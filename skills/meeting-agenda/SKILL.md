@@ -15,10 +15,15 @@ The skill operates in four modes — **bootstrap**, **capture**, **build**, **wr
 skills/meeting-agenda/
   SKILL.md
   meetings/
-    <slug>.json       # one file per tracked meeting
+    <slug>.json       # structured shadow (machine-readable)
+    <slug>.md         # running notes (human-readable)
 ```
 
-Each `<slug>.json` is the structured shadow of one meeting series:
+The **running notes live as a markdown file in this repo**, not in Google Drive. The Drive MCP available to this skill can create Docs but not edit existing ones, so editing a hosted Doc each capture means recreating it and breaking the link every time. The markdown file is git-tracked, cheap to append to, and survives the ephemeral container via the remote.
+
+The **Google Doc is only emitted at build time**, as a day-of agenda artifact named `<Meeting Title> — Agenda YYYY-MM-DD`, dropped into the "Meeting Prep" folder at the root of the user's Drive. That's a low-frequency, short-lived artifact intended to be shared/used during the meeting; recreating it per build is fine.
+
+Each `<slug>.json` is the structured shadow:
 
 ```json
 {
@@ -26,8 +31,8 @@ Each `<slug>.json` is the structured shadow of one meeting series:
   "title": "Atlas Exec Sync",
   "event_id": "<latest Google Calendar event id>",
   "recurring_event_id": "<recurringEventId if applicable>",
-  "doc_url": "<Google Doc URL in Meeting Prep folder>",
-  "doc_id": "<Drive file id>",
+  "calendar_id": "<calendar id>",
+  "event_url": "<htmlLink>",
   "attendees": [{ "name": "...", "email": "..." }],
   "objective": "Why this meeting exists. Set at bootstrap, editable.",
   "captures": [
@@ -48,15 +53,37 @@ Each `<slug>.json` is the structured shadow of one meeting series:
       "objective": "...",
       "outcome": "user's wrap-up summary",
       "objective_met": true,
+      "agenda_doc_url": "<Google Doc URL emitted at build time>",
       "routed": { "tasks": [...], "shortlist": [...], "chase": [...] }
     }
   ]
 }
 ```
 
-The human-facing running notes live in a **Google Doc per meeting**, stored in a Drive folder named exactly **"Meeting Prep"** at the root of the user's Drive. The Doc is linked into the calendar event description.
+Each `<slug>.md` is the read-friendly running notes for the meeting series:
 
-Slugs are auto-derived from the event title: lowercase, strip punctuation, hyphenate spaces (`"Atlas Exec Sync"` → `atlas-exec-sync`). On collision, append a short qualifier (`-1on1-sam`). The user can rename a slug at bootstrap or any time by editing the JSON filename — do not rename silently.
+```markdown
+# <Title> — Running Notes
+
+**Recurrence:** <weekly | …>
+**Attendees:** <comma-separated>
+**Event:** <event_url>
+
+## Objective
+<one paragraph>
+
+## Captured this week
+- YYYY-MM-DD (source): summary [link]
+- …
+
+## Wrap-up history
+### YYYY-MM-DD — objective met: yes/partial/no
+<outcome narrative, routed items>
+```
+
+Captures and wrap-ups are written to **both** the JSON (structured) and the .md (human). They are kept in sync — if you can't write one, do not write the other.
+
+Slugs are auto-derived from the event title: lowercase, strip punctuation, hyphenate spaces (`"Atlas Exec Sync"` → `atlas-exec-sync`). On collision, append a short qualifier (`-1on1-sam`). The user can rename a slug at any time by renaming both `<slug>.json` and `<slug>.md` — do not rename silently.
 
 ## When to run
 
@@ -79,10 +106,9 @@ Run when no `meetings/` directory exists, when the user asks to set it up, or wh
 4. For each candidate, derive a slug from the title and propose: slug, title, day/time, attendee count.
 5. Show the proposed list and **ask the user which to track** — do not auto-track everything.
 6. For each confirmed meeting:
-   - Create a Google Doc in "Meeting Prep" titled `<Meeting Title> — Running Notes`.
-   - Write the `meetings/<slug>.json` skeleton (objective starts empty; prompt the user for a one-line objective).
-   - `update_event` to append the Doc URL to the event description if not already linked.
-7. Commit the new JSON files. Report the list of tracked meetings and their Doc links.
+   - Write `meetings/<slug>.json` and `meetings/<slug>.md`. The objective starts empty in both — prompt the user for a one-line objective and fill it in.
+   - Do **not** create a Google Doc and do **not** modify the calendar event. Both happen only at build time.
+7. Commit the new files. Report the list of tracked meetings.
 
 ### Capture
 
@@ -94,9 +120,8 @@ Triggered by "add this to <meeting>" / "file this under <meeting>" / pasting a G
    - **chat**: free-text note typed by the user. `ref` = null.
    - **gmail**: thread id or message link. Use `get_thread` to pull a 1-line summary; do not paste the full body into the JSON.
    - **slack**: permalink. Use `slack_read_thread` or `slack_read_channel` to fetch context for a 1-line summary.
-4. Append a new entry to `captures[]` in the JSON.
-5. Append a corresponding bullet to the running Google Doc under a "Captured this week" section, with a link back to the source.
-6. Confirm filed and show the running count of captures for that meeting.
+4. Append a new entry to `captures[]` in `<slug>.json` **and** a corresponding bullet to the "Captured this week" section of `<slug>.md`, with a link back to the source. Both writes happen in the same commit.
+5. Confirm filed and show the running count of captures for that meeting.
 
 ### Build agenda
 
@@ -112,12 +137,14 @@ Triggered by "build my agenda for <meeting>" / "prep my 2pm" / `/agenda <slug>`.
    - Invoke `shortlist` (read mode) for items mentioning attendees or topics.
    - Invoke `chase` (read mode) for outstanding financial commitments with any attendee.
    - Surface these as a "Open loops with attendees" section in the agenda — do not auto-add as discussion topics; the user decides which to raise.
-4. **Assemble the agenda** into the Google Doc, replacing the previous "Day-of agenda" section (preserve "Captured this week" and running notes above it). Sections, in this order:
-   - **Objective** — from JSON; if missing, prompt the user.
+4. **Assemble the agenda** with these sections, in order:
+   - **Objective** — from JSON; if missing, prompt the user and persist back.
    - **Carryover from last meeting** — pulled from `carryover[]` (populated by the previous wrap-up). Each item shows owner and due date.
-   - **Topics & decisions needed** — synthesized from `captures[]`, grouped by source, each with link back. Mark items that need a decision explicitly (`[DECISION NEEDED]`).
+   - **Topics & decisions needed** — synthesized from `captures[]` in the JSON, grouped by source, each with link back. Mark items that need a decision explicitly (`[DECISION NEEDED]`).
    - **Open loops with attendees** — output of step 3, listed but not pre-assigned to the agenda.
-5. Update the Doc. Return the Doc URL and a one-line summary in chat — do not dump the agenda into chat.
+5. **Emit the Google Doc.** Create a new Doc in "Meeting Prep" titled `<Meeting Title> — Agenda <YYYY-MM-DD>` (date = the instance date). Write the assembled agenda into it. Do not overwrite or delete prior agenda Docs — they become a historical record per instance.
+6. Append the new Doc URL to a stub history entry for this instance (`history[]`), so wrap-up later finds it. The stub has `instance_date` and `agenda_doc_url` set; other fields filled by wrap-up.
+7. Return the Doc URL and a one-line summary in chat — do not dump the agenda into chat.
 
 ### Wrap-up
 
@@ -132,9 +159,9 @@ Triggered by "wrap up the <meeting>" / "meeting done" / "post-mortem the 2pm". T
    - **Financial commitments → `chase`.** Amount, counterparty, date/window; ask `chase` to verify and update.
    - If a handoff fails, capture the error and keep going.
 5. **Record carryover for next instance.** Anything punted, owed, or not resolved becomes a `carryover[]` entry. It will appear in the next instance's agenda automatically.
-6. **Append to `history[]`** with date, objective, outcome, `objective_met`, and the routed items.
-7. **Clear `captures[]`** for the just-completed instance.
-8. Append a "Wrap-up — <date>" section to the Google Doc with the outcome narrative.
+6. **Fill in the stub history entry** for this instance (created at build time) with objective, outcome, `objective_met`, and the routed items. If no stub exists (wrap-up without a prior build), append a fresh entry.
+7. **Clear `captures[]`** for the just-completed instance in the JSON, and move the "Captured this week" bullets in `<slug>.md` into a new dated subsection under "Wrap-up history" alongside the outcome narrative.
+8. Do **not** modify the agenda Google Doc — the wrap-up record lives in the markdown and JSON. The Doc stays as the day-of snapshot.
 9. Report: items routed (with what each downstream skill said back, especially `chase`), carryover recorded, objective met or not.
 
 ## Inbound from star-craft
@@ -151,7 +178,9 @@ Triggered by "wrap up the <meeting>" / "meeting done" / "post-mortem the 2pm". T
 - **Always confirm the matched event** before filing, building, or wrapping up. The cost of asking is one extra message; the cost of filing under the wrong meeting is silent data drift.
 - **Never auto-add open-loops items as agenda topics.** Surface them; the user decides what to raise.
 - **Never dump the assembled agenda into chat.** The deliverable is the Google Doc link plus a one-line summary. Chat output stays terse.
-- **Never modify the calendar event** beyond appending the Doc URL to the description during bootstrap. Do not change times, attendees, or titles.
+- **Never modify the calendar event.** No description edits, no time/attendee/title changes. Share the Doc link via chat/Slack instead.
+- **Never edit a previously-emitted agenda Doc.** Each instance gets its own Doc; the prior one is the historical record.
+- **JSON and markdown must stay in sync.** Every capture and wrap-up writes to both, in the same commit. If one write fails, roll back the other.
 - **Never deduplicate fan-out across skills.** If an item could be both a task and a shortlist note, route to both — each downstream skill owns its own view.
 - **Never drop a failed handoff silently.** Report which routes failed and why.
 - **Slug renames are explicit.** If the user wants to rename a meeting, they (or the skill, on request) renames the JSON file; the skill does not silently re-slug on event-title changes.
