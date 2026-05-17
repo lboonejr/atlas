@@ -18,7 +18,7 @@
     { "name": "Joshua", "email": "joshua@cuzziesnj.com" },
     { "name": "Admin", "email": "admin@cuzziesnj.com", "role": "organizer" }
   ],
-  "objective": null,
+  "objective": "Weekly operational sync for the Cuzzie's team — align on what happened last week, what's planned for next week, what we did right, and what we did wrong.",
   "captures": [
     {
       "source": "chat",
