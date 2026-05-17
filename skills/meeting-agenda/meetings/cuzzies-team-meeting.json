@@ -17,27 +17,73 @@
     { "name": "Admin", "email": "admin@cuzziesnj.com", "role": "organizer" }
   ],
   "objective": "Weekly operational sync for the Cuzzie's team — align on what happened last week, what's planned for next week, what we did right, and what we did wrong.",
-  "captures": [
+  "captures": [],
+  "carryover": [
     {
-      "source": "chat",
-      "ref": null,
-      "summary": "Funding event this week; preparing for big orders to fill inventory by end of next week. Team should watch the inventory ordering Slack channel for menus and be ready to make picks fast.",
-      "added_at": "2026-05-17T12:49:00Z",
-      "added_by": "user"
+      "from_instance": "2026-05-17",
+      "item": "Check whether Wednesday's vendor orders (Hamilton Farms, Agricine, MB1/Kai, Fresh, Niche, Love Grow, Elicit, Dime, Harvest Moon, Verono, Abco, Garden State, Heavy Hitters, Garden Society) arrived on time and Memorial Day stocking is on track.",
+      "owner": "Lemar",
+      "due": "2026-05-24"
     },
     {
-      "source": "chat",
-      "ref": null,
-      "summary": "Next week we'll be in all week tightening up operations from front-end to inventory — getting back in the swing of running Cuzzie's at full power.",
-      "added_at": "2026-05-17T13:35:00Z",
-      "added_by": "user"
+      "from_instance": "2026-05-17",
+      "item": "Synthesize feedback from this week's 1:1 check-ins — surface common themes and proposed operational changes.",
+      "owner": "Lemar",
+      "due": "2026-05-24"
+    },
+    {
+      "from_instance": "2026-05-17",
+      "item": "Begin scoping Phase 3 (mid-June expansion to 8 AM–10 PM, 7 days) staffing and shift structure as Memorial Day push winds down.",
+      "owner": "Lemar / Joshua",
+      "due": null
+    },
+    {
+      "from_instance": "2026-05-17",
+      "item": "Confirm KPI baselines (Google reviews, delivery turnaround, upsells) are measured starting first week of June.",
+      "owner": "Joshua",
+      "due": "2026-06-01"
+    },
+    {
+      "from_instance": "2026-05-17",
+      "item": "Revisit meeting format — objective only partially met this instance (heavy on next-week plans, light on retrospective). Consider structuring next sync with explicit \"last week recap / what worked / what didn't\" prompts.",
+      "owner": "Lemar",
+      "due": null
     }
   ],
-  "carryover": [],
   "history": [
     {
       "instance_date": "2026-05-17",
-      "agenda_doc_url": "https://docs.google.com/document/d/1mCM0RP1edNTrxRgAPfqLtgy7EBDlSacgSY9A2j8gkfA/edit"
+      "objective": "Weekly operational sync for the Cuzzie's team — align on what happened last week, what's planned for next week, what we did right, and what we did wrong.",
+      "objective_met": "partial",
+      "objective_met_note": "Heavy on next-week strategy and the three-phase plan; light on last-week retrospective and right/wrong evaluation.",
+      "agenda_doc_url": "https://docs.google.com/document/d/1mCM0RP1edNTrxRgAPfqLtgy7EBDlSacgSY9A2j8gkfA/edit",
+      "transcript_source_url": "https://docs.google.com/document/d/1v1BrmvOx2pLz_CIEGdlZjQq0Ik0QCwSdr2ubojPPObU/edit",
+      "outcome": "Strategic kickoff for the post-funding phase. Lemar framed the next month as three phases — Payback (vendor reset + inventory replenish), Get Back (marketing/customer recovery), Expansion (8 AM–10 PM, 7 days, mid-June). Wednesday funding triggers the first wave of vendor orders targeting Memorial Day stocking; full stock targeted by the Friday after Memorial Day. Joshua announced June KPI tracking, asked the inventory team to standardize product descriptions, proposed a team dinner, and reminded the delivery team on the new-customer cash policy. Annmarie pushed (and got agreement on) tightening the points program before the inventory influx.",
+      "decisions": [
+        "Loyalty program revised: $25 minimum spend for $5 reward, $100 spend for $20 reward — effective before Memorial Day.",
+        "Three-phase strategic plan adopted: Payback → Get Back → Expansion (8 AM–10 PM, 7 days, mid-June).",
+        "Memorial Day stocking target: full stock by the Friday after Memorial Day.",
+        "KPI tracking begins first week of June: Google reviews, delivery turnaround, upsell performance."
+      ],
+      "routed": {
+        "tasks": [
+          { "name": "Lock Memorial Day deal plan", "owner": "Joshua Evans", "due": "2026-05-21", "board": "Operations", "group": "Inventory Tasks", "url": "https://nextleaf-and-all-its-subs.monday.com/boards/18396190103/pulses/12034281813" },
+          { "name": "Make station picks (3-vote threshold) for Memorial Day stocking", "owner": "All team", "due": "2026-05-22", "board": "Operations", "group": "Inventory Tasks", "url": "https://nextleaf-and-all-its-subs.monday.com/boards/18396190103/pulses/12034323434" },
+          { "name": "Set up KPI tracking framework", "owner": "Joshua Evans", "due": "2026-06-01", "board": "Operations", "group": "Miscellaneous", "url": "https://nextleaf-and-all-its-subs.monday.com/boards/18396190103/pulses/12034297401" },
+          { "name": "Plan team dinner", "owner": "Joshua Evans", "due": "2026-05-31", "board": "Operations", "group": "Miscellaneous", "url": "https://nextleaf-and-all-its-subs.monday.com/boards/18396190103/pulses/12034297636" },
+          { "name": "Configure cataloging tools to include product descriptions", "owner": "Ken Jones", "due": null, "board": "Operations", "group": "Inventory Tasks", "url": "https://nextleaf-and-all-its-subs.monday.com/boards/18396190103/pulses/12034297599" },
+          { "name": "Submit updated availability (to Joshua/Lemar, then enter in Gusto)", "owner": "All team", "due": "2026-05-20", "board": "Operations", "group": "Miscellaneous", "url": "https://nextleaf-and-all-its-subs.monday.com/boards/18396190103/pulses/12034297409" },
+          { "name": "Implement new points-program thresholds ($25 → $5, $100 → $20)", "owner": "Anna", "due": "2026-05-18", "board": "Operations", "group": "Budtender Tasks", "url": "https://nextleaf-and-all-its-subs.monday.com/boards/18396190103/pulses/12034319096" }
+        ],
+        "shortlist": [
+          { "name": "Conduct 1:1 check-ins with each team member this week", "url": "https://nextleaf-and-all-its-subs.monday.com/boards/18410986746/pulses/12034323334" }
+        ],
+        "chase": [],
+        "skipped": [
+          "Lemar: secure early vendor orders for Wednesday (already in flight)",
+          "Delivery team: new-customer cash-not-accepted script (deleted per Lemar)"
+        ]
+      }
     }
   ]
 }
