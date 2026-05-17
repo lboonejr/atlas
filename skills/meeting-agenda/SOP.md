@@ -4,13 +4,13 @@
 
 ## What this is for
 
-A workflow that treats every meeting you lead as a long-running thread. Notes you collect during the week get filed against the right upcoming meeting; the morning of, a polished HTML agenda is assembled and dropped in your Drive ready to share with attendees, partners, or anyone covering for you; after the meeting, outcomes get extracted and routed to your other skills (`task-builder`, `shortlist`, `chase`) so nothing falls through.
+A workflow that treats every meeting you lead as a long-running thread. Notes you collect during the week get filed against the right upcoming meeting; the morning of, a polished Google Doc agenda is assembled and dropped in your Drive ready to share with attendees, partners, or anyone covering for you; after the meeting, outcomes get extracted and routed to your other skills (`task-builder`, `shortlist`, `chase`) so nothing falls through.
 
 **Scope:** only meetings *you organize*. Externals and meetings someone else scheduled for you are excluded unless you explicitly bootstrap them.
 
 ## Where things live
 
-- **Drive > Meeting Prep folder** — agenda HTML files, one per meeting instance. Named `<Meeting Title> — Agenda YYYY-MM-DD`. Open in Drive to view formatted; click "Open with > Google Docs" if you need to edit.
+- **Drive > Meeting Prep folder** — agenda Google Docs, one per meeting instance. Named `<Meeting Title> — Agenda YYYY-MM-DD`. Open, share, or edit like any Doc.
 - **atlas repo > `skills/meeting-agenda/meetings/`**
   - `<slug>.md` — human-readable running notes (objective, captures-this-week, wrap-up history). Edit directly if you want.
   - `<slug>.json` — structured shadow (event IDs, attendees, carryover, history). Don't hand-edit unless you know what you're touching.
@@ -53,7 +53,7 @@ Claude will **always confirm the matched event** before filing — one extra mes
    - **Carryover from last meeting** (decisions and owed items from the prior instance)
    - **Topics & decisions needed** (synthesized from this week's captures, grouped by source, with links back)
    - **Open loops with attendees** (surfaced but not pre-added — you decide what to raise)
-5. The agenda lands in **Drive > Meeting Prep** as a formatted HTML file. Claude returns the link in chat. Share it however you like (paste in Slack, send via email, drop in the calendar event).
+5. The agenda lands in **Drive > Meeting Prep** as a Google Doc. Claude returns the link in chat. Share it however you like (paste in Slack, send via email, drop in the calendar event).
 
 ## 4. Wrap-up (after the meeting)
 
@@ -90,7 +90,7 @@ Alternatives if Gemini isn't available: Otter.ai, Fireflies.ai, Read.ai — each
 ## Operational notes
 
 - **Slug renames** are explicit — rename both `<slug>.json` and `<slug>.md` in the repo if you want to change a slug. Claude won't silently re-slug if you rename a calendar event.
-- **Agenda files are never edited after emit** — each instance gets its own historical HTML file. Wrap-up records live in the markdown and JSON, not in the agenda file.
+- **Agenda Docs are never edited after emit** — each instance gets its own historical Doc. Wrap-up records live in the markdown and JSON, not in the agenda Doc.
 - **Calendar events are never modified** by the skill. Share agenda links manually via Slack / email / event description.
 - **Cleanup:** Claude can create files in Drive but cannot delete them. If you build many agendas, manually trash older instances from the Meeting Prep folder periodically.
 - **One source of truth:** the JSON is canonical for structured data (event IDs, attendees, carryover); the markdown is canonical for human-readable narrative. Both are written together — if you edit one by hand, edit the other to match or ask Claude to reconcile.

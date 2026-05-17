@@ -24,13 +24,20 @@
       "summary": "Funding event this week; preparing for big orders to fill inventory by end of next week. Team should watch the inventory ordering Slack channel for menus and be ready to make picks fast.",
       "added_at": "2026-05-17T12:49:00Z",
       "added_by": "user"
+    },
+    {
+      "source": "chat",
+      "ref": null,
+      "summary": "Next week we'll be in all week tightening up operations from front-end to inventory — getting back in the swing of running Cuzzie's at full power.",
+      "added_at": "2026-05-17T13:35:00Z",
+      "added_by": "user"
     }
   ],
   "carryover": [],
   "history": [
     {
       "instance_date": "2026-05-17",
-      "agenda_doc_url": "https://drive.google.com/file/d/1SaQrQnEPKkpPFdDcJ-jOXPZgF3ZiW2tH/view"
+      "agenda_doc_url": "https://docs.google.com/document/d/1mCM0RP1edNTrxRgAPfqLtgy7EBDlSacgSY9A2j8gkfA/edit"
     }
   ]
 }

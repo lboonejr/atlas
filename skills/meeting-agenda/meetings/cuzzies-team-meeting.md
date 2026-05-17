@@ -9,6 +9,7 @@ Weekly operational sync for the Cuzzie's team — align on what happened last we
 
 ## Captured this week
 - 2026-05-17 (chat, Lemar): Funding event this week — preparing for big orders to fill inventory by end of next week. Team should watch the inventory ordering Slack channel for menus and be ready to make picks fast.
+- 2026-05-17 (chat, Lemar): Next week is a full week of tightening up operations from front-end to inventory — getting back in the swing of running Cuzzie's at full power.
 
 ## Wrap-up history
 _(none yet)_

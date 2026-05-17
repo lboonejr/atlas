@@ -1,6 +1,6 @@
 ---
 name: meeting-agenda
-description: Maintain per-meeting running notes through the week and assemble a shareable HTML agenda on demand for meetings the user organizes. Captures notes from chat, Gmail, and Slack; carries decisions and open items forward across recurring instances; wraps up from either a user narrative or an uploaded meeting transcript and fans outcomes out to task-builder, shortlist, and chase. Triggers on phrases like "build my agenda for <meeting>", "prep my 2pm", "add this to <meeting>", "wrap up the <meeting>", "process the transcript for <meeting>", "set up meeting-agenda", or the `/agenda` slash command.
+description: Maintain per-meeting running notes through the week and assemble a shareable Google Doc agenda on demand for meetings the user organizes. Captures notes from chat, Gmail, and Slack; carries decisions and open items forward across recurring instances; wraps up from either a user narrative or an uploaded meeting transcript and fans outcomes out to task-builder, shortlist, and chase. Triggers on phrases like "build my agenda for <meeting>", "prep my 2pm", "add this to <meeting>", "wrap up the <meeting>", "process the transcript for <meeting>", "set up meeting-agenda", or the `/agenda` slash command.
 ---
 
 # Meeting Agenda
@@ -21,7 +21,7 @@ skills/meeting-agenda/
 
 The **running notes live as a markdown file in this repo**, not in Google Drive. The Drive MCP available to this skill can create Docs but not edit existing ones, so editing a hosted Doc each capture means recreating it and breaking the link every time. The markdown file is git-tracked, cheap to append to, and survives the ephemeral container via the remote.
 
-The **Google Doc is only emitted at build time**, as a day-of agenda artifact named `<Meeting Title> — Agenda YYYY-MM-DD`, dropped into the "Meeting Prep" folder at the root of the user's Drive. That's a low-frequency, short-lived artifact intended to be shared/used during the meeting; recreating it per build is fine.
+The **Google Doc is only emitted at build time**, as a day-of agenda artifact named `<Meeting Title> — Agenda YYYY-MM-DD`, dropped into the "Meeting Prep" folder at the root of the user's Drive. Upload as `text/plain` — the Drive MCP auto-converts that to a native Google Doc. Do not upload as `text/html`: the MCP does not convert HTML, leaving the file as a raw `.html` blob that Drive often refuses to preview ("Sorry, we're unable to open this file at this time"). The Doc is a low-frequency, short-lived artifact intended to be shared and used during the meeting; recreating it per build is fine.
 
 Each `<slug>.json` is the structured shadow:
 
@@ -142,55 +142,32 @@ Triggered by "build my agenda for <meeting>" / "prep my 2pm" / `/agenda <slug>`.
    - **Carryover from last meeting** — pulled from `carryover[]` (populated by the previous wrap-up). Each item shows owner and due date.
    - **Topics & decisions needed** — synthesized from `captures[]` in the JSON, grouped by source, each with link back. Mark items that need a decision explicitly (`[DECISION NEEDED]`).
    - **Open loops with attendees** — output of step 3, listed but not pre-assigned to the agenda.
-5. **Emit the agenda as an HTML file in Drive** (see "Agenda formatting" below). Use `create_file` with `contentMimeType: text/html`, parent = the "Meeting Prep" folder, title = `<Meeting Title> — Agenda <YYYY-MM-DD>` (date = the instance date). The Drive MCP does not convert `text/html` to a native Google Doc — the file is stored as HTML, and Drive's browser preview renders it with proper headings, bullets, bold, and hyperlinks. That preview is what gets shared; recipients who need to edit can click "Open with > Google Docs" to convert. Never upload plain text for the agenda — it renders as a monospace block and looks unprofessional.
-6. Do not overwrite or delete prior agenda files — they become a historical record per instance.
-7. Append the new file URL (the `https://drive.google.com/file/d/<id>/view` form) to a stub history entry for this instance (`history[]`), so wrap-up later finds it. The stub has `instance_date` and `agenda_doc_url` set; other fields filled by wrap-up.
-8. Return the file URL and a one-line summary in chat — do not dump the agenda into chat.
+5. **Emit the agenda as a Google Doc** (see "Agenda formatting" below). Use `create_file` with `contentMimeType: text/plain`, parent = the "Meeting Prep" folder, title = `<Meeting Title> — Agenda <YYYY-MM-DD>` (date = the instance date). Plain text gets auto-converted by the Drive MCP into a native `application/vnd.google-apps.document` — a real, previewable, shareable Doc. Do not upload as HTML or markdown; the MCP does not convert those, leaving them as raw files that Drive may refuse to preview.
+6. Do not overwrite or delete prior agenda Docs — they become a historical record per instance.
+7. Append the Doc URL (the `https://docs.google.com/document/d/<id>/edit` form) to a stub history entry for this instance (`history[]`), so wrap-up later finds it. The stub has `instance_date` and `agenda_doc_url` set; other fields filled by wrap-up.
+8. Return the Doc URL and a one-line summary in chat — do not dump the agenda into chat.
 
 #### Agenda formatting
 
-The agenda may be shared with business partners, attendees, or someone covering the meeting on the user's behalf. It must look polished in Drive's HTML preview.
+The Doc may be shared with business partners, attendees, or someone covering the meeting on the user's behalf. Since plain-text upload produces a Doc without styled headings or list formatting, use typographic structure that reads clearly as-is:
 
-Render the agenda as HTML following this structure:
+- **Title in ALL CAPS** on the first line, followed by a date/time line and an attendee line.
+- **Section headers in ALL CAPS**, framed by a horizontal rule of box-drawing characters (`────────────────────────────────────────────────────`) above and below the header text. Keep rules consistent in length.
+- **Bullets as `  • `** (two spaces, bullet glyph, space). Indent sub-bullets two additional spaces. Wrap long lines at ~60 chars so the Doc reads cleanly on phone screens.
+- **Source labels** ("From chat notes:", "From email:", "From Slack:") above each grouping inside Topics. Put the source link on its own line beneath the bullet (`See: <URL>`) since plain-text uploads don't render `<a>` tags.
+- **Items needing a decision**: prefix the bullet with `[DECISION NEEDED] `.
+- **Carryover with nothing in it**: keep the section and write `(Nothing carried over.)` so the reader knows the slot exists.
+- **Open Loops with attendees with nothing in it**: omit the section entirely.
 
-```html
-<h1>{Meeting Title} — Agenda</h1>
-<p><strong>Date:</strong> {YYYY-MM-DD, weekday}<br>
-<strong>Time:</strong> {start–end, timezone}<br>
-<strong>Attendees:</strong> {comma-separated names}</p>
+Required section order:
 
-<h2>Objective</h2>
-<p>{objective text}</p>
+1. Title block (title, date/time, attendees)
+2. OBJECTIVE
+3. CARRYOVER FROM LAST MEETING
+4. TOPICS & DECISIONS NEEDED
+5. OPEN LOOPS WITH ATTENDEES (only if non-empty)
 
-<h2>Carryover from last meeting</h2>
-<ul>
-  <li><strong>{owner}</strong> — {item} <em>(due {due})</em></li>
-</ul>
-<!-- If empty: <p><em>Nothing carried over.</em></p> -->
-
-<h2>Topics &amp; decisions needed</h2>
-<h3>From chat notes</h3>
-<ul><li>{summary}</li></ul>
-<h3>From email</h3>
-<ul><li>{summary} — <a href="{gmail link}">thread</a></li></ul>
-<h3>From Slack</h3>
-<ul><li>{summary} — <a href="{slack permalink}">message</a></li></ul>
-<!-- Items needing a decision: prefix with <strong>[DECISION NEEDED]</strong> -->
-
-<h2>Open loops with attendees</h2>
-<ul>
-  <li><strong>{attendee name}</strong> — {item} <em>(from {task-builder | shortlist | chase})</em></li>
-</ul>
-<!-- If empty, omit this section entirely. -->
-```
-
-Rules:
-- Use `<h1>` exactly once (the title). Section headings are `<h2>`; sub-groupings under Topics are `<h3>`.
-- Always use real `<ul><li>` lists — never asterisks or hyphens in paragraphs.
-- Escape `&`, `<`, `>` in any user-supplied text (capture summaries, attendee names).
-- Hyperlinks use `<a href="...">label</a>` with descriptive label text (e.g. "thread", "message", "doc"), not raw URLs.
-- Omit empty sections silently except Carryover, which renders an "Nothing carried over." line so the reader knows the slot exists.
-- Do not embed CSS or `<style>` blocks — Drive strips them and they create noise.
+Never use markdown syntax (`#`, `**`, `-`) — it renders literally in the Doc and looks broken.
 
 ### Wrap-up
 
@@ -216,7 +193,7 @@ Both routes converge on the same extract-and-route flow.
 7. **Record carryover for next instance.** Anything punted, owed, or not resolved becomes a `carryover[]` entry. It will appear in the next instance's agenda automatically.
 8. **Fill in the stub history entry** for this instance (created at build time) with objective, outcome, `objective_met`, the routed items, and the transcript source URL/path if one was used. If no stub exists (wrap-up without a prior build), append a fresh entry.
 9. **Clear `captures[]`** for the just-completed instance in the JSON, and move the "Captured this week" bullets in `<slug>.md` into a new dated subsection under "Wrap-up history" alongside the outcome narrative.
-10. Do **not** modify the agenda HTML file — the wrap-up record lives in the markdown and JSON. The agenda file stays as the day-of snapshot.
+10. Do **not** modify the agenda Doc — the wrap-up record lives in the markdown and JSON. The Doc stays as the day-of snapshot.
 11. Report: items routed (with what each downstream skill said back, especially `chase`), carryover recorded, objective met or not.
 
 ## Inbound from star-craft
