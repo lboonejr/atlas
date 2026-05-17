@@ -1,0 +1,33 @@
+{
+  "slug": "cuzzies-team-meeting",
+  "title": "Cuzzie's Team Meeting",
+  "event_id": "1hova85om04c9v3r4n8if0inco_20260517T213000Z",
+  "recurring_event_id": "1hova85om04c9v3r4n8if0inco",
+  "calendar_id": "lemar@cuzziesnj.com",
+  "event_url": "https://www.google.com/calendar/event?eid=MWhvdmE4NW9tMDRjOXYzcjRuOGlmMGluY29fMjAyNjA1MTdUMjEzMDAwWiBsZW1hckBjdXp6aWVzbmouY29t",
+  "doc_url": "https://docs.google.com/document/d/1cWeS1RRDKmQUc8kKF1APvwQcxQY49o1xLQuzgO78A0c",
+  "doc_id": "1cWeS1RRDKmQUc8kKF1APvwQcxQY49o1xLQuzgO78A0c",
+  "drive_folder_id": "1Epw2DpIeT7WtbVan4LDuJJYUeSrVRPeb",
+  "attendees": [
+    { "name": "Lemar", "email": "lemar@cuzziesnj.com" },
+    { "name": "Jamone", "email": "jamone@cuzziesnj.com" },
+    { "name": "Malik", "email": "malik@cuzziesnj.com" },
+    { "name": "Kenneth", "email": "kenneth@cuzziesnj.com" },
+    { "name": "Anna", "email": "anna@cuzziesnj.com" },
+    { "name": "Jowie", "email": "jowie@cuzziesnj.com" },
+    { "name": "Joshua", "email": "joshua@cuzziesnj.com" },
+    { "name": "Admin", "email": "admin@cuzziesnj.com", "role": "organizer" }
+  ],
+  "objective": null,
+  "captures": [
+    {
+      "source": "chat",
+      "ref": null,
+      "summary": "Funding event this week; preparing for big orders to fill inventory by end of next week. Team should watch the inventory ordering Slack channel for menus and be ready to make picks fast.",
+      "added_at": "2026-05-17T12:49:00Z",
+      "added_by": "user"
+    }
+  ],
+  "carryover": [],
+  "history": []
+}
