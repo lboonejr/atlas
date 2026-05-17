@@ -142,9 +142,55 @@ Triggered by "build my agenda for <meeting>" / "prep my 2pm" / `/agenda <slug>`.
    - **Carryover from last meeting** — pulled from `carryover[]` (populated by the previous wrap-up). Each item shows owner and due date.
    - **Topics & decisions needed** — synthesized from `captures[]` in the JSON, grouped by source, each with link back. Mark items that need a decision explicitly (`[DECISION NEEDED]`).
    - **Open loops with attendees** — output of step 3, listed but not pre-assigned to the agenda.
-5. **Emit the Google Doc.** Create a new Doc in "Meeting Prep" titled `<Meeting Title> — Agenda <YYYY-MM-DD>` (date = the instance date). Write the assembled agenda into it. Do not overwrite or delete prior agenda Docs — they become a historical record per instance.
-6. Append the new Doc URL to a stub history entry for this instance (`history[]`), so wrap-up later finds it. The stub has `instance_date` and `agenda_doc_url` set; other fields filled by wrap-up.
-7. Return the Doc URL and a one-line summary in chat — do not dump the agenda into chat.
+5. **Emit the Google Doc as HTML** (see "Agenda Doc formatting" below). Create a new Doc in "Meeting Prep" titled `<Meeting Title> — Agenda <YYYY-MM-DD>` (date = the instance date). Use `create_file` with `contentMimeType: text/html` so Drive converts it into a properly formatted Doc — real headings, real bullet lists, hyperlinks, bold. Plain text uploads render as monospace blocks and look unprofessional when shared; never use plain text for the agenda Doc.
+6. Do not overwrite or delete prior agenda Docs — they become a historical record per instance.
+7. Append the new Doc URL to a stub history entry for this instance (`history[]`), so wrap-up later finds it. The stub has `instance_date` and `agenda_doc_url` set; other fields filled by wrap-up.
+8. Return the Doc URL and a one-line summary in chat — do not dump the agenda into chat.
+
+#### Agenda Doc formatting
+
+The Doc may be shared with business partners, attendees, or someone covering the meeting on the user's behalf. It must look polished out of the box.
+
+Render the agenda as HTML following this structure:
+
+```html
+<h1>{Meeting Title} — Agenda</h1>
+<p><strong>Date:</strong> {YYYY-MM-DD, weekday}<br>
+<strong>Time:</strong> {start–end, timezone}<br>
+<strong>Attendees:</strong> {comma-separated names}</p>
+
+<h2>Objective</h2>
+<p>{objective text}</p>
+
+<h2>Carryover from last meeting</h2>
+<ul>
+  <li><strong>{owner}</strong> — {item} <em>(due {due})</em></li>
+</ul>
+<!-- If empty: <p><em>Nothing carried over.</em></p> -->
+
+<h2>Topics &amp; decisions needed</h2>
+<h3>From chat notes</h3>
+<ul><li>{summary}</li></ul>
+<h3>From email</h3>
+<ul><li>{summary} — <a href="{gmail link}">thread</a></li></ul>
+<h3>From Slack</h3>
+<ul><li>{summary} — <a href="{slack permalink}">message</a></li></ul>
+<!-- Items needing a decision: prefix with <strong>[DECISION NEEDED]</strong> -->
+
+<h2>Open loops with attendees</h2>
+<ul>
+  <li><strong>{attendee name}</strong> — {item} <em>(from {task-builder | shortlist | chase})</em></li>
+</ul>
+<!-- If empty, omit this section entirely. -->
+```
+
+Rules:
+- Use `<h1>` exactly once (the title). Section headings are `<h2>`; sub-groupings under Topics are `<h3>`.
+- Always use real `<ul><li>` lists — never asterisks or hyphens in paragraphs.
+- Escape `&`, `<`, `>` in any user-supplied text (capture summaries, attendee names).
+- Hyperlinks use `<a href="...">label</a>` with descriptive label text (e.g. "thread", "message", "doc"), not raw URLs.
+- Omit empty sections silently except Carryover, which renders an "Nothing carried over." line so the reader knows the slot exists.
+- Do not embed CSS or `<style>` blocks — Drive strips them and they create noise.
 
 ### Wrap-up
 
