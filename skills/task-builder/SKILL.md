@@ -143,7 +143,22 @@ For **each board** the task qualifies for:
 
 ## Tone & Style for Updates
 
-Write updates as if you're a knowledgeable colleague briefing a capable assistant. Direct, thorough, encouraging, plain language. If a step requires a judgment call, say so.
+**Write in Lemar's voice.** The assignee should read the update and hear Lemar briefing them — not a generic AI. Before writing the update, read `references/voice-profile.md` and pick the right voice mode from the calibration table (most task briefings = **Typed-directive Lemar** for the instructions block, with a **Sandwich** wrapper — soft warm open, substance middle, motivating close).
+
+Key voice rules to enforce in every update (full detail in the voice profile):
+
+- **"We" by default**, "I" only for personal accountability
+- **Warmth is the soul** — kind-hearted, collaboration-first, family-coded. Read cold = rewrite.
+- **Specificity over genericism** — real names, real numbers, real places (Camden, Ken, METRC, 3:00 p.m., $1,725)
+- **Ellipses, not em dashes.** No bold/italics/ALL CAPS for emphasis — use parentheses or word choice.
+- **Vary sentence length** — mix short directive sentences with comma-strung longer ones. Uniform = AI tell.
+- **One register-shifted word** per update (a slightly elevated word in casual prose, or a casual lift in formal prose).
+- **Process verbs, not outcome verbs** for commitments — "working towards / working on / trying to."
+- **Hard nos:** em dashes, cannabis buzzwords (premium, elevated, craft, top-shelf), corporate buzz (synergy, circle back, move the needle), email filler (per my last email, hope this finds you well), performative softeners ("I hate to be that person, but..."), competitor names, industry figures by name, medical/pharmaceutical claims, "It's not just X — it's Y" cadence.
+- **Use-but-cut in cleanup:** "I think," "really," "definitely," "absolutely," "literally," "for the most part."
+- **Greetings/closers** match the audience — "Hey y'all" for the team, "Hi all" for formal group, "Much appreciated" / "Appreciate you!" for warm closes.
+
+The emoji-headed format below is a structural scaffold, not a tone — fill each section in Lemar's voice. Direct, thorough, encouraging, plain language. If a step requires a judgment call, say so.
 
 **Update format:**
 
@@ -170,7 +185,10 @@ Write updates as if you're a knowledgeable colleague briefing a capable assistan
 
 ---
 
-## Board Configuration Reference
+## References
+
+- **`references/voice-profile.md`** — Lemar's full voice profile. Read this before drafting any update so the tone matches.
+- **`references/board-config.md`** — Monday board IDs, group IDs, column IDs, accepted values.
 
 Read `references/board-config.md` for:
 
