@@ -6,8 +6,14 @@ This file maps Monday.com boards Lemar references in conversation to their concr
 
 ## Canonical Strings (use exactly)
 
-- **Cuzzie's** / Cuzzies / Camden → always use `"Cuzzie's Dispensary & Delivery"` (with apostrophe and ampersand) for the Dispensary dropdown value.
-- The other location is `"The Station"` (capital T).
+- The **Dispensary dropdown** (`dropdown_mkx99cy8`, used on Admin / Ken's / Lemar's To-Do) accepts these exact labels:
+  - `Cuzzie's Dispensary & Delivery`
+  - `The Station Dispensary`
+  - `High Society Club`
+  - `Office`
+  - `stat`
+- There is **no "Both" option** on this dropdown. When a task applies to multiple locations, pass them as an array: `"labels": ["Cuzzie's Dispensary & Delivery", "The Station Dispensary"]`.
+- The Operations board uses a different Dispensary column (`dropdown_mkzrcy5z`) — labels there have not been verified yet. Call `get_column_type_info` on that column the first time you set it.
 
 ---
 
@@ -59,7 +65,7 @@ Match Lemar's phrasing (case-insensitive, fuzzy) against this table to pick a ta
 |---------------|------------------------|-----------|--------------------------------------------------------------------------|
 | Status        | `status`               | status    | `Planned` (default), `Working on it`, `Stuck`, `Done`                    |
 | Due Date      | `date4`                | date      | ISO `YYYY-MM-DD`                                                         |
-| Dispensary    | `dropdown_mkx99cy8`    | dropdown  | `Cuzzie's Dispensary & Delivery`, `The Station`, `Office`, `Both`        |
+| Dispensary    | `dropdown_mkx99cy8`    | dropdown  | `Cuzzie's Dispensary & Delivery`, `The Station Dispensary`, `High Society Club`, `Office`, `stat` (no "Both" — pass an array of labels for multi-location) |
 | Priority      | `color_mkx91yfh`       | status    | `Low`, `Medium`, `High`, `Critical`                                      |
 | Recurring?    | `color_mkywezgs`       | status    | Set when task repeats                                                    |
 | Task Type     | `dropdown_mkzjy76e`    | dropdown  | `Research`, `Scheduling`, `Filing`, `Document Creation`, `Call`, `Supplies`, `Payroll`, `Account Management`, `Menu` |
@@ -161,7 +167,7 @@ Match Lemar's phrasing (case-insensitive, fuzzy) against this table to pick a ta
 |----------------|----------------------------|----------------|---------------------------------------------------------------|
 | Status         | `status`                   | status         | `Planned` (default), `Working on it`, `Stuck`, `Done`         |
 | Due Date       | `date4`                    | date           | ISO `YYYY-MM-DD`                                              |
-| Dispensary     | `dropdown_mkx99cy8`        | dropdown       | `Cuzzie's Dispensary & Delivery`, `The Station`, `Both`       |
+| Dispensary     | `dropdown_mkx99cy8`        | dropdown       | `Cuzzie's Dispensary & Delivery`, `The Station Dispensary`, `High Society Club`, `Office`, `stat` |
 | Media Type     | `dropdown_mkz8bzna`        | dropdown       | `Deal Graphic`, `Social`, `Kiosk`, `Postcard`, `Flyer`, `Signage`, `Merch`, `Branding` (verify exact labels via `get_column_type_info`) |
 | Priority       | `color_mkx91yfh`           | status         | `Low`, `Medium`, `High`, `Critical`                           |
 | Assigned To    | `multiple_person_mkx9xzya` | multi-people   | Ken by default                                                |
@@ -192,7 +198,7 @@ Match Lemar's phrasing (case-insensitive, fuzzy) against this table to pick a ta
 |----------------|----------------------------|----------------|---------------------------------------------------------------|
 | Status         | `status`                   | status         | `Planned` (default), `Working on it`, `Stuck`, `Done`         |
 | Due Date       | `date4`                    | date           | ISO `YYYY-MM-DD`                                              |
-| Dispensary     | `dropdown_mkx99cy8`        | dropdown       | `Cuzzie's Dispensary & Delivery`, `The Station`, `Office`, `Both` |
+| Dispensary     | `dropdown_mkx99cy8`        | dropdown       | `Cuzzie's Dispensary & Delivery`, `The Station Dispensary`, `High Society Club`, `Office`, `stat` |
 | Priority       | `color_mkx91yfh`           | status         | `Low`, `Medium`, `High`, `Critical`                           |
 | Assigned To    | `multiple_person_mkx9xzya` | multi-people   | Lemar by default                                              |
 
