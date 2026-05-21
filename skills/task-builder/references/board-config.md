@@ -4,20 +4,25 @@ This file maps Monday.com boards Lemar references in conversation to their concr
 
 ---
 
+## Canonical Strings (use exactly)
+
+- **Cuzzie's** / Cuzzies / Camden → always use `"Cuzzie's Dispensary & Delivery"` (with apostrophe and ampersand) for the Dispensary dropdown value.
+- The other location is `"The Station"` (capital T).
+
+---
+
 ## Board Name Resolution Table
 
 Match Lemar's phrasing (case-insensitive, fuzzy) against this table to pick a target board.
 
-| Lemar says…                                             | Resolves to     | Board ID          |
-|---------------------------------------------------------|-----------------|-------------------|
-| "admin", "admin board", "for admin", "tell my admin"    | Admin Board     | `<TODO_ADMIN_ID>` |
-| "operations", "ops", "ops board", "add to ops"          | Operations      | `<TODO_OPS_ID>`   |
-| "Ken", "Ken's", "Ken's board", "design board"           | Ken's Board     | `<TODO_KENS_ID>`  |
-| "my list", "my to-do", "to-do", "remind me", "I need to"| Lemar's To-Do   | `<TODO_TODO_ID>`  |
-| "shortlist", "shortlist board"                          | Shortlist       | `<TODO_SHORTLIST_ID>` — verify via `get_board_info` |
-| Any other board by name                                 | Unknown         | Look up the ID via `list_workspaces` / search, then `get_board_info` |
-
-> **TODO:** Fill in the board IDs above. Until then, the skill should call `list_workspaces` + search Monday at runtime to resolve the IDs, then update this table.
+| Lemar says…                                              | Resolves to     | Board ID       |
+|----------------------------------------------------------|-----------------|----------------|
+| "admin", "admin board", "for admin", "tell my admin"     | Admin Board     | `18324306759`  |
+| "operations", "ops", "ops board", "add to ops"           | Operations      | `18396190103`  |
+| "Ken", "Ken's", "Ken's board", "design board"            | Ken's Board     | `18390239321`  |
+| "my list", "my to-do", "to-do", "remind me", "I need to" | Lemar's To-Do   | `18390239511`  |
+| "shortlist", "shortlist board"                           | Shortlist       | unknown — resolve via `search` / `get_board_info` |
+| Any other board by name                                  | Unknown         | resolve, then `get_board_info` |
 
 ---
 
@@ -27,64 +32,111 @@ Match Lemar's phrasing (case-insensitive, fuzzy) against this table to pick a ta
 
 **Purpose:** Day-to-day admin execution work — research, filing, scheduling, calls, document creation, supplies, financial admin, menu updates.
 
-**Board ID:** `<TODO_ADMIN_ID>`
+**Board ID:** `18324306759`
+
+**Default Status:** `Planned`
 
 **Groups:**
 
-| Group name             | Group ID              | When to use                                                              |
-|------------------------|-----------------------|--------------------------------------------------------------------------|
-| Supplies/Equipment     | `<TODO_GROUP_ID>`     | Anything to order, replace, or restock (paper, ink, cleaning, hardware)  |
-| To Pay                 | `<TODO_GROUP_ID>`     | Bills, payroll, vendor payments, reimbursements                          |
-| Menus                  | `<TODO_GROUP_ID>`     | Menu updates, additions, removals (use Operations for audits)            |
-| `<TODO group name>`    | `<TODO_GROUP_ID>`     | `<TODO description>`                                                     |
+| Group name           | Group ID            | When to use                                                              |
+|----------------------|---------------------|--------------------------------------------------------------------------|
+| Current Projects     | `group_title`       | Active in-progress admin work                                            |
+| Future Projects      | `group_mky9jzcv`    | Backlog / not-yet-started planned work                                   |
+| Planned              | `group_mkxsdqmm`    | Scheduled but not yet active                                             |
+| Supplies/Equipment   | `group_mkx9ak1c`    | Anything to order, replace, or restock (paper, ink, cleaning, hardware)  |
+| Menus                | `group_mm127kr1`    | Menu updates, additions, removals (use Operations for audits)            |
+| To Pay               | `group_mm136m3`     | Bills, payroll, vendor payments, reimbursements                          |
+| Archive              | `group_mkx9e17j`    | Completed work — never write here from the skill                         |
 
-> **TODO:** Enumerate all Admin board groups and their IDs.
+**Default group:** `group_mkxsdqmm` (Planned) for most new tasks. Override based on content:
+- Supplies/equipment → `group_mkx9ak1c`
+- Financial → `group_mm136m3`
+- Menu work → `group_mm127kr1`
 
 **Columns:**
 
-| Column label    | Column ID           | Type     | Accepted values / notes                                            |
-|-----------------|---------------------|----------|--------------------------------------------------------------------|
-| Status          | `<TODO_COL_ID>`     | status   | `Planned`, `Working on it`, `Stuck`, `Done`, …                     |
-| Priority        | `<TODO_COL_ID>`     | status   | `Low`, `Medium`, `High`, `Critical`                                |
-| Due Date        | `<TODO_COL_ID>`     | date     | ISO format `YYYY-MM-DD`                                            |
-| Dispensary      | `<TODO_COL_ID>`     | status / dropdown | `Cuzzie's`, `The Station`, `Office`, `Both`             |
-| Task Type       | `<TODO_COL_ID>`     | status / dropdown | `Research`, `Scheduling`, `Filing`, `Document Creation`, `Call`, `Supplies`, `Payroll`, `Account Management`, `Menu`, … |
-| Assignee        | `<TODO_COL_ID>`     | people   | Default: admin                                                     |
-| Recurring       | `<TODO_COL_ID>`     | checkbox / status | Set if task repeats                                       |
+| Column label  | Column ID              | Type      | Accepted values / notes                                                  |
+|---------------|------------------------|-----------|--------------------------------------------------------------------------|
+| Status        | `status`               | status    | `Planned` (default), `Working on it`, `Stuck`, `Done`                    |
+| Due Date      | `date4`                | date      | ISO `YYYY-MM-DD`                                                         |
+| Dispensary    | `dropdown_mkx99cy8`    | dropdown  | `Cuzzie's Dispensary & Delivery`, `The Station`, `Office`, `Both`        |
+| Priority      | `color_mkx91yfh`       | status    | `Low`, `Medium`, `High`, `Critical`                                      |
+| Recurring?    | `color_mkywezgs`       | status    | Set when task repeats                                                    |
+| Task Type     | `dropdown_mkzjy76e`    | dropdown  | `Research`, `Scheduling`, `Filing`, `Document Creation`, `Call`, `Supplies`, `Payroll`, `Account Management`, `Menu` |
 
-> **TODO:** Pull the full column inventory (and the exact label/index pairs the API accepts) for the Admin board.
+**Subitem columns (Admin):**
+
+| Subitem label | Column ID              | Type       |
+|---------------|------------------------|------------|
+| Status        | `status`               | status     |
+| Date          | `date0`                | date       |
+| Dispensary    | `dropdown_mky4140v`    | dropdown   |
+| Priority      | `color_mky4f5ft`       | status     |
+| Notes         | `long_text_mky4sy63`   | long text  |
+| Link          | `text_mky4p1gr`        | text       |
+| Login Info    | `text_mky4hh7y`        | text       |
 
 ---
 
 ### Operations Board
 
-**Purpose:** Store-floor and operational work — inventory tasks, menu audits, menus, on-site operations across Cuzzie's and The Station.
+**Purpose:** Store-floor and operational work — inventory tasks, menu audits, menus, budtender tasks, deliveries, price changes, on-site operations across Cuzzie's and The Station.
 
-**Board ID:** `<TODO_OPS_ID>`
+**Board ID:** `18396190103`
+
+**Default Status:** `Working on it` (board has **no "Planned" status**)
 
 **Groups:**
 
-| Group name        | Group ID         | When to use                                  |
-|-------------------|------------------|----------------------------------------------|
-| Menus             | `group_mm26wm5c` | Menu work (additions, edits, removals)       |
-| Menu Audits       | `group_title`    | Menu audits specifically                     |
-| Inventory Tasks   | `topics`         | Inventory counts, transfers, reconciliations |
-| `<TODO>`          | `<TODO>`         | `<TODO>`                                     |
+| Group name              | Group ID            | When to use                                  |
+|-------------------------|---------------------|----------------------------------------------|
+| Weekly Tasks            | `group_mm0jtrdx`    | Recurring weekly work                        |
+| Cataloging              | `group_mm1wb2tk`    | Product cataloging                           |
+| Miscellaneous           | `group_mkzrh5sj`    | One-off operations work                      |
+| Budtender Tasks         | `group_mkzrkwb5`    | Budtender-specific assignments               |
+| Inventory Tasks         | `topics`            | Inventory counts, transfers, reconciliations |
+| Menu Audits             | `group_title`       | Menu audits specifically                     |
+| Delivery Tasks          | `group_mkzsk83v`    | Delivery ops                                 |
+| Price Changes           | `group_mkzrsnx8`    | Price update work                            |
+| Menus                   | `group_mm26wm5c`    | Menu additions, edits, removals              |
+| Overdue                 | `group_mkzvgnbe`    | Past-due items — usually a triage bucket; don't post new tasks here unless instructed |
+| Inventory Archive       | `group_mkzrzfpq`    | Completed — skill never writes               |
+| Menu Audit Archive      | `group_mkzrew11`    | Completed — skill never writes               |
+| Price Changes Archive   | `group_mm034zq8`    | Completed — skill never writes               |
+| Miscellaneous Archive   | `group_mm0ef85m`    | Completed — skill never writes               |
+| Weekly Task Archive     | `group_mm0mc633`    | Completed — skill never writes               |
 
-> **TODO:** Confirm the remaining Operations groups and their IDs. `group_title` and `topics` are common default group IDs in Monday — double-check they map to the intended groups for this board.
+**Default group:** `group_mkzrh5sj` (Miscellaneous) when nothing more specific fits. Routing rules:
+- Inventory → `topics`
+- Menu work → `group_mm26wm5c`
+- Menu audits specifically → `group_title`
+- Delivery → `group_mkzsk83v`
+- Price changes → `group_mkzrsnx8`
+- Budtender-facing → `group_mkzrkwb5`
+- Recurring weekly → `group_mm0jtrdx`
+- Cataloging → `group_mm1wb2tk`
 
 **Columns:**
 
-| Column label    | Column ID           | Type     | Accepted values / notes                                            |
-|-----------------|---------------------|----------|--------------------------------------------------------------------|
-| Status          | `<TODO_COL_ID>`     | status   | **No "Planned" status.** Default: `Working on it`. Others: `Stuck`, `Done`. |
-| Priority        | `<TODO_COL_ID>`     | status   | `Low`, `Medium`, `High`, `Critical`                                |
-| Due Date        | `<TODO_COL_ID>`     | date     | ISO format `YYYY-MM-DD`                                            |
-| Dispensary      | `<TODO_COL_ID>`     | status / dropdown | `Cuzzie's`, `The Station`, `Both`                         |
-| Task Type       | `<TODO_COL_ID>`     | status / dropdown | `Inventory`, `Menu`, `Menu Audit`, …                      |
-| Assignee        | `<TODO_COL_ID>`     | people   |                                                                    |
+| Column label             | Column ID              | Type      | Accepted values / notes                                                  |
+|--------------------------|------------------------|-----------|--------------------------------------------------------------------------|
+| Person                   | `person`               | people    | Assignee                                                                 |
+| Dispensary Name          | `dropdown_mkzrcy5z`    | dropdown  | `Cuzzie's Dispensary & Delivery`, `The Station`, `Both`                  |
+| Status                   | `status`               | status    | **No "Planned"** — default `Working on it`. Others: `Stuck`, `Done`      |
+| Priority                 | `color_mkzre1zw`       | status    | `Low`, `Medium`, `High`, `Critical`                                      |
+| Files                    | `file_mkzrksn3`        | file      | Skip unless explicit upload                                              |
+| Date                     | `date4`                | date      | ISO `YYYY-MM-DD`                                                         |
+| Link                     | `text_mkzrw5vx`        | text      | URL — only set when one is provided                                      |
+| Bot Action               | `color_mm1ww44f`       | status    | Automation flag — skip unless instructed                                 |
+| Price Change Due Date    | `date_mkzr3841`        | date      | Only for Price Changes group                                             |
 
-> **TODO:** Full column inventory.
+**Subitem columns (Operations):**
+
+| Subitem label | Column ID  | Type     |
+|---------------|------------|----------|
+| Owner         | `person`   | people   |
+| Status        | `status`   | status   |
+| Date          | `date0`    | date     |
 
 ---
 
@@ -92,27 +144,27 @@ Match Lemar's phrasing (case-insensitive, fuzzy) against this table to pick a ta
 
 **Purpose:** Graphic design queue — deal graphics, social posts, kiosk graphics (Weedmaps/Leafly/Dutchie), postcards, flyers, signage, merch, branding.
 
-**Board ID:** `<TODO_KENS_ID>`
+**Board ID:** `18390239321`
+
+**Default Status:** `Planned`
 
 **Groups:**
 
-| Group name        | Group ID        | When to use                                                  |
-|-------------------|-----------------|--------------------------------------------------------------|
-| Current Projects  | `group_title`   | **All new tasks land here.**                                 |
-| Archive           | `<TODO>`        | Lemar / Ken move completed work here; the skill never writes |
+| Group name        | Group ID           | When to use                                                  |
+|-------------------|--------------------|--------------------------------------------------------------|
+| Current Projects  | `group_title`      | **All new tasks land here.**                                 |
+| Archive           | `group_mkx9e17j`   | Completed — skill never writes                               |
 
 **Columns:**
 
-| Column label    | Column ID           | Type     | Accepted values / notes                                            |
-|-----------------|---------------------|----------|--------------------------------------------------------------------|
-| Status          | `<TODO_COL_ID>`     | status   |                                                                    |
-| Priority        | `<TODO_COL_ID>`     | status   |                                                                    |
-| Due Date        | `<TODO_COL_ID>`     | date     |                                                                    |
-| Dispensary      | `<TODO_COL_ID>`     | status   | When the design is location-specific                               |
-| Design Type     | `<TODO_COL_ID>`     | status / dropdown | `Deal Graphic`, `Social`, `Kiosk`, `Postcard`, `Flyer`, `Signage`, `Merch`, `Branding` |
-| Dimensions      | `<TODO_COL_ID>`     | text     | Free-text; common values: `1080x1080`, `1080x1920`, etc.           |
-
-> **TODO:** Full column inventory.
+| Column label   | Column ID                  | Type           | Accepted values / notes                                       |
+|----------------|----------------------------|----------------|---------------------------------------------------------------|
+| Status         | `status`                   | status         | `Planned` (default), `Working on it`, `Stuck`, `Done`         |
+| Due Date       | `date4`                    | date           | ISO `YYYY-MM-DD`                                              |
+| Dispensary     | `dropdown_mkx99cy8`        | dropdown       | `Cuzzie's Dispensary & Delivery`, `The Station`, `Both`       |
+| Media Type     | `dropdown_mkz8bzna`        | dropdown       | `Deal Graphic`, `Social`, `Kiosk`, `Postcard`, `Flyer`, `Signage`, `Merch`, `Branding` (verify exact labels via `get_column_type_info`) |
+| Priority       | `color_mkx91yfh`           | status         | `Low`, `Medium`, `High`, `Critical`                           |
+| Assigned To    | `multiple_person_mkx9xzya` | multi-people   | Ken by default                                                |
 
 ---
 
@@ -120,23 +172,29 @@ Match Lemar's phrasing (case-insensitive, fuzzy) against this table to pick a ta
 
 **Purpose:** Lemar's personal queue — strategic / ownership-level work he'll drive himself, things to remember, decisions to make.
 
-**Board ID:** `<TODO_TODO_ID>`
+**Board ID:** `18390239511`
+
+**Default Status:** `Planned`
 
 **Groups:**
 
-| Group name        | Group ID        | When to use                          |
-|-------------------|-----------------|--------------------------------------|
-| `<TODO>`          | `<TODO>`        | `<TODO>`                             |
+| Group name        | Group ID           | When to use                                  |
+|-------------------|--------------------|----------------------------------------------|
+| Current Projects  | `group_title`      | Active strategic work Lemar's driving        |
+| Planned           | `group_mkxsdqmm`   | **Default for new tasks** — scheduled / soon |
+| Archive           | `group_mkx9e17j`   | Completed — skill never writes               |
+
+**Default group:** `group_mkxsdqmm` (Planned) unless Lemar says he's actively working on it now.
 
 **Columns:**
 
-| Column label    | Column ID           | Type     | Accepted values / notes              |
-|-----------------|---------------------|----------|--------------------------------------|
-| Status          | `<TODO_COL_ID>`     | status   |                                      |
-| Priority        | `<TODO_COL_ID>`     | status   |                                      |
-| Due Date        | `<TODO_COL_ID>`     | date     |                                      |
-
-> **TODO:** Full group + column inventory.
+| Column label   | Column ID                  | Type           | Accepted values / notes                                       |
+|----------------|----------------------------|----------------|---------------------------------------------------------------|
+| Status         | `status`                   | status         | `Planned` (default), `Working on it`, `Stuck`, `Done`         |
+| Due Date       | `date4`                    | date           | ISO `YYYY-MM-DD`                                              |
+| Dispensary     | `dropdown_mkx99cy8`        | dropdown       | `Cuzzie's Dispensary & Delivery`, `The Station`, `Office`, `Both` |
+| Priority       | `color_mkx91yfh`           | status         | `Low`, `Medium`, `High`, `Critical`                           |
+| Assigned To    | `multiple_person_mkx9xzya` | multi-people   | Lemar by default                                              |
 
 ---
 
@@ -146,24 +204,24 @@ Monday's `create_item` accepts `columnValues` as a JSON object keyed by column I
 
 ```json
 {
-  "status_column_id":   { "label": "Working on it" },
-  "priority_column_id": { "label": "High" },
-  "date_column_id":     { "date": "2026-05-25" },
-  "dropdown_column_id": { "labels": ["Cuzzie's"] },
-  "people_column_id":   { "personsAndTeams": [{ "id": 12345678, "kind": "person" }] },
-  "text_column_id":     "free-form text",
-  "checkbox_column_id": { "checked": "true" },
-  "long_text_column_id":{ "text": "longer body of text" }
+  "status":               { "label": "Working on it" },
+  "color_mkx91yfh":       { "label": "High" },
+  "date4":                { "date": "2026-05-25" },
+  "dropdown_mkx99cy8":    { "labels": ["Cuzzie's Dispensary & Delivery"] },
+  "multiple_person_mkx9xzya": { "personsAndTeams": [{ "id": 12345678, "kind": "person" }] },
+  "person":               { "personsAndTeams": [{ "id": 12345678, "kind": "person" }] },
+  "text_mkzrw5vx":        "https://example.com",
+  "long_text_mky4sy63":   { "text": "longer body of text" }
 }
 ```
 
 Notes:
 
-- For `status` / dropdown columns: prefer `label` (the human-readable value) rather than `index`. Monday will resolve it.
-- For `date`: ISO `YYYY-MM-DD`. Add `"time": "HH:MM:SS"` when needed.
-- For `people`: the `id` is the Monday user ID — keep a small mapping of common assignees here as you learn them.
+- **Status / dropdown columns:** prefer `label` (the human-readable value) rather than `index`. Monday will resolve it. For multi-select dropdowns (like Dispensary), use `labels` as an array.
+- **Date:** ISO `YYYY-MM-DD`. Add `"time": "HH:MM:SS"` when needed.
+- **People / multi-people:** the `id` is the Monday user ID. Keep the table below current.
 - Only include columns that exist on the target board. Unknown columns will error.
-- When in doubt, call `get_column_type_info` for the board + column ID to verify the expected value shape.
+- If a status/dropdown value gets rejected, call `get_column_type_info` on that column to see the exact labels Monday accepts.
 
 **Known user IDs:**
 
@@ -173,7 +231,7 @@ Notes:
 | Admin          | `<TODO>`        |
 | Ken            | `<TODO>`        |
 
-> **TODO:** Fill in user IDs as you learn them.
+> **TODO:** Fill in user IDs as you learn them. Until then, leave People/Assigned To unset and let board defaults apply, or set via `list_users_and_teams` lookup at runtime.
 
 ---
 
@@ -181,7 +239,7 @@ Notes:
 
 When Lemar names a board that isn't in this file:
 
-1. Resolve the board ID. If he gave one, use it. Otherwise call `list_workspaces` or `search` (Monday MCP) to find it. If you still can't resolve it, **ask Lemar** — don't guess.
+1. Resolve the board ID. If he gave one, use it. Otherwise call `search` / `list_workspaces` (Monday MCP) to find it. If you still can't resolve it, **ask Lemar** — don't guess.
 2. Call `get_board_info` with the board ID. This returns groups, columns, and column types.
 3. Map what you can — Status, Priority, Due Date, Dispensary, Task Type are the common ones. Skip anything you can't confidently map.
 4. Create the item with the mapped columns; post the full task detail as a `create_update` regardless.
