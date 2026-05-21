@@ -225,13 +225,18 @@ Notes:
 
 **Known user IDs:**
 
-| Name           | Monday user ID  |
-|----------------|-----------------|
-| Lemar          | `<TODO>`        |
-| Admin          | `<TODO>`        |
-| Ken            | `<TODO>`        |
+| Name              | Monday user ID |
+|-------------------|----------------|
+| Lemar             | `61231708`     |
+| Admin (Arianna)   | `95418519`     |
+| Ken               | `69676580`     |
 
-> **TODO:** Fill in user IDs as you learn them. Until then, leave People/Assigned To unset and let board defaults apply, or set via `list_users_and_teams` lookup at runtime.
+Default assignment rules:
+
+- **Admin board** → `Admin (Arianna)` on the People/Assigned To column unless Lemar names someone else.
+- **Ken's board** → `Ken` on Assigned To.
+- **Lemar's To-Do** → `Lemar` on Assigned To.
+- **Operations board** → leave `Person` unset by default (it's role-based, set when the brainstorm names an assignee).
 
 ---
 
