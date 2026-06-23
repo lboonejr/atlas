@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback Loop Workflow — Atlas</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0f0f0f;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 24px 16px 48px;
+    min-height: 100vh;
+  }
+  h1 { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .subtitle { color: #888; font-size: 13px; margin-bottom: 32px; }
+  .center-col { display: flex; flex-direction: column; align-items: center; }
+  .node {
+    border-radius: 8px;
+    padding: 14px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    max-width: 340px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .node sub { font-size: 11px; color: #666; display: block; margin-top: 2px; }
+  .node-start  { background: #1a1a1a; border: 2px solid #444; border-radius: 24px; color: #aaa; }
+  .node-action { background: #1e2a3a; border: 2px solid #3a6ea8; color: #7eb8f7; }
+  .node-decision { background: #2a1e1e; border: 2px dashed #a85c3a; color: #f7a87e; }
+  .node-alarm  { background: #2a1515; border: 2px solid #c0392b; color: #ff6b6b; }
+  .node-done   { background: #1a2a1e; border: 2px solid #27ae60; color: #7ef7a8; border-radius: 24px; }
+  .node-stuck  { background: #1e1e1e; border: 2px solid #888; color: #aaa; }
+  .node-loop   { background: #1e1a2a; border: 2px solid #8e44ad; color: #c39bd3; }
+  .node-warn   { background: #2a2010; border: 2px solid #f39c12; color: #f7c68e; }
+  .arrow {
+    width: 2px; height: 24px; background: #444; margin: 0 auto; position: relative;
+  }
+  .arrow::after {
+    content: '▼'; position: absolute; bottom: -8px; left: 50%;
+    transform: translateX(-50%); color: #555; font-size: 10px;
+  }
+  .branch-row {
+    display: flex; gap: 40px; align-items: flex-start; justify-content: center;
+  }
+  .branch-col { display: flex; flex-direction: column; align-items: center; }
+  .branch-arrow { width: 2px; height: 20px; background: #444; margin: 0 auto; }
+  .branch-label {
+    font-size: 11px; color: #888; background: #1a1a1a;
+    border-radius: 4px; padding: 2px 8px; white-space: nowrap;
+  }
+  .loop-label { font-size: 11px; color: #c0392b; margin-top: 4px; text-align: center; }
+  .section-title {
+    font-size: 11px; font-weight: 700; color: #555; text-transform: uppercase;
+    letter-spacing: 0.08em; margin: 36px 0 10px;
+  }
+  .param-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    max-width: 680px; width: 100%;
+  }
+  @media (max-width: 600px) { .param-grid { grid-template-columns: 1fr; } }
+  .param-card {
+    background: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 12px 14px; font-size: 12px;
+  }
+  .param-name { font-weight: 700; color: #7eb8f7; margin-bottom: 4px; }
+  .param-desc { color: #999; }
+  .param-options { color: #aaa; margin-top: 6px; font-style: italic; line-height: 1.6; }
+</style>
+</head>
+<body>
+<h1>🔁 Feedback Loop Workflow</h1>
+<p class="subtitle">Atlas — Unsatisfactory Output Alarm | v1 brainstorm draft</p>
+
+<div class="center-col">
+
+  <div class="node node-start">Lemar triggers a task or prompt</div>
+  <div class="arrow"></div>
+
+  <div class="node node-action">
+    🤖 Atlas / Samira generates output
+    <sub>(email draft, analysis, Monday task, etc.)</sub>
+  </div>
+  <div class="arrow"></div>
+
+  <div class="node node-action">
+    📬 Output delivered to Lemar
+    <sub>(Slack reply · Monday item · Gmail draft)</sub>
+  </div>
+  <div class="arrow"></div>
+
+  <div class="node node-decision">
+    ⚖️ Lemar evaluates output
+    <sub>Is the output satisfactory?</sub>
+  </div>
+
+  <!-- Branch fork -->
+  <div class="branch-row" style="margin-top:0; width:100%; max-width:600px;">
+
+    <!-- YES branch -->
+    <div class="branch-col" style="flex:1;">
+      <div class="branch-arrow"></div>
+      <div class="branch-label" style="color:#27ae60">✓ Yes</div>
+      <div class="branch-arrow"></div>
+      <div class="node node-done" style="max-width:200px;">
+        ✅ Done
+        <sub>Log to #reports</sub>
+      </div>
+    </div>
+
+    <!-- NO branch -->
+    <div class="branch-col" style="flex:1;">
+      <div class="branch-arrow"></div>
+      <div class="branch-label" style="color:#c0392b">✗ No — alarm</div>
+      <div class="branch-arrow"></div>
+
+      <div class="node node-alarm" style="max-width:220px;">
+        🚨 Lemar sends alarm signal
+        <sub>Signal method: <em>TBD — see parameters</em></sub>
+      </div>
+      <div class="branch-arrow"></div>
+
+      <div class="node node-loop" style="max-width:220px;">
+        🔁 Correction loop triggered
+        <sub>Retry with context · escalate · clarify</sub>
+      </div>
+      <div class="branch-arrow"></div>
+
+      <div class="node node-warn" style="max-width:220px;">
+        ⚠️ Retry count &gt; max retries?
+        <sub>If no → back to output delivery ↑</sub>
+      </div>
+      <div class="branch-arrow"></div>
+
+      <div class="node node-stuck" style="max-width:220px;">
+        🛑 Post to #action-items
+        <sub>STUCK — needs Lemar's decision</sub>
+      </div>
+      <div class="loop-label">↑ loops back to output delivery on retry</div>
+    </div>
+
+  </div>
+
+  <!-- Parameters section -->
+  <div class="section-title">Parameters to Define — Brainstorm</div>
+
+  <div class="param-grid">
+    <div class="param-card">
+      <div class="param-name">1. Signal Method</div>
+      <div class="param-desc">How does Lemar send the alarm?</div>
+      <div class="param-options">
+        • Emoji reaction (:x: / 👎 / custom)<br>
+        • Keyword in reply ("redo", "wrong", "off")<br>
+        • Rating in reply (1–5, below threshold = alarm)<br>
+        • Custom slash command / reaction combo
+      </div>
+    </div>
+
+    <div class="param-card">
+      <div class="param-name">2. Signal Content</div>
+      <div class="param-desc">What info should the alarm carry?</div>
+      <div class="param-options">
+        • Freeform reply text (just say what's wrong)<br>
+        • Structured fields: what's wrong / severity / suggested fix<br>
+        • Signal alone (system infers from context)<br>
+        • Required: what was wrong + what you expected
+      </div>
+    </div>
+
+    <div class="param-card">
+      <div class="param-name">3. Alarm Threshold</div>
+      <div class="param-desc">What qualifies as unsatisfactory?</div>
+      <div class="param-options">
+        • Any negative signal from Lemar<br>
+        • Only explicit alarm triggers (not minor tweaks)<br>
+        • Severity score above N (1–5 scale)<br>
+        • Specific output types only (emails, financials)
+      </div>
+    </div>
+
+    <div class="param-card">
+      <div class="param-name">4. Correction Strategy</div>
+      <div class="param-desc">What happens when an alarm fires?</div>
+      <div class="param-options">
+        • Auto-retry same prompt (no changes)<br>
+        • Retry with alarm context appended to prompt<br>
+        • Ask Lemar a clarifying question first<br>
+        • Escalate to a different model or skill
+      </div>
+    </div>
+
+    <div class="param-card">
+      <div class="param-name">5. Max Retries</div>
+      <div class="param-desc">How many loops before escalating?</div>
+      <div class="param-options">
+        • 1 retry, then escalate<br>
+        • 2 retries (default)<br>
+        • 3 retries (admin-3x pattern, already in Samira)<br>
+        • No limit with human-in-loop gate each time
+      </div>
+    </div>
+
+    <div class="param-card">
+      <div class="param-name">6. Alarm Landing Zone</div>
+      <div class="param-desc">Where does the alarm notification post?</div>
+      <div class="param-options">
+        • Reply in same thread (inline)<br>
+        • New post in #action-items<br>
+        • DM to Lemar<br>
+        • Monday item update on the source task<br>
+        • All of the above
+      </div>
+    </div>
+
+    <div class="param-card">
+      <div class="param-name">7. Failure Archive</div>
+      <div class="param-desc">Where do unsatisfactory outputs get logged?</div>
+      <div class="param-options">
+        • #reports with "ALARM" or "FAILED" tag<br>
+        • Monday item update on the source task<br>
+        • Dedicated #feedback channel<br>
+        • None (ephemeral, just retry)
+      </div>
+    </div>
+
+    <div class="param-card">
+      <div class="param-name">8. Scope</div>
+      <div class="param-desc">Which outputs can trigger an alarm?</div>
+      <div class="param-options">
+        • All Samira outputs<br>
+        • Email drafts only<br>
+        • Monday items only<br>
+        • Scoped by channel (#emails, #admin, etc.)<br>
+        • Any output Lemar explicitly marks
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
