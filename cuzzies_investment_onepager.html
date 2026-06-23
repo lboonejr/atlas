@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuzzie's — Investment Opportunity</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #000;
+    color: #fff;
+    font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 48px 80px;
+  }
+
+  /* ── Header ────────────────────────────────── */
+  .header {
+    text-align: center;
+    padding: 88px 0 72px;
+    border-bottom: 1px solid #1c1c1e;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #30d158;
+    margin-bottom: 20px;
+  }
+
+  .brand {
+    font-size: 68px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 14px;
+    background: linear-gradient(135deg, #ffffff 0%, #a1a1a6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .tagline {
+    font-size: 22px;
+    font-weight: 300;
+    color: #636366;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── Stats Hero ─────────────────────────────── */
+  .stats-section {
+    padding: 72px 0;
+    border-bottom: 1px solid #1c1c1e;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #48484a;
+    margin-bottom: 48px;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stat {
+    padding: 32px 24px;
+    text-align: center;
+    border-right: 1px solid #1c1c1e;
+  }
+
+  .stat:first-child { padding-left: 0; text-align: left; }
+  .stat:last-child { border-right: none; padding-right: 0; text-align: right; }
+
+  .stat-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: #636366;
+    line-height: 1.5;
+  }
+
+  .stat-highlight {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #30d158;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── Two Column ─────────────────────────────── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    padding: 72px 0;
+    border-bottom: 1px solid #1c1c1e;
+  }
+
+  .section-title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 28px;
+    letter-spacing: -0.5px;
+    color: #fff;
+  }
+
+  .feature-list {
+    list-style: none;
+  }
+
+  .feature-list li {
+    padding: 11px 0;
+    font-size: 14px;
+    color: #ebebf5cc;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    border-bottom: 1px solid #1c1c1e;
+    line-height: 1.5;
+  }
+
+  .feature-list li:last-child { border-bottom: none; }
+
+  .feature-list li::before {
+    content: '▸';
+    color: #30d158;
+    flex-shrink: 0;
+    font-size: 11px;
+    margin-top: 2px;
+  }
+
+  .body-text {
+    font-size: 15px;
+    color: #636366;
+    line-height: 1.75;
+  }
+
+  .body-text strong {
+    color: #ebebf5cc;
+  }
+
+  /* ── Credibility Callout ────────────────────── */
+  .credibility-section {
+    padding: 80px 0;
+    border-bottom: 1px solid #1c1c1e;
+    text-align: center;
+  }
+
+  .credibility-number {
+    font-size: 100px;
+    font-weight: 700;
+    color: #30d158;
+    letter-spacing: -4px;
+    line-height: 1;
+    margin: 24px 0 16px;
+  }
+
+  .credibility-desc {
+    font-size: 19px;
+    color: #636366;
+    max-width: 440px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .credibility-desc strong {
+    color: #ebebf5cc;
+  }
+
+  /* ── Asset Table ────────────────────────────── */
+  .asset-section {
+    padding: 72px 0;
+    border-bottom: 1px solid #1c1c1e;
+  }
+
+  .asset-intro {
+    font-size: 16px;
+    color: #636366;
+    line-height: 1.7;
+    margin-bottom: 36px;
+    max-width: 600px;
+  }
+
+  .asset-intro strong { color: #fff; }
+
+  .asset-card {
+    background: #0a0a0a;
+    border: 1px solid #1c1c1e;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .asset-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 28px;
+    border-bottom: 1px solid #1c1c1e;
+    font-size: 14px;
+  }
+
+  .asset-row:last-child { border-bottom: none; }
+
+  .asset-key { color: #48484a; }
+  .asset-val { color: #ebebf5cc; font-weight: 500; text-align: right; max-width: 60%; }
+
+  /* ── Opportunity ────────────────────────────── */
+  .opportunity-section {
+    padding: 72px 0;
+    border-bottom: 1px solid #1c1c1e;
+  }
+
+  .opp-intro {
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: -0.8px;
+    line-height: 1.15;
+    margin-bottom: 48px;
+    color: #fff;
+    max-width: 520px;
+  }
+
+  .opportunity-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .opportunity-card {
+    background: #0a0a0a;
+    border: 1px solid #1c1c1e;
+    border-radius: 20px;
+    padding: 40px 36px 36px;
+  }
+
+  .opp-type {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #48484a;
+    margin-bottom: 14px;
+  }
+
+  .opp-amount {
+    font-size: 52px;
+    font-weight: 700;
+    color: #30d158;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .opp-desc {
+    font-size: 14px;
+    color: #636366;
+    line-height: 1.65;
+  }
+
+  /* ── Contact ────────────────────────────────── */
+  .contact-section {
+    padding: 88px 0 0;
+    text-align: center;
+  }
+
+  .contact-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #48484a;
+    margin-bottom: 20px;
+  }
+
+  .contact-name {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+
+  .contact-info {
+    font-size: 17px;
+    color: #636366;
+    line-height: 2;
+  }
+
+  .contact-info a {
+    color: #30d158;
+    text-decoration: none;
+  }
+
+  .confidential {
+    margin-top: 60px;
+    padding-top: 32px;
+    border-top: 1px solid #1c1c1e;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #2c2c2e;
+  }
+
+  /* ── Print ──────────────────────────────────── */
+  @media print {
+    body { background: #fff; color: #000; }
+    .brand { -webkit-text-fill-color: #000; background: none; }
+    .stat-number { color: #000; }
+    .section-title { color: #000; }
+    .opp-amount { color: #1d7a3e; }
+    .credibility-number { color: #1d7a3e; }
+    .eyebrow, .stat-highlight, .feature-list li::before { color: #1d7a3e; }
+    .asset-card, .opportunity-card { border-color: #ddd; background: #fafafa; }
+    .asset-row { border-color: #eee; }
+    .asset-key { color: #666; }
+    .asset-val { color: #000; }
+    .opp-desc, .body-text, .credibility-desc, .asset-intro { color: #555; }
+    .header, .stats-section, .two-col, .credibility-section,
+    .asset-section, .opportunity-section, .contact-section { border-color: #eee; }
+    .confidential { border-color: #eee; color: #ccc; }
+    .opp-type, .section-label, .contact-eyebrow { color: #999; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="eyebrow">Cannabis Investment Opportunity &nbsp;·&nbsp; South Jersey</div>
+    <div class="brand">Cuzzie's</div>
+    <div class="tagline">Dispensary &amp; Delivery &nbsp;·&nbsp; Camden, NJ &nbsp;·&nbsp; June 2026</div>
+  </div>
+
+  <!-- Stats Hero -->
+  <div class="stats-section">
+    <div class="section-label">Proven Revenue — 14 Months of Operation</div>
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-number">$1.58M</div>
+        <div class="stat-label">Gross sales<br>Apr 2025 – Jun 2026</div>
+        <div class="stat-highlight">19,860 transactions</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">$120K</div>
+        <div class="stat-label">Peak single month<br>October 2025</div>
+        <div class="stat-highlight">6 consecutive months above $100K</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">6,024</div>
+        <div class="stat-label">Unique customers<br>on file</div>
+        <div class="stat-highlight">$57.40 average basket</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About + Situation -->
+  <div class="two-col">
+    <div>
+      <div class="section-title">The Business</div>
+      <ul class="feature-list">
+        <li>Active NJ-CRC Class 5 Retail License — 2750 Mt. Ephraim Ave, Camden NJ</li>
+        <li>Licensed delivery program serving South Jersey</li>
+        <li>Dutchie POS with live Weedmaps &amp; Leafly integrations</li>
+        <li>20+ established NJ cultivator relationships</li>
+        <li>6,024 verified unique customers on file</li>
+        <li>Lean two-principal operating model with on-site management</li>
+      </ul>
+    </div>
+    <div>
+      <div class="section-title">The Situation</div>
+      <p class="body-text">
+        Cuzzie's temporarily paused operations in June 2026 — not a license issue, not a product issue, not a market issue.
+      </p>
+      <p class="body-text" style="margin-top: 18px;">
+        The license is <strong>active</strong>. The POS, Weedmaps, and Leafly listings are <strong>live</strong>. The vendor network is <strong>intact</strong>. The customer base spent <strong>$1.58M</strong> over 14 months and is still there.
+      </p>
+      <p class="body-text" style="margin-top: 18px;">
+        We need a capital partner to get the doors back open.
+      </p>
+    </div>
+  </div>
+
+  <!-- Operator Credibility -->
+  <div class="credibility-section">
+    <div class="section-label">Operator Track Record</div>
+    <div class="credibility-number">144%</div>
+    <div class="credibility-desc">
+      Year-over-year revenue growth at <strong>The Station Newark</strong> — the sister location built and operated by the same team.
+    </div>
+  </div>
+
+  <!-- Asset Value -->
+  <div class="asset-section">
+    <div class="section-title">The Asset</div>
+    <p class="asset-intro">
+      Acquiring or recapitalizing a licensed NJ cannabis retailer from scratch costs <strong>$500K–$1M+</strong> and takes <strong>18–24 months</strong> through the CRC. It took Cuzzie's <strong>3 years</strong> to get open. Cuzzie's is turn-key — licensed, integrated, and already serving a proven market.
+    </p>
+    <div class="asset-card">
+      <div class="asset-row">
+        <span class="asset-key">Location</span>
+        <span class="asset-val">2750 Mt. Ephraim Ave, Unit C3 — Camden, NJ 08104</span>
+      </div>
+      <div class="asset-row">
+        <span class="asset-key">Lease term remaining</span>
+        <span class="asset-val">~7.5 years (expires Nov 7, 2033)</span>
+      </div>
+      <div class="asset-row">
+        <span class="asset-key">Lease assignability</span>
+        <span class="asset-val">Assignable per lease terms</span>
+      </div>
+      <div class="asset-row">
+        <span class="asset-key">Transaction history</span>
+        <span class="asset-val">19,860 transactions · 46,573 units sold</span>
+      </div>
+      <div class="asset-row">
+        <span class="asset-key">Platform integrations</span>
+        <span class="asset-val">Dutchie POS · Weedmaps · Leafly — live &amp; transferable</span>
+      </div>
+      <div class="asset-row">
+        <span class="asset-key">Vendor network</span>
+        <span class="asset-val">20+ established NJ cultivator accounts</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Opportunity -->
+  <div class="opportunity-section">
+    <div class="opp-intro">Two paths to get the doors back open.</div>
+    <div class="opportunity-grid">
+      <div class="opportunity-card">
+        <div class="opp-type">Bridge Round</div>
+        <div class="opp-amount">$125K</div>
+        <div class="opp-desc">
+          Reopen the storefront, restore inventory, and return to revenue. Repaid via weekly ACH from operations — a licensed, proven cash-flow machine already on the floor.
+        </div>
+      </div>
+      <div class="opportunity-card">
+        <div class="opp-type">Recapitalization</div>
+        <div class="opp-amount">$500K</div>
+        <div class="opp-desc">
+          Full reset. Clears the debt stack and secures the lease — MCA-free from day one. Investor picks up the Camden lease (assignable, 7.5 years). Growth position in a South Jersey market with limited licensed competition and a proven six-figure revenue engine already in place.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-section">
+    <div class="contact-eyebrow">Get in touch</div>
+    <div class="contact-name">Lemar Boone Jr.</div>
+    <div class="contact-info">
+      (856) 602-0820<br>
+      <a href="mailto:lemar@cuzziesnj.com">lemar@cuzziesnj.com</a>
+    </div>
+    <div class="confidential">Confidential &nbsp;·&nbsp; June 2026 &nbsp;·&nbsp; For discussion purposes only</div>
+  </div>
+
+</div>
+
+</body>
+</html>
