@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bridge Capital Opportunity — Cuzzie's</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #000;
+    color: #fff;
+    font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 48px 80px;
+  }
+
+  .header {
+    text-align: center;
+    padding: 88px 0 72px;
+    border-bottom: 1px solid #1c1c1e;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #ff9f0a;
+    margin-bottom: 20px;
+  }
+
+  .brand {
+    font-size: 68px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 14px;
+    background: linear-gradient(135deg, #ffffff 0%, #a1a1a6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .tagline {
+    font-size: 22px;
+    font-weight: 300;
+    color: #636366;
+    letter-spacing: 0.5px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #48484a;
+    margin-bottom: 48px;
+  }
+
+  .ask-section {
+    padding: 88px 0 72px;
+    border-bottom: 1px solid #1c1c1e;
+    text-align: center;
+  }
+
+  .ask-number {
+    font-size: 110px;
+    font-weight: 700;
+    color: #ff9f0a;
+    letter-spacing: -5px;
+    line-height: 1;
+    margin: 24px 0 24px;
+  }
+
+  .ask-desc {
+    font-size: 20px;
+    color: #636366;
+    max-width: 500px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+  }
+
+  .ask-desc strong { color: #ebebf5cc; }
+
+  .ask-pill {
+    display: inline-block;
+    background: #1c1c1e;
+    border: 1px solid #2c2c2e;
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-size: 14px;
+    color: #ff9f0a;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+
+  .repayment-section {
+    padding: 72px 0;
+    border-bottom: 1px solid #1c1c1e;
+  }
+
+  .section-title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+    color: #fff;
+  }
+
+  .repay-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .repay-card {
+    background: #0a0a0a;
+    border: 1px solid #1c1c1e;
+    border-radius: 20px;
+    padding: 36px 28px;
+    text-align: center;
+  }
+
+  .repay-number {
+    font-size: 40px;
+    font-weight: 700;
+    color: #ff9f0a;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    margin-bottom: 14px;
+  }
+
+  .repay-label {
+    font-size: 13px;
+    color: #636366;
+    line-height: 1.6;
+  }
+
+  .stats-section {
+    padding: 72px 0;
+    border-bottom: 1px solid #1c1c1e;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stat {
+    padding: 32px 24px;
+    text-align: center;
+    border-right: 1px solid #1c1c1e;
+  }
+
+  .stat:first-child { padding-left: 0; text-align: left; }
+  .stat:last-child { border-right: none; padding-right: 0; text-align: right; }
+
+  .stat-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: #636366;
+    line-height: 1.5;
+  }
+
+  .stat-highlight {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #ff9f0a;
+    font-weight: 500;
+  }
+
+  .in-place-section {
+    padding: 72px 0;
+    border-bottom: 1px solid #1c1c1e;
+  }
+
+  .checklist {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .checklist li {
+    padding: 16px 0;
+    font-size: 14px;
+    color: #ebebf5cc;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-bottom: 1px solid #1c1c1e;
+    line-height: 1.4;
+    padding-right: 24px;
+  }
+
+  .checklist li:nth-last-child(-n+2) { border-bottom: none; }
+
+  .check-icon {
+    width: 22px;
+    height: 22px;
+    background: #1c2e1c;
+    border: 1px solid #2a4a2a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 11px;
+    color: #30d158;
+  }
+
+  .operator-section {
+    padding: 80px 0;
+    border-bottom: 1px solid #1c1c1e;
+    text-align: center;
+  }
+
+  .operator-number {
+    font-size: 100px;
+    font-weight: 700;
+    color: #30d158;
+    letter-spacing: -4px;
+    line-height: 1;
+    margin: 24px 0 16px;
+  }
+
+  .operator-desc {
+    font-size: 19px;
+    color: #636366;
+    max-width: 440px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .operator-desc strong { color: #ebebf5cc; }
+
+  .risk-section {
+    padding: 72px 0;
+    border-bottom: 1px solid #1c1c1e;
+  }
+
+  .risk-intro {
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: -0.8px;
+    line-height: 1.15;
+    margin-bottom: 40px;
+    color: #fff;
+    max-width: 520px;
+  }
+
+  .detail-card {
+    background: #0a0a0a;
+    border: 1px solid #1c1c1e;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 18px 28px;
+    border-bottom: 1px solid #1c1c1e;
+    font-size: 14px;
+    gap: 24px;
+  }
+
+  .detail-row:last-child { border-bottom: none; }
+  .detail-key { color: #48484a; min-width: 180px; flex-shrink: 0; padding-top: 1px; }
+  .detail-val { color: #ebebf5cc; font-weight: 500; text-align: right; line-height: 1.5; }
+
+  .contact-section {
+    padding: 88px 0 0;
+    text-align: center;
+  }
+
+  .contact-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #48484a;
+    margin-bottom: 20px;
+  }
+
+  .contact-name {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+
+  .contact-info {
+    font-size: 17px;
+    color: #636366;
+    line-height: 2;
+  }
+
+  .contact-info a { color: #ff9f0a; text-decoration: none; }
+
+  .confidential {
+    margin-top: 60px;
+    padding-top: 32px;
+    border-top: 1px solid #1c1c1e;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #2c2c2e;
+  }
+
+  @media print {
+    body { background: #fff; color: #000; }
+    .brand { -webkit-text-fill-color: #000; background: none; }
+    .ask-number, .repay-number { color: #b36000; }
+    .stat-number, .section-title, .risk-intro { color: #000; }
+    .operator-number { color: #1d7a3e; }
+    .eyebrow, .stat-highlight, .ask-pill { color: #b36000; }
+    .ask-pill { background: #f5f5f5; border-color: #ddd; }
+    .repay-card, .detail-card { border-color: #ddd; background: #fafafa; }
+    .checklist li { border-color: #eee; }
+    .check-icon { background: #e8f5e9; border-color: #c8e6c9; }
+    .detail-key { color: #666; }
+    .detail-val, .contact-name { color: #000; }
+    .operator-desc, .ask-desc, .stat-label, .repay-label, .tagline { color: #555; }
+    .header, .ask-section, .repayment-section, .stats-section,
+    .in-place-section, .operator-section, .risk-section, .contact-section { border-color: #eee; }
+    .detail-row { border-color: #eee; }
+    .confidential { border-color: #eee; color: #ccc; }
+    .contact-info a { color: #b36000; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="eyebrow">Bridge Capital Opportunity &nbsp;&middot;&nbsp; South Jersey</div>
+    <div class="brand">Cuzzie's</div>
+    <div class="tagline">Licensed Retail &nbsp;&middot;&nbsp; Camden, NJ &nbsp;&middot;&nbsp; June 2026</div>
+  </div>
+
+  <div class="ask-section">
+    <div class="section-label">The Ask</div>
+    <div class="ask-number">$125K</div>
+    <p class="ask-desc">A <strong>90-day operational bridge</strong> to reopen a licensed retail business with a documented <strong>$1.58M revenue history</strong> over 14 months of uninterrupted operation.</p>
+    <div class="ask-pill">Repaid via weekly ACH from operations &mdash; not equity, not a note due at term</div>
+  </div>
+
+  <div class="repayment-section">
+    <div class="section-label">Repayment Structure</div>
+    <div class="section-title">Cash flow from operations. Not equity dilution.</div>
+    <div class="repay-grid">
+      <div class="repay-card">
+        <div class="repay-number">Weekly</div>
+        <div class="repay-label">ACH draws from operating revenue. Automatic. No invoice chasing, no balloon payment.</div>
+      </div>
+      <div class="repay-card">
+        <div class="repay-number">~6 mo</div>
+        <div class="repay-label">Estimated full repayment at $5&ndash;6K weekly draws, based on the documented revenue run rate.</div>
+      </div>
+      <div class="repay-card">
+        <div class="repay-number">$0</div>
+        <div class="repay-label">Equity given up. This is operational restart capital. Lender has no ownership stake.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-section">
+    <div class="section-label">Documented Revenue &mdash; 14 Months of Operation</div>
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-number">$1.58M</div>
+        <div class="stat-label">Gross sales<br>Apr 2025 &ndash; Jun 2026</div>
+        <div class="stat-highlight">19,860 transactions</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">$120K</div>
+        <div class="stat-label">Peak single month<br>October 2025</div>
+        <div class="stat-highlight">6 consecutive months above $100K</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">6,024</div>
+        <div class="stat-label">Unique customers<br>on file</div>
+        <div class="stat-highlight">$57.40 average basket</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="in-place-section">
+    <div class="section-label">What&rsquo;s Already In Place</div>
+    <div class="section-title">This isn&rsquo;t a startup. The infrastructure is live.</div>
+    <ul class="checklist">
+      <li><span class="check-icon">&#10003;</span> Active NJ Class 5 Retail License &mdash; CRC compliant</li>
+      <li><span class="check-icon">&#10003;</span> Dutchie POS system live and operational</li>
+      <li><span class="check-icon">&#10003;</span> Weedmaps &amp; Leafly listings &mdash; live and indexed</li>
+      <li><span class="check-icon">&#10003;</span> Licensed delivery program in place</li>
+      <li><span class="check-icon">&#10003;</span> 20+ established vendor accounts &mdash; ready to order</li>
+      <li><span class="check-icon">&#10003;</span> 6,024 verified customer accounts in POS</li>
+      <li><span class="check-icon">&#10003;</span> Lease secured through November 2033</li>
+      <li><span class="check-icon">&#10003;</span> On-site operations management in place</li>
+    </ul>
+  </div>
+
+  <div class="operator-section">
+    <div class="section-label">Operator Track Record</div>
+    <div class="operator-number">144%</div>
+    <div class="operator-desc">Year-over-year revenue growth at <strong>The Station Newark</strong> &mdash; the sister location built and operated by the same principal team that runs Cuzzie&rsquo;s.</div>
+  </div>
+
+  <div class="risk-section">
+    <div class="section-label">Due Diligence Summary</div>
+    <div class="risk-intro">A clean risk profile for bridge capital.</div>
+    <div class="detail-card">
+      <div class="detail-row">
+        <span class="detail-key">Capital use</span>
+        <span class="detail-val">Inventory restocking &amp; operating expenses &mdash; direct path to revenue</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-key">License status</span>
+        <span class="detail-val">Active &mdash; NJ CRC Class 5 retail, no compliance issues on record</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-key">Pause reason</span>
+        <span class="detail-val">Capital shortfall only &mdash; not a license, product, or market issue</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-key">Revenue basis</span>
+        <span class="detail-val">$1.58M over 14 months at this location &mdash; documented, not projected</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-key">Customer base</span>
+        <span class="detail-val">6,024 verified accounts, $57.40 average basket &mdash; still in the POS system</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-key">Repayment source</span>
+        <span class="detail-val">Same operating revenue that produced $1.58M on record &mdash; not a new business line</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-key">Location</span>
+        <span class="detail-val">2750 Mt. Ephraim Ave, Unit C3 &mdash; Camden, NJ 08104 (lease through Nov 2033)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-section">
+    <div class="contact-eyebrow">Get in touch</div>
+    <div class="contact-name">Lemar Boone Jr.</div>
+    <div class="contact-info">
+      (856) 602-0820<br>
+      <a href="mailto:lemar@cuzziesnj.com">lemar@cuzziesnj.com</a>
+    </div>
+    <div class="confidential">Confidential &nbsp;&middot;&nbsp; June 2026 &nbsp;&middot;&nbsp; For discussion purposes only</div>
+  </div>
+
+</div>
+</body>
+</html>
