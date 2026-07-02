@@ -1,0 +1,27 @@
+name: Scout Car Hunt
+
+# Cron is UTC. EDT (summer) = UTC-4, so 9am/1pm/5pm ET = 13,17,21 UTC.
+# EST (winter): shift to 14,18,22 UTC.
+on:
+  schedule:
+    - cron: "0 13,17,21 * * *" # 9am / 1pm / 5pm ET (EDT)
+  workflow_dispatch: {}
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Scout car hunt scan
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Run the "scout" skill (skills/scout/SKILL.md) end to end: Lane A
+            Gmail sweep, Lane B dealer web sweep, merge/score, dedupe against
+            the Car Search board, write new rows, and report to #car-search
+            and the Samira anchor item per the skill's instructions.
+          allowed_tools: |
+            WebSearch
