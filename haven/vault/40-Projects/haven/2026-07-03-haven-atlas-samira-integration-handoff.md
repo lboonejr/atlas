@@ -1,6 +1,6 @@
 ---
 created: 2026-07-03T00:00-04:00
-updated: 2026-07-03T00:00-04:00
+updated: 2026-07-03T12:00-04:00
 domain: project
 type: brief
 status: active
@@ -37,8 +37,9 @@ Nothing outward-facing gets wired without approval.
 - **Samira** is the executor (the worker who does them).
 - **Skills report to Haven.** The write path is `haven-capture`; the filing is
   `vault-keeper`.
-- **Conflict rule:** truth and *why* live in Haven; current status lives in
-  Monday. Binary files live in Drive.
+- **Surfaces (revised 2026-07-03):** Haven owns truth, *why*, **and** live status
+  (via the `status` field). **Google Calendar** is the alarm clock — the only
+  thing that fires timed alerts. **Monday is being retired.** Drive owns binaries.
 
 ---
 
@@ -66,6 +67,29 @@ of existing skills into Haven.
 
 ---
 
+## Decisions locked this session (2026-07-03)
+
+- **Monday: demote, then retire (staged).** Leave it running as-is now; build the
+  Haven-native replacements, prove they work, migrate the live items, then turn
+  Monday off. No cold cutover, no gap.
+- **Notifications reroute to Google Calendar.** Calendar becomes the alarm clock:
+  time-bound work gets put on the calendar, which fires native 24/7 phone alerts
+  independent of Claude and the loop. This closes the "alerts stop when the system
+  is down" gap that dropping Monday would otherwise open.
+- **The live board moves into Haven.** An Obsidian Dataview query over the `status`
+  field (`active / parked / done / archived`) rebuilds the at-a-glance board
+  inside the vault, replacing the Monday board view.
+- **Consequence:** the old vault↔Monday sync problem dissolves. There is no second
+  source of truth to reconcile — only a one-way push from Haven to Calendar for
+  anything time-bound.
+
+**Proposed schema addition (confirm before building):** add an optional `due`
+field (ISO 8601 ET) to the frontmatter standard. Notes with a `due` are what the
+loop pushes onto Google Calendar. Optional and additive — it does not touch the
+controlled lists.
+
+---
+
 ## The decision for this leg: Atlas/Samira integration FIRST
 
 Settle these before rerouting any skills. These are the real integration
@@ -80,14 +104,17 @@ questions — each one changes how Atlas and Samira behave day to day:
 3. **The capture path.** Confirm Atlas routes `atlas`-channel captures into
    `00-Inbox` as `.md` with frontmatter applied on the way in, via the
    `haven-capture` contract. Define who stamps `domain`/`type` at capture time.
-4. **Vault ↔ Monday sync direction.** "Vault-first, Monday downstream" needs a
-   concrete rule: when a capture lands, does it write to Haven only, or also
-   mirror a Monday item? Does `vault-keeper` read Monday status back into notes,
-   or stay one-way? Decide the reconciliation so the two never silently drift.
+4. **Calendar push (replaces the old Monday-sync question).** Define the one-way
+   path: which notes get a Google Calendar event (proposal: any note with a `due`
+   field), who creates/updates it, and how a note and its event stay matched
+   (e.g. store the event id back in the note). One direction only — Haven → Calendar.
 5. **Cadence.** Confirm the hourly loop runs the vault pass **seven days a week**,
    overriding the old Saturday-silent rule for this job (Lemar's latest lean = yes).
 6. **Status surfaces.** Confirm `vault-keeper` posts internal status to `#decisions`
    / the Open Items canvas, and never outward.
+7. **Monday retirement plan.** Sequence the wind-down: build the Dataview board +
+   Calendar alerts, verify, migrate the ~25 live Samira-board items into Haven,
+   then switch Monday off.
 
 ---
 
