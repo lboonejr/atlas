@@ -64,10 +64,29 @@ haven/
 ```
 
 The `vault/` here is a **seed** — the canonical skeleton, schema, templates, and
-example entities. The *live* vault runs through Obsidian's headless Sync client
-on the Atlas server (with this git repo as the no-subscription fallback), and
-Claude Code reads and writes the `.md` files directly. You read it through the
-Obsidian app; routines read and write it through Claude Code on the server.
+example entities.
+
+### The headless worker is transport-agnostic
+
+The autonomy of Atlas and Samira does **not** depend on Obsidian. The headless
+worker is nothing more than **file reads and writes on the `.md` files**:
+`git pull` → read/write markdown → `git commit` → `git push`. Git is the
+transport, and because the vault is just versioned text, every change is
+auditable and revertible. This is already how the vault operates today.
+
+Obsidian is a separate, optional layer: it is the **human's reader**, a window
+onto the same files on your own devices. **Obsidian Sync** is one way to mirror
+the vault to your phone/desktop for reading — convenient, but not required for
+the worker, and freely substitutable (the Obsidian Git plugin, or plain git,
+does the same job). Deferring or dropping Obsidian Sync changes nothing about
+how Atlas and Samira run; it only affects where a human can *read* Haven.
+
+```
+  Server (headless worker) ── git pull/push ──┐
+                                              ├──►  the Haven repo  ◄── canonical
+  Human's Obsidian (desktop/phone) ───────────┘        (git = transport)
+        (optional reader; add via Obsidian Sync or the Git plugin, any time)
+```
 
 ---
 
