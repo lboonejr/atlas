@@ -25,8 +25,15 @@ That works because of a hard rule:
 
 Everything that *is* platform-specific — the hourly loop, the Monday board
 registration, the Slack channels, the Samira executor wiring — lives in the
-**skills** (`../skills/`), never in the vault. The skills are the muscles; Haven
-is the memory. Swap the muscles, keep the memory.
+**skills** (`../.claude/skills/`), never in the vault. The skills are the muscles;
+Haven is the memory. Swap the muscles, keep the memory.
+
+> **Skills live in `../.claude/skills/`, not `../skills/`.** The Claude Code cloud
+> runtime (the headless worker that runs Atlas/Samira) only auto-discovers project
+> skills under `.claude/skills/<name>/SKILL.md`; a root-level `skills/` directory is
+> **not** loaded. Keeping the canonical skills there is what lets the scheduled cloud
+> routine actually invoke them. (`../skills/` retains only `star-craft`, inherited
+> from an earlier branch.)
 
 ### How to rehydrate Haven anywhere
 Because the vault is self-describing, any capable agent or app can pick it up
@@ -38,8 +45,8 @@ cold:
    frontmatter standard, and the deterministic filing rules. No outside context
    is required to understand or operate the vault.
 3. Point whatever new tool you are using at the same rules. Re-implement the
-   Inbox sweep (see `../skills/vault-keeper/SKILL.md` for the reference
-   procedure) in that tool's own terms.
+   Inbox sweep (see `../.claude/skills/haven-vault-keeper/SKILL.md` for the
+   reference procedure) in that tool's own terms.
 
 That is the entire migration. The vault is the asset; the tooling is replaceable.
 
@@ -97,8 +104,8 @@ how Atlas and Samira run; it only affects where a human can *read* Haven.
 - **Samira executes.** `vault-keeper` is a Samira executor job — the filing
   clerk that sweeps `00-Inbox` each pass and files valid notes by the schema.
 - **Every skill reports to Haven.** Any skill that produces something worth
-  remembering calls `haven-capture` (`../skills/haven-capture/`) to write a
-  properly-framed note into `00-Inbox`. That is the front door; vault-keeper is
+  remembering calls `haven-capture` (`../.claude/skills/haven-capture/`) to write
+  a properly-framed note into `00-Inbox`. That is the front door; vault-keeper is
   the back office.
 
 ```

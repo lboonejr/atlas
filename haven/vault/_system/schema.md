@@ -28,7 +28,7 @@ else. Any tool that can read a text file can read Haven. That is the whole point
   live status** (via the `status` field).
 - **Google Calendar** is the alarm clock — the only thing that fires timed alerts.
   It is a one-way *projection* of any note that carries a `due` date, never a
-  source of truth. (See `calendar-sync`.)
+  source of truth. (See `haven-calendar-sync`.)
 - **Drive owns** binary files: PDFs, invoices, Excel menus, images.
 - **Monday** is being retired. It is no longer a source of truth; do not write
   new truth to it. It stays running only until the Haven-native board and the
@@ -99,8 +99,8 @@ can drive downstream projections.
 
 | field              | meaning |
 |--------------------|---------|
-| `due`              | ISO 8601 with ET offset. Present only when the note is time-bound. Any note with a `due` is picked up by `calendar-sync` and projected onto Google Calendar. Truth lives here; the calendar is only a rendering of it. |
-| `calendar_event_id`| Machine-managed. Written back by `calendar-sync` after it creates the event, so the same note is never double-booked. Do not set it by hand. |
+| `due`              | ISO 8601 with ET offset. Present only when the note is time-bound. Any note with a `due` is picked up by `haven-calendar-sync` and projected onto Google Calendar. Truth lives here; the calendar is only a rendering of it. |
+| `calendar_event_id`| Machine-managed. Written back by `haven-calendar-sync` after it creates the event, so the same note is never double-booked. Do not set it by hand. |
 
 A note with **complete, valid** frontmatter files itself. A note **missing or
 malformed** frontmatter stays in `00-Inbox` until a human fixes it. That gap is
