@@ -92,8 +92,19 @@ Google Calendar.
 **New skill — BUILT 2026-07-03.** `skills/calendar-sync/SKILL.md` — the twin of
 `vault-keeper`. A Samira executor dispatched by Atlas on the same hourly loop;
 one-way Haven → Calendar; creates/updates/cancels events from `due` notes and
-writes the event id back so it never double-books. Still needs the Calendar
-connector authorized and the skill registered on board `18419004984` to go live.
+writes the event id back so it never double-books.
+
+**Go-live status (2026-07-03):**
+- ✅ Calendar connector authorized (reads confirmed — calendars listed).
+- ✅ Dedicated **Haven** calendar created; target id wired into the skill
+  (`c_383bbf77…935549@group.calendar.google.com`, America/New_York).
+- ✅ GitHub connector reconnected (PR #25 reads restored).
+- ⛔ **Calendar writes blocked in headless/non-interactive sessions** — creating
+  an event returns "requires approval." The loop must run where calendar writes
+  are permitted (interactive approval or an environment allow-rule). This is the
+  last blocker before the alarm clock actually rings, and it is a session-
+  permission matter, not a Haven design gap.
+- ☐ Register `calendar-sync` (and confirm `vault-keeper`) on board `18419004984`.
 
 ---
 

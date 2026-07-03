@@ -92,5 +92,12 @@ outward:
   (`18419004984`) as a **Samira executor** skill, alongside `vault-keeper`.
 - Dispatch: Atlas hourly loop, 8am–6pm, seven days a week (same loop as
   vault-keeper). The calendar itself fires reminders 24/7, independent of the loop.
-- Target calendar: Lemar's Google Calendar (via the Calendar connector).
+- Target calendar: the dedicated **Haven** calendar (via the Calendar connector) —
+  `c_383bbf77e22b75080885c4eb36e5e7e005e59c17a17bff751ece8e0e23935549@group.calendar.google.com`
+  (America/New_York). Everything writes here so Haven's auto-reminders can be
+  muted or toggled without touching Lemar's other calendars. This id is platform
+  wiring — it lives here in the skill, never in a vault note.
+- **Write approval:** creating/updating events is a mutating call. A headless/
+  non-interactive run hits an approval gate, so the loop must run where calendar
+  writes are permitted (interactive approval, or an environment allow-rule).
 - Status surface: `#decisions` / the Open Items canvas.
