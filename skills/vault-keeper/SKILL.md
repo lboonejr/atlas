@@ -107,9 +107,10 @@ Open Items canvas) — never outward:
 - **Never guess frontmatter** to force a note out of the Inbox. A stuck note is
   the system working, not failing.
 - **Never move `_daily` notes.**
-- **Do not replicate Monday.** Timed alerts and scheduled scans stay in Monday;
-  the conflict rule holds — truth and *why* live in Haven, current status lives
-  in Monday.
+- **Timed alerts are not your job.** Anything time-bound carries a `due` field
+  and is handled by `calendar-sync` → Google Calendar. vault-keeper only files.
+  The conflict rule holds — Haven is the source of truth; downstream surfaces
+  (Calendar, and Monday while it lingers) are renderings.
 - **Keep the vault portable.** Never write Claude-, Monday-, or Slack-specific
   syntax into a vault note. Platform wiring lives in this skill, not in Haven.
 

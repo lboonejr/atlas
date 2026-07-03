@@ -1,6 +1,6 @@
 ---
 created: 2026-07-03T00:00-04:00
-updated: 2026-07-03T12:00-04:00
+updated: 2026-07-03T14:30-04:00
 domain: project
 type: brief
 status: active
@@ -83,10 +83,17 @@ of existing skills into Haven.
   source of truth to reconcile — only a one-way push from Haven to Calendar for
   anything time-bound.
 
-**Proposed schema addition (confirm before building):** add an optional `due`
-field (ISO 8601 ET) to the frontmatter standard. Notes with a `due` are what the
-loop pushes onto Google Calendar. Optional and additive — it does not touch the
-controlled lists.
+**Schema addition — LOCKED 2026-07-03.** The optional `due` field (ISO 8601 ET)
+is now in `_system/schema.md`, plus a machine-managed `calendar_event_id`. Both
+are optional and additive — they do not touch the six required fields, so filing
+stays deterministic. A note with a `due` is what `calendar-sync` projects onto
+Google Calendar.
+
+**New skill — BUILT 2026-07-03.** `skills/calendar-sync/SKILL.md` — the twin of
+`vault-keeper`. A Samira executor dispatched by Atlas on the same hourly loop;
+one-way Haven → Calendar; creates/updates/cancels events from `due` notes and
+writes the event id back so it never double-books. Still needs the Calendar
+connector authorized and the skill registered on board `18419004984` to go live.
 
 ---
 

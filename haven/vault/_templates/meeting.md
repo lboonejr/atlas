@@ -6,6 +6,7 @@ type: meeting
 status: active
 tags: [meeting]
 source: {{source}}
+# due: 2026-07-08T09:00-04:00   # optional — add only if time-bound; calendar-sync will ring it
 ---
 
 # {{title}} — {{date}}

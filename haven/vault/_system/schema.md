@@ -22,17 +22,22 @@ else. Any tool that can read a text file can read Haven. That is the whole point
 
 ## 1. The one rule that makes it real
 
-**Every new capture writes to the vault first.** Monday and Drive are downstream.
+**Every new capture writes to the vault first.** Everything else is downstream.
 
-- **Haven owns** truth, context, decisions, and the narrative of every thread.
-- **Monday owns** live operational state and automations — the timed alerts and
-  scheduled scans a Markdown file cannot fire.
+- **Haven owns** truth, context, decisions, the narrative of every thread, **and
+  live status** (via the `status` field).
+- **Google Calendar** is the alarm clock — the only thing that fires timed alerts.
+  It is a one-way *projection* of any note that carries a `due` date, never a
+  source of truth. (See `calendar-sync`.)
 - **Drive owns** binary files: PDFs, invoices, Excel menus, images.
+- **Monday** is being retired. It is no longer a source of truth; do not write
+  new truth to it. It stays running only until the Haven-native board and the
+  Calendar alerts are proven, then it is switched off.
 
 ### Conflict resolution
-- Disagreement about **what is true or why** → the vault wins.
-- Disagreement about **current status** → Monday wins, because it is the live
-  execution surface.
+- Disagreement about **anything** → the vault wins. Downstream surfaces
+  (Calendar, and Monday while it lingers) are renderings; the next sync corrects
+  them to match Haven.
 
 ---
 
@@ -71,6 +76,7 @@ type: note                         # controlled — see below
 status: active                     # controlled — see below
 tags: []                           # open list, connect ideas freely
 source: manual                     # controlled — see below
+due: 2026-07-08T09:00-04:00        # OPTIONAL. Present only when the note is time-bound.
 ---
 ```
 
@@ -84,6 +90,17 @@ where the note came from.
 | `type`   | `note`, `meeting`, `decision`, `task`, `reference`, `entity`, `log`, `brief` |
 | `status` | `active`, `parked`, `done`, `archived` |
 | `source` | `slack`, `gmail`, `monday`, `drive`, `voice`, `claude`, `manual` |
+
+### Optional fields
+
+These are **not** part of the six required fields — a note files itself without
+them, and their absence never sends a note to the human. They exist so the note
+can drive downstream projections.
+
+| field              | meaning |
+|--------------------|---------|
+| `due`              | ISO 8601 with ET offset. Present only when the note is time-bound. Any note with a `due` is picked up by `calendar-sync` and projected onto Google Calendar. Truth lives here; the calendar is only a rendering of it. |
+| `calendar_event_id`| Machine-managed. Written back by `calendar-sync` after it creates the event, so the same note is never double-booked. Do not set it by hand. |
 
 A note with **complete, valid** frontmatter files itself. A note **missing or
 malformed** frontmatter stays in `00-Inbox` until a human fixes it. That gap is
