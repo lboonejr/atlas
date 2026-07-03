@@ -1,6 +1,6 @@
 # Haven
 
-**Haven is the source of truth.** If Atlas and Semira are people who do jobs,
+**Haven is the source of truth.** If Atlas and Samira are people who do jobs,
 Haven is the country they live in — the place where everything is, where every
 skill reports, and where the truth and the *why* of every thread are kept.
 
@@ -24,7 +24,7 @@ That works because of a hard rule:
 > inside a note's body or frontmatter. The vault is just notes.
 
 Everything that *is* platform-specific — the hourly loop, the Monday board
-registration, the Slack channels, the Semira executor wiring — lives in the
+registration, the Slack channels, the Samira executor wiring — lives in the
 **skills** (`../skills/`), never in the vault. The skills are the muscles; Haven
 is the memory. Swap the muscles, keep the memory.
 
@@ -71,11 +71,11 @@ Obsidian app; routines read and write it through Claude Code on the server.
 
 ---
 
-## How Haven connects to Atlas and Semira
+## How Haven connects to Atlas and Samira
 
 - **Atlas orchestrates.** On the hourly loop (8am–6pm, seven days a week) Atlas
   dispatches jobs.
-- **Semira executes.** `vault-keeper` is a Semira executor job — the filing
+- **Samira executes.** `vault-keeper` is a Samira executor job — the filing
   clerk that sweeps `00-Inbox` each pass and files valid notes by the schema.
 - **Every skill reports to Haven.** Any skill that produces something worth
   remembering calls `haven-capture` (`../skills/haven-capture/`) to write a
@@ -87,7 +87,7 @@ Obsidian app; routines read and write it through Claude Code on the server.
         │  haven-capture  (writes note → 00-Inbox)
         ▼
   Haven / 00-Inbox
-        │  vault-keeper   (Semira executor, hourly via Atlas)
+        │  vault-keeper   (Samira executor, hourly via Atlas)
         ▼
   filed by domain/type/status → the brain fills
 ```

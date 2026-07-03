@@ -10,7 +10,7 @@ source: manual
 
 # Haven — Home
 
-Welcome to Haven, the source of truth. If Atlas and Semira are people who do
+Welcome to Haven, the source of truth. If Atlas and Samira are people who do
 jobs, Haven is the country they live and work in. Everything flows through here.
 
 ## Start here
@@ -26,7 +26,7 @@ jobs, Haven is the country they live and work in. Everything flows through here.
 
 ## How the brain fills
 1. A capture is written to `00-Inbox` as a Markdown note with frontmatter.
-2. `vault-keeper` (a Semira executor, dispatched by Atlas on the hourly loop)
+2. `vault-keeper` (a Samira executor, dispatched by Atlas on the hourly loop)
    reads the Inbox and files each valid note by its `domain`/`type`/`status`.
 3. Notes that are missing frontmatter stay in the Inbox and get flagged.
 4. The maps of content and Open Items stay refreshed so navigation is current.

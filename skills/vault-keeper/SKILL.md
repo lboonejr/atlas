@@ -1,6 +1,6 @@
 ---
 name: vault-keeper
-description: Sweep the Haven Inbox and file each note into the vault by its frontmatter, following the Haven schema. Triggers when the user says things like "run vault-keeper", "file the inbox", "sweep Haven", "file my notes", or when Atlas dispatches the hourly vault pass. A Semira executor job.
+description: Sweep the Haven Inbox and file each note into the vault by its frontmatter, following the Haven schema. Triggers when the user says things like "run vault-keeper", "file the inbox", "sweep Haven", "file my notes", or when Atlas dispatches the hourly vault pass. A Samira executor job.
 ---
 
 # Vault Keeper
@@ -10,7 +10,7 @@ reads `00-Inbox`, files every note that has complete, valid frontmatter into its
 proper folder, and leaves everything else in the Inbox for a human to fix. It
 moves files and posts internal status only — it never sends anything outward.
 
-This is a **Semira executor** job. **Atlas** dispatches it on the hourly loop
+This is a **Samira executor** job. **Atlas** dispatches it on the hourly loop
 (8am–6pm, seven days a week — this job overrides the Saturday-silent rule). It is
 not a standalone system; it is one recurring job on the existing orchestrator.
 
@@ -116,8 +116,8 @@ Open Items canvas) — never outward:
 ## Registration & wiring (operational, not part of the vault)
 
 - Register vault-keeper on the **Atlas Skills and Accounts Registry** board
-  (`18419004984`) as a **Semira executor** skill.
-- Semira operational board: `18418714876`. Semira Slack ID `U0BC5UTHYG4`.
-- Two-channel Slack: `atlas` for input, `decisions` for action. Semira owns
+  (`18419004984`) as a **Samira executor** skill.
+- Samira operational board: `18418714876`. Samira Slack ID `U0BC5UTHYG4`.
+- Two-channel Slack: `atlas` for input, `decisions` for action. Samira owns
   execution.
 - Dispatch: Atlas hourly loop, 8am–6pm, seven days a week.
