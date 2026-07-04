@@ -31,8 +31,8 @@ A stuck note is the system working. The gap is the enforcement mechanism (schema
 ## HAVEN VAULT ANCHORS
 
 ```
-Repo:            lboonejr/atlas   ·   branch: claude/haven-knowledge-system-4tp4sa   ·   draft PR #25
-Vault (canonical):  haven/vault/          Schema (rulebook):  haven/vault/_system/schema.md
+Repo:            lboonejr/atlas   ·   branch: claude/star-crash-thread-context-2npbr   ·   PR #25 merged 2026-07-03
+Vault (canonical):  haven/vault/          Schema (rulebook):  haven/vault/_system/schema.md   Skills (canonical): .claude/skills/
 Transport:          GitHub connector. Pull latest → move/rename notes + touch `updated` → commit → push.
 DO NOT WRITE the local reader copy at C:\Users\lemar\Vaults\Haven (no .git, may drift).
 Surface stuck notes to Lemar in Slack #decisions  C0BBXA96FFV  (one card, batched — see "Surfacing").
@@ -55,7 +55,7 @@ rules is unclear — that file wins over this one if they ever disagree.
    |----------|----------------|
    | `created`| present, ISO 8601 |
    | `updated`| present, ISO 8601 |
-   | `domain` | `personal` · `cuzzies` · `station` · `project` · `reference` |
+   | `domain` | `personal` · `cuzzies` · `station` · `project` · `reference` · `legal` |
    | `type`   | `note` · `meeting` · `decision` · `task` · `reference` · `entity` · `log` · `brief` |
    | `status` | `active` · `parked` · `done` · `archived` |
    | `tags`   | present (may be empty `[]`) |
@@ -71,13 +71,17 @@ rules is unclear — that file wins over this one if they ever disagree.
       Archived is checked first because it overrides domain placement.
 
    b. Otherwise **file by `domain`:**
-      - `personal`  → `10-Personal/`
+      - `personal`  → `10-Personal/`, **and if the optional `area` is set** (`money`/`health`/
+        `home`/`family`) → `10-Personal/<Area>/` (capitalized). A `personal` note with NO
+        `area` files to the `10-Personal/` root — missing `area` is NOT a gap; never park a
+        personal note for lacking one.
       - `cuzzies`   → `20-Cuzzies/`
       - `station`   → `30-Station/`
       - `project`   → `40-Projects/<project>/`  (use the note's project tag/slug for
         `<project>`; if no project subfolder is named, leave the note in the Inbox and
         surface it — "which project?" is a controlled gap, not a guess to make)
       - `reference` → `50-Reference/`, **and if `type: entity`** → `50-Reference/Entities/`
+      - `legal`     → `60-Legal/`
 
    c. **Inside a business domain** (`cuzzies`, `station`), sort by `type`:
       - `meeting`  → `<domain>/meetings/`
@@ -143,9 +147,12 @@ domain; next sweep files it. No guessing anywhere.
 
 ---
 
-## Scope note (pending, not this build)
-The approved schema edits — a `legal` domain + top-level Legal folder + filing rule, and
-splitting `10-Personal` into Money/Health/Home/Family — are NOT yet in the schema. Until
-`haven/vault/_system/schema.md` carries them, vault-keeper files against the five domains
-above only. When those land, add: `legal` → `Legal/`, and personal sub-area routing. Do
-not pre-implement rules the schema does not yet state.
+## Scope note (schema edits — now landed 2026-07-03)
+The previously-deferred schema edits are now in `haven/vault/_system/schema.md` and active
+above: the `legal` domain + top-level `60-Legal/` folder + filing rule, and the split of
+`10-Personal` into `Money`/`Health`/`Home`/`Family` via the optional `area` field. vault-keeper
+now files against **six** domains (`personal`, `cuzzies`, `station`, `project`, `reference`,
+`legal`) and routes personal notes by `area` when present. `area` is OPTIONAL — a personal note
+without it is never stuck; it just files to the `10-Personal/` root. Still NOT in scope here:
+the done=filed-note cutover for the loop skills, the Haven Dataview board, and the Monday
+switch-off. Do not pre-implement rules the schema does not yet state.

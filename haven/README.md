@@ -59,11 +59,12 @@ haven/
 ├── README.md              this file — what Haven is and the portability contract
 └── vault/                 the portable brain (plain Markdown, no tool lock-in)
     ├── 00-Inbox/          everything lands here first, unfiled
-    ├── 10-Personal/       life, finances, housing, vehicles, writing
+    ├── 10-Personal/       life & family (Money/ Health/ Home/ Family/ sub-areas via `area`)
     ├── 20-Cuzzies/        Cuzzie's ops (meetings/, decisions/)
     ├── 30-Station/        The Station ops (meetings/, decisions/)
     ├── 40-Projects/       cross-cutting or multi-phase work
     ├── 50-Reference/      evergreen reference + Entities/ (canonical, cross-domain)
+    ├── 60-Legal/          active legal matters (domain `legal`)
     ├── 90-Archive/        archived notes, original domain path preserved
     ├── _daily/            one append-only log note per day
     ├── _templates/        note, meeting, decision, entity, daily
@@ -128,12 +129,15 @@ schema and this note if you want a different call.
 1. **Cadence** — vault-keeper runs on the hourly loop **seven days a week**,
    overriding the old "Saturday is silent" rule for this specific job (your
    latest instruction). 
-2. **Personal** — kept **flat** (`10-Personal`) for now; not split into
-   father's-entities / finance / writing sub-domains yet.
+2. **Personal** — **split** (2026-07-03) into `10-Personal/Money`, `/Health`, `/Home`,
+   `/Family` via the optional `area` frontmatter field. A personal note with no `area`
+   still files to the `10-Personal/` root, so the split never blocks filing.
 3. **Projects** — kept as a **top-level `40-Projects`**, not nested under each
    business.
-4. **Legal** — kept under **`50-Reference/Entities`** for now. Given the two
-   active evictions, say the word and it gets promoted to a top-level folder.
+4. **Legal** — **promoted** (2026-07-03) to a top-level domain + folder: `legal` →
+   `60-Legal/`, for active legal matters (the two evictions, filings, counsel threads).
+   Canonical legal *entities* (a counterparty, counsel) can still live in
+   `50-Reference/Entities`; the active *matter* is `domain: legal`.
 5. **Capture wiring** — Atlas routes `atlas`-channel captures into `00-Inbox`
    automatically, frontmatter applied on the way in (via the `haven-capture`
    contract).
