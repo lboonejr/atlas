@@ -1,6 +1,6 @@
 ---
 created: 2026-07-03T00:00-04:00
-updated: 2026-07-03T00:00-04:00
+updated: 2026-07-04T12:00-04:00
 domain: reference
 type: reference
 status: active
@@ -30,9 +30,9 @@ else. Any tool that can read a text file can read Haven. That is the whole point
   It is a one-way *projection* of any note that carries a `due` date, never a
   source of truth. (See `haven-calendar-sync`.)
 - **Drive owns** binary files: PDFs, invoices, Excel menus, images.
-- **Monday** is being retired. It is no longer a source of truth; do not write
-  new truth to it. It stays running only until the Haven-native board and the
-  Calendar alerts are proven, then it is switched off.
+- **Monday is being retired — gate reviews 2026-07-11.** It is not a source of
+  truth; do not write new truth to it. The mirror runs only until the gate (7 clean
+  days: every result has a matching Haven note, zero discrepancies), then it drops.
 
 ### Conflict resolution
 - Disagreement about **anything** → the vault wins. Downstream surfaces
@@ -53,7 +53,8 @@ else. Any tool that can read a text file can read Haven. That is the whole point
    Entities/    businesses, vendors, people, accounts (canonical, cross-domain)
 60-Legal        active legal matters (evictions, filings, counsel threads) — domain `legal`
 90-Archive      anything archived, original domain path preserved
-_daily          one log note per day, YYYY-MM-DD, append-only
+_daily          one log note per day, YYYY-MM-DD, append-only — ALSO the run journal:
+                Samira appends her run digest here at the end of every scan
 _templates      note, meeting, decision, entity, daily
 _system         this schema, the home note, and the maps of content
 ```
@@ -91,8 +92,14 @@ where the note came from.
 |----------|----------------|
 | `domain` | `personal`, `cuzzies`, `station`, `project`, `reference`, `legal` |
 | `type`   | `note`, `meeting`, `decision`, `task`, `reference`, `entity`, `log`, `brief` |
-| `status` | `active`, `parked`, `done`, `archived` |
+| `status` | `active`, `parked`, `done`, `archived`, `awaiting-decision` |
 | `source` | `slack`, `gmail`, `monday`, `drive`, `voice`, `claude`, `manual` |
+
+**The decision rule:** any note whose substance is a decision Lemar made — an option he
+picked, an approval he gave, a direction he chose — is **`type: decision`**, never `log`
+or `note`. It files to `<domain>/decisions/` and is the record future-you searches for.
+A `log` records what happened; a `decision` records what was CHOSEN and why. When a
+single event contains both, the decision wins the type.
 
 ### Optional fields
 
@@ -146,10 +153,45 @@ surfaced to a human. No guessing, ever.
 - Entities: one canonical file per real-world thing in `50-Reference/Entities`.
   Everything else links to it; it is never duplicated under a business folder.
 
----
-
 ## 6. Links, not copies
 
 Reference an entity or decision by wiki-link (`[[cuzzies]]`, `[[2026-07-03-...]]`)
 rather than pasting its contents. One fact, one home. This keeps Haven consistent
 and keeps the graph navigable in Obsidian.
+
+When a note names a recurring counterparty (a vendor, lender, bank, service) that has
+no entity note yet, create a stub in `50-Reference/Entities/` (from `_templates/entity.md`,
+even two lines is enough) and wiki-link it — a link that resolves is worth ten that dangle.
+
+## 7. Threads: update, don't fragment
+
+One matter, one note. When new information arrives on a matter that already has an
+**active** note (same invoice, same deal, same dispute), **append to that note** instead
+of creating a sibling:
+
+```markdown
+## Update 2026-07-04
+[what changed, what was done, what is now blocked/next]
+```
+
+Touch `updated` (this is the one sanctioned body edit — appending an Update section
+never rewrites existing content). Create a NEW note only for a genuinely new matter, or
+when the old one is `done`/`archived` (then wiki-link the old one). Capture tools must
+search for an existing active note on the matter before writing a new one.
+
+## 8. Provenance: the `## Sources` section
+
+Platform references — a Slack permalink, a Gmail thread id, a Drive folder link, a
+Monday item (while it lasts) — are welcome **as provenance, never as load-bearing
+state**. They go in a `## Sources` section at the bottom of the note, one per line:
+
+```markdown
+## Sources
+- slack: https://…/archives/C0BBXA96FFV/p1783… (decision thread)
+- gmail: thread 19f24ea3bd41fa12 (invoice PDF attached)
+- drive: https://drive.google.com/… (data room)
+```
+
+The note must stand on its own if every link dies: amounts, dates, names, and outcomes
+live in the body, not behind the links. Never put an ID in prose that the reader must
+dereference to understand the note.
