@@ -45,12 +45,13 @@ else. Any tool that can read a text file can read Haven. That is the whole point
 
 ```
 00-Inbox        everything lands here first, unfiled
-10-Personal     life, finances, housing, vehicles, writing
+10-Personal     life & family, with Money/ Health/ Home/ Family/ sub-areas (see `area` below)
 20-Cuzzies      Cuzzie's ops, with meetings/ and decisions/ subfolders
 30-Station      The Station ops, with meetings/ and decisions/ subfolders
 40-Projects     cross-cutting or multi-phase work, one subfolder each
 50-Reference    evergreen reference, plus Entities/
-   Entities/    businesses, vendors, people, accounts, legal (canonical, cross-domain)
+   Entities/    businesses, vendors, people, accounts (canonical, cross-domain)
+60-Legal        active legal matters (evictions, filings, counsel threads) — domain `legal`
 90-Archive      anything archived, original domain path preserved
 _daily          one log note per day, YYYY-MM-DD, append-only
 _templates      note, meeting, decision, entity, daily
@@ -58,8 +59,10 @@ _system         this schema, the home note, and the maps of content
 ```
 
 **Principle: folders are for humans, frontmatter is for the machine.**
-Cross-domain objects — a vendor serving both stores, a person, a legal matter —
-live in `50-Reference/Entities`, never trapped under one business.
+Cross-domain objects — a vendor serving both stores, a person, an account —
+live in `50-Reference/Entities`, never trapped under one business. (An active
+legal *matter* is its own domain, `legal` → `60-Legal/`; the counsel or
+counterparty behind it can still have a canonical entity note in Entities.)
 
 ---
 
@@ -86,7 +89,7 @@ where the note came from.
 
 | field    | allowed values |
 |----------|----------------|
-| `domain` | `personal`, `cuzzies`, `station`, `project`, `reference` |
+| `domain` | `personal`, `cuzzies`, `station`, `project`, `reference`, `legal` |
 | `type`   | `note`, `meeting`, `decision`, `task`, `reference`, `entity`, `log`, `brief` |
 | `status` | `active`, `parked`, `done`, `archived` |
 | `source` | `slack`, `gmail`, `monday`, `drive`, `voice`, `claude`, `manual` |
@@ -101,6 +104,7 @@ can drive downstream projections.
 |--------------------|---------|
 | `due`              | ISO 8601 with ET offset. Present only when the note is time-bound. Any note with a `due` is picked up by `haven-calendar-sync` and projected onto Google Calendar. Truth lives here; the calendar is only a rendering of it. |
 | `calendar_event_id`| Machine-managed. Written back by `haven-calendar-sync` after it creates the event, so the same note is never double-booked. Do not set it by hand. |
+| `area`             | **Personal notes only.** One of `money` · `health` · `home` · `family`. When present, vault-keeper files the note into `10-Personal/<Area>/` (capitalized). When absent, the note files to `10-Personal/` root — its absence never sends a note to a human. Ignored on non-`personal` domains. |
 
 A note with **complete, valid** frontmatter files itself. A note **missing or
 malformed** frontmatter stays in `00-Inbox` until a human fixes it. That gap is
@@ -113,11 +117,12 @@ the enforcement mechanism, not a bug — never guess a label to move a note out.
 Applied to every note in `00-Inbox` that has complete, valid frontmatter:
 
 1. **File by `domain`:**
-   - `personal`  → `10-Personal/`
+   - `personal`  → `10-Personal/` (if `area` is set → `10-Personal/<Area>/`, i.e. `Money`/`Health`/`Home`/`Family`; if `area` is absent, the domain root is a valid home — do NOT treat missing `area` as a gap)
    - `cuzzies`   → `20-Cuzzies/`
    - `station`   → `30-Station/`
    - `project`   → `40-Projects/<project>/`
    - `reference` → `50-Reference/` (if `type: entity`, → `50-Reference/Entities/`)
+   - `legal`     → `60-Legal/`
 2. **Inside a business domain (`cuzzies`, `station`), sort by `type`:**
    - `meeting`  → `<domain>/meetings/`
    - `decision` → `<domain>/decisions/`
