@@ -28,8 +28,8 @@ The rule this skill enforces, above all others:
 ## HAVEN VAULT ANCHORS (shared across haven-capture, haven-vault-keeper, haven-calendar-sync, Atlas, Samira)
 
 ```
-Repo:            lboonejr/atlas   ·   branch: claude/haven-knowledge-system-4tp4sa   ·   draft PR #25
-Vault (canonical):  haven/vault/          Skills (canonical):  skills/
+Repo:            lboonejr/atlas   ·   branch: claude/star-crash-thread-context-2npbr   ·   PR #25 merged 2026-07-03
+Vault (canonical):  haven/vault/          Skills (canonical):  .claude/skills/
 Inbox:              haven/vault/00-Inbox/
 Schema (rulebook):  haven/vault/_system/schema.md
 Templates:          haven/vault/_templates/   (note · meeting · decision · entity · daily)
@@ -57,12 +57,13 @@ A Haven note is plain Markdown with a YAML frontmatter block. Every note carries
 ---
 created: 2026-07-03T14:32-04:00    # ISO 8601 with ET offset. Set once, at capture, never changed.
 updated: 2026-07-03T14:32-04:00    # Same as created at capture time.
-domain: cuzzies                     # controlled — personal | cuzzies | station | project | reference
+domain: cuzzies                     # controlled — personal | cuzzies | station | project | reference | legal
 type: note                          # controlled — note | meeting | decision | task | reference | entity | log | brief
 status: active                      # controlled — active | parked | done | archived
 tags: [invoice, harvest-moon]       # open list — connect ideas freely
 source: slack                       # controlled — slack | gmail | monday | drive | voice | claude | manual
 # due: 2026-07-08T09:00-04:00       # OPTIONAL — add ONLY when the note is time-bound; calendar-sync will ring it
+# area: money                       # OPTIONAL, personal notes only — money | health | home | family (files into 10-Personal/<Area>/)
 ---
 ```
 
@@ -88,7 +89,7 @@ Emit an unresolved controlled field as the key with an empty value and an inline
 comment naming the choices, so it is obvious in Obsidian and to vault-keeper:
 
 ```yaml
-domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference
+domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal
 ```
 
 A note with any UNRESOLVED (or absent, or out-of-list) controlled field **cannot be
@@ -115,11 +116,15 @@ guessing — resolving it is Lemar's one-tap job.
   default. Stamp it only when the note clearly belongs to one:
   `cuzzies` (Cuzzie's, Camden), `station` (The Station, Newark), `personal` (Lemar's
   life, money, home, family, vehicles), `project` (cross-cutting/multi-phase work),
-  `reference` (evergreen or a cross-domain entity). If the input could plausibly be two
+  `reference` (evergreen or a cross-domain entity), `legal` (an active legal matter —
+  an eviction, a filing, a counsel thread). If the input could plausibly be two
   domains, or you're inferring rather than reading it, **leave `domain` UNRESOLVED.**
 
 `tags` is open — add a few honest tags from the content; never blocks filing.
-`created`/`updated` are always stamped.
+`created`/`updated` are always stamped. **`area`** is an OPTIONAL personal-only field
+(`money`/`health`/`home`/`family`): stamp it only when the note is clearly `personal` AND
+the sub-area is obvious; otherwise leave it off — its absence just files the note to the
+`10-Personal/` root, never sends it to Lemar.
 
 ---
 
@@ -150,13 +155,19 @@ Capture enough that the note stands on its own later; don't pad.
 The loop is always the same — pull → write the `.md` into `00-Inbox` → commit `capture: <slug>`
 → push — but **how** you run git depends on the surface. Pick the one that matches where you are:
 
-### Desktop (Claude Code, this machine) — PROVEN, use raw git via the Bash tool
+### Desktop (Claude Code, this machine) — prefer the GitHub MCP connector
 
-There is a persistent working clone at **`C:\Users\lemar\Haven-repo`**. Git Credential Manager
-holds the GitHub token, so pull/push need no extra auth. Run, against that clone:
+⚠️ On Lemar's machine, direct `git` traffic to **github.com is network-blocked** (only the
+raw.githubusercontent.com CDN and the cloud-routed GitHub MCP connector get through). So the
+raw-git clone below often fails at `push`. **Preferred desktop path: use the GitHub MCP tools**
+(`get_file_contents` / `create_or_update_file` / `push_files`) to commit the note straight to the
+branch — that is what works from here. The raw-git clone is a fallback for when github.com is
+reachable (e.g. on a phone hotspot).
+
+Raw-git fallback (only when github.com is reachable), against the persistent clone:
 
 ```bash
-REPO="C:/Users/lemar/Haven-repo"; BR="claude/haven-knowledge-system-4tp4sa"
+REPO="C:/Users/lemar/Haven-repo"; BR="claude/star-crash-thread-context-2npbr"
 # 1. Ensure the clone exists and is current (self-heals if it was removed):
 [ -d "$REPO/.git" ] || git clone --branch "$BR" --single-branch https://github.com/lboonejr/atlas.git "$REPO"
 git -C "$REPO" fetch -q origin "$BR" && git -C "$REPO" checkout -q "$BR" && git -C "$REPO" pull -q --ff-only origin "$BR"
@@ -229,7 +240,7 @@ Contrast — same capture, but Lemar just says *"shortlist this: confirm the cou
 we pay 2425"* with no vendor and no store named. Now `domain` is a guess, so:
 
 ```yaml
-domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference
+domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal
 type: task
 status: active
 tags: [invoice, accounts-payable]

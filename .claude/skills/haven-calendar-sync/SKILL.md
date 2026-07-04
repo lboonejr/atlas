@@ -30,8 +30,8 @@ The rule it never breaks:
 ## HAVEN VAULT ANCHORS
 
 ```
-Repo:            lboonejr/atlas   ·   branch: claude/haven-knowledge-system-4tp4sa   ·   draft PR #25
-Vault (canonical):  haven/vault/          Schema (rulebook):  haven/vault/_system/schema.md
+Repo:            lboonejr/atlas   ·   branch: claude/star-crash-thread-context-2npbr   ·   PR #25 merged 2026-07-03
+Vault (canonical):  haven/vault/          Schema (rulebook):  haven/vault/_system/schema.md   Skills (canonical): .claude/skills/
 Transport:          GitHub connector. Pull latest → read `due` notes → write back `calendar_event_id` → commit → push.
 DO NOT WRITE the local reader copy at C:\Users\lemar\Vaults\Haven (no .git, may drift).
 Reminder calendar (the ONLY target — personal, NOT Lemar's business primary):
