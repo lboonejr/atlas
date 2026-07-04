@@ -7,46 +7,55 @@ description: >
   law is "capture-first: the vault is written before anything downstream." It stamps
   ONLY the controlled fields it is sure of (domain, type, status, source) and leaves
   any it is unsure of blank and marked UNRESOLVED, so vault-keeper parks the note in
-  the Inbox for Lemar to resolve rather than guessing a label. Use it whenever Atlas
-  or Samira catches something that belongs in Haven: "shortlist this", a brain-dump,
-  a meeting note, a decision, an email-derived task, a captured idea. It writes the
-  note and nothing else — it never files, never touches the calendar, never sends.
+  the Inbox for Lemar to resolve rather than guessing a label. If the matter already
+  has an active note in the vault, it APPENDS an Update section to that note instead
+  of creating a duplicate. Use it whenever Atlas or Samira catches something that
+  belongs in Haven. It writes the note and nothing else — it never files, never
+  touches the calendar, never sends.
 ---
 
 # haven-capture — the front door of the vault
 
 Haven is the source of truth (see `haven/vault/_system/schema.md`). This skill is the
-**only** sanctioned way to put a new note into it. Its whole job is: take a captured
-thing and land one valid Markdown note in `00-Inbox`. Filing it, ringing it on the
-calendar, and mirroring it to Monday are other jobs — not this one.
+**only** sanctioned way to put new content into it. Its whole job is: take a captured
+thing and land it as one valid Markdown note (or one Update section on the matter's
+existing note). Filing, ringing the calendar, and mirroring are other jobs — not this one.
 
 The rule this skill enforces, above all others:
 
-> **Capture-first is law. The vault note is written before Monday, before Slack,
+> **Capture-first is law. The vault is written before Monday, before Slack,
 > before anything downstream.** If the vault write fails, nothing downstream runs.
 
-## HAVEN VAULT ANCHORS (shared across haven-capture, haven-vault-keeper, haven-calendar-sync, Atlas, Samira)
-
-```
-Repo:            lboonejr/atlas   ·   branch: claude/star-crash-thread-context-2npbr   ·   PR #25 merged 2026-07-03
-Vault (canonical):  haven/vault/          Skills (canonical):  .claude/skills/
-Inbox:              haven/vault/00-Inbox/
-Schema (rulebook):  haven/vault/_system/schema.md
-Templates:          haven/vault/_templates/   (note · meeting · decision · entity · daily)
-Transport:          git — pull latest → write the .md → commit → push. That is the whole loop.
-                    HOW the git happens depends on the surface you are running on (see "The write" below).
-Desktop working clone: C:\Users\lemar\Haven-repo  (full clone of lboonejr/atlas on the branch above;
-                    Git Credential Manager supplies the GitHub token, so `git push` just works — no MCP GitHub tool needed).
-DO NOT WRITE the local reader copy at C:\Users\lemar\Vaults\Haven (no .git, may drift — read-only for humans in Obsidian).
-Reminder calendar (calendar-sync target):
-    c_205bab62b8bb2c4fe12eec38bbc6725abaf6f5f11b767fe99a542112cf5695d3@group.calendar.google.com
-```
+## ANCHORS
+All platform IDs live in ONE file: **`.claude/anchors.md`** at the repo root — read it at
+the start of a run; never keep a local copy of it. Constants for this skill:
+- Vault: `haven/vault/` · Inbox `haven/vault/00-Inbox/` · schema `haven/vault/_system/schema.md`
+  · templates `haven/vault/_templates/` — on repo `lboonejr/atlas`, **default branch**.
+- Transport: git — pull latest → write the .md → commit → push (see "The write").
+- DO NOT write the retired local reader copy `C:\Users\lemar\Vaults\Haven`.
 
 If you have no way to commit to the repo on your surface, STOP and say so — do not fall
-back to writing the local reader copy, and do not skip the vault write and go straight to
-Monday. The vault write is the capture; without it there is no capture.
+back to the reader copy, and do not skip the vault write and go straight to Monday. The
+vault write is the capture; without it there is no capture.
 
 ---
+
+## Step zero: does this matter already have a note? (schema §7)
+
+One matter, one note. Before writing anything, SEARCH the vault (filed folders +
+`00-Inbox`) for an existing **active** note on the same matter — same invoice number,
+same deal, same dispute, same thread.
+
+- **Found, and still `active`/`awaiting-decision`** → do NOT create a sibling. APPEND to
+  that note:
+  ```markdown
+  ## Update 2026-07-04
+  [what changed / what was done / what is now blocked or next]
+  ```
+  Touch `updated`, add any new `## Sources` lines, commit `update: <slug>`. Appending an
+  Update section is the one sanctioned body edit — it never rewrites existing content.
+- **Found but `done`/`archived`** → new matter: write a new note and wiki-link the old one.
+- **Not found** → write a new note (below).
 
 ## What you produce: one note
 
@@ -59,11 +68,11 @@ created: 2026-07-03T14:32-04:00    # ISO 8601 with ET offset. Set once, at captu
 updated: 2026-07-03T14:32-04:00    # Same as created at capture time.
 domain: cuzzies                     # controlled — personal | cuzzies | station | project | reference | legal
 type: note                          # controlled — note | meeting | decision | task | reference | entity | log | brief
-status: active                      # controlled — active | parked | done | archived
+status: active                      # controlled — active | parked | done | archived | awaiting-decision
 tags: [invoice, harvest-moon]       # open list — connect ideas freely
 source: slack                       # controlled — slack | gmail | monday | drive | voice | claude | manual
 # due: 2026-07-08T09:00-04:00       # OPTIONAL — add ONLY when the note is time-bound; calendar-sync will ring it
-# area: money                       # OPTIONAL, personal notes only — money | health | home | family (files into 10-Personal/<Area>/)
+# area: money                       # OPTIONAL, personal notes only — money | health | home | family
 ---
 ```
 
@@ -94,8 +103,7 @@ domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project |
 
 A note with any UNRESOLVED (or absent, or out-of-list) controlled field **cannot be
 filed deterministically**, so vault-keeper leaves it in `00-Inbox` and surfaces it to
-Lemar. That stuck note is the system working, not failing. Never resolve the gap by
-guessing — resolving it is Lemar's one-tap job.
+Lemar. That stuck note is the system working, not failing.
 
 ### How sure is "sure" per field
 
@@ -103,113 +111,95 @@ guessing — resolving it is Lemar's one-tap job.
   chat = `claude`. From #atlas or any Slack message = `slack`. From the email loop =
   `gmail`. A voice note = `voice`. A human typing directly = `manual`. Stamp it.
 - **status** — default `active`. Use `done` only if the captured thing is already
-  finished (a record of something closed), `parked` if explicitly on hold. Rarely
-  unresolved.
-- **type** — infer from shape, and stamp when the shape is unambiguous:
-  `meeting` (notes from a meeting), `decision` (a choice made, with reasoning to
-  preserve), `task` (a concrete to-do), `brief` (a worked-up project brief),
-  `reference`/`entity` (evergreen facts / a business, vendor, person, account, legal
-  matter), `log` (a dated running log), else `note`. When genuinely torn between two,
-  prefer `note` — it files to the domain root and is safe. Leave `type` UNRESOLVED only
-  when you cannot tell what *kind* of thing this even is.
-- **domain** — the field most often unresolved, because it is the one with no safe
-  default. Stamp it only when the note clearly belongs to one:
-  `cuzzies` (Cuzzie's, Camden), `station` (The Station, Newark), `personal` (Lemar's
-  life, money, home, family, vehicles), `project` (cross-cutting/multi-phase work),
-  `reference` (evergreen or a cross-domain entity), `legal` (an active legal matter —
-  an eviction, a filing, a counsel thread). If the input could plausibly be two
-  domains, or you're inferring rather than reading it, **leave `domain` UNRESOLVED.**
+  finished, `parked` if explicitly on hold, `awaiting-decision` when it sits on a
+  #decisions card. Rarely unresolved.
+- **type** — infer from shape, and stamp when the shape is unambiguous. **The decision
+  rule (schema §3): anything recording a choice Lemar made — an option picked, an
+  approval given — is `type: decision`, never `log`.** Otherwise: `meeting` (notes from
+  a meeting), `task` (a concrete to-do), `brief` (a worked-up project brief),
+  `reference`/`entity` (evergreen facts / a business, vendor, person, account),
+  `log` (a dated record of what happened), else `note`. When genuinely torn, prefer
+  `note` — it files to the domain root and is safe.
+- **domain** — the field most often unresolved, because it has no safe default. Stamp it
+  only when the note clearly belongs to one: `cuzzies` (Camden), `station` (Newark),
+  `personal`, `project`, `reference`, `legal` (an active legal matter). If it could
+  plausibly be two, or you're inferring rather than reading it, **leave it UNRESOLVED.**
 
-`tags` is open — add a few honest tags from the content; never blocks filing.
-`created`/`updated` are always stamped. **`area`** is an OPTIONAL personal-only field
-(`money`/`health`/`home`/`family`): stamp it only when the note is clearly `personal` AND
-the sub-area is obvious; otherwise leave it off — its absence just files the note to the
-`10-Personal/` root, never sends it to Lemar.
+`tags` is open — add a few honest tags; never blocks filing. **`area`** is OPTIONAL and
+personal-only (`money`/`health`/`home`/`family`): stamp it only when obvious.
 
 ---
 
 ## Naming the file
 
-`kebab-case.md`, per schema §5:
-- **Time-bound** (has or will have a `due`, or is tied to a date/event) → lead with the
-  date: `2026-07-03-harvest-moon-invoice.md`.
-- **Evergreen / stable** → a stable slug: `the-station-liquor-license.md`, `cuzzies.md`.
-- Keep it short, lowercase, hyphen-separated, no spaces. Land it in `haven/vault/00-Inbox/`.
-
-If a note with that name already exists in the Inbox, append a short disambiguator
-(`-2`, or a keyword) rather than overwriting — never clobber an unfiled note.
-
----
+`kebab-case.md`, per schema §5: time-bound → date-led (`2026-07-03-harvest-moon-invoice.md`);
+evergreen → stable slug (`the-station-liquor-license.md`). Land it in `haven/vault/00-Inbox/`.
+If the name already exists in the Inbox, append a short disambiguator — never clobber an
+unfiled note.
 
 ## The body
 
 Fill the template body with the substance: what this is, the context, any decision or
-open question. Link entities and threads with `[[wiki-links]]` (`[[cuzzies]]`,
-`[[2026-07-03-...]]`) instead of pasting their contents — one fact, one home (schema §6).
-Capture enough that the note stands on its own later; don't pad.
+open question. The note must stand on its own if every link dies — amounts, dates,
+names, and outcomes go in the body. Link entities and threads with `[[wiki-links]]`
+instead of pasting their contents (one fact, one home — schema §6); if a recurring
+counterparty has no entity note yet, note it — vault-keeper will stub it.
+
+End the note with the provenance block (schema §8):
+
+```markdown
+## Sources
+- slack: <permalink> (what it is)
+- gmail: thread <id> (what it is)
+```
+
+Platform links belong HERE, as provenance — never as load-bearing state in prose.
 
 ---
 
 ## The write (the only side effect)
 
-The loop is always the same — pull → write the `.md` into `00-Inbox` → commit `capture: <slug>`
-→ push — but **how** you run git depends on the surface. Pick the one that matches where you are:
+The loop is always the same — pull → write the `.md` into `00-Inbox` (or append the
+Update) → commit `capture: <slug>` (or `update: <slug>`) → push — but **how** you run
+git depends on the surface:
 
-### Desktop (Claude Code, this machine) — prefer the GitHub MCP connector
+### Cloud (Samira's routine, claude.ai) — the normal path
+Use the GitHub MCP connector (`get_file_contents` / `create_or_update_file` /
+`push_files`) against the default branch. This is the proven, always-available path.
 
-⚠️ On Lemar's machine, direct `git` traffic to **github.com is network-blocked** (only the
-raw.githubusercontent.com CDN and the cloud-routed GitHub MCP connector get through). So the
-raw-git clone below often fails at `push`. **Preferred desktop path: use the GitHub MCP tools**
-(`get_file_contents` / `create_or_update_file` / `push_files`) to commit the note straight to the
-branch — that is what works from here. The raw-git clone is a fallback for when github.com is
-reachable (e.g. on a phone hotspot).
-
-Raw-git fallback (only when github.com is reachable), against the persistent clone:
+### Desktop (Claude Code on Lemar's machine)
+⚠️ github.com is network-blocked on home Wi-Fi — prefer the GitHub MCP connector here
+too. Raw git against the working clone `C:/Users/lemar/Haven-repo` works only when
+github.com is reachable (hotspot, or after the router fix):
 
 ```bash
-REPO="C:/Users/lemar/Haven-repo"; BR="claude/star-crash-thread-context-2npbr"
-# 1. Ensure the clone exists and is current (self-heals if it was removed):
-[ -d "$REPO/.git" ] || git clone --branch "$BR" --single-branch https://github.com/lboonejr/atlas.git "$REPO"
+REPO="C:/Users/lemar/Haven-repo"; BR="$(git -C "$REPO" symbolic-ref --short refs/remotes/origin/HEAD | cut -d/ -f2)"
 git -C "$REPO" fetch -q origin "$BR" && git -C "$REPO" checkout -q "$BR" && git -C "$REPO" pull -q --ff-only origin "$BR"
-# 2. Write the note file into  $REPO/haven/vault/00-Inbox/<slug>.md  (use the Write tool).
-# 3. Commit and push:
+# write the note into $REPO/haven/vault/00-Inbox/<slug>.md, then:
 git -C "$REPO" add -A && git -C "$REPO" commit -q -m "capture: <slug>" && git -C "$REPO" push origin "$BR"
 ```
 
-If `git push` fails (network, auth), STOP and tell Lemar — the capture is not real until it
-is pushed. Do not write the reader copy, do not go to Monday.
+If the push fails, STOP and say so — the capture is not real until it is pushed.
 
-### claude.ai (phone/web Atlas Project) — write path PENDING a connector test
-
-A claude.ai Project has no shell, so it cannot run the git above. Whether the account's GitHub
-connector can itself **commit** to the repo is being tested. Until that is resolved:
-- If your surface exposes a way to commit a file to `lboonejr/atlas` on the branch, use it to
-  write the note into `00-Inbox` and confirm the commit.
-- If it does not, you **cannot** land the capture from here — say so plainly and route the raw
-  thought to the capture intake (`#atlas`) so the hourly cloud routine (Samira, PART V/B) lands
-  it in Haven instead. Never claim a capture succeeded when no note was committed.
+### claude.ai phone/web without a commit path
+If your surface cannot commit, you cannot land the capture — say so plainly and route
+the raw thought to #atlas so the hourly routine lands it. Never claim a capture
+succeeded when no note was committed.
 
 ### Return value
+Return the note's repo path (and "created" vs "updated") to the caller so it can be
+linked downstream (Slack card, #reports line, mirror item).
 
-Return the note's repo path (`haven/vault/00-Inbox/<slug>.md`) and the branch to the caller so
-it can be linked downstream (Slack card, Monday mirror, #reports line).
-
-That is the entire skill. You do **not**:
-- move or file the note (that is `haven-vault-keeper`, on the hourly loop),
-- create a calendar event (that is `haven-calendar-sync`),
-- write to Monday, Slack, Gmail, or the local reader vault,
-- guess any controlled field to avoid a stuck note.
+You do NOT: move/file notes (vault-keeper), create calendar events (calendar-sync),
+write to Monday/Slack/Gmail, or guess a controlled field.
 
 ## Worked example
 
-Lemar, in an Atlas chat: *"Shortlist this — Harvest Moon sent invoice 2425 for the
-Camden delivery, $1,840, I think it's due next week, need to confirm the count before
-we pay."*
+Lemar: *"Shortlist this — Harvest Moon sent invoice 2425 for the Camden delivery,
+$1,840, I think it's due next week, need to confirm the count before we pay."*
 
-Sure of: it's Cuzzie's (`domain: cuzzies`), it's a concrete to-do (`type: task`), it's
-open (`status: active`), it came from a chat (`source: claude`), it's time-bound (a due
-is coming but the exact date is unconfirmed — leave `due` off until confirmed, don't
-invent it). File name is time-bound → date-led.
+Step zero: no active note on invoice 2425 exists → new note. Sure of: `domain: cuzzies`,
+`type: task`, `status: active`, `source: claude`. Due is unconfirmed — leave `due` off.
 
 `haven/vault/00-Inbox/2026-07-03-harvest-moon-invoice-2425.md`:
 
@@ -227,25 +217,18 @@ source: claude
 # Harvest Moon invoice 2425 — confirm count before paying
 
 Harvest Moon billed invoice **2425**, **$1,840**, for the Camden delivery.
-Lemar wants the received count confirmed against the invoice before we pay.
+Confirm the received count against the invoice before releasing payment.
 
-- Amount: $1,840
-- Vendor: [[harvest-moon]]
-- Open question: does the delivered count match 2425? Confirm, then release payment.
-- Due: believed next week — CONFIRM the exact date, then add a `due:` and let
-  calendar-sync ring it.
+- Amount: $1,840 · Vendor: [[harvest-moon]]
+- Due: believed next week — CONFIRM, then add `due:` so calendar-sync rings it.
+
+## Sources
+- claude: Atlas chat capture, 2026-07-03
 ```
 
-Contrast — same capture, but Lemar just says *"shortlist this: confirm the count before
-we pay 2425"* with no vendor and no store named. Now `domain` is a guess, so:
+Two days later the count is confirmed — that is the SAME matter, so step zero finds the
+active note and appends `## Update 2026-07-05: count confirmed (matches), due confirmed
+Jul 16 — due: added`, touches `updated`. One matter, one note.
 
-```yaml
-domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal
-type: task
-status: active
-tags: [invoice, accounts-payable]
-source: claude
-```
-
-vault-keeper will leave this one in `00-Inbox` and surface it; Lemar sets the domain in
-one tap and the next sweep files it. Working as designed.
+And if Lemar had named no vendor and no store: `domain:` stays UNRESOLVED, vault-keeper
+parks it, Lemar labels it in one tap. Working as designed.
