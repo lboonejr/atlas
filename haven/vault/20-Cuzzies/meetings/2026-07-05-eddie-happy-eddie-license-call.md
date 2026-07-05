@@ -1,13 +1,13 @@
 ---
 created: 2026-07-05T08:15-04:00
-updated: 2026-07-05T09:00-04:00
+updated: 2026-07-05T09:10-04:00
 domain: cuzzies
 type: meeting
 status: active
 tags: [eddie, happy-eddie, license-transfer, white-label, wind-down]
 source: slack
 due: 2026-07-06T14:30-04:00
-calendar_event_id: 7qc6dpjbfdbnovlnvsp6b4erio
+calendar_event_id: d5ve5pg570bk90r5j3ajc5q9c4
 ---
 
 # Call with Eddie Osefo (Happy Eddie) — license/ops transition + white-label angle
@@ -20,6 +20,10 @@ of Happy Eddie + Branded Pop-Ups!!") was checked for verification per Lemar's re
 **Date correction:** the confirmed meeting is **Monday, July 6, 2026 at 2:30 PM ET**,
 not Tuesday — Eddie proposed 2:30pm on 7/1 and Lemar confirmed it same day. Calendar
 event created for the verified time, not the "Tuesday" guess in the capture.
+
+**Calendar note:** the original event id (`7qc6dpjbfdbnovlnvsp6b4erio`) no longer existed
+on the reminder calendar as of the 2026-07-05 sync — recreated per "vault always wins";
+new id above.
 
 ## Context (from the email thread)
 - Eddie Osefo (`eddie@happy-eddie.com`) is the Happy Eddie brand contact, previously a
@@ -77,4 +81,4 @@ whichever piece moves first." Note anything Eddie commits to and follow up by em
 ## Sources
 - slack: #atlas capture, 2026-07-04 18:22 ET (channel C0BBWHCJUV9, ts 1783203770.523559)
 - gmail: thread 19f08f50fd2d53d7 ("NEW DROP of Happy Eddie + Branded Pop-Ups!!")
-- calendar: event 7qc6dpjbfdbnovlnvsp6b4erio, Mon 2026-07-06 2:30-2:50pm ET
+- calendar: event d5ve5pg570bk90r5j3ajc5q9c4, Mon 2026-07-06 2:30-3:00pm ET
