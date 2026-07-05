@@ -44,18 +44,7 @@ Lemar sent his own follow-up email directly (2026-07-05 12:44 PM ET, same thread
 placeholder time exactly. The time is now proposed in writing (not just a placeholder);
 no reply from Jarred yet as of this scan. No Samira-staged draft exists in Gmail Drafts
 for this thread (Lemar handled the send himself), so there is nothing stale to worry
-about — the call script/context above still applies once Jarred confirms.
-
-## Call script outline
-
-**Opening**
-"Hey Eddie, thanks for making time. Wanted to pick up where we left off — happy to
-dive into the license/ops side first, then I've got a second idea I'd love your take on."
-
-*(Note: script content below was originally drafted against the Eddie call context —
-retained for reference. For Jarred specifically, key material is Jerzey Grown's
-vendor history and the unresolved PO 002 payment above; no separate script drafted yet
-pending Jarred's confirmation of the call.)*
+about.
 
 ## Sources
 - slack: #atlas capture, 2026-07-05 08:56 ET (channel C0BBWHCJUV9, ts 1783256167.814249)
