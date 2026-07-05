@@ -1,11 +1,13 @@
 ---
 created: 2026-07-05T10:25-04:00
-updated: 2026-07-05T14:25-04:00
+updated: 2026-07-05T17:10-04:00
 domain: personal
 type: task
 status: awaiting-decision
 tags: [car-hunt, honda-civic, financing]
 source: slack
+due: 2026-07-06T18:00-04:00
+calendar_event_id: d5bmagon0lpv6t830sn57n89co
 ---
 
 # 07 Honda Civic — $2k down / finance the rest, use remaining budget for repairs
@@ -63,7 +65,21 @@ cheaper than towing, same fluid/torque-converter check. No booking made — Sami
 can't contact/schedule with a third party on Lemar's behalf; this is a list only.
 Still awaiting his call on next step.
 
+## Update 2026-07-05 (inspection booked)
+Lemar found a private/independent mechanic to come look at the car — appointment
+set for tomorrow (2026-07-06) at 6:00 PM ET. That slot conflicted with an existing
+"Test Drive 2016 Hyundai Elantra" appointment already on his calendar for the same
+day/time (Legacy Auto NJ) — he asked to bump the Hyundai test drive to Wednesday
+(2026-07-08) same time to clear the conflict. Both done: created a reminder-calendar
+event for the Civic inspection (6:00–6:30 PM ET, 7/6) and moved the existing Hyundai
+Elantra test drive event to 6:00–7:00 PM ET, 7/8, same location. Still awaiting the
+inspection outcome before any financing/purchase decision.
+
 ## Sources
 - slack: #atlas capture, 2026-07-05 10:25 ET (channel C0BBWHCJUV9, ts 1783261543.136049)
 - slack: #decisions thread, ts 1783264256.931429 (Lemar's reply 11:31 ET + Samira's
-  numbers-check reply + mechanic-options reply 14:25 ET)
+  numbers-check reply + mechanic-options reply 14:25 ET + inspection-booked replies
+  16:55–16:58 ET)
+- calendar: reminder-calendar event `d5bmagon0lpv6t830sn57n89co` (Civic inspection,
+  7/6 6:00 PM ET) · Cuzzie's calendar event `mtfuvp4fgfeut2kgf58p334npo` (Hyundai
+  Elantra test drive, moved to 7/8 6:00 PM ET)
