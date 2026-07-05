@@ -1,6 +1,6 @@
 ---
 created: 2026-07-05T13:25-04:00
-updated: 2026-07-05T13:55-04:00
+updated: 2026-07-05T17:13-04:00
 domain: cuzzies
 type: meeting
 status: active
@@ -46,8 +46,16 @@ no reply from Jarred yet as of this scan. No Samira-staged draft exists in Gmail
 for this thread (Lemar handled the send himself), so there is nothing stale to worry
 about.
 
+## Update 2026-07-05 (confirmed)
+Jarred replied (2026-07-05 4:22 PM ET, same thread): "Hey that's good. 7322360850" —
+confirming Monday 7/6 3:30 PM ET works, and re-sharing his cell (732-236-0850). Call is
+now confirmed on both sides, not just proposed. Calendar event description updated to
+drop the "not yet confirmed" caveat and add his number. Still no detail on what the
+"business opportunity" actually is — that's the call itself.
+
 ## Sources
 - slack: #atlas capture, 2026-07-05 08:56 ET (channel C0BBWHCJUV9, ts 1783256167.814249)
 - gmail: thread 19f2d5897e550b19 ("Business Opportunity / Question") — Lemar's own
-  confirmation-time email, msg id 19f332b2dcf4b577, sent 2026-07-05 12:44 PM ET
+  confirmation-time email, msg id 19f332b2dcf4b577, sent 2026-07-05 12:44 PM ET;
+  Jarred's confirmation, msg id 19f33f258a2bbbe1, 2026-07-05 4:22 PM ET
 - gmail: thread 19b05262638fa8af ("JG- Cuzzie's PO 002") — unresolved payment follow-ups through 2026-01-29
