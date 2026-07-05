@@ -1,6 +1,6 @@
 ---
 created: 2026-07-05T13:25-04:00
-updated: 2026-07-05T13:30-04:00
+updated: 2026-07-05T13:55-04:00
 domain: cuzzies
 type: meeting
 status: active
@@ -38,7 +38,16 @@ update us on what's going on???") with no reply visible in Gmail after that. Wor
 knowing going into this call: the "business opportunity" ask may be paired with (or a
 softer approach toward) that outstanding payment.
 
+## Update 2026-07-05
+Lemar sent his own follow-up email directly (2026-07-05 12:44 PM ET, same thread) —
+"Does tomorrow (Monday 7/6) at 3:30 PM ET work for a call?" — matching the calendar
+placeholder time exactly. The time is now proposed in writing (not just a placeholder);
+no reply from Jarred yet as of this scan. No Samira-staged draft exists in Gmail Drafts
+for this thread (Lemar handled the send himself), so there is nothing stale to worry
+about.
+
 ## Sources
 - slack: #atlas capture, 2026-07-05 08:56 ET (channel C0BBWHCJUV9, ts 1783256167.814249)
-- gmail: thread 19f2d5897e550b19 ("Business Opportunity / Question")
+- gmail: thread 19f2d5897e550b19 ("Business Opportunity / Question") — Lemar's own
+  confirmation-time email, msg id 19f332b2dcf4b577, sent 2026-07-05 12:44 PM ET
 - gmail: thread 19b05262638fa8af ("JG- Cuzzie's PO 002") — unresolved payment follow-ups through 2026-01-29
