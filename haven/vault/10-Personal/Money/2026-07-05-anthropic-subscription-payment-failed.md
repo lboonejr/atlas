@@ -1,10 +1,10 @@
 ---
 created: 2026-07-05T08:45-04:00
-updated: 2026-07-05T09:00-04:00
+updated: 2026-07-05T13:15-04:00
 domain: personal
 area: money
 type: task
-status: active
+status: done
 tags: [anthropic, claude, subscription, billing, samira-infrastructure]
 source: gmail
 ---
@@ -23,6 +23,11 @@ working entirely. Samira cannot update billing or pay this herself (safety rule 
 payments). Flagged to Lemar directly in #decisions; needs his action on the card/billing
 page (link in the Anthropic email, Gmail thread `19f2f5af154d4707`).
 
+## Update 2026-07-05
+Lemar replied in #decisions (08:56 ET): "This has been handled now." Treating as
+billing updated / subscription reactivated. Closing out.
+
 ## Sources
 - gmail: thread 19f2f5af154d4707 ("$100.00 payment to Anthropic, PBC was unsuccessful")
 - gmail: thread 19f2f5afb1e0c93b ("Your subscription access has been paused")
+- slack: #decisions thread, ts 1783211373.155689
