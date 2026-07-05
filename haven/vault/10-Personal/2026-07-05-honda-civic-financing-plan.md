@@ -1,6 +1,6 @@
 ---
 created: 2026-07-05T10:25-04:00
-updated: 2026-07-05T13:50-04:00
+updated: 2026-07-05T14:25-04:00
 domain: personal
 type: task
 status: awaiting-decision
@@ -51,7 +51,19 @@ Recommended a pre-purchase inspection specifically checking the transmission
 putting the $2,000 down, rather than deciding on the financing math alone.
 Posted back in the #decisions thread; still awaiting his call.
 
+## Update 2026-07-05 (mechanic options)
+Lemar asked for businesses that could do this inspection. Researched and posted
+in-thread — mobile options (come to wherever the car sits): Lemon Protector
+(450-point on-site inspection, serves NJ/NY/CT), Wrench / YourMechanic (mobile,
+~150-point pre-purchase inspection), Instant Car Fix (mobile mechanic serving
+Camden, 844-669-6324). Dedicated transmission shops (bring the car in): Delaware
+Valley Transmissions (Camden County since 1984), Goodmon's Auto Repair, AAMCO
+Transmissions & Total Car Care. Recommended mobile if the seller allows it —
+cheaper than towing, same fluid/torque-converter check. No booking made — Samira
+can't contact/schedule with a third party on Lemar's behalf; this is a list only.
+Still awaiting his call on next step.
+
 ## Sources
 - slack: #atlas capture, 2026-07-05 10:25 ET (channel C0BBWHCJUV9, ts 1783261543.136049)
 - slack: #decisions thread, ts 1783264256.931429 (Lemar's reply 11:31 ET + Samira's
-  numbers-check reply)
+  numbers-check reply + mechanic-options reply 14:25 ET)
