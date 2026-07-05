@@ -1,34 +1,26 @@
 ---
-created: 2026-07-05T09:30-04:00
-updated: 2026-07-05T09:30-04:00
+created: 2026-07-05T13:10-04:00
+updated: 2026-07-05T11:09-04:00
 domain: cuzzies
 type: log
 status: done
-tags: [on-button, canvas, leafly, wind-down, reopen-checklist]
+tags: [on-button, canvas, leafly]
 source: slack
 ---
 
-# On-Button canvas synced — Leafly row added
+# On-Button canvas — synced Leafly, fixed stray duplicate row
 
-Scan 77, PART C admin-prompt sweep. Checked the "On-Button — Reopen Checklist"
-pinned canvas (F0BEN1167GB) in #on-button (C0BEQUW5NPP) against channel drops.
-The canvas (last rebuilt Scan 55, 2026-07-02) was missing the Leafly missed-payment
-notice that Lemar dropped 2026-07-05 09:09 EDT (see
-`2026-07-05-leafly-missed-payment.md`).
+Scan 77 (7/5 ~10:11 ET): synced the pinned On-Button — Reopen Checklist canvas
+(`F0BEN1167GB` in #on-button) to add the Leafly missed-payment row, and caught +
+fixed a stray duplicate/blank row left over from an earlier section-replace edit.
 
-Added a Leafly row to the Past-Due / Needs-Reactivation table: amount not stated
-in the notice ("almost two weeks past due"), no account ref given, contact = Leafly
-Biz billing portal or 256-488-4697. Updated the "Total Estimated" line to flag the
-Leafly amount as unknown (not included in the $8,466.08 combined figure) and to note
-Progressive's cancel-by-07/03 status is unconfirmed as of this update (a separate
-note, `2026-07-04-progressive-commercial-canceled-confirmed.md`, already covers that
-outcome — not duplicated here).
-
-While editing, a canvas-tool section-replace quirk left a stray blank duplicate
-table; caught it and did a full content rebuild of the canvas to restore a single
-clean table. No other channel/document content was touched. Canvas remains
-tracking-only — nothing paid or contacted.
+## Update 2026-07-05
+Lemar asked in #atlas (10:20:53 ET) to clean up duplicate info on the on-button
+canvas — this request landed just after the fix above already went out (10:11 ET
+post in #on-button). Re-checked the canvas table: six rows (Comcast, PSEG, ADT,
+Progressive, EPLI, Leafly), no duplicates or blank rows. Nothing further needed.
 
 ## Sources
-- slack: #on-button (C0BEQUW5NPP), canvas F0BEN1167GB
-- haven: 2026-07-05-leafly-missed-payment.md
+- slack: #on-button sync post, 2026-07-05 10:11 ET (channel C0BEQUW5NPP, ts 1783260661.991529)
+- slack: #atlas capture, 2026-07-05 10:20:53 ET (channel C0BBWHCJUV9, ts 1783261253.428509)
+- slack: canvas F0BEN1167GB ("On-Button — Reopen Checklist")
