@@ -1,12 +1,13 @@
 ---
 created: 2026-07-05T13:25-04:00
-updated: 2026-07-05T13:25-04:00
+updated: 2026-07-05T13:30-04:00
 domain: cuzzies
 type: meeting
 status: active
 tags: [jerzey-grown, jarred, business-opportunity, vendor]
 source: slack
 due: 2026-07-06T15:30-04:00
+calendar_event_id: etstlhppvrjl4sv1gn4jmkbo0k
 ---
 
 # Call with Jarred Freeman (Jerzey Grown) — business opportunity
