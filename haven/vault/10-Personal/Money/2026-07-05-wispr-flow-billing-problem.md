@@ -3,8 +3,8 @@ created: 2026-07-05T10:15-04:00
 updated: 2026-07-05T11:03-04:00
 domain: personal
 area: money
-type: task
-status: active
+type: decision
+status: done
 tags: [wispr-flow, subscription, billing, apple, app-store]
 source: gmail
 ---
@@ -22,5 +22,10 @@ Samira has no access to Apple/App Store billing and can't act on this (safety
 rule — no payments, no account changes). Low stakes ($15/month) but flagged so it
 doesn't lapse silently if he wants to keep the subscription.
 
+## Update 2026-07-05
+Posted to #decisions offering ✅ (updated) or 🚫 (let it lapse). Lemar reacted 🚫 —
+decision: let the Wispr Flow subscription lapse, no payment update. Closed.
+
 ## Sources
 - gmail: thread 19f32923744c2aef ("Billing Problem" — Apple, 2026-07-05)
+- slack: #decisions card, 2026-07-05 10:12 ET (channel C0BBXA96FFV, ts 1783260734.459589)
