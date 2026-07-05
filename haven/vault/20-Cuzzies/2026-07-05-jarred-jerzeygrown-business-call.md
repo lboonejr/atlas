@@ -1,0 +1,64 @@
+---
+created: 2026-07-05T13:25-04:00
+updated: 2026-07-05T13:55-04:00
+domain: cuzzies
+type: meeting
+status: active
+tags: [jerzey-grown, jarred, business-opportunity, vendor]
+source: slack
+due: 2026-07-06T15:30-04:00
+calendar_event_id: etstlhppvrjl4sv1gn4jmkbo0k
+---
+
+# Call with Jarred Freeman (Jerzey Grown) — business opportunity
+
+Lemar captured in #atlas (2026-07-05 08:56 ET): wants a call with Jarred set up for
+**tomorrow (Mon 7/6) at 3:30 PM ET** to discuss "the business opportunity he mentioned
+in the email he sent," and asked Samira to scan email for verification.
+
+## Email verification
+Gmail thread `19f2d5897e550b19` ("Business Opportunity / Question"):
+- Jarred emailed 2026-07-04 9:36 AM ET: "Happy 4th! Let me know if you have time to
+  chat about a possible business opportunity. I could not locate your cell. Mine is
+  732-236-0850."
+- Lemar replied same day 10:00 AM ET: "Happy to connect whenever you're ready, just let
+  me know what works... My cell is (856) 602-0820."
+- **No specific time was confirmed by either side in the thread yet** — Lemar is
+  proposing Mon 7/6 3:30 PM ET now via this capture, not confirming an exchange that
+  already happened. A calendar placeholder has been created for that slot, and a reply
+  email proposing this time is staged as a Gmail draft for Lemar to review/send —
+  Samira can't send outreach or add Jarred as a calendar guest (safety rule).
+- No detail yet on what the "business opportunity" actually is.
+
+## Relevant background
+Jerzey Grown ([[jerzey-grown]]) is a wholesale flower vendor Cuzzie's has ordered from
+since mid-2025 (POs June 2025, Dec 2025). PO 002 (Dec 2025) shows an unresolved payment
+thread — Jarred followed up repeatedly (1/14, 1/23, 1/26, 1/29 2026: "can someone please
+update us on what's going on???") with no reply visible in Gmail after that. Worth
+knowing going into this call: the "business opportunity" ask may be paired with (or a
+softer approach toward) that outstanding payment.
+
+## Update 2026-07-05
+Lemar sent his own follow-up email directly (2026-07-05 12:44 PM ET, same thread) —
+"Does tomorrow (Monday 7/6) at 3:30 PM ET work for a call?" — matching the calendar
+placeholder time exactly. The time is now proposed in writing (not just a placeholder);
+no reply from Jarred yet as of this scan. No Samira-staged draft exists in Gmail Drafts
+for this thread (Lemar handled the send himself), so there is nothing stale to worry
+about — the call script/context above still applies once Jarred confirms.
+
+## Call script outline
+
+**Opening**
+"Hey Eddie, thanks for making time. Wanted to pick up where we left off — happy to
+dive into the license/ops side first, then I've got a second idea I'd love your take on."
+
+*(Note: script content below was originally drafted against the Eddie call context —
+retained for reference. For Jarred specifically, key material is Jerzey Grown's
+vendor history and the unresolved PO 002 payment above; no separate script drafted yet
+pending Jarred's confirmation of the call.)*
+
+## Sources
+- slack: #atlas capture, 2026-07-05 08:56 ET (channel C0BBWHCJUV9, ts 1783256167.814249)
+- gmail: thread 19f2d5897e550b19 ("Business Opportunity / Question") — Lemar's own
+  confirmation-time email, msg id 19f332b2dcf4b577, sent 2026-07-05 12:44 PM ET
+- gmail: thread 19b05262638fa8af ("JG- Cuzzie's PO 002") — unresolved payment follow-ups through 2026-01-29
