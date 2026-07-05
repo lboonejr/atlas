@@ -1,6 +1,6 @@
 ---
 created: 2026-07-05T10:25-04:00
-updated: 2026-07-05T11:11-04:00
+updated: 2026-07-05T13:50-04:00
 domain: personal
 type: task
 status: awaiting-decision
@@ -30,5 +30,28 @@ who can get discounted Honda parts.
 
 Posted these two questions to #decisions rather than guessing at a recommendation.
 
+## Update 2026-07-05
+Lemar replied in-thread: no confirmed financing terms yet, but estimates 24–36
+months. He also flagged something new — on the test drive the car stuttered
+slightly when slowing down, and running it through Claude (a different session)
+suggested it might be a transmission issue.
+
+Ran the numbers with his estimate: financing the $2,295 balance is cheap either
+way, roughly $75–115/month, ~$250–750 total interest across the 24–36 month range
+regardless of exact rate — the financing itself isn't the risk.
+
+The bigger risk is the deceleration stuttering: a classic symptom of a failing
+torque converter or worn automatic transmission on a 19-year-old car. A
+transmission rebuild typically runs $1,500–$3,500, replacement $2,000–$4,000+ —
+enough to consume the entire $3,000 repair budget on its own, before anything
+else the car needs (brakes, tires, timing belt/chain at this age/mileage).
+
+Recommended a pre-purchase inspection specifically checking the transmission
+(fluid condition, torque converter behavior) with a real repair quote before
+putting the $2,000 down, rather than deciding on the financing math alone.
+Posted back in the #decisions thread; still awaiting his call.
+
 ## Sources
 - slack: #atlas capture, 2026-07-05 10:25 ET (channel C0BBWHCJUV9, ts 1783261543.136049)
+- slack: #decisions thread, ts 1783264256.931429 (Lemar's reply 11:31 ET + Samira's
+  numbers-check reply)
