@@ -8,7 +8,7 @@ When a workspace, board, account, or channel changes, edit THIS file and nothing
 > doing work is fine; maintaining a second list is not). The memory file
 > `shortlist_anchors.md` on Lemar's machine is a pointer to this file, not a copy.
 
-Last verified: 2026-07-04.
+Last verified: 2026-07-05.
 
 ## Repo / vault
 
@@ -34,6 +34,7 @@ Last verified: 2026-07-04.
 | #car-search | `C0BEC2RFC00` | Car loop (samira-car-search); never swept in PART C |
 | #investor-pipeline | `C0BCCUKEUQ2` | Investor loop (samira-investor) |
 | #skills-lab | `C0BBZ5J8805` | Skill-candidate proposals |
+| #on-button | `C0BEQUW5NPP` | "Reopen Checklist" — drop past-due bills/screenshots here; Samira extracts amount/account/contact into the pinned canvas each scan. Tracking only, nothing paid/contacted. Canvas: `F0BEN1167GB` |
 | Open Items canvas | `F0BDLSHD8JD` | State only: ⏳ Waiting · ⚙️ In motion · ⛔ Parked |
 | #emails (ARCHIVED) | `C0BC1JSCHQW` | Read-only record; never swept, never posted to |
 | #to-do (ARCHIVED) | `C0BC30U222K` | Read-only record |
