@@ -1,6 +1,6 @@
 ---
 created: 2026-06-24T18:15-04:00
-updated: 2026-07-06T17:04-04:00
+updated: 2026-07-06T18:05-04:00
 domain: project
 type: note
 status: active
@@ -28,7 +28,7 @@ honor that by making Josh CEO. That mutual loyalty and lifting-each-other-up is
 the heart of the brand he wants to carry forward.
 
 **Q2 — Keep the Cuzzy's name on white-label products, or a separate identity?**
-(2026-07-05, 13:14 ET)
+(2026-07-05, 13:14 ET) — **DECIDED 2026-07-06, see Update below.**
 Lemar: Genuinely undecided. Locally, Cuzzie's has built some name recognition,
 but the business has soured a number of cannabis-industry vendor/cultivator
 relationships by owing money — so the name might not land well within the
@@ -60,10 +60,18 @@ Q2 (name vs. new brand identity) is a real fork with business-strategy stakes
 `haven/vault/20-Cuzzies/decisions/` once he picks (or check #decisions thread
 ts 1783372386.951919 for the live card).
 
+## Update 2026-07-06 (~18:05 ET)
+Lemar picked **Option A — keep the Cuzzie's name** (✅ on the option reply,
+thread ts 1783372386.951919). Full decision record:
+`haven/vault/20-Cuzzies/decisions/2026-07-06-cuzzys-brand-name-decision.md`.
+Packaging, trademark filing, and the remaining downstream questions (Q1, Q3,
+Q9, etc.) can now proceed on the assumption the Cuzzie's name carries forward.
+
 ## Sources
 - slack: #cuzzys-brand, 100-questions post, 2026-06-24 18:15 ET (ts 1782339354.273549)
 - slack: #cuzzys-brand thread, Lemar's Q1/Q2 answers 2026-07-05 13:14 ET
   (ts 1783271654.420259) + Samira's log reply 16:08 ET (ts 1783282088.268849)
 - slack: #cuzzys-brand thread, Lemar's Q4 answer 2026-07-05 20:23 ET
   (ts 1783297381.038359)
-- slack: #decisions, Q2 brand-identity card 2026-07-06 (ts 1783372386.951919)
+- slack: #decisions, Q2 brand-identity card 2026-07-06 (ts 1783372386.951919),
+  decided ~18:05 ET — see `20-Cuzzies/decisions/2026-07-06-cuzzys-brand-name-decision.md`
