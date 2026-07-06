@@ -3,6 +3,30 @@
 The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NOW.
 History and cutover narratives live here.
 
+## 2026-07-05 — Daily Brief routine (persona "Dawn") added
+- **Second cloud routine**, separate from Samira: a once-a-day **1am ET** routine that gives
+  Lemar the executive read Samira's hourly loop doesn't. Thin bootstrap
+  `.claude/routines/DAILY-BRIEF-TRIGGER.md` → fat runbook `.claude/routines/daily-brief.md`,
+  same thin-bootstrap/fat-runbook pattern as Samira.
+- **Two new skills**: `morning-brief` — closes yesterday's open loops and sets today's top 5
+  goals, synthesized from the Marspace activity cluster (#decisions + #atlas + #reports +
+  #admin + email, weighted as ONE group) held SEPARATE from the project channels, plus
+  Calendar and Gmail; and `meeting-prep` — one combined prep doc for today's calls, with Haven
+  context (entity notes, prior meetings, prep scripts) pulled per meeting.
+- **Living visual artifacts**: each skill renders a self-contained HTML page via the Artifact
+  tool and re-deploys it to a stable URL every run (fulfils the 2026-07-03 "HTML/visual
+  digests allowed; not yet designed" note). Fallback if headless artifacts prove unstable:
+  a Slack canvas updated in place — a render-step swap only, everything else unchanged.
+- **New channel** `#daily-brief` `C0BF73FF56H` — both brief links land here; Dawn posts here
+  and only here (never #reports, Samira's feed).
+- **Haven-first preserved, no collision with Samira**: briefs land as `type: brief` notes
+  written directly into `_daily/` FIRST (the append-only zone vault-keeper never touches);
+  Dawn is otherwise read-only on the vault and never runs vault-keeper or calendar-sync.
+- **Pending on Lemar**: merge this PR; create the RemoteTrigger (daily 1am ET) pointing at the
+  bootstrap and record its id/env in anchors; do one supervised manual run to confirm the
+  artifact URL is viewable + re-deployable (else flip the render step to Slack canvas). The
+  persona name "Dawn" is a placeholder — rename freely (two skills + one anchors row).
+
 ## 2026-07-04 — System hardening (this PR)
 - **One anchors registry**: `.claude/anchors.md` replaces the four mirrored ANCHORS
   blocks (memory `shortlist_anchors.md`, atlas SKILL.md, atlas chat-project doc, the

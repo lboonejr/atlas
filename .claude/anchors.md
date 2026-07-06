@@ -31,6 +31,7 @@ Last verified: 2026-07-05.
 | #reports | `C0BBZJL85RT` | Silent one-way result log; never swept for prompts |
 | #atlas | `C0BBWHCJUV9` | Raw capture inbox; never hosts a decision |
 | #admin | `C0BBLUA7JLX` | Staged run:admin-3x prompts |
+| #daily-brief | `C0BF73FF56H` | Dawn's once-a-day brief + meeting-prep links (1am ET routine). Dawn posts here and ONLY here; Samira never posts here |
 | #car-search | `C0BEC2RFC00` | Car loop (samira-car-search); never swept in PART C |
 | #investor-pipeline | `C0BCCUKEUQ2` | Investor loop (samira-investor) |
 | #skills-lab | `C0BBZ5J8805` | Skill-candidate proposals |
@@ -81,7 +82,7 @@ gate, the mirror steps drop from the runbook + skills and the boards go read-onl
 | Legacy /Shortlist/ (read-only backup until sunset) | `1OsPmyZErkiYZAomNfmCgG1go2Pcq76XV` |
 | ~~Investor Index Google Sheet~~ | RETIRED 2026-07-04 — replaced by `haven/vault/40-Projects/investor-pipeline/index.md` (was `1QJZNznjRGY-74wprJH_ehdv0VKvJRb4gZHzhais1AwA`, never populated) |
 
-## Cloud routine (Claude-specific — see PORTABILITY.md for what replaces this elsewhere)
+## Cloud routine — Samira (Claude-specific — see PORTABILITY.md for what replaces this elsewhere)
 
 | What | Value |
 |---|---|
@@ -90,10 +91,26 @@ gate, the mirror steps drop from the runbook + skills and the boards go read-onl
 | Cron | `0 12-22 * * *` UTC (hourly 8a–6p ET) |
 | Disabled trigger (folded into v4) | `trig_0145zp6gHsouqBAKa9JkhJRk` |
 
+## Cloud routine — Daily Brief / "Dawn" (separate from Samira)
+
+Once-a-day 1am ET routine that complements Samira. Thin bootstrap
+`.claude/routines/DAILY-BRIEF-TRIGGER.md` → fat runbook `.claude/routines/daily-brief.md`.
+
+| What | Value |
+|---|---|
+| RemoteTrigger | NOT YET CREATED — create with a daily 1am ET cron pointing at the bootstrap, then record the `trig_…` id here |
+| Cloud env | fill in on creation (may reuse Samira's `env_01Xatmag93x2WA2Gd84D9iHj` or a fresh env) |
+| Cron | `0 5 * * *` UTC (1am EDT) · `0 6 * * *` UTC during EST — revisit at DST |
+| Runbook (live behavior) | `.claude/routines/daily-brief.md` — editing on the default branch changes the next run |
+| Living brief artifact URL | NOT YET CREATED — morning-brief publishes on first run and records the stable URL here, then re-deploys to it each run |
+| Living meeting-prep artifact URL | NOT YET CREATED — meeting-prep publishes on first run and records the stable URL here, then re-deploys to it each run |
+
 ## Identity
 
 | What | Value |
 |---|---|
 | Lemar business | lemar@cuzziesnj.com (Cuzzie's winds down mid-2026 — do not build on it) |
 | Lemar personal / durable | l.boonejr@gmail.com · 856-602-0820 (car hunt: private buyer, never a Cuzzie's title) |
+| Lemar Slack user id | `U0BC5UTHYG4` (display "Don Frunt") |
 | Samira Slack posts | lead with 🌐, sign "— Samira" |
+| Dawn (Daily Brief) Slack posts | lead with 🌅, sign "— Dawn" · posts only to #daily-brief `C0BF73FF56H`. ("Dawn" is a placeholder persona name — rename freely; it lives only in the two skills + this row.) |
