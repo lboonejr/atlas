@@ -1,6 +1,6 @@
 ---
 created: 2026-06-24T18:15-04:00
-updated: 2026-07-05T17:12-04:00
+updated: 2026-07-06T17:04-04:00
 domain: project
 type: note
 status: active
@@ -38,7 +38,12 @@ Samira's note in-thread: worth revisiting Q2 once the AP list on the #on-button
 canvas is cleared, since outstanding vendor debt is likely a real driver of the
 industry hesitation.
 
-98 of 100 questions remain unanswered — no rush, Lemar answers as more comes to
+**Q4 — Who is the target customer for a Cuzzy's white-label product?**
+(2026-07-05, 20:23 ET)
+Lemar: The budget buyer and the culturally aligned consumer — those were the
+customers Cuzzie's faced the most at retail.
+
+96 of 100 questions remain unanswered — no rush, Lemar answers as more comes to
 him.
 
 ## Note on this record
@@ -48,7 +53,17 @@ that was never actually written — likely from an interactive session that
 replied without completing the capture-first step. Writing it now so Haven
 matches what was already represented to Lemar.
 
+## Update 2026-07-06
+Q2 (name vs. new brand identity) is a real fork with business-strategy stakes
+(packaging/trademark/brand-voice depend on it) — lifted to #decisions as a
+3-option card (keep name / new identity / hybrid) for Lemar's call. See
+`haven/vault/20-Cuzzies/decisions/` once he picks (or check #decisions thread
+ts 1783372386.951919 for the live card).
+
 ## Sources
 - slack: #cuzzys-brand, 100-questions post, 2026-06-24 18:15 ET (ts 1782339354.273549)
 - slack: #cuzzys-brand thread, Lemar's Q1/Q2 answers 2026-07-05 13:14 ET
   (ts 1783271654.420259) + Samira's log reply 16:08 ET (ts 1783282088.268849)
+- slack: #cuzzys-brand thread, Lemar's Q4 answer 2026-07-05 20:23 ET
+  (ts 1783297381.038359)
+- slack: #decisions, Q2 brand-identity card 2026-07-06 (ts 1783372386.951919)
