@@ -98,8 +98,8 @@ Once-a-day 1am ET routine that complements Samira. Thin bootstrap
 
 | What | Value |
 |---|---|
-| RemoteTrigger | NOT YET CREATED — create with a daily 1am ET cron pointing at the bootstrap, then record the `trig_…` id here |
-| Cloud env | fill in on creation (may reuse Samira's `env_01Xatmag93x2WA2Gd84D9iHj` or a fresh env) |
+| RemoteTrigger | `trig_01BFg7YLWvhoegvWLCjGYtx3` (created 2026-07-05; daily 1am ET; bootstraps `.claude/routines/DAILY-BRIEF-TRIGGER.md`) |
+| Cloud env | `env_01Xatmag93x2WA2Gd84D9iHj` (shared with Samira — same connectors + git access) |
 | Cron | `0 5 * * *` UTC (1am EDT) · `0 6 * * *` UTC during EST — revisit at DST |
 | Runbook (live behavior) | `.claude/routines/daily-brief.md` — editing on the default branch changes the next run |
 | Living brief artifact URL | `https://claude.ai/code/artifact/125d4d13-c1ae-4f9c-8861-e173b56635e5` — first published 2026-07-05 (manual dry run). morning-brief re-deploys to THIS same URL each run (pass it as `url`). |
