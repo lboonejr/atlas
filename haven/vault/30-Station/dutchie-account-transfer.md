@@ -1,6 +1,6 @@
 ---
 created: 2026-06-22T00:00-04:00
-updated: 2026-07-07T17:10:00-04:00
+updated: 2026-07-07T17:46:00-04:00
 domain: station
 type: note
 status: active
@@ -45,3 +45,14 @@ Cuzzie's closes, still need to work out how The Station's own Dutchie
 account/catalog access proceeds — folds into the open question above rather
 than replacing it.
 Source: #atlas, 2026-07-07 17:08 ET.
+
+## Update 2026-07-07 (17:46 ET, Gmail follow-up)
+Dutchie support ticket 672201 got a follow-up from Kylie: "Thanks for our quick
+chat! My phone number is 541-595-8223 — text me when you have an update on
+Cuzzies, I will get the temp 2 month closure processed for you!" She wants a
+**text**, not an email reply, once Lemar has an update — no email draft needed
+here. Open question is unchanged: Lemar still needs to decide Cuzzie's path
+forward before texting her.
+
+## Sources
+- gmail: thread 19f1f7df3f295ccc (Dutchie Support Request 672201, 2026-07-01 to 2026-07-07)
