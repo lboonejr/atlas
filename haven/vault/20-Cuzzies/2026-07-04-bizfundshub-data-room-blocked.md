@@ -1,10 +1,10 @@
 ---
 created: 2026-07-04T09:15-04:00
-updated: 2026-07-07T12:20:00-04:00
+updated: 2026-07-07T17:30:00-04:00
 domain: cuzzies
 type: log
 status: active
-tags: [samira, investor, bizfundshub, david-cancro]
+tags: [samira, investor, bizfundshub, david-cancro, mca]
 source: slack
 ---
 
@@ -106,8 +106,22 @@ draft, or index change needed; the deal was already `Sent` before this email arr
 Labeled `Samira/investor` + `Samira/seen` for tracking. Nothing blocked, nothing for
 Lemar to decide here — informational only.
 
+## Update — 2026-07-07 (17:30 ET, later scan)
+
+Lemar reported in `#atlas` (ts `1783459619.362739`) that BizFundsHub told him directly
+(call/conversation, not written) that they can fund enough to cover **2 of Cuzzie's 3
+MCAs, not all 3** — and that this is the most BizFundsHub can help with. The 3 MCA
+obligations on file for this matter are Liquidibee, Elevate Funding, and Novus Capital
+(see "What's in the folder" above). This is a step past the prior "Sent" status: it is
+BizFundsHub's first real funding-capacity signal, and it leaves open which one of the
+three MCAs would go uncovered, or whether Lemar wants to keep negotiating/seek a top-up
+elsewhere for the third. That is a real choice for Lemar, not something Samira can
+resolve — posted as a `#decisions` parent (see that thread for options). Index status
+unchanged (`Sent`) pending Lemar's call.
+
 ## Sources
 - slack: #investor-pipeline thread https://newworkspace-zlb6313.slack.com/archives/C0BCCUKEUQ2/p1783372540669229?thread_ts=1783090109.984409&cid=C0BCCUKEUQ2
+- slack: #atlas message https://newworkspace-zlb6313.slack.com/archives/C0BBWHCJUV9/p1783459619362739 (2026-07-07 17:26:59 EDT, BizFundsHub 2-of-3 MCA funding capacity)
 - drive: https://drive.google.com/drive/folders/1G4vqdv-5kz0x5ATpSCTjDC_tJyEsnkFv
 - gmail: draft `r-5106031061493058589` (unsent)
 - gmail: thread `19f3838ed7995926` (David Cancro, driver's license request)
