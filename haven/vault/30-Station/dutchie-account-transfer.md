@@ -1,6 +1,6 @@
 ---
 created: 2026-06-22T00:00-04:00
-updated: 2026-07-03T00:00-04:00
+updated: 2026-07-07T17:10:00-04:00
 domain: station
 type: note
 status: active
@@ -37,3 +37,11 @@ nothing is copied, nothing is lost.
 
 ## Open questions
 - Confirm the shared catalog stays connected to both stores after the primary flips.
+
+## Update 2026-07-07
+Lemar's call with Kylie Austin (Dutchie CSM) landed: she gave 2 months of free
+Dutchie credits while he decides Cuzzie's path forward (reopen vs. close). If
+Cuzzie's closes, still need to work out how The Station's own Dutchie
+account/catalog access proceeds — folds into the open question above rather
+than replacing it.
+Source: #atlas, 2026-07-07 17:08 ET.
