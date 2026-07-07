@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T09:15-04:00
-updated: 2026-07-07T10:52-04:00
+updated: 2026-07-07T10:20-04:00
 domain: cuzzies
 type: task
 status: active
@@ -16,17 +16,47 @@ Bronnie@littleleaflabs.net) sent a Reminder 8 follow-up (gmail thread
 INV-0000762 ($5,675 original / $3,175 remaining balance, due 09/25/2025, 91+
 days past due) and INV-0000889 ($5,156, due 12/05/2025). Total balance due:
 **$8,331.00**. She warns that without payment, the account will be referred
-to a collections agency and the state will be notified. This is the first
-record of Little Leaf Labs in Haven — no prior Reminder 1-7 on file in the
-vault.
+to a collections agency and the state will be notified.
 
-This needs Lemar's call: propose a payment plan, ask for more time without
-committing yet, or push back and verify the balance first before committing
-anything (consistent with the wind-down vendor-payment pattern already seen
-with Leafly/ADT/Weedmaps/Talaria — see
-`haven/vault/20-Cuzzies/2026-07-05-leafly-missed-payment.md`). Posted to
-#decisions with 3 draft reply options.
+## Correction — this is NOT a first-time matter
+Posted to #decisions initially as "first time this vendor has surfaced in
+Haven," treating it as a fresh decision. That was wrong — Lemar asked in-thread
+(2026-07-07 09:57 ET) to check email first, and a full Gmail search turned up
+an already-active, already-personally-handled correspondence:
+- **Reminder 4** (6/10), **Reminder 5** (6/17, thread `19ed4e962ef66d1c`),
+  **Reminder 6** (6/24, thread `19ef8db9f879258d`) — Lemar personally replied to
+  Reminders 5 and 6 (6/22 and 6/24/6/25), each time explaining Cuzzie's
+  temporary closure and asking for patience, without committing to a specific
+  payment date. Little Leaf Labs' accounting (Suwarna) acknowledged the 6/25
+  reply ("Noted your response... thank you for updating").
+- **Reminder 7** (7/1, thread `19f1ce2c23e456a9`) — same day, Lemar separately
+  sent a direct **"Cuzzie's Dispensary — Temporary Closure Update"** email
+  (thread `19f1e0535a1abc74`, cc joshua@cuzziesnj.com) to
+  accounting@littleleaflabs.net: temporarily closed, actively working to
+  re-establish, will update with a timeline "as soon as we have a clear
+  timeline." No reply from Little Leaf Labs to that email is visible before
+  Reminder 8 arrived 6 days later.
+- **Reminder 8** (this note) is the vendor's template escalation continuing on
+  its own cadence — it does not reference or acknowledge the 7/1 closure
+  email, so it reads as an automated/templated follow-up rather than a
+  considered response to what Lemar already told them.
+
+## Revised read
+This fits the same wind-down vendor-payment pattern as Leafly/ADT/Weedmaps/
+Talaria (see `haven/vault/20-Cuzzies/2026-07-05-leafly-missed-payment.md`) —
+Lemar is already transparent with them and has already declined to commit to
+a firm payment date while Cuzzie's status is unresolved. The original 3 draft
+options (propose a payment plan / ask for more time / verify balance first)
+assumed a fresh reply was needed; a 4th, more consistent option — a short
+"nothing has changed since my July 1 update, will follow up when it has" reply
+— was added in-thread to match what he's already told every other similar
+vendor.
 
 ## Sources
 - gmail: thread `19f3bff3a2daa78a`, message `19f3bff3a2daa78a`, 2026-07-07
-  09:53 ET, from Accounting@littleleaflabs.net
+  09:53 ET, from Accounting@littleleaflabs.net (Reminder 8)
+- gmail: thread `19ed4e962ef66d1c` (Reminder 5, 6/17) — Lemar's reply 6/22
+- gmail: thread `19ef8db9f879258d` (Reminder 6, 6/24) — Lemar's replies 6/24 and 6/25
+- gmail: thread `19f1ce2c23e456a9` (Reminder 7, 7/1)
+- gmail: thread `19f1e0535a1abc74` ("Cuzzie's Dispensary — Temporary Closure
+  Update", Lemar → accounting@littleleaflabs.net, 7/1 14:12 ET, cc joshua@cuzziesnj.com)
