@@ -1,6 +1,6 @@
 ---
 created: 2026-07-05T13:25-04:00
-updated: 2026-07-05T17:13-04:00
+updated: 2026-07-07T09:35:00-04:00
 domain: cuzzies
 type: meeting
 status: active
@@ -53,9 +53,19 @@ now confirmed on both sides, not just proposed. Calendar event description updat
 drop the "not yet confirmed" caveat and add his number. Still no detail on what the
 "business opportunity" actually is — that's the call itself.
 
+## Update 2026-07-06 — call happened, positive
+Lemar's call with Jarred went pretty positive. They talked about bringing in product,
+possibly staff, to help Cuzzie's get back on its feet. Lemar isn't sure it solves
+everything but a promise of product in the store helps, and he noticed brand alignment.
+Doesn't sound like they're offering to inject money — more using their cultivator
+resources/power to help the dispensary. They said they'd send a proposal in the next
+few days. No action needed until it arrives; watch for the Jerzey Grown proposal (no
+timeline beyond "next few days" as of 2026-07-06).
+
 ## Sources
 - slack: #atlas capture, 2026-07-05 08:56 ET (channel C0BBWHCJUV9, ts 1783256167.814249)
 - gmail: thread 19f2d5897e550b19 ("Business Opportunity / Question") — Lemar's own
   confirmation-time email, msg id 19f332b2dcf4b577, sent 2026-07-05 12:44 PM ET;
   Jarred's confirmation, msg id 19f33f258a2bbbe1, 2026-07-05 4:22 PM ET
 - gmail: thread 19b05262638fa8af ("JG- Cuzzie's PO 002") — unresolved payment follow-ups through 2026-01-29
+- slack: #atlas capture, 2026-07-06 20:46:14 EDT (TS 1783385174.878349) — post-call recap
