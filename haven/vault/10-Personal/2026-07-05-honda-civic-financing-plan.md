@@ -1,6 +1,6 @@
 ---
 created: 2026-07-05T10:25-04:00
-updated: 2026-07-06T10:20-04:00
+updated: 2026-07-07T13:45-04:00
 domain: personal
 type: task
 status: awaiting-decision
@@ -83,11 +83,27 @@ unaffected by the correction; only the make/model reference was wrong. Also
 corrected the reminder-calendar event title/description to say Accord. Replied
 in-thread to confirm. Still awaiting tonight's inspection outcome.
 
+## Update 2026-07-07 (scheduling conflict flagged — unresolved)
+Lemar said in-thread on 7/6 at 17:09 ET ("I moved this meeting to 6:00pm Wednesday")
+that he moved the private inspector's visit off the original 7/6 6pm slot to
+Wednesday 7/8 6pm instead. The calendar event (`d5bmagon0lpv6t830sn57n89co`) was
+never updated to match — it still shows the original 7/6 6:00–6:30pm slot, and no
+inspection outcome was ever reported, so it's unclear whether that 7/6 visit
+actually happened or was skipped in favor of Wednesday.
+
+Separately, Wednesday 7/8 6:00–7:00pm ET is already occupied by the Hyundai
+Elantra test drive at Legacy Auto NJ (Westampton) — so if the inspector visit is
+now really set for Wed 6pm too, that's a double-booking. Flagged this in-thread
+with three open windows (Wed 7/8 before ~5:30pm, Thu 7/9 6:00–6:45pm, Fri 7/10
+6:00–6:45pm) and asked Lemar to confirm the actual slot before touching either
+calendar event. No changes made to either event this pass — awaiting his reply.
+
 ## Sources
 - slack: #atlas capture, 2026-07-05 10:25 ET (channel C0BBWHCJUV9, ts 1783261543.136049)
 - slack: #decisions thread, ts 1783264256.931429 (Lemar's reply 11:31 ET + Samira's
   numbers-check reply + mechanic-options reply 14:25 ET + inspection-booked replies
-  16:55–16:58 ET + Accord/Civic correction 2026-07-06 06:54 ET)
+  16:55–16:58 ET + Accord/Civic correction 2026-07-06 06:54 ET + Wed-move note
+  2026-07-06 17:09 ET + conflict flag 2026-07-07 13:45 ET)
 - calendar: reminder-calendar event `d5bmagon0lpv6t830sn57n89co` (Accord inspection,
-  7/6 6:00 PM ET) · Cuzzie's calendar event `mtfuvp4fgfeut2kgf58p334npo` (Hyundai
-  Elantra test drive, moved to 7/8 6:00 PM ET)
+  currently still showing 7/6 6:00 PM ET, unconfirmed/stale) · Cuzzie's calendar
+  event `mtfuvp4fgfeut2kgf58p334npo` (Hyundai Elantra test drive, 7/8 6:00 PM ET)
