@@ -1,9 +1,9 @@
 ---
 created: 2026-07-07T12:03:00-04:00
-updated: 2026-07-07T13:00:00-04:00
+updated: 2026-07-07T13:10:00-04:00
 domain: cuzzies
 type: task
-status: awaiting-decision
+status: active
 tags: [gusto, payroll, cash-flow, wind-down]
 source: gmail
 ---
@@ -28,6 +28,14 @@ run in Gusto (same as last time). If yes, the account needs funding before Gusto
 attempts to draft it, or it will bounce and add another overdraft/NSF hit. Samira
 cannot log into Gusto or fund the account — this needs Lemar's action either way.
 
+## Update 2026-07-07 13:10 ET
+Lemar picked Option 1 on the #decisions card (ts `1783440895.484549`): no one worked
+this period — cancel/skip the run. Decision recorded in
+[[2026-07-07-gusto-jul7-payroll-shortfall-cancel]]. Samira has no Gusto login/credential
+to action the cancel herself — still needs Lemar to log into app.gusto.com and skip
+the run.
+
 ## Sources
 - gmail: thread 19f3d5254770517a (Gusto payroll funding task, due today)
 - gmail: thread 19f3c8dcb3eaf573 (Parke Bank NSF update, 12:29 PM ET)
+- slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1783440890885089
