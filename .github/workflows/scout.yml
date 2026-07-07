@@ -1,0 +1,16 @@
+name: Scout - Car Hunt scanner
+
+# Cron is UTC. EDT (summer) = UTC-4: 9am/1pm/5pm ET -> 13/17/21 UTC.
+# Shift to "0 14,18,22 * * *" for EST (winter).
+on:
+  schedule:
+    - cron: "0 13,17,21 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Scout
+        run: echo "Invoke the Scout skill (skills/scout/SKILL.md) via the managed agent harness."
