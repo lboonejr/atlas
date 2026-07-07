@@ -1,1 +1,39 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDctMDdUMTc6MDAtMDQ6MDAKdXBkYXRlZDogMjAyNi0wNy0wN1QxNzowMC0wNDowMApkb21haW46ICAgICMgVU5SRVNPTFZFRCDigJQgc3BhbnMgbXVsdGlwbGUgcHJvamVjdHMgKEN1enppZSdzIGJyYW5kLCBwaXRjaCBkZWNrLCBkZWxpdmVyeS1pbi1hLWJveCwgY29tZWR5LWNsdWIpIOKAlCBzZXQgb25lIG9mOiBwZXJzb25hbCB8IGN1enppZXMgfCBzdGF0aW9uIHwgcHJvamVjdCB8IHJlZmVyZW5jZSB8IGxlZ2FsCnR5cGU6IGxvZwpzdGF0dXM6IGRvbmUKdGFnczogW3NhbWlyYSwgcGFydC1nLCBwcm9qZWN0LWNoYW5uZWwtc3dlZXBdCnNvdXJjZTogc2xhY2sKLS0tCgojIFBBUlQgRyDigJQgUHJvamVjdCBjaGFubmVsIHN3ZWVwICgyMDI2LTA3LTA3KSDigJQgemVybyBuZXcgYWN0aXZpdHkKCipXaGF0IHJhbioqOiBQQVJUIEcgb2YgU2FtaXJhJ3MgQXRsYXMgRXhlY3V0b3Igcm91dGluZSDigJQgcmVhZCBlYWNoIGFjdGl2ZSBwcm9qZWN0L0pvc2ggU2xhY2sgY2hhbm5lbCBzaW5jZSB0aGUgbGFzdCBydW4sIGNsYXNzaWZ5IGFueXRoaW5nIHJlcXVpcmluZyBMZW1hcidzIGRlY2lzaW9uIGZvciBsaWZ0IHRvICNkZWNpc2lvbnMsIHdvcmsgaW4tY2hhbm5lbCBpdGVtcyBiZWxvbmdpbmcgdG8gYW5vdGhlciBtZW1iZXIsIGFuZCBzdGFnZSBhZG1pbiB0YXNrcyBhcyBydW46YWRtaW4tM3ggcHJvbXB0cyBpbiAjYWRtaW4uCgojIyBDaGFubmVscyByZXZpZXdlZCAoaW4gc2NvcGUpCi0gI2RlbGl2ZXJ5LWluLWEtYm94IChDMEJETjJLUUZENCkKLSAjY3V6enlzLWJyYW5kIChDMEJDSDJDM0dSTSkKLSAjcGl0Y2gtZGVjay1wcmVzc3VyZS10ZXN0IChDMEJDRDdVNVgyQikg4oCUIGluY2x1ZGVzIEpvc2gvSm9zaHVhIEV2YW5zIChVMEJDSlFYMzM3RykgYXMgbWVtYmVyCi0gI2NvbWVkeS1jbHViIChDMEJEOExUTTFFSywgcHJpdmF0ZSkKCkV4Y2x1ZGVkIHBlciByb3V0aW5lIChvd25lZCBieSBvdGhlciBQQVJUcyAvIGluZnJhKTogI2RlY2lzaW9ucywgI2F0bGFzLCAjcmVwb3J0cywgI2Nhci1zZWFyY2gsICNpbnZlc3Rvci1waXBlbGluZSwgI2FkbWluIChzdGFnZWQtcHJvbXB0IHN3ZWVwKSwgI2dlbmVyYWwsICNyYW5kb20taWRlYXMsICNza2lsbHMtbGFiLCAjZGFpbHktYnJpZWYsICNvbi1idXR0b24uCgojIyBBY3R1YWwgcmVzdWx0CgpaZXJvIG5ldyBhY3Rpdml0eSByZXF1aXJpbmcgYWN0aW9uIHRoaXMgc2NhbjoKCi0gKiojY3V6enlzLWJyYW5kKio6IHRoZSAxMDAtcXVlc3Rpb25zIGJyYW5kIGJyaWVmIHRocmVhZCdzIFEyIGZvcmsgKGtlZXAgIkN1enppZSdzIiBuYW1lIHZzLiBuZXcgaWRlbnRpdHkpIHdhcyBhbHJlYWR5IGxpZnRlZCB0byAjZGVjaXNpb25zIGFuZCBkZWNpZGVkIGJ5IExlbWFyIChPcHRpb24gQSwga2VlcCB0aGUgbmFtZSkgaW4gYSBwcmlvciBzY2FuIGVhcmxpZXIgdG9kYXkgKDIwMjYtMDctMDcpOyBvdXRjb21lIGFscmVhZHkgcG9zdGVkIGJhY2sgdG8gI2N1enp5cy1icmFuZCBhbmQgbG9nZ2VkIHRvIGBoYXZlbi92YXVsdC8yMC1DdXp6aWVzL2RlY2lzaW9ucy8yMDI2LTA3LTA2LWN1enp5cy1icmFuZC1uYW1lLWRlY2lzaW9uLm1kYC4gTm8gbmV3IHJlcGxpZXMgc2luY2Ug4oCUIGZ1bGx5IGNsb3NlZCwgbm90aGluZyBuZXcgdG8gZG8uCi0gKiojcGl0Y2gtZGVjay1wcmVzc3VyZS10ZXN0Kio6IEJyaWRnZSBMb2FuICgkMTI1SykgYW5kIFJlY2FwaXRhbGl6YXRpb24gKCQ1MDBLKSBkZWNrIHByZXNzdXJlLXRlc3QgdGhyZWFkcyBoYXZlIGhhZCBubyBuZXcgcmVwbGllcyBzaW5jZSBKdW4gMjcgKFJlY2FwKSAvIEp1biAyOSAoQnJpZGdlKS4gVGhlIHN0aWxsLW9wZW4gaXRlbXMgKEJyaWRnZSBRMyByb290IGNhdXNlLCBRNCBkYXktOTEgbWlsZXN0b25lOyBSZWNhcCBRMSB2YWx1YXRpb24vb3duZXJzaGlwICUpIHdlcmUgYWxyZWFkeSBsaWZ0ZWQgdG8gI2RlY2lzaW9ucyBvbiAyMDI2LTA3LTAxICgiU3RhbGxlZCDigJQgUGl0Y2ggRGVjayBQcmVzc3VyZSBUZXN0IikgYW5kIHJlbWFpbiBjb3JyZWN0bHkgd2FpdGluZyBvbiBMZW1hciB0aGVyZSDigJQgbm90IGR1cGxpY2F0ZWQgdGhpcyBzY2FuLgotICoqI2RlbGl2ZXJ5LWluLWEtYm94Kio6IG9ubHkgdGhlIG9yaWdpbmFsIGNoYW5uZWwtaW50cm8gd2VsY29tZSBtZXNzYWdlIGV4aXN0cyAoc2luY2UgNi8yOCk7IG5vIGFjdGl2aXR5IHRvIHdvcmsuCi0gKiojY29tZWR5LWNsdWIqKjogUGhhc2UgMCBhY3Rpb24gY2hlY2tsaXN0IHBvc3RlZCA3LzUgYXNraW5nIEZyZXNjbyB0byBkcm9wIHZlbnVlIGxlYWRzOyBubyBuZXcgbGVhZHMgb3IgcmVwbGllcyBzaW5jZS4KCk5vIG5ldyBkZWNpc2lvbnMgbGlmdGVkIHRvICNkZWNpc2lvbnMgdGhpcyBzY2FuLiBObyBuZXcgcnVuOmFkbWluLTN4IHByb21wdHMgc3RhZ2VkIHRvICNhZG1pbiB0aGlzIHNjYW4gKGNoZWNrZWQgI2FkbWluIGhpc3RvcnkgZm9yIGR1cGxpY2F0ZXMg4oCUIG5vbmUgbmVlZGVkKS4gTm8gaW4tY2hhbm5lbCB3b3JrIHBlcmZvcm1lZCDigJQgbm90aGluZyBjb25jcmV0ZSBhbmQgc2FmZSB0byBhZGQgYmV5b25kIHdoYXQncyBhbHJlYWR5IGJlZW4gZG9uZSBpbiBwcmlvciBzY2Fucy4KCiMjIFNvdXJjZXMKLSBzbGFjazogI2N1enp5cy1icmFuZCB0aHJlYWQgdHMgMTc4MjMzOTM1NC4yNzM1NDkgKDEwMCBxdWVzdGlvbnMsIFEyIGRlY2lzaW9uIGNsb3NlZCAyMDI2LTA3LTA3IDE2OjE2IEVUKQotIHNsYWNrOiAjZGVjaXNpb25zIHRzIDE3ODMzNzIzODYuOTUxOTE5IChDdXp6eSdzIGJyYW5kIFEyIGxpZnQpIGFuZCB0cyAxNzgyOTQzNTAyLjMzMDQwOSAocGl0Y2gtZGVjayBzdGFsbGVkIGxpZnQsIDIwMjYtMDctMDEpCi0gc2xhY2s6ICNwaXRjaC1kZWNrLXByZXNzdXJlLXRlc3QgdHMgMTc4MjMwMzM3Ny44NTI5NjkgKFJlY2FwIGRlY2sgdGhyZWFkKSwgdHMgMTc4MjMwMzM3MC4wMzA4MzkgKEJyaWRnZSBkZWNrIHRocmVhZCkKLSBzbGFjazogI2NvbWVkeS1jbHViIHRzIDE3ODMyNTcyMDAuMjk3MDk5IChQaGFzZSAwIGNoZWNrbGlzdCkKLSBzbGFjazogI2RlbGl2ZXJ5LWluLWEtYm94IHRzIDE3ODI2NTE5NzIuOTEyNzM5IChjaGFubmVsIGludHJvKQo=
+---
+created: 2026-07-07T17:00-04:00
+updated: 2026-07-07T17:00-04:00
+domain:    # UNRESOLVED — spans multiple projects (Cuzzie's brand, pitch deck, delivery-in-a-box, comedy-club) — set one of: personal | cuzzies | station | project | reference | legal
+type: log
+status: done
+tags: [samira, part-g, project-channel-sweep]
+source: slack
+---
+
+# PART G — Project channel sweep (2026-07-07) — zero new activity
+
+*What ran**: PART G of Samira's Atlas Executor routine — read each active project/Josh Slack channel since the last run, classify anything requiring Lemar's decision for lift to #decisions, work in-channel items belonging to another member, and stage admin tasks as run:admin-3x prompts in #admin.
+
+## Channels reviewed (in scope)
+- #delivery-in-a-box (C0BDN2KQFD4)
+- #cuzzys-brand (C0BCH2C3GRM)
+- #pitch-deck-pressure-test (C0BCD7U5X2B) — includes Josh/Joshua Evans (U0BCJQX337G) as member
+- #comedy-club (C0BD8LTM1EK, private)
+
+Excluded per routine (owned by other PARTs / infra): #decisions, #atlas, #reports, #car-search, #investor-pipeline, #admin (staged-prompt sweep), #general, #random-ideas, #skills-lab, #daily-brief, #on-button.
+
+## Actual result
+
+Zero new activity requiring action this scan:
+
+- **#cuzzys-brand**: the 100-questions brand brief thread's Q2 fork (keep "Cuzzie's" name vs. new identity) was already lifted to #decisions and decided by Lemar (Option A, keep the name) in a prior scan earlier today (2026-07-07); outcome already posted back to #cuzzys-brand and logged to `haven/vault/20-Cuzzies/decisions/2026-07-06-cuzzys-brand-name-decision.md`. No new replies since — fully closed, nothing new to do.
+- **#pitch-deck-pressure-test**: Bridge Loan ($125K) and Recapitalization ($500K) deck pressure-test threads have had no new replies since Jun 27 (Recap) / Jun 29 (Bridge). The still-open items (Bridge Q3 root cause, Q4 day-91 milestone; Recap Q1 valuation/ownership %) were already lifted to #decisions on 2026-07-01 ("Stalled — Pitch Deck Pressure Test") and remain correctly waiting on Lemar there — not duplicated this scan.
+- **#delivery-in-a-box**: only the original channel-intro welcome message exists (since 6/28); no activity to work.
+- **#comedy-club**: Phase 0 action checklist posted 7/5 asking Fresco to drop venue leads; no new leads or replies since.
+
+No new decisions lifted to #decisions this scan. No new run:admin-3x prompts staged to #admin this scan (checked #admin history for duplicates — none needed). No in-channel work performed — nothing concrete and safe to add beyond what's already been done in prior scans.
+
+## Sources
+- slack: #cuzzys-brand thread ts 1782339354.273549 (100 questions, Q2 decision closed 2026-07-07 16:16 ET)
+- slack: #decisions ts 1783372386.951919 (Cuzzy's brand Q2 lift) and ts 1782943502.330409 (pitch-deck stalled lift, 2026-07-01)
+- slack: #pitch-deck-pressure-test ts 1782303377.852969 (Recap deck thread), ts 1782303370.030839 (Bridge deck thread)
+- slack: #comedy-club ts 1783257200.297099 (Phase 0 checklist)
+- slack: #delivery-in-a-box ts 1782651972.912739 (channel intro)
