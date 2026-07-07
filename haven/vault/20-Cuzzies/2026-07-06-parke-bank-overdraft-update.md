@@ -1,6 +1,6 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-06T09:10:00-04:00
+updated: 2026-07-07T09:15:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -21,6 +21,14 @@ funds) — Lemar already replied 7/1 with a general "hopeful things come togethe
 holding response. Not re-posting to #decisions to avoid a duplicate ping on the same
 open ask; treating this as a status update on the existing situation only.
 
+## Update 2026-07-07
+Chris Cabezas emailed again (7/7 ~8:29 AM ET): one more item returned, External
+Withdrawal $26.68 (Google Debit - Purchase). He notes the overdrawn balance
+"remains the same as yesterday" — no new figure given, no new question. Same
+pattern as the 7/6 update: routine FYI, standing ask unchanged, not re-posting
+to #decisions.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention Required:
   Cuzzie's Dispensary" thread)
+- gmail: thread `19f27e47429ebd1e`, message `19f3c8dcb3eaf573`, 2026-07-07 12:29 UTC

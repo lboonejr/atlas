@@ -1,6 +1,6 @@
 ---
 created: 2026-07-05T08:45-04:00
-updated: 2026-07-05T13:20-04:00
+updated: 2026-07-07T09:15-04:00
 domain: cuzzies
 type: task
 status: parked
@@ -24,6 +24,14 @@ Lemar replied in #decisions (08:19 ET): hold on this for now; asked for the bill
 posted to #on-button so it's tracked for when Cuzzie's reopens. Posted there; parking
 this note until reopen.
 
+## Update 2026-07-07
+Leafly billing sent a formal invoice, INV00389006, $279.00, due 07/07/2026 (to
+joshua@cuzziesnj.com and lemar@cuzziesnj.com) — same underlying Leafly account,
+no new ask from a person, no reply expected. Still under the 7/5 "hold" decision;
+no new #decisions post. Confirms the amount for whenever this gets revisited
+via #on-button.
+
 ## Sources
 - gmail: thread 19f317015779d988 ("You Missed Your Payment With Leafly")
 - slack: #decisions thread, ts 1783253699.967179 · #on-button (C0BEQUW5NPP)
+- gmail: thread `19f3c3d7a0039854`, invoice INV00389006, $279.00, due 2026-07-07
