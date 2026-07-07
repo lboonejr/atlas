@@ -1,13 +1,13 @@
 ---
 created: 2026-07-05T08:15-04:00
-updated: 2026-07-05T08:30-04:00
+updated: 2026-07-07T09:11-04:00
 domain: cuzzies
 type: meeting
 status: active
 tags: [eddie, happy-eddie, license-transfer, white-label, wind-down]
 source: slack
 due: 2026-07-06T14:30-04:00
-calendar_event_id: 7qc6dpjbfdbnovlnvsp6b4erio
+calendar_event_id: l4qppq7jfl8gm7q2m2vedl6nmc
 ---
 
 # Call with Eddie Osefo (Happy Eddie) — license/ops transition + white-label angle
@@ -77,4 +77,7 @@ whichever piece moves first." Note anything Eddie commits to and follow up by em
 ## Sources
 - slack: #atlas capture, 2026-07-04 18:22 ET (channel C0BBWHCJUV9, ts 1783203770.523559)
 - gmail: thread 19f08f50fd2d53d7 ("NEW DROP of Happy Eddie + Branded Pop-Ups!!")
-- calendar: event 7qc6dpjbfdbnovlnvsp6b4erio, Mon 2026-07-06 2:30-2:50pm ET
+- calendar: event l4qppq7jfl8gm7q2m2vedl6nmc, Mon 2026-07-06 2:30-3:00pm ET (recreated
+  2026-07-07 by calendar-sync — the prior event 7qc6dpjbfdbnovlnvsp6b4erio no longer
+  existed on the reminder calendar; vault due was unchanged, so the event was recreated
+  per the vault-wins rule)
