@@ -1,6 +1,6 @@
 ---
 created: 2026-07-04T09:15-04:00
-updated: 2026-07-07T13:15-04:00
+updated: 2026-07-07T12:20:00-04:00
 domain: cuzzies
 type: log
 status: active
@@ -91,10 +91,26 @@ No new documents copied this scan (Lemar supplied the license + statement himsel
 outside the tailored data-room folder — not duplicated here per the personal-doc
 guard). No owner/guarantor personal doc numbers recorded in this note.
 
+## Update — 2026-07-07 (12:20 ET, later scan)
+
+Nate Geary (Range Marketing — the same contact behind the earlier "Call Follow Up"
+thread) sent a fresh intro email today at 12:11 PM ET (Gmail thread `19f3d593797e09db`,
+subject "BizFundsHub x Cuzzie's Dispensary & Delivery"): "David, I want to introduce
+you to Lemar Boone... I'll let you two take it from here!" — addressed to
+`submissions@bizfundshub.com`, cc'ing Lemar.
+
+This is a second, parallel introduction into the same BizFundsHub/David Cancro
+relationship that's already active and past the outreach stage (see above — David
+already has folder access and is corresponding directly with Lemar). No new room,
+draft, or index change needed; the deal was already `Sent` before this email arrived.
+Labeled `Samira/investor` + `Samira/seen` for tracking. Nothing blocked, nothing for
+Lemar to decide here — informational only.
+
 ## Sources
 - slack: #investor-pipeline thread https://newworkspace-zlb6313.slack.com/archives/C0BCCUKEUQ2/p1783372540669229?thread_ts=1783090109.984409&cid=C0BCCUKEUQ2
 - drive: https://drive.google.com/drive/folders/1G4vqdv-5kz0x5ATpSCTjDC_tJyEsnkFv
 - gmail: draft `r-5106031061493058589` (unsent)
 - gmail: thread `19f3838ed7995926` (David Cancro, driver's license request)
 - gmail: thread `19f38181476de067` (David Cancro, June bank statement request)
+- gmail: thread `19f3d593797e09db` (Nate Geary intro, 2026-07-07)
 - haven: `haven/vault/40-Projects/investor-pipeline/index.md`
