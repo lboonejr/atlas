@@ -1,9 +1,9 @@
 ---
 created: 2026-07-07T11:05:00-04:00
-updated: 2026-07-07T11:05:00-04:00
+updated: 2026-07-07T16:10:00-04:00
 domain: cuzzies
 type: task
-status: awaiting-decision
+status: done
 tags: [gusto, security, 2fa, payroll]
 source: gmail
 ---
@@ -27,7 +27,16 @@ request 2FA removal on Gusto? If not, this may be someone trying to weaken accou
 security on a system tied to payroll/banking — worth a direct check of Gusto's
 account activity/security log outside of any link in these emails.
 
+## Update 2026-07-07 16:10 ET
+Lemar closed the #decisions card (🫡, no written reply) without a recorded answer to
+the open security question — unconfirmed whether he/Josh/the accountant actually
+requested the 2FA removal. Card closed per the reaction engine; no further action
+taken by Samira (no Gusto login/credentials to check account activity directly). If
+the 5x-in-9-minutes pattern recurs, worth Lemar checking Gusto's account activity log
+directly.
+
 ## Sources
 - gmail: messages 19f3cbc24d067639, 19f3cbe7b3400593, 19f3cc1f48b0de04,
   19f3cc3d90e06f2c, 19f3cc3d99f1825c (all "Verify your identity for Gusto support",
   2026-07-07 09:19–09:28 ET)
+- slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1783437033168679
