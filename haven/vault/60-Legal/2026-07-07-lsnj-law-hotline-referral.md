@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T10:45:00-04:00
-updated: 2026-07-07T12:15:00-04:00
+updated: 2026-07-07T13:20:00-04:00
 domain: legal
 type: note
 status: active
@@ -92,9 +92,38 @@ No email addresses were found for firms 1–3 in this search (phone contact only
 Lemar would call or use each firm's website contact form, or paste this text in
 directly. Nothing sent; awaiting Lemar's pick.
 
+## Update 2026-07-07 (13:20 ET) — Lemar doesn't want representation, wants adjournment guidance
+
+Lemar clarified: he's not looking for an attorney, just guidance on getting the
+July 30 trial date pushed back. Posted general (non-legal-advice) procedural
+guidance to the #decisions thread on requesting an adjournment in NJ Special Civil
+Part, Camden County:
+
+1. **Ask the landlord's side first, in writing.** A short adjournment is most
+   reliably granted by mutual consent — if the landlord (or their attorney, if they
+   have one) agrees in writing/email to a new date, that consent can usually be
+   submitted to the court and is rarely contested.
+2. **Contact the Camden County Special Civil Part clerk's office directly** — explain
+   there are active good-faith settlement discussions with the landlord and ask what
+   their adjournment process requires (many Special Civil Part courts take informal
+   phone/in-person requests close to trial; some require a written motion).
+3. **If a formal motion is needed**, it's typically a short "Notice of Motion for
+   Adjournment of Trial," citing the case number, the trial date, and the reason
+   (ongoing settlement negotiations / need additional time), filed with the Special
+   Civil Part clerk with notice to the landlord.
+4. **File it early** — the sooner this goes in relative to 7/30, the more likely a
+   short continuance is granted without objection.
+5. Self-help resources: NJ Courts' Special Civil Part Landlord-Tenant self-help
+   materials at njcourts.gov, and the Camden County Special Civil Part clerk's office
+   can confirm the exact local process/form.
+
+This is general procedural information, not legal advice — the specifics (whether the
+court will actually grant it, what form is required) should be confirmed directly with
+the clerk's office. Awaiting Lemar's next step.
+
 ## Sources
 - slack: #atlas capture, 2026-07-07 10:38:33 EDT (TS 1783435113.063839)
-- slack: #decisions thread, TS 1783436812.660609 (shortlist + draft request, reply 2026-07-07 11:44:14 EDT)
+- slack: #decisions thread, TS 1783436812.660609 (shortlist + draft request, reply 2026-07-07 11:44:14 EDT; adjournment guidance reply ~13:20 ET)
 - canvas: Open Items (F0BDLSHD8JD), "Harrison Court Case" line, "LSNJLAW call
   scheduled 7/7 10am ET"
 - web: sobellaw.com/commercial-landlord-tenant, rjwnjlaw.com/camden-county-landlord-tenant-attorney,
