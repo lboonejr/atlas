@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T10:45:00-04:00
-updated: 2026-07-07T13:20:00-04:00
+updated: 2026-07-07T15:20:00-04:00
 domain: legal
 type: note
 status: active
@@ -121,10 +121,36 @@ This is general procedural information, not legal advice — the specifics (whet
 court will actually grant it, what form is required) should be confirmed directly with
 the clerk's office. Awaiting Lemar's next step.
 
+## Update 2026-07-07 (15:20 ET) — Step 1 drafted: landlord letter + accompanying email
+
+Lemar picked step 1 ("ask the landlord's side first, in writing") and asked for an
+official document to send by mail plus an accompanying email. Two things produced,
+both draft-only, nothing sent or mailed:
+
+1. **Gmail draft** (`r9160363618254282970`) to hsutton@centurionre.com (Harold
+   Sutton, Centurion Realty — Lemar's ongoing landlord contact on the rent-bill
+   thread), new thread, subject "Harrison Acquisitions, LP v. Cuzzie's (Case No.
+   CAM-LT-004393-26) — request for a short adjournment." Requests a short
+   adjournment of the 7/30 trial given active settlement talks, offers to follow
+   up with landlord's counsel (Dylan Mruczinski, Rivkin Radler LLP) on court
+   paperwork. Sitting in Gmail Drafts, not sent.
+2. **Formal letter text** posted to the #decisions thread for Lemar to print and
+   mail — same substance, addressed to Harrison Acquisitions, LP c/o Centurion
+   Realty LLC, Attn: Harold Sutton, 500 5th Avenue, 39th Floor, New York, NY 10110,
+   referencing case CAM-LT-004393-26.
+
+⚠️ Flag: this is correspondence to a landlord's side that already has litigation
+counsel of record (Dylan Mruczinski, Rivkin Radler LLP, per the June eCourts
+notices), on an active trial matter, and Lemar is currently unrepresented. Worth a
+quick gut-check before sending/mailing — either confirm this is fine to send
+directly, or loop in counsel first.
+
 ## Sources
 - slack: #atlas capture, 2026-07-07 10:38:33 EDT (TS 1783435113.063839)
-- slack: #decisions thread, TS 1783436812.660609 (shortlist + draft request, reply 2026-07-07 11:44:14 EDT; adjournment guidance reply ~13:20 ET)
+- slack: #decisions thread, TS 1783436812.660609 (shortlist + draft request, reply 2026-07-07 11:44:14 EDT; adjournment guidance reply ~13:20 ET; step-1 ask 14:53:06 EDT)
 - canvas: Open Items (F0BDLSHD8JD), "Harrison Court Case" line, "LSNJLAW call
   scheduled 7/7 10am ET"
 - web: sobellaw.com/commercial-landlord-tenant, rjwnjlaw.com/camden-county-landlord-tenant-attorney,
   earlwhite.law/practices/real-estate-attorney-in-camden-county, camdencountybar.org/lrs-info
+- gmail: draft `r9160363618254282970` (created 2026-07-07 15:18 ET), to hsutton@centurionre.com
+- gmail: thread `19f000a8e62ac339` (NJ eCourts trial notice, cc DYLAN.MRUCZINSKI@rivkin.com — landlord's counsel of record)
