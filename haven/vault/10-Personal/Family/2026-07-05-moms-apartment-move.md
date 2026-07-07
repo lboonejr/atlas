@@ -1,6 +1,6 @@
 ---
 created: 2026-07-05T20:40:27-04:00
-updated: 2026-07-05T20:40:27-04:00
+updated: 2026-07-07T16:20:00-04:00
 domain: personal
 type: brief
 status: active
@@ -47,5 +47,14 @@ Probing questions posted back in the #atlas thread (2026-07-06): how much can Gr
 put toward rent monthly, is she up for the long drive (alone or with Lemar), and does
 her arrival need to land before July 15 or can it trail the move by a few days.
 
+## Update 2026-07-07
+A Google Calendar reminder landed in Gmail flagging a specific prep task tied to this
+same move: **repair the back room before Mom's July 15 move-in**, due **Wed Jul 8,
+2026** — one week out as of this reminder. No Haven note existed behind that calendar
+event yet, so logging it here as part of the same move-in matter rather than as a new
+note. This is a task only Lemar can execute (physical repair work); no reply or
+Samira-side action possible. Flagging the Jul 8 date so it doesn't slip.
+
 ## Sources
 - slack: #atlas 2026-07-05 20:40 ET
+- gmail: thread `19f3e311273ad2fd` (Google Calendar reminder, "Repair back room before mom's move-in July 15")
