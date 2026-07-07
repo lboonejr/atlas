@@ -103,7 +103,7 @@ Once-a-day 1am ET routine that complements Samira. Thin bootstrap
 | Cron | `0 5 * * *` UTC (1am EDT) · `0 6 * * *` UTC during EST — revisit at DST |
 | Runbook (live behavior) | `.claude/routines/daily-brief.md` — editing on the default branch changes the next run |
 | Living brief artifact URL | `https://claude.ai/code/artifact/125d4d13-c1ae-4f9c-8861-e173b56635e5` — first published 2026-07-05 (manual dry run). morning-brief re-deploys to THIS same URL each run (pass it as `url`). |
-| Living meeting-prep artifact URL | NOT YET CREATED — meeting-prep publishes on the first day with calls and records the stable URL here, then re-deploys to it each run |
+| Living meeting-prep artifact URL | `https://claude.ai/code/artifact/fbc21f73-86c6-4339-9abd-c9c8ef8c568b` — first published 2026-07-07 (first day with qualifying calls). meeting-prep re-deploys to THIS same URL each run (pass it as `url`). |
 
 ## Identity
 
