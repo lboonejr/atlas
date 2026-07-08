@@ -1,6 +1,6 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-08T08:30-04:00
+updated: 2026-07-08T13:25:48-04:00
 domain: cuzzies
 type: task
 status: active
@@ -41,9 +41,22 @@ number) for cuzziesnj.com are now at real risk of suspension, not just NSF fees 
 small external items. Labeled `Samira/seen` in Gmail; no reply drafted (automated,
 no-reply sender).
 
+## Update 2026-07-08 (2) — WM AutoPay canceled
+A step further than a single declined payment: Waste Management emailed (7/8 ~15:49
+ET, wmonline@wm.com) that AutoPay on the Cuzzie's account has been **unenrolled**
+outright — "Any currently scheduled automatic payments will not be processed." This
+is the same underlying Parke Bank payment-method problem, but now the automatic
+payment method itself has been dropped rather than just failing once, so the next
+trash/waste billing cycle for Cuzzie's will not be paid automatically unless someone
+re-enrolls AutoPay or pays manually. Needs Lemar's judgment (whether to re-enroll now
+or wait until the bank issue clears) — not something a channel can execute on its own,
+so no admin prompt staged; flagging it as part of the same open task. Automated
+no-reply sender, no reply drafted; labeled `Samira/seen` in Gmail.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention Required:
   Cuzzie's Dispensary" thread)
 - gmail: thread `19f27e47429ebd1e`, message `19f3c8dcb3eaf573`, 2026-07-07 12:29 UTC
 - gmail: thread `19f411600d1fc1cc` (Google Workspace payment declined, 2026-07-08 09:36 ET)
 - gmail: thread `19f414b46ad7fdd7` (Google Voice Starter payment failure x3, 2026-07-08 10:34 ET)
+- gmail: thread `19f426b950d4bda4` (WM AutoPay canceled, 2026-07-08 15:49 ET)
