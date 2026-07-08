@@ -1,6 +1,6 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-07T09:15:00-04:00
+updated: 2026-07-08T08:30-04:00
 domain: cuzzies
 type: task
 status: active
@@ -28,7 +28,22 @@ Withdrawal $26.68 (Google Debit - Purchase). He notes the overdrawn balance
 pattern as the 7/6 update: routine FYI, standing ask unchanged, not re-posting
 to #decisions.
 
+## Update 2026-07-08
+Same underlying overdraft is now visibly cascading into service billing: Google
+Workspace declined a payment for `cuzziesnj.com` on 7/8 (Checking ••••046,
+"insufficient funds," customer ID cuzziesnj.com / payments profile 1078-7383-2495 —
+service continues briefly but risks disruption if not fixed), and Google Voice
+Starter for the same domain also failed (3 near-duplicate notices, 7/8 ~10:34 ET).
+No new question beyond the standing "any updates on incoming funds" ask — not
+re-posting to #decisions per the established pattern for this matter, but flagging
+plainly: if the account stays overdrawn, Google Workspace/Voice (email + phone
+number) for cuzziesnj.com are now at real risk of suspension, not just NSF fees on
+small external items. Labeled `Samira/seen` in Gmail; no reply drafted (automated,
+no-reply sender).
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention Required:
   Cuzzie's Dispensary" thread)
 - gmail: thread `19f27e47429ebd1e`, message `19f3c8dcb3eaf573`, 2026-07-07 12:29 UTC
+- gmail: thread `19f411600d1fc1cc` (Google Workspace payment declined, 2026-07-08 09:36 ET)
+- gmail: thread `19f414b46ad7fdd7` (Google Voice Starter payment failure x3, 2026-07-08 10:34 ET)
