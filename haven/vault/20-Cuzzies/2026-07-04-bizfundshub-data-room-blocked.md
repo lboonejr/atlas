@@ -1,6 +1,6 @@
 ---
 created: 2026-07-04T09:15-04:00
-updated: 2026-07-07T17:30:00-04:00
+updated: 2026-07-08T08:15-04:00
 domain: cuzzies
 type: log
 status: active
@@ -119,8 +119,25 @@ elsewhere for the third. That is a real choice for Lemar, not something Samira c
 resolve — posted as a `#decisions` parent (see that thread for options). Index status
 unchanged (`Sent`) pending Lemar's call.
 
+## Update — 2026-07-08 (08:15 ET)
+
+Lemar answered the "which MCA gets left out" #decisions card by plain-text reply
+(2026-07-08 07:39 ET): **Liquidibee is the one that gets left out** — BizFundsHub's
+partial coverage goes to Novus Capital and Elevate Funding instead. This lines up with
+Option A (keep Novus covered per the 2026-06-29 "absolute first priority" assurance)
+with Elevate Funding also staying covered rather than Elevate being the one dropped.
+
+No dollar terms from BizFundsHub yet, so nothing to confirm back to David Cancro in
+writing at this stage — recording the decision here; the standalone
+negotiate-or-extend track for Liquidibee is a separate open item (see the Liquidibee
+restart-timeline thread in #decisions, still unanswered) and is not resolved by this
+note. Index status unchanged (`Sent`) — no new document or outreach needed this scan.
+
+Closed the #decisions card (parent ts `1783462404.990359`) with a Done reply.
+
 ## Sources
 - slack: #investor-pipeline thread https://newworkspace-zlb6313.slack.com/archives/C0BCCUKEUQ2/p1783372540669229?thread_ts=1783090109.984409&cid=C0BCCUKEUQ2
+- slack: #decisions thread https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1783462409549009?thread_ts=1783462404.990359&cid=C0BBXA96FFV (Lemar's answer, 2026-07-08 07:39 ET)
 - slack: #atlas message https://newworkspace-zlb6313.slack.com/archives/C0BBWHCJUV9/p1783459619362739 (2026-07-07 17:26:59 EDT, BizFundsHub 2-of-3 MCA funding capacity)
 - drive: https://drive.google.com/drive/folders/1G4vqdv-5kz0x5ATpSCTjDC_tJyEsnkFv
 - gmail: draft `r-5106031061493058589` (unsent)
