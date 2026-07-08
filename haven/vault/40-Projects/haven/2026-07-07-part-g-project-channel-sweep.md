@@ -1,7 +1,7 @@
 ---
 created: 2026-07-07T17:00-04:00
-updated: 2026-07-07T17:00-04:00
-domain:    # UNRESOLVED — spans multiple projects (Cuzzie's brand, pitch deck, delivery-in-a-box, comedy-club) — set one of: personal | cuzzies | station | project | reference | legal
+updated: 2026-07-08T13:00-04:00
+domain: project
 type: log
 status: done
 tags: [samira, part-g, project-channel-sweep]
@@ -31,9 +31,18 @@ Zero new activity requiring action this scan:
 
 No new decisions lifted to #decisions this scan. No new run:admin-3x prompts staged to #admin this scan (checked #admin history for duplicates — none needed). No in-channel work performed — nothing concrete and safe to add beyond what's already been done in prior scans.
 
+## Update 2026-07-08
+Domain was UNRESOLVED (this log spans four separate project channels). Asked Lemar via
+the batched Haven Inbox card in #decisions; he replied "these are all projects so I
+would label them projects" — confirming `domain: project`. Since the note covers
+Samira's own routine execution rather than any single business project, filed it under
+the existing `40-Projects/haven/` folder (the Samira/Atlas system's own project home)
+rather than inventing a project slug.
+
 ## Sources
 - slack: #cuzzys-brand thread ts 1782339354.273549 (100 questions, Q2 decision closed 2026-07-07 16:16 ET)
 - slack: #decisions ts 1783372386.951919 (Cuzzy's brand Q2 lift) and ts 1782943502.330409 (pitch-deck stalled lift, 2026-07-01)
 - slack: #pitch-deck-pressure-test ts 1782303377.852969 (Recap deck thread), ts 1782303370.030839 (Bridge deck thread)
 - slack: #comedy-club ts 1783257200.297099 (Phase 0 checklist)
 - slack: #delivery-in-a-box ts 1782651972.912739 (channel intro)
+- slack: #decisions ts 1783512462.975089 (Haven Inbox card, Lemar's domain answer 2026-07-08 08:20 ET)
