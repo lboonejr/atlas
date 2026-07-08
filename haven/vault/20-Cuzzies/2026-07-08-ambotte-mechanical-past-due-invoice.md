@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T11:20-04:00
-updated: 2026-07-08T13:00-04:00
+updated: 2026-07-08T16:20-04:00
 domain: cuzzies
 type: task
 status: done
@@ -30,6 +30,13 @@ intention to reopen and repay everything owed including this invoice. Stephanie
 replied same day, thanked him and said she'd add a note to the account. No payment
 made or promised; matter is otherwise resolved for now.
 
+## Update 2026-07-08 (16:20 ET) — card closed
+
+Lemar reacted 🫡 on Samira's "Done ✅" reply in the #decisions thread, confirming the
+card can close. No new facts — outcome unchanged from the 13:00 ET update above.
+Card closed out in #decisions and the Monday mirror.
+
 ## Sources
 - gmail: thread 19f421b5aad147a1 (Stephanie Rodriguez, srodriguez@ambotte.com,
   2026-07-08 10:21 ET; Lemar's reply 12:18 PM ET; her acknowledgment same day)
+- slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1783523386829959
