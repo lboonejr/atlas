@@ -3,7 +3,7 @@ created: 2026-07-08T08:20-04:00
 updated: 2026-07-08T13:00-04:00
 domain: project
 type: task
-status: awaiting-decision
+status: done
 tags: [dawn, daily-brief, artifact, feature-request, samira]
 source: slack
 ---
@@ -37,5 +37,21 @@ artifact rather than going back into Slack to find the thread.
 Posted the scope/shape question to #decisions rather than guessing — see that thread.
 No fenced build prompt staged yet; this resumes once Lemar answers.
 
+## Update 2026-07-08 13:00 ET
+Lemar answered both open questions in the #decisions thread: (1) scope = morning-brief
+artifact only, not meeting-prep; (2) a small link-out (not a write-back). He also asked
+to apply it to today's brief right away rather than wait for tomorrow's 1am run.
+
+Built and shipped:
+- Re-rendered today's living brief artifact (same URL, re-deployed in place) with a
+  small speech-bubble icon next to every goal/closed-loop/on-the-radar item that traces
+  to a Slack thread; each opens that thread in a new tab. Items without a precise
+  ts/channel (e.g. calendar-only or Gmail-only items) were left without a bubble rather
+  than guessing a link.
+- Updated `.claude/skills/morning-brief/SKILL.md` step 2 with the chat-bubble spec so
+  future 1am Dawn runs render it by default, scoped to the morning-brief artifact only.
+- No changes to `.claude/skills/meeting-prep/` (out of scope per Lemar's answer).
+
 ## Sources
 - slack: #atlas https://newworkspace-zlb6313.slack.com/archives/C0BBWHCJUV9/p1783511790997129 (2026-07-08 07:56:30 EDT)
+- slack: #decisions ts 1783512662.172029 (scope-check probe), reply ts 1783513302.060869 (Lemar's answer, 2026-07-08 08:21:42 EDT)

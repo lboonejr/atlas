@@ -86,8 +86,17 @@ make the top five) so nothing is silently dropped — say what you set aside, do
    external requests; load the `artifact-design` skill for calibration). Suggested shape:
    a header with the date + a one-line status, goal cards with progress state, a
    closed-loops delta strip, today's calendar timeline, key emails, and the
-   activity-cluster-vs-projects split rendered as two distinct columns. Write the HTML to
-   a working file, then publish with the **Artifact** tool:
+   activity-cluster-vs-projects split rendered as two distinct columns. **Chat-bubble
+   link-outs** (added 2026-07-08 per Lemar's #atlas request): every flagged item that
+   traces to a Slack thread — goal cards, closed-loop rows, on-the-radar rows — gets a
+   small speech-bubble icon linking out to that thread's permalink
+   (`https://newworkspace-zlb6313.slack.com/archives/<channel_id>/p<ts with the decimal
+   removed>`, `target="_blank"`). Link-out only, never a write-back — Artifacts are
+   static HTML with no live backend. Skip the icon rather than guess when a precise
+   ts/channel isn't available; a missing bubble is fine, a dead link is not. In scope for
+   the morning-brief artifact only — meeting-prep is a separate artifact and out of
+   scope for this feature. Write the HTML to a working file, then publish with the
+   **Artifact** tool:
    - If anchors holds a real brief URL → pass it as `url` to **re-deploy the same page**
      (keep the same `title` and `favicon` 🌅 so it stays the same tab/page).
    - If it's still the placeholder → publish fresh, capture the returned URL, and record it
