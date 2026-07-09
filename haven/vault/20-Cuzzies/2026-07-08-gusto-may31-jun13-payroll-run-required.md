@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T16:15-04:00
-updated: 2026-07-08T16:15-04:00
+updated: 2026-07-09T09:10-04:00
 domain: cuzzies
 type: task
 status: active
@@ -29,3 +29,9 @@ Gusto login/credential to inspect or action this directly.
 
 ## Sources
 - gmail: thread 19f4335ef69ca9a8 (Gusto "Action required: Run payroll today", received 2026-07-08 3:30 PM ET)
+
+## Update 2026-07-09
+Lemar picked Option 1 in #decisions (✅, 2026-07-08 evening): no one worked this
+period / stale duplicate — log into app.gusto.com and cancel/skip this run. Logged
+here; Samira has no Gusto login so the actual cancel-click still needs to happen in
+app.gusto.com. Leaving `status: active` until that's done.
