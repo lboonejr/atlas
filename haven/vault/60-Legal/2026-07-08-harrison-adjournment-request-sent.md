@@ -1,9 +1,9 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-08T12:00-04:00
+updated: 2026-07-09T16:20-04:00
 domain: legal
 type: log
-status: active
+status: awaiting-decision
 tags: [harrison-acquisitions, eviction, cam-lt-004393-26, rivkin-radler]
 source: gmail
 ---
@@ -31,5 +31,20 @@ No action needed from Lemar on this specific item — informational. Worth watch
 whether Dylan or Maria responds substantively once he's back, and whether the court
 grants the adjournment.
 
+## Update 2026-07-09 (16:20 ET) — landlord's counsel responds: conditional consent, $20,000 demand
+
+Jason Gil (Counsel, Rivkin Radler LLP — not Dylan Mruczinski, who appears to still be
+out) replied 2026-07-09 ~4:03 PM ET (cc'd Dylan Mruczinski, Erez Glambosky, Trisha
+Edmond): the client (Harrison Acquisitions) states arrears are now "upwards of $60K"
+(up from the $42,157.37 figure tracked earlier this week) and will consent to a 30-day
+adjournment ONLY on condition that **$20,000.00 is paid immediately**. Asked Lemar to
+confirm whether that payment can be made. "All rights reserved."
+
+This is a real payment-authorization + legal-strategy decision — Samira cannot pay or
+commit to payment (safety rule), and cannot advise on litigation strategy. Flagged to
+#decisions for Lemar's call; draft reply options posted in-thread there (not sent —
+Gmail Drafts only).
+
 ## Sources
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
+- gmail: thread 19f3e00cb68ac2cb (Jason Gil reply, 2026-07-09 20:02:55 UTC, message id 19f487a33d5691b8)
