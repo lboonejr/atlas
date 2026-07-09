@@ -1,6 +1,6 @@
 ---
 created: 2026-07-09T12:29-04:00
-updated: 2026-07-09T13:20-04:00
+updated: 2026-07-09T14:30-04:00
 domain: cuzzies
 type: task
 status: active
@@ -31,3 +31,10 @@ the contract. This latest exchange is the wind-down endgame: vacate and return k
 ## Sources
 - gmail: thread 19e17d94ca809a2f, message 19f47a8dd02a1101 (Ali's ask, 2026-07-09 16:14 UTC)
 - gmail: thread 19e17d94ca809a2f, message 19f47b6b88b728ad (Lemar's sent reply/commitment, 2026-07-09 16:29 UTC)
+
+## Update 2026-07-09 14:30 ET
+Lemar reacted ✅ on the #decisions card (self-tracking, "react ✅ once handled/confirmed")
+— read as confirming he's tracking/on it, not that the physical clear-out is complete yet.
+Status left `active`; deadline (Monday 7/13 9am) and calendar reminder unchanged. Will
+close (`status: done`) once Lemar reacts 🫡 or confirms the office is actually cleared
+out and keys returned to Ali.
