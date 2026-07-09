@@ -1,12 +1,13 @@
 ---
 created: 2026-07-09T12:29-04:00
-updated: 2026-07-09T12:29-04:00
+updated: 2026-07-09T13:15-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [regus, iwg, office, wind-down, mount-laurel]
 source: gmail
 due: 2026-07-13T09:00-04:00
+calendar_event_id: nhu7id7ltfluav68lbgvk0dq0c
 ---
 
 # Regus (Mount Laurel) office — clear out and return keys by Monday
