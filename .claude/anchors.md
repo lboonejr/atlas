@@ -8,7 +8,7 @@ When a workspace, board, account, or channel changes, edit THIS file and nothing
 > doing work is fine; maintaining a second list is not). The memory file
 > `shortlist_anchors.md` on Lemar's machine is a pointer to this file, not a copy.
 
-Last verified: 2026-07-05.
+Last verified: 2026-07-08 (added Inbox Janitor / "Basil" nightly cleanup routine).
 
 ## Repo / vault
 
@@ -66,6 +66,7 @@ gate, the mirror steps drop from the runbook + skills and the boards go read-onl
 | Car-Hunt/seen | `Label_6` |
 | Samira/investor | `Label_7` |
 | Samira/investor-sent | NOT YET CREATED — create with `create_label` on first investor-loop run and record the ID here |
+| Vendor Menus | `Label_8` (created 2026-07-08 for the Inbox Janitor routine) |
 
 ## Google Calendar
 
@@ -106,6 +107,47 @@ Once-a-day 1am ET routine that complements Samira. Thin bootstrap
 | Living brief artifact URL | `https://claude.ai/code/artifact/125d4d13-c1ae-4f9c-8861-e173b56635e5` — first published 2026-07-05 (manual dry run). morning-brief re-deploys to THIS same URL each run (pass it as `url`). |
 | Living meeting-prep artifact URL | `https://claude.ai/code/artifact/b0143e64-a665-44e1-af48-33db2f88457e` — first published 2026-07-08 (first day with a qualifying call). meeting-prep re-deploys to THIS same URL each run (pass it as `url`). |
 
+## Cloud routine — Inbox Janitor / "Basil" (nightly Gmail cleanup, separate from Samira/Dawn)
+
+Standalone nightly routine (~11pm ET). Thin bootstrap `.claude/routines/INBOX-JANITOR-TRIGGER.md`
+→ fat runbook `.claude/routines/inbox-janitor.md`. Acts on Gmail ONLY (the connected account);
+Drive is out of scope (connected Drive tools have no move/delete/trash). Ships with `DRY_RUN=true`
+in the runbook until Lemar vets one preview run, then flip to false.
+
+| What | Value |
+|---|---|
+| RemoteTrigger | `NOT YET CREATED` — create via /schedule from an authed session; record ID here |
+| Cloud env | `NOT YET CREATED` — record here (may reuse `env_01Xatmag93x2WA2Gd84D9iHj`) |
+| Cron | ~11:07pm ET → `7 3 * * *` UTC (EDT) / `7 4 * * *` UTC (EST). Confirm at creation. |
+| Runbook (live behavior) | `.claude/routines/inbox-janitor.md` — editing on `main` changes the next run |
+| Reports to | #reports `C0BBZJL85RT` (reuse; no new channel) |
+| Gmail account acted on | `lemar@cuzziesnj.com` (business — confirmed as the connected Gmail account 2026-07-08; winds down mid-2026) |
+| Vendor Menus label | `Label_8` |
+| Persona | lead `🧹`, sign "— Basil" (placeholder name, rename-able like "Dawn") |
+
+**Trash sweep categories** (PART B): `category:promotions OR category:social OR category:forums`,
+`older_than:1y`. `category:updates` is **report-only, never auto-trashed** (it holds invoices,
+bank, payroll, insurance/legal receipts mixed with ads — see the runbook).
+
+**Vendor-domain seed list** (PART A archives their *recent* menus out of the inbox; these are NOT
+on the allowlist, so their >12-month marketing IS trashable in PART B). Expand as new menu
+senders appear:
+`qccnj.com` · `verano.com` · `terrascend.com` · `awholdings.com` · `freshcannabis.co` ·
+`kivaconfections.com` · `illicitgardens.com` · `harvestmoonfarmsnj.com` · `apextrading.com`
+(and `*.apextrading.com` seller subdomains) · `budsgoods.com` · `novafarms.com` ·
+`prolificgrowhouse.com` · `parksgrove.com` · `laddsllc.com` · `missgrass.com` ·
+`jerseysmooth.com` · `thegardensociety.com` · `arescanna.com` · `1906.shop` · `northlake.supply`
+
+**NEVER-TOUCH allowlist** (PART B hard floor — sender domains never trashed; expand freely).
+Seeded from a live-inbox recon on 2026-07-08 that found financial/legal mail routinely
+mis-categorized as promotions/updates:
+`intuit.com` · `notification.intuit.com` · `notifications.intuit.com` · `quickbooks` (any) ·
+`tsheets.com` · `gusto.com` · `parkebank.com` · `fundcanna.com` · `firstinsurancefunding.com` ·
+`pactsafe.com` · `docusign` (any) · `crc.nj.gov` and any `*.gov` · `accounts.google.com` and
+`no-reply@accounts.google.com` (security alerts) · `headset.io` · `stellaconnect.net` (Metrc).
+Plus the rule: never trash the active FundCanna underwriting thread. Anything `is:important` or
+`is:starred` is already protected by the Safety floor regardless of this list.
+
 ## Identity
 
 | What | Value |
@@ -115,3 +157,4 @@ Once-a-day 1am ET routine that complements Samira. Thin bootstrap
 | Lemar Slack user id | `U0BC5UTHYG4` (display "Don Frunt") |
 | Samira Slack posts | lead with 🌐, sign "— Samira" |
 | Dawn (Daily Brief) Slack posts | lead with 🌅, sign "— Dawn" · posts only to #daily-brief `C0BF73FF56H`. ("Dawn" is a placeholder persona name — rename freely; it lives only in the two skills + this row.) |
+| Basil (Inbox Janitor) Slack posts | lead with 🧹, sign "— Basil" · posts only to #reports `C0BBZJL85RT`. ("Basil" is a placeholder persona name — rename freely; it lives only in the runbook + this row.) |
