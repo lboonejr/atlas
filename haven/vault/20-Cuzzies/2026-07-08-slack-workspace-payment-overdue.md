@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T18:10-04:00
-updated: 2026-07-09T09:00-04:00
+updated: 2026-07-09T09:12-04:00
 domain: cuzzies
 type: task
 status: active
@@ -24,3 +24,9 @@ Relevant context: Cuzzie's is winding down mid-2026, which may make downgrading 
 
 ## Sources
 - gmail: thread 19f43ae8b17065bf (Slack "Overdue payment for Cuzzie's Dispensary & Delivery", 2026-07-08 17:42 ET)
+
+## Update 2026-07-09
+Lemar picked Option B in #decisions (✅, 2026-07-08 evening): switch the workspace to
+Free, let Pro lapse. Logged here; this is a Slack workspace-admin billing action
+Samira has no tool/login to perform — needs Lemar to click through in the Slack admin
+billing page (link above). Leaving `status: active` until that's done.
