@@ -8,7 +8,7 @@ tags: [extraspace, storage, past-due, billing, family, mom]
 source: gmail
 area: family
 due: 2026-07-15T09:00-04:00
-calendar_event_id:
+calendar_event_id: f6usr0gdlgoqcfgceaar0rs03c
 ---
 
 # Extra Space Storage — unit 3003 past due (40 White Horse Pike, Collingswood NJ)
