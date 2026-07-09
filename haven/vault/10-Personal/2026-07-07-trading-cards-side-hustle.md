@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T09:25:00-04:00
-updated: 2026-07-07T09:25:00-04:00
+updated: 2026-07-08T21:40:00-04:00
 domain: personal
 type: note
 status: active
@@ -45,5 +45,17 @@ and sell.
 Sports cards or another category (Pokémon/other TCG) first — which fits Lemar's
 existing knowledge/interest better?
 
+## Update 2026-07-08
+Lemar asked (in-thread, 7/7 15:06 ET) for an HTML version of this framework, and
+separately (7/8 21:02 ET) asked for a dedicated project channel. Both done this scan:
+- HTML artifact built and sent: https://claude.ai/code/artifact/6ed1eb91-1126-46cd-975c-78800e8bc128
+- Created #trading-cards (channel ID `C0BGYM1UB4Y`) and posted the framework there as
+  the project kickoff.
+Decision point (sports vs. Pokémon/TCG first) is still open, now tracked in the new
+channel instead of this thread.
+
 ## Sources
 - slack: #atlas capture, 2026-07-06 20:36:41 EDT (TS 1783384601.800979)
+- slack: #atlas, HTML request, 2026-07-07 15:06:12 EDT (TS 1783451172.932509)
+- slack: #atlas, channel request, 2026-07-08 21:02:18 EDT (TS 1783558938.594869)
+- slack: #trading-cards kickoff post, 2026-07-08 21:42 ET (TS 1783561351.148859)
