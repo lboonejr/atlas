@@ -1,6 +1,6 @@
 ---
 created: 2026-07-09T11:10-04:00
-updated: 2026-07-09T11:10-04:00
+updated: 2026-07-09T16:07-04:00
 domain: cuzzies
 type: task
 status: active
@@ -33,5 +33,12 @@ Posted to #decisions for Lemar's pick.
 ## Related
 - [[buds-goods]]
 
+## Update 2026-07-09 16:07 ET
+Lemar reacted ✅ on **Option A — wind-down disclosure + request 30 days** in the
+#decisions thread. Drafted the reply to the vendor (mzaidi@budsgoods.com) and saved it
+to Gmail Drafts — NOT sent (safety rule: Samira drafts, Lemar sends).
+
 ## Sources
 - gmail: thread 19f4755bb267ff2e, message 19f4755bb267ff2e (2026-07-09 14:43 UTC)
+- gmail: draft r-962087085426208916 (Option A reply to mzaidi@budsgoods.com, unsent)
+- slack: #decisions thread 1783609612.586299, option reply 1783609617.459919 (✅ by Lemar)
