@@ -116,9 +116,9 @@ in the runbook until Lemar vets one preview run, then flip to false.
 
 | What | Value |
 |---|---|
-| RemoteTrigger | `NOT YET CREATED` — create via /schedule from an authed session; record ID here |
-| Cloud env | `NOT YET CREATED` — record here (may reuse `env_01Xatmag93x2WA2Gd84D9iHj`) |
-| Cron | ~11:07pm ET → `7 3 * * *` UTC (EDT) / `7 4 * * *` UTC (EST). Confirm at creation. |
+| RemoteTrigger | `trig_01JE6TpvqAnawkETpx64vvX9` (created 2026-07-08 via RemoteTrigger API; enabled; first run 2026-07-09 03:07 UTC = 11:07pm ET) |
+| Cloud env | `env_01Xatmag93x2WA2Gd84D9iHj` (shared with Samira + Dawn — Gmail + Slack MCP + git access) |
+| Cron | `7 3 * * *` UTC (11:07pm EDT) — switch to `7 4 * * *` UTC during EST. Working branch `claude/inbox-janitor`; durable writes go to `main` per git-write policy. |
 | Runbook (live behavior) | `.claude/routines/inbox-janitor.md` — editing on `main` changes the next run |
 | Reports to | #reports `C0BBZJL85RT` (reuse; no new channel) |
 | Gmail account acted on | `lemar@cuzziesnj.com` (business — confirmed as the connected Gmail account 2026-07-08; winds down mid-2026) |
