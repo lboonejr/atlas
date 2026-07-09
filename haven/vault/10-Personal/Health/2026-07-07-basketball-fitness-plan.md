@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T09:40:00-04:00
-updated: 2026-07-07T09:40:00-04:00
+updated: 2026-07-08T21:35:00-04:00
 domain: personal
 type: note
 status: active
@@ -42,9 +42,11 @@ out-of-shape, using bodyweight-only strength and conditioning to start.
 - Rest at least 1 day between strength sessions early on; soreness/joint pain,
   not just fatigue, is the signal to back off.
 
-## Decision point
-Want this broken into a week-by-week checklist (with reminders), or is the phase
-outline enough to start from?
+## Update 2026-07-08
+Lemar asked for the week-by-week breakdown as HTML. Built an interactive checklist
+(session-by-session, checkmarks persist on his device, overall progress bar):
+https://claude.ai/code/artifact/a723834f-6310-4575-8897-75ae8e30806e
 
 ## Sources
 - slack: #atlas capture, 2026-07-07 07:32:09 EDT (TS 1783423929.885519)
+- slack: HTML request + reply, 2026-07-08 21:37 ET
