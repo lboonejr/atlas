@@ -1,6 +1,6 @@
 ---
 created: 2026-06-24T18:15-04:00
-updated: 2026-07-06T18:05-04:00
+updated: 2026-07-09T14:20-04:00
 domain: project
 type: note
 status: active
@@ -43,7 +43,14 @@ industry hesitation.
 Lemar: The budget buyer and the culturally aligned consumer — those were the
 customers Cuzzie's faced the most at retail.
 
-96 of 100 questions remain unanswered — no rush, Lemar answers as more comes to
+**Q6 — What's the feeling you want customers to have when they pick up a
+Cuzzy's product?** (2026-07-08, 20:58 ET)
+Lemar: I want consumers to feel proud that they purchased this product and
+supported us. I want them to feel like they've become a part of the family.
+There's a certain connection to a community that is associated with the
+Cuzzie's ethos.
+
+95 of 100 questions remain unanswered — no rush, Lemar answers as more comes to
 him.
 
 ## Note on this record
@@ -75,3 +82,4 @@ Q9, etc.) can now proceed on the assumption the Cuzzie's name carries forward.
   (ts 1783297381.038359)
 - slack: #decisions, Q2 brand-identity card 2026-07-06 (ts 1783372386.951919),
   decided ~18:05 ET — see `20-Cuzzies/decisions/2026-07-06-cuzzys-brand-name-decision.md`
+- slack: #cuzzys-brand thread, Lemar's Q6 answer 2026-07-08 20:58 ET (ts 1783558691.293299)
