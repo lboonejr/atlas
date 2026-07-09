@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T09:25:00-04:00
-updated: 2026-07-08T21:40:00-04:00
+updated: 2026-07-09T13:00:00-04:00
 domain: personal
 type: note
 status: active
@@ -43,7 +43,7 @@ and sell.
 
 ## Decision point
 Sports cards or another category (Pokémon/other TCG) first — which fits Lemar's
-existing knowledge/interest better?
+existing knowledge/interest better? **DECIDED 2026-07-08, see Update below.**
 
 ## Update 2026-07-08
 Lemar asked (in-thread, 7/7 15:06 ET) for an HTML version of this framework, and
@@ -54,8 +54,25 @@ separately (7/8 21:02 ET) asked for a dedicated project channel. Both done this 
 Decision point (sports vs. Pokémon/TCG first) is still open, now tracked in the new
 channel instead of this thread.
 
+## Update 2026-07-09 — sports cards picked, starter tracker posted
+Lemar answered in #trading-cards (7/8 21:52 ET): "I think I want to start with sports."
+Starting lane is **sports cards**.
+
+Sports-specific notes to carry forward:
+- PSA is the dominant grader for sports (biggest resale liquidity/premium); BGS is
+  strong for football/basketball rookies specifically; SGC has gained ground for
+  vintage.
+- Rookie cards and first-year/vintage sets carry the most durable value; look for
+  serial-numbered parallels and rookie patch autos (RPAs) for the higher end.
+- Season/demand cycle: buy low in the off-season, sell into playoffs/draft-season
+  demand spikes for the sport in question.
+
+Posted a starter inventory/P&L tracking table (markdown, copy into a spreadsheet) to
+#trading-cards so Lemar can log his first test-budget purchases.
+
 ## Sources
 - slack: #atlas capture, 2026-07-06 20:36:41 EDT (TS 1783384601.800979)
 - slack: #atlas, HTML request, 2026-07-07 15:06:12 EDT (TS 1783451172.932509)
 - slack: #atlas, channel request, 2026-07-08 21:02:18 EDT (TS 1783558938.594869)
 - slack: #trading-cards kickoff post, 2026-07-08 21:42 ET (TS 1783561351.148859)
+- slack: #trading-cards, Lemar's sports-first answer, 2026-07-08 21:52:04 EDT (TS 1783561924.270499)
