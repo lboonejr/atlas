@@ -1,9 +1,9 @@
 ---
 created: 2026-07-10T11:20:00-04:00
-updated: 2026-07-10T11:20:00-04:00
+updated: 2026-07-10T13:00:00-04:00
 domain: project
 type: decision
-status: awaiting-decision
+status: done
 tags: [pitch-deck, fundraising, recap-deck, valuation]
 source: slack
 ---
@@ -27,7 +27,19 @@ whether an attorney has confirmed the Camden lease is assignable in a change-of-
 — Lemar answered "No as of right now" (2026-06-27). The deck's "assignable Camden lease"
 headline claim needs a caveat or fix; worth a follow-up dev pass, not a #decisions item.
 
+## Update — 2026-07-10 12:50 ET
+Lemar replied directly in the #decisions thread (not a reaction — a text answer):
+"Josh and I landed on $500k for 50%. Implied valuation is 1 million"
+
+**Decision: the $500K raise buys 50% ownership. Implied valuation: $1,000,000.**
+
+This clears the last blocker on the Recapitalization deck's valuation / "WHAT YOU GET"
+section — Q1 is now answered alongside Q2/Q4/Q5/Q6/Q7/Q8. Deck finalization (folding
+this number into the drafted section) is a follow-up dev pass, not a #decisions item.
+
 ## Sources
 - Slack #pitch-deck-pressure-test (C0BCD7U5X2B), Recap Deck thread root ts
   1782303377.852979
 - Latest still-open flag: ts 1782594539.940209 (2026-06-27 17:08:59 ET)
+- Answer: #decisions (C0BBXA96FFV), thread ts 1783696529.830699, reply ts
+  1783702239.666029 (2026-07-10 12:50:39 ET)
