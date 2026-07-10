@@ -1,1 +1,32 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDctMTBUMTY6MzUtMDQ6MDAKdXBkYXRlZDogMjAyNi0wNy0xMFQxNjozNS0wNDowMApkb21haW46IGN1enppZXMKdHlwZTogdGFzawpzdGF0dXM6IGFjdGl2ZQp0YWdzOiBbaW52b2ljZSwgbG91ZC1sYWJzLCBhY2NvdW50cy1wYXlhYmxlLCB3aW5kLWRvd24sIHZlbmRvci1kZWJ0XQpzb3VyY2U6IGdtYWlsCi0tLQoKIyBMb3VkIExhYnMg4oCUIG92ZXJkdWUgaW52b2ljZSAoUFNJMDAwMTYzNCkKCkpha2UgQmVycnkgKENFTywgTG91ZCBMYWJzIOKAlCBQeXJhbWlkIC8gRG9pbmtzIC8gWm9vYmllcyAvIFJlanV2IGJyYW5kcykKZW1haWxlZCBvbiAyMDI2LTA3LTEwIGF0IH40OjEzcG0gRVQgc2F5aW5nIGFuIGludm9pY2UgaGFzIHNsaXBwZWQgb3ZlcmR1ZSwKYXNraW5nIGZvciBwYXltZW50IGF0IExlbWFyJ3MgImVhcmxpZXN0IGNvbnZlbmllbmNlLiIgQ0MnZCBBYXJvbiAmIEJyYWQKKExvdWQgTGFicyksIHNlbnQgdG8gSmVubi9Kb3NodWEvTGVtYXIgYXQgY3V6emllc25qLmNvbS4KCi0gQW1vdW50OiBub3Qgc3RhdGVkIGluIHRoZSBlbWFpbCBib2R5IOKAlCBzZWUgYXR0YWNoZWQgaW52b2ljZSAqKlBTSTAwMDE2MzQqKgogICgiUG9zdGVkIFNhbGVzIEludm9pY2UgLSBDdXp6aWUncyAoTkopIikuIENPTkZJUk0gYW1vdW50IGJlZm9yZSBhbnkgcGF5bWVudAogIGNvbW1pdG1lbnQuCi0gVmVuZG9yIGNvbnRhY3Q6IGpha2VAbG91ZGxhYnMuY28gKGNjIGFhcm9uQGxvdWRsYWJzLmNvLCBicmFkQGxvdWRsYWJzLmNvKQotIEZpcnN0IHRpbWUgdGhpcyB2ZW5kb3IncyBBL1IgaGFzIHN1cmZhY2VkIGluIEhhdmVuLgotIFNhbWUgd2luZC1kb3duLWNyZWRpdG9yIHBhdHRlcm4gYXMgVGVyckFzY2VuZC9FbXVuaW8vTGl0dGxlIExlYWYgTGFicy9UYWxhcmlhL0dUSS9CdWQncyBHb29kcyDigJQgQ3V6emllJ3MgY2Vhc2VkIG9wZXJhdGlvbnMgSnVuZSAxMywgMjAyNiBhbmQgaXMgd29ya2luZyB0aHJvdWdoIHZlbmRvcgogIG9ibGlnYXRpb25zIGluIGl0cyB3aW5kLWRvd24gcHJvY2Vzcy4KCjMgZHJhZnQgcmVwbHkgb3B0aW9ucyBzdGFnZWQgdG8gI2RlY2lzaW9ucyBmb3IgTGVtYXIncyBwaWNrOiAoQSkgd2luZC1kb3duCmRpc2Nsb3N1cmUgKyByZXF1ZXN0IGEgMzAtZGF5IGhvbGQgKyBhc2sgZm9yIGNvbmZpcm1lZCBhbW91bnQsIChCKSBzaG9ydAphY2tub3dsZWRnbWVudCB3aXRoIG5vIGNvbW1pdG1lbnQsIChDKSBwYXJrIC8gbm8gcmVwbHkgdGhpcyBzY2FuLiBObyBwYXltZW50CndpbGwgYmUgc2VudCB3aXRob3V0IExlbWFyJ3MgZXhwbGljaXQgYWN0aW9uLgoKIyMgU291cmNlcwotIGdtYWlsOiB0aHJlYWQgMTlmNGRhYTk1MTI3ZTg5YyAoTG91ZCBMYWJzIEludm9pY2UsIHJlY2VpdmVkIDIwMjYtMDctMTAgMjA6MTM6NTNaKQo=
+---
+created: 2026-07-10T16:35-04:00
+updated: 2026-07-10T16:35-04:00
+domain: cuzzies
+type: task
+status: active
+tags: [invoice, loud-labs, accounts-payable, wind-down, vendor-debt]
+source: gmail
+---
+
+# Loud Labs — overdue invoice (PSI0001634)
+
+Jake Berry (CEO, Loud Labs — Pyramid / Doinks / Zoobies / Rejuv brands)
+emailed on 2026-07-10 at ~4:13pm ET saying an invoice has slipped overdue,
+asking for payment at Lemar's "earliest convenience." CC'd Aaron & Brad
+(Loud Labs), sent to Jenn/Joshua/Lemar at cuzziesnj.com.
+
+- Amount: not stated in the email body — see attached invoice **PSI0001634**
+  ("Posted Sales Invoice - Cuzzie's (NJ)"). CONFIRM amount before any payment
+  commitment.
+- Vendor contact: jake@loudlabs.co (cc aaron@loudlabs.co, brad@loudlabs.co)
+- First time this vendor's A/R has surfaced in Haven.
+- Same wind-down-creditor pattern as TerrAscend/Emunio/Little Leaf Labs/Talaria/GTI/Bud's Goods — Cuzzie's ceased operations June 13, 2026 and is working through vendor
+  obligations in its wind-down process.
+
+3 draft reply options staged to #decisions for Lemar's pick: (A) wind-down
+disclosure + request a 30-day hold + ask for confirmed amount, (B) short
+acknowledgment with no commitment, (C) park / no reply this scan. No payment
+will be sent without Lemar's explicit action.
+
+## Sources
+- gmail: thread 19f4daa95127e89c (Loud Labs Invoice, received 2026-07-10 20:13:53Z)
