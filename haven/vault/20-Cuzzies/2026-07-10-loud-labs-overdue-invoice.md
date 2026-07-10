@@ -1,9 +1,9 @@
 ---
 created: 2026-07-10T16:35-04:00
-updated: 2026-07-10T17:15-04:00
+updated: 2026-07-10T18:00-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [invoice, loud-labs, accounts-payable, wind-down, vendor-debt]
 source: gmail
 ---
@@ -51,7 +51,26 @@ jake@loudlabs.co, cc aaron@loudlabs.co / brad@loudlabs.co / jenn@cuzziesnj.com /
 joshua@cuzziesnj.com. Thread labeled `Samira/drafted`. Card stays open in #decisions
 (ts `1783715084.741489`) awaiting Lemar's send + 🫡 to close.
 
+## Update 2026-07-10 18:00 ET — Lemar sent his own replies directly, thread resolved
+
+Lemar bypassed the saved draft and sent two of his own replies directly by email
+(not via Slack/#decisions):
+- 17:45 ET: told Jake Cuzzie's has "temporarily closed operations," the invoice
+  hasn't been forgotten, will follow up as things develop.
+- 17:54 ET (after Jake asked "are you reopening? do you have our inventory?"): no
+  firm reopening timeline yet, and confirmed Cuzzie's does **not** hold any Loud Labs
+  inventory.
+
+One bounce in the thread (mailer-daemon, 17:45 ET) — Lemar's first reply cc'd
+`jenn@cuzziesnj.com`, which doesn't exist; no impact, the primary recipient (Jake)
+received both replies.
+
+Thread labeled `Samira/sent`. Marking this note `done` — nothing further pending on
+Samira's side; the #decisions card (ts `1783715084.741489`) is moot now that Lemar
+acted directly, still awaiting his 🫡 to formally close.
+
 ## Sources
-- gmail: thread 19f4daa95127e89c (Loud Labs Invoice, received 2026-07-10 20:13:53Z)
+- gmail: thread 19f4daa95127e89c (Loud Labs Invoice, received 2026-07-10 20:13:53Z;
+  Lemar's direct replies 21:45:35Z and 21:54:31Z)
 - slack: #decisions, Lemar's edited-reply instruction, ts `1783716950.592549`
   (2026-07-10 16:55:50 ET)
