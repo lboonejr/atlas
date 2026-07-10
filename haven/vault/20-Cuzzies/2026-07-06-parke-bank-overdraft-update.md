@@ -1,6 +1,6 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-08T13:25:48-04:00
+updated: 2026-07-10T13:15:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -53,6 +53,30 @@ or wait until the bank issue clears) — not something a channel can execute on 
 so no admin prompt staged; flagging it as part of the same open task. Automated
 no-reply sender, no reply drafted; labeled `Samira/seen` in Gmail.
 
+## Update 2026-07-10 — 5 more returned items, $403.80, largest single item yet
+Meggan Hallworth (Assistant Branch Manager, Parke Bank Kennedy Branch, cc Chris
+Cabezas) emailed 7/10 ~12:32 PM ET, subject "Secure: Cuzzie's Dispensary & Delivery
+LLC" (gmail thread `19f4c03a31c89a43`): 5 more items presented for payment were
+returned this morning —
+
+- Waste Management $320.56 (this is the manual/re-presented charge that the 7/8
+  AutoPay-cancellation update warned would land unpaid — it has now landed and
+  bounced)
+- GoDaddy.com $39.99
+- PayPal $21.73
+- PayPal $17.55
+- PayPal $3.97
+
+Total returned this round: **$403.80** — the single largest item (WM $320.56) is
+bigger than any prior individual returned item in this saga. Unlike Chris Cabezas's
+prior routine notices, this one came from a different contact (branch manager,
+not the usual AR contact) with a direct invitation to reply ("If you have any
+questions, please let me know"). Given the new contact, the escalated amount, and
+that Lemar's last reply on this matter was over a week ago (7/1), treating this
+one as reply-worthy rather than a silent log-only update — draft reply options
+posted to #decisions (not sent, Gmail Drafts only if picked). Labeled `Samira/seen`
+in Gmail.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention Required:
   Cuzzie's Dispensary" thread)
@@ -60,3 +84,4 @@ no-reply sender, no reply drafted; labeled `Samira/seen` in Gmail.
 - gmail: thread `19f411600d1fc1cc` (Google Workspace payment declined, 2026-07-08 09:36 ET)
 - gmail: thread `19f414b46ad7fdd7` (Google Voice Starter payment failure x3, 2026-07-08 10:34 ET)
 - gmail: thread `19f426b950d4bda4` (WM AutoPay canceled, 2026-07-08 15:49 ET)
+- gmail: thread `19f4c03a31c89a43` (Meggan Hallworth, 5 more returned items $403.80, 2026-07-10 12:32 ET)
