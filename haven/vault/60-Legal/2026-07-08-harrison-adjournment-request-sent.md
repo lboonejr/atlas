@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-09T16:20-04:00
+updated: 2026-07-10T09:15-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -45,6 +45,22 @@ commit to payment (safety rule), and cannot advise on litigation strategy. Flagg
 #decisions for Lemar's call; draft reply options posted in-thread there (not sent —
 Gmail Drafts only).
 
+## Update 2026-07-10 (09:15 ET) — Lemar asks (in #atlas): file directly with the court instead?
+
+Lemar asked in #atlas (08:52 ET): "considering the Harrison demand (20k for 30 day
+adjournment) should we try to file for the court date pushback directly with the
+courts?" — i.e., an alternative to negotiating with Rivkin Radler: ask the Camden
+County Special Civil Part judge directly for a short adjournment/continuance, sidestepping
+counsel's $20K condition entirely.
+
+Samira can't offer litigation strategy or file anything with a court (safety rule +
+not a lawyer). Added as **Option D** on the existing #decisions card (same thread as
+Options A/B/C, not a new card — one matter, one decision surface) with that caveat
+attached, and flagged that this is exactly the kind of question the still-open LSNJ Law
+Hotline referral card ([[2026-07-07-lsnj-law-hotline-referral]]) was trying to route to
+real counsel for. Trial is July 30 — nine days out — so timing is tight either way.
+
 ## Sources
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
 - gmail: thread 19f3e00cb68ac2cb (Jason Gil reply, 2026-07-09 20:02:55 UTC, message id 19f487a33d5691b8)
+- slack: #atlas, Don Frunt, 2026-07-10 08:52:53 ET (court-filing question)
