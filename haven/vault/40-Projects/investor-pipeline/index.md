@@ -1,6 +1,6 @@
 ---
 created: 2026-07-04T13:30-04:00
-updated: 2026-07-08T21:15-04:00
+updated: 2026-07-10T14:35-04:00
 domain: project
 type: reference
 status: active
@@ -23,6 +23,7 @@ Parked — rows are never deleted.
 | Star Renovate Funding | Cuzzie's | — | — | [folder](https://drive.google.com/drive/folders/1PBThQptYMzBigg7Z8RZiRKutoCdFtFWy) | Working | Masters now available in Master Templates — still need contact + ask confirmed by Josh before tailoring | 2026-07-07 |
 | Getty Advance | Cuzzie's | — | — | [folder](https://drive.google.com/drive/folders/1tn5uZbSjWk3ffcJq6-CjggH4SotVc4pX) | Working | Masters now available in Master Templates — still need contact + ask confirmed by Josh before tailoring | 2026-07-07 |
 | FundCanna | Cuzzie's | Sal Castaneda (Director of Partnerships) · scastaneda@fundcanna.com · 858-652-9437 — AE Peter Gladish cc'd | Operating Capital Line to restructure existing MCAs (Elevate, Novus, Liquid Bee) | [folder](https://drive.google.com/drive/folders/1FfYcoHmGVuih-Iup8Yo4tRZn98wn2C7T) — built by Lemar 7/8, all 3 MCA agreements + 11mo Parke Bank statements + payment-confirmation docs + debt investment summary · [[2026-07-08-fundcanna-restructure-application]] | Sent | Josh sent the full package to Sal by email 7/8 6:21pm ET (Drive folder linked, not a Samira draft); Sal confirmed receipt 7/8 8:50pm ET and is reviewing — no reply needed until FundCanna comes back with questions or a term sheet | 2026-07-08 |
+| George Irwin | Cuzzie's | George Irwin · george@agreenroof.com · [LinkedIn](https://www.linkedin.com/in/georgeirwin/) | Lender/equity — angle: bridge loan; no ask amount given yet | [folder](https://drive.google.com/drive/folders/1PhEHnU6tbrI0xYqskjuCHejzYMGa4sm7) | Working | Josh spoke with him by phone 7/10, gave a synopsis of the store/operations/needs — no ask number stated. Folder created; holding off tailoring the one-pager/rescue-capital-brief masters until Lemar/Josh confirm the actual ask (BizFundsHub lesson: never leave a master un-tailored where it should be personalized) | 2026-07-10 |
 
 ## Sources
 - drive: Data Rooms parent + Master Templates folder (IDs in repo `.claude/anchors.md`)
