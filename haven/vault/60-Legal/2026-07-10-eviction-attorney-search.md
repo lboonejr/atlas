@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T14:25:00-04:00
-updated: 2026-07-10T15:03:00-04:00
+updated: 2026-07-10T17:05:00-04:00
 domain: legal
 type: brief
 status: active
@@ -60,5 +60,13 @@ but not yet set — Lemar's call.
 - `haven/vault/60-Legal/2026-07-07-lsnj-law-hotline-referral.md` — earlier legal-aid
   attempt, still open re: attorney sign-off
 
+## Update — 2026-07-10 17:05 ET
+
+Lemar asked in #atlas to make sure the 5 staged outreach items above are scheduled for
+Monday (2026-07-13). Samira put a reminder on the personal calendar for each item,
+9:00–10:20 AM ET Monday, referencing this note. Calls/emails are still `run:manual` —
+Lemar places every one himself; these are reminders only, no external invites.
+
 ## Sources
 - slack: #atlas 2026-07-10 14:00:40 ET (task:20260710_eviction-attorney-search)
+- slack: #atlas 2026-07-10 16:58:10 ET — "make sure the calls... are scheduled for Monday"
