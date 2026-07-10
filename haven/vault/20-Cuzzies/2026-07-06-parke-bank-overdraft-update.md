@@ -1,1 +1,103 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDctMDZUMDk6MTA6MDAtMDQ6MDAKdXBkYXRlZDogMjAyNi0wNy0xMFQxNDowNTowMC0wNDowMApkb21haW46IGN1enppZXMKdHlwZTogdGFzawpzdGF0dXM6IGFjdGl2ZQp0YWdzOiBbcGFya2UtYmFuaywgb3ZlcmRyYWZ0LCBuc2ZdCnNvdXJjZTogZ21haWwKLS0tCgojIFBhcmtlIEJhbmsg4oCUIG92ZXJkcmFmdCB1cGRhdGUsIDMgbW9yZSByZXR1cm5lZCBpdGVtcwoKQ2hyaXMgQ2FiZXphcyAoUGFya2UgQmFuaykgZW1haWxlZCBhZ2FpbiAoNy82IH44OjQ1IEFNIEVUKSB3aXRoIGEgcm91dGluZSBmb2xsb3ctdXAgb24KdGhlIGFjY291bnQgb3ZlcmRyYWZ0IGZpcnN0IGZsYWdnZWQgNy8xOiAzIG1vcmUgc21hbGwgZXh0ZXJuYWwgd2l0aGRyYXdhbHMgcmV0dXJuZWQgZm9yCmluc3VmZmljaWVudCBmdW5kcyAoUGF5UGFsIEluc3RhbnQgVHJhbnNmZXIgJDIxLjczLCBFbGV2YXRlIEZ1bmRpbmcgJDUuMDAsIFBheVBhbApJbnN0YW50IFRyYW5zZmVyICQzLjk3KS4gQ3VycmVudCBvdmVyZHJhd24gYmFsYW5jZTogKiokMSwxMTUuNjMqKiAoZG93biBzbGlnaHRseSBmcm9tCnRoZSAkMSwyNDMuMTMgcmVwb3J0ZWQgNy8xIOKAlCBzbWFsbGVyIGl0ZW1zLCBubyBuZXcgZmVlcyBtZW50aW9uZWQgdGhpcyB0aW1lKS4KCk5vIG5ldyBxdWVzdGlvbiBvciBhc2sgYmV5b25kIHRoZSBzdGFuZGluZyBvbmUgYWxyZWFkeSBvcGVuIChhbnkgdXBkYXRlcyBvbiBpbmNvbWluZwpmdW5kcykg4oCUIExlbWFyIGFscmVhZHkgcmVwbGllZCA3LzEgd2l0aCBhIGdlbmVyYWwgImhvcGVmdWwgdGhpbmdzIGNvbWUgdG9nZXRoZXIgc29vbiIKaG9sZGluZyByZXNwb25zZS4gTm90IHJlLXBvc3RpbmcgdG8gI2RlY2lzaW9ucyB0byBhdm9pZCBhIGR1cGxpY2F0ZSBwaW5nIG9uIHRoZSBzYW1lCm9wZW4gYXNrOyB0cmVhdGluZyB0aGlzIGFzIGEgc3RhdHVzIHVwZGF0ZSBvbiB0aGUgZXhpc3Rpbmcgc2l0dWF0aW9uIG9ubHkuCgojIyBVcGRhdGUgMjAyNi0wNy0wNwpDaHJpcyBDYWJlemFzIGVtYWlsZWQgYWdhaW4gKDcvNyB+ODoyOSBBTSBFVCk6IG9uZSBtb3JlIGl0ZW0gcmV0dXJuZWQsIEV4dGVybmFsCldpdGhkcmF3YWwgJDI2LjY4IChHb29nbGUgRGViaXQgLSBQdXJjaGFzZSkuIEhlIG5vdGVzIHRoZSBvdmVyZHJhd24gYmFsYW5jZQoicmVtYWlucyB0aGUgc2FtZSBhcyB5ZXN0ZXJkYXkiIOKAlCBubyBuZXcgZmlndXJlIGdpdmVuLCBubyBuZXcgcXVlc3Rpb24uIFNhbWUKcGF0dGVybiBhcyB0aGUgNy82IHVwZGF0ZTogcm91dGluZSBGWUksIHN0YW5kaW5nIGFzayB1bmNoYW5nZWQsIG5vdCByZS1wb3N0aW5nCnRvICNkZWNpc2lvbnMuCgojIyBVcGRhdGUgMjAyNi0wNy0wOApTYW1lIHVuZGVybHlpbmcgb3ZlcmRyYWZ0IGlzIG5vdyB2aXNpYmx5IGNhc2NhZGluZyBpbnRvIHNlcnZpY2UgYmlsbGluZzogR29vZ2xlCldvcmtzcGFjZSBkZWNsaW5lZCBhIHBheW1lbnQgZm9yIGBjdXp6aWVzbmouY29tYCBvbiA3LzggKENoZWNraW5nIOKAouKAouKAouKAojA0NiwKImluc3VmZmljaWVudCBmdW5kcywiIGN1c3RvbWVyIElEIGN1enppZXNuai5jb20gLyBwYXltZW50cyBwcm9maWxlIDEwNzgtNzM4My0yNDk1IOKAlApzZXJ2aWNlIGNvbnRpbnVlcyBicmllZmx5IGJ1dCByaXNrcyBkaXNydXB0aW9uIGlmIG5vdCBmaXhlZCksIGFuZCBHb29nbGUgVm9pY2UKU3RhcnRlciBmb3IgdGhlIHNhbWUgZG9tYWluIGFsc28gZmFpbGVkICgzIG5lYXItZHVwbGljYXRlIG5vdGljZXMsIDcvOCB+MTA6MzQgRVQpLgpObyBuZXcgcXVlc3Rpb24gYmV5b25kIHRoZSBzdGFuZGluZyAiYW55IHVwZGF0ZXMgb24gaW5jb21pbmcgZnVuZHMiIGFzayDigJQgbm90CnJlLXBvc3RpbmcgdG8gI2RlY2lzaW9ucyBwZXIgdGhlIGVzdGFibGlzaGVkIHBhdHRlcm4gZm9yIHRoaXMgbWF0dGVyLCBidXQgZmxhZ2dpbmcKcGxhaW5seTogaWYgdGhlIGFjY291bnQgc3RheXMgb3ZlcmRyYXduLCBHb29nbGUgV29ya3NwYWNlL1ZvaWNlIChlbWFpbCArIHBob25lCm51bWJlcikgZm9yIGN1enppZXNuai5jb20gYXJlIG5vdyBhdCByZWFsIHJpc2sgb2Ygc3VzcGVuc2lvbiwgbm90IGp1c3QgTlNGIGZlZXMgb24Kc21hbGwgZXh0ZXJuYWwgaXRlbXMuIExhYmVsZWQgYFNhbWlyYS9zZWVuYCBpbiBHbWFpbDsgbm8gcmVwbHkgZHJhZnRlZCAoYXV0b21hdGVkLApuby1yZXBseSBzZW5kZXIpLgoKIyMgVXBkYXRlIDIwMjYtMDctMDggKDIpIOKAlCBXTSBBdXRvUGF5IGNhbmNlbGVkCkEgc3RlcCBmdXJ0aGVyIHRoYW4gYSBzaW5nbGUgZGVjbGluZWQgcGF5bWVudDogV2FzdGUgTWFuYWdlbWVudCBlbWFpbGVkICg3LzggfjE1OjQ5CkVULCB3bW9ubGluZUB3bS5jb20pIHRoYXQgQXV0b1BheSBvbiB0aGUgQ3V6emllJ3MgYWNjb3VudCBoYXMgYmVlbiAqKnVuZW5yb2xsZWQqKgpvdXRyaWdodCDigJQgIkFueSBjdXJyZW50bHkgc2NoZWR1bGVkIGF1dG9tYXRpYyBwYXltZW50cyB3aWxsIG5vdCBiZSBwcm9jZXNzZWQuIiBUaGlzCmlzIHRoZSBzYW1lIHVuZGVybHlpbmcgUGFya2UgQmFuayBwYXltZW50LW1ldGhvZCBwcm9ibGVtLCBidXQgbm93IHRoZSBhdXRvbWF0aWMKcGF5bWVudCBtZXRob2QgaXRzZWxmIGhhcyBiZWVuIGRyb3BwZWQgcmF0aGVyIHRoYW4ganVzdCBmYWlsaW5nIG9uY2UsIHNvIHRoZSBuZXh0CnRyYXNoL3dhc3RlIGJpbGxpbmcgY3ljbGUgZm9yIEN1enppZSdzIHdpbGwgbm90IGJlIHBhaWQgYXV0b21hdGljYWxseSB1bmxlc3Mgc29tZW9uZQpyZS1lbnJvbGxzIEF1dG9QYXkgb3IgcGF5cyBtYW51YWxseS4gTmVlZHMgTGVtYXIncyBqdWRnbWVudCAod2hldGhlciB0byByZS1lbnJvbGwgbm93Cm9yIHdhaXQgdW50aWwgdGhlIGJhbmsgaXNzdWUgY2xlYXJzKSDigJQgbm90IHNvbWV0aGluZyBhIGNoYW5uZWwgY2FuIGV4ZWN1dGUgb24gaXRzIG93biwKc28gbm8gYWRtaW4gcHJvbXB0IHN0YWdlZDsgZmxhZ2dpbmcgaXQgYXMgcGFydCBvZiB0aGUgc2FtZSBvcGVuIHRhc2suIEF1dG9tYXRlZApuby1yZXBseSBzZW5kZXIsIG5vIHJlcGx5IGRyYWZ0ZWQ7IGxhYmVsZWQgYFNhbWlyYS9zZWVuYCBpbiBHbWFpbC4KCiMjIFVwZGF0ZSAyMDI2LTA3LTEwIOKAlCA1IG1vcmUgcmV0dXJuZWQgaXRlbXMsICQ0MDMuODAsIGxhcmdlc3Qgc2luZ2xlIGl0ZW0geWV0Ck1lZ2dhbiBIYWxsd29ydGggKEFzc2lzdGFudCBCcmFuY2ggTWFuYWdlciwgUGFya2UgQmFuayBLZW5uZWR5IEJyYW5jaCwgY2MgQ2hyaXMKQ2FiZXphcykgZW1haWxlZCA3LzEwIH4xMjozMiBQTSBFVCwgc3ViamVjdCAiU2VjdXJlOiBDdXp6aWUncyBEaXNwZW5zYXJ5ICYgRGVsaXZlcnkKTExDIiAoZ21haWwgdGhyZWFkIGAxOWY0YzAzYTMxYzg5YTQzYCk6IDUgbW9yZSBpdGVtcyBwcmVzZW50ZWQgZm9yIHBheW1lbnQgd2VyZQpyZXR1cm5lZCB0aGlzIG1vcm5pbmcg4oCUCgotIFdhc3RlIE1hbmFnZW1lbnQgJDMyMC41NiAodGhpcyBpcyB0aGUgbWFudWFsL3JlLXByZXNlbnRlZCBjaGFyZ2UgdGhhdCB0aGUgNy84CiAgQXV0b1BheS1jYW5jZWxsYXRpb24gdXBkYXRlIHdhcm5lZCB3b3VsZCBsYW5kIHVucGFpZCDigJQgaXQgaGFzIG5vdyBsYW5kZWQgYW5kCiAgYm91bmNlZCkKLSBHb0RhZGR5LmNvbSAkMzkuOTkKLSBQYXlQYWwgJDIxLjczCi0gUGF5UGFsICQxNy41NQotIFBheVBhbCAkMy45NwoKVG90YWwgcmV0dXJuZWQgdGhpcyByb3VuZDogKiokNDAzLjgwKiog4oCUIHRoZSBzaW5nbGUgbGFyZ2VzdCBpdGVtIChXTSAkMzIwLjU2KSBpcwpiaWdnZXIgdGhhbiBhbnkgcHJpb3IgaW5kaXZpZHVhbCByZXR1cm5lZCBpdGVtIGluIHRoaXMgc2FnYS4gVW5saWtlIENocmlzIENhYmV6YXMncwpwcmlvciByb3V0aW5lIG5vdGljZXMsIHRoaXMgb25lIGNhbWUgZnJvbSBhIGRpZmZlcmVudCBjb250YWN0IChicmFuY2ggbWFuYWdlciwKbm90IHRoZSB1c3VhbCBBUiBjb250YWN0KSB3aXRoIGEgZGlyZWN0IGludml0YXRpb24gdG8gcmVwbHkgKCJJZiB5b3UgaGF2ZSBhbnkKcXVlc3Rpb25zLCBwbGVhc2UgbGV0IG1lIGtub3ciKS4gR2l2ZW4gdGhlIG5ldyBjb250YWN0LCB0aGUgZXNjYWxhdGVkIGFtb3VudCwgYW5kCnRoYXQgTGVtYXIncyBsYXN0IHJlcGx5IG9uIHRoaXMgbWF0dGVyIHdhcyBvdmVyIGEgd2VlayBhZ28gKDcvMSksIHRyZWF0aW5nIHRoaXMKb25lIGFzIHJlcGx5LXdvcnRoeSByYXRoZXIgdGhhbiBhIHNpbGVudCBsb2ctb25seSB1cGRhdGUg4oCUIGRyYWZ0IHJlcGx5IG9wdGlvbnMKcG9zdGVkIHRvICNkZWNpc2lvbnMgKG5vdCBzZW50LCBHbWFpbCBEcmFmdHMgb25seSBpZiBwaWNrZWQpLiBMYWJlbGVkIGBTYW1pcmEvc2VlbmAKaW4gR21haWwuCgojIyBVcGRhdGUgMjAyNi0wNy0xMCAoMikg4oCUIHJlcGx5IHNhdmVkIHRvIEdtYWlsIERyYWZ0cwpMZW1hciByZWFjdGVkIOKchSBvbiBPcHRpb24gQSBpbiB0aGUgI2RlY2lzaW9ucyB0aHJlYWQgKGJyaWVmIGhvbGRpbmcgcmVwbHkgbWlycm9yaW5nCnRoZSA3LzEgdG9uZSkuIE1lcmdlZCBoaXMgcGljayB3aXRoIG5vIGVkaXRzIGFuZCBzYXZlZCBpdCB0byBHbWFpbCBEcmFmdHMsIHRocmVhZGVkCm9udG8gdGhlIG9yaWdpbmFsIG1lc3NhZ2UgKGdtYWlsIHRocmVhZCBgMTlmNGMwM2EzMWM4OWE0M2AsIGRyYWZ0IGlkCmByOTE0ODM4Nzg1MDgzODk5NTU1N2ApLCBhZGRyZXNzZWQgdG8gTWVnZ2FuIEhhbGx3b3J0aCB3aXRoIENocmlzIENhYmV6YXMgY2MnZDoKCj4gSGkgTWVnZ2FuLCB0aGFuayB5b3UgZm9yIHRoZSBoZWFkcyB1cCBhbmQgZm9yIGxvb3BpbmcgbWUgaW4uIFdlJ3JlIHN0aWxsIHdvcmtpbmcKPiB0aHJvdWdoIHNvbWUgY2FzaCBmbG93IHRpbWluZyBvbiBvdXIgZW5kLiBJIGRvbid0IGhhdmUgbmV3IGZ1bmRzIHRvIG1vdmUgdG9kYXksCj4gYnV0IEknbSBob3BpbmcgdGhpbmdzIGNvbWUgdG9nZXRoZXIgc29vbi4gSSdsbCByZWFjaCBvdXQgYXMgc29vbiBhcyB0aGVyZSdzIGFuCj4gdXBkYXRlLiBUaGFua3MgZm9yIHlvdXIgcGF0aWVuY2UuCgpOb3Qgc2VudCDigJQgc2l0dGluZyBpbiBHbWFpbCBEcmFmdHMgb25seSwgcmVhZHkgZm9yIExlbWFyIHRvIHNlbmQgaGltc2VsZi4gR21haWwKdGhyZWFkIGxhYmVsZWQgYFNhbWlyYS9kcmFmdGVkYC4gI2RlY2lzaW9ucyB0aHJlYWQgbm90IHlldCBjbG9zZWQgKHdhaXRpbmcgb24gYQrwn6uhIHJlYWN0aW9uIHRvIGNsb3NlIHBlciB0aGUgcmVhY3Rpb24gZW5naW5lKS4KCiMjIFNvdXJjZXMKLSBnbWFpbDogdGhyZWFkIGAxOWYxZGI0MmUxMzNiMDQ3YCAoNy82IDEyOjQ1IEVUIHJlcGx5IG9uIHRoZSA3LzEgIkF0dGVudGlvbiBSZXF1aXJlZDoKICBDdXp6aWUncyBEaXNwZW5zYXJ5IiB0aHJlYWQpCi0gZ21haWw6IHRocmVhZCBgMTlmMjdlNDc0MjllYmQxZWAsIG1lc3NhZ2UgYDE5ZjNjOGRjYjNlYWY1NzNgLCAyMDI2LTA3LTA3IDEyOjI5IFVUQwotIGdtYWlsOiB0aHJlYWQgYDE5ZjQxMTYwMGQxZmMxY2NgIChHb29nbGUgV29ya3NwYWNlIHBheW1lbnQgZGVjbGluZWQsIDIwMjYtMDctMDggMDk6MzYgRVQpCi0gZ21haWw6IHRocmVhZCBgMTlmNDE0YjQ2YWQ3ZmRkN2AgKEdvb2dsZSBWb2ljZSBTdGFydGVyIHBheW1lbnQgZmFpbHVyZSB4MywgMjAyNi0wNy0wOCAxMDozNCBFVCkKLSBnbWFpbDogdGhyZWFkIGAxOWY0MjZiOTUwZDRiZGE0YCAoV00gQXV0b1BheSBjYW5jZWxlZCwgMjAyNi0wNy0wOCAxNTo0OSBFVCkKLSBnbWFpbDogdGhyZWFkIGAxOWY0YzAzYTMxYzg5YTQzYCAoTWVnZ2FuIEhhbGx3b3J0aCwgNSBtb3JlIHJldHVybmVkIGl0ZW1zICQ0MDMuODAsIDIwMjYtMDctMTAgMTI6MzIgRVQ7IHJlcGx5IGRyYWZ0ZWQgYHI5MTQ4Mzg3ODUwODM4OTk1NTU3YCkKLSBzbGFjazogI2RlY2lzaW9ucyBtZXNzYWdlIHRzIGAxNzgzNjg5NjA2LjE0NDI2OWAgKHBhcmVudCkgLyBgMTc4MzY4OTYwOS44NDc5MjlgIChPcHRpb24gQSwg4pyFIHBpY2tlZCkK
+---
+created: 2026-07-06T09:10:00-04:00
+updated: 2026-07-10T14:05:00-04:00
+domain: cuzzies
+type: task
+status: active
+tags: [parke-bank, overdraft, nsf]
+source: gmail
+---
+
+# Parke Bank — overdraft update, 3 more returned items
+
+Chris Cabezas (Parke Bank) emailed again (7/6 ~8:45 AM ET) with a routine follow-up on
+the account overdraft first flagged 7/1: 3 more small external withdrawals returned for
+insufficient funds (PayPal Instant Transfer $21.73, Elevate Funding $5.00, PayPal
+Instant Transfer $3.97). Current overdrawn balance: **$1,115.63** (down slightly from
+the $1,243.13 reported 7/1 — smaller items, no new fees mentioned this time).
+
+No new question or ask beyond the standing one already open (any updates on incoming
+funds) — Lemar already replied 7/1 with a general "hopeful things come together soon"
+holding response. Not re-posting to #decisions to avoid a duplicate ping on the same
+open ask; treating this as a status update on the existing situation only.
+
+## Update 2026-07-07
+Chris Cabezas emailed again (7/7 ~8:29 AM ET): one more item returned, External
+Withdrawal $26.68 (Google Debit - Purchase). He notes the overdrawn balance
+"remains the same as yesterday" — no new figure given, no new question. Same
+pattern as the 7/6 update: routine FYI, standing ask unchanged, not re-posting
+to #decisions.
+
+## Update 2026-07-08
+Same underlying overdraft is now visibly cascading into service billing: Google
+Workspace declined a payment for `cuzziesnj.com` on 7/8 (Checking ••••046,
+"insufficient funds," customer ID cuzziesnj.com / payments profile 1078-7383-2495 —
+service continues briefly but risks disruption if not fixed), and Google Voice
+Starter for the same domain also failed (3 near-duplicate notices, 7/8 ~10:34 ET).
+No new question beyond the standing "any updates on incoming funds" ask — not
+re-posting to #decisions per the established pattern for this matter, but flagging
+plainly: if the account stays overdrawn, Google Workspace/Voice (email + phone
+number) for cuzziesnj.com are now at real risk of suspension, not just NSF fees on
+small external items. Labeled `Samira/seen` in Gmail; no reply drafted (automated,
+no-reply sender).
+
+## Update 2026-07-08 (2) — WM AutoPay canceled
+A step further than a single declined payment: Waste Management emailed (7/8 ~15:49
+ET, wmonline@wm.com) that AutoPay on the Cuzzie's account has been **unenrolled**
+outright — "Any currently scheduled automatic payments will not be processed." This
+is the same underlying Parke Bank payment-method problem, but now the automatic
+payment method itself has been dropped rather than just failing once, so the next
+trash/waste billing cycle for Cuzzie's will not be paid automatically unless someone
+re-enrolls AutoPay or pays manually. Needs Lemar's judgment (whether to re-enroll now
+or wait until the bank issue clears) — not something a channel can execute on its own,
+so no admin prompt staged; flagging it as part of the same open task. Automated
+no-reply sender, no reply drafted; labeled `Samira/seen` in Gmail.
+
+## Update 2026-07-10 — 5 more returned items, $403.80, largest single item yet
+Meggan Hallworth (Assistant Branch Manager, Parke Bank Kennedy Branch, cc Chris
+Cabezas) emailed 7/10 ~12:32 PM ET, subject "Secure: Cuzzie's Dispensary & Delivery
+LLC" (gmail thread `19f4c03a31c89a43`): 5 more items presented for payment were
+returned this morning —
+
+- Waste Management $320.56 (this is the manual/re-presented charge that the 7/8
+  AutoPay-cancellation update warned would land unpaid — it has now landed and
+  bounced)
+- GoDaddy.com $39.99
+- PayPal $21.73
+- PayPal $17.55
+- PayPal $3.97
+
+Total returned this round: **$403.80** — the single largest item (WM $320.56) is
+bigger than any prior individual returned item in this saga. Unlike Chris Cabezas's
+prior routine notices, this one came from a different contact (branch manager,
+not the usual AR contact) with a direct invitation to reply ("If you have any
+questions, please let me know"). Given the new contact, the escalated amount, and
+that Lemar's last reply on this matter was over a week ago (7/1), treating this
+one as reply-worthy rather than a silent log-only update — draft reply options
+posted to #decisions (not sent, Gmail Drafts only if picked). Labeled `Samira/seen`
+in Gmail.
+
+## Update 2026-07-10 (2) — reply saved to Gmail Drafts
+Lemar reacted ✅ on Option A in the #decisions thread (brief holding reply mirroring
+the 7/1 tone). Merged his pick with no edits and saved it to Gmail Drafts, threaded
+onto the original message (gmail thread `19f4c03a31c89a43`, draft id
+`r9148387850838995557`), addressed to Meggan Hallworth with Chris Cabezas cc'd:
+
+> Hi Meggan, thank you for the heads up and for looping me in. We're still working
+> through some cash flow timing on our end. I don't have new funds to move today,
+> but I'm hoping things come together soon. I'll reach out as soon as there's an
+> update. Thanks for your patience.
+
+Not sent — sitting in Gmail Drafts only, ready for Lemar to send himself. Gmail
+thread labeled `Samira/drafted`. #decisions thread not yet closed (waiting on a
+🫡 reaction to close per the reaction engine).
+
+## Sources
+- gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention Required:
+  Cuzzie's Dispensary" thread)
+- gmail: thread `19f27e47429ebd1e`, message `19f3c8dcb3eaf573`, 2026-07-07 12:29 UTC
+- gmail: thread `19f411600d1fc1cc` (Google Workspace payment declined, 2026-07-08 09:36 ET)
+- gmail: thread `19f414b46ad7fdd7` (Google Voice Starter payment failure x3, 2026-07-08 10:34 ET)
+- gmail: thread `19f426b950d4bda4` (WM AutoPay canceled, 2026-07-08 15:49 ET)
+- gmail: thread `19f4c03a31c89a43` (Meggan Hallworth, 5 more returned items $403.80, 2026-07-10 12:32 ET; reply drafted `r9148387850838995557`)
+- slack: #decisions message ts `1783689606.144269` (parent) / `1783689609.847929` (Option A, ✅ picked)
