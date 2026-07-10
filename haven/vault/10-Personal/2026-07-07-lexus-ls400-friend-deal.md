@@ -1,10 +1,10 @@
 ---
 created: 2026-07-07T09:30:00-04:00
-updated: 2026-07-07T09:30:00-04:00
+updated: 2026-07-10T09:15:00-04:00
 domain: personal
 type: note
 status: active
-tags: [car-search]
+tags: [car-search, samira, lexus-ls400]
 source: slack
 ---
 
@@ -34,5 +34,21 @@ Worth a look given the reliability reputation, but get the repair list + a look 
 the car in person (or a trusted second set of eyes) before committing, same as any
 other car-search candidate.
 
+## Update 2026-07-10
+Picked up in the #car-search loop (had been assessed 2026-07-07 and added to the
+Monday Car Search board — item 12465533780, status New Listing, verdict Maybe —
+but never surfaced in #car-search itself). Posted a summary of the lead plus a
+suggested private-buyer-voice message for Lemar to send his friend: asks for the
+repair list, what's fixed vs. still mid-repair, title/mileage status, receipts,
+and proposes a look at the cooling system/suspension bushings. Negotiation framing
+included: target $3,000 if real work remains, up to $3,500 if sorted with paperwork,
+walk away over $3,500 (Lemar's own ceiling). Nothing sent to the friend yet — this
+is a suggestion only, logged as a send once Lemar reacts ✅ in #car-search.
+
+Pipeline status: New Listing (Monday item 12465533780) · Maybe.
+
 ## Sources
 - slack: #atlas capture, 2026-07-06 20:16:11 EDT (TS 1783383371.862029)
+- slack: #car-search lead summary, 2026-07-10 (https://newworkspace-zlb6313.slack.com/archives/C0BEC2RFC00/p1783689170772639)
+- slack: #car-search suggested outreach draft, 2026-07-10 (https://newworkspace-zlb6313.slack.com/archives/C0BEC2RFC00/p1783689178182959)
+- monday: Car Search board item 12465533780 (https://lboonejrs-team.monday.com/boards/18418974601/pulses/12465533780)
