@@ -1,6 +1,6 @@
 ---
 created: 2026-07-09T14:35-04:00
-updated: 2026-07-09T16:15-04:00
+updated: 2026-07-10T13:15-04:00
 domain: cuzzies
 type: task
 status: done
@@ -75,8 +75,34 @@ size of that jump for visibility; no action taken beyond tracking.
 
 Nothing paid or contacted — tracking only, per the canvas's own rules.
 
+## Update 2026-07-10 (13:15 ET) — cannabis vendor repayments split into own section
+
+Lemar posted directly in #on-button (2026-07-10 11:02:43 ET, ts 1783695763.836349):
+"Atlas lets remove the cannabis vendor repayments for now, that's going to have
+to be its own section within this list." Un-reacted, direct instruction — actioned
+as a PART C canvas-only edit (tracking sheet restructure, no payment/contact).
+
+Moved three cannabis-specific vendor rows out of the main Past-Due table into a
+new **"Cannabis Vendor Repayments"** section: Little Leaf Labs ($8,331.00), Bud's
+Goods of NJ ($1,512.10), Weedmaps 5-invoice batch ($6,583.00) — subtotal
+**$16,426.10**, called out separately. Main table's "Total Estimated to Turn
+Everything Back On" now reads **~$70,629.62** (general reopen costs only); a
+grand total line (**~$87,055.72**, unchanged) is kept for the combined view.
+
+Note: which specific rows count as "cannabis vendor repayments" was inferred
+(cannabis-industry-specific product/testing/listing vendors owed money) since
+Lemar's message didn't enumerate them — flagging in case he meant a different
+or broader set (e.g. Weedmaps could be read as marketing/listing rather than
+"repayment"). Easy to re-split if he corrects it.
+
+Also: the canvas-editing tool briefly corrupted the Past-Due table mid-edit
+(left a blank malformed table block after a row-removal replace). Caught it on
+the next read and did a full-content restore + rebuild in one clean pass —
+final canvas verified intact, no data lost, nothing paid/contacted.
+
 ## Sources
 - slack: #atlas capture, 2026-07-09 14:35:30 ET (channel C0BBWHCJUV9, ts 1783622130.775359)
 - slack: canvas F0BEN1167GB ("On-Button — Reopen Checklist"), channel C0BEQUW5NPP
 - slack: #admin staged prompt, ts 1783624436.298719
 - slack: #on-button channel history through 2026-07-09 14:31 ET
+- slack: #on-button, ts 1783695763.836349 (2026-07-10 11:02:43 ET, Lemar's split request)
