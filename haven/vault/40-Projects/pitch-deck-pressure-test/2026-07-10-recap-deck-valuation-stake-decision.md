@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T11:20:00-04:00
-updated: 2026-07-10T13:00:00-04:00
+updated: 2026-07-10T17:56:00-04:00
 domain: project
 type: decision
 status: done
@@ -37,9 +37,27 @@ This clears the last blocker on the Recapitalization deck's valuation / "WHAT YO
 section — Q1 is now answered alongside Q2/Q4/Q5/Q6/Q7/Q8. Deck finalization (folding
 this number into the drafted section) is a follow-up dev pass, not a #decisions item.
 
+## Update — 2026-07-10 17:56 ET — deck-ready confirmed, Q1 paste-in pushed
+
+Lemar asked directly in the #decisions thread (17:09 ET): "Alright atlas, do we have
+enough to create the deck?" Answer: yes. Pushed the final paste-in language for Q1
+("Investment Terms — $500,000 for a 50% ownership stake. Implied post-money valuation:
+$1,000,000.") to #pitch-deck-pressure-test alongside a recap of where every other
+question's edit language already lives (Q2/Q5/Q6/Q7 Reply 7, Q4/labor Reply 11, Q8 Reply
+9, Q2 lease numbers Reply 13). Samira has no direct write access to Google
+Slides/Docs, so the deck edit itself is a paste-in on Lemar's/Josh's end — nothing built
+or sent on Samira's side.
+
+Q3 (lease assignability) remains the one open flag: no attorney review yet ("No as of
+right now"). Recommended softening the "assignable Camden lease" headline claim or
+getting counsel to confirm before this goes in front of an investor — not a blocker to
+finalizing the deck otherwise.
+
 ## Sources
 - Slack #pitch-deck-pressure-test (C0BCD7U5X2B), Recap Deck thread root ts
-  1782303377.852979
+  1782303377.852979 · Q1 edit pushed ts 1783721384.863929 (2026-07-10 17:56 ET)
 - Latest still-open flag: ts 1782594539.940209 (2026-06-27 17:08:59 ET)
 - Answer: #decisions (C0BBXA96FFV), thread ts 1783696529.830699, reply ts
-  1783702239.666029 (2026-07-10 12:50:39 ET)
+  1783702239.666029 (2026-07-10 12:50:39 ET) · Lemar's "enough to create the deck?"
+  ask ts 1783717751.820829 (17:09:11 ET) · Samira's confirmation reply ts
+  1783721377.704019 (17:56:17 ET)
