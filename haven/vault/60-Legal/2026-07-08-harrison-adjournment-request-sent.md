@@ -58,7 +58,8 @@ not a lawyer). Added as **Option D** on the existing #decisions card (same threa
 Options A/B/C, not a new card — one matter, one decision surface) with that caveat
 attached, and flagged that this is exactly the kind of question the still-open LSNJ Law
 Hotline referral card ([[2026-07-07-lsnj-law-hotline-referral]]) was trying to route to
-real counsel for. Trial is July 30 — nine days out — so timing is tight either way.
+real counsel for. Trial is July 30 — twenty days out — so there's some room, but a
+self-filed motion this close to trial still carries real risk.
 
 ## Sources
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
