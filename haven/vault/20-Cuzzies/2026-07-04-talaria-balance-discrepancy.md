@@ -1,6 +1,6 @@
 ---
 created: 2026-07-04T09:53-04:00
-updated: 2026-07-04T10:03-04:00
+updated: 2026-07-10T15:10-04:00
 domain: cuzzies
 type: task
 status: active
@@ -24,3 +24,10 @@ Which figure is the real payoff amount? Posted 3 draft reply options to `#decisi
 (ts `1783170418.207269`) — clarify-before-paying, pay-the-lower-figure-with-written-confirmation,
 or ask for more time. Payment itself is outward-facing, so Samira can only draft; Lemar
 must choose an option and send.
+
+## Update 2026-07-10 15:1x ET
+Mike followed up again (gmail thread `19f0591d0fa2205c`, message `19f4d59bf3b14e0a`,
+2026-07-10 ~2:45 PM ET) with copies of all open invoices and a current invoice report
+attached. Same balance as before — Open Balance: $868.60, no new figure, no mention of
+the $713.70 "Amount Outstanding" discrepancy this time. Still awaiting Lemar's pick
+among Options A/B/C on the standing card. Resurfaced in-thread, no new decision needed.
