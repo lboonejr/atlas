@@ -125,6 +125,13 @@ mirror item and linked in the outcome note.
 OUTCOMES — success or failure, ALWAYS via **samira-report-result**: outcome note in
 Haven first, then the two-line #reports block, then the Monday mirror (until the gate),
 then ✅ on the source (success only). Never a bare checkmark.
+ON-BUTTON DROPS: #on-button is swept here, but its bills/screenshots/figures are NOT
+prompts. When a genuinely new drop appears (per the on-button-plan scanner rule — ignore
+🧹📌📊/numbered restatements), invoke the **on-button-plan** skill: ingest the drop into the
+source of truth `haven/vault/40-Projects/on-button-reopen/index.md` (dedupe by id), then
+regenerate `on-button-reopen.html` + the pinned canvas `F0BEN1167GB`, commit to `main`, and
+log via samira-report-result. Ambiguous tier or an unconfirmed figure → leave it `tbd` and
+raise ONE #decisions parent; never guess a material number, never pay or contact anyone.
 
 ### PART D — email loop
 Invoke the **samira-email-loop** skill: drive in-flight #decisions email cards from

@@ -36,7 +36,7 @@ Last verified: 2026-07-10 (recorded Samira/investor-sent Gmail label id).
 | #car-search | `C0BEC2RFC00` | Car loop (samira-car-search); never swept in PART C |
 | #investor-pipeline | `C0BCCUKEUQ2` | Investor loop (samira-investor) |
 | #skills-lab | `C0BBZ5J8805` | Skill-candidate proposals |
-| #on-button | `C0BEQUW5NPP` | "Reopen Checklist" — drop past-due bills/screenshots here; Samira extracts amount/account/contact into the pinned canvas each scan. Tracking only, nothing paid/contacted. Canvas: `F0BEN1167GB` |
+| #on-button | `C0BEQUW5NPP` | Reopening command center — drop past-due bills/screenshots here. The **on-button-plan** skill ingests drops into the ONE source of truth `haven/vault/40-Projects/on-button-reopen/index.md`, then regenerates the interactive page `on-button-reopen.html` (githack: `https://raw.githack.com/lboonejr/atlas/main/on-button-reopen.html`) and the pinned canvas `F0BEN1167GB`. Tracking only, nothing paid/contacted. |
 | Open Items canvas | `F0BDLSHD8JD` | State only: ⏳ Waiting · ⚙️ In motion · ⛔ Parked |
 | #emails (ARCHIVED) | `C0BC1JSCHQW` | Read-only record; never swept, never posted to |
 | #to-do (ARCHIVED) | `C0BC30U222K` | Read-only record |

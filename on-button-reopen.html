@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>On-Button — Reopening Path</title>
+<style>
+  :root{
+    --ink:#12181f; --muted:#5b6672; --line:#e5e7eb; --bg:#ffffff; --card:#f9fafb; --card2:#f3f4f6;
+    --accent:#15803d; --accent-ink:#0f5f2e; --accent-soft:#f0fdf4; --accent-line:#bbf7d0;
+    --amber:#b45309; --amber-soft:#fffbeb; --amber-line:#fde68a;
+    --red:#b91c1c; --red-soft:#fef2f2; --red-line:#fecaca;
+    --blue:#1d4ed8; --blue-soft:#eff6ff; --blue-line:#bfdbfe;
+    --shadow:0 1px 2px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ink:#e8edf2; --muted:#9aa6b2; --line:#2a323c; --bg:#0f1216; --card:#161b21; --card2:#1c232b;
+      --accent:#4ade80; --accent-ink:#86efac; --accent-soft:#0f2a1a; --accent-line:#1f5136;
+      --amber:#fbbf24; --amber-soft:#2a2010; --amber-line:#5c4611;
+      --red:#f87171; --red-soft:#2a1414; --red-line:#5c1f1f;
+      --blue:#60a5fa; --blue-soft:#111e33; --blue-line:#20365c;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 20px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#e8edf2; --muted:#9aa6b2; --line:#2a323c; --bg:#0f1216; --card:#161b21; --card2:#1c232b;
+    --accent:#4ade80; --accent-ink:#86efac; --accent-soft:#0f2a1a; --accent-line:#1f5136;
+    --amber:#fbbf24; --amber-soft:#2a2010; --amber-line:#5c4611;
+    --red:#f87171; --red-soft:#2a1414; --red-line:#5c1f1f;
+    --blue:#60a5fa; --blue-soft:#111e33; --blue-line:#20365c;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 20px rgba(0,0,0,.35);
+  }
+  :root[data-theme="light"]{
+    --ink:#12181f; --muted:#5b6672; --line:#e5e7eb; --bg:#ffffff; --card:#f9fafb; --card2:#f3f4f6;
+    --accent:#15803d; --accent-ink:#0f5f2e; --accent-soft:#f0fdf4; --accent-line:#bbf7d0;
+    --amber:#b45309; --amber-soft:#fffbeb; --amber-line:#fde68a;
+    --red:#b91c1c; --red-soft:#fef2f2; --red-line:#fecaca;
+    --blue:#1d4ed8; --blue-soft:#eff6ff; --blue-line:#bfdbfe;
+    --shadow:0 1px 2px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.05);
+  }
+  *{box-sizing:border-box;}
+  html,body{max-width:100%; overflow-x:hidden;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:var(--bg); margin:0; line-height:1.5; font-size:15px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1060px; margin:0 auto; padding:36px 22px 80px;}
+  a{color:var(--accent-ink);}
+  .num{font-variant-numeric:tabular-nums;}
+
+  header{border-bottom:3px solid var(--accent); padding-bottom:18px; margin-bottom:22px;}
+  .kicker{display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:700;
+    color:var(--accent-ink); text-transform:uppercase; letter-spacing:.07em;}
+  .dot{width:11px; height:11px; border-radius:50%; background:var(--accent); display:inline-block;}
+  h1{font-size:29px; margin:11px 0 6px; letter-spacing:-.02em;}
+  .sub{color:var(--muted); font-size:14.5px; max-width:780px;}
+  .updated{margin-top:11px; font-size:12.5px; color:var(--muted);}
+  .updated b{color:var(--ink);}
+
+  /* Gate banner */
+  .gate{background:var(--amber-soft); border:1px solid var(--amber-line); border-left:4px solid var(--amber);
+    border-radius:12px; padding:15px 18px; margin:0 0 24px; display:flex; gap:14px; align-items:flex-start;}
+  .gate .g-ico{font-size:20px; line-height:1.1;}
+  .gate h3{margin:0 0 3px; font-size:15px;}
+  .gate p{margin:0; font-size:13.5px; color:var(--muted);}
+  .gate .g-amt{color:var(--amber); font-weight:700;}
+
+  /* Allocator */
+  .alloc{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px; box-shadow:var(--shadow);}
+  .alloc h2{margin:0 0 4px; font-size:18px; letter-spacing:-.01em;}
+  .alloc .lead{color:var(--muted); font-size:13.5px; margin:0 0 18px;}
+  .controls{display:grid; grid-template-columns:1.4fr 1fr; gap:18px; margin-bottom:8px;}
+  .field label{display:block; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin-bottom:7px;}
+  .money-in{display:flex; align-items:center; gap:8px; background:var(--bg); border:1.5px solid var(--line); border-radius:10px; padding:8px 12px;}
+  .money-in span{color:var(--muted); font-size:20px; font-weight:600;}
+  .money-in input{border:none; background:transparent; color:var(--ink); font-size:22px; font-weight:700; width:100%; outline:none; font-variant-numeric:tabular-nums;}
+  input[type=range]{width:100%; margin-top:12px; accent-color:var(--accent);}
+  .rangelabels{display:flex; justify-content:space-between; font-size:11px; color:var(--muted); margin-top:2px;}
+  .toggles{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;}
+  .tog{display:inline-flex; align-items:center; gap:7px; font-size:13px; font-weight:600; padding:7px 12px; border-radius:999px;
+    border:1.5px solid var(--line); background:var(--bg); cursor:pointer; user-select:none; color:var(--muted);}
+  .tog input{accent-color:var(--accent); width:15px; height:15px;}
+  .tog.on{border-color:var(--accent-line); background:var(--accent-soft); color:var(--accent-ink);}
+  .tog.locked{opacity:.9; cursor:default; border-color:var(--accent-line); background:var(--accent-soft); color:var(--accent-ink);}
+
+  /* Readout tiles */
+  .tiles{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:22px 0 6px;}
+  .tile{background:var(--bg); border:1px solid var(--line); border-radius:12px; padding:14px 15px;}
+  .tile .t-label{font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:700;}
+  .tile .t-val{font-size:23px; font-weight:800; margin-top:5px; letter-spacing:-.01em;}
+  .tile .t-note{font-size:11.5px; color:var(--muted); margin-top:3px;}
+  .tile.status.go{background:var(--accent-soft); border-color:var(--accent-line);}
+  .tile.status.go .t-val{color:var(--accent-ink);}
+  .tile.status.no{background:var(--red-soft); border-color:var(--red-line);}
+  .tile.status.no .t-val{color:var(--red);}
+  .tile.runway .t-val{color:var(--blue);}
+
+  .guide{margin-top:14px; font-size:12.5px; color:var(--muted); background:var(--blue-soft); border:1px solid var(--blue-line);
+    border-radius:10px; padding:11px 14px;}
+  .guide b{color:var(--ink);}
+
+  /* Tier progress */
+  .tiers{margin-top:26px; display:grid; gap:14px;}
+  .tierbox{border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--bg);}
+  .tierhead{display:flex; align-items:center; gap:12px; padding:13px 16px; background:var(--card2);}
+  .tierhead .t-name{font-weight:700; font-size:14.5px;}
+  .tierhead .t-tag{font-size:11px; color:var(--muted); font-weight:600;}
+  .tierhead .t-right{margin-left:auto; text-align:right; font-size:12.5px; color:var(--muted);}
+  .tierhead .t-right b{color:var(--ink); font-size:14px;}
+  .bar{height:8px; background:var(--line); border-radius:99px; overflow:hidden; margin:0 16px;}
+  .bar > i{display:block; height:100%; background:var(--accent); width:0; transition:width .25s ease;}
+  .tierbox.partial .bar > i{background:var(--amber);}
+  .tierbox.empty .bar > i{background:var(--line);}
+  .items{list-style:none; margin:10px 0 12px; padding:0 16px; display:grid; gap:2px;}
+  .items li{display:flex; align-items:baseline; gap:9px; font-size:13px; padding:4px 0; border-bottom:1px dashed transparent;}
+  .items li .ic{width:16px; flex:none; text-align:center;}
+  .items li .lab{flex:1;}
+  .items li .amt{font-variant-numeric:tabular-nums; font-weight:600; white-space:nowrap; color:var(--muted);}
+  .items li.funded .lab{color:var(--ink);} .items li.funded .amt{color:var(--accent-ink);}
+  .items li.unfunded .lab{color:var(--muted);} .items li.unfunded .amt{color:var(--muted);}
+  .items li.partial .amt{color:var(--amber);}
+  .items li.tbd .amt{color:var(--muted); font-style:italic;}
+
+  /* Detail tables */
+  h2.section{font-size:19px; margin:44px 0 6px; letter-spacing:-.01em; display:flex; align-items:center; gap:9px;}
+  h2.section .bar2{width:4px; height:20px; border-radius:2px; background:var(--accent); display:inline-block;}
+  .section-note{color:var(--muted); font-size:13px; margin:0 0 14px;}
+  .tblwrap{border:1px solid var(--line); border-radius:12px; overflow-x:auto; margin-top:6px;}
+  table{width:100%; border-collapse:collapse; font-size:13px; min-width:560px;}
+  th{text-align:left; background:var(--card2); color:var(--muted); font-weight:700; font-size:11px;
+    text-transform:uppercase; letter-spacing:.03em; padding:10px 12px; border-bottom:2px solid var(--line);}
+  td{padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  td.amt{font-variant-numeric:tabular-nums; font-weight:700; white-space:nowrap;}
+  td.svc{font-weight:600;}
+  .pill{display:inline-block; font-size:10.5px; font-weight:700; padding:1px 7px; border-radius:20px; margin-left:6px; vertical-align:middle;}
+  .pill.t1{background:var(--accent-soft); color:var(--accent-ink); border:1px solid var(--accent-line);}
+  .pill.t2{background:var(--blue-soft); color:var(--blue); border:1px solid var(--blue-line);}
+  .pill.t3{background:var(--card2); color:var(--muted); border:1px solid var(--line);}
+  .pill.tbd{background:var(--amber-soft); color:var(--amber); border:1px solid var(--amber-line);}
+  .subtotal td{background:var(--card); font-weight:800; border-top:2px solid var(--line);}
+  .muted{color:var(--muted);}
+
+  footer{margin-top:46px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:12px;}
+  footer code{background:var(--card2); padding:1px 6px; border-radius:5px; font-size:11.5px;}
+
+  @media (max-width:760px){
+    .controls{grid-template-columns:1fr;} .tiles{grid-template-columns:1fr 1fr;}
+    .wrap{padding:24px 14px 60px;} h1{font-size:24px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker"><span class="dot"></span> On-Button · Reopening Path</span>
+    <h1>What an investment buys — and how fast we reopen</h1>
+    <p class="sub">Type an amount and see the funded reopening path: which tiers clear, whether we can open inside 14 days, and how many months of runway are left after the one-time spend. Tracking &amp; planning only — nothing is paid or contacted automatically.</p>
+    <p class="updated">Last updated <b id="upd">July 10, 2026</b> · Source of truth: the Haven note <b>on-button-reopen/index.md</b> · #on-button drops</p>
+  </header>
+
+  <div class="gate" id="gate">
+    <div class="g-ico">⚠️</div>
+    <div>
+      <h3>Gating condition — sales &amp; local tax <span class="g-amt" id="gate-total"></span></h3>
+      <p id="gate-detail"></p>
+    </div>
+  </div>
+
+  <section class="alloc">
+    <h2>Investment path</h2>
+    <p class="lead">Tier 1 is mandatory to open. Toggle Tier 2 / Tier 3 to see what a given raise can also cover — and what it leaves for runway.</p>
+
+    <div class="controls">
+      <div class="field">
+        <label for="inv">Investment amount</label>
+        <div class="money-in"><span>$</span><input id="inv" type="text" inputmode="numeric" value="120,000" aria-label="Investment amount"></div>
+        <input id="invr" type="range" min="0" max="300000" step="5000" value="120000" aria-label="Investment slider">
+        <div class="rangelabels"><span>$0</span><span>$150K</span><span>$300K</span></div>
+      </div>
+      <div class="field">
+        <label for="tax">Carve off for tax first installment (optional)</label>
+        <div class="money-in"><span>$</span><input id="tax" type="text" inputmode="numeric" value="0" aria-label="Tax carve-off"></div>
+        <div class="toggles">
+          <label class="tog locked"><input type="checkbox" checked disabled> Tier 1 · Bare bones</label>
+          <label class="tog" id="tog2wrap"><input type="checkbox" id="tog2"> Tier 2 · Nice-to-have</label>
+          <label class="tog" id="tog3wrap"><input type="checkbox" id="tog3"> Tier 3 · Edge</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="tiles">
+      <div class="tile status" id="tile-status"><div class="t-label">Reopen status</div><div class="t-val" id="v-status">—</div><div class="t-note" id="n-status"></div></div>
+      <div class="tile"><div class="t-label">One-time funded</div><div class="t-val num" id="v-spent">—</div><div class="t-note" id="n-spent"></div></div>
+      <div class="tile runway"><div class="t-label">Runway after spend</div><div class="t-val num" id="v-runway">—</div><div class="t-note">at ~$31.2K/mo carry</div></div>
+      <div class="tile"><div class="t-label">Left over</div><div class="t-val num" id="v-left">—</div><div class="t-note" id="n-left"></div></div>
+    </div>
+
+    <div class="guide" id="guide"></div>
+
+    <div class="tiers" id="tiers"></div>
+  </section>
+
+  <h2 class="section"><span class="bar2"></span> Full detail — every line, by tier</h2>
+  <p class="section-note">The complete internal record: amount, vendor, contact, account reference, status. Change any number by editing <b>index.md</b> and regenerating this page (the <code>on-button-plan</code> skill). Tier 1 = must-pay to open &amp; operate · Tier 2 = as funds allow · Tier 3 = restore / competitive edge.</p>
+  <div class="tblwrap">
+    <table id="detail">
+      <thead><tr><th>Line</th><th>Amount</th><th>Vendor / account</th><th>Contact</th><th>Status</th></tr></thead>
+      <tbody id="detail-body"></tbody>
+    </table>
+  </div>
+
+  <h2 class="section"><span class="bar2" style="background:var(--amber);"></span> Monthly carry to operate</h2>
+  <p class="section-note">Ongoing bare-bones cost once reopened — the denominator for runway. Excludes cannabis tax (a % of sales). Rent and payroll live here, not in the one-time reopen bucket, so they are not double-counted.</p>
+  <div class="tblwrap">
+    <table><thead><tr><th>Category</th><th>Monthly</th></tr></thead><tbody id="carry-body"></tbody></table>
+  </div>
+
+  <footer>
+    On-Button — Reopening Path · Cuzzie's Dispensary &amp; Delivery LLC · generated from <code>haven/vault/40-Projects/on-button-reopen/index.md</code>. Tracking &amp; planning only — nothing paid or contacted. The tax gate is tracked separately from the reopening tiers. Investment inputs are what-if only; item costs and tiers change in index.md.
+  </footer>
+
+</div>
+
+<script id="reopen-data" type="application/json">
+{
+  "meta": {"updated": "July 10, 2026"},
+  "constants": {"monthly_carry": 31200, "target_open_days": 14},
+  "gate": {
+    "items": [
+      {"label": "NJ state sales tax (6.625%)", "amount": 84400},
+      {"label": "Camden local cannabis tax (2%)", "amount": 25500}
+    ]
+  },
+  "items": [
+    {"id":"gusto-payroll-tax","label":"Gusto — payroll tax remittance","amount":9739.85,"tier":1,"vendor":"Gusto · 5 payrolls behind (tax principal only)","contact":"Gusto support / accountant","status":"past due"},
+    {"id":"little-leaf-labs","label":"Little Leaf Labs — lab testing","amount":8331,"tier":1,"vendor":"Little Leaf Labs · INV-0000762 + INV-0000889 (91+ days)","contact":"Dhruvi, Accounting","status":"past due — gates sellable product"},
+    {"id":"progressive","label":"Progressive Commercial — auto/liability","amount":2117.80,"tier":1,"vendor":"Progressive · Policy #997268390","contact":"progressivecommercial.com","status":"past due (reinstate)"},
+    {"id":"parke-bank","label":"Parke Bank — clear negative balance","amount":2000,"tier":1,"vendor":"Parke Bank · acct ending 8046","contact":"Christopher Cabezas, AVP · (856) 582-6900 x142","status":"past due"},
+    {"id":"adt","label":"ADT Security","amount":1637.84,"tier":1,"vendor":"ADT · acct 405075455 (90 days)","contact":"(833) 320-1859","status":"past due"},
+    {"id":"nst","label":"National Secure Transport — cash pickup","amount":868.60,"tier":1,"vendor":"NST · 7-invoice batch (oldest 05/26)","contact":"(800) 696-1934","status":"past due"},
+    {"id":"pseg","label":"PSE&G — electric","amount":391.58,"tier":1,"vendor":"PSE&G · 2764 Mt Ephraim · acct 7804704100","contact":"1-800-357-2262","status":"past due"},
+    {"id":"google-workspace","label":"Google Workspace / Voice","amount":33.97,"tier":1,"vendor":"Google · profile 1078-7383-2495 (bounced 7/8)","contact":"Google Payments","status":"past due"},
+    {"id":"inventory-restock","label":"Cannabis inventory restock","amount":50000,"tier":1,"vendor":"Multiple licensed cultivators/wholesalers","contact":"—","status":"target — $50K working ('if we can')"},
+
+    {"id":"arod-marketing","label":"Arod — marketing services","amount":7500,"tier":2,"vendor":"Arod","contact":"—","status":"past due"},
+    {"id":"weedmaps","label":"Weedmaps — menu listing","amount":6583,"tier":2,"vendor":"Weedmaps (Ghost Mgmt) · 5-invoice batch (58 days)","contact":"Emma Donaldson, AR","status":"past due"},
+    {"id":"loan-nicky","label":"Loan from Nicky (personal)","amount":4000,"tier":2,"vendor":"Nicky","contact":"—","status":"owed"},
+    {"id":"regus-iwg","label":"Regus / IWG — Mt Laurel office","amount":2451.80,"tier":2,"vendor":"Regus/IWG · acct #16605480 (collections)","contact":"America's Debt Collection · (469) 257-3503","status":"collections — settle to close"},
+    {"id":"buds-goods","label":"Bud's Goods of NJ","amount":1512.10,"tier":2,"vendor":"Bud's Goods · INV-0000153 (69 days)","contact":"mzaidi@budsgoods.com","status":"past due"},
+    {"id":"ambotte","label":"Ambotte Mechanical","amount":431.83,"tier":2,"vendor":"Ambotte · invoice #76732","contact":"Stephanie Rodriguez · srodriguez@ambotte.com","status":"past due"},
+    {"id":"cintas","label":"Cintas — uniforms","amount":225.95,"tier":2,"vendor":"Cintas · payer #0027585065 (4 invoices)","contact":"mycintas.com","status":"past due"},
+    {"id":"apple-dev","label":"Apple Developer — restore","amount":99,"tier":2,"vendor":"Apple","contact":"Apple Developer portal","status":"past due"},
+    {"id":"leafly","label":"Leafly — menu listing","amount":null,"tier":2,"vendor":"Leafly · ~2 wks past due (as of 7/5)","contact":"256-488-4697","status":"TBD — set amount in index.md"},
+
+    {"id":"intercompany-loan","label":"Intercompany inventory loan — repay","amount":40000,"tier":3,"vendor":"Related entity","contact":"—","status":"owed — goodwill/creditworthiness"},
+    {"id":"epli-reinstate","label":"EPLI (Berkley Select) — reinstate","amount":4051.12,"tier":3,"vendor":"Berkley Select via First Insurance Funding · loan #105889646","contact":"Andrew Giampaolo, Marshall & Sterling · (845) 454-0800 x2397","status":"lapsed 7/6 — restore as edge"},
+    {"id":"marketing-relaunch","label":"Reopening marketing relaunch (promo budget)","amount":null,"tier":3,"vendor":"—","contact":"—","status":"TBD — set target in index.md"},
+    {"id":"full-staffing","label":"Full staffing restore (beyond bare crew)","amount":null,"tier":3,"vendor":"—","contact":"—","status":"TBD — incremental monthly, model separately"},
+    {"id":"delivery-expansion","label":"Delivery / extended-hours expansion","amount":null,"tier":3,"vendor":"—","contact":"—","status":"TBD"},
+    {"id":"loyalty-app","label":"Loyalty / app / branding","amount":null,"tier":3,"vendor":"—","contact":"—","status":"TBD"}
+  ],
+  "carry": [
+    {"label":"Payroll — you + Josh + 1 employee (bare-bones)","amount":7900},
+    {"label":"Rent — Harrison Acquisitions (all-in, incl. NNN)","amount":8467},
+    {"label":"Marketing (budgeted)","amount":2500},
+    {"label":"Dutchie POS","amount":2160},
+    {"label":"Insurance — General/Product Liability","amount":2026},
+    {"label":"Accounting — GreenBooks","amount":1600},
+    {"label":"Car insurance — 2 cars (re-quote)","amount":1400},
+    {"label":"Workers' comp","amount":1118},
+    {"label":"Gas & maintenance (2 delivery cars)","amount":700},
+    {"label":"Cash deposit — National Secure Transport","amount":520},
+    {"label":"Gusto payroll software","amount":500},
+    {"label":"Parke Bank service charge","amount":500},
+    {"label":"Phone — T-Mobile, 6 lines","amount":457},
+    {"label":"PSE&G electric/gas (operating est.)","amount":400},
+    {"label":"Waste Management","amount":320.56},
+    {"label":"Comcast Business Internet","amount":267.74},
+    {"label":"QuickBooks","amount":151},
+    {"label":"METRC compliance","amount":40},
+    {"label":"Google Workspace (5 seats)","amount":42},
+    {"label":"Google Voice","amount":34},
+    {"label":"Veriscan ID verification","amount":30}
+  ]
+}
+</script>
+
+<script>
+(function(){
+  var DATA = JSON.parse(document.getElementById('reopen-data').textContent);
+  var CARRY = DATA.constants.monthly_carry;
+  var OPENDAYS = DATA.constants.target_open_days;
+  var TIER_NAMES = {1:"Tier 1 · Bare bones", 2:"Tier 2 · Nice-to-have", 3:"Tier 3 · Competitive edge"};
+  var TIER_TAG = {1:"must-pay to open & operate", 2:"as funds allow", 3:"restore / advantage"};
+
+  function fmt(n){ return "$" + Math.round(n).toLocaleString("en-US"); }
+  function fmtK(n){ return n>=1000 ? "$"+(Math.round(n/100)/10)+"K" : "$"+Math.round(n); }
+  function parseMoney(s){ var v = parseFloat(String(s).replace(/[^0-9.]/g,"")); return isNaN(v)?0:v; }
+
+  var itemsByTier = {1:[],2:[],3:[]};
+  DATA.items.forEach(function(it){ if(itemsByTier[it.tier]) itemsByTier[it.tier].push(it); });
+  function tierPriced(t){ return itemsByTier[t].reduce(function(s,it){ return s + (it.amount||0); },0); }
+  var TIER1 = tierPriced(1), TIER2 = tierPriced(2), TIER3 = tierPriced(3);
+
+  // ---- static: gate ----
+  var gtot = DATA.gate.items.reduce(function(s,g){return s+g.amount;},0);
+  document.getElementById('gate-total').textContent = "≈ " + fmt(gtot);
+  document.getElementById('gate-detail').innerHTML =
+    DATA.gate.items.map(function(g){return g.label+" <b class='num'>"+fmt(g.amount)+"</b>";}).join(" · ") +
+    " — trust-fund taxes owed regardless of cash position, and an open balance is a CRC license risk. Tracked on its own (voluntary-disclosure + payment plan), <b>not</b> funded by the allocator below.";
+  document.getElementById('upd').textContent = DATA.meta.updated;
+
+  // ---- static: detail table ----
+  var order = {1:0,2:1,3:2};
+  var sorted = DATA.items.slice().sort(function(a,b){ return order[a.tier]-order[b.tier]; });
+  var dbody = document.getElementById('detail-body');
+  sorted.forEach(function(it){
+    var tr = document.createElement('tr');
+    var amt = it.amount==null ? "<span class='muted'>TBD</span>" : fmt(it.amount);
+    var pill = "<span class='pill t"+it.tier+(it.amount==null?" tbd":"")+"'>T"+it.tier+"</span>";
+    tr.innerHTML = "<td class='svc'>"+it.label+pill+"</td><td class='amt'>"+amt+"</td><td>"+it.vendor+"</td><td>"+it.contact+"</td><td class='muted'>"+it.status+"</td>";
+    dbody.appendChild(tr);
+  });
+  // subtotal row
+  var subtr = document.createElement('tr'); subtr.className='subtotal';
+  subtr.innerHTML = "<td>Priced one-time total (T1+T2+T3)</td><td class='amt'>"+fmt(TIER1+TIER2+TIER3)+"</td><td colspan='3' class='muted'>T1 "+fmt(TIER1)+" · T2 "+fmt(TIER2)+" · T3 "+fmt(TIER3)+" · excludes TBD lines &amp; the tax gate</td>";
+  dbody.appendChild(subtr);
+
+  // ---- static: carry table ----
+  var cbody = document.getElementById('carry-body');
+  DATA.carry.forEach(function(c){
+    var tr=document.createElement('tr');
+    tr.innerHTML="<td class='svc'>"+c.label+"</td><td class='amt'>"+fmt(c.amount)+"</td>";
+    cbody.appendChild(tr);
+  });
+  var csum = DATA.carry.reduce(function(s,c){return s+c.amount;},0);
+  var ctr=document.createElement('tr'); ctr.className='subtotal';
+  ctr.innerHTML="<td>Ongoing monthly carry</td><td class='amt'>≈ "+fmt(CARRY)+"</td>";
+  cbody.appendChild(ctr);
+
+  // ---- interactive allocator ----
+  var el = {
+    inv: document.getElementById('inv'), invr: document.getElementById('invr'),
+    tax: document.getElementById('tax'), tog2: document.getElementById('tog2'), tog3: document.getElementById('tog3'),
+    tog2wrap: document.getElementById('tog2wrap'), tog3wrap: document.getElementById('tog3wrap'),
+    tiers: document.getElementById('tiers')
+  };
+
+  function activeTiers(){ var a=[1]; if(el.tog2.checked)a.push(2); if(el.tog3.checked)a.push(3); return a; }
+
+  function compute(){
+    var invest = parseMoney(el.inv.value);
+    var carve = Math.min(parseMoney(el.tax.value), invest);
+    var available = Math.max(0, invest - carve);
+    var tiers = activeTiers();
+
+    // greedy walk in tier order, item order; compute per-item funded state
+    var running = 0; // cumulative committed as we walk
+    var perItem = {};
+    tiers.forEach(function(t){
+      itemsByTier[t].forEach(function(it){
+        if(it.amount==null){ perItem[it.id]={state:"tbd",applied:0}; return; }
+        var start = running, end = running + it.amount;
+        var applied = Math.max(0, Math.min(available, end) - start);
+        var state = applied>=it.amount-0.001 ? "funded" : (applied>0 ? "partial" : "unfunded");
+        perItem[it.id]={state:state, applied:applied};
+        running = end;
+      });
+    });
+
+    var committed = running;                       // total priced cost of active tiers
+    var spent = Math.min(available, committed);     // actually funded
+    var shortfall = Math.max(0, committed - available);
+    var leftover = Math.max(0, available - committed);
+
+    var opensOK = available >= TIER1 - 0.001;       // Tier 1 always first & mandatory
+    var t1short = Math.max(0, TIER1 - available);
+    var runwayMo = leftover / CARRY;
+
+    return {invest:invest, carve:carve, available:available, tiers:tiers, perItem:perItem,
+      committed:committed, spent:spent, shortfall:shortfall, leftover:leftover,
+      opensOK:opensOK, t1short:t1short, runwayMo:runwayMo};
+  }
+
+  function render(){
+    var r = compute();
+
+    // status tile
+    var st = document.getElementById('tile-status');
+    var vs = document.getElementById('v-status'), ns = document.getElementById('n-status');
+    if(r.opensOK){ st.className="tile status go"; vs.textContent="Open in ~"+OPENDAYS+" days"; ns.textContent="Tier 1 fully funded"; }
+    else { st.className="tile status no"; vs.textContent="Not yet openable"; ns.textContent="Tier 1 short by "+fmt(r.t1short); }
+
+    document.getElementById('v-spent').textContent = fmt(r.spent);
+    document.getElementById('n-spent').textContent = r.shortfall>0 ? ("short "+fmt(r.shortfall)+" on active tiers") : "all active tiers covered";
+    document.getElementById('v-runway').textContent = (r.opensOK && r.shortfall<=0) ? (r.runwayMo.toFixed(1)+" mo") : "—";
+    document.getElementById('v-left').textContent = fmt(r.leftover);
+    document.getElementById('n-left').textContent = r.opensOK ? "after funding active tiers" : "open Tier 1 first";
+
+    // guidance line
+    var need3 = TIER1 + 3*CARRY + r.carve;
+    var g = document.getElementById('guide');
+    if(!r.opensOK){
+      g.innerHTML = "To open at all you need Tier 1 = <b>"+fmt(TIER1)+"</b>"+(r.carve>0?(" + your "+fmt(r.carve)+" tax carve-off"):"")+". A safer target — <b>open + 3 months runway</b> — is about <b>"+fmt(need3)+"</b>.";
+    } else if(r.runwayMo < 2){
+      g.innerHTML = "You can open, but runway is thin (<b>"+r.runwayMo.toFixed(1)+" mo</b>). Reopening safely usually wants 3+ months of carry — about <b>"+fmt(need3)+"</b> to open with a 3-month cushion.";
+    } else {
+      g.innerHTML = "Funds Tier 1"+(r.tiers.indexOf(2)>-1?" + Tier 2":"")+(r.tiers.indexOf(3)>-1?" + Tier 3":"")+" and leaves <b>"+r.runwayMo.toFixed(1)+" months</b> of runway. Open + 3-month runway ≈ <b>"+fmt(need3)+"</b>.";
+    }
+
+    // toggle chip styling
+    el.tog2wrap.className = "tog"+(el.tog2.checked?" on":"");
+    el.tog3wrap.className = "tog"+(el.tog3.checked?" on":"");
+
+    // tier boxes
+    el.tiers.innerHTML = "";
+    [1,2,3].forEach(function(t){
+      var active = r.tiers.indexOf(t)>-1;
+      var priced = t===1?TIER1:(t===2?TIER2:TIER3);
+      var funded = itemsByTier[t].reduce(function(s,it){ var p=r.perItem[it.id]; return s + (p&&p.applied?p.applied:0); },0);
+      var pct = priced>0 ? Math.min(100, 100*funded/priced) : (active?100:0);
+      var cls = "tierbox";
+      if(!active){ cls+=" empty"; }
+      else if(funded>=priced-0.001){ /* full */ }
+      else if(funded>0){ cls+=" partial"; }
+      else { cls+=" empty"; }
+
+      var box=document.createElement('div'); box.className=cls;
+      var rightTxt = active ? (fmt(funded)+" / "+fmt(priced)) : ("off · "+fmt(priced));
+      box.innerHTML =
+        "<div class='tierhead'><span class='t-name'>"+TIER_NAMES[t]+"</span>"+
+        "<span class='t-tag'>"+TIER_TAG[t]+"</span>"+
+        "<span class='t-right'><b>"+(active?Math.round(pct)+"%":"—")+"</b><br>"+rightTxt+"</span></div>"+
+        "<div class='bar'><i style='width:"+(active?pct:0)+"%'></i></div>";
+      var ul=document.createElement('ul'); ul.className="items";
+      itemsByTier[t].forEach(function(it){
+        var p=r.perItem[it.id]||{state:active?"unfunded":"unfunded"};
+        var st = active ? p.state : "unfunded";
+        var ic = st==="funded"?"✅":(st==="partial"?"🟡":(st==="tbd"?"⬜":"⬜"));
+        var amt = it.amount==null ? "TBD" : fmt(it.amount);
+        var li=document.createElement('li'); li.className=st;
+        li.innerHTML="<span class='ic'>"+ic+"</span><span class='lab'>"+it.label+"</span><span class='amt'>"+amt+"</span>";
+        ul.appendChild(li);
+      });
+      box.appendChild(ul);
+      el.tiers.appendChild(box);
+    });
+  }
+
+  // wiring
+  el.inv.addEventListener('input', function(){ render(); });
+  el.inv.addEventListener('blur', function(){ el.inv.value = parseMoney(el.inv.value).toLocaleString("en-US"); el.invr.value=Math.min(300000,parseMoney(el.inv.value)); });
+  el.invr.addEventListener('input', function(){ el.inv.value = parseInt(el.invr.value,10).toLocaleString("en-US"); render(); });
+  el.tax.addEventListener('input', render);
+  el.tax.addEventListener('blur', function(){ el.tax.value = parseMoney(el.tax.value).toLocaleString("en-US"); });
+  el.tog2.addEventListener('change', render);
+  el.tog3.addEventListener('change', render);
+
+  render();
+})();
+</script>
+</body>
+</html>
