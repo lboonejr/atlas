@@ -170,7 +170,7 @@
     <span class="kicker"><span class="dot"></span> On-Button · Reopening Path</span>
     <h1>What an investment buys — and how fast we reopen</h1>
     <p class="sub">Type an amount and see the funded reopening path: which tiers clear, whether we can open inside 14 days, and how many months of runway are left after the one-time spend. Tracking &amp; planning only — nothing is paid or contacted automatically.</p>
-    <p class="updated">Last updated <b id="upd">July 10, 2026</b> · Source of truth: the Haven note <b>on-button-reopen/index.md</b> · #on-button drops</p>
+    <p class="updated">Last updated <b id="upd">July 11, 2026</b> · Source of truth: the Haven note <b>on-button-reopen/index.md</b> · #on-button drops</p>
   </header>
 
   <div class="gate" id="gate">
@@ -248,7 +248,7 @@
 
 <script id="reopen-data" type="application/json">
 {
-  "meta": {"updated": "July 10, 2026"},
+  "meta": {"updated": "July 11, 2026"},
   "constants": {"monthly_carry": 31200, "target_open_days": 14},
   "gate": {
     "items": [
@@ -258,13 +258,13 @@
   },
   "items": [
     {"id":"gusto-payroll-tax","label":"Gusto — payroll tax remittance","amount":9739.85,"tier":1,"vendor":"Gusto · 5 payrolls behind (tax principal only)","contact":"Gusto support / accountant","status":"past due"},
-    {"id":"little-leaf-labs","label":"Little Leaf Labs — lab testing","amount":8331,"tier":1,"vendor":"Little Leaf Labs · INV-0000762 + INV-0000889 (91+ days)","contact":"Dhruvi, Accounting","status":"past due — gates sellable product"},
     {"id":"progressive","label":"Progressive Commercial — auto/liability","amount":2117.80,"tier":1,"vendor":"Progressive · Policy #997268390","contact":"progressivecommercial.com","status":"past due (reinstate)"},
     {"id":"parke-bank","label":"Parke Bank — clear negative balance","amount":2000,"tier":1,"vendor":"Parke Bank · acct ending 8046","contact":"Christopher Cabezas, AVP · (856) 582-6900 x142","status":"past due"},
     {"id":"adt","label":"ADT Security","amount":1637.84,"tier":1,"vendor":"ADT · acct 405075455 (90 days)","contact":"(833) 320-1859","status":"past due"},
     {"id":"nst","label":"National Secure Transport — cash pickup","amount":868.60,"tier":1,"vendor":"NST · 7-invoice batch (oldest 05/26)","contact":"(800) 696-1934","status":"past due"},
     {"id":"pseg","label":"PSE&G — electric","amount":391.58,"tier":1,"vendor":"PSE&G · 2764 Mt Ephraim · acct 7804704100","contact":"1-800-357-2262","status":"past due"},
     {"id":"google-workspace","label":"Google Workspace / Voice","amount":33.97,"tier":1,"vendor":"Google · profile 1078-7383-2495 (bounced 7/8)","contact":"Google Payments","status":"past due"},
+    {"id":"intercompany-loan","label":"Intercompany inventory loan — repay","amount":40000,"tier":1,"vendor":"Related entity","contact":"—","status":"owed — goodwill/creditworthiness (moved Tier 3 → Tier 1, 7/11 tier-shuffle)"},
     {"id":"inventory-restock","label":"Cannabis inventory restock","amount":50000,"tier":1,"vendor":"Multiple licensed cultivators/wholesalers","contact":"—","status":"target — $50K working ('if we can')"},
 
     {"id":"arod-marketing","label":"Arod — marketing services","amount":7500,"tier":2,"vendor":"Arod","contact":"—","status":"past due"},
@@ -277,7 +277,7 @@
     {"id":"apple-dev","label":"Apple Developer — restore","amount":99,"tier":2,"vendor":"Apple","contact":"Apple Developer portal","status":"past due"},
     {"id":"leafly","label":"Leafly — menu listing","amount":null,"tier":2,"vendor":"Leafly · ~2 wks past due (as of 7/5)","contact":"256-488-4697","status":"TBD — set amount in index.md"},
 
-    {"id":"intercompany-loan","label":"Intercompany inventory loan — repay","amount":40000,"tier":3,"vendor":"Related entity","contact":"—","status":"owed — goodwill/creditworthiness"},
+    {"id":"little-leaf-labs","label":"Little Leaf Labs — lab testing","amount":8331,"tier":3,"vendor":"Little Leaf Labs · INV-0000762 + INV-0000889 (91+ days)","contact":"Dhruvi, Accounting","status":"past due (moved Tier 1 → Tier 3, 7/11 tier-shuffle)"},
     {"id":"epli-reinstate","label":"EPLI (Berkley Select) — reinstate","amount":4051.12,"tier":3,"vendor":"Berkley Select via First Insurance Funding · loan #105889646","contact":"Andrew Giampaolo, Marshall & Sterling · (845) 454-0800 x2397","status":"lapsed 7/6 — restore as edge"},
     {"id":"marketing-relaunch","label":"Reopening marketing relaunch (promo budget)","amount":null,"tier":3,"vendor":"—","contact":"—","status":"TBD — set target in index.md"},
     {"id":"full-staffing","label":"Full staffing restore (beyond bare crew)","amount":null,"tier":3,"vendor":"—","contact":"—","status":"TBD — incremental monthly, model separately"},
