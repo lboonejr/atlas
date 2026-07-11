@@ -40,7 +40,12 @@ dedupe by `id`). Never invent figures — an unknown stays `null`.
 1. **`on-button-reopen.html`** (repo root, served at
    `https://raw.githack.com/lboonejr/atlas/main/on-button-reopen.html`). Self-contained
    single file. Its data lives in one `<script id="reopen-data" type="application/json">`
-   block near the bottom. **To regenerate: translate the note's `yaml` block into that JSON
+   block near the bottom. The page also has a client-side **tier-shuffle** (per-line Tier
+   menu) that is a browser-only what-if; its "Apply to plan →" button emits a
+   `Samira, update the on-button reopen plan — apply these tier moves:` instruction. When you
+   see that instruction (in #on-button), apply each listed move by changing the item's `tier`
+   in the note, then regenerate — that is the loop that makes a shuffle durable.
+   **To regenerate: translate the note's `yaml` block into that JSON
    (constants → `constants`; `tax_gate` → `gate.items`; `items` → `items` with the same
    `id/label/amount/tier` plus a flattened `vendor`/`contact`/`status` string for the detail
    table; `carry` → `carry`) and set `meta.updated`.** Do not touch the markup, CSS, or the

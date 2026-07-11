@@ -59,7 +59,6 @@
   .updated{margin-top:11px; font-size:12.5px; color:var(--muted);}
   .updated b{color:var(--ink);}
 
-  /* Gate banner */
   .gate{background:var(--amber-soft); border:1px solid var(--amber-line); border-left:4px solid var(--amber);
     border-radius:12px; padding:15px 18px; margin:0 0 24px; display:flex; gap:14px; align-items:flex-start;}
   .gate .g-ico{font-size:20px; line-height:1.1;}
@@ -67,7 +66,6 @@
   .gate p{margin:0; font-size:13.5px; color:var(--muted);}
   .gate .g-amt{color:var(--amber); font-weight:700;}
 
-  /* Allocator */
   .alloc{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px; box-shadow:var(--shadow);}
   .alloc h2{margin:0 0 4px; font-size:18px; letter-spacing:-.01em;}
   .alloc .lead{color:var(--muted); font-size:13.5px; margin:0 0 18px;}
@@ -85,7 +83,6 @@
   .tog.on{border-color:var(--accent-line); background:var(--accent-soft); color:var(--accent-ink);}
   .tog.locked{opacity:.9; cursor:default; border-color:var(--accent-line); background:var(--accent-soft); color:var(--accent-ink);}
 
-  /* Readout tiles */
   .tiles{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:22px 0 6px;}
   .tile{background:var(--bg); border:1px solid var(--line); border-radius:12px; padding:14px 15px;}
   .tile .t-label{font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:700;}
@@ -101,7 +98,19 @@
     border-radius:10px; padding:11px 14px;}
   .guide b{color:var(--ink);}
 
-  /* Tier progress */
+  /* scenario (tier-shuffle) banner */
+  .scenario{margin-top:12px; font-size:12.5px; background:var(--amber-soft); border:1px solid var(--amber-line);
+    border-radius:10px; padding:12px 14px;}
+  .scenario.hidden{display:none;}
+  .scenario h4{margin:0 0 6px; font-size:12.5px; color:var(--amber); text-transform:uppercase; letter-spacing:.04em;}
+  .scenario ul{margin:0 0 10px; padding-left:18px;} .scenario li{margin:2px 0;}
+  .scenario .btns{display:flex; flex-wrap:wrap; gap:8px;}
+  .scenario button{font-size:12.5px; font-weight:700; border-radius:8px; padding:7px 12px; cursor:pointer; border:1.5px solid var(--line); background:var(--bg); color:var(--ink);}
+  .scenario button.apply{border-color:var(--accent-line); background:var(--accent-soft); color:var(--accent-ink);}
+  .scenario .applytext{margin-top:10px; width:100%; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11.5px;
+    white-space:pre; overflow-x:auto; background:var(--card2); border:1px solid var(--line); border-radius:8px; padding:10px; color:var(--ink);}
+  .scenario .applytext.hidden{display:none;}
+
   .tiers{margin-top:26px; display:grid; gap:14px;}
   .tierbox{border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--bg);}
   .tierhead{display:flex; align-items:center; gap:12px; padding:13px 16px; background:var(--card2);}
@@ -114,7 +123,7 @@
   .tierbox.partial .bar > i{background:var(--amber);}
   .tierbox.empty .bar > i{background:var(--line);}
   .items{list-style:none; margin:10px 0 12px; padding:0 16px; display:grid; gap:2px;}
-  .items li{display:flex; align-items:baseline; gap:9px; font-size:13px; padding:4px 0; border-bottom:1px dashed transparent;}
+  .items li{display:flex; align-items:center; gap:9px; font-size:13px; padding:4px 0;}
   .items li .ic{width:16px; flex:none; text-align:center;}
   .items li .lab{flex:1;}
   .items li .amt{font-variant-numeric:tabular-nums; font-weight:600; white-space:nowrap; color:var(--muted);}
@@ -122,8 +131,10 @@
   .items li.unfunded .lab{color:var(--muted);} .items li.unfunded .amt{color:var(--muted);}
   .items li.partial .amt{color:var(--amber);}
   .items li.tbd .amt{color:var(--muted); font-style:italic;}
+  .tsel{flex:none; font-size:11px; font-weight:700; color:var(--muted); background:var(--card2); border:1px solid var(--line);
+    border-radius:7px; padding:2px 4px; cursor:pointer; -webkit-appearance:menulist;}
+  .tsel.moved{color:var(--amber); border-color:var(--amber-line); background:var(--amber-soft);}
 
-  /* Detail tables */
   h2.section{font-size:19px; margin:44px 0 6px; letter-spacing:-.01em; display:flex; align-items:center; gap:9px;}
   h2.section .bar2{width:4px; height:20px; border-radius:2px; background:var(--accent); display:inline-block;}
   .section-note{color:var(--muted); font-size:13px; margin:0 0 14px;}
@@ -172,7 +183,7 @@
 
   <section class="alloc">
     <h2>Investment path</h2>
-    <p class="lead">Tier 1 is mandatory to open. Toggle Tier 2 / Tier 3 to see what a given raise can also cover — and what it leaves for runway.</p>
+    <p class="lead">Tier 1 is mandatory to open. Toggle Tier 2 / Tier 3 to see what a given raise can also cover — and what it leaves for runway. Use the <b>tier menu</b> on any line to shuffle it between lists — that's a local what-if until you apply it to the plan.</p>
 
     <div class="controls">
       <div class="field">
@@ -201,11 +212,21 @@
 
     <div class="guide" id="guide"></div>
 
+    <div class="scenario hidden" id="scenario">
+      <h4>Scenario — unsaved tier moves (this browser only)</h4>
+      <ul id="sc-list"></ul>
+      <div class="btns">
+        <button class="apply" id="sc-apply">Apply to plan →</button>
+        <button id="sc-reset">Reset to plan</button>
+      </div>
+      <div class="applytext hidden" id="sc-text"></div>
+    </div>
+
     <div class="tiers" id="tiers"></div>
   </section>
 
   <h2 class="section"><span class="bar2"></span> Full detail — every line, by tier</h2>
-  <p class="section-note">The complete internal record: amount, vendor, contact, account reference, status. Change any number by editing <b>index.md</b> and regenerating this page (the <code>on-button-plan</code> skill). Tier 1 = must-pay to open &amp; operate · Tier 2 = as funds allow · Tier 3 = restore / competitive edge.</p>
+  <p class="section-note">The complete internal record: amount, vendor, contact, account reference, status. This table follows your current tiering (including scenario moves). Durable changes to numbers or tiers land in <b>index.md</b> via the <code>on-button-plan</code> skill. Tier 1 = must-pay to open &amp; operate · Tier 2 = as funds allow · Tier 3 = restore / competitive edge.</p>
   <div class="tblwrap">
     <table id="detail">
       <thead><tr><th>Line</th><th>Amount</th><th>Vendor / account</th><th>Contact</th><th>Status</th></tr></thead>
@@ -220,7 +241,7 @@
   </div>
 
   <footer>
-    On-Button — Reopening Path · Cuzzie's Dispensary &amp; Delivery LLC · generated from <code>haven/vault/40-Projects/on-button-reopen/index.md</code>. Tracking &amp; planning only — nothing paid or contacted. The tax gate is tracked separately from the reopening tiers. Investment inputs are what-if only; item costs and tiers change in index.md.
+    On-Button — Reopening Path · Cuzzie's Dispensary &amp; Delivery LLC · generated from <code>haven/vault/40-Projects/on-button-reopen/index.md</code>. Tracking &amp; planning only — nothing paid or contacted. The tax gate is tracked separately from the reopening tiers. Investment inputs and tier moves are what-if until applied to the plan; the durable record is index.md.
   </footer>
 
 </div>
@@ -296,15 +317,20 @@
   var OPENDAYS = DATA.constants.target_open_days;
   var TIER_NAMES = {1:"Tier 1 · Bare bones", 2:"Tier 2 · Nice-to-have", 3:"Tier 3 · Competitive edge"};
   var TIER_TAG = {1:"must-pay to open & operate", 2:"as funds allow", 3:"restore / advantage"};
+  var LSKEY = "onbutton-tier-overrides-v1";
 
   function fmt(n){ return "$" + Math.round(n).toLocaleString("en-US"); }
-  function fmtK(n){ return n>=1000 ? "$"+(Math.round(n/100)/10)+"K" : "$"+Math.round(n); }
   function parseMoney(s){ var v = parseFloat(String(s).replace(/[^0-9.]/g,"")); return isNaN(v)?0:v; }
 
-  var itemsByTier = {1:[],2:[],3:[]};
-  DATA.items.forEach(function(it){ if(itemsByTier[it.tier]) itemsByTier[it.tier].push(it); });
-  function tierPriced(t){ return itemsByTier[t].reduce(function(s,it){ return s + (it.amount||0); },0); }
-  var TIER1 = tierPriced(1), TIER2 = tierPriced(2), TIER3 = tierPriced(3);
+  // ---- tier overrides (scenario layer) ----
+  var ORIG = {}; DATA.items.forEach(function(it){ ORIG[it.id]=it.tier; });
+  function loadOverrides(){ try{ var s=localStorage.getItem(LSKEY); return s?JSON.parse(s):{}; }catch(e){ return {}; } }
+  function saveOverrides(){ try{ localStorage.setItem(LSKEY, JSON.stringify(overrides)); }catch(e){} }
+  var overrides = loadOverrides();
+  function curTier(it){ return overrides[it.id] || it.tier; }
+  function buildGroups(){ var g={1:[],2:[],3:[]}; DATA.items.forEach(function(it){ g[curTier(it)].push(it); }); return g; }
+  function priced(list){ return list.reduce(function(s,it){ return s + (it.amount||0); },0); }
+  function moves(){ var m=[]; DATA.items.forEach(function(it){ var c=curTier(it); if(c!==ORIG[it.id]) m.push({it:it, from:ORIG[it.id], to:c}); }); return m; }
 
   // ---- static: gate ----
   var gtot = DATA.gate.items.reduce(function(s,g){return s+g.amount;},0);
@@ -314,22 +340,6 @@
     " — trust-fund taxes owed regardless of cash position, and an open balance is a CRC license risk. Tracked on its own (voluntary-disclosure + payment plan), <b>not</b> funded by the allocator below.";
   document.getElementById('upd').textContent = DATA.meta.updated;
 
-  // ---- static: detail table ----
-  var order = {1:0,2:1,3:2};
-  var sorted = DATA.items.slice().sort(function(a,b){ return order[a.tier]-order[b.tier]; });
-  var dbody = document.getElementById('detail-body');
-  sorted.forEach(function(it){
-    var tr = document.createElement('tr');
-    var amt = it.amount==null ? "<span class='muted'>TBD</span>" : fmt(it.amount);
-    var pill = "<span class='pill t"+it.tier+(it.amount==null?" tbd":"")+"'>T"+it.tier+"</span>";
-    tr.innerHTML = "<td class='svc'>"+it.label+pill+"</td><td class='amt'>"+amt+"</td><td>"+it.vendor+"</td><td>"+it.contact+"</td><td class='muted'>"+it.status+"</td>";
-    dbody.appendChild(tr);
-  });
-  // subtotal row
-  var subtr = document.createElement('tr'); subtr.className='subtotal';
-  subtr.innerHTML = "<td>Priced one-time total (T1+T2+T3)</td><td class='amt'>"+fmt(TIER1+TIER2+TIER3)+"</td><td colspan='3' class='muted'>T1 "+fmt(TIER1)+" · T2 "+fmt(TIER2)+" · T3 "+fmt(TIER3)+" · excludes TBD lines &amp; the tax gate</td>";
-  dbody.appendChild(subtr);
-
   // ---- static: carry table ----
   var cbody = document.getElementById('carry-body');
   DATA.carry.forEach(function(c){
@@ -337,32 +347,32 @@
     tr.innerHTML="<td class='svc'>"+c.label+"</td><td class='amt'>"+fmt(c.amount)+"</td>";
     cbody.appendChild(tr);
   });
-  var csum = DATA.carry.reduce(function(s,c){return s+c.amount;},0);
   var ctr=document.createElement('tr'); ctr.className='subtotal';
   ctr.innerHTML="<td>Ongoing monthly carry</td><td class='amt'>≈ "+fmt(CARRY)+"</td>";
   cbody.appendChild(ctr);
 
-  // ---- interactive allocator ----
   var el = {
     inv: document.getElementById('inv'), invr: document.getElementById('invr'),
     tax: document.getElementById('tax'), tog2: document.getElementById('tog2'), tog3: document.getElementById('tog3'),
     tog2wrap: document.getElementById('tog2wrap'), tog3wrap: document.getElementById('tog3wrap'),
-    tiers: document.getElementById('tiers')
+    tiers: document.getElementById('tiers'), dbody: document.getElementById('detail-body'),
+    scenario: document.getElementById('scenario'), scList: document.getElementById('sc-list'),
+    scText: document.getElementById('sc-text'), scApply: document.getElementById('sc-apply'), scReset: document.getElementById('sc-reset')
   };
 
   function activeTiers(){ var a=[1]; if(el.tog2.checked)a.push(2); if(el.tog3.checked)a.push(3); return a; }
 
   function compute(){
+    var g = buildGroups();
+    var T = {1:priced(g[1]), 2:priced(g[2]), 3:priced(g[3])};
     var invest = parseMoney(el.inv.value);
     var carve = Math.min(parseMoney(el.tax.value), invest);
     var available = Math.max(0, invest - carve);
     var tiers = activeTiers();
 
-    // greedy walk in tier order, item order; compute per-item funded state
-    var running = 0; // cumulative committed as we walk
-    var perItem = {};
+    var running = 0, perItem = {};
     tiers.forEach(function(t){
-      itemsByTier[t].forEach(function(it){
+      g[t].forEach(function(it){
         if(it.amount==null){ perItem[it.id]={state:"tbd",applied:0}; return; }
         var start = running, end = running + it.amount;
         var applied = Math.max(0, Math.min(available, end) - start);
@@ -372,24 +382,52 @@
       });
     });
 
-    var committed = running;                       // total priced cost of active tiers
-    var spent = Math.min(available, committed);     // actually funded
+    var committed = running;
+    var spent = Math.min(available, committed);
     var shortfall = Math.max(0, committed - available);
     var leftover = Math.max(0, available - committed);
-
-    var opensOK = available >= TIER1 - 0.001;       // Tier 1 always first & mandatory
-    var t1short = Math.max(0, TIER1 - available);
+    var opensOK = available >= T[1] - 0.001;
+    var t1short = Math.max(0, T[1] - available);
     var runwayMo = leftover / CARRY;
 
-    return {invest:invest, carve:carve, available:available, tiers:tiers, perItem:perItem,
+    return {g:g, T:T, invest:invest, carve:carve, available:available, tiers:tiers, perItem:perItem,
       committed:committed, spent:spent, shortfall:shortfall, leftover:leftover,
       opensOK:opensOK, t1short:t1short, runwayMo:runwayMo};
+  }
+
+  function pill(t, tbd){ return "<span class='pill t"+t+(tbd?" tbd":"")+"'>T"+t+"</span>"; }
+
+  function renderDetail(g){
+    el.dbody.innerHTML = "";
+    [1,2,3].forEach(function(t){
+      g[t].forEach(function(it){
+        var tr = document.createElement('tr');
+        var amt = it.amount==null ? "<span class='muted'>TBD</span>" : fmt(it.amount);
+        tr.innerHTML = "<td class='svc'>"+it.label+pill(t, it.amount==null)+"</td><td class='amt'>"+amt+"</td><td>"+it.vendor+"</td><td>"+it.contact+"</td><td class='muted'>"+it.status+"</td>";
+        el.dbody.appendChild(tr);
+      });
+    });
+    var subtr = document.createElement('tr'); subtr.className='subtotal';
+    var tot = priced(g[1])+priced(g[2])+priced(g[3]);
+    subtr.innerHTML = "<td>Priced one-time total (T1+T2+T3)</td><td class='amt'>"+fmt(tot)+"</td><td colspan='3' class='muted'>T1 "+fmt(priced(g[1]))+" · T2 "+fmt(priced(g[2]))+" · T3 "+fmt(priced(g[3]))+" · excludes TBD lines &amp; the tax gate</td>";
+    el.dbody.appendChild(subtr);
+  }
+
+  function renderScenario(){
+    var m = moves();
+    if(!m.length){ el.scenario.className="scenario hidden"; el.scText.className="applytext hidden"; return; }
+    el.scenario.className="scenario";
+    el.scList.innerHTML = m.map(function(x){ return "<li><b>"+x.it.label+"</b>: Tier "+x.from+" → Tier "+x.to+"</li>"; }).join("");
+  }
+
+  function applyText(){
+    var lines = moves().map(function(x){ return "- "+x.it.label+": Tier "+x.from+" → Tier "+x.to; });
+    return "Samira, update the on-button reopen plan — apply these tier moves:\n" + lines.join("\n");
   }
 
   function render(){
     var r = compute();
 
-    // status tile
     var st = document.getElementById('tile-status');
     var vs = document.getElementById('v-status'), ns = document.getElementById('n-status');
     if(r.opensOK){ st.className="tile status go"; vs.textContent="Open in ~"+OPENDAYS+" days"; ns.textContent="Tier 1 fully funded"; }
@@ -401,64 +439,85 @@
     document.getElementById('v-left').textContent = fmt(r.leftover);
     document.getElementById('n-left').textContent = r.opensOK ? "after funding active tiers" : "open Tier 1 first";
 
-    // guidance line
-    var need3 = TIER1 + 3*CARRY + r.carve;
+    var need3 = r.T[1] + 3*CARRY + r.carve;
     var g = document.getElementById('guide');
     if(!r.opensOK){
-      g.innerHTML = "To open at all you need Tier 1 = <b>"+fmt(TIER1)+"</b>"+(r.carve>0?(" + your "+fmt(r.carve)+" tax carve-off"):"")+". A safer target — <b>open + 3 months runway</b> — is about <b>"+fmt(need3)+"</b>.";
+      g.innerHTML = "To open at all you need Tier 1 = <b>"+fmt(r.T[1])+"</b>"+(r.carve>0?(" + your "+fmt(r.carve)+" tax carve-off"):"")+". A safer target — <b>open + 3 months runway</b> — is about <b>"+fmt(need3)+"</b>.";
     } else if(r.runwayMo < 2){
       g.innerHTML = "You can open, but runway is thin (<b>"+r.runwayMo.toFixed(1)+" mo</b>). Reopening safely usually wants 3+ months of carry — about <b>"+fmt(need3)+"</b> to open with a 3-month cushion.";
     } else {
       g.innerHTML = "Funds Tier 1"+(r.tiers.indexOf(2)>-1?" + Tier 2":"")+(r.tiers.indexOf(3)>-1?" + Tier 3":"")+" and leaves <b>"+r.runwayMo.toFixed(1)+" months</b> of runway. Open + 3-month runway ≈ <b>"+fmt(need3)+"</b>.";
     }
 
-    // toggle chip styling
     el.tog2wrap.className = "tog"+(el.tog2.checked?" on":"");
     el.tog3wrap.className = "tog"+(el.tog3.checked?" on":"");
 
-    // tier boxes
     el.tiers.innerHTML = "";
     [1,2,3].forEach(function(t){
       var active = r.tiers.indexOf(t)>-1;
-      var priced = t===1?TIER1:(t===2?TIER2:TIER3);
-      var funded = itemsByTier[t].reduce(function(s,it){ var p=r.perItem[it.id]; return s + (p&&p.applied?p.applied:0); },0);
-      var pct = priced>0 ? Math.min(100, 100*funded/priced) : (active?100:0);
+      var pricedT = r.T[t];
+      var funded = r.g[t].reduce(function(s,it){ var p=r.perItem[it.id]; return s + (p&&p.applied?p.applied:0); },0);
+      var pct = pricedT>0 ? Math.min(100, 100*funded/pricedT) : (active?100:0);
       var cls = "tierbox";
       if(!active){ cls+=" empty"; }
-      else if(funded>=priced-0.001){ /* full */ }
+      else if(funded>=pricedT-0.001){ /* full */ }
       else if(funded>0){ cls+=" partial"; }
       else { cls+=" empty"; }
 
       var box=document.createElement('div'); box.className=cls;
-      var rightTxt = active ? (fmt(funded)+" / "+fmt(priced)) : ("off · "+fmt(priced));
+      var rightTxt = active ? (fmt(funded)+" / "+fmt(pricedT)) : ("off · "+fmt(pricedT));
       box.innerHTML =
         "<div class='tierhead'><span class='t-name'>"+TIER_NAMES[t]+"</span>"+
         "<span class='t-tag'>"+TIER_TAG[t]+"</span>"+
         "<span class='t-right'><b>"+(active?Math.round(pct)+"%":"—")+"</b><br>"+rightTxt+"</span></div>"+
         "<div class='bar'><i style='width:"+(active?pct:0)+"%'></i></div>";
       var ul=document.createElement('ul'); ul.className="items";
-      itemsByTier[t].forEach(function(it){
-        var p=r.perItem[it.id]||{state:active?"unfunded":"unfunded"};
-        var st = active ? p.state : "unfunded";
-        var ic = st==="funded"?"✅":(st==="partial"?"🟡":(st==="tbd"?"⬜":"⬜"));
+      r.g[t].forEach(function(it){
+        var p=r.perItem[it.id];
+        var stt = active && p ? p.state : "unfunded";
+        var ic = stt==="funded"?"✅":(stt==="partial"?"🟡":"⬜");
         var amt = it.amount==null ? "TBD" : fmt(it.amount);
-        var li=document.createElement('li'); li.className=st;
-        li.innerHTML="<span class='ic'>"+ic+"</span><span class='lab'>"+it.label+"</span><span class='amt'>"+amt+"</span>";
+        var moved = curTier(it)!==ORIG[it.id];
+        var opts = [1,2,3].map(function(k){ return "<option value='"+k+"'"+(k===t?" selected":"")+">T"+k+"</option>"; }).join("");
+        var li=document.createElement('li'); li.className=stt;
+        li.innerHTML="<span class='ic'>"+ic+"</span><span class='lab'>"+it.label+"</span><span class='amt'>"+amt+"</span>"+
+          "<select class='tsel"+(moved?" moved":"")+"' data-id='"+it.id+"' title='Move to another tier'>"+opts+"</select>";
         ul.appendChild(li);
       });
       box.appendChild(ul);
       el.tiers.appendChild(box);
     });
+
+    renderDetail(r.g);
+    renderScenario();
   }
 
-  // wiring
-  el.inv.addEventListener('input', function(){ render(); });
+  // ---- wiring ----
+  el.inv.addEventListener('input', render);
   el.inv.addEventListener('blur', function(){ el.inv.value = parseMoney(el.inv.value).toLocaleString("en-US"); el.invr.value=Math.min(300000,parseMoney(el.inv.value)); });
   el.invr.addEventListener('input', function(){ el.inv.value = parseInt(el.invr.value,10).toLocaleString("en-US"); render(); });
   el.tax.addEventListener('input', render);
   el.tax.addEventListener('blur', function(){ el.tax.value = parseMoney(el.tax.value).toLocaleString("en-US"); });
   el.tog2.addEventListener('change', render);
   el.tog3.addEventListener('change', render);
+
+  // delegated: tier select changes (survives re-renders)
+  el.tiers.addEventListener('change', function(e){
+    var s = e.target;
+    if(!s || !s.classList || !s.classList.contains('tsel')) return;
+    var id = s.getAttribute('data-id'); var t = parseInt(s.value,10);
+    if(t===ORIG[id]){ delete overrides[id]; } else { overrides[id]=t; }
+    saveOverrides(); render();
+  });
+
+  el.scReset.addEventListener('click', function(){ overrides={}; saveOverrides(); render(); });
+  el.scApply.addEventListener('click', function(){
+    var txt = applyText();
+    el.scText.textContent = txt; el.scText.className = "applytext";
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(function(){ el.scApply.textContent="Copied — paste in #on-button ✓"; setTimeout(function(){ el.scApply.textContent="Apply to plan →"; },2500); }, function(){});
+    }
+  });
 
   render();
 })();

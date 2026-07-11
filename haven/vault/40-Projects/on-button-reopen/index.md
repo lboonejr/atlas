@@ -15,6 +15,9 @@ It follows the [[investor-pipeline]] `index.md` precedent: one structured block 
 `on-button-plan` skill reads and regenerates downstream surfaces from. **The interactive
 page `on-button-reopen.html` (served via githack) and the Slack canvas `F0BEN1167GB` are
 both rendered FROM this block — edit numbers here, never on the page or the canvas.**
+The page has a client-side **tier-shuffle** (a what-if that lives only in that browser); its
+"Apply to plan →" button emits a `Samira, ... apply these tier moves` instruction — running
+`on-button-plan` on it writes the moves back HERE, which is what makes them durable.
 
 Mission: reopen Cuzzie's (Camden) within **14 days of funds landing**, then plan the rest
 of the year. Every reopening element is sorted into three tiers so any investment amount
