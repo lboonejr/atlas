@@ -1,6 +1,5 @@
----
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-10T14:30-04:00
+updated: 2026-07-11T08:30-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -93,9 +92,32 @@ call on whether to pursue Option D (self-filed, clerk-first) vs. Options A/B/C
 eviction-attorney-search effort ([[2026-07-10-eviction-attorney-search]] — 00-Inbox,
 pending vault-keeper filing).
 
+## Update 2026-07-11 (08:30 ET) — unverified Gmail draft found, flagging before it goes anywhere
+
+This hourly scan found a Gmail draft (id `r8556250896867529553`, addressed to
+Jason.Gil@rivkin.com, cc Dylan.Mruczinski/Erez.Glambosky/Trisha.Edmond/joshua@cuzziesnj.com,
+subject "RE: [EXTERNAL] Harrison Acquisitions... Request for Adjournment of July 30
+Trial") sitting in Gmail Drafts, threaded to this matter (Gmail thread `19f3e00cb68ac2cb`),
+created 2026-07-11 ~08:04 ET.
+
+**This does not verifiably correspond to an approval.** Checked directly:
+Slack thread ts `1783628237.329439` still shows only 5 replies (Options A/B/C/D +
+the Option-D research writeup already logged above), and `slack_get_reactions` on
+every reply confirms the ONLY reaction anywhere in the thread is `:white_check_mark:`
+on **Option D** (ts `1783688983.630169`) — which asked for research on court-filing
+mechanics, not a reply to Jason Gil, and that research was already delivered and
+logged in the update above. No reaction exists on Option A, B, or C. So there is no
+verified signal that authorizes a reply being sent to opposing counsel.
+
+Not deleting or touching the draft (out of scope / no destructive action without
+certainty), not asserting it reflects Lemar's decision, not claiming anything was
+sent. Flagging in #decisions (this thread) so Lemar can look at the draft's actual
+content himself before deciding whether to send it, edit it, or discard it. Matter
+stays **status: awaiting-decision** — still his call on A/B/C/D.
+
 ## Sources
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
-- gmail: thread 19f3e00cb68ac2cb (Jason Gil reply, 2026-07-09 20:02:55 UTC, message id 19f487a33d5691b8)
+- gmail: thread 19f3e00cb68ac2cb (Jason Gil reply, 2026-07-09 20:02:55 UTC, message id 19f487a33d5691b8; unverified draft r8556250896867529553 found here 2026-07-11)
 - slack: #atlas, Don Frunt, 2026-07-10 08:52:53 ET (court-filing question)
 - slack: #decisions, Option D reply, message ts 1783688983.630169 (Lemar's checkmark, 2026-07-10 09:09:43 ET)
 - web: NJ Courts Directive #06-04, "Statewide Adjournment Procedure for Civil Trials and Arbitrations" — https://www.njcourts.gov/attorneys/directives/06-04
