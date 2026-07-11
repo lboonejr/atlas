@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:15-04:00
-updated: 2026-07-11T10:15:00-04:00
+updated: 2026-07-11T10:25:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -33,5 +33,12 @@ sender) — this needs a decision, not a drafted email. Updating billing is not 
 payment/transfer, but the follow-through (a card charge) is, so Samira cannot execute
 either path — only flag it.
 
+## Update 2026-07-11 10:25 ET
+Lemar reacted ✅ on the #decisions card (no thread reply). Per the card's own framing
+this signals he addressed it himself — but it doesn't say which way (resubscribed vs.
+let lapse). Not guessing which; asked in-thread. Leaving `status: active` until he
+confirms, so this doesn't silently read as resolved either way.
+
 ## Sources
 - gmail: message `19f51423a7497392` ("Your Intuit subscription was canceled")
+- slack: #decisions (C0BBXA96FFV), ts 1783776086.547019
