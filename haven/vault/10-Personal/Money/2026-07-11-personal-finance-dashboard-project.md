@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-11T10:15:00-04:00
+updated: 2026-07-11T12:10:00-04:00
 domain: personal
 type: task
 status: active
@@ -24,17 +24,31 @@ Lemar wants a personal finance project: track bills/budget, own channel + workfl
 - **Cashapp payback** — $187.22 owed.
 - More items exist but not yet listed.
 
-## Open questions (probe)
-1. Phone: split 3 ways now, or solo-pay until payoff then switch plans — which do you
-   want modeled as the default in the dashboard?
-2. What's the full bill list — any rent/housing, utilities, insurance, subscriptions,
-   transportation not yet named?
-3. Income side — what's the monthly personal income figure this budgets against?
-4. Cashapp $187.22 — one-time payoff or a payment plan?
+## Answers (2026-07-11, #personal-finance thread 11:39am ET)
+1. **Phone** — model the budget assuming he takes on the entire bill (no 3-way split for
+   now).
+2. **Rent/Housing/Utilities/Insurance** — $0 (none currently). **Transportation** —
+   not yet fixed: depends on whether he ends up commuting Camden→Newark 3x/week via
+   train (NJ Transit + Riverline) or staying with a friend in Rahway on Newark days
+   (NJ Transit only). No dollar figure yet — contingent on the Station job decision.
+3. **Income** — currently unemployed, no income. Plan: work at The Station for
+   ~$500/week, then look for a second job (possibly Amazon overnights) for more income.
+   Budget has no confirmed income figure yet — still open.
+4. **Cashapp $187.22** — due now, but he's paying it back at his own pace (no fixed
+   payoff date or plan requested).
+
+## Still open before the dashboard can be finalized
+- A confirmed monthly income figure (depends on Station start date/hours — see
+  `haven/vault/30-Station/2026-07-11-station-agent-job-letter-meeting.md`).
+- A transportation cost once the Camden↔Newark commute vs. Rahway-stay decision is made.
+- The rest of the full bill list (Student loans $500/mo, Claude $100/mo, Food ~$600/mo,
+  Cashapp $187.22 are the only figures on hand so far).
 
 ## Next step
-New Slack channel #personal-finance created; initial budget sketch + workflow proposal
-posted there.
+Model a draft budget using the confirmed figures (phone full-pay, $0 rent/housing,
+student loans $500, Claude $100, food ~$600, Cashapp $187.22) with income and
+transportation left as placeholders pending the two still-open figures above.
 
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
+- slack: #personal-finance (C0BGLEMH99T), ts 1783784379.469619 (2026-07-11 11:39 ET reply)
