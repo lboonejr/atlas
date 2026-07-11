@@ -1,12 +1,13 @@
 ---
 created: 2026-07-11T09:36:00-04:00
-updated: 2026-07-11T10:15:00-04:00
+updated: 2026-07-11T10:20:00-04:00
 domain: personal
 type: task
 status: active
 tags: [claude-certification, learning-plan, upskilling]
 source: slack
 due: 2026-08-31T09:00:00-04:00
+calendar_event_id: le4aio9qkkeifglg87u8n6ipt8
 ---
 
 # Claude certification by end of August — curriculum + learning plan
