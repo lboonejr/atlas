@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-07-10T18:45-04:00
+updated: 2026-07-11T08:26-04:00
 domain: project
 type: reference
 status: active
@@ -52,7 +52,7 @@ Guardrail: tracking & planning only — nothing is paid or contacted automatical
 constants:
   monthly_carry: 31200          # bare-bones crew; excludes cannabis tax
   target_open_days: 14
-  updated_label: "July 10, 2026"
+  updated_label: "July 11, 2026"
 
 tax_gate:
   - id: nj-sales-tax
@@ -74,15 +74,6 @@ items:
     account: "5 payrolls behind; tax principal only (excl. IRS/NJ penalties+interest)"
     contact: "Gusto support / accountant"
     status: past-due
-  - id: little-leaf-labs
-    label: "Little Leaf Labs — lab testing"
-    amount: 8331
-    tier: 1
-    vendor: "Little Leaf Labs"
-    account: "INV-0000762 + INV-0000889 · 91+ days"
-    contact: "Dhruvi, Accounting"
-    status: past-due
-    note: "Cannabis vendor, but gates sellable tested product → Tier 1."
   - id: progressive
     label: "Progressive Commercial — auto/liability"
     amount: 2117.80
@@ -132,6 +123,13 @@ items:
     account: "Payments profile 1078-7383-2495 · bounced 7/8"
     contact: "Google Payments"
     status: past-due
+  - id: intercompany-loan
+    label: "Intercompany inventory loan — repay"
+    amount: 40000
+    tier: 1
+    vendor: "Related entity"
+    status: owed
+    note: "Related-entity repayment; goodwill/creditworthiness. Moved Tier 3 → Tier 1 per Lemar's 7/10 tier-shuffle instruction (#on-button ts 1783738175.999559)."
   - id: inventory-restock
     label: "Cannabis inventory restock"
     amount: 50000
@@ -214,13 +212,15 @@ items:
     note: "Amount TBD — set when confirmed."
 
 # ---- TIER 3 — Competitive edge (restore / advantage) ----
-  - id: intercompany-loan
-    label: "Intercompany inventory loan — repay"
-    amount: 40000
+  - id: little-leaf-labs
+    label: "Little Leaf Labs — lab testing"
+    amount: 8331
     tier: 3
-    vendor: "Related entity"
-    status: owed
-    note: "Related-entity repayment; goodwill/creditworthiness."
+    vendor: "Little Leaf Labs"
+    account: "INV-0000762 + INV-0000889 · 91+ days"
+    contact: "Dhruvi, Accounting"
+    status: past-due
+    note: "Cannabis vendor. Moved Tier 1 → Tier 3 per Lemar's 7/10 tier-shuffle instruction (#on-button ts 1783738175.999559)."
   - id: epli-reinstate
     label: "EPLI (Berkley Select) — reinstate"
     amount: 4051.12
@@ -278,13 +278,22 @@ carry:
   - {label: "Veriscan ID verification", amount: 30}
 ```
 
-## Snapshot (human-readable, as of 2026-07-10)
-- **Tier 1 (open & operate):** ≈ **$75,121** one-time (incl. $50K inventory restock).
+## Snapshot (human-readable, as of 2026-07-11)
+- **Tier 1 (open & operate):** ≈ **$106,790** one-time (incl. $50K inventory restock, $40K
+  intercompany loan repay).
 - **Tier 2 (nice-to-have):** ≈ **$22,804** (+ Leafly TBD).
-- **Tier 3 (edge):** ≈ **$44,051** (intercompany loan $40K + EPLI $4,051; strategic lines TBD).
+- **Tier 3 (edge):** ≈ **$12,382** (Little Leaf Labs $8,331 + EPLI $4,051; strategic lines TBD).
 - **Tax gate (separate):** ≈ **$109,900**.
 - **Monthly carry:** ≈ **$31,200/mo** → runway = (investment − one-time) ÷ 31,200.
-- Reality check: opening ($75K) + a 3-month cushion (~$93.6K carry) ≈ **$169K** before Tier 2/3 and before tax.
+- Reality check: opening ($106.8K) + a 3-month cushion (~$93.6K carry) ≈ **$200K** before
+  Tier 2/3 and before tax.
+
+## Update — 2026-07-11
+Applied Lemar's tier-move instruction (#on-button `C0BEQUW5NPP`, ts `1783738175.999559`,
+posted 2026-07-10 22:49:35 ET, unreacted): **Little Leaf Labs — lab testing** moved
+Tier 1 → Tier 3; **Intercompany inventory loan — repay** moved Tier 3 → Tier 1. Snapshot
+totals recalculated above. Tier 2 unaffected. Page (`on-button-reopen.html`) and canvas
+(`F0BEN1167GB`) regenerated from this note in the same pass.
 
 ## Sources
 - slack: #on-button `C0BEQUW5NPP` — the running drop feed; canvas `F0BEN1167GB`.
