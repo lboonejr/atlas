@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-11T12:10:00-04:00
+updated: 2026-07-11T13:50:00-04:00
 domain: personal
 type: task
 status: active
@@ -49,6 +49,22 @@ Model a draft budget using the confirmed figures (phone full-pay, $0 rent/housin
 student loans $500, Claude $100, food ~$600, Cashapp $187.22) with income and
 transportation left as placeholders pending the two still-open figures above.
 
+## Draft budget (2026-07-11, first pass)
+| Category | Monthly cost | Note |
+|---|---|---|
+| Phone | TBD | Full bill on Lemar. Gmail shows a $200.00 in-store payment 7/11 (ref 6831818746) but no stated recurring plan total — not safe to treat as the monthly figure. Still needed. |
+| Rent/Housing/Utilities/Insurance | $0 | None currently |
+| Student loans | ~$500 | ~$8,000 remaining |
+| Claude subscription | $100 | Fixed |
+| Food | ~$600 | ~$20/day estimate |
+| Transportation | TBD | Blocked on Camden↔Newark commute vs. Rahway-stay decision (live in #decisions) |
+| Income | TBD | Blocked on Station start date/hours |
+| Cashapp payback | $187.22 | One-time, own pace — not a recurring line |
+
+Posted to #personal-finance 2026-07-11 ~13:50 ET.
+
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
 - slack: #personal-finance (C0BGLEMH99T), ts 1783784379.469619 (2026-07-11 11:39 ET reply)
+- slack: #personal-finance (C0BGLEMH99T), ts 1783793432.284659 (2026-07-11 draft budget posted)
+- gmail: thread 19f51f33f63c1887 (T-Mobile payment confirmation, $200.00, 2026-07-11)
