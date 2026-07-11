@@ -157,6 +157,38 @@
   footer{margin-top:46px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:12px;}
   footer code{background:var(--card2); padding:1px 6px; border-radius:5px; font-size:11.5px;}
 
+
+  /* ---- vendor repayment ladder ---- */
+  .repay{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px; box-shadow:var(--shadow); margin-top:6px;}
+  .repay .lead{color:var(--muted); font-size:13.5px; margin:0 0 18px;}
+  .weights{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:18px 0 4px; padding:16px; background:var(--bg); border:1px solid var(--line); border-radius:12px;}
+  .weights .w label{display:flex; justify-content:space-between; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin-bottom:6px;}
+  .weights .w label b{color:var(--ink); font-variant-numeric:tabular-nums;}
+  .weights .w input[type=range]{margin-top:2px;}
+  .weights .w .wnote{font-size:11px; color:var(--muted); margin-top:3px;}
+  .ladder{list-style:none; margin:18px 0 0; padding:0; display:grid; gap:8px;}
+  .ladder li{display:grid; grid-template-columns:26px 1fr auto; gap:10px; align-items:center;
+    background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:10px 13px;}
+  .ladder li.cleared{border-color:var(--accent-line); background:var(--accent-soft);}
+  .ladder li.partial{border-color:var(--amber-line); background:var(--amber-soft);}
+  .ladder li.tbd{opacity:.72; border-style:dashed;}
+  .ladder .rank{font-size:12px; font-weight:800; color:var(--muted); text-align:center; font-variant-numeric:tabular-nums;}
+  .ladder .who{min-width:0;}
+  .ladder .who .nm{font-weight:700; font-size:13.5px; display:flex; align-items:center; gap:6px; flex-wrap:wrap;}
+  .ladder .who .mt{font-size:11.5px; color:var(--muted); margin-top:2px;}
+  .ladder .rt{text-align:right; white-space:nowrap;}
+  .ladder .rt .amt{font-weight:800; font-size:14px; font-variant-numeric:tabular-nums;}
+  .ladder .rt .sc{font-size:11px; color:var(--muted); font-variant-numeric:tabular-nums;}
+  .ladder li.cleared .rt .amt{color:var(--accent-ink);} .ladder li.partial .rt .amt{color:var(--amber);}
+  .flag{display:inline-block; font-size:10px; font-weight:800; padding:1px 6px; border-radius:20px; letter-spacing:.02em;}
+  .flag.coll{background:var(--red-soft); color:var(--red); border:1px solid var(--red-line);}
+  .flag.thr{background:var(--amber-soft); color:var(--amber); border:1px solid var(--amber-line);}
+  .flag.rev3{background:var(--accent-soft); color:var(--accent-ink); border:1px solid var(--accent-line);}
+  .flag.rev2{background:var(--blue-soft); color:var(--blue); border:1px solid var(--blue-line);}
+  .flag.rev1{background:var(--card2); color:var(--muted); border:1px solid var(--line);}
+  .flag.win{background:var(--blue-soft); color:var(--blue); border:1px solid var(--blue-line);}
+  @media (max-width:760px){ .weights{grid-template-columns:1fr;} }
+
   @media (max-width:760px){
     .controls{grid-template-columns:1fr;} .tiles{grid-template-columns:1fr 1fr;}
     .wrap{padding:24px 14px 60px;} h1{font-size:24px;}
@@ -234,6 +266,55 @@
     </table>
   </div>
 
+  <h2 class="section"><span class="bar2" style="background:var(--blue);"></span> Vendor repayment ladder</h2>
+  <p class="section-note">These cannabis vendors have <b>blocked Cuzzie&#39;s from ordering</b>. We are currently ordering alongside The Station and receiving product that way, so the reopen does not depend on any of them being paid — this is a <b>clean-slate buy-back</b>, sequenced strategically. Priority is scored on three things you can retune below: <b>the real gross profit the vendor made us</b> (Dutchie, 14.4 trading months), <b>how small the balance is</b> (quick wins buy back the most relationships per dollar), and <b>whether they have us in collections</b>. Tracking &amp; planning only — nothing is paid or contacted.</p>
+
+  <section class="repay">
+    <div class="controls">
+      <div class="field">
+        <label for="repay">Repayment budget</label>
+        <div class="money-in"><span>$</span><input id="repay" type="text" inputmode="numeric" value="25,000" aria-label="Repayment budget"></div>
+        <input id="repayr" type="range" min="0" max="110000" step="1000" value="25000" aria-label="Repayment budget slider">
+        <div class="rangelabels"><span>$0</span><span>$55K</span><span>$110K</span></div>
+        <p class="wnote" style="font-size:11.5px;color:var(--muted);margin:8px 0 0;">Separate from the reopen tiers above — this is post-reopen, paid out of operating cash as it comes back.</p>
+      </div>
+      <div class="field">
+        <div class="tiles" style="grid-template-columns:1fr 1fr; margin:0;">
+          <div class="tile"><div class="t-label">Vendors bought back</div><div class="t-val num" id="rp-count">—</div><div class="t-note" id="rp-countn"></div></div>
+          <div class="tile"><div class="t-label">Debt retired</div><div class="t-val num" id="rp-pct">—</div><div class="t-note" id="rp-pctn"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weights">
+      <div class="w">
+        <label for="w-rev">Gross profit to us <b id="w-rev-v">40</b></label>
+        <input id="w-rev" type="range" min="0" max="100" step="5" value="40">
+        <div class="wnote">Real Dutchie gross profit &mdash; pay the vendors that actually make us money.</div>
+      </div>
+      <div class="w">
+        <label for="w-win">Quick win (small balance) <b id="w-win-v">30</b></label>
+        <input id="w-win" type="range" min="0" max="100" step="5" value="30">
+        <div class="wnote">Most relationships re-opened per dollar spent.</div>
+      </div>
+      <div class="w">
+        <label for="w-coll">Collections risk <b id="w-coll-v">30</b></label>
+        <input id="w-coll" type="range" min="0" max="100" step="5" value="30">
+        <div class="wnote">Legal exposure &amp; credit damage — settle to close.</div>
+      </div>
+    </div>
+
+    <div class="guide" id="rp-guide"></div>
+
+    <ul class="ladder" id="ladder"></ul>
+  </section>
+
+  <h2 class="section"><span class="bar2"></span> Repayment ladder — full detail</h2>
+  <p class="section-note">Every blocked cannabis vendor, the last balance they put in writing, the contact chasing it, and where it stands. <b>Gross profit is real</b> — pulled from the Dutchie <i>Detailed Sales Breakdown by Product</i> (04/01/2025&ndash;06/13/2026, 14.4 trading months), samples excluded, rolled brand &rarr; vendor. <b>Payback</b> = months of that vendor&#39;s gross profit needed to earn the balance back. Little Leaf Labs is <b>parked</b> (negative margin). TBD balances still need the vendor&#39;s statement PDF opened.</p>
+  <div class="tblwrap">
+    <table><thead><tr><th>#</th><th>Vendor / brands</th><th>Balance</th><th>Gross profit</th><th>Margin</th><th>Payback</th><th>Flag</th><th>Contact</th><th>Status</th></tr></thead><tbody id="repay-body"></tbody></table>
+  </div>
+
   <h2 class="section"><span class="bar2" style="background:var(--amber);"></span> Monthly carry to operate</h2>
   <p class="section-note">Ongoing bare-bones cost once reopened — the denominator for runway. Excludes cannabis tax (a % of sales). Rent and payroll live here, not in the one-time reopen bucket, so they are not double-counted.</p>
   <div class="tblwrap">
@@ -248,82 +329,581 @@
 
 <script id="reopen-data" type="application/json">
 {
-  "meta": {"updated": "July 11, 2026"},
-  "constants": {"monthly_carry": 31200, "target_open_days": 14},
+  "meta": {
+    "updated": "July 11, 2026"
+  },
+  "constants": {
+    "monthly_carry": 31200,
+    "target_open_days": 14
+  },
   "gate": {
     "items": [
-      {"label": "NJ state sales tax (6.625%)", "amount": 84400},
-      {"label": "Camden local cannabis tax (2%)", "amount": 25500}
+      {
+        "label": "NJ state sales tax (6.625%)",
+        "amount": 84400
+      },
+      {
+        "label": "Camden local cannabis tax (2%)",
+        "amount": 25500
+      }
     ]
   },
   "items": [
-    {"id":"gusto-payroll-tax","label":"Gusto — payroll tax remittance","amount":9739.85,"tier":1,"vendor":"Gusto · 5 payrolls behind (tax principal only)","contact":"Gusto support / accountant","status":"past due"},
-    {"id":"progressive","label":"Progressive Commercial — auto/liability","amount":2117.80,"tier":1,"vendor":"Progressive · Policy #997268390","contact":"progressivecommercial.com","status":"past due (reinstate)"},
-    {"id":"parke-bank","label":"Parke Bank — clear negative balance","amount":2000,"tier":1,"vendor":"Parke Bank · acct ending 8046","contact":"Christopher Cabezas, AVP · (856) 582-6900 x142","status":"past due"},
-    {"id":"adt","label":"ADT Security","amount":1637.84,"tier":1,"vendor":"ADT · acct 405075455 (90 days)","contact":"(833) 320-1859","status":"past due"},
-    {"id":"nst","label":"National Secure Transport — cash pickup","amount":868.60,"tier":1,"vendor":"NST · 7-invoice batch (oldest 05/26)","contact":"(800) 696-1934","status":"past due — verified 7/11 vs. PDF, sums exactly"},
-    {"id":"pseg","label":"PSE&G — electric","amount":391.58,"tier":1,"vendor":"PSE&G · 2764 Mt Ephraim · acct 7804704100","contact":"1-800-357-2262","status":"past due"},
-    {"id":"google-workspace","label":"Google Workspace / Voice","amount":33.97,"tier":1,"vendor":"Google · profile 1078-7383-2495 (bounced 7/8)","contact":"Google Payments","status":"past due"},
-    {"id":"intercompany-loan","label":"Intercompany inventory loan — repay","amount":40000,"tier":1,"vendor":"Related entity","contact":"—","status":"owed — goodwill/creditworthiness (moved Tier 3 → Tier 1, 7/11 tier-shuffle)"},
-    {"id":"inventory-restock","label":"Cannabis inventory restock","amount":50000,"tier":1,"vendor":"Multiple licensed cultivators/wholesalers","contact":"—","status":"target — $50K working ('if we can')"},
-
-    {"id":"arod-marketing","label":"Arod — marketing services","amount":7500,"tier":2,"vendor":"Arod","contact":"—","status":"past due"},
-    {"id":"weedmaps","label":"Weedmaps — menu listing","amount":6583,"tier":2,"vendor":"Weedmaps (Ghost Mgmt) · 5-invoice batch (58 days)","contact":"Emma Donaldson, AR","status":"past due"},
-    {"id":"loan-nicky","label":"Loan from Nicky (personal)","amount":4000,"tier":2,"vendor":"Nicky","contact":"—","status":"owed"},
-    {"id":"regus-iwg","label":"Regus / IWG — Mt Laurel office","amount":2451.80,"tier":2,"vendor":"Regus/IWG · acct #16605480 (collections)","contact":"America's Debt Collection · (469) 257-3503","status":"collections — settle to close"},
-    {"id":"buds-goods","label":"Bud's Goods of NJ","amount":1512.10,"tier":2,"vendor":"Bud's Goods · INV-0000153 (69 days)","contact":"mzaidi@budsgoods.com","status":"past due"},
-    {"id":"ambotte","label":"Ambotte Mechanical","amount":431.83,"tier":2,"vendor":"Ambotte · invoice #76732","contact":"Stephanie Rodriguez · srodriguez@ambotte.com","status":"past due"},
-    {"id":"cintas","label":"Cintas — uniforms","amount":225.95,"tier":2,"vendor":"Cintas · payer #0027585065 (4 invoices)","contact":"mycintas.com","status":"past due"},
-    {"id":"apple-dev","label":"Apple Developer — restore","amount":99,"tier":2,"vendor":"Apple","contact":"Apple Developer portal","status":"past due"},
-    {"id":"leafly","label":"Leafly — menu listing","amount":null,"tier":2,"vendor":"Leafly · ~2 wks past due (as of 7/5)","contact":"256-488-4697","status":"TBD — set amount in index.md"},
-
-    {"id":"cannabist-company","label":"The Cannabist Company","amount":26382.21,"tier":2,"vendor":"Cannabist Company · 7 invoices, oldest 7/23/25 (statement 6/30)","contact":"AR@cannabistcompany.com","status":"past due"},
-    {"id":"verano","label":"Verano","amount":18557.04,"tier":2,"vendor":"Verano · statement 6/4 ($21,183.12 gross less $1,358.37 payment)","contact":"Vladimir Jovanovic","status":"past due"},
-    {"id":"sun-extractions","label":"Sun Extractions","amount":11534.46,"tier":2,"vendor":"Sun Extractions · majority 90+ days","contact":"—","status":"past due — payment plan accepted 5/26, first payment never landed"},
-    {"id":"green-lightning","label":"Green Lightning Cultivation","amount":9339.35,"tier":2,"vendor":"Green Lightning Cultivation","contact":"—","status":"past due — escalating, last contact 6/22"},
-    {"id":"prolific-growhouse","label":"Prolific Growhouse","amount":6144.63,"tier":2,"vendor":"Prolific Growhouse · #2735 $1,966.40 + #2881 $4,178.23","contact":"—","status":"past due — 10% discount offer → $5,530.17 if paid in full"},
-    {"id":"happy-farmer","label":"The Happy Farmer","amount":5487.60,"tier":2,"vendor":"Happy Farmer · Invoice 1686, due 2/24/26","contact":"—","status":"past due"},
-    {"id":"cookies-harrison","label":"Cookies Harrison","amount":4384.08,"tier":2,"vendor":"Cookies Harrison · Invoice 001","contact":"Allan Fries","status":"past due"},
-    {"id":"hillview-med","label":"Hillview Med","amount":2532.00,"tier":2,"vendor":"Hillview Med · Invoice #754, as of 5/20","contact":"—","status":"past due"},
-    {"id":"garden-society","label":"The Garden Society","amount":1720.00,"tier":2,"vendor":"Garden Society · INV-0000048, due 5/18","contact":"—","status":"past due — chased 6/23"},
-    {"id":"curaleaf-vendor","label":"Curaleaf — vendor account","amount":null,"tier":2,"vendor":"Curaleaf · statement CNJ2-000241 (recurring)","contact":"—","status":"TBD — balance on PDF attachment, not in email body"},
-    {"id":"glass-meadows-vendor","label":"Glass Meadows — vendor account","amount":null,"tier":2,"vendor":"Glass Meadows · weekly QuickBooks statements, incl. INV 2425","contact":"—","status":"TBD — see 20-Cuzzies/2026-07-10-glass-meadows-statement-5791.md"},
-    {"id":"chew-and-chill","label":"Chew & Chill / PanCann","amount":null,"tier":2,"vendor":"Chew & Chill / PanCann","contact":"—","status":"TBD — full payment demanded 6/22, amount not stated"},
-    {"id":"dime-industries","label":"Dime Industries","amount":null,"tier":2,"vendor":"Dime Industries","contact":"—","status":"TBD — open invoices listed in 5/11 email"},
-    {"id":"hamilton-farms","label":"Hamilton Farms","amount":null,"tier":2,"vendor":"Hamilton Farms","contact":"—","status":"TBD — payment plan proposed ($1K start) 5/5"},
-    {"id":"ganja-manja","label":"Ganja Manja","amount":null,"tier":2,"vendor":"Ganja Manja","contact":"—","status":"TBD — aging balance, threatened collections 4/28"},
-    {"id":"lovegrow-vendor","label":"Lovegrow — vendor account","amount":null,"tier":2,"vendor":"Lovegrow","contact":"—","status":"TBD — payments stopped, chased again 6/29"},
-    {"id":"niche-llc","label":"Niche, LLC","amount":null,"tier":2,"vendor":"Niche, LLC · statement 6/5","contact":"—","status":"TBD"},
-
-    {"id":"little-leaf-labs","label":"Little Leaf Labs — lab testing","amount":8331,"tier":3,"vendor":"Little Leaf Labs · INV-0000762 + INV-0000889 (91+ days)","contact":"Dhruvi, Accounting","status":"past due (moved Tier 1 → Tier 3, 7/11 tier-shuffle)"},
-    {"id":"epli-reinstate","label":"EPLI (Berkley Select) — reinstate","amount":4051.12,"tier":3,"vendor":"Berkley Select via First Insurance Funding · loan #105889646","contact":"Andrew Giampaolo, Marshall & Sterling · (845) 454-0800 x2397","status":"lapsed 7/6 — restore as edge"},
-    {"id":"marketing-relaunch","label":"Reopening marketing relaunch (promo budget)","amount":null,"tier":3,"vendor":"—","contact":"—","status":"TBD — set target in index.md"},
-    {"id":"full-staffing","label":"Full staffing restore (beyond bare crew)","amount":null,"tier":3,"vendor":"—","contact":"—","status":"TBD — incremental monthly, model separately"},
-    {"id":"delivery-expansion","label":"Delivery / extended-hours expansion","amount":null,"tier":3,"vendor":"—","contact":"—","status":"TBD"},
-    {"id":"loyalty-app","label":"Loyalty / app / branding","amount":null,"tier":3,"vendor":"—","contact":"—","status":"TBD"}
+    {
+      "id": "gusto-payroll-tax",
+      "label": "Gusto — payroll tax remittance",
+      "amount": 9739.85,
+      "tier": 1,
+      "vendor": "Gusto · 5 payrolls behind (tax principal only)",
+      "contact": "Gusto support / accountant",
+      "status": "past due"
+    },
+    {
+      "id": "progressive",
+      "label": "Progressive Commercial — auto/liability",
+      "amount": 2117.8,
+      "tier": 1,
+      "vendor": "Progressive · Policy #997268390",
+      "contact": "progressivecommercial.com",
+      "status": "past due (reinstate)"
+    },
+    {
+      "id": "parke-bank",
+      "label": "Parke Bank — clear negative balance",
+      "amount": 2000,
+      "tier": 1,
+      "vendor": "Parke Bank · acct ending 8046",
+      "contact": "Christopher Cabezas, AVP · (856) 582-6900 x142",
+      "status": "past due"
+    },
+    {
+      "id": "adt",
+      "label": "ADT Security",
+      "amount": 1637.84,
+      "tier": 1,
+      "vendor": "ADT · acct 405075455 (90 days)",
+      "contact": "(833) 320-1859",
+      "status": "past due"
+    },
+    {
+      "id": "nst",
+      "label": "National Secure Transport — cash pickup",
+      "amount": 868.6,
+      "tier": 1,
+      "vendor": "NST · 7-invoice batch (oldest 05/26)",
+      "contact": "(800) 696-1934",
+      "status": "past due"
+    },
+    {
+      "id": "pseg",
+      "label": "PSE&G — electric",
+      "amount": 391.58,
+      "tier": 1,
+      "vendor": "PSE&G · 2764 Mt Ephraim · acct 7804704100",
+      "contact": "1-800-357-2262",
+      "status": "past due"
+    },
+    {
+      "id": "google-workspace",
+      "label": "Google Workspace / Voice",
+      "amount": 33.97,
+      "tier": 1,
+      "vendor": "Google · profile 1078-7383-2495 (bounced 7/8)",
+      "contact": "Google Payments",
+      "status": "past due"
+    },
+    {
+      "id": "intercompany-loan",
+      "label": "Intercompany inventory loan — repay",
+      "amount": 40000,
+      "tier": 1,
+      "vendor": "Related entity",
+      "contact": "—",
+      "status": "owed — goodwill/creditworthiness (moved Tier 3 → Tier 1, 7/11 tier-shuffle)"
+    },
+    {
+      "id": "inventory-restock",
+      "label": "Cannabis inventory restock",
+      "amount": 50000,
+      "tier": 1,
+      "vendor": "Multiple licensed cultivators/wholesalers",
+      "contact": "—",
+      "status": "target — $50K working ('if we can')"
+    },
+    {
+      "id": "arod-marketing",
+      "label": "Arod — marketing services",
+      "amount": 7500,
+      "tier": 2,
+      "vendor": "Arod",
+      "contact": "—",
+      "status": "past due"
+    },
+    {
+      "id": "weedmaps",
+      "label": "Weedmaps — menu listing",
+      "amount": 6583,
+      "tier": 2,
+      "vendor": "Weedmaps (Ghost Mgmt) · 5-invoice batch (58 days)",
+      "contact": "Emma Donaldson, AR",
+      "status": "past due"
+    },
+    {
+      "id": "loan-nicky",
+      "label": "Loan from Nicky (personal)",
+      "amount": 4000,
+      "tier": 2,
+      "vendor": "Nicky",
+      "contact": "—",
+      "status": "owed"
+    },
+    {
+      "id": "regus-iwg",
+      "label": "Regus / IWG — Mt Laurel office",
+      "amount": 2451.8,
+      "tier": 2,
+      "vendor": "Regus/IWG · acct #16605480 (collections)",
+      "contact": "America's Debt Collection · (469) 257-3503",
+      "status": "collections — settle to close"
+    },
+    {
+      "id": "buds-goods",
+      "label": "Bud's Goods of NJ",
+      "amount": 1512.1,
+      "tier": 2,
+      "vendor": "Bud's Goods · INV-0000153 (69 days)",
+      "contact": "mzaidi@budsgoods.com",
+      "status": "past due"
+    },
+    {
+      "id": "ambotte",
+      "label": "Ambotte Mechanical",
+      "amount": 431.83,
+      "tier": 2,
+      "vendor": "Ambotte · invoice #76732",
+      "contact": "Stephanie Rodriguez · srodriguez@ambotte.com",
+      "status": "past due"
+    },
+    {
+      "id": "cintas",
+      "label": "Cintas — uniforms",
+      "amount": 225.95,
+      "tier": 2,
+      "vendor": "Cintas · payer #0027585065 (4 invoices)",
+      "contact": "mycintas.com",
+      "status": "past due"
+    },
+    {
+      "id": "apple-dev",
+      "label": "Apple Developer — restore",
+      "amount": 99,
+      "tier": 2,
+      "vendor": "Apple",
+      "contact": "Apple Developer portal",
+      "status": "past due"
+    },
+    {
+      "id": "leafly",
+      "label": "Leafly — menu listing",
+      "amount": null,
+      "tier": 2,
+      "vendor": "Leafly · ~2 wks past due (as of 7/5)",
+      "contact": "256-488-4697",
+      "status": "TBD — set amount in index.md"
+    },
+    {
+      "id": "little-leaf-labs",
+      "label": "Little Leaf Labs — lab testing",
+      "amount": 8331,
+      "tier": 3,
+      "vendor": "Little Leaf Labs · INV-0000762 + INV-0000889 (91+ days)",
+      "contact": "Dhruvi, Accounting",
+      "status": "past due (moved Tier 1 → Tier 3, 7/11 tier-shuffle)"
+    },
+    {
+      "id": "epli-reinstate",
+      "label": "EPLI (Berkley Select) — reinstate",
+      "amount": 4051.12,
+      "tier": 3,
+      "vendor": "Berkley Select via First Insurance Funding · loan #105889646",
+      "contact": "Andrew Giampaolo, Marshall & Sterling · (845) 454-0800 x2397",
+      "status": "lapsed 7/6 — restore as edge"
+    },
+    {
+      "id": "marketing-relaunch",
+      "label": "Reopening marketing relaunch (promo budget)",
+      "amount": null,
+      "tier": 3,
+      "vendor": "—",
+      "contact": "—",
+      "status": "TBD — set target in index.md"
+    },
+    {
+      "id": "full-staffing",
+      "label": "Full staffing restore (beyond bare crew)",
+      "amount": null,
+      "tier": 3,
+      "vendor": "—",
+      "contact": "—",
+      "status": "TBD — incremental monthly, model separately"
+    },
+    {
+      "id": "delivery-expansion",
+      "label": "Delivery / extended-hours expansion",
+      "amount": null,
+      "tier": 3,
+      "vendor": "—",
+      "contact": "—",
+      "status": "TBD"
+    },
+    {
+      "id": "loyalty-app",
+      "label": "Loyalty / app / branding",
+      "amount": null,
+      "tier": 3,
+      "vendor": "—",
+      "contact": "—",
+      "status": "TBD"
+    }
   ],
+  "repay": {
+    "note": "Cannabis vendors that have blocked ordering. net/profit/margin = ACTUAL Dutchie gross profit contributed to Cuzzie's, Detailed Sales Breakdown by Product, 04/01/2025-06/13/2026 (14.4 trading months), samples excluded, rolled brand->vendor. profit:null = brand not mappable in Dutchie. flag: collections|threatened|null. Balances confirmed from vendor statements/AR exports as of 2026-07-11. Lovegrow = URBNJ (confirmed).",
+    "vendors": [
+      {
+        "id": "cannabist",
+        "vendor": "The Cannabist Company",
+        "amount": 26382.21,
+        "flag": null,
+        "contact": "AR@cannabistcompany.com",
+        "status": "7 invoices, oldest 07/23/25 · statement 6/30",
+        "net": 30131.99,
+        "profit": 8329.41,
+        "margin": 27.6,
+        "units": 977,
+        "brands": "Triple Seven, Seed & Strain"
+      },
+      {
+        "id": "verano",
+        "vendor": "Verano",
+        "amount": 18557.04,
+        "flag": null,
+        "contact": "Vladimir Jovanovic · ar@verano.com",
+        "status": "$21,183.12 incl. 2 new orders, less $1,358.37 paid · statement 6/4",
+        "net": 36577.08,
+        "profit": 6256.83,
+        "margin": 17.1,
+        "units": 2111,
+        "brands": "Savvy, Verano Reserve, Verano, Encore, Avexia, Bits"
+      },
+      {
+        "id": "sun-extractions",
+        "vendor": "Sun Extractions",
+        "amount": 11534.46,
+        "flag": "threatened",
+        "contact": "ar@sunextractions.com",
+        "status": "payment plan accepted 5/26 — first payment never landed, chased 6/11",
+        "net": 11803.82,
+        "profit": 5432.06,
+        "margin": 46.0,
+        "units": 328,
+        "brands": "Sun Extraction"
+      },
+      {
+        "id": "green-lightning",
+        "vendor": "Green Lightning Cultivation",
+        "amount": 9339.35,
+        "flag": "threatened",
+        "contact": "Miles / Allen Livshits · accounting@greenlightningcannabis.com",
+        "status": "small operator, 6th attempt — 'we will keep contacting'",
+        "net": 15631.62,
+        "profit": 6275.82,
+        "margin": 40.1,
+        "units": 564,
+        "brands": "Green Lightning"
+      },
+      {
+        "id": "little-leaf",
+        "vendor": "Little Leaf Labs",
+        "amount": 8331.0,
+        "flag": "parked",
+        "contact": "Accounting@littleleaflabs.net",
+        "status": "PARKED — backburner. -$496 GP (negative margin) on $5.2K sales; paying never earns back",
+        "net": 5199.85,
+        "profit": -496.2,
+        "margin": -9.5,
+        "units": 460,
+        "brands": "Little Leaf (Little Leaf Labs LLC.)"
+      },
+      {
+        "id": "prolific",
+        "vendor": "Prolific Growhouse",
+        "amount": 6144.63,
+        "flag": null,
+        "contact": "Maylissa Clarke / Kylen Fairman",
+        "status": "10% off if paid in full → $5,530.17 · #2735 + #2881",
+        "net": 11481.2,
+        "profit": 2264.12,
+        "margin": 19.7,
+        "units": 653,
+        "brands": "Prolific Grow House"
+      },
+      {
+        "id": "happy-farmer",
+        "vendor": "The Happy Farmer",
+        "amount": 5487.6,
+        "flag": null,
+        "contact": "via QuickBooks",
+        "status": "Invoice 1686, due 02/24/26",
+        "net": 27148.18,
+        "profit": 6584.18,
+        "margin": 24.3,
+        "units": 848,
+        "brands": "Happy Farmer"
+      },
+      {
+        "id": "cookies-harrison",
+        "vendor": "Cookies Harrison",
+        "amount": 4384.08,
+        "flag": null,
+        "contact": "Allan Fries · allanf@cookiesharrison.com",
+        "status": "Invoice 001 · promised 6/1, missed — still following up",
+        "net": 17372.6,
+        "profit": 1848.6,
+        "margin": 10.6,
+        "units": 632,
+        "brands": "Cookies"
+      },
+      {
+        "id": "hillview",
+        "vendor": "Hillview Med",
+        "amount": 2532.0,
+        "flag": null,
+        "contact": "Jackie · Jackie@hillviewmed.com",
+        "status": "Invoice #754 · was paying down $250 at a time, then stopped",
+        "net": 5509.95,
+        "profit": 613.95,
+        "margin": 11.1,
+        "units": 168,
+        "brands": "Hillview Farms"
+      },
+      {
+        "id": "garden-society",
+        "vendor": "The Garden Society",
+        "amount": 1720.0,
+        "flag": null,
+        "contact": "ar@thegardensociety.com",
+        "status": "INV-0000048, due 5/18 · chased 6/23",
+        "net": 1404.85,
+        "profit": 494.07,
+        "margin": 35.2,
+        "units": 172,
+        "brands": "Garden Society"
+      },
+      {
+        "id": "buds-goods",
+        "vendor": "Bud's Goods of NJ",
+        "amount": 1512.1,
+        "flag": null,
+        "contact": "mzaidi@budsgoods.com",
+        "status": "INV-0000153, due 5/1 · 69 days · brand unmapped in Dutchie (also Tier 2 above)",
+        "net": null,
+        "profit": null,
+        "margin": null,
+        "units": null,
+        "brands": "unmapped — no matching brand in Dutchie"
+      },
+      {
+        "id": "ganja-manja",
+        "vendor": "Ganja Manja",
+        "amount": 1266.56,
+        "flag": "collections",
+        "contact": "JR Stevenson · jrstevenson@ganja-manja.com",
+        "status": "IN COLLECTIONS — formal process opened 4/28 · payoff confirmed $1,266.56",
+        "net": 2398.7,
+        "profit": 568.17,
+        "margin": 23.7,
+        "units": 239,
+        "brands": "Manja Munchies"
+      },
+      {
+        "id": "curaleaf",
+        "vendor": "Curaleaf",
+        "amount": 23774.81,
+        "flag": null,
+        "contact": "ar@curaleaf.com · Jason Cropsey",
+        "status": "statement CNJ2-000241 · balance confirmed 7/11",
+        "net": 34171.7,
+        "profit": 14435.96,
+        "margin": 42.2,
+        "units": 827,
+        "brands": "Find, Grassroots, Select, JAMS"
+      },
+      {
+        "id": "hamilton-farms",
+        "vendor": "Hamilton Farms",
+        "amount": null,
+        "flag": null,
+        "contact": "lluterek@hamiltonfarms.com · wholesale@",
+        "status": "TBD — payment plan proposed ($1K start) · still actively courting us to reorder",
+        "net": 21276.56,
+        "profit": 5204.41,
+        "margin": 24.5,
+        "units": 904,
+        "brands": "Hamilton Farms"
+      },
+      {
+        "id": "glass-meadows",
+        "vendor": "Glass Meadows",
+        "amount": null,
+        "flag": null,
+        "contact": "accounting@glassmeadows.com",
+        "status": "TBD — weekly statements, incl. INV 2425",
+        "net": 1889.72,
+        "profit": 905.97,
+        "margin": 47.9,
+        "units": 50,
+        "brands": "Glass Meadows"
+      },
+      {
+        "id": "dime",
+        "vendor": "Dime Industries",
+        "amount": null,
+        "flag": null,
+        "contact": "Jackie S. · jackie.s@dime.industries",
+        "status": "TBD — open invoices listed 5/11",
+        "net": 11818.11,
+        "profit": 2678.54,
+        "margin": 22.7,
+        "units": 217,
+        "brands": "DIME"
+      },
+      {
+        "id": "lovegrow",
+        "vendor": "Lovegrow",
+        "amount": 18630.67,
+        "flag": null,
+        "contact": "Cara Dawson · cara@lovegrow.co",
+        "status": "5 overdue invoices (oldest 11/11/25) · payment plan stalled · chased 6/29",
+        "net": 98541.0,
+        "profit": 28466.0,
+        "margin": 28.9,
+        "units": 3595,
+        "brands": "URBNJ"
+      },
+      {
+        "id": "chew-chill",
+        "vendor": "Chew & Chill / PanCann",
+        "amount": 3350.35,
+        "flag": "threatened",
+        "contact": "amethyst@chewandchill.com",
+        "status": "PanCann statement #1043 · PCW-A2547/A2608/A2659 · demanded payment in full 6/22",
+        "net": 4926.41,
+        "profit": 1326.25,
+        "margin": 26.9,
+        "units": 376,
+        "brands": "Chew & Chill"
+      },
+      {
+        "id": "niche",
+        "vendor": "Niche, LLC",
+        "amount": null,
+        "flag": null,
+        "contact": "austin@nichenfe.com",
+        "status": "TBD — statement 6/5",
+        "net": 21754.76,
+        "profit": 2078.01,
+        "margin": 9.6,
+        "units": 1229,
+        "brands": "niche."
+      }
+    ],
+    "trading_months": 14.4
+  },
   "carry": [
-    {"label":"Payroll — you + Josh + 1 employee (bare-bones)","amount":7900},
-    {"label":"Rent — Harrison Acquisitions (all-in, incl. NNN)","amount":8467},
-    {"label":"Marketing (budgeted)","amount":2500},
-    {"label":"Dutchie POS","amount":2160},
-    {"label":"Insurance — General/Product Liability","amount":2026},
-    {"label":"Accounting — GreenBooks","amount":1600},
-    {"label":"Car insurance — 2 cars (re-quote)","amount":1400},
-    {"label":"Workers' comp","amount":1118},
-    {"label":"Gas & maintenance (2 delivery cars)","amount":700},
-    {"label":"Cash deposit — National Secure Transport","amount":520},
-    {"label":"Gusto payroll software","amount":500},
-    {"label":"Parke Bank service charge","amount":500},
-    {"label":"Phone — T-Mobile, 6 lines","amount":457},
-    {"label":"PSE&G electric/gas (operating est.)","amount":400},
-    {"label":"Waste Management","amount":320.56},
-    {"label":"Comcast Business Internet","amount":267.74},
-    {"label":"QuickBooks","amount":151},
-    {"label":"METRC compliance","amount":40},
-    {"label":"Google Workspace (5 seats)","amount":42},
-    {"label":"Google Voice","amount":34},
-    {"label":"Veriscan ID verification","amount":30}
+    {
+      "label": "Payroll — you + Josh + 1 employee (bare-bones)",
+      "amount": 7900
+    },
+    {
+      "label": "Rent — Harrison Acquisitions (all-in, incl. NNN)",
+      "amount": 8467
+    },
+    {
+      "label": "Marketing (budgeted)",
+      "amount": 2500
+    },
+    {
+      "label": "Dutchie POS",
+      "amount": 2160
+    },
+    {
+      "label": "Insurance — General/Product Liability",
+      "amount": 2026
+    },
+    {
+      "label": "Accounting — GreenBooks",
+      "amount": 1600
+    },
+    {
+      "label": "Car insurance — 2 cars (re-quote)",
+      "amount": 1400
+    },
+    {
+      "label": "Workers' comp",
+      "amount": 1118
+    },
+    {
+      "label": "Gas & maintenance (2 delivery cars)",
+      "amount": 700
+    },
+    {
+      "label": "Cash deposit — National Secure Transport",
+      "amount": 520
+    },
+    {
+      "label": "Gusto payroll software",
+      "amount": 500
+    },
+    {
+      "label": "Parke Bank service charge",
+      "amount": 500
+    },
+    {
+      "label": "Phone — T-Mobile, 6 lines",
+      "amount": 457
+    },
+    {
+      "label": "PSE&G electric/gas (operating est.)",
+      "amount": 400
+    },
+    {
+      "label": "Waste Management",
+      "amount": 320.56
+    },
+    {
+      "label": "Comcast Business Internet",
+      "amount": 267.74
+    },
+    {
+      "label": "QuickBooks",
+      "amount": 151
+    },
+    {
+      "label": "METRC compliance",
+      "amount": 40
+    },
+    {
+      "label": "Google Workspace (5 seats)",
+      "amount": 42
+    },
+    {
+      "label": "Google Voice",
+      "amount": 34
+    },
+    {
+      "label": "Veriscan ID verification",
+      "amount": 30
+    }
   ]
 }
 </script>
@@ -536,6 +1116,139 @@
       navigator.clipboard.writeText(txt).then(function(){ el.scApply.textContent="Copied — paste in #on-button ✓"; setTimeout(function(){ el.scApply.textContent="Apply to plan →"; },2500); }, function(){});
     }
   });
+
+  render();
+})();
+
+// ================= vendor repayment ladder =================
+(function(){
+  var DATA = JSON.parse(document.getElementById('reopen-data').textContent);
+  var V = DATA.repay.vendors;
+  var CAP = 30000; // balance at/above which "quick win" score bottoms out
+
+  function fmt(n){ return "$" + Math.round(n).toLocaleString("en-US"); }
+  function parseMoney(s){ var v = parseFloat(String(s).replace(/[^0-9.]/g,"")); return isNaN(v)?0:v; }
+
+  var e = {
+    budget: document.getElementById('repay'), budgetr: document.getElementById('repayr'),
+    wRev: document.getElementById('w-rev'), wWin: document.getElementById('w-win'), wColl: document.getElementById('w-coll'),
+    list: document.getElementById('ladder'), body: document.getElementById('repay-body'), guide: document.getElementById('rp-guide')
+  };
+
+  var MONTHS = DATA.repay.trading_months;
+  var MAXP = Math.max.apply(null, V.map(function(v){ return v.profit||0; }));
+
+  function revScore(v){                       // 0..1 from ACTUAL gross profit
+    if(v.profit==null) return 0.4;            // unmapped brand — park at median
+    return Math.max(0, v.profit) / MAXP;
+  }
+  function payback(v){                        // months of this vendor's GP to earn the balance back
+    if(v.amount==null || v.profit==null || v.profit<=0) return null;
+    return v.amount / (v.profit / MONTHS);
+  }
+  function score(v, wRev, wWin, wColl){
+    var rev = revScore(v);
+    var win = v.amount==null ? 0.5 : 1 - Math.min(v.amount, CAP)/CAP;
+    if(v.flag==="parked") return -1;
+    var coll = v.flag==="collections" ? 1 : (v.flag==="threatened" ? 0.55 : 0);
+    var tot = wRev + wWin + wColl;
+    if(tot === 0) return 0;
+    return 100 * (rev*wRev + win*wWin + coll*wColl) / tot;
+  }
+
+  function render(){
+    var wRev = +e.wRev.value, wWin = +e.wWin.value, wColl = +e.wColl.value;
+    document.getElementById('w-rev-v').textContent = wRev;
+    document.getElementById('w-win-v').textContent = wWin;
+    document.getElementById('w-coll-v').textContent = wColl;
+
+    var budget = parseMoney(e.budget.value);
+    var ranked = V.map(function(v){ return {v:v, s:score(v, wRev, wWin, wColl)}; })
+                  .sort(function(a,b){ return b.s - a.s; });
+
+    var known = V.filter(function(v){ return v.amount!=null && v.flag!=="parked"; });
+    var knownTotal = known.reduce(function(s,v){ return s + v.amount; }, 0);
+    var tbdCount = V.filter(function(v){ return v.amount==null; }).length;
+
+    var running = 0, cleared = 0, retired = 0;
+    e.list.innerHTML = ""; e.body.innerHTML = "";
+
+    ranked.forEach(function(r, i){
+      var v = r.v, state, applied = 0;
+      if(v.amount==null){ state = "tbd"; }
+      else if(v.flag==="parked"){ state = "unfunded"; }
+      else {
+        applied = Math.max(0, Math.min(budget, running + v.amount) - running);
+        state = applied >= v.amount - 0.001 ? "cleared" : (applied > 0 ? "partial" : "unfunded");
+        running += v.amount;
+        if(state==="cleared"){ cleared++; }
+        retired += applied;
+      }
+
+      var flags = "";
+      if(v.flag==="collections") flags += "<span class='flag coll'>COLLECTIONS</span>";
+      else if(v.flag==="threatened") flags += "<span class='flag thr'>ESCALATING</span>";
+      else if(v.flag==="parked") flags += "<span class='flag rev1'>PARKED</span>";
+      if(v.profit==null) flags += "<span class='flag rev1'>BRAND UNMAPPED</span>";
+      else if(v.profit < 0) flags += "<span class='flag coll'>LOSES MONEY</span>";
+      else {
+        var rc = v.profit>=5000 ? 3 : (v.profit>=1500 ? 2 : 1);
+        flags += "<span class='flag rev"+rc+"'>GP "+fmt(v.profit)+" &middot; "+v.margin+"%</span>";
+      }
+      if(v.amount!=null && v.amount <= 2600) flags += "<span class='flag win'>QUICK WIN</span>";
+      var pb = payback(v);
+      if(pb!=null) flags += "<span class='flag win'>"+pb.toFixed(1)+" mo payback</span>";
+
+      var ic = state==="cleared" ? "&#9989;" : (state==="partial" ? "&#128993;" : (state==="tbd" ? "&#10067;" : "&#11036;"));
+      var amt = v.amount==null ? "TBD" : fmt(v.amount);
+
+      var li = document.createElement('li');
+      li.className = state;
+      li.innerHTML = "<span class='rank'>"+ic+"</span>" +
+        "<span class='who'><span class='nm'>"+v.vendor+" "+flags+"</span><span class='mt'>"+v.status+"</span></span>" +
+        "<span class='rt'><span class='amt'>"+amt+"</span><br><span class='sc'>score "+r.s.toFixed(0)+"</span></span>";
+      e.list.appendChild(li);
+
+      var pbT = payback(v);
+      var tr = document.createElement('tr');
+      tr.innerHTML = "<td class='muted'>"+(i+1)+"</td><td class='svc'>"+v.vendor+"<br><span class='muted' style='font-weight:400;font-size:11.5px;'>"+v.brands+"</span></td>" +
+        "<td class='amt'>"+(v.amount==null?"<span class='muted'>TBD</span>":fmt(v.amount))+"</td>" +
+        "<td class='amt'>"+(v.profit==null?"<span class='muted'>&mdash;</span>":(v.profit<0?"<span style='color:var(--red)'>"+fmt(v.profit)+"</span>":fmt(v.profit)))+"</td>" +
+        "<td class='amt'>"+(v.margin==null?"<span class='muted'>&mdash;</span>":v.margin+"%")+"</td>" +
+        "<td class='amt'>"+(pbT==null?"<span class='muted'>&mdash;</span>":pbT.toFixed(1)+" mo")+"</td>" +
+        "<td>"+(v.flag ? (v.flag==="collections"?"<span class='flag coll'>COLLECTIONS</span>":"<span class='flag thr'>ESCALATING</span>") : "<span class='muted'>&mdash;</span>")+"</td>" +
+        "<td class='muted'>"+v.contact+"</td><td class='muted'>"+v.status+"</td>";
+      e.body.appendChild(tr);
+    });
+
+    var sub = document.createElement('tr'); sub.className = 'subtotal';
+    var gpTotal = V.reduce(function(s,v){ return s + (v.profit||0); }, 0);
+    sub.innerHTML = "<td colspan='2'>Known cannabis vendor debt</td><td class='amt'>"+fmt(knownTotal)+"</td>" +
+      "<td class='amt'>"+fmt(gpTotal)+"</td>" +
+      "<td colspan='5' class='muted'>"+known.length+" priced &middot; "+tbdCount+" TBD (balance is in the statement PDF) &middot; GP over "+MONTHS+" trading months</td>";
+    e.body.appendChild(sub);
+
+    document.getElementById('rp-count').textContent = cleared + " / " + known.length;
+    document.getElementById('rp-countn').textContent = tbdCount + " more TBD";
+    var pct = knownTotal>0 ? 100*retired/knownTotal : 0;
+    document.getElementById('rp-pct').textContent = pct.toFixed(0) + "%";
+    document.getElementById('rp-pctn').textContent = fmt(retired) + " of " + fmt(knownTotal);
+
+    var top = ranked[0] ? ranked[0].v.vendor : "—";
+    var remaining = Math.max(0, knownTotal - retired);
+    if(budget <= 0){
+      e.guide.innerHTML = "Set a budget to see the buy-back sequence. Clearing <b>every priced</b> cannabis vendor costs <b>"+fmt(knownTotal)+"</b> (plus "+tbdCount+" TBD balances). Top of the ladder right now: <b>"+top+"</b>.";
+    } else if(remaining <= 0){
+      e.guide.innerHTML = "Every priced vendor is bought back. <b>"+tbdCount+" TBD balances</b> still need a payoff figure before the slate is truly clean.";
+    } else {
+      e.guide.innerHTML = "At <b>"+fmt(budget)+"</b> you buy back <b>"+cleared+" of "+known.length+"</b> priced vendors and retire <b>"+pct.toFixed(0)+"%</b> of known debt. <b>"+fmt(remaining)+"</b> left to a clean slate. Drag the weights to re-rank: heavier <i>quick win</i> reopens more doors per dollar; heavier <i>revenue</i> reopens the doors that earn it back fastest.";
+    }
+  }
+
+  e.budget.addEventListener('input', render);
+  e.budget.addEventListener('blur', function(){ e.budget.value = parseMoney(e.budget.value).toLocaleString("en-US"); e.budgetr.value = Math.min(110000, parseMoney(e.budget.value)); });
+  e.budgetr.addEventListener('input', function(){ e.budget.value = parseInt(e.budgetr.value,10).toLocaleString("en-US"); render(); });
+  [e.wRev, e.wWin, e.wColl].forEach(function(x){ x.addEventListener('input', render); });
 
   render();
 })();
