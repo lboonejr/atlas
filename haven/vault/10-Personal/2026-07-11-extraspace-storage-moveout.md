@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T14:05-04:00
-updated: 2026-07-11T12:05-04:00
+updated: 2026-07-11T12:15-04:00
 domain: personal
 type: task
 status: active
@@ -33,5 +33,13 @@ context (past-due balance on the same unit).
 Nothing paid, called, or replied to on Lemar's behalf — this note is the
 record; the due date is set so calendar-sync rings it ahead of 7/18.
 
+## Update 2026-07-11 12:15 ET
+Lemar reacted ✅ on the #decisions task card (ts 1783779573.661159), signaling
+he is handling the access/empty-out/confirm calls himself — no Samira action
+taken (calls are his to make, safety rule). Status stays `active` pending the
+7/18 move-out; still tracking via the `due` date and calendar reminder. Will
+close to `done` on his 🫡 or confirmation the unit is cleared.
+
 ## Sources
 - gmail: thread 19f5171b324e0162 (move-out notice, Extra Space Storage)
+- slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1783779573661159 (task card, Lemar's ✅ confirmation)
