@@ -1,9 +1,9 @@
 ---
 created: 2026-07-11T09:15-04:00
-updated: 2026-07-11T10:25:00-04:00
+updated: 2026-07-11T11:05:00-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [intuit, quickbooks, payroll, workforce, accounts-payable, wind-down]
 source: gmail
 ---
@@ -39,6 +39,11 @@ this signals he addressed it himself — but it doesn't say which way (resubscri
 let lapse). Not guessing which; asked in-thread. Leaving `status: active` until he
 confirms, so this doesn't silently read as resolved either way.
 
+## Update 2026-07-11 11:05 ET — decision: let it lapse
+Lemar confirmed in #decisions thread (10:58 ET): "Let it lapse." No resubscribe — the
+Workforce Premium/Worker Charge/W2-print-mail/Multistate subscriptions stay canceled.
+He saluted the reply to close. Closing this out — no further action needed.
+
 ## Sources
 - gmail: message `19f51423a7497392` ("Your Intuit subscription was canceled")
-- slack: #decisions (C0BBXA96FFV), ts 1783776086.547019
+- slack: #decisions (C0BBXA96FFV), ts 1783776086.547019 (thread reply 1783781910.744089)

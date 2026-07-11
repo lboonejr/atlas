@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:35:00-04:00
-updated: 2026-07-11T10:15:00-04:00
+updated: 2026-07-11T11:05:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -32,6 +32,18 @@ This requires portal login on Lemar's own account — not something Samira can f
 Which employee, and does Lemar have their last known home address / any forwarding
 employer info on file to complete the report.
 
+## Update 2026-07-11 11:05 ET — details provided, Lemar self-filing
+Lemar replied in #decisions (11:01 ET):
+- Employee: Kenneth Jones
+- Last known home address: 1561 S 8th Street, Camden, NJ 08104
+- New employer/address: not on file
+- Portal login (njcsesp.com) is currently rejecting both admin@cuzziesnj.com and
+  lemar@cuzziesnj.com as unregistered. He is calling 1-877-654-4737 to sort account
+  access, then filing directly himself. No further action from Samira — filing is his,
+  not something requiring a portal login I have. Leaving `status: active` until he
+  confirms filed; no reaction yet to close.
+
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783775251.615809 (2026-07-11 09:07 ET)
+- slack: #decisions (C0BBXA96FFV), ts 1783775382.603689 (thread reply 1783782112.223929)
 - web: njcsesp.com FAQs, njchildsupport.gov/employers/responsibilities
