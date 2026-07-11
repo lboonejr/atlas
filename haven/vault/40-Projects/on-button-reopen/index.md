@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-07-11T08:26-04:00
+updated: 2026-07-11T16:35-04:00
 domain: project
 type: reference
 status: active
@@ -107,6 +107,7 @@ items:
     account: "7-invoice batch · oldest due 05/26"
     contact: "(800) 696-1934"
     status: past-due
+    note: "Verified 7/11 against the 7-invoice PDF (F0BGNFR1WLR) — invoices sum to exactly $868.60, no change."
   - id: pseg
     label: "PSE&G — electric"
     amount: 391.58
@@ -211,6 +212,135 @@ items:
     status: tbd
     note: "Amount TBD — set when confirmed."
 
+# ---- Cannabis vendor arrears — from 7/11 Gmail sweep digest (#on-button ts 1783801467.428439) ----
+  - id: cannabist-company
+    label: "The Cannabist Company"
+    amount: 26382.21
+    tier: 2
+    vendor: "The Cannabist Company"
+    account: "7 invoices, oldest 7/23/25 · statement 6/30"
+    contact: "AR@cannabistcompany.com"
+    status: past-due
+  - id: verano
+    label: "Verano"
+    amount: 18557.04
+    tier: 2
+    vendor: "Verano"
+    account: "Statement 6/4 ($21,183.12 incl. 2 new orders, less $1,358.37 payment)"
+    contact: "Vladimir Jovanovic"
+    status: past-due
+  - id: sun-extractions
+    label: "Sun Extractions"
+    amount: 11534.46
+    tier: 2
+    vendor: "Sun Extractions"
+    account: "Majority 90+ days"
+    status: past-due
+    note: "Payment plan accepted 5/26; first payment never landed (followed up 6/11)."
+  - id: green-lightning
+    label: "Green Lightning Cultivation"
+    amount: 9339.35
+    tier: 2
+    vendor: "Green Lightning Cultivation"
+    status: past-due
+    note: "Escalating; last contact 6/22."
+  - id: prolific-growhouse
+    label: "Prolific Growhouse"
+    amount: 6144.63
+    tier: 2
+    vendor: "Prolific Growhouse"
+    account: "#2735 $1,966.40 + #2881 $4,178.23"
+    status: past-due
+    note: "10% discount offer → $5,530.17 if paid in full. Last chase 7/4."
+  - id: happy-farmer
+    label: "The Happy Farmer"
+    amount: 5487.60
+    tier: 2
+    vendor: "The Happy Farmer"
+    account: "Invoice 1686, due 2/24/26"
+    status: past-due
+  - id: cookies-harrison
+    label: "Cookies Harrison"
+    amount: 4384.08
+    tier: 2
+    vendor: "Cookies Harrison"
+    account: "Invoice 001"
+    contact: "Allan Fries"
+    status: past-due
+  - id: hillview-med
+    label: "Hillview Med"
+    amount: 2532.00
+    tier: 2
+    vendor: "Hillview Med"
+    account: "Invoice #754, as of 5/20"
+    status: past-due
+  - id: garden-society
+    label: "The Garden Society"
+    amount: 1720.00
+    tier: 2
+    vendor: "The Garden Society"
+    account: "INV-0000048, due 5/18"
+    status: past-due
+    note: "Chased 6/23."
+  - id: curaleaf-vendor
+    label: "Curaleaf — vendor account"
+    amount: null
+    tier: 2
+    vendor: "Curaleaf"
+    account: "Recurring statement CNJ2-000241 (latest 7/4, also 6/17, 6/4, 5/19, 5/5)"
+    status: tbd
+    note: "Balance is on a PDF attachment, not stated in the email body — amount TBD until read."
+  - id: glass-meadows-vendor
+    label: "Glass Meadows — vendor account"
+    amount: null
+    tier: 2
+    vendor: "Glass Meadows"
+    account: "Weekly QuickBooks statements (latest 7/10); incl. INV 2425"
+    status: tbd
+    note: "See also haven/vault/20-Cuzzies/2026-07-10-glass-meadows-statement-5791.md — amount TBD here pending consolidation."
+  - id: chew-and-chill
+    label: "Chew & Chill / PanCann"
+    amount: null
+    tier: 2
+    vendor: "Chew & Chill / PanCann"
+    status: tbd
+    note: "Past due, full payment demanded 6/22 — amount not stated."
+  - id: dime-industries
+    label: "Dime Industries"
+    amount: null
+    tier: 2
+    vendor: "Dime Industries"
+    status: tbd
+    note: "Open invoices listed in a 5/11 email — amount TBD."
+  - id: hamilton-farms
+    label: "Hamilton Farms"
+    amount: null
+    tier: 2
+    vendor: "Hamilton Farms"
+    status: tbd
+    note: "Payment plan proposed ($1K start) 5/5 — outstanding balance TBD."
+  - id: ganja-manja
+    label: "Ganja Manja"
+    amount: null
+    tier: 2
+    vendor: "Ganja Manja"
+    status: tbd
+    note: "Aging balance; threatened collections as of 4/28 — amount TBD."
+  - id: lovegrow-vendor
+    label: "Lovegrow — vendor account"
+    amount: null
+    tier: 2
+    vendor: "Lovegrow"
+    status: tbd
+    note: "Open balance, payments stopped; chased again 6/29 — amount TBD."
+  - id: niche-llc
+    label: "Niche, LLC"
+    amount: null
+    tier: 2
+    vendor: "Niche, LLC"
+    account: "Statement 6/5"
+    status: tbd
+
 # ---- TIER 3 — Competitive edge (restore / advantage) ----
   - id: little-leaf-labs
     label: "Little Leaf Labs — lab testing"
@@ -278,24 +408,43 @@ carry:
   - {label: "Veriscan ID verification", amount: 30}
 ```
 
-## Snapshot (human-readable, as of 2026-07-11)
+## Snapshot (human-readable, as of 2026-07-11 evening)
 - **Tier 1 (open & operate):** ≈ **$106,790** one-time (incl. $50K inventory restock, $40K
   intercompany loan repay).
-- **Tier 2 (nice-to-have):** ≈ **$22,804** (+ Leafly TBD).
+- **Tier 2 (nice-to-have):** ≈ **$108,885** (+ Leafly and 8 new cannabis-vendor lines TBD)
+  — jumped from ≈$22,804 after folding in the 7/11 cannabis-vendor arrears digest (9 new
+  priced vendors below).
 - **Tier 3 (edge):** ≈ **$12,382** (Little Leaf Labs $8,331 + EPLI $4,051; strategic lines TBD).
 - **Tax gate (separate):** ≈ **$109,900**.
 - **Monthly carry:** ≈ **$31,200/mo** → runway = (investment − one-time) ÷ 31,200.
 - Reality check: opening ($106.8K) + a 3-month cushion (~$93.6K carry) ≈ **$200K** before
-  Tier 2/3 and before tax.
+  Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$108.9K+) once
+  the cannabis-vendor arrears are included.
 
-## Update — 2026-07-11
+## Update — 2026-07-11 (evening)
+Ingested two #on-button drops:
+1. **National Secure Transport 7-invoice PDF** (`F0BGNFR1WLR`) — verified against the
+   existing `nst` line; the 7 invoices sum to exactly $868.60, matching what was already
+   tracked. No change, note added confirming the verification.
+2. **"Cannabis Vendor — Open Balances & Account Statements" digest** (#on-button ts
+   `1783801467.428439`, a 90-day Gmail sweep) — added 9 new priced Tier 2 lines
+   (Cannabist Company $26,382.21, Verano $18,557.04, Sun Extractions $11,534.46, Green
+   Lightning $9,339.35, Prolific Growhouse $6,144.63, Happy Farmer $5,487.60, Cookies
+   Harrison $4,384.08, Hillview Med $2,532.00, Garden Society $1,720.00) and 8 new TBD
+   Tier 2 lines whose balance is on an attachment or not stated in the body (Curaleaf,
+   Glass Meadows, Chew & Chill/PanCann, Dime Industries, Hamilton Farms, Ganja Manja,
+   Lovegrow, Niche LLC). Little Leaf Labs and Bud's Goods were already tracked — no
+   duplicate created, figures matched. Nothing paid or contacted — tracking only.
+   Tier 2 snapshot total recalculated above. Page (`on-button-reopen.html`) and canvas
+   (`F0BEN1167GB`) regenerated from this note in the same pass.
+
+### Prior — Update 2026-07-11 (morning)
 Applied Lemar's tier-move instruction (#on-button `C0BEQUW5NPP`, ts `1783738175.999559`,
 posted 2026-07-10 22:49:35 ET, unreacted): **Little Leaf Labs — lab testing** moved
-Tier 1 → Tier 3; **Intercompany inventory loan — repay** moved Tier 3 → Tier 1. Snapshot
-totals recalculated above. Tier 2 unaffected. Page (`on-button-reopen.html`) and canvas
-(`F0BEN1167GB`) regenerated from this note in the same pass.
+Tier 1 → Tier 3; **Intercompany inventory loan — repay** moved Tier 3 → Tier 1.
 
 ## Sources
-- slack: #on-button `C0BEQUW5NPP` — the running drop feed; canvas `F0BEN1167GB`.
+- slack: #on-button `C0BEQUW5NPP` — the running drop feed; canvas `F0BEN1167GB`; cannabis
+  vendor digest ts `1783801467.428439`; NST PDF `F0BGNFR1WLR`.
 - Prior brief [[2026-07-10-cuzzies-reopening-plan]] and the per-vendor notes in `20-Cuzzies/`.
 - Rendered by: `on-button-reopen.html` (repo root, via githack) — regenerated by the `on-button-plan` skill.
