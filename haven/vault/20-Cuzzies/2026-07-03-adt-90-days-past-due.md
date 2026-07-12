@@ -1,9 +1,9 @@
 ---
 created: 2026-07-03T17:09-04:00
-updated: 2026-07-03T18:03-04:00
+updated: 2026-07-12T09:05-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [samira, gmail, adt, past-due, financial-risk]
 source: gmail
 ---
@@ -20,3 +20,8 @@ operations as of 2026-06-13, so ADT's continued value is a live question).
 
 - Gmail thread: 19f23e95a008cf7b
 - Flagged to #decisions this scan for Lemar's call.
+
+## Update 2026-07-12T09:05-04:00
+Lemar decided in #decisions (reply 2026-07-12 08:44 ET, thread ts
+`1783113004.736749`): **let it lapse.** No payment, no negotiation — ADT service will
+be allowed to disconnect. Nothing further for Samira to do; closing this item.
