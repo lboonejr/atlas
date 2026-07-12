@@ -7,6 +7,7 @@ status: active
 tags: [side-hustle, trading-cards]
 source: slack
 due: 2026-08-01T09:00:00-04:00
+calendar_event_id: o9i482d50psgp7qf9uimvo33rs
 ---
 
 # Trading cards buy/sell side hustle — starter framework
@@ -95,7 +96,8 @@ no further Samira action needed here.
 Lemar, in #trading-cards (10:58:41 ET): "We're gonna let this sit for a couple
 weeks until I can clear 100 to 150 to spare so let's follow up on this. Let's say
 August first." Set `due: 2026-08-01T09:00-04:00` on this note so a reminder rings
-that morning to check back in on the first purchase. No action needed before then.
+that morning to check back in on the first purchase. Calendar event created
+(`calendar_event_id: o9i482d50psgp7qf9uimvo33rs`). No action needed before then.
 
 ## Sources
 - slack: #atlas capture, 2026-07-06 20:36:41 EDT (TS 1783384601.800979)
