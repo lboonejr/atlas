@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-11T13:50:00-04:00
+updated: 2026-07-12T10:30:00-04:00
 domain: personal
 type: task
 status: active
@@ -40,7 +40,9 @@ Lemar wants a personal finance project: track bills/budget, own channel + workfl
 ## Still open before the dashboard can be finalized
 - A confirmed monthly income figure (depends on Station start date/hours — see
   `haven/vault/30-Station/2026-07-11-station-agent-job-letter-meeting.md`).
-- A transportation cost once the Camden↔Newark commute vs. Rahway-stay decision is made.
+- ~~A transportation cost once the Camden↔Newark commute vs. Rahway-stay decision is
+  made.~~ **Decided 2026-07-12 — see Update below.** A dollar figure for the transit
+  fare still needs to be worked out.
 - The rest of the full bill list (Student loans $500/mo, Claude $100/mo, Food ~$600/mo,
   Cashapp $187.22 are the only figures on hand so far).
 
@@ -57,14 +59,30 @@ transportation left as placeholders pending the two still-open figures above.
 | Student loans | ~$500 | ~$8,000 remaining |
 | Claude subscription | $100 | Fixed |
 | Food | ~$600 | ~$20/day estimate |
-| Transportation | TBD | Blocked on Camden↔Newark commute vs. Rahway-stay decision (live in #decisions) |
+| Transportation | TBD | Route decided 2026-07-12 (Option B, see Update) — dollar figure still needed |
 | Income | TBD | Blocked on Station start date/hours |
 | Cashapp payback | $187.22 | One-time, own pace — not a recurring line |
 
 Posted to #personal-finance 2026-07-11 ~13:50 ET.
 
+## Update 2026-07-12T10:30:00-04:00 — commute decided (Option B)
+Lifted to #decisions 2026-07-11 as ONE parent (origin #personal-finance, thread ts
+`1783790772.606439`) with two options: (A) commute Camden→Newark via NJ Transit +
+Riverline ~3x/week, or (B) stay with a friend in Rahway on Newark days, NJ Transit only
+from there. Lemar picked **Option B** (reacted 🅱️ on the options reply, ts
+`1783790778.040749`).
+
+**Decision:** stay with a friend in Rahway on Newark days; commute from Rahway via NJ
+Transit only (no Riverline leg). This is the last qualitative blocker on the
+Transportation line — an actual fare/cost figure still needs to be pulled before the
+budget dashboard can go final; not guessing a number here.
+
+Outcome posted back to #personal-finance.
+
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
 - slack: #personal-finance (C0BGLEMH99T), ts 1783784379.469619 (2026-07-11 11:39 ET reply)
 - slack: #personal-finance (C0BGLEMH99T), ts 1783793432.284659 (2026-07-11 draft budget posted)
+- slack: #decisions (C0BBXA96FFV), ts 1783790772.606439 (commute decision card), option reply
+  ts 1783790778.040749 (Option B picked, 🅱️ reaction)
 - gmail: thread 19f51f33f63c1887 (T-Mobile payment confirmation, $200.00, 2026-07-11)
