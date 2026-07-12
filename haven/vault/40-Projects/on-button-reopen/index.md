@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-07-12T13:13-04:00
+updated: 2026-07-12T15:07-04:00
 domain: project
 type: reference
 status: active
@@ -361,13 +361,13 @@ items:
     status: lapsed
     note: "Decided 7/6 to let lapse; restore as coverage edge on reopen."
   - id: first-insurance-funding-notice
-    label: "First Insurance Funding — loan #106241219 (UNCONFIRMED vs. epli-reinstate)"
+    label: "First Insurance Funding — loan #106241219 (separate policy from epli-reinstate)"
     amount: 4699.76
     tier: 3
     vendor: "First Insurance Funding"
     account: "Loan #106241219 · past due $3,040.95 + current installment $1,658.81"
-    status: tbd-confirm
-    note: "From #on-button drop 7/9 (Notices.pdf, F0BG52EUSKD, no message text). Loan # does NOT match the tracked epli-reinstate line (#105889646) and the total is ~$650 higher — may be a later statement on the SAME EPLI policy, or a SEPARATE policy financed through the same lender. NOT added to Tier 3 snapshot math pending confirmation — do not double-count. Raised in #decisions 2026-07-12; never guessed."
+    status: past-due
+    note: "From #on-button drop 7/9 (Notices.pdf, F0BG52EUSKD, no message text). Lemar confirmed 7/12 (#decisions, Option B) this is a SEPARATE insurance line financed through the same lender as epli-reinstate (#105889646) — not the same policy, not a duplicate. Tracked as its own Tier 3 line, added to snapshot math."
   - id: marketing-relaunch
     label: "Reopening marketing relaunch (promo budget)"
     amount: null
@@ -421,17 +421,25 @@ carry:
   intercompany loan repay).
 - **Tier 2 (nice-to-have):** ≈ **$109,164** (Leafly now priced at $279; 8 cannabis-vendor
   lines still TBD) — was ≈$108,885 with Leafly TBD.
-- **Tier 3 (edge):** ≈ **$12,382** priced (Little Leaf Labs $8,331 + EPLI $4,051; strategic
-  lines TBD). A possible-duplicate First Insurance Funding notice ($4,699.76, loan
-  #106241219) is tracked but excluded from this total pending #decisions confirmation of
-  whether it's the same policy as the tracked EPLI line — see Update below.
+- **Tier 3 (edge):** ≈ **$17,081.76** priced (Little Leaf Labs $8,331 + EPLI $4,051.12 +
+  First Insurance Funding loan #106241219 $4,699.76, confirmed 7/12 as a separate policy,
+  not a duplicate; strategic lines TBD).
 - **Tax gate (separate):** ≈ **$109,900**.
 - **Monthly carry:** ≈ **$31,200/mo** → runway = (investment − one-time) ÷ 31,200.
 - Reality check: opening ($106.8K) + a 3-month cushion (~$93.6K carry) ≈ **$200K** before
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
 
-## Update — 2026-07-12 (afternoon)
+## Update — 2026-07-12 (evening)
+Lemar answered the #decisions ask (Option B, reacted on the parent, ts `1783876542.732339`):
+the First Insurance Funding notice (loan #106241219, $4,699.76) is a **separate insurance
+line** financed through the same lender as `epli-reinstate` (#105889646), not a duplicate
+statement on that policy. `first-insurance-funding-notice` status moved `tbd-confirm` →
+`past-due`, label updated to drop "UNCONFIRMED", and its $4,699.76 is now included in the
+Tier 3 snapshot total (was $12,382, now **$17,081.76**). Page (`on-button-reopen.html`) and
+canvas (`F0BEN1167GB`) regenerated from this note in the same pass.
+
+### Prior — Update 2026-07-12 (afternoon)
 Ingested from a full #on-button re-sweep (2026-07-02 → 2026-07-11 window):
 1. **Leafly — priced.** The 7/10 "email pull" drop (#on-button ts `1783719691.083309`)
    named invoice INV00389006, $279, billing period 7/6–7/7 — resolves the prior TBD.
