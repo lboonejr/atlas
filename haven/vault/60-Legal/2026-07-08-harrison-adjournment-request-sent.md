@@ -1,5 +1,6 @@
+---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-11T08:30-04:00
+updated: 2026-07-12T10:10:00-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -115,9 +116,30 @@ sent. Flagging in #decisions (this thread) so Lemar can look at the draft's actu
 content himself before deciding whether to send it, edit it, or discard it. Matter
 stays **status: awaiting-decision** — still his call on A/B/C/D.
 
+## Update 2026-07-12 (10:10 ET) — #decisions Slack thread closed per Lemar's 🫡; underlying matter still open
+
+Lemar reacted 🫡 on the 2026-07-11 08:31:56 ET flag-reply (ts `1783773116.307949`)
+that surfaced the unverified Gmail draft. Per the reaction engine, 🫡 closes the
+Slack notification thread — it does **not** mean the underlying eviction/payment
+matter is resolved. Recording the true state plainly:
+
+- Options A/B/C (negotiate the $20K condition with Rivkin Radler) remain **unpicked**
+  — no reaction on any of them, no reply sent to Jason Gil.
+- Option D (self-filed adjournment mechanics) was the only one picked and it was
+  research-only — already delivered, nothing filed with the court.
+- The unverified Gmail draft (`r8556250896867529553`) is still sitting untouched in
+  Drafts — not sent, not edited, not discarded. Still Lemar's to review directly.
+- Trial remains scheduled July 30; this is still the standing urgent item.
+
+Status stays **awaiting-decision**. Closing the #decisions thread (edited the parent
+to "✅ CLOSED") is a Slack-notification-only action per this scan's instructions —
+if Lemar wants to revisit A/B/C/D or the draft, a fresh #decisions card should be
+opened rather than reopening this one.
+
 ## Sources
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
 - gmail: thread 19f3e00cb68ac2cb (Jason Gil reply, 2026-07-09 20:02:55 UTC, message id 19f487a33d5691b8; unverified draft r8556250896867529553 found here 2026-07-11)
 - slack: #atlas, Don Frunt, 2026-07-10 08:52:53 ET (court-filing question)
 - slack: #decisions, Option D reply, message ts 1783688983.630169 (Lemar's checkmark, 2026-07-10 09:09:43 ET)
+- slack: #decisions, thread ts 1783628237.329439, closed via 🫡 on ts 1783773116.307949 (2026-07-12)
 - web: NJ Courts Directive #06-04, "Statewide Adjournment Procedure for Civil Trials and Arbitrations" — https://www.njcourts.gov/attorneys/directives/06-04
