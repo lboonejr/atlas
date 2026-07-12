@@ -61,14 +61,13 @@ fail, and lists those failures.
    select-the-text) and an **Open #atlas** link. Lemar pastes in #atlas; the next scan's
    PART B captures it into Haven. Say exactly that in the helper text so the mechanism
    is honest. Keep this strip compact — one row, not a card the size of a section.
-2. **Dawn — the North Star.** Direction, NOT tasks. Distill today's
-   `haven/vault/_daily/brief-YYYY-MM-DD.md` into: one **North Star line** (what
-   direction is today pointing?) and 2–4 **directional themes** (the big storylines the
-   day serves — e.g. "resolve the wind-down", "open the Newark door", "bring personal
-   systems online"), each one line with why-it-matters. Do NOT render the five goals or
-   any task list here — execution lives further down in #decisions. Loop tally as a
-   small chip. Link out to the full Dawn brief artifact. If today's note is missing
-   (Dawn failed or pre-1am), use yesterday's and flag it stale.
+2. **Dawn — the North Star.** Direction, NOT tasks. Since 2026-07-12 Dawn's own brief
+   note (`haven/vault/_daily/brief-YYYY-MM-DD.md`) carries the **North Star line** and
+   **2–4 directional themes** as first-class sections — lift them verbatim (distill
+   yourself only if reading an older five-goals-format note). Never render a task list
+   here — execution lives further down in #decisions. Loop tally as a small chip. Link
+   out to the full Dawn brief artifact. If today's note is missing (Dawn failed or
+   pre-1am), use yesterday's and flag it stale.
 3. **Calendar — today's roadmap.** Today as a timeline (primary + reminder calendar,
    ET), then this week (today+6d) as a compact day strip. All-day items render as
    chips. Every event links to its Google Calendar `htmlLink` (law #2).
