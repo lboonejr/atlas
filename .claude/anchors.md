@@ -39,6 +39,10 @@ Last verified: 2026-07-12 (added the Pulse dashboard section — rendered by Sam
 | #on-button | `C0BEQUW5NPP` | Reopening command center — drop past-due bills/screenshots here. The **on-button-plan** skill ingests drops into the ONE source of truth `haven/vault/40-Projects/on-button-reopen/index.md`, then regenerates the interactive page `on-button-reopen.html` (githack: `https://raw.githack.com/lboonejr/atlas/main/on-button-reopen.html`) and the pinned canvas `F0BEN1167GB`. Tracking only, nothing paid/contacted. |
 | #personal-finance | `C0BGLEMH99T` | Personal bills/budget dashboard project (created 2026-07-11 from an #atlas capture). Source of truth: `haven/vault/00-Inbox/2026-07-11-personal-finance-dashboard-project.md` (files to 10-Personal/Money once complete). |
 | #pitch-deck-pressure-test | `C0BCD7U5X2B` | Recapitalization deck ($500K) pressure-test Q&A thread |
+| #cuzzys-brand | `C0BCH2C3GRM` | White-label brand project (recorded 2026-07-12 for Pulse link-outs) |
+| #delivery-in-a-box | `C0BDN2KQFD4` | DIB project channel (recorded 2026-07-12 for Pulse link-outs) |
+| #comedy-club | `C0BD8LTM1EK` | Comedy-club project channel — PRIVATE (recorded 2026-07-12 for Pulse link-outs) |
+| #trading-cards | `C0BGYM1UB4Y` | Sports-cards side hustle (recorded 2026-07-12 for Pulse link-outs) |
 | Open Items canvas | `F0BDLSHD8JD` | State only: ⏳ Waiting · ⚙️ In motion · ⛔ Parked |
 | #emails (ARCHIVED) | `C0BC1JSCHQW` | Read-only record; never swept, never posted to |
 | #to-do (ARCHIVED) | `C0BC30U222K` | Read-only record |
@@ -163,7 +167,7 @@ pattern used by on-button-reopen.
 |---|---|
 | Living Pulse artifact URL | `https://claude.ai/code/artifact/6838142e-852c-44a5-8778-b584be1316d4` — first published 2026-07-12 (desktop session, v1). PART P re-deploys to THIS same URL each run (pass it as `url`; keep title "Pulse — Personal Dashboard" + favicon 📍). |
 | Workout plan artifact URL | `https://claude.ai/code/artifact/a723834f-6310-4575-8897-75ae8e30806e` ("Back to the Court — 12-Week Plan"; source-of-truth note `haven/vault/10-Personal/Health/2026-07-07-basketball-fitness-plan.md`, start Mon 2026-07-07). Pulse links out to it; its check-offs live in that page's own localStorage. |
-| Sections | workout · Dawn brief (condensed) · #decisions respond list · #reports + routine health · money (Era Context + Haven budget note) · calendar today/week · Atlas open items + todo composer · project pulses |
+| Sections (Lemar's fixed top-to-bottom order, 2026-07-12: big ideas → details → execution) | quick-capture todo strip · Dawn as North Star (direction, NOT tasks) · calendar roadmap · #decisions respond list · money (Era Context + Haven budget note) · today's workout · Atlas open items · project pulses · Samira + routine health. Single column. EVERY item links to its source thread (Slack permalink) or calendar event (htmlLink). |
 
 ## Identity
 
