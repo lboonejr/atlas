@@ -1,6 +1,6 @@
 ---
 created: 2026-07-09T16:10-04:00
-updated: 2026-07-09T16:10-04:00
+updated: 2026-07-12T12:08-04:00
 domain: cuzzies
 type: task
 status: active
@@ -28,5 +28,14 @@ run in Gusto (same as last time). If yes, the account needs funding before Gusto
 attempts to draft it, or it will bounce and add another overdraft/NSF hit. Samira
 cannot log into Gusto or fund the account — this needs Lemar's action either way.
 
+## Update 2026-07-12 12:08 ET
+Gusto sent a second "new task" alert on this same shortfall (Gmail thread
+`19f570fa35598379`, "Review payroll funding", received 12:01 PM ET) — identical
+warning, same Jul 14 pay run, nothing new. The 2026-07-09 #decisions card on this
+matter is still open with no reaction from Lemar. Treating this as a reinforcement of
+the same open ask rather than a new decision — not re-posted to #decisions per the
+no-nudge rule.
+
 ## Sources
-- gmail: thread 19f47a03314c5cd1 (Gusto payroll funding task, due today, received 4:05 PM ET)
+- gmail: thread 19f47a03314c5cd1 (Gusto payroll funding task, due today, received 4:05 PM ET, 2026-07-09)
+- gmail: thread 19f570fa35598379 (second Gusto payroll funding task, received 12:01 PM ET, 2026-07-12)
