@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T11:20:00-04:00
-updated: 2026-07-10T17:56:00-04:00
+updated: 2026-07-12T12:35:00-04:00
 domain: project
 type: decision
 status: done
@@ -53,6 +53,19 @@ right now"). Recommended softening the "assignable Camden lease" headline claim 
 getting counsel to confirm before this goes in front of an investor — not a blocker to
 finalizing the deck otherwise.
 
+## Update — 2026-07-12 07:46 ET
+
+Lemar flagged in #atlas as one of today's two priorities: "finishing off the
+recapitalization deck, being ready to be distributed to any investors or lenders."
+Nothing new blocking this — all 8 pressure-test questions are answered and deck-ready
+language has been pushed to #pitch-deck-pressure-test, plus a self-contained
+slide-generation prompt for another AI platform (delivered 2026-07-11 09:06 ET, same
+#decisions thread). The only open flag is still Q3 (lease assignability) — live as its
+own #decisions card ("Lease assignability — send counsel note now, or swap in fallback
+deck language?", posted 2026-07-11 17:15 ET, options A/B/C, no pick yet). Building the
+actual deck file (Slides/Docs) is Lemar's/Josh's own action — Samira has no direct write
+access there.
+
 ## Sources
 - Slack #pitch-deck-pressure-test (C0BCD7U5X2B), Recap Deck thread root ts
   1782303377.852979 · Q1 edit pushed ts 1783721384.863929 (2026-07-10 17:56 ET)
@@ -61,3 +74,4 @@ finalizing the deck otherwise.
   1783702239.666029 (2026-07-10 12:50:39 ET) · Lemar's "enough to create the deck?"
   ask ts 1783717751.820829 (17:09:11 ET) · Samira's confirmation reply ts
   1783721377.704019 (17:56:17 ET)
+- #atlas (C0BBWHCJUV9) capture ts 1783856784.097929 (2026-07-12 07:46:24 ET)
