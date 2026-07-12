@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-07-11T16:35-04:00
+updated: 2026-07-12T13:13-04:00
 domain: project
 type: reference
 status: active
@@ -52,7 +52,7 @@ Guardrail: tracking & planning only — nothing is paid or contacted automatical
 constants:
   monthly_carry: 31200          # bare-bones crew; excludes cannabis tax
   target_open_days: 14
-  updated_label: "July 11, 2026"
+  updated_label: "July 12, 2026"
 
 tax_gate:
   - id: nj-sales-tax
@@ -204,13 +204,13 @@ items:
     status: past-due
   - id: leafly
     label: "Leafly — menu listing"
-    amount: null
+    amount: 279
     tier: 2
     vendor: "Leafly"
-    account: "~2 weeks past due as of 7/5"
+    account: "Invoice INV00389006, billing period 7/6–7/7"
     contact: "256-488-4697"
-    status: tbd
-    note: "Amount TBD — set when confirmed."
+    status: past-due
+    note: "Amount confirmed 7/10 email pull (#on-button ts 1783719691.083309) — was TBD, now priced."
 
 # ---- Cannabis vendor arrears — from 7/11 Gmail sweep digest (#on-button ts 1783801467.428439) ----
   - id: cannabist-company
@@ -360,6 +360,14 @@ items:
     contact: "Andrew Giampaolo, Marshall & Sterling · (845) 454-0800 x2397"
     status: lapsed
     note: "Decided 7/6 to let lapse; restore as coverage edge on reopen."
+  - id: first-insurance-funding-notice
+    label: "First Insurance Funding — loan #106241219 (UNCONFIRMED vs. epli-reinstate)"
+    amount: 4699.76
+    tier: 3
+    vendor: "First Insurance Funding"
+    account: "Loan #106241219 · past due $3,040.95 + current installment $1,658.81"
+    status: tbd-confirm
+    note: "From #on-button drop 7/9 (Notices.pdf, F0BG52EUSKD, no message text). Loan # does NOT match the tracked epli-reinstate line (#105889646) and the total is ~$650 higher — may be a later statement on the SAME EPLI policy, or a SEPARATE policy financed through the same lender. NOT added to Tier 3 snapshot math pending confirmation — do not double-count. Raised in #decisions 2026-07-12; never guessed."
   - id: marketing-relaunch
     label: "Reopening marketing relaunch (promo budget)"
     amount: null
@@ -408,20 +416,43 @@ carry:
   - {label: "Veriscan ID verification", amount: 30}
 ```
 
-## Snapshot (human-readable, as of 2026-07-11 evening)
+## Snapshot (human-readable, as of 2026-07-12 afternoon)
 - **Tier 1 (open & operate):** ≈ **$106,790** one-time (incl. $50K inventory restock, $40K
   intercompany loan repay).
-- **Tier 2 (nice-to-have):** ≈ **$108,885** (+ Leafly and 8 new cannabis-vendor lines TBD)
-  — jumped from ≈$22,804 after folding in the 7/11 cannabis-vendor arrears digest (9 new
-  priced vendors below).
-- **Tier 3 (edge):** ≈ **$12,382** (Little Leaf Labs $8,331 + EPLI $4,051; strategic lines TBD).
+- **Tier 2 (nice-to-have):** ≈ **$109,164** (Leafly now priced at $279; 8 cannabis-vendor
+  lines still TBD) — was ≈$108,885 with Leafly TBD.
+- **Tier 3 (edge):** ≈ **$12,382** priced (Little Leaf Labs $8,331 + EPLI $4,051; strategic
+  lines TBD). A possible-duplicate First Insurance Funding notice ($4,699.76, loan
+  #106241219) is tracked but excluded from this total pending #decisions confirmation of
+  whether it's the same policy as the tracked EPLI line — see Update below.
 - **Tax gate (separate):** ≈ **$109,900**.
 - **Monthly carry:** ≈ **$31,200/mo** → runway = (investment − one-time) ÷ 31,200.
 - Reality check: opening ($106.8K) + a 3-month cushion (~$93.6K carry) ≈ **$200K** before
-  Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$108.9K+) once
+  Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
 
-## Update — 2026-07-11 (evening)
+## Update — 2026-07-12 (afternoon)
+Ingested from a full #on-button re-sweep (2026-07-02 → 2026-07-11 window):
+1. **Leafly — priced.** The 7/10 "email pull" drop (#on-button ts `1783719691.083309`)
+   named invoice INV00389006, $279, billing period 7/6–7/7 — resolves the prior TBD.
+2. **First Insurance Funding notice — flagged, NOT merged.** `Notices.pdf` (`F0BG52EUSKD`,
+   dropped 7/9, no message text) shows loan #106241219, past due $3,040.95 + current
+   installment $1,658.81 = **$4,699.76 total**, insurance cancelled. This loan number does
+   not match the tracked `epli-reinstate` line (#105889646, $4,051.12) and the total is
+   ~$650 higher. Added as a new `tbd-confirm` item, excluded from Tier 3 totals to avoid
+   double-counting, and raised as ONE #decisions parent (never guessing which policy this
+   is or folding the figures together).
+3. **Everything else re-checked and confirmed already accurate, no changes:** the 7/11
+   cannabis-vendor arrears digest, NST 7-invoice total, Waste Management, Comcast, Google
+   Workspace, Gusto payroll-tax detail, Regus/IWG $2,451.80, and the NJ sales-tax gate
+   figures all matched what's already in this note — restatements/reactions (🧹📌📊,
+   numbered recaps) correctly ignored per the scanner rule. Progressive Commercial's
+   7/3 cancel date has passed with no confirming message either way — left as-is
+   (`status: past-due`), not escalated again since no new figure exists to act on.
+Page (`on-button-reopen.html`) and canvas (`F0BEN1167GB`) regenerated from this note in
+the same pass.
+
+### Prior — Update 2026-07-11 (evening)
 Ingested two #on-button drops:
 1. **National Secure Transport 7-invoice PDF** (`F0BGNFR1WLR`) — verified against the
    existing `nst` line; the 7 invoices sum to exactly $868.60, matching what was already
