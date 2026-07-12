@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T17:05-04:00
-updated: 2026-07-12T14:00-04:00
+updated: 2026-07-12T14:15-04:00
 domain: project
 type: note
 status: active
@@ -43,7 +43,7 @@ rather than a bad ID.
 **No files were copied. No files were deleted or overwritten (per safety rule,
 nothing would have been deleted regardless).** Nothing was posted to
 #delivery-in-a-box claiming completion, and Monday item 12381650918 was updated
-to log the blocker (not marked done).
+to log the blocker (not marked done) — back when the Monday mirror was still live.
 
 ## Next step (superseded — see Update below)
 
@@ -60,24 +60,28 @@ for the 2026-07-10 "ineligible to be used in generative AI contexts" error (Driv
 commonly blocks metadata/content retrieval on trashed items), and supersedes the
 DLP/sharing-restriction read above.
 
-**Decision:** abandon merging the trashed folders. Lemar wants Samira to start the
-Delivery-in-a-Box consolidation fresh in a **new destination folder** instead.
+**Decision:** abandon merging the trashed folders. Samira will start the
+Delivery-in-a-Box consolidation fresh in a **new destination folder** that she
+creates herself, after first searching Drive for any live (non-trashed) copies of
+the old content to recover.
 
-**Still open** (as of this update, same live session): who creates the new folder,
-and what source content — if any live/non-trashed originals exist elsewhere — should
-populate it versus it starting empty for new assets going forward. Not yet staged as
-a `run:admin-3x` prompt pending that answer. Status stays `active`.
+Staged for Samira in #admin as `task:20260712_dib-folder-fresh-start`
+(`run:admin-3x`): search Drive for recoverable live copies → create a new master
+folder → copy in anything recovered → report the final result in
+**#delivery-in-a-box** (not #admin), routing any ambiguous call through
+**#decisions** rather than deciding silently.
 
-Monday item 12381650918 (board 18418714876) still needs a status/note update
-reflecting this — not yet done this session (Monday connector unavailable here).
+**Monday: no longer applicable.** Per `anchors.md`, the Monday mirror gate closed
+2026-07-11 — Haven is now the sole source of truth for this project. Item
+12381650918 will not receive further updates and can be left as-is/read-only.
 
 ## Sources
 - slack: #atlas ts 1782434912.962149 (thread), reply 1782490810.566029 (folder
   IDs originally listed 6/26)
-- slack: #admin ts 1783714967.528359 (staged run:admin-3x prompt)
-- slack: #delivery-in-a-box ts 1783719011.118469 (2026-07-10 blocked report, this
-  matter's own #delivery-in-a-box thread)
+- slack: #admin ts 1783714967.528359 (staged run:admin-3x prompt, 2026-07-10)
+- slack: #delivery-in-a-box ts 1783719011.118469 (2026-07-10 blocked report)
 - haven: `haven/vault/40-Projects/delivery-in-a-box/2026-07-10-status-briefing.md`
-- monday: item 12381650918 (board 18418714876)
+- monday: item 12381650918 (board 18418714876) — historical only, mirror retired
+  2026-07-11
 - claude: Atlas chat capture, 2026-07-12 (Lemar confirmed folders in Drive Trash;
-  requested fresh-folder restart)
+  requested fresh-folder restart; confirmed Monday mirror no longer needed)
