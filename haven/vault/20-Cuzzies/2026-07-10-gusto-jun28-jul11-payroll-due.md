@@ -1,11 +1,12 @@
 ---
 created: 2026-07-10T08:20-04:00
-updated: 2026-07-10T12:00-04:00
+updated: 2026-07-12T08:30-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [gusto, payroll, pay-period]
 source: gmail
+due: 2026-07-13T19:00-04:00
 ---
 
 # Gusto — payroll due Mon Jul 13, pay period Jun 28–Jul 11
@@ -20,5 +21,18 @@ warning here, just a normal payroll-due reminder plus a pending time-off approva
 question as always: was this period worked (run it) or not (skip/cancel)? Samira has no
 Gusto login/credential either way.
 
+**Decided 2026-07-10:** cancel/skip — see
+`[[2026-07-10-gusto-jun28-jul11-payroll-cancel]]`. Lemar still needs to click cancel/skip
+himself in app.gusto.com (and clear/ignore the pending time-off request) — Samira has no
+Gusto credential to do it for him.
+
+## Update 2026-07-12 08:15 ET
+Gusto sent a second automated reminder (thread `19f563208314864d`, "Run payroll by 7:00PM
+EDT tomorrow") — same pay period, same deadline, nothing new. Not a new decision: the
+7/10 cancel/skip call already covers this period. Flagged as a duplicate rather than
+filed as a separate note — Gusto will likely keep nagging until the click actually
+happens in-app.
+
 ## Sources
 - gmail: thread 19f4bddf75aeda3d, automated@gusto.com, 2026-07-10 11:51 UTC
+- gmail: thread 19f563208314864d, automated@gusto.com, 2026-07-12 11:59 UTC (duplicate reminder)
