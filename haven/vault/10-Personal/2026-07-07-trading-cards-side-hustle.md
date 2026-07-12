@@ -1,11 +1,12 @@
 ---
 created: 2026-07-07T09:25:00-04:00
-updated: 2026-07-12T10:10:00-04:00
+updated: 2026-07-12T11:20:00-04:00
 domain: personal
 type: note
 status: active
 tags: [side-hustle, trading-cards]
 source: slack
+due: 2026-08-01T09:00:00-04:00
 ---
 
 # Trading cards buy/sell side hustle — starter framework
@@ -90,6 +91,12 @@ patch auto. Options B ($300-500) and C ($750-1,000) not chosen.
 Decision point closed. Lemar can start buying against this budget whenever ready;
 no further Samira action needed here.
 
+## Update 2026-07-12 (11:20 ET) - first buy deferred to August 1
+Lemar, in #trading-cards (10:58:41 ET): "We're gonna let this sit for a couple
+weeks until I can clear 100 to 150 to spare so let's follow up on this. Let's say
+August first." Set `due: 2026-08-01T09:00-04:00` on this note so a reminder rings
+that morning to check back in on the first purchase. No action needed before then.
+
 ## Sources
 - slack: #atlas capture, 2026-07-06 20:36:41 EDT (TS 1783384601.800979)
 - slack: #atlas, HTML request, 2026-07-07 15:06:12 EDT (TS 1783451172.932509)
@@ -98,3 +105,4 @@ no further Samira action needed here.
 - slack: #trading-cards, Lemar's sports-first answer, 2026-07-08 21:52:04 EDT (TS 1783561924.270499)
 - slack: #trading-cards, budget question, 2026-07-09 13:22:41 EDT (TS 1783617761.373749)
 - slack: #decisions, Option A picked, message ts 1783625662.399819 (2026-07-12, reaction on 2026-07-09 15:34:22 EDT reply)
+- slack: #trading-cards, follow-up deferral, 2026-07-12 10:58:41 EDT (TS 1783868321.223839)
