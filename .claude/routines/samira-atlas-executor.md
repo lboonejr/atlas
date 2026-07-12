@@ -68,7 +68,7 @@ Lemar" in #decisions.
 
 ## Run order
 
-V → S → A → B → C → D → E → F → G → H → canvas refresh → digest (+ _daily append).
+V → S → A → B → C → D → E → F → G → H → canvas refresh → P (Pulse) → digest (+ _daily append).
 
 ---
 
@@ -169,6 +169,17 @@ the whole canvas): ⏳ Waiting · ⚙️ In motion · ⛔ Parked — one line ea
 waits on · the Haven note path (+ Monday link until the gate). Never repost a canvas
 item into #decisions.
 
+### PART P — render the Pulse dashboard (rendering only, last step before the digest)
+Invoke the **pulse-dashboard** skill (`.claude/skills/pulse-dashboard/`). It re-renders
+Lemar's one-page personal dashboard from what THIS run already holds (#decisions state,
+project pulses, tallies) plus the workout plan, Dawn's brief note, Era Context, Google
+Calendar, and the open Haven notes, then re-deploys it to the stable artifact URL in
+anchors ("Pulse dashboard" section). It writes NO vault notes and posts NOTHING to Slack
+— its status rides in your digest as one token. **Non-fatal by design:** if the render
+fails, note `pulse ⚠️ <reason>` for the digest and continue — a Pulse failure must never
+abort the digest or affect any other PART, and it does NOT count toward any task's
+3-strike stuck rule. Returns `pulse ✅ <url> · sections OK K/8` or `pulse ⚠️ <reason>`.
+
 ### Digest — #reports + the vault's own journal
 Via **samira-report-result** Mode 3:
 1. Post the delta digest to #reports:
@@ -177,7 +188,8 @@ Via **samira-report-result** Mode 3:
    `Closed: [one-liners]` · `🔴 Send TODAY: […]` · `👉 Waiting on you: [count] in #decisions`
    · `🧵 Standing list → Open Items canvas`
    (Full tallies: filed/stuck, rang, decisions handled H, captures G, staged L, ran Y,
-   done Z, failed Fl, parked P, deferred D; email E/R/Cl/T; investor + car counts; junk J.
+   done Z, failed Fl, parked P, deferred D; email E/R/Cl/T; investor + car counts; junk J;
+   plus PART P's one token: `pulse ✅` or `pulse ⚠️ <reason>`.
    Stuck notes surface ONLY via the batched #decisions card, never line-by-line here.)
 2. APPEND the same digest block to `haven/vault/_daily/YYYY-MM-DD.md` (create the day's
    note from `_templates/daily.md` if absent; append-only; never edit prior entries).

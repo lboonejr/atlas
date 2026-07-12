@@ -8,7 +8,7 @@ When a workspace, board, account, or channel changes, edit THIS file and nothing
 > doing work is fine; maintaining a second list is not). The memory file
 > `shortlist_anchors.md` on Lemar's machine is a pointer to this file, not a copy.
 
-Last verified: 2026-07-11 (added #personal-finance channel, created by the Samira scan).
+Last verified: 2026-07-12 (added the Pulse dashboard section — rendered by Samira PART P).
 
 ## Repo / vault
 
@@ -149,6 +149,21 @@ mis-categorized as promotions/updates:
 `no-reply@accounts.google.com` (security alerts) · `headset.io` · `stellaconnect.net` (Metrc).
 Plus the rule: never trash the active FundCanna underwriting thread. Anything `is:important` or
 `is:starred` is already protected by the Safety floor regardless of this list.
+
+## Pulse dashboard (rendered by Samira — no separate trigger)
+
+Lemar's living one-page personal dashboard. Rendered at the END of every hourly Samira
+scan (runbook **PART P**) by the **pulse-dashboard** skill (`.claude/skills/pulse-dashboard/`)
+and re-deployed to ONE stable artifact URL. Rendering only — writes no vault notes, posts
+nothing to Slack; its status rides in Samira's digest as `pulse ✅/⚠️`. Fallback if the
+Artifact re-deploy breaks headless: a Slack canvas updated in place, or the githack
+pattern used by on-button-reopen.
+
+| What | Value |
+|---|---|
+| Living Pulse artifact URL | `https://claude.ai/code/artifact/6838142e-852c-44a5-8778-b584be1316d4` — first published 2026-07-12 (desktop session, v1). PART P re-deploys to THIS same URL each run (pass it as `url`; keep title "Pulse — Personal Dashboard" + favicon 📍). |
+| Workout plan artifact URL | `https://claude.ai/code/artifact/a723834f-6310-4575-8897-75ae8e30806e` ("Back to the Court — 12-Week Plan"; source-of-truth note `haven/vault/10-Personal/Health/2026-07-07-basketball-fitness-plan.md`, start Mon 2026-07-07). Pulse links out to it; its check-offs live in that page's own localStorage. |
+| Sections | workout · Dawn brief (condensed) · #decisions respond list · #reports + routine health · money (Era Context + Haven budget note) · calendar today/week · Atlas open items + todo composer · project pulses |
 
 ## Identity
 
