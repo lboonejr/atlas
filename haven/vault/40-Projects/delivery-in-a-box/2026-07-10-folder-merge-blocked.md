@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T17:05-04:00
-updated: 2026-07-10T17:05-04:00
+updated: 2026-07-12T14:00-04:00
 domain: project
 type: note
 status: active
@@ -45,15 +45,39 @@ nothing would have been deleted regardless).** Nothing was posted to
 #delivery-in-a-box claiming completion, and Monday item 12381650918 was updated
 to log the blocker (not marked done).
 
-## Next step
-Needs a human check on Drive sharing/DLP settings for these three folder IDs (or
+## Next step (superseded — see Update below)
+
+~~Needs a human check on Drive sharing/DLP settings for these three folder IDs (or
 Lemar re-sharing/re-creating access) before the merge can run. Re-stage as a
 run:admin-3x prompt once access is confirmed working, or ask Lemar to manually
-grant/verify access to the connected Google account.
+grant/verify access to the connected Google account.~~
+
+## Update 2026-07-12
+
+Lemar checked all three folder links directly and found them sitting in **Google
+Drive Trash** — the destination folder included. This is the more likely explanation
+for the 2026-07-10 "ineligible to be used in generative AI contexts" error (Drive
+commonly blocks metadata/content retrieval on trashed items), and supersedes the
+DLP/sharing-restriction read above.
+
+**Decision:** abandon merging the trashed folders. Lemar wants Samira to start the
+Delivery-in-a-Box consolidation fresh in a **new destination folder** instead.
+
+**Still open** (as of this update, same live session): who creates the new folder,
+and what source content — if any live/non-trashed originals exist elsewhere — should
+populate it versus it starting empty for new assets going forward. Not yet staged as
+a `run:admin-3x` prompt pending that answer. Status stays `active`.
+
+Monday item 12381650918 (board 18418714876) still needs a status/note update
+reflecting this — not yet done this session (Monday connector unavailable here).
 
 ## Sources
 - slack: #atlas ts 1782434912.962149 (thread), reply 1782490810.566029 (folder
   IDs originally listed 6/26)
 - slack: #admin ts 1783714967.528359 (staged run:admin-3x prompt)
+- slack: #delivery-in-a-box ts 1783719011.118469 (2026-07-10 blocked report, this
+  matter's own #delivery-in-a-box thread)
 - haven: `haven/vault/40-Projects/delivery-in-a-box/2026-07-10-status-briefing.md`
 - monday: item 12381650918 (board 18418714876)
+- claude: Atlas chat capture, 2026-07-12 (Lemar confirmed folders in Drive Trash;
+  requested fresh-folder restart)
