@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T17:05-04:00
-updated: 2026-07-12T14:15-04:00
+updated: 2026-07-12T14:20-04:00
 domain: project
 type: note
 status: active
@@ -45,7 +45,7 @@ nothing would have been deleted regardless).** Nothing was posted to
 #delivery-in-a-box claiming completion, and Monday item 12381650918 was updated
 to log the blocker (not marked done) — back when the Monday mirror was still live.
 
-## Next step (superseded — see Update below)
+## Next step (superseded — see Updates below)
 
 ~~Needs a human check on Drive sharing/DLP settings for these three folder IDs (or
 Lemar re-sharing/re-creating access) before the merge can run. Re-stage as a
@@ -75,12 +75,44 @@ folder → copy in anything recovered → report the final result in
 2026-07-11 — Haven is now the sole source of truth for this project. Item
 12381650918 will not receive further updates and can be left as-is/read-only.
 
+## Update 2026-07-12 (later) — fresh-start prompt executed
+
+Ran `task:20260712_dib-folder-fresh-start` (`run:admin-3x`) during this hourly
+PART C sweep — the only un-reacted runnable prompt found in #admin this scan.
+
+- Searched connected Drive by title ("Brandless Templates", "Sellable Asset",
+  "Delivery-in-a-Box", "DIB") and fullText ("Delivery-in-a-Box", "Brandless",
+  "Cuzzie's Delivery Operation Sellable Asset", "Delivery Operation Sellable
+  Asset") for any live, non-trashed copies of the old DIB template/asset
+  content, plus a folder-type search for title contains 'Delivery'.
+- **Nothing recoverable found.** All matches were unrelated Cuzzie's/Station
+  files (delivery driver training SOPs, METRC transfer manifests, Harrison
+  rent invoices, investor decks) or unrelated "Home Delivery (...)"
+  operational folders — none were duplicates of the DIB Brandless
+  Templates/Sellable Asset content.
+- Folder `1PV8-k7DwN2gvB9Y_TH_qA6ktZMuQFmcc` still errors as "ineligible to be
+  used in generative AI contexts" when queried directly, consistent with its
+  trashed status.
+- Created a new, currently-empty Drive folder to serve as the DIB master asset
+  folder going forward: **"Delivery-in-a-Box — Master Assets (2026-07)"**,
+  ID `10HXbPVH9MSF2HDr-Nlv3ZZoStuuK7Fi3`
+  (https://drive.google.com/drive/folders/10HXbPVH9MSF2HDr-Nlv3ZZoStuuK7Fi3).
+  It holds nothing yet — the original template/asset files will need to be
+  rebuilt or re-uploaded from a source outside Drive (Lemar may have a local
+  or email copy) since no live Drive copy could be located.
+- No ambiguous candidates surfaced, so no #decisions escalation was needed.
+- Result posted to #delivery-in-a-box; source #admin prompt reacted ✅.
+
 ## Sources
 - slack: #atlas ts 1782434912.962149 (thread), reply 1782490810.566029 (folder
   IDs originally listed 6/26)
 - slack: #admin ts 1783714967.528359 (staged run:admin-3x prompt, 2026-07-10)
+- slack: #admin ts 1783865048.648399 (staged run:admin-3x fresh-start prompt,
+  2026-07-12, task:20260712_dib-folder-fresh-start)
 - slack: #delivery-in-a-box ts 1783719011.118469 (2026-07-10 blocked report)
 - haven: `haven/vault/40-Projects/delivery-in-a-box/2026-07-10-status-briefing.md`
+- drive: folder `10HXbPVH9MSF2HDr-Nlv3ZZoStuuK7Fi3` — new DIB Master Assets
+  folder created 2026-07-12
 - monday: item 12381650918 (board 18418714876) — historical only, mirror retired
   2026-07-11
 - claude: Atlas chat capture, 2026-07-12 (Lemar confirmed folders in Drive Trash;
