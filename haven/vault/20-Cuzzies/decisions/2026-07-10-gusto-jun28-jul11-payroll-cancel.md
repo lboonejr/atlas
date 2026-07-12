@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T09:20-04:00
-updated: 2026-07-10T09:20-04:00
+updated: 2026-07-12T10:10:00-04:00
 domain: cuzzies
 type: decision
 status: active
@@ -41,5 +41,18 @@ approval directly in app.gusto.com — Lemar needs to log in and cancel/skip the
 (and resolve or ignore the pending time-off request) himself. Flagged back in-thread;
 nothing further Samira can do here.
 
+## Update 2026-07-12 (10:10 ET) — duplicate reminder, thread closed
+
+Gusto sent another automated reminder for this same Jun 28–Jul 11 period (2026-07-12
+~08:16 ET, gmail thread `19f563208314864d`), re-nagging because the in-app
+cancel/skip click Lemar still owes hasn't happened yet in app.gusto.com. Not a new
+decision — merged into this existing note rather than filed separately, and flagged
+as a duplicate in the #decisions thread (ts `1783858576.933119`). Lemar reacted 🫡 on
+that correction reply — closing the Slack notification only. The underlying manual
+Gusto click is still outstanding and still his to do; tracked on the Open Items
+canvas under Gusto pay-period cancel/skip clicks.
+
 ## Sources
 - slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1783686112716939
+- slack: #decisions duplicate-notice thread, ts 1783858576.933119 (2026-07-12 08:16 ET, closed via 🫡 on correction reply ts 1783858795.883459)
+- gmail: thread 19f563208314864d (2026-07-12 duplicate reminder)
