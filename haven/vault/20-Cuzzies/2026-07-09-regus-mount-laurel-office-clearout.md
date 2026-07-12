@@ -1,6 +1,6 @@
 ---
 created: 2026-07-09T12:29-04:00
-updated: 2026-07-09T14:30-04:00
+updated: 2026-07-12T12:35-04:00
 domain: cuzzies
 type: task
 status: active
@@ -38,3 +38,11 @@ Lemar reacted ✅ on the #decisions card (self-tracking, "react ✅ once handled
 Status left `active`; deadline (Monday 7/13 9am) and calendar reminder unchanged. Will
 close (`status: done`) once Lemar reacts 🫡 or confirms the office is actually cleared
 out and keys returned to Ali.
+
+## Update 2026-07-12 07:46 ET
+Lemar flagged in #atlas as one of today's two priorities: "I'm gonna have to empty out
+my office by the end of the day" — moving this up from the Monday 7/13 commitment to
+today (Sunday 7/12). Physical task, nothing for Samira to do beyond tracking; deadline
+and calendar reminder left as-is since the 7/13 date is still the hard commitment Ali is
+expecting confirmation against. Will close once Lemar confirms it's cleared and keys are
+back with Ali.
