@@ -1,6 +1,6 @@
 ---
 created: 2026-06-24T18:15-04:00
-updated: 2026-07-09T14:20-04:00
+updated: 2026-07-12T11:10:00-04:00
 domain: project
 type: note
 status: active
@@ -50,7 +50,21 @@ supported us. I want them to feel like they've become a part of the family.
 There's a certain connection to a community that is associated with the
 Cuzzie's ethos.
 
-95 of 100 questions remain unanswered — no rush, Lemar answers as more comes to
+**Q7 — Is the brand meant to represent Black-owned cannabis specifically, and
+how prominently do you want that positioned?** (2026-07-12, 10:33 ET)
+Lemar: Should be Black-owned in a way where inclusivity is part of our DNA. Two
+Black men (Lemar and Josh) started the brand, but the original inspiration —
+their friend Hoagie — is Afro-Latino, and the friend group around Cuzzy's was
+diverse and inclusive. The brand should clearly identify and acknowledge it's
+Black-owned, while feeling like an inclusive space for various identities.
+
+**Q8 — How does The Station Newark factor into the Cuzzy's brand story?**
+(2026-07-12, 10:35 ET)
+Lemar: The Station wasn't directly involved in this brand. It should be seen
+as a distribution channel for the product, and to a degree, a way to begin
+collecting consumer/market feedback.
+
+93 of 100 questions remain unanswered — no rush, Lemar answers as more comes to
 him.
 
 ## Note on this record
@@ -74,6 +88,11 @@ thread ts 1783372386.951919). Full decision record:
 Packaging, trademark filing, and the remaining downstream questions (Q1, Q3,
 Q9, etc.) can now proceed on the assumption the Cuzzie's name carries forward.
 
+## Update 2026-07-12 — Q7/Q8 logged
+Lemar answered Q7 (Black-owned positioning, inclusive DNA) and Q8 (The Station's
+role as distribution channel + feedback source, not brand-integrated) in-thread.
+No fork in either — both logged straight into "Answers so far" above.
+
 ## Sources
 - slack: #cuzzys-brand, 100-questions post, 2026-06-24 18:15 ET (ts 1782339354.273549)
 - slack: #cuzzys-brand thread, Lemar's Q1/Q2 answers 2026-07-05 13:14 ET
@@ -83,3 +102,5 @@ Q9, etc.) can now proceed on the assumption the Cuzzie's name carries forward.
 - slack: #decisions, Q2 brand-identity card 2026-07-06 (ts 1783372386.951919),
   decided ~18:05 ET — see `20-Cuzzies/decisions/2026-07-06-cuzzys-brand-name-decision.md`
 - slack: #cuzzys-brand thread, Lemar's Q6 answer 2026-07-08 20:58 ET (ts 1783558691.293299)
+- slack: #cuzzys-brand thread, Lemar's Q7 answer 2026-07-12 10:33:58 ET (ts 1783866838.178689)
+- slack: #cuzzys-brand thread, Lemar's Q8 answer 2026-07-12 10:35:24 ET (ts 1783866924.366209)
