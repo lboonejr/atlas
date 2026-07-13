@@ -1,12 +1,13 @@
 ---
 created: 2026-07-13T13:20-04:00
-updated: 2026-07-13T13:20-04:00
+updated: 2026-07-13T17:18-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [greenbooks-cpa, tax-records, payroll, wind-down, meeting]
 source: gmail
 due: 2026-07-14T13:45-04:00
+calendar_event_id: 6hvi72sp8sfuvg38mkh54c6t2s
 ---
 
 # GreenBooks CPA — records request + Tue 7/14 1:45pm meeting
