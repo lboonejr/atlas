@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T14:05-04:00
-updated: 2026-07-11T12:15-04:00
+updated: 2026-07-13T16:30-04:00
 domain: personal
 type: task
 status: active
@@ -40,6 +40,14 @@ taken (calls are his to make, safety rule). Status stays `active` pending the
 7/18 move-out; still tracking via the `due` date and calendar reminder. Will
 close to `done` on his 🫡 or confirmation the unit is cleared.
 
+## Update 2026-07-13 16:30 ET
+A separate "Payment Reminder" email arrived from Extra Space Storage 7/13 4:04pm ET
+(no-reply sender): monthly rent for the same unit 3003 is **$253.04, due 07/18/2026**
+— the identical due date as the move-out. This is a distinct payment-authorization
+task (pay or don't, depending on whether the unit is emptied before the due date) —
+flagged to #decisions rather than assumed; nothing paid on Lemar's behalf.
+
 ## Sources
 - gmail: thread 19f5171b324e0162 (move-out notice, Extra Space Storage)
+- gmail: thread 19f5c394f749d028 (payment reminder, $253.04 due 7/18, 2026-07-13)
 - slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1783779573661159 (task card, Lemar's ✅ confirmation)

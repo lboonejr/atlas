@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-12T10:10:00-04:00
+updated: 2026-07-13T16:30:00-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -136,9 +136,29 @@ to "✅ CLOSED") is a Slack-notification-only action per this scan's instruction
 if Lemar wants to revisit A/B/C/D or the draft, a fresh #decisions card should be
 opened rather than reopening this one.
 
+## Update 2026-07-13 (16:30 ET) — Lemar replied directly; Jason Gil pushes back again, offers a call
+
+Outside this loop, Lemar sent his own reply straight to Jason Gil 2026-07-13 ~12:00 PM
+ET (bypassing Gmail Drafts entirely — the unverified draft from 07-11 is gone from
+Drafts, presumably superseded): told Jason the $20,000 isn't available right now, cited
+an active fundraising process to resolve outstanding obligations, and offered a call.
+
+Jason Gil replied 2026-07-13 ~3:58 PM ET: he is open to a call, but reiterated his
+client will not consent to the adjournment unless Lemar is willing/able to make a
+"substantial payment towards the arrears." Trial is still July 30.
+
+This is a fresh, unanswered message from opposing counsel — reply-worthy, and a
+payment-authorization + negotiation-strategy call only Lemar can make. Posting a NEW
+#decisions card (the prior thread ts 1783628237.329439 was already closed per his 🫡)
+with three draft options: (A) accept the call, no dollar commitment in writing; (B) ask
+in writing what "substantial" means before committing to a call; (C) decline further
+payment talk for now and raise the direct-to-court adjournment path (Option D mechanics,
+already researched 2026-07-10) as the alternative. None sent — Gmail Drafts only, on
+his pick.
+
 ## Sources
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
-- gmail: thread 19f3e00cb68ac2cb (Jason Gil reply, 2026-07-09 20:02:55 UTC, message id 19f487a33d5691b8; unverified draft r8556250896867529553 found here 2026-07-11)
+- gmail: thread 19f3e00cb68ac2cb (Jason Gil reply, 2026-07-09 20:02:55 UTC, message id 19f487a33d5691b8; unverified draft r8556250896867529553 found here 2026-07-11; Lemar's own direct reply 2026-07-13 12:00 ET message id 19f5b593277f5f33; Jason Gil's follow-up 2026-07-13 15:58:55 ET message id 19f5c34485b54791)
 - slack: #atlas, Don Frunt, 2026-07-10 08:52:53 ET (court-filing question)
 - slack: #decisions, Option D reply, message ts 1783688983.630169 (Lemar's checkmark, 2026-07-10 09:09:43 ET)
 - slack: #decisions, thread ts 1783628237.329439, closed via 🫡 on ts 1783773116.307949 (2026-07-12)
