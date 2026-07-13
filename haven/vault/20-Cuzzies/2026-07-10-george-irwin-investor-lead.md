@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T14:35:00-04:00
-updated: 2026-07-13T17:12-04:00
+updated: 2026-07-13T17:25-04:00
 domain: cuzzies
 type: log
 status: active
@@ -69,8 +69,18 @@ rather than through a Samira draft. No ask amount has been recorded anywhere; ma
 remain un-tailored. No further Samira action pending on this lead unless Lemar reopens
 it with a number or asks for a draft.
 
+## Update — 2026-07-13 17:25 ET
+
+Confirmed via Gmail: Lemar replied to George directly (from his own inbox, ~4:55pm ET,
+on the george@cannabisstop.net thread) naming an ask of **$75K**. This is Lemar's own
+number, sent by him, not a Samira draft — recorded here as the factual outcome of the
+🫡 close above. Index row can move to reflect an ask is now on the table; masters still
+un-tailored pending George's response. No further Samira action pending unless George
+replies or Lemar asks for a draft/data-room tailoring.
+
 ## Sources
 - slack: #investor-pipeline, Joshua Evans, 2026-07-10 13:22:21 ET
 - gmail: thread 19f4d72e50c51f9b, Lemar → george@agreenroof.com, 2026-07-10 15:14 ET
 - gmail: thread 19f5ce6f744b67d8, george@cannabisstop.net → Lemar, "Cuzzies," 2026-07-13 15:14 ET
 - slack: #decisions, card ts 1783973576.160979 (closed 🫡, no number given)
+- gmail: thread 19f5ce6f744b67d8, Lemar → george@cannabisstop.net, 2026-07-13 ~16:55 ET ($75K ask, sent directly by Lemar)
