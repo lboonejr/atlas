@@ -1,9 +1,9 @@
 ---
 created: 2026-07-13T10:35-04:00
-updated: 2026-07-13T13:20-04:00
+updated: 2026-07-13T16:52-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [google-voice, workspace, phone, wind-down, billing]
 source: gmail
 ---
@@ -36,6 +36,11 @@ license reassignment. Fixing it requires signing into the Google Admin console
 can't take. Given the wind-down, this is consistent with letting Workspace spend
 trim itself down rather than an error, but still Lemar's call whether to restore it
 or let it lapse (same #decisions card, still open).
+
+## Update — 2026-07-13 16:52 ET
+Lemar reacted 🫡 on the #decisions card (ts 1783948570.402789) — closing this as
+expected: the billing lapse is consistent with letting Workspace spend trim down
+during the wind-down, not restoring the payment method. No further action.
 
 ## Sources
 - gmail: thread 19f5b9bb0f9a17e9 (Google Voice license unassigned notice)

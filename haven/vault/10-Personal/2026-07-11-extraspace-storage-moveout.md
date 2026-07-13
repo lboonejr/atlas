@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T14:05-04:00
-updated: 2026-07-13T16:30-04:00
+updated: 2026-07-13T16:52-04:00
 domain: personal
 type: task
 status: active
@@ -47,7 +47,15 @@ A separate "Payment Reminder" email arrived from Extra Space Storage 7/13 4:04pm
 task (pay or don't, depending on whether the unit is emptied before the due date) —
 flagged to #decisions rather than assumed; nothing paid on Lemar's behalf.
 
+## Update 2026-07-13 16:52 ET
+Lemar reacted 🫡 on the $253.04 payment-reminder card (ts 1783959138.208459) — closing
+that question without picking pay-vs-moot explicitly; reading it as him handling the
+payment decision himself alongside the move-out calls (same pattern as the 7/11 ✅).
+No payment made on his behalf. The underlying move-out (unit access/empty/confirm)
+stays `active` pending 7/18.
+
 ## Sources
 - gmail: thread 19f5171b324e0162 (move-out notice, Extra Space Storage)
 - gmail: thread 19f5c394f749d028 (payment reminder, $253.04 due 7/18, 2026-07-13)
 - slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1783779573661159 (task card, Lemar's ✅ confirmation)
+- slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1783959138208459 (payment-reminder card, Lemar's 🫡 close)
