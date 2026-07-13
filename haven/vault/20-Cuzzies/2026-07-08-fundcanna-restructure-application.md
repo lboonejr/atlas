@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T14:13-04:00
-updated: 2026-07-08T21:15-04:00
+updated: 2026-07-13T08:30-04:00
 domain: cuzzies
 type: task
 status: active
@@ -59,8 +59,25 @@ receipt ("I've received the Google Drive folder and will begin reviewing the
 documents") — no open question, no reply needed from here until FundCanna comes back
 with questions or a term sheet. Index status moved Needs info → Sent.
 
+## Update 2026-07-13 (found in #investor-pipeline thread reply, Jul 12)
+Joshua Evans replied in-thread on 2026-07-12 15:03 ET (missed by the top-level channel
+re-reads on the 7/12 and 7/13 scan passes since it's a thread reply, not a new
+top-level post — caught this pass by reading the thread directly): "Shya Mousavipour
+fowarded our e-mail to Sal Castaneda with FundCanna, just waiting on Sal's response."
+
+This clarifies Shya Mousavipour (GVS-NSS) — one of the five older cold leads flagged
+2026-07-11 13:17 ET as needing a revive-or-close call from Lemar — is not a dormant
+lead: he acted as a connector who forwarded Josh's outreach into the live FundCanna
+thread. No status change (FundCanna stays `Sent`, still awaiting Sal's response,
+consistent with the existing index Next step) — this is corroborating color, not a new
+event. Still no reply needed from Samira's side until FundCanna comes back. Index
+`Last update` bumped to reflect this pass; Shya Mousavipour's line item in the
+still-open cold-lead question narrows from 5 to 4 remaining (Ian Lindemann, Mickey
+Wills, Meyer Goldman, Alfonso Rodrigo) — flagged to Lemar in the scan post.
+
 ## Sources
 - gmail: thread 19f42d51ae61c0c0 ("FundCanna - Next Steps | Cuzzie's Application")
 - gmail: thread 19f42d20592d5979 (Drive share request for "FundCanna" folder)
 - drive: https://drive.google.com/drive/folders/1FfYcoHmGVuih-Iup8Yo4tRZn98wn2C7T (data room)
+- slack: #investor-pipeline thread reply, Joshua Evans, 2026-07-12 15:03:18 ET (https://newworkspace-zlb6313.slack.com/archives/C0BCCUKEUQ2/p1783858492794809?thread_ts=1783858492.794809&cid=C0BCCUKEUQ2)
 - haven: `haven/vault/40-Projects/investor-pipeline/index.md`
