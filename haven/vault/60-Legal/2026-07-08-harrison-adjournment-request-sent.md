@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-13T16:30:00-04:00
+updated: 2026-07-13T16:52:00-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -155,6 +155,25 @@ in writing what "substantial" means before committing to a call; (C) decline fur
 payment talk for now and raise the direct-to-court adjournment path (Option D mechanics,
 already researched 2026-07-10) as the alternative. None sent — Gmail Drafts only, on
 his pick.
+
+## Update 2026-07-13 (16:52 ET) — Option A picked + refined; reply drafted, not sent
+
+Lemar reacted ✅ on Option A (accept the call, no dollar figure in writing) and added a
+thread reply refining it: "Draft option A asking if we can get on the phone later today
+or tomorrow." Per the reaction+reply rule, treated the reply as a refinement to the pick,
+not a separate ask.
+
+Created a Gmail draft (id `r-1549434188444417928`, threaded to Gmail thread
+`19f3e00cb68ac2cb`, replying to Jason Gil's 2026-07-13 15:58:55 ET message
+`19f5c34485b54791`) — to Jason.Gil@rivkin.com, cc Dylan.Mruczinski/Erez.Glambosky/
+Trisha.Edmond@rivkin.com + joshua@cuzziesnj.com. Body: thanks him for getting back,
+proposes a call today or tomorrow, and stays upfront that a large lump sum isn't
+available right now. **Not sent** — sitting in Gmail Drafts for Lemar to review/edit/send
+himself, same pattern as every prior draft on this matter. Replied "Done ✅" in the
+#decisions thread (ts 1783959121.720879) pointing to this.
+
+Status stays **awaiting-decision** — matter isn't resolved until the call happens (or
+doesn't) and a real number/path is agreed.
 
 ## Sources
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
