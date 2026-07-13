@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T14:35:00-04:00
-updated: 2026-07-10T17:15:00-04:00
+updated: 2026-07-13T16:15:00-04:00
 domain: cuzzies
 type: log
 status: active
@@ -41,6 +41,24 @@ Still no ask amount or debt-vs-equity split from George — masters remain un-ta
 per the BizFundsHub lesson. Index row moved to Status: Sent to reflect that real
 outreach has now gone out; next step is George's reply (ask amount, and/or a call time).
 
+## Update — 2026-07-13 16:15 ET
+
+George replied 2026-07-13 ~3:14pm ET — but from a second address, george@cannabisstop.net
+(cc cheryl@cannabisstop.net), subject "Cuzzies," saying he moved the discussion there.
+Message: "Thanks for the call last week. Before we start doing any due diligence and
+asking for more information etc... What is your ask." Still no number from George —
+he's now asking Lemar to name one.
+
+Per the investor guards (never commit numbers/terms as Lemar's decision), this isn't a
+Samira draft — routed as a #decisions card asking Lemar for the ask amount and
+debt-vs-equity split, since a prior, unrelated M&A conversation (Jason Klein/Cann.Dev,
+`2026-07-09-camden-dispensary-sale-update.md`) already has Lemar quoting a $150K–$250K
+range to a different buyer for a full lease-and-license sale — worth Lemar knowing
+before he answers George, since these may be different kinds of deals (bridge financing
+vs. an outright sale) and conflating the numbers could be costly. Index row updated;
+masters still un-tailored until the ask is set.
+
 ## Sources
 - slack: #investor-pipeline, Joshua Evans, 2026-07-10 13:22:21 ET
 - gmail: thread 19f4d72e50c51f9b, Lemar → george@agreenroof.com, 2026-07-10 15:14 ET
+- gmail: thread 19f5ce6f744b67d8, george@cannabisstop.net → Lemar, "Cuzzies," 2026-07-13 15:14 ET
