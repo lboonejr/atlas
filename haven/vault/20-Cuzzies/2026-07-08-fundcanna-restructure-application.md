@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T14:13-04:00
-updated: 2026-07-13T08:30-04:00
+updated: 2026-07-13T14:45-04:00
 domain: cuzzies
 type: task
 status: active
@@ -74,6 +74,17 @@ event. Still no reply needed from Samira's side until FundCanna comes back. Inde
 `Last update` bumped to reflect this pass; Shya Mousavipour's line item in the
 still-open cold-lead question narrows from 5 to 4 remaining (Ian Lindemann, Mickey
 Wills, Meyer Goldman, Alfonso Rodrigo) — flagged to Lemar in the scan post.
+
+## Update 2026-07-13 14:45 ET — application declined, call scheduled
+Josh checked in with Sal 7/13 7:30am ET. Sal replied 2:45pm ET: **the application was
+declined**, but he wants to review what's needed "to position ourselves to obtain
+approval over the next couple of months," and asked if Josh was free the next morning.
+Josh (directly, not a Samira draft) confirmed a call **Tuesday 7/14 11:00 AM ET**. Sal
+confirmed ("Perfect, I will reach out then.").
+
+No draft or action needed from Samira here — Josh is driving this thread himself and
+already has the call locked in. Index status moved Sent → Negotiating pending the
+outcome of that call. Gmail thread labeled `Samira/investor` + `Samira/seen`.
 
 ## Sources
 - gmail: thread 19f42d51ae61c0c0 ("FundCanna - Next Steps | Cuzzie's Application")
