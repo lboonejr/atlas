@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T14:35:00-04:00
-updated: 2026-07-13T16:15:00-04:00
+updated: 2026-07-13T17:12-04:00
 domain: cuzzies
 type: log
 status: active
@@ -58,7 +58,19 @@ before he answers George, since these may be different kinds of deals (bridge fi
 vs. an outright sale) and conflating the numbers could be costly. Index row updated;
 masters still un-tailored until the ask is set.
 
+## Update — 2026-07-13 17:12 ET
+
+Lemar closed the #decisions card (🫡) without naming an ask number or picking one of
+the three drafted options (give a number / turn it around and ask George's range first /
+propose a call instead of a number in writing). Reading this as he's taking the George
+conversation directly himself, outside Samira — the same pattern seen today on the
+Harrison Acquisitions thread (Jason Gil), where Lemar replied to counsel personally
+rather than through a Samira draft. No ask amount has been recorded anywhere; masters
+remain un-tailored. No further Samira action pending on this lead unless Lemar reopens
+it with a number or asks for a draft.
+
 ## Sources
 - slack: #investor-pipeline, Joshua Evans, 2026-07-10 13:22:21 ET
 - gmail: thread 19f4d72e50c51f9b, Lemar → george@agreenroof.com, 2026-07-10 15:14 ET
 - gmail: thread 19f5ce6f744b67d8, george@cannabisstop.net → Lemar, "Cuzzies," 2026-07-13 15:14 ET
+- slack: #decisions, card ts 1783973576.160979 (closed 🫡, no number given)
