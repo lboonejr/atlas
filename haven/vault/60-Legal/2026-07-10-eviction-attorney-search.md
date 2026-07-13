@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T14:25:00-04:00
-updated: 2026-07-13T13:00:00-04:00
+updated: 2026-07-13T16:07:00-04:00
 domain: legal
 type: brief
 status: active
@@ -77,7 +77,15 @@ reminders (9:20/9:40/10:00 AM ET) and item 5 (follow-up email to Rivkin Radler) 
 flagging the closure so the plan reflects one fewer live lead ahead of the July 30
 trial date.
 
+## Update — 2026-07-13 16:07 ET
+
+Auto-acknowledgment landed from the Camden County Bar Association's Lawyer Referral
+Service (item 3): "a representative will contact you by phone or email between 9:30
+a.m. and 4:00 p.m. within the next business day." Confirms Lemar placed that call as
+scheduled. No reply needed — informational only, waiting on their callback.
+
 ## Sources
 - slack: #atlas 2026-07-10 14:00:40 ET (task:20260710_eviction-attorney-search)
 - slack: #atlas 2026-07-10 16:58:10 ET — "make sure the calls... are scheduled for Monday"
 - slack: #atlas 2026-07-13 09:26:53 ET — "Rutgers Law Camden Clinic is closed for the Summer"
+- gmail: thread 19f5cfe3809e3c99 — CCBA LRS auto-acknowledgment, 2026-07-13 15:39 ET
