@@ -1,6 +1,6 @@
 ---
 created: 2026-07-13T09:05-04:00
-updated: 2026-07-13T09:05-04:00
+updated: 2026-07-13T13:35-04:00
 domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal
 type: note
 status: awaiting-decision
@@ -41,5 +41,27 @@ he wants the `Artifact` tool broadly allow-listed (via the `update-config` skill
 `domain` unresolved — this is an Atlas/tooling meta-request, not personal/cuzzies/
 station/project/reference/legal.
 
+## Update 2026-07-13 13:35 ET
+Lemar answered in the #decisions thread: he sees the prompt on **Claude Code on his
+phone**, and confirmed he wants the `Artifact` tool allow-listed generally (not scoped
+to just Pulse).
+
+Action taken: added `.claude/settings.json` to this repo (via the `update-config`
+skill) with `permissions.allow: ["Artifact"]`, committed straight to `main` per this
+repo's git write policy — commit `861e4483a0d92249aac2df9f01ebdb20e4ddbda8`. This
+resolves the prompt for any Claude Code session that loads this repo's project
+settings. Caveat carried back to Lemar: if his phone session doesn't operate on this
+same repo/project, the repo-level setting won't reach it — in that case the fix is
+choosing "Always allow" the next time the prompt appears on that device, which Samira
+cannot do on his behalf.
+
+Replied "Done ✅" in the #decisions thread. Leaving this note `awaiting-decision` and
+`domain` unresolved — separately, Lemar also replied "This is an atlas/tooling
+metarequest" on the Haven Inbox stuck-note card without picking one of the six domain
+values; asked him to confirm `reference` as the closest fit rather than guessing.
+
 ## Sources
 - slack: https://newworkspace-zlb6313.slack.com/archives/C0BBWHCJUV9/p1783936218981789 (the #atlas capture)
+- slack: #decisions thread, parent ts 1783944688.284069 (surface + allow-list confirmation, reply ts 1783961560.064609)
+- slack: #decisions thread, parent ts 1783951524.673069 (Haven Inbox card, ambiguous domain reply ts 1783961610.433519)
+- github: commit 861e4483a0d92249aac2df9f01ebdb20e4ddbda8 (.claude/settings.json)
