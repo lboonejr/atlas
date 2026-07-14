@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-13T16:52:00-04:00
+updated: 2026-07-13T18:20:00-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -174,6 +174,19 @@ himself, same pattern as every prior draft on this matter. Replied "Done ✅" in
 
 Status stays **awaiting-decision** — matter isn't resolved until the call happens (or
 doesn't) and a real number/path is agreed.
+
+## Update 2026-07-13 (18:20 ET) — Lemar sent the drafted reply himself
+
+Gmail confirms Lemar sent the Option-A-refined reply to Jason Gil at 2026-07-13 18:12 ET
+(message id `19f5cadf43a9f80c`, same thread `19f3e00cb68ac2cb`, cc Dylan.Mruczinski/
+Erez.Glambosky/Trisha.Edmond@rivkin.com + joshua@cuzziesnj.com) — text matches the
+2026-07-13 16:52 ET Gmail draft verbatim: thanks Jason for getting back, proposes a call
+today or tomorrow, stays upfront that a large lump sum isn't available right now.
+
+No reply from Jason Gil yet as of this check. The #decisions thread (ts
+`1783959121.720879`) hasn't been 🫡'd — leaving it open per the reaction engine; Lemar
+closes it when ready. Status stays **awaiting-decision** — trial still July 30, no
+number/path agreed yet.
 
 ## Sources
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
