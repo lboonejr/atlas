@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T14:25:00-04:00
-updated: 2026-07-13T16:07:00-04:00
+updated: 2026-07-14T10:56:00-04:00
 domain: legal
 type: brief
 status: active
@@ -84,8 +84,27 @@ Service (item 3): "a representative will contact you by phone or email between 9
 a.m. and 4:00 p.m. within the next business day." Confirms Lemar placed that call as
 scheduled. No reply needed — informational only, waiting on their callback.
 
+## Update — 2026-07-14 10:56 ET — item 3 lands: a named attorney, referred and ready to call
+
+The Camden County Bar Association's Lawyer Referral Service (item 3) followed its
+2026-07-13 auto-acknowledgment with an actual referral, 2026-07-14 ~10:56 AM ET:
+
+- **Rachael B. Brekke**, McDowell Law PC
+- 106 White Horse Pike, Haddon Heights, NJ 08035
+- Office phone: **856-428-5555**
+- Discounted $30 first-half-hour consult per the CCBA LRS program; fees for
+  representation beyond that are between Lemar and the attorney directly.
+- The email is computer-generated / do-not-reply — the next step is Lemar calling her
+  office directly, mentioning the CCBA LRS referral.
+
+This is the first live, named attorney lead in the whole search (item 1 dead-ended,
+items 2/4/5 status not yet confirmed back). Trial is July 30 — 16 days out. Only Lemar
+can place the call (his voice, outbound), so this is surfaced to #decisions rather than
+staged as a run:manual — same as the original 5-item call plan.
+
 ## Sources
 - slack: #atlas 2026-07-10 14:00:40 ET (task:20260710_eviction-attorney-search)
 - slack: #atlas 2026-07-10 16:58:10 ET — "make sure the calls... are scheduled for Monday"
 - slack: #atlas 2026-07-13 09:26:53 ET — "Rutgers Law Camden Clinic is closed for the Summer"
 - gmail: thread 19f5cfe3809e3c99 — CCBA LRS auto-acknowledgment, 2026-07-13 15:39 ET
+- gmail: thread 19f612127d9477a3 — Rachael B. Brekke / McDowell Law PC referral, 2026-07-14 14:56 UTC (10:56 ET)
