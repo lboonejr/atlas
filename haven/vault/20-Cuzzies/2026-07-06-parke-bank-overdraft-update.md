@@ -1,9 +1,9 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-14T11:30:00-04:00
+updated: 2026-07-14T18:40:00-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [parke-bank, overdraft, nsf]
 source: gmail
 ---
@@ -130,6 +130,16 @@ the original message (gmail thread `19f608fceb87ece9`, draft id
 
 Not sent — sitting in Gmail Drafts only, ready for Lemar to send himself. #decisions
 thread not yet closed (waiting on a 🫡 reaction to close).
+
+## Update 2026-07-14 (3) — sent, thread closed
+Checking Gmail this scan, the drafted Option B reply now shows up in Sent — Lemar sent
+it himself directly from Gmail at 7/14 ~18:34 ET (text matches the draft essentially
+verbatim, no material edits). Treating this as the equivalent of the 🫡 close signal
+(he acted before reacting), same pattern as the 7/10 round. Labeled `Samira/sent` in
+Gmail. Status moved to `done` for this round of returned items — the underlying
+overdraft situation stays open and will likely generate further rounds; the next
+update on this matter should reopen status to `active` and append here rather than
+creating a sibling note.
 
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
