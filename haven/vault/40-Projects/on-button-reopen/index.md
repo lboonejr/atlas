@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-07-12T15:07-04:00
+updated: 2026-07-14T17:45-04:00
 domain: project
 type: reference
 status: active
@@ -52,7 +52,7 @@ Guardrail: tracking & planning only — nothing is paid or contacted automatical
 constants:
   monthly_carry: 31200          # bare-bones crew; excludes cannabis tax
   target_open_days: 14
-  updated_label: "July 12, 2026"
+  updated_label: "July 14, 2026"
 
 tax_gate:
   - id: nj-sales-tax
@@ -204,13 +204,13 @@ items:
     status: past-due
   - id: leafly
     label: "Leafly — menu listing"
-    amount: 279
+    amount: 653.30
     tier: 2
     vendor: "Leafly"
-    account: "Invoice INV00389006, billing period 7/6–7/7"
+    account: "Invoice INV00389006 ($279, billing period 7/6–7/7) — Collections Case #00155715"
     contact: "256-488-4697"
-    status: past-due
-    note: "Amount confirmed 7/10 email pull (#on-button ts 1783719691.083309) — was TBD, now priced."
+    status: collections
+    note: "Escalated to collections 7/14 (Case #00155715, $653.30 — unconfirmed if accumulated balance or separate invoice vs. the $279 logged 7/10). Lemar's call 7/14: let the collections referral proceed under the existing 7/5 hold-until-reopen stance; tracked here per his request, nothing paid/contacted."
 
 # ---- Cannabis vendor arrears — from 7/11 Gmail sweep digest (#on-button ts 1783801467.428439) ----
   - id: cannabist-company
@@ -419,8 +419,8 @@ carry:
 ## Snapshot (human-readable, as of 2026-07-12 afternoon)
 - **Tier 1 (open & operate):** ≈ **$106,790** one-time (incl. $50K inventory restock, $40K
   intercompany loan repay).
-- **Tier 2 (nice-to-have):** ≈ **$109,164** (Leafly now priced at $279; 8 cannabis-vendor
-  lines still TBD) — was ≈$108,885 with Leafly TBD.
+- **Tier 2 (nice-to-have):** ≈ **$109,538** (Leafly escalated to collections 7/14, $653.30 —
+  was $279; 8 cannabis-vendor lines still TBD).
 - **Tier 3 (edge):** ≈ **$17,081.76** priced (Little Leaf Labs $8,331 + EPLI $4,051.12 +
   First Insurance Funding loan #106241219 $4,699.76, confirmed 7/12 as a separate policy,
   not a duplicate; strategic lines TBD).
@@ -430,7 +430,19 @@ carry:
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
 
-## Update — 2026-07-12 (evening)
+## Update — 2026-07-14
+Leafly (`leafly`) escalated to collections: Leafly Support emailed Joshua 7/14 3:46pm ET
+(Case #00155715), account being transferred to their Collections team, **$653.30** — bigger
+than the $279.00 invoice (INV00389006) priced 7/10; unconfirmed whether it's an accumulated
+balance or a separate figure. Raised as a #decisions parent (ts `1784060033.368559`); Lemar
+reacted ✅ + 🫡 and asked in-thread to make sure it's tracked here. `leafly` item updated:
+`amount` 279 → 653.30, `status` past-due → collections, note appended. Tier 2 snapshot total
+recalculated (+$374.30 → **$109,538**). Nothing paid or contacted — Lemar's 7/5 "hold until
+reopen" stance stands; the collections referral proceeds under that hold. Page
+(`on-button-reopen.html`) and canvas (`F0BEN1167GB`) regenerated from this note in the same
+pass. Haven: `haven/vault/20-Cuzzies/2026-07-05-leafly-missed-payment.md`.
+
+### Prior — Update 2026-07-12 (evening)
 Lemar answered the #decisions ask (Option B, reacted on the parent, ts `1783876542.732339`):
 the First Insurance Funding notice (loan #106241219, $4,699.76) is a **separate insurance
 line** financed through the same lender as `epli-reinstate` (#105889646), not a duplicate
