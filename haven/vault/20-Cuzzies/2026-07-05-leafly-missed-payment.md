@@ -1,9 +1,9 @@
 ---
 created: 2026-07-05T08:45-04:00
-updated: 2026-07-12T08:30-04:00
+updated: 2026-07-14T16:05-04:00
 domain: cuzzies
 type: task
-status: parked
+status: awaiting-decision
 tags: [leafly, vendor, billing, wind-down]
 source: gmail
 ---
@@ -37,8 +37,24 @@ thread `19f557d13e112fc9`), asking for a call or Leafly Biz payment. Same accoun
 same already-parked "hold until reopen" decision from 7/5 — not a new ask. Flagged
 as a duplicate rather than filed as a separate note.
 
+## Update 2026-07-14
+Escalation, not a duplicate this time: Leafly Support emailed joshua@cuzziesnj.com
+15:46 ET, Case #00155715, subject "Your Account Is Being Transferred To Collections -
+Pay Today!" — **Amount Due $653.30** (cc kory@highsocietyclubnj.com), stating "due to
+no response, your account will be transferred to our Collections team for review."
+Joshua forwarded it to lemar@cuzziesnj.com at 15:49:59 ET with no added question, just
+his signature — an FYI forward, not a live reply-worthy ask from Joshua himself.
+
+This changes the shape of the 7/5 "hold until reopen" decision: Leafly is no longer
+just re-asking, they're stating collections referral is now underway, and $653.30 is a
+larger figure than the $279.00 invoice logged 7/7 (unconfirmed whether it's an
+accumulated balance or a different invoice). Samira cannot pay or negotiate on Lemar's
+behalf (safety rule). Needs Lemar's call: let the collections referral proceed under
+the existing "hold" stance, or handle before it's referred. Flagged in #decisions.
+
 ## Sources
 - gmail: thread 19f317015779d988 ("You Missed Your Payment With Leafly")
 - slack: #decisions thread, ts 1783253699.967179 · #on-button (C0BEQUW5NPP)
 - gmail: thread `19f3c3d7a0039854`, invoice INV00389006, $279.00, due 2026-07-07
 - gmail: thread `19f557d13e112fc9`, accountsreceivable@leafly.com, 2026-07-12 08:41 ET (2nd collections follow-up, duplicate)
+- gmail: thread `19f622a4a88d7611`, help@leafly.com → joshua@cuzziesnj.com, Case #00155715, $653.30, forwarded to lemar@cuzziesnj.com 2026-07-14
