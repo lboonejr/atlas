@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T14:35:00-04:00
-updated: 2026-07-13T17:25-04:00
+updated: 2026-07-14T08:15-04:00
 domain: cuzzies
 type: log
 status: active
@@ -78,9 +78,34 @@ number, sent by him, not a Samira draft — recorded here as the factual outcome
 un-tailored pending George's response. No further Samira action pending unless George
 replies or Lemar asks for a draft/data-room tailoring.
 
+## Update — 2026-07-14 08:15 ET
+
+Full text of Lemar's 7/13 ~4:55pm ET reply (read via Gmail this scan) actually names
+**two** figures, not just $75K: **$75K near-term** (cures landlord arrears/lease
+termination notice + protects the license ahead of the Jan 7 renewal) and **$600K–$700K
+for "the real conversation"** (retires ~$555K–$665K of obligations — three MCAs, vendor
+AP, landlord arrears, back taxes — and funds a delivery-led relaunch). Lemar also
+corrected his own earlier framing of the margin story with specific POS-data figures
+(discounting 46%→20%, margin 24%→39%, transactions -61%, delivery now 33% of net sales).
+All of this was Lemar writing and sending directly — no Samira draft at any point in
+this exchange.
+
+George replied 2026-07-13 ~5:20pm ET (Outlook/mobile): "I do appreciate the open
+dialogue... let me digest some of this... fyi we also own www.TheJoint.me in Portland
+Maine... it's going on 6 yrs strong so we have something to compare to." No commitment
+either direction, no counter-number — reads as him taking time to think it over and
+signaling he has a comparable operation to benchmark against.
+
+Index row updated to reflect both figures + George's reply; Status stays `Negotiating`.
+Added the sensitive-thread advisory in #investor-pipeline (live financial figures now
+on this thread) and left it with Lemar to keep running directly — no draft posted, no
+numbers restated as anything other than Lemar's own words. Masters remain un-tailored.
+
 ## Sources
 - slack: #investor-pipeline, Joshua Evans, 2026-07-10 13:22:21 ET
 - gmail: thread 19f4d72e50c51f9b, Lemar → george@agreenroof.com, 2026-07-10 15:14 ET
 - gmail: thread 19f5ce6f744b67d8, george@cannabisstop.net → Lemar, "Cuzzies," 2026-07-13 15:14 ET
 - slack: #decisions, card ts 1783973576.160979 (closed 🫡, no number given)
-- gmail: thread 19f5ce6f744b67d8, Lemar → george@cannabisstop.net, 2026-07-13 ~16:55 ET ($75K ask, sent directly by Lemar)
+- gmail: thread 19f5ce6f744b67d8, Lemar → george@cannabisstop.net, 2026-07-13 ~16:55 ET ($75K + $600K-$700K figures, sent directly by Lemar)
+- gmail: thread 19f5ce6f744b67d8, george@cannabisstop.net → Lemar, 2026-07-13 ~17:20 ET ("let me digest...TheJoint.me" reply)
+- slack: #investor-pipeline, thread ts 1783973569.032629, Samira advisory reply 2026-07-14
