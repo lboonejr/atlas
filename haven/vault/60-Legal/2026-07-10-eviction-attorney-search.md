@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T14:25:00-04:00
-updated: 2026-07-14T10:56:00-04:00
+updated: 2026-07-14T17:53:00-04:00
 domain: legal
 type: brief
 status: active
@@ -101,6 +101,14 @@ This is the first live, named attorney lead in the whole search (item 1 dead-end
 items 2/4/5 status not yet confirmed back). Trial is July 30 — 16 days out. Only Lemar
 can place the call (his voice, outbound), so this is surfaced to #decisions rather than
 staged as a run:manual — same as the original 5-item call plan.
+
+## Update — 2026-07-14 17:53 ET
+
+Lemar replied in-thread on the #decisions card (no reaction, card stays open): "I don't
+have the $30 right now for the consult fee, I'll have to make the call [Friday]." Timing
+note only — the $30 discounted-consult fee is the blocker, not the referral itself.
+Trial is July 30, so a Friday call still leaves runway. No action for Samira here;
+self-tracking until Lemar places the call or reports back.
 
 ## Sources
 - slack: #atlas 2026-07-10 14:00:40 ET (task:20260710_eviction-attorney-search)
