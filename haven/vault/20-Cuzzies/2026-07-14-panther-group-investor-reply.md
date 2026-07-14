@@ -1,6 +1,6 @@
 ---
 created: 2026-07-14T08:15-04:00
-updated: 2026-07-14T13:03-04:00
+updated: 2026-07-14T17:14-04:00
 domain: cuzzies
 type: log
 status: active
@@ -37,10 +37,27 @@ draft (`r7803095677530942017`) and confirm a call time; no calendar event create
 per the skill, an event is only created once a specific time is confirmed, with no
 external invitees.
 
+## Update 2026-07-14 (~17:14 ET)
+Lemar sent his own reply directly from Gmail at 2026-07-14T20:18:20Z (~4:18pm ET),
+bypassing the staged draft above (`r7803095677530942017`, which is now superseded and
+may be discarded). His own words: reaffirmed the ~$500K figure only, said "structure and
+terms we can work out together, nothing is set in stone yet," pointed Michael to the
+data room folder, and asked Michael to propose times so he could "get it on the
+calendar." No dollar terms or valuation were committed beyond the original $500K figure
+Lemar had already given in June.
+
+Action taken: index status moved **Working → Sent**; Next step updated to reflect the
+direct send and that we're awaiting Michael's reply/times before any further drafting.
+Gmail thread `19ed22a918463463` labeled `Samira/investor-sent`. Posted a threaded update
+to #investor-pipeline with headline :large_green_circle:. No calendar event created —
+Michael has not yet proposed a time.
+
 ## Sources
 - gmail: thread `19ed22a918463463` ("Reconnecting: Cuzzie's Dispensary / NJ Cannabis") —
   Lemar's original 2026-06-16 outreach, Michael's reply 2026-07-14 (message
-  `19f5e86200192b7a`); Samira's draft reply `r7803095677530942017`
+  `19f5e86200192b7a`); Samira's draft reply `r7803095677530942017` (now superseded);
+  Lemar's own direct reply 2026-07-14 (message `19f6247cdf43ec7b`)
 - drive: data room https://drive.google.com/drive/folders/1mOyt8U3XUxQyPDQpvtM60E7xuTHThpwc
-- slack: #investor-pipeline https://newworkspace-zlb6313.slack.com/archives/C0BCCUKEUQ2/p1784031383726409
+- slack: #investor-pipeline https://newworkspace-zlb6313.slack.com/archives/C0BCCUKEUQ2/p1784031383726409 ·
+  update https://newworkspace-zlb6313.slack.com/archives/C0BCCUKEUQ2/p1784063706521249?thread_ts=1784031383.726409&cid=C0BCCUKEUQ2
 - haven: `haven/vault/40-Projects/investor-pipeline/index.md`
