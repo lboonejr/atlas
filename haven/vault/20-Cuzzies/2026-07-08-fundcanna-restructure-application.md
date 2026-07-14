@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T14:13-04:00
-updated: 2026-07-13T14:45-04:00
+updated: 2026-07-14T12:30-04:00
 domain: cuzzies
 type: task
 status: active
@@ -85,6 +85,26 @@ confirmed ("Perfect, I will reach out then.").
 No draft or action needed from Samira here — Josh is driving this thread himself and
 already has the call locked in. Index status moved Sent → Negotiating pending the
 outcome of that call. Gmail thread labeled `Samira/investor` + `Samira/seen`.
+
+## Update 2026-07-14 — call held, specific improvement criteria given
+Sal Castaneda emailed Joshua (cc Lemar) 2026-07-14 ~12:19pm ET, "Next Steps &
+Positioning for Future Capital" (gmail thread `19f616dbaabdc60f`) following up on the
+11:00 AM ET call. Not an approval and not a hard no — a "come back once these move"
+holding pattern, with specific criteria:
+
+- **Joshua:** FICO 584, $7,463 in past-due accounts, multiple collections (Synchrony,
+  Apple Card, Geico), extensive late-payment history.
+- **Lemar:** FICO 527, $1,836 in past-due accounts, a Verizon collection + one
+  charge-off, limited revolving credit history. Sal suggests opening two revolving
+  accounts once past-due balances are current.
+- **Business side:** wants monthly deposit volume back to $100K+, average daily
+  balance improved, and continued paydown of the existing MCA obligations before
+  revisiting.
+
+No ask, no reply needed — informational, and nothing for Samira to draft (this is
+personal credit/financial detail, Lemar and Josh's to act on directly, not something
+staged as a task). Index status moved Negotiating → Parked pending those specific
+triggers ("the coming months"). Gmail thread labeled `Samira/seen` + `Samira/investor`.
 
 ## Sources
 - gmail: thread 19f42d51ae61c0c0 ("FundCanna - Next Steps | Cuzzie's Application")
