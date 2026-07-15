@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-07-15T16:15-04:00
+updated: 2026-07-15T16:35-04:00
 domain: project
 type: reference
 status: active
@@ -349,6 +349,15 @@ items:
     contact: "Kathy@freshcannabis.co"
     status: past-due
     note: "Open wholesale balance, $3,262.06 confirmed by Lemar 7/15 (no invoice/statement email found). 7/15: Samira sent Kathy a draft reply (unsent, in Gmail Drafts) noting Cuzzie's temporary closure and that the balance hasn't been forgotten."
+  - id: primo-brands-readyrefresh
+    label: "Primo Brands (Ready Refresh) — water/coffee delivery"
+    amount: 129.94
+    tier: 2
+    vendor: "Primo Brands / Ready Refresh"
+    account: "Acct 6710233346 · final notice before collections"
+    contact: "1-800-274-5282"
+    status: past-due
+    note: "Logged 7/15 per Lemar's in-thread ask (#decisions ts 1784136181.354949). Small balance, not a reopen blocker — pay-or-lapse call still open in #decisions."
 
 # ---- TIER 3 — Competitive edge (restore / advantage) ----
   - id: little-leaf-labs
@@ -428,8 +437,9 @@ carry:
 ## Snapshot (human-readable, as of 2026-07-15 afternoon)
 - **Tier 1 (open & operate):** ≈ **$107,995** one-time (incl. $50K inventory restock, $40K
   intercompany loan repay; ADT reconciled to $2,842.83, was $1,637.84).
-- **Tier 2 (nice-to-have):** ≈ **$112,800** (Leafly escalated to collections 7/14, $653.30 —
-  was $279; Fresh Grow priced 7/15 at $3,262.06 — was TBD; 8 cannabis-vendor lines still TBD).
+- **Tier 2 (nice-to-have):** ≈ **$112,929.94** (Leafly escalated to collections 7/14, $653.30 —
+  was $279; Fresh Grow priced 7/15 at $3,262.06 — was TBD; Primo Brands/Ready Refresh $129.94
+  added 7/15; 8 cannabis-vendor lines still TBD).
 - **Tier 3 (edge):** ≈ **$17,081.76** priced (Little Leaf Labs $8,331 + EPLI $4,051.12 +
   First Insurance Funding loan #106241219 $4,699.76, confirmed 7/12 as a separate policy,
   not a duplicate; strategic lines TBD).
@@ -438,6 +448,16 @@ carry:
 - Reality check: opening ($106.8K) + a 3-month cushion (~$93.6K carry) ≈ **$200K** before
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
+
+## Update — 2026-07-15 (Primo Brands / Ready Refresh)
+Added **Primo Brands (Ready Refresh)** (`primo-brands-readyrefresh`) as a new Tier 2 line —
+water/coffee delivery, account 6710233346, **$129.94** past due, final notice before
+collections. Lemar asked in-thread (#decisions ts `1784136181.354949`, replied "Can we
+make sure that this gets logged on the #on-button?") to track it here. Small balance, not
+a reopen blocker. Tier 2 total $112,800 → **≈$112,929.94** (+$129.94). Nothing paid or
+contacted — pay-or-lapse decision remains open in #decisions. Page (`on-button-reopen.html`)
+and canvas (`F0BEN1167GB`) regenerated from this note in the same pass. Haven:
+`haven/vault/20-Cuzzies/2026-07-15-primo-brands-readyrefresh-overdue.md`.
 
 ## Update — 2026-07-15 (ADT reconciliation)
 Lemar confirmed in-thread (#decisions ts `1784128401.635159`, replied "Yes can you update
