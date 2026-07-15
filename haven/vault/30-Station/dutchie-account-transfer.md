@@ -1,6 +1,6 @@
 ---
 created: 2026-06-22T00:00-04:00
-updated: 2026-07-07T17:46:00-04:00
+updated: 2026-07-15T18:30:00-04:00
 domain: station
 type: note
 status: active
@@ -54,5 +54,12 @@ Cuzzies, I will get the temp 2 month closure processed for you!" She wants a
 here. Open question is unchanged: Lemar still needs to decide Cuzzie's path
 forward before texting her.
 
+## Update 2026-07-15 (18:30 ET, credit confirmed)
+Dutchie support (ticket 672201) confirmed: "the temporary closure and credit request
+for July and August have been approved" — 2 months of Dutchie billing credited, the
+Cuzzie's location will not be deactivated. Informational only, nothing for Lemar to
+action; the open question (how The Station's own Dutchie account/catalog access
+proceeds if Cuzzie's closes for good) is unchanged.
+
 ## Sources
-- gmail: thread 19f1f7df3f295ccc (Dutchie Support Request 672201, 2026-07-01 to 2026-07-07)
+- gmail: thread 19f1f7df3f295ccc (Dutchie Support Request 672201, 2026-07-01 to 2026-07-15)
