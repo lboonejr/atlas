@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-13T18:20:00-04:00
+updated: 2026-07-15T12:00:00-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -188,10 +188,25 @@ No reply from Jason Gil yet as of this check. The #decisions thread (ts
 closes it when ready. Status stays **awaiting-decision** — trial still July 30, no
 number/path agreed yet.
 
+## Update 2026-07-15 — the call happened; Jason names a number, Lemar holds the line
+
+Lemar posted in #atlas: the call with Jason Gil took place. Jason said the arrears has
+reached a level that's affecting Harrison Acquisitions' own business, which is why they
+took it to court, and asked if there's **anything** Lemar could pay — even $10,000 the
+week of the July 30 trial would make a difference. Lemar told him Cuzzie's is currently
+in talks to sell and all that's needed is time.
+
+No payment made or committed — Lemar held to the same position as his 7/13 reply
+(no lump sum available, resolution is coming via the sale process). Nothing for Samira
+to draft or send; this is Lemar's own conversation, captured here for the record.
+Status stays **awaiting-decision** — trial still July 30, no number/path agreed, and
+Jason's $10K figure is now the lowest ask on record (down from $20K).
+
 ## Sources
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
 - gmail: thread 19f3e00cb68ac2cb (Jason Gil reply, 2026-07-09 20:02:55 UTC, message id 19f487a33d5691b8; unverified draft r8556250896867529553 found here 2026-07-11; Lemar's own direct reply 2026-07-13 12:00 ET message id 19f5b593277f5f33; Jason Gil's follow-up 2026-07-13 15:58:55 ET message id 19f5c34485b54791)
 - slack: #atlas, Don Frunt, 2026-07-10 08:52:53 ET (court-filing question)
+- slack: #atlas, Don Frunt, 2026-07-15 07:53:59 ET ($10K call outcome)
 - slack: #decisions, Option D reply, message ts 1783688983.630169 (Lemar's checkmark, 2026-07-10 09:09:43 ET)
 - slack: #decisions, thread ts 1783628237.329439, closed via 🫡 on ts 1783773116.307949 (2026-07-12)
 - web: NJ Courts Directive #06-04, "Statewide Adjournment Procedure for Civil Trials and Arbitrations" — https://www.njcourts.gov/attorneys/directives/06-04
