@@ -1,6 +1,6 @@
 ---
 created: 2026-07-05T20:40:27-04:00
-updated: 2026-07-07T16:20:00-04:00
+updated: 2026-07-15T12:00:00-04:00
 domain: personal
 type: brief
 status: active
@@ -55,6 +55,16 @@ event yet, so logging it here as part of the same move-in matter rather than as 
 note. This is a task only Lemar can execute (physical repair work); no reply or
 Samira-side action possible. Flagging the Jul 8 date so it doesn't slip.
 
+## Update 2026-07-15 — move-in rescheduled a week (water leak above the apartment)
+
+Lemar posted in #atlas: a leak in the unit above Mom's new apartment means she'll have
+to wait about a week before she can actually move in — the planned 2026-07-15 move-in
+date no longer holds. No number attached to the delay beyond "a week"; the movers/
+storage-transfer sequencing sketched above will need to shift with it once a firm new
+date is known. Nothing for Samira to action — informational, tracked here so the
+delay doesn't get lost against the original 7/15–7/18 plan.
+
 ## Sources
 - slack: #atlas 2026-07-05 20:40 ET
 - gmail: thread `19f3e311273ad2fd` (Google Calendar reminder, "Repair back room before mom's move-in July 15")
+- slack: #atlas 2026-07-15 07:58 ET (move-in reschedule, leak above apartment)
