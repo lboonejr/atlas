@@ -1,9 +1,9 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-14T18:40:00-04:00
+updated: 2026-07-15T12:00:00-04:00
 domain: cuzzies
 type: task
-status: done
+status: active
 tags: [parke-bank, overdraft, nsf]
 source: gmail
 ---
@@ -141,6 +141,18 @@ overdraft situation stays open and will likely generate further rounds; the next
 update on this matter should reopen status to `active` and append here rather than
 creating a sibling note.
 
+## Update 2026-07-15 — one more returned item, $280.00, no new ask
+
+Christopher Cabezas emailed again (7/15 ~11:58 AM ET, same thread as the 7/14
+exchange, subject "secure: RE: secure: Cuzzie's Dispensary & Delivery LLC"):
+one more item returned — External Withdrawal $280.00, NovusCapital II. Unlike
+the 7/10 and 7/14 rounds, this one does **not** invite a reply ("I hope things
+work out soon with the business" only, no "let us know if you have
+questions") and Lemar's 7/14 18:12 ET reply to Christopher is only a day old.
+Reopening status to `active` to reflect the ongoing saga, but treating this as
+a log-only update per the same judgment used on 7/7 and 7/8 — no new
+#decisions card, nothing drafted. Labeled `Samira/seen` in Gmail.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -155,5 +167,6 @@ creating a sibling note.
   2026-07-10 12:32 ET; reply drafted `r9148387850838995557`, sent by Lemar directly
   2026-07-10 14:48:01 UTC)
 - gmail: thread `19f608fceb87ece9` (Christopher Cabezas, 3 more returned items
-  $428.49, 2026-07-14 08:17 ET)
+  $428.49, 2026-07-14 08:17 ET; same thread continues 2026-07-15 with message
+  `19f65a47fbfa661a`, 1 more returned item $280.00)
 - slack: #decisions message ts `1783689606.144269` (parent) / `1783689609.847929` (Option A, ✅ picked) / `1783700440.292759` (closed, confirmed sent)
