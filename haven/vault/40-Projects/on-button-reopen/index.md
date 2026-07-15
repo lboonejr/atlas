@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-07-15T11:34-04:00
+updated: 2026-07-15T16:15-04:00
 domain: project
 type: reference
 status: active
@@ -93,12 +93,13 @@ items:
     status: past-due
   - id: adt
     label: "ADT Security"
-    amount: 1637.84
+    amount: 2842.83
     tier: 1
     vendor: "ADT"
-    account: "405075455 · 90 days past due"
+    account: "405075455 · due 8/4/2026 (supersedes prior $1,637.84 90-days-past-due statement)"
     contact: "(833) 320-1859"
     status: past-due
+    note: "Lemar confirmed 7/15 (#decisions, ts 1784128401.635159) this $2,842.83 statement is the current balance on the same account — tracked line updated."
   - id: nst
     label: "National Secure Transport — cash pickup"
     amount: 868.60
@@ -424,9 +425,9 @@ carry:
   - {label: "Veriscan ID verification", amount: 30}
 ```
 
-## Snapshot (human-readable, as of 2026-07-15 late morning)
-- **Tier 1 (open & operate):** ≈ **$106,790** one-time (incl. $50K inventory restock, $40K
-  intercompany loan repay).
+## Snapshot (human-readable, as of 2026-07-15 afternoon)
+- **Tier 1 (open & operate):** ≈ **$107,995** one-time (incl. $50K inventory restock, $40K
+  intercompany loan repay; ADT reconciled to $2,842.83, was $1,637.84).
 - **Tier 2 (nice-to-have):** ≈ **$112,800** (Leafly escalated to collections 7/14, $653.30 —
   was $279; Fresh Grow priced 7/15 at $3,262.06 — was TBD; 8 cannabis-vendor lines still TBD).
 - **Tier 3 (edge):** ≈ **$17,081.76** priced (Little Leaf Labs $8,331 + EPLI $4,051.12 +
@@ -437,6 +438,14 @@ carry:
 - Reality check: opening ($106.8K) + a 3-month cushion (~$93.6K carry) ≈ **$200K** before
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
+
+## Update — 2026-07-15 (ADT reconciliation)
+Lemar confirmed in-thread (#decisions ts `1784128401.635159`, replied "Yes can you update
+the tracked line?") that the new **ADT** statement ($2,842.83, due 8/4/2026) supersedes the
+prior $1,637.84 90-days-past-due figure on the same account (405075455). `adt` item
+updated: `amount` 1637.84 → 2842.83, account/note updated. Tier 1 total $106,790 →
+**≈$107,995** (+$1,204.99). Nothing paid or contacted. Page (`on-button-reopen.html`) and
+canvas (`F0BEN1167GB`) regenerated from this note in the same pass.
 
 ## Update — 2026-07-15 (afternoon)
 Lemar confirmed the **Fresh Grow** balance: **$3,262.06**. `fresh-grow` item updated:
