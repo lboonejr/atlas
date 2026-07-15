@@ -31,7 +31,7 @@ the record itself. **Done = a filed Haven note.**
 
 ## DRY_RUN flag (top of every run)
 
-`DRY_RUN = true`
+`DRY_RUN = false`
 
 - While `DRY_RUN` is **true**: do PART A and PART B exactly as written but **take no
   irreversible action** — do not archive, do not label, do not trash. Instead collect the
