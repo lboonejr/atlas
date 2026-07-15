@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-07-14T17:45-04:00
+updated: 2026-07-15T11:03-04:00
 domain: project
 type: reference
 status: active
@@ -340,6 +340,14 @@ items:
     vendor: "Niche, LLC"
     account: "Statement 6/5"
     status: tbd
+  - id: fresh-grow
+    label: "Fresh Grow"
+    amount: null
+    tier: 2
+    vendor: "Fresh Grow (freshcannabis.co)"
+    contact: "Kathy@freshcannabis.co"
+    status: tbd
+    note: "Open wholesale balance — no invoice/statement found, only recurring menu emails. 7/15: Samira sent Kathy a draft reply (unsent, in Gmail Drafts) noting Cuzzie's temporary closure and that the balance hasn't been forgotten. Add the real figure here once known."
 
 # ---- TIER 3 — Competitive edge (restore / advantage) ----
   - id: little-leaf-labs
@@ -416,11 +424,11 @@ carry:
   - {label: "Veriscan ID verification", amount: 30}
 ```
 
-## Snapshot (human-readable, as of 2026-07-12 afternoon)
+## Snapshot (human-readable, as of 2026-07-15 morning)
 - **Tier 1 (open & operate):** ≈ **$106,790** one-time (incl. $50K inventory restock, $40K
   intercompany loan repay).
 - **Tier 2 (nice-to-have):** ≈ **$109,538** (Leafly escalated to collections 7/14, $653.30 —
-  was $279; 8 cannabis-vendor lines still TBD).
+  was $279; 9 cannabis-vendor lines still TBD, incl. Fresh Grow added 7/15).
 - **Tier 3 (edge):** ≈ **$17,081.76** priced (Little Leaf Labs $8,331 + EPLI $4,051.12 +
   First Insurance Funding loan #106241219 $4,699.76, confirmed 7/12 as a separate policy,
   not a duplicate; strategic lines TBD).
@@ -429,6 +437,18 @@ carry:
 - Reality check: opening ($106.8K) + a 3-month cushion (~$93.6K carry) ≈ **$200K** before
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
+
+## Update — 2026-07-15
+Added **Fresh Grow** (`fresh-grow`, freshcannabis.co, contact Kathy@freshcannabis.co) as a
+new Tier 2 cannabis-vendor arrears line, `amount: null` — no invoice or statement email was
+found for them, only recurring wholesale menu blasts, so the balance is TBD until Lemar or
+a vendor statement supplies it. Context: earlier 7/15, Samira saved (unsent) a Gmail draft
+reply to Kathy letting her know Cuzzie's is temporarily closed, that reopening is the
+priority, and that the balance hasn't been forgotten (Haven:
+`haven/vault/00-Inbox/2026-07-15-fresh-grow-closure-balance-draft.md`). Tier 2 TBD count
+9 → the dollar total is unchanged since the new line has no figure yet. Page
+(`on-button-reopen.html`) and canvas (`F0BEN1167GB`) regenerated from this note in the
+same pass.
 
 ## Update — 2026-07-14
 Leafly (`leafly`) escalated to collections: Leafly Support emailed Joshua 7/14 3:46pm ET
