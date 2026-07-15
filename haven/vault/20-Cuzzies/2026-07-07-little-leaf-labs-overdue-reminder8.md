@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T09:15-04:00
-updated: 2026-07-07T15:15-04:00
+updated: 2026-07-15T12:00:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -61,6 +61,18 @@ to Accounting@littleleaflabs.net cc Bronnie@littleleaflabs.net. Not sent —
 sitting in Gmail Drafts for Lemar to review/send. Applied `Samira/drafted`
 label to the thread.
 
+## Update 2026-07-15 — same Reminder 8 thread resent, no new figures
+
+Accounting@littleleaflabs.net (Dhruvi) sent the same thread again (7/15 ~07:23 ET,
+gmail thread `19f3bff3a2daa78a`) — identical content to the 7/7 Reminder 8: same two
+invoices (INV-0000762, INV-0000889), same **$8,331.00** total, same collections/state
+notification threat, no new figure or deadline. Reads as the vendor's automated
+cadence continuing rather than a considered response to anything Lemar has sent.
+No confirmation found that the 7/7 Option D draft (`r2984417775050992038`, "nothing
+has changed since my July 1 update") was ever sent — still worth Lemar's own check
+next time he's in Gmail Drafts. Nothing new to draft or decide this pass; logging
+only. Labeled `Samira/seen` in Gmail.
+
 ## Sources
 - gmail: thread `19f3bff3a2daa78a`, message `19f3bff3a2daa78a`, 2026-07-07
   09:53 ET, from Accounting@littleleaflabs.net (Reminder 8)
@@ -74,3 +86,5 @@ label to the thread.
 - slack: #decisions thread, TS 1783430193.461359 (approval reply
   2026-07-07 14:55 ET)
 - gmail: draft `r2984417775050992038` (created 2026-07-07 15:12 ET)
+- gmail: thread `19f3bff3a2daa78a`, message `19f64a8950e00949`, 2026-07-15 07:23 ET
+  (same Reminder 8 thread resent, no new content)
