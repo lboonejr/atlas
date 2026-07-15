@@ -1,6 +1,6 @@
 ---
 created: 2026-07-15T13:07-04:00
-updated: 2026-07-15T13:08-04:00
+updated: 2026-07-15T13:20-04:00
 domain: cuzzies
 type: log
 status: done
@@ -32,5 +32,21 @@ the pass draft and send only this one, or tell Samira which to keep.
 Not added to the investor-pipeline index — this is unsolicited inbound, not yet a deal
 Lemar is actively pursuing; revisit if Lucas's follow-up turns into a live ask.
 
+## Update 2026-07-15 13:20 ET — hourly scan (PART D email loop): draft verified missing, recreated
+
+This run checked the thread (`19f66bc8923ab429`) and Gmail Drafts directly before
+triaging it as "new" mail: `in:draft` returned zero drafts mailbox-wide, and the thread
+itself showed only the single original inbound message — neither of the two drafts this
+note describes was actually present. Not asserting why (draft-creation may have failed
+silently in the earlier session); recording what was verified rather than trusting the
+note text at face value.
+
+Since the underlying decision ("hear more, no financials, no application, closure
+context up front") was already made and is low-risk, re-drafted it rather than
+re-opening it as a fresh decision: new Gmail draft id `r6019696564463629326`, threaded
+on message `19f66bc8923ab429`, same content described above. Thread labeled
+`Samira/seen` + `Samira/drafted`. This is now the only draft on this matter, sitting in
+Gmail Drafts, unsent, for Lemar to review/edit/send himself.
+
 ## Sources
-- gmail: thread `19f66bc8923ab429` — "Fwd: We pick Cuzzie'S Dispensary & Delivery"
+- gmail: thread `19f66bc8923ab429` — "Fwd: We pick Cuzzie'S Dispensary & Delivery" — draft `r6019696564463629326`
