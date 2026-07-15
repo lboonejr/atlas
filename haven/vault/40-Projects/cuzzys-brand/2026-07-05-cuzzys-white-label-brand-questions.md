@@ -1,6 +1,6 @@
 ---
 created: 2026-06-24T18:15-04:00
-updated: 2026-07-12T11:10:00-04:00
+updated: 2026-07-15T18:15:00-04:00
 domain: project
 type: note
 status: active
@@ -64,7 +64,12 @@ Lemar: The Station wasn't directly involved in this brand. It should be seen
 as a distribution channel for the product, and to a degree, a way to begin
 collecting consumer/market feedback.
 
-93 of 100 questions remain unanswered — no rush, Lemar answers as more comes to
+**Q12 — Which product categories would Cuzzy's lead with first?** (2026-07-15,
+18:05 ET)
+Lemar: Focus on the value product first, then work up to mid-tier and
+high-quality tiers.
+
+92 of 100 questions remain unanswered — no rush, Lemar answers as more comes to
 him.
 
 ## Note on this record
@@ -93,6 +98,10 @@ Lemar answered Q7 (Black-owned positioning, inclusive DNA) and Q8 (The Station's
 role as distribution channel + feedback source, not brand-integrated) in-thread.
 No fork in either — both logged straight into "Answers so far" above.
 
+## Update 2026-07-15 — Q12 logged
+Lemar answered Q12 (value tier first, then mid-tier/high-quality) in-thread. No
+fork — logged straight into "Answers so far" above.
+
 ## Sources
 - slack: #cuzzys-brand, 100-questions post, 2026-06-24 18:15 ET (ts 1782339354.273549)
 - slack: #cuzzys-brand thread, Lemar's Q1/Q2 answers 2026-07-05 13:14 ET
@@ -104,3 +113,4 @@ No fork in either — both logged straight into "Answers so far" above.
 - slack: #cuzzys-brand thread, Lemar's Q6 answer 2026-07-08 20:58 ET (ts 1783558691.293299)
 - slack: #cuzzys-brand thread, Lemar's Q7 answer 2026-07-12 10:33:58 ET (ts 1783866838.178689)
 - slack: #cuzzys-brand thread, Lemar's Q8 answer 2026-07-12 10:35:24 ET (ts 1783866924.366209)
+- slack: #cuzzys-brand thread, Lemar's Q12 answer 2026-07-15 18:05:31 ET (ts 1784153131.082909)
