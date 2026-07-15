@@ -1,9 +1,9 @@
 ---
 created: 2026-07-09T12:29-04:00
-updated: 2026-07-12T12:35-04:00
+updated: 2026-07-15T12:00:00-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [regus, iwg, office, wind-down, mount-laurel]
 source: gmail
 due: 2026-07-13T09:00-04:00
@@ -46,3 +46,13 @@ today (Sunday 7/12). Physical task, nothing for Samira to do beyond tracking; de
 and calendar reminder left as-is since the 7/13 date is still the hard commitment Ali is
 expecting confirmation against. Will close once Lemar confirms it's cleared and keys are
 back with Ali.
+
+## Update 2026-07-15 — cleared out, item closed
+
+Lemar posted in #atlas: "I was able to clear out my office so we can close that item."
+Marking `status: done` — Ali Coffey confirmation is still Lemar's to send directly
+(Samira doesn't email on his behalf), but the physical clear-out itself is complete.
+Calendar reminder retires on the next scan.
+
+## Sources (cont.)
+- slack: #atlas 2026-07-15 07:55 ET (clear-out confirmed complete)
