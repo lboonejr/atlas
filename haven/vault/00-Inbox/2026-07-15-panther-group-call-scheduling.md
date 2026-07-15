@@ -1,6 +1,6 @@
 ---
 created: 2026-07-15T13:15-04:00
-updated: 2026-07-15T13:15-04:00
+updated: 2026-07-15T13:20-04:00
 domain: cuzzies
 type: log
 status: done
@@ -26,6 +26,17 @@ existing thread pattern. No terms or figures discussed — just scheduling.
 external invitees per the investor guards), and update the
 [[investor-pipeline]] index row.
 
+## Update 2026-07-15 13:20 ET — hourly scan (PART D email loop): reply was actually sent, not drafted
+
+This run checked the thread (`19ed22a918463463`) before treating Michael's reply as new
+mail. No draft matching this note's description exists (`in:draft` is empty
+mailbox-wide) — but the thread shows Lemar sent a real reply directly at 2026-07-15
+17:15:15 UTC (message `19f66c6874a2fec6`, to michael@thepanthergroup.co, cc
+joshua@cuzziesnj.com), 14 minutes after Michael's question. Same pattern as the Harrison
+Acquisitions thread — Lemar replying straight from Gmail rather than through a Samira
+draft. Matter is resolved either way: no action needed. Thread labeled `Samira/seen`
+(already carried `Samira/investor` from earlier messages).
+
 ## Sources
-- gmail: thread `19ed22a918463463` — "Reconnecting: Cuzzie's Dispensary / NJ Cannabis"
+- gmail: thread `19ed22a918463463` — "Reconnecting: Cuzzie's Dispensary / NJ Cannabis" — Lemar's direct reply `19f66c6874a2fec6` (2026-07-15 17:15:15Z)
 - vault: haven/vault/40-Projects/investor-pipeline/index.md
