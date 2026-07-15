@@ -1,13 +1,12 @@
 ---
 created: 2026-07-09T12:29-04:00
-updated: 2026-07-15T12:00:00-04:00
+updated: 2026-07-15T09:11:00-04:00
 domain: cuzzies
 type: task
 status: done
 tags: [regus, iwg, office, wind-down, mount-laurel]
 source: gmail
 due: 2026-07-13T09:00-04:00
-calendar_event_id: nhu7id7ltfluav68lbgvk0dq0c
 ---
 
 # Regus (Mount Laurel) office — clear out and return keys by Monday
@@ -56,3 +55,7 @@ Calendar reminder retires on the next scan.
 
 ## Sources (cont.)
 - slack: #atlas 2026-07-15 07:55 ET (clear-out confirmed complete)
+
+## Update 2026-07-15 09:11 ET — calendar-sync retired the reminder
+Reminder-calendar event `nhu7id7ltfluav68lbgvk0dq0c` cancelled (status: done, per the
+calendar-sync rule); `calendar_event_id` cleared from frontmatter.
