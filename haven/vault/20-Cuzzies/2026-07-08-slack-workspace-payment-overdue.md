@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T18:10-04:00
-updated: 2026-07-16T11:00-04:00
+updated: 2026-07-16T09:05-04:00
 domain: cuzzies
 type: task
 status: active
@@ -39,3 +39,10 @@ shared channels disconnected permanently, guests disconnected, only the most rec
 10,000 messages viewable, 5 GB file cap. Decision was already made (switch to Free) but
 the manual click-through in Slack's billing admin still hasn't happened. Nudging in
 #decisions since there's now a hard date; no autonomous billing action taken.
+
+## Update 2026-07-16 (close)
+Lemar reacted 🫡 on the #decisions nudge card — reading this as "I've got the
+click-through, stop tracking it here." No confirmation received that the Slack billing
+admin page was actually clicked through, so `status` stays `active` rather than `done`
+— if the downgrade notice recurs (deadline ~7/22) it resurfaces on its own. No payment
+action taken by Samira.
