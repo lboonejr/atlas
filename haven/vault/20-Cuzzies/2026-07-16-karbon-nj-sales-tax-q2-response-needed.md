@@ -1,12 +1,13 @@
 ---
 created: 2026-07-16T14:10-04:00
-updated: 2026-07-16T15:00-04:00
+updated: 2026-07-16T15:15-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [nj-sales-tax, greenbooks, karbon, tax-gate, wind-down]
 source: gmail
 due: 2026-07-20T09:00-04:00
+calendar_event_id: t5mqt1d85canl5ugdgl12hcrec
 ---
 
 # Karbon request — Q2 2026 NJ sales tax filing needs Lemar's response by Monday
