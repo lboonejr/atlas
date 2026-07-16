@@ -1,6 +1,6 @@
 ---
 created: 2026-07-16T14:10-04:00
-updated: 2026-07-16T15:15-04:00
+updated: 2026-07-16T15:35-04:00
 domain: cuzzies
 type: task
 status: active
@@ -29,5 +29,22 @@ Tiffany, and Richard Wyse (@greenbookscpa.com), not huljevgroup.com.
 Needs Lemar directly: logging into the Karbon portal is not something Samira can do,
 and confirming/authorizing a tax filing is a judgment call, not a draft-and-send.
 
+## Update 2026-07-16 (PART D email loop — Lemar asked us to check for a portal link)
+Searched Gmail for a Q2 Karbon portal link. Jessica's message is plain text with no
+button/link embedded — nothing to click there. The only Karbon portal links on file
+are from the Q1 2026 GreenBooks checklist reminders (Reminder #1–5, mgavigan@greenbookscpa.com,
+2026-04-18 through 2026-04-22): domain `clientportal.karbonhq.com`, tenant key
+`3tGL7RHfCGdX` (GreenBooks' Karbon tenant), each link a checklist-item-specific token
+("Confirm date, amount and bank of NJ State Sales Tax Payment" — the Q1 item). No
+GreenBooks/Karbon email with a fresh Q2 checklist link has landed in the inbox yet as
+of this scan. Those old tokens are almost certainly scoped/expired for the Q1 item, not
+usable for Q2. Likely path: either a Q2 checklist email hasn't gone out yet (worth
+following up with Jessica/GreenBooks directly), or Lemar can try logging into
+`https://clientportal.karbonhq.com` directly with his account rather than waiting on a
+link. Posted this finding back in the #decisions thread; no email drafted (nothing to
+reply to — this needs a portal login, not a reply).
+
 ## Sources
 - gmail: thread 19f6c18133f23ab2 ("Q2 2026 NJ Sales Tax", jessica@huljevgroup.com, 2026-07-16)
+- gmail: thread 19db583a88878413 ("Reminder #5 - Q1 2026 NJ Sales Tax Return", mgavigan@greenbookscpa.com, 2026-04-22) — Karbon portal link pattern reference
+- slack: #decisions thread on `2026-07-16 14:11:20 EDT` card, Lemar's follow-up question `2026-07-16 14:13:51 EDT`
