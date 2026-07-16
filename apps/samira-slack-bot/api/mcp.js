@@ -1,11 +1,19 @@
-import express from "express";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
-import { buildServer } from "./lib/buildServer.js";
+import { buildServer } from "../lib/buildServer.js";
 
-const app = express();
-app.use(express.json());
-
-app.post("/mcp", async (req, res) => {
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    res.status(405).json({
+      error: "Method not allowed. This endpoint only accepts POST (used by MCP clients).",
+    });
+    return;
+  }
+  if (!process.env.SLACK_BOT_TOKEN) {
+    res.status(500).json({
+      error: "Missing SLACK_BOT_TOKEN environment variable. Set it in Vercel's Project Settings → Environment Variables.",
+    });
+    return;
+  }
   try {
     const server = buildServer();
     const transport = new StreamableHTTPServerTransport({ sessionIdGenerator: undefined });
@@ -25,13 +33,4 @@ app.post("/mcp", async (req, res) => {
       });
     }
   }
-});
-
-app.get("/", (_req, res) => {
-  res.send("Samira Slack MCP bot server is running.");
-});
-
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Samira Slack MCP server listening on port ${port}`);
-});
+}
