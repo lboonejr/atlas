@@ -1,6 +1,6 @@
 ---
 created: 2026-07-04T13:30-04:00
-updated: 2026-07-16T09:30-04:00
+updated: 2026-07-16T13:30-04:00
 domain: project
 type: reference
 status: active
@@ -28,6 +28,7 @@ Parked — rows are never deleted.
 | Panther Group | Cuzzie's | Michael Teller (COO, The Panther Group) · michael@thepanthergroup.co · (917) 841-0391 | Equity/growth capital reconnect — ~$500K per Lemar's original 6/16 outreach, to cover operational needs and continued growth; no structure/terms set | [folder](https://drive.google.com/drive/folders/1mOyt8U3XUxQyPDQpvtM60E7xuTHThpwc) | Negotiating | Michael asked 7/15 5:01pm ET "have time middle of next week to discuss?" — Lemar replied himself 7/15 5:15pm ET directly ("Middle of next week works well. Let me know which works best and I'll get it locked in on my calendar"), superseding the earlier drafted 3-window reply. Awaiting Michael to name a specific day/time; once he does, create the call on Lemar's calendar only (no external invitees) and update this row | 2026-07-15 |
 | Bobby Lee (Emirates Investment) | Cuzzie's | Bobby Lee — no email on file | $250K bridge (pitch deck delivered 6/27; no dollar terms ever confirmed by the investor) | folder built 6/27, no longer resolves in Drive (deleted/moved) | Parked | **Closed per Lemar 7/16** ("We can close out Bobby Lee" — reply in #decisions thread 1784204500.172449) — data room + Gmail outreach draft built 6/27, never got a reaction either way, folder no longer resolves. No further action. Sweet Leaf Finance (bundled in the same original question) was NOT explicitly confirmed by name — re-asked separately, still open | 2026-07-16 |
 | Joey (HNW individual, referred by a mutual friend — full name TBD) | Cuzzie's | Unknown — Lemar to provide full name + contact | Unclear — Lemar to confirm the specific ask; existing folder holds general Cuzzie's MCA (Elevate/Novus/Liquidibee)/bank/license/deposit-history materials | [folder](https://drive.google.com/drive/folders/1nHEYc0FdIY4Kn-Q9ffkS5n66y0R5s43h) (still titled "Data Room" — no Drive rename/move tool available to Samira; Lemar to rename manually or supply a name for a freshly built room) | Working | Awaiting Joey's full name, contact info, and specific ask from Lemar before tailoring an exec summary or drafting outreach — asked in #decisions thread 7/16 | 2026-07-16 |
+| Prompt Working Capital (broker) | Cuzzie's | Noah Cohen · noahcohen.n@promptworkingcapital.com | Unsolicited $190K MCA proposal ($226,100 payback, $3,768/mo × 60) — reads as cold broker template, no prior relationship on file | none built — flagged before building, see guard | Working | Flagged to #decisions 7/16 rather than building a room or drafting a reply — adds MCA debt while Cuzzie's is actively trying to reduce MCA exposure; awaiting Lemar's pursue/ignore call | 2026-07-16 |
 
 ## Sources
 - drive: Data Rooms parent + Master Templates folder (IDs in repo `.claude/anchors.md`)
