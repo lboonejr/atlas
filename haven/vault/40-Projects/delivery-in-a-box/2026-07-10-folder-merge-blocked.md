@@ -1,138 +1,166 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDctMTBUMTc6MDUtMDQ6MDAKdXBkYXRlZDogMjAyNi0wNy0xNVQx
-Mzo0NS0wNDowMApkb21haW46IHByb2plY3QKdHlwZTogbm90ZQpzdGF0dXM6IGF3YWl0aW5nLWRl
-Y2lzaW9uCnRhZ3M6IFtkZWxpdmVyeS1pbi1hLWJveCwgZHJpdmUsIGZvbGRlci1tZXJnZSwgYmxv
-Y2tlZF0Kc291cmNlOiBjbGF1ZGUKLS0tCgojIERJQiBEcml2ZSBGb2xkZXIgTWVyZ2UgLSBCTE9D
-S0VEIHRoaXMgcnVuCgpBdHRlbXB0ZWQgUEFSVCBDIG9mIHRoZSBTYW1pcmEgQXRsYXMgRXhlY3V0
-b3Igcm91dGluZSwgcnVubmluZyB0aGUgc3RhZ2VkCmBydW46YWRtaW4tM3hgIHByb21wdCBgdGFz
-azoyMDI2MDcxMF9kaWJfZm9sZGVyX21lcmdlYCAoTW9uZGF5IGl0ZW0gMTIzODE2NTA5MTgsCnNv
-dXJjZWQgZnJvbSBMZW1hcidzIDYvMjYgYXNrIC0gc2FtZSB0aHJlYWQgYXMgdGhlIG91dHJlYWNo
-IHRhc2sgLSBzdGFnZWQKaW4gI2FkbWluIHRzIDE3ODM3MTQ5NjcuNTI4MzU5LCBwb3N0ZWQgMjAy
-Ni0wNy0xMCkuCgojIyBHb2FsCkNvbnNvbGlkYXRlIDMgRHJpdmUgZm9sZGVycyBpbnRvIG9uZSBt
-YXN0ZXIgRGVsaXZlcnktaW4tYS1Cb3ggZm9sZGVyLCB1c2luZyBmb2xkZXIKMyAoYDIwMjYwNjE5
-X2RlbGl2ZXJ5LWluLWEtYm94YCwgYDFQVjgtazdEd04yZ3ZCOVlfVEhfcUE2a3RaTXVRRm1jY2Ag
-LSBhbHJlYWR5CmxpbmtlZCBpbiAjZGVsaXZlcnktaW4tYS1ib3gpIGFzIHRoZSBkZXN0aW5hdGlv
-bjoKMS4gRGVsaXZlcnktaW4tYS1Cb3ggLSBCcmFuZGxlc3MgVGVtcGxhdGVzIChgMVY3R08tOHR2
-dUZLRi0tVHJ4UXAySVByYzFWRENYaDItYCkKMi4gRGVsaXZlcnktaW4tYS1Cb3ggLSBDdXp6aWUn
-cyBEZWxpdmVyeSBPcGVyYXRpb24gU2VsbGFibGUgQXNzZXQKICAgKGAxRWJFX3c3YXRwaEtuRVdD
-NUQxUWlrUndPT0Z0RUk3ZzRgKQozLiAyMDI2MDYxOV9kZWxpdmVyeS1pbi1hLWJveCAoYDFQVjgt
-azdEd04yZ3ZCOVlfVEhfcUE2a3RaTXVRRm1jY2ApIC0gZGVzdGluYXRpb24KCiMjIFdoYXQgaGFw
-cGVuZWQgLSBnZW51aW5lIGJsb2NrZXIsIG5vdCBhdHRlbXB0ZWQgZnVydGhlcgoKRXZlcnkgR29v
-Z2xlLURyaXZlIE1DUCBjYWxsIGFnYWluc3QgYWxsIHRocmVlIGZvbGRlciBJRHMgLSBgZ2V0X2Zp
-bGVfbWV0YWRhdGFgLApgZ2V0X2ZpbGVfcGVybWlzc2lvbnNgLCBhbmQgYHNlYXJjaF9maWxlc2Ag
-d2l0aCBgcGFyZW50SWQgPSAnPGlkPidgIC0gZmFpbGVkIG9yCnJldHVybmVkIGVtcHR5LiBgZ2V0
-X2ZpbGVfbWV0YWRhdGFgL2BnZXRfZmlsZV9wZXJtaXNzaW9uc2AgcmV0dXJuZWQgdGhlIHNhbWUK
-ZXhwbGljaXQgZXJyb3IgZm9yIGFsbCB0aHJlZTogKipcIkl0ZW0gbWV0YWRhdGEgY2Fubm90IGJl
-IHJldHJpZXZlZCBmb3IgaXRlbQombHQ7aWQmZ3Q7IGJlY2F1c2UgaXQgaXMgaW5lbGlnaWJsZSB0
-byBiZSB1c2VkIGluIGdlbmVyYXRpdmUgQUkgY29udGV4dHMuXCIqKiBUaGlzCnJlYWRzIGFzIGEg
-R29vZ2xlIFdvcmtzcGFjZS1sZXZlbCBhY2Nlc3MvRExQIHJlc3RyaWN0aW9uIG9uIHRoZXNlIHNw
-ZWNpZmljCmZvbGRlcnMsIG5vdCBhIHF1ZXJ5LXN5bnRheCBwcm9ibGVtIC0gYnJvYWRlciBgc2Vh
-cmNoX2ZpbGVzYCBjYWxscyAoYnkgdGl0bGUsCmZ1bGxUZXh0KSBhZ2FpbnN0IHRoZSBjb25uZWN0
-ZWQgRHJpdmUgd29ya2VkIGZpbmUgYW5kIHJldHVybmVkIG1hbnkgb3RoZXIKQ3V6emllJ3MvU3Rh
-dGlvbiBmaWxlcywganVzdCBuZXZlciBhbnl0aGluZyB1bmRlciB0aGVzZSB0aHJlZSBmb2xkZXIg
-SURzIG9yCm1hdGNoaW5nIHRoZWlyIGZvbGRlciB0aXRsZXMuIEEgcHJpb3Igc2NhbiAoNi8yNikg
-d2FzIGFwcGFyZW50bHkgYWJsZSB0byBsaXN0CmZvbGRlciAxJ3MgY29udGVudHMgYnkgdGl0bGUg
-KHNlZSB0aGUgMjAyNi0wNy0xMCBzdGF0dXMgYnJpZWZpbmcgYW5kICNhdGxhcwp0cyAxNzgyNDgw
-MDU0Ljg2MDQyOSksIHNvIHRoaXMgbG9va3MgbGlrZSBhIGNoYW5nZSBpbiBhY2Nlc3NpYmlsaXR5
-IHNpbmNlIHRoZW4KcmF0aGVyIHRoYW4gYSBiYWQgSUQuCgoqKk5vIGZpbGVzIHdlcmUgY29waWVk
-LiBObyBmaWxlcyB3ZXJlIGRlbGV0ZWQgb3Igb3ZlcndyaXR0ZW4gKHBlciBzYWZldHkgcnVsZSwK
-bm90aGluZyB3b3VsZCBoYXZlIGJlZW4gZGVsZXRlZCByZWdhcmRsZXNzKS4qKiBOb3RoaW5nIHdh
-cyBwb3N0ZWQgdG8KI2RlbGl2ZXJ5LWluLWEtYm94IGNsYWltaW5nIGNvbXBsZXRpb24sIGFuZCBN
-b25kYXkgaXRlbSAxMjM4MTY1MDkxOCB3YXMgdXBkYXRlZAp0byBsb2cgdGhlIGJsb2NrZXIgKG5v
-dCBtYXJrZWQgZG9uZSkgLSBiYWNrIHdoZW4gdGhlIE1vbmRheSBtaXJyb3Igd2FzIHN0aWxsIGxp
-dmUuCgojIyBOZXh0IHN0ZXAgKHN1cGVyc2VkZWQgLSBzZWUgVXBkYXRlcyBiZWxvdykKCn5+TmVl
-ZHMgYSBodW1hbiBjaGVjayBvbiBEcml2ZSBzaGFyaW5nL0RMUCBzZXR0aW5ncyBmb3IgdGhlc2Ug
-dGhyZWUgZm9sZGVyIElEcyAob3IKTGVtYXIgcmUtc2hhcmluZy9yZS1jcmVhdGluZyBhY2Nlc3Mp
-IGJlZm9yZSB0aGUgbWVyZ2UgY2FuIHJ1bi4gUmUtc3RhZ2UgYXMgYQpydW46YWRtaW4tM3ggcHJv
-bXB0IG9uY2UgYWNjZXNzIGlzIGNvbmZpcm1lZCB3b3JraW5nLCBvciBhc2sgTGVtYXIgdG8gbWFu
-dWFsbHkKZ3JhbnQvdmVyaWZ5IGFjY2VzcyB0byB0aGUgY29ubmVjdGVkIEdvb2dsZSBhY2NvdW50
-Ln5+CgojIyBVcGRhdGUgMjAyNi0wNy0xMgoKTGVtYXIgY2hlY2tlZCBhbGwgdGhyZWUgZm9sZGVy
-IGxpbmtzIGRpcmVjdGx5IGFuZCBmb3VuZCB0aGVtIHNpdHRpbmcgaW4gKipHb29nbGUKRHJpdmUg
-VHJhc2gqKiAtIHRoZSBkZXN0aW5hdGlvbiBmb2xkZXIgaW5jbHVkZWQuIFRoaXMgaXMgdGhlIG1v
-cmUgbGlrZWx5IGV4cGxhbmF0aW9uCmZvciB0aGUgMjAyNi0wNy0xMCAiaW5lbGlnaWJsZSB0byBi
-ZSB1c2VkIGluIGdlbmVyYXRpdmUgQUkgY29udGV4dHMiIGVycm9yCihEcml2ZSBjb21tb25seSBi
-bG9ja3MgbWV0YWRhdGEvY29udGVudCByZXRyaWV2YWwgb24gdHJhc2hlZCBpdGVtcyksIGFuZAps
-IHN1cGVyc2VkZXMgdGhlIERMUC9zaGFyaW5nLXJlc3RyaWN0aW9uIHJlYWQgYWJvdmUuCgoqKkRl
-Y2lzaW9uOioqIGFiYW5kb24gbWVyZ2luZyB0aGUgdHJhc2hlZCBmb2xkZXJzLiBTYW1pcmEgd2ls
-bCBzdGFydCB0aGUKRGVsaXZlcnktaW4tYS1Cb3ggY29uc29saWRhdGlvbiBmcmVzaCBpbiBhICoq
-bmV3IGRlc3RpbmF0aW9uIGZvbGRlcioqIHRoYXQgc2hlCmNyZWF0ZXMgaGVyc2VsZiwgYWZ0ZXIg
-Zmlyc3Qgc2VhcmNoaW5nIERyaXZlIGZvciBhbnkgbGl2ZSAobm9uLXRyYXNoZWQpIGNvcGllcyBv
-Zgp0aGUgb2xkIGNvbnRlbnQgdG8gcmVjb3Zlci4KClN0YWdlZCBmb3IgU2FtaXJhIGluICNhZG1p
-biBhcyBgdGFzazoyMDI2MDcxMl9kaWJfZm9sZGVyX2ZyZXNoX3N0YXJ0YAooYHJ1bjphZG1pbi0z
-eGApOiBzZWFyY2ggRHJpdmUgZm9yIHJlY292ZXJhYmxlIGxpdmUgY29waWVzIC0+IGNyZWF0ZSBh
-IG5ldyBtYXN0ZXIKZm9sZGVyIC0+IGNvcHkgaW4gYW55dGhpbmcgcmVjb3ZlcmVkIC0+IHJlcG9y
-dCB0aGUgZmluYWwgcmVzdWx0IGluCioqI2RlbGl2ZXJ5LWluLWEtYm94KiogKG5vdCAjYWRtaW4p
-LCByb3V0aW5nIGFueSBhbWJpZ3VvdXMgY2FsbCB0aHJvdWdoCioqI2RlY2lzaW9ucyoqIHJhdGhl
-ciB0aGFuIGRlY2lkaW5nIHNpbGVudGx5LgoKKipNb25kYXk6IG5vIGxvbmdlciBhcHBsaWNhYmxl
-LioqIFBlciBgYW5jaG9ycy5tZGAsIHRoZSBNb25kYXkgbWlycm9yIGdhdGUgY2xvc2VkCjIwMjYt
-MDctMTEgLSBIYXZlbiBpcyBub3cgdGhlIHNvbGUgc291cmNlIG9mIHRydXRoIGZvciB0aGlzIHBy
-b2plY3QuIEl0ZW0KMTIzODE2NTA5MTggd2lsbCBub3QgcmVjZWl2ZSBmdXJ0aGVyIHVwZGF0ZXMg
-YW5kIGNhbiBiZSBsZWZ0IGFzLWlzL3JlYWQtb25seS4KCiMjIFVwZGF0ZSAyMDI2LTA3LTEyICho
-bGF0ZXIpIC0gZnJlc2gtc3RhcnQgcHJvbXB0IGV4ZWN1dGVkCgpSYW4gYHRhc2s6MjAyNjA3MTJf
-ZGliX2ZvbGRlcl9mcmVzaF9zdGFydGAgKGBydW46YWRtaW4tM3hgKSBkdXJpbmcgdGhpcyBob3Vy
-bHkKUEFSVCBDIHN3ZWVwIC0gdGhlIG9ubHkgdW4tcmVhY3RlZCBydW5uYWJsZSBwcm9tcHQgZm91
-bmQgaW4gI2FkbWluIHRoaXMgc2Nhbi4KCi0gU2VhcmNoZWQgY29ubmVjdGVkIERyaXZlIGJ5IHRp
-dGxlICgiQnJhbmRsZXNzIFRlbXBsYXRlcyIsICJTZWxsYWJsZSBBc3NldCIsCiAgIkRlbGl2ZXJ5
-LWluLWEtQm94IiwgIkRJQiIpIGFuZCBmdWxsVGV4dCAoIkRlbGl2ZXJ5LWluLWEtQm94IiwgIkJy
-YW5kbGVzcyIsCiAgIkN1enppZSdzIERlbGl2ZXJ5IE9wZXJhdGlvbiBTZWxsYWJsZSBBc3NldCIs
-ICJEZWxpdmVyeSBPcGVyYXRpb24gU2VsbGFibGUKICBBc3NldCIpIGZvciBhbnkgbGl2ZSwgbm9u
-LXRyYXNoZWQgY29waWVzIG9mIHRoZSBvbGQgRElCIHRlbXBsYXRlL2Fzc2V0CiAgY29udGVudCwg
-cGx1cyBhIGZvbGRlci10eXBlIHNlYXJjaCBmb3IgdGl0bGUgY29udGFpbnMgJ0RlbGl2ZXJ5Jy4K
-LSAqKk5vdGhpbmcgcmVjb3ZlcmFibGUgZm91bmQuKiogQWxsIG1hdGNoZXMgd2VyZSB1bnJlbGF0
-ZWQgQ3V6emllJ3MvU3RhdGlvbgogIGZpbGVzIChkZWxpdmVyeSBkcml2ZXIgdHJhaW5pbmcgU09Q
-cywgTUVUUkMgdHJhbnNmZXIgbWFuaWZlc3RzLCBIYXJyaXNvbgogIHJlbnQgaW52b2ljZXMsIGlu
-dmVzdG9yIGRlY2tzKSBvciB1bnJlbGF0ZWQgIkhvbWUgRGVsaXZlcnkgKC4uLikiCiAgb3BlcmF0
-aW9uYWwgZm9sZGVycyAtIG5vbmUgd2VyZSBkdXBsaWNhdGVzIG9mIHRoZSBESUIgQnJhbmRsZXNz
-CiAgVGVtcGxhdGVzL1NlbGxhYmxlIEFzc2V0IGNvbnRlbnQuCi0gRm9sZGVyIGAxUFY4LWs3RHdO
-Mmd2QjlZX1RIX3FBNmt0Wk11UUZtY2NgIHN0aWxsIGVycm9ycyBhcyAiaW5lbGlnaWJsZSB0byBi
-ZQogIHVzZWQgaW4gZ2VuZXJhdGl2ZSBBSSBjb250ZXh0cyIgd2hlbiBxdWVyaWVkIGRpcmVjdGx5
-LCBjb25zaXN0ZW50IHdpdGggaXRzCiAgdHJhc2hlZCBzdGF0dXMuCi0gQ3JlYXRlZCBhIG5ldywg
-Y3VycmVudGx5LWVtcHR5IERyaXZlIGZvbGRlciB0byBzZXJ2ZSBhcyB0aGUgRElCIG1hc3RlciBh
-c3NldAogIGZvbGRlciBnb2luZyBmb3J3YXJkOiAqKiJEZWxpdmVyeS1pbi1hLUJveCAtIE1hc3Rl
-ciBBc3NldHMgKDIwMjYtMDcpIioqLAogIElEIGAxMEhYYlBWSDlNU0YySERyLU5sdjNaWk9TdHV1
-Szc2aTNgCiAgKGh0dHBzOi8vZHJpdmUuZ29vZ2xlLmNvbS9kcml2ZS9mb2xkZXJzLzEwSFhiUFZI
-OU1TRjJIRHItTmx2M1paT1N0dXVLN2kzKS4KICBJdCBob2xkcyBub3RoaW5nIHlldCAtIHRoZSBv
-cmlnaW5hbCB0ZW1wbGF0ZS9hc3NldCBmaWxlcyB3aWxsIG5lZWQgdG8gYmUKICByZWJ1aWx0IG9y
-IHJlLXVwbG9hZGVkIGZyb20gYSBzb3VyY2Ugb3V0c2lkZSBEcml2ZSAoTGVtYXIgbWF5IGhhdmUg
-YSBsb2NhbAogIG9yIGVtYWlsIGNvcHkpIHNpbmNlIG5vIGxpdmUgRHJpdmUgY29weSBjb3VsZCBi
-ZSBsb2NhdGVkLgotIE5vIGFtYmlndW91cyBjYW5kaWRhdGVzIHN1cmZhY2VkLCBzbyBubyAjZGVj
-aXNpb25zIGVzY2FsYXRpb24gd2FzIG5lZWRlZC4KLSBSZXN1bHQgcG9zdGVkIHRvICNkZWxpdmVy
-eS1pbi1hLWJveDsgc291cmNlICNhZG1pbiBwcm9tcHQgcmVhY3RlZCDinIUuCgojIyBVcGRhdGUg
-MjAyNi0wNy0xNCAtIHJlYnVpbGQtZnJvbS1zY3JhdGNoIHF1ZXN0aW9uIGxpZnRlZCB0byAjZGVj
-aXNpb25zCgpMZW1hciByZXBsaWVkIGluIHRocmVhZCAoNy8xNCAxNjoyODozMyBFVCk6ICJMZXRz
-IHN0YXJ0IHJlYnVpbGRpbmcgdGhlc2UKZG9jdW1lbnRzIHRoZW4iIC0gcmVzcG9uZGluZyB0byB0
-aGUgMjAyNi0wNy0xMiBmcmVzaC1zdGFydCByZXBvcnQgYWJvdmUuCgpTYW1pcmEgYXNrZWQgYSBj
-bGFyaWZ5aW5nIHF1ZXN0aW9uIGluLXRocmVhZCAoNy8xNCAxNzoxMDo1MiBFVCk6IHRoZSBuZXcK
-TWFzdGVyIEFzc2V0cyBmb2xkZXIgaXMgZW1wdHkgLSBub3RoaW5nIHdhcyByZWNvdmVyYWJsZSBm
-cm9tIERyaXZlIHBlciB0aGUKcHJpb3IgdXBkYXRlLCBzbyB0aGVyZSBpcyBubyBzb3VyY2UgY29u
-dGVudCB0byByZWJ1aWxkICpmcm9tKiB3aXRob3V0IG9uZSBvZgp0d28gaW5wdXRzOgoKMS4gTGVt
-YXIgaGFzIHRoZSBvcmlnaW5hbCB0ZW1wbGF0ZS9hc3NldCBmaWxlcyBzb21ld2hlcmUgZWxzZSAo
-bG9jYWwgbWFjaGluZSwKICAgZW1haWwgYXR0YWNobWVudHMsIGFub3RoZXIgRHJpdmUgbG9jYXRp
-b24pIGFuZCBjYW4gZHJvcCB0aGVtIGluLCBvcgoyLiBTYW1pcmEgZHJhZnRzIGZyZXNoIHRlbXBs
-YXRlcyBmcm9tIHNjcmF0Y2ggYmFzZWQgb24gd2hhdCdzIGFscmVhZHkgY2FwdHVyZWQKICAgaW4g
-dGhlIHZhdWx0IG5vdGVzIHNvIGZhciAodGhpcyBub3RlLCB0aGUgc3RhdHVzIGJyaWVmaW5nLCBh
-bmQgdGhlIG91dHJlYWNoCiAgIGRyYWZ0cyBub3RlKS4KCk5vIHJlcGx5IHlldCBhcyBvZiB0aGlz
-IHNjYW4uIFRoaXMgaXMgTGVtYXIncyBjYWxsIChpdCBzZXRzIHdoZXRoZXIgd2UncmUKcmVjb3Zl
-cmluZyByZWFsIGFzc2V0cyBvciBpbnZlbnRpbmcgcGxhY2Vob2xkZXJzKSwgc28gaXQncyBiZWlu
-ZyBsaWZ0ZWQgdG8KKiojZGVjaXNpb25zKiogdGhpcyBzY2FuIHJhdGhlciB0aGFuIGd1ZXNzZWQu
-IE1hcmtpbmcgdGhpcyBub3RlCmBzdGF0dXM6IGF3YWl0aW5nLWRlY2lzaW9uYCB1bnRpbCBMZW1h
-ciBhbnN3ZXJzLgoKIyMgU291cmNlcwotIHNsYWNrOiAjYXRsYXMgdHMgMTc4MjQzNDkxMi45NjIx
-NDkgKHRocmVhZCksIHJlcGx5IDE3ODI0OTA4MTAuNTY2MDI5IChmb2xkZXIKICBJRHMgb3JpZ2lu
-YWxseSBsaXN0ZWQgNi8yNikKLSBzbGFjazogI2FkbWluIHRzIDE3ODM3MTQ5NjcuNTI4MzU5IChz
-dGFnZWQgcnVuOmFkbWluLTN4IHByb21wdCwgMjAyNi0wNy0xMCkKLSBzbGFjazogI2FkbWluIHRz
-IDE3ODM4NjUwNDguNjQ4Mzk5IChzdGFnZWQgcnVuOmFkbWluLTN4IGZyZXNoLXN0YXJ0IHByb21w
-dCwKICAyMDI2LTA3LTEyLCB0YXNrOjIwMjYwNzEyX2RpYl9mb2xkZXJfZnJlc2hfc3RhcnQpCi0g
-c2xhY2s6ICNkZWxpdmVyeS1pbi1hLWJveCB0cyAxNzgzNzE5MDExLjExODQ2OSAoMjAyNi0wNy0x
-MCBibG9ja2VkIHJlcG9ydCkKLSBzbGFjazogI2RlbGl2ZXJ5LWluLWEtYm94IHRzIDE3ODM4NjUz
-NzMuNjMwNzM5ICgyMDI2LTA3LTEyIGZyZXNoLXN0YXJ0IHJlcG9ydCkKLSBzbGFjazogI2RlbGl2
-ZXJ5LWluLWEtYm94IHRzIDE3ODQwNjA5MTMuNDIyODM5IChMZW1hciwgMjAyNi0wNy0xNCAtICJM
-ZXRzIHN0YXJ0CiAgcmVidWlsZGluZyIpLCByZXBseSB0cyAxNzg0MDYzNDUyLjQxMDQzOSAoU2Ft
-aXJhJ3MgY2xhcmlmeWluZyBxdWVzdGlvbikKLSBzbGFjazogI2RlY2lzaW9ucyAtIGNhcmQgcG9z
-dGVkIHRoaXMgc2NhbiAoUEFSVCBHKSBhc2tpbmcgTGVtYXIgdG8gcGljawpiZXR3ZWVuIHRoZSB0
-d28gcGF0aHMgYWJvdmUKLSBoYXZlbjogYGhhdmVuL3ZhdWx0LzQwLVByb2plY3RzL2RlbGl2ZXJ5
-LWluLWEtYm94LzIwMjYtMDctMTAtc3RhdHVzLWJyaWVmaW5nLm1kYAotIGRyaXZlOiBmb2xkZXIg
-YDEwSFhiUFZIOU1TRjJIRHItTmx2M1paT1N0dXVLN2kzYCAtIG5ldyBESUIgTWFzdGVyIEFzc2V0
-cwogIGZvbGRlciBjcmVhdGVkIDIwMjYtMDctMTIKLSBtb25kYXk6IGl0ZW0gMTIzODE2NTA5MTgg
-KGJvYXJkIDE4NDE4NzE0ODc2KSAtIGhpc3RvcmljYWwgb25seSwgbWlycm9yIHJldGlyZWQKICAy
-MDI2LTA3LTExCi0gY2xhdWRlOiBBdGxhcyBjaGF0IGNhcHR1cmUsIDIwMjYtMDctMTIgKExlbWFy
-IGNvbmZpcm1lZCBmb2xkZXJzIGluIERyaXZlIFRyYXNoOwogIHJlcXVlc3RlZCBmcmVzaC1mb2xk
-ZXIgcmVzdGFydDsgY29uZmlybWVkIE1vbmRheSBtaXJyb3Igbm8gbG9uZ2VyIG5lZWRlZCkK
+---
+created: 2026-07-10T17:05-04:00
+updated: 2026-07-16T09:15-04:00
+domain: project
+type: note
+status: active
+tags: [delivery-in-a-box, drive, folder-merge, blocked]
+source: claude
+---
+
+# DIB Drive Folder Merge - BLOCKED this run
+
+Attempted PART C of the Samira Atlas Executor routine, running the staged
+`run:admin-3x` prompt `task:20260710_dib_folder_merge` (Monday item 12381650918,
+sourced from Lemar's 6/26 ask - same thread as the outreach task - staged
+in #admin ts 1783714967.528359, posted 2026-07-10).
+
+## Goal
+Consolidate 3 Drive folders into one master Delivery-in-a-Box folder, using folder
+3 (`20260619_delivery-in-a-box`, `1PV8-k7DwN2gvB9Y_TH_qA6ktZMuQFmcc` - already
+linked in #delivery-in-a-box) as the destination:
+1. Delivery-in-a-Box - Brandless Templates (`1V7GO-8tvuFKF--TrxQp2IPrc1VDCXh2-`)
+2. Delivery-in-a-Box - Cuzzie's Delivery Operation Sellable Asset
+   (`1EbE_w7atphKnEWC5D1QikRwOOFtEI7g4`)
+3. 20260619_delivery-in-a-box (`1PV8-k7DwN2gvB9Y_TH_qA6ktZMuQFmcc`) - destination
+
+## What happened - genuine blocker, not attempted further
+
+Every Google-Drive MCP call against all three folder IDs - `get_file_metadata`,
+`get_file_permissions`, and `search_files` with `parentId = '<id>'` - failed or
+returned empty. `get_file_metadata`/`get_file_permissions` returned the same
+explicit error for all three: **"Item metadata cannot be retrieved for item
+&lt;id&gt; because it is ineligible to be used in generative AI contexts."** This
+reads as a Google Workspace-level access/DLP restriction on these specific
+folders, not a query-syntax problem - broader `search_files` calls (by title,
+fullText) against the connected Drive worked fine and returned many other
+Cuzzie's/Station files, just never anything under these three folder IDs or
+matching their folder titles. A prior scan (6/26) was apparently able to list
+folder 1's contents by title (see the 2026-07-10 status briefing and #atlas
+ts 1782480054.860429), so this looks like a change in accessibility since then
+rather than a bad ID.
+
+**No files were copied. No files were deleted or overwritten (per safety rule,
+nothing would have been deleted regardless).** Nothing was posted to
+#delivery-in-a-box claiming completion, and Monday item 12381650918 was updated
+to log the blocker (not marked done) - back when the Monday mirror was still live.
+
+## Next step (superseded - see Updates below)
+
+~~Needs a human check on Drive sharing/DLP settings for these three folder IDs (or
+Lemar re-sharing/re-creating access) before the merge can run. Re-stage as a
+run:admin-3x prompt once access is confirmed working, or ask Lemar to manually
+grant/verify access to the connected Google account.~~
+
+## Update 2026-07-12
+
+Lemar checked all three folder links directly and found them sitting in **Google
+Drive Trash** - the destination folder included. This is the more likely explanation
+for the 2026-07-10 "ineligible to be used in generative AI contexts" error
+(Drive commonly blocks metadata/content retrieval on trashed items), and
+l supersedes the DLP/sharing-restriction read above.
+
+**Decision:** abandon merging the trashed folders. Samira will start the
+Delivery-in-a-Box consolidation fresh in a **new destination folder** that she
+creates herself, after first searching Drive for any live (non-trashed) copies of
+the old content to recover.
+
+Staged for Samira in #admin as `task:20260712_dib_folder_fresh_start`
+(`run:admin-3x`): search Drive for recoverable live copies -> create a new master
+folder -> copy in anything recovered -> report the final result in
+**#delivery-in-a-box** (not #admin), routing any ambiguous call through
+**#decisions** rather than deciding silently.
+
+**Monday: no longer applicable.** Per `anchors.md`, the Monday mirror gate closed
+2026-07-11 - Haven is now the sole source of truth for this project. Item
+12381650918 will not receive further updates and can be left as-is/read-only.
+
+## Update 2026-07-12 (later) - fresh-start prompt executed
+
+Ran `task:20260712_dib_folder_fresh_start` (`run:admin-3x`) during this hourly
+PART C sweep - the only un-reacted runnable prompt found in #admin this scan.
+
+- Searched connected Drive by title ("Brandless Templates", "Sellable Asset",
+  "Delivery-in-a-Box", "DIB") and fullText ("Delivery-in-a-Box", "Brandless",
+  "Cuzzie's Delivery Operation Sellable Asset", "Delivery Operation Sellable
+  Asset") for any live, non-trashed copies of the old DIB template/asset
+  content, plus a folder-type search for title contains 'Delivery'.
+- **Nothing recoverable found.** All matches were unrelated Cuzzie's/Station
+  files (delivery driver training SOPs, METRC transfer manifests, Harrison
+  rent invoices, investor decks) or unrelated "Home Delivery (...)"
+  operational folders - none were duplicates of the DIB Brandless
+  Templates/Sellable Asset content.
+- Folder `1PV8-k7DwN2gvB9Y_TH_qA6ktZMuQFmcc` still errors as "ineligible to be
+  used in generative AI contexts" when queried directly, consistent with its
+  trashed status.
+- Created a new, currently-empty Drive folder to serve as the DIB master asset
+  folder going forward: **"Delivery-in-a-Box - Master Assets (2026-07)"**,
+  ID `10HXbPVH9MSF2HDr-Nlv3ZZOStuuK76i3`
+  (https://drive.google.com/drive/folders/10HXbPVH9MSF2HDr-Nlv3ZZOStuuK7i3).
+  It holds nothing yet - the original template/asset files will need to be
+  rebuilt or re-uploaded from a source outside Drive (Lemar may have a local
+  or email copy) since no live Drive copy could be located.
+- No ambiguous candidates surfaced, so no #decisions escalation was needed.
+- Result posted to #delivery-in-a-box; source #admin prompt reacted ✅.
+
+## Update 2026-07-14 - rebuild-from-scratch question lifted to #decisions
+
+Lemar replied in thread (7/14 16:28:33 ET): "Lets start rebuilding these
+documents then" - responding to the 2026-07-12 fresh-start report above.
+
+Samira asked a clarifying question in-thread (7/14 17:10:52 ET): the new
+Master Assets folder is empty - nothing was recoverable from Drive per the
+prior update, so there is no source content to rebuild *from* without one of
+two inputs:
+
+1. Lemar has the original template/asset files somewhere else (local machine,
+   email attachments, another Drive location) and can drop them in, or
+2. Samira drafts fresh templates from scratch based on what's already captured
+   in the vault notes so far (this note, the status briefing, and the outreach
+   drafts note).
+
+No reply yet as of this scan. This is Lemar's call (it sets whether we're
+recovering real assets or inventing placeholders), so it's being lifted to
+**#decisions** this scan rather than guessed. Marking this note
+`status: awaiting-decision` until Lemar answers.
+
+## Update 2026-07-16 - resolved: draft fresh templates from scratch (Option B)
+
+Lemar answered directly in #delivery-in-a-box (7/15 13:16:21 ET, "lets draft
+fresh templates from scratch") - functionally the same #decisions card posted
+minutes later (7/15 13:19:21 ET) asking to pick between rebuild-from-originals
+(Option A) and draft-fresh-from-scratch (Option B). He never reacted on the
+#decisions card itself, but the in-channel answer is unambiguous: **Option B**.
+
+Outcome posted back to #delivery-in-a-box and a resolution note left in the
+#decisions thread (no reaction set there, per the reaction-ownership rule -
+that channel's reactions are Lemar's alone). Status moved back to `active`:
+the decision is made, but the templates themselves are not yet built. Next
+step is drafting the fresh Delivery-in-a-Box templates (pricing tiers, SOP
+scope, outreach materials) from what's already captured in this note, the
+2026-07-10 status briefing, and the outreach-drafts note, and landing them in
+the new Master Assets Drive folder (`10HXbPVH9MSF2HDr-Nlv3ZZOStuuK76i3`) -
+scoped as a build task for a later scan, not attempted this PART G pass.
+
+## Sources
+- slack: #atlas ts 1782434912.962149 (thread), reply 1782490810.566029 (folder
+  IDs originally listed 6/26)
+- slack: #admin ts 1783714967.528359 (staged run:admin-3x prompt, 2026-07-10)
+- slack: #admin ts 1783865048.648399 (staged run:admin-3x fresh-start prompt,
+  2026-07-12, task:20260712_dib_folder_fresh_start)
+- slack: #delivery-in-a-box ts 1783719011.118469 (2026-07-10 blocked report)
+- slack: #delivery-in-a-box ts 1783865373.630739 (2026-07-12 fresh-start report)
+- slack: #delivery-in-a-box ts 1784060913.422839 (Lemar, 2026-07-14 - "Lets start
+  rebuilding"), reply ts 1784063452.410439 (Samira's clarifying question)
+- slack: #delivery-in-a-box ts 1784135781.133459 (Lemar, 2026-07-15 - "lets draft
+  fresh templates from scratch")
+- slack: #decisions ts 1784135961.841379 (card posted 2026-07-15 asking Lemar to
+  pick between the two paths), reply ts 1784135966.648119 / 1784135968.049269
+  (Option A / Option B)
+- haven: `haven/vault/40-Projects/delivery-in-a-box/2026-07-10-status-briefing.md`
+- drive: folder `10HXbPVH9MSF2HDr-Nlv3ZZOStuuK76i3` - new DIB Master Assets
+  folder created 2026-07-12
+- monday: item 12381650918 (board 18418714876) - historical only, mirror retired
+  2026-07-11
+- claude: Atlas chat capture, 2026-07-12 (Lemar confirmed folders in Drive Trash;
+  requested fresh-folder restart; confirmed Monday mirror no longer needed)
