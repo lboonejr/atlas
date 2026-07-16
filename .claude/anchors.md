@@ -8,7 +8,7 @@ When a workspace, board, account, or channel changes, edit THIS file and nothing
 > doing work is fine; maintaining a second list is not). The memory file
 > `shortlist_anchors.md` on Lemar's machine is a pointer to this file, not a copy.
 
-Last verified: 2026-07-12 (added the Pulse dashboard section — rendered by Samira PART P).
+Last verified: 2026-07-16 (added Samira's dedicated Slack bot connector).
 
 ## Repo / vault
 
@@ -98,6 +98,7 @@ gate, the mirror steps drop from the runbook + skills and the boards go read-onl
 | Cloud env | `env_01Xatmag93x2WA2Gd84D9iHj` |
 | Cron | `0 12-22 * * *` UTC (hourly 8a–6p ET) |
 | Disabled trigger (folded into v4) | `trig_0145zp6gHsouqBAKa9JkhJRk` |
+| Slack connector (Samira's own bot identity) | connector_uuid `01519dfa-b91a-47eb-beb4-cdc04444144e`, custom connector named "Samira", MCP endpoint `https://samira-two.vercel.app/mcp`. Swapped into this trigger's `mcp_connections` 2026-07-16, replacing the shared personal Slack connector (`7faf04c0-5bd6-4237-8430-f80040c482e1`) for Samira ONLY — Dawn and Basil still use the personal connector. Fixes the reaction-engine identity gap (Samira's posts/self-tag reactions were previously indistinguishable from Lemar's real reactions since both came from his own Slack account). Server code: `apps/samira-slack-bot/` in this repo, deployed free on Vercel; bot token lives only in Vercel's environment settings. Bot must stay invited (`/invite @Samira`) in every channel Samira posts/reads: #decisions, #reports, #atlas, #admin, #car-search, #investor-pipeline, plus active project channels. |
 
 ## Cloud routine — Daily Brief / "Dawn" (separate from Samira)
 
@@ -176,6 +177,6 @@ pattern used by on-button-reopen.
 | Lemar business | lemar@cuzziesnj.com (Cuzzie's winds down mid-2026 — do not build on it) |
 | Lemar personal / durable | l.boonejr@gmail.com · 856-602-0820 (car hunt: private buyer, never a Cuzzie's title) |
 | Lemar Slack user id | `U0BC5UTHYG4` (display "Don Frunt") |
-| Samira Slack posts | lead with 🌐, sign "— Samira" |
+| Samira Slack posts | lead with 🌐, sign "— Samira" · posts and reacts through her own dedicated bot connector (see Cloud routine — Samira above), not Lemar's personal Slack account |
 | Dawn (Daily Brief) Slack posts | lead with 🌅, sign "— Dawn" · posts only to #daily-brief `C0BF73FF56H`. ("Dawn" is a placeholder persona name — rename freely; it lives only in the two skills + this row.) |
 | Basil (Inbox Janitor) Slack posts | lead with 🧹, sign "— Basil" · posts only to #reports `C0BBZJL85RT`. ("Basil" is a placeholder persona name — rename freely; it lives only in the runbook + this row.) |
