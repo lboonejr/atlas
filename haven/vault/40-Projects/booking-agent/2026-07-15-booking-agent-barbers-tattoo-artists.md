@@ -1,1 +1,46 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDctMTVUMTg6MTUtMDQ6MDAKdXBkYXRlZDogMjAyNi0wNy0xNlQxMDo0MC0wNDowMApkb21haW46IHByb2plY3QKdHlwZTogbm90ZQpzdGF0dXM6IGFjdGl2ZQp0YWdzOiBbYm9va2luZy1hZ2VudCwgYmFyYmVycywgdGF0dG9vLWFydGlzdHMsIHNpZGUtcHJvamVjdCwgc2Fhcy1pZGVhXQpzb3VyY2U6IHNsYWNrCi0tLQoKIyBCb29raW5nIGFnZW50IGZvciBiYXJiZXJzLCB0YXR0b28gYXJ0aXN0cywgZXRjIOKAlCBuZXcgcHJvamVjdCBpZGVhCgpMZW1hciB3YW50cyB0byBkZXZlbG9wIGEgYm9va2luZy1tYW5hZ2VtZW50IGFnZW50IGFpbWVkIGF0IGJhcmJlcnMsIHRhdHRvbyBhcnRpc3RzLCBhbmQKc2ltaWxhciBhcHBvaW50bWVudC1iYXNlZCBpbmRlcGVuZGVudCBzZXJ2aWNlIHByb3ZpZGVycyDigJQgYSBzaWRlIHByb2plY3Qgc2VwYXJhdGUgZnJvbQpDdXp6aWUncy9UaGUgU3RhdGlvbi4KClJhdyBjYXB0dXJlIGZyb20gI2F0bGFzOiAiQXMgYW5vdGhlciBwcm9qZWN0LCBhdGxhcyBJIHdvdWxkIGxpa2UgdG8gZGV2ZWxvcCBhIGJvb2tpbmcKYWdlbnQuIHdoZXJlIGl0IGhlbHBzIGJhcmJlcnMsIHRhdHRvbyBhcnRpc3RzLCBldGMgbWFuYWdlIHRoZWlyIGJvb2tpbmdzLiIKCk5vIHNjb3BlLCB0aW1lbGluZSwgb3IgYnVzaW5lc3MgbW9kZWwgYXR0YWNoZWQgeWV0IOKAlCB0aGlzIG5lZWRzIGEgcHJvYmUgcGFzcyBiZWZvcmUgaXQKY2FuIG1vdmUgdG8gYSBwcm9qZWN0IGJyaWVmOiB0YXJnZXQgY3VzdG9tZXIgKHNvbG8gb3BlcmF0b3JzIHZzLiBzaG9wcz8pLCBjb3JlIGZlYXR1cmUKc2V0IChjYWxlbmRhciBzeW5jLCByZW1pbmRlcnMsIGRlcG9zaXRzL25vLXNob3cgZmVlcywgY2xpZW50IGhpc3Rvcnk/KSwgYnVpbGQtdnMtYnV5CihjdXN0b20gYWdlbnQgdnMuIHdyYXBwaW5nIGFuIGV4aXN0aW5nIHNjaGVkdWxpbmcgdG9vbCksIGFuZCB3aGV0aGVyIHRoaXMgaXMgYSAic29tZWRheSIKaWRlYSAoU3Rvcm15IHRlcnJpdG9yeSDigJQgbm8gZGVhZGxpbmUsIG5lZWRzIHByZXNzdXJlLXRlc3RpbmcpIG9yIHNvbWV0aGluZyBMZW1hciB3YW50cwptb3Zpbmcgbm93IChTaG9ydGxpc3QvQXRsYXMgdGVycml0b3J5KS4KCiMjIE5leHQgc3RlcApQcm9iZSB3aXRoIExlbWFyOiB3aHkgbm93LCB0YXJnZXQgb3V0Y29tZSwgc2NvcGUsIGFuZCB3aGV0aGVyIHRvIHJvdXRlIHRoaXMgdGhyb3VnaApTdG9ybXkncyBpZGVhLXByZXNzdXJlLXRlc3QgKDE1LXF1ZXN0aW9uIGluc3RydW1lbnQpIGdpdmVuIGl0IGhhcyBubyBzdGF0ZWQgdGltZWZyYW1lLgoKIyMgVXBkYXRlIDIwMjYtMDctMTYg4oCUIGRlY2lzaW9uOiBhY3RpdmUgcHJvamVjdCwgbmV3IGNoYW5uZWwKTGVtYXIgcmVhY3RlZCDinIUgb24gIk9wdGlvbiAyIOKAlCBBY3RpdmUgcHJvamVjdDogc3RhcnQgbm93LCBwcm9iZSBzY29wZS9jdXN0b21lci9mZWF0dXJlcwp1bmRlciBTaG9ydGxpc3QvQXRsYXMgYW5kIGdldCBhIGJyaWVmIG1vdmluZyB0aGlzIHdlZWsiIG9uIHRoZSAjZGVjaXNpb25zIGNhcmQgKG1lc3NhZ2UKdHMgYDE3ODQyMDM5MjYuMjc2MTY5YCwgb3B0aW9uIHJlcGx5IHRzIGAxNzg0MjAzOTMxLjYzNzY5OWApLCBhbmQgYWRkZWQgZnJlZS1mb3JtOgoiTGV0J3MganVzdCBtYWtlIHN1cmUgd2UgcHV0IGl0IGluIGEgbmV3IGNoYW5uZWwuIgoKRGVjaXNpb246IHRoaXMgaXMgbm93IGFuIGFjdGl2ZSBwcm9qZWN0LCBub3QgYSBTdG9ybXkgc29tZWRheS1iYWtlLiBDcmVhdGVkIGEgZGVkaWNhdGVkClNsYWNrIGNoYW5uZWwgcGVyIGhpcyBhc2sg4oCUIGAjYm9va2luZy1hZ2VudGAg4oCUIGZvciB0aGlzIHByb2plY3QgdG8gbGl2ZSBpbiBnb2luZyBmb3J3YXJkLgpOZXh0IGFjdHVhbCBzdGVwIChzdGlsbCBvcGVuLCBwZXIgdGhlIG9yaWdpbmFsIHByb2JlKTogdGFyZ2V0IGN1c3RvbWVyLCBjb3JlIGZlYXR1cmUKc2V0LCBidWlsZC12cy1idXksIGFuZCBhIGZpcnN0IGJyaWVmIGRyYWZ0IOKAlCB0byBiZSB3b3JrZWQgdW5kZXIgU2hvcnRsaXN0L0F0bGFzIGluIHRoZQpuZXcgY2hhbm5lbCwgbm90IHRoaXMgc2Nhbi4KCiMjIFNvdXJjZXMKLSBzbGFjazogI2F0bGFzIDIwMjYtMDctMTUgMTg6MTU6MzkgRVQsIG1lc3NhZ2UgdHMgMTc4NDE1MzczOS42OTMzMjkgKGNoYW5uZWwgQzBCQldIQ0pVVjkpCi0gc2xhY2s6ICNkZWNpc2lvbnMgMjAyNi0wNy0xNiAwODoxMjowNiBFVCwgcHJvYmUgY2FyZCB0cyAxNzg0MjAzOTI2LjI3NjE2OSAoY2hhbm5lbCBDMEJCWEE5NkZGVikKLSBzbGFjazogI2RlY2lzaW9ucyAyMDI2LTA3LTE2IDA4OjI2OjQ0IEVULCBMZW1hcidzIGZyZWUtZm9ybSByZXBseSB0cyAxNzg0MjA0ODA0LjQzNDAxOSAoImxldCdzIGp1c3QgbWFrZSBzdXJlIHdlIHB1dCBpdCBpbiBhIG5ldyBjaGFubmVsIikK
+---
+created: 2026-07-15T18:15-04:00
+updated: 2026-07-16T10:40-04:00
+domain: project
+type: note
+status: active
+tags: [booking-agent, barbers, tattoo-artists, side-project, saas-idea]
+source: slack
+---
+
+# Booking agent for barbers, tattoo artists, etc — new project idea
+
+Lemar wants to develop a booking-management agent aimed at barbers, tattoo artists, and
+similar appointment-based independent service providers — a side project separate from
+Cuzzie's/The Station.
+
+Raw capture from #atlas: "As another project, atlas I would like to develop a booking
+agent. where it helps barbers, tattoo artists, etc manage their bookings."
+
+No scope, timeline, or business model attached yet — this needs a probe pass before it
+can move to a project brief: target customer (solo operators vs. shops?), core feature
+set (calendar sync, reminders, deposits/no-show fees, client history?), build-vs-buy
+(custom agent vs. wrapping an existing scheduling tool), and whether this is a "someday"
+idea (Stormy territory — no deadline, needs pressure-testing) or something Lemar wants
+moving now (Shortlist/Atlas territory).
+
+## Next step
+Probe with Lemar: why now, target outcome, scope, and whether to route this through
+Stormy's idea-pressure-test (15-question instrument) given it has no stated timeframe.
+
+## Update 2026-07-16 — decision: active project, new channel
+Lemar reacted ✅ on "Option 2 — Active project: start now, probe scope/customer/features
+under Shortlist/Atlas and get a brief moving this week" on the #decisions card (message
+ts `1784203926.276169`, option reply ts `1784203931.637699`), and added free-form:
+"Let's just make sure we put it in a new channel."
+
+Decision: this is now an active project, not a Stormy someday-bake. Created a dedicated
+Slack channel per his ask — `#booking-agent` — for this project to live in going forward.
+Next actual step (still open, per the original probe): target customer, core feature
+set, build-vs-buy, and a first brief draft — to be worked under Shortlist/Atlas in the
+new channel, not this scan.
+
+## Sources
+- slack: #atlas 2026-07-15 18:15:39 ET, message ts 1784153739.693329 (channel C0BBWHCJUV9)
+- slack: #decisions 2026-07-16 08:12:06 ET, probe card ts 1784203926.276169 (channel C0BBXA96FFV)
+- slack: #decisions 2026-07-16 08:26:44 ET, Lemar's free-form reply ts 1784204804.434019 ("let's just make sure we put it in a new channel")
