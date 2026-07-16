@@ -1,6 +1,6 @@
 ---
 created: 2026-07-16T09:00-04:00
-updated: 2026-07-16T12:15-04:00
+updated: 2026-07-16T15:55-04:00
 domain: project
 type: log
 status: awaiting-decision
@@ -127,3 +127,30 @@ relationship), nothing renamed/moved/deleted. Flagged as item 5 in the open
 - drive: https://drive.google.com/drive/folders/1DHm0MXPAfqvE2ewBXyO4IX-tKAENulSk (stray "Jason Klein — Data Room" folder)
 - drive: https://drive.google.com/drive/folders/1Ax3qCt34RYAZeIjxZcyX4Dt99pg63M-I (actual buyer diligence room sent to Jason Klein 6/19)
 - drive: https://drive.google.com/drive/folders/1OCHc9iAYCf-4dK7i7ZqJskNHuIO73nU5 (correctly-parented "Cann.Dev — Jason Klein (M&A)" folder)
+
+## Update — 2026-07-16, PART E (~15:55 ET)
+
+Read this thread fresh (all 3 replies) before doing anything else, per this pass's
+instruction. Confirmed nothing new beyond what the 09:30 and 12:15 ET passes already
+logged above: Lemar's only reply (08:25 ET) was fully actioned — Bobby Lee Parked,
+Joey identified and given an index row, George-folder deletion request relayed back
+to him (no Drive delete tool available), Jason Klein folder investigated and left
+untouched. **Two items in Lemar's answer remain open and unresolved by him**: Sweet
+Leaf Finance (close it too, or keep open?) and the 4 cold leads — Ian
+Lindemann/Lead Funding, Mickey Wills, Meyer Goldman, Alfonso Rodrigo (revive or
+archive?). No reaction or further reply on the card since the 12:15 ET check. Per
+this pass's guardrail against re-nudging an already-answered-and-actioned card, left
+untouched — not re-posted.
+
+Also swept this pass: Gmail `label:Samira/investor` minus `Samira/investor-sent` — 0
+threads. #investor-pipeline — 0 new messages since the Prompt Working Capital inbound
+flag (13:13 ET, logged separately at
+`haven/vault/20-Cuzzies/2026-07-16-prompt-working-capital-mca-flag.md`). Panther
+Group email thread (`19ed22a918463463`) checked directly — Michael has not yet named
+a specific day/time for the "middle of next week" call, so nothing to schedule; index
+row unchanged. Index note (`index.md`) verified accurate against all of the above —
+no row edits needed this pass. Prompt Working Capital's own #decisions card
+(`p1784230607851799`, posted 15:36 ET) also checked — no reply yet, left alone.
+
+Quiet pass: 0 rooms built, 0 drafts, 0 sends, 0 meetings scheduled, 0 index rows
+changed.
