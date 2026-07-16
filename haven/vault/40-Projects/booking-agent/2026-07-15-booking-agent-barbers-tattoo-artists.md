@@ -1,6 +1,6 @@
 ---
 created: 2026-07-15T18:15-04:00
-updated: 2026-07-16T10:40-04:00
+updated: 2026-07-16T14:00-04:00
 domain: project
 type: note
 status: active
@@ -40,7 +40,23 @@ Next actual step (still open, per the original probe): target customer, core fea
 set, build-vs-buy, and a first brief draft — to be worked under Shortlist/Atlas in the
 new channel, not this scan.
 
+## Update 2026-07-16 — scope answers from Lemar in #booking-agent
+Lemar answered the open probe questions directly in the new project channel (14:00:29 ET):
+"I think we start off with solo operators. All of the core features that you mentioned
+there and we'll build it versus buy."
+
+- Target customer: **solo operators** (not shops, at least to start)
+- Core feature set: **all of it** — calendar sync, reminders, deposits/no-show fees,
+  client history (the full set originally listed in the probe)
+- Build-vs-buy: **build** (custom agent, not wrapping an existing scheduling tool)
+
+This closes the three open scope questions from the 07-15 probe. Remaining open step:
+turn this into a first project brief (per the 07-16 decision: "brief moving this week")
+— this is Lemar's own project so no #decisions lift needed; next brief-drafting pass
+belongs to Shortlist/Atlas working this channel.
+
 ## Sources
 - slack: #atlas 2026-07-15 18:15:39 ET, message ts 1784153739.693329 (channel C0BBWHCJUV9)
 - slack: #decisions 2026-07-16 08:12:06 ET, probe card ts 1784203926.276169 (channel C0BBXA96FFV)
 - slack: #decisions 2026-07-16 08:26:44 ET, Lemar's free-form reply ts 1784204804.434019 ("let's just make sure we put it in a new channel")
+- slack: #booking-agent 2026-07-16 14:00:29 ET, scope-answers message ts 1784224829.576589 (channel C0BHXTPST52)
