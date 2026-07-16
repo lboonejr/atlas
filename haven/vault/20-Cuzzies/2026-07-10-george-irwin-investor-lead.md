@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T14:35:00-04:00
-updated: 2026-07-14T08:15-04:00
+updated: 2026-07-16T09:15-04:00
 domain: cuzzies
 type: log
 status: active
@@ -101,6 +101,17 @@ Added the sensitive-thread advisory in #investor-pipeline (live financial figure
 on this thread) and left it with Lemar to keep running directly — no draft posted, no
 numbers restated as anything other than Lemar's own words. Masters remain un-tailored.
 
+## Update — 2026-07-16 09:15 ET
+
+Lemar asked in #atlas (08:22:54 ET): "follow up with George Irwin, give him a little
+nudge, see if he's made any progress on the items mentioned in the thread." No reply
+from George since his 7/13 ~5:20pm ET "let me digest" message — 3 days quiet.
+
+Per the no-outreach-without-approval rule, drafted (not sent) a short check-in reply on
+the same Gmail thread (Re: Cuzzies) asking for his initial reaction and offering a call
+instead of more email. Saved to Gmail Drafts, draft id `r3430578820917852314`, on thread
+`19f5ce6f744b67d8`. Nothing sent. Flagged in #decisions for Lemar to review/send.
+
 ## Sources
 - slack: #investor-pipeline, Joshua Evans, 2026-07-10 13:22:21 ET
 - gmail: thread 19f4d72e50c51f9b, Lemar → george@agreenroof.com, 2026-07-10 15:14 ET
@@ -109,3 +120,5 @@ numbers restated as anything other than Lemar's own words. Masters remain un-tai
 - gmail: thread 19f5ce6f744b67d8, Lemar → george@cannabisstop.net, 2026-07-13 ~16:55 ET ($75K + $600K-$700K figures, sent directly by Lemar)
 - gmail: thread 19f5ce6f744b67d8, george@cannabisstop.net → Lemar, 2026-07-13 ~17:20 ET ("let me digest...TheJoint.me" reply)
 - slack: #investor-pipeline, thread ts 1783973569.032629, Samira advisory reply 2026-07-14
+- slack: #atlas, 2026-07-16 08:22:54 ET, message ts 1784204574.522859 (nudge request)
+- gmail: draft r3430578820917852314 on thread 19f5ce6f744b67d8 (nudge reply, not sent)
