@@ -1,6 +1,6 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-15T12:00:00-04:00
+updated: 2026-07-16T09:35:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -153,6 +153,19 @@ Reopening status to `active` to reflect the ongoing saga, but treating this as
 a log-only update per the same judgment used on 7/7 and 7/8 — no new
 #decisions card, nothing drafted. Labeled `Samira/seen` in Gmail.
 
+## Update 2026-07-16 — new secure message, content locked behind portal login
+
+Meggan Hallworth emailed again (7/16 ~08:27 AM ET, cc Christopher Cabezas), subject
+"Cuzzie's Dispensary & Delivery LLC" (gmail thread `19f6ae580101e4e0`) — but unlike
+every prior "secure:"-subject message in this saga, this one is a bare SilverSky
+mailsafe notification shell with no content in the body at all; the actual message
+is locked behind an "Open Secure Message" portal link that expires in 30 days.
+Samira can't log into the SilverSky/Parke Bank portal (safety rule, same class as
+the Regus portal notice), so there's no way to tell from here whether this is just
+another routine returned-items update or something new/escalated. Posting a
+#decisions card asking Lemar to open it himself, since content can't be read or
+drafted against sight-unseen.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -169,4 +182,6 @@ a log-only update per the same judgment used on 7/7 and 7/8 — no new
 - gmail: thread `19f608fceb87ece9` (Christopher Cabezas, 3 more returned items
   $428.49, 2026-07-14 08:17 ET; same thread continues 2026-07-15 with message
   `19f65a47fbfa661a`, 1 more returned item $280.00)
+- gmail: thread `19f6ae580101e4e0` (Meggan Hallworth, secure message notification
+  only — content locked behind portal, 2026-07-16 08:27 ET)
 - slack: #decisions message ts `1783689606.144269` (parent) / `1783689609.847929` (Option A, ✅ picked) / `1783700440.292759` (closed, confirmed sent)
