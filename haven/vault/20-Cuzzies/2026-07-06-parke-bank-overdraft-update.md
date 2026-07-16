@@ -1,9 +1,9 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-16T09:35:00-04:00
+updated: 2026-07-16T10:12:51-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [parke-bank, overdraft, nsf]
 source: gmail
 ---
@@ -166,6 +166,18 @@ another routine returned-items update or something new/escalated. Posting a
 #decisions card asking Lemar to open it himself, since content can't be read or
 drafted against sight-unseen.
 
+## Update 2026-07-16 (2) — closed, Lemar saluted
+
+Lemar reacted 🫡 on the #decisions card for the 7/16 secure-message notice (message
+ts `1784207854.147209`) — no reply text, no free-form note. Reading this as: he saw
+the portal-locked notice and is closing the loop without needing Samira to do
+anything further (consistent with "Samira can't open the portal" being the whole
+ask). Not asserting the underlying secure message was read, opened, or resolved —
+only that Lemar closed this #decisions card. Labeled `Samira/sent` on gmail thread
+`19f6ae580101e4e0` per the 🫡 convention for this loop; the broader overdraft saga
+stays open and will likely resurface on the next Parke Bank contact. Status moved to
+`done` for this round.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -183,5 +195,7 @@ drafted against sight-unseen.
   $428.49, 2026-07-14 08:17 ET; same thread continues 2026-07-15 with message
   `19f65a47fbfa661a`, 1 more returned item $280.00)
 - gmail: thread `19f6ae580101e4e0` (Meggan Hallworth, secure message notification
-  only — content locked behind portal, 2026-07-16 08:27 ET)
+  only — content locked behind portal, 2026-07-16 08:27 ET; labeled `Samira/sent`
+  2026-07-16 following Lemar's 🫡 close)
 - slack: #decisions message ts `1783689606.144269` (parent) / `1783689609.847929` (Option A, ✅ picked) / `1783700440.292759` (closed, confirmed sent)
+- slack: #decisions message ts `1784207854.147209` (7/16 secure-message card, closed via 🫡)
