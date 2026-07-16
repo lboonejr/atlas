@@ -1,6 +1,6 @@
 ---
 created: 2026-07-15T16:52-04:00
-updated: 2026-07-15T18:04-04:00
+updated: 2026-07-16T16:12-04:00
 domain: cuzzies
 type: task
 status: active
@@ -33,6 +33,19 @@ send it now and let Liquidibee know, or decide how to handle the missed date.
 Thread: Gmail "Follow-Up — Forbearance Discussion | Cuzzie's Dispensary & Delivery"
 (thread `19f145c4067ec93d`).
 
+## Update 2026-07-16
+
+Lemar replied in the #decisions thread (free-form, no reaction): "I'm going to try to
+get this payment out on friday if I can." This is his own payment to send — Samira
+cannot wire funds (safety floor) — so this is tracking-only: due date is now slipping
+past the original 7/15 forbearance deadline to a targeted Friday (2026-07-17). No wire
+sent by Samira, nothing else actioned. Still open: whether Liquidibee needs to be told
+about the new target date, and whether the forbearance survives a payment that lands
+~2 days late.
+
 ## Related
 - [[liquidibee]]
 - [[2026-07-04-bizfundshub-data-room-blocked]]
+
+## Sources
+- slack: #decisions thread `1784150330.736109` — Lemar's Friday-payment reply
