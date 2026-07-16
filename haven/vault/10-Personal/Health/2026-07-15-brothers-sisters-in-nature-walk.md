@@ -1,6 +1,6 @@
 ---
 created: 2026-07-15T22:39-04:00
-updated: 2026-07-16T12:00-04:00
+updated: 2026-07-16T13:15-04:00
 domain: personal
 type: note
 status: active
@@ -8,6 +8,7 @@ tags: [event, nature-walk, philadelphia, personal-interest]
 source: slack
 area: health
 due: 2026-08-02T09:30-04:00
+calendar_event_id: seauhq6m6gq0t5bdfrnod39q5k
 ---
 
 # Brothers and Sisters in Nature Walk — Aug 2, Pennypack Park
