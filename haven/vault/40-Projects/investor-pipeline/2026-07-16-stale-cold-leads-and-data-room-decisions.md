@@ -1,6 +1,6 @@
 ---
 created: 2026-07-16T09:00-04:00
-updated: 2026-07-16T09:00-04:00
+updated: 2026-07-16T09:35-04:00
 domain: project
 type: log
 status: awaiting-decision
@@ -54,3 +54,40 @@ the above rather than a separate card.
 - drive: https://drive.google.com/drive/folders/1nHEYc0FdIY4Kn-Q9ffkS5n66y0R5s43h (unlabeled Data Room)
 - drive: https://drive.google.com/drive/folders/1uNfI-UHH53F1mFSAL1dEjYEoK9aQ_OF3 (stray George folder)
 - drive: https://drive.google.com/drive/folders/1U7GFTuA5Tj6TMD0CWgfZhWwSbwWKWDfF (Investor Data Rooms parent)
+
+## Update — 2026-07-16, PART E (~09:30 ET)
+
+Lemar replied in the #decisions thread at 08:25:48 ET (message ts
+`1784204748.573089`) — a plain-text reply, not an emoji reaction, so it was missed
+by the two automated passes that ran at 08:22 and 09:14 ET (both only checked for
+an emoji signal). Picked up and actioned this pass:
+
+1. **Bobby Lee** — "We can close out Bobby Lee." Added an index row, Status:
+   Parked. Sweet Leaf Finance was bundled in the original question but NOT named
+   in Lemar's reply — treated as still open rather than assumed closed; re-asked
+   in #decisions.
+2. **Four cold leads (origin reminder requested)** — answered in #decisions with
+   what's on file: Ian Lindemann/Lead Funding (bridge loan, Josh 6/29, email never
+   confirmed) · Mickey Wills/Mickey Mix Consult LLC (debt/equity, intro via Amir
+   Armstrong, 19-yr cannabis operator background, Josh sent outreach 6/27, no
+   reply) · Meyer Goldman (replied positively 6/29 "looking forward to speaking,"
+   ball was in Lemar's court for a call, never scheduled) · Alfonso Rodrigo
+   (equity, LinkedIn-only, context marked Unknown, generic intro drafted 6/25,
+   never confirmed sent). Revive-or-close decision on these four is still Lemar's
+   — re-asked, not assumed.
+3. **Joey (new)** — "through a friend, we found a high-net-worth individual that
+   might want to be a part of this so his name is Joey. We could change the name
+   of the folder to that but basically that's what that folder is for." This
+   resolves item 3 above: the unlabeled Data Room folder is Joey's room. Added an
+   index row (Status: Working). Could NOT rename the Drive folder — no
+   rename/move tool available in this session — flagged to Lemar to rename
+   manually or supply a full name. Still need Joey's full name, contact info, and
+   the specific ask before any exec summary tailoring or outreach draft.
+4. **George duplicate folder** — "We can delete the George folder." Could NOT
+   delete it — no Drive delete tool available in this session. Flagged back to
+   Lemar to delete manually: https://drive.google.com/drive/folders/1uNfI-UHH53F1mFSAL1dEjYEoK9aQ_OF3
+
+Index updated (Bobby Lee, Joey rows added) — commit `investor-index: Bobby Lee
+Parked, Joey Working`. Reply posted in the #decisions thread with the origin
+recap, the Sweet Leaf / four-cold-lead re-ask, the Joey info request, and the
+George-folder tooling limitation.
