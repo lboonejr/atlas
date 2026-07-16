@@ -29,4 +29,4 @@ Probe with Lemar: why now, target outcome, scope, and whether to route this thro
 Stormy's idea-pressure-test (15-question instrument) given it has no stated timeframe.
 
 ## Sources
-- slack: #atlas 2026-07-15 18:15 ET (message ts 1783558... see channel C0BBWHCJUV9)
+- slack: #atlas 2026-07-15 18:15:39 ET, message ts 1784153739.693329 (channel C0BBWHCJUV9)
