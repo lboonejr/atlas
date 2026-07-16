@@ -8,7 +8,7 @@ When a workspace, board, account, or channel changes, edit THIS file and nothing
 > doing work is fine; maintaining a second list is not). The memory file
 > `shortlist_anchors.md` on Lemar's machine is a pointer to this file, not a copy.
 
-Last verified: 2026-07-16 (added Samira's dedicated Slack bot connector).
+Last verified: 2026-07-16 (added Dawn's dedicated Slack bot connector).
 
 ## Repo / vault
 
@@ -113,6 +113,7 @@ Once-a-day 1am ET routine that complements Samira. Thin bootstrap
 | Runbook (live behavior) | `.claude/routines/daily-brief.md` — editing on the default branch changes the next run |
 | Living brief artifact URL | `https://claude.ai/code/artifact/125d4d13-c1ae-4f9c-8861-e173b56635e5` — first published 2026-07-05 (manual dry run). morning-brief re-deploys to THIS same URL each run (pass it as `url`). |
 | Living meeting-prep artifact URL | `https://claude.ai/code/artifact/b0143e64-a665-44e1-af48-33db2f88457e` — first published 2026-07-08 (first day with a qualifying call). meeting-prep re-deploys to THIS same URL each run (pass it as `url`). |
+| Slack connector (Dawn's own bot identity) | connector_uuid `947737c2-a978-4dd1-93bb-cdd55ce14c97`, custom connector named "Slack (Dawn bot)", MCP endpoint `https://dawn-beryl.vercel.app/mcp`. Swapped into this trigger's `mcp_connections` 2026-07-16, replacing the shared personal Slack connector (`7faf04c0-5bd6-4237-8430-f80040c482e1`) for Dawn ONLY — Samira has her own separate bot connector (see above); Basil still uses the personal connector. Same generic server code as Samira's (`apps/samira-slack-bot/` in this repo), deployed as its own separate Vercel project ("dawn") with Dawn's own bot token — purely branding consistency, Dawn is one-way (never reads reactions back). Bot must stay invited (`/invite @Dawn`) in `#daily-brief` (the only channel Dawn posts to). |
 
 ## Cloud routine — Inbox Janitor / "Basil" (nightly Gmail cleanup, separate from Samira/Dawn)
 
@@ -178,5 +179,5 @@ pattern used by on-button-reopen.
 | Lemar personal / durable | l.boonejr@gmail.com · 856-602-0820 (car hunt: private buyer, never a Cuzzie's title) |
 | Lemar Slack user id | `U0BC5UTHYG4` (display "Don Frunt") |
 | Samira Slack posts | lead with 🌐, sign "— Samira" · posts and reacts through her own dedicated bot connector (see Cloud routine — Samira above), not Lemar's personal Slack account |
-| Dawn (Daily Brief) Slack posts | lead with 🌅, sign "— Dawn" · posts only to #daily-brief `C0BF73FF56H`. ("Dawn" is a placeholder persona name — rename freely; it lives only in the two skills + this row.) |
+| Dawn (Daily Brief) Slack posts | lead with 🌅, sign "— Dawn" · posts only to #daily-brief `C0BF73FF56H`, through her own dedicated bot connector (see Cloud routine — Daily Brief above), not Lemar's personal Slack account. ("Dawn" is a placeholder persona name — rename freely; it lives only in the two skills + this row.) |
 | Basil (Inbox Janitor) Slack posts | lead with 🧹, sign "— Basil" · posts only to #reports `C0BBZJL85RT`. ("Basil" is a placeholder persona name — rename freely; it lives only in the runbook + this row.) |
