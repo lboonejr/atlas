@@ -1,0 +1,19 @@
+{
+  "name": "samira-slack-bot",
+  "version": "1.0.0",
+  "description": "Bot-token Slack MCP server for Samira (Atlas Executor) — gives Samira a distinct Slack identity separate from Lemar's account.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "@slack/web-api": "^7.8.0",
+    "express": "^4.21.2",
+    "zod": "^3.24.1"
+  }
+}
