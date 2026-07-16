@@ -1,12 +1,13 @@
 ---
 created: 2026-07-16T13:15-04:00
-updated: 2026-07-16T13:45-04:00
+updated: 2026-07-16T14:05-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [vendor, niche, apex-trading, ordering-platform]
 source: gmail
 due: 2026-07-17T09:00-04:00
+calendar_event_id: nli7h95m39t5p41urkeh5nmifk
 ---
 
 # Register Cuzzie's buyer account on Apex Trading for niche/Goodies orders
