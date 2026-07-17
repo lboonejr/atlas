@@ -1,9 +1,9 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-17T08:30:00-04:00
+updated: 2026-07-17T09:10:00-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [parke-bank, overdraft, nsf]
 source: gmail
 ---
@@ -188,6 +188,16 @@ days). Samira still can't log into the portal (safety rule). Reopening status to
 `active`. Posting a #decisions card asking Lemar to open it himself, matching the
 7/16 pattern exactly. Labeled `Samira/seen` in Gmail.
 
+## Update 2026-07-17 (2) — closed, Lemar saluted
+
+Lemar reacted 🫡 on the #decisions card for the 7/17 secure-message notice (message
+ts `1784291108.312309`) — no reply text, no free-form note. Same read as the 7/16
+close: he saw the portal-locked notice and is closing the loop without needing
+Samira to do anything further. Not asserting the underlying secure message was
+read, opened, or resolved — only that Lemar closed this #decisions card. Status
+moved to `done` for this round; the broader overdraft saga stays open and will
+likely resurface on the next Parke Bank contact.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -211,3 +221,4 @@ days). Samira still can't log into the portal (safety rule). Reopening status to
   notification only — content locked behind portal, 2026-07-17 08:04 ET)
 - slack: #decisions message ts `1783689606.144269` (parent) / `1783689609.847929` (Option A, ✅ picked) / `1783700440.292759` (closed, confirmed sent)
 - slack: #decisions message ts `1784207854.147209` (7/16 secure-message card, closed via 🫡)
+- slack: #decisions message ts `1784291108.312309` (7/17 secure-message card, closed via 🫡)
