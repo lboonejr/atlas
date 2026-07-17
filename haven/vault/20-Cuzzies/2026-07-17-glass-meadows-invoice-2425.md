@@ -1,9 +1,9 @@
 ---
 created: 2026-07-17T12:30-04:00
-updated: 2026-07-17T12:45-04:00
+updated: 2026-07-17T13:10-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [glass-meadows, invoice, vendor, quickbooks]
 source: gmail
 ---
@@ -18,5 +18,15 @@ same building/area as the business. Nothing to reply to; this is a payment/no-pa
 call for Lemar, not something Samira can act on (no portal login, no payment, per the
 safety floor).
 
+Posted a single-action #decisions card. Lemar reacted 🫡 on it.
+
+## Update 2026-07-17 — closed
+Reading the 🫡 as the same wind-down stance already applied to other vendor
+notices this month (Regus, Wispr Flow, Zapier, Intuit Workforce) — closing the loop, no
+call made, no portal login, no payment sent by Samira (safety floor: payments are never
+executed). Balance remains unpaid on Glass Meadows' side; this just stops the
+#decisions card from staying open.
+
 ## Sources
 - gmail: thread `19f703c0bc99fbef` ("Invoice 2425 needs your attention"), 2026-07-17T13:20:09Z
+- slack: #decisions `1784305563.928709` — 🫡 close signal
