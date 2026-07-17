@@ -1,10 +1,10 @@
 ---
 created: 2026-07-06T06:53:45-04:00
-updated: 2026-07-17T09:10-04:00
+updated: 2026-07-17T16:45-04:00
 domain: project
 type: brief
 status: active
-tags: [samira, atlas, productization, dad, air-force]
+tags: [samira, atlas, productization, dad, air-force, stormy]
 source: slack
 ---
 
@@ -75,8 +75,36 @@ can log the routing decision but can't sit through the interview on Lemar's beha
 Next step is his call: say "stormy this idea" (or "resume stormy") on this
 onboarding-form idea whenever he's ready to sit through the pressure test.
 
+## Update 2026-07-17 (4) — Stormy pressure test underway (PART Q)
+
+Lemar confirmed in #decisions (ts `1784306179`, 12:36 ET): "I'm ready. Let's /stormy this
+idea. Let's get it moving." Stormy dropped the seed into the private #stormy channel and
+opened the 15-question pressure test this same hour:
+
+- **Seed posted** in #stormy 16:09 ET (ts `1784318958.144999`) — restates the AI-onboarding
+  intake form idea (Jotform basic-info/tools-in-use/pain-points/desired-outcome, feeds
+  straight into Samira's build loop for a new person or business — dad, the booking-agent).
+- **Q1 (Section A — Problem)** posted 16:11 ET (ts `1784319080.586059`). Lemar answered
+  16:34 ET (ts `1784320495.581389`): the core problem is that operators/individuals
+  struggle with day-to-day pieces of their job — booking-based businesses struggle managing
+  bookings, lead-based jobs struggle finding leads, businesses struggle with inventory,
+  individuals want better workflows generally. The jotform is the front door: it identifies
+  the person/business and the specific problem before anything gets built.
+- **Q2 + Q3 asked** this scan (~16:45 ET) — beneficiary scope (internal/family use only for
+  now, vs. an explicit External partner/Customers productized play) and the first-version
+  scope + hardest constraint (intake form alone vs. form + Lemar building the automation
+  after, and what's most likely to slow it down). Awaiting Lemar's reply in #stormy; picked
+  up and logged on the next PART Q scan.
+
+Section A/B of the 15-point instrument in progress. No plan is locked yet — `status` stays
+`active` (this note was already active pre-Stormy; the bake itself tracks via these Updates,
+not a separate `awaiting-decision` note, per the append-not-duplicate rule since this is the
+same matter as the existing dad-samira-atlas brief).
+
 ## Sources
 - slack: #atlas 2026-07-06 06:53 ET
 - slack: Samira capture DM (D0BHPKMDNEP) 2026-07-17 08:04:18 ET, ts 1784288658.057799 — onboarding job form idea
 - slack: Samira capture DM (D0BHPKMDNEP) 2026-07-16 21:00:06 ET, ts 1784257206.265089 — "pressure tester" agent idea
 - slack: #decisions message ts `1784290595.494019` (parent, probe card) / `1784290600.449469` (Option 1, ✅ picked)
+- slack: #decisions ts `1784306179` — Lemar: "I'm ready. Let's /stormy this idea. Let's get it moving"
+- slack: #stormy (C0BJ37SU1TL) ts `1784318958.144999` (seed drop) / `1784319080.586059` (Q1) / `1784320495.581389` (Lemar's Q1 answer) / `1784323007.567499` (Q2+Q3, this scan)
