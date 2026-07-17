@@ -108,8 +108,8 @@ Lemar. That stuck note is the system working, not failing.
 ### How sure is "sure" per field
 
 - **source** — almost always known: it is *where this capture came from*. Atlas from a
-  chat = `claude`. From #atlas or any Slack message = `slack`. From the email loop =
-  `gmail`. A voice note = `voice`. A human typing directly = `manual`. Stamp it.
+  chat = `claude`. From the capture DM or any Slack message = `slack`. From the email
+  loop = `gmail`. A voice note = `voice`. A human typing directly = `manual`. Stamp it.
 - **status** — default `active`. Use `done` only if the captured thing is already
   finished, `parked` if explicitly on hold, `awaiting-decision` when it sits on a
   #decisions card. Rarely unresolved.
@@ -183,7 +183,8 @@ If the push fails, STOP and say so — the capture is not real until it is pushe
 
 ### claude.ai phone/web without a commit path
 If your surface cannot commit, you cannot land the capture — say so plainly and route
-the raw thought to #atlas so the hourly routine lands it. Never claim a capture
+the raw thought to the **Samira capture DM** (`D0BHPKMDNEP`) so the hourly routine lands
+it (this DM replaced #atlas as the capture inbox 2026-07-16). Never claim a capture
 succeeded when no note was committed.
 
 ### Return value
