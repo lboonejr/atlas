@@ -7,10 +7,10 @@ description: >
   counterparty's entity note, prior meetings, related project notes, any prep script
   already in the vault), and renders ONE combined visual prep doc for the day as a living
   artifact. "Done = a filed Haven note": the prep lands as a `type: brief` note FIRST,
-  then the artifact, then a link in #daily-brief. Use it on the daily run or on demand:
+  then the artifact, then a link in Lemar's DM. Use it on the daily run or on demand:
   "prep me for today's calls", "meeting prep", "brief me before the call", "who am I
   talking to today". It reads calendar + Haven and writes only the prep note + artifact +
-  one #daily-brief line — it never joins or declines invites, never emails an attendee,
+  one line in Lemar's DM — it never joins or declines invites, never emails an attendee,
   never sends anything.
 ---
 
@@ -22,12 +22,13 @@ behind it — as one combined prep doc he can open before the first call and scr
 the day.
 
 **Order of operations: (1) durable record to Haven → (2) render the artifact → (3) post
-the link to #daily-brief.** Same law as the morning brief: note first, rendering second.
+the link to Lemar's DM.** Same law as the morning brief: note first, rendering second.
 
 ## ANCHORS
-Read **`.claude/anchors.md`** first. You use: **#daily-brief** (`C0BF73FF56H`, the only
-channel you post to); **Google Calendar** (his ET calendars); the **vault**
-`haven/vault/` incl. `50-Reference/Entities/`, `40-Projects/`, and the business
+Read **`.claude/anchors.md`** first. You use: **Lemar's DM** (the Dawn bot IM
+`D0BJ0JPQD8C`, opened by posting to Lemar's user id `U0BC5UTHYG4` — the only surface you
+post to, rerouted off #daily-brief 2026-07-16); **Google Calendar** (his ET calendars); the
+**vault** `haven/vault/` incl. `50-Reference/Entities/`, `40-Projects/`, and the business
 `meetings/` folders; and the persisted **meeting-prep artifact URL** under "Daily Brief
 routine" in anchors.
 
@@ -71,7 +72,7 @@ For each qualifying meeting, in chronological order:
    one page. Publish with the **Artifact** tool: re-deploy to the persisted meeting-prep URL
    in anchors if present (same `title`, favicon 🗓️); else publish fresh, capture the URL,
    write it back to anchors under "Daily Brief routine".
-3. **Post to #daily-brief** — ONE line, lead 🌅, sign "— Dawn":
+3. **Post to Lemar's DM** (the Dawn bot IM `D0BJ0JPQD8C`) — ONE line, lead 🌅, sign "— Dawn":
    `🌅 Prepped for today's 3 calls — Eddie 2:30 · Gusto 9:00 · LSNJLAW 10:00. [link] — Dawn`.
    **If there are no meetings today**, post a single quiet line instead
    (`🌅 No calls on the calendar today. — Dawn`) and skip the note + artifact.
@@ -80,12 +81,12 @@ For each qualifying meeting, in chronological order:
 
 ## SAFETY (applies to the whole skill)
 You MAY: read calendar + vault; write the prep note into `_daily/`; publish/re-deploy the
-prep artifact; post ONE line to #daily-brief; append the run marker.
+prep artifact; post ONE line to Lemar's DM; append the run marker.
 You MUST NOT, ever: respond to, accept, or decline a calendar invite; add or remove an
 attendee; email or message anyone on the invite; send any outreach; post anywhere but
-#daily-brief; run vault-keeper/calendar-sync; edit note bodies beyond your own Update/Log
-lines; delete or overwrite content; guess a controlled field. You prepare Lemar — you never
-touch the meeting itself.
+Lemar's DM (never a channel, never #reports); run vault-keeper/calendar-sync; edit note
+bodies beyond your own Update/Log lines; delete or overwrite content; guess a controlled
+field. You prepare Lemar — you never touch the meeting itself.
 
 ## Returns (to the daily-brief routine)
 `prep note path · artifact URL · meeting count N` (N=0 → note/artifact skipped, quiet line posted).
