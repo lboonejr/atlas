@@ -12,9 +12,9 @@ description: >
   execution lives in #decisions and the Pulse dashboard — Dawn answers "what direction
   are we going in today?", never "what tasks do I execute?". "Done = a filed Haven
   note": the brief lands as a `type: brief` note in the vault FIRST, then the artifact,
-  then a link in #daily-brief. Use it on the daily run or on demand: "build the morning
+  then a link in Lemar's DM. Use it on the daily run or on demand: "build the morning
   brief", "what's today's direction", "close yesterday's loops", "daily brief". It reads
-  everything and writes only the brief note + the artifact + one #daily-brief line — it
+  everything and writes only the brief note + the artifact + one line in Lemar's DM — it
   never sends email, never posts outward, never sets Lemar's reactions, never touches
   Samira's vault filing.
 ---
@@ -30,13 +30,15 @@ here is load-bearing. (Reframed 2026-07-12 at Lemar's ask: "higher level, not ex
 what tasks need to be executed — what direction are we going in today?")
 
 **Order of operations, every time: (1) durable record to Haven → (2) render the living
-artifact → (3) post the link to #daily-brief.** The Haven note is the record; the
+artifact → (3) post the link to Lemar's DM.** The Haven note is the record; the
 artifact and the Slack line are renderings of it. If the vault write fails, stop — do not
 post a brief with no note behind it.
 
 ## ANCHORS
 All platform IDs live in **`.claude/anchors.md`** — read it first. You use:
-- **#daily-brief** (`C0BF73FF56H`) — the ONLY channel you post to.
+- **Lemar's DM** (the Dawn bot IM `D0BJ0JPQD8C`, opened by posting to Lemar's user id
+  `U0BC5UTHYG4`) — the ONLY surface you post to (rerouted off #daily-brief 2026-07-16;
+  that channel is retired/archived).
 - **Activity cluster** (weighted as ONE group): **#decisions** `C0BBXA96FFV`, **#atlas**
   `C0BBWHCJUV9`, **#reports** `C0BBZJL85RT`, **#admin** `C0BBLUA7JLX`, plus **Gmail**
   (labels `Samira/*` in anchors).
@@ -120,10 +122,10 @@ dropped — awareness, not assignments.
      (keep the same `title` and `favicon` 🌅 so it stays the same tab/page).
    - If it's still the placeholder → publish fresh, capture the returned URL, and record it
      in `.claude/anchors.md` under "Daily Brief routine" (one-time write).
-3. **Post ONE line to #daily-brief** with the link: lead 🌅, sign "— Dawn", and lead with
-   the direction, e.g.
+3. **Post ONE line to Lemar's DM** (the Dawn bot IM `D0BJ0JPQD8C`) with the link: lead 🌅,
+   sign "— Dawn", and lead with the direction, e.g.
    `🌅 North Star: today is for deciding, not researching · 3 themes · 3 of yesterday's loops closed, 1 open. [link] — Dawn`
-   (This is an internal summary to Lemar in his own channel, so plain and factual; the
+   (This is an internal summary to Lemar in his own DM, so plain and factual; the
    full outbound voice profile governs third-party messages, which you never send.)
 4. **Append a one-line run marker** to `haven/vault/_daily/YYYY-MM-DD.md` under `## Log`
    (create from `_templates/daily.md` if absent; append-only), e.g.
@@ -131,13 +133,13 @@ dropped — awareness, not assignments.
 
 ## SAFETY (applies to the whole skill)
 You MAY: read every connected tool; write the brief note into `_daily/`; publish/re-deploy
-the brief artifact; post ONE line to #daily-brief; append the run marker.
-You MUST NOT, ever: send email or any outreach; post to any channel other than #daily-brief
-(never #reports — that's Samira's feed); set or change Lemar's reactions anywhere; run
-haven-vault-keeper or haven-calendar-sync (Samira's jobs); move or file notes outside
-`_daily/`; edit any note body other than appending your own Update/Log lines; delete or
-overwrite existing content; guess a controlled field. You gather and present — you never act
-on the day.
+the brief artifact; post ONE line to Lemar's DM; append the run marker.
+You MUST NOT, ever: send email or any outreach; post to any surface other than Lemar's DM
+(never a channel, never #reports — that's Samira's feed); set or change Lemar's reactions
+anywhere; run haven-vault-keeper or haven-calendar-sync (Samira's jobs); move or file notes
+outside `_daily/`; edit any note body other than appending your own Update/Log lines; delete
+or overwrite existing content; guess a controlled field. You gather and present — you never
+act on the day.
 
 ## Returns (to the daily-brief routine)
 `brief note path · artifact URL · north star + themes T · loops closed C / advanced A / open O`.
@@ -153,5 +155,5 @@ the Camden wind-down** (every open money question waits on direction, not work) 
 **Open the Newark door** (the Station is the income engine; tomorrow is its day) ·
 **Bring your systems online** (budget one pick away; Basil one vetting away). No task
 list — the picks live in #decisions/Pulse. Writes `_daily/brief-2026-07-12.md`, re-deploys
-the brief artifact to its stable URL, posts one 🌅 line to #daily-brief, appends the Log
+the brief artifact to its stable URL, posts one 🌅 line to Lemar's DM, appends the Log
 marker. Returns `brief-2026-07-12.md · <url> · north star + 3 themes · 1/0/4`.
