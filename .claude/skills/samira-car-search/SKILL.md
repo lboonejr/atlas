@@ -64,8 +64,11 @@ individual, friendly and direct, short; practical buyer questions (price firmnes
 in hand, mileage, service history, issues, availability); include 2–4 negotiation angles
 (mileage vs the $5,000 ceiling, known model-year issues, days-on-market/price drops,
 reconditioning, out-the-door fees) with a target offer and walk-away at/under $5,000
-when price is in play. Lead with the draft in a code block (one-tap copy). No em dashes,
-no ALL CAPS, private-buyer signature (see anchors: identity) — never a Cuzzie's title.
+when price is in play. Lead with the draft in a code block (one-tap copy). Read
+`.claude/voice/voice-profile-lemar-boone-jr.md` and run its Hard-Floor Lint against this
+draft; revise until it passes before saving (floors 1–6 and 8–10 apply as written; floor
+7 does NOT — this voice signs with the private-buyer identity per anchors: identity, never
+Lemar's name or a Cuzzie's title). No em dashes, no ALL CAPS.
 Your posted suggestion IS the handled-marker for that pasted message.
 
 ## F4 — test-drive scheduling (vs Google Calendar)

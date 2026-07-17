@@ -93,10 +93,12 @@ Add the index row (Status: Working) → create `[Investor] — [Entity] — Data
 the parent → copy + tailor masters → folder link into the row → receipt.
 
 ## I3 — first outreach (Lemar's business voice)
-1–2 drafts threaded under the item (🌐, "— Samira", headline ⏳), business voice
-(email-responder, draft only + feedback_voice_profile.md), pointing to THEIR folder.
-Status: Room ready. On ✅ for email-sourced items, save the final reply to Gmail Drafts
-(threaded) — you never send.
+1–2 drafts threaded under the item (🌐, "— Samira", headline ⏳), business voice per the
+canonical profile at `.claude/voice/voice-profile-lemar-boone-jr.md` (the single source
+of truth — it supersedes the email-responder guide and every other style reference),
+pointing to THEIR folder. Read that profile and run its Hard-Floor Lint against this
+draft; revise until it passes before saving. Status: Room ready. On ✅ for email-sourced
+items, save the final reply to Gmail Drafts (threaded) — you never send.
 
 ## I4 — the investor's reply
 - **No / pass** → gracious close draft; Status: Passed on ✅/🫡.

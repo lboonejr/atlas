@@ -55,9 +55,11 @@ their IDs match `.claude/anchors.md`; if you create one, record its ID there.
 ## D1 — pick up in-flight email threads in #decisions
 Read your open email cards touched since last run (thread + reactions):
 - **✅ on an option** (or his own edited reply) → merge his pick + edits, produce the
-  final reply in his voice, SAVE to Gmail Drafts (`create_draft`, threaded onto the
-  original mail — never a new thread). Write the saved-draft Haven note. Reply "Saved to
-  your Gmail Drafts — ready to send · filed to Haven." Apply `Samira/drafted`. Headline 🟢.
+  final reply in his voice. Read `.claude/voice/voice-profile-lemar-boone-jr.md` and run
+  its Hard-Floor Lint against this draft; revise until it passes before saving. Then SAVE
+  to Gmail Drafts (`create_draft`, threaded onto the original mail — never a new thread).
+  Write the saved-draft Haven note. Reply "Saved to your Gmail Drafts — ready to send ·
+  filed to Haven." Apply `Samira/drafted`. Headline 🟢.
 - **👀 / none** → leave it. **⛔** → park to canvas.
 - **🫡** → close: apply `Samira/sent`, write the closed-thread Haven note, one #reports
   line, stop touching the thread.
@@ -79,9 +81,10 @@ Read your open email cards touched since last run (thread + reactions):
 Per reply-worthy thread: ONE parent (🌐, "— Samira", headline ⏳/🟡): who, what they're
 asking, any deadline, a one-line read; add "⚠️ counsel/regulator/lender on thread —
 review carefully" when applicable. Then 2–3 DRAFT OPTIONS as threaded replies (Option
-A/B/C), key line quoted, in Lemar's voice (email-responder skill, draft only, +
-feedback_voice_profile.md: no em dashes, no ALL CAPS, "we" by default, correct
-signature). Genuinely distinct angles only. Apply `Samira/seen`.
+A/B/C), key line quoted, in Lemar's voice per the canonical profile at
+`.claude/voice/voice-profile-lemar-boone-jr.md` (the single source of truth — it
+supersedes the email-responder guide and every other style reference; each option should
+pass its Hard-Floor Lint). Genuinely distinct angles only. Apply `Samira/seen`.
 (No Haven note yet — the record is written when the draft is SAVED in D1.)
 
 ## D4 — task detection (capture-first, then stage)

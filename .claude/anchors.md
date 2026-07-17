@@ -8,7 +8,7 @@ When a workspace, board, account, or channel changes, edit THIS file and nothing
 > doing work is fine; maintaining a second list is not). The memory file
 > `shortlist_anchors.md` on Lemar's machine is a pointer to this file, not a copy.
 
-Last verified: 2026-07-16 (added Dawn's dedicated Slack bot connector).
+Last verified: 2026-07-16 (added the Voice profile section — canonical profile moved into the repo).
 
 ## Repo / vault
 
@@ -23,6 +23,20 @@ Last verified: 2026-07-16 (added Dawn's dedicated Slack bot connector).
 | **Git write policy** | **Never open a feature branch + pull request for `haven/vault/**`, `.claude/**`, or any routine/skill write.** Every session (hourly Samira scan, Dawn's daily run, or a one-off session) commits and pushes straight to `main` — GitHub MCP connector's `create_or_update_file`/`push_files`, or local git `commit` + `push origin main`. A branch+PR strands that session's work off `main`, where no later run or skill ever sees it (root-caused 2026-07-08: PRs #34/#35 each re-did work already done on `main`, and #35's Gusto Jul 8 note existed nowhere else). Lemar's call 2026-07-08 1:23pm ET: fix this with guidance here rather than flipping repo auto-merge settings. If a direct push to `main` is rejected (someone pushed since your last pull), re-pull and retry the direct write — do not fall back to a branch+PR. |
 | Local working clone | `C:\Users\lemar\Haven-repo` (desktop; also what Obsidian reads) |
 | DO NOT WRITE | `C:\Users\lemar\Vaults\Haven` — retired reader copy, superseded by the clone |
+
+## Voice profile (Lemar's outbound voice — single source of truth)
+
+Any skill, routine, or agent that drafts language Lemar will send or post reads the
+canonical profile first and obeys it. Its header block carries the precedence rule: it
+supersedes ALL other style guidance, including guides bundled inside skills.
+
+| What | Value |
+|---|---|
+| **Canonical profile (authoritative)** | `.claude/voice/voice-profile-lemar-boone-jr.md` (repo). The single source of truth for Lemar's voice; edit it through Obsidian. Opens with a header block (precedence rule) + a Hard-Floor Lint, then the full ~983-line profile verbatim. Supersedes every other style reference. |
+| OneDrive copy (NOT authoritative) | `C:\Users\lemar\OneDrive\Desktop\12 Personal\Shared\Lemar Voice Profile\voice-profile-lemar-boone-jr.md` — convenience copy only, kept for desktop reference. If it ever differs from the repo copy, the repo copy governs. Cloud routines cannot reach it; the repo copy is what they read. |
+| Wired draft-skills (repo) | `samira-email-loop` (D1 save gate + D3 draft-options), `samira-investor` (I3 outreach), `samira-car-search` (F3 — floors apply except signature floor 7, which yields to the private-buyer identity). Each reads the profile and runs its Hard-Floor Lint before saving. |
+| Not-yet-wired (not in this repo) | `task-builder`, `Aaron` (aaron-exec), `Chase` (chase-commitments) are anthropic-skills plugin/session skills, not vendored here — they can't be wired via local git yet. Wire them when the pending chat-skills→repo conversion lands them in `.claude/skills/`. Until then, the profile's header-block precedence rule governs any voice they draft. |
+| email-responder (retired from send path) | The vendored `anthropic-skills:email-responder` is retired from the send path — `samira-email-loop` owns email drafting. If it ever fires, the canonical profile's header-block precedence rule governs: the profile supersedes email-responder's `references/writing-style.md` (which conflicts, e.g. it permits em dashes; the profile forbids them). Do not blend them. |
 
 ## Slack (workspace "Marspace", newworkspace-zlb6313)
 
