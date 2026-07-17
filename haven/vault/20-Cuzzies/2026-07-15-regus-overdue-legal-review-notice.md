@@ -1,9 +1,9 @@
 ---
 created: 2026-07-15T13:23-04:00
-updated: 2026-07-17T12:25-04:00
+updated: 2026-07-17T12:40-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [regus, iwg, collections, on-button]
 source: gmail
 ---
@@ -48,9 +48,15 @@ gets its own #decisions card rather than reviving the closed one, but the underl
 call is the same one Lemar already made twice this month: no call, no portal login, no
 payment sent by Samira (safety floor either way).
 
+## Update 2026-07-17 — second card also CLOSED
+
+Lemar reacted 🫡 on the fresh 2026-07-17 card too. Same disposition as every prior round:
+no call, no portal login, no payment sent by Samira (safety floor). Collections referral
+proceeds as-is on IWG's side. Both cards for this matter are now closed.
+
 ## Sources
 - gmail: thread `19f668ad2518eb65` — "Urgent Request for Payment of Overdue REGUS account"
 - gmail: thread `19f70731fb9299f3` — "URGENT Request for Payment of Past Due Invoices for
   your Regus Office Agreement", 2026-07-17T13:43:43Z, $2,451.80
 - slack: #decisions `1784136179.246039` — 🫡 close signal, closed via threaded reply
-- slack: #decisions (new card, 2026-07-17 PART D run)
+- slack: #decisions `1784305560.333029` — 🫡 close signal (second card, this run)
