@@ -1,12 +1,13 @@
 ---
 created: 2026-07-17T08:25-04:00
-updated: 2026-07-17T09:10-04:00
+updated: 2026-07-17T12:17-04:00
 domain: personal
 type: note
 status: active
 due: 2026-09-09T09:00-04:00
 tags: [event, comedy, philadelphia, ticket-reminder]
 source: slack
+calendar_event_id: 62mngnbidcnrj2uae08sf52sic
 ---
 
 # Philadelphia comedy show — ticket reminder
