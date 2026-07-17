@@ -1,9 +1,9 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-16T10:12:51-04:00
+updated: 2026-07-17T08:30:00-04:00
 domain: cuzzies
 type: task
-status: done
+status: active
 tags: [parke-bank, overdraft, nsf]
 source: gmail
 ---
@@ -178,6 +178,16 @@ only that Lemar closed this #decisions card. Labeled `Samira/sent` on gmail thre
 stays open and will likely resurface on the next Parke Bank contact. Status moved to
 `done` for this round.
 
+## Update 2026-07-17 — another secure message, "Cuzzie's Dispensary Returned Items"
+
+Christopher Cabezas emailed again (7/17 ~8:04 AM ET, cc Meggan Hallworth), subject
+"Cuzzie's Dispensary Returned Items" (gmail thread `19f6ff707a8929f4`) — same bare
+SilverSky/mailsafe notification shell as the 7/16 message, no content in the body,
+real message locked behind an "Open Secure Message" portal link (expires in 30
+days). Samira still can't log into the portal (safety rule). Reopening status to
+`active`. Posting a #decisions card asking Lemar to open it himself, matching the
+7/16 pattern exactly. Labeled `Samira/seen` in Gmail.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -197,5 +207,7 @@ stays open and will likely resurface on the next Parke Bank contact. Status move
 - gmail: thread `19f6ae580101e4e0` (Meggan Hallworth, secure message notification
   only — content locked behind portal, 2026-07-16 08:27 ET; labeled `Samira/sent`
   2026-07-16 following Lemar's 🫡 close)
+- gmail: thread `19f6ff707a8929f4` (Christopher Cabezas, secure message
+  notification only — content locked behind portal, 2026-07-17 08:04 ET)
 - slack: #decisions message ts `1783689606.144269` (parent) / `1783689609.847929` (Option A, ✅ picked) / `1783700440.292759` (closed, confirmed sent)
 - slack: #decisions message ts `1784207854.147209` (7/16 secure-message card, closed via 🫡)
