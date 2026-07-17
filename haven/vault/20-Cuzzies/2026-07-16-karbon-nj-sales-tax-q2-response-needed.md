@@ -1,13 +1,12 @@
 ---
 created: 2026-07-16T14:10-04:00
-updated: 2026-07-17T19:15-04:00
+updated: 2026-07-17T17:23-04:00
 domain: cuzzies
 type: task
 status: done
 tags: [nj-sales-tax, greenbooks, karbon, tax-gate, wind-down]
 source: gmail
 due: 2026-07-20T09:00-04:00
-calendar_event_id: t5mqt1d85canl5ugdgl12hcrec
 ---
 
 # Karbon request — Q2 2026 NJ sales tax filing needs Lemar's response by Monday
@@ -81,6 +80,10 @@ Lemar's own direct emails, so the outstanding filing-response task is closed. Th
 reply) and are being left un-reacted rather than nudged again. Marking status `done`;
 the underlying due-Monday filing/payment itself is tracked separately via the
 compliance calendar (`due` field retained here as a pointer, not an open task).
+
+## Update 2026-07-17 (calendar-sync — reminder retired)
+Status is `done`; the 7/20 09:00 ET reminder event (`t5mqt1d85canl5ugdgl12hcrec`) has
+been cancelled and the id cleared per the calendar-sync RETIRE rule.
 
 ## Sources
 - gmail: thread 19f6c18133f23ab2 ("Q2 2026 NJ Sales Tax", jessica@huljevgroup.com) —
