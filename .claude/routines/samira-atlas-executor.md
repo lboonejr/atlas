@@ -69,7 +69,7 @@ Lemar" in #decisions.
 
 ## Run order
 
-V → S → A → B → C → D → E → F → G → H → canvas refresh → P (Pulse) → digest (+ _daily append).
+V → S → A → B → C → D → E → F → Q → G → H → canvas refresh → P (Pulse) → digest (+ _daily append).
 
 ---
 
@@ -116,8 +116,9 @@ BUFFER: nothing staged in this run's PART B may run in this run's PART C.
 
 ### PART C — run prompts staged on an EARLIER scan
 Sweep every channel you can read EXCEPT #reports, #decisions, #car-search,
-#investor-pipeline, the Samira capture DM (`D0BHPKMDNEP`, developed in PART B), and the
-archived channels. A message is a RUNNABLE PROMPT only if:
+#investor-pipeline, #stormy (Stormy's surface, worked in PART Q), the Samira capture DM
+(`D0BHPKMDNEP`, developed in PART B), and the archived channels. A message is a RUNNABLE
+PROMPT only if:
 no ✅/🫡/🚗/⏳ reaction; posted by Atlas or Lemar; not staged this run; and it is either
 (a) an exact fence — opening line starting `===ATLAS PROMPT START`, header containing
 `run:admin-3x`, closing line `===ATLAS PROMPT END===` — or (b) a named instruction
@@ -157,6 +158,17 @@ receipts. Returns its counts for the digest.
 Invoke the **samira-car-search** skill: suggest private-buyer replies in #car-search,
 log sends, coordinate test drives, write Haven receipts. Returns its counts.
 
+### PART Q — idea-baking loop (Stormy, #stormy)
+Invoke the **stormy-ideation** loop (`.claude/routines/stormy-ideation.md`) against the
+private **#stormy** channel. Read Lemar's new no-deadline ideas there and bake each through
+the 15-point pressure test one message per scan — posting as YOUR bot but signed
+`🌩️ … — Stormy` (the Basil pattern: shared bot, own persona line). Land/append the brief
+note via haven-capture (`type: brief`, `tags: [stormy]`, no `due`); on graduation, hand
+Lemar the Atlas Gear 2 trigger line in #stormy. Stormy touches ONLY #stormy, never sets or
+reads reactions, and NEVER executes, stages, or creates a channel — she bakes and hands
+off; the launch stays Lemar's call via the capture DM. Returns one token for the digest
+(`stormy: [project] …` or `stormy idle`). #stormy is NOT swept in PART C.
+
 ### PART G — project & Josh channels
 Read each active project/Josh channel since the last run. A decision that is LEMAR'S →
 lift to #decisions tagged with origin; when fulfilled, post the outcome back to the
@@ -194,8 +206,8 @@ Via **samira-report-result** Mode 3:
    `Closed: [one-liners]` · `🔴 Send TODAY: […]` · `👉 Waiting on you: [count] in #decisions`
    · `🧵 Standing list → Open Items canvas`
    (Full tallies: filed/stuck, rang, decisions handled H, captures G, staged L, ran Y,
-   done Z, failed Fl, parked P, deferred D; email E/R/Cl/T; investor + car counts; junk J;
-   plus PART P's one token: `pulse ✅` or `pulse ⚠️ <reason>`.
+   done Z, failed Fl, parked P, deferred D; email E/R/Cl/T; investor + car + Stormy counts;
+   junk J; plus PART P's one token: `pulse ✅` or `pulse ⚠️ <reason>`.
    Stuck notes surface ONLY via the batched #decisions card, never line-by-line here.)
 2. APPEND the same digest block to `haven/vault/_daily/YYYY-MM-DD.md` (create the day's
    note from `_templates/daily.md` if absent; append-only; never edit prior entries).
