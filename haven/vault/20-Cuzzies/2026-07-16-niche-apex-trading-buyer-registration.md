@@ -1,13 +1,12 @@
 ---
 created: 2026-07-16T13:15-04:00
-updated: 2026-07-16T14:05-04:00
+updated: 2026-07-17T16:07-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [vendor, niche, apex-trading, ordering-platform]
 source: gmail
 due: 2026-07-17T09:00-04:00
-calendar_event_id: nli7h95m39t5p41urkeh5nmifk
 ---
 
 # Register Cuzzie's buyer account on Apex Trading for niche/Goodies orders
@@ -24,5 +23,11 @@ To keep ordering from niche/Goodies without interruption, register a buyer accou
 
 Questions can be routed by replying to the vendor email — no reply drafted yet.
 
+## Update 2026-07-17T16:07-04:00
+Lemar reacted ✅ on the #decisions card confirming he completed the Apex Trading buyer
+registration directly (Samira has no browser/account-creation tool). Marked done;
+reminder calendar event retired.
+
 ## Sources
 - gmail: thread 19f6be37995fc20e (niche — "New Ordering Platform: We've Moved to Apex Trading", jamie@nichenfe.com, 2026-07-16)
+- slack: #decisions card, 2026-07-17
