@@ -1,6 +1,6 @@
 ---
 created: 2026-07-06T06:53:45-04:00
-updated: 2026-07-17T08:20-04:00
+updated: 2026-07-17T09:10-04:00
 domain: project
 type: brief
 status: active
@@ -51,7 +51,7 @@ on 2026-07-15) — but Lemar hasn't said whether he wants it pressure-tested fir
 built directly. Flagged to #decisions alongside the related capture below rather than
 guessing which path he wants.
 
-## Update 2026-07-17 — related capture: "pressure tester" agent
+## Update 2026-07-17 (2) — related capture: "pressure tester" agent
 
 Same session, a second capture (2026-07-16 ~21:00 ET, Samira capture DM): "I think we
 should make an entirely new agent that's just a pressure tester. When I want to
@@ -62,7 +62,21 @@ exactly this — a 15-question pressure-test instrument for no-deadline ideas. F
 to Lemar in the same #decisions card: does Stormy already cover what he's picturing,
 and if so, does he want to run the onboarding-form idea above through it now?
 
+## Update 2026-07-17 (3) — Option 1 picked: route through Stormy
+
+Lemar reacted ✅ on Option 1 in the #decisions thread (message ts `1784290600.449469`):
+"Run the onboarding-form idea through Stormy now ('stormy this idea'), confirm Stormy
+is the pressure-tester you meant, bake it fully before any building starts." Decision
+recorded — Stormy is confirmed as the pressure-tester agent Lemar was picturing, and
+the onboarding-form idea above is the first thing to run through it.
+
+Stormy's 15-question pressure-test instrument is a live Q&A session — this hourly scan
+can log the routing decision but can't sit through the interview on Lemar's behalf.
+Next step is his call: say "stormy this idea" (or "resume stormy") on this
+onboarding-form idea whenever he's ready to sit through the pressure test.
+
 ## Sources
 - slack: #atlas 2026-07-06 06:53 ET
 - slack: Samira capture DM (D0BHPKMDNEP) 2026-07-17 08:04:18 ET, ts 1784288658.057799 — onboarding job form idea
 - slack: Samira capture DM (D0BHPKMDNEP) 2026-07-16 21:00:06 ET, ts 1784257206.265089 — "pressure tester" agent idea
+- slack: #decisions message ts `1784290595.494019` (parent, probe card) / `1784290600.449469` (Option 1, ✅ picked)
