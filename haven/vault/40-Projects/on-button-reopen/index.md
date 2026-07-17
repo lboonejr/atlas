@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-07-17T13:10-04:00
+updated: 2026-07-17T17:15-04:00
 domain: project
 type: reference
 status: active
@@ -108,7 +108,7 @@ items:
     account: "7-invoice batch · oldest due 05/26"
     contact: "(800) 696-1934"
     status: past-due
-    note: "Verified 7/11 against the 7-invoice PDF (F0BGNFR1WLR) — invoices sum to exactly $868.60, no change."
+    note: "Verified 7/11 against the 7-invoice PDF (F0BGNFR1WLR) — invoices sum to exactly $868.60, no change. New 'Friendly Reminder' emailed 7/17 requests payment by July 21, 2026; amount unchanged at $868.60. Posted to #on-button per Lemar's ask in #decisions (ts 1784319361.170599)."
   - id: pseg
     label: "PSE&G — electric"
     amount: 391.58
@@ -457,6 +457,18 @@ carry:
 - Reality check: opening ($106.8K) + a 3-month cushion (~$93.6K carry) ≈ **$200K** before
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
+
+## Update — 2026-07-17 (NST reminder)
+National Secure Transport emailed a "Friendly Reminder: Outstanding Invoice(s)" 7/17 —
+open balance **$868.60**, unchanged, now with a concrete ask: pay by **July 21, 2026**.
+Lemar reacted ✅ in #decisions on the card (ts `1784319361.170599`) and asked in-thread
+"Can you make sure that this gets added to the #on-button channel?" `nst` item note
+updated to record the new due-date ask; amount and Tier 1 status unchanged (already
+tracked). Posted to #on-button as a drop per the scanner rule (restatement of an
+already-tracked item, not a new line). Nothing paid or contacted — pay-by-7/21 decision
+remains open in #decisions. Page (`on-button-reopen.html`) and canvas (`F0BEN1167GB`)
+regenerated from this note in the same pass. Haven:
+`haven/vault/20-Cuzzies/2026-07-17-national-secure-transport-invoice.md`.
 
 ## Update — 2026-07-17 (AIQ)
 Added **AIQ** (`aiq`) as a new Tier 2 line — SaaS subscription billed via Chargify, invoice
