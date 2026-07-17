@@ -1,6 +1,6 @@
 ---
 created: 2026-07-16T14:10-04:00
-updated: 2026-07-16T15:35-04:00
+updated: 2026-07-17T12:20-04:00
 domain: cuzzies
 type: task
 status: active
@@ -44,7 +44,29 @@ following up with Jessica/GreenBooks directly), or Lemar can try logging into
 link. Posted this finding back in the #decisions thread; no email drafted (nothing to
 reply to — this needs a portal login, not a reply).
 
+## Update 2026-07-17 (PART D email loop — Jessica replied with the actual figures)
+Lemar's own 7/17 reply (sent directly from Gmail, not through a Samira draft) asked
+Jessica to resend the Karbon link/access details. She replied same day (16:14 ET):
+says she may be having delivery issues on her end, resent the request inline instead of
+via Karbon. The figures she's asking Lemar to review and confirm:
+
+- Cannabis Sales: $100,624.06
+- Non-Cannabis Sales: $487.08
+- Total Sales for the Quarter: $101,111.14
+- Sales Tax Due: $6,698.61
+
+She also asked Lemar to confirm the bank account/routing number to use for payment —
+that is a controlled financial field Samira will never fill in or guess; it has to come
+from Lemar directly, never over email in a Samira-drafted reply.
+
+Posted 3 reply-option drafts as threaded replies under the existing #decisions card
+(thread `1784225480.998989`) rather than opening a new card, since this is the same
+open item, just with more information now. None of the options confirm the dollar
+figures as accurate (only Lemar can verify against internal records) and none include
+banking details — all three route the account/routing exchange to a direct call.
+
 ## Sources
-- gmail: thread 19f6c18133f23ab2 ("Q2 2026 NJ Sales Tax", jessica@huljevgroup.com, 2026-07-16)
+- gmail: thread 19f6c18133f23ab2 ("Q2 2026 NJ Sales Tax", jessica@huljevgroup.com) —
+  latest message id `19f70dbede83fef7`, 2026-07-17T16:14:45Z, figures above
 - gmail: thread 19db583a88878413 ("Reminder #5 - Q1 2026 NJ Sales Tax Return", mgavigan@greenbookscpa.com, 2026-04-22) — Karbon portal link pattern reference
-- slack: #decisions thread on `2026-07-16 14:11:20 EDT` card, Lemar's follow-up question `2026-07-16 14:13:51 EDT`
+- slack: #decisions thread `1784225480.998989`
