@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T14:35:00-04:00
-updated: 2026-07-16T09:15-04:00
+updated: 2026-07-17T09:20-04:00
 domain: cuzzies
 type: log
 status: active
@@ -112,6 +112,20 @@ the same Gmail thread (Re: Cuzzies) asking for his initial reaction and offering
 instead of more email. Saved to Gmail Drafts, draft id `r3430578820917852314`, on thread
 `19f5ce6f744b67d8`. Nothing sent. Flagged in #decisions for Lemar to review/send.
 
+## Update — 2026-07-17 09:20 ET
+
+Lemar's Friday follow-up capture (`haven/vault/00-Inbox/2026-07-17-friday-followups-george-greenbooks-jason.md`)
+asked to push George forward again. Checked first, per its own instruction to avoid a
+duplicate: the 7/16 nudge draft (`r3430578820917852314` on this same thread) is still
+sitting unsent in Gmail Drafts, and the 7/16 #decisions card that flagged it has zero
+reactions — Lemar hasn't acted on it either way. Still no reply from George since 7/13
+5:20pm ET (now 4 days quiet).
+
+Rather than draft a second nudge, re-surfaced the existing draft in #decisions (ts
+1784293867.337819) so it isn't lost in the backlog — no new outreach drafted, nothing
+sent. Index row `Last update` moved to 2026-07-17 to reflect the re-surface pass; Status
+stays `Negotiating`.
+
 ## Sources
 - slack: #investor-pipeline, Joshua Evans, 2026-07-10 13:22:21 ET
 - gmail: thread 19f4d72e50c51f9b, Lemar → george@agreenroof.com, 2026-07-10 15:14 ET
@@ -122,3 +136,6 @@ instead of more email. Saved to Gmail Drafts, draft id `r3430578820917852314`, o
 - slack: #investor-pipeline, thread ts 1783973569.032629, Samira advisory reply 2026-07-14
 - slack: #atlas, 2026-07-16 08:22:54 ET, message ts 1784204574.522859 (nudge request)
 - gmail: draft r3430578820917852314 on thread 19f5ce6f744b67d8 (nudge reply, not sent)
+- slack: #decisions, card ts 1784207512.934649 (7/16 nudge-ready card, still 0 reactions as of 7/17)
+- haven: haven/vault/00-Inbox/2026-07-17-friday-followups-george-greenbooks-jason.md (Friday follow-up ask)
+- slack: #decisions, re-surface reply ts 1784293867.337819, 2026-07-17 09:20 ET
