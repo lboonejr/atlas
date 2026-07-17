@@ -1,6 +1,6 @@
 ---
 created: 2026-07-16T09:00-04:00
-updated: 2026-07-16T15:55-04:00
+updated: 2026-07-17T12:35-04:00
 domain: project
 type: log
 status: awaiting-decision
@@ -154,3 +154,54 @@ no row edits needed this pass. Prompt Working Capital's own #decisions card
 
 Quiet pass: 0 rooms built, 0 drafts, 0 sends, 0 meetings scheduled, 0 index rows
 changed.
+
+## Update — 2026-07-17, PART E (~12:35 ET)
+
+Full verification pass across both sources before touching anything, per this pass's
+instruction to check what's already handled today.
+
+**Gmail `label:Samira/investor` (11 threads total, checked each for `Samira/investor-sent`
+and read content):**
+- **George Irwin** (both addresses) — already fully closed this morning: nudge sent
+  09:12 ET, #decisions card ✅'d and verified 09:35 ET (see
+  [[2026-07-10-george-irwin-investor-lead]]). No new reply from George. No action.
+- **Panther Group** — already carries `Samira/investor-sent`; thread re-checked
+  directly (`19ed22a918463463`, 6 messages) — no message since Lemar's own 7/15
+  17:15 ET reply. Michael still hasn't named a day/time. No action.
+- **BizFundsHub** (`19f3d593797e09db`) — Lemar replied directly 7/7; nothing since.
+  No action.
+- **FundCanna** (`19f42d51ae61c0c0` the 7/8-7/14 application thread, and
+  `19f616dbaabdc60f` the 7/14 4:19pm "Next Steps & Positioning" recap) — read in
+  full; both are the already-logged 7/14 call outcome (declined, revisit criteria
+  given, "coming months"). Fully captured in the index row already (Parked,
+  informational only). No reply warranted — Sal's email is a recap, not a question.
+  No action.
+- **Suite420** (`19f29b5e55c3f621`, Josh's 7/3 forward) — same content already
+  logged in [[2026-07-03-suite420-solutions-lender-docs-needed]]; Josh corresponds
+  directly, not a Samira draft. No action.
+- **Willow Financial / Colton Marshall** (`19f3ec18b012a73d`, "36 Month Terms") —
+  already decided: Lemar passed 🫡 on 2026-07-08 (see
+  [[2026-07-08-willow-financial-pass]]), no room, no draft, no index row by design.
+  Confirmed still no reply needed (cold pitch has a self-serve decline). No action.
+- Two automated notifications (Drive share, Plaid/Magenta) — not correspondence, no
+  action.
+- Also spot-checked the separate **Willow Capital** (Lucas White) thread
+  (`19f66bc8923ab429`, general-email-loop territory, intentionally not on the
+  investor index) — still just the one inbound message, draft already sitting in
+  Gmail Drafts from the 7/15 scan. No new reply. No action.
+
+**#investor-pipeline** — 0 new messages since the 7/16 16:13 ET scan post; no new
+contact drop from Lemar.
+
+**#decisions** — only investor-related item today is the George Irwin card above,
+already ✅'d and closed. Prompt Working Capital's 7/16 15:36 ET pursue/decline card
+(`p1784230607851799`) re-checked — still no reply/reaction; correctly left alone
+per the open-decision guardrail. Sweet Leaf Finance and the 4 cold-lead
+revive-or-close questions from this note also still unanswered — left untouched
+(no re-nudge on an already-surfaced card).
+
+**Index note** (`index.md`) verified accurate against all of the above — no row
+edits needed this pass (nothing changed status).
+
+Quiet pass: 0 rooms built, 0 drafts, 0 sends, 0 meetings scheduled, 0 index rows
+changed. Posted a short status line to #investor-pipeline for the record.
