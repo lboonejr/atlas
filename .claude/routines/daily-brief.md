@@ -17,7 +17,8 @@ first scan. You produce two things and nothing else: the **morning brief** (yest
 loops closed as movement + today's DIRECTION — a North Star line and 2–4 themes, never a
 task list; reframed 2026-07-12 at Lemar's ask) and the **meeting prep** (one combined doc
 for today's calls). Both are living visual artifacts; both land as Haven notes first; both
-surface as one link each in **#daily-brief**.
+surface as one link each in **Lemar's DM** (the Dawn bot's direct message with Lemar —
+rerouted off #daily-brief 2026-07-16).
 
 **Read `.claude/anchors.md` first.** Every channel, calendar, and URL comes from there. If
 this repo is unreachable, the bootstrap already told you to stop.
@@ -29,23 +30,24 @@ Haven note** — never post a brief with no note behind it.
 ## Separation of duties (do not step on Samira)
 This routine is **read-only on the vault except for writing its own brief/prep notes into
 `_daily/`**. You do **NOT** run `haven-vault-keeper` or `haven-calendar-sync` — those are
-Samira's standing jobs and run on her hourly cadence. You post **only** to **#daily-brief**
-(`C0BF73FF56H`) — never #reports (Samira's feed), never #decisions. You never set or read
-Lemar's reactions as signals. If the two routines ever both wrote the same surface, Haven's
-schema (one matter, one note; `_daily` is append-only) keeps them from colliding.
+Samira's standing jobs and run on her hourly cadence. You post **only** to **Lemar's DM**
+(the Dawn bot IM `D0BJ0JPQD8C` with Lemar `U0BC5UTHYG4`) — never #reports (Samira's feed),
+never #decisions, never any channel. You never set or read Lemar's reactions as signals. If
+the two routines ever both wrote the same surface, Haven's schema (one matter, one note;
+`_daily` is append-only) keeps them from colliding.
 
 ## SAFETY (the complete list, stated once)
 You MAY, unattended: read every connected tool; write `type: brief` notes into
 `haven/vault/_daily/`; append your run marker to the day's `_daily/YYYY-MM-DD.md`;
-publish/re-deploy the two brief artifacts; post one line per skill to #daily-brief; write the
-two artifact URLs back into `.claude/anchors.md` on first creation.
+publish/re-deploy the two brief artifacts; post one line per skill to Lemar's DM
+(`D0BJ0JPQD8C`); write the two artifact URLs back into `.claude/anchors.md` on first creation.
 You MUST NOT, ever: send email or any outreach; respond to / accept / decline a calendar
-invite or add an attendee; make a payment or transfer; post to any surface but #daily-brief;
-change sharing permissions; delete or overwrite existing content (a note body, a prior brief);
-edit a note's `created` or body beyond appending your own Update/Log lines; guess a controlled
-field; run Samira's vault-keeper or calendar-sync; create skills mid-run. You gather and
-present the day — you never act on it. Anything that would require acting stays a note for
-Lemar to see in the brief.
+invite or add an attendee; make a payment or transfer; post to any surface but Lemar's DM
+(never a channel, never #reports, never #decisions); change sharing permissions; delete or
+overwrite existing content (a note body, a prior brief); edit a note's `created` or body
+beyond appending your own Update/Log lines; guess a controlled field; run Samira's
+vault-keeper or calendar-sync; create skills mid-run. You gather and present the day — you
+never act on it. Anything that would require acting stays a note for Lemar to see in the brief.
 
 ## Run order
 Pre-flight → PART 1 (morning brief) → PART 2 (meeting prep) → digest → commit.
@@ -56,9 +58,10 @@ Pre-flight → PART 1 (morning brief) → PART 2 (meeting prep) → digest → c
 1. Confirm the bootstrap read THIS file and `.claude/anchors.md`.
 2. Stamp the run date/time in **ET** (this drives the `_daily/` filenames and the "today"
    window for calendar + activity reads). All "yesterday/today" boundaries are ET.
-3. Confirm **#daily-brief** (`C0BF73FF56H`) is reachable. If Slack is down, still write the
-   Haven notes + artifacts (the durable record and the links survive), and skip only the
-   Slack post — note the skip in the digest.
+3. Confirm **Lemar's DM** (the Dawn bot IM `D0BJ0JPQD8C`) is reachable — the bot posts by
+   sending to Lemar's user id `U0BC5UTHYG4`, which auto-opens the IM. If Slack is down, still
+   write the Haven notes + artifacts (the durable record and the links survive), and skip
+   only the Slack post — note the skip in the digest.
 
 ### PART 1 — morning brief
 Invoke the **morning-brief** skill (`.claude/skills/morning-brief/`). It reads the activity
@@ -66,14 +69,14 @@ cluster (weighted as one group, held separate from the project channels), Google
 Gmail, and Haven's open loops + yesterday's brief; closes yesterday's loops as movement;
 sets the **North Star + 2–4 directional themes** (direction, not tasks — execution lives in
 #decisions and Pulse); writes `_daily/brief-YYYY-MM-DD.md`; re-deploys the living brief
-artifact to its stable URL; and posts one 🌅 line to #daily-brief. Returns `brief note path
+artifact to its stable URL; and posts one 🌅 line to Lemar's DM. Returns `brief note path
 · artifact URL · north star + themes T · loops C/A/O`.
 
 ### PART 2 — meeting prep
 Invoke the **meeting-prep** skill (`.claude/skills/meeting-prep/`). It filters today's
 calendar to real calls/meetings, pulls each event's notes + Haven context, writes one
 combined `_daily/meeting-prep-YYYY-MM-DD.md`, re-deploys the combined prep artifact, and posts
-one 🌅 line to #daily-brief (or a single quiet "no calls today" line). Returns `prep note path
+one 🌅 line to Lemar's DM (or a single quiet "no calls today" line). Returns `prep note path
 · artifact URL · meeting count N`.
 
 ### Digest — the vault's journal (no #reports)
@@ -84,7 +87,7 @@ from `_templates/daily.md` if absent; append-only; never edit prior entries):
    brief → [brief note path] · prep → [prep note path]
 ```
 Do **not** post the digest to #reports and do **not** call samira-report-result — that ritual
-is Samira's. Dawn's only Slack footprint is the two brief links in #daily-brief.
+is Samira's. Dawn's only Slack footprint is the two brief links in Lemar's DM.
 
 ### Commit
 Commit the new/updated `_daily/` notes (and, on first run only, the anchors URL write-back) to
@@ -103,7 +106,8 @@ from an unattended cloud run and re-deploys to it on the next run.
    brief was reframed to North Star + themes on 2026-07-12.)
 2. **Fallback if the artifact URL isn't viewable/stable headless:** switch both skills'
    render step to a **Slack canvas** (`slack_create_canvas` / `slack_update_canvas`) updated
-   in place in #daily-brief — same "living document," no external host. This is a render-step
-   swap only; the Haven-first record and everything else stay identical.
+   in place in Lemar's DM — same "living document," no external host. (If a canvas can't be
+   created inside a DM, fall back to posting the brief content inline in the DM.) This is a
+   render-step swap only; the Haven-first record and everything else stay identical.
 3. On day 2, confirm progression: the new brief shows day 1's loops as closed/advanced/open
    and re-deploys to the SAME artifact URL (no duplicate notes or links).
