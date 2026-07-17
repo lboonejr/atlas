@@ -8,7 +8,7 @@ When a workspace, board, account, or channel changes, edit THIS file and nothing
 > doing work is fine; maintaining a second list is not). The memory file
 > `shortlist_anchors.md` on Lemar's machine is a pointer to this file, not a copy.
 
-Last verified: 2026-07-16 (added the Voice profile section — canonical profile moved into the repo) · 2026-07-16 (Dawn rerouted off #daily-brief → now posts to Lemar's DM, bot IM `D0BJ0JPQD8C`; #daily-brief being archived) · 2026-07-16 (Atlas capture inbox moved off #atlas → Lemar's DM with Samira's bot, `D0BHPKMDNEP`; #atlas being archived).
+Last verified: 2026-07-16 (added the Voice profile section — canonical profile moved into the repo) · 2026-07-16 (Dawn rerouted off #daily-brief → now posts to Lemar's DM, bot IM `D0BJ0JPQD8C`; #daily-brief being archived) · 2026-07-16 (Atlas capture inbox moved off #atlas → Lemar's DM with Samira's bot, `D0BHPKMDNEP`; #atlas being archived) · 2026-07-17 (added Cloud routine — Stormy: the idea-baking DM routine; runbook `.claude/routines/stormy-ideation.md` + trigger live, but her bot connector, RemoteTrigger id, and DM id are PENDING the 8-step Slack-bot-identity playbook — marked TBD below).
 
 ## Repo / vault
 
@@ -48,6 +48,7 @@ supersedes ALL other style guidance, including guides bundled inside skills.
 | #atlas (RETIRED) | `C0BBWHCJUV9` | Former raw capture inbox — **retired 2026-07-16**, replaced by the Samira capture DM (above). Being archived; during the transition Samira still glances here in PART B for stray top-level captures, but never posts here |
 | #admin | `C0BBLUA7JLX` | Staged run:admin-3x prompts |
 | Dawn DM (Lemar) | `D0BJ0JPQD8C` | **Dawn's output surface since 2026-07-16** — the Dawn bot's direct message with Lemar (`U0BC5UTHYG4`). The bot posts by sending to Lemar's user id, which auto-opens this IM (bot has `im:write`). Dawn's ONLY Slack surface; Samira never posts here. Replaced #daily-brief |
+| Stormy DM (Lemar) | **TBD** — `D-STORMY-TBD` | **Stormy's ONLY surface** — the Stormy bot's direct message with Lemar (`U0BC5UTHYG4`), where he drops raw no-deadline ideas and she bakes them hourly. Bot posts by sending to Lemar's user id, which auto-opens this IM (needs `im:write`). Fill in the real IM id after the bot is installed (mirrors how Dawn's `D0BJ0JPQD8C` was captured). Samira/Dawn never post here; Stormy never posts anywhere else. See "Cloud routine — Stormy" below |
 | #daily-brief (RETIRED) | `C0BF73FF56H` | Dawn's former once-a-day surface — **retired 2026-07-16**, Dawn now DMs Lemar (see "Dawn DM" above). Being archived; read-only record, never posted to |
 | #car-search | `C0BEC2RFC00` | Car loop (samira-car-search); never swept in PART C |
 | #investor-pipeline | `C0BCCUKEUQ2` | Investor loop (samira-investor) |
@@ -173,6 +174,31 @@ mis-categorized as promotions/updates:
 Plus the rule: never trash the active FundCanna underwriting thread. Anything `is:important` or
 `is:starred` is already protected by the Safety floor regardless of this list.
 
+## Cloud routine — Stormy (idea-baking DM routine, separate from Samira/Dawn/Basil)
+
+Hourly ideation routine on Samira's cadence (8a–6p ET). Thin bootstrap
+`.claude/routines/STORMY-TRIGGER.md` → fat runbook `.claude/routines/stormy-ideation.md`. Her
+method, voice, and 15-question instrument live in the skill `.claude/skills/stormy/SKILL.md`.
+Lemar drops raw no-deadline ideas in the Stormy DM; she bakes each through the pressure test
+across successive hourly scans, then hands the locked brief to Atlas Gear 2 (she never creates
+a channel or executes). **Design decisions (Lemar, 2026-07-17):** dedicated DM surface;
+propose-and-confirm graduation (no reaction engine); Haven note → Samira/Atlas Gear 2 handoff
+fired by Lemar; the 15-Q instrument runs as organic conversation. This routine **deliberately
+overrides** the skill's Constraint 7 ("never scheduled") per Lemar — documented in both the
+runbook and the skill's runtime banner.
+
+| What | Value |
+|---|---|
+| RemoteTrigger | **TBD — not yet created.** Create hourly `0 12-22 * * *` UTC (8a–6p ET during EDT; DST-shift like Samira/Dawn), bootstrapping `.claude/routines/STORMY-TRIGGER.md`. **Do not create until Stormy's bot connector exists** — an hourly trigger firing into a bot-less DM errors every hour. Record the `trig_...` id here once created. |
+| Cloud env | `env_01Xatmag93x2WA2Gd84D9iHj` (shared with Samira/Dawn/Basil — same connectors + git access) |
+| Cron | `0 12-22 * * *` UTC (hourly 8a–6p EDT) · shift the same way Samira/Dawn do at the DST switch |
+| Runbook (live behavior) | `.claude/routines/stormy-ideation.md` — editing on `main` changes the next run |
+| Skill (method/voice/instrument) | `.claude/skills/stormy/SKILL.md` |
+| Output/input surface | **Stormy DM with Lemar** (bot IM `D-STORMY-TBD`, user `U0BC5UTHYG4`) — her ONLY surface, both read and write. Fill in the real IM id after the bot is installed. No channel invite needed (a bot DMs a workspace user without one). |
+| Slack connector (Stormy's own bot identity) | **TBD** — run the 8-step Slack-bot-identity playbook (same as Samira/Dawn): create a Slack app "Stormy", deploy the generic `apps/samira-slack-bot/` server as its own Vercel project with Stormy's bot token, register a claude.ai custom connector at its `/mcp` endpoint, then swap that connector_uuid into this trigger's `mcp_connections` (replacing the shared personal connector `7faf04c0-5bd6-4237-8430-f80040c482e1`). Record connector_uuid + endpoint + Vercel project name here once live. |
+| Bot Token Scopes (minimal — DM-only, propose/confirm graduation, no reactions) | `chat:write`, `im:write`, `im:history`, `users:read`. (Subset of the full playbook scope list — she watches only her own DM and never reads/sets reactions, so `channels:*`, `groups:*`, and `reactions:*` are not needed.) |
+| Persona | lead `🌩️`, sign "— Stormy" (placeholder name, rename-able like "Dawn"/"Basil") |
+
 ## Pulse dashboard (rendered by Samira — no separate trigger)
 
 Lemar's living one-page personal dashboard. Rendered at the END of every hourly Samira
@@ -198,3 +224,4 @@ pattern used by on-button-reopen.
 | Samira Slack posts | lead with 🌐, sign "— Samira" · posts and reacts through her own dedicated bot connector (see Cloud routine — Samira above), not Lemar's personal Slack account. Captures reach her via the Samira capture DM `D0BHPKMDNEP` (PART B). |
 | Dawn (Daily Brief) Slack posts | lead with 🌅, sign "— Dawn" · posts only to Lemar's DM (bot IM `D0BJ0JPQD8C`, user `U0BC5UTHYG4`) — rerouted off #daily-brief 2026-07-16 — through her own dedicated bot connector (see Cloud routine — Daily Brief above), not Lemar's personal Slack account. ("Dawn" is a placeholder persona name — rename freely; it lives only in the two skills + this row.) |
 | Basil (Inbox Janitor) Slack posts | lead with 🧹, sign "— Basil" · posts only to #reports `C0BBZJL85RT`. ("Basil" is a placeholder persona name — rename freely; it lives only in the runbook + this row.) |
+| Stormy (idea baking) Slack posts | lead with 🌩️, sign "— Stormy" · posts and reads ONLY the Stormy DM with Lemar (bot IM `D-STORMY-TBD`, user `U0BC5UTHYG4`) through her own dedicated bot connector (see Cloud routine — Stormy above), not Lemar's personal Slack account. Never reads or sets reactions; never posts to any channel. ("Stormy" is a placeholder persona name — rename freely; it lives only in the skill, the runbook, and this row.) |
