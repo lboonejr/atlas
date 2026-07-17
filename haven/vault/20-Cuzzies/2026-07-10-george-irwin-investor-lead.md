@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T14:35:00-04:00
-updated: 2026-07-17T09:35-04:00
+updated: 2026-07-17T13:25-04:00
 domain: cuzzies
 type: log
 status: active
@@ -140,6 +140,16 @@ nudge went out, Lemar's own send, no Samira action taken beyond verification. St
 stays `Negotiating` — next step is George's reply. Closed the #decisions card with a
 Done ✅ thread reply.
 
+## Update — 2026-07-17 13:25 ET
+
+Verification pass: still no reply from George since 7/13 5:20pm ET. Found the index
+row's Next step text hadn't been synced to the 09:35 ET confirmation above (it still
+read as if the nudge draft was unsent) — corrected the row to reflect the confirmed
+send + #decisions close. Applied `Samira/investor-sent` (Label_9) to this Gmail thread
+(`19f5ce6f744b67d8`) since real outreach is now confirmed sent on it, matching the label
+pattern used on the Panther Group and Eagle Bend Capital threads. No new outreach
+drafted, nothing sent by Samira.
+
 ## Sources
 - slack: #investor-pipeline, Joshua Evans, 2026-07-10 13:22:21 ET
 - gmail: thread 19f4d72e50c51f9b, Lemar → george@agreenroof.com, 2026-07-10 15:14 ET
@@ -154,3 +164,4 @@ Done ✅ thread reply.
 - haven: haven/vault/00-Inbox/2026-07-17-friday-followups-george-greenbooks-jason.md (Friday follow-up ask)
 - slack: #decisions, re-surface reply ts 1784293867.337819, 2026-07-17 09:20 ET
 - gmail: thread 19f5ce6f744b67d8, message 19f7034cb863de96, Lemar → george@cannabisstop.net, 2026-07-17T13:12:14Z (nudge sent, confirmed)
+- gmail: label Samira/investor-sent (Label_9) applied to thread 19f5ce6f744b67d8, 2026-07-17 ~13:25 ET
