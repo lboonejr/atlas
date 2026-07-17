@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T14:35:00-04:00
-updated: 2026-07-17T09:20-04:00
+updated: 2026-07-17T09:35-04:00
 domain: cuzzies
 type: log
 status: active
@@ -126,6 +126,20 @@ Rather than draft a second nudge, re-surfaced the existing draft in #decisions (
 sent. Index row `Last update` moved to 2026-07-17 to reflect the re-surface pass; Status
 stays `Negotiating`.
 
+## Update — 2026-07-17 09:35 ET
+
+Lemar reacted ✅ on the re-surfaced card (ts 1784293867.337819). Verified via Gmail
+(thread `19f5ce6f744b67d8`, METADATA + FULL_CONTENT read) rather than trusting the
+reaction alone: a new SENT message (id `19f7034cb863de96`) landed 2026-07-17T13:12:14Z
+(~9:12am ET) from lemar@cuzziesnj.com to george@cannabisstop.net (cc Cheryl Nardino,
+Joshua Evans), subject "Re: Cuzzies" — body matches the drafted nudge verbatim
+("Wanted to check back in... digesting the numbers... anything from TheJoint.me...
+Happy to jump on a call"). Draft `r3430578820917852314` is now gone from Gmail Drafts
+(list_drafts query "Cuzzies" returned empty), consistent with send. Confirmed: the
+nudge went out, Lemar's own send, no Samira action taken beyond verification. Status
+stays `Negotiating` — next step is George's reply. Closed the #decisions card with a
+Done ✅ thread reply.
+
 ## Sources
 - slack: #investor-pipeline, Joshua Evans, 2026-07-10 13:22:21 ET
 - gmail: thread 19f4d72e50c51f9b, Lemar → george@agreenroof.com, 2026-07-10 15:14 ET
@@ -135,7 +149,8 @@ stays `Negotiating`.
 - gmail: thread 19f5ce6f744b67d8, george@cannabisstop.net → Lemar, 2026-07-13 ~17:20 ET ("let me digest...TheJoint.me" reply)
 - slack: #investor-pipeline, thread ts 1783973569.032629, Samira advisory reply 2026-07-14
 - slack: #atlas, 2026-07-16 08:22:54 ET, message ts 1784204574.522859 (nudge request)
-- gmail: draft r3430578820917852314 on thread 19f5ce6f744b67d8 (nudge reply, not sent)
+- gmail: draft r3430578820917852314 on thread 19f5ce6f744b67d8 (nudge reply, sent 2026-07-17)
 - slack: #decisions, card ts 1784207512.934649 (7/16 nudge-ready card, still 0 reactions as of 7/17)
 - haven: haven/vault/00-Inbox/2026-07-17-friday-followups-george-greenbooks-jason.md (Friday follow-up ask)
 - slack: #decisions, re-surface reply ts 1784293867.337819, 2026-07-17 09:20 ET
+- gmail: thread 19f5ce6f744b67d8, message 19f7034cb863de96, Lemar → george@cannabisstop.net, 2026-07-17T13:12:14Z (nudge sent, confirmed)
