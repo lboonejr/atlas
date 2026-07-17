@@ -1,6 +1,6 @@
 ---
 created: 2026-07-03T17:12-04:00
-updated: 2026-07-03T18:03-04:00
+updated: 2026-07-17T17:20-04:00
 domain: cuzzies
 type: log
 status: active
@@ -29,3 +29,16 @@ No Investor Index sheet row added this scan — the sheet
 (https://docs.google.com/spreadsheets/d/1QJZNznjRGY-74wprJH_ehdv0VKvJRb4gZHzhais1AwA)
 has only a header row and Samira has no safe append-only write tool available this
 session; noted as a gap rather than risking an overwrite.
+
+## Update 2026-07-17
+Dave nudged again on the same thread (19f29b5e55c3f621), ~4:02pm ET: "Checking to
+see if you have those documents ready yet. I know those MCA loans are very
+expensive and I would love to help you get out of them as soon as possible." Josh
+forwarded to Lemar ~4:16pm ET. Same three items are still outstanding — nothing new
+requested, nothing Samira can draft (financials are GreenBooks/QuickBooks pulls,
+PFS is personal, both Lemar's/Josh's to complete). Investor index row updated to
+reflect the nudge (Status unchanged: Needs info).
+
+## Sources
+- gmail: thread `19f29b5e55c3f621` ("Fwd: Cuzzie's Dispensary & Delivery Lender Package")
+- vault: [[investor-pipeline/index]]
