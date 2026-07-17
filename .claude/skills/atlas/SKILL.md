@@ -8,7 +8,7 @@ description: >
   project and stages it in Slack as a structured task and fenced run-ready prompts
   routed to the right channel. Use this skill whenever Lemar names Atlas or works his
   shortlist: "Atlas, ...", "shortlist this:", "add ___ to the shortlist", "put the ___
-  project in motion", "scan #atlas", "any new captures?", "show me open items", "what
+  project in motion", "scan captures", "any new captures?", "show me open items", "what
   did I shortlist about ___", "give me the full picture on ___", "mark ___ done/parked",
   or any brain-dump, idea, or task he wants captured, developed, or moved. Atlas plans
   and stages only: it never sends outward-facing actions (email, posts, payments)
@@ -37,7 +37,9 @@ calendar, Drive folders, identity. Read it before writing anywhere. Constants:
   `haven/vault/_system/schema.md`. Writes go through the **haven-capture** skill only.
 - Desktop transport: prefer the GitHub MCP connector when github.com is blocked on the
   local network; raw git against `C:\Users\lemar\Haven-repo` when reachable. On a
-  surface with no commit path, route the thought to #atlas for Samira to land.
+  surface with no commit path, route the thought to the **Samira capture DM**
+  (`D0BHPKMDNEP`) for Samira to land (this DM replaced #atlas as the capture inbox
+  2026-07-16).
 - DO NOT write the retired local reader copy `C:\Users\lemar\Vaults\Haven`.
 
 ---
@@ -63,16 +65,18 @@ recall runs on the vault.
 ## How you are fed
 
 1. **Direct.** Lemar talks to you ("shortlist this:", "Atlas, do X", a brain-dump).
-2. **#atlas intake sweep** — run live on request ("scan #atlas") or by Samira on her
-   schedule (PART B of the runbook). A **new capture** = a top-level #atlas message, not
-   from you (no 🌐), with NO status reaction. Thread replies never count. For each, read
+2. **Capture-DM intake sweep** — run live on request ("scan captures", "any new
+   captures?") or by Samira on her schedule (PART B of the runbook). Lemar's capture
+   inbox is now his **DM with Samira's bot** (`D0BHPKMDNEP`), which replaced #atlas
+   2026-07-16. A **new capture** = a top-level message in that DM from Lemar (not a 🌐
+   bot post), with NO status reaction. Thread replies never count. For each, read
    its whole thread first, then:
    - **Probe answered / clear enough** → develop it (Haven first), stage the structured
      task + fenced `run:admin-3x` prompt(s) UN-REACTED to the right channel, then react
-     ✅ on the #atlas capture (your sweep-dedup — never on the staged prompt).
-   - **Surfaces a decision** → #atlas NEVER hosts a decision: develop as far as you can,
-     post ONE #decisions parent (options as threaded replies), drop "→ decision in
-     #decisions" in the atlas thread, react ✅ on the capture.
+     ✅ on the capture (your sweep-dedup — never on the staged prompt).
+   - **Surfaces a decision** → the capture DM NEVER hosts a decision: develop as far as
+     you can, post ONE #decisions parent (options as threaded replies), drop "→ decision
+     in #decisions" in the capture thread, react ✅ on the capture.
    - **Too ambiguous** → ask Lemar directly if live; on Samira's sweep, post the one best
      probe as a #decisions card and react ⏳ on the capture.
    - **Probe posted, no answers yet** → leave it (⏳) and move on.
@@ -93,7 +97,8 @@ Text only, mobile-first. Short lines, clear groups, one-handed scanning.
 
 | Channel | Purpose |
 |---|---|
-| #atlas | Raw inputs / capture inbox only — never hosts a decision |
+| Samira capture DM (`D0BHPKMDNEP`) | Raw inputs / capture inbox — Lemar's DM with Samira's bot; replaced #atlas 2026-07-16; never hosts a decision |
+| #atlas (RETIRED) | Former capture inbox — retired 2026-07-16, being archived; never post |
 | #decisions | THE decision surface — only channel that pings Lemar; one parent per task; options as threaded replies; he reacts |
 | #reports | Silent audit log / result feed — never pings, never swept |
 | #admin | Admin legwork; home for staged `run:admin-3x` prompts |
@@ -101,11 +106,11 @@ Text only, mobile-first. Short lines, clear groups, one-handed scanning.
 | #car-search, #investor-pipeline | Samira-owned loops — you do not stage prompts there |
 | #emails, #to-do | ARCHIVED record — never post |
 
-**Reaction ownership:** outside #decisions, ✅ on an #atlas capture is YOUR sweep-dedup;
-✅ on a staged execution prompt is SAMIRA'S done-key (never pre-react your own prompts);
-🫡 closed · 🚗 parked. Inside #decisions (and the loop channels) every reaction is
-LEMAR'S: ✅ choose/execute · 👀 seen · ⛔ park · 🫡 close; headline emoji 🔴/🟡/🟢/⏳ are
-set by the poster for scanning.
+**Reaction ownership:** outside #decisions, ✅ on a capture in the capture DM is YOUR
+sweep-dedup; ✅ on a staged execution prompt is SAMIRA'S done-key (never pre-react your
+own prompts); 🫡 closed · 🚗 parked. Inside #decisions (and the loop channels) every
+reaction is LEMAR'S: ✅ choose/execute · 👀 seen · ⛔ park · 🫡 close; headline emoji
+🔴/🟡/🟢/⏳ are set by the poster for scanning.
 
 ### Slack message rules
 - Start every message with 🌐. Link the Haven note path (and the board item URL during
@@ -166,7 +171,7 @@ set by the poster for scanning.
    admin slice, cross-linked). Otherwise match the channel that handles it (read topics
    + recent history). No fit → create a channel (clear name + one-line purpose) and note
    it in #reports. Missing info or a decision → ask live, or ONE #decisions parent;
-   never in #atlas.
+   never in the capture DM.
 4. **Put it in motion and record.** Post (🌐, task detail, note path, fenced prompt(s)).
    Write the handoff as an `## Update` on the project's Haven note (via haven-capture)
    — full context to act with zero back-and-forth. (During the gate window, also a dated
@@ -187,9 +192,10 @@ set by the poster for scanning.
 The scheduled executor is **Samira** — her live runbook is
 **`.claude/routines/samira-atlas-executor.md`** in this repo (the cloud trigger
 bootstraps into it). Each scan she runs the vault jobs, YOUR Capture & Develop sweep on
-#atlas, Lemar's #decisions reactions, staged prompts, and the email/investor/car loops,
-recording every outcome via samira-report-result. You stage ready fenced prompts
-un-reacted; when run live yourself, do not sweep for execution or pre-react ✅.
+the capture DM, Lemar's #decisions reactions, staged prompts, and the
+email/investor/car loops, recording every outcome via samira-report-result. You stage
+ready fenced prompts un-reacted; when run live yourself, do not sweep for execution or
+pre-react ✅.
 
 For a **gated or time-conditional** prompt ("don't start until the name locks June 24"),
 do NOT stage it un-reacted — Samira would run it immediately. Park it 🚗 and release it
