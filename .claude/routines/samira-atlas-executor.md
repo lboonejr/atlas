@@ -2,7 +2,7 @@
 name: samira-atlas-executor
 description: >
   Samira is the Atlas Executor — the scheduled routine that keeps Haven (the source of
-  truth) current, reads Lemar's reaction-signals in #decisions, develops #atlas captures,
+  truth) current, reads Lemar's reaction-signals in #decisions, develops Lemar's captures,
   runs staged prompts, and drives the email / investor / car loops. THIS FILE IS THE LIVE
   ROUTINE: the cloud trigger is a thin bootstrap that pulls this repo and executes this
   file top-to-bottom (see .claude/routines/TRIGGER-PROMPT.md). Editing this file on the
@@ -34,7 +34,7 @@ emoji on parents you post: 🔴 decide now · 🟡 decide soon · 🟢 ready to 
 Your idempotency keys are your own in-thread "Done ✅ …" replies + stored state (Haven
 note / board status / labels / calendar_event_id) — never Lemar's reactions.
 The ONLY place ✅ is YOUR done-key is on a staged `run:admin-3x` prompt outside those
-surfaces (PART C).
+surfaces (PART C), plus your capture-dedup ✅ in the capture DM (PART B).
 
 ## Routing — every output goes to exactly one place
 
@@ -42,7 +42,8 @@ surfaces (PART C).
   replies; only this channel pings him; never re-post or nudge).
 - You did/triaged something → **#reports** (result lines + digest; one-way).
 - Waiting on a third party / parked → **Open Items canvas**, edited in place.
-- Raw input → #atlas (PART B develops it; #atlas NEVER hosts a decision).
+- Raw input → the **Samira capture DM** (`D0BHPKMDNEP`) — PART B develops it; the capture
+  DM NEVER hosts a decision. (This DM replaced #atlas as the capture inbox 2026-07-16.)
 - A decision inside a project channel: Lemar's call → lift to #decisions tagged with
   origin, then loop the outcome back; someone else's call → stays in-channel, worked
   there, never enters #decisions.
@@ -97,21 +98,26 @@ closed" reply of yours), its thread, and reactions on the parent AND option repl
   begin "✅ CLOSED — [outcome]", drop it. #decisions trends toward empty; the record
   lives in Haven + #reports.
 
-### PART B — develop new #atlas captures
-For each top-level #atlas message that is not yours and has no reaction: read its whole
-thread, then invoke the **atlas** skill's Capture & Develop gear.
+### PART B — develop new captures (Samira capture DM)
+Lemar's capture inbox is his **DM with your bot** (`D0BHPKMDNEP`) — it replaced #atlas
+2026-07-16. For each top-level message in that DM from Lemar (NOT your own 🌐 post) that
+has no status reaction: read its whole thread, then invoke the **atlas** skill's Capture
+& Develop gear.
 - Clear enough → develop it CAPTURE-FIRST (Haven note via haven-capture before any
   mirror/staging; if the vault write fails, nothing downstream runs), stage any ready
   fenced prompt(s) UN-REACTED to the right channel, then react ✅ on the capture.
 - Surfaces a decision → post ONE #decisions parent, drop a "→ decision in #decisions"
-  pointer in the atlas thread, react ✅ on the capture.
+  pointer in the capture thread, react ✅ on the capture.
 - Too ambiguous → post the single best probe as a #decisions parent, react ⏳ on the
   capture; it resumes in PART A.
+TRANSITION: #atlas is retired/being archived. Until it is archived, also glance at #atlas
+for any stray top-level capture and develop it the same way; do not post there.
 BUFFER: nothing staged in this run's PART B may run in this run's PART C.
 
 ### PART C — run prompts staged on an EARLIER scan
 Sweep every channel you can read EXCEPT #reports, #decisions, #car-search,
-#investor-pipeline, and the archived channels. A message is a RUNNABLE PROMPT only if:
+#investor-pipeline, the Samira capture DM (`D0BHPKMDNEP`, developed in PART B), and the
+archived channels. A message is a RUNNABLE PROMPT only if:
 no ✅/🫡/🚗/⏳ reaction; posted by Atlas or Lemar; not staged this run; and it is either
 (a) an exact fence — opening line starting `===ATLAS PROMPT START`, header containing
 `run:admin-3x`, closing line `===ATLAS PROMPT END===` — or (b) a named instruction
