@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-07-15T16:35-04:00
+updated: 2026-07-17T13:10-04:00
 domain: project
 type: reference
 status: active
@@ -52,7 +52,7 @@ Guardrail: tracking & planning only — nothing is paid or contacted automatical
 constants:
   monthly_carry: 31200          # bare-bones crew; excludes cannabis tax
   target_open_days: 14
-  updated_label: "July 14, 2026"
+  updated_label: "July 17, 2026 (AIQ added)"
 
 tax_gate:
   - id: nj-sales-tax
@@ -358,6 +358,15 @@ items:
     contact: "1-800-274-5282"
     status: past-due
     note: "Logged 7/15 per Lemar's in-thread ask (#decisions ts 1784136181.354949). Small balance, not a reopen blocker — pay-or-lapse call still open in #decisions."
+  - id: aiq
+    label: "AIQ — SaaS subscription"
+    amount: 2481.51
+    tier: 2
+    vendor: "AIQ (billed via Chargify)"
+    account: "Invoice 68388, issued 7/17"
+    contact: "ar@aiq.com"
+    status: past-due
+    note: "New invoice 7/17, no due date stated. Lemar asked in-thread (#decisions ts 1784305562.237219, replied \"throw this into the #on-button channel so we can take care of that upon returning\") to track it here. Not a reopen blocker — pay-or-lapse call still open in #decisions."
 
 # ---- TIER 3 — Competitive edge (restore / advantage) ----
   - id: little-leaf-labs
@@ -434,12 +443,12 @@ carry:
   - {label: "Veriscan ID verification", amount: 30}
 ```
 
-## Snapshot (human-readable, as of 2026-07-15 afternoon)
+## Snapshot (human-readable, as of 2026-07-17)
 - **Tier 1 (open & operate):** ≈ **$107,995** one-time (incl. $50K inventory restock, $40K
   intercompany loan repay; ADT reconciled to $2,842.83, was $1,637.84).
-- **Tier 2 (nice-to-have):** ≈ **$112,929.94** (Leafly escalated to collections 7/14, $653.30 —
+- **Tier 2 (nice-to-have):** ≈ **$115,411.45** (Leafly escalated to collections 7/14, $653.30 —
   was $279; Fresh Grow priced 7/15 at $3,262.06 — was TBD; Primo Brands/Ready Refresh $129.94
-  added 7/15; 8 cannabis-vendor lines still TBD).
+  added 7/15; AIQ $2,481.51 added 7/17; 8 cannabis-vendor lines still TBD).
 - **Tier 3 (edge):** ≈ **$17,081.76** priced (Little Leaf Labs $8,331 + EPLI $4,051.12 +
   First Insurance Funding loan #106241219 $4,699.76, confirmed 7/12 as a separate policy,
   not a duplicate; strategic lines TBD).
@@ -448,6 +457,16 @@ carry:
 - Reality check: opening ($106.8K) + a 3-month cushion (~$93.6K carry) ≈ **$200K** before
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
+
+## Update — 2026-07-17 (AIQ)
+Added **AIQ** (`aiq`) as a new Tier 2 line — SaaS subscription billed via Chargify, invoice
+68388, **$2,481.51**, issued 7/17, no due date stated. Lemar asked in-thread (#decisions
+ts `1784305562.237219`, ✅ reaction + reply "I think we need to throw this into the
+#on-button channel so we can take care of that upon returning") to route it here. Posted
+to #on-button as a drop and ingested per the scanner rule. Tier 2 total $112,929.94 →
+**≈$115,411.45** (+$2,481.51). Nothing paid or contacted — pay-or-lapse decision remains
+open in #decisions. Page (`on-button-reopen.html`) and canvas (`F0BEN1167GB`) regenerated
+from this note in the same pass. Haven: `haven/vault/20-Cuzzies/2026-07-17-aiq-invoice-68388.md`.
 
 ## Update — 2026-07-15 (Primo Brands / Ready Refresh)
 Added **Primo Brands (Ready Refresh)** (`primo-brands-readyrefresh`) as a new Tier 2 line —
