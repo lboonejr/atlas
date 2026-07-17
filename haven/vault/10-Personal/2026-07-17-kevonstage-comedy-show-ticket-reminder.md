@@ -7,6 +7,7 @@ status: active
 due: 2026-08-14T09:00-04:00
 tags: [event, comedy, kevonstage, ticket-reminder]
 source: slack
+calendar_event_id: jcbvar3jrdlb22j2q7k0tnssc4
 ---
 
 # KevonStage comedy show — ticket reminder
