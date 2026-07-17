@@ -1,6 +1,6 @@
 ---
 created: 2026-07-17T09:12-04:00
-updated: 2026-07-17T19:22-04:00
+updated: 2026-07-17T21:50-04:00
 domain: cuzzies
 type: task
 status: active
@@ -46,6 +46,22 @@ George Irwin and Jason are out of scope for this pass (no new mail on
 either since the last scan); left open for the next full sweep or a direct
 check against the investor pipeline / #decisions.
 
+## Update 2026-07-17 (PART A decisions sweep — GreenBooks nudge confirmed sent)
+Lemar reacted ✅ on the #decisions card for the GreenBooks nudge (thread
+`1784323289.118459`). Verified via Gmail rather than trusting the reaction
+alone: Lemar sent the drafted nudge himself from Gmail Drafts on 2026-07-17
+at 21:42:35Z (5:42pm ET) to `richard@greenbookscpa.com`, subject "RE:
+Following Up — Tax Info for Cuzzie's Sale" (thread `19f685d27181dbe1`,
+message `19f720804efd1647`). Body matches the drafted check-in verbatim.
+The Gmail draft is confirmed gone from Drafts. No reply yet from Richard as
+of this check — status stays active/awaiting reply. Replied "Done ✅" on
+the #decisions thread.
+
+George Irwin and Jason remain out of scope for this pass; the George Irwin
+nudge on a separate card (`1784293867.337819`) was independently confirmed
+sent 2026-07-17 ~9:12am ET.
+
 ## Sources
 - slack: Samira capture DM (D0BHPKMDNEP), ts 1784292479.736069, 2026-07-17 ET
-- gmail: thread 19f685d27181dbe1 ("Following Up — Tax Info for Cuzzie's Sale," richard@greenbookscpa.com), Lemar's 2026-07-15 direct follow-up; new draft reply queued in Gmail Drafts 2026-07-17
+- slack: #decisions (C0BBXA96FFV) GreenBooks card, ts 1784323289.118459
+- gmail: thread 19f685d27181dbe1 ("Following Up — Tax Info for Cuzzie's Sale," richard@greenbookscpa.com), Lemar's 2026-07-15 direct follow-up; nudge reply sent by Lemar 2026-07-17T21:42:35Z (message 19f720804efd1647)
