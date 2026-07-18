@@ -1,9 +1,9 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-17T09:10:00-04:00
+updated: 2026-07-18T09:25:00-04:00
 domain: cuzzies
 type: task
-status: done
+status: active
 tags: [parke-bank, overdraft, nsf]
 source: gmail
 ---
@@ -198,6 +198,26 @@ read, opened, or resolved — only that Lemar closed this #decisions card. Statu
 moved to `done` for this round; the broader overdraft saga stays open and will
 likely resurface on the next Parke Bank contact.
 
+## Update 2026-07-18 — new round, 5 more returned items, $327.19
+
+Christopher Cabezas emailed again (7/18 ~9:20 AM ET, subject "secure: Cuzzie's Returned
+Items", gmail thread `19f7562c226a7ecd`): 5 more items presented for payment were
+returned this morning —
+
+- External Withdrawal $280.00 — NovusCapital II
+- External Withdrawal $21.73 — PayPal Retry Pymt
+- External Withdrawal $17.55 — PayPal Retry Pymt
+- External Withdrawal $3.97 — PayPal Retry Pymt
+- External Withdrawal $3.94 — PayPal Retry Pymt
+
+Total returned this round: **$327.19**. Direct invitation to reply ("If you have any
+questions, please let me know"), and Lemar's last actual sent reply on this matter is
+now 4 days old (7/14) — the 7/16 and 7/17 rounds were portal-locked secure messages
+closed with a bare 🫡, no reply text went out either time. Reopening status to `active`;
+treating this as reply-worthy again per the 7/10/7/14 pattern — draft reply options
+staged to #decisions (not sent, Gmail Drafts only if picked). Labeled `Samira/seen` in
+Gmail.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -222,3 +242,6 @@ likely resurface on the next Parke Bank contact.
 - slack: #decisions message ts `1783689606.144269` (parent) / `1783689609.847929` (Option A, ✅ picked) / `1783700440.292759` (closed, confirmed sent)
 - slack: #decisions message ts `1784207854.147209` (7/16 secure-message card, closed via 🫡)
 - slack: #decisions message ts `1784291108.312309` (7/17 secure-message card, closed via 🫡)
+- gmail: thread `19f7562c226a7ecd` (Christopher Cabezas, 5 more returned items $327.19,
+  2026-07-18 09:20 ET)
+- slack: #decisions message ts `1784383840.026859` (7/18 returned-items card, open)
