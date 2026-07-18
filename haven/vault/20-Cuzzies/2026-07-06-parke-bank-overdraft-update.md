@@ -1,6 +1,6 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-18T12:10:00-04:00
+updated: 2026-07-18T13:00:00-04:00
 domain: cuzzies
 type: task
 status: done
@@ -236,6 +236,18 @@ the underlying overdraft situation stays open and will likely generate further r
 the next update on this matter should reopen status to `active` and append here rather
 than creating a sibling note.
 
+## Update 2026-07-18 (3) — sent, thread closed
+
+Checking Gmail this scan, the drafted Option A reply now shows up in Sent — Lemar sent
+it himself directly from Gmail at 7/18 ~12:46 PM ET (text matches the draft essentially
+verbatim, no material edits). Treating this as the equivalent of the 🫡 close signal
+(he acted before reacting), same pattern as the 7/10 and 7/14 rounds. Labeled
+`Samira/sent` in Gmail; replied in the #decisions thread (ts `1784383840.026859`)
+noting the close, parent left as posted per the no-edit-message limitation. Status
+stays `done` for this round — the underlying overdraft situation stays open and will
+likely generate further rounds; the next update on this matter should reopen status to
+`active` and append here rather than creating a sibling note.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -261,6 +273,7 @@ than creating a sibling note.
 - slack: #decisions message ts `1784207854.147209` (7/16 secure-message card, closed via 🫡)
 - slack: #decisions message ts `1784291108.312309` (7/17 secure-message card, closed via 🫡)
 - gmail: thread `19f7562c226a7ecd` (Christopher Cabezas, 5 more returned items $327.19,
-  2026-07-18 09:20 ET; reply drafted `r4044494085104740508`)
+  2026-07-18 09:20 ET; reply drafted `r4044494085104740508`; sent by Lemar directly
+  2026-07-18 ~12:46 PM ET)
 - slack: #decisions message ts `1784383840.026859` (7/18 returned-items card) /
   `1784383843.781329` (Option A, ✅ picked)
