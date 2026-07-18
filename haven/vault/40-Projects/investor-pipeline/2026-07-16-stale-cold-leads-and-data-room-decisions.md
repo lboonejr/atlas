@@ -1,6 +1,6 @@
 ---
 created: 2026-07-16T09:00-04:00
-updated: 2026-07-17T12:35-04:00
+updated: 2026-07-18T08:15-04:00
 domain: project
 type: log
 status: awaiting-decision
@@ -205,3 +205,37 @@ edits needed this pass (nothing changed status).
 
 Quiet pass: 0 rooms built, 0 drafts, 0 sends, 0 meetings scheduled, 0 index rows
 changed. Posted a short status line to #investor-pipeline for the record.
+
+## Update — 2026-07-18, PART E (~08:1x ET)
+
+Full verification pass across both sources; nothing to redo — this scan picks up
+right behind the 7/17 ~17:2x ET post that already logged the Suite420 nudge, the
+7/17 Fundwell backfill, and the 7/17 ~5:20pm ET George Irwin re-check (all three
+already reflected in `index.md`).
+
+**Gmail `label:Samira/investor -label:Samira/investor-sent`** — 0 threads (nothing
+un-actioned). Direct spot-checks for the three names most likely to have moved
+overnight — George Irwin (both addresses), Dave Miesner/Suite420, Michael
+Teller/Panther Group — `newer_than:2d` — 0 new messages from any of them. George's
+last word remains his 7/13 "let me digest"; Suite420's last word remains Dave's
+7/17 4:02pm ET nudge (already logged); Panther still hasn't named a day/time for
+the "middle of next week" call.
+
+**#investor-pipeline** — 0 new messages since Samira's own 7/17 ~17:2x ET status
+post (ts `1784323125.099269`); no new contact drop from Lemar.
+
+**#decisions** — checked the last 15 messages; no new investor-pipeline card.
+Sweet Leaf Finance (close-or-keep) and the 4 cold-lead revive-or-close question
+(Ian Lindemann, Mickey Wills, Meyer Goldman, Alfonso Rodrigo) remain unanswered —
+left untouched per the no-re-nudge guardrail. Prompt Working Capital's
+pursue/decline card also still unanswered — left alone. Nothing else in
+#decisions today touches an investor/lender thread (today's new cards — Liquidibee
+lawsuit bank-statement ask, GreenBooks nudge, National Secure Transport invoice,
+Regus, Parke Bank secure message — are all Cuzzie's ops/collections items, not
+investor-pipeline).
+
+**Index note** (`index.md`) verified accurate against all of the above — no row
+edits needed this pass (no status changed).
+
+Quiet pass: 0 rooms built, 0 drafts, 0 sends, 0 meetings scheduled, 0 index rows
+changed.
