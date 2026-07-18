@@ -55,8 +55,47 @@ turn this into a first project brief (per the 07-16 decision: "brief moving this
 — this is Lemar's own project so no #decisions lift needed; next brief-drafting pass
 belongs to Shortlist/Atlas working this channel.
 
+## Update 2026-07-18 — first project brief draft (PART G, worked in-channel)
+
+Scope answers from 7-16 are locked (solo operators, full feature set, build not buy), so
+drafting the first brief now rather than leaving the "brief moving this week" step open
+another day.
+
+**Mission:** A booking-management agent for solo appointment-based service providers
+(barbers, tattoo artists, and similar one-person shops) — calendar sync, reminders,
+deposit/no-show fee handling, and client history in one place, built (not bought/wrapped).
+
+**Target user:** Solo operators first — one calendar, one book of clients, no multi-staff
+scheduling logic needed for v1.
+
+**MVP feature set (all four, per Lemar's 7-16 answer):**
+1. Calendar sync (two-way, at least one major calendar provider to start)
+2. Automated reminders (client-facing, reduces no-shows)
+3. Deposits / no-show fees (payment collection tied to booking)
+4. Client history (repeat-client notes, past services, preferences)
+
+**Build vs. buy:** Build custom — not a wrapper on an existing scheduler. Biggest
+implication: payment collection (deposits/no-show fees) means a payment processor
+integration (Stripe or similar) from day one, which is real scope, not a v2 add-on.
+
+**Open questions before this can become a real dev plan:**
+- Which calendar provider(s) to sync first (Google Calendar likely, given the rest of
+  this workspace already runs on it)?
+- Payment processor preference, or defer to whoever's cheapest/fastest to integrate?
+- Is this a tool Lemar uses personally first (dogfood with one real operator — e.g. the
+  friend mentioned in the original capture) before opening it to anyone else, or built
+  generic from the start?
+- Timeline expectation now that scope is build-not-buy — "this week" for the brief,
+  but no date attached to an actual MVP yet.
+
+**Not yet started:** no code, no accounts, no external commitments. This is a planning
+brief only — Lemar's call on whether this stays a personal side-build or graduates to
+something with real deadlines (in which case it may be worth a Stormy pressure-test pass
+on the business model even though the scope/build decision is already made).
+
 ## Sources
 - slack: #atlas 2026-07-15 18:15:39 ET, message ts 1784153739.693329 (channel C0BBWHCJUV9)
 - slack: #decisions 2026-07-16 08:12:06 ET, probe card ts 1784203926.276169 (channel C0BBXA96FFV)
+- slack: #booking-agent 2026-07-18, brief posted this pass (channel C0BHXTPST52)
 - slack: #decisions 2026-07-16 08:26:44 ET, Lemar's free-form reply ts 1784204804.434019 ("let's just make sure we put it in a new channel")
 - slack: #booking-agent 2026-07-16 14:00:29 ET, scope-answers message ts 1784224829.576589 (channel C0BHXTPST52)
