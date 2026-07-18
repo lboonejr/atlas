@@ -1,9 +1,9 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-18T09:25:00-04:00
+updated: 2026-07-18T12:10:00-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [parke-bank, overdraft, nsf]
 source: gmail
 ---
@@ -218,6 +218,24 @@ treating this as reply-worthy again per the 7/10/7/14 pattern — draft reply op
 staged to #decisions (not sent, Gmail Drafts only if picked). Labeled `Samira/seen` in
 Gmail.
 
+## Update 2026-07-18 (2) — reply saved to Gmail Drafts
+
+Lemar reacted ✅ on Option A in the #decisions thread (message ts `1784383843.781329`
+— short holding reply, same tone as the 7/10/7/14 sends). Merged his pick with no
+edits and saved it to Gmail Drafts, threaded onto the original message (gmail thread
+`19f7562c226a7ecd`, draft id `r4044494085104740508`), addressed to Christopher Cabezas
+with Meggan Hallworth cc'ed:
+
+> Hi Christopher, thanks for the heads up. Still working through the cash flow timing
+> on our end, nothing new to move today. I'll reach out as soon as there's an update.
+> Appreciate you and Meggan staying on top of this.
+
+Not sent — sitting in Gmail Drafts only, ready for Lemar to send himself. Gmail thread
+labeled `Samira/drafted`. Status moved to `done` for this round of returned items —
+the underlying overdraft situation stays open and will likely generate further rounds;
+the next update on this matter should reopen status to `active` and append here rather
+than creating a sibling note.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -243,5 +261,6 @@ Gmail.
 - slack: #decisions message ts `1784207854.147209` (7/16 secure-message card, closed via 🫡)
 - slack: #decisions message ts `1784291108.312309` (7/17 secure-message card, closed via 🫡)
 - gmail: thread `19f7562c226a7ecd` (Christopher Cabezas, 5 more returned items $327.19,
-  2026-07-18 09:20 ET)
-- slack: #decisions message ts `1784383840.026859` (7/18 returned-items card, open)
+  2026-07-18 09:20 ET; reply drafted `r4044494085104740508`)
+- slack: #decisions message ts `1784383840.026859` (7/18 returned-items card) /
+  `1784383843.781329` (Option A, ✅ picked)
