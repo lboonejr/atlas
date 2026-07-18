@@ -1,6 +1,6 @@
 ---
 created: 2026-07-16T09:00-04:00
-updated: 2026-07-18T08:15-04:00
+updated: 2026-07-18T11:10-04:00
 domain: project
 type: log
 status: awaiting-decision
@@ -239,3 +239,32 @@ edits needed this pass (no status changed).
 
 Quiet pass: 0 rooms built, 0 drafts, 0 sends, 0 meetings scheduled, 0 index rows
 changed.
+
+## Update — 2026-07-18, PART E (~11:1x ET)
+
+Full verification pass, picking up behind the 08:1x ET scan. Gmail
+`label:Samira/investor -label:Samira/investor-sent` — 0 threads. Direct spot-check,
+`newer_than:1d`, on George Irwin (both addresses), Suite420 (Dave Miesner), Panther
+Group (Michael Teller), Eagle Bend Capital, FundCanna, and BizFundsHub senders — 0
+new mail from any. George's last word remains his 7/13 "let me digest" (per this
+run's explicit instruction: his nudge already went out 7/17, no re-nudge); Suite420's
+last word remains Dave's 7/17 4:02pm ET nudge; Panther still hasn't named a day/time.
+
+**#investor-pipeline** — 0 new messages since Samira's own 08:1x ET status post
+(ts `1784376733.368099`); no new contact drop from Lemar.
+
+**#decisions** — checked the last 15 messages; no new investor-pipeline card. Sweet
+Leaf Finance (close-or-keep) and the 4 cold-lead revive-or-close question remain
+unanswered — left untouched per the no-re-nudge guardrail. Prompt Working Capital's
+pursue/decline card also still unanswered — left alone. Today's other new
+#decisions cards (Liquidibee lawsuit bank-statement ask, Parke Bank returned items,
+GreenBooks nudge) are Cuzzie's ops/collections/legal matters — confirmed
+Liquidibee is the lawsuit/collections matter explicitly out of this loop's scope
+per this run's instructions, left untouched.
+
+**Index note** (`index.md`) verified accurate against all of the above — no row
+edits needed this pass (no status changed).
+
+Quiet pass: 0 threads picked up · 0 rooms built · 0 drafts posted · 0 docs
+built/copied · 0 sends logged · 0 meetings scheduled · 1 Haven receipt (this
+update).
