@@ -1,10 +1,10 @@
 ---
 created: 2026-07-10T14:35:00-04:00
-updated: 2026-07-17T13:25-04:00
+updated: 2026-07-19T08:15-04:00
 domain: cuzzies
-type: log
-status: active
-tags: [samira, investor, george-irwin, a-green-roof, bridge-loan]
+type: decision
+status: done
+tags: [samira, investor, george-irwin, a-green-roof, bridge-loan, passed]
 source: gmail
 ---
 
@@ -150,6 +150,23 @@ send + #decisions close. Applied `Samira/investor-sent` (Label_9) to this Gmail 
 pattern used on the Panther Group and Eagle Bend Capital threads. No new outreach
 drafted, nothing sent by Samira.
 
+## Update — 2026-07-19 08:15 ET
+
+George replied 2026-07-19T10:03:22Z (~6:03am ET) — a pass. Full text: "After carefully
+reviewing the information, we've decided not to pursue this opportunity. Our assessment
+is that the business is carrying a level of debt and financial obligations that places
+it outside the investment criteria we're comfortable with at this time... This decision
+isn't a reflection of the effort you've put into building the business... Hopefully, our
+paths will cross again under different circumstances." Gracious, no ask for anything
+further, leaves the door open for the future.
+
+Per I4 (investor's reply — no/pass), drafted a gracious close reply on the same thread
+(Gmail draft `r-4976946085875222544`, threaded on message `19f79d4aa9f794a9`) — nothing
+sent by Samira, Lemar's to send if/when he wants to. Index row moved to Status: Passed.
+Applied `Samira/seen` (Label_2) to the thread. No #decisions card posted — no decision
+is required (the deal is dead, the reply is optional), so this is logged here + reported
+to #reports/#investor-pipeline instead per the informational-only path.
+
 ## Sources
 - slack: #investor-pipeline, Joshua Evans, 2026-07-10 13:22:21 ET
 - gmail: thread 19f4d72e50c51f9b, Lemar → george@agreenroof.com, 2026-07-10 15:14 ET
@@ -165,3 +182,5 @@ drafted, nothing sent by Samira.
 - slack: #decisions, re-surface reply ts 1784293867.337819, 2026-07-17 09:20 ET
 - gmail: thread 19f5ce6f744b67d8, message 19f7034cb863de96, Lemar → george@cannabisstop.net, 2026-07-17T13:12:14Z (nudge sent, confirmed)
 - gmail: label Samira/investor-sent (Label_9) applied to thread 19f5ce6f744b67d8, 2026-07-17 ~13:25 ET
+- gmail: thread 19f5ce6f744b67d8, message 19f79d4aa9f794a9, george@cannabisstop.net → Lemar/Joshua, 2026-07-19T10:03:22Z (pass, decline)
+- gmail: draft r-4976946085875222544 on thread 19f5ce6f744b67d8 (gracious close reply, drafted, not sent)
