@@ -1,6 +1,6 @@
 ---
 created: 2026-07-20T08:04:43-04:00
-updated: 2026-07-20T12:00:00-04:00
+updated: 2026-07-20T13:18-04:00
 domain: personal
 type: note
 status: active
@@ -31,5 +31,20 @@ proceeds (e.g. investor outreach → investor-pipeline project, Harrison Case �
 legal/60-Legal, T-Mobile bill → admin/shortlist, Samira "weekend mode" →
 skill-candidate proposal in #skills-lab). Not yet broken out.
 
+## Update 2026-07-20 — weekly-tracking loop idea
+Lemar followed up (capture DM, ts `1784552924.372259`) describing how he wants this
+kind of weekly goal-setting to work going forward as a standing loop: he sets goals
+(Sun/Mon), Samira posts them to a Slack canvas, then through the week proactively
+pushes him progress nudges + related considerations/resources via #decisions, aiming
+to leave no open items by week's end.
+
+This is a request for a new standing behavior/loop, not a one-off task — Safety
+floor "never create skills mid-run" applies, and the scope (cadence, which canvas,
+how "leave no open items" resolves against the existing reaction-engine rules) isn't
+locked down yet. Surfaced to Lemar as a #decisions card rather than built or guessed;
+see the card for the specific questions. React ✅ set on the capture DM message per
+PART B (surfaces-a-decision path).
+
 ## Sources
 - slack: Samira capture DM (D0BHPKMDNEP), ts `1784538555.146929`
+- slack: Samira capture DM (D0BHPKMDNEP), ts `1784552924.372259` (weekly-loop idea)
