@@ -1,6 +1,6 @@
 ---
 created: 2026-06-24T18:15-04:00
-updated: 2026-07-15T18:15:00-04:00
+updated: 2026-07-20T18:30-04:00
 domain: project
 type: note
 status: active
@@ -102,6 +102,23 @@ No fork in either — both logged straight into "Answers so far" above.
 Lemar answered Q12 (value tier first, then mid-tier/high-quality) in-thread. No
 fork — logged straight into "Answers so far" above.
 
+## Update 2026-07-20 — Q12→Q13 correction + Q19 logged
+Lemar flagged in-thread (ts `1784574363.551469`) that the answer logged above
+under "Q12" was actually intended for **Q13 — "Are you positioning as premium,
+mid-tier, or value — and does that change by category?"** The original entry is
+left unedited per the append-only rule (schema §7); read it as the answer to
+Q13. **Q12 — "Which product categories would Cuzzy's lead with first?" —
+remains open.**
+
+Lemar also answered **Q19 — "Is the goal to be the default supplier other
+dispensaries turn to, or a curated brand that only select partners carry?"**
+(ts `1784574556.328859`): "I'd like to have something for everyone if
+possible. But I would like to partner with The Station Dispensary in some way
+because of our relationship." No fork — logged here per the append-only rule.
+
+90 of 100 questions remain unanswered (Q2, Q7, Q8, Q13 decided/answered; Q1,
+Q4, Q6 answered; Q19 answered; Q12 still genuinely open) — no rush.
+
 ## Sources
 - slack: #cuzzys-brand, 100-questions post, 2026-06-24 18:15 ET (ts 1782339354.273549)
 - slack: #cuzzys-brand thread, Lemar's Q1/Q2 answers 2026-07-05 13:14 ET
@@ -114,3 +131,5 @@ fork — logged straight into "Answers so far" above.
 - slack: #cuzzys-brand thread, Lemar's Q7 answer 2026-07-12 10:33:58 ET (ts 1783866838.178689)
 - slack: #cuzzys-brand thread, Lemar's Q8 answer 2026-07-12 10:35:24 ET (ts 1783866924.366209)
 - slack: #cuzzys-brand thread, Lemar's Q12 answer 2026-07-15 18:05:31 ET (ts 1784153131.082909)
+- slack: #cuzzys-brand thread, Lemar's Q12→Q13 correction 2026-07-20 (ts 1784574363.551469)
+- slack: #cuzzys-brand thread, Lemar's Q19 answer 2026-07-20 (ts 1784574556.328859)
