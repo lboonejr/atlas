@@ -1,11 +1,12 @@
 ---
 created: 2026-07-05T20:40:27-04:00
-updated: 2026-07-15T12:00:00-04:00
+updated: 2026-07-20T11:11-04:00
 domain: personal
 type: brief
 status: active
 tags: [family, mom, grandma, move, apartment, affordability]
 source: slack
+due: 2026-07-20T17:00-04:00
 area: family
 ---
 
@@ -64,7 +65,16 @@ storage-transfer sequencing sketched above will need to shift with it once a fir
 date is known. Nothing for Samira to action — informational, tracked here so the
 delay doesn't get lost against the original 7/15–7/18 plan.
 
+## Update 2026-07-20 — reminder: bring the transfer-room TV to Mom's new apartment
+
+Lemar asked (capture DM, ts `1784556650.917479`) for a reminder at 5:00 PM ET today to
+bring the transfer-room TV from Cuzzie's over to Mom's new apartment, as part of the
+same move-in effort. Added `due: 2026-07-20T17:00-04:00` above so calendar-sync rings
+it this afternoon. This is a physical task only Lemar can do; no Samira-side action
+beyond the reminder.
+
 ## Sources
 - slack: #atlas 2026-07-05 20:40 ET
 - gmail: thread `19f3e311273ad2fd` (Google Calendar reminder, "Repair back room before mom's move-in July 15")
 - slack: #atlas 2026-07-15 07:58 ET (move-in reschedule, leak above apartment)
+- slack: Samira capture DM (D0BHPKMDNEP), ts `1784556650.917479` (TV reminder ask, 2026-07-20)
