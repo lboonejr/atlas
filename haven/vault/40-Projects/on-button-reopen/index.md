@@ -458,6 +458,13 @@ carry:
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
 
+## Update — 2026-07-20 (ADT reconfirmed)
+Lemar posted "ADT updated Balance - $2842.83" in #on-button (ts `1784556454.923039`) — this
+matches the already-tracked `adt` figure exactly (no change from the 7/15 reconciliation).
+Per the scanner/dedupe rule this is a restatement of an existing line, not a new drop —
+`amount` and `status` unchanged. Logged as a confirmation only; page and canvas not
+regenerated (no data changed). Nothing paid or contacted.
+
 ## Update — 2026-07-17 (NST reminder)
 National Secure Transport emailed a "Friendly Reminder: Outstanding Invoice(s)" 7/17 —
 open balance **$868.60**, unchanged, now with a concrete ask: pay by **July 21, 2026**.
