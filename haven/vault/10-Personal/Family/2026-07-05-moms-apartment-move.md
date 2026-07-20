@@ -1,6 +1,6 @@
 ---
 created: 2026-07-05T20:40:27-04:00
-updated: 2026-07-20T11:11-04:00
+updated: 2026-07-20T12:08-04:00
 domain: personal
 type: brief
 status: active
@@ -8,6 +8,7 @@ tags: [family, mom, grandma, move, apartment, affordability]
 source: slack
 due: 2026-07-20T17:00-04:00
 area: family
+calendar_event_id: dk5fbajiulv9t6st33fmn8b15o
 ---
 
 # Mom's apartment move (July 15) + Grandma relocating from Georgia
@@ -72,6 +73,11 @@ bring the transfer-room TV from Cuzzie's over to Mom's new apartment, as part of
 same move-in effort. Added `due: 2026-07-20T17:00-04:00` above so calendar-sync rings
 it this afternoon. This is a physical task only Lemar can do; no Samira-side action
 beyond the reminder.
+
+## Update 2026-07-20 (PART S calendar-sync — reminder created)
+Created the reminder-calendar event for the 5pm TV pickup (`calendar_event_id`
+above), popup at the top of the hour. Reacted ✅ on the capture DM ask (ts
+`1784556650.917479`).
 
 ## Sources
 - slack: #atlas 2026-07-05 20:40 ET
