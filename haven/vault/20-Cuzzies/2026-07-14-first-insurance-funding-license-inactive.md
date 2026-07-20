@@ -1,9 +1,9 @@
 ---
 created: 2026-07-14T15:05:00-04:00
-updated: 2026-07-14T18:00:00-04:00
+updated: 2026-07-20T16:00:00-04:00
 domain: cuzzies
 type: decision
-status: done
+status: active
 tags: [license, compliance, insurance, first-insurance-funding, cuzzies, reopening]
 source: gmail
 ---
@@ -45,10 +45,21 @@ Card closed; no draft needed since he answered himself. Status set to `done` (no
 `parked`) since the underlying question is now actually resolved, and retyped
 `decision` since this records the position Lemar gave Liz.
 
+## Update — 2026-07-20 — Liz followed up, reopened as reply-worthy
+Liz replied again 2026-07-20 15:56 ET (same thread): she appreciates the transparency and
+is now asking for documentation showing this is being addressed with the NJ CRC, or an
+update if anything changes. Checked the vault — nothing on file shows an actual CRC
+filing tied to this specific reactivation (it is a closure status, not a compliance
+case), so no draft option claims a CRC document exists. Posted 3 reply options to
+#decisions (thread `1784567634.434279`) for Lemar to pick or edit; status reopened to
+`active` pending his call.
+
 ## Sources
 - gmail thread `19f61ffd73a8b247` — "Response Required: Expired License - Cuzzie's
   Dispensary & Delivery LLC" from Liz.Hernandez@firstinsurancefunding.com; Lemar's own
-  reply sent 2026-07-14T20:25:54Z (message `19f624ebd1aab115`)
+  reply sent 2026-07-14T20:25:54Z (message `19f624ebd1aab115`); Liz's follow-up
+  2026-07-20T15:56:36Z (message `19f803e629c6984c`)
 - Related: `haven/vault/40-Projects/on-button-reopen/index.md` (`first-insurance-funding-notice`,
   `epli-reinstate` — separate insurance-line matters with the same lender)
-- slack: #decisions ts `1784056375.686539` (closed 2026-07-14, Lemar answered directly via email)
+- slack: #decisions ts `1784056375.686539` (closed 2026-07-14, Lemar answered directly via email);
+  new card ts `1784567634.434279` (2026-07-20, awaiting Lemar's pick)
