@@ -1,12 +1,13 @@
 ---
 created: 2026-07-17T09:12-04:00
-updated: 2026-07-20T11:11-04:00
+updated: 2026-07-20T12:08-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [follow-up, investor, compliance, greenbooks, george-irwin, jason]
 source: slack
 due: 2026-07-20T15:00-04:00
+calendar_event_id: atv2la7ul1e0rmshdsi7rapvkc
 ---
 
 # Friday follow-ups — George, GreenBooks tax info, Jason's buyers
@@ -87,6 +88,12 @@ approve, just talking points):**
    documents beyond tax status + P&L, so the ask to GreenBooks can be widened
    in one pass instead of multiple back-and-forths.
 5. Close: commit to looping back the moment GreenBooks responds.
+
+## Update 2026-07-20 (PART S calendar-sync — reminder created)
+Created the reminder-calendar event for the 3pm Jason call (`calendar_event_id`
+above), popup at the top of the hour. `calendar_event_id` written back per
+schema — do not hand-edit it. Reacted ✅ on the capture DM ask (ts
+`1784556529.671089`).
 
 ## Sources
 - slack: Samira capture DM (D0BHPKMDNEP), ts 1784292479.736069, 2026-07-17 ET
