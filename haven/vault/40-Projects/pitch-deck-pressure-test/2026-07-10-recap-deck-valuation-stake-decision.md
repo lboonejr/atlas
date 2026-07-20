@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T11:20:00-04:00
-updated: 2026-07-12T12:35:00-04:00
+updated: 2026-07-20T11:21:00-04:00
 domain: project
 type: decision
 status: done
@@ -65,6 +65,14 @@ own #decisions card ("Lease assignability — send counsel note now, or swap in 
 deck language?", posted 2026-07-11 17:15 ET, options A/B/C, no pick yet). Building the
 actual deck file (Slides/Docs) is Lemar's/Josh's own action — Samira has no direct write
 access there.
+
+## Update — 2026-07-20 11:21 ET — re-confirmed via #decisions ✅
+
+Samira re-flagged this in #decisions (misreading the record as unconfirmed — the
+2026-07-10 12:50 ET reply below already settled it) and asked Lemar to confirm the
+figure could stay in the deck as-is. Lemar reacted ✅. No change to the decision:
+**$500,000 for a 50% ownership stake, implied post-money valuation $1,000,000** stands,
+already live in the deck's Q1 paste-in language pushed 2026-07-10.
 
 ## Sources
 - Slack #pitch-deck-pressure-test (C0BCD7U5X2B), Recap Deck thread root ts
