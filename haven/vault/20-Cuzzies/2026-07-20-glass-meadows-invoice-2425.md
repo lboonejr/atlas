@@ -26,6 +26,18 @@ payment — that stays with Lemar/admin.
 - Amount: $4,617.92 · Invoice #2425
 - Attachment: `Invoice_2425_from_Glass_Meadows_Inc.pdf` (on the source email)
 
+## Update — 2026-07-20 — checked against wind-down stance, no action taken
+Ran the staged `run:admin-3x` admin task (#admin ts `1784553795.722189`). Samira has no
+QuickBooks write access, so "record it in the books" isn't an action she can perform
+directly — flagging that gap rather than guessing at a bookkeeping entry. This is the
+same recurring invoice 2425 notice already closed multiple times this month
+([[glass-meadows]] — see `2026-07-17-glass-meadows-invoice-2425.md`, `2026-07-16`,
+`2026-07-15`, `2026-07-14`, `2026-07-13`, `2026-07-04` repeats) under the established
+wind-down stance: no call, no portal login, no payment made by Samira (safety floor).
+Leaving `status: active` since actual QuickBooks recording + payment authorization is
+still Lemar's/admin's to do; nothing further for Samira to execute here.
+
 ## Sources
 - gmail: thread `19f7fa0541d4432b` (7/20 9:03am ET notification, PDF attached)
 - gmail: thread `19f7a7dc89b00edf` (7/19 9:08am ET, same invoice/amount, earlier notification)
+- slack: #admin `1784553795.722189` — staged run:admin-3x task
