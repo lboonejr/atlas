@@ -1,9 +1,9 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-21T09:00:00-04:00
+updated: 2026-07-21T13:05:00-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [parke-bank, overdraft, nsf]
 source: gmail
 ---
@@ -264,6 +264,23 @@ reply-worthy again per the established 7/10/7/14/7/18 pattern — draft reply op
 staged to #decisions (ts `1784643460.294209`, not sent, Gmail Drafts only if picked).
 Labeled `Samira/seen` in Gmail.
 
+## Update 2026-07-21 (2) — reply saved to Gmail Drafts
+
+Lemar reacted ✅ on Option A in the #decisions thread (message ts `1784643465.253509`
+— short holding reply, same tone as the 7/10/7/14/7/18 sends) but the reply had not
+yet been drafted as of this scan. Merged his pick with no edits and saved it to Gmail
+Drafts, threaded onto the original message (gmail thread `19f84a91bf57c841`, draft id
+`r11520209879939822`), addressed to Christopher Cabezas with Meggan Hallworth cc'ed:
+
+> Hi Christopher, thanks for the heads up. Still working through the cash flow timing
+> on our end, nothing new to move today. I'll reach out as soon as there's an update.
+> Appreciate you staying on top of this.
+
+Not sent — sitting in Gmail Drafts only, ready for Lemar to send himself. Status moved
+to `done` for this round of returned items — the underlying overdraft situation stays
+open and will likely generate further rounds; the next update on this matter should
+reopen status to `active` and append here rather than creating a sibling note.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -294,6 +311,6 @@ Labeled `Samira/seen` in Gmail.
 - slack: #decisions message ts `1784383840.026859` (7/18 returned-items card) /
   `1784383843.781329` (Option A, ✅ picked)
 - gmail: thread `19f84a91bf57c841` (Christopher Cabezas, 2 more returned items $148.49,
-  2026-07-21 08:31 ET)
+  2026-07-21 08:31 ET; reply drafted `r11520209879939822`)
 - slack: #decisions message ts `1784643460.294209` (7/21 returned-items card, options
-  in thread)
+  in thread) / `1784643465.253509` (Option A, ✅ picked)
