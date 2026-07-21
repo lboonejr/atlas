@@ -1,6 +1,6 @@
 ---
 created: 2026-07-20T08:04:43-04:00
-updated: 2026-07-20T13:18-04:00
+updated: 2026-07-21T11:07:58-04:00
 domain: personal
 type: note
 status: active
@@ -45,6 +45,16 @@ locked down yet. Surfaced to Lemar as a #decisions card rather than built or gue
 see the card for the specific questions. React ✅ set on the capture DM message per
 PART B (surfaces-a-decision path).
 
+## Update 2026-07-21 — nudge received, still waiting on the scoping card
+Lemar followed up again (capture DM, ts `1784642829.940209`): "Can we add the weekly
+goals I set yesterday to that new slack canvas?" The canvas doesn't exist yet — it's
+gated on the 3 scoping questions posted to #decisions on 2026-07-20 (cadence, which
+canvas, how "no open items" resolves), which are still unanswered. Per routing rules,
+this doesn't get a new #decisions card (that would be a duplicate/nudge) — pointed
+Lemar back to the existing card in the capture DM thread instead. React ✅ set on the
+2026-07-21 capture per PART B.
+
 ## Sources
 - slack: Samira capture DM (D0BHPKMDNEP), ts `1784538555.146929`
 - slack: Samira capture DM (D0BHPKMDNEP), ts `1784552924.372259` (weekly-loop idea)
+- slack: Samira capture DM (D0BHPKMDNEP), ts `1784642829.940209` (2026-07-21 nudge)
