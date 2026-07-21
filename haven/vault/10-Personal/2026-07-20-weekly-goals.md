@@ -45,16 +45,28 @@ locked down yet. Surfaced to Lemar as a #decisions card rather than built or gue
 see the card for the specific questions. React ✅ set on the capture DM message per
 PART B (surfaces-a-decision path).
 
-## Update 2026-07-21 — nudge received, still waiting on the scoping card
+## Update 2026-07-20 (later) — scope confirmed, queued as skill candidate
+Lemar answered the 3 scoping questions in #decisions (thread ts `1784553493.577769`,
+reply ts `1784554188.162019`): cadence = any time he drops a new goals list (not
+fixed) · surface = a NEW dedicated Slack canvas (not a section on the existing Open
+Items canvas `F0BDLSHD8JD`) · "leave no open items" = full #decisions treatment per
+goal, same as everything else. Samira logged this as a skill candidate in
+#skills-lab ("weekly-goals standing loop") per the safety floor — she does not build
+skills mid-run. **The dedicated canvas does not exist yet** — it's built only when
+that skill is built.
+
+## Update 2026-07-21 — nudge received, still gated on the unbuilt skill
 Lemar followed up again (capture DM, ts `1784642829.940209`): "Can we add the weekly
-goals I set yesterday to that new slack canvas?" The canvas doesn't exist yet — it's
-gated on the 3 scoping questions posted to #decisions on 2026-07-20 (cadence, which
-canvas, how "no open items" resolves), which are still unanswered. Per routing rules,
-this doesn't get a new #decisions card (that would be a duplicate/nudge) — pointed
-Lemar back to the existing card in the capture DM thread instead. React ✅ set on the
+goals I set yesterday to that new slack canvas?" Answer: no new #decisions card
+needed (the scope question is already answered, not open) — this is gated on the
+`weekly-goals` skill candidate (queued 2026-07-20 in #skills-lab) actually getting
+built, which only a build session (not this scan) can do. Pointed Lemar back to the
+#skills-lab post + this note in the capture DM thread reply. React ✅ set on the
 2026-07-21 capture per PART B.
 
 ## Sources
 - slack: Samira capture DM (D0BHPKMDNEP), ts `1784538555.146929`
 - slack: Samira capture DM (D0BHPKMDNEP), ts `1784552924.372259` (weekly-loop idea)
+- slack: #decisions (C0BBXA96FFV), thread ts `1784553493.577769` (scoping Q&A)
+- slack: #skills-lab (C0BBZ5J8805), ts `1784557015.888319` (skill candidate logged)
 - slack: Samira capture DM (D0BHPKMDNEP), ts `1784642829.940209` (2026-07-21 nudge)
