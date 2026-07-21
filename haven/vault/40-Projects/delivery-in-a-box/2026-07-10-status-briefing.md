@@ -3,6 +3,7 @@ domain: cuzzies
 type: project
 status: active
 source: samira-atlas-executor-part-g
+updated: 2026-07-21T18:15:00-04:00
 ---
 
 # Delivery-in-a-Box — Status Briefing (2026-07-10)
@@ -49,3 +50,18 @@ Staging the two stalled 6/26 commitments as run:admin-3x prompts in #admin this 
 - #atlas thread ts 1782434912.962149
 - #admin ts 1782476419.795739, 1782476423.368199, 1782476427.251529 (completed 6/26 sub-tasks)
 - #delivery-in-a-box (C0BDN2KQFD4)
+
+## Update 2026-07-21 (18:15 ET)
+
+Template-doc visual theme decided: **Option 1 — Secure Logistics** (steel-blue/charcoal
+#1B2A3A/#2E3E4E + safety-orange accent #F2601C, geometric sans headers, lock/shield/
+route-line iconography). Samira staged the two-direction pick in #decisions (card ts
+`1784660953.312329`) on 7/16; Lemar answered directly in #delivery-in-a-box ("Let's go
+with option 1", 7/21 ~3:44pm ET) rather than reacting on the card. Choice folded back
+into this note per the original prompt's own promise. The actual formatting pass on the
+3 template docs (Pricing Tiers One-Pager, SOP & Scope Outline, Generic Outreach
+Template) still needs the pasted Claude-Design prompt run with Docs access — that step
+is on Lemar per the original staging (Samira has no doc-formatting tool here). Docs:
+[Pricing Tiers](https://docs.google.com/document/d/180yQzo6y0j4ILmvxQzhJN-4NVA4bls1juQMt_vnmnH8/edit) ·
+[SOP & Scope](https://docs.google.com/document/d/1ba3OLAhj5DLGxthnrEuJ_e-10QzfFaZgqnSLWuC3Kt8/edit) ·
+[Outreach Template](https://docs.google.com/document/d/1T_3UuhLu9KY56Rf8G9J0rsYSQN42hkv8U-9Epx38IPc/edit).
