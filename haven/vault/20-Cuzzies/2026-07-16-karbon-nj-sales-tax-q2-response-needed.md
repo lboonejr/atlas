@@ -1,6 +1,6 @@
 ---
 created: 2026-07-16T14:10-04:00
-updated: 2026-07-17T17:23-04:00
+updated: 2026-07-21T13:00:00-04:00
 domain: cuzzies
 type: task
 status: done
@@ -85,7 +85,29 @@ compliance calendar (`due` field retained here as a pointer, not an open task).
 Status is `done`; the 7/20 09:00 ET reminder event (`t5mqt1d85canl5ugdgl12hcrec`) has
 been cancelled and the id cleared per the calendar-sync RETIRE rule.
 
+## Update 2026-07-21 (email loop — return filed, payment still not made; separate "Documents" reply)
+
+Jessica sent two new messages: (1) a new thread "Q2 2026 NJ Sales Tax" (`19f8144861bb821a`,
+2026-07-20 20:42 ET) with the filed Q2 2026 NJ sales tax return attached "for your
+records" — confirming, in her words, "as discussed, payment was not made." No question
+asked, nothing to reply to; informational only. (2) A separate thread "Documents"
+(`19f8147bd8737c29`, 2026-07-20 20:46 ET) — she looked for whatever records Cuzzie's/
+GreenBooks-adjacent files she had and attached a `CUZZIES.zip`, saying there wasn't much.
+Unclear if this answers the earlier GreenBooks records-request nudge (Richard Wyse,
+@greenbookscpa.com) or is a separate Huljev-side pull — flagging the overlap rather than
+guessing which.
+
+Both are consistent with the standing picture: the filing itself is done, but the
+**$6,698.61 payment is still outstanding**, and the bank/routing confirmation Options
+A/B/C on the open #decisions card (thread `1784225480.998989`) are still unreacted —
+that card remains the live ask, not re-posting a duplicate. No draft needed for either
+new message (no question posed in either). Labeled `Samira/seen` on both new threads.
+
 ## Sources
+- gmail: thread 19f8144861bb821a ("Q2 2026 NJ Sales Tax", 2026-07-20 20:42 ET) — return
+  filed, payment not made
+- gmail: thread 19f8147bd8737c29 ("Documents", 2026-07-20 20:46 ET) — CUZZIES.zip,
+  "not much" found
 - gmail: thread 19f6c18133f23ab2 ("Q2 2026 NJ Sales Tax", jessica@huljevgroup.com) —
   latest message id `19f70e883fa79658`, 2026-07-17T16:28:31Z, Jessica confirms she will
   file today

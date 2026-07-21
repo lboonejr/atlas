@@ -1,9 +1,9 @@
 ---
 created: 2026-07-11T14:05-04:00
-updated: 2026-07-13T16:52-04:00
+updated: 2026-07-21T13:00:00-04:00
 domain: personal
 type: task
-status: active
+status: done
 tags: [extraspace, storage, moveout]
 source: gmail
 due: 2026-07-18T12:00-04:00
@@ -54,7 +54,14 @@ payment decision himself alongside the move-out calls (same pattern as the 7/11 
 No payment made on his behalf. The underlying move-out (unit access/empty/confirm)
 stays `active` pending 7/18.
 
+## Update 2026-07-21 (email loop — move-out confirmed)
+Extra Space Storage sent a "Move-out confirmation" email (2026-07-20 20:13 ET,
+no-reply sender, nothing to draft/send): unit 3003 move-out processed. Marking
+`status: done` — calendar-sync will retire the 7/18 reminder next pass. Labeled
+`Samira/seen`.
+
 ## Sources
+- gmail: thread 19f81298363c8c71 (move-out confirmation, 2026-07-20)
 - gmail: thread 19f5171b324e0162 (move-out notice, Extra Space Storage)
 - gmail: thread 19f5c394f749d028 (payment reminder, $253.04 due 7/18, 2026-07-13)
 - slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1783779573661159 (task card, Lemar's ✅ confirmation)

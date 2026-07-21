@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T09:15-04:00
-updated: 2026-07-15T12:00:00-04:00
+updated: 2026-07-21T13:00:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -73,6 +73,20 @@ has changed since my July 1 update") was ever sent — still worth Lemar's own c
 next time he's in Gmail Drafts. Nothing new to draft or decide this pass; logging
 only. Labeled `Samira/seen` in Gmail.
 
+## Update 2026-07-21 (email loop — Reminder 9, same figures, still "URGENT")
+
+Dhruvi sent a new "Reminder 9" (gmail thread `19f83125f341ff98`, 2026-07-21 05:07 ET,
+cc Bronnie@littleleaflabs.net) — same two invoices, same **$8,331.00** total, same
+collections/state-notification threat, now flagged "URGENT" in the subject line. No new
+figure, no new deadline — same templated-cadence read as Reminder 8's 7/15 resend.
+
+Checked Gmail Drafts for anything queued to this vendor: **nothing found** — the 7/7
+Option D draft (`r2984417775050992038`) is no longer sitting in Drafts, and there is
+still no confirmation it was ever sent. Given Lemar's position hasn't changed (no
+payment-date commitment while Cuzzie's status is unresolved — same line taken with
+Leafly/ADT/Weedmaps/Talaria/Chew & Chill), not re-drafting an unprompted reply this
+pass; logging only. Labeled `Samira/seen` on the new thread.
+
 ## Sources
 - gmail: thread `19f3bff3a2daa78a`, message `19f3bff3a2daa78a`, 2026-07-07
   09:53 ET, from Accounting@littleleaflabs.net (Reminder 8)
@@ -88,3 +102,5 @@ only. Labeled `Samira/seen` in Gmail.
 - gmail: draft `r2984417775050992038` (created 2026-07-07 15:12 ET)
 - gmail: thread `19f3bff3a2daa78a`, message `19f64a8950e00949`, 2026-07-15 07:23 ET
   (same Reminder 8 thread resent, no new content)
+- gmail: thread `19f83125f341ff98`, 2026-07-21 05:07 ET ("Reminder 9", URGENT, same
+  $8,331.00 total)
