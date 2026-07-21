@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-15T12:00:00-04:00
+updated: 2026-07-21T14:30:00-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -202,6 +202,56 @@ to draft or send; this is Lemar's own conversation, captured here for the record
 Status stays **awaiting-decision** — trial still July 30, no number/path agreed, and
 Jason's $10K figure is now the lowest ask on record (down from $20K).
 
+## Update 2026-07-21 (capture DM — Lemar wants to call about pushing the trial date back)
+
+Lemar asked in the capture DM: "I think tomorrow will be a good day to try to postpone
+the Harrison court date — can you let me know who to call and give me a call script for
+pushing this date back?" This is the same matter as the Directive #06-04 research
+above (2026-07-10 update) — surfacing who to call and a script now that he's ready to
+place it. Not legal advice; procedural info only, and Lemar places the call himself
+(`run:manual`).
+
+**Who to call:** Camden County Special Civil Part clerk's office — **(856) 379-2202**
+— Hall of Justice, 101 S. 5th Street, Suite 150, Camden, NJ 08103. (General Camden
+County Superior Court main line, same building: 856-379-2200, if the direct line
+doesn't pick up.) Sourced from a web search against njcourts.gov directory listings
+2026-07-21 — the njcourts.gov page itself returned a 403 to an automated fetch, so this
+number is not independently re-verified against the primary source; worth a quick
+"is this Special Civil Part, landlord-tenant" confirmation in the first seconds of the
+call before getting into specifics.
+
+**Timing check:** trial is July 30; Directive #06-04 wants the request in "no less
+than 5 days before trial" absent good cause — that's on or before ~July 25. Calling
+tomorrow (July 22) is well inside that window.
+
+**What to say when the clerk picks up** (docket **CAM-LT-004393-26**, Harrison
+Acquisitions, LP v. Cuzzies LLC, Special Civil Part, trial July 30 8:45 AM):
+
+> "Hi, I'm calling about docket CAM-LT-004393-26 — Harrison Acquisitions LP versus
+> Cuzzies LLC, a landlord-tenant matter set for trial July 30. I'm representing myself
+> on this while I finalize counsel. I've been in direct settlement discussions with the
+> landlord's attorney, Rivkin Radler — they've said their client would need a
+> substantial payment toward the arrears before agreeing to any delay, which I'm not
+> able to make right now. I wanted to ask what the process is for requesting a short
+> adjournment, and whether anything needs to be submitted in writing."
+
+That last point IS the "adversary's response" Directive #06-04 wants reported to the
+clerk — Jason Gil (Rivkin Radler) has already stated it (most recently the 2026-07-15
+call, floating $10K), so this satisfies "notify the adversary first, then tell the
+clerk what they said" without needing a fresh email round first.
+
+**Worth naming to the clerk if asked why no attorney yet:** Cuzzies LLC is a corporate
+entity, and NJ generally requires an LLC to be represented by counsel at trial/for
+filings in this court (the same blocker tracked in
+[[2026-07-10-eviction-attorney-search]]) — if the clerk says the adjournment request
+itself needs to come from an attorney or a signed written motion, that's a strong
+signal to close the attorney search fast (Rachael B. Brekke / McDowell Law,
+856-428-5555, is still the one live named referral, per that note — still waiting on
+the $30 consult fee as of 2026-07-17).
+
+Posted the same script back in the capture DM thread; no #decisions card needed since
+there's nothing here for Lemar to pick between, just information he asked for.
+
 ## Sources
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
 - gmail: thread 19f3e00cb68ac2cb (Jason Gil reply, 2026-07-09 20:02:55 UTC, message id 19f487a33d5691b8; unverified draft r8556250896867529553 found here 2026-07-11; Lemar's own direct reply 2026-07-13 12:00 ET message id 19f5b593277f5f33; Jason Gil's follow-up 2026-07-13 15:58:55 ET message id 19f5c34485b54791)
@@ -210,3 +260,5 @@ Jason's $10K figure is now the lowest ask on record (down from $20K).
 - slack: #decisions, Option D reply, message ts 1783688983.630169 (Lemar's checkmark, 2026-07-10 09:09:43 ET)
 - slack: #decisions, thread ts 1783628237.329439, closed via 🫡 on ts 1783773116.307949 (2026-07-12)
 - web: NJ Courts Directive #06-04, "Statewide Adjournment Procedure for Civil Trials and Arbitrations" — https://www.njcourts.gov/attorneys/directives/06-04
+- web: search results citing Camden County Special Civil Part contact info (Hall of Justice, 101 S. 5th St, Camden NJ), 2026-07-21 — njcourts.gov directory page itself returned HTTP 403 to an automated fetch, not independently re-confirmed
+- slack: capture DM (`D0BHPKMDNEP`), Lemar, 2026-07-21 — "who to call and give me a call script for pushing this date back"
