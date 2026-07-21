@@ -1,6 +1,6 @@
 ---
 created: 2026-07-20T09:22-04:00
-updated: 2026-07-20T15:05:00-04:00
+updated: 2026-07-21T09:05:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -37,7 +37,16 @@ wind-down stance: no call, no portal login, no payment made by Samira (safety fl
 Leaving `status: active` since actual QuickBooks recording + payment authorization is
 still Lemar's/admin's to do; nothing further for Samira to execute here.
 
+## Update — 2026-07-21 — same invoice, another daily QuickBooks reminder
+Same notification recurred again (7/21 1:02pm ET, gmail thread `19f84c59624c5d54`),
+identical vendor/amount/invoice number — no new information. Same wind-down stance as
+7/20: no action Samira can take (no QuickBooks write access), recording + payment
+authorization stays with Lemar/admin. Labeled `Samira/seen` in Gmail; no new
+#decisions/#admin post (already staged and closed with the same finding). Leaving
+`status: active`.
+
 ## Sources
 - gmail: thread `19f7fa0541d4432b` (7/20 9:03am ET notification, PDF attached)
 - gmail: thread `19f7a7dc89b00edf` (7/19 9:08am ET, same invoice/amount, earlier notification)
+- gmail: thread `19f84c59624c5d54` (7/21 1:02pm ET, same invoice/amount, another repeat)
 - slack: #admin `1784553795.722189` — staged run:admin-3x task

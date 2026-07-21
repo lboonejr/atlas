@@ -1,9 +1,9 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-18T13:00:00-04:00
+updated: 2026-07-21T09:00:00-04:00
 domain: cuzzies
 type: task
-status: done
+status: active
 tags: [parke-bank, overdraft, nsf]
 source: gmail
 ---
@@ -248,6 +248,22 @@ stays `done` for this round — the underlying overdraft situation stays open an
 likely generate further rounds; the next update on this matter should reopen status to
 `active` and append here rather than creating a sibling note.
 
+## Update 2026-07-21 — new round, 2 more returned items, $148.49
+
+Christopher Cabezas emailed again (7/21 ~8:31 AM ET, gmail thread `19f84a91bf57c841`,
+subject "secure: Cuzzie's Dispensary - Returning Items", to Lemar only this time, no
+Meggan cc): 2 more items presented for payment were returned this morning —
+
+- External Withdrawal $103.50 — PayPal Transfer Zapier
+- External Withdrawal $44.99 — GoDaddy.com
+
+Total returned this round: **$148.49**. Direct invitation to reply ("If you have any
+questions or updates, please let us know"), and Lemar's last actual sent reply on this
+matter is now 3 days old (7/18). Reopening status to `active`; treating this as
+reply-worthy again per the established 7/10/7/14/7/18 pattern — draft reply options
+staged to #decisions (ts `1784643460.294209`, not sent, Gmail Drafts only if picked).
+Labeled `Samira/seen` in Gmail.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -277,3 +293,7 @@ likely generate further rounds; the next update on this matter should reopen sta
   2026-07-18 ~12:46 PM ET)
 - slack: #decisions message ts `1784383840.026859` (7/18 returned-items card) /
   `1784383843.781329` (Option A, ✅ picked)
+- gmail: thread `19f84a91bf57c841` (Christopher Cabezas, 2 more returned items $148.49,
+  2026-07-21 08:31 ET)
+- slack: #decisions message ts `1784643460.294209` (7/21 returned-items card, options
+  in thread)
