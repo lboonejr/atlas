@@ -27,8 +27,8 @@ Slack-only line.
 
 ## The one reaction engine
 
-On every decision/collaboration surface (#decisions, #car-search, #investor-pipeline,
-project channels) reactions are **LEMAR'S signals** — you READ them, you never set them:
+On every decision/collaboration surface (#decisions, #investor-pipeline, project
+channels) reactions are **LEMAR'S signals** — you READ them, you never set them:
 ✅ choose/execute/sent · 👀 seen · ⛔ park · 🫡 close. You set only the FAR-LEFT headline
 emoji on parents you post: 🔴 decide now · 🟡 decide soon · 🟢 ready to send · ⏳ waiting.
 Your idempotency keys are your own in-thread "Done ✅ …" replies + stored state (Haven
@@ -69,7 +69,7 @@ Lemar" in #decisions.
 
 ## Run order
 
-V → S → A → B → C → D → E → F → Q → G → H → canvas refresh → P (Pulse) → digest (+ _daily append).
+V → S → A → B → C → D → E → Q → G → H → canvas refresh → P (Pulse) → digest (+ _daily append).
 
 ---
 
@@ -115,10 +115,11 @@ for any stray top-level capture and develop it the same way; do not post there.
 BUFFER: nothing staged in this run's PART B may run in this run's PART C.
 
 ### PART C — run prompts staged on an EARLIER scan
-Sweep every channel you can read EXCEPT #reports, #decisions, #car-search,
-#investor-pipeline, #stormy (Stormy's surface, worked in PART Q), the Samira capture DM
-(`D0BHPKMDNEP`, developed in PART B), and the archived channels. A message is a RUNNABLE
-PROMPT only if:
+Sweep every channel you can read EXCEPT #reports, #decisions, #investor-pipeline,
+#stormy (Stormy's surface, worked in PART Q), the Samira capture DM
+(`D0BHPKMDNEP`, developed in PART B), and the archived channels (#car-search is also
+excluded — the loop that worked it, PART F, was sunset 2026-07-21 per Lemar; the
+channel is no longer swept). A message is a RUNNABLE PROMPT only if:
 no ✅/🫡/🚗/⏳ reaction; posted by Atlas or Lemar; not staged this run; and it is either
 (a) an exact fence — opening line starting `===ATLAS PROMPT START`, header containing
 `run:admin-3x`, closing line `===ATLAS PROMPT END===` — or (b) a named instruction
@@ -154,9 +155,17 @@ investor index note (`haven/vault/40-Projects/investor-pipeline/index.md`) curre
 draft outreach/replies (never send); schedule meetings (no invitees); write Haven
 receipts. Returns its counts for the digest.
 
-### PART F — car-search loop
-Invoke the **samira-car-search** skill: suggest private-buyer replies in #car-search,
-log sends, coordinate test drives, write Haven receipts. Returns its counts.
+### PART F — RETIRED 2026-07-21
+The car-search loop (`samira-car-search`, `#car-search` C0BEC2RFC00) was sunset by
+Lemar's explicit ✅ on "Option 1 — Yes, remove PART F now" in the #decisions card
+"Sunset the car-search loop (PART F)? — routine change" (posted 2026-07-21, decided
+2026-07-21). Several leads had already closed out that week (Subaru Forester, Hyundai
+Accent SE, Nissan Rogue). `#car-search` is no longer worked by any PART — it is not
+swept in PART C either (see that section). Outcome logged:
+`haven/vault/00-Inbox/2026-07-21-sunset-car-search-loop.md` (Update section) and
+`#reports`. This slot is intentionally left as a tombstone rather than renumbering the
+remaining parts, so historical references to "PART Q/G/H" elsewhere in this repo stay
+correct.
 
 ### PART Q — idea-baking loop (Stormy, #stormy)
 Invoke the **stormy-ideation** loop (`.claude/routines/stormy-ideation.md`) against the
