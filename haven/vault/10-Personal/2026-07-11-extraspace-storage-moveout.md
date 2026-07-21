@@ -1,13 +1,12 @@
 ---
 created: 2026-07-11T14:05-04:00
-updated: 2026-07-21T13:00:00-04:00
+updated: 2026-07-21T14:10-04:00
 domain: personal
 type: task
 status: done
 tags: [extraspace, storage, moveout]
 source: gmail
 due: 2026-07-18T12:00-04:00
-calendar_event_id: bjcu8mpca6ufnmha9b84bikouc
 ---
 
 # Extra Space Storage — move-out due 7/18, unit 3003
