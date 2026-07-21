@@ -1,7 +1,7 @@
 ---
 created: 2026-07-21T23:15-04:00
-updated: 2026-07-21T23:15-04:00
-domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal
+updated: 2026-07-21T14:15-04:00
+domain: personal
 type: log
 status: done
 tags: [basil, inbox-janitor, gmail, automation, run-log]
