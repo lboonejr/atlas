@@ -1,6 +1,6 @@
 ---
 created: 2026-07-22T15:35-04:00
-updated: 2026-07-22T16:00-04:00
+updated: 2026-07-22T16:10-04:00
 domain: cuzzies
 type: task
 status: active
@@ -33,5 +33,14 @@ This would normally be staged as a #decisions parent card; posting there was ski
 scan since another part of this run owns #decisions directly — flagging here instead so
 it doesn't fall through the cracks.
 
+## Update 2026-07-22 16:10 ET
+The #decisions card for this matter (posted 15:35 ET) got Lemar's 🫡 this scan — closed
+without picking an option A–D. No reply sent, nothing executed. The underlying task is
+still open: the written SOP overview has not gone out and the inventory-disposition
+question still needs an answer, with counsel review recommended given the DeWalt v.
+Cuzzie's litigation. Leaving this note `status: active` — it is the durable record now
+that the Slack card is closed.
+
 ## Sources
 - gmail: thread 19eff89d385fe611 (CRC follow-up, 2026-07-22)
+- slack: #decisions card closed via 🫡, 2026-07-22 ~16:0x ET
