@@ -1,6 +1,6 @@
 ---
 created: 2026-07-15T13:23-04:00
-updated: 2026-07-17T12:40-04:00
+updated: 2026-07-22T10:30-04:00
 domain: cuzzies
 type: task
 status: done
@@ -54,9 +54,22 @@ Lemar reacted 🫡 on the fresh 2026-07-17 card too. Same disposition as every p
 no call, no portal login, no payment sent by Samira (safety floor). Collections referral
 proceeds as-is on IWG's side. Both cards for this matter are now closed.
 
+## Update 2026-07-22 — third repeat notice, same figure, no new card
+
+IWG's Americas Debt Collection team emailed again (13:34 ET, gmail thread
+`19f8a267e2148607`), same account (16605480), same balance **$2,451.80**, same
+escalation language ("you must contact us today... to avoid escalation of this matter
+and the pursuit of legal action"), signed Fernanda R., same phone number. No new
+information versus the 7/17 round — third identical ask this month. Following the
+established pattern for this exact recurrence (see the 7/15 duplicate "payment declined"
+note): treating this as a repeat dunning email on an already 🫡-closed matter rather than
+raising a fourth #decisions card. No call, no portal login, no payment sent. Gmail
+thread labeled seen only.
+
 ## Sources
 - gmail: thread `19f668ad2518eb65` — "Urgent Request for Payment of Overdue REGUS account"
 - gmail: thread `19f70731fb9299f3` — "URGENT Request for Payment of Past Due Invoices for
   your Regus Office Agreement", 2026-07-17T13:43:43Z, $2,451.80
+- gmail: thread `19f8a267e2148607` — same subject, 2026-07-22T13:34:19Z, $2,451.80 (repeat)
 - slack: #decisions `1784136179.246039` — 🫡 close signal, closed via threaded reply
 - slack: #decisions `1784305560.333029` — 🫡 close signal (second card, this run)
