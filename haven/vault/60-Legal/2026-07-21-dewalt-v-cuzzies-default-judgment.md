@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-07-21T16:00:00-04:00
+updated: 2026-07-22T11:15:00-04:00
 domain: legal
 type: task
 status: active
@@ -51,6 +51,23 @@ and/or retained counsel's attention **now**, not on the normal weekly cadence.
   both by name per Lemar's chosen option, but neither auto-populated pending his
   read.
 
+## Update 2026-07-22
+Today's email sweep turned up a new, unrelated Gmail thread: an auto-reply from
+Marshall+Sterling (the insurance broker) to a "New Claim Notice — Policy
+DEP-2335743-P1 — DeWalt v. Cuzzie's Dispensary & Delivery (CAM-L-1339-26)" email —
+i.e. someone already emailed the broker to report this suit as an insurance claim.
+
+The auto-reply itself is generic boilerplate ("closing Friday, May 22nd" — a stale
+holiday notice, unrelated to today's date) but it carries one load-bearing line:
+**"No claims can be reported, coverage cannot be amended, bound, or canceled via
+this email."** That means the claim notice, as sent, may not have actually
+registered as a filed claim with the broker/insurer — worth confirming it went in
+through their real claims channel (phone/portal), not just email.
+
+Who sent the original "New Claim Notice" email and when is not established from
+this auto-reply alone — leaving that UNRESOLVED rather than assuming it was Lemar.
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
+- gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
 - slack: #decisions card, ts `1784657518.918529` (Option 1 picked ✅ by Lemar)
