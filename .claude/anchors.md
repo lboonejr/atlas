@@ -62,7 +62,7 @@ supersedes ALL other style guidance, including guides bundled inside skills.
 | #trading-cards | `C0BGYM1UB4Y` | Sports-cards side hustle (recorded 2026-07-12 for Pulse link-outs) |
 | #free-books-partnership | `C0BGCAK0ML3` | Project channel — discovered via `slack_search_channels` 2026-07-22 (bot already a member, was missing from this table); swept in PART C/G going forward |
 | #booking-agent | `C0BHXTPST52` | Booking-agent scoping project channel — discovered via `slack_search_channels` 2026-07-22 (bot already a member, was missing from this table); swept in PART C/G going forward |
-| #random-ideas | (id not yet recorded — resolve on next scan via `slack_search_channels`) | Discovered readable 2026-07-22 during PART C; content not yet reviewed, add its ID + role once confirmed |
+| #random-ideas | `C0BC2A94142` | Resolved via `slack_search_channels` 2026-07-22 12:xx ET scan. Old/quiet channel (last activity ~June 2026) — one long-form idea from Lemar about restructuring Samira into a skills/employees org, not a runnable prompt (no fence, not addressed as an instruction, and not new this scan). No action taken; recorded for future sweeps. |
 | #general | `C0BC07YTZJA` | **Access gap** — bot returns `not_in_channel` despite appearing in some channel listings; needs `/invite @Samira` or confirmation it's out of scope. Flagged 2026-07-22, unresolved. |
 | Open Items canvas | `F0BDLSHD8JD` | State only: ⏳ Waiting · ⚙️ In motion · ⛔ Parked |
 | #emails (ARCHIVED) | `C0BC1JSCHQW` | Read-only record; never swept, never posted to |
