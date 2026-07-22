@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-07-22T12:07:00-04:00
+updated: 2026-07-22T18:20:00-04:00
 domain: legal
 type: task
 status: active
@@ -84,9 +84,45 @@ This directly answers the "no defense counsel visible on this thread" gap flagge
 not something Samira drafted or sent). Next step is his call: contacting Siciliano &
 Associates. Gmail thread labeled `Samira/seen`.
 
+## Update 2026-07-22T18:20:00-04:00 — default judgment ENTERED; proof hearing Sept 14; opposing counsel demands a response by Aug 5
+Marco Di Stefano emailed 2026-07-22 5:30pm ET (thread `19f8bbc734d83286`, cc Monica Madin
+and info@cuzziesnj.com): Judge Francisco Dominguez, P.J.Cv. **entered default judgment as
+to liability** on 2026-07-17 (motion was unopposed) — Jennifer DeWalt now wins on
+Counts I–VII automatically; liability is no longer contestable. Order attached
+(`CivilCaseJacket (3).pdf`).
+
+**What's still open:** damages only. A **proof hearing is set for 2026-09-14** — the
+court will fix compensatory damages (back pay, front pay, emotional distress), punitive
+damages, NJ Wage Payment Law statutory penalties, and Plaintiff's attorneys' fees/costs
+there. Whatever number is entered becomes an enforceable judgment (docketing, levy,
+wage/bank execution, post-judgment asset discovery).
+
+**Two case-status notes from the letter:**
+- The default motion was **denied without prejudice as to Josh Evans** — Plaintiff may
+  renew it against him.
+- **Lemar remains a named defendant individually**, not just Cuzzie's the entity — the
+  individual claims against him personally are unaffected by this Order.
+
+**Hard deadline:** opposing counsel wants either a settlement proposal or confirmation
+Cuzzie's will proceed to the proof hearing **by 2026-08-05** — 14 days out. He states
+plainly that pre-7/17 settlement leverage is gone now that liability is decided, and
+that delay only grows the recoverable fee figure.
+
+**Standing gap, now sharper:** counsel referral (Salvatore Siciliano, logged above
+2026-07-22 12:07 ET) is still just a referral — no confirmation Lemar has actually
+retained counsel or that anyone has responded to this letter. An LLC cannot appear pro
+se in NJ Superior Court; Cuzzie's needs counsel of record before the Aug 5 deadline,
+separate from whatever Lemar decides for his individual-capacity exposure. Not guessing
+whether he's called Siciliano yet — that's his to confirm.
+
+Posted as an update in the existing #decisions thread (ts `1784657518.918529`) rather
+than a new card, per routing (one parent per task). Gmail thread labeled `Samira/seen`.
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
 - gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
 - slack: #decisions card, ts `1784657518.918529` (Option 1 picked ✅ by Lemar)
 - gmail: thread `19f8a2fe650f8a9f` (Camden County Bar Association second referral —
   Salvatore Siciliano, Siciliano & Associates)
+- gmail: thread `19f8bbc734d83286` (2026-07-22 17:30 ET, default judgment entered +
+  Sept 14 proof hearing + Aug 5 response deadline)
