@@ -1,6 +1,6 @@
 ---
 created: 2026-07-20T09:22-04:00
-updated: 2026-07-21T09:05:00-04:00
+updated: 2026-07-22T09:10-04:00
 domain: cuzzies
 type: task
 status: active
@@ -45,8 +45,17 @@ authorization stays with Lemar/admin. Labeled `Samira/seen` in Gmail; no new
 #decisions/#admin post (already staged and closed with the same finding). Leaving
 `status: active`.
 
+## Update — 2026-07-22 — same invoice, third daily QuickBooks reminder
+Same notification recurred again (7/22 9:10am ET, gmail thread `19f89f3394904969`),
+identical vendor/amount/invoice number ($4,617.92, invoice 2425) — no new information.
+Same wind-down stance: no call, no portal login, no payment made by Samira. Recording +
+payment authorization stays with Lemar/admin. Labeled `Samira/seen` in Gmail; no new
+#decisions/#admin post (already staged and closed with the same finding on 7/20 and
+7/21). Leaving `status: active`.
+
 ## Sources
 - gmail: thread `19f7fa0541d4432b` (7/20 9:03am ET notification, PDF attached)
 - gmail: thread `19f7a7dc89b00edf` (7/19 9:08am ET, same invoice/amount, earlier notification)
 - gmail: thread `19f84c59624c5d54` (7/21 1:02pm ET, same invoice/amount, another repeat)
+- gmail: thread `19f89f3394904969` (7/22 9:10am ET, same invoice/amount, another repeat)
 - slack: #admin `1784553795.722189` — staged run:admin-3x task
