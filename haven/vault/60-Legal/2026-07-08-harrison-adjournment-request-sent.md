@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-21T14:30:00-04:00
+updated: 2026-07-22T17:15:00-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -252,6 +252,24 @@ the $30 consult fee as of 2026-07-17).
 Posted the same script back in the capture DM thread; no #decisions card needed since
 there's nothing here for Lemar to pick between, just information he asked for.
 
+## Update 2026-07-22 (17:15 ET) — adjournment request filed with the court
+
+Today's email sweep found an NJ eCourts Filing Notification: **an Adjournment request
+was filed by Lemar Boone Jr. on 07/22/2026 at 04:56:41 PM** in Superior Court of New
+Jersey, Camden County, Case CAM-LT-004393-26 (Harrison Acquisition Vs Cuzzies LLC
+D/B/A Cuzzie). Transaction ID `SCP20263406443`, JEDS EF ID `EF-4344278`. Notice went
+electronically to Dylan Mruczinski, Ada Belamour, and Maria Camacho-Castro (Rivkin
+Radler, landlord's counsel) and to lemar@cuzziesnj.com.
+
+This is Lemar following through himself on the 2026-07-21 clerk call script — well
+inside the Directive #06-04 window (on/before ~July 25 for the July 30 trial). Both
+messages are automated no-reply court notifications (`JEDSDoNotReply.Mailbox@njcourts.gov`)
+— nothing for Samira to reply to, nothing to draft.
+
+Status stays **awaiting-decision** — the request is now filed, but whether the court
+actually grants it, and the underlying arrears/trial outcome, remain open. Worth
+watching next scan for any response from Rivkin Radler or a court ruling on the record.
+
 ## Sources
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
 - gmail: thread 19f3e00cb68ac2cb (Jason Gil reply, 2026-07-09 20:02:55 UTC, message id 19f487a33d5691b8; unverified draft r8556250896867529553 found here 2026-07-11; Lemar's own direct reply 2026-07-13 12:00 ET message id 19f5b593277f5f33; Jason Gil's follow-up 2026-07-13 15:58:55 ET message id 19f5c34485b54791)
@@ -262,3 +280,5 @@ there's nothing here for Lemar to pick between, just information he asked for.
 - web: NJ Courts Directive #06-04, "Statewide Adjournment Procedure for Civil Trials and Arbitrations" — https://www.njcourts.gov/attorneys/directives/06-04
 - web: search results citing Camden County Special Civil Part contact info (Hall of Justice, 101 S. 5th St, Camden NJ), 2026-07-21 — njcourts.gov directory page itself returned HTTP 403 to an automated fetch, not independently re-confirmed
 - slack: capture DM (`D0BHPKMDNEP`), Lemar, 2026-07-21 — "who to call and give me a call script for pushing this date back"
+- gmail: thread 19f8b9dd1d51279d (NJ eCourts Filing Notification — adjournment request filed, 2026-07-22 20:56:42 UTC)
+- gmail: thread 19f8b9dce3a0a65f (NJ Courts eFiling Confirmation EF-4344278, 2026-07-22 20:56:41 UTC)
