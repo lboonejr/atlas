@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-22T12:07:00-04:00
+updated: 2026-07-22T18:15:00-04:00
 domain: personal
 type: task
 status: active
@@ -152,6 +152,36 @@ missing dollar figures above, this note is ready to carry an actual worked weekl
 waterfall example. Outcome reply posted to the #decisions thread; #reports line via
 samira-report-result.
 
+## Update 2026-07-22T18:15:00-04:00 — DoorDash income target + dollar figures for priorities 1/3/5/6/7
+Lemar replied in the #decisions allocation-strategy thread (ts `1784754837.053279`,
+17:13 ET) with the numeric figures Samira's 15:0x ET flag asked for:
+- **DoorDash income target:** "at least $500 a week or more" (ts `1784745591.901859`,
+  15:39 ET) — a target, not a confirmed historical average; still the best figure on
+  hand for a first worked example.
+- **Priority 1 (Cuzzie's survival costs):** Phone & Google Workspace ≈ **$550/month**
+  (his own estimate).
+- **Priority 3 (ex-employee back pay):** **$11,579** total owed, personally covered.
+- **Priority 5 (own car):** **$2,000** in repairs + **$1,000** in taxes/tags/tires (on
+  top of the ~$500 remaining car payment already on file above).
+- **Priority 6 (side projects):** starting with "a few trading cards" — no dollar figure
+  attached, treated as variable/discretionary rather than a fixed line.
+- **Priority 7 (savings):** **30%** — given as a percentage, not a flat dollar amount;
+  note this is a different unit than the waterfall logic locked in below (which funds a
+  priority in full before the next gets anything) — flagged, not reconciled, in the open
+  item below.
+
+**Still open, not guessed:** the ✅ reaction on this thread's options still shows on
+**Option 3** (hybrid floor + waterfall), while the "Done" reply on file locked **Option 1**
+(strict waterfall) as the recorded logic — flagged for Lemar once already (ts
+`1784747329.164429`, 15:08 ET); no second nudge posted, per the routine's no-repeat-ping
+rule, but the worked numeric weekly example below is being built on the recorded
+**Option 1** logic since that is what Haven currently has as decided. If Lemar meant
+Option 3, say so in-thread (or leave the ✅ where it is) and the next scan will rebuild
+the example under the hybrid-floor logic instead. Priority 7's 30%-of-income framing
+also doesn't cleanly fit a strict waterfall (which funds 1→6 in full first, leaving
+whatever's left for savings) — this may itself be a signal that Option 3's floor
+structure is the one Lemar actually wants; surfacing, not resolving.
+
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
 - slack: #personal-finance (C0BGLEMH99T), ts 1783784379.469619 (2026-07-11 11:39 ET reply)
@@ -164,3 +194,5 @@ samira-report-result.
 - slack: #personal-finance (C0BGLEMH99T), ts 1784729112.183609 (2026-07-22 10:05 ET, DoorDash income shift + 7 priorities)
 - slack: #decisions (C0BBXA96FFV), ts 1784729543.875229 (allocation-strategy card), option
   reply ts 1784729552.391779 (Option 1 — strict waterfall — picked, ✅ reaction)
+- slack: #decisions (C0BBXA96FFV) thread, ts 1784745591.901859 ($500/wk DoorDash target)
+  and ts 1784754837.053279 (2026-07-22 17:13 ET, dollar figures for priorities 1/3/5/6/7)
