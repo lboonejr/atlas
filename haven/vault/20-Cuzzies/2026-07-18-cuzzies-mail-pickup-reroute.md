@@ -1,6 +1,6 @@
 ---
 created: 2026-07-18T11:00:00-04:00
-updated: 2026-07-18T12:05:00-04:00
+updated: 2026-07-22T13:00:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -28,6 +28,23 @@ This needs Lemar's ID/account in person or on the USPS site — Samira cannot do
 his behalf. Lemar asked (2026-07-18) to log this as a to-do with a `due` so it doesn't
 slip.
 
+## Update 2026-07-22 — servicing post office identified
+Lemar asked in the capture DM (2026-07-22) which post office services the Cuzzie's
+address (he wrote "2750 Mount Ephraim Avenue, Camden, NJ 08104" — note the storefront
+address on file elsewhere in this note is 2764 Mt Ephraim Ave; same block/ZIP, worth
+confirming which digits are correct before he goes in person). Answer: **USPS Camden
+Carrier Annex, 2700 Mount Ephraim Ave, Camden, NJ 08104**, phone **856-963-6597** — this
+is the carrier facility that services that ZIP/street and is the correct stop for
+picking up held business mail (bring photo ID + proof of authorization for "Cuzzie's
+Dispensary & Delivery, LLC"). Note: some sources describe 2700 Mt Ephraim as a
+carrier-only annex (no retail window) — if Lemar hits a retail-only location instead,
+ask staff there to redirect him to the carrier annex for held mail.
+Still open: Lemar still needs to physically go (ID in hand) or file the USPS COA online —
+neither step can be done on his behalf.
+
 ## Sources
-- slack: Samira capture DM thread, 2026-07-17/18 (Lemar's question + Samira's answer +
-  "Yes please" to log it)
+- slack: Samira capture DM (D0BHPKMDNEP), ts 1784293032.198689 (original question) /
+  1784302942.955709 (follow-up nudge) / 1784322794.118419 (Samira's answer) /
+  1784721747.275809 (2026-07-22 follow-up: which post office services the address)
+- web: USPS location tools + Yelp/postallocations listings for 2700 Mount Ephraim Ave,
+  Camden NJ 08104 (Camden Carrier Annex), 2026-07-22
