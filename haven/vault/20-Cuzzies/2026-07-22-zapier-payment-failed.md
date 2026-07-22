@@ -1,35 +1,29 @@
 ---
-created: 2026-07-22T09:15:00-04:00
-updated: 2026-07-22T12:00:00-04:00
+created: 2026-07-22T10:10:17-04:00
+updated: 2026-07-22T10:10:17-04:00
 domain: cuzzies
 type: task
-status: active
-tags: [samira, zapier, subscription, payment]
+status: done
+tags: [zapier, subscription, billing]
 source: gmail
 ---
 
 # Zapier — subscription payment failed
 
-## What happened
+No-reply automated notice (2026-07-22, ~1:34am ET): Zapier's last payment failed, will
+retry, and the account auto-downgrades to the Free plan if the retry doesn't go
+through. Posted to #decisions as a task card (parent, ts `1784722768.821229`) rather
+than a silent log entry — this account was named in an earlier Regus card as one
+already let lapse twice this month (alongside Wispr Flow and Intuit Workforce), but no
+Haven note recording that prior call could be found, so it wasn't assumed to carry over
+without one to point to.
 
-Automated (no-reply) notice from Zapier (2026-07-22, 01:34 ET): the last subscription
-payment failed. Zapier will retry the charge; if it doesn't go through, the account
-auto-downgrades to the Free plan (Zaps over the Free-plan limits stop running).
-
-Samira's own #decisions card for a separate Regus notice (2026-07-21) referenced
-Zapier as one of three SaaS accounts (alongside Wispr Flow and Intuit Workforce)
-where Lemar has already closed similar payment-failure notices this month with a
-"let it lapse, we're winding down" read — but no Haven note recorded that decision
-directly, so it isn't being treated as settled here. Flagging fresh rather than
-assuming the same call applies without a note to point to.
-
-## What's needed
-
-Lemar's call: update the payment method to keep Zapier active, or let it downgrade
-to Free (consistent with the winddown-era pattern referenced above). Nothing paid or
-authorized by Samira (payment call, outside the safety floor).
+## Update 2026-07-22 (10:10 ET) — closed
+Lemar reacted 🫡 on the #decisions card — read as "close/let lapse" per the card's own
+options (✅ once handled · 🫡 to close/let lapse). No payment retried, no action taken;
+the account will auto-downgrade to Free if Zapier's own retry fails. Replied in-thread
+noting the close (message-edit tooling isn't available to this connector, so the parent
+was left as posted rather than edited to "CLOSED").
 
 ## Sources
-
-- gmail: automated no-reply payment-failure notice from `billing@mail.zapier.com`
-  (2026-07-22 01:34 ET), subject "Action required: Your Zapier payment failed"
+- slack: #decisions (C0BBXA96FFV), card ts `1784722768.821229`, Lemar's 🫡 reaction
