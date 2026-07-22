@@ -1,9 +1,9 @@
 ---
 created: 2026-07-08T18:10-04:00
-updated: 2026-07-16T09:05-04:00
+updated: 2026-07-22T17:20:00-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [slack, billing, subscription, payment-failed]
 source: gmail
 ---
@@ -46,3 +46,26 @@ click-through, stop tracking it here." No confirmation received that the Slack b
 admin page was actually clicked through, so `status` stays `active` rather than `done`
 — if the downgrade notice recurs (deadline ~7/22) it resurfaces on its own. No payment
 action taken by Samira.
+
+## Update 2026-07-22 (17:20 ET) — downgrade landed, matches the decision already made
+
+Two Slack no-reply notices arrived 2026-07-22 ~4:30pm ET: "Your Slack plan for Cuzzie's
+Dispensary & Delivery has changed" and "Your workspace has been downgraded" — the
+workspace is now on the **Free plan**, outstanding balance **$35.84 USD** (payment
+method never updated). This matches Lemar's 2026-07-09 Option B pick exactly (switch to
+Free, let Pro lapse) and lands right on the ~7/22 deadline the 2026-07-16 escalation
+warned about. Free-plan impact per the notice: search/browse limited to the most recent
+90 days, Slack Connect channels disabled, limited app integrations, group huddles
+disabled, AI features disabled, loss of custom retention policies.
+
+No decision needed — this is the expected outcome of a call Lemar already made and
+closed (🫡, 2026-07-16). Not reopening a #decisions card. Worth a passive watch: Samira's
+own bot connector and the various project channels rely on integrations/search that the
+Free plan caps (90-day search, "limited app integrations") — if any bot behavior looks
+degraded in coming scans, this is the likely cause. Marking **status: done** — matter
+resolved as intended, nothing outstanding unless Lemar wants to revisit paying to
+restore Pro.
+
+## Sources
+- gmail: thread 19f8b86152a60ea2 (Slack "Your Slack plan ... has changed", 2026-07-22 20:30:47 UTC)
+- gmail: thread 19f8b860a1e37f3b (Slack "Your workspace has been downgraded", 2026-07-22 20:30:44 UTC)
