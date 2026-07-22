@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-07-22T11:15:00-04:00
+updated: 2026-07-22T12:07:00-04:00
 domain: legal
 type: task
 status: active
@@ -67,7 +67,26 @@ through their real claims channel (phone/portal), not just email.
 Who sent the original "New Claim Notice" email and when is not established from
 this auto-reply alone — leaving that UNRESOLVED rather than assuming it was Lemar.
 
+## Update 2026-07-22T12:07:00-04:00 — defense counsel referral received
+Lemar emailed the Camden County Bar Association's Lawyer Referral Service directly
+(10:18am ET) requesting a second referral (his first, for the tenancy matter, was
+Rachael Brekke of McDowell Law) specifically for this employment-litigation defense —
+naming the case, docket number, the pending default judgment, and asking for
+employer-side counsel who can move to vacate the default. The Bar Association replied
+(3:46pm ET) with a referral:
+
+- **Salvatore Siciliano, Siciliano & Associates, LLC** — 2 Kings Highway West,
+  Haddonfield, NJ 08033 · (856) 795-0500. $30 discounted first half-hour consultation
+  per the referral program; fees beyond that are between Lemar and the attorney.
+
+This directly answers the "no defense counsel visible on this thread" gap flagged
+2026-07-21 — Lemar is now the one driving counsel outreach (run:manual, his own email,
+not something Samira drafted or sent). Next step is his call: contacting Siciliano &
+Associates. Gmail thread labeled `Samira/seen`.
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
 - gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
 - slack: #decisions card, ts `1784657518.918529` (Option 1 picked ✅ by Lemar)
+- gmail: thread `19f8a2fe650f8a9f` (Camden County Bar Association second referral —
+  Salvatore Siciliano, Siciliano & Associates)
