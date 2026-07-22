@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-12T11:10:00-04:00
+updated: 2026-07-22T10:05:00-04:00
 domain: personal
 type: task
 status: active
@@ -39,7 +39,8 @@ Lemar wants a personal finance project: track bills/budget, own channel + workfl
 
 ## Still open before the dashboard can be finalized
 - A confirmed monthly income figure (depends on Station start date/hours — see
-  `haven/vault/30-Station/2026-07-11-station-agent-job-letter-meeting.md`).
+  `haven/vault/30-Station/2026-07-11-station-agent-job-letter-meeting.md`). **Superseded
+  2026-07-22 — see Update below: income model has shifted off Station hours.**
 - ~~A transportation cost once the Camden↔Newark commute vs. Rahway-stay decision is
   made.~~ **Decided 2026-07-12 — see Update below.** Fare figure now found 2026-07-12,
   see second Update — still needs a spot-check against the NJ Transit app/site.
@@ -95,6 +96,35 @@ days/week is known from the Station schedule (still open above).
 Not yet updated in the draft-budget table above pending Lemar's spot-check;
 flagging as the figure to confirm rather than silently finalizing the line.
 
+## Update 2026-07-22T10:05:00-04:00 — income model shifts to DoorDash; 7 budget priorities given
+Lemar posted in #personal-finance (10:05am ET): his Station income will now only be
+occasional shifts "here and there as needed," not a reliable weekly figure — his **main
+income going forward is DoorDash** (variable, gig-based). This supersedes the earlier
+"~$500/week at Station" income assumption above; the Income line stays TBD, now blocked
+on DoorDash variability rather than a Station start date.
+
+He asked for help understanding how to budget/allocate this variable income and gave it
+in priority order:
+1. Keep the Cuzzie's reopening-or-sale alive — mainly the Cuzzie's phone bill and Google
+   Workspace, plus a buffer for unexpected needed expenses.
+2. Personal bills — student loans, subscriptions (ties to the lines already tracked
+   above).
+3. Personal debt he's chosen to take on — he is personally covering the last paychecks
+   owed to all former Cuzzie's employees (new line, no dollar figure given yet).
+4. Day-to-day expenses — food, gas for DoorDash, maintenance on his mom's car (currently
+   his vehicle).
+5. Get his own car running — ~$500 left on the car payment, then ~$2,500 for repairs,
+   new tires, registration, and first insurance payment (new line, no schedule given).
+6. A small amount to invest in the side projects (comedy club, trading cards,
+   Delivery-in-a-Box, etc.).
+7. A small amount of savings.
+
+No dollar amounts attached to items 1, 3, 5, 6, or 7 yet, and no average weekly DoorDash
+income figure — the budget model can't go numeric until those land. The underlying
+allocation-strategy question (waterfall by this priority order vs. a fixed weekly %
+split vs. a hybrid floor-plus-waterfall) is a real either/or call, not just a data gap —
+lifted to #decisions this run (origin #personal-finance) rather than assumed.
+
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
 - slack: #personal-finance (C0BGLEMH99T), ts 1783784379.469619 (2026-07-11 11:39 ET reply)
@@ -104,3 +134,4 @@ flagging as the figure to confirm rather than silently finalizing the line.
 - gmail: thread 19f51f33f63c1887 (T-Mobile payment confirmation, $200.00, 2026-07-11)
 - slack: #personal-finance (C0BGLEMH99T), ts 1783868286.049049 (2026-07-12 10:58 ET, fare lookup ask)
 - web: NJ Transit "Fares to/from Penn Station Newark" table (fetched via search, direct PDF pull blocked this session)
+- slack: #personal-finance (C0BGLEMH99T), ts 1784729112.183609 (2026-07-22 10:05 ET, DoorDash income shift + 7 priorities)
