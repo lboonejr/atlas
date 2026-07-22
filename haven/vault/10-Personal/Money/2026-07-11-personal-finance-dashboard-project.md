@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-22T10:05:00-04:00
+updated: 2026-07-22T12:07:00-04:00
 domain: personal
 type: task
 status: active
@@ -125,6 +125,33 @@ allocation-strategy question (waterfall by this priority order vs. a fixed weekl
 split vs. a hybrid floor-plus-waterfall) is a real either/or call, not just a data gap —
 lifted to #decisions this run (origin #personal-finance) rather than assumed.
 
+## Update 2026-07-22T12:07:00-04:00 — allocation-strategy decision: strict waterfall
+Lifted to #decisions this run at 10:12 ET (thread ts `1784729543.875229`); Lemar picked
+**Option 1 — strict waterfall** (✅ on the option reply, ts `1784729552.391779`,
+2026-07-22).
+
+**Decision:** each week's DoorDash income is spent straight down the 7-priority list
+from the 10:05 ET update above, in order (1→7), until it runs out; whatever's unfunded
+rolls forward to the next week. No fixed percentages, no floor — first priority is
+funded in full before the next one gets anything.
+
+**Still blocking a numeric weekly plan** (unchanged from the 10:05 ET update — this
+decision fixes the *logic*, not the *numbers*):
+- No confirmed average/typical weekly DoorDash income figure yet.
+- No dollar figures yet for priorities 1 (Cuzzie's phone/Workspace/buffer — partial
+  figures exist, e.g. $200 phone payment 7/11, not a confirmed recurring total), 3
+  (ex-employee back pay owed — no total given), 5 (car — ~$500 remaining payment +
+  ~$2,500 repairs/tires/registration/insurance is the only figure on file), 6 and 7
+  (side projects / savings — "small amount", unquantified).
+- Priority 2 (personal bills) can already be partly numeric from figures already on
+  file above: student loans ~$500/mo, Claude $100/mo, food ~$600/mo, Cashapp $187.22
+  one-time.
+
+Once Lemar supplies a weekly DoorDash income figure (even a rough average) and the
+missing dollar figures above, this note is ready to carry an actual worked weekly
+waterfall example. Outcome reply posted to the #decisions thread; #reports line via
+samira-report-result.
+
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
 - slack: #personal-finance (C0BGLEMH99T), ts 1783784379.469619 (2026-07-11 11:39 ET reply)
@@ -135,3 +162,5 @@ lifted to #decisions this run (origin #personal-finance) rather than assumed.
 - slack: #personal-finance (C0BGLEMH99T), ts 1783868286.049049 (2026-07-12 10:58 ET, fare lookup ask)
 - web: NJ Transit "Fares to/from Penn Station Newark" table (fetched via search, direct PDF pull blocked this session)
 - slack: #personal-finance (C0BGLEMH99T), ts 1784729112.183609 (2026-07-22 10:05 ET, DoorDash income shift + 7 priorities)
+- slack: #decisions (C0BBXA96FFV), ts 1784729543.875229 (allocation-strategy card), option
+  reply ts 1784729552.391779 (Option 1 — strict waterfall — picked, ✅ reaction)
