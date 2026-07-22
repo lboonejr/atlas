@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-07-17T17:15-04:00
+updated: 2026-07-22T16:20-04:00
 domain: project
 type: reference
 status: active
@@ -52,7 +52,7 @@ Guardrail: tracking & planning only — nothing is paid or contacted automatical
 constants:
   monthly_carry: 31200          # bare-bones crew; excludes cannabis tax
   target_open_days: 14
-  updated_label: "July 17, 2026 (AIQ added)"
+  updated_label: "July 22, 2026 (PSE&G escalated)"
 
 tax_gate:
   - id: nj-sales-tax
@@ -111,12 +111,13 @@ items:
     note: "Verified 7/11 against the 7-invoice PDF (F0BGNFR1WLR) — invoices sum to exactly $868.60, no change. New 'Friendly Reminder' emailed 7/17 requests payment by July 21, 2026; amount unchanged at $868.60. Posted to #on-button per Lemar's ask in #decisions (ts 1784319361.170599)."
   - id: pseg
     label: "PSE&G — electric"
-    amount: 391.58
+    amount: 1051.51
     tier: 1
     vendor: "PSE&G"
     account: "2764 Mt Ephraim Ave · acct 7804704100"
     contact: "1-800-357-2262"
     status: past-due
+    note: "Escalated 7/22 — automated reminder says 3 payments past due, was $391.58, now $1,051.51. Service-continuity warning in the notice; nothing paid or contacted."
   - id: google-workspace
     label: "Google Workspace / Voice"
     amount: 33.97
@@ -443,9 +444,10 @@ carry:
   - {label: "Veriscan ID verification", amount: 30}
 ```
 
-## Snapshot (human-readable, as of 2026-07-17)
-- **Tier 1 (open & operate):** ≈ **$107,995** one-time (incl. $50K inventory restock, $40K
-  intercompany loan repay; ADT reconciled to $2,842.83, was $1,637.84).
+## Snapshot (human-readable, as of 2026-07-22)
+- **Tier 1 (open & operate):** ≈ **$108,655** one-time (incl. $50K inventory restock, $40K
+  intercompany loan repay; ADT reconciled to $2,842.83, was $1,637.84; PSE&G escalated to
+  $1,051.51, was $391.58).
 - **Tier 2 (nice-to-have):** ≈ **$115,411.45** (Leafly escalated to collections 7/14, $653.30 —
   was $279; Fresh Grow priced 7/15 at $3,262.06 — was TBD; Primo Brands/Ready Refresh $129.94
   added 7/15; AIQ $2,481.51 added 7/17; 8 cannabis-vendor lines still TBD).
@@ -457,6 +459,16 @@ carry:
 - Reality check: opening ($106.8K) + a 3-month cushion (~$93.6K carry) ≈ **$200K** before
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
+
+## Update — 2026-07-22 (PSE&G escalated)
+PSE&G sent a new past-due reminder for the Camden account (2764 Mt Ephraim Ave, acct
+7804704100) — now **3 payments past due**, minimum payment needed **$1,051.51** (was
+$391.58 previously tracked). Same account/address already on file, no address mismatch
+(this is the correct utility account for the Cuzzie's Camden property, distinct from the
+2750 Mt Ephraim Ave lease-street-number). `pseg` item updated: `amount` 391.58 → 1051.51,
+note appended. Tier 1 total $107,995 → **≈$108,655** (+$659.93). Nothing paid or
+contacted. Page (`on-button-reopen.html`) and canvas (`F0BEN1167GB`) regenerated from
+this note in the same pass. Haven: `haven/vault/20-Cuzzies/2026-07-22-pseg-electric-past-due-escalation.md`.
 
 ## Update — 2026-07-20 (ADT reconfirmed)
 Lemar posted "ADT updated Balance - $2842.83" in #on-button (ts `1784556454.923039`) — this
