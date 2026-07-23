@@ -1,6 +1,6 @@
 ---
 created: 2026-07-15T18:15-04:00
-updated: 2026-07-16T14:00-04:00
+updated: 2026-07-23T09:12-04:00
 domain: project
 type: note
 status: active
@@ -93,9 +93,29 @@ brief only — Lemar's call on whether this stays a personal side-build or gradu
 something with real deadlines (in which case it may be worth a Stormy pressure-test pass
 on the business model even though the scope/build decision is already made).
 
+## Update 2026-07-23 — answers to the 3 open brief questions (PART G, worked in-channel)
+
+Lemar answered all three open questions from the 07-18 brief directly in #booking-agent
+(2026-07-22 ~19:14 ET, thread on the brief post):
+
+1. **Calendar provider:** Google Calendar — matches the rest of the workspace.
+2. **Payment processor:** defer to whoever's fastest/cheapest to integrate (Stripe or
+   similar) — no hard preference.
+3. **Dogfood plan:** yes — test with the tattoo-artist friend from the original capture,
+   specifically because he's tech-averse and still tracks appointments by hand. Lemar's
+   framing: "I want to make such a simple and easy solution anyone could use it" — this
+   sets the actual usability bar (a tech-averse solo operator has to be able to run it),
+   not just a feature checklist.
+
+This closes all three open questions from the 07-18 brief. Nothing built yet — still a
+planning-stage project. Next step (not started this pass): turn the locked scope +
+dogfood plan into a build-sequencing outline, Lemar's own project, no #decisions lift
+needed.
+
 ## Sources
 - slack: #atlas 2026-07-15 18:15:39 ET, message ts 1784153739.693329 (channel C0BBWHCJUV9)
 - slack: #decisions 2026-07-16 08:12:06 ET, probe card ts 1784203926.276169 (channel C0BBXA96FFV)
 - slack: #booking-agent 2026-07-18, brief posted this pass (channel C0BHXTPST52)
 - slack: #decisions 2026-07-16 08:26:44 ET, Lemar's free-form reply ts 1784204804.434019 ("let's just make sure we put it in a new channel")
 - slack: #booking-agent 2026-07-16 14:00:29 ET, scope-answers message ts 1784224829.576589 (channel C0BHXTPST52)
+- slack: #booking-agent 2026-07-22 ~19:14 ET, brief-question answers ts 1784574891.283109 (channel C0BHXTPST52, thread 1784383950.961519)
