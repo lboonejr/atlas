@@ -1,9 +1,9 @@
 ---
 created: 2026-07-07T11:00:00-04:00
-updated: 2026-07-07T15:05:00-04:00
+updated: 2026-07-23T14:35:00-04:00
 domain: cuzzies
 type: note
-status: parked
+status: active
 tags: [broker, sale, exit, highgate-capital-partners]
 source: gmail
 ---
@@ -49,5 +49,26 @@ Status set to **parked**: the relationship isn't dead, just on hold pending Cuzz
 cash position, per Lemar's own words. No #decisions card needed — nothing left open
 for Lemar to decide; he already decided.
 
+## Update 2026-07-23 (~14:35 ET) — re-engagement, touch-base meeting held
+
+Camilo Basto (Highgate) sent a calendar invite 2026-07-22 ~2:27pm ET — "Cuzziesnj/HCP-
+touch base," Wed Jul 22 3:00–3:30pm ET, Google Meet, Jeffrey Dunetz cc'd. Lemar
+**accepted** the invite (calendar shows `responseStatus: accepted`), so the meeting
+appears to have gone ahead as scheduled. No email correspondence before or after the
+invite — no agenda stated, no outcome captured anywhere in Gmail or Slack.
+
+This surfaced this scan under the `Samira/investor` label (thread `19f8b14d4684685d`,
+still Label_7, not Label_9 — consistent with a calendar-invite thread, no send
+involved). Prior automated passes on 7/22 (~15:2x ET onward) reported "0 threads" on
+this label and missed it; backfilling now.
+
+**Status moved parked → active** since Highgate proactively re-opened contact and a
+meeting was held — but the actual content/outcome of the touch-base is unknown from
+available records. Flagged to Lemar in #investor-pipeline: what came out of the 7/22
+call, and whether this should reactivate as a live broker engagement (possibly on
+revised terms) or get parked again.
+
 ## Sources
 - gmail: thread 19f3ccb1b638dee1 (Highgate Capital Partners "Follow-Up", 2026-07-07)
+- gmail: thread 19f8b14d4684685d (calendar invite "Cuzziesnj/HCP- touch base", 2026-07-22)
+- calendar: event `5irs0loq387fethlbcieq4bl8t`, Jul 22 2026 3:00–3:30pm ET, Lemar accepted
