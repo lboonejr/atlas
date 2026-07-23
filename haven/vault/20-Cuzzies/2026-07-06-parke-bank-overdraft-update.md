@@ -1,9 +1,9 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-22T10:10:17-04:00
+updated: 2026-07-23T09:20-04:00
 domain: cuzzies
 type: task
-status: done
+status: active
 tags: [parke-bank, overdraft, nsf]
 source: gmail
 ---
@@ -302,6 +302,15 @@ underlying overdraft situation stays open and will likely generate further round
 next update on this matter should reopen status to `active` and append here rather
 than creating a sibling note.
 
+## Update 2026-07-23 — another round, 1 more returned item, $280.00 (NovusCapital II)
+
+Christopher Cabezas replied again (7/23 ~8:15am ET, gmail thread `19f8ee763d9d9378`,
+subject "secure: RE: secure: Cuzzie's Dispensary - Returning Items", to Lemar only, cc
+Meggan Hallworth), on top of Lemar's own 7/22 holding reply: another $280.00 payment to
+NovusCapital II returned unpaid this morning — same recurring line item as the 7/22
+round. No new items beyond the one. Reopening status to `active`; draft reply options
+staged to #decisions.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -339,4 +348,6 @@ than creating a sibling note.
   2026-07-22 08:12 ET; reply drafted `r-6463077385516029090`)
 - slack: #decisions message ts `1784722750.227349` (7/22 returned-items card, options
   in thread) / `1784722758.219669` (Option A, ✅ picked)
+- gmail: thread `19f8ee763d9d9378` (Christopher Cabezas, 1 more returned item $280.00
+  NovusCapital II, 2026-07-23 08:15 ET)
 </content>
