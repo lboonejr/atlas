@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-23T14:15:00-04:00
+updated: 2026-07-23T19:20:00-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -300,6 +300,36 @@ filing actually says, trial is 7 days out (July 30), and checking the eCourts po
 directly or calling Rivkin Radler about it remains Lemar's to pursue. Status stays
 **awaiting-decision**.
 
+## Update 2026-07-23 (19:15 ET) — the mystery is solved: the adjournment request is DENIED
+
+Two new NJ eCourts no-reply notices landed this run, both timestamped 2026-07-23
+~3:13 PM ET, same Transaction ID `EF-4344278` as Lemar's own 07-22 filing:
+
+- **"NJ Courts eFiling Clerk Notice - EF-4344278"** (Gmail thread `19f9065b25f0c297`):
+  Filing type "Adjournment request." Clerk notice: **"This request for an adjournment
+  is denied."**
+- **"NJ eCourts Filing Notification - Special Civil Part Case CAM-LT-004393-26"**
+  (Gmail thread `19f9065b4e1b459e`): duplicate case-caption notice tied to the same
+  transaction, no additional content.
+
+So the 07-23 "CORRESPONDENCE" filing flagged this morning (Update above, 13:00 ET) was
+most likely the clerk/court record of this denial, not a fresh filing from Rivkin
+Radler — though that is inference, not confirmed independently.
+
+**This changes the picture materially: the July 30 trial is now going forward as
+scheduled, with no adjournment.** Both notices are automated no-reply court mail —
+nothing for Samira to draft or reply to. This needs Lemar's judgment now, not
+Samira's: whether to renew the request with counsel now retained (see
+[[2026-07-21-dewalt-v-cuzzies-default-judgment]] — Siciliano & Associates is now
+representing Cuzzie's on the DeWalt matter as of today; worth asking whether they can
+also appear or advise on this eviction trial), show up pro se on Cuzzies LLC's behalf
+(an LLC generally cannot appear pro se in NJ Superior Court — the same blocker flagged
+throughout this note), or pursue a different path with 7 days left before trial.
+
+Raised as a NEW #decisions parent (the prior card on this matter was already closed via
+🫡) since this is fresh, urgent, judgment-only information. Nothing sent, filed, or
+executed by Samira here — tracking and flagging only.
+
 ## Sources
 - gmail: thread 19f8fe851917899a (NJ eCourts CORRESPONDENCE notification, Dylan Mruczinski filing, 2026-07-23 16:56 UTC)
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
@@ -314,3 +344,5 @@ directly or calling Rivkin Radler about it remains Lemar's to pursue. Status sta
 - gmail: thread 19f8b9dd1d51279d (NJ eCourts Filing Notification — adjournment request filed, 2026-07-22 20:56:42 UTC)
 - gmail: thread 19f8b9dce3a0a65f (NJ Courts eFiling Confirmation EF-4344278, 2026-07-22 20:56:41 UTC)
 - slack: #decisions, thread ts 1784826909.532689, closed via 🫡 (2026-07-23, PART A sweep)
+- gmail: thread 19f9065b25f0c297 (NJ Courts eFiling Clerk Notice EF-4344278 — adjournment denied, 2026-07-23 19:13:31 UTC)
+- gmail: thread 19f9065b4e1b459e (NJ eCourts Filing Notification duplicate, 2026-07-23 19:13:31 UTC)
