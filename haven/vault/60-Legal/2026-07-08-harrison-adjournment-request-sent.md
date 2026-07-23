@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-23T19:20:00-04:00
+updated: 2026-07-23T19:35:00-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -329,6 +329,18 @@ throughout this note), or pursue a different path with 7 days left before trial.
 Raised as a NEW #decisions parent (the prior card on this matter was already closed via
 🫡) since this is fresh, urgent, judgment-only information. Nothing sent, filed, or
 executed by Samira here — tracking and flagging only.
+
+## Update 2026-07-23 (19:35 ET) — #decisions card closed via Lemar's 🫡; trial 7 days out, still awaiting his call
+
+The #decisions card raised above ("adjournment request DENIED," parent ts
+`1784834546.675549`) was reacted 🫡 by Lemar. Per the reaction engine this closes the
+Slack notification thread only — no options existed on the card (FYI/judgment-only),
+so nothing was sent, filed, or executed here. **The underlying decision remains open
+and urgent**: trial is now 7 days out (July 30) with no adjournment, and it's still
+Lemar's call whether to ask Siciliano & Associates (retained on DeWalt) to also take
+this matter, attempt to appear pro se (likely blocked — an LLC generally can't
+self-represent in NJ Superior Court), or pursue another path. Status stays
+**awaiting-decision**.
 
 ## Sources
 - gmail: thread 19f8fe851917899a (NJ eCourts CORRESPONDENCE notification, Dylan Mruczinski filing, 2026-07-23 16:56 UTC)
