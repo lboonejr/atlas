@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-22T17:15:00-04:00
+updated: 2026-07-23T13:00:00-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -270,7 +270,22 @@ Status stays **awaiting-decision** — the request is now filed, but whether the
 actually grants it, and the underlying arrears/trial outcome, remain open. Worth
 watching next scan for any response from Rivkin Radler or a court ruling on the record.
 
+## Update 2026-07-23 (13:00 ET) — opposing counsel filed correspondence; content unknown, flagged to Lemar
+
+An NJ eCourts notification (Gmail thread `19f8fe851917899a`) landed 2026-07-23 ~12:56 PM
+ET: Dylan Mruczinski (Rivkin Radler, landlord's counsel) filed **"CORRESPONDENCE"** in
+docket CAM-LT-004393-26, the day after Lemar's own adjournment request was filed
+(2026-07-22, see update above). The notification is a no-reply system alert with no
+document content — viewing the actual filing requires an eCourts login with a Bar ID,
+which Samira does not have and cannot obtain.
+
+This could plausibly be Rivkin Radler's response to the adjournment request (consent,
+objection, or something else) — with trial now **7 days out (July 30)**, it's worth
+Lemar's attention regardless of content. Not a decision Samira can make or research
+further (no portal access) — raised as ONE #decisions parent rather than guessed at.
+
 ## Sources
+- gmail: thread 19f8fe851917899a (NJ eCourts CORRESPONDENCE notification, Dylan Mruczinski filing, 2026-07-23 16:56 UTC)
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
 - gmail: thread 19f3e00cb68ac2cb (Jason Gil reply, 2026-07-09 20:02:55 UTC, message id 19f487a33d5691b8; unverified draft r8556250896867529553 found here 2026-07-11; Lemar's own direct reply 2026-07-13 12:00 ET message id 19f5b593277f5f33; Jason Gil's follow-up 2026-07-13 15:58:55 ET message id 19f5c34485b54791)
 - slack: #atlas, Don Frunt, 2026-07-10 08:52:53 ET (court-filing question)
