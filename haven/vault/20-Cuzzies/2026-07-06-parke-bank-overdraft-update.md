@@ -1,9 +1,9 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-23T09:20-04:00
+updated: 2026-07-23T10:10-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [parke-bank, overdraft, nsf]
 source: gmail
 ---
@@ -311,6 +311,18 @@ NovusCapital II returned unpaid this morning — same recurring line item as the
 round. No new items beyond the one. Reopening status to `active`; draft reply options
 staged to #decisions.
 
+## Update 2026-07-23 (2) — closed, Option C (no reply) picked
+
+Lemar reacted ✅ on Option C in the #decisions thread (message ts `1784812496.307449`
+— "no reply, just close: leave it as a tracked log entry, no draft sent"). Unlike the
+prior several rounds, no Gmail draft was created this time — Option C is a deliberate
+no-reply close, not a holding-reply pick. Gmail thread `19f8ee763d9d9378` labeled
+`Samira/sent` (closed-loop convention for this saga, same as the 🫡 portal-message
+closes). Replied in the #decisions thread confirming no draft was made. Status moved
+to `done` for this round — the underlying overdraft situation stays open and will
+likely generate further rounds; the next update on this matter should reopen status to
+`active` and append here rather than creating a sibling note.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -349,5 +361,5 @@ staged to #decisions.
 - slack: #decisions message ts `1784722750.227349` (7/22 returned-items card, options
   in thread) / `1784722758.219669` (Option A, ✅ picked)
 - gmail: thread `19f8ee763d9d9378` (Christopher Cabezas, 1 more returned item $280.00
-  NovusCapital II, 2026-07-23 08:15 ET)
-</content>
+  NovusCapital II, 2026-07-23 08:15 ET; closed via Option C, no draft, message ts
+  `1784812488.694719` / `1784812496.307449`)
