@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-22T18:15:00-04:00
+updated: 2026-07-23T09:20:00-04:00
 domain: personal
 type: task
 status: active
@@ -181,6 +181,31 @@ the example under the hybrid-floor logic instead. Priority 7's 30%-of-income fra
 also doesn't cleanly fit a strict waterfall (which funds 1→6 in full first, leaving
 whatever's left for savings) — this may itself be a signal that Option 3's floor
 structure is the one Lemar actually wants; surfacing, not resolving.
+
+## Update 2026-07-23T09:20:00-04:00 — three new upcoming expenses dropped
+Lemar posted in #personal-finance (2026-07-23, ts `1784824568.847679`): "Also I want to
+add here a couple of upcoming expenses — New Tires for Car - $200, Reconciling Personal
+Gym Debt - $75, New Water Pump - $184.79." No priority number attached to any of the
+three.
+
+Recording as given, not reconciling against existing figures:
+- **New tires — $200.** The 2026-07-22T18:15 update already carries a bundled **$1,000
+  "taxes/tags/tires"** figure under Priority 5 (own car). Unclear whether this $200 is
+  part of that $1,000, additional to it, or a more precise replacement for the tires
+  portion of it — flagging rather than guessing which.
+- **Personal gym debt — $75.** New line, not previously captured anywhere in this note.
+  No priority number given; closest fit by content is Priority 2 (personal bills) or
+  Priority 3 (personal debt), but that's my inference, not his word — leaving unassigned
+  pending his confirmation.
+- **New water pump — $184.79.** Car repair cost; the 2026-07-22T18:15 update carries a
+  bundled **$2,000 "repairs"** figure under Priority 5. Same ambiguity as the tires line
+  above — may be part of, additional to, or a refinement of that $2,000.
+
+No #decisions card raised for this — it's a data drop, not a decision point (no
+either/or choice on the table, just new dollar figures needing a slot). Acknowledged
+in #personal-finance; next reconciliation pass on Priority 5 figures should ask Lemar
+directly whether these three are inside or outside the existing $1,000/$2,000 lump
+figures before the worked weekly waterfall example gets finalized.
 
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
