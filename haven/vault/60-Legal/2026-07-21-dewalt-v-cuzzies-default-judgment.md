@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-07-22T18:20:00-04:00
+updated: 2026-07-23T19:20:00-04:00
 domain: legal
 type: task
 status: active
@@ -118,6 +118,41 @@ whether he's called Siciliano yet — that's his to confirm.
 Posted as an update in the existing #decisions thread (ts `1784657518.918529`) rather
 than a new card, per routing (one parent per task). Gmail thread labeled `Samira/seen`.
 
+## Update 2026-07-23T19:15:00-04:00 — counsel retained; new insurance claims correspondence to review
+
+Two developments found in today's email sweep, both closing/advancing the standing gap:
+
+1. **Siciliano & Associates confirmed representation.** Lemar emailed
+   `sjs@sicilianolaw.com` (cc `AA@sicilianolaw.com`, `jm@sicilianolaw.com`) 2026-07-23
+   ~17:22 ET requesting representation on this matter (CAM-L-1339-26). Salvatore
+   Siciliano replied ~17:44 ET: *"Yes, we will be able to assist you... my assistant
+   Lyann will call to schedule time for an initial telephone consultation."* Lemar
+   replied ~17:50 ET flagging a scheduling conflict (tied up 3:30-4:30pm today) before
+   Lyann calls. **This closes the "counsel not yet confirmed retained" gap** flagged
+   in the 2026-07-22 18:20 ET update — Cuzzie's now has representation moving, ahead
+   of the Aug 5 deadline. Not yet confirmed: whether a signed retainer/engagement
+   letter has been executed, or whether Siciliano's scope covers the Sept 14 proof
+   hearing specifically as well as the motion-to-vacate question. Both sent directly
+   by Lemar, not drafted by Samira. Gmail thread `19f8fd0b123baf45`.
+
+2. **Berkley Select Claims sent claim documentation.** `ClaimsOpsSupport@berkleyselect.com`
+   emailed 2026-07-23 ~18:54 ET (cc `mreddy@marshallsterling.com`,
+   `david.lee@jencapgroup.com`, `tdenis@berkleyselect.com` — the insurance broker/carrier
+   chain), subject **"Jennifer DeWalt v. Cuzzie's Dispensary & Delivery, LLC — Claim no:
+   57979."** Body is a bare "Please see attached" with one attachment,
+   `Insured_-_communications_to_from_07232026025213.pdf` (filename suggests a compiled
+   correspondence log, not opened/parsed by this capture). Gmail thread `19f9053fb36e204f`.
+   This is a real claim number now on record with Berkley Select — a meaningfully
+   different signal than the 2026-07-22 auto-reply that warned the earlier claim notice
+   "cannot be reported... via this email." Worth Lemar (or now Siciliano) pulling and
+   reviewing the attachment, and confirming claim 57979 is the properly-registered
+   claim (vs. the possibly-unregistered one flagged 7/22).
+
+Nothing sent, drafted, or forwarded by Samira on either item — both are informational,
+no-reply-shaped correspondence (a CSR auto-thread and a claims-support attachment drop),
+not something requiring a drafted email reply. Posted as an update in the existing
+#decisions thread (ts `1784657518.918529`) rather than a new card, per routing.
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
 - gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
@@ -126,3 +161,7 @@ than a new card, per routing (one parent per task). Gmail thread labeled `Samira
   Salvatore Siciliano, Siciliano & Associates)
 - gmail: thread `19f8bbc734d83286` (2026-07-22 17:30 ET, default judgment entered +
   Sept 14 proof hearing + Aug 5 response deadline)
+- gmail: thread `19f8fd0b123baf45` (2026-07-23, Siciliano & Associates confirms
+  representation, Lyann to schedule consult)
+- gmail: thread `19f9053fb36e204f` (2026-07-23 18:54 ET, Berkley Select Claims, claim
+  no. 57979, attachment not yet reviewed)
