@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-23T13:00:00-04:00
+updated: 2026-07-23T14:15:00-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -284,6 +284,22 @@ objection, or something else) — with trial now **7 days out (July 30)**, it's 
 Lemar's attention regardless of content. Not a decision Samira can make or research
 further (no portal access) — raised as ONE #decisions parent rather than guessed at.
 
+## Update 2026-07-23 (14:15 ET) — #decisions card closed via Lemar's 🫡; underlying matter still open
+
+The #decisions card raised above (channel `C0BBXA96FFV`, parent ts `1784826909.532689`,
+"Harrison Acquisitions eviction (CAM-LT-004393-26) — opposing counsel filed
+correspondence, content unknown") was reacted 🫡 by Lemar sometime after the 13:45 ET
+digest. This PART A sweep read that reaction and is closing the notification thread —
+the card had no options to pick between (FYI/needs-your-read only), so nothing was
+sent, filed, or executed here; nothing was available for Samira to execute (still no
+eCourts/Bar-ID login to view the actual "CORRESPONDENCE" filing content).
+
+Per the reaction engine, this closes the Slack card only. The underlying matter is
+**not resolved**: it is still unknown what Rivkin Radler's 07-23 "CORRESPONDENCE"
+filing actually says, trial is 7 days out (July 30), and checking the eCourts portal
+directly or calling Rivkin Radler about it remains Lemar's to pursue. Status stays
+**awaiting-decision**.
+
 ## Sources
 - gmail: thread 19f8fe851917899a (NJ eCourts CORRESPONDENCE notification, Dylan Mruczinski filing, 2026-07-23 16:56 UTC)
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
@@ -297,3 +313,4 @@ further (no portal access) — raised as ONE #decisions parent rather than guess
 - slack: capture DM (`D0BHPKMDNEP`), Lemar, 2026-07-21 — "who to call and give me a call script for pushing this date back"
 - gmail: thread 19f8b9dd1d51279d (NJ eCourts Filing Notification — adjournment request filed, 2026-07-22 20:56:42 UTC)
 - gmail: thread 19f8b9dce3a0a65f (NJ Courts eFiling Confirmation EF-4344278, 2026-07-22 20:56:41 UTC)
+- slack: #decisions, thread ts 1784826909.532689, closed via 🫡 (2026-07-23, PART A sweep)
