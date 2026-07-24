@@ -313,8 +313,7 @@ open):
   waterfall mechanically — at $46/wk of waterfall room, 30% of $500 ($150/wk) is not
   achievable without deprioritizing Priority 3 or shrinking the floor. If Lemar wants
   savings to hit 30% specifically, that's a different allocation shape than what Option
-  3 as written produces — surfacing this tension rather than picking a fix.
-  **Old figure — see the 2026-07-24T16:xx Update below for the reconciliation.**
+  3 as written produces — surfacing this tension rather than picking a fix on his behalf.
 - The three 2026-07-23 one-time items (tires $200, gym debt $75, water pump $184.79) and
   the Priority 5 lump figures ($2k repairs / $1k taxes-tags-tires) still aren't reconciled
   against each other — still unclear if the itemized costs are inside or additional to
