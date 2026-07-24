@@ -1,9 +1,9 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-23T10:10-04:00
+updated: 2026-07-24T09:10:00-04:00
 domain: cuzzies
 type: task
-status: done
+status: active
 tags: [parke-bank, overdraft, nsf]
 source: gmail
 ---
@@ -90,12 +90,12 @@ onto the original message (gmail thread `19f4c03a31c89a43`, draft id
 
 Not sent — sitting in Gmail Drafts only, ready for Lemar to send himself. Gmail
 thread labeled `Samira/drafted`. #decisions thread not yet closed (waiting on a
-🚡 reaction to close).
+🫡 reaction to close).
 
 ## Update 2026-07-10 (3) — sent, thread closed
 Checking Gmail this scan, the drafted Option A reply now shows up in Sent — Lemar
 sent it himself directly from Gmail at 7/10 ~10:48 AM ET (the text matches the
-draft exactly, no edits). Treating this as the equivalent of the 🚡 close signal
+draft exactly, no edits). Treating this as the equivalent of the 🫡 close signal
 (he acted before reacting) — no further draft work needed on this round. Labeled
 `Samira/sent` in Gmail. Status moved to `done` for this round of returned items —
 the underlying overdraft situation is still open and will likely generate further
@@ -323,6 +323,22 @@ to `done` for this round — the underlying overdraft situation stays open and w
 likely generate further rounds; the next update on this matter should reopen status to
 `active` and append here rather than creating a sibling note.
 
+## Update 2026-07-24 — new round, 2 more returned items, $298.96
+
+Meggan Hallworth (Assistant Branch Manager, Parke Bank Kennedy Branch, cc Christopher
+Cabezas) emailed 7/24 ~8:50 AM ET, subject "Secure: Cuzzie's Dispensary & Delivery LLC"
+(gmail thread `19f942da9460dca2`): 2 more items presented for payment were returned
+today —
+
+- External Withdrawal $280.00 — NovusCapital
+- External Withdrawal $18.96 — SLACK
+
+Total returned this round: **$298.96**. Direct invitation to reply ("If you have any
+questions, please let us know"), same pattern as prior rounds. Reopening status to
+`active`; draft reply options staged to #decisions matching the established A/B/C
+pattern for this saga (holding reply / short ack / no-reply close). Labeled
+`Samira/seen` in Gmail.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -363,3 +379,5 @@ likely generate further rounds; the next update on this matter should reopen sta
 - gmail: thread `19f8ee763d9d9378` (Christopher Cabezas, 1 more returned item $280.00
   NovusCapital II, 2026-07-23 08:15 ET; closed via Option C, no draft, message ts
   `1784812488.694719` / `1784812496.307449`)
+- gmail: thread `19f942da9460dca2` (Meggan Hallworth, 2 more returned items $298.96,
+  2026-07-24 08:50 ET)
