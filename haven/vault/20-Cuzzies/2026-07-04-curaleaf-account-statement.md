@@ -1,6 +1,6 @@
 ---
 created: 2026-07-04T09:00-04:00
-updated: 2026-07-23T16:15-04:00
+updated: 2026-07-24T12:15-04:00
 domain: cuzzies
 type: task
 status: active
@@ -45,5 +45,15 @@ draft reply options, none committing to a specific dollar figure or date per the
 profile's hard floor. Nothing drafted has been sent — Gmail Drafts only, pending
 Lemar's pick.
 
+## Update 2026-07-24
+Lemar sent his own direct reply to Jacqueline this morning (2026-07-24, ~11:46am ET,
+Gmail thread `19f90b461b964a08`, message `19f93f2d672b1309`) — responding point-by-point
+to the three items in her "FINAL ATTEMPT" demand. He handled this himself, bypassing all
+three drafted #decisions reply options (none was picked or sent). The #decisions card is
+being closed as a result since the reply already went out. The underlying Curaleaf
+AR/collections relationship stays `active` for whatever follow-up comes next — only this
+round is resolved.
+
 ## Sources
 - gmail: thread `19f90b461b964a08` (Curaleaf "FINAL ATTEMPT" chain, 7/17–7/23)
+- gmail: thread `19f90b461b964a08`, message `19f93f2d672b1309` (Lemar's own direct reply, 2026-07-24 ~11:46am ET)
