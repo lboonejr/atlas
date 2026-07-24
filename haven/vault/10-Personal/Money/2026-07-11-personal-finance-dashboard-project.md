@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-24T08:16:00-04:00
+updated: 2026-07-24T09:15:00-04:00
 domain: personal
 type: task
 status: active
@@ -231,6 +231,35 @@ thread instead of re-flagging or picking a logic unilaterally. **Status stays
 Lemar says explicitly which one governs.** No numeric weekly example has been rebuilt
 under either logic pending that call.
 
+## Update 2026-07-24T09:15:00-04:00 — new recurring line (mom's expenses) + two subscription bill notes
+
+Three new messages since the 08:30 ET cutoff, all data drops — no either/or choice on
+any of them, so none lifted to #decisions; recorded here per the same-pattern precedent
+set by the 2026-07-23 update above.
+
+1. **New recurring line — $200/month to help his mom with expenses** (ts
+   `1784896199.616809`, ~08:30 ET, posted directly by Lemar). New commitment, not
+   previously captured anywhere in this note. No priority number given — same ambiguity
+   as the 2026-07-23 drop; not assigning it to one of the 7 priorities myself. Flagging
+   for Lemar to slot in on the next reconciliation pass.
+2. **Wispr Flow subscription — $15.00/month** (ts `1784897964.479209`), billed through
+   Apple/App Store, renews the 10th. New line, not previously on file. Note attached: the
+   July charge landed on the 20th (one-off catch-up after a 7/5 decline), not a change to
+   the billing date — informational only, no open action.
+3. **Claude (Anthropic) subscription — $100/month confirmed** (ts `1784898221.065089`,
+   matches the $100/mo Claude figure already on file above), renews Aug 4. Flag: the card
+   on file has declined on the 4th three months running (May/June/July), each time
+   recovering on a retry after a brief access pause. Worth updating the payment method
+   before Aug 4. This is Lemar's own card/billing action with Anthropic directly — not
+   something Samira/admin can execute (would mean touching live payment credentials, a
+   controlled field) — so no run:admin-3x staged; recording here as an open item instead
+   of manufacturing a task no one downstream can actually run.
+
+No #decisions card raised (no either/or choice — same reasoning as 2026-07-23) and no
+#admin prompt staged (nothing here is delegable execution work; the one action item —
+updating a declined card — is Lemar's alone to do directly with Anthropic).
+Acknowledged in #personal-finance.
+
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
 - slack: #personal-finance (C0BGLEMH99T), ts 1783784379.469619 (2026-07-11 11:39 ET reply)
@@ -249,3 +278,6 @@ under either logic pending that call.
   waterfall — the option actually carrying the ✅ reaction from U0BC5UTHYG4)
 - slack: #decisions (C0BBXA96FFV) thread, ts 1784747329.164429 and 1784758292.598939
   (prior flag replies noting the Option 1/Option 3 conflict, both unresolved)
+- slack: #personal-finance (C0BGLEMH99T), ts 1784896199.616809 (mom's expenses $200/mo,
+  2026-07-24), ts 1784897964.479209 (Wispr Flow bill note), ts 1784898221.065089
+  (Claude/Anthropic bill + card-decline flag)
