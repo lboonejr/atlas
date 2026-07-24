@@ -1,9 +1,9 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-24T09:15:00-04:00
+updated: 2026-07-24T13:30:00-04:00
 domain: personal
 type: task
-status: active
+status: awaiting-decision
 tags: [personal-finance, budget, dashboard]
 source: slack
 area: money
@@ -260,6 +260,22 @@ No #decisions card raised (no either/or choice — same reasoning as 2026-07-23)
 updating a declined card — is Lemar's alone to do directly with Anthropic).
 Acknowledged in #personal-finance.
 
+## Update 2026-07-24T13:30:00-04:00 — STUCK escalation completed: 🚗 set, new #decisions parent posted
+
+The 08:16 ET update above logged the STUCK status in Haven but the prior run only
+posted a threaded reply in the original card — it never completed the actual escalation
+mechanics the routine calls for (🚗 on the source, a NEW #decisions parent). This run
+(PART A) completed both:
+- Reacted 🚗 (`red_car`) on the source parent (ts `1784729543.875229`), removing it from
+  the retry queue.
+- Posted a NEW #decisions parent (ts `1784902247.621169`, headline ⏳) titled "STUCK —
+  needs Lemar: Personal Finance allocation logic (Option 1 vs Option 3)", summarizing
+  the conflict and offering two clean ✅ options (Option 1 / Option 3) plus 🫡 to close
+  without picking.
+
+Status stays `awaiting-decision` — no logic has been picked on Lemar's behalf. Next scan
+watches the NEW card, not the original thread, for a resolution.
+
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
 - slack: #personal-finance (C0BGLEMH99T), ts 1783784379.469619 (2026-07-11 11:39 ET reply)
@@ -281,3 +297,5 @@ Acknowledged in #personal-finance.
 - slack: #personal-finance (C0BGLEMH99T), ts 1784896199.616809 (mom's expenses $200/mo,
   2026-07-24), ts 1784897964.479209 (Wispr Flow bill note), ts 1784898221.065089
   (Claude/Anthropic bill + card-decline flag)
+- slack: #decisions (C0BBXA96FFV), ts 1784902247.621169 (2026-07-24 PART A, NEW "STUCK —
+  needs Lemar" parent card, headline ⏳)
