@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-24T15:35:00-04:00
+updated: 2026-07-24T16:10:00-04:00
 domain: personal
 type: task
 status: active
@@ -326,6 +326,77 @@ Reacted `white_check_mark` and replied "Done ✅" on the STUCK card (ts
 `1784902247.621169`). Outcome landed via samira-report-result; #reports line posted this
 scan.
 
+## Update 2026-07-24T16:10:00-04:00 — Priority 3 (back pay) pulled out to a business-side deal; reassessment; account-routing question answered
+
+Two new items this scan, both unanswered as of the last digest.
+
+**1. Reassessment request** (ts `1784906044.525909`, reply in the STUCK card thread):
+Lemar wants to "take the payroll out of my personal hands and try to work out a deal
+with the business for that back to payroll amount," and asked for the whole
+#personal-finance channel to be re-read and the strategy reworked given the new items
+added since (mom's $200/mo, Wispr Flow $15/mo, tires/gym-debt/water-pump).
+
+**Change, as instructed — not a guess:** Priority 3 (ex-employee back pay, $11,579) is
+removed from Lemar's personal DoorDash waterfall. It is **not resolved or forgiven** —
+Lemar intends to arrange a Cuzzie's-side repayment plan/deal for that amount instead of
+funding it from his personal income. That arrangement isn't structured yet (no terms,
+no counterpart, no schedule), so nothing new is logged as a formal commitment yet; once
+Lemar has actual terms for the business-side deal, that likely belongs on its own
+Cuzzie's-domain note (and possibly `chase-commitments`, since it would be an outbound
+promise) — flagging as the next step, not creating it speculatively.
+
+**Reworked waterfall** (same floor as the 2026-07-24T15:35 update — Priority 1 ~$127/wk
++ Priority 2 ~$188/wk (now includes mom's $200/mo + Wispr Flow $15/mo, both already
+folded into the $188 above) + Priority 4 ~$139/wk ≈ **$454/wk floor**, same ~$46/wk
+waterfall room at the $500/wk target). With Priority 3 out, the $46/wk now waterfalls
+into **Priority 5 (own car) first**: at ~$3,500 (the $500 remaining payment + $2,000
+repairs + $1,000 taxes/tags/tires baseline — the 2026-07-23 tires/water-pump items still
+unreconciled against those lumps, so not double-counted here), that's **~76 weeks
+(~1.5 years)** to fully fund the car priority from waterfall room alone — versus ~4.8
+years when Priority 3 sat ahead of it. That is the direct, quantified benefit of pulling
+Priority 3 out. After Priority 5 clears, the same room then flows to Priority 6 (side
+projects) then Priority 7 (savings).
+
+**What this change does NOT fix** — same structural tension as the 15:35 ET update,
+just now attached to Priority 5 instead of Priority 3: Priority 7's "30% of income"
+framing still doesn't fit a $46/wk waterfall room (30% of $500/wk = $150/wk). Pulling
+Priority 3 out speeds up when the car gets funded; it does not by itself make room for
+30% savings — that would need either a smaller floor, a higher income week, or treating
+savings as its own floor-level percentage rather than the last waterfall stop. Surfacing
+this again rather than picking a fix.
+
+The gym debt ($75, still unassigned), and the tires/water-pump-vs-lump-figure
+reconciliation from 2026-07-23, remain open exactly as before — nothing new resolved
+them this pass.
+
+**2. Account-routing question** (posted twice, same text: #decisions ts
+`1784905477.540149` and #personal-finance ts `1784910062.943339`): Lemar listed 6
+accounts — SoFi (checking + savings), Cash App (checking + savings), and a card
+transcribed as "door-crimson" (checking + savings) — and asked where to start routing
+money to keep the budget in "nice budgeted pockets."
+
+Samira does not move money or open/close accounts (Safety floor) — this is a proposed
+**pocket structure only**, mapped to the 7 priorities above, for Lemar to confirm or
+change before setting up any actual transfers himself:
+
+| Account | Proposed pocket |
+|---|---|
+| SoFi Checking | Operating pocket — weekly DoorDash income lands here first; the ~$454/wk floor (Priorities 1, 2, 4) pays out of this account. |
+| SoFi Savings | Priority 7 (savings) — once the 30%-vs-waterfall tension above is settled, this is where that money would sit. |
+| Cash App Checking | Priority 5 (own car) — the ~$46/wk waterfall room parks here until the car total is funded. |
+| Cash App Savings | Priority 6 (side projects) — small, discretionary amounts. |
+| "door-crimson" Checking | Priority 1's "buffer for unexpected needed expenses" — the near-term Cuzzie's buffer, kept separate from the fixed phone/Workspace portion. |
+| "door-crimson" Savings | Same buffer, building balance — a second layer under the checking-side buffer. |
+
+Not sure what "door-crimson" refers to exactly (a card name, likely mis-transcribed) —
+used as given; worth Lemar confirming the actual issuer name for the record. This is a
+draft mapping, not an instruction executed anywhere — no transfers made, no accounts
+touched.
+
+Both items acknowledged/answered directly in #personal-finance (and pointed to from the
+#decisions thread) this scan; no #decisions card raised for either (reassessment
+instruction + an advisory question, not an either/or pick).
+
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
 - slack: #personal-finance (C0BGLEMH99T), ts 1783784379.469619 (2026-07-11 11:39 ET reply)
@@ -334,7 +405,6 @@ scan.
   ts 1783790778.040749 (Option B picked, 🅱️ reaction)
 - gmail: thread 19f51f33f63c1887 (T-Mobile payment confirmation, $200.00, 2026-07-11)
 - slack: #personal-finance (C0BGLEMH99T), ts 1783868286.049049 (2026-07-12 10:58 ET, fare lookup ask)
-- web: NJ Transit "Fares to/from Penn Station Newark" table (fetched via search, direct PDF pull blocked this session)
 - slack: #personal-finance (C0BGLEMH99T), ts 1784729112.183609 (2026-07-22 10:05 ET, DoorDash income shift + 7 priorities)
 - slack: #decisions (C0BBXA96FFV), ts 1784729543.875229 (allocation-strategy card), option
   reply ts 1784729552.391779 (Option 1 — strict waterfall — originally picked, later
@@ -349,3 +419,8 @@ scan.
 - slack: #decisions (C0BBXA96FFV), ts 1784902247.621169 (2026-07-24 PART A, "STUCK —
   needs Lemar" parent card, headline ⏳), reply ts 1784902704.065119 (Lemar: "Let's go
   with option 3", final resolution)
+- slack: #decisions (C0BBXA96FFV) thread ts 1784902247.621169, reply ts 1784906044.525909
+  (Lemar: pull payroll/back-pay out to a business deal, reassess)
+- slack: #decisions (C0BBXA96FFV), ts 1784905477.540149, and #personal-finance
+  (C0BGLEMH99T), ts 1784910062.943339 (account-routing question, SoFi/Cash App/
+  "door-crimson")
