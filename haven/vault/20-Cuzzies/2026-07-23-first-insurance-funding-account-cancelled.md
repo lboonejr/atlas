@@ -77,6 +77,3 @@ quick check with Siciliano & Associates (already retained on DeWalt) before payi
 given point 4 is unresolved. Nothing paid, called, or committed to by Samira. Existing
 #decisions card (unreacted) stays open; no new card raised — same decision, sharper
 context.
-
-## Sources (cont.)
-- gmail: thread `19f8fc2b6eb3e178` — n/a, see above.
