@@ -1,9 +1,9 @@
 ---
 created: 2026-07-24T12:20-04:00
-updated: 2026-07-24T12:20-04:00
+updated: 2026-07-24T09:05-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [gusto, payroll, pay-period]
 source: gmail
 due: 2026-07-27T19:00-04:00
@@ -24,5 +24,14 @@ notes) — several of the earlier ones were tied to a funding-shortfall warning.
 Lemar checking whether that underlying cause has actually been resolved, or whether
 this is about to repeat the same late/skip pattern as the Jun 28–Jul 11 period.
 
+## Update 2026-07-24T09:05-04:00
+Lemar closed the #decisions card via 🫡 (saluting_face reaction, no thread reply). This
+records that Lemar acknowledged/closed the alert — it does NOT record which way the
+run/skip payroll call went; neither the card nor its thread stated that explicitly, and
+Samira has no Gusto login to have run it herself. If a run/skip decision needs a
+durable record, it should come from Lemar directly (in app.gusto.com or back on this
+thread). Card closed, dropped from the #decisions queue.
+
 ## Sources
 - gmail: thread `19f93f5e82ea20d4`, automated@gusto.com, 2026-07-24 11:49 UTC
+- slack: #decisions parent ts 1784895631.960559, 🫡 close reaction from U0BC5UTHYG4
