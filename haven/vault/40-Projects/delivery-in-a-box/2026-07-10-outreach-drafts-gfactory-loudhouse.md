@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T17:05-04:00
-updated: 2026-07-20T08:04:43-04:00
+updated: 2026-07-24T00:00:00-04:00
 domain: project
 type: note
 status: parked
@@ -56,6 +56,13 @@ card, ts `1784466935.675889`, option ts `1784466940.558749`). Outreach to G
 Factory and Loud House is parked — drafts remain in this note, nothing sent.
 Moved to the Open Items canvas (Parked). Revisit only on a fresh ask from Lemar.
 
+## Update — 2026-07-24 (PART G loop-back)
+
+The 2026-07-20 park decision closed in #decisions but was never posted back to
+#delivery-in-a-box itself (the channel's thread only had a "→ decision in
+#decisions" pointer, no closing reply). Posted the parked outcome to
+#delivery-in-a-box this run so the project channel matches Haven/#decisions.
+
 ## Sources
 - slack: #atlas ts 1782434912.962149 (thread), reply 1782480868.572239 (Lemar's
   6/26 ask — Gfactory + Loud House + Leena + folder merge)
@@ -66,3 +73,4 @@ Moved to the Open Items canvas (Parked). Revisit only on a fresh ask from Lemar.
 - gmail: leena@thegardensociety.com thread history (Garden Society wholesale
   account, ongoing since at least Nov 2025)
 - monday: item 12381626678 (board 18418714876)
+- PART G loop-back post: #delivery-in-a-box, this run (2026-07-24)
