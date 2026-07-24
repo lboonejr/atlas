@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-07-24T09:10:00-04:00
+updated: 2026-07-24T15:35:00-04:00
 domain: legal
 type: task
 status: active
@@ -171,6 +171,23 @@ closed — the Sept 14 proof hearing and the Aug 5 opposing-counsel settlement/p
 deadline remain the open items. Gmail thread already carries `Samira/seen`; no
 draft/send action taken by Samira on this exchange.
 
+## Update 2026-07-24T15:35:00-04:00 — Siciliano called and left a message
+
+A new email landed 2026-07-24 ~3:33pm ET (gmail thread `19f959e4c30e1924`, subject
+"Just called you and left a message") from `sjs@sicilianolaw.com` — Salvatore
+Siciliano himself. The message body is just his signature block; there is no
+substantive text beyond the subject line and signature (no attachment content
+beyond his firm logo image). Read as: Siciliano's office called Lemar's phone and
+left a voicemail, then sent this as a paper-trail follow-up — there is nothing here
+for Samira to draft a reply to (a phone call needs a phone call back, not an email).
+
+Given the Aug 5 opposing-counsel deadline (12 days out) and the Sept 14 proof
+hearing, this is worth Lemar's prompt attention — likely Siciliano (or Lyann)
+following up on the initial consult / retainer / case strategy. Not asserting the
+content of the voicemail since Samira has no way to hear it. Flagging in
+#decisions as a call-back item rather than drafting anything. Gmail thread
+labeled `Samira/seen`.
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
 - gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
@@ -184,3 +201,5 @@ draft/send action taken by Samira on this exchange.
 - gmail: thread `19f9053fb36e204f` (2026-07-23 18:54 ET, Berkley Select Claims, claim
   no. 57979, attachment not yet reviewed; 2026-07-24, adjuster Tyler Denis schedules
   Monday 7/27 call, Lemar replied directly confirming)
+- gmail: thread `19f959e4c30e1924` (2026-07-24 19:33 UTC, Siciliano — "Just called you
+  and left a message," no substantive body beyond signature; labeled `Samira/seen`)
