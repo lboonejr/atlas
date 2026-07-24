@@ -1,9 +1,9 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-24T13:30:00-04:00
+updated: 2026-07-24T15:35:00-04:00
 domain: personal
 type: task
-status: awaiting-decision
+status: active
 tags: [personal-finance, budget, dashboard]
 source: slack
 area: money
@@ -135,7 +135,10 @@ from the 10:05 ET update above, in order (1→7), until it runs out; whatever's 
 rolls forward to the next week. No fixed percentages, no floor — first priority is
 funded in full before the next one gets anything.
 
-**Still blocking a numeric weekly plan** (unchanged from the 10:05 ET update — this
+**Superseded 2026-07-24 — see the "allocation logic resolved" Update below: Lemar
+confirmed Option 3 (hybrid floor + waterfall) governs, not Option 1.**
+
+**Still blocking a numeric weekly plan** (unchanged from the 10:05 ET update above — this
 decision fixes the *logic*, not the *numbers*):
 - No confirmed average/typical weekly DoorDash income figure yet.
 - No dollar figures yet for priorities 1 (Cuzzie's phone/Workspace/buffer — partial
@@ -170,17 +173,10 @@ Lemar replied in the #decisions allocation-strategy thread (ts `1784754837.05327
   priority in full before the next gets anything) — flagged, not reconciled, in the open
   item below.
 
-**Still open, not guessed:** the ✅ reaction on this thread's options still shows on
-**Option 3** (hybrid floor + waterfall), while the "Done" reply on file locked **Option 1**
-(strict waterfall) as the recorded logic — flagged for Lemar once already (ts
-`1784747329.164429`, 15:08 ET); no second nudge posted, per the routine's no-repeat-ping
-rule, but the worked numeric weekly example below is being built on the recorded
-**Option 1** logic since that is what Haven currently has as decided. If Lemar meant
-Option 3, say so in-thread (or leave the ✅ where it is) and the next scan will rebuild
-the example under the hybrid-floor logic instead. Priority 7's 30%-of-income framing
-also doesn't cleanly fit a strict waterfall (which funds 1→6 in full first, leaving
-whatever's left for savings) — this may itself be a signal that Option 3's floor
-structure is the one Lemar actually wants; surfacing, not resolving.
+**Resolved 2026-07-24 — see the "allocation logic resolved" Update below.** (At the time
+of this update the ✅ reaction on this thread's options still showed on **Option 3**
+while the recorded "Done" reply had locked **Option 1** — that conflict is what got
+escalated as STUCK on 2026-07-24 and resolved the same day by Lemar's direct reply.)
 
 ## Update 2026-07-23T09:20:00-04:00 — three new upcoming expenses dropped
 Lemar posted in #personal-finance (2026-07-23, ts `1784824568.847679`): "Also I want to
@@ -226,10 +222,8 @@ No reply or reaction from Lemar has resolved this since — the ✅ is still on 
 while Haven's recorded decision still says Option 1. Per the STUCK rule (same task
 flagged/attempted 3 times across runs without resolution → stop retrying, escalate
 rather than guess a 4th time), this run posts a `STUCK — needs Lemar` reply in the same
-thread instead of re-flagging or picking a logic unilaterally. **Status stays
-`active`; the allocation logic remains ambiguous between Option 1 and Option 3 until
-Lemar says explicitly which one governs.** No numeric weekly example has been rebuilt
-under either logic pending that call.
+thread instead of re-flagging or picking a logic unilaterally. **Resolved the same day —
+see the "allocation logic resolved" Update below.**
 
 ## Update 2026-07-24T09:15:00-04:00 — new recurring line (mom's expenses) + two subscription bill notes
 
@@ -246,7 +240,7 @@ set by the 2026-07-23 update above.
    Apple/App Store, renews the 10th. New line, not previously on file. Note attached: the
    July charge landed on the 20th (one-off catch-up after a 7/5 decline), not a change to
    the billing date — informational only, no open action.
-3. **Claude (Anthropic) subscription — $100/month confirmed** (ts `1784898221.065089`,
+3. **Claude (Anthropic) subscription — $100/month confirmed** (ts `1784898221.065089`),
    matches the $100/mo Claude figure already on file above), renews Aug 4. Flag: the card
    on file has declined on the 4th three months running (May/June/July), each time
    recovering on a retry after a brief access pause. Worth updating the payment method
@@ -276,6 +270,63 @@ mechanics the routine calls for (🚗 on the source, a NEW #decisions parent). T
 Status stays `awaiting-decision` — no logic has been picked on Lemar's behalf. Next scan
 watches the NEW card, not the original thread, for a resolution.
 
+## Update 2026-07-24T15:35:00-04:00 — allocation logic resolved: Option 3 picked, worked weekly example built
+
+Lemar replied directly in the STUCK card thread (ts `1784902247.621169`) at ts
+`1784902704.065119`, ~2026-07-24 14:41 ET: **"Let's go with option 3"** — this landed
+about four minutes before the 14:35 ET digest posted, so the prior scan's digest still
+listed the card as open; caught and locked in this scan.
+
+**Decision, final: Option 3 — hybrid floor + waterfall.** A fixed weekly $ floor comes
+off the top for the three essentials (Priority 1 Cuzzie's survival costs, Priority 2
+personal bills, Priority 4 day-to-day), in that order; whatever's left of the week's
+DoorDash income then waterfalls through Priority 3 (ex-employee back pay) → Priority 5
+(own car) → Priority 6 (side projects) → Priority 7 (savings), each funded in full
+before the next gets anything. This matches the ✅ reaction that had sat on the Option 3
+reply since 2026-07-22 and supersedes the 2026-07-22T12:07 Update's Option 1 record.
+
+**Worked weekly example** (target income $500/wk per the 2026-07-22 figure; monthly →
+weekly conversion at ÷4.33; figures are the ones on file above, several still rough
+estimates):
+
+| Floor item (off the top, in order) | Monthly | Weekly floor |
+|---|---|---|
+| Priority 1 — Cuzzie's phone + Workspace | $550 | ~$127 |
+| Priority 2 — personal bills (student loans $500 + Claude $100 + Wispr Flow $15 + mom's $200) | $815 | ~$188 |
+| Priority 4 — day-to-day (food ~$600 only figure on file; DoorDash gas + mom's-car maintenance still unquantified, so this floor is understated) | $600 | ~$139 |
+| **Floor subtotal** | | **~$454/wk** |
+
+At the $500/wk target, that leaves **~$46/wk** to waterfall through Priority 3 → 5 → 6 →
+7. Priority 3 alone (ex-employee back pay, $11,579 owed) would absorb all of it every
+week for the foreseeable future: at ~$46/wk it would take **~252 weeks (~4.8 years)** to
+pay off from waterfall remainder alone, before Priority 5 (car, ~$3,500 across the
+$500 remaining payment + $2k repairs + $1k taxes/tags/tires), 6 (side projects), or 7
+(savings) would see anything in a typical $500 week. Above-target weeks (income >
+$500) shrink that timeline; below-target weeks push it out further or eat into the
+floor itself, which the logic doesn't provide for (Option 3 as specified doesn't define
+what happens if income comes in under the ~$454 floor — flagging as a real gap, not
+guessing a fallback).
+
+**Not reconciled, flagged rather than resolved** (unchanged from earlier updates, still
+open):
+- Priority 7's "30% of income" framing (2026-07-22T18:15 update) doesn't fit this
+  waterfall mechanically — at $46/wk of waterfall room, 30% of $500 ($150/wk) is not
+  achievable without deprioritizing Priority 3 or shrinking the floor. If Lemar wants
+  savings to hit 30% specifically, that's a different allocation shape than what Option
+  3 as written produces — surfacing this tension rather than picking a fix.
+  **Old figure — see the 2026-07-24T16:xx Update below for the reconciliation.**
+- The three 2026-07-23 one-time items (tires $200, gym debt $75, water pump $184.79) and
+  the Priority 5 lump figures ($2k repairs / $1k taxes-tags-tires) still aren't reconciled
+  against each other — still unclear if the itemized costs are inside or additional to
+  the lump sums. Not assigned to a week in this example; would come out of the Priority 5
+  waterfall slice whenever it's funded.
+- Income is a target ($500/wk), not a confirmed historical average — actual weekly
+  waterfall room will vary with real DoorDash earnings.
+
+Reacted `white_check_mark` and replied "Done ✅" on the STUCK card (ts
+`1784902247.621169`). Outcome landed via samira-report-result; #reports line posted this
+scan.
+
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
 - slack: #personal-finance (C0BGLEMH99T), ts 1783784379.469619 (2026-07-11 11:39 ET reply)
@@ -287,15 +338,15 @@ watches the NEW card, not the original thread, for a resolution.
 - web: NJ Transit "Fares to/from Penn Station Newark" table (fetched via search, direct PDF pull blocked this session)
 - slack: #personal-finance (C0BGLEMH99T), ts 1784729112.183609 (2026-07-22 10:05 ET, DoorDash income shift + 7 priorities)
 - slack: #decisions (C0BBXA96FFV), ts 1784729543.875229 (allocation-strategy card), option
-  reply ts 1784729552.391779 (Option 1 — strict waterfall — picked, ✅ reaction)
+  reply ts 1784729552.391779 (Option 1 — strict waterfall — originally picked, later
+  superseded), ts 1784729556.074029 (Option 3 — hybrid floor + waterfall — final pick)
 - slack: #decisions (C0BBXA96FFV) thread, ts 1784745591.901859 ($500/wk DoorDash target)
   and ts 1784754837.053279 (2026-07-22 17:13 ET, dollar figures for priorities 1/3/5/6/7)
-- slack: #decisions (C0BBXA96FFV) thread, ts 1784729556.074029 (Option 3 — hybrid floor +
-  waterfall — the option actually carrying the ✅ reaction from U0BC5UTHYG4)
 - slack: #decisions (C0BBXA96FFV) thread, ts 1784747329.164429 and 1784758292.598939
   (prior flag replies noting the Option 1/Option 3 conflict, both unresolved)
 - slack: #personal-finance (C0BGLEMH99T), ts 1784896199.616809 (mom's expenses $200/mo,
   2026-07-24), ts 1784897964.479209 (Wispr Flow bill note), ts 1784898221.065089
   (Claude/Anthropic bill + card-decline flag)
-- slack: #decisions (C0BBXA96FFV), ts 1784902247.621169 (2026-07-24 PART A, NEW "STUCK —
-  needs Lemar" parent card, headline ⏳)
+- slack: #decisions (C0BBXA96FFV), ts 1784902247.621169 (2026-07-24 PART A, "STUCK —
+  needs Lemar" parent card, headline ⏳), reply ts 1784902704.065119 (Lemar: "Let's go
+  with option 3", final resolution)
