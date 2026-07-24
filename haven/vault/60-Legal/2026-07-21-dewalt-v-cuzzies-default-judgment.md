@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-07-23T19:20:00-04:00
+updated: 2026-07-24T09:10:00-04:00
 domain: legal
 type: task
 status: active
@@ -153,6 +153,24 @@ no-reply-shaped correspondence (a CSR auto-thread and a claims-support attachmen
 not something requiring a drafted email reply. Posted as an update in the existing
 #decisions thread (ts `1784657518.918529`) rather than a new card, per routing.
 
+## Update 2026-07-24T09:10:00-04:00 — Berkley Select adjuster scheduling; Lemar replied directly
+
+Tyler Denis, the handling adjuster at Berkley Select, emailed 2026-07-23 ~4:46pm ET
+(gmail thread `19f9053fb36e204f`, message `19f90bb3c0b28b37`) identifying himself as
+the adjuster on claim 57979 and asking for Lemar's availability to discuss the matter
+Monday 7/27. Lemar replied directly himself 2026-07-24 ~7:42am ET (message
+`19f93eef5b5c0498`, not drafted by Samira): confirmed Monday the 27th works, morning
+preferred, afternoon workable if needed.
+
+This resolves the "who's the handling adjuster and are they engaging" question
+implicit in the 7/23 claim-57979 update — Berkley Select now has an assigned adjuster
+actively moving, and a call is set for Monday. Nothing further needed from Samira on
+this specific exchange (Lemar handled it directly, same pattern as several Parke Bank
+rounds and the Curaleaf FINAL ATTEMPT reply). Not marking the overall DeWalt matter
+closed — the Sept 14 proof hearing and the Aug 5 opposing-counsel settlement/proceed
+deadline remain the open items. Gmail thread already carries `Samira/seen`; no
+draft/send action taken by Samira on this exchange.
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
 - gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
@@ -164,4 +182,5 @@ not something requiring a drafted email reply. Posted as an update in the existi
 - gmail: thread `19f8fd0b123baf45` (2026-07-23, Siciliano & Associates confirms
   representation, Lyann to schedule consult)
 - gmail: thread `19f9053fb36e204f` (2026-07-23 18:54 ET, Berkley Select Claims, claim
-  no. 57979, attachment not yet reviewed)
+  no. 57979, attachment not yet reviewed; 2026-07-24, adjuster Tyler Denis schedules
+  Monday 7/27 call, Lemar replied directly confirming)
