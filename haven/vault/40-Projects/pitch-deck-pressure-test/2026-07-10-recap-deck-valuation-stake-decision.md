@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T11:20:00-04:00
-updated: 2026-07-20T11:21:00-04:00
+updated: 2026-07-24T00:00:00-04:00
 domain: project
 type: decision
 status: done
@@ -74,6 +74,13 @@ figure could stay in the deck as-is. Lemar reacted ✅. No change to the decisio
 **$500,000 for a 50% ownership stake, implied post-money valuation $1,000,000** stands,
 already live in the deck's Q1 paste-in language pushed 2026-07-10.
 
+## Update — 2026-07-24 (PART G loop-back)
+
+The 2026-07-20 re-confirmation above closed out in #decisions but was never looped back
+into #pitch-deck-pressure-test itself (the channel's last message was still the 2026-07-12
+Q3 close). Posted the outcome to #pitch-deck-pressure-test this run so the project channel
+record matches #decisions/Haven. No new information — same $500K/50%/$1M figure, no change.
+
 ## Sources
 - Slack #pitch-deck-pressure-test (C0BCD7U5X2B), Recap Deck thread root ts
   1782303377.852979 · Q1 edit pushed ts 1783721384.863929 (2026-07-10 17:56 ET)
@@ -83,3 +90,6 @@ already live in the deck's Q1 paste-in language pushed 2026-07-10.
   ask ts 1783717751.820829 (17:09:11 ET) · Samira's confirmation reply ts
   1783721377.704019 (17:56:17 ET)
 - #atlas (C0BBWHCJUV9) capture ts 1783856784.097929 (2026-07-12 07:46:24 ET)
+- #decisions re-confirm thread ts 1784560860.609079, closed 1784567184.127769
+  (2026-07-20 17:06 ET) · PART G loop-back post: #pitch-deck-pressure-test, this run
+  (2026-07-24)
