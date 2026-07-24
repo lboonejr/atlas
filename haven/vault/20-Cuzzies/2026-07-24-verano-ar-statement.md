@@ -1,10 +1,10 @@
 ---
 created: 2026-07-24T12:16:00-04:00
-updated: 2026-07-24T12:16:00-04:00
+updated: 2026-07-24T16:40:00-04:00
 domain: cuzzies
-type: task
-status: active
-tags: [vendor, ar, verano]
+type: decision
+status: done
+tags: [vendor, ar, verano, gmail-draft]
 source: gmail
 ---
 
@@ -23,6 +23,20 @@ Lemar's call. Posted to #decisions with three draft options (process-forward
 acknowledgment / offer a call / ask for a short window), none naming a specific
 date or amount. No draft saved to Gmail Drafts yet — waiting on Lemar's pick.
 
+## Update 2026-07-24 (16:40 ET)
+
+Lemar reacted ✅ on **Option A — process-forward acknowledgment** in the #decisions
+thread (parent ts `1784909858.676599`, option ts `1784909862.459349`). Option A holds
+that Cuzzie's is still sorting out numbers internally and will follow up with real
+payment dates once available — no dollar figure or firm date invented.
+
+Saved as a Gmail Draft (**not sent**): draft id `r7481267607785565123`, threaded onto
+Gmail message `19f94d2f031b04d6`, to `Vladimir.Jovanovic@verano.com`, cc
+`ar@verano.com`, `admin@cuzziesnj.com`. Ready for Lemar to review/send from Gmail
+Drafts. Nothing sent externally by Samira.
+
 ## Sources
 - gmail: thread `19f94d2f031b04d6` ("Cuzzie's Dispensary || AR Statement || Verano",
   2026-07-24 15:51 UTC)
+- slack: #decisions thread ts `1784909858.676599` (channel `C0BBXA96FFV`)
+- gmail: draft `r7481267607785565123` (Option A, not sent)
