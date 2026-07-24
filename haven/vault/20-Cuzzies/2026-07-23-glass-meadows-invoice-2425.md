@@ -1,6 +1,6 @@
 ---
 created: 2026-07-23T10:14:00-04:00
-updated: 2026-07-24T09:10:00-04:00
+updated: 2026-07-24T12:16:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -39,7 +39,17 @@ QuickBooks/Intuit automated statement notice (no-reply, 7/24 ~9:02am ET, gmail t
 no-reply sender). Log-only update — no new #decisions card (would duplicate the
 existing open task from 7/23), no draft. Labeled `Samira/seen` in Gmail.
 
+## Update 2026-07-24T12:16:00-04:00 — third same-day auto-notice, still no new information
+
+A second automated Intuit notice landed the same day (7/24 ~10:20am ET, gmail thread
+`19f947ff50d6ad8a`, subject "Invoice 2425 needs your attention"): same invoice 2425,
+same balance due **$4,617.92**, same automated no-reply sender. No new amount, terms,
+or due date beyond what's already logged above. Log-only — no new #decisions card, no
+draft. Labeled `Samira/seen` in Gmail.
+
 ## Sources
 - gmail: thread `19f8f1cbd7424cb2` (Invoice 2425 notice, 2026-07-23 13:14 UTC)
 - gmail: thread `19f9438ca95d6107` (Statement #6166 reminder, same invoice 2425,
   2026-07-24 09:02 ET)
+- gmail: thread `19f947ff50d6ad8a` (third auto-notice, same invoice 2425,
+  2026-07-24 ~10:20am ET)
