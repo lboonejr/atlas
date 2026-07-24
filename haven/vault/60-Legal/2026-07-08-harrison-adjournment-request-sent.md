@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-23T19:20:00-04:00
+updated: 2026-07-24T12:30-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -330,6 +330,25 @@ Raised as a NEW #decisions parent (the prior card on this matter was already clo
 🫡) since this is fresh, urgent, judgment-only information. Nothing sent, filed, or
 executed by Samira here — tracking and flagging only.
 
+## Update 2026-07-24 (12:30 ET) — #decisions card (adjournment-denied notice) closed via Lemar's 🫡; trial still 6 days out, unresolved
+
+The #decisions card raised in the update above (parent ts `1784834546.675549`,
+"Harrison Acquisitions eviction (CAM-LT-004393-26) — adjournment request DENIED —
+trial is 7 days out (July 30), needs your judgment") was reacted 🫡 by Lemar. Per the
+reaction engine this closes the Slack notification thread only — the card had no
+options to pick between (judgment-only, no reply Samira could draft against a
+no-reply court notice), so nothing was sent, filed, or executed here. Labeled both
+underlying Gmail threads (`19f9065b25f0c297`, `19f9065b4e1b459e`) `Samira/sent` per
+the 🫡-close convention for this loop — this records that Lemar closed the
+notification, it does **not** assert anything was sent or that the matter is
+resolved.
+
+**The underlying matter is not resolved and remains urgent**: the adjournment is
+denied, trial is now 6 days out (July 30), and no path (retained counsel appearing,
+pro se attempt, or another approach) has been chosen yet. Status stays
+**awaiting-decision** — worth Lemar's attention again before July 30 regardless of
+this Slack card being closed.
+
 ## Sources
 - gmail: thread 19f8fe851917899a (NJ eCourts CORRESPONDENCE notification, Dylan Mruczinski filing, 2026-07-23 16:56 UTC)
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
@@ -344,5 +363,6 @@ executed by Samira here — tracking and flagging only.
 - gmail: thread 19f8b9dd1d51279d (NJ eCourts Filing Notification — adjournment request filed, 2026-07-22 20:56:42 UTC)
 - gmail: thread 19f8b9dce3a0a65f (NJ Courts eFiling Confirmation EF-4344278, 2026-07-22 20:56:41 UTC)
 - slack: #decisions, thread ts 1784826909.532689, closed via 🫡 (2026-07-23, PART A sweep)
-- gmail: thread 19f9065b25f0c297 (NJ Courts eFiling Clerk Notice EF-4344278 — adjournment denied, 2026-07-23 19:13:31 UTC)
-- gmail: thread 19f9065b4e1b459e (NJ eCourts Filing Notification duplicate, 2026-07-23 19:13:31 UTC)
+- gmail: thread 19f9065b25f0c297 (NJ Courts eFiling Clerk Notice EF-4344278 — adjournment denied, 2026-07-23 19:13:31 UTC; labeled Samira/sent 2026-07-24 PART D close)
+- gmail: thread 19f9065b4e1b459e (NJ eCourts Filing Notification duplicate, 2026-07-23 19:13:31 UTC; labeled Samira/sent 2026-07-24 PART D close)
+- slack: #decisions, thread ts 1784834546.675549, closed via 🫡 (2026-07-24, PART D email loop)
