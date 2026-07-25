@@ -1,12 +1,13 @@
 ---
 created: 2026-07-25T12:04-04:00
-updated: 2026-07-25T14:00-04:00
+updated: 2026-07-25T13:12-04:00
 domain: personal
 type: task
 status: active
 tags: [court, shopping, reminder]
 source: slack
 due: 2026-07-29T09:00-04:00
+calendar_event_id: iscpo0chj75hg0dbtd4cokp9as
 ---
 
 # Buy clothes for court — reminder for Wednesday
