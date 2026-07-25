@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-25T08:10:00-04:00
+updated: 2026-07-25T11:15:00-04:00
 domain: personal
 type: task
 status: active
@@ -429,6 +429,20 @@ paid once this actually lands, pending Lemar confirming the payments went throug
 Acknowledged in #personal-finance; no #decisions card needed for items 2-4 (data drops,
 no either/or choice).
 
+## Update 2026-07-25T11:15:00-04:00 — Patreon billing day confirmed (10th), calendar reminder created
+
+Lemar confirmed in #personal-finance (ts `1784985260.923479`, 2026-07-25) that Patreon
+bills on the **10th of each month** ($25/mo, already logged as a monthly bill above).
+This closes one of the four billing-day gaps raised in the 2026-07-25T08:10 update's
+#decisions card (ts `1784981452.641889`) — Tidal, mom's $200/mo, and student loans still
+open there.
+
+Created a recurring monthly all-day event on the personal reminder calendar (no
+external guests) — event `ou01edab6e97348clv6uo0ru20`, "Patreon $25/mo", 10th of the
+month (RRULE FREQ=MONTHLY;BYMONTHDAY=10), starting 2026-08-10.
+
+Executed via a `run:admin-3x` prompt staged in #admin (source ts `1784989032.447079`).
+
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
 - slack: #personal-finance (C0BGLEMH99T), ts 1783784379.469619 (2026-07-11 11:39 ET reply)
@@ -456,3 +470,5 @@ no either/or choice).
 - slack: #decisions (C0BBXA96FFV), ts 1784905477.540149, and #personal-finance
   (C0BGLEMH99T), ts 1784910062.943339 (account-routing question, SoFi/Cash App/
   "door-crimson")
+- slack: #admin (C0BBLUA7JLX), ts 1784989032.447079 (2026-07-25, run:admin-3x prompt
+  confirming Patreon billing day)
