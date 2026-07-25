@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-25T11:15:00-04:00
+updated: 2026-07-25T12:04:00-04:00
 domain: personal
 type: task
 status: active
@@ -443,6 +443,21 @@ month (RRULE FREQ=MONTHLY;BYMONTHDAY=10), starting 2026-08-10.
 
 Executed via a `run:admin-3x` prompt staged in #admin (source ts `1784989032.447079`).
 
+## Update 2026-07-25T12:04:00-04:00 — T-Mobile split-payment reminder created
+
+Lemar posted in #personal-finance (ts `1784994250.731869`, ~11:44 ET): the next
+T-Mobile bill is splitting into two payments, first payment **August 3rd, $265** —
+asked to make sure it's on the calendar.
+
+Created a one-time popup reminder event on the personal reminder calendar (no external
+guests) — event `pg0a92rgg01l09mg3tatcfb3mk`, "T-Mobile bill payment 1 of 2 — $265",
+2026-08-03 9:00 AM ET. The second payment's amount and date were not given — not
+guessing a figure; flagging for Lemar to supply once he has it so a second reminder can
+be created.
+
+No #decisions card raised (data drop, no either/or choice). Acknowledged in
+#personal-finance.
+
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
 - slack: #personal-finance (C0BGLEMH99T), ts 1783784379.469619 (2026-07-11 11:39 ET reply)
@@ -472,3 +487,5 @@ Executed via a `run:admin-3x` prompt staged in #admin (source ts `1784989032.447
   "door-crimson")
 - slack: #admin (C0BBLUA7JLX), ts 1784989032.447079 (2026-07-25, run:admin-3x prompt
   confirming Patreon billing day)
+- slack: #personal-finance (C0BGLEMH99T), ts 1784994250.731869 (2026-07-25 11:44 ET,
+  T-Mobile split-payment note)
