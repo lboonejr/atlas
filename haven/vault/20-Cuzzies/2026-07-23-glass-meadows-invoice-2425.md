@@ -1,6 +1,6 @@
 ---
 created: 2026-07-23T10:14:00-04:00
-updated: 2026-07-24T12:16:00-04:00
+updated: 2026-07-25T14:20:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -47,9 +47,22 @@ same balance due **$4,617.92**, same automated no-reply sender. No new amount, t
 or due date beyond what's already logged above. Log-only — no new #decisions card, no
 draft. Labeled `Samira/seen` in Gmail.
 
+## Update 2026-07-25 — fourth auto-notice, still $4,617.92, still unpaid
+
+Another automated Intuit no-reply notice landed today (7/25 ~9:12am ET, gmail thread
+`19f9967856d213e2`, subject "Invoice 2425 needs your attention"): same invoice 2425,
+same balance due **$4,617.92**, same automated no-reply sender, no new amount/terms.
+Now the fourth repeat of the same unpaid invoice across three calendar days (7/23,
+7/24 x2, 7/25). Log-only — no new #decisions card (would duplicate the existing open
+7/23 task), no draft, no payment or authorization action taken by Samira. Labeled
+`Samira/seen` in Gmail. Flagging for Lemar/admin: this is aging further with each
+repeat and still has unconfirmed due-date/terms per the 7/23 update above.
+
 ## Sources
 - gmail: thread `19f8f1cbd7424cb2` (Invoice 2425 notice, 2026-07-23 13:14 UTC)
 - gmail: thread `19f9438ca95d6107` (Statement #6166 reminder, same invoice 2425,
   2026-07-24 09:02 ET)
 - gmail: thread `19f947ff50d6ad8a` (third auto-notice, same invoice 2425,
   2026-07-24 ~10:20am ET)
+- gmail: thread `19f9967856d213e2` (fourth auto-notice, same invoice 2425,
+  2026-07-25 ~9:12am ET)
