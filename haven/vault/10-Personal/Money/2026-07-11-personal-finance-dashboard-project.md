@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-24T16:10:00-04:00
+updated: 2026-07-25T08:10:00-04:00
 domain: personal
 type: task
 status: active
@@ -396,6 +396,38 @@ touched.
 Both items acknowledged/answered directly in #personal-finance (and pointed to from the
 #decisions thread) this scan; no #decisions card raised for either (reassessment
 instruction + an advisory question, not an either/or pick).
+
+## Update 2026-07-25T08:10:00-04:00 — recurring bills → Google Calendar; card name confirmed; $1,000 allocated
+
+**1. Calendar-tracking request** (capture DM, ts `1784948686.045009`, unreacted): Lemar
+asked that recurring bills / anything with a due date in #personal-finance also land on
+his Google Calendar for tracking. Created recurring monthly events on the personal
+reminder calendar (no external guests) for the two bills with a known billing day:
+- Claude (Anthropic) $100/mo, 4th of the month — event `7djf895pc8is0illrr8bcrra20`.
+- Wispr Flow $15/mo, 10th of the month — event `e7d9muku31setk1b10le3bf3ak`.
+
+Posted a #decisions card (ts `1784981452.641889`) asking for the billing day for the
+remaining bills below rather than guessing one — Tidal, Patreon, mom's $200/mo, and
+student loans don't have a specific day on file.
+
+**2. Two new recurring bills** (#personal-finance, ts `1784949585.189359`): Tidal
+$14.92/mo and Patreon $25/mo, added to the monthly bills list. No billing day given yet
+— see the #decisions card above.
+
+**3. "door-crimson" resolved** (#personal-finance, ts `1784923927.319259`): Lemar
+confirmed the card name is **"DoorDash Crimson"** — not a separate bank, a DoorDash
+card product. Updates the open question from the 2026-07-24T16:10 update above.
+
+**4. $1,000 received and allocated** (#personal-finance, ts `1784979711.226819`):
+Lemar reported receiving $1,000 and allocating it directly: $50 to his mom, $500 toward
+the remaining car payment (Priority 5), $200 toward tires (Priority 5). Recording as
+given — informational, not a decision point. This is outside-the-waterfall income (not
+DoorDash), so it doesn't change the ~$46/wk waterfall-room math above; it does mean the
+$500 remaining car payment and part of the tires line (2026-07-23 update, $200) are now
+paid once this actually lands, pending Lemar confirming the payments went through.
+
+Acknowledged in #personal-finance; no #decisions card needed for items 2-4 (data drops,
+no either/or choice).
 
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
