@@ -1,6 +1,6 @@
 ---
 created: 2026-07-15T18:15-04:00
-updated: 2026-07-23T09:12-04:00
+updated: 2026-07-25T09:14-04:00
 domain: project
 type: note
 status: active
@@ -112,6 +112,25 @@ planning-stage project. Next step (not started this pass): turn the locked scope
 dogfood plan into a build-sequencing outline, Lemar's own project, no #decisions lift
 needed.
 
+## Update 2026-07-25 — build-sequencing outline posted (PART G, worked in-channel)
+
+Lemar pinged directly in #booking-agent ("can we proceed with the next step?", ts
+`1784980354.978559`) — this is the "build-sequencing outline" step flagged open on
+07-23. Posted a six-phase sequencing outline in-channel (ts `1784981661.406349`), still
+his own project so no #decisions lift:
+
+1. Foundations — account model, client/appointment schemas, Google OAuth wiring
+2. Calendar sync core — two-way Google Calendar sync, timezone + conflict handling
+3. Reminders — configurable-window client reminders with confirm/reschedule/cancel link
+4. Payments — deposit/no-show fee processor integration (fastest/cheapest, e.g. Stripe)
+5. Client history — notes, past services, preferences
+6. Dogfood pilot — live test with the tattoo-artist friend (tech-averse = the real
+   usability bar); ready-to-expand marker is a full month of real bookings without
+   hand-holding
+
+Nothing built or accounts opened — sequencing plan only. Next actual step (Phase 1
+build) is Lemar's call to kick off.
+
 ## Sources
 - slack: #atlas 2026-07-15 18:15:39 ET, message ts 1784153739.693329 (channel C0BBWHCJUV9)
 - slack: #decisions 2026-07-16 08:12:06 ET, probe card ts 1784203926.276169 (channel C0BBXA96FFV)
@@ -119,3 +138,4 @@ needed.
 - slack: #decisions 2026-07-16 08:26:44 ET, Lemar's free-form reply ts 1784204804.434019 ("let's just make sure we put it in a new channel")
 - slack: #booking-agent 2026-07-16 14:00:29 ET, scope-answers message ts 1784224829.576589 (channel C0BHXTPST52)
 - slack: #booking-agent 2026-07-22 ~19:14 ET, brief-question answers ts 1784574891.283109 (channel C0BHXTPST52, thread 1784383950.961519)
+- slack: #booking-agent 2026-07-25, "can we proceed with the next step?" ts 1784980354.978559; build-sequencing outline posted ts 1784981661.406349 (channel C0BHXTPST52)
