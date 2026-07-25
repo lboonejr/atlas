@@ -1,1 +1,60 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDctMjRUMTk6MjMtMDQ6MDAKdXBkYXRlZDogMjAyNi0wNy0yNVQxMjowMC0wNDowMApkb21haW46IGN1enppZXMKdHlwZTogdGFzawpzdGF0dXM6IGF3YWl0aW5nLWRlY2lzaW9uCnRhZ3M6IFtpcnMsIHRheGVzLCBvdXRyZWFjaF0Kc291cmNlOiBzbGFjawotLS0KCiMgUmVhY2ggb3V0IHRvIElSUyBhYm91dCBTdGF0ZSBhbmQgRmVkZXJhbCB0YXhlcwoKTGVtYXIgZHJvcHBlZCB0aGlzIHJhdyBjYXB0dXJlIGluIHRoZSBTYW1pcmEgY2FwdHVyZSBETToKCj4gIlJlYWNoIG91dCB0byB0aGUgSVJTIGFib3V0IHRoZSBTdGF0ZSBhbmQgRmVkZXJhbCB0YXhlcyIKCk5vIGZ1cnRoZXIgZGV0YWlsIHdhcyBnaXZlbiDigJQgdGhlIGNhcHR1cmUgZG9lc24ndCBzYXkgd2hpY2ggdGF4ZXMgKHBlcnNvbmFsLCBDdXp6aWUncywKb3IgVGhlIFN0YXRpb24pLCB3aGF0IHRoZSB1bmRlcmx5aW5nIGlzc3VlIGlzIChhIG5vdGljZSByZWNlaXZlZCwgYSBmaWxpbmcgZGVhZGxpbmUsIGEKcGF5bWVudCBwbGFuLCBiYWNrIHRheGVzIG93ZWQpLCBvciB3aGF0ICJyZWFjaCBvdXQiIHNob3VsZCBtZWFuIGluIHByYWN0aWNlIChhIHBob25lCmNhbGwgc2NyaXB0IGZvciBMZW1hciB0byBwbGFjZSBoaW1zZWxmLCBhIGRyYWZ0ZWQgbGV0dGVyLCBvciBsb29waW5nIGluIGFuIGFjY291bnRhbnQvCkdyZWVuYm9va3MpLiBUaGUgSVJTIGFuZCBhbnkgc3RhdGUgdGF4IGF1dGhvcml0eSBhcmUgb3V0c2lkZSBjb250YWN0cyDigJQgU2FtaXJhIGRvZXMgbm90CnBsYWNlIG91dHJlYWNoIG9yIGRyYWZ0IGNvcnJlc3BvbmRlbmNlIHRvIGEgdGF4aW5nIGF1dGhvcml0eSB3aXRob3V0IGtub3dpbmcgdGhlIGFjdHVhbAptYXR0ZXIsIGFuZCBuZXZlciBzZW5kcyBhbnl0aGluZyB3aXRob3V0IExlbWFyJ3MgYXBwcm92YWwgcmVnYXJkbGVzcy4KClRoaXMgbm90ZSBpcyBzdGFnZWQgYGF3YWl0aW5nLWRlY2lzaW9uYCBwZW5kaW5nIGEgcHJvYmUgcG9zdGVkIHRvICNkZWNpc2lvbnMgYXNraW5nCkxlbWFyIGZvciB0aGUgbWlzc2luZyBzcGVjaWZpY3MgKGVudGl0eSwgdGhlIGFjdHVhbCBpc3N1ZS9ub3RpY2UsIGFuZCB3aGF0IGhlIHdhbnRzIGRvbmUKYWJvdXQgaXQpLiBPbmNlIGhlIGFuc3dlcnMsIHRoaXMgbm90ZSB1cGRhdGVzIHdpdGggdGhlIHJlYWwgbWF0dGVyIGFuZCBlaXRoZXIgZG9tYWluCnJlc29sdmVzIChwZXJzb25hbC9jdXp6aWVzL3N0YXRpb24pIG9yIHRoZSBub3RlIG1vdmVzIHVuZGVyIGA0MC1Qcm9qZWN0c2AgL2A2MC1MZWdhbGAgYXMKYXBwcm9wcmlhdGUuCgojIyBVcGRhdGUg4oCUIDIwMjYtMDctMjUgMDg6MzUgRVQKTGVtYXIgYW5zd2VyZWQgdGhlIHByb2JlIGluICNkZWNpc2lvbnMgKHRzIGAxNzg0OTQyNzE0LjE1MDkyOWApOiAiQmFzaWNhbGx5IEkKd2FudCB0byBzZWUgd2hhdCBvdXIgbGlhYmlsaXRpZXMgYXJlIHNvIHRoYXQgd2UgY2FuIGJlIHRyYW5zcGFyZW50IHdpdGgKYW55b25lIHdlJ3JlIHNlbGxpbmcgdG8uIFdlIGFsc28gd2FudCB0byBzdGFydCB1cCBhIDUgeWVhciBwYXltZW50IHBsYW4uIgoKVGhpcyByZXNvbHZlcyB0aGUgIndoYXQiIGFuZCAid2h5IjogKDEpIGdldCBhIGZ1bGwgYWNjb3VudGluZyBvZiBvdXRzdGFuZGluZwpJUlMvc3RhdGUgdGF4IGxpYWJpbGl0aWVzIHNvIHRoZXkgY2FuIGJlIGRpc2Nsb3NlZCBhY2N1cmF0ZWx5IHRvIGEKcHJvc3BlY3RpdmUgYnV5ZXIgb2YgdGhlIGJ1c2luZXNzLCBhbmQgKDIpIGluaXRpYXRlIGFuIElSUyBpbnN0YWxsbWVudAphZ3JlZW1lbnQgKDUteWVhciBwYXltZW50IHBsYW4pIGZvciB3aGF0ZXZlciBpcyBvd2VkLiAiT3VyIGxpYWJpbGl0aWVzIiBhbmQKInNlbGxpbmcgdG8iIGJvdGggcG9pbnQgYXQgdGhlIGJ1c2luZXNzIChDdXp6aWUncyksIG5vdCBhIHBlcnNvbmFsIHRheAptYXR0ZXIg4oCUIGJ1dCBMZW1hciBoYXNuJ3Qgc2FpZCB0aGF0IGluIHNvIG1hbnkgd29yZHMsIHNvIGBkb21haW5gIHN0YXlzClVOUkVTT0xWRUQgcmF0aGVyIHRoYW4gZ3Vlc3NlZC4gU3RpbGwgb3V0c3RhbmRpbmcgYmVmb3JlIGFueSBvdXRzaWRlCm91dHJlYWNoOiBjb25maXJtIHRoZSBlbnRpdHkgKEN1enppZSdzIHZzLiBwZXJzb25hbCB2cy4gYm90aCksIGFuZCB3aGV0aGVyCmhlIHdhbnRzIFNhbWlyYSB0byBkcmFmdCBhIGNhbGwgc2NyaXB0L2xldHRlciBvciBsb29wIGluIEdyZWVuQm9va3MgKHRoZQpDUEEpIGZpcnN0IHRvIHB1bGwgdGhlIGFjdHVhbCBsaWFiaWxpdHkgZmlndXJlcyBiZWZvcmUgYW55dGhpbmcgZ29lcyB0byB0aGUKSVJTLiBObyBjb250YWN0IHdpdGggdGhlIElSUyBvciBhbnkgc3RhdGUgYWdlbmN5IGhhcyBiZWVuIG1hZGUuCgojIyBVcGRhdGUg4oCUIDIwMjYtMDctMjUgKFNhbWlyYSBob3VybHkgc2NhbikKTGVtYXIgcmVwbGllZCBvbiB0aGUgcmVmcmVzaGVkIEhhdmVuIEluYm94IGNhcmQgaW4gI2RlY2lzaW9ucyAodHMKYDE3ODQ5ODQ5NDMuMjQ0NTg5YCwgcmVwbHlpbmcgdG8gcGFyZW50IGAxNzg0OTg0ODk3LjE4MzU2OWApOiAiVGhpcyBpcyBmb3IKQ3V6emllJ3MiIOKAlCBkaXJlY3RseSBhbnN3ZXJpbmcgdGhlIG91dHN0YW5kaW5nICJjb25maXJtIHRoZSBlbnRpdHkiIHF1ZXN0aW9uCmFib3ZlLiBgZG9tYWluYCBzZXQgdG8gYGN1enppZXNgIGFuZCBmaWxlZCBvdXQgb2YgdGhlIEluYm94LiBTdGlsbCBvcGVuOgp3aGV0aGVyIExlbWFyIHdhbnRzIGEgY2FsbCBzY3JpcHQvbGV0dGVyIGRyYWZ0ZWQgb3IgR3JlZW5Cb29rcyBsb29wZWQgaW4KZmlyc3QgdG8gcHVsbCB0aGUgYWN0dWFsIGxpYWJpbGl0eSBmaWd1cmVzIOKAlCByZW1haW5zIGBhd2FpdGluZy1kZWNpc2lvbmAuCk5vIGNvbnRhY3Qgd2l0aCB0aGUgSVJTIG9yIGFueSBzdGF0ZSBhZ2VuY3kgaGFzIGJlZW4gbWFkZS4KCiMjIFNvdXJjZXMKLSBzbGFjazogU2FtaXJhIGNhcHR1cmUgRE0gKGBEMEJIUEtNRE5FUGApLCAyMDI2LTA3LTI0IH4xOToyMyBFVAotIHNsYWNrOiAjZGVjaXNpb25zIGBDMEJCWEE5NkZGVmAgdHMgYDE3ODQ5NDI3MTQuMTUwOTI5YCAoTGVtYXIncyBhbnN3ZXIpCi0gc2xhY2s6ICNkZWNpc2lvbnMgYEMwQkJYQTk2RkZWYCB0cyBgMTc4NDk4NDk0My4yNDQ1ODlgIChMZW1hcidzIGVudGl0eSBjb25maXJtYXRpb24pCg==
+---
+created: 2026-07-24T19:23-04:00
+updated: 2026-07-25T12:00-04:00
+domain: cuzzies
+type: task
+status: awaiting-decision
+tags: [irs, taxes, outreach]
+source: slack
+---
+
+# Reach out to IRS about State and Federal taxes
+
+Lemar dropped this raw capture in the Samira capture DM:
+
+> "Reach out to IRS about the State and Federal taxes"
+
+No further detail was given — the capture doesn't say which taxes (personal, Cuzzie's,
+or The Station), what the underlying issue is (a notice received, a filing deadline, a
+payment plan, back taxes owed), or what "reach out" should mean in practice (a phone
+call script for Lemar to place himself, a drafted letter, or looping in an accountant/
+Greenbooks). The IRS and any state tax authority are outside contacts — Samira does not
+place outreach or draft correspondence to a taxing authority without knowing the actual
+matter, and never sends anything without Lemar's approval regardless.
+
+This note is staged `awaiting-decision` pending a probe posted to #decisions asking
+Lemar for the missing specifics (entity, the actual issue/notice, and what he wants done
+about it). Once he answers, this note updates with the real matter and either domain
+resolves (personal/cuzzies/station) or the note moves under `40-Projects` /`60-Legal` as
+appropriate.
+
+## Update — 2026-07-25 08:35 ET
+Lemar answered the probe in #decisions (ts `1784942714.150929`): "Basically I
+want to see what our liabilities are so that we can be transparent with
+anyone we're selling to. We also want to start up a 5 year payment plan."
+
+This resolves the "what" and "why": (1) get a full accounting of outstanding
+IRS/state tax liabilities so they can be disclosed accurately to a
+prospective buyer of the business, and (2) initiate an IRS installment
+agreement (5-year payment plan) for whatever is owed. "Our liabilities" and
+"selling to" both point at the business (Cuzzie's), not a personal tax
+matter — but Lemar hasn't said that in so many words, so `domain` stays
+UNRESOLVED rather than guessed. Still outstanding before any outside
+outreach: confirm the entity (Cuzzie's vs. personal vs. both), and whether
+he wants Samira to draft a call script/letter or loop in GreenBooks (the
+CPA) first to pull the actual liability figures before anything goes to the
+IRS. No contact with the IRS or any state agency has been made.
+
+## Update — 2026-07-25 (Samira hourly scan)
+Lemar replied on the refreshed Haven Inbox card in #decisions (ts
+`1784984943.244589`, replying to parent `1784984897.183569`): "This is for
+Cuzzie's" — directly answering the outstanding "confirm the entity" question
+above. `domain` set to `cuzzies` and filed out of the Inbox. Still open:
+whether Lemar wants a call script/letter drafted or GreenBooks looped in
+first to pull the actual liability figures — remains `awaiting-decision`.
+No contact with the IRS or any state agency has been made.
+
+## Sources
+- slack: Samira capture DM (`D0BHPKMDNEP`), 2026-07-24 ~19:23 ET
+- slack: #decisions `C0BBXA96FFV` ts `1784942714.150929` (Lemar's answer)
+- slack: #decisions `C0BBXA96FFV` ts `1784984943.244589` (Lemar's entity confirmation)
