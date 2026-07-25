@@ -1,1 +1,21 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDctMDZUMTc6MTAtMDQ6MDAKdXBkYXRlZDogMjAyNi0wNy0wNlQxNzoxMC0wNDowMApkb21haW46IGN1enppZXMKdHlwZTogbG9nCnN0YXR1czogZG9uZQp0YWdzOiBbbmVlZGhhbS1iYW5rLCBzYmEtbG9hbiwgY3V6emllcywgYmFua2luZ10Kc291cmNlOiBzbGFjawotLS0KCiMgTmVlZGhhbSBCYW5rIOKAlCBTQkEvbG9hbiBhcHBsaWNhdGlvbiBkb2N1bWVudHMgY29tcGxldGVkCgpBbXkgR2lib25zIChWUCBTQkMgUG9ydGZvbGlvIE1hbmFnZXIsIE5lZWRoYW0gQmFuaykgZW1haWxlZCAyMDI2LTA2LTMwIGZsYWdnaW5nIDMgb3V0c3RhbmRpbmcgaXRlbXMgb24gQ3V6emllJ3MgU0JBL2xvYW4gYXBwbGljYXRpb246CjEuIFVuZXhwaXJlZCBwaG90byBJRCAoTGVtYXIncykKMi4gT3BlcmF0aW5nIEFncmVlbWVudCDigJQgbmVlZGVkIHRvIGJlIHNpZ25lZAozLiBGaW5hbCBsaWNlbnNlIOKAlCBleHBpcmVkLCBuZWVkZWQgYW4gdXBkYXRlZCBjb3B5CgpUaGVzZSB3ZXJlIHBlcnNvbmFsL1BJSSBpdGVtcyBTYW1pcmEgY291bGQgbm90IGhhbmRsZSBvbiBMZW1hcidzIGJlaGFsZiAocGhvdG8gSUQgYW5kIHNpZ25hdHVyZSByZXF1aXJlIGhpcyBvd24gaGFuZCkuIExlbWFyIHJlYWN0ZWQg4pyFIG9uIHRoZSAjZGVjaXNpb25zIGNhcmQgd2l0aCBubyBmb2xsb3ctdXAgdGV4dCwgY29uZmlybWluZyBoZSBzZW50L3VwbG9hZGVkIGFsbCB0aHJlZSBpdGVtcyAoc2lnbmVkIE9wZXJhdGluZyBBZ3JlZW1lbnQsIGN1cnJlbnQgcGhvdG8gSUQsIHVwZGF0ZWQgbGljZW5zZSBjb3B5KSB0byBBbXkgR2lib25zIG9yIHZpYSB0aGUgYXBwbGljYXRpb24gcG9ydGFsIGRpcmVjdGx5LiBObyBmdXJ0aGVyIFNhbWlyYSBhY3Rpb24gcmVxdWlyZWQuCgojIyBTb3VyY2VzCi0gc2xhY2s6IGh0dHBzOi8vbmV3d29ya3NwYWNlLXpsYjYzMTMuc2xhY2suY29tL2FyY2hpdmVzL0MwQkJYQTk2RkZWL3AxNzgyODUzNjE2NjAzMzc5Cg==
+---
+created: 2026-07-06T17:10-04:00
+updated: 2026-07-06T17:10-04:00
+domain: cuzzies
+type: log
+status: done
+tags: [needham-bank, sba-loan, cuzzies, banking]
+source: slack
+---
+
+# Needham Bank — SBA/loan application documents completed
+
+Amy Gibons (VP SBC Portfolio Manager, Needham Bank) emailed 2026-06-30 flagging 3 outstanding items on Cuzzie's SBA/loan application:
+1. Unexpired photo ID (Lemar's)
+2. Operating Agreement — needed to be signed
+3. Final license — expired, needed an updated copy
+
+These were personal/PII items Samira could not handle on Lemar's behalf (photo ID and signature require his own hand). Lemar reacted ✅ on the #decisions card with no follow-up text, confirming he sent/uploaded all three items (signed Operating Agreement, current photo ID, updated license copy) to Amy Gibons or via the application portal directly. No further Samira action required.
+
+## Sources
+- slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1782853616603379

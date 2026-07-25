@@ -1,1 +1,18 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDctMDZUMTc6MjAtMDQ6MDAKdXBkYXRlZDogMjAyNi0wNy0wNlQxNzoyMC0wNDowMApkb21haW46IGN1enppZXMKdHlwZTogbG9nCnN0YXR1czogZG9uZQp0YWdzOiBbcGFya2UtYmFuaywgbnNmLCBlbGV2YXRlLWZ1bmRpbmcsIGN1enppZXMsIGJhbmtpbmddCnNvdXJjZTogc2xhY2sKLS0tCgojIFBhcmtlIEJhbmsgTlNGIChFbGV2YXRlIEZ1bmRpbmcgJDU5Mi4xNSkg4oCUIExlbWFyIHRvIGhhbmRsZSBkaXJlY3RseQoKQ2hyaXN0b3BoZXIgQ2FiZXphcyAoQVZQIEJyYW5jaCBNYW5hZ2VyLCBQYXJrZSBCYW5rKSBlbWFpbGVkIDIwMjYtMDctMDEgZmxhZ2dpbmcgYSBuZXcgTlNGOiAkNTkyLjE1IGV4dGVybmFsIHdpdGhkcmF3YWwgdG8gRWxldmF0ZSBGdW5kaW5nIHJldHVybmVkIGZvciBpbnN1ZmZpY2llbnQgZnVuZHMsIGFjY291bnQgb3ZlcmRyYXduICQxLDI0My4xMyBhZnRlciBtb250aC1lbmQgZmVlcy9wcmlvciBvdmVyZHJhZnRzIChjb21wbGlhbmNlIGZlZSBhbHJlYWR5IHdhaXZlZCBnaXZlbiBub24tb3BlcmF0aW9uYWwgc3RhdHVzKS4gQ2FyZCBhc2tlZCB3aGV0aGVyIExlbWFyIHdvdWxkIGNhbGwvcmVwbHkgZGlyZWN0bHkgb3IgcGFyay4KCkxlbWFyIHJlYWN0ZWQgOndoaXRlX2NoZWNrX21hcms6IG9uIHRoZSAjZGVjaXNpb25zIGNhcmQsIGNob29zaW5nIHRvIGNhbGwvcmVwbHkgdG8gQ2hyaXN0b3BoZXIgZGlyZWN0bHkgKCg4NTYpIDU4Mi02OTAwIHgxNDIgLyBjY2FiZXphc0BwYXJrZWJhbmsuY29tKSByYXRoZXIgdGhhbiBwYXJraW5nIGl0LiBUaGlzIGlzIGEgcGVyc29uYWwgcGhvbmUgY2FsbCBTYW1pcmEgY2Fubm90IHBsYWNlIG9uIGhpcyBiZWhhbGYuIE5vIGZ1cnRoZXIgUGFya2UgQmFuayBOU0YgZXNjYWxhdGlvbiBoYXMgc3VyZmFjZWQgaW4gI2RlY2lzaW9ucyBzaW5jZSAoNSsgZGF5cyksIGNvbnNpc3RlbnQgd2l0aCBpdCBoYXZpbmcgYmVlbiBoYW5kbGVkIGRpcmVjdGx5LgoKIyMgU291cmNlcwotIHNsYWNrOiBodHRwczovL25ld3dvcmtzcGFjZS16bGI2MzEzLnNsYWNrLmNvbS9hcmNoaXZlcy9DMEJCWEE5NkZGVi9wMTc4MjkxMTI2OTYyNTM1OQo=
+---
+created: 2026-07-06T17:20-04:00
+updated: 2026-07-06T17:20-04:00
+domain: cuzzies
+type: log
+status: done
+tags: [parke-bank, nsf, elevate-funding, cuzzies, banking]
+source: slack
+---
+
+# Parke Bank NSF (Elevate Funding $592.15) — Lemar to handle directly
+
+Christopher Cabezas (AVP Branch Manager, Parke Bank) emailed 2026-07-01 flagging a new NSF: $592.15 external withdrawal to Elevate Funding returned for insufficient funds, account overdrawn $1,243.13 after month-end fees/prior overdrafts (compliance fee already waived given non-operational status). Card asked whether Lemar would call/reply directly or park.
+
+Lemar reacted :white_check_mark: on the #decisions card, choosing to call/reply to Christopher directly ((856) 582-6900 x142 / ccabezas@parkebank.com) rather than parking it. This is a personal phone call Samira cannot place on his behalf. No further Parke Bank NSF escalation has surfaced in #decisions since (5+ days), consistent with it having been handled directly.
+
+## Sources
+- slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1782911269625359
