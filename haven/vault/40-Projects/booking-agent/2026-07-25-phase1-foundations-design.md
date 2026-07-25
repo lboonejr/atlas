@@ -1,6 +1,6 @@
 ---
 created: 2026-07-25T11:20:00-04:00
-updated: 2026-07-25T11:20:00-04:00
+updated: 2026-07-25T18:15:00-04:00
 domain: project
 type: note
 status: active
@@ -141,9 +141,24 @@ for unsupervised execution.
 - Phase 5: client history surface (reads off Appointment records per schema above)
 - Phase 6: dogfood pilot with the tattoo-artist friend
 
+## Update — 2026-07-25 18:15 ET: formal spec docx produced
+
+Executed the follow-up run:admin-3x prompt staged in #admin (ts `1785010138.314099`,
+`task:booking-agent-phase1-spec`): repackaged this pass's three schemas + the OAuth plan
+as a standalone docx design doc and posted the link back to #booking-agent (this project
+is worked directly in-channel, no #decisions lift needed per the 2026-07-16 call).
+Nothing new designed or decided — same content as above, formatted as a deliverable.
+
+Doc: [Booking Agent — Phase 1 (Foundations) Design Spec](https://drive.google.com/file/d/1tMJ6VqgahomcdWbquI5I06okFvY-pk5m/view?usp=drivesdk)
+(Google Drive, docx)
+
 ## Sources
-- slack: #admin (C0BBLUA7JLX), ts `1784989035.005839` (2026-07-25, run:admin-3x prompt)
+- slack: #admin (C0BBLUA7JLX), ts `1784989035.005839` (2026-07-25, run:admin-3x prompt,
+  original design pass)
+- slack: #admin (C0BBLUA7JLX), ts `1785010138.314099` (2026-07-25, run:admin-3x prompt,
+  docx spec build)
 - slack: #booking-agent (C0BHXTPST52), ts `1784985333.569689` (2026-07-25, Lemar: "Let's
   go with phase 1")
 - haven: `haven/vault/40-Projects/booking-agent/2026-07-15-booking-agent-barbers-tattoo-artists.md`
   (scope decisions + 2026-07-25 build-sequencing outline)
+- drive: `1tMJ6VqgahomcdWbquI5I06okFvY-pk5m` (Phase 1 Design Spec docx)
