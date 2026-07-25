@@ -1,1 +1,32 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDctMjVUMTI6MzA6MDAtMDQ6MDAKdXBkYXRlZDogMjAyNi0wNy0yNVQxMjozMDowMC0wNDowMApkb21haW46IGN1enppZXMKdHlwZTogdGFzawpzdGF0dXM6IGFjdGl2ZQp0YWdzOiBbc2xhY2ssIGJpbGxpbmcsIHN1YnNjcmlwdGlvbiwgcGF5bWVudC1mYWlsdXJlLCBmdW5kaW5nLXNob3J0ZmFsbF0Kc291cmNlOiBnbWFpbAotLS0KCiMgU2xhY2sgc3Vic2NyaXB0aW9uIOKAlCBwYXltZW50IGZhaWxlZCB0byByZW5ldyAoQ3V6emllJ3MgcGxhbiwgNCB1c2VycykKClNsYWNrIChgZmVlZGJhY2tAc2xhY2suY29tYCkgZW1haWxlZCAyMDI2LTA3LTI1IH4xMjoyNWFtIEVUIChnbWFpbCB0aHJlYWQKYDE5Zjk2YTkyYzFjNWQ4NDFgKTogdGhlIEN1enppZSdzIERpc3BlbnNhcnkgJiBEZWxpdmVyeSBTbGFjayBwbGFuICh0ZWFtIG9mIDQgYWN0aXZlCnVzZXJzKSB3YXMgc2V0IHRvIHJlbmV3IDcvMjIvMjYsIGJ1dCB0aGUgY2hhcmdlIHRvIHRoZSBwYXltZW50IG1ldGhvZCBvbiBmaWxlIGZhaWxlZCDigJQKaW52YWxpZC9leHBpcmVkIGNhcmQsIGRlY2xpbmVkIHRyYW5zYWN0aW9uLCBvciBhZGRpdGlvbmFsIHZlcmlmaWNhdGlvbiBuZWVkZWQuIFRlYW0gY2FuCmtlZXAgdXNpbmcgU2xhY2sgZm9yIG5vdywgYnV0IHRoZSBwYXltZW50IGRldGFpbHMgbmVlZCB1cGRhdGluZwooYGh0dHBzOi8vY3V6emllc2Rpc3Blbi1vbHcyOTIxLnNsYWNrLmNvbS9hZG1pbi9iaWxsaW5nL2RldGFpbHNgKSBvciB0aGUgcGxhbiByaXNrcwpsYXBzaW5nLgoKTm8tcmVwbHkgYXV0b21hdGVkIGJpbGxpbmcgbm90aWNlIOKAlCBub3RoaW5nIGZvciBTYW1pcmEgdG8gZHJhZnQgYSByZXBseSB0by4gVGhpcyBpcyBhCnBheW1lbnQtYXV0aG9yaXphdGlvbiBjYWxsIG9ubHkgTGVtYXIgY2FuIG1ha2UgKG91dHdhcmQtZmFjaW5nIHBheW1lbnQsIG91dHNpZGUgdGhlClNhZmV0eSBmbG9vcikuIFdvcnRoIGZsYWdnaW5nIHRoYXQgdGhpcyBpcyB0aGUgU0FNRSBTbGFjayB3b3Jrc3BhY2UgdGhpcyBBdGxhcyBFeGVjdXRvcgpyb3V0aW5lIChTYW1pcmEvRGF3bi9CYXNpbCBib3RzKSBydW5zIGluc2lkZSBvZiDigJQgaWYgdGhlIHBsYW4gYWN0dWFsbHkgbGFwc2VzLCBpdCBjb3VsZAphZmZlY3QgYm90IGFjY2Vzcy9mZWF0dXJlcywgbm90IGp1c3QgaHVtYW4gc2VhdHMuCgpGaXRzIHRoZSBzYW1lIHBhdHRlcm4gYWxyZWFkeSBsb2dnZWQgZWxzZXdoZXJlIChaYXBpZXIsIFdpc3ByIEZsb3csIEludHVpdCBXb3JrZm9yY2UpCm9mIHN1YnNjcmlwdGlvbnMgbGFwc2luZyBhbWlkIHRoZSBicm9hZGVyIGNhc2gtZmxvdyBjcnVuY2gg4oCUIHNlZQpgaGF2ZW4vdmF1bHQvMDAtSW5ib3gvMjAyNi0wNy0yMi16YXBpZXItcGF5bWVudC1mYWlsZWQubWRgIGZvciB0aGUgc2libGluZyBwYXR0ZXJuLgoKIyMgU291cmNlcwotIGdtYWlsOiB0aHJlYWQgYDE5Zjk2YTkyYzFjNWQ4NDFgIChTbGFjayBwYXltZW50IGZhaWx1cmUgbm90aWNlLCAyMDI2LTA3LTI1IH4xMjoyNWFtIEVUKQo=
+---
+created: 2026-07-25T12:30:00-04:00
+updated: 2026-07-25T12:30:00-04:00
+domain: cuzzies
+type: task
+status: active
+tags: [slack, billing, subscription, payment-failure, funding-shortfall]
+source: gmail
+---
+
+# Slack subscription — payment failed to renew (Cuzzie's plan, 4 users)
+
+Slack (`feedback@slack.com`) emailed 2026-07-25 ~12:25am ET (gmail thread
+`19f96a92c1c5d841`): the Cuzzie's Dispensary & Delivery Slack plan (team of 4 active
+users) was set to renew 7/22/26, but the charge to the payment method on file failed —
+invalid/expired card, declined transaction, or additional verification needed. Team can
+keep using Slack for now, but the payment details need updating
+(`https://cuzziesdispen-olw2921.slack.com/admin/billing/details`) or the plan risks
+lapsing.
+
+No-reply automated billing notice — nothing for Samira to draft a reply to. This is a
+payment-authorization call only Lemar can make (outward-facing payment, outside the
+Safety floor). Worth flagging that this is the SAME Slack workspace this Atlas Executor
+routine (Samira/Dawn/Basil bots) runs inside of — if the plan actually lapses, it could
+affect bot access/features, not just human seats.
+
+Fits the same pattern already logged elsewhere (Zapier, Wispr Flow, Intuit Workforce)
+of subscriptions lapsing amid the broader cash-flow crunch — see
+`haven/vault/00-Inbox/2026-07-22-zapier-payment-failed.md` for the sibling pattern.
+
+## Sources
+- gmail: thread `19f96a92c1c5d841` (Slack payment failure notice, 2026-07-25 ~12:25am ET)

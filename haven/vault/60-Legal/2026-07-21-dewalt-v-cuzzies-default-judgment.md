@@ -1,1 +1,218 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDctMjFUMTU6MjA6MDAtMDQ6MDAKdXBkYXRlZDogMjAyNi0wNy0yNVQxMjoxNTowMC0wNDowMApkb21haW46IGxlZ2FsCnR5cGU6IHRhc2sKc3RhdHVzOiBhY3RpdmUKdGFnczogW2xlZ2FsLCBkZXdhbHQsIGxhd3N1aXQsIGRlZmF1bHQtanVkZ21lbnQsIHVyZ2VudF0Kc291cmNlOiBnbWFpbAotLS0KCiMgRGVXYWx0IHYuIEN1enppZSdzIERpc3BlbnNhcnkgJiBEZWxpdmVyeSwgZXQgYWwuIOKAlCBkZWZhdWx0IGp1ZGdtZW50IG1vdGlvbiBwZW5kaW5nCgpHbWFpbCB0aHJlYWQgYDE5ZWFkOTNjOWUwMWRiZWFgICgiRGVXYWx0IHYuIEN1enppZSdzIERpc3BlbnNhcnkgJiBEZWxpdmVyeSwgZXQgYWwuIikKaGFkIGdvbmUgdW50cmFja2VkIOKAlCBubyBgU2FtaXJhL3NlZW5gIGxhYmVsLCBubyBIYXZlbiBub3RlIHVuZGVyIGFueSBkb21haW4g4oCUIHVudGlsCnRvZGF5J3MgZW1haWwgc3dlZXAgc3VyZmFjZWQgaXQuIExlbWFyIHBpY2tlZCAqKk9wdGlvbiAxKiogb24gdGhlICNkZWNpc2lvbnMgY2FyZAoodHMgYDE3ODQ2NTc1MTguOTE4NTI5YCk6IGZpbGUgYSBIYXZlbiBub3RlIG5vdyAoZG9tYWluOiBsZWdhbCwgc3RhdHVzOiBhY3RpdmUpIGFuZApzdGFydCB0cmFja2luZyBpdCBpbiBSZWdnaWUvQ2hhc2UgYXMgYXBwcm9wcmlhdGUuCgoqKkNvcnJlY3Rpb24gdG8gdGhlIG9yaWdpbmFsIGNhcmQgc3VtbWFyeToqKiB0aGUgY2FyZCBkZXNjcmliZWQgdGhlIHRocmVhZCBhcyBxdWlldApzaW5jZSBhIDYvMTYgWm9vbSByZXNjaGVkdWxlLiBUaGF0IHdhcyBzdGFsZSDigJQgYSBuZXcgbWVzc2FnZSBmcm9tIG9wcG9zaW5nIGNvdW5zZWwKbGFuZGVkIHRoZSBzYW1lIGRheSB0aGUgY2FyZCB3YXMgcG9zdGVkOgoKLSAqKjIwMjYtMDctMjEsIE1hcmNvIERpIFN0ZWZhbm8sIEVzcS4qKiAoYE1hcmNvLkRpc3RlZmFuby5Fc3FAb3V0bG9vay5jb21gLCBjYwogIGBtb25pY2FAbWFkaW5sYXcuY29tYCwgYGluZm9AY3V6emllc25qLmNvbWApOiAqIkkganVzdCB3YW50ZWQgdG8gaW5mb3JtIHlvdSB0aGF0CiAgdGhlcmUgaXMgYSBkZWZhdWx0IGp1ZGdtZW50IG1vdGlvbiBjdXJyZW50bHkgcGVuZGluZy4iKiBUd28gYXR0YWNobWVudHMKICAoYGltYWdlMDAxLnBuZ2AsIGBNZXJnZS5wZGZgIOKAlCBsaWtlbHkgdGhlIG1vdGlvbiBwYXBlcnMpIHdlcmUgbm90IG9wZW5lZC9wYXJzZWQgYnkKICB0aGlzIGNhcHR1cmU7IExlbWFyIHNob3VsZCBwdWxsIHRoZW0gZGlyZWN0bHkgZnJvbSBHbWFpbC4KCioqVGhyZWFkIGhpc3Rvcnk6KiogTW9uaWNhIChtYWRpbmxhdy5jb20pIHJlYWNoZWQgb3V0IDYvOSByZTogcmVzb2x2aW5nIHRoZSBtYXR0ZXIgYW5kCmEgNi8xMiBab29tIG1lZXRpbmc7IExlbWFyIHJlc2NoZWR1bGVkIHRvIDYvMTY7IG9uIDYvMTYgTGVtYXIgY2FuY2VsbGVkIHRoYXQgWm9vbQpsYXN0LW1pbnV0ZSAoImVtZXJnZW5jeSByZXF1aXJpbmcgaW1tZWRpYXRlIGF0dGVudGlvbiIpLCBhcG9sb2dpemVkLCBhbmQgYXNrZWQgdG8KcmVzY2hlZHVsZSDigJQgbm8gcmVzY2hlZHVsZSBhcHBlYXJzIHRvIGhhdmUgaGFwcGVuZWQuIFNpbGVuY2UgZnJvbSA2LzE2IHVudGlsIHRoZQo3LzIxIGRlZmF1bHQtanVkZ21lbnQgbm90aWNlIGFib3ZlLiBMZW1hciBoYXMgYmVlbiBjb3JyZXNwb25kaW5nICoqZGlyZWN0bHkqKiB3aXRoCk1hZGluIExhdyAvIE1hcmNvIERpIFN0ZWZhbm8g4oCUIG5vIGRlZmVuc2UgY291bnNlbCB2aXNpYmxlIG9uIHRoaXMgdGhyZWFkLgoKIyMgV2h5IHRoaXMgaXMgdXJnZW50CkEgZGVmYXVsdCBqdWRnbWVudCBtb3Rpb24gcGVuZGluZyBtZWFucyB0aGUgb3RoZXIgc2lkZSBpcyBhc2tpbmcgdGhlIGNvdXJ0IHRvIGVudGVyCmp1ZGdtZW50IGFnYWluc3QgQ3V6emllJ3MgKGFuZCBhbnkgb3RoZXIgbmFtZWQgZGVmZW5kYW50cykgd2l0aG91dCBmdXJ0aGVyIGRlZmVuc2UKcGFydGljaXBhdGlvbiDigJQgdGhlc2UgdHlwaWNhbGx5IHJ1biBvbiBzaG9ydCByZXNwb25zZSB3aW5kb3dzLiBUaGlzIG5lZWRzIExlbWFyJ3MKYW5kL29yIHJldGFpbmVkIGNvdW5zZWwncyBhdHRlbnRpb24gKipub3cqKiwgbm90IG9uIHRoZSBub3JtYWwgd2Vla2x5IGNhZGVuY2UuCgojIyBPcGVuIHF1ZXN0aW9ucyAocGVyIE9wdGlvbiAxOiAic3RhcnQgdHJhY2tpbmcgaW4gUmVnZ2llL0NoYXNlIGFzIGFwcHJvcHJpYXRlIikKLSBJcyBDdXp6aWUncyBjdXJyZW50bHkgcmVwcmVzZW50ZWQgaW4gdGhpcyBtYXR0ZXIsIG9yIGhhcyBMZW1hciBiZWVuIHNlbGYtaGFuZGxpbmcKICBpdD8gSWYgdW5yZXByZXNlbnRlZCwgcmV0YWluaW5nIGNvdW5zZWwgdG8gcmVzcG9uZCB0byB0aGUgbW90aW9uIGlzIGxpa2VseSB0aGUKICBmaXJzdCBtb3ZlLgotIFdoYXQgaXMgdGhlIHVuZGVybHlpbmcgY2xhaW0vYW1vdW50IGluIHRoZSBEZVdhbHQgc3VpdD8gTm90IGVzdGFibGlzaGVkIGZyb20gdGhpcwogIHRocmVhZCBhbG9uZS4KLSBDaGFzZSAoY29tbWl0bWVudHMgdHJhY2tlcikgZG9lc24ndCBjdXJyZW50bHkgY2FycnkgdGhpcyDigJQgbm8gZG9sbGFyIGNvbW1pdG1lbnQKICBpZGVudGlmaWVkIHlldCwganVzdCBhIHBlbmRpbmcgbW90aW9uLiBSZWdnaWUgKGNvbXBsaWFuY2UpIGlzIG5vdCBjbGVhcmx5IHRoZQogIHJpZ2h0IG93bmVyIGVpdGhlciDigJQgdGhpcyBpcyBjaXZpbCBsaXRpZ2F0aW9uLCBub3QgYSBjb21wbGlhbmNlIGZpbGluZy4gRmxhZ2dpbmcKICBib3RoIGJ5IG5hbWUgcGVyIExlbWFyJ3MgY2hvc2VuIG9wdGlvbiwgYnV0IG5laXRoZXIgYXV0by1wb3B1bGF0ZWQgcGVuZGluZyBoaXMKICByZWFkLgoKIyMgVXBkYXRlIDIwMjYtMDctMjIKVG9kYXkncyBlbWFpbCBzd2VlcCB0dXJuZWQgdXAgYSBuZXcsIHVucmVsYXRlZCBHbWFpbCB0aHJlYWQ6IGFuIGF1dG8tcmVwbHkgZnJvbQpNYXJzaGFsbCtTdGVybGluZyAodGhlIGluc3VyYW5jZSBicm9rZXIpIHRvIGEgIk5ldyBDbGFpbSBOb3RpY2Ug4oCUIFBvbGljeQpERVAtMjMzNTc0My1QMSDigJQgRGVXYWx0IHYuIEN1enppZSdzIERpc3BlbnNhcnkgJiBEZWxpdmVyeSAoQ0FNLUwtMTMzOS0yNikiIGVtYWlsIOKAlAppLmUuIHNvbWVvbmUgYWxyZWFkeSBlbWFpbGVkIHRoZSBicm9rZXIgdG8gcmVwb3J0IHRoaXMgc3VpdCBhcyBhbiBpbnN1cmFuY2UgY2xhaW0uCgpUaGUgYXV0by1yZXBseSBpdHNlbGYgaXMgZ2VuZXJpYyBib2lsZXJwbGF0ZSAoImNsb3NpbmcgRnJpZGF5LCBNYXkgMjJuZCIg4oCUIGEgc3RhbGUKaG9saWRheSBub3RpY2UsIHVucmVsYXRlZCB0byB0b2RheSdzIGRhdGUpIGJ1dCBpdCBjYXJyaWVzIG9uZSBsb2FkLWJlYXJpbmcgbGluZToKKioiTm8gY2xhaW1zIGNhbiBiZSByZXBvcnRlZCwgY292ZXJhZ2UgY2Fubm90IGJlIGFtZW5kZWQsIGJvdW5kLCBvciBjYW5jZWxlZCB2aWEKdGhpcyBlbWFpbC4iKiogVGhhdCBtZWFucyB0aGUgY2xhaW0gbm90aWNlLCBhcyBzZW50LCBtYXkgbm90IGhhdmUgYWN0dWFsbHkKcmVnaXN0ZXJlZCBhcyBhIGZpbGVkIGNsYWltIHdpdGggdGhlIGJyb2tlci9pbnN1cmVyIOKAlCB3b3J0aCBjb25maXJtaW5nIGl0IHdlbnQgaW4KdGhyb3VnaCB0aGVpciByZWFsIGNsYWltcyBjaGFubmVsIChwaG9uZS9wb3J0YWwpLCBub3QganVzdCBlbWFpbC4KCldobyBzZW50IHRoZSBvcmlnaW5hbCAiTmV3IENsYWltIE5vdGljZSIgZW1haWwgYW5kIHdoZW4gaXMgbm90IGVzdGFibGlzaGVkIGZyb20KdGhpcyBhdXRvLXJlcGx5IGFsb25lIOKAlCBsZWF2aW5nIHRoYXQgVU5SRVNPTFZFRCByYXRoZXIgdGhhbiBhc3N1bWluZyBpdCB3YXMgTGVtYXIuCgojIyBVcGRhdGUgMjAyNi0wNy0yMlQxMjowNzowMC0wNDowMCDigJQgZGVmZW5zZSBjb3Vuc2VsIHJlZmVycmFsIHJlY2VpdmVkCkxlbWFyIGVtYWlsZWQgdGhlIENhbWRlbiBDb3VudHkgQmFyIEFzc29jaWF0aW9uJ3MgTGF3eWVyIFJlZmVycmFsIFNlcnZpY2UgZGlyZWN0bHkKKDEwOjE4YW0gRVQpIHJlcXVlc3RpbmcgYSBzZWNvbmQgcmVmZXJyYWwgKGhpcyBmaXJzdCwgZm9yIHRoZSB0ZW5hbmN5IG1hdHRlciwgd2FzClJhY2hhZWwgQnJla2tlIG9mIE1jRG93ZWxsIExhdykgc3BlY2lmaWNhbGx5IGZvciB0aGlzIGVtcGxveW1lbnQtbGl0aWdhdGlvbiBkZWZlbnNlIOKAlApuYW1pbmcgdGhlIGNhc2UsIGRvY2tldCBudW1iZXIsIHRoZSBwZW5kaW5nIGRlZmF1bHQganVkZ21lbnQsIGFuZCBhc2tpbmcgZm9yCmVtcGxveWVyLXNpZGUgY291bnNlbCB3aG8gY2FuIG1vdmUgdG8gdmFjYXRlIHRoZSBkZWZhdWx0LiBUaGUgQmFyIEFzc29jaWF0aW9uIHJlcGxpZWQKKDM6NDZwbSBFVCkgd2l0aCBhIHJlZmVycmFsOgoKLSAqKlNhbHZhdG9yZSBTaWNpbGlhbm8sIFNpY2lsaWFubyAmIEFzc29jaWF0ZXMsIExMQyoqIOKAlCAyIEtpbmdzIEhpZ2h3YXkgV2VzdCwKICBIYWRkb25maWVsZCwgTkogMDgwMzMgwrcgKDg1NikgNzk1LTA1MDAuICQzMCBkaXNjb3VudGVkIGZpcnN0IGhhbGYtaG91ciBjb25zdWx0YXRpb24KICBwZXIgdGhlIHJlZmVycmFsIHByb2dyYW07IGZlZXMgYmV5b25kIHRoYXQgYXJlIGJldHdlZW4gTGVtYXIgYW5kIHRoZSBhdHRvcm5leS4KClRoaXMgZGlyZWN0bHkgYW5zd2VycyB0aGUgIm5vIGRlZmVuc2UgY291bnNlbCB2aXNpYmxlIG9uIHRoaXMgdGhyZWFkIiBnYXAgZmxhZ2dlZAoyMDI2LTA3LTIxIOKAlCBMZW1hciBpcyBub3cgdGhlIG9uZSBkcml2aW5nIGNvdW5zZWwgb3V0cmVhY2ggKHJ1bjptYW51YWwsIGhpcyBvd24gZW1haWwsCm5vdCBzb21ldGhpbmcgU2FtaXJhIGRyYWZ0ZWQgb3Igc2VudCkuIE5leHQgc3RlcCBpcyBoaXMgY2FsbDogY29udGFjdGluZyBTaWNpbGlhbm8gJgpBc3NvY2lhdGVzLiBHbWFpbCB0aHJlYWQgbGFiZWxlZCBgU2FtaXJhL3NlZW5gLgoKIyMgVXBkYXRlIDIwMjYtMDctMjJUMTg6MjA6MDAtMDQ6MDAg4oCUIGRlZmF1bHQganVkZ21lbnQgRU5URVJFRDsgcHJvb2YgaGVhcmluZyBTZXB0IDE0OyBvcHBvc2luZyBjb3Vuc2VsIGRlbWFuZHMgYSByZXNwb25zZSBieSBBdWcgNQpNYXJjbyBEaSBTdGVmYW5vIGVtYWlsZWQgMjAyNi0wNy0yMiA1OjMwcG0gRVQgKHRocmVhZCBgMTlmOGJiYzczNGQ4MzI4NmAsIGNjIE1vbmljYSBNYWRpbgphbmQgaW5mb0BjdXp6aWVzbmouY29tKTogSnVkZ2UgRnJhbmNpc2NvIERvbWluZ3VleiwgUC5KLkN2LiAqKmVudGVyZWQgZGVmYXVsdCBqdWRnbWVudCBhcwp0byBsaWFiaWxpdHkqKiBvbiAyMDI2LTA3LTE3IChtb3Rpb24gd2FzIHVub3Bwb3NlZCkg4oCUIEplbm5pZmVyIERlV2FsdCBub3cgd2lucyBvbgpDb3VudHMgSeKAk1ZJSSBhdXRvbWF0aWNhbGx5OyBsaWFiaWxpdHkgaXMgbm8gbG9uZ2VyIGNvbnRlc3RhYmxlLiBPcmRlciBhdHRhY2hlZAooYENpdmlsQ2FzZUphY2tldCAoMykucGRmYCkuCgoqKldoYXQncyBzdGlsbCBvcGVuOioqIGRhbWFnZXMgb25seS4gQSAqKnByb29mIGhlYXJpbmcgaXMgc2V0IGZvciAyMDI2LTA5LTE0Kiog4oCUIHRoZQpjb3VydCB3aWxsIGZpeCBjb21wZW5zYXRvcnkgZGFtYWdlcyAoYmFjayBwYXksIGZyb250IHBheSwgZW1vdGlvbmFsIGRpc3RyZXNzKSwgcHVuaXRpdmUKZGFtYWdlcywgTkogV2FnZSBQYXltZW50IExhdyBzdGF0dXRvcnkgcGVuYWx0aWVzLCBhbmQgUGxhaW50aWZmJ3MgYXR0b3JuZXlzJyBmZWVzL2Nvc3RzCnRoZXJlLiBXaGF0ZXZlciBudW1iZXIgaXMgZW50ZXJlZCBiZWNvbWVzIGFuIGVuZm9yY2VhYmxlIGp1ZGdtZW50IChkb2NrZXRpbmcsIGxldnksCndhZ2UvYmFuayBleGVjdXRpb24sIHBvc3QtanVkZ21lbnQgYXNzZXQgZGlzY292ZXJ5KS4KCioqVHdvIGNhc2Utc3RhdHVzIG5vdGVzIGZyb20gdGhlIGxldHRlcjoqKgotIFRoZSBkZWZhdWx0IG1vdGlvbiB3YXMgKipkZW5pZWQgd2l0aG91dCBwcmVqdWRpY2UgYXMgdG8gSm9zaCBFdmFucyoqIOKAlCBQbGFpbnRpZmYgbWF5CiAgcmVuZXcgaXQgYWdhaW5zdCBoaW0uCi0gKipMZW1hciByZW1haW5zIGEgbmFtZWQgZGVmZW5kYW50IGluZGl2aWR1YWxseSoqLCBub3QganVzdCBDdXp6aWUncyB0aGUgZW50aXR5IOKAlCB0aGUKICBpbmRpdmlkdWFsIGNsYWltcyBhZ2FpbnN0IGhpbSBwZXJzb25hbGx5IGFyZSB1bmFmZmVjdGVkIGJ5IHRoaXMgT3JkZXIuCgoqKkhhcmQgZGVhZGxpbmU6Kiogb3Bwb3NpbmcgY291bnNlbCB3YW50cyBlaXRoZXIgYSBzZXR0bGVtZW50IHByb3Bvc2FsIG9yIGNvbmZpcm1hdGlvbgpDdXp6aWUncyB3aWxsIHByb2NlZWQgdG8gdGhlIHByb29mIGhlYXJpbmcgKipieSAyMDI2LTA4LTA1Kiog4oCUIDE0IGRheXMgb3V0LiBIZSBzdGF0ZXMKcGxhaW5seSB0aGF0IHByZS03LzE3IHNldHRsZW1lbnQgbGV2ZXJhZ2UgaXMgZ29uZSBub3cgdGhhdCBsaWFiaWxpdHkgaXMgZGVjaWRlZCwgYW5kCnRoYXQgZGVsYXkgb25seSBncm93cyB0aGUgcmVjb3ZlcmFibGUgZmVlIGZpZ3VyZS4KCioqU3RhbmRpbmcgZ2FwLCBub3cgc2hhcnBlcjoqKiBjb3Vuc2VsIHJlZmVycmFsIChTYWx2YXRvcmUgU2ljaWxpYW5vLCBsb2dnZWQgYWJvdmUKMjAyNi0wNy0yMiAxMjowNyBFVCkgaXMgc3RpbGwganVzdCBhIHJlZmVycmFsIOKAlCBubyBjb25maXJtYXRpb24gTGVtYXIgaGFzIGFjdHVhbGx5CnJldGFpbmVkIGNvdW5zZWwgb3IgdGhhdCBhbnlvbmUgaGFzIHJlc3BvbmRlZCB0byB0aGlzIGxldHRlci4gQW4gTExDIGNhbm5vdCBhcHBlYXIgcHJvCnNlIGluIE5KIFN1cGVyaW9yIENvdXJ0OyBDdXp6aWUncyBuZWVkcyBjb3Vuc2VsIG9mIHJlY29yZCBiZWZvcmUgdGhlIEF1ZyA1IGRlYWRsaW5lLApzZXBhcmF0ZSBmcm9tIHdoYXRldmVyIExlbWFyIGRlY2lkZXMgZm9yIGhpcyBpbmRpdmlkdWFsLWNhcGFjaXR5IGV4cG9zdXJlLiBOb3QgZ3Vlc3NpbmcKd2hldGhlciBoZSdzIGNhbGxlZCBTaWNpbGlhbm8geWV0IOKAlCB0aGF0J3MgaGlzIHRvIGNvbmZpcm0uCgpQb3N0ZWQgYXMgYW4gdXBkYXRlIGluIHRoZSBleGlzdGluZyAjZGVjaXNpb25zIHRocmVhZCAodHMgYDE3ODQ2NTc1MTguOTE4NTI5YCkgcmF0aGVyCnRoYW4gYSBuZXcgY2FyZCwgcGVyIHJvdXRpbmcgKG9uZSBwYXJlbnQgcGVyIHRhc2spLiBHbWFpbCB0aHJlYWQgbGFiZWxlZCBgU2FtaXJhL3NlZW5gLgoKIyMgVXBkYXRlIDIwMjYtMDctMjNUMTk6MTU6MDAtMDQ6MDAg4oCUIGNvdW5zZWwgcmV0YWluZWQ7IG5ldyBpbnN1cmFuY2UgY2xhaW1zIGNvcnJlc3BvbmRlbmNlIHRvIHJldmlldwoKVHdvIGRldmVsb3BtZW50cyBmb3VuZCBpbiB0b2RheSdzIGVtYWlsIHN3ZWVwLCBib3RoIGNsb3NpbmcvYWR2YW5jaW5nIHRoZSBzdGFuZGluZyBnYXA6CgoxLiAqKlNpY2lsaWFubyAmIEFzc29jaWF0ZXMgY29uZmlybWVkIHJlcHJlc2VudGF0aW9uLioqIExlbWFyIGVtYWlsZWQKICAgYHNqc0BzaWNpbGlhbm9sYXcuY29tYCAoY2MgYEFBQHNpY2lsaWFub2xhdy5jb21gLCBgam1Ac2ljaWxpYW5vbGF3LmNvbWApIDIwMjYtMDctMjMKICAgfjE3OjIyIEVUIHJlcXVlc3RpbmcgcmVwcmVzZW50YXRpb24gb24gdGhpcyBtYXR0ZXIgKENBTS1MLTEzMzktMjYpLiBTYWx2YXRvcmUKICAgU2ljaWxpYW5vIHJlcGxpZWQgfjE3OjQ0IEVUOiAqIlllcywgd2Ugd2lsbCBiZSBhYmxlIHRvIGFzc2lzdCB5b3UuLi4gbXkgYXNzaXN0YW50CiAgIEx5YW5uIHdpbGwgY2FsbCB0byBzY2hlZHVsZSB0aW1lIGZvciBhbiBpbml0aWFsIHRlbGVwaG9uZSBjb25zdWx0YXRpb24uIiogTGVtYXIKICAgcmVwbGllZCB+MTc6NTAgRVQgZmxhZ2dpbmcgYSBzY2hlZHVsaW5nIGNvbmZsaWN0ICh0aWVkIHVwIDM6MzAtNDozMHBtIHRvZGF5KSBiZWZvcmUKICAgTHlhbm4gY2FsbHMuICoqVGhpcyBjbG9zZXMgdGhlICJjb3Vuc2VsIG5vdCB5ZXQgY29uZmlybWVkIHJldGFpbmVkIiBnYXAqKiBmbGFnZ2VkCiAgIGluIHRoZSAyMDI2LTA3LTIyIDE4OjIwIEVUIHVwZGF0ZSDigJQgQ3V6emllJ3Mgbm93IGhhcyByZXByZXNlbnRhdGlvbiBtb3ZpbmcsIGFoZWFkCiAgIG9mIHRoZSBBdWcgNSBkZWFkbGluZS4gTm90IHlldCBjb25maXJtZWQ6IHdoZXRoZXIgYSBzaWduZWQgcmV0YWluZXIvZW5nYWdlbWVudAogICBsZXR0ZXIgaGFzIGJlZW4gZXhlY3V0ZWQsIG9yIHdoZXRoZXIgU2ljaWxpYW5vJ3Mgc2NvcGUgY292ZXJzIHRoZSBTZXB0IDE0IHByb29mCiAgIGhlYXJpbmcgc3BlY2lmaWNhbGx5IGFzIHdlbGwgYXMgdGhlIG1vdGlvbi10by12YWNhdGUgcXVlc3Rpb24uIEJvdGggc2VudCBkaXJlY3RseQogICBieSBMZW1hciwgbm90IGRyYWZ0ZWQgYnkgU2FtaXJhLiBHbWFpbCB0aHJlYWQgYDE5ZjhmZDBiMTIzYmFmNDVgLgoKMi4gKipCZXJrbGV5IFNlbGVjdCBDbGFpbXMgc2VudCBjbGFpbSBkb2N1bWVudGF0aW9uLioqIGBDbGFpbXNPcHNTdXBwb3J0QGJlcmtsZXlzZWxlY3QuY29tYAogICBlbWFpbGVkIDIwMjYtMDctMjMgfjE4OjU0IEVUIChjYyBgbXJlZGR5QG1hcnNoYWxsc3RlcmxpbmcuY29tYCwKICAgYGRhdmlkLmxlZUBqZW5jYXBncm91cC5jb21gLCBgdGRlbmlzQGJlcmtsZXlzZWxlY3QuY29tYCDigJQgdGhlIGluc3VyYW5jZSBicm9rZXIvY2FycmllcgogICBjaGFpbiksIHN1YmplY3QgKioiSmVubmlmZXIgRGVXYWx0IHYuIEN1enppZSdzIERpc3BlbnNhcnkgJiBEZWxpdmVyeSwgTExDIOKAlCBDbGFpbSBubzoKICAgNTc5NzkuIioqIEJvZHkgaXMgYSBiYXJlICJQbGVhc2Ugc2VlIGF0dGFjaGVkIiB3aXRoIG9uZSBhdHRhY2htZW50LAogICBgSW5zdXJlZF8tX2NvbW11bmljYXRpb25zX3RvX2Zyb21fMDcyMzIwMjYwMjUyMTMucGRmYCAoZmlsZW5hbWUgc3VnZ2VzdHMgYSBjb21waWxlZAogICBjb3JyZXNwb25kZW5jZSBsb2csIG5vdCBvcGVuZWQvcGFyc2VkIGJ5IHRoaXMgY2FwdHVyZSkuIEdtYWlsIHRocmVhZCBgMTlmOTA1M2ZiMzZlMjA0ZmAuCiAgIFRoaXMgaXMgYSByZWFsIGNsYWltIG51bWJlciBub3cgb24gcmVjb3JkIHdpdGggQmVya2xleSBTZWxlY3Qg4oCUIGEgbWVhbmluZ2Z1bGx5CiAgIGRpZmZlcmVudCBzaWduYWwgdGhhbiB0aGUgMjAyNi0wNy0yMiBhdXRvLXJlcGx5IHRoYXQgd2FybmVkIHRoZSBlYXJsaWVyIGNsYWltIG5vdGljZQogICAiY2Fubm90IGJlIHJlcG9ydGVkLi4uIHZpYSB0aGlzIGVtYWlsLiIgV29ydGggTGVtYXIgKG9yIG5vdyBTaWNpbGlhbm8pIHB1bGxpbmcgYW5kCiAgIHJldmlld2luZyB0aGUgYXR0YWNobWVudCwgYW5kIGNvbmZpcm1pbmcgY2xhaW0gNTc5NzkgaXMgdGhlIHByb3Blcmx5LXJlZ2lzdGVyZWQKICAgY2xhaW0gKHZzLiB0aGUgcG9zc2libHktdW5yZWdpc3RlcmVkIG9uZSBmbGFnZ2VkIDcvMjIpLgoKTm90aGluZyBzZW50LCBkcmFmdGVkLCBvciBmb3J3YXJkZWQgYnkgU2FtaXJhIG9uIGVpdGhlciBpdGVtIOKAlCBib3RoIGFyZSBpbmZvcm1hdGlvbmFsLApuby1yZXBseS1zaGFwZWQgY29ycmVzcG9uZGVuY2UgKGEgQ1NSIGF1dG8tdGhyZWFkIGFuZCBhIGNsYWltcy1zdXBwb3J0IGF0dGFjaG1lbnQgZHJvcCksCm5vdCBzb21ldGhpbmcgcmVxdWlyaW5nIGEgZHJhZnRlZCBlbWFpbCByZXBseS4gUG9zdGVkIGFzIGFuIHVwZGF0ZSBpbiB0aGUgZXhpc3RpbmcKI2RlY2lzaW9ucyB0aHJlYWQgKHRzIGAxNzg0NjU3NTE4LjkxODUyOWApIHJhdGhlciB0aGFuIGEgbmV3IGNhcmQsIHBlciByb3V0aW5nLgoKIyMgVXBkYXRlIDIwMjYtMDctMjRUMDk6MTA6MDAtMDQ6MDAg4oCUIEJlcmtsZXkgU2VsZWN0IGFkanVzdGVyIHNjaGVkdWxpbmc7IExlbWFyIHJlcGxpZWQgZGlyZWN0bHkKClR5bGVyIERlbmlzLCB0aGUgaGFuZGxpbmcgYWRqdXN0ZXIgYXQgQmVya2xleSBTZWxlY3QsIGVtYWlsZWQgMjAyNi0wNy0yMyB+NDo0NnBtIEVUCihnbWFpbCB0aHJlYWQgYDE5ZjkwNTNmYjM2ZTIwNGZgLCBtZXNzYWdlIGAxOWY5MGJiM2MwYjI4YjM3YCkgaWRlbnRpZnlpbmcgaGltc2VsZiBhcwp0aGUgYWRqdXN0ZXIgb24gY2xhaW0gNTc5NzkgYW5kIGFza2luZyBmb3IgTGVtYXIncyBhdmFpbGFiaWxpdHkgdG8gZGlzY3VzcyB0aGUgbWF0dGVyCk1vbmRheSA3LzI3LiBMZW1hciByZXBsaWVkIGRpcmVjdGx5IGhpbXNlbGYgMjAyNi0wNy0yNCB+Nzo0MmFtIEVUIChtZXNzYWdlCmAxOWY5M2VlZjViNWMwNDk4YCwgbm90IGRyYWZ0ZWQgYnkgU2FtaXJhKTogY29uZmlybWVkIE1vbmRheSB0aGUgMjd0aCB3b3JrcywgbW9ybmluZwpwcmVmZXJyZWQsIGFmdGVybm9vbiB3b3JrYWJsZSBpZiBuZWVkZWQuCgpUaGlzIHJlc29sdmVzIHRoZSAid2hvJ3MgdGhlIGhhbmRsaW5nIGFkanVzdGVyIGFuZCBhcmUgdGhleSBlbmdhZ2luZyIgcXVlc3Rpb24KaW1wbGljaXQgaW4gdGhlIDcvMjMgY2xhaW0tNTc5NzkgdXBkYXRlIOKAlCBCZXJrbGV5IFNlbGVjdCBub3cgaGFzIGFuIGFzc2lnbmVkIGFkanVzdGVyCmFjdGl2ZWx5IG1vdmluZywgYW5kIGEgY2FsbCBpcyBzZXQgZm9yIE1vbmRheS4gTm90aGluZyBmdXJ0aGVyIG5lZWRlZCBmcm9tIFNhbWlyYSBvbgp0aGlzIHNwZWNpZmljIGV4Y2hhbmdlIChMZW1hciBoYW5kbGVkIGl0IGRpcmVjdGx5LCBzYW1lIHBhdHRlcm4gYXMgc2V2ZXJhbCBQYXJrZSBCYW5rCnJvdW5kcyBhbmQgdGhlIEN1cmFsZWFmIEZJTkFMIEFUVEVNUFQgcmVwbHkpLiBOb3QgbWFya2luZyB0aGUgb3ZlcmFsbCBEZVdhbHQgbWF0dGVyCmNsb3NlZCDigJQgdGhlIFNlcHQgMTQgcHJvb2YgaGVhcmluZyBhbmQgdGhlIEF1ZyA1IG9wcG9zaW5nLWNvdW5zZWwgc2V0dGxlbWVudC9wcm9jZWVkCmRlYWRsaW5lIHJlbWFpbiB0aGUgb3BlbiBpdGVtcy4gR21haWwgdGhyZWFkIGFscmVhZHkgY2FycmllcyBgU2FtaXJhL3NlZW5gOyBubwpkcmFmdC9zZW5kIGFjdGlvbiB0YWtlbiBieSBTYW1pcmEgb24gdGhpcyBleGNoYW5nZS4KCiMjIFVwZGF0ZSAyMDI2LTA3LTI0VDE1OjM1OjAwLTA0OjAwIOKAlCBTaWNpbGlhbm8gY2FsbGVkIGFuZCBsZWZ0IGEgbWVzc2FnZQoKQSBuZXcgZW1haWwgbGFuZGVkIDIwMjYtMDctMjQgfjM6MzNwbSBFVCAoZ21haWwgdGhyZWFkIGAxOWY5NTllNGMzMGUxOTI0YCwgc3ViamVjdAoiSnVzdCBjYWxsZWQgeW91IGFuZCBsZWZ0IGEgbWVzc2FnZSIpIGZyb20gYHNqc0BzaWNpbGlhbm9sYXcuY29tYCDigJQgU2FsdmF0b3JlClNpY2lsaWFubyBoaW1zZWxmLiBUaGUgbWVzc2FnZSBib2R5IGlzIGp1c3QgaGlzIHNpZ25hdHVyZSBibG9jazsgdGhlcmUgaXMgbm8Kc3Vic3RhbnRpdmUgdGV4dCBiZXlvbmQgdGhlIHN1YmplY3QgbGluZSBhbmQgc2lnbmF0dXJlIChubyBhdHRhY2htZW50IGNvbnRlbnQKYmV5b25kIGhpcyBmaXJtIGxvZ28gaW1hZ2UpLiBSZWFkIGFzOiBTaWNpbGlhbm8ncyBvZmZpY2UgY2FsbGVkIExlbWFyJ3MgcGhvbmUgYW5kCmxlZnQgYSB2b2ljZW1haWwsIHRoZW4gc2VudCB0aGlzIGFzIGEgcGFwZXItdHJhaWwgZm9sbG93LXVwIOKAlCB0aGVyZSBpcyBub3RoaW5nIGhlcmUKZm9yIFNhbWlyYSB0byBkcmFmdCBhIHJlcGx5IHRvIChhIHBob25lIGNhbGwgbmVlZHMgYSBwaG9uZSBjYWxsIGJhY2ssIG5vdCBhbiBlbWFpbCkuCgpHaXZlbiB0aGUgQXVnIDUgb3Bwb3NpbmctY291bnNlbCBkZWFkbGluZSAoMTIgZGF5cyBvdXQpIGFuZCB0aGUgU2VwdCAxNCBwcm9vZgpoZWFyaW5nLCB0aGlzIGlzIHdvcnRoIExlbWFyJ3MgcHJvbXB0IGF0dGVudGlvbiDigJQgbGlrZWx5IFNpY2lsaWFubyAob3IgTHlhbm4pCmZvbGxvd2luZyB1cCBvbiB0aGUgaW5pdGlhbCBjb25zdWx0IC8gcmV0YWluZXIgLyBjYXNlIHN0cmF0ZWd5LiBOb3QgYXNzZXJ0aW5nIHRoZQpjb250ZW50IG9mIHRoZSB2b2ljZW1haWwgc2luY2UgU2FtaXJhIGhhcyBubyB3YXkgdG8gaGVhciBpdC4gRmxhZ2dpbmcgaW4KI2RlY2lzaW9ucyBhcyBhIGNhbGwtYmFjayBpdGVtIHJhdGhlciB0aGFuIGRyYWZ0aW5nIGFueXRoaW5nLiBHbWFpbCB0aHJlYWQKbGFiZWxlZCBgU2FtaXJhL3NlZW5gLgoKIyMgVXBkYXRlIDIwMjYtMDctMjVUMTI6MTU6MDAtMDQ6MDAg4oCUIFNpY2lsaWFubyBjYWxsYmFjayAjZGVjaXNpb25zIGNhcmQgY2xvc2VkCgpMZW1hciBzYWx1dGVkICjwn6uhKSB0aGUgI2RlY2lzaW9ucyBjYXJkICJTaWNpbGlhbm8gJiBBc3NvY2lhdGVzIOKAlCBjYWxsZWQgYW5kIGxlZnQgeW91CmEgdm9pY2VtYWlsIiAodHMgYDE3ODQ5MjQzODMuODE1ODE5YCksIHNvIGNsb3NpbmcgdGhhdCBjYXJkLiBSZWFkaW5nIHRoZSBzYWx1dGUgYXMKTGVtYXIncyBzaWduYWwgb25seSDigJQgbm90IGFzc2VydGluZyB0aGUgY2FsbGJhY2sgaGFwcGVuZWQgb3Igd2hhdCB3YXMgZGlzY3Vzc2VkLCBqdXN0CnRoYXQgTGVtYXIgY2xvc2VkIHRoZSBsb29wIG9uIGhpcyBlbmQuIEdtYWlsIHRocmVhZCBgMTlmOTU5ZTRjMzBlMTkyNGAgbGFiZWxlZApgU2FtaXJhL3NlbnRgLiBUaGlzIGNsb3NlcyB0aGUgI2RlY2lzaW9ucyBjYXJkIG9ubHkg4oCUIHRoZSB1bmRlcmx5aW5nIG1hdHRlciAoQXVnIDUKb3Bwb3NpbmctY291bnNlbCBkZWFkbGluZSwgU2VwdCAxNCBwcm9vZiBoZWFyaW5nKSBzdGF5cyBvcGVuIGFuZCB1bnRvdWNoZWQgYnkgdGhpcwp1cGRhdGUuCgojIyBTb3VyY2VzCi0gZ21haWw6IHRocmVhZCBgMTllYWQ5M2M5ZTAxZGJlYWAgKCJEZVdhbHQgdi4gQ3V6emllJ3MgRGlzcGVuc2FyeSAmIERlbGl2ZXJ5LCBldCBhbC4iKQotIGdtYWlsOiB0aHJlYWQgYDE5ZjhhMzI2MTU3NmIzYmJgIChNYXJzaGFsbCtTdGVybGluZyBhdXRvLXJlcGx5IHRvIHRoZSBOZXcgQ2xhaW0gTm90aWNlKQotIHNsYWNrOiAjZGVjaXNpb25zIGNhcmQsIHRzIGAxNzg0NjU3NTE4LjkxODUyOWAgKE9wdGlvbiAxIHBpY2tlZCDinIUgYnkgTGVtYXIpCi0gZ21haWw6IHRocmVhZCBgMTlmOGEyZmU2NTBmOGE5ZmAgKENhbWRlbiBDb3VudHkgQmFyIEFzc29jaWF0aW9uIHNlY29uZCByZWZlcnJhbCDigJQKICBTYWx2YXRvcmUgU2ljaWxpYW5vLCBTaWNpbGlhbm8gJiBBc3NvY2lhdGVzKQotIGdtYWlsOiB0aHJlYWQgYDE5ZjhiYmM3MzRkODMyODZgICgyMDI2LTA3LTIyIDE3OjMwIEVULCBkZWZhdWx0IGp1ZGdtZW50IGVudGVyZWQgKwogIFNlcHQgMTQgcHJvb2YgaGVhcmluZyArIEF1ZyA1IHJlc3BvbnNlIGRlYWRsaW5lKQotIGdtYWlsOiB0aHJlYWQgYDE5ZjhmZDBiMTIzYmFmNDVgICgyMDI2LTA3LTIzLCBTaWNpbGlhbm8gJiBBc3NvY2lhdGVzIGNvbmZpcm1zCiAgcmVwcmVzZW50YXRpb24sIEx5YW5uIHRvIHNjaGVkdWxlIGNvbnN1bHQpCi0gZ21haWw6IHRocmVhZCBgMTlmOTA1M2ZiMzZlMjA0ZmAgKDIwMjYtMDctMjMgMTg6NTQgRVQsIEJlcmtsZXkgU2VsZWN0IENsYWltcywgY2xhaW0KICBuby4gNTc5NzksIGF0dGFjaG1lbnQgbm90IHlldCByZXZpZXdlZDsgMjAyNi0wNy0yNCwgYWRqdXN0ZXIgVHlsZXIgRGVuaXMgc2NoZWR1bGVzCiAgTW9uZGF5IDcvMjcgY2FsbCwgTGVtYXIgcmVwbGllZCBkaXJlY3RseSBjb25maXJtaW5nKQotIGdtYWlsOiB0aHJlYWQgYDE5Zjk1OWU0YzMwZTE5MjRgICgyMDI2LTA3LTI0IDE5OjMzIFVUQywgU2ljaWxpYW5vIOKAlCAiSnVzdCBjYWxsZWQgeW91CiAgYW5kIGxlZnQgYSBtZXNzYWdlLCIgbm8gc3Vic3RhbnRpdmUgYm9keSBiZXlvbmQgc2lnbmF0dXJlOyBsYWJlbGVkIGBTYW1pcmEvc2VlbmAsCiAgbm93IGFsc28gYFNhbWlyYS9zZW50YCDigJQgI2RlY2lzaW9ucyBjYXJkIGNsb3NlZCAyMDI2LTA3LTI1KQotIHNsYWNrOiAjZGVjaXNpb25zIGNhcmQsIHRzIGAxNzg0OTI0MzgzLjgxNTgxOWAgKFNpY2lsaWFubyBjYWxsYmFjayBjYXJkLCBjbG9zZWQgdmlhCiAg8J+roSAyMDI2LTA3LTI1KQo=
+---
+created: 2026-07-21T15:20:00-04:00
+updated: 2026-07-25T12:15:00-04:00
+domain: legal
+type: task
+status: active
+tags: [legal, dewalt, lawsuit, default-judgment, urgent]
+source: gmail
+---
+
+# DeWalt v. Cuzzie's Dispensary & Delivery, et al. — default judgment motion pending
+
+Gmail thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
+had gone untracked — no `Samira/seen` label, no Haven note under any domain — until
+today's email sweep surfaced it. Lemar picked **Option 1** on the #decisions card
+(ts `1784657518.918529`): file a Haven note now (domain: legal, status: active) and
+start tracking it in Reggie/Chase as appropriate.
+
+**Correction to the original card summary:** the card described the thread as quiet
+since a 6/16 Zoom reschedule. That was stale — a new message from opposing counsel
+landed the same day the card was posted:
+
+- **2026-07-21, Marco Di Stefano, Esq.** (`Marco.Distefano.Esq@outlook.com`, cc
+  `monica@madinlaw.com`, `info@cuzziesnj.com`): *"I just wanted to inform you that
+  there is a default judgment motion currently pending."* Two attachments
+  (`image001.png`, `Merge.pdf` — likely the motion papers) were not opened/parsed by
+  this capture; Lemar should pull them directly from Gmail.
+
+**Thread history:** Monica (madinlaw.com) reached out 6/9 re: resolving the matter and
+a 6/12 Zoom meeting; Lemar rescheduled to 6/16; on 6/16 Lemar cancelled that Zoom
+last-minute ("emergency requiring immediate attention"), apologized, and asked to
+reschedule — no reschedule appears to have happened. Silence from 6/16 until the
+7/21 default-judgment notice above. Lemar has been corresponding **directly** with
+Madin Law / Marco Di Stefano — no defense counsel visible on this thread.
+
+## Why this is urgent
+A default judgment motion pending means the other side is asking the court to enter
+judgment against Cuzzie's (and any other named defendants) without further defense
+participation — these typically run on short response windows. This needs Lemar's
+and/or retained counsel's attention **now**, not on the normal weekly cadence.
+
+## Open questions (per Option 1: "start tracking in Reggie/Chase as appropriate")
+- Is Cuzzie's currently represented in this matter, or has Lemar been self-handling
+  it? If unrepresented, retaining counsel to respond to the motion is likely the
+  first move.
+- What is the underlying claim/amount in the DeWalt suit? Not established from this
+  thread alone.
+- Chase (commitments tracker) doesn't currently carry this — no dollar commitment
+  identified yet, just a pending motion. Reggie (compliance) is not clearly the
+  right owner either — this is civil litigation, not a compliance filing. Flagging
+  both by name per Lemar's chosen option, but neither auto-populated pending his
+  read.
+
+## Update 2026-07-22
+Today's email sweep turned up a new, unrelated Gmail thread: an auto-reply from
+Marshall+Sterling (the insurance broker) to a "New Claim Notice — Policy
+DEP-2335743-P1 — DeWalt v. Cuzzie's Dispensary & Delivery (CAM-L-1339-26)" email —
+i.e. someone already emailed the broker to report this suit as an insurance claim.
+
+The auto-reply itself is generic boilerplate ("closing Friday, May 22nd" — a stale
+holiday notice, unrelated to today's date) but it carries one load-bearing line:
+**"No claims can be reported, coverage cannot be amended, bound, or canceled via
+this email."** That means the claim notice, as sent, may not have actually
+registered as a filed claim with the broker/insurer — worth confirming it went in
+through their real claims channel (phone/portal), not just email.
+
+Who sent the original "New Claim Notice" email and when is not established from
+this auto-reply alone — leaving that UNRESOLVED rather than assuming it was Lemar.
+
+## Update 2026-07-22T12:07:00-04:00 — defense counsel referral received
+Lemar emailed the Camden County Bar Association's Lawyer Referral Service directly
+(10:18am ET) requesting a second referral (his first, for the tenancy matter, was
+Rachael Brekke of McDowell Law) specifically for this employment-litigation defense —
+naming the case, docket number, the pending default judgment, and asking for
+employer-side counsel who can move to vacate the default. The Bar Association replied
+(3:46pm ET) with a referral:
+
+- **Salvatore Siciliano, Siciliano & Associates, LLC** — 2 Kings Highway West,
+  Haddonfield, NJ 08033 · (856) 795-0500. $30 discounted first half-hour consultation
+  per the referral program; fees beyond that are between Lemar and the attorney.
+
+This directly answers the "no defense counsel visible on this thread" gap flagged
+2026-07-21 — Lemar is now the one driving counsel outreach (run:manual, his own email,
+not something Samira drafted or sent). Next step is his call: contacting Siciliano &
+Associates. Gmail thread labeled `Samira/seen`.
+
+## Update 2026-07-22T18:20:00-04:00 — default judgment ENTERED; proof hearing Sept 14; opposing counsel demands a response by Aug 5
+Marco Di Stefano emailed 2026-07-22 5:30pm ET (thread `19f8bbc734d83286`, cc Monica Madin
+and info@cuzziesnj.com): Judge Francisco Dominguez, P.J.Cv. **entered default judgment as
+to liability** on 2026-07-17 (motion was unopposed) — Jennifer DeWalt now wins on
+Counts I–VII automatically; liability is no longer contestable. Order attached
+(`CivilCaseJacket (3).pdf`).
+
+**What's still open:** damages only. A **proof hearing is set for 2026-09-14** — the
+court will fix compensatory damages (back pay, front pay, emotional distress), punitive
+damages, NJ Wage Payment Law statutory penalties, and Plaintiff's attorneys' fees/costs
+there. Whatever number is entered becomes an enforceable judgment (docketing, levy,
+wage/bank execution, post-judgment asset discovery).
+
+**Two case-status notes from the letter:**
+- The default motion was **denied without prejudice as to Josh Evans** — Plaintiff may
+  renew it against him.
+- **Lemar remains a named defendant individually**, not just Cuzzie's the entity — the
+  individual claims against him personally are unaffected by this Order.
+
+**Hard deadline:** opposing counsel wants either a settlement proposal or confirmation
+Cuzzie's will proceed to the proof hearing **by 2026-08-05** — 14 days out. He states
+plainly that pre-7/17 settlement leverage is gone now that liability is decided, and
+that delay only grows the recoverable fee figure.
+
+**Standing gap, now sharper:** counsel referral (Salvatore Siciliano, logged above
+2026-07-22 12:07 ET) is still just a referral — no confirmation Lemar has actually
+retained counsel or that anyone has responded to this letter. An LLC cannot appear pro
+se in NJ Superior Court; Cuzzie's needs counsel of record before the Aug 5 deadline,
+separate from whatever Lemar decides for his individual-capacity exposure. Not guessing
+whether he's called Siciliano yet — that's his to confirm.
+
+Posted as an update in the existing #decisions thread (ts `1784657518.918529`) rather
+than a new card, per routing (one parent per task). Gmail thread labeled `Samira/seen`.
+
+## Update 2026-07-23T19:15:00-04:00 — counsel retained; new insurance claims correspondence to review
+
+Two developments found in today's email sweep, both closing/advancing the standing gap:
+
+1. **Siciliano & Associates confirmed representation.** Lemar emailed
+   `sjs@sicilianolaw.com` (cc `AA@sicilianolaw.com`, `jm@sicilianolaw.com`) 2026-07-23
+   ~17:22 ET requesting representation on this matter (CAM-L-1339-26). Salvatore
+   Siciliano replied ~17:44 ET: *"Yes, we will be able to assist you... my assistant
+   Lyann will call to schedule time for an initial telephone consultation."* Lemar
+   replied ~17:50 ET flagging a scheduling conflict (tied up 3:30-4:30pm today) before
+   Lyann calls. **This closes the "counsel not yet confirmed retained" gap** flagged
+   in the 2026-07-22 18:20 ET update — Cuzzie's now has representation moving, ahead
+   of the Aug 5 deadline. Not yet confirmed: whether a signed retainer/engagement
+   letter has been executed, or whether Siciliano's scope covers the Sept 14 proof
+   hearing specifically as well as the motion-to-vacate question. Both sent directly
+   by Lemar, not drafted by Samira. Gmail thread `19f8fd0b123baf45`.
+
+2. **Berkley Select Claims sent claim documentation.** `ClaimsOpsSupport@berkleyselect.com`
+   emailed 2026-07-23 ~18:54 ET (cc `mreddy@marshallsterling.com`,
+   `david.lee@jencapgroup.com`, `tdenis@berkleyselect.com` — the insurance broker/carrier
+   chain), subject **"Jennifer DeWalt v. Cuzzie's Dispensary & Delivery, LLC — Claim no:
+   57979."** Body is a bare "Please see attached" with one attachment,
+   `Insured_-_communications_to_from_07232026025213.pdf` (filename suggests a compiled
+   correspondence log, not opened/parsed by this capture). Gmail thread `19f9053fb36e204f`.
+   This is a real claim number now on record with Berkley Select — a meaningfully
+   different signal than the 2026-07-22 auto-reply that warned the earlier claim notice
+   "cannot be reported... via this email." Worth Lemar (or now Siciliano) pulling and
+   reviewing the attachment, and confirming claim 57979 is the properly-registered
+   claim (vs. the possibly-unregistered one flagged 7/22).
+
+Nothing sent, drafted, or forwarded by Samira on either item — both are informational,
+no-reply-shaped correspondence (a CSR auto-thread and a claims-support attachment drop),
+not something requiring a drafted email reply. Posted as an update in the existing
+#decisions thread (ts `1784657518.918529`) rather than a new card, per routing.
+
+## Update 2026-07-24T09:10:00-04:00 — Berkley Select adjuster scheduling; Lemar replied directly
+
+Tyler Denis, the handling adjuster at Berkley Select, emailed 2026-07-23 ~4:46pm ET
+(gmail thread `19f9053fb36e204f`, message `19f90bb3c0b28b37`) identifying himself as
+the adjuster on claim 57979 and asking for Lemar's availability to discuss the matter
+Monday 7/27. Lemar replied directly himself 2026-07-24 ~7:42am ET (message
+`19f93eef5b5c0498`, not drafted by Samira): confirmed Monday the 27th works, morning
+preferred, afternoon workable if needed.
+
+This resolves the "who's the handling adjuster and are they engaging" question
+implicit in the 7/23 claim-57979 update — Berkley Select now has an assigned adjuster
+actively moving, and a call is set for Monday. Nothing further needed from Samira on
+this specific exchange (Lemar handled it directly, same pattern as several Parke Bank
+rounds and the Curaleaf FINAL ATTEMPT reply). Not marking the overall DeWalt matter
+closed — the Sept 14 proof hearing and the Aug 5 opposing-counsel settlement/proceed
+deadline remain the open items. Gmail thread already carries `Samira/seen`; no
+draft/send action taken by Samira on this exchange.
+
+## Update 2026-07-24T15:35:00-04:00 — Siciliano called and left a message
+
+A new email landed 2026-07-24 ~3:33pm ET (gmail thread `19f959e4c30e1924`, subject
+"Just called you and left a message") from `sjs@sicilianolaw.com` — Salvatore
+Siciliano himself. The message body is just his signature block; there is no
+substantive text beyond the subject line and signature (no attachment content
+beyond his firm logo image). Read as: Siciliano's office called Lemar's phone and
+left a voicemail, then sent this as a paper-trail follow-up — there is nothing here
+for Samira to draft a reply to (a phone call needs a phone call back, not an email).
+
+Given the Aug 5 opposing-counsel deadline (12 days out) and the Sept 14 proof
+hearing, this is worth Lemar's prompt attention — likely Siciliano (or Lyann)
+following up on the initial consult / retainer / case strategy. Not asserting the
+content of the voicemail since Samira has no way to hear it. Flagging in
+#decisions as a call-back item rather than drafting anything. Gmail thread
+labeled `Samira/seen`.
+
+## Update 2026-07-25T12:15:00-04:00 — Siciliano callback #decisions card closed
+
+Lemar saluted (🫡) the #decisions card "Siciliano & Associates — called and left you
+a voicemail" (ts `1784924383.815819`), so closing that card. Reading the salute as
+Lemar's signal only — not asserting the callback happened or what was discussed, just
+that Lemar closed the loop on his end. Gmail thread `19f959e4c30e1924` labeled
+`Samira/sent`. This closes the #decisions card only — the underlying matter (Aug 5
+opposing-counsel deadline, Sept 14 proof hearing) stays open and untouched by this
+update.
+
+## Sources
+- gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
+- gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
+- slack: #decisions card, ts `1784657518.918529` (Option 1 picked ✅ by Lemar)
+- gmail: thread `19f8a2fe650f8a9f` (Camden County Bar Association second referral —
+  Salvatore Siciliano, Siciliano & Associates)
+- gmail: thread `19f8bbc734d83286` (2026-07-22 17:30 ET, default judgment entered +
+  Sept 14 proof hearing + Aug 5 response deadline)
+- gmail: thread `19f8fd0b123baf45` (2026-07-23, Siciliano & Associates confirms
+  representation, Lyann to schedule consult)
+- gmail: thread `19f9053fb36e204f` (2026-07-23 18:54 ET, Berkley Select Claims, claim
+  no. 57979, attachment not yet reviewed; 2026-07-24, adjuster Tyler Denis schedules
+  Monday 7/27 call, Lemar replied directly confirming)
+- gmail: thread `19f959e4c30e1924` (2026-07-24 19:33 UTC, Siciliano — "Just called you
+  and left a message," no substantive body beyond signature; labeled `Samira/seen`,
+  now also `Samira/sent` — #decisions card closed 2026-07-25)
+- slack: #decisions card, ts `1784924383.815819` (Siciliano callback card, closed via
+  🫡 2026-07-25)
