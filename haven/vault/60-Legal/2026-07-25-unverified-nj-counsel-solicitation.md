@@ -1,9 +1,9 @@
 ---
 created: 2026-07-25T12:32:00-04:00
-updated: 2026-07-25T09:03:46-04:00
+updated: 2026-07-25T10:45:00-04:00
 domain: legal
 type: task
-status: active
+status: done
 tags: [fraud-risk, unauthorized, unverified, counsel-engagement, business-sale, dewalt]
 source: gmail
 ---
@@ -48,7 +48,18 @@ legitimate action is contemplated here without his direct read. Flagging in
 happen, and does anyone have authority to negotiate a sale of Cuzzie's on his
 behalf.
 
+## Update — 2026-07-25 ~10:45 ET
+Lemar closed the #decisions card via 🫡 (ts `1784982541.237019`) with no additional
+reply text — no confirmation either way on whether he knows "Donte Bronaugh" or
+whether a call took place. Recording this as: **acknowledged/closed on his read**,
+not verified. Nothing was paid, signed, or replied to; no outreach was made to
+Bronaugh, "Steven," or anyone else on the thread. If this resurfaces (another
+email, a call, a request for money or a signature), it should be treated as a new
+flag, not a reopening of this one.
+
 ## Sources
 - gmail: thread `19f9644f6550c782` ("Engagement as New Jersey Counsel — Cuzzies
   Dispensary and Delivery LLC," from `dontebronaugh@gmail.com` to
   `Smg.esquire@verizon.net`, Lemar cc'd, 2026-07-24 ~6:34pm ET)
+- slack: #decisions `C0BBXA96FFV` ts `1784982541.237019` (card + Lemar's 🫡 close),
+  Samira's closing reply ts `1784988310.041279`
