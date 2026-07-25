@@ -1,13 +1,11 @@
 ---
 created: 2026-07-24T14:04-04:00
-updated: 2026-07-24T15:00-04:00
+updated: 2026-07-25T08:30-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [extra-space, storage, auction-risk, cuzzies]
 source: gmail
-due: 2026-08-04T14:00-04:00
-calendar_event_id: tn7vh0dpudib0lpoafhrra9oqs
 ---
 
 # Extra Space Storage - unit 4103 (Cuzzie's) heading to auction 8/4
@@ -37,7 +35,17 @@ was already sent in June; this is the follow-up with a hard auction date.
 Samira does not call or pay on Lemar's behalf - this needs his direct call
 before 8/4.
 
+## Update — 2026-07-25 08:30 ET
+Lemar's call (#decisions reply, 2026-07-25 ~8:28am ET): letting unit 4103 lapse.
+"There's really nothing in there that's even worth the amount of money that I
+have to pay for. It's only extra decorations and shovels and brooms, extra
+construction materials, so it can be let go." No call placed to Extra Space,
+no payment made - decision is to accept the auction/loss of contents rather
+than pay to redeem the unit. Reminder calendar event cancelled (was
+`tn7vh0dpudib0lpoafhrra9oqs`, 8/4 2pm ET) since no action is being taken
+before that date. Matter closed.
+
 ## Sources
 - gmail: thread 19f952e0380dbe81 ("Account Response Requested", 7/24)
 - gmail: thread 19ec70431379d02f ("Action Required: Notice of Lien", 6/14)
-- calendar: tn7vh0dpudib0lpoafhrra9oqs (reminder calendar, 8/4 2pm ET)
+- slack: #decisions `C0BBXA96FFV` ts `1784916529.468889` (Lemar's decision)
