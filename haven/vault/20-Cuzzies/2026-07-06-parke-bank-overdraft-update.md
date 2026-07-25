@@ -1,6 +1,6 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-24T09:10:00-04:00
+updated: 2026-07-25T14:20:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -339,6 +339,20 @@ questions, please let us know"), same pattern as prior rounds. Reopening status 
 pattern for this saga (holding reply / short ack / no-reply close). Labeled
 `Samira/seen` in Gmail.
 
+## Update 2026-07-25 — new round, 1 more returned item, $280.00 (NovusCapital), returning Monday
+
+Meggan Hallworth (Assistant Branch Manager, Parke Bank Kennedy Branch, cc Chris
+Cabezas) emailed 7/25 ~1:18 PM ET, subject "Secure: Cuzzie's Dispensary & Delivery LLC"
+(gmail thread `19f9a48e47346758`): 1 item presented for payment will be returned
+**Monday morning** —
+
+- External Withdrawal $280.00 — NovusCapital
+
+Direct invitation to reply ("If you have any questions, please let us know"), same
+established pattern. Reopening status to `active`; draft reply options staged to
+#decisions matching the A/B/C pattern used throughout this saga (holding reply / short
+ack / no-reply close). Labeled `Samira/seen` in Gmail.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -381,3 +395,5 @@ pattern for this saga (holding reply / short ack / no-reply close). Labeled
   `1784812488.694719` / `1784812496.307449`)
 - gmail: thread `19f942da9460dca2` (Meggan Hallworth, 2 more returned items $298.96,
   2026-07-24 08:50 ET)
+- gmail: thread `19f9a48e47346758` (Meggan Hallworth, 1 more returned item $280.00
+  NovusCapital, returning Monday, 2026-07-25 13:18 ET)
