@@ -1,6 +1,6 @@
 ---
 created: 2026-07-15T18:15-04:00
-updated: 2026-07-26T13:45-04:00
+updated: 2026-07-26T15:04-04:00
 domain: project
 type: note
 status: active
@@ -194,6 +194,31 @@ open — not guessed here, can be answered whenever Lemar has a view.
 Posted this replan back to #booking-agent (no #decisions lift — Lemar's own project,
 matches the established pattern). Nothing built or accounts opened.
 
+## Update 2026-07-26 (15:04 ET) — open flag closed; Phase 2 (Calendar Sync Core) design spec posted (PART C)
+
+Lemar replied directly in #booking-agent (ts `1785091102.755439`, ~15:00 ET) to the open
+flag from the 13:45 ET update: "No I think a tattoo artist will be a second test on
+track a. Let's start building track A now though."
+
+**Open flag closed:** the tattoo-artist friend is now the *second* Track A test
+(mechanic first), not a Track B dogfooder — no other change to the tiered plan.
+
+**"Start building Track A now"** — per the replanned sequence, Track A hardening
+formally begins once the Basic-tier pilot ships (step 4), which needs Phases 1–3 built
+first. Phase 1 (Foundations) already exists as a design spec; Phase 2 (Calendar Sync
+Core) was the next open step, so that's the concrete action taken this pass: drafted and
+posted the Phase 2 design spec — two-way Google Calendar sync (push/pull paths, source
+of truth = the Appointment table), timezone handling (UTC storage, operator-timezone
+display), and double-booking/conflict detection (overlap rejection + externally-created
+calendar events treated as availability blockers).
+
+Doc: <https://docs.google.com/document/d/1rDAa4sYhub6_Ov4yhE5WLRNfoiJRzJetuGSXk-b3YJk/edit|Booking Agent — Phase 2 (Calendar Sync Core) Design Spec>
+
+Design/plan artifact only — no code deployed, no Google Cloud project or OAuth
+credentials created (still Lemar's direct action per the Phase 1 spec). Phase 3
+(Reminders) is the next open step. Reply posted in #booking-agent same thread; no
+#decisions lift (Lemar's own project, matches established pattern).
+
 ## Sources
 - slack: #atlas 2026-07-15 18:15:39 ET, message ts 1784153739.693329 (channel C0BBWHCJUV9)
 - slack: #decisions 2026-07-16 08:12:06 ET, probe card ts 1784203926.276169 (channel C0BBXA96FFV)
@@ -204,3 +229,5 @@ matches the established pattern). Nothing built or accounts opened.
 - slack: #booking-agent 2026-07-25, "can we proceed with the next step?" ts 1784980354.978559; build-sequencing outline posted ts 1784981661.406349 (channel C0BHXTPST52)
 - slack: #booking-agent 2026-07-26 ~11:51 ET, mechanic-lead message ts 1785081105.504179 (channel C0BHXTPST52)
 - slack: #booking-agent 2026-07-26 ~13:42 ET, scope-change/replan-request message ts 1785086527.751709 (channel C0BHXTPST52)
+- slack: #booking-agent 2026-07-26 ~15:00 ET, open-flag-answer + "start building" message ts 1785091102.755439 (channel C0BHXTPST52); reply ts 1785093451.775999
+- drive: Booking Agent — Phase 2 (Calendar Sync Core) Design Spec, file id 1rDAa4sYhub6_Ov4yhE5WLRNfoiJRzJetuGSXk-b3YJk
