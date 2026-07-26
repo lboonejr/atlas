@@ -1,13 +1,12 @@
 ---
 created: 2026-07-24T12:20-04:00
-updated: 2026-07-26T10:08:23-04:00
+updated: 2026-07-26T12:09-04:00
 domain: cuzzies
 type: task
 status: done
 tags: [gusto, payroll, pay-period]
 source: gmail
 due: 2026-07-27T19:00-04:00
-calendar_event_id: ka01o5f5f58iudnokou1s84810
 ---
 
 # Gusto — payroll due Mon Jul 27, pay period Jul 12–25
@@ -40,8 +39,12 @@ haven-calendar-sync created one — a popup reminder 10 minutes before the 7:00 
 Monday deadline — since whether payroll was actually run is still unconfirmed per the
 update above.
 
+## Update 2026-07-26 (~12:09 ET) — calendar-sync retired the reminder
+Status is `done`; the 7/27 7:00 PM ET reminder event (`ka01o5f5f58iudnokou1s84810`) has
+been cancelled and the id cleared per the calendar-sync RETIRE rule.
+
 ## Sources
 - gmail: thread `19f93f5e82ea20d4`, automated@gusto.com, 2026-07-24 11:49 UTC; repeat
   reminder 2026-07-26 ~11:56am ET (thread `19f9e485e27aaac7`)
 - slack: #decisions parent ts 1784895631.960559, 🫡 close reaction from U0BC5UTHYG4
-- calendar: event `ka01o5f5f58iudnokou1s84810` on the reminder calendar, 2026-07-27 7:00 PM ET
+- calendar: event `ka01o5f5f58iudnokou1s84810` cancelled 2026-07-26 (was 2026-07-27 7:00 PM ET)
