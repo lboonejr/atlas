@@ -1,6 +1,6 @@
 ---
 created: 2026-07-16T09:00-04:00
-updated: 2026-07-26T12:30-04:00
+updated: 2026-07-26T17:07-04:00
 domain: project
 type: log
 status: awaiting-decision
@@ -325,3 +325,35 @@ guardrail) — surfaced here and in today's report instead.
 Quiet pass: 0 threads picked up · 0 rooms built · 0 drafts posted · 0 docs
 built/copied · 0 sends logged · 0 meetings scheduled · 1 Haven receipt (this
 update).
+
+## Update — 2026-07-26, PART E (~5:0x PM ET)
+
+Quiet verification pass, picking up behind the ~2:0x PM ET checkpoint (ts
+`1785089371`).
+
+- Gmail `label:Samira/investor -label:Samira/investor-sent` (Label_7 minus
+  Label_9) — 0 threads, all previously actioned, 0 new.
+- `#investor-pipeline` (`C0BCCUKEUQ2`) — read to the last checkpoint; no new
+  drop, reply, or reaction since Samira's own ~2:0x PM ET post (ts
+  `1785089371`). The three still-open items remain completely un-reacted:
+  Highgate touch-base outcome (ts `1784834307.391839`), BitX Capital/Magenta
+  Funding pursue-or-ignore (ts `1784747628.190969`), George Irwin gracious
+  close-draft (ts `1784463351.840879`).
+- `#decisions` (last 15) — no new investor-pipeline-sourced card. The Donte
+  Bronaugh/Jerzey Grown term-sheet card (ts `1785067899`) is a debt-
+  restructuring/business-sale matter filed to `60-Legal`, not this pipeline —
+  Lemar confirmed it directly in-thread (known business partner, term-sheet
+  exchange was intentional) and it is already CLOSED. Noted here only for the
+  name overlap with Panther Group's Donte Bronaugh cc, already flagged in a
+  prior pass; no action taken in this loop.
+- `index.md` cross-checked row by row against the above — accurate, no edits
+  needed this pass.
+
+Quiet pass: 0 threads picked up · 0 rooms built · 0 drafts posted · 0 docs
+built/copied · 0 sends logged · 0 meetings scheduled · 1 Haven receipt (this
+update).
+
+Still open on Lemar (unchanged): Panther Group awaiting Michael's day/time ·
+Prompt Working Capital pursue/ignore · BitX Capital pursue/ignore · Magenta
+Funding identity confirm · Joey's name/contact/ask · George Irwin close-draft
+· Highgate touch-base outcome.
