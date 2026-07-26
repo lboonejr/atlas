@@ -1,6 +1,6 @@
 ---
 created: 2026-07-15T18:15-04:00
-updated: 2026-07-26T11:51-04:00
+updated: 2026-07-26T13:45-04:00
 domain: project
 type: note
 status: active
@@ -147,6 +147,53 @@ friend as the Phase 6 dogfood pilot, or (b) just a second solo-operator vertical
 in-channel rather than guessing which; nothing else changes in the build sequence —
 Phase 1 (Foundations) design spec already stands as the last completed step.
 
+## Update 2026-07-26 (13:45 ET) — replanned build sequence around mechanic basic-tier pilot (PART C)
+
+Lemar confirmed the mechanic lead is the Phase 6 dogfood pilot (swapping in for the
+tattoo-artist friend, logged same day) and then set a scope change directly in-channel
+(ts `1785086527.751709`): the mechanic's pilot version keeps reminders but **drops
+payments/deposits** — his dogfood build is calendar sync + client/appointment tracking +
+reminders only. In parallel, the full-featured build (deposits/no-show fees, deeper
+client history) continues on its own track. End goal, per Lemar: package this as a
+**tiered product** — a Basic Tracker tier and a Full-Featured tier — once both are
+proven out. He asked directly: "can you replan the build sequence around this (basic
+tier scope + parallel full-build track) and flag what changes in the phase order?"
+
+**Replanned sequence:**
+
+1. **Foundations** — unchanged, already done (spec: `2026-07-25-phase1-foundations-design.md`).
+2. **Calendar sync core** — unchanged, next up.
+3. **Reminders** — unchanged.
+4. **Basic-tier dogfood pilot (NEW — moved up from old Phase 6)** — once Phases 1–3 are
+   built, freeze that as the Basic tier (calendar sync + client/appointment tracking +
+   reminders, no payments) and ship it live to the mechanic. This is the biggest order
+   change: the pilot no longer waits on Payments or Client History — it only needs
+   Phases 1–3, so it moves up four steps in the old sequence.
+5. **Two parallel tracks, starting once the basic pilot is live:**
+   - **Track A — Basic tier hardening:** iterate on Phases 1–3 against real mechanic
+     usage; watch for friction (same tech-averse usability bar Lemar set 07-23).
+   - **Track B — Full-featured build (old Phases 4–5, unblocked, continues independently):**
+     Payments (deposit/no-show fee processor integration) and Client History depth.
+     These no longer gate the first live pilot — they now build toward the
+     Full-Featured tier instead.
+6. **Tiered packaging (renamed from old Phase 6 "Dogfood pilot," which is now step 4
+   above)** — once Track A clears its ready-to-expand marker (a full month of real
+   mechanic bookings without hand-holding) and Track B completes Payments + Client
+   History, package the two as a tiered product: Basic Tracker tier vs. Full-Featured
+   tier.
+
+**What changed vs. the 07-25 outline:** the dogfood pilot moves from last (old Phase 6)
+to right after Reminders (new step 4), because the Basic tier scope no longer includes
+Payments or Client History. Payments and Client History (old Phases 4–5) are unblocked
+from gating the pilot and instead become the parallel Full-Featured track.
+
+**Open flag, not yet answered:** whether the tattoo-artist friend still dogfoods the
+Full-Featured track once Track B is ready, or whether that dogfood role is now fully
+open — not guessed here, can be answered whenever Lemar has a view.
+
+Posted this replan back to #booking-agent (no #decisions lift — Lemar's own project,
+matches the established pattern). Nothing built or accounts opened.
+
 ## Sources
 - slack: #atlas 2026-07-15 18:15:39 ET, message ts 1784153739.693329 (channel C0BBWHCJUV9)
 - slack: #decisions 2026-07-16 08:12:06 ET, probe card ts 1784203926.276169 (channel C0BBXA96FFV)
@@ -156,3 +203,4 @@ Phase 1 (Foundations) design spec already stands as the last completed step.
 - slack: #booking-agent 2026-07-22 ~19:14 ET, brief-question answers ts 1784574891.283109 (channel C0BHXTPST52, thread 1784383950.961519)
 - slack: #booking-agent 2026-07-25, "can we proceed with the next step?" ts 1784980354.978559; build-sequencing outline posted ts 1784981661.406349 (channel C0BHXTPST52)
 - slack: #booking-agent 2026-07-26 ~11:51 ET, mechanic-lead message ts 1785081105.504179 (channel C0BHXTPST52)
+- slack: #booking-agent 2026-07-26 ~13:42 ET, scope-change/replan-request message ts 1785086527.751709 (channel C0BHXTPST52)
