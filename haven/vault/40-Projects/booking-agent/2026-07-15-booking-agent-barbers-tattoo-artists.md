@@ -1,6 +1,6 @@
 ---
 created: 2026-07-15T18:15-04:00
-updated: 2026-07-26T11:51-04:00
+updated: 2026-07-26T12:30-04:00
 domain: project
 type: note
 status: active
@@ -146,6 +146,19 @@ friend as the Phase 6 dogfood pilot, or (b) just a second solo-operator vertical
 (independent mechanics) to keep in mind post-launch. Posted a clarifying question
 in-channel rather than guessing which; nothing else changes in the build sequence —
 Phase 1 (Foundations) design spec already stands as the last completed step.
+
+## Update 2026-07-26 — mechanic lead confirmed as Phase 6 dogfood pilot (PART G, worked in-channel)
+
+Lemar answered Samira's clarifying question from the update above directly in-channel
+(ts `1785083272.752079`, ~12:27 ET): "Swapping in for tattoo artist."
+
+Decision: the independent mechanic is now the Phase 6 dogfood pilot, replacing the
+tattoo-artist friend named in the 07-23 update. Nothing else in the six-phase build
+sequence changes — Phase 1 (Foundations) design spec still stands as the last completed
+step; Phase 6 (dogfood pilot) simply now points at this new contact instead. His name/
+contact info for the pilot is not yet on file — a detail to capture whenever Lemar shares
+it, not a blocker to anything upcoming (Phases 2–5 are still ahead of the pilot phase).
+Lemar's own project, no #decisions lift needed. Confirmed back in #booking-agent.
 
 ## Sources
 - slack: #atlas 2026-07-15 18:15:39 ET, message ts 1784153739.693329 (channel C0BBWHCJUV9)
