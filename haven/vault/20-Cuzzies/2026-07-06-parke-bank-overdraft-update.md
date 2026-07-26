@@ -1,6 +1,6 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-25T14:20:00-04:00
+updated: 2026-07-26T09:15:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -339,6 +339,25 @@ questions, please let us know"), same pattern as prior rounds. Reopening status 
 pattern for this saga (holding reply / short ack / no-reply close). Labeled
 `Samira/seen` in Gmail.
 
+## Update 2026-07-24 (2) — reply saved to Gmail Drafts
+
+Lemar reacted ✅ on Option A in the #decisions thread (message ts `1784899545.315679`
+— holding reply, same tone as prior rounds). Merged his pick with no edits and saved
+it to Gmail Drafts, threaded onto the original message (gmail thread
+`19f942da9460dca2`, draft id `r6784023313189212539`), addressed to Meggan Hallworth
+with Christopher Cabezas cc'ed:
+
+> Hi Meggan, thanks for the heads up and for looping me in. We're still working
+> through the cash flow timing on our end, nothing new to move today. I'll reach out
+> as soon as there's an update. Appreciate you and Chris staying on top of this.
+
+Not sent — sitting in Gmail Drafts only, ready for Lemar to send himself. #decisions
+thread replied "Done ✅"; parent left as posted (waiting on a 🫡 reaction to close).
+Status moved to `done` for this round of returned items — the underlying overdraft
+situation stays open and will likely generate further rounds; the next update on this
+matter should reopen status to `active` and append here rather than creating a
+sibling note.
+
 ## Update 2026-07-25 — new round, 1 more returned item, $280.00 (NovusCapital), returning Monday
 
 Meggan Hallworth (Assistant Branch Manager, Parke Bank Kennedy Branch, cc Chris
@@ -352,6 +371,24 @@ Direct invitation to reply ("If you have any questions, please let us know"), sa
 established pattern. Reopening status to `active`; draft reply options staged to
 #decisions matching the A/B/C pattern used throughout this saga (holding reply / short
 ack / no-reply close). Labeled `Samira/seen` in Gmail.
+
+## Update 2026-07-26 — reply saved to Gmail Drafts (7/25 round, Option B)
+
+Lemar reacted ✅ on Option B in the #decisions thread (message ts `1785003378.894309`
+— short ack-only reply). Merged his pick with no edits and saved it to Gmail Drafts,
+threaded onto the original message (gmail thread `19f9a48e47346758`, draft id
+`r-3993732764164859067`), addressed to Meggan Hallworth with Christopher Cabezas
+cc'ed:
+
+> Hi Meggan, thanks for letting me know. Still sorting out funding timing — I'll
+> follow up once there's news.
+
+Not sent — sitting in Gmail Drafts only, ready for Lemar to send himself. #decisions
+thread replied "Done ✅"; parent left as posted (waiting on a 🫡 reaction to close).
+Status moved to `done` for this round of returned items — the underlying overdraft
+situation stays open and will likely generate further rounds; the next update on this
+matter should reopen status to `active` and append here rather than creating a
+sibling note.
 
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
@@ -394,6 +431,9 @@ ack / no-reply close). Labeled `Samira/seen` in Gmail.
   NovusCapital II, 2026-07-23 08:15 ET; closed via Option C, no draft, message ts
   `1784812488.694719` / `1784812496.307449`)
 - gmail: thread `19f942da9460dca2` (Meggan Hallworth, 2 more returned items $298.96,
-  2026-07-24 08:50 ET)
+  2026-07-24 08:50 ET; reply drafted `r6784023313189212539`, Option A ✅ picked, message
+  ts `1784899540.968389` / `1784899545.315679`)
 - gmail: thread `19f9a48e47346758` (Meggan Hallworth, 1 more returned item $280.00
-  NovusCapital, returning Monday, 2026-07-25 13:18 ET)
+  NovusCapital, returning Monday, 2026-07-25 13:18 ET; reply drafted
+  `r-3993732764164859067`, Option B ✅ picked, message ts `1785003374.228009` /
+  `1785003378.894309`)
