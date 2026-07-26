@@ -1,6 +1,6 @@
 ---
 created: 2026-07-15T18:15-04:00
-updated: 2026-07-25T09:14-04:00
+updated: 2026-07-26T11:51-04:00
 domain: project
 type: note
 status: active
@@ -129,7 +129,23 @@ his own project so no #decisions lift:
    hand-holding
 
 Nothing built or accounts opened — sequencing plan only. Next actual step (Phase 1
-build) is Lemar's call to kick off.
+build) is Lemar's call to kick off. (Phase 1 was greenlit 2026-07-25, spec doc built —
+see `2026-07-25-phase1-foundations-design.md`.)
+
+## Update 2026-07-26 — potential dogfood/pilot lead surfaced (PART G, worked in-channel)
+
+Lemar dropped a new lead in #booking-agent (ts `1785081105.504179`, ~11:51 ET):
+"I found someone that wants to do the booking agent, a young guy that does independent
+mechanic work." No reaction/reply on it yet — first pass on this pass.
+
+This is new project context, not a decision needing a #decisions lift (matches the
+established pattern for this channel — scope/pilot questions get worked in-channel,
+same as the 07-23 and 07-25 updates above). It's ambiguous whether "wants to do the
+booking agent" means (a) a candidate to swap in for or add alongside the tattoo-artist
+friend as the Phase 6 dogfood pilot, or (b) just a second solo-operator vertical
+(independent mechanics) to keep in mind post-launch. Posted a clarifying question
+in-channel rather than guessing which; nothing else changes in the build sequence —
+Phase 1 (Foundations) design spec already stands as the last completed step.
 
 ## Sources
 - slack: #atlas 2026-07-15 18:15:39 ET, message ts 1784153739.693329 (channel C0BBWHCJUV9)
@@ -139,3 +155,4 @@ build) is Lemar's call to kick off.
 - slack: #booking-agent 2026-07-16 14:00:29 ET, scope-answers message ts 1784224829.576589 (channel C0BHXTPST52)
 - slack: #booking-agent 2026-07-22 ~19:14 ET, brief-question answers ts 1784574891.283109 (channel C0BHXTPST52, thread 1784383950.961519)
 - slack: #booking-agent 2026-07-25, "can we proceed with the next step?" ts 1784980354.978559; build-sequencing outline posted ts 1784981661.406349 (channel C0BHXTPST52)
+- slack: #booking-agent 2026-07-26 ~11:51 ET, mechanic-lead message ts 1785081105.504179 (channel C0BHXTPST52)
