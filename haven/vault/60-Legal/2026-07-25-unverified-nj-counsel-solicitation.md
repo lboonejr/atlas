@@ -1,9 +1,9 @@
 ---
 created: 2026-07-25T12:32:00-04:00
-updated: 2026-07-26T08:10:00-04:00
+updated: 2026-07-26T10:05:30-04:00
 domain: legal
 type: task
-status: awaiting-decision
+status: done
 tags: [fraud-risk, unauthorized, unverified, counsel-engagement, business-sale, dewalt]
 source: gmail
 ---
@@ -81,6 +81,24 @@ something Samira will draft into or act on further; status set back to
 `awaiting-decision` pending Lemar's confirmation of whether this is a deal he is
 personally running or a compromise that needs a security response.
 
+## Update — 2026-07-26 ~09:22 ET (Lemar confirmed — closing)
+Lemar replied directly in-thread on the 🔴 re-flag card (ts `1785072172.986379`,
+not a reaction — a typed answer): "Donte is a business partner of ours that helped
+me and Josh put Cuzzie's together and helped Markony put The Station Dispensary
+together, he's on our team and is assisting with Cuzzie's current situation. I was
+sending the deal over to him because he's helping negotiate. He sent me different
+numbers because he's saying we can make the deal sweeter. No cause for alarm."
+
+This resolves the flag: Donte Bronaugh is a known business partner Lemar is
+personally and knowingly dealing with on the Jerzey Grown restructuring; the term
+sheet exchange was intentional. The mismatch with the Haven entity on file
+(`jerzey-grown.md`, listing Jarred Freeman as the wholesale-flower contact) stands
+as a separate, lower-stakes gap — Jerzey Grown appears to have two distinct
+contacts (a flower vendor and this restructuring/negotiation partner) that the
+entity note doesn't yet distinguish; worth a note update on a future pass, not a
+flag. Status set to `done`. No further Samira action on this thread — Lemar is
+running the Jerzey Grown negotiation himself.
+
 ## Sources
 - gmail: thread `19f9644f6550c782` ("Engagement as New Jersey Counsel — Cuzzies
   Dispensary and Delivery LLC," from `dontebronaugh@gmail.com` to
@@ -88,4 +106,4 @@ personally running or a compromise that needs a security response.
   `19f9bf70af1afdbd` ("Jerzey Grown" / "Re: Jerzey Grown", 2026-07-25 9:11–9:23pm ET)
 - slack: #decisions `C0BBXA96FFV` ts `1784982541.237019` (first card + Lemar's
   🫡 close), Samira's closing reply ts `1784988310.041279`; re-flag ts
-  `1785067899.252279`
+  `1785067899.252279`; Lemar's confirming reply ts `1785072172.986379`
