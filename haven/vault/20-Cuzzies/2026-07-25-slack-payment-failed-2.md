@@ -1,6 +1,6 @@
 ---
 created: 2026-07-25T08:25:00-04:00
-updated: 2026-07-25T16:03:25-04:00
+updated: 2026-07-26T15:05:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -51,11 +51,23 @@ which vault-keeper must never do. Filed here as `-2` instead. **Needs a manual m
 dedup pass** — Lemar or a future capture pass should fold this note's content (the
 content-deletion deadline above) into the sibling note and archive one of the two.
 
+## Update 2026-07-26 (PART A reaction sweep) — closed
+
+Lemar reacted 🫡 on the #decisions card (ts `1784982544.271849`). Reading this as
+closing the card: no payment-method update was made on Samira's end (outward-facing
+payment/account action, outside the Safety floor), nothing sent. Card closed
+in-thread. Still true and unresolved on Lemar's side: the Cuzzie's plan renewal charge
+is failed/unfixed, and the harder deadline from the follow-up notice stands — content
+older than one year starts getting deleted from the free-tier workspace beginning
+**2026-09-23** if the paid plan isn't restored before then. The sibling note
+(`20-Cuzzies/2026-07-25-slack-payment-failed.md`) covers the same event and still needs
+the manual merge/dedup pass flagged in the Update below — not done this pass (out of
+scope for a reaction-sweep close; flagging again so it doesn't get lost).
+
 ## Sources
 - gmail: thread `19f96a92c1c5d841` (Slack renewal charge failed, feedback@slack.com,
   2026-07-25 ~00:24 ET)
 - gmail: thread `19f9a77b1be3656d` (Slack content-deletion notice tied to the same
   lapse, no-reply@slack.com, 2026-07-25 ~18:09 UTC / ~14:09 ET; deletion starts
   2026-09-23)
-- slack: #decisions message ts `1784982544.271849` (open card, unreacted as of this
-  scan)
+- slack: #decisions message ts `1784982544.271849` (closed 🫡, 2026-07-26 PART A sweep)
