@@ -1,6 +1,6 @@
 ---
 created: 2026-07-16T09:00-04:00
-updated: 2026-07-18T11:10-04:00
+updated: 2026-07-26T12:30-04:00
 domain: project
 type: log
 status: awaiting-decision
@@ -264,6 +264,63 @@ per this run's instructions, left untouched.
 
 **Index note** (`index.md`) verified accurate against all of the above — no row
 edits needed this pass (no status changed).
+
+Quiet pass: 0 threads picked up · 0 rooms built · 0 drafts posted · 0 docs
+built/copied · 0 sends logged · 0 meetings scheduled · 1 Haven receipt (this
+update).
+
+## Update — 2026-07-26, PART E (dedicated pass, ~12:2x ET)
+
+Independent full-depth verification pass (Gmail thread-by-thread, Drive
+Data-Rooms-parent listing, #investor-pipeline full history to its earliest
+retained message, #decisions, and cross-reference against every existing Haven
+note touching this pipeline), run separately from the routine hourly scans that
+have been posting quiet checkpoints to #investor-pipeline roughly hourly since
+7/19 (most recent Slack checkpoint: ts `1785010075`, Jul 25 ~4:0x PM ET; the
+2026-07-26 11:05 ET hourly digest also confirmed "0 new" without a fresh Slack
+post — see `_daily/2026-07-26.md`).
+
+**Confirmed 0 new since the 7/25 ~4pm checkpoint:**
+- Gmail `label:"Samira/investor"` (17 threads total, confirmed via
+  `list_labels` — Label_7, 36 messages/17 threads/4 unread) minus
+  `Samira/investor-sent` (Label_9) — 0 un-actioned threads. Every thread in the
+  label maps to an already-tracked index row or an already-logged non-pipeline
+  item (Highgate Capital Partners — broker-to-sell, out of index scope by
+  design, see [[2026-07-07-highgate-capital-broker-engagement]]; Willow
+  Financial/Colton Marshall — already passed 🫡 2026-07-08, see
+  [[2026-07-08-willow-financial-pass]], by design never entered the index).
+- Drive Data Rooms parent (`1U7GFTuA5Tj6TMD0CWgfZhWwSbwWKWDfF`) — same 11
+  folders as prior passes (420 Solutions, Data Room [Joey's, still unrenamed],
+  FundCanna, BizFundsHub, Panther Group, George Irwin, Jason Klein [misfiled,
+  still untouched by design — business-sale broker, not an investor],
+  Star Renovate Funding, George [stray empty, still undeleted — no Drive
+  delete tool], Getty Advance, the retired Investor Index spreadsheet,
+  Liquidibee — Data Room [separate 60-Legal collections matter, not this
+  pipeline]). Nothing new, nothing needing a rename/delete beyond what's
+  already flagged to Lemar.
+- `#investor-pipeline` (`C0BCCUKEUQ2`) — read to its earliest retained message
+  (Jul 16); no drop, reply, or reaction since the 7/25 ~4pm checkpoint. The
+  three still-open items carried since 7/22–7/23 (Highgate touch-base outcome,
+  BitX Capital/Magenta Funding pursue-or-ignore, George Irwin gracious
+  close-draft) remain **completely un-reacted** — no ✅/👀/⛔/🫡 from Lemar on
+  any of them across the entire retained history.
+- `index.md` cross-checked row by row against every source above — accurate,
+  no edits needed.
+
+**Nothing rises to a live financial commitment, term sheet, LOI, wire request,
+or signature ask this pass** — the two dollar-figure items on file (Prompt
+Working Capital's $190K MCA proposal, BitX Capital's "$300K, no collateral"
+blast) are both unsolicited cold pitches awaiting a simple pursue/ignore call,
+not active negotiations.
+
+**Genuinely time-sensitive callout:** Highgate Capital Partners (Camilo Basto/
+Jeffrey Dunetz) held a real touch-base call with Lemar on 2026-07-22 (calendar
+event `5irs0loq387fethlbcieq4bl8t`, accepted) and nobody has captured what was
+discussed or decided in the 4 days since — this is the one open loop where a
+live external conversation already happened and needs Lemar's own recollection
+to move (reactivate the broker-to-sell relationship on some terms, or park
+again). Not re-posted this pass (already flagged 7/23, no re-nudge per
+guardrail) — surfaced here and in today's report instead.
 
 Quiet pass: 0 threads picked up · 0 rooms built · 0 drafts posted · 0 docs
 built/copied · 0 sends logged · 0 meetings scheduled · 1 Haven receipt (this
