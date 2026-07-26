@@ -1,6 +1,6 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-26T09:15:00-04:00
+updated: 2026-07-26T13:30:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -389,6 +389,17 @@ Status moved to `done` for this round of returned items — the underlying overd
 situation stays open and will likely generate further rounds; the next update on this
 matter should reopen status to `active` and append here rather than creating a
 sibling note.
+
+## Update 2026-07-26 (2) — closed, Lemar saluted (7/22 NovusCapital II round)
+
+Lemar reacted 🫡 on the #decisions card for the 7/22 returned-item round (message ts
+`1784722750.227349` — Option A draft to Christopher Cabezas, cc Meggan Hallworth,
+already saved to Gmail Drafts on 7/22, draft id `r-6463077385516029090`). Reading this
+as: he's closing the loop on this round, no further action needed from Samira. Gmail
+thread `19f89bd9c13faad0` labeled `Samira/sent` per the established 🫡-close convention
+for this saga. Status stays `done` for this round — the underlying overdraft situation
+stays open and will likely generate further rounds; the next update on this matter
+should reopen status to `active` and append here rather than creating a sibling note.
 
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
