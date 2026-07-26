@@ -1,9 +1,9 @@
 ---
 created: 2026-07-25T12:32:00-04:00
-updated: 2026-07-25T10:45:00-04:00
+updated: 2026-07-26T08:10:00-04:00
 domain: legal
 type: task
-status: done
+status: awaiting-decision
 tags: [fraud-risk, unauthorized, unverified, counsel-engagement, business-sale, dewalt]
 source: gmail
 ---
@@ -57,9 +57,35 @@ Bronaugh, "Steven," or anyone else on the thread. If this resurfaces (another
 email, a call, a request for money or a signature), it should be treated as a new
 flag, not a reopening of this one.
 
+## Update — 2026-07-26 ~08:10 ET (resurfaced, re-flagged)
+Overnight Gmail sweep found Gmail thread `19f9bf70af1afdbd` ("Jerzey Grown"):
+- 2026-07-25 9:11pm ET — an email **sent from Lemar's own account** (not a Samira
+  draft — Samira never sends) to `dontebronaugh@gmail.com`, with a full Term Sheet
+  (`Cuzzies_JerzeyGrown_TermSheet.docx`) and Debt Schedule
+  (`Cuzzies_Debt_Schedule_Shareable.xlsx`) attached: 90/10 structure with Donte's
+  side as Managing Member and Cuzzie's stepping back to a passive 10%, ~$798K in
+  total obligations broken out line by line, a full release of personal
+  guarantees, and a $50K-capped mutual indemnity.
+- 2026-07-25 9:23pm ET — Donte replied "Term sheet — ready to sign," with his own
+  revised term sheet + debt schedule attached, changing the post-closing monthly
+  obligation figure from $12,300 to $7,832.
+
+This is the **same unverified contact** from the entry above, less than 24 hours
+after impersonating counsel and claiming an unauthorized sale of the business —
+now apparently in possession of a real, detailed Cuzzie's term sheet and debt
+schedule. The real Jerzey Grown relationship on file is a wholesale-flower vendor
+contact, Jarred Freeman (`jarred@jerzeygrown.com`,
+`50-Reference/Entities/jerzey-grown.md`) — not Donte Bronaugh. Re-flagged in
+#decisions (ts `1785067899.252279`) as 🔴 urgent, needs-your-read-now — this is not
+something Samira will draft into or act on further; status set back to
+`awaiting-decision` pending Lemar's confirmation of whether this is a deal he is
+personally running or a compromise that needs a security response.
+
 ## Sources
 - gmail: thread `19f9644f6550c782` ("Engagement as New Jersey Counsel — Cuzzies
   Dispensary and Delivery LLC," from `dontebronaugh@gmail.com` to
-  `Smg.esquire@verizon.net`, Lemar cc'd, 2026-07-24 ~6:34pm ET)
-- slack: #decisions `C0BBXA96FFV` ts `1784982541.237019` (card + Lemar's 🫡 close),
-  Samira's closing reply ts `1784988310.041279`
+  `Smg.esquire@verizon.net`, Lemar cc'd, 2026-07-24 ~6:34pm ET); thread
+  `19f9bf70af1afdbd` ("Jerzey Grown" / "Re: Jerzey Grown", 2026-07-25 9:11–9:23pm ET)
+- slack: #decisions `C0BBXA96FFV` ts `1784982541.237019` (first card + Lemar's
+  🫡 close), Samira's closing reply ts `1784988310.041279`; re-flag ts
+  `1785067899.252279`
