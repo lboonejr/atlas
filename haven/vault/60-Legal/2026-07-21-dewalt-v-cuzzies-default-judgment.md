@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-07-27T13:05:00-04:00
+updated: 2026-07-27T09:57:00-04:00
 domain: legal
 type: task
 status: active
@@ -231,7 +231,7 @@ coordinating with each other. No payment has been made or retainer signed on the
 Greenberg side as of this update — Donte and Greenberg are still negotiating terms
 between themselves. No Samira action taken (not primary recipient, informational only).
 
-## Update 2026-07-27T13:05:00-04:00 — Greenberg agrees to the co-counsel/review-only scope; Berkley Select call held today
+## Update 2026-07-27T09:57:00-04:00 — Greenberg agrees to the co-counsel/review-only scope; Berkley Select call scheduled for this afternoon
 
 Two developments today, both continuing threads already logged above, neither a
 Samira action:
@@ -240,7 +240,7 @@ Samira action:
    update's exchange: Greenberg pushed back once more (*"I am not willing to enter
    my appearance in a superior court case for $500"*), Donte re-clarified he only
    needs Greenberg as NJ co-counsel to review/approve a settlement (not appear in
-   the litigation itself), and Greenberg replied *"ok"* ~1:05pm ET — reading this as
+   the litigation itself), and Greenberg replied *"ok"* ~9:05am ET — reading this as
    Greenberg agreeing to the narrowed scope. Still no payment/retainer signed on
    file as of this update; this is the Donte-run settlement track, separate from
    Siciliano's litigation representation. No Samira action (not primary recipient).
