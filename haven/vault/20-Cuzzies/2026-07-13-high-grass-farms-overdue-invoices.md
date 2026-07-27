@@ -1,6 +1,6 @@
 ---
 created: 2026-07-13T08:15-04:00
-updated: 2026-07-13T09:20-04:00
+updated: 2026-07-27T00:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -34,3 +34,17 @@ card with draft reply options addressed to jconnelly@hgfarmsnj.com, none sent.
 
 ## Sources
 - gmail: thread 19f5b216aca9bd57 (2 messages: High_G-440 and High_G-918 invoice reminders)
+
+## Update — 2026-07-27
+
+Same two invoices got a fresh round of QuickBooks auto-reminders, both still unpaid:
+
+- **Invoice High_G-918** — $1,810.70, due 02/27/2026 (reminder received 06:46 ET)
+- **Invoice High_G-440** — $718.18, due 11/09/2025 (reminder received 06:48 ET)
+
+No new information beyond the repeat reminder — balance and due dates unchanged from
+the 2026-07-13 entry above. Still no reply drafted (no-reply QuickBooks sender); still
+awaiting Lemar's pay/dispute/hold call.
+
+## Sources
+- gmail: thread 19fa32e9c881f512 (2 messages: repeat High_G-918 and High_G-440 reminders)
