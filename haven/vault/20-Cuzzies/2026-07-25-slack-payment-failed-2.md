@@ -64,10 +64,30 @@ older than one year starts getting deleted from the free-tier workspace beginnin
 the manual merge/dedup pass flagged in the Update below — not done this pass (out of
 scope for a reaction-sweep close; flagging again so it doesn't get lost).
 
+## Update 2026-07-27T13:04:00-04:00 — confirmed reverted to free tier
+
+Slack emailed again 2026-07-27 ~12:23pm ET (no-reply@email.slackhq.com), subject "Your
+team has lost access to key features in Slack": the workspace has now actually reverted
+to the free plan (this is past the "at risk" stage of the 7/25 notices — it has
+happened). No-reply automated notice, nothing to draft. Labeled `Samira/seen`.
+
+Worth flagging as a possible root cause: several standing infra gaps logged across
+recent scans — the Open Items canvas read/write access being limited, the `#general`
+channel access gap (`not_in_channel` since 7/22), and the lack of any Slack admin tool
+(message-edit, channel-rename) available to Samira's bot — may simply be free-tier
+permission limits rather than separate bot-permission problems. Not confirmed (free-tier
+workspaces can still have those features depending on plan-specific settings), but the
+timing lines up and it's a simpler explanation than several unrelated access bugs.
+Restoring the paid plan (Lemar's call, payment-method fix) may resolve more than just
+this ticket. Still nothing Samira can act on directly — payment authorization is
+outward-facing and outside the Safety floor.
+
 ## Sources
 - gmail: thread `19f96a92c1c5d841` (Slack renewal charge failed, feedback@slack.com,
   2026-07-25 ~00:24 ET)
 - gmail: thread `19f9a77b1be3656d` (Slack content-deletion notice tied to the same
   lapse, no-reply@slack.com, 2026-07-25 ~18:09 UTC / ~14:09 ET; deletion starts
   2026-09-23)
+- gmail: thread `19fa4638a7ea8462` (feature-loss confirmation, no-reply@email.slackhq.com,
+  2026-07-27 ~16:23 UTC / ~12:23 ET)
 - slack: #decisions message ts `1784982544.271849` (closed 🫡, 2026-07-26 PART A sweep)
