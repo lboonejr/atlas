@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-07-25T12:15:00-04:00
+updated: 2026-07-27T09:04:00-04:00
 domain: legal
 type: task
 status: active
@@ -198,6 +198,39 @@ that Lemar closed the loop on his end. Gmail thread `19f959e4c30e1924` labeled
 opposing-counsel deadline, Sept 14 proof hearing) stays open and untouched by this
 update.
 
+## Update 2026-07-27T09:04:00-04:00 — Donte pursuing separate NJ co-counsel (Greenberg) on the settlement/sale track
+
+New Gmail thread `19fa39f99e758d24` ("RE: Engagement as New Jersey Counsel — Cuzzies
+Dispensary and Delivery LLC," 2026-07-27 8:40–8:54am ET, Lemar cc'd throughout) shows
+Donte Bronaugh continuing to try to retain **Steven M. Greenberg** (`smg.esquire@verizon.net`,
+Law Office of Steven M. Greenberg, Cedar Grove NJ, 973-857-9300) as New Jersey co-counsel
+— **this is the same outreach previously flagged and resolved** in
+`60-Legal/2026-07-25-unverified-nj-counsel-solicitation.md` (Lemar confirmed 2026-07-26
+that Donte is a known business partner running this negotiation on his behalf; status
+`done`, no fraud concern). Today's exchange is that negotiation continuing:
+
+- Greenberg initially pushed back: *"I am not willing to enter my appearance in a
+  superior court case for $500."*
+- Donte clarified 8:44am: the company "had a default judgment entered as it was
+  unrepresented and there is now a damages hearing set for September 14th" (matches
+  this note's Sept 14 proof hearing) — he wants to negotiate the settlement himself
+  since it's tied to the sale-negotiation number, with Greenberg cc'd/reviewing.
+- Greenberg asked "Is this in litigation," and Donte replied 8:54am: he only needs
+  **co-counsel for the settlement negotiation** — Greenberg would just review/approve
+  a settlement as NJ counsel of record; "if we are unable to settle before the court
+  date we will find alternative means to handle that portion."
+
+**Read:** this appears to be a second, parallel track alongside Siciliano & Associates
+(retained 2026-07-23 for the litigation defense / proof hearing). Donte seems to be
+pursuing a settlement in parallel, via Greenberg, aimed at closing this liability out
+before the sale — separate from Siciliano's litigation representation. **Not flagging
+as a new fraud risk** (already resolved 7/26), but worth Lemar's awareness: two
+different NJ attorneys may now be circling the same matter (Siciliano for the court
+proceeding, Greenberg for a Donte-run settlement), and nothing here indicates they are
+coordinating with each other. No payment has been made or retainer signed on the
+Greenberg side as of this update — Donte and Greenberg are still negotiating terms
+between themselves. No Samira action taken (not primary recipient, informational only).
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
 - gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
@@ -216,3 +249,6 @@ update.
   now also `Samira/sent` — #decisions card closed 2026-07-25)
 - slack: #decisions card, ts `1784924383.815819` (Siciliano callback card, closed via
   🫡 2026-07-25)
+- gmail: thread `19fa39f99e758d24` (2026-07-27 8:40-8:54am ET, Donte/Greenberg
+  co-counsel negotiation continuing — see `60-Legal/2026-07-25-unverified-nj-counsel-solicitation.md`
+  for the prior fraud-risk flag and resolution on this same contact)
