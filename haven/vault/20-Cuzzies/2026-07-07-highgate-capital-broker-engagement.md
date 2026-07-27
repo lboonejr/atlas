@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T11:00:00-04:00
-updated: 2026-07-27T09:18:00-04:00
+updated: 2026-07-27T12:00:00-04:00
 domain: cuzzies
 type: note
 status: active
@@ -84,9 +84,22 @@ price vs. net proceeds), term length/exclusivity, and termination clause before
 signing. **Signing is Lemar's call — nothing filled out or returned by Samira.**
 Flagged in #decisions.
 
+## Update 2026-07-27 — Lemar: hold for now, exclusivity conflicts with other active lanes
+
+Lemar's read in #decisions: "I don't think that we can move forward with this just yet
+because of the exclusivity part. We got other lanes going right now and wouldn't want
+to give exclusive rights to them." Decision: **hold, do not sign** — the exclusivity
+clause in Highgate's engagement letter would block the other active deal lanes Lemar
+is currently working. Nothing signed or returned to Camilo/Jeffrey. Status stays
+**active** (not parked) — the relationship is live, just paused on this specific
+document pending how the other lanes play out. Card left open in #decisions in case
+Lemar wants a reply drafted to Camilo; no reply drafted yet since he hasn't asked for
+one.
+
 ## Sources
 - gmail: thread 19f3ccb1b638dee1 (Highgate Capital Partners "Follow-Up", 2026-07-07)
 - gmail: thread 19f8b14d4684685d (calendar invite "Cuzziesnj/HCP- touch base", 2026-07-22)
 - calendar: event `5irs0loq387fethlbcieq4bl8t`, Jul 22 2026 3:00–3:30pm ET, Lemar accepted
 - gmail: thread `19fa3ba25917d2cd` (2026-07-27 09:18 ET, Camilo Basto — engagement
   letter, 10% no retainer)
+- slack: #decisions ts `1785161637.814709` (card) / `1785162489.020899` (Lemar's hold decision)
