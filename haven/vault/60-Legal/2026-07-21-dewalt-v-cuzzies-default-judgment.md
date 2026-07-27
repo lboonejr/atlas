@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-07-27T09:04:00-04:00
+updated: 2026-07-27T13:05:00-04:00
 domain: legal
 type: task
 status: active
@@ -230,6 +230,25 @@ proceeding, Greenberg for a Donte-run settlement), and nothing here indicates th
 coordinating with each other. No payment has been made or retainer signed on the
 Greenberg side as of this update — Donte and Greenberg are still negotiating terms
 between themselves. No Samira action taken (not primary recipient, informational only).
+
+## Update 2026-07-27T13:05:00-04:00 — Greenberg agrees to the co-counsel/review-only scope; Berkley Select call held today
+
+Two developments today, both continuing threads already logged above, neither a
+Samira action:
+
+1. **Greenberg/Donte co-counsel thread resolved.** Continuing the 2026-07-27 09:04
+   update's exchange: Greenberg pushed back once more (*"I am not willing to enter
+   my appearance in a superior court case for $500"*), Donte re-clarified he only
+   needs Greenberg as NJ co-counsel to review/approve a settlement (not appear in
+   the litigation itself), and Greenberg replied *"ok"* ~1:05pm ET — reading this as
+   Greenberg agreeing to the narrowed scope. Still no payment/retainer signed on
+   file as of this update; this is the Donte-run settlement track, separate from
+   Siciliano's litigation representation. No Samira action (not primary recipient).
+
+2. **Berkley Select call happened as scheduled.** Adjuster Tyler Denis and Lemar
+   coordinated call time directly by email this morning (2pm CST / 3pm ET) and the
+   call is on Lemar's calendar (`ct01kge613v5266gm4t2qe688k`, 3:00–3:30pm ET). Lemar
+   handled all scheduling himself; nothing drafted or sent by Samira.
 
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")

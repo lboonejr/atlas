@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T11:00:00-04:00
-updated: 2026-07-23T14:35:00-04:00
+updated: 2026-07-27T13:18:00-04:00
 domain: cuzzies
 type: note
 status: active
@@ -68,7 +68,25 @@ available records. Flagged to Lemar in #investor-pipeline: what came out of the 
 call, and whether this should reactivate as a live broker engagement (possibly on
 revised terms) or get parked again.
 
+## Update 2026-07-27 (~13:18 ET) — engagement letter sent, revised terms: 10%, no retainer
+
+Camilo Basto (Partner, Highgate) emailed today ~1:18pm ET, subject "Engagement letter
+- 10% no retainer": *"As discussed here is the engagement letter. Once you fill it out
+we will execute and send it back."* Addressed to Lemar, Jeffrey Dunetz cc'd. Attachment
+not opened/parsed by this capture.
+
+This answers the "what came out of the 7/22 touch-base" gap flagged in the update
+above — the outcome was a renegotiation to **10% success fee, no retainer** (a
+materially better term than the original $10K flat retainer + 10% success fee Lemar
+declined on cash grounds back on 7/7). No terms confirmed beyond the subject line
+itself (attachment not reviewed) — worth Lemar confirming the fee basis (purchase
+price vs. net proceeds), term length/exclusivity, and termination clause before
+signing. **Signing is Lemar's call — nothing filled out or returned by Samira.**
+Flagged in #decisions.
+
 ## Sources
 - gmail: thread 19f3ccb1b638dee1 (Highgate Capital Partners "Follow-Up", 2026-07-07)
 - gmail: thread 19f8b14d4684685d (calendar invite "Cuzziesnj/HCP- touch base", 2026-07-22)
 - calendar: event `5irs0loq387fethlbcieq4bl8t`, Jul 22 2026 3:00–3:30pm ET, Lemar accepted
+- gmail: thread `19fa3ba25917d2cd` (2026-07-27 13:18 ET, Camilo Basto — engagement
+  letter, 10% no retainer)
