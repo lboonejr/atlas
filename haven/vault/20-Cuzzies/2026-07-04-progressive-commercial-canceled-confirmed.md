@@ -1,6 +1,6 @@
 ---
 created: 2026-07-04T09:00-04:00
-updated: 2026-07-27T00:00-04:00
+updated: 2026-07-27T12:00:00-04:00
 domain: cuzzies
 type: log
 status: done
@@ -49,5 +49,13 @@ already cancelled per his 7/2 decision; request proof/confirmation of the cancel
 terms) or pay it to close it out and stop collections risk. Posted as a new #decisions
 card so it isn't buried inside this already-`done` log note.
 
+## Update 2026-07-27 — Lemar: let it lapse, tracked in #on-button
+
+Lemar's decision in #decisions: "We're going to let this lapse for now" — not disputing,
+not paying. He asked for this to be logged in #on-button for tracking. No payment made,
+no dispute correspondence sent to Progressive — tracking only, per the safety floor
+(payment authorization is his call). Posted to #on-button (`C0BEQUW5NPP`).
+
 ## Sources
 - gmail: thread 19fa1e171bca3fae ("Final notice: You owe $1,107.20 on your policy.")
+- slack: #decisions ts `1785154455.692639` (card) / `1785154909.161039` (Lemar: let it lapse, update #on-button)
