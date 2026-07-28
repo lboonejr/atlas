@@ -1,6 +1,6 @@
 ---
 created: 2026-07-04T13:30-04:00
-updated: 2026-07-27T15:35-04:00
+updated: 2026-07-28T12:15-04:00
 domain: project
 type: reference
 status: active
@@ -33,6 +33,7 @@ Parked — rows are never deleted.
 | BitX Capital | Cuzzie's | Todd Rowe · todd.rowe@bitxfunding.com | Unsolicited marketing blast — "Startup Funding Up to $300K with No Collateral," generic HTML banner mailer, no specific ask tied to Cuzzie's, no prior relationship on file | none built — flagged before building, same guard as Prompt Working Capital | Working | New label pickup 2026-07-22 (received 7/20, dated `Samira/investor`) — reads as a cold mass-mailer, same pattern as other unsolicited MCA/lender solicitations; flagged in #investor-pipeline rather than building a room or drafting a reply; awaiting Lemar's pursue/ignore call | 2026-07-22 |
 | Magenta Funding | Cuzzie's | Unknown — no correspondence on file beyond a Plaid connection notice | Unknown — a Plaid "Magenta Funding connected to your Parke Bank account" notice (2026-07-08) is the only trace; no application email, no contact name, no ask on file | none built — no contact or ask to tailor to | Working | New pickup 2026-07-22 — Gmail search for "Magenta Funding" turns up nothing beyond the one Plaid notification; flagged in #investor-pipeline asking Lemar/Josh to confirm who this is and what (if anything) was submitted before building anything or drafting outreach | 2026-07-22 |
 | Dhaval Joshi (THC Factory) | Cuzzie's | Dhaval Joshi · dhaval@thcfactory.net · [thcfactory.net](http://www.thcfactory.net) | **Equity/buyer** — proposes either (a) 90/10 split: cash injection to restart the business, prior owners passive at 10%, serviced via monthly payments on remaining debt until clear, or (b) outright purchase of the entire company + assets | none built — no exec summary/masters tailored yet, terms not confirmed as real by Lemar | Working | Dropped in #investor-pipeline 2026-07-27 ~2:30pm ET by a team member (not Lemar), template intake incl. a screenshot of prior interaction (Slack file `F0BL2QECC0N`, not parsed/opened by Samira). This is an acquisition-style offer, materially different from the debt/equity-raise leads on this board — no dollar figure stated, terms proposed by the buyer, nothing confirmed or committed by Samira. Logged only; awaiting Lemar's read on whether to engage before a data room is built or any reply drafted | 2026-07-27 |
+| Willow Financial | Cuzzie's | Colton Marshall · colton@mywillowbank.com | Unsolicited working-capital pitch — up to $3M, 1–3yr terms, rate reduction for prepay/renewal, 24hr closing; requires 3mo bank statements + a simple application. Addressed to Joshua at info@cuzziesnj.com 6/29, fwd'd to Lemar 7/7 | none built — flagged before building, same guard as Prompt Working Capital/BitX Capital | Working | **Gap found 2026-07-28** — this `Samira/investor`-labeled thread (in-label since 7/7) had never been added to the index despite being reviewed in prior "16 threads" passes; backfilled this scan. Same cold/template pattern as Prompt Working Capital and BitX Capital — no prior relationship, no specific ask tied to Cuzzie's; posted to #investor-pipeline flagging rather than building a room or drafting a reply; awaiting Lemar's pursue/ignore call | 2026-07-28 |
 
 ## Sources
 - drive: Data Rooms parent + Master Templates folder (IDs in repo `.claude/anchors.md`)
@@ -42,3 +43,5 @@ Parked — rows are never deleted.
 - gmail: thread 19f80ca1b2a553bf (BitX Capital cold marketing, received 2026-07-20, picked up off `Samira/investor` 2026-07-22)
 - gmail: thread 19f428fe6b2b4e0f (Plaid "Magenta Funding connected to your Parke Bank account" notice, 2026-07-08, picked up off `Samira/investor` 2026-07-22)
 - slack: #investor-pipeline `C0BCCUKEUQ2` ts 1785178604.579409 (Dhaval Joshi / THC Factory intake, file `F0BL2QECC0N`)
+- gmail: thread 19f3ec18b012a73d (Willow Financial / Colton Marshall cold "36 Month Terms" pitch, received 2026-06-29, fwd'd 2026-07-07, backfilled onto the index 2026-07-28)
+- slack: #investor-pipeline `C0BCCUKEUQ2` ts 1785255051.131739 (Willow Financial flag posted 2026-07-28)
