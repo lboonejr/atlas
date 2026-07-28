@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-24T12:30-04:00
+updated: 2026-07-28T14:00-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -349,6 +349,33 @@ pro se attempt, or another approach) has been chosen yet. Status stays
 **awaiting-decision** — worth Lemar's attention again before July 30 regardless of
 this Slack card being closed.
 
+## Update 2026-07-28 (14:00 ET) — Lemar's decision: proceed WITHOUT counsel; plan is a post-trial negotiation with the landlord
+
+On today's #decisions card ("Harrison Acquisitions eviction — trial in 2 days (Jul 30),
+no counsel path chosen," parent ts `1785244330.635209`), Lemar reacted ✅ on **Option 3**
+("tell me what you're actually doing here so I can track it correctly") and followed up
+with the actual plan in-thread (ts `1785246204.390029`):
+
+> "We're going to move forward with no counsel. We understand that this may result in
+> an automatic loss, but the idea would be that we talk to the landlord after the case,
+> let them know that we're working on getting a new tenant to replace us, if they give
+> us 30-45 days and a chance to keep the lease going so that it continues to be
+> possible to run a cannabis business at that address"
+
+Recorded plainly, no inference added: Cuzzies LLC will appear (or not formally appear,
+given the pro se/LLC representation blocker flagged throughout this note) at the July 30
+trial without retained counsel, accepting the real risk of an automatic loss/default
+judgment. The intended next step is a **post-trial conversation with Harrison
+Acquisitions** proposing a 30–45 day window to find a replacement tenant so the location
+can keep operating as a cannabis business in the interim. This is Lemar's own
+negotiation to have — nothing drafted, filed, or sent by Samira on this update; no
+outreach to Rivkin Radler or the landlord was made. Trial is in 2 days (July 30).
+
+Status stays **awaiting-decision** — the matter isn't resolved until the trial happens
+and/or the post-trial landlord conversation takes place. Replied "Done ✅ — recorded"
+in the #decisions thread; leaving the card open for Lemar to 🫡 when he's ready to
+close it.
+
 ## Sources
 - gmail: thread 19f8fe851917899a (NJ eCourts CORRESPONDENCE notification, Dylan Mruczinski filing, 2026-07-23 16:56 UTC)
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
@@ -366,3 +393,4 @@ this Slack card being closed.
 - gmail: thread 19f9065b25f0c297 (NJ Courts eFiling Clerk Notice EF-4344278 — adjournment denied, 2026-07-23 19:13:31 UTC; labeled Samira/sent 2026-07-24 PART D close)
 - gmail: thread 19f9065b4e1b459e (NJ eCourts Filing Notification duplicate, 2026-07-23 19:13:31 UTC; labeled Samira/sent 2026-07-24 PART D close)
 - slack: #decisions, thread ts 1784834546.675549, closed via 🫡 (2026-07-24, PART D email loop)
+- slack: #decisions, thread ts 1785244330.635209, Option 3 ✅ + Lemar's reply ts 1785246204.390029 (2026-07-28, PART A — no-counsel decision recorded)
