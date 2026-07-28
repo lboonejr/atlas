@@ -1,9 +1,9 @@
 ---
 created: 2026-07-28T14:15-04:00
-updated: 2026-07-28T14:15-04:00
+updated: 2026-07-28T10:20-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [google-voice, google-workspace, billing, cuzziesnj-com]
 source: gmail
 ---
@@ -31,5 +31,13 @@ that Voice number is in active use (vendors, bank, court correspondence, etc.).
 Runway is ~6 weeks (today is 2026-07-28, cancellation on/after 2026-09-11) — flagging
 now rather than urgently, since there's no immediate deadline.
 
+## Update — 2026-07-28
+Lemar closed the #decisions card (🫡) shortly after it posted, with no reactivate
+instruction given. Treated as an accepted lapse, consistent with the other wind-down
+services already let go (Slack, Zapier, Wispr Flow, Intuit Workforce): no admin console
+login, no payment made or authorized on Samira's end. Runway remains ~6 weeks
+(cancellation on/after 2026-09-11) if this call changes before then.
+
 ## Sources
 - gmail: thread 19fa8dbf87ef67f2 (Google Voice subscription cancellation notice, 2026-07-28 13:13:35 UTC)
+- slack: #decisions card, closed by Lemar 🫡 2026-07-28
