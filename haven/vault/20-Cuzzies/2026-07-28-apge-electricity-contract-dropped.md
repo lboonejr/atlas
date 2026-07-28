@@ -1,9 +1,9 @@
 ---
 created: 2026-07-28T09:12-04:00
-updated: 2026-07-28T09:12-04:00
+updated: 2026-07-28T11:14-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [utilities, vendor, cuzzies-closure, gmail]
 source: gmail
 ---
@@ -22,6 +22,14 @@ depending on how/why it dropped. Needs Lemar's read: confirm intentional (let it
 or ask Josh/Monika to reinstate.
 
 Contract PDF attached to the source thread (`Contract_244350.pdf`), not parsed here.
+
+## Update — 2026-07-28
+
+Lemar picked Option A in #decisions (confirm intentional, no reinstatement) via reaction.
+Reply drafted in his voice and saved to Gmail Drafts (draft `r3937308750731459193`),
+threaded on the source Gmail thread, to Joshua Evans (cc Monika Leschkies): confirms the
+drop was intentional given the wind-down, no reinstatement needed. Not sent — Lemar's to
+send from Gmail.
 
 ## Sources
 - gmail thread `19fa8c57eb7cd705` — "Fwd: Your electricity supply contract with APG&E
