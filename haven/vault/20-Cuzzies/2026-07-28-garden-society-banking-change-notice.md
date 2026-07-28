@@ -1,9 +1,9 @@
 ---
 created: 2026-07-28T12:15-04:00
-updated: 2026-07-28T12:15-04:00
+updated: 2026-07-28T16:20-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [vendor, banking, fraud-risk, gmail]
 source: gmail
 ---
@@ -26,7 +26,14 @@ has been made or scheduled off this notice. If/when Cuzzie's has a balance to pa
 Garden Society NJ, verify the new banking details by phone with a known contact before
 sending funds to the new account — do not rely on the email/PDF alone.
 
+## Update 2026-07-28 16:20 ET
+Lemar acknowledged the notice (🫡 in #decisions). Closing the decision card — no reply
+was sent to Garden Society NJ, no payment was made or scheduled, and the underlying
+guidance stands: verify any new banking details by phone with a known contact before
+paying. Nothing further executed.
+
 ## Sources
 - gmail thread `19fa4d37e676e9da` — "URGENT UPDATE: Garden Society NJ Banking info
   change - Effective 08/01/2026" — ar@thegardensociety.com, 2026-07-27 18:25 UTC,
   Lemar bcc'd
+- slack: #decisions `C0BBXA96FFV` ts `1785255199.339759` (closing thread)
