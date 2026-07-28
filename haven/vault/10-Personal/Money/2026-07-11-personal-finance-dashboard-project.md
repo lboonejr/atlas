@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-28T14:20:00-04:00
+updated: 2026-07-28T14:30:00-04:00
 domain: personal
 type: task
 status: active
@@ -473,6 +473,22 @@ which is current. **Calendar event `ou01edab6e97348clv6uo0ru20` is left unchange
 correct; once confirmed, the event will be moved off the 10th and onto the 27th (or
 left as-is if 10th was right).
 
+## Update 2026-07-28T14:30:00-04:00 — Patreon billing-day conflict resolved: 27th confirmed, calendar reminder moved
+
+Lemar replied in the same thread (ts `1785248487.034659`, 10:21 ET) after Samira's
+follow-up question (ts `1785248023.507699`): **"The 27th is the correct day."** This
+resolves the 2026-07-28T14:20 update's flagged conflict — the 10th was stale/incorrect.
+
+**Action taken:** cancelled the old recurring calendar event (`ou01edab6e97348clv6uo0ru20`,
+10th of the month) and created a new recurring monthly all-day event on the personal
+reminder calendar (no external guests) — event `lf7pne54rrtcnrvekhq0fecec4`, "Patreon
+$25/mo", 27th of the month (RRULE FREQ=MONTHLY;BYMONTHDAY=27), starting 2026-08-27 (July
+27 had already passed by the time this ran).
+
+No #decisions card needed — Lemar directly answered Samira's own clarifying question in
+the source thread, a data correction rather than an either/or choice. Outcome logged via
+samira-report-result; #reports line posted this scan.
+
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
 - slack: #personal-finance (C0BGLEMH99T), ts 1783784379.469619 (2026-07-11 11:39 ET reply)
@@ -506,3 +522,5 @@ left as-is if 10th was right).
   T-Mobile split-payment note)
 - slack: #personal-finance (C0BGLEMH99T), ts 1785247529.119239 (2026-07-28, Patreon
   billing-day conflict — 27th stated, conflicts with 7/25's 10th)
+- slack: #personal-finance (C0BGLEMH99T), ts 1785248487.034659 (2026-07-28 10:21 ET,
+  Lemar confirms 27th is correct)
