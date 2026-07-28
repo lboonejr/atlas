@@ -1,1 +1,77 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDctMjhUMTM6MTUtMDQ6MDAKdXBkYXRlZDogMjAyNi0wNy0yOFQxNDoxNS0wNDowMApkb21haW46ICAgICMgVU5SRVNPTFZFRCDigJQgc2V0IG9uZSBvZjogcGVyc29uYWwgfCBjdXp6aWVzIHwgc3RhdGlvbiB8IHByb2plY3QgfCByZWZlcmVuY2UgfCBsZWdhbAp0eXBlOiB0YXNrCnN0YXR1czogYWN0aXZlCnRhZ3M6IFtjYW1kZW4sIGNpdHktY291bmNpbCwgY2FsZW5kYXIsIHJlc2VhcmNoXQpzb3VyY2U6IHNsYWNrCi0tLQoKIyBDYW1kZW4gY2l0eSBjb3VuY2lsIG1lZXRpbmdzIOKAlCBzZWFyY2ggKyBhZGQgdG8gR29vZ2xlIENhbGVuZGFyCgpMZW1hciBhc2tlZCBTYW1pcmEgdG8gc2VhcmNoIGZvciBhbGwgQ2FtZGVuLCBOSiBjaXR5IGNvdW5jaWwgbWVldGluZ3MKYW5kIHByZS1tZWV0aW5ncyAoY2F1Y3VzL2FnZW5kYSBzZXNzaW9ucykgZm9yIHRoZSByZW1haW5kZXIgb2YgMjAyNiBhbmQKYWRkIHRoZW0gdG8gaGlzIEdvb2dsZSBDYWxlbmRhci4KCi0gQXNrLCB2ZXJiYXRpbTogIlNhbWlyYSBDYW4geW91IGRvIGEgc2VhcmNoIG9mIGFsbCBvZiB0aGUgQ2FtZGVuIGNpdHkKICBjb3VuY2lsIG1lZXRpbmdzIGFuZCBwcmUtbWVldGluZ3MgZm9yIHRoZSByZXN0IG9mIHRoZSB5ZWFyIGFuZCBwdXQgdGhlbSBvbgogIG15IGdvb2dsZSBjYWxlbmRhcj8iCi0gTm8gZGF0ZXMgY29uZmlybWVkIHlldCDigJQgdGhlIHJlc2VhcmNoIGl0c2VsZiB3YXMgdGhlIGZpcnN0IHN0ZXAuCi0gU2NvcGU6IHJlbWFpbmRlciBvZiAyMDI2IChmcm9tIGNhcHR1cmUgZGF0ZSAyMDI2LTA3LTI4IHRocm91Z2ggMjAyNi0xMi0zMSkuCi0gYGRvbWFpbmAgbGVmdCBVTlJFU09MVkVEOiBjb3VsZCBiZSBgY3V6emllc2AgKEN1enppZSdzIGlzIGluIENhbWRlbiDigJQgY2l0eQogIGNvdW5jaWwgbWF5IHRvdWNoIHpvbmluZy9saWNlbnNpbmcgcmVsZXZhbnQgdG8gdGhlIGJ1c2luZXNzKSBvciBgcGVyc29uYWxgCiAgKExlbWFyIHRyYWNraW5nIGNpdmljIG1hdHRlcnMgZ2VuZXJhbGx5KS4gTm90IHN0YXRlZCBleHBsaWNpdGx5IGVpdGhlciB3YXkuCi0gU3RhZ2VkIGFzIGFuIGFkbWluLTN4IHByb21wdCB0byAjYWRtaW4gZm9yIGEgbGF0ZXIgU2FtaXJhIHNjYW4gdG8gZXhlY3V0ZQogIChidWZmZXIgcnVsZSDigJQgbm90IHJ1biB0aGUgc2FtZSBzY2FuIGl0IHdhcyBjYXB0dXJlZCBpbik6IGZpbmQgdGhlIG9mZmljaWFsCiAgQ2FtZGVuIGNpdHkgY291bmNpbCBtZWV0aW5nIHNjaGVkdWxlIChjaXR5b2ZjYW1kZW4ub3JnIG9yIE5KIG11bmljaXBhbAogIG5vdGljZSBwb3N0aW5ncyksIHRoZW4gY3JlYXRlIG9uZSByZW1pbmRlci1jYWxlbmRhciBldmVudCBwZXIgY29uZmlybWVkCiAgbWVldGluZy9wcmUtbWVldGluZywgbm8gZXh0ZXJuYWwgYXR0ZW5kZWVzLgoKIyMgVXBkYXRlIOKAlCAyMDI2LTA3LTI4ICgxOjI2IFBNIEVUKSDigJQgcmVzZWFyY2ggcGFzcyAoUEFSVCBDKQoKUmVzZWFyY2hlZCB0aGUgb2ZmaWNpYWwgQ2l0eSBvZiBDYW1kZW4sIE5KIGNvdW5jaWwgbWVldGluZyBzY2hlZHVsZQooY2FtZGVubmouZ292IC8gY2kuY2FtZGVuLm5qLnVzIOKAlCBOT1RFOiBgY2l0eW9mY2FtZGVuLm9yZ2AgKG5hbWVkIGluIHRoZQpvcmlnaW5hbCBhc2spIGlzIGFjdHVhbGx5IENhbWRlbiwgU291dGggQ2Fyb2xpbmEsIGEgZGlmZmVyZW50IG11bmljaXBhbGl0eTsKdGhlIGNvcnJlY3QgTkogZG9tYWluIGlzIGBjYW1kZW5uai5nb3ZgKS4KCioqRmluZGluZ3M6KioKLSBDb25maXJtZWQgcmVjdXJyaW5nIHBhdHRlcm4gZnJvbSB0aGUgY2l0eSdzIG93biAiQ2l0eSBDb3VuY2lsIE1lZXRpbmcKICBEYXRlcyIgcGFnZSBhbmQgMyBhY3R1YWwgcHVibGlzaGVkIDIwMjYgYWdlbmRhczogUHJlLU1lZXRpbmcgQ29uZmVyZW5jZQogIG9uIHRoZSAxc3QgVHVlc2RheSBvZiBlYWNoIG1vbnRoLCBSZWd1bGFyIE1lZXRpbmcgb24gdGhlIDJuZCBUdWVzZGF5IG9mCiAgZWFjaCBtb250aCBhdCA1OjAwIFBNLCAidW5sZXNzIG90aGVyd2lzZSBpbmRpY2F0ZWQuIgotIFZlcmlmaWVkIGFnYWluc3QgcmVhbCAyMDI2IGFnZW5kYSBQREZzOiBKYW4gMTMsIDIwMjYgKDJuZCBUdWUpLCBNYXIgMTAsCiAgMjAyNiAoMm5kIFR1ZSksIEFwciAxNCwgMjAyNiAoMm5kIFR1ZSkg4oCUIGFsbCBtYXRjaCB0aGUgc3RhdGVkIHBhdHRlcm4uCiAgQWxsIHRocmVlIGFyZSBhbHJlYWR5IGluIHRoZSBwYXN0IHJlbGF0aXZlIHRvIHRvZGF5ICgyMDI2LTA3LTI4KSwgc28gbm9uZQogIGZhbGwgaW4gdGhlIHJlcXVlc3RlZCByZW1haW5kZXItb2YtMjAyNiB3aW5kb3cuCi0gQ291bGQgTk9UIGluZGVwZW5kZW50bHkgY29uZmlybSBzcGVjaWZpYyBSZWd1bGFyIE1lZXRpbmcgb3IgUHJlLU1lZXRpbmcKICBDb25mZXJlbmNlIGRhdGVzIGZvciBBdWfigJNEZWMgMjAyNjogdGhlIGNhbWRlbm5qLmdvdiBhbmQgY2kuY2FtZGVuLm5qLnVzCiAgZG9tYWlucyByZXR1cm4gSFRUUCA0MDMgdG8gYXV0b21hdGVkIGZldGNoIHRvb2xzIChDbG91ZGZsYXJlL2JvdAogIHByb3RlY3Rpb24gYmxvY2tzIGRpcmVjdCBwYWdlL1BERiByZXRyaWV2YWwpLCBhbmQgbm8gYWdlbmRhIFBERnMgb3IgYW4KICBhbm51YWwgc2NoZWR1bGUgbm90aWNlIGZvciBBdWfigJNEZWMgMjAyNiBhcmUgaW5kZXhlZC9zZWFyY2hhYmxlIHlldAogICh0aGV5IGxpa2VseSBwb3N0IGNsb3NlciB0byBlYWNoIG1lZXRpbmcgZGF0ZSwgY29uc2lzdGVudCB3aXRoIGNvdW5jaWwKICBwcmFjdGljZSBvZiBwb3N0aW5nIGFnZW5kYXMgfjEgd2VlayBvdXQpLiBObyBBdWd1c3QtcmVjZXNzIG9yCiAgaG9saWRheS1hZGp1c3RtZW50IG5vdGljZSB3YXMgZm91bmQgZWl0aGVyIHdheS4KLSBQZXIgdGhlICJkbyBub3QgZ3Vlc3MgZGF0ZXMiIGluc3RydWN0aW9uLCBOTyBjYWxlbmRhciBldmVudHMgd2VyZSBjcmVhdGVkCiAgdGhpcyBwYXNzIOKAlCBwcm9qZWN0aW5nIHRoZSAxc3QvMm5kLVR1ZXNkYXkgcGF0dGVybiBvbnRvIEF1Z+KAk0RlYyB3aXRob3V0CiAgYSBwb3N0ZWQgYWdlbmRhIG9yIGFubnVhbCBub3RpY2Ugd291bGQgcmlzayB3cm9uZyBkYXRlcyB0aGUgY2l0eSBpdHNlbGYKICBtYXkgb3ZlcnJpZGUgKCJ1bmxlc3Mgb3RoZXJ3aXNlIGluZGljYXRlZCIpLgoKUmVjb21tZW5kZWQgbmV4dCBzdGVwOiByZS1ydW4gdGhpcyByZXNlYXJjaCBjbG9zZXIgdG8gZWFjaCBtb250aCAoYWdlbmRhcwp0eXBpY2FsbHkgcG9zdCBhYm91dCBhIHdlZWsgYWhlYWQpLCBvciBjYWxsIHRoZSBDaXR5IENsZXJrICg4NTYtNzU3LTcxMTUgLwpDaXR5Q291bmNpbEBjYW1kZW5uai5nb3YpIGZvciB0aGUgY29uZmlybWVkIHJlbWFpbmRlci1vZi0yMDI2IHNjaGVkdWxlIGluCm9uZSBzaG90LgoKU3RhdHVzOiBsZWZ0IGBkb21haW5gIFVOUkVTT0xWRUQgKHZhdWx0LWtlZXBlcidzIGNhbGwpLiBSZXNlYXJjaCBwYXNzCmNvbXBsZXRlOyBjYWxlbmRhciBhY3Rpb24gZGVmZXJyZWQgcGVuZGluZyBjb25maXJtYWJsZSBkYXRlcy4KCiMjIFNvdXJjZXMKLSBzbGFjazogRE0gd2l0aCBTYW1pcmEgYm90IChEMEJIUEtNRE5FUCksIHRzIDE3ODUyNTY4NjkuMTE0MDg5Ci0gd2ViOiBodHRwczovL3d3dy5jaS5jYW1kZW4ubmoudXMvY2l0eS1jb3VuY2lsLW1lZXRpbmctZGF0ZXMvICjigJxDaXR5CiAgQ291bmNpbCBNZWV0aW5nIERhdGVz4oCdIHBhZ2Ug4oCUIHJlY3VycmluZyBwYXR0ZXJuIHN0YXRlbWVudCkKLSB3ZWI6IGh0dHBzOi8vd3d3LmNhbWRlbm5qLmdvdi93cC1jb250ZW50L3VwbG9hZHMvMjAyNi8wMS8wMS0xMy0yMDI2LXJldmlzZWQtMy0xLnBkZgogICgyMDI2LTAxLTEzIGFnZW5kYSkKLSB3ZWI6IGh0dHBzOi8vd3d3LmNhbWRlbm5qLmdvdi93cC1jb250ZW50L3VwbG9hZHMvMjAyNi8wMy8wMy0xMC0yMDI2LVJldmlzZWQtNi5wZGYKICAoMjAyNi0wMy0xMCBhZ2VuZGEpCi0gd2ViOiBodHRwczovL3d3dy5jYW1kZW5uai5nb3Yvd3AtY29udGVudC91cGxvYWRzLzIwMjYvMDQvMDQtMTQtMjAyNi1SZXZpc2VkLTIucGRmCiAgKDIwMjYtMDQtMTQgYWdlbmRhKQo=
+---
+created: 2026-07-28T13:15-04:00
+updated: 2026-07-28T14:15-04:00
+domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal
+type: task
+status: active
+tags: [camden, city-council, calendar, research]
+source: slack
+---
+
+# Camden city council meetings — search + add to Google Calendar
+
+Lemar asked Samira to search for all Camden, NJ city council meetings
+and pre-meetings (caucus/agenda sessions) for the remainder of 2026 and
+add them to his Google Calendar.
+
+- Ask, verbatim: "Samira Can you do a search of all of the Camden city
+  council meetings and pre-meetings for the rest of the year and put them on
+  my google calendar?"
+- No dates confirmed yet — the research itself was the first step.
+- Scope: remainder of 2026 (from capture date 2026-07-28 through 2026-12-31).
+- `domain` left UNRESOLVED: could be `cuzzies` (Cuzzie's is in Camden — city
+  council may touch zoning/licensing relevant to the business) or `personal`
+  (Lemar tracking civic matters generally). Not stated explicitly either way.
+- Staged as an admin-3x prompt to #admin for a later Samira scan to execute
+  (buffer rule — not run the same scan it was captured in): find the official
+  Camden city council meeting schedule (cityofcamden.org or NJ municipal
+  notice postings), then create one reminder-calendar event per confirmed
+  meeting/pre-meeting, no external attendees.
+
+## Update — 2026-07-28 (1:26 PM ET) — research pass (PART C)
+
+Researched the official City of Camden, NJ council meeting schedule
+(camdennj.gov / ci.camden.nj.us — NOTE: `cityofcamden.org` (named in the
+original ask) is actually Camden, South Carolina, a different municipality;
+the correct NJ domain is `camdennj.gov`).
+
+**Findings:**
+- Confirmed recurring pattern from the city's own "City Council Meeting
+  Dates" page and 3 actual published 2026 agendas: Pre-Meeting Conference
+  on the 1st Tuesday of each month, Regular Meeting on the 2nd Tuesday of
+  each month at 5:00 PM, "unless otherwise indicated."
+- Verified against real 2026 agenda PDFs: Jan 13, 2026 (2nd Tue), Mar 10,
+  2026 (2nd Tue), Apr 14, 2026 (2nd Tue) — all match the stated pattern.
+  All three are already in the past relative to today (2026-07-28), so none
+  fall in the requested remainder-of-2026 window.
+- Could NOT independently confirm specific Regular Meeting or Pre-Meeting
+  Conference dates for Aug–Dec 2026: the camdennj.gov and ci.camden.nj.us
+  domains return HTTP 403 to automated fetch tools (Cloudflare/bot
+  protection blocks direct page/PDF retrieval), and no agenda PDFs or an
+  annual schedule notice for Aug–Dec 2026 are indexed/searchable yet
+  (they likely post closer to each meeting date, consistent with council
+  practice of posting agendas ~1 week out). No August-recess or
+  holiday-adjustment notice was found either way.
+- Per the "do not guess dates" instruction, NO calendar events were created
+  this pass — projecting the 1st/2nd-Tuesday pattern onto Aug–Dec without
+  a posted agenda or annual notice would risk wrong dates the city itself
+  may override ("unless otherwise indicated").
+
+Recommended next step: re-run this research closer to each month (agendas
+typically post about a week ahead), or call the City Clerk (856-757-7115 /
+CityCouncil@camdennj.gov) for the confirmed remainder-of-2026 schedule in
+one shot.
+
+Status: left `domain` UNRESOLVED (vault-keeper's call). Research pass
+complete; calendar action deferred pending confirmable dates.
+
+## Sources
+- slack: DM with Samira bot (D0BHPKMDNEP), ts 1785256869.114089
+- web: https://www.ci.camden.nj.us/city-council-meeting-dates/ (“City
+  Council Meeting Dates” page — recurring pattern statement)
+- web: https://www.camdennj.gov/wp-content/uploads/2026/01/01-13-2026-revised-3-1.pdf
+  (2026-01-13 agenda)
+- web: https://www.camdennj.gov/wp-content/uploads/2026/03/03-10-2026-Revised-6.pdf
+  (2026-03-10 agenda)
+- web: https://www.camdennj.gov/wp-content/uploads/2026/04/04-14-2026-Revised-2.pdf
+  (2026-04-14 agenda)
