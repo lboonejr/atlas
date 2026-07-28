@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-25T12:04:00-04:00
+updated: 2026-07-28T14:20:00-04:00
 domain: personal
 type: task
 status: active
@@ -458,6 +458,21 @@ be created.
 No #decisions card raised (data drop, no either/or choice). Acknowledged in
 #personal-finance.
 
+## Update 2026-07-28T14:20:00-04:00 — Patreon billing-day conflict: 10th (7/25) vs 27th (7/28)
+
+Lemar posted in #personal-finance (ts `1785247529.119239`, no reaction): "The Patreon
+will be charged on the 27th of each month." This conflicts with the 2026-07-25T11:15
+update above, where he confirmed the 10th — and a recurring calendar reminder
+(`ou01edab6e97348clv6uo0ru20`) is already live on the 10th.
+
+Not silently overwriting the calendar event on this alone — two different days have now
+each come directly from him, three days apart, with nothing in between explaining the
+change (e.g. Patreon itself moving the billing date). Flagging rather than guessing
+which is current. **Calendar event `ou01edab6e97348clv6uo0ru20` is left unchanged
+(still the 10th) pending confirmation.** Asked in #personal-finance which day is
+correct; once confirmed, the event will be moved off the 10th and onto the 27th (or
+left as-is if 10th was right).
+
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
 - slack: #personal-finance (C0BGLEMH99T), ts 1783784379.469619 (2026-07-11 11:39 ET reply)
@@ -489,3 +504,5 @@ No #decisions card raised (data drop, no either/or choice). Acknowledged in
   confirming Patreon billing day)
 - slack: #personal-finance (C0BGLEMH99T), ts 1784994250.731869 (2026-07-25 11:44 ET,
   T-Mobile split-payment note)
+- slack: #personal-finance (C0BGLEMH99T), ts 1785247529.119239 (2026-07-28, Patreon
+  billing-day conflict — 27th stated, conflicts with 7/25's 10th)
