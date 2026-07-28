@@ -26,3 +26,13 @@ draft is saved to Gmail.
 ## Sources
 - gmail: thread 19ee177e466516fe (Cintas past-due notice + replies)
 - slack: #decisions card posted 2026-07-28 ~15:11 UTC (parent ts 1785251474.155409)
+
+## Update 2026-07-28T13:15-04:00
+A second PART D run this same hour missed this active note in step zero (matching
+Gmail thread already carried `Samira/seen` from the earlier run, so it fell outside the
+"new mail" search window, but the pass at re-checking in-flight #decisions cards for
+this loop's own follow-up traffic did not catch it before drafting) and posted a
+duplicate #decisions card (parent ts 1785258859.290469, ~17:14 UTC) with the same 3
+draft-option shape for the same ask. Flagged as a duplicate in-thread pointing back to
+the original card above; the original (1785251474.155409) is canonical — Lemar should
+pick/close there. No new Gmail draft was created by either card yet.
