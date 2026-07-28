@@ -1,9 +1,9 @@
 ---
 created: 2026-07-24T12:20-04:00
-updated: 2026-07-26T12:09-04:00
+updated: 2026-07-28T12:20:00-04:00
 domain: cuzzies
 type: task
-status: done
+status: active
 tags: [gusto, payroll, pay-period]
 source: gmail
 due: 2026-07-27T19:00-04:00
@@ -48,3 +48,21 @@ been cancelled and the id cleared per the calendar-sync RETIRE rule.
   reminder 2026-07-26 ~11:56am ET (thread `19f9e485e27aaac7`)
 - slack: #decisions parent ts 1784895631.960559, 🫡 close reaction from U0BC5UTHYG4
 - calendar: event `ka01o5f5f58iudnokou1s84810` cancelled 2026-07-26 (was 2026-07-27 7:00 PM ET)
+
+## Update 2026-07-28T12:20:00-04:00 — Gusto confirms this payroll is now 1 day late; reopening
+
+New Gusto email (thread `19fa88edcb8d38a0`, 2026-07-28 ~11:49am ET, "Action required:
+Payroll is late for Cuzzie's Dispensary & Delivery LLC"): same pay period (Jul 12-25)
+is now flagged **1 day late**, original payday Fri Jul 31. This resolves the
+uncertainty flagged in the 2026-07-24 09:05 ET update — payroll for this period was
+NOT run by the prior deadline, despite Lemar closing the #decisions card. Reopening
+this note (`status: active`) since the underlying task is not actually done.
+
+Gusto's email notes same-day/instant pay options may still be available to hit the
+Jul 31 payday despite the late start. This is a payment action only Lemar can take
+(no Gusto login available to Samira) — raised fresh in #decisions rather than
+re-using the closed card, since the prior close didn't carry a run/skip signal.
+
+## Sources (continued)
+- gmail: thread `19fa88edcb8d38a0` (2026-07-28, "Action required: Payroll is late," 1
+  day late, original payday Fri Jul 31)
