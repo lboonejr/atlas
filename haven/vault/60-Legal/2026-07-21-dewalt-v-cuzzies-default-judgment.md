@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-07-27T09:57:00-04:00
+updated: 2026-07-28T12:15:00-04:00
 domain: legal
 type: task
 status: active
@@ -250,6 +250,38 @@ Samira action:
    call is on Lemar's calendar (`ct01kge613v5266gm4t2qe688k`, 3:00–3:30pm ET). Lemar
    handled all scheduling himself; nothing drafted or sent by Samira.
 
+## Update 2026-07-28T12:15:00-04:00 — $150,000 settlement figure received via Donte/Marco Di Stefano track, open until Aug 10 or closing
+
+New mail (thread `19fa8704ab579217`, fwd from Donte Bronaugh 2026-07-28 11:14 ET,
+forwarding Marco Di Stefano Esq.'s 2026-07-27 11:29pm reply): opposing counsel Marco
+Di Stefano (representing the claimant on this matter, on the Donte-run settlement
+track logged in the updates above) has given a concrete number.
+
+- **Figure: $150,000 to fully and finally resolve the matter** (inclusive of damages,
+  interest, costs, fees), framed as a discount off what he'd present at the proof
+  hearing given liability is already established by the default judgment.
+- **Assumes payment in full at closing, out of sale proceeds** — not carried forward
+  as an obligation on the business post-sale. If full funding at closing isn't
+  achievable, Di Stefano says he's open to a structured/deferred arrangement, but
+  wants it secured (consent judgment in escrow, personal guaranty, or a security
+  interest) with the discount contingent on timely performance.
+- **Open until the earlier of August 10, 2026 or the sale closing** — withdrawn if the
+  sale doesn't proceed, in which case his client proceeds to the Sept 14 proof
+  hearing.
+- Di Stefano is asking Donte for the draft liability schedule and proposed proceeds
+  distribution, flags N.J.S.A. 54:50-38 bulk-sale notification requirements for the
+  transaction team, and asks how Thursday's building/lease proceedings affect
+  proceeds available at closing.
+- Explicitly for-settlement-purposes-only under N.J.R.E. 408.
+
+**Read:** this is the concrete outcome of the Donte/Greenberg settlement track logged
+in the updates above, now with a real number and a deadline. It sits alongside (not
+necessarily coordinated with) Siciliano & Associates' litigation defense track for the
+same Sept 14 proof hearing. This is a business/legal decision only Lemar can make
+(accept, counter, or let it ride to the proof hearing) — raised in #decisions rather
+than drafted as a reply, since it needs legal judgment before any number is confirmed
+back to counsel. No Samira action taken beyond flagging; nothing sent.
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
 - gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
@@ -271,3 +303,7 @@ Samira action:
 - gmail: thread `19fa39f99e758d24` (2026-07-27 8:40-8:54am ET, Donte/Greenberg
   co-counsel negotiation continuing — see `60-Legal/2026-07-25-unverified-nj-counsel-solicitation.md`
   for the prior fraud-risk flag and resolution on this same contact)
+
+## Sources (continued)
+- gmail: thread `19fa8704ab579217` (2026-07-28, Donte Bronaugh fwd of Marco Di
+  Stefano's $150,000 settlement figure, open until Aug 10 or closing)
