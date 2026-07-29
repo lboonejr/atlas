@@ -1,9 +1,9 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-29T09:35:00-04:00
+updated: 2026-07-29T09:45:00-04:00
 domain: cuzzies
 type: task
-status: done
+status: active
 tags: [parke-bank, overdraft, nsf]
 source: gmail
 ---
@@ -432,6 +432,21 @@ overdraft situation stays open and will likely generate further rounds; the next
 update on this matter should reopen status to `active` and append here rather than
 creating a sibling note.
 
+## Update 2026-07-29 (3) — another new round, 2 more returned items, $692.20
+
+Christopher Cabezas emailed again (7/29 ~8:11am ET, gmail thread `19fadc9dfd8949ce`,
+subject "secure: Cuzzie's Dispensary - Returned Items", cc Meggan Hallworth): 2 more
+items presented for payment were returned this morning —
+
+- External Withdrawal $412.20 — Elevate Funding
+- External Withdrawal $280.00 — NovusCapital II
+
+Total returned this round: **$692.20** — the largest single item (Elevate Funding
+$412.20) is bigger than any prior individual item in this saga. Direct invitation to
+reply ("let us know"), same pattern. Reopening status to `active`; draft reply options
+staged to #decisions (ts `1785330758.868719`) matching the established A/B/C pattern
+for this saga. Labeled `Samira/seen` in Gmail.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -483,3 +498,7 @@ creating a sibling note.
   2026-07-28 ~19:14 ET, cc Meggan Hallworth)
 - slack: #decisions message ts `1785327753.822449` (7/29 returned-items card, closed
   via direct 🫡, no option picked)
+- gmail: thread `19fadc9dfd8949ce` (Christopher Cabezas, 2 more returned items $692.20,
+  2026-07-29 ~08:11 ET, cc Meggan Hallworth)
+- slack: #decisions message ts `1785330758.868719` (7/29 (2) returned-items card,
+  options in thread, awaiting Lemar's pick)
