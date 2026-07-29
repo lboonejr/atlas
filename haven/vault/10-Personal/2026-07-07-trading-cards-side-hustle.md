@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T09:25:00-04:00
-updated: 2026-07-12T11:20:00-04:00
+updated: 2026-07-29T09:40:00-04:00
 domain: personal
 type: note
 status: active
@@ -99,6 +99,13 @@ August first." Set `due: 2026-08-01T09:00-04:00` on this note so a reminder ring
 that morning to check back in on the first purchase. Calendar event created
 (`calendar_event_id: o9i482d50psgp7qf9uimvo33rs`). No action needed before then.
 
+## Update 2026-07-29 (09:40 ET) - local shop leads logged
+Lemar posted in #trading-cards (7/29 09:35:26 ET): two local card shops he can buy
+from — **Lurk Cards and Collectibles** (Philadelphia) and **Lucky Strike**
+(Merchantville, NJ) — framed as journal notes ("keeping these as notes on my
+journey"), not a question or a task. Logged only; no reply needed, nothing lifted to
+#decisions, still on track for the Aug 1 due date above.
+
 ## Sources
 - slack: #atlas capture, 2026-07-06 20:36:41 EDT (TS 1783384601.800979)
 - slack: #atlas, HTML request, 2026-07-07 15:06:12 EDT (TS 1783451172.932509)
@@ -108,3 +115,4 @@ that morning to check back in on the first purchase. Calendar event created
 - slack: #trading-cards, budget question, 2026-07-09 13:22:41 EDT (TS 1783617761.373749)
 - slack: #decisions, Option A picked, message ts 1783625662.399819 (2026-07-12, reaction on 2026-07-09 15:34:22 EDT reply)
 - slack: #trading-cards, follow-up deferral, 2026-07-12 10:58:41 EDT (TS 1783868321.223839)
+- slack: #trading-cards, local shop leads, 2026-07-29 09:35:26 EDT (TS 1785328926.295679)
