@@ -1,9 +1,9 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-29T13:45:00-04:00
+updated: 2026-07-29T09:35:00-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [parke-bank, overdraft, nsf]
 source: gmail
 ---
@@ -419,6 +419,19 @@ pattern — draft reply options staged to #decisions matching the A/B/C shape us
 throughout this saga (holding reply / short ack / no-reply close). Labeled
 `Samira/seen` in Gmail.
 
+## Update 2026-07-29 (2) — closed, Lemar saluted (Option C — no reply)
+
+Lemar reacted 🫡 directly on the #decisions parent (message ts `1785327753.822449`,
+no option ✅'d) — read per this saga's established convention as a direct close/let-ride,
+equivalent to Option C ("no reply, just close: leave it as a tracked log entry, no
+draft sent"). No Gmail draft created, no reply sent. Replied in the #decisions thread
+noting the close (message-edit tooling still unavailable on this connector, so the
+parent is left as posted rather than edited to "CLOSED", matching this saga's
+established precedent). Status moved to `done` for this round — the underlying
+overdraft situation stays open and will likely generate further rounds; the next
+update on this matter should reopen status to `active` and append here rather than
+creating a sibling note.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -468,3 +481,5 @@ throughout this saga (holding reply / short ack / no-reply close). Labeled
   `1785003378.894309`)
 - gmail: thread `19fa899f4f0ca94b` (Christopher Cabezas, 3 more returned items $423.49,
   2026-07-28 ~19:14 ET, cc Meggan Hallworth)
+- slack: #decisions message ts `1785327753.822449` (7/29 returned-items card, closed
+  via direct 🫡, no option picked)
