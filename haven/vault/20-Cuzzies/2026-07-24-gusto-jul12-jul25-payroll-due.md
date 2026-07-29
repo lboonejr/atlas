@@ -1,9 +1,9 @@
 ---
 created: 2026-07-24T12:20-04:00
-updated: 2026-07-28T13:08:00-04:00
+updated: 2026-07-29T15:39:00-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [gusto, payroll, pay-period]
 source: gmail
 due: 2026-07-27T19:00-04:00
@@ -67,3 +67,18 @@ re-using the closed card, since the prior close didn't carry a run/skip signal.
 ## Sources (continued)
 - gmail: thread `19fa88edcb8d38a0` (2026-07-28, "Action required: Payroll is late," 1
   day late, original payday Fri Jul 31)
+
+## Update 2026-07-29T15:39:00-04:00 — off-cycle payroll confirmed, resolved
+
+Gusto emailed a confirmation (gmail thread/message `19faf635faa00932`, "Off-cycle
+payroll confirmed," 2026-07-29 ~3:39pm ET): the Jul 12–25 pay period was run as an
+Off-Cycle payroll — Gusto will debit **$1,570.65** from Cuzzie's Dispensary & Delivery
+LLC's bank account on **Wed Jul 29** ($1,209.36 employee net pay/donations + $361.29
+taxes), employees paid **Tue Aug 4**. This was a Gusto-login action only Lemar could
+take; Samira did not run it. Marking this note `done` — the run/skip question from the
+2026-07-24 and 2026-07-28 updates is now settled (it was run, late but before the Aug 4
+payday). No further action needed from Samira on this pay period.
+
+## Sources (continued)
+- gmail: message `19faf635faa00932` (gustonoreply@gusto.com, 2026-07-29 19:39 UTC,
+  "Off-cycle payroll confirmed," $1,570.65 debit Jul 29, payday Aug 4)
