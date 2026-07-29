@@ -1,6 +1,6 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-26T13:30:00-04:00
+updated: 2026-07-29T13:45:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -401,6 +401,24 @@ for this saga. Status stays `done` for this round — the underlying overdraft s
 stays open and will likely generate further rounds; the next update on this matter
 should reopen status to `active` and append here rather than creating a sibling note.
 
+## Update 2026-07-29 — new round, 3 more returned items, $423.49
+
+Christopher Cabezas emailed again (7/28 ~7:14pm ET, gmail thread `19fa899f4f0ca94b`,
+subject "secure: Cuzzie's Returned Items", to Lemar only, cc Meggan Hallworth): 3 more
+items presented for payment were returned that morning —
+
+- External Withdrawal $280.00 — NovusCapital II
+- External Withdrawal $103.50 — Zapier Payment
+- External Withdrawal $39.99 — GoDaddy.com LLC
+
+Total returned this round: **$423.49**. Closes with "I hope you'll have an update for
+us soon" — softer than the direct "let us know" invitations in most prior rounds, but
+Lemar's last actual sent reply on this matter (7/25, to Meggan) is now 3 days old.
+Reopening status to `active`; treating this as reply-worthy again per the established
+pattern — draft reply options staged to #decisions matching the A/B/C shape used
+throughout this saga (holding reply / short ack / no-reply close). Labeled
+`Samira/seen` in Gmail.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -448,3 +466,5 @@ should reopen status to `active` and append here rather than creating a sibling 
   NovusCapital, returning Monday, 2026-07-25 13:18 ET; reply drafted
   `r-3993732764164859067`, Option B ✅ picked, message ts `1785003374.228009` /
   `1785003378.894309`)
+- gmail: thread `19fa899f4f0ca94b` (Christopher Cabezas, 3 more returned items $423.49,
+  2026-07-28 ~19:14 ET, cc Meggan Hallworth)
