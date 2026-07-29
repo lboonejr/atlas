@@ -3,10 +3,11 @@ created: 2026-07-24T12:20-04:00
 updated: 2026-07-29T17:10:00-04:00
 domain: cuzzies
 type: task
-status: done
+status: active
 tags: [gusto, payroll, pay-period]
 source: gmail
-due: 2026-07-27T19:00-04:00
+due: 2026-07-29T19:00:00-04:00
+calendar_event_id: 474nemh5ki2hj3k81211pfouvo
 ---
 
 # Gusto — payroll due Mon Jul 27, pay period Jul 12–25
@@ -81,3 +82,39 @@ payday). No further action needed from Samira on this pay period.
 ## Sources (continued)
 - gmail: message `19faf635faa00932` (gustonoreply@gusto.com, 2026-07-29 19:39 UTC,
   "Off-cycle payroll confirmed," $1,570.65 debit Jul 29, payday Aug 4)
+
+## Update 2026-07-29T17:11:00-04:00 — CANCELED 38 minutes later; reopening, urgent
+
+New Gusto email (thread `19faf86047552535`, "Payroll canceled," 2026-07-29 20:17 UTC =
+4:17pm ET): "You canceled Cuzzie's Dispensary & Delivery LLC's payroll for $1,570.65 at
+4:17pm EDT on Wed Jul 29." Gusto's own text attributes the cancel action to the account
+holder (Lemar), not Samira — Samira has no Gusto login and did not touch this. Gusto:
+"To pay your team on time, run payroll again by **7pm EDT on Wed Jul 29**" — same day,
+same deadline.
+
+This reverses the 15:39 ET "resolved" update above — the off-cycle run was confirmed,
+then canceled 38 minutes later, before this note's calendar event could even retire
+cleanly (it had just been cancelled by this run's calendar-sync pass moments before this
+thread was found; a fresh reminder was created for the new 7pm deadline instead).
+Reopening `status: active`, `due` moved to **2026-07-29T19:00:00-04:00** (today, 7pm ET).
+
+Separately, an unrelated Gusto notice arrived 9 minutes later (thread `19faf8e474cf86f8`,
+20:26 UTC, "You've added a past year non-Gusto payroll") about corrected W-2s (W-2Cs)
+for a prior-year payroll entry — this is a distinct Gusto action from the same session,
+not part of this Jul 12–25 pay-period thread; not chased further here, flagged for
+Lemar to review directly in Gusto (legal responsibility to distribute W-2Cs sits with
+him, not something Samira can act on).
+
+Given the tight same-day window, posted a 🔴 urgent card to #decisions (not re-using the
+already-closed prior card) and sent a direct phone notification — Samira has no Gusto
+credential and cannot run or skip payroll herself; this needs Lemar in app.gusto.com
+before 7pm ET.
+
+## Sources (continued)
+- gmail: message `19faf86047552535` (gustonoreply@gusto.com, 2026-07-29 20:17 UTC,
+  "Payroll canceled," $1,570.65, re-run-by-7pm-ET-today deadline)
+- gmail: thread `19faf8e474cf86f8` (2026-07-29 20:26 UTC, "past year non-Gusto payroll"
+  — separate W-2C matter, unresolved, flagged for Lemar)
+- calendar: event `7jjg70sv94gt6rk92r9glqrv2o` cancelled (stale, from the 15:39 ET
+  "resolved" pass) → new event `474nemh5ki2hj3k81211pfouvo` created for the 7pm ET
+  Jul 29 re-run deadline
