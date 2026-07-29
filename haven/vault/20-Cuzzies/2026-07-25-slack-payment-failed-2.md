@@ -1,9 +1,9 @@
 ---
 created: 2026-07-25T08:25:00-04:00
-updated: 2026-07-26T15:05:00-04:00
+updated: 2026-07-29T15:22:58-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [slack, billing, payment-failed, funding-shortfall]
 source: gmail
 ---
@@ -82,6 +82,20 @@ Restoring the paid plan (Lemar's call, payment-method fix) may resolve more than
 this ticket. Still nothing Samira can act on directly — payment authorization is
 outward-facing and outside the Safety floor.
 
+## Update 2026-07-29T15:22:58-04:00 — payment succeeded, resolved
+
+Slack emailed a receipt (gmail message `19faf54820c8a490`, "Your payment was
+successful," 2026-07-29 ~3:22pm ET, PDF receipt `slack_receipt_SBUS-9932652.pdf`
+attached): "We've collected $18.96 USD to cover your outstanding charges." This was a
+payment-method action only Lemar could take (outward-facing, outside the Safety
+floor) — Samira did not update any billing details. Marking this note `done`. Whether
+this restores the paid plan (vs. clearing the free-tier balance only) isn't stated in
+the receipt email — worth a quick manual check in Slack admin billing if the lost
+paid-tier features (from the 7/27 update) matter before the Sept 23 content-deletion
+date. The still-open sibling note (`20-Cuzzies/2026-07-25-slack-payment-failed.md`)
+covers the same event and should be marked resolved too (see that note for the
+matching update) — the flagged manual-merge/dedup pass is still outstanding.
+
 ## Sources
 - gmail: thread `19f96a92c1c5d841` (Slack renewal charge failed, feedback@slack.com,
   2026-07-25 ~00:24 ET)
@@ -90,4 +104,6 @@ outward-facing and outside the Safety floor.
   2026-09-23)
 - gmail: thread `19fa4638a7ea8462` (feature-loss confirmation, no-reply@email.slackhq.com,
   2026-07-27 ~16:23 UTC / ~12:23 ET)
+- gmail: message `19faf54820c8a490` (feedback@slack.com, 2026-07-29 19:22 UTC,
+  "Your payment was successful," $18.96 collected)
 - slack: #decisions message ts `1784982544.271849` (closed 🫡, 2026-07-26 PART A sweep)
