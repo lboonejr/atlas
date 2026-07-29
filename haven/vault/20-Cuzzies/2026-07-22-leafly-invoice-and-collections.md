@@ -1,9 +1,9 @@
 ---
 created: 2026-07-22T10:10:17-04:00
-updated: 2026-07-29T09:20-04:00
+updated: 2026-07-29T09:35:00-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [leafly, invoice, collections]
 source: gmail
 ---
@@ -44,8 +44,20 @@ options posted to #decisions matching the established pattern for this saga (sho
 holding reply / brief ack / no-reply-let-ride, consistent with Lemar's prior 🫡
 decision on this exact account).
 
+## Update 2026-07-29 (2, ~09:35 ET) — closed again, Lemar saluted (let ride)
+Lemar reacted 🫡 directly on the #decisions parent (message ts `1785290148.421429`,
+no option ✅'d) for the case #00159241 / $1,002.60 collections-transfer card — same
+"close/let ride again" signal as the 7/22 close on this account, per the card's own
+option text. No reply sent, no payment made or scheduled; the $1,002.60 balance and
+collections-transfer status stand as-is. Replied in-thread noting the close (parent
+left as posted, message-edit tooling still unavailable on this connector). Status
+moved back to `done` for this round — if the balance changes again or this escalates
+past a collections-transfer notice (legal, service cutoff), that's the next flag.
+
 ## Sources
 - slack: #decisions (C0BBXA96FFV), card ts `1784722765.550729`, Lemar's 🫡 reaction
 - gmail: thread `19f9d971f0ac3cb3` (2026-07-26 past-due notice, repeat, no new figure)
 - gmail: thread `19fab0271af4ddbb` (2026-07-28 ~11:14pm ET, collections transfer
   notice, case #00159241, $1,002.60)
+- slack: #decisions (C0BBXA96FFV), card ts `1785290148.421429`, Lemar's 🫡 reaction
+  (closed 7/29, let ride again)
