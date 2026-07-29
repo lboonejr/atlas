@@ -1,9 +1,9 @@
 ---
 created: 2026-07-22T10:10:17-04:00
-updated: 2026-07-26T10:05:30-04:00
+updated: 2026-07-29T09:20-04:00
 domain: cuzzies
 type: task
-status: done
+status: active
 tags: [leafly, invoice, collections]
 source: gmail
 ---
@@ -32,6 +32,20 @@ already on file here. Consistent with the standing 🫡 let-ride decision — no
 re-flagged in #decisions; logged here only. If a new/changed balance shows up, or this
 escalates further (legal, service cutoff), that's a new flag.
 
+## Update 2026-07-29 (~09:20 ET) — escalated further, new case, higher balance
+Gmail thread `19fab0271af4ddbb` (2026-07-28 ~11:14pm ET, `help@leafly.com`, to
+joshua@cuzziesnj.com / cc lemar@cuzziesnj.com), subject "Your Account Is Being
+Transferred To Collections - Pay Today!": new case #00159241, balance now
+**$1,002.60** (up from $653.30), explicit "pay today" ultimatum, states the account
+will be transferred to their Collections team due to no response, invites a reply
+("simply reply to this email"). Meets the escalation bar this note flagged on
+2026-07-26 (new/changed balance) — reopening status to `active`; 3 draft reply
+options posted to #decisions matching the established pattern for this saga (short
+holding reply / brief ack / no-reply-let-ride, consistent with Lemar's prior 🫡
+decision on this exact account).
+
 ## Sources
 - slack: #decisions (C0BBXA96FFV), card ts `1784722765.550729`, Lemar's 🫡 reaction
 - gmail: thread `19f9d971f0ac3cb3` (2026-07-26 past-due notice, repeat, no new figure)
+- gmail: thread `19fab0271af4ddbb` (2026-07-28 ~11:14pm ET, collections transfer
+  notice, case #00159241, $1,002.60)
