@@ -1,6 +1,6 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-29T09:45:00-04:00
+updated: 2026-07-30T09:14:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -447,6 +447,17 @@ reply ("let us know"), same pattern. Reopening status to `active`; draft reply o
 staged to #decisions (ts `1785330758.868719`) matching the established A/B/C pattern
 for this saga. Labeled `Samira/seen` in Gmail.
 
+## Update 2026-07-30 — third day in a row, 1 more returned item, $280.00 (NovusCapital II)
+
+Meggan Hallworth emailed again (7/30 ~12:49pm ET, gmail thread `19fb31238030c513`):
+one more item returned this morning — External Withdrawal $280.00, NovusCapital II.
+Same recurring line item as the 7/29 and several prior rounds — this is now the third
+consecutive day with a NovusCapital II return. No new question beyond the standing
+ask. Flagged in #decisions (ts `1785417300.841449`) noting the back-to-back-to-back
+pattern in case it changes Lemar's view on the MCA repayment plan, rather than staging
+another A/B/C reply-draft round — no reply drafted, nothing sent. Status stays
+`active`.
+
 ## Sources
 - gmail: thread `19f1db42e133b047` (7/6 12:45 ET reply on the 7/1 "Attention
   Required: Cuzzie's Dispensary" thread)
@@ -502,3 +513,7 @@ for this saga. Labeled `Samira/seen` in Gmail.
   2026-07-29 ~08:11 ET, cc Meggan Hallworth)
 - slack: #decisions message ts `1785330758.868719` (7/29 (2) returned-items card,
   options in thread, awaiting Lemar's pick)
+- gmail: thread `19fb31238030c513` (Meggan Hallworth, 1 more returned item $280.00
+  NovusCapital II, 2026-07-30 ~12:49pm ET)
+- slack: #decisions message ts `1785417300.841449` (7/30 returned-item flag, third
+  consecutive day)
