@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-30T13:15-04:00
+updated: 2026-07-30T14:00-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -406,6 +406,38 @@ Status stays **awaiting-decision** — what the consent judgment's actual terms 
 possession/move-out timing) and what the post-trial landlord conversation looks like
 next are still Lemar's to pursue.
 
+## Update — 2026-07-30 (14:00 ET) — Lemar sets move-out deadline (Thu 8/6); 7 daily calendar reminders created
+
+In the same #decisions thread as the consent-judgment card above (channel `C0BBXA96FFV`,
+parent ts `1785431719.874339`), Lemar replied directly (ts `1785431791.973819`):
+
+> "Basically we're gonna have to get out of the building by next Thursday so I wanna
+> kind of make sure that it's on my calendar each day to empty and clean the location
+> little by little"
+
+Today is Thursday 2026-07-30, so "next Thursday" = **2026-08-06**. Read plainly: Lemar
+has set an internal move-out target of Thursday 2026-08-06 for the Cuzzie's leased
+business location that is the subject of this docket (CAM-LT-004393-26, Harrison
+Acquisitions v. Cuzzies LLC), and asked for daily calendar coverage to empty and clean
+the space between now and then. This is a direct instruction, not FYI — acted on this
+run. It does not resolve or replace the still-open post-trial landlord conversation
+described in the 2026-07-28 update (the 30–45 day replacement-tenant ask); that remains
+Lemar's separately.
+
+**Action taken by Samira:** created 7 daily Google Calendar events, 2026-07-31 through
+2026-08-06 inclusive, on Lemar's personal reminder calendar (not his business primary
+calendar), each titled "Harrison Acquisitions — empty & clean location (move-out by Thu
+8/6)," 10:00–10:30 AM ET, popup reminder only, **no attendees/guests added, no invites
+sent**. Event IDs: `3kv86skh43pbeio2b74g0rumlk` (7/31), `p4pekd1s26l25klh89akd9cge4`
+(8/1), `ai0i9too1bse6uqs7sgm0p48ns` (8/2), `fmicha2pbdgnfr4g3isvnv58q0` (8/3),
+`fbclvkockddd9ceo1k3jnob2oc` (8/4), `58jqjsupj962s7ip8s2f7ilqs8` (8/5),
+`ijdr4vmf7mrmgrj7c8ve2e4qv8` (8/6, move-out day). Confirmed back in the same #decisions
+thread.
+
+Status stays **awaiting-decision** — the consent judgment's actual possession terms,
+the post-trial landlord conversation, and move-out logistics beyond these daily
+clean-out reminders are still Lemar's to pursue.
+
 ## Sources
 - gmail: thread 19f8fe851917899a (NJ eCourts CORRESPONDENCE notification, Dylan Mruczinski filing, 2026-07-23 16:56 UTC)
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
@@ -425,3 +457,4 @@ next are still Lemar's to pursue.
 - slack: #decisions, thread ts 1784834546.675549, closed via 🫡 (2026-07-24, PART D email loop)
 - slack: #decisions, thread ts 1785244330.635209, Option 3 ✅ + Lemar's reply ts 1785246204.390029 (2026-07-28, PART A — no-counsel decision recorded)
 - gmail: message 19fb3dc88747852e (NJ eCourts Judgment For Possession By Consent Notification, CAM-LT-004393-26, 2026-07-30 16:30:01 UTC / ~12:30 PM ET, transaction SCP20263541625)
+- slack: #decisions, thread ts 1785431719.874339, Lemar's reply ts 1785431791.973819 (2026-07-30, move-out-by-8/6 instruction; 7 daily calendar reminders created on the reminder calendar)
