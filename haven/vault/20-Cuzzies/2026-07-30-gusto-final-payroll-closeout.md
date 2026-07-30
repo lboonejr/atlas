@@ -1,12 +1,13 @@
 ---
 created: 2026-07-30T14:30-04:00
-updated: 2026-07-30T15:00-04:00
+updated: 2026-07-30T15:09-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [gusto, payroll, wind-down, close-out]
 source: gmail
 due: 2026-07-31T09:00:00-04:00
+calendar_event_id: kce9ibkh596d6srmk0fupd03dc
 ---
 
 # Gusto Final Payroll Deadline — Complete Employee Close-Out (all 8 employees)
@@ -37,3 +38,8 @@ not one pay period).
   13:00 UTC, "Notification: Gusto Final Payroll Deadline — Complete Employee
   Close-Out @ Fri Jul 31, 2026 9am - 10am (EDT) (Cuzzie's)")
 - see also: [[2026-07-24-gusto-jul12-jul25-payroll-due]] (related but distinct pay-period saga, still `status: active`, unresolved as of 2026-07-29 4:17pm ET cancel)
+
+## Update — 2026-07-30 (calendar-sync)
+Reminder event created on the reminder calendar (`Haven: Gusto Final Payroll Deadline —
+Complete Employee Close-Out`, Jul 31 9:00-9:30am ET, popup notification). Event id
+written back above.
