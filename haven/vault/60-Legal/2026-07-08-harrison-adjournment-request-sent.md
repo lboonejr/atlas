@@ -1,6 +1,6 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-28T14:00-04:00
+updated: 2026-07-30T13:15-04:00
 domain: legal
 type: log
 status: awaiting-decision
@@ -376,6 +376,36 @@ and/or the post-trial landlord conversation takes place. Replied "Done ✅ — r
 in the #decisions thread; leaving the card open for Lemar to 🫡 when he's ready to
 close it.
 
+## Update 2026-07-30 (13:15 ET) — Judgment For Possession By Consent signed; trial day outcome is in
+
+An NJ eCourts notification (Gmail thread/message `19fb3dc88747852e`, "NJ eCourts
+Judgment For Possession By Consent Notification - Special Civil Part CAM-LT-004393-26")
+landed 2026-07-30 ~12:30 PM ET — trial day. Docket text: **"Judgment For Possession By
+Consent signed by Judge RICHARD F. WELLS, J.S.C. RET./REC. Submitted by Case Management
+Staff."** Notice went electronically to Dylan Mruczinski/Ada Belamour/Maria
+Camacho-Castro (Rivkin Radler, landlord's counsel) and lemar@cuzziesnj.com. Transaction
+ID `SCP20263541625`.
+
+Read plainly: a **judgment for possession has been entered by consent** — i.e. this is
+not the bare automatic/default loss Lemar braced for in the 2026-07-28 update above, it
+carries the word "consent," which is consistent with (but not confirmation of) the plan
+he described going in: not contesting the trial, then working the timeline with the
+landlord. The notice itself has no content beyond the docket line — actual terms (any
+move-out date, whether a 30–45 day window like the one Lemar wanted to ask for is
+reflected in it, next steps) are not in this email and require logging into eCourts
+(Bar-ID gated, Samira has no access) or hearing directly from Rivkin Radler/the court.
+
+This is fresh, time-sensitive, judgment-level information — raised as a NEW #decisions
+parent (the prior 2026-07-28 card is still open, unclosed by Lemar, but this is a
+materially new fact — a signed judgment — not a refinement of that card) and pushed to
+Lemar's phone this run given the trial-day significance. Nothing sent, filed, drafted,
+or committed by Samira here — tracking and flagging only. Gmail message labeled
+`Samira/seen`.
+
+Status stays **awaiting-decision** — what the consent judgment's actual terms are (esp.
+possession/move-out timing) and what the post-trial landlord conversation looks like
+next are still Lemar's to pursue.
+
 ## Sources
 - gmail: thread 19f8fe851917899a (NJ eCourts CORRESPONDENCE notification, Dylan Mruczinski filing, 2026-07-23 16:56 UTC)
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
@@ -394,3 +424,4 @@ close it.
 - gmail: thread 19f9065b4e1b459e (NJ eCourts Filing Notification duplicate, 2026-07-23 19:13:31 UTC; labeled Samira/sent 2026-07-24 PART D close)
 - slack: #decisions, thread ts 1784834546.675549, closed via 🫡 (2026-07-24, PART D email loop)
 - slack: #decisions, thread ts 1785244330.635209, Option 3 ✅ + Lemar's reply ts 1785246204.390029 (2026-07-28, PART A — no-counsel decision recorded)
+- gmail: message 19fb3dc88747852e (NJ eCourts Judgment For Possession By Consent Notification, CAM-LT-004393-26, 2026-07-30 16:30:01 UTC / ~12:30 PM ET, transaction SCP20263541625)
