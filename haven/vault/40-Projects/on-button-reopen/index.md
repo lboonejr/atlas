@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-07-22T16:20-04:00
+updated: 2026-07-31T13:10-04:00
 domain: project
 type: reference
 status: active
@@ -459,6 +459,33 @@ carry:
 - Reality check: opening ($106.8K) + a 3-month cushion (~$93.6K carry) ≈ **$200K** before
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
+
+## Update — 2026-07-31 (dedupe confirmed on flagged ADT/AIQ drops; canvas resync blocked)
+Swept the two #on-button items flagged for this run: Lemar's "ADT updated Balance -
+$2842.83" (ts `1784556454.923039`) and the Samira-bot AIQ routing message (invoice 68388,
+$2,481.51, issued 7/17, ts `1784308668.895359`). Per the scanner/dedupe rule, checked both
+against this index: **ADT** already carries `amount: 2842.83` (reconciled 7/15 per Lemar's
+confirmation, reconfirmed 7/20 — ts `1784556454.923039` is exactly the restatement already
+logged in the "2026-07-20 (ADT reconfirmed)" entry below) and **AIQ** already exists as its
+own Tier 2 item (`aiq`, added 7/17, same invoice 68388, same $2,481.51, same "handle upon
+returning" routing). No yaml changes were needed — both figures were already correct.
+Cross-checked the rendered `on-button-reopen.html` JSON payload directly (not just this
+note) and confirmed it already carries `adt: 2842.83` (Tier 1) and the full `aiq` line
+(Tier 2, $2,481.51) with `meta.updated` still reading "July 22, 2026 (PSE&G escalated)" —
+page regeneration was not needed.
+
+While verifying, found the pinned canvas `F0BEN1167GB`'s file metadata shows its last real
+edit at 2026-07-15 17:13 ET (`edit_timestamp` 1784142539) — before the 7/17 AIQ addition and
+the 7/22 PSE&G escalation ($391.58 → $1,051.51) — so the canvas is stale on those two
+points (missing the AIQ line entirely, showing the old PSE&G figure). Attempted a full
+canvas rebuild from this note's current state (precedented by the 2026-07-09 canvas-cleanup
+note — "Samira rebuilds this each scan" is the canvas's own stated behavior), but every
+`slack_update_canvas` call this run — full-document replace, section replace, and
+`insert_after` — returned a `restricted_action` API error regardless of parameters. Canvas
+writes appear blocked in this session; the refresh could not be completed. Flagging for a
+follow-up pass once canvas-write access is confirmed working — no #decisions ask needed,
+this is a tooling gap, not a business decision. Nothing paid or contacted; no figures
+changed this run.
 
 ## Update — 2026-07-22 (PSE&G escalated)
 PSE&G sent a new past-due reminder for the Camden account (2764 Mt Ephraim Ave, acct
