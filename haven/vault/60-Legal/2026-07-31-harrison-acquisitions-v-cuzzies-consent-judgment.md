@@ -1,6 +1,6 @@
 ---
 created: 2026-07-31T15:55:00-04:00
-updated: 2026-07-31T15:55:00-04:00
+updated: 2026-07-31T16:04:34-04:00
 domain: legal
 type: task
 status: awaiting-decision
