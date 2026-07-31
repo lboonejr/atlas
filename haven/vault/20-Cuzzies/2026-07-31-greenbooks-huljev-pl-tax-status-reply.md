@@ -1,9 +1,9 @@
 ---
 created: 2026-07-31T14:00-04:00
-updated: 2026-07-31T15:35-04:00
+updated: 2026-07-31T15:30-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [greenbooks, huljev-group, tax-status, pl-statement, investor-diligence]
 source: gmail
 ---
@@ -41,6 +41,14 @@ Both are account-access/subscription actions only Lemar can take — not somethi
 Samira can execute. Staged as an informational #decisions card (no reply draft, this
 isn't a reply-worthy ask of Richard — it's an action ask of Lemar).
 
+## Update 2026-07-31T15:30-04:00 — Lemar resolved the QuickBooks/bank-access ask directly (outside the loop)
+Lemar emailed Richard directly (15:30:51 ET, same thread) confirming QuickBooks is fully
+reactivated and the flagged bank account reconnected, and asked for an updated P&L off
+the fresh data. This resolves the informational #decisions card (posted 12:12 ET) — no
+reaction was set, Lemar just acted directly in Gmail before picking anything. Closing the
+card as moot, same pattern as the earlier P&L-ack card. Matter is done; watching for
+Richard's follow-up P&L is a light open thread, not tracked as a separate task.
+
 ## Sources
-- gmail: thread 19f7fdee27983645 (P&L delivered + tax-status question, 7/31; original request 7/20; Lemar's direct reply 14:15 ET; Richard's QuickBooks/bank-connect ask 15:13 ET)
-- slack: #decisions message ts `1785507208.232089` (7/31 P&L-ack card, closed as moot — Lemar replied directly)
+- gmail: thread 19f7fdee27983645 (P&L delivered + tax-status question, 7/31; original request 7/20; Lemar's direct reply 14:15 ET; Richard's QuickBooks/bank-connect ask 15:13 ET; Lemar's direct QuickBooks/bank-access resolution reply 15:30:51 ET, message `19fb9a869d9c3ac9`)
+- slack: #decisions message ts `1785507208.232089` (7/31 P&L-ack card, closed as moot — Lemar replied directly); #decisions message ts `1785514323.582199` (7/31 QuickBooks/bank-access card, closed as moot — Lemar resolved directly)
