@@ -1,6 +1,6 @@
 ---
 created: 2026-07-06T09:10:00-04:00
-updated: 2026-07-29T09:45:00-04:00
+updated: 2026-07-31T15:30:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -502,3 +502,19 @@ for this saga. Labeled `Samira/seen` in Gmail.
   2026-07-29 ~08:11 ET, cc Meggan Hallworth)
 - slack: #decisions message ts `1785330758.868719` (7/29 (2) returned-items card,
   options in thread, awaiting Lemar's pick)
+- gmail: thread `19fb31238030c513` (Meggan Hallworth, 1 more returned item $280.00
+  NovusCapital II, 2026-07-30 ~08:49 ET)
+- slack: #decisions message ts `1785417300.841449` (7/30 returned-item card, 🫡-only,
+  no options — still open/unanswered as of this run)
+- gmail: thread `19fadc9dfd8949ce` (Christopher Cabezas, 1 more returned item $280.00
+  NovusCapital II, 2026-07-31 ~08:26 ET — same thread as the 7/29 (2) item above)
+
+## Update 2026-07-31 (Samira scan, ~15:xx ET) — 4th NovusCapital II return since 7/28, two prior cards still unanswered
+A 4th $280.00 NovusCapital II return landed this morning (7/31 ~08:26 ET, Christopher
+Cabezas). Two prior #decisions cards on this same pattern (7/29 (2) and 7/30) are
+still open with no Lemar reaction as of this scan — posting a 5th fresh parent would
+just pile on an already-unanswered thread, so this occurrence is logged here and
+added as a reply on the still-open 7/30 card instead of a new parent. Nothing sent to
+the bank, nothing paid. Worth Lemar's eye when he gets to the standing Parke Bank
+thread: the NovusCapital II external-withdrawal item is now returning on 4 of the
+last 4 business days.

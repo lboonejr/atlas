@@ -1,6 +1,6 @@
 ---
 created: 2026-07-31T14:00-04:00
-updated: 2026-07-31T15:10-04:00
+updated: 2026-07-31T15:35-04:00
 domain: cuzzies
 type: task
 status: active
@@ -27,5 +27,20 @@ Jessica/Ilija's follow-up on the tax question.
 Reply-worthy: staged as a #decisions card with draft options in Lemar's
 voice.
 
+## Update 2026-07-31T14:15-04:00 — Lemar replied directly (outside the loop)
+Lemar sent his own reply to Richard from Gmail directly (14:15 ET) — thanking him for
+the P&L, confirming he's watching for Jessica/Ilija's tax-status follow-up. This
+happened before the #decisions card options were picked; card closed as moot.
+
+## Update 2026-07-31T15:13-04:00 — Richard flags a new ask: reactivate QuickBooks + connect banks
+New reply from Richard Wyse (15:13 ET, same thread): he noticed no activity has been
+booked/coded since Feb/Mar, and asks Lemar to (1) reactivate QuickBooks fully (beyond
+report-generation-only access) and (2) connect the bank accounts (or give GreenBooks
+access to connect them) so the books can be brought current for the diligence packet.
+Both are account-access/subscription actions only Lemar can take — not something
+Samira can execute. Staged as an informational #decisions card (no reply draft, this
+isn't a reply-worthy ask of Richard — it's an action ask of Lemar).
+
 ## Sources
-- gmail: thread 19f7fdee27983645 (P&L delivered + tax-status question, 7/31; original request 7/20)
+- gmail: thread 19f7fdee27983645 (P&L delivered + tax-status question, 7/31; original request 7/20; Lemar's direct reply 14:15 ET; Richard's QuickBooks/bank-connect ask 15:13 ET)
+- slack: #decisions message ts `1785507208.232089` (7/31 P&L-ack card, closed as moot — Lemar replied directly)
