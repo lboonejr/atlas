@@ -1,9 +1,9 @@
 ---
 created: 2026-07-31T08:15:00-04:00
-updated: 2026-07-31T12:00:00-04:00
+updated: 2026-07-31T13:10:00-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [cannabist-company, accounts-payable, overdue, wholesale]
 source: gmail
 ---
@@ -32,5 +32,17 @@ kind of outward commitment this loop does not make unilaterally.
 
 Staged to #decisions for Lemar's read/decision — see the card there for options.
 
+## Update 2026-07-31 (13:10 ET)
+
+Lemar closed this via 🫡 in #decisions (thread ts `1785499789.098439`) with no
+additional instruction — reading it the same as the Donte Bronaugh and Garden Society
+closes: acknowledged/closed on his read only. No email sent back to
+`AR@CannabistCompany.com`, no scheduled-to-pay dates or amounts committed on his behalf,
+no payment made or scheduled. The $26,382.21 balance and the seven open invoices above
+still stand as an outstanding AP fact — closing the decision card does not resolve the
+debt, only Samira's open loop on it. If Lemar wants dates sent to AR, that is a new
+capture to act on.
+
 ## Sources
 - gmail: thread `19fb809ff7aeead5` (Cannabist Company Account Statement, 7/31)
+- slack: #decisions thread ts `1785499789.098439` (channel `C0BBXA96FFV`)

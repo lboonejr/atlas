@@ -1,6 +1,6 @@
 ---
 created: 2026-07-24T12:16:00-04:00
-updated: 2026-07-24T16:40:00-04:00
+updated: 2026-07-31T13:10:00-04:00
 domain: cuzzies
 type: decision
 status: done
@@ -34,6 +34,14 @@ Saved as a Gmail Draft (**not sent**): draft id `r7481267607785565123`, threaded
 Gmail message `19f94d2f031b04d6`, to `Vladimir.Jovanovic@verano.com`, cc
 `ar@verano.com`, `admin@cuzziesnj.com`. Ready for Lemar to review/send from Gmail
 Drafts. Nothing sent externally by Samira.
+
+## Update 2026-07-31 (13:10 ET)
+
+Lemar closed this via 🫡 in #decisions (thread ts `1784909858.676599`). The Option A
+draft (Gmail draft `r7481267607785565123`) remains saved and unsent in Gmail Drafts —
+closing the decision card does not send it; sending is still Lemar's action whenever
+he chooses. No payment made or scheduled, no dollar figure or date committed on his
+behalf.
 
 ## Sources
 - gmail: thread `19f94d2f031b04d6` ("Cuzzie's Dispensary || AR Statement || Verano",
