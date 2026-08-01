@@ -1,6 +1,6 @@
 ---
 created: 2026-07-09T09:00:00-04:00
-updated: 2026-07-09T13:00:00-04:00
+updated: 2026-08-01T14:04:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -24,5 +24,16 @@ Timeline:
 Currently awaiting next move from Jason/the buyer — nothing outstanding on Lemar's side
 right now. Worth checking back if no word in a week or two.
 
+## Update — 2026-08-01 ~2:04 PM ET
+Jason emailed (thread `19eda7545ffe62f0`, msg `19fbe7fe0b027a9c`): "I'm gonna have a
+written offer to present to you by Tuesday, buyer wants to know if they can get in for a
+tour on the property as well." This follows the 7/29 exchange where Donte Bronaugh outlined
+the $250K-minus-fee asset-sale structure (buyer takes the space, not the lease/LLC) and
+Lemar sent the financials data room the same day. Two things now pending Lemar's read:
+the written offer expected Tuesday (8/4), and the buyer's property-tour request — a
+tour would need scheduling with an external party, which is outside Samira's authority
+(no external-guest invites), so it's routed to #decisions rather than actioned.
+
 ## Sources
 - gmail: thread 19f19d3bff0241cf ("Re: Camden dispensary for sale")
+- gmail: thread 19eda7545ffe62f0, msg 19fbe7fe0b027a9c (2026-08-01 18:04 UTC — Jason Klein, written offer + tour request)
