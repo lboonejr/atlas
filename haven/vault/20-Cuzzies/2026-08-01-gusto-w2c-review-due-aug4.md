@@ -1,12 +1,13 @@
 ---
 created: 2026-08-01T12:30-04:00
-updated: 2026-08-01T13:30-04:00
+updated: 2026-08-01T13:07-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [gusto, payroll, w-2c, tax-correction, wind-down]
 source: gmail
 due: 2026-08-04T09:00-04:00
+calendar_event_id: 60oru6pklr16hg1amlf380pf80
 ---
 
 # Gusto — review draft W-2Cs due Aug 4, 2026
