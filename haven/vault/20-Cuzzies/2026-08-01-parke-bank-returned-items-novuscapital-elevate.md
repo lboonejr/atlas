@@ -1,10 +1,10 @@
 ---
 created: 2026-08-01T12:00:00-04:00
-updated: 2026-08-01T12:00:00-04:00
+updated: 2026-08-01T14:30:00-04:00
 domain: cuzzies
 type: task
 status: active
-tags: [parke-bank, returned-item, nsf, novuscapital, elevate-funding]
+tags: [parke-bank, returned-item, nsf, novuscapital, elevate-funding, overdraft-fee]
 source: gmail
 ---
 
@@ -22,6 +22,27 @@ cards (e.g. ts `1785327753` — 3 more returned items, $423.49, saluted). Not
 posting a new #decisions parent — this is a continuation of the same standing
 issue, already on Lemar's radar. Nothing paid, no reply sent.
 
+## Update 2026-08-01 (~14:30 ET) — new escalation: overdraft service fee assessed
+Re-reading the same 13:43 ET email surfaces a detail not captured in the first
+pass: Chris Cabezas also flagged that "due to all the rejected items that have
+overdrawn your account each time through the month of July, the account was
+assessed a monthly service fee of $1,495.40." The account's overdrawn balance
+is now stated at **$2,611.03**, and he asks directly: "Do you have an update
+for us on when you expect to have this negative balance resolved?"
+
+This crosses the same escalation bar used elsewhere in this saga (new dollar
+figure + a direct, unanswered question) — unlike the routine per-item returns,
+a $1,495.40 fee assessment on top of the running balance is materially new
+information Lemar hasn't seen yet. Posting a fresh #decisions parent with
+draft reply options, distinct from the earlier "not reposting" call above
+(which was about the routine $285 in returns, not this fee).
+
+No payment made or scheduled, no reply sent yet — options posted for Lemar's
+pick.
+
 ## Sources
-- gmail: thread 19fbd91191b09536 (Parke Bank returned items notice, 8/1)
+- gmail: thread 19fbd91191b09536 (Parke Bank returned items notice + $1,495.40
+  fee assessment + $2,611.03 overdrawn balance, 8/1)
 - vault: `50-Reference/Entities/parke-bank.md`
+- slack: #decisions (C0BBXA96FFV) — new card posted 2026-08-01 for the fee
+  escalation
