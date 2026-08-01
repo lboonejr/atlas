@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-07-31T13:10-04:00
+updated: 2026-08-01T10:20-04:00
 domain: project
 type: reference
 status: active
@@ -52,7 +52,7 @@ Guardrail: tracking & planning only — nothing is paid or contacted automatical
 constants:
   monthly_carry: 31200          # bare-bones crew; excludes cannabis tax
   target_open_days: 14
-  updated_label: "July 22, 2026 (PSE&G escalated)"
+  updated_label: "August 1, 2026 (Progressive Commercial reclassified)"
 
 tax_gate:
   - id: nj-sales-tax
@@ -74,15 +74,6 @@ items:
     account: "5 payrolls behind; tax principal only (excl. IRS/NJ penalties+interest)"
     contact: "Gusto support / accountant"
     status: past-due
-  - id: progressive
-    label: "Progressive Commercial — auto/liability"
-    amount: 2117.80
-    tier: 1
-    vendor: "Progressive Commercial"
-    account: "Policy #997268390"
-    contact: "progressivecommercial.com"
-    status: past-due
-    note: "One-time reinstatement; ongoing ~$1,400/mo re-quote sits in monthly carry."
   - id: parke-bank
     label: "Parke Bank — clear negative balance"
     amount: 2000
@@ -388,6 +379,15 @@ items:
     contact: "Andrew Giampaolo, Marshall & Sterling · (845) 454-0800 x2397"
     status: lapsed
     note: "Decided 7/6 to let lapse; restore as coverage edge on reopen."
+  - id: progressive
+    label: "Progressive Commercial — auto/liability (letting lapse)"
+    amount: 1107.20
+    tier: 3
+    vendor: "Progressive Commercial"
+    account: "Policy #997268390 (cancelled 7/3/26)"
+    contact: "progressivecommercial.com"
+    status: lapsed
+    note: "Moved Tier 1 → Tier 3 (2026-08-01): Lemar decided 2026-07-27 in #decisions to let this lapse rather than pay — same 7/2 #decisions call that paired this with epli-reinstate above (ts 1783026740.943679). Balance reconciled to $1,107.20, the actual cancellation-confirmation amount owed; supersedes the old $2,117.80 pre-cancellation reinstatement-quote figure, which no longer applies since the policy is confirmed cancelled effective 7/3. Escalated to a collections-threat 'final notice' 7/27, repeated 7/30 — no dispute sent, no payment made, tracking only. Restore/reinstate coverage only if decided later; not a reopen blocker."
   - id: first-insurance-funding-notice
     label: "First Insurance Funding — loan #106241219 (separate policy from epli-reinstate)"
     amount: 4699.76
@@ -444,21 +444,41 @@ carry:
   - {label: "Veriscan ID verification", amount: 30}
 ```
 
-## Snapshot (human-readable, as of 2026-07-22)
-- **Tier 1 (open & operate):** ≈ **$108,655** one-time (incl. $50K inventory restock, $40K
+## Snapshot (human-readable, as of 2026-08-01)
+- **Tier 1 (open & operate):** ≈ **$106,537.20** one-time (incl. $50K inventory restock, $40K
   intercompany loan repay; ADT reconciled to $2,842.83, was $1,637.84; PSE&G escalated to
-  $1,051.51, was $391.58).
+  $1,051.51, was $391.58; Progressive Commercial ($2,117.80) moved out to Tier 3 8/1 — see
+  below).
 - **Tier 2 (nice-to-have):** ≈ **$115,411.45** (Leafly escalated to collections 7/14, $653.30 —
   was $279; Fresh Grow priced 7/15 at $3,262.06 — was TBD; Primo Brands/Ready Refresh $129.94
   added 7/15; AIQ $2,481.51 added 7/17; 8 cannabis-vendor lines still TBD).
-- **Tier 3 (edge):** ≈ **$17,081.76** priced (Little Leaf Labs $8,331 + EPLI $4,051.12 +
+- **Tier 3 (edge):** ≈ **$18,188.96** priced (Little Leaf Labs $8,331 + EPLI $4,051.12 +
   First Insurance Funding loan #106241219 $4,699.76, confirmed 7/12 as a separate policy,
-  not a duplicate; strategic lines TBD).
+  not a duplicate + Progressive Commercial $1,107.20, moved in 8/1; strategic lines TBD).
 - **Tax gate (separate):** ≈ **$109,900**.
 - **Monthly carry:** ≈ **$31,200/mo** → runway = (investment − one-time) ÷ 31,200.
-- Reality check: opening ($106.8K) + a 3-month cushion (~$93.6K carry) ≈ **$200K** before
+- Reality check: opening (~$104.4K) + a 3-month cushion (~$93.6K carry) ≈ **$198K** before
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
+
+## Update — 2026-08-01 (Progressive Commercial reclassified Tier 1 → Tier 3, balance reconciled)
+Swept #on-button ts `1785164745.763099` (2026-07-27, Samira's own report of the "let it
+lapse" call — no 🧹📌📊 tag, not a numbered restatement, carries a figure not yet in this
+index, so treated as a drop per the scanner rule): Progressive Commercial's balance is
+confirmed **$1,107.20** (the actual amount owed per the 7/4 cancellation-confirmation email
+and the 7/27 "final notice"/collections-threat email, repeated 7/30 — see
+`haven/vault/20-Cuzzies/2026-07-04-progressive-commercial-canceled-confirmed.md`), not the
+$2,117.80 previously tracked (that figure was the pre-cancellation cost to *keep the policy
+active*, now moot since the policy is confirmed cancelled effective 7/3). Lemar's call in
+#decisions 2026-07-27 (ts `1785154909.161039`): let it lapse — no dispute, no payment.
+`progressive` item updated: `amount` 2117.80 → 1107.20, `status` past-due → lapsed, and
+**moved Tier 1 → Tier 3** to match the treatment of `epli-reinstate` — the same pairing from
+the original 7/2 #decisions call (ts `1783026740.943679`) that decided both policies would
+lapse rather than be paid, so neither is a reopen blocker; both sit in Tier 3 as coverage
+that could be restored later. Tier 1 total $108,655 → **≈$106,537.20** (−$2,117.80); Tier 3
+total $17,081.76 → **≈$18,188.96** (+$1,107.20). Nothing paid or contacted — tracking only.
+Page (`on-button-reopen.html`) and canvas (`F0BEN1167GB`) regenerated from this note in the
+same pass.
 
 ## Update — 2026-07-31 (dedupe confirmed on flagged ADT/AIQ drops; canvas resync blocked)
 Swept the two #on-button items flagged for this run: Lemar's "ADT updated Balance -
