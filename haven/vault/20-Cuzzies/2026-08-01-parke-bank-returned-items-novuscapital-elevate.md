@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T12:00:00-04:00
-updated: 2026-08-01T14:30:00-04:00
+updated: 2026-08-02T08:15:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -40,9 +40,20 @@ draft reply options, distinct from the earlier "not reposting" call above
 No payment made or scheduled, no reply sent yet — options posted for Lemar's
 pick.
 
+## Update 2026-08-02 (~08:15 ET) — routine eStatement-ready ping, no new figure
+An automated, no-reply "Statement Notification" landed (gmail thread
+`19fbf71d57e10cad`, 2026-08-01 ~18:28 ET, `admin@parkebank.com`) saying the new
+eStatement is ready to view in Online Banking. No dollar figure or account
+detail in the email itself — just a pointer to log in. Doesn't cross the
+escalation bar (no new figure, no direct question); the open card above (fee
+escalation, $2,611.03) already covers what Lemar needs to see. Not re-flagged
+in #decisions, logged here only.
+
 ## Sources
 - gmail: thread 19fbd91191b09536 (Parke Bank returned items notice + $1,495.40
   fee assessment + $2,611.03 overdrawn balance, 8/1)
 - vault: `50-Reference/Entities/parke-bank.md`
 - slack: #decisions (C0BBXA96FFV) — new card posted 2026-08-01 for the fee
   escalation
+- gmail: thread 19fbf71d57e10cad (2026-08-01 ~18:28 ET, eStatement-ready
+  notification, no new figure)
