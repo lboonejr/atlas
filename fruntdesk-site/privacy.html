@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — FruntDesk</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --fg: #14171a;
+      --muted: #5b6470;
+      --accent: #2f6fed;
+      --border: #e6e8eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1115;
+        --fg: #f2f3f5;
+        --muted: #9aa3ad;
+        --accent: #6d9bff;
+        --border: #23262b;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 56px 24px 64px;
+    }
+    h1 { font-size: 1.8rem; margin-bottom: 0.2em; }
+    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 2.5em; }
+    h2 { font-size: 1.15rem; margin-top: 2.2em; }
+    p, li { color: var(--fg); }
+    ul { padding-left: 1.2em; }
+    a { color: var(--accent); }
+    .back { display: inline-block; margin-bottom: 2em; font-size: 0.9rem; }
+    code { background: var(--border); padding: 0.1em 0.4em; border-radius: 4px; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="/">&larr; FruntDesk</a>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: August 2, 2026</p>
+
+    <p>
+      FruntDesk ("we," "us") provides scheduling, reminder, and payment tools for solo,
+      appointment-based operators (an "Operator") and their clients (a "Client"). This policy
+      explains what information FruntDesk collects, why, and how it's used.
+    </p>
+
+    <h2>Who this applies to</h2>
+    <p>
+      FruntDesk is used directly by an Operator to run their own scheduling. A Client interacts
+      with FruntDesk only through links an Operator sends them (e.g. to confirm, reschedule, or
+      pay a deposit for their own appointment) — a Client does not create a FruntDesk account.
+    </p>
+
+    <h2>Information we collect</h2>
+    <ul>
+      <li><strong>Operator account information:</strong> name, business name, contact email and phone, timezone, and booking preferences.</li>
+      <li><strong>Client information, entered by the Operator:</strong> name, phone number, email (optional), and any notes the Operator adds (e.g. service preferences).</li>
+      <li><strong>Appointment information:</strong> service, date/time, status, and any deposit amount associated with the appointment.</li>
+      <li><strong>Google Calendar data:</strong> when an Operator connects their Google Calendar, FruntDesk requests the <code>calendar.events</code> scope only — access to read and write calendar events for scheduling purposes. FruntDesk does not request access to any other Google data (Gmail, Drive, Contacts, etc.) and does not read events FruntDesk did not create except to detect scheduling conflicts.</li>
+      <li><strong>Payment information:</strong> deposit and subscription payments are processed directly by Stripe. FruntDesk does not receive or store full card numbers or other raw payment credentials — only a reference id and status (e.g. "paid," "refunded") that Stripe returns.</li>
+    </ul>
+
+    <h2>How we use this information</h2>
+    <ul>
+      <li>To create, reschedule, and cancel appointments, and keep them in sync with the Operator's Google Calendar.</li>
+      <li>To send appointment reminders and related messages (confirm/reschedule/cancel links) to a Client by SMS, via Twilio.</li>
+      <li>To process deposit payments and, for Operators on a paid plan, subscription billing, via Stripe.</li>
+      <li>To detect and prevent double-booking.</li>
+    </ul>
+    <p>We do not sell personal information, and we do not use Client or Operator data for advertising.</p>
+
+    <h2>How information is shared</h2>
+    <p>Information is shared only with the service providers needed to operate FruntDesk on the Operator's behalf:</p>
+    <ul>
+      <li><strong>Google</strong> — to sync appointments to the Operator's own Google Calendar.</li>
+      <li><strong>Twilio</strong> — to deliver SMS reminders and confirm/reschedule/cancel links.</li>
+      <li><strong>Stripe</strong> — to process deposit and subscription payments.</li>
+    </ul>
+    <p>We do not share Client or Operator information with any other third party except as required by law.</p>
+
+    <h2>Data retention and security</h2>
+    <p>
+      Google Calendar access tokens are encrypted at rest (AES-256-GCM). Client-facing
+      confirm/reschedule/cancel links are single-purpose, expire automatically, and cannot be
+      used to access any appointment other than the one they were issued for. Appointment and
+      client records are retained for as long as the Operator's account is active, or as needed
+      to provide the service.
+    </p>
+
+    <h2>Your choices</h2>
+    <p>
+      An Operator can disconnect their Google Calendar at any time from Google's own
+      <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">third-party
+      access settings</a>. To request access to, correction of, or deletion of information
+      FruntDesk holds about you — whether you're an Operator or a Client — contact us below.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Questions about this policy or a request regarding your data:
+      <a href="mailto:fruntdeskhq@gmail.com">fruntdeskhq@gmail.com</a>.
+    </p>
+  </main>
+</body>
+</html>
