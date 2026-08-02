@@ -1,9 +1,9 @@
 ---
 created: 2026-07-22T10:10:17-04:00
-updated: 2026-07-29T09:35:00-04:00
+updated: 2026-08-02T08:15:00-04:00
 domain: cuzzies
 type: task
-status: done
+status: active
 tags: [leafly, invoice, collections]
 source: gmail
 ---
@@ -54,6 +54,17 @@ left as posted, message-edit tooling still unavailable on this connector). Statu
 moved back to `done` for this round — if the balance changes again or this escalates
 past a collections-transfer notice (legal, service cutoff), that's the next flag.
 
+## Update 2026-08-02 (~08:15 ET) — reopened, another direct contact request
+New thread this pass, Gmail thread `19fc1a42513c653f` (2026-08-02 ~08:43 ET,
+`accountsreceivable@leafly.com`, "Your Account Requires Immediate Attention"): Leafly's
+Accounting Team asks Lemar to contact them today about the account and payment
+options, and separately asks for payment details (date/amount/method/remittance name)
+if funds were already sent, with rep Dante offered as a contact. No new balance figure
+given beyond the $1,002.60 / case #00159241 already on file here. Reopening status to
+`active` (same pattern as the 7/29 reopen) — 3 draft reply options posted to
+#decisions, matching the established short-holding-reply pattern for this saga. No
+reply sent, no payment made or scheduled.
+
 ## Sources
 - slack: #decisions (C0BBXA96FFV), card ts `1784722765.550729`, Lemar's 🫡 reaction
 - gmail: thread `19f9d971f0ac3cb3` (2026-07-26 past-due notice, repeat, no new figure)
@@ -61,3 +72,7 @@ past a collections-transfer notice (legal, service cutoff), that's the next flag
   notice, case #00159241, $1,002.60)
 - slack: #decisions (C0BBXA96FFV), card ts `1785290148.421429`, Lemar's 🫡 reaction
   (closed 7/29, let ride again)
+- gmail: thread `19fc1a42513c653f` (2026-08-02 ~08:43 ET, "Your Account Requires
+  Immediate Attention", direct contact request)
+- slack: #decisions (C0BBXA96FFV) — new card posted 2026-08-02 with 3 draft reply
+  options
