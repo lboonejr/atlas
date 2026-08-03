@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T12:30-04:00
-updated: 2026-08-01T13:07-04:00
+updated: 2026-08-03T12:30-04:00
 domain: cuzzies
 type: task
 status: active
@@ -26,3 +26,10 @@ Gusto credentials and cannot review or approve these on his behalf.
 ## Sources
 - gmail: thread `19fbb8d9a4feaa3a` — "Review draft W-2Cs for Cuzzie's Dispensary &
   Delivery LLC by Aug 4, 2026"
+
+## Update — 2026-08-03 ~12:30 ET
+Lemar reacted 🫡 on the #decisions card (ts `1785586486.010689`) — closing the card's
+tracking in #decisions. No confirmation received that the Gusto-portal review was
+actually completed; Samira has no Gusto login and cannot verify. `status` stays `active`
+and the calendar reminder (due Aug 4, 9:00am ET) stays in place as the real backstop.
+Closed in #decisions, reply posted there.
