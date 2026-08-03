@@ -1,6 +1,6 @@
 ---
 created: 2026-07-22T10:10:17-04:00
-updated: 2026-08-03T16:16-04:00
+updated: 2026-08-03T17:13-04:00
 domain: cuzzies
 type: task
 status: active
@@ -80,6 +80,19 @@ routed to #decisions rather than actioned. The earlier open #decisions card (ts
 Lemar's own direct reply — left as posted (no reaction, nothing to overwrite) with a
 note pointing to this update.
 
+## Update 2026-08-03 (2, ~16:40 ET) — cancellation confirmed processed, Eatabit printer return task surfaced
+New email, same saga (Gmail thread `19fc95ba44cc5279`, case #00159743,
+`help@leafly.com`, "Update on your request: Cancellation Request"): "The Team has duly
+recorded and processed your request to cancel your Leafly Subscription." A cancellation
+request was submitted today under this case number (separate from case #00159241, the
+collections-transfer case still tracked above). The confirmation surfaces a new task:
+if Cuzzie's has a Leafly Eatabit printer on-site, it must be packaged and returned
+within 30 days of cancellation (by roughly 9/2) or additional charges apply. This is
+admin-executable legwork (confirm the printer is on-site, package it, request a
+shipping label, ship it) — staged to #admin as a `run:admin-3x` prompt rather than
+routed to #decisions, since it needs no judgment call, only doing. No reply sent (this
+is a status update, not a live back-and-forth) and no payment made.
+
 ## Sources
 - slack: #decisions (C0BBXA96FFV), card ts `1784722765.550729`, Lemar's 🫡 reaction
 - gmail: thread `19f9d971f0ac3cb3` (2026-07-26 past-due notice, repeat, no new figure)
@@ -95,3 +108,5 @@ note pointing to this update.
   Lemar's own sent reply: selling the business, will settle balance before transition)
 - gmail: thread `19fc1a42513c653f`, msg `19fc87d7891543b4` (2026-08-03 16:38 ET, Dante
   Coley: submit cancellation form, listing removed 9/22)
+- gmail: thread `19fc95ba44cc5279` (2026-08-03 ~16:40 ET, cancellation processed
+  confirmation, case #00159743, Eatabit printer return notice)
