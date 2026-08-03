@@ -1,7 +1,7 @@
 ---
 created: 2026-07-12T23:07-04:00
-updated: 2026-07-12T12:30-04:00
-domain: cuzzies
+updated: 2026-08-03T07:56-04:00
+domain: automation
 type: log
 status: active
 tags: [inbox-janitor, basil, gmail-cleanup, dry-run, vendor-menus]

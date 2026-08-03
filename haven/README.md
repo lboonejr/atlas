@@ -65,6 +65,7 @@ haven/
     ├── 40-Projects/       cross-cutting or multi-phase work
     ├── 50-Reference/      evergreen reference + Entities/ (canonical, cross-domain)
     ├── 60-Legal/          active legal matters (domain `legal`)
+    ├── 70-Automation/     unattended routine run logs, one subfolder per bot (domain `automation`)
     ├── 90-Archive/        archived notes, original domain path preserved
     ├── _daily/            one append-only log note per day + Samira's run digests
     ├── _templates/        note, meeting, decision, entity, daily
