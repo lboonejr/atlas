@@ -3,6 +3,58 @@
 The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NOW.
 History and cutover narratives live here.
 
+## 2026-08-03 — Integrity pass: vault-keeper now repairs broken frontmatter vault-wide
+- **The hole this closes.** Filing only ever looked at `00-Inbox`, so once a note was filed
+  (or landed outside the Inbox by hand) nothing re-examined it. Malformed notes accumulated
+  exactly where the enforcement mechanism could not see them, and stayed broken
+  indefinitely. Four were found this way — none in the Inbox.
+- **New schema §4.5, executed as vault-keeper step 0**: every sweep reads the frontmatter
+  block of every note in the vault (block only, not bodies — cheap) and repairs the
+  mechanical defects same-day.
+- **Container vs. value — the distinction that makes this safe.** A broken *container* (stray
+  line above the `---` opener, missing opener, base64-encoded file, CRLF) has exactly one
+  correct repair and no judgment in it. A missing or out-of-list *value* (`domain`, `type`,
+  `status`, `source`) is a judgment call and still waits for a human, unchanged. Repairing a
+  container grants no licence to fill in a value.
+- **The lossless gate on base64 decodes**: decode only if the bytes are valid UTF-8, AND
+  re-encoding reproduces the file byte-for-byte, AND the result starts with valid
+  frontmatter. Any failure means flag and write nothing — a partial decode that silently
+  drops bytes is worse than the corruption.
+- **Prior decisions stand.** If a note records that a previous run or a human examined a
+  defect and chose to leave it, that decision is not relitigated. This rule exists because
+  `_daily/2026-08-01.md` contains exactly such a note — Samira found the corruption, tested
+  the decode, found bytes unrecoverable, and deliberately left it. An eager repair pass
+  would have bulldozed that.
+- **`_daily` carve-out, narrow and deliberate** (amends the old absolute "never touch
+  `_daily`"): the frontmatter block may be repaired, **not one line below the closing `---`**
+  may be touched, and the file is still never moved. The append-only law protects the day's
+  logged entries; a broken block is the container around them, not an entry.
+- **Synthesized precision must be visible as synthesized.** On a `_daily` reconstruction the
+  controlled fields come from `_templates/daily.md` and the date from the filename, but the
+  times are not recoverable — so they are set to `00:00` ET and disclosed as synthesized in
+  YAML comments inside the block itself (keeps it discoverable at the top while touching
+  zero body lines).
+- **No hourly re-escalation.** An unrepairable defect never goes away, so surfacing it every
+  sweep is noise — and digest fatigue is what let these hide. New/changed defects report in
+  full; known-and-accepted ones carry as a bare count (`repaired 0 · known 1`). The line is
+  never omitted, so a quiet pass and a skipped pass can't be confused.
+- **Values are validated vault-wide too, and only ever flagged.** Field validation used to
+  run only on Inbox notes, so a filed note could sit for months missing required fields or
+  holding a value in no controlled list. The pass now checks all six fields present, every
+  controlled field in-list, and `domain` consistent with the note's actual location — and
+  fixes none of it: never invent a `created`, never map an out-of-list value onto the nearest
+  legal one, never re-file to match `domain` (a mismatch means the frontmatter or the
+  location is wrong, and which is a judgment call). This immediately caught a fifth note,
+  `40-Projects/delivery-in-a-box/2026-07-10-status-briefing.md` — missing `created`/`updated`/
+  `tags`, `type: project` and `source: samira-atlas-executor-part-g` both outside the
+  controlled lists, and `domain: cuzzies` contradicting its `40-Projects/` location. Left for
+  Lemar, as the rule requires.
+- **Applied to the four found**: `20-Cuzzies/2026-07-31-garden-society-past-due-ar-followup.md`
+  decoded from base64 (gate passed byte-perfect); `_daily/2026-07-15.md` missing `---` opener
+  inserted; `_daily/2026-07-07.md` frontmatter reconstructed and disclosed;
+  `_daily/2026-08-01.md` left alone — lossy decode, prior decision stands. Verified across
+  all 401 notes: 1 remaining defect, correctly the protected one.
+
 ## 2026-08-03 — New `automation` domain; Basil categorizes its own run logs
 - **Root cause fixed, not the symptoms.** Basil's PART C told it to file a Haven note via
   haven-capture but never said what `domain` to stamp, so every nightly log landed in

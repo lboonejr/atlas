@@ -1,1 +1,27 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDctMzFUMTM6MzAtMDQ6MDAKdXBkYXRlZDogMjAyNi0wNy0zMVQxMzozMC0wNDowMApkb21haW46IGN1enppZXMKdHlwZTogbG9nCnN0YXR1czogZG9uZQp0YWdzOiBbZW1haWwsIGFyLCBnYXJkZW4tc29jaWV0eSwgcGFzdC1kdWVdCnNvdXJjZTogZ21haWwKLS0tCgojIEdhcmRlbiBTb2NpZXR5IE5KIOKAlCBwYXN0LWR1ZSBBUiBmb2xsb3ctdXAsIGhhbmRsZWQgZGlyZWN0bHkgYnkgTGVtYXIKCk1hcnkgKEFSLCBHYXJkZW4gU29jaWV0eSBOSikgZm9sbG93ZWQgdXAgb24gdGhlIG9wZW4gQ3V6emllJ3MgYmFsYW5jZSBvbgo3LzMxIH4xMDozMGFtIEVUIG9uIHRoZSBzdGFuZGluZyAiUGFzdCBEdWUgUGF5bWVudCBSZW1pbmRlciIgdGhyZWFkICh0aGUKc2FtZSB0aHJlYWQgd2hlcmUgTGVtYXIgdG9sZCBoZXIgb24gNi8yMyB0aGF0IEN1enppZSdzIGhhZCB0ZW1wb3JhcmlseQpjbG9zZWQgSnVuZSAxMykuIE5vIG5ldyBhbW91bnQgb3IgdGVybXMgaW4gaGVyIG1lc3NhZ2Ug4oCUIGp1c3QgYSBjaGVjay1pbgphc2tpbmcgZm9yIGFuIHVwZGF0ZS4KCkxlbWFyIHJlcGxpZWQgZGlyZWN0bHkgZnJvbSBHbWFpbCB0aGUgc2FtZSBkYXkgKDE0OjM4IEVUKSBiZWZvcmUgdGhpcwpzY2FuIHJlYWNoZWQgdGhlIHRocmVhZCDigJQgdG9sZCBoZXIgdGhpbmdzIGFyZSAiZ2V0dGluZyBjbG9zZXIgdG8gY2xvc2luZyBhCmRlYWwiIHRoYXQgd291bGQgaGVscCByZXNvbHZlIHRoZSBiYWxhbmNlLiBObyBkcmFmdCB3YXMgbmVlZGVkIGZyb20gdGhpcwpsb29wIOKAlCB0aGUgcmVwbHkgd2FzIGFscmVhZHkgc2VudCBieSB0aGUgdGltZSBpdCB3YXMgdHJpYWdlZC4gTm90aGluZyBmdXJ0aGVyCmZvciBTYW1pcmEgdG8gZG8gaGVyZTsgbG9nZ2VkIGZvciB0aGUgcmVjb3JkIG9ubHkuIE5vIHBheW1lbnQgbWFkZSBvcgpzY2hlZHVsZWQuCgojIyBTb3VyY2VzCi0gZ21haWw6IHRocmVhZCBgMTllZjVhM2RhYzEwYjg3M2AgKGxhdGVzdCBpbmJvdW5kIG1lc3NhZ2UgYDE5ZmI4OTZjYWVhM2YwYWFgLCBMZW1hcidzIHJlcGx5IGAxOWZiODlkMDczNTNiNzUzYCkK
+---
+created: 2026-07-31T13:30-04:00
+updated: 2026-07-31T13:30-04:00
+domain: cuzzies
+type: log
+status: done
+tags: [email, ar, garden-society, past-due]
+source: gmail
+---
+
+# Garden Society NJ — past-due AR follow-up, handled directly by Lemar
+
+Mary (AR, Garden Society NJ) followed up on the open Cuzzie's balance on
+7/31 ~10:30am ET on the standing "Past Due Payment Reminder" thread (the
+same thread where Lemar told her on 6/23 that Cuzzie's had temporarily
+closed June 13). No new amount or terms in her message — just a check-in
+asking for an update.
+
+Lemar replied directly from Gmail the same day (14:38 ET) before this
+scan reached the thread — told her things are "getting closer to closing a
+deal" that would help resolve the balance. No draft was needed from this
+loop — the reply was already sent by the time it was triaged. Nothing further
+for Samira to do here; logged for the record only. No payment made or
+scheduled.
+
+## Sources
+- gmail: thread `19ef5a3dac10b873` (latest inbound message `19fb896caea3f0aa`, Lemar's reply `19fb89d07353b753`)
