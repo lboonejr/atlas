@@ -11,6 +11,7 @@ working system on new tools in about a day, using only this repo.
 |---|---|---|
 | Truth + records | `haven/vault/` (Markdown + YAML, this repo) | Self-describing: `_system/schema.md` is the complete rulebook |
 | Behavior | `.claude/skills/*/SKILL.md` + `.claude/routines/samira-atlas-executor.md` | Plain-English procedures — they are prompts, readable by any model |
+| New behavior | `.claude/skills-proposed/<slug>/` — the quarantine the executor writes into | Just files outside the loading path; any platform can gate on "not discoverable until moved" |
 | Platform IDs | `.claude/anchors.md` — the ONLY place IDs live | One file to re-point |
 | Scheduling | claude.ai RemoteTrigger (hourly 8a–6p ET) | Replaceable by any scheduler (see below) |
 | Decision surface | Slack #decisions, reactions | An abstract 4-signal protocol (see below) |
@@ -33,8 +34,17 @@ working system on new tools in about a day, using only this repo.
    actions (send/pay/post/delete) without an explicit approval signal.
 7. RECORD: every finished (or failed) task → an outcome note in the vault, THEN a
    short result ping. Done = a filed note, never just a checkmark.
-8. JOURNAL: append the run digest to _daily/YYYY-MM-DD.md.
+8. FORGE: when the same work has been done by hand 3x, WRITE the skill for it — but into
+   a quarantine outside the loading path, plus one approval card. Activation requires the
+   human's APPROVE signal on a LATER cycle. The executor authors behavior; it never
+   activates it, and a forged skill can never claim a capability the safety block denies.
+9. JOURNAL: append the run digest to _daily/YYYY-MM-DD.md.
 ```
+
+Any replacement platform must preserve the forge's split: authoring is the agent's,
+activation is the human's. A quarantine is anything the runtime will not load — a sibling
+directory, a branch, a disabled flag. What matters is that no file the agent writes can
+change a later run's behavior before a human has read it and approved it.
 
 ## The signal protocol (today: Slack emoji — but they are just a rendering)
 

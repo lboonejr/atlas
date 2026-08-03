@@ -67,7 +67,7 @@ Skill specs (4Q each)       → sections on the same note
     ↓
 Activation choice           → A / B / C / D, no default
     ↓
-Hand off                    → skill-creator (A/B), Atlas Gear 2 (B/C), or park/kill (D)
+Hand off                    → skill-forge (A/B), Atlas Gear 2 (B/C), or park/kill (D)
 ```
 
 ## Source of truth: the brief note IS the project
@@ -238,7 +238,7 @@ Where its output goes, and which existing skills it chains with (task-builder, e
 What runs autonomously vs. needs approval, and who owns it (Lemar, Arianna, an agent).
 
 Output: one `## Skill spec — [name]` section per skill on the brief note, written as a clean
-handoff that skill-creator can act on without asking a follow-up question.
+handoff that skill-forge can act on without asking a follow-up question.
 
 ---
 
@@ -246,10 +246,10 @@ handoff that skill-creator can act on without asking a follow-up question.
 
 Present four options. No default — every project gets an explicit call.
 
-**A) BUILD FIRST** — Route all skill specs to skill-creator now. Launch Phase 1 only when the
+**A) BUILD FIRST** — Route all skill specs to skill-forge now. Launch Phase 1 only when the
 skills are ready. Best when the project leans hard on automation that doesn't exist yet.
 
-**B) PARALLEL** — Launch Phase 1 with manual workarounds while skill-creator builds in the
+**B) PARALLEL** — Launch Phase 1 with manual workarounds while skill-forge builds in the
 background. Best when Phase 1 is mostly human work and the skills matter for later phases.
 
 **C) EXECUTE NOW** — Launch Phase 1 immediately. Skill specs sit on the note as a backlog to
@@ -264,7 +264,8 @@ right now, or ever. This is a legitimate, respectable outcome. Do not steer him 
 
 ### A, B, or C
 1. Brief note is complete and `active`. Record the activation choice in it.
-2. **skill-creator** — hand off each skill spec section if A or B.
+2. **skill-forge** — hand off each skill spec section if A or B. It forges each into the
+   quarantine and raises one #decisions card per skill; they go live only on Lemar's ✅.
 3. **Atlas Gear 2** — hand off Phase 1 for orchestration if B or C (or if A, once the skills
    are built). Atlas finds the channel, builds the task, stages the prompt. You do not.
 4. **reggie-compliance** — engage only if Q11 flagged.
