@@ -1,7 +1,7 @@
 ---
 created: 2026-08-02T16:00-04:00
-updated: 2026-08-03T08:25-04:00
-domain: cuzzies
+updated: 2026-08-03T08:45-04:00
+domain: project
 type: log
 status: active
 tags: [samira, investor, jason-klein, cann-dev, broker]
