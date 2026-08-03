@@ -1,6 +1,6 @@
 ---
 created: 2026-07-22T10:10:17-04:00
-updated: 2026-08-02T08:15:00-04:00
+updated: 2026-08-03T16:16-04:00
 domain: cuzzies
 type: task
 status: active
@@ -65,6 +65,21 @@ given beyond the $1,002.60 / case #00159241 already on file here. Reopening stat
 #decisions, matching the established short-holding-reply pattern for this saga. No
 reply sent, no payment made or scheduled.
 
+## Update 2026-08-03 (~13:00-16:38 ET) — Lemar replied directly, Dante now asks for a cancellation form
+Lemar sent his own reply on this same thread (`19fc1a42513c653f`) directly, no draft
+needed: told Dante (rep) the business is being sold, so the Leafly account needs to
+close out — balance will be reconciled and settled in full before any ownership
+transition, no closing date yet, asked what Leafly needs on their end to close the
+account. Dante replied ~16:38 ET: thanked him for working to reconcile the balance,
+asked him to submit a cancellation request form
+(https://help.leafly.com/hc/en-us/requests/new?ticket_form_id=60004274093) — listing
+will be removed as of 9/22 once submitted. This is a task needing Lemar (submitting an
+official account-closure request is a judgment call, not something Samira executes) —
+routed to #decisions rather than actioned. The earlier open #decisions card (ts
+`1785676732.790559`, Option A/B/C for the "contact us today" ask) is now superseded by
+Lemar's own direct reply — left as posted (no reaction, nothing to overwrite) with a
+note pointing to this update.
+
 ## Sources
 - slack: #decisions (C0BBXA96FFV), card ts `1784722765.550729`, Lemar's 🫡 reaction
 - gmail: thread `19f9d971f0ac3cb3` (2026-07-26 past-due notice, repeat, no new figure)
@@ -74,5 +89,9 @@ reply sent, no payment made or scheduled.
   (closed 7/29, let ride again)
 - gmail: thread `19fc1a42513c653f` (2026-08-02 ~08:43 ET, "Your Account Requires
   Immediate Attention", direct contact request)
-- slack: #decisions (C0BBXA96FFV) — new card posted 2026-08-02 with 3 draft reply
-  options
+- slack: #decisions (C0BBXA96FFV) — card posted 2026-08-02 with 3 draft reply options
+  (ts `1785676732.790559`), superseded 2026-08-03 by Lemar's own direct reply
+- gmail: thread `19fc1a42513c653f`, msg `19fc7b5ac8312e12` (2026-08-03 13:00 ET,
+  Lemar's own sent reply: selling the business, will settle balance before transition)
+- gmail: thread `19fc1a42513c653f`, msg `19fc87d7891543b4` (2026-08-03 16:38 ET, Dante
+  Coley: submit cancellation form, listing removed 9/22)
