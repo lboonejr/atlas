@@ -74,6 +74,21 @@ is not allowed to decide what she is allowed to do.*
 - `#skills-lab` has old candidate-style posts in it from the previous PART H. They are
   history now; no cleanup done.
 
+## Update 2026-08-03 — rebased on the `automation` domain
+
+`main` landed the new `automation` domain (schema §3) while this was in review. It raises a
+question the forge would otherwise have to guess at every run: a spec note is *about*
+automation, so should it be `domain: automation`?
+
+No — and the schema already settles it: *"work on building or fixing a routine is still
+`project`."* The line is who the note is **about**. A routine reporting its own run is
+`automation`; designing the tool is `project`. Made explicit in `skill-forge` step 2 so a
+later run doesn't re-derive it and land spec notes in `70-Automation/`. This note's own
+`domain: project` is correct on the same rule.
+
+Also added the `.claude/CHANGELOG.md` entry — that convention landed on `main` in the same
+window, and a PART H cutover is exactly the kind of narrative it is for.
+
 ## Sources
 - `.claude/skills/skill-forge/SKILL.md` — the procedure
 - `.claude/skills-proposed/README.md` — the quarantine

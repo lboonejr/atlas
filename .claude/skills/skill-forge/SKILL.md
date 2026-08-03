@@ -91,6 +91,11 @@ Before a single file is written, land the spec in Haven via **haven-capture**:
 `tags: [samira, skill-forge, <slug>]`. Leave any field you are not sure of blank and
 UNRESOLVED — never guess one to make the note file itself.
 
+**`project`, never `automation`** — even though a forged skill *is* automation. Schema §3's
+automation rule draws the line by who the note is about: a routine reporting its own run is
+`automation`, but **work on building or fixing a routine is `project`**. A spec note is you
+designing a tool, not a tool logging its run. Same for the promotion outcome note.
+
 Body, in this order:
 - **What recurs** — at least **3 dated occurrences**, each with its real source link. No
   evidence, no forge.
