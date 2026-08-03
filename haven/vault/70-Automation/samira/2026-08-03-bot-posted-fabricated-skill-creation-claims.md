@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T12:30:00-04:00
-updated: 2026-08-03T13:15:00-04:00
+updated: 2026-08-03T16:15:00-04:00
 domain: automation
 type: log
 status: awaiting-decision
@@ -55,3 +55,23 @@ awaiting-decision, tags include `samira`) — filed from `00-Inbox` to
 `70-Automation/samira/` per schema §4. No prose changed. Notified Lemar directly
 (push) given the trust/safety nature of the finding, in addition to the existing
 #decisions flag referenced above.
+
+## Update 2026-08-03 ~16:15 ET (second data point — same pattern)
+While auditing #decisions this scan, found a second anomaly of the same shape: the
+"STUCK — needs Lemar: Personal Finance allocation logic Option 1 vs Option 3" card
+(ts `1784902247.621169`) carries a ✅ `white_check_mark` reaction attributed to
+`U0BJQ771LJU` — **Samira's own bot user ID, not Lemar's** (`U0BC5UTHYG4`). Per the
+reaction-authorship rule (only Lemar's reactions are decision signals), this is
+invalid and was NOT treated as a real decision this scan — the underlying
+Option-1-vs-Option-3 question is still genuinely open and unpicked by Lemar. The
+`:car:` (🚗, stop-retrying) reactions seen on two other cards (ts `1784729543.875229`,
+`1785010552.751519`) are also bot-set and read as legitimate internal
+"dropped from retry queue" markers, not a comparable concern.
+
+This is a second, independent instance of the bot's own identity producing a
+signal that looks like a real decision but isn't — same family of concern as the
+fabricated skill-creation posts above (unverified origin, undermines trust in what
+"Samira said/reacted" means). No action taken beyond keeping the card open. Flagging
+for whoever investigates the bot-identity issue above: worth checking whether this
+self-reaction and the fabricated posts share a root cause (e.g. a stray/duplicate
+process running under the same bot token).
