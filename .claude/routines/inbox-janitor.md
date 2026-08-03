@@ -125,6 +125,26 @@ IMPORTANT-guard can be tuned.
    the mode (DRY_RUN or live), counts (menus archived, threads trashed, threads over the cap),
    and the full trash audit list (ID · subject · sender · date). This is what makes the night
    recoverable and auditable.
+
+   **You categorize your own note — never leave `domain` for a human.** Pass haven-capture
+   this exact frontmatter; all four controlled fields are known to you, so none of them is
+   ever UNRESOLVED:
+
+   ```yaml
+   domain: automation          # ALWAYS. Your run log is your own record, not store content.
+   type: log                   # a dated record of what happened
+   status: done                # the run is finished the moment you write it up
+   tags: [inbox-janitor, basil, gmail-cleanup]   # `inbox-janitor` routes the filing — always include it
+   source: claude
+   ```
+
+   The `inbox-janitor` tag is load-bearing: vault-keeper reads it as the routine slug and
+   files the note to `70-Automation/inbox-janitor/`. Keep it in the list on every run.
+
+   **Do not let the run's contents change the domain.** A night that was all Cuzzie's
+   vendor menus is still `domain: automation` — the note is about *your execution*, not
+   about Cuzzie's. If a sweep surfaces a genuine business item Lemar should act on, note
+   it in your digest for him; do not reclassify this note to reach him.
 2. **Post one digest block to #reports** (see anchors for the ID). Lead `🧹`, sign "— Basil":
    ```
    🧹 Basil · [date] — inbox tidy [DRY RUN if applicable]
