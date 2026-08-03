@@ -1,11 +1,12 @@
 ---
 created: 2026-08-01T15:30:00-04:00
-updated: 2026-08-01T16:00:00-04:00
+updated: 2026-08-03T17:15-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [tbt-barter, statement, vendor, first-appearance]
 source: gmail
+due: 2026-08-07T09:00-04:00
 ---
 
 # TBT Barter — monthly statement arrived (Cuzzie's, July activity)
@@ -24,6 +25,14 @@ Not drafting a reply — it is a do-not-reply system statement with no reply pat
 Lemar's read to confirm what TBT Barter is (a barter/trade network account?) and whether
 the statement reflects a balance owed before anyone opens the payment link.
 
+## Update 2026-08-03
+Lemar replied in the #decisions thread: "I need to put this on the calendar to make
+sure that I pay for this by the end of the week." Added `due: 2026-08-07T09:00-04:00`
+(Friday, end of this week) so haven-calendar-sync projects a reminder onto the calendar.
+Amount is still unresolved — Lemar needs to open the PDF to confirm what's owed before
+paying.
+
 ## Sources
 - gmail: thread `19fbc632700d906e` (bsoper@tbtbarter.com, "Your statement has arrived",
   2026-08-01, PDF attachment: TBT-Barter-statement-Cuzzie-s-Dispensary---Delivery-LLC-07-31-2026.pdf)
+- slack: #decisions thread ts 1785615798.410529 (Lemar's calendar-reminder reply, ts 1785759787.309099)
