@@ -1,6 +1,6 @@
 ---
 created: 2026-07-22T10:10:17-04:00
-updated: 2026-08-03T17:13-04:00
+updated: 2026-08-03T18:05-04:00
 domain: cuzzies
 type: task
 status: active
@@ -110,3 +110,8 @@ is a status update, not a live back-and-forth) and no payment made.
   Coley: submit cancellation form, listing removed 9/22)
 - gmail: thread `19fc95ba44cc5279` (2026-08-03 ~16:40 ET, cancellation processed
   confirmation, case #00159743, Eatabit printer return notice)
+- gmail: thread `19fc994018aa434c` (2026-08-03 ~17:42 ET, "Your Cancellation is
+  Pending" — automated status update, no new figure, marked seen)
+- slack: #decisions (C0BBXA96FFV), card ts `1785788625.241099` — Dante's cancellation-
+  form ask, Lemar's 🫡 (submitting the form stays Lemar's own account-closure judgment
+  call, not executed by Samira), closed 2026-08-03 ~18:00 ET
