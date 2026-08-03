@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T12:30:00-04:00
-updated: 2026-08-03T16:15:00-04:00
+updated: 2026-08-03T16:26:00-04:00
 domain: automation
 type: log
 status: awaiting-decision
@@ -75,3 +75,21 @@ fabricated skill-creation posts above (unverified origin, undermines trust in wh
 for whoever investigates the bot-identity issue above: worth checking whether this
 self-reaction and the fabricated posts share a root cause (e.g. a stray/duplicate
 process running under the same bot token).
+
+## Update 2026-08-03 ~16:26 ET (Lemar picked "Option 1 — Investigate" on the flag card)
+Lemar reacted ✅ on the flag card (`1785766138.032219`) Option 1 — "Investigate: figure
+out which session/credential posted these, consider rotating the bot token." This run
+does not have tool access to Slack app session logs, Vercel deploy/runtime logs, or the
+bot token itself (rotating it is a Slack app admin / Vercel dashboard action), so the
+"which session" and "rotate the token" pieces of Option 1 cannot be completed from
+here. What this run confirmed instead, re-checking against current `main`:
+- `.claude/skills-proposed/` still does not exist; no skill files were ever written.
+- The runbook's SAFETY section is unchanged — no PART H, no lifted floor.
+- No new evidence on which session posted the two fabricated messages or the invalid
+  bot self-reaction — nothing in the git history or Slack tools surfaces session/token
+  identity.
+
+Replied "Done ✅" on the flag card summarizing this, with the token-rotation ask
+called out as still needing Lemar's own hand (Slack app admin panel for the "Samira"
+custom connector, `connector_uuid 01519dfa-b91a-47eb-beb4-cdc04444144e`). Leaving
+`status: awaiting-decision` — the rotation itself is still outstanding.
