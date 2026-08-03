@@ -1,12 +1,13 @@
 ---
 created: 2026-08-01T15:30:00-04:00
-updated: 2026-08-03T17:15-04:00
+updated: 2026-08-03T17:19-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [tbt-barter, statement, vendor, first-appearance]
 source: gmail
 due: 2026-08-07T09:00-04:00
+calendar_event_id: joj8fqaktfuj8v0n4gvsgl08ps
 ---
 
 # TBT Barter — monthly statement arrived (Cuzzie's, July activity)
@@ -28,9 +29,9 @@ the statement reflects a balance owed before anyone opens the payment link.
 ## Update 2026-08-03
 Lemar replied in the #decisions thread: "I need to put this on the calendar to make
 sure that I pay for this by the end of the week." Added `due: 2026-08-07T09:00-04:00`
-(Friday, end of this week) so haven-calendar-sync projects a reminder onto the calendar.
-Amount is still unresolved — Lemar needs to open the PDF to confirm what's owed before
-paying.
+(Friday, end of this week) and created the reminder event on the reminder calendar
+(`calendar_event_id` below). Amount is still unresolved — Lemar needs to open the PDF
+to confirm what's owed before paying.
 
 ## Sources
 - gmail: thread `19fbc632700d906e` (bsoper@tbtbarter.com, "Your statement has arrived",
