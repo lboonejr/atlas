@@ -2,7 +2,7 @@ mode: new
 slug: doc-naming
 target: .claude/skills/doc-naming/SKILL.md
 spec_note: haven/vault/00-Inbox/2026-08-03-skill-spec-doc-naming.md
-card_ts: 1785772240.234567
+card_ts: 1785765953.893389
 forged: 2026-08-03
 status: pending
 trigger: direct-request (Lemar, #skills-lab ts 1783694505.201439, 2026-07-10)

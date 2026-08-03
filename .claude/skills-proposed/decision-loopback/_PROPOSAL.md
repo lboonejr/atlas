@@ -2,7 +2,7 @@ mode: new
 slug: decision-loopback
 target: .claude/skills/decision-loopback/SKILL.md
 spec_note: haven/vault/00-Inbox/2026-08-03-skill-spec-decision-loopback.md
-card_ts: 1785772116.123456
+card_ts: 1785765937.619699
 forged: 2026-08-03
 status: pending
 self_check: |
