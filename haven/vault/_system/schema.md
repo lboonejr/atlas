@@ -269,6 +269,11 @@ what let the original defects hide in plain sight. So:
 
 - A defect already carrying a **recorded decision to leave it** is counted as
   **known/accepted** — a bare tally in the digest, not a fresh escalation.
+- **A defect shared by 3+ notes is one pattern, not N findings.** Report it as a single
+  line naming the shape and the count (e.g. "6 notes `domain: cuzzies` inside
+  `40-Projects/` — one policy call, not 6 repairs"). A pattern almost always means a
+  convention needs deciding, not that six notes each need fixing, and listing it six
+  times per hour buries the one decision that would clear all six.
 - Escalate prominently only what is **new since the last sweep**, or what has changed.
 - The tally must never drop to silence, though: `integrity: repaired 0 · known 1` keeps a
   standing problem visible without pretending it is urgent every hour.

@@ -1,11 +1,11 @@
 ---
 created: 2026-08-02T16:00-04:00
-updated: 2026-08-02T16:00-04:00
+updated: 2026-08-03T08:25-04:00
 domain: cuzzies
 type: log
 status: active
 tags: [samira, investor, jason-klein, cann-dev, broker]
-source: gdrive
+source: drive
 ---
 
 # Jason Klein (Cann.Dev) — data room gap found, backfilled onto the index

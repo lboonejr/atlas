@@ -173,7 +173,12 @@ All platform IDs live in **`.claude/anchors.md`** — read it at the start of a 
    **Escalate only what's new.** An unrepairable defect (lossy decode, prior decision
    stands) never goes away, so re-flagging it every hour is noise — and digest fatigue is
    what let these defects hide in the first place. Report new-or-changed defects in full;
-   carry everything already known and accepted as a bare count:
+   carry everything already known and accepted as a bare count.
+
+   **Collapse patterns.** A defect shared by 3+ notes is ONE line naming the shape and the
+   count, not N findings — e.g. `6 notes domain: cuzzies inside 40-Projects/ — one policy
+   call, not 6 repairs`. A pattern means a convention needs deciding; listing it per-note
+   every hour buries the single decision that would clear all of them.
 
    ```
    integrity: 401 notes · repaired 0 · known 1 (_daily/2026-08-01.md, lossy b64, decided 8/1)
