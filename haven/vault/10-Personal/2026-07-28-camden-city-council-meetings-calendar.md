@@ -1,7 +1,7 @@
 ---
 created: 2026-07-28T13:15-04:00
-updated: 2026-07-28T14:15-04:00
-domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal
+updated: 2026-08-03T07:56-04:00
+domain: personal
 type: task
 status: active
 tags: [camden, city-council, calendar, research]
@@ -65,8 +65,21 @@ one shot.
 Status: left `domain` UNRESOLVED (vault-keeper's call). Research pass
 complete; calendar action deferred pending confirmable dates.
 
+## Update — 2026-08-03 — domain resolved: `personal`
+
+Lemar's call, in answer to Samira's Haven Inbox card (Slack ts `1785679499.204679`):
+**this is personal** — civic tracking, not Cuzzie's business. The `cuzzies` reading
+above (zoning/licensing relevance) is explicitly not what he meant. Filed to
+`10-Personal/`; no `area` set, so the domain root is the correct home.
+
+The calendar action is still open and unchanged: dates for Aug–Dec 2026 remain
+unconfirmed, so nothing has been projected onto Google Calendar. Next step is still
+the City Clerk call (856-757-7115) or a re-run closer to each month.
+
 ## Sources
 - slack: DM with Samira bot (D0BHPKMDNEP), ts 1785256869.114089
+- slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1785679499204679
+  (Haven Inbox card — Lemar resolved `domain` to `personal`)
 - web: https://www.ci.camden.nj.us/city-council-meeting-dates/ (“City
   Council Meeting Dates” page — recurring pattern statement)
 - web: https://www.camdennj.gov/wp-content/uploads/2026/01/01-13-2026-revised-3-1.pdf

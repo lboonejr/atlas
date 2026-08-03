@@ -3,6 +3,37 @@
 The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NOW.
 History and cutover narratives live here.
 
+## 2026-08-03 — New `automation` domain; Basil categorizes its own run logs
+- **Root cause fixed, not the symptoms.** Basil's PART C told it to file a Haven note via
+  haven-capture but never said what `domain` to stamp, so every nightly log landed in
+  `00-Inbox` with `domain:` UNRESOLVED and waited on Lemar. Seven had piled up (7/28–8/03)
+  and the count grew by one a night. Basil now stamps its own frontmatter.
+- **New controlled domain `automation` → `70-Automation/<routine>/`** (Lemar's call over
+  reusing `project`): the bots doing unattended workspace admin get their own domain, one
+  subfolder per routine. `70-Automation/inbox-janitor/` is Basil's.
+- **The boundary that keeps filing deterministic:** a routine reporting *its own run* is
+  `automation`; work on *building or fixing* a routine stays `project` → `40-Projects/`.
+  A run log never changes domain based on what the run touched — a night of all-Cuzzie's
+  vendor menus is still `automation`, not `cuzzies`. Written into schema §3, and into
+  vault-keeper as "never re-read a run log's contents to reclassify it."
+- **Unlike `project`, a missing routine slug is not a gap** — `automation` files to the
+  `70-Automation/` root rather than sticking in the Inbox, so a run log always has a home
+  and this class of note can never block on a human again.
+- **Schema propagated** to every place the controlled list is enumerated: `_system/schema.md`
+  (§2 folder circuit, §3 table + the new automation rule, §4 filing rules), `haven/README.md`,
+  `_system/home.md`, `haven-capture` (both domain lists + the per-field certainty guidance),
+  `haven-vault-keeper` (validation table + filing rules).
+- **Backfilled all 27 historical janitor logs** into `70-Automation/inbox-janitor/`, restamped
+  `domain: automation`. They had been filed three different ways — 16 `cuzzies`, 3 `personal`,
+  1 `project`, 7 unfiled — which is what the missing instruction produced. `created` preserved,
+  `updated` touched, bodies untouched. Wiki-links are filename-only so they still resolve;
+  stale paths inside `_daily` digests were deliberately left alone (append-only zone, and they
+  are accurate records of where a note sat that day).
+- **Two Inbox items resolved with it** (Samira's card ts `1785679499.204679`): the Camden city
+  council note → `domain: personal` → `10-Personal/`; the duplicate Cannabist Company AR
+  statement merged into the already-filed `20-Cuzzies/` original per schema §7 and the Inbox
+  copy deleted. `00-Inbox` is now empty.
+
 ## 2026-07-05 — Daily Brief routine (persona "Dawn") added
 - **Second cloud routine**, separate from Samira: a once-a-day **1am ET** routine that gives
   Lemar the executive read Samira's hourly loop doesn't. Thin bootstrap

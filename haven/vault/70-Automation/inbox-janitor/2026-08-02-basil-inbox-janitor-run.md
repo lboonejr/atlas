@@ -1,7 +1,7 @@
 ---
 created: 2026-08-02T00:00-04:00
-updated: 2026-08-02T00:00-04:00
-domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal
+updated: 2026-08-03T07:56-04:00
+domain: automation
 type: log
 status: done
 tags: [inbox-janitor, basil, gmail-cleanup, automation, vendor-menus]

@@ -23,6 +23,8 @@ jobs, Haven is the country they live and work in. Everything flows through here.
 - `10-Personal` — life, finances, housing, vehicles, writing
 - `40-Projects` — cross-cutting or multi-phase work
 - `50-Reference/Entities` — canonical businesses, vendors, people, accounts, legal
+- `70-Automation` — what the bots did: run logs from unattended routines, one
+  subfolder per routine (`inbox-janitor/` is Basil's)
 
 ## How the brain fills
 1. A capture is written to `00-Inbox` as a Markdown note with frontmatter.

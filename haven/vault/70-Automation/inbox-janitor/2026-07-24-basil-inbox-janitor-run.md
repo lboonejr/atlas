@@ -1,7 +1,7 @@
 ---
 created: 2026-07-24T23:15:00-04:00
-updated: 2026-07-24T12:00:00-04:00
-domain: project
+updated: 2026-08-03T07:56-04:00
+domain: automation
 type: log
 status: done
 tags: [basil, inbox-janitor, gmail, cleanup, vendor-menus, trash-sweep]

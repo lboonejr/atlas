@@ -49,7 +49,7 @@ All platform IDs live in **`.claude/anchors.md`** — read it at the start of a 
    |----------|----------------|
    | `created`| present, ISO 8601 |
    | `updated`| present, ISO 8601 |
-   | `domain` | `personal` · `cuzzies` · `station` · `project` · `reference` · `legal` |
+   | `domain` | `personal` · `cuzzies` · `station` · `project` · `reference` · `legal` · `automation` |
    | `type`   | `note` · `meeting` · `decision` · `task` · `reference` · `entity` · `log` · `brief` |
    | `status` | `active` · `parked` · `done` · `archived` · `awaiting-decision` |
    | `tags`   | present (may be empty `[]`) |
@@ -72,6 +72,10 @@ All platform IDs live in **`.claude/anchors.md`** — read it at the start of a 
         project is named, leave it and surface — "which project?" is a controlled gap)
       - `reference` → `50-Reference/`, and if `type: entity` → `50-Reference/Entities/`
       - `legal`     → `60-Legal/`
+      - `automation`→ `70-Automation/<routine>/` (routine slug from the note's tags —
+        e.g. `inbox-janitor` → `70-Automation/inbox-janitor/`). Unlike `project`, a
+        missing slug is **NOT** a gap: file to the `70-Automation/` root and move on.
+        Never re-read a run log's contents to reclassify it into a business domain.
 
    c. **Inside a business domain** (`cuzzies`, `station`), sort by `type`:
       `meeting` → `<domain>/meetings/` · `decision` → `<domain>/decisions/` · else root.

@@ -66,7 +66,7 @@ A Haven note is plain Markdown with a YAML frontmatter block. Every note carries
 ---
 created: 2026-07-03T14:32-04:00    # ISO 8601 with ET offset. Set once, at capture, never changed.
 updated: 2026-07-03T14:32-04:00    # Same as created at capture time.
-domain: cuzzies                     # controlled — personal | cuzzies | station | project | reference | legal
+domain: cuzzies                     # controlled — personal | cuzzies | station | project | reference | legal | automation
 type: note                          # controlled — note | meeting | decision | task | reference | entity | log | brief
 status: active                      # controlled — active | parked | done | archived | awaiting-decision
 tags: [invoice, harvest-moon]       # open list — connect ideas freely
@@ -98,7 +98,7 @@ Emit an unresolved controlled field as the key with an empty value and an inline
 comment naming the choices, so it is obvious in Obsidian and to vault-keeper:
 
 ```yaml
-domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal
+domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation
 ```
 
 A note with any UNRESOLVED (or absent, or out-of-list) controlled field **cannot be
@@ -122,8 +122,14 @@ Lemar. That stuck note is the system working, not failing.
   `note` — it files to the domain root and is safe.
 - **domain** — the field most often unresolved, because it has no safe default. Stamp it
   only when the note clearly belongs to one: `cuzzies` (Camden), `station` (Newark),
-  `personal`, `project`, `reference`, `legal` (an active legal matter). If it could
-  plausibly be two, or you're inferring rather than reading it, **leave it UNRESOLVED.**
+  `personal`, `project`, `reference`, `legal` (an active legal matter), `automation` (an
+  unattended routine's own run log). If it could plausibly be two, or you're inferring
+  rather than reading it, **leave it UNRESOLVED.**
+  **`automation` is the one domain a caller is always sure of:** when the thing being
+  captured is a routine reporting its own run, the routine knows what it is, so it
+  passes `domain: automation` explicitly and you stamp it — never leave it UNRESOLVED
+  and never re-infer it from the run's *contents* (a Cuzzie's-heavy sweep is still an
+  `automation` note). Notes about *building or fixing* a routine remain `project`.
 
 `tags` is open — add a few honest tags; never blocks filing. **`area`** is OPTIONAL and
 personal-only (`money`/`health`/`home`/`family`): stamp it only when obvious.

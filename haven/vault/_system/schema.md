@@ -52,6 +52,9 @@ else. Any tool that can read a text file can read Haven. That is the whole point
 50-Reference    evergreen reference, plus Entities/
    Entities/    businesses, vendors, people, accounts (canonical, cross-domain)
 60-Legal        active legal matters (evictions, filings, counsel threads) — domain `legal`
+70-Automation   run logs from unattended routines (Basil the Inbox Janitor, and any
+                future bot doing workspace admin) — domain `automation`, one subfolder
+                per routine. Append-only operational records, not business content.
 90-Archive      anything archived, original domain path preserved
 _daily          one log note per day, YYYY-MM-DD, append-only — ALSO the run journal:
                 Samira appends her run digest here at the end of every scan
@@ -90,10 +93,20 @@ where the note came from.
 
 | field    | allowed values |
 |----------|----------------|
-| `domain` | `personal`, `cuzzies`, `station`, `project`, `reference`, `legal` |
+| `domain` | `personal`, `cuzzies`, `station`, `project`, `reference`, `legal`, `automation` |
 | `type`   | `note`, `meeting`, `decision`, `task`, `reference`, `entity`, `log`, `brief` |
 | `status` | `active`, `parked`, `done`, `archived`, `awaiting-decision` |
 | `source` | `slack`, `gmail`, `monday`, `drive`, `voice`, `claude`, `manual` |
+
+**The automation rule:** a note whose substance is *an unattended routine reporting its
+own run* — what Basil archived last night, what a future bot swept — is
+**`domain: automation`**, and the routine stamps it itself. These are the bots doing
+workspace admin; their run logs are not Cuzzie's content, not personal content, and not
+project work. Draw the line by **who the note is about**: the routine's own execution →
+`automation` → `70-Automation/<routine>/`. Work on *building or fixing* a routine (a
+design decision, a bug, a handoff) is still `project` → `40-Projects/<project>/`. An
+automation note that surfaces a business item worth acting on does not change domain —
+it stays `automation`, and the actionable item gets its own note in the right domain.
 
 **The decision rule:** any note whose substance is a decision Lemar made — an option he
 picked, an approval he gave, a direction he chose — is **`type: decision`**, never `log`
@@ -130,6 +143,9 @@ Applied to every note in `00-Inbox` that has complete, valid frontmatter:
    - `project`   → `40-Projects/<project>/`
    - `reference` → `50-Reference/` (if `type: entity`, → `50-Reference/Entities/`)
    - `legal`     → `60-Legal/`
+   - `automation`→ `70-Automation/<routine>/` (routine slug from the note's tags, e.g.
+     `inbox-janitor`; unlike `project`, a missing slug is NOT a gap — file to the
+     `70-Automation/` root, because a run log always has a valid home)
 2. **Inside a business domain (`cuzzies`, `station`), sort by `type`:**
    - `meeting`  → `<domain>/meetings/`
    - `decision` → `<domain>/decisions/`

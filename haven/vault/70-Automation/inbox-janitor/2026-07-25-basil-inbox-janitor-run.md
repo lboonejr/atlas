@@ -1,7 +1,7 @@
 ---
 created: 2026-07-25T23:07-04:00
-updated: 2026-07-26T13:15-04:00
-domain: personal
+updated: 2026-08-03T07:56-04:00
+domain: automation
 type: log
 status: done
 tags: [inbox-janitor, basil, gmail, cleanup]
