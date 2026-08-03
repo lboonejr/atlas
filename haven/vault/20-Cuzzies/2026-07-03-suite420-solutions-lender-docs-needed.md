@@ -1,6 +1,6 @@
 ---
 created: 2026-07-03T17:12-04:00
-updated: 2026-07-17T17:20-04:00
+updated: 2026-08-03T16:00-04:00
 domain: cuzzies
 type: log
 status: active
@@ -39,6 +39,19 @@ requested, nothing Samira can draft (financials are GreenBooks/QuickBooks pulls,
 PFS is personal, both Lemar's/Josh's to complete). Investor index row updated to
 reflect the nudge (Status unchanged: Needs info).
 
+## Update 2026-08-03
+Dave emailed Josh directly (not on the labeled thread) ~11:24am ET: reviewed the
+file that morning, asked Lemar/Josh to say whether to keep the file open or close
+it out — "I don't want to bother you if you're no longer interested." Josh
+forwarded to Lemar ~3:47pm ET ("Dave is also still interested in putting an offer
+up. Just needs the Balance sheet and PFS; if applicable"). Same three items still
+outstanding, nothing new requested, nothing Samira can draft. Flagged in
+#investor-pipeline (ts 1785788432.311749) and index row updated (Status unchanged:
+Needs info) to carry the new urgency — Dave is now implicitly time-boxing the file,
+Lemar's call whether to push financials through or let it close.
+
 ## Sources
 - gmail: thread `19f29b5e55c3f621` ("Fwd: Cuzzie's Dispensary & Delivery Lender Package")
+- gmail: message `19fc92aad3a81450` (Josh → Lemar, 2026-08-03T19:47:12Z fwd of Dave's 11:24am ET "keep the file open or close it" nudge)
+- slack: #investor-pipeline `C0BCCUKEUQ2` ts 1785788432.311749 (2026-08-03 nudge flagged)
 - vault: [[investor-pipeline/index]]
