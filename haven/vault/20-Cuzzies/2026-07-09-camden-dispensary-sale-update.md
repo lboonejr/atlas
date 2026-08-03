@@ -1,6 +1,6 @@
 ---
 created: 2026-07-09T09:00:00-04:00
-updated: 2026-08-01T14:04:00-04:00
+updated: 2026-08-03T16:16-04:00
 domain: cuzzies
 type: task
 status: active
@@ -34,6 +34,15 @@ the written offer expected Tuesday (8/4), and the buyer's property-tour request 
 tour would need scheduling with an external party, which is outside Samira's authority
 (no external-guest invites), so it's routed to #decisions rather than actioned.
 
+## Update — 2026-08-03
+Lemar handled the tour reply himself, directly by email (confirmed via #decisions:
+"I've responded to Jason on my own"). Gmail thread shows Lemar sent Jason a reply
+2026-08-01 18:25 ET offering the buyer a walkthrough anytime before end of day Thursday
+8/6. No draft needed — the reply is already sent, not staged. Still awaiting the written
+offer expected Tuesday 8/4.
+
 ## Sources
 - gmail: thread 19f19d3bff0241cf ("Re: Camden dispensary for sale")
 - gmail: thread 19eda7545ffe62f0, msg 19fbe7fe0b027a9c (2026-08-01 18:04 UTC — Jason Klein, written offer + tour request)
+- gmail: thread 19eda7545ffe62f0, msg sent 2026-08-01 18:25 ET (Lemar's own reply on the tour)
+- slack: #decisions thread ts 1785608654.232229
