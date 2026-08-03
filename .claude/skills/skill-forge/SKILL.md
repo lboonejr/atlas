@@ -97,8 +97,14 @@ automation rule draws the line by who the note is about: a routine reporting its
 designing a tool, not a tool logging its run. Same for the promotion outcome note.
 
 Body, in this order:
-- **What recurs** — at least **3 dated occurrences**, each with its real source link. No
-  evidence, no forge.
+- **The evidence**, which depends on which trigger fired:
+  - *Recurrence trigger* → **at least 3 dated occurrences**, each with its real source
+    link. No evidence, no forge. This is the bar that stops one-off work becoming a skill.
+  - *Lemar asked directly* → **his request is the evidence**: quote it, link it, date it.
+    Do not manufacture occurrences to satisfy a bar that does not apply — he is allowed to
+    want a tool before it has failed three times. Record any real occurrences you do find
+    as supporting detail, and say plainly when there are none.
+  - *Stormy graduation* → the brief note's `## Skill spec` section, linked.
 - **Inputs / outputs** — what it reads, what it produces, where the output lands.
 - **Surfaces** — every channel, board, calendar, or folder it touches.
 - **Safety envelope** — what it may do unattended and what it must gate on Lemar.

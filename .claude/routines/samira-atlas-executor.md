@@ -214,7 +214,8 @@ Forge when — and only when — one of these is true:
 - **Revision**: a live skill misfired the **same way 3 times**, or Lemar asked directly.
 
 The floor, restated because it is load-bearing: capture-first (the spec note lands in
-Haven before any file, with ≥3 dated occurrences as evidence — no evidence, no forge); a
+Haven before any file, evidenced — ≥3 dated occurrences for a recurrence trigger, or
+Lemar's own quoted request when he asked directly; never manufacture occurrences); a
 forged skill may never claim a capability the SAFETY block above forbids, nor write to
 `.claude/routines/`, `.claude/anchors.md`, or the vault schema; **skill-forge may never
 propose a revision to itself**; core skills (haven-capture, haven-vault-keeper,
