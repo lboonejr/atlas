@@ -1,6 +1,6 @@
 ---
 created: 2026-07-22T10:10:17-04:00
-updated: 2026-08-04T09:30-04:00
+updated: 2026-08-04T10:15-04:00
 domain: cuzzies
 type: task
 status: active
@@ -103,6 +103,21 @@ there a printer on-site, yes or no. Once he answers, the shipping/packaging legw
 (get label, ship before ~9/2) is still admin-executable and will run from #decisions
 once the yes/no is known. No reply sent, no payment made, nothing shipped.
 
+## Update 2026-08-04 (2, ~10:15 ET) — Lemar confirmed: printer is on-site
+Lemar reacted :white_check_mark: on the #decisions card (ts `1785848906.448709`) and
+replied directly in-thread: "There is a printer on site." Per the card's own options,
+this selects "yes, there's one on-site." The remaining return legwork (box the printer,
+submit Leafly's return-label request form at
+https://help.leafly.com/hc/en-us/requests/new?ticket_form_id=41439806026387, drop at a
+carrier) needs physical presence and counts as outreach to a third party — both outside
+what Samira executes unattended (Safety floor: no outreach, no form submissions to
+external parties without judgment already covering it). Recording the confirmed fact
+here; the #admin `run:admin-3x` card (ts `1785791721.018689`, still reacted
+:hourglass_flowing_sand:) stays staged for whoever does the physical pack-and-ship,
+due by ~2026-09-02. Replied "Done :white_check_mark:" in the #decisions thread noting
+the confirmation is logged and what's still needed. No form submitted, nothing shipped,
+no outreach made.
+
 ## Sources
 - slack: #decisions (C0BBXA96FFV), card ts `1784722765.550729`, Lemar's 🫡 reaction
 - gmail: thread `19f9d971f0ac3cb3` (2026-07-26 past-due notice, repeat, no new figure)
@@ -123,4 +138,5 @@ once the yes/no is known. No reply sent, no payment made, nothing shipped.
 - slack: #admin (C0BBLUA7JLX), card ts `1785791721.018689`, reacted ⏳ (physical check
   needed)
 - slack: #decisions (C0BBXA96FFV), card ts `1785848906.448709`, posted asking
-  yes/no on printer on-site
+  yes/no on printer on-site — Lemar's :white_check_mark: + thread reply "There is a
+  printer on site" (2026-08-04 ~10:15 ET)
