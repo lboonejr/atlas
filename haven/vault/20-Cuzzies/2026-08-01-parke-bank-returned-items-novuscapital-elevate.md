@@ -1,10 +1,10 @@
 ---
 created: 2026-08-01T12:00:00-04:00
-updated: 2026-08-02T08:15:00-04:00
+updated: 2026-08-04T09:08:00-04:00
 domain: cuzzies
 type: task
 status: active
-tags: [parke-bank, returned-item, nsf, novuscapital, elevate-funding, overdraft-fee]
+tags: [parke-bank, returned-item, nsf, novuscapital, zapier, godaddy, elevate-funding, overdraft-fee]
 source: gmail
 ---
 
@@ -49,6 +49,23 @@ escalation bar (no new figure, no direct question); the open card above (fee
 escalation, $2,611.03) already covers what Lemar needs to see. Not re-flagged
 in #decisions, logged here only.
 
+## Update 2026-08-04 (~09:08 ET) — 3 more routine returned items, $428.49, no new figure
+Christopher Cabezas (Parke Bank AVP-Branch Manager) emailed 2026-08-04 12:28
+UTC (gmail thread `19fccbf16b7c9830`, cc mhallworth@parkebank.com, subject
+"secure: Cuzzie's Dispensary") that three items are being returned this
+morning:
+- External Withdrawal — $280.00 : NovusCapital II
+- External Withdrawal — $103.50 : Zapier Payment
+- External Withdrawal — $44.99 : GO DADDY.COM, LLC
+
+Same recurring pattern as the entries above — no new dollar figure beyond what
+Lemar has already seen (the standing $2,611.03 overdrawn balance / $1,495.40
+fee is still the open item), no direct question, just an FYI with an open
+offer to answer questions. Doesn't cross the escalation bar. Not reposted to
+#decisions, not staged to #admin — logged here only per the same judgment
+call used for the prior routine returns. Nothing paid, no reply sent, no
+outward action taken.
+
 ## Sources
 - gmail: thread 19fbd91191b09536 (Parke Bank returned items notice + $1,495.40
   fee assessment + $2,611.03 overdrawn balance, 8/1)
@@ -57,3 +74,5 @@ in #decisions, logged here only.
   escalation
 - gmail: thread 19fbf71d57e10cad (2026-08-01 ~18:28 ET, eStatement-ready
   notification, no new figure)
+- gmail: thread 19fccbf16b7c9830 (2026-08-04 12:28 UTC, 3 more routine
+  returned items, $428.49 total, no new figure)
