@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T12:00:00-04:00
-updated: 2026-08-04T09:08:00-04:00
+updated: 2026-08-04T10:32:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -66,6 +66,23 @@ offer to answer questions. Doesn't cross the escalation bar. Not reposted to
 call used for the prior routine returns. Nothing paid, no reply sent, no
 outward action taken.
 
+## Update 2026-08-04 (~10:32 ET) — escalation: lockout placed on the account
+Christopher Cabezas (Parke Bank AVP-Branch Manager) emailed 2026-08-04 13:39
+UTC (gmail thread `19fcd0050dda065d`, cc mhallworth@parkebank.com, subject
+"secure: Cuzzie's Dispensary - Lockout placed on Account") that senior
+management has instructed him to place a lockout on the account until the
+negative balance is resolved — he no longer has the option to leave the
+account active and return items as NSF. Same standing overdrawn balance
+figure ($2,611.03, no new dollar amount), but the lockout itself is a
+materially new consequence, not a routine returned-item notice, so this
+crosses the escalation bar. Posted a fresh #decisions parent (ts
+`1785853982.850109`) with 3 reply options in Lemar's voice (giving Chris the
+same wind-down/temporary-closure context used with DIME and Rove), since a
+real person is reachable and a reply seems warranted even though he isn't
+directly demanding one. No payment made or scheduled (outward-facing,
+requires Lemar's sign-off), no reply sent yet — options posted for Lemar's
+pick.
+
 ## Sources
 - gmail: thread 19fbd91191b09536 (Parke Bank returned items notice + $1,495.40
   fee assessment + $2,611.03 overdrawn balance, 8/1)
@@ -76,3 +93,7 @@ outward action taken.
   notification, no new figure)
 - gmail: thread 19fccbf16b7c9830 (2026-08-04 12:28 UTC, 3 more routine
   returned items, $428.49 total, no new figure)
+- gmail: thread 19fcd0050dda065d (2026-08-04 13:39 UTC, lockout placed on
+  account, $2,611.03 overdrawn)
+- slack: #decisions (C0BBXA96FFV) ts `1785853982.850109` — lockout card + 3
+  draft reply options, posted 2026-08-04
