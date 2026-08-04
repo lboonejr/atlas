@@ -1,3 +1,13 @@
+---
+created: 2026-08-04T15:45:00-04:00
+updated: 2026-08-04T15:45:00-04:00
+domain: cuzzies
+type: task
+status: awaiting-decision
+tags: [insurance, marshall-sterling, mailing-address, move-out]
+source: gmail
+---
+
 # Marshall & Sterling — returned mail, address update needed
 
 Marshall & Sterling (insurance broker) emailed 2026-08-04 (~19:43 UTC / ~3:43pm ET):
@@ -18,12 +28,3 @@ Staged as a #decisions card with three options:
 
 ## Sources
 - gmail: thread `19fce4d96aa477ef` — "Returned Mail - Address update needed", Marshall & Sterling, 2026-08-04
----
-created: 2026-08-04T15:45:00-04:00
-updated: 2026-08-04T15:45:00-04:00
-domain: cuzzies
-type: task
-status: awaiting-decision
-tags: [insurance, marshall-sterling, mailing-address, move-out]
-source: gmail
----
