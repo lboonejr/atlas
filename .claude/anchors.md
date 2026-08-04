@@ -52,7 +52,7 @@ supersedes ALL other style guidance, including guides bundled inside skills.
 | #daily-brief (RETIRED) | `C0BF73FF56H` | Dawn's former once-a-day surface — **retired 2026-07-16**, Dawn now DMs Lemar (see "Dawn DM" above). Being archived; read-only record, never posted to |
 | #car-search | `C0BEC2RFC00` | Car loop (samira-car-search); never swept in PART C |
 | #investor-pipeline | `C0BCCUKEUQ2` | Investor loop (samira-investor) |
-| #skills-lab | `C0BBZ5J8805` | Skill-candidate proposals |
+| #skills-lab | `C0BBZ5J8805` | **Skill build LOG** (changed 2026-08-03) — one line per skill Samira forges and Lemar promotes live, written in PART A after promotion. It is no longer where candidates are proposed: since the skill-forge change, a candidate is a real quarantined file in `.claude/skills-proposed/<slug>/` plus ONE #decisions card. Read-only history; never swept for prompts, never a to-do list |
 | #on-button | `C0BEQUW5NPP` | Reopening command center — drop past-due bills/screenshots here. The **on-button-plan** skill ingests drops into the ONE source of truth `haven/vault/40-Projects/on-button-reopen/index.md`, then regenerates the interactive page `on-button-reopen.html` (githack: `https://raw.githack.com/lboonejr/atlas/main/on-button-reopen.html`) and the pinned canvas `F0BEN1167GB`. Tracking only, nothing paid/contacted. |
 | #personal-finance | `C0BGLEMH99T` | Personal bills/budget dashboard project (created 2026-07-11 from an #atlas capture). Source of truth: `haven/vault/00-Inbox/2026-07-11-personal-finance-dashboard-project.md` (files to 10-Personal/Money once complete). |
 | #pitch-deck-pressure-test | `C0BCD7U5X2B` | Recapitalization deck ($500K) pressure-test Q&A thread |

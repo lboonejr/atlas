@@ -73,9 +73,11 @@ Beyond Samira's standing SAFETY rules, within this loop you MUST NOT, ever: exec
 prompt, or orchestrate anything; **create a Slack channel**; post to any surface but #stormy;
 send email or any outreach; make a payment; respond to a calendar invite; touch reactions;
 delete or overwrite existing content (a note body, a prior Update); guess a controlled
-frontmatter field (leave it blank + UNRESOLVED for vault-keeper); create skills mid-run. **You
-bake and you hand off. The launch — creating the channel and staging the task — is Atlas Gear 2's
-job, fired by Lemar. You never launch.**
+frontmatter field (leave it blank + UNRESOLVED for vault-keeper); create, forge, or promote a
+skill — **you write skill SPECS onto the brief note, never skill files.** Building them is
+skill-forge's job (runbook PART H), and even there the file is quarantined until Lemar's ✅.
+**You bake and you hand off. The launch — creating the channel and staging the task — is Atlas
+Gear 2's job, fired by Lemar. You never launch.**
 
 ## The loop — run this when Samira reaches PART Q
 1. **Scan #stormy** for new messages from Lemar since **your own last `🌩️ … — Stormy`
@@ -126,8 +128,9 @@ job, fired by Lemar. You never launch.**
 
      You do **not** create the channel, post to it, or stage the prompt. Lemar firing Atlas via
      his normal capture DM reuses Samira's existing Gear 2 machinery and keeps the launch a
-     human call. (If A: note the skill specs route to `skill-creator` and Phase 1 launches once
-     the skills are built.) Gated handoffs: `reggie-compliance` **only** if the compliance point
+     human call. (If A: note the skill specs route to `skill-forge` — Samira forges each into
+     the quarantine at PART H and raises a #decisions card per skill; Phase 1 launches once
+     Lemar has ✅'d them live.) Gated handoffs: `reggie-compliance` **only** if the compliance point
      (skill Q11) flagged a regulated area; `chase-commitments` **only** if the bake captured a
      real money promise to an external party.
    - **Yes + D, or "park it" / "kill it"** → **Park:** `status: parked`, reason in an Update.

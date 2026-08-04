@@ -3,6 +3,52 @@
 The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NOW.
 History and cutover narratives live here.
 
+## 2026-08-03 — PART H: Samira forges her own skills, behind an approval gate
+- **What she could do before.** PART H had her post a text candidate to #skills-lab when a
+  task ran `no skill — direct` for the 3rd time, and SAFETY ended with a flat "create skills
+  mid-run" prohibition plus "You never build skills yourself." She could notice a capability
+  gap; she could never close one. Every skill in the system had to be built by hand.
+- **What changed.** She now writes the real, complete `SKILL.md` herself — but authoring and
+  activation are split. Lemar chose this explicitly over full autonomy (a bad skill would
+  silently change every later run before he saw it) and over a richer proposal-only format
+  (the status quo with better prose).
+- **The quarantine is structural, not a promise.** Forged skills land in
+  `.claude/skills-proposed/<slug>/`, deliberately outside the skill-loading path, so a
+  proposal is not discoverable or runnable by any agent. Verified empirically at build time:
+  the loader registered `skill-forge` and registered nothing from `skills-proposed/`. This
+  is the same reason `_daily` is protected by a folder rule rather than an instruction — a
+  constraint the runtime enforces beats one the model has to remember.
+- **The flow**: 3rd occurrence (or Lemar asking) → spec note to Haven FIRST with ≥3 dated
+  occurrences as evidence → the skill file + `_PROPOSAL.md` into quarantine → six
+  self-checks → ONE #decisions card. His ✅ promotes it in PART A **on a later scan**, and
+  it goes live the run after that — the same buffer rule PART B/C already use, applied to
+  behavior changes instead of tasks.
+- **The forge inherits the safety floor and cannot widen it.** A forged skill may not claim
+  any capability SAFETY forbids; if the recurring work genuinely needs one (send, pay, post
+  externally), the skill is written draft-only and the card says so. It also may not write
+  `.claude/routines/`, `.claude/anchors.md`, or the schema — the runbook that constrains her
+  is not editable by the thing it constrains.
+- **skill-forge may never revise itself.** The one hard block with no override. A forge that
+  can edit its own limits has no limits. If it needs changing, that is a plain #decisions
+  card and a human edit.
+- **Core skills are gated harder.** `haven-capture`, `haven-vault-keeper`, and
+  `samira-report-result` may be revised only behind a 🔴 `CORE SKILL` card, because a bad
+  revision there breaks the record-keeping Lemar would notice problems *through*.
+- **The overwrite carve-out, stated rather than implied.** SAFETY says "never overwrite
+  existing content," but an approved revision overwrites a live `SKILL.md` by definition.
+  Rather than leave an unattended run to resolve a contradiction, the carve-out is written
+  into SAFETY explicitly: that one case, on an explicit ✅, with git holding the prior
+  version and the spec note holding the diff.
+- **Rate limits against sprawl**: ≥3 dated occurrences or no forge (one-off work is just
+  work), one forge action per run, two open proposals at a time, and the six self-checks
+  re-run at promotion time so a stale proposal can't be promoted on an old validation.
+- **#skills-lab changed role** from proposal inbox to build LOG — one line per promoted
+  skill. A candidate is now a real file plus a real card, not a paragraph.
+- **Also**: Stormy's skill specs route to `skill-forge` instead of a manual `skill-creator`
+  run (Stormy still writes specs, never files); Dawn's prohibition repointed; `PORTABILITY.md`
+  gained the FORGE step and the rule any replacement platform must preserve — a quarantine
+  is anything the runtime will not load, and the author/activate split must survive the port.
+
 ## 2026-08-03 — Integrity pass: vault-keeper now repairs broken frontmatter vault-wide
 - **The hole this closes.** Filing only ever looked at `00-Inbox`, so once a note was filed
   (or landed outside the Inbox by hand) nothing re-examined it. Malformed notes accumulated
