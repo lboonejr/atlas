@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T17:13-04:00
-updated: 2026-08-04T00:00-04:00
+updated: 2026-08-04T10:20-04:00
 domain: cuzzies
 type: task
 status: active
@@ -29,7 +29,19 @@ other collections letter this cycle (Parke Bank, Leafly). Needs Lemar's read and
 payment/response call — not something Samira executes (payment/transfer stays
 outward-facing only with his sign-off).
 
+## Update 2026-08-04 (~10:20 ET) — Lemar picked Option A, holding reply saved to Drafts
+Lemar reacted :white_check_mark: on the "Option A — holding reply" thread reply (ts
+`1785791698.849359`) under the #decisions card (parent ts `1785791694.648369`). Saved
+that exact text to Gmail Drafts as a reply on thread `19fc961fdfa15928`, addressed to
+`mail@agaltd.com` (the letter's sender; Michael Mintz's listed contact is
+`michaelm@cadexsolutions.com`), draft id `r-2232885167684855045`. **Not sent** — sits in
+Gmail Drafts for Lemar to send. No payment made or scheduled; the $25,601.41 balance and
+the 30-day dispute window (~9/2) stand as-is.
+
 ## Sources
 - gmail: thread `19fc961fdfa15928` (2026-08-03 15:47 ET, mail@agaltd.com, AGA
   collections letter, $25,601.41, file 2532730_AGA)
 - slack: #decisions (C0BBXA96FFV) — 3 draft reply options posted same pass
+- slack: #decisions (C0BBXA96FFV), option reply ts `1785791698.849359`, Lemar's
+  :white_check_mark: (2026-08-04 ~10:20 ET) — Option A picked, draft saved
+- gmail: draft `r-2232885167684855045` (Option A, unsent)
