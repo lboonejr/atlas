@@ -1,9 +1,9 @@
 ---
 created: 2026-08-03T16:16-04:00
-updated: 2026-08-03T17:00-04:00
+updated: 2026-08-04T16:20-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [samira, email, rove-brand, accounts-payable, wind-down]
 source: gmail
 ---
@@ -23,5 +23,12 @@ Nothing owed on INV-886 right now. Needs Lemar's judgment on how future Rove bal
 (if any) get handled once the wind-down resolution is finalized — flagging so it isn't
 lost, not urgent today.
 
+## Update 2026-08-04 (~16:20 ET) — closed
+Lemar reacted 🫡 on the #decisions parent (ts `1785788627.903599`). No new balance,
+nothing further to draft — INV-886 stays cleared. Status moved to `done`. Replied
+in-thread noting the close.
+
 ## Sources
 - gmail: thread 19c2fac1d6ca1c92
+- slack: #decisions (C0BBXA96FFV), parent ts `1785788627.903599`, Lemar's 🫡
+  (2026-08-04 ~16:20 ET) — closed

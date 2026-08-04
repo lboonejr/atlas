@@ -1,9 +1,9 @@
 ---
 created: 2026-08-03T16:16-04:00
-updated: 2026-08-03T17:00-04:00
+updated: 2026-08-04T16:20-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [samira, email, dime-industries, accounts-payable, wind-down]
 source: gmail
 ---
@@ -23,5 +23,12 @@ but a clearer update targeted for end of month. Offered a call if useful.
 Nothing outstanding right now — this is a payment obligation, so no one auto-pays it.
 Needs Lemar's judgment on timing/amount once the wind-down resolution firms up.
 
+## Update 2026-08-04 (~16:20 ET) — closed
+Lemar reacted 🫡 on the #decisions parent (ts `1785788621.155319`). Nothing owed right
+now, no new figure — his direct reply to Marcel Carter stands. Status moved to `done`.
+Replied in-thread noting the close.
+
 ## Sources
 - gmail: thread 19fc8b3eff8e16c0
+- slack: #decisions (C0BBXA96FFV), parent ts `1785788621.155319`, Lemar's 🫡
+  (2026-08-04 ~16:20 ET) — closed

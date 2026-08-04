@@ -1,6 +1,6 @@
 ---
 created: 2026-07-22T10:10:17-04:00
-updated: 2026-08-04T10:15-04:00
+updated: 2026-08-04T16:20-04:00
 domain: cuzzies
 type: task
 status: active
@@ -118,8 +118,17 @@ due by ~2026-09-02. Replied "Done :white_check_mark:" in the #decisions thread n
 the confirmation is logged and what's still needed. No form submitted, nothing shipped,
 no outreach made.
 
+## Update 2026-08-04 (3, ~16:20 ET) — cancellation-form task card closed
+Lemar reacted 🫡 on the separate #decisions card asking him to submit Leafly's official
+cancellation-request form (parent ts `1785788625.241099` — distinct from the Eatabit
+printer card above). Per that card's own text, submitting the form is Lemar's judgment
+call, not something Samira executes; the 🫡 closes the card without a form having been
+submitted by Samira. No outreach made. Replied in-thread noting the close.
+
 ## Sources
 - slack: #decisions (C0BBXA96FFV), card ts `1784722765.550729`, Lemar's 🫡 reaction
+- slack: #decisions (C0BBXA96FFV), card ts `1785788625.241099`, Lemar's 🫡
+  (2026-08-04 ~16:20 ET) — cancellation-form card closed
 - gmail: thread `19f9d971f0ac3cb3` (2026-07-26 past-due notice, repeat, no new figure)
 - gmail: thread `19fab0271af4ddbb` (2026-07-28 ~11:14pm ET, collections transfer
   notice, case #00159241, $1,002.60)
