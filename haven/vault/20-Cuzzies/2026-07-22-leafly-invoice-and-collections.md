@@ -1,6 +1,6 @@
 ---
 created: 2026-07-22T10:10:17-04:00
-updated: 2026-08-03T17:13-04:00
+updated: 2026-08-04T09:30-04:00
 domain: cuzzies
 type: task
 status: active
@@ -93,6 +93,16 @@ shipping label, ship it) — staged to #admin as a `run:admin-3x` prompt rather 
 routed to #decisions, since it needs no judgment call, only doing. No reply sent (this
 is a status update, not a live back-and-forth) and no payment made.
 
+## Update 2026-08-04 (~09:30 ET) — printer-return task escalated to #decisions
+The staged #admin `run:admin-3x` prompt (task:leafly-eatabit-printer-return) asks to
+"confirm whether Cuzzie's has a Leafly Eatabit printer on-site" — that's a
+physical-presence fact Samira has no way to verify remotely (no site visit, no camera,
+no inventory record checked so far). Rather than guess, reacted ⏳ on the #admin card
+and posted a #decisions parent (ts `1785848906.448709`) asking Lemar directly: is
+there a printer on-site, yes or no. Once he answers, the shipping/packaging legwork
+(get label, ship before ~9/2) is still admin-executable and will run from #decisions
+once the yes/no is known. No reply sent, no payment made, nothing shipped.
+
 ## Sources
 - slack: #decisions (C0BBXA96FFV), card ts `1784722765.550729`, Lemar's 🫡 reaction
 - gmail: thread `19f9d971f0ac3cb3` (2026-07-26 past-due notice, repeat, no new figure)
@@ -110,3 +120,7 @@ is a status update, not a live back-and-forth) and no payment made.
   Coley: submit cancellation form, listing removed 9/22)
 - gmail: thread `19fc95ba44cc5279` (2026-08-03 ~16:40 ET, cancellation processed
   confirmation, case #00159743, Eatabit printer return notice)
+- slack: #admin (C0BBLUA7JLX), card ts `1785791721.018689`, reacted ⏳ (physical check
+  needed)
+- slack: #decisions (C0BBXA96FFV), card ts `1785848906.448709`, posted asking
+  yes/no on printer on-site
