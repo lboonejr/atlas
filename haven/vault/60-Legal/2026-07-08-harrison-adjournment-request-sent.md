@@ -1,10 +1,10 @@
 ---
 created: 2026-07-08T10:10-04:00
-updated: 2026-07-30T14:00-04:00
+updated: 2026-08-04T13:45:00-04:00
 domain: legal
 type: log
 status: awaiting-decision
-tags: [harrison-acquisitions, eviction, cam-lt-004393-26, rivkin-radler]
+tags: [harrison-acquisitions, eviction, cam-lt-004393-26, rivkin-radler, centurion-realty]
 source: gmail
 ---
 
@@ -438,6 +438,43 @@ Status stays **awaiting-decision** — the consent judgment's actual possession 
 the post-trial landlord conversation, and move-out logistics beyond these daily
 clean-out reminders are still Lemar's to pursue.
 
+## Update 2026-08-04 (~13:45 ET) — Centurion Realty confirms the walkthrough: Thu 8/6, 4pm, JoAnne to get keys
+
+Sherry Caldwell (Property Manager, Centurion Realty LLC — the landlord's property
+management contact, distinct from the AR/back-rent contact Eldy Bernardez tracked on
+[[2026-07-15-harrison-centurion-ar-closure-draft]]) emailed 2026-08-04 ~13:35 ET
+(Gmail thread `19fcdd80644e5973`, subject "Cuzzies Vacate Date?", cc
+joshua@cuzziesnj.com): "I have confirmed that JoAnne will meet you to get the keys and
+do a walkthrough this Thursday the 6th at 4pm. As discussed, please send me a video
+walkthrough of the space once you have it vacated and clean. Best of luck in your next
+location."
+
+Read plainly: this confirms a specific time (4:00 PM) for the move-out-day (8/6)
+key handoff/walkthrough that the existing daily 10:00 AM clean-out reminders (created
+2026-07-30, see update above) don't cover, plus a new deliverable — a video walkthrough
+of the vacated/cleaned space, to be sent to Sherry Caldwell (SCaldwell@CenturionRE.com)
+once ready. Both are logistics Lemar needs to execute himself (the walkthrough requires
+his physical presence; the video needs his phone/camera and his own send — Samira
+drafts no outreach to landlord contacts on this docket without a decision, per the
+overlap with the still-open AR/back-rent matter). No reply sent, nothing drafted to
+Sherry Caldwell.
+
+**Action taken by Samira:** created one Google Calendar event on the reminder calendar
+(personal, no external attendees) — "Centurion Realty — JoAnne walkthrough, get keys
+(4pm)," Thu 2026-08-06 4:00–4:30 PM ET, popup reminder, description pointing back to
+this note and the Gmail thread. This is in addition to, not a replacement for, the
+existing 8/6 10:00 AM daily clean-out reminder.
+
+Not raised as a #decisions card — nothing here for Lemar to pick between, just a
+schedule confirmation plus a to-do (record and send a video walkthrough) that's his to
+execute; logged for the record and calendared so it isn't missed. Gmail thread labeled
+`Samira/seen`.
+
+Status stays **awaiting-decision** — the underlying AR/back-rent negotiation with
+Centurion (Eldy Bernardez, see linked note) and the post-trial 30–45 day
+replacement-tenant conversation with Harrison Acquisitions remain open and unrelated
+to this specific walkthrough confirmation.
+
 ## Sources
 - gmail: thread 19f8fe851917899a (NJ eCourts CORRESPONDENCE notification, Dylan Mruczinski filing, 2026-07-23 16:56 UTC)
 - gmail: thread 19f41ffb89a03804 (Dylan Mruczinski auto-reply, 2026-07-08)
@@ -458,3 +495,5 @@ clean-out reminders are still Lemar's to pursue.
 - slack: #decisions, thread ts 1785244330.635209, Option 3 ✅ + Lemar's reply ts 1785246204.390029 (2026-07-28, PART A — no-counsel decision recorded)
 - gmail: message 19fb3dc88747852e (NJ eCourts Judgment For Possession By Consent Notification, CAM-LT-004393-26, 2026-07-30 16:30:01 UTC / ~12:30 PM ET, transaction SCP20263541625)
 - slack: #decisions, thread ts 1785431719.874339, Lemar's reply ts 1785431791.973819 (2026-07-30, move-out-by-8/6 instruction; 7 daily calendar reminders created on the reminder calendar)
+- gmail: thread 19fcdd80644e5973 ("Cuzzies Vacate Date?", Sherry Caldwell/Centurion Realty, 2026-08-04 17:35:12 UTC — walkthrough confirmed Thu 8/6 4pm + video-walkthrough request)
+- calendar: reminder calendar event "Centurion Realty — JoAnne walkthrough, get keys (4pm)," 2026-08-06 4:00 PM ET (created 2026-08-04)
