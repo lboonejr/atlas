@@ -1,8 +1,27 @@
 ---
-domain: cuzzies
-type: project
+created: 2026-07-10T00:00-04:00   # SYNTHESIZED — see note below
+updated: 2026-08-03T08:45-04:00
+domain: project
+type: brief
 status: active
-source: samira-atlas-executor-part-g
+tags: [delivery-in-a-box, status-briefing, wind-down, asset-recovery, samira]
+source: claude
+# ---------------------------------------------------------------------------
+# FRONTMATTER REPAIRED 2026-08-03 on Lemar's explicit approval. This note was
+# written with three out-of-list values and three missing fields:
+#   domain: cuzzies  -> project  (it lives in 40-Projects/, and 12 of 13 project
+#                                 folders use `project`; the two that mixed both
+#                                 were bot typos, not a convention)
+#   type:   project  -> brief    (`project` is not a valid type; this is a
+#                                 worked-up status briefing)
+#   source: samira-atlas-executor-part-g -> claude  (not a valid source; a
+#                                 routine wrote it)
+#   created/updated/tags         -> supplied; `created` DATE is from the filename
+#                                 and the TIME IS SYNTHESIZED (00:00 ET) because
+#                                 the real time was not recoverable. Do not read
+#                                 it as precise.
+# Not one line of the body was altered.
+# ---------------------------------------------------------------------------
 ---
 
 # Delivery-in-a-Box — Status Briefing (2026-07-10)
