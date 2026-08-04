@@ -1,6 +1,6 @@
 ---
 created: 2026-07-23T19:20:00-04:00
-updated: 2026-07-24T14:15:00-04:00
+updated: 2026-08-04T08:10:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -77,3 +77,16 @@ quick check with Siciliano & Associates (already retained on DeWalt) before payi
 given point 4 is unresolved. Nothing paid, called, or committed to by Samira. Existing
 #decisions card (unreacted) stays open; no new card raised — same decision, sharper
 context.
+
+## Update 2026-08-04
+
+A routine "Insured Breakdown Letter" (account 106241219) landed 2026-08-04 02:55 ET
+from `firstinsite@firstinsurancefunding.com` — an automated, unmonitored statement
+mailer, no new dollar figure or written answer beyond what's already captured above.
+No reply required, nothing paid or contacted. Logged for the record only; the same
+unresolved decision (pay $6,091.76 / full $14,133.68 payoff, retroactivity question
+still unconfirmed by FIRST) stands, still awaiting Lemar in #decisions.
+
+## Sources (cont.)
+- gmail: thread `19fcab4318838661` ("FIRST Insurance Funding - Insured Breakdown
+  Letter - 106241219", 2026-08-04 02:55:27 UTC, automated statement mailer)
