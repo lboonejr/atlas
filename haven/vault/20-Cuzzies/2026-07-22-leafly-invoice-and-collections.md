@@ -1,6 +1,6 @@
 ---
 created: 2026-07-22T10:10:17-04:00
-updated: 2026-08-05T08:13:00-04:00
+updated: 2026-08-05T17:50:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -131,7 +131,26 @@ what Lemar already told them. Consistent with the standing "let ride, no unpromp
 reply" position taken on Reminders/notices throughout this thread — not drafting a new
 reply this pass; logging only. Labeled `Samira/seen` on the new thread.
 
+## Update 2026-08-05 (2, ~17:50 ET) — another "pay today" collections notice, same case figure, no new balance
+
+New email landed (Gmail thread `19fd3e48e947c061`, 2026-08-05 21:46 UTC / ~17:46 ET,
+`help@leafly.com`, cc lemar@cuzziesnj.com, to joshua@cuzziesnj.com), subject "Your
+Account Is Being Transferred To Collections - Pay Today!", new case #00160234. Amount
+Due stated as **$1,002.60** — identical to the balance already on file since the 7/28
+case #00159241 escalation, not a new or changed figure. Four old invoice PDFs attached
+(Jun 22 – Jul 22 dated), nothing new. This lands after the account cancellation was
+already confirmed processed 2026-08-03 (case #00159743) and after Lemar's own direct
+reply that the business is being sold and the balance will be settled before
+transition — this notice doesn't acknowledge either. Reads as the same automated
+collections/dunning cadence repeating on a new case number, consistent with the
+standing "let ride, no unprompted reply" position taken throughout this saga. Not
+drafting a new reply and not posting a new #decisions card (no new/changed balance —
+doesn't meet the escalation bar this note has used throughout). Labeled `Samira/seen`
+on the thread. No reply sent, no payment made.
+
 ## Sources
+- gmail: thread `19fd3e48e947c061` (2026-08-05 ~17:46 ET, case #00160234, "Pay Today"
+  collections notice, $1,002.60, no new figure)
 - slack: #decisions (C0BBXA96FFV), card ts `1784722765.550729`, Lemar's 🫡 reaction
 - gmail: thread `19f9d971f0ac3cb3` (2026-07-26 past-due notice, repeat, no new figure)
 - gmail: thread `19fab0271af4ddbb` (2026-07-28 ~11:14pm ET, collections transfer
@@ -155,3 +174,5 @@ reply this pass; logging only. Labeled `Samira/seen` on the new thread.
   printer on site" (2026-08-04 ~10:15 ET)
 - gmail: thread `19fd117bcbd45f33` (2026-08-05 08:43 ET, "PAST DUE" AR dunning, no new
   figure)
+- gmail: thread `19fd3e48e947c061` (2026-08-05 ~17:46 ET, case #00160234, "Pay Today"
+  collections notice, $1,002.60, no new figure)
