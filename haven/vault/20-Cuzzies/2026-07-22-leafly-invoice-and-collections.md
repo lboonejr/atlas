@@ -1,6 +1,6 @@
 ---
 created: 2026-07-22T10:10:17-04:00
-updated: 2026-08-04T10:15-04:00
+updated: 2026-08-05T08:13:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -118,6 +118,19 @@ due by ~2026-09-02. Replied "Done :white_check_mark:" in the #decisions thread n
 the confirmation is logged and what's still needed. No form submitted, nothing shipped,
 no outreach made.
 
+## Update 2026-08-05 (~08:43 ET) — new "PAST DUE" AR dunning, same case, no new figure
+
+A new automated AR email landed (gmail thread `19fd117bcbd45f33`,
+accountsreceivable@leafly.com, "Cuzzie's Dispensary & Delivery is PAST DUE") asking for
+proof of payment or the correct point of contact, and pointing back to rep Dante Coley.
+No dollar figure or deadline is stated, and it doesn't reference the cancellation
+already confirmed 2026-08-03 (case #00159743) or Lemar's own direct reply that the
+business is being sold and the balance will be settled before transition. Reads as the
+same automated dunning cadence as the rest of this saga, not a considered response to
+what Lemar already told them. Consistent with the standing "let ride, no unprompted
+reply" position taken on Reminders/notices throughout this thread — not drafting a new
+reply this pass; logging only. Labeled `Samira/seen` on the new thread.
+
 ## Sources
 - slack: #decisions (C0BBXA96FFV), card ts `1784722765.550729`, Lemar's 🫡 reaction
 - gmail: thread `19f9d971f0ac3cb3` (2026-07-26 past-due notice, repeat, no new figure)
@@ -140,3 +153,5 @@ no outreach made.
 - slack: #decisions (C0BBXA96FFV), card ts `1785848906.448709`, posted asking
   yes/no on printer on-site — Lemar's :white_check_mark: + thread reply "There is a
   printer on site" (2026-08-04 ~10:15 ET)
+- gmail: thread `19fd117bcbd45f33` (2026-08-05 08:43 ET, "PAST DUE" AR dunning, no new
+  figure)

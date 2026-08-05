@@ -1,6 +1,6 @@
 ---
 created: 2026-07-22T10:10:17-04:00
-updated: 2026-07-29T13:58:00-04:00
+updated: 2026-08-05T08:13:00-04:00
 domain: cuzzies
 type: task
 status: done
@@ -35,6 +35,18 @@ this lapse to the Free plan if the retry failed — treating this as that outcom
 out, not a new decision. Log-only, no new #decisions card, no action taken. Labeled
 `Samira/seen` in Gmail. Status stays `done`.
 
+## Update 2026-08-05 (~01:38am ET) — outcome landed: subscription actually canceled
+
+No-reply notice (gmail thread `19fcf9255d52b73e`, "Your Zapier subscription has been
+canceled") confirms the retries Lemar accepted letting lapse (🫡, 2026-07-22) ran their
+course: paid plan is canceled, Zaps over the Free-plan limits are turned off, any
+automations built on the paid tier may have stopped running. This is the accepted
+outcome playing out, not a new decision — no reactivation without Lemar's own call to
+pay. Log-only, no new #decisions card, no payment made or scheduled. Labeled
+`Samira/seen` on the new thread. Status stays `done`.
+
 ## Sources
 - slack: #decisions (C0BBXA96FFV), card ts `1784722768.821229`, Lemar's 🫡 reaction
 - gmail: thread `19fac9839da01530` (repeat payment-failed notice, 2026-07-29 ~2:38am ET)
+- gmail: thread `19fcf9255d52b73e` (2026-08-05 ~01:38am ET, subscription actually
+  canceled, paid features off)
