@@ -69,7 +69,7 @@ Lemar" in #decisions.
 
 ## Run order
 
-V → S → A → B → C → D → E → Q → G → H → canvas refresh → P (Pulse) → digest (+ _daily append).
+V → S → A → B → C → D → E → Q → G → H → M (money) → canvas refresh → P (Pulse) → digest (+ _daily append).
 
 ---
 
@@ -190,6 +190,19 @@ When a PART C task ran "no skill — direct" for the 3rd time in the same shape,
 candidate proposal to #skills-lab (what recurs, inputs/outputs, rough starter prompt).
 You never build skills yourself.
 
+### PART M — personal money hub (#personal-finance)
+Invoke the **money-hub** skill (`.claude/skills/money-hub/`) in its PART M mode: sweep
+#personal-finance since the last run for MONEY DROPS — Lemar reporting earnings, cash
+on hand, a bill (text or a photo), a payment made, or payment-plan terms. These are NOT
+prompts (same doctrine as ON-BUTTON DROPS in PART C — fenced/named instructions in this
+channel still run in PART C). The skill logs earnings to the income log, updates the
+ledger `haven/vault/10-Personal/Money/money-hub-ledger.md`, projects dated bills and
+installments onto the reminder calendar, and re-renders the Money Hub artifact only if
+something changed. Anything ambiguous or material (an unconfirmed figure, an unassigned
+priority) stays `null` and raises ONE #decisions parent — never guess a number. The
+weekly split (mode 5, "run my week") is ON DEMAND ONLY — never run it from a sweep.
+Returns `money ✓ <what changed> · hub ✅/⚠️` or `money —` for the digest.
+
 ### Canvas refresh
 Edit the Open Items canvas IN PLACE (read to get section IDs; replace per-section, never
 the whole canvas): ⏳ Waiting · ⚙️ In motion · ⛔ Parked — one line each: title · what it
@@ -216,7 +229,8 @@ Via **samira-report-result** Mode 3:
    · `🧵 Standing list → Open Items canvas`
    (Full tallies: filed/stuck, rang, decisions handled H, captures G, staged L, ran Y,
    done Z, failed Fl, parked P, deferred D; email E/R/Cl/T; investor + car + Stormy counts;
-   junk J; plus PART P's one token: `pulse ✅` or `pulse ⚠️ <reason>`.
+   junk J; PART M's token: `money ✓ …` or `money —`; plus PART P's one token: `pulse ✅`
+   or `pulse ⚠️ <reason>`.
    Stuck notes surface ONLY via the batched #decisions card, never line-by-line here.)
 2. APPEND the same digest block to `haven/vault/_daily/YYYY-MM-DD.md` (create the day's
    note from `_templates/daily.md` if absent; append-only; never edit prior entries).

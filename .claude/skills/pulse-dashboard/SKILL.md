@@ -76,15 +76,15 @@ fail, and lists those failures.
    capped at ~10 with a "+N more in #decisions" channel link. Each card: severity dot,
    one-line summary, age ("2d"), and its 💬 thread permalink so one tap opens the exact
    thread to react/reply.
-5. **Money.** Era Context connector: month-to-date income/spending/net
-   (`insights__get_daily_financial_summary`) and active recurring items
-   (`transactions__list_recurring_charges`), plus the draft budget table from
-   `haven/vault/10-Personal/Money/2026-07-11-personal-finance-dashboard-project.md`
-   (render its confirmed figures and its TBD blockers as-is — never invent a number;
-   link each TBD to the thread/decision that blocks it). Money-relevant events this
-   week (e.g. a payment due) link to their calendar event. If the Era connector is
-   absent in this environment, render the ⚠️ chip and the Haven budget alone. Money
-   renders read-only — Pulse never advises, moves, or projects money.
+5. **Money.** A ~3-line summary + a link-out to the **Money Hub** artifact (URL in
+   anchors' "Money Hub" section), which owns the full picture. The three lines, from
+   the ledger `haven/vault/10-Personal/Money/money-hub-ledger.md` + Era Context:
+   cash position (Era balances; ⚠️ chip if unreachable), the next dated bill or
+   installment due, and this week's income vs the target from the ledger's config
+   (sum this week's `income-log-2026.md` entries) — never invent a number; an unknown
+   renders as its open question. Money renders read-only — Pulse never advises,
+   moves, or projects money; detail, plans, and the weekly split live in the Money
+   Hub page.
 6. **Today's workout.** Source of truth: `haven/vault/10-Personal/Health/
    2026-07-07-basketball-fitness-plan.md` (12 weeks from Mon 2026-07-07; Phase 1 =
    weeks 1–4 Foundation, Phase 2 = weeks 5–9 Conditioning, Phase 3 = weeks 10–12
