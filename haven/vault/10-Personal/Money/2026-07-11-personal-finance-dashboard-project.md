@@ -1,9 +1,9 @@
 ---
 created: 2026-07-11T09:37:00-04:00
-updated: 2026-07-28T14:30:00-04:00
+updated: 2026-08-05T07:47:00-04:00
 domain: personal
 type: task
-status: active
+status: done
 tags: [personal-finance, budget, dashboard]
 source: slack
 area: money
@@ -488,6 +488,24 @@ $25/mo", 27th of the month (RRULE FREQ=MONTHLY;BYMONTHDAY=27), starting 2026-08-
 No #decisions card needed — Lemar directly answered Samira's own clarifying question in
 the source thread, a data correction rather than an either/or choice. Outcome logged via
 samira-report-result; #reports line posted this scan.
+
+## Update 2026-08-05T07:47:00-04:00 — project complete: superseded by the Money Hub ledger
+
+This project note's job is done. Everything live in it — the bill lines, the locked
+Option 3 allocation logic (floor from p1/p2/p4, waterfall p5 → p6 → p7 after the
+2026-07-24 removal of p3 to a business-side deal), the pocket mapping, the four
+calendar reminder event ids, and every still-open question — has been carried into the
+new structured source of truth:
+
+**[[money-hub-ledger]]** (`haven/vault/10-Personal/Money/money-hub-ledger.md`), worked
+by the new **money-hub** skill (`.claude/skills/money-hub/SKILL.md`): earnings + cash
+reporting, bill posting (text or photo), payment plans with per-installment calendar
+reminders, the on-demand "run my week" split, and the Money Hub dashboard artifact.
+Earnings land in `income-log-2026.md`. #personal-finance money drops are swept by
+Samira's PART M.
+
+Status flipped to `done`. This note stays as the full history and provenance record;
+nothing here should be edited again.
 
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783773809.408719 (2026-07-11 08:43 ET)
