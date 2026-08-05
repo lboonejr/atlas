@@ -1,6 +1,6 @@
 ---
 created: 2026-08-04T10:32:00-04:00
-updated: 2026-08-05T09:11:00-04:00
+updated: 2026-08-05T12:04:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -38,8 +38,23 @@ closed/de-energized location rather than a new emergency — not
 re-escalating to #decisions. Labeled `Samira/seen` in Gmail; nothing further
 done.
 
+## Update 2026-08-05 (~11:16 ET) — Back Door left open alert
+Automated ADT system alert (notifications@adtcontrol.com, gmail message
+`19fd27fb5f2f7869`, 2026-08-05 15:16 UTC): "The Back Door was left open at
+11:16 am." No content beyond the timestamp and an opt-out prompt ("Would
+you like to receive this notification again?") — not opened, same class of
+locked portal Samira doesn't log into. This lands within the same window as
+today's Cuzzie's data-room buyer walkthrough (Jason Klein/Cann.Dev thread,
+buyer on-site ~9:32–11:13 ET per Lemar's own emails) — read as the door
+being propped for that visit rather than a fresh break-in/security event.
+Consistent with the standing 7/12 decision to let ADT service lapse on this
+closed/de-energized location; not escalating to #decisions. Labeled
+`Samira/seen` in Gmail; nothing further done.
+
 ## Sources
 - gmail: thread `19fcd15705cbbf87` — "Important Account Update: ADT Rate
   Change Notice" (adt@t.adt.com), 2026-08-04
 - gmail: message `19fd207346b5cef2` — ADT Power Failure system alert,
   2026-08-05 09:05 ET
+- gmail: message `19fd27fb5f2f7869` — ADT Back Door left open alert,
+  2026-08-05 11:16 ET
