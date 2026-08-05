@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T12:00:00-04:00
-updated: 2026-08-04T10:32:00-04:00
+updated: 2026-08-05T09:11:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -83,7 +83,25 @@ directly demanding one. No payment made or scheduled (outward-facing,
 requires Lemar's sign-off), no reply sent yet — options posted for Lemar's
 pick.
 
+## Update 2026-08-05 (~08:31 ET) — 2 more returned items, $692.20, no new figure
+Christopher Cabezas emailed again (2026-08-05 12:31 UTC, gmail thread
+`19fd1e8808a43ee3` cc mhallworth@parkebank.com, subject "secure: Cuzzie's
+Returned Items"): 2 more items presented for payment were returned this
+morning —
+- External Withdrawal $412.20 — Elevate Funding
+- External Withdrawal $280.00 — NovusCapital II
+
+Total returned this round: $692.20 — same two line items/amounts as the
+7/29 (3) round. No new dollar figure or consequence beyond what's already
+open: the 8/4 lockout card (#decisions ts `1785853982.850109`) and the 7/30
+card are both still unreacted as of this scan's PART A pass. Posting a
+fresh parent would just pile onto already-unanswered threads, matching the
+7/31 precedent above — logged here only, no new #decisions card. Labeled
+`Samira/seen` in Gmail; nothing paid, no reply sent.
+
 ## Sources
+- gmail: thread 19fd1e8808a43ee3 (2026-08-05 12:31 UTC, 2 more returned
+  items $692.20, no new figure)
 - gmail: thread 19fbd91191b09536 (Parke Bank returned items notice + $1,495.40
   fee assessment + $2,611.03 overdrawn balance, 8/1)
 - vault: `50-Reference/Entities/parke-bank.md`
