@@ -1,6 +1,6 @@
 ---
 created: 2026-08-02T16:00-04:00
-updated: 2026-08-03T08:25-04:00
+updated: 2026-08-05T12:04:00-04:00
 domain: cuzzies
 type: log
 status: active
@@ -39,11 +39,26 @@ verbatim from the thread, not a new commitment.
 **Need from Lemar:** nothing urgent — this is a quiet broker relationship awaiting
 Jason's response. Optional: a light re-nudge to Jason if Lemar wants to keep it warm.
 
+## Update 2026-08-05 (~11:15 ET) — buyer walkthrough happened, entirely self-managed
+Same-day thread (gmail thread `19fd21e1a4c94ecd`, subject "Re: Following up — Cuzzie's
+data room", cc dontebronaugh@gmail.com) shows Jason coordinated an in-person buyer
+walkthrough of the Camden space today: Lemar gave Jason a heads-up that the power is
+currently off at the space (13:32 ET) so it wouldn't surprise the buyer; Jason relayed
+the buyer was running ~10 minutes late (14:50 ET) and then confirmed they arrived
+(15:13 ET). All replies sent directly by Lemar (`lemar@cuzziesnj.com`) — nothing
+drafted or sent by Samira. No new dollar figure or terms in this thread; first
+concrete sign of Jason's discreet listing producing an actual site visit since the
+2026-07-07 quiet-relationship note above. Labeled `Samira/seen` in Gmail.
+
+**Need from Lemar:** nothing — informational. Worth asking Jason for buyer feedback
+post-walkthrough if/when Lemar wants to.
+
 ## Sources
 - gmail: thread `19eda7545ffe62f0` (Lemar → jason@cann.dev, NDA confirmation + license/
   price clarification + data room link, 2026-06-18/19)
 - gmail: thread `19f19d3bff0241cf` (follow-ups 2026-06-30 and 2026-07-07, no reply on
   file)
+- gmail: thread `19fd21e1a4c94ecd` (buyer walkthrough coordination, 2026-08-05)
 - drive: https://drive.google.com/drive/folders/1DHm0MXPAfqvE2ewBXyO4IX-tKAENulSk
   ("Jason Klein — Data Room" folder, created 2026-07-10)
 - haven: `haven/vault/40-Projects/investor-pipeline/index.md` row "Jason Klein
