@@ -1,6 +1,6 @@
 ---
 created: 2026-08-04T10:32:00-04:00
-updated: 2026-08-05T12:04:00-04:00
+updated: 2026-08-05T15:05:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -51,6 +51,16 @@ Consistent with the standing 7/12 decision to let ADT service lapse on this
 closed/de-energized location; not escalating to #decisions. Labeled
 `Samira/seen` in Gmail; nothing further done.
 
+## Update 2026-08-05 (~14:13 ET) — Low Battery alert on Partition 1
+Automated ADT system alert (notifications@adtcontrol.com, gmail message
+`19fd3218844ea194`, 2026-08-05 18:13 UTC): "The Partition 1 reported a low
+battery at 2:13 pm." No content beyond the timestamp — same automated-alert
+class as the two above, not opened. Consistent with the standing 7/12
+decision to let ADT service lapse on this closed/de-energized location; a
+low battery on an unmonitored/lapsing panel is expected drift, not a new
+emergency. Not escalating to #decisions. Labeled `Samira/seen` in Gmail;
+nothing further done.
+
 ## Sources
 - gmail: thread `19fcd15705cbbf87` — "Important Account Update: ADT Rate
   Change Notice" (adt@t.adt.com), 2026-08-04
@@ -58,3 +68,5 @@ closed/de-energized location; not escalating to #decisions. Labeled
   2026-08-05 09:05 ET
 - gmail: message `19fd27fb5f2f7869` — ADT Back Door left open alert,
   2026-08-05 11:16 ET
+- gmail: message `19fd3218844ea194` — ADT Low Battery (Partition 1) alert,
+  2026-08-05 14:13 ET
