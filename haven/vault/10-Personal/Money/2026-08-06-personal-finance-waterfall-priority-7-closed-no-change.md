@@ -6,6 +6,7 @@ type: log
 status: done
 tags: [money-hub, waterfall, decision-outcome]
 source: claude
+area: money
 ---
 
 # Personal-finance waterfall — Priority 7 (savings) closed, no change
