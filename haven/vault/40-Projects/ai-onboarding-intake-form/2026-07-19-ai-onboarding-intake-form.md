@@ -1,6 +1,6 @@
 ---
 created: 2026-07-19T18:14-04:00
-updated: 2026-07-20T12:00:00-04:00
+updated: 2026-08-06T14:00-04:00
 domain: project
 type: brief
 status: awaiting-decision
@@ -49,8 +49,16 @@ time to build each intake, Jotform/connector limits, or something else?
 Awaiting Lemar's answer to Q2/Q3 in #stormy. Remaining points (Sections C through H,
 Q4–Q15) not yet asked.
 
+## Update 2026-08-06
+Bake had sat untouched since 7/17, past the 14-day mark, so Stormy posted a check-in in
+#stormy (ts `1785586607.101759`) asking whether to resume (answer Q2/Q3), park, or kill.
+No reply yet as of this scan — no new #stormy activity since that check-in, so this scan
+is idle on this project. Status stays `awaiting-decision`; will pick up the next answer,
+or re-raise the resume/park/kill choice if it keeps sitting, on a future scan.
+
 ## Sources
 - slack: #stormy seed message, ts `1784318958.144999` (channel C0BJ37SU1TL)
 - slack: #stormy Q1 prompt, ts `1784319080.586059`
 - slack: #stormy Q1 answer (thread reply), ts `1784320495.581389`
 - slack: #stormy Q2/Q3 prompt, ts `1784323007.567499`
+- slack: #stormy 14-day check-in nudge, ts `1785586607.101759`
