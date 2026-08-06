@@ -1,12 +1,13 @@
 ---
 created: 2026-08-06T14:10:00-04:00
-updated: 2026-08-06T14:10:00-04:00
+updated: 2026-08-06T15:06:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [google-play, compliance, developer-account]
 due: 2026-09-16
 source: gmail
+calendar_event_id: d1shh92gqe98ngjiaku2krg4og
 ---
 
 # Google Play — register apps/signing keys by 2026-09-30
