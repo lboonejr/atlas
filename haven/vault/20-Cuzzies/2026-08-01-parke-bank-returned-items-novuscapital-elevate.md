@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T12:00:00-04:00
-updated: 2026-08-05T09:11:00-04:00
+updated: 2026-08-06T10:15:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -99,7 +99,22 @@ fresh parent would just pile onto already-unanswered threads, matching the
 7/31 precedent above — logged here only, no new #decisions card. Labeled
 `Samira/seen` in Gmail; nothing paid, no reply sent.
 
+## Update 2026-08-06 (~10:15 ET) — 1 more returned item, $100.00, no new figure
+Meggan Hallworth (Assistant Branch Manager, Parke Bank) emailed 2026-08-06
+13:45 UTC (gmail thread `19fd75298cf8226a`, cc ccabezas@parkebank.com,
+subject "Secure: Cuzzie's Returned Items") that one more item is being
+returned this morning:
+- External Withdrawal — $100.00 : NovusCapital II
+
+Same recurring pattern, no new dollar figure or consequence beyond what's
+already open (the 8/4 lockout card, ts `1785853982.850109`, is still open
+in #decisions with no Lemar reaction as of this scan). Not reposting —
+matches the standing judgment call used for every routine return in this
+saga. Nothing paid, no reply sent. Labeled `Samira/seen` in Gmail.
+
 ## Sources
+- gmail: thread 19fd75298cf8226a (2026-08-06 13:45 UTC, 1 more returned item
+  $100.00 NovusCapital II, no new figure)
 - gmail: thread 19fd1e8808a43ee3 (2026-08-05 12:31 UTC, 2 more returned
   items $692.20, no new figure)
 - gmail: thread 19fbd91191b09536 (Parke Bank returned items notice + $1,495.40
