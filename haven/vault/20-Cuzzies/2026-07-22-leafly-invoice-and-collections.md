@@ -1,6 +1,6 @@
 ---
 created: 2026-07-22T10:10:17-04:00
-updated: 2026-08-05T17:50:00-04:00
+updated: 2026-08-07T13:45-04:00
 domain: cuzzies
 type: task
 status: active
@@ -148,6 +148,14 @@ drafting a new reply and not posting a new #decisions card (no new/changed balan
 doesn't meet the escalation bar this note has used throughout). Labeled `Samira/seen`
 on the thread. No reply sent, no payment made.
 
+## Update 2026-08-07 (~13:45 ET) — cancellation-form #decisions card formally closed
+The #decisions card asking Lemar to submit Leafly's cancellation form (ts
+`1785788625.241099`) — reconfirmed 🫡-only this pass — was already superseded by the
+2026-08-03 direct reply and confirmed cancellation (case #00159743) recorded above.
+Per PART A's 🫡 rule, the Slack parent has been edited to begin "✅ CLOSED — [outcome]"
+and dropped from the queue. No new action; the standing dunning-notice saga (case
+#00160234, $1,002.60) continues to be tracked separately above.
+
 ## Sources
 - gmail: thread `19fd3e48e947c061` (2026-08-05 ~17:46 ET, case #00160234, "Pay Today"
   collections notice, $1,002.60, no new figure)
@@ -176,3 +184,5 @@ on the thread. No reply sent, no payment made.
   figure)
 - gmail: thread `19fd3e48e947c061` (2026-08-05 ~17:46 ET, case #00160234, "Pay Today"
   collections notice, $1,002.60, no new figure)
+- slack: #decisions (C0BBXA96FFV), card ts `1785788625.241099`, Lemar's 🫡 —
+  formally closed 2026-08-07 (cancellation-form card, already superseded)
