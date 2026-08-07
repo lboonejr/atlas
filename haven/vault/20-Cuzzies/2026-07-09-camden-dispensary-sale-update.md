@@ -1,6 +1,6 @@
 ---
 created: 2026-07-09T09:00:00-04:00
-updated: 2026-08-03T16:16-04:00
+updated: 2026-08-07T10:15-04:00
 domain: cuzzies
 type: task
 status: active
@@ -41,8 +41,19 @@ Lemar handled the tour reply himself, directly by email (confirmed via #decision
 8/6. No draft needed — the reply is already sent, not staged. Still awaiting the written
 offer expected Tuesday 8/4.
 
+## Update — 2026-08-07
+The buyer's tour happened 2026-08-05 (coordinated directly between Lemar and Jason in a
+separate thread, "Re: Following up — Cuzzie's data room" — power was off at the space,
+Lemar flagged that ahead of time so it wasn't a surprise; buyer confirmed on-site 15:13
+ET). Jason followed up 2026-08-06 20:52 ET: "what was the feedback from your side on the
+tour yesterday?" — unanswered as of this scan. No written offer has arrived yet either
+(originally expected "Tuesday," now several days past). Reply-worthy; Samira doesn't
+have Lemar's actual read on how the tour went, so draft options posted to #decisions are
+generic placeholders for him to fill in or override, not real feedback content.
+
 ## Sources
 - gmail: thread 19f19d3bff0241cf ("Re: Camden dispensary for sale")
 - gmail: thread 19eda7545ffe62f0, msg 19fbe7fe0b027a9c (2026-08-01 18:04 UTC — Jason Klein, written offer + tour request)
 - gmail: thread 19eda7545ffe62f0, msg sent 2026-08-01 18:25 ET (Lemar's own reply on the tour)
+- gmail: thread 19fd21e1a4c94ecd ("Re: Following up — Cuzzie's data room") — tour-day coordination + 8/6 feedback ask (msg `19fd8d9649154ba3`)
 - slack: #decisions thread ts 1785608654.232229
