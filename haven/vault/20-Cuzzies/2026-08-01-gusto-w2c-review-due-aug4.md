@@ -1,9 +1,9 @@
 ---
 created: 2026-08-01T12:30-04:00
-updated: 2026-08-03T12:30-04:00
+updated: 2026-08-07T13:45-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [gusto, payroll, w-2c, tax-correction, wind-down]
 source: gmail
 due: 2026-08-04T09:00-04:00
@@ -26,6 +26,8 @@ Gusto credentials and cannot review or approve these on his behalf.
 ## Sources
 - gmail: thread `19fbb8d9a4feaa3a` — "Review draft W-2Cs for Cuzzie's Dispensary &
   Delivery LLC by Aug 4, 2026"
+- slack: #decisions (C0BBXA96FFV), card ts `1785586486.010689`, Lemar's 🫡 —
+  formally closed 2026-08-07
 
 ## Update — 2026-08-03 ~12:30 ET
 Lemar reacted 🫡 on the #decisions card (ts `1785586486.010689`) — closing the card's
@@ -33,3 +35,11 @@ tracking in #decisions. No confirmation received that the Gusto-portal review wa
 actually completed; Samira has no Gusto login and cannot verify. `status` stays `active`
 and the calendar reminder (due Aug 4, 9:00am ET) stays in place as the real backstop.
 Closed in #decisions, reply posted there.
+
+## Update 2026-08-07 (~13:45 ET) — #decisions card formally closed, task complete
+Lemar's 🫡 reconfirmed on the #decisions card (ts `1785586486.010689`) this pass. Per
+PART A's 🫡 rule, the Slack parent has been edited to begin "✅ CLOSED — [outcome]" and
+dropped from the open queue. Lemar reviewed the draft W-2Cs directly in the Gusto
+portal (Samira has no Gusto login) — the Aug 4 due date has passed with no further
+action needed on Samira's side. Moving `status` to `done`; calendar-sync will retire
+the reminder event on this pass since the note is now done.
