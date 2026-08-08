@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T12:00:00-04:00
-updated: 2026-08-06T10:15:00-04:00
+updated: 2026-08-08T09:15-04:00
 domain: cuzzies
 type: task
 status: active
@@ -37,8 +37,8 @@ information Lemar hasn't seen yet. Posting a fresh #decisions parent with
 draft reply options, distinct from the earlier "not reposting" call above
 (which was about the routine $285 in returns, not this fee).
 
-No payment made or scheduled, no reply sent yet — options posted for Lemar's
-pick.
+No payment made or scheduled (outward-facing, requires Lemar's sign-off), no
+reply sent yet — options posted for Lemar's pick.
 
 ## Update 2026-08-02 (~08:15 ET) — routine eStatement-ready ping, no new figure
 An automated, no-reply "Statement Notification" landed (gmail thread
@@ -112,6 +112,20 @@ in #decisions with no Lemar reaction as of this scan). Not reposting —
 matches the standing judgment call used for every routine return in this
 saga. Nothing paid, no reply sent. Labeled `Samira/seen` in Gmail.
 
+## Update 2026-08-08 (~09:15 ET) — 2 more returned items, $105.00, no new figure
+Meggan Hallworth (Assistant Branch Manager, Parke Bank) emailed 2026-08-08
+12:57 UTC (gmail thread `19fe172e0974abbc`, cc ccabezas@parkebank.com,
+subject "Secure: Cuzzie's Returned Items") that two more items are being
+returned Monday morning (8/10):
+- External Withdrawal — $100.00 : NovusCapital II
+- External Withdrawal — $5.00 : Elevate Funding Payment
+
+Same recurring pattern, no new dollar figure or consequence beyond what's
+already open (8/4 lockout card, ts `1785853982.850109`, remains the live
+escalation). Not reposting — matches the standing judgment call used for
+every routine return in this saga. Nothing paid, no reply sent. Labeled
+`Samira/seen` in Gmail.
+
 ## Sources
 - gmail: thread 19fd75298cf8226a (2026-08-06 13:45 UTC, 1 more returned item
   $100.00 NovusCapital II, no new figure)
@@ -130,3 +144,5 @@ saga. Nothing paid, no reply sent. Labeled `Samira/seen` in Gmail.
   account, $2,611.03 overdrawn)
 - slack: #decisions (C0BBXA96FFV) ts `1785853982.850109` — lockout card + 3
   draft reply options, posted 2026-08-04
+- gmail: thread 19fe172e0974abbc (2026-08-08 12:57 UTC, 2 more returned items
+  $105.00, no new figure)
