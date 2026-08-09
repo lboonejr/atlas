@@ -1,1 +1,51 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDgtMDhUMTE6MjAtMDQ6MDAKdXBkYXRlZDogMjAyNi0wOC0wOVQwODoxMi0wNDowMApkb21haW46IGN1enppZXMKdHlwZTogdGFzawpzdGF0dXM6IGRvbmUKdGFnczogW2NhbWRlbi1kaXNwZW5zYXJ5LXNhbGUsIGphc29uLWtsZWluLCBjYW5uLWRldiwgbGVhc2UsIG0tYW5kLWFdCnNvdXJjZTogZ21haWwKLS0tCgojIENhbWRlbiBkaXNwZW5zYXJ5IHNhbGUg4oCUIHRlcm1zIGV4cGVjdGVkIGFmdGVyIHRoZSB3ZWVrZW5kLCBmZWVkYmFjayBhbnN3ZXJlZCBieSBEb250ZQoKTmV3IG1lc3NhZ2VzIDIwMjYtMDgtMDYgaW4gdGhlIGV4aXN0aW5nICJGb2xsb3dpbmcgdXAg4oCUIEN1enppZSdzIGRhdGEgcm9vbSIgdGhyZWFkCihHbWFpbCB0aHJlYWQgYDE5ZmQyMWUxYTRjOTRlY2RgKSwgYm90aCBjYydpbmcgTGVtYXIgcmF0aGVyIHRoYW4gYWRkcmVzc2VkIHRvIGhpbQpkaXJlY3RseToKCi0gMjA6NTQgRVQg4oCUIERvbnRlIEJyb25hdWdoIChkb250ZWJyb25hdWdoQGdtYWlsLmNvbSkgdG9sZCBKYXNvbiBLbGVpbiAoTSZBLAogIENhbm4uRGV2KSB0aGUgdG91ciBmZWVkYmFjayAid2FzIHBvc2l0aXZlIGZyb20gbXkgdW5kZXJzdGFuZGluZyIgYW5kIGFza2VkCiAgd2hldGhlciB0aGUgYnV5ZXIgd2FudHMgdG8gbW92ZSBmb3J3YXJkIHdpdGggYW4gb2ZmZXIgYW5kIGEgbmV3IGxlYXNlLgotIDIwOjU2IEVUIOKAlCBKYXNvbiByZXBsaWVkIGhlIGJlbGlldmVzIHNvLCB0b3VjaGVkIGJhc2Ugd2l0aCB0aGUgYnV5ZXIsIGFuZCBleHBlY3RzCiAgdG8gaGVhciB0aGUgcHJvcG9zZWQgdGVybXMgYWZ0ZXIgdGhlIHdlZWtlbmQuCgpUaGlzIGVmZmVjdGl2ZWx5IGFuc3dlcnMgdGhlIHN0aWxsLW9wZW4gI2RlY2lzaW9ucyBjYXJkICh0cyBgMTc4NjExMTgwNS4yNTg4NTlgLAp1bnJlYWN0ZWQgYXMgb2YgdGhpcyBzY2FuLCBwbGFjZWhvbGRlciB0b3VyLWZlZWRiYWNrIG9wdGlvbnMpIHZpYSBhIHRoaXJkIHBhcnR5CnJhdGhlciB0aGFuIExlbWFyIGRpcmVjdGx5LiBOb3QgcmVwbHktd29ydGh5IG9uIGl0cyBvd24gKExlbWFyIG9ubHkgY2MnZCwgbm8gZGlyZWN0CnF1ZXN0aW9uIHRvIGhpbSksIHNvIG5vIG5ldyBkcmFmdCBvcHRpb25zIHN0YWdlZCBoZXJlLiBTdXJmYWNpbmcgYmVjYXVzZSBhCmxlYXNlL29mZmVyIHRlcm1zIHBhY2thZ2UgaXMgbGlrZWx5IGluYm91bmQgZWFybHkgbmV4dCB3ZWVrIGFuZCB3aWxsIG5lZWQgTGVtYXIncwpyZWFkIGFuZCBqdWRnbWVudCBvbmNlIGl0IGxhbmRzLgoKIyMgVXBkYXRlIDIwMjYtMDgtMDkgKFBBUlQgQSDigJQgY2xvc2VkIHZpYSDwn6uhKQoKTGVtYXIgcmVhY3RlZCDwn6uhIG9uIHRoZSAjZGVjaXNpb25zIGNhcmQgKHRocmVhZCBgMTc4NjIwNTgwOC45NTM1OTlgKSBhbmQgcmVwbGllZDoKIldlJ2xsIGtlZXAgYW4gZXllIG9uIHRoaXMgYW5kIGZpZ3VyZSBvdXQgaG93IHRvIGJ1ZGdldCBvdXQgdGhlIG1vbmV5IGZyb20gdGhlIHNhbGUKZm9yIHRoZSBhbHBoYSBidXR0b24gb24gdGhlIG9mZiBidXR0b24gb24gbW9uZGF5IGJvYXJkIiDigJQgaS5lLiBvbmNlIHRoZSBzYWxlCnByb2NlZWRzIGFyZSBrbm93biwgaGUgd2FudHMgdGhlbSBidWRnZXRlZCBhZ2FpbnN0IHRoZSBvbi1idXR0b24tcmVvcGVuIHBsYW4uCgoqKkNsb3NlZCoqIOKAlCBoZWFkcy11cCBhY2tub3dsZWRnZWQsIG5vIHJlcGx5IG5lZWRlZCB0byBKYXNvbi9Eb250ZSByaWdodCBub3cuIFN0aWxsCm9wZW4vdW5yZXNvbHZlZCAoY2FycmllZCBmb3J3YXJkLCBOT1QgY2xvc2VkIGJ5IHRoaXMgY2FyZCk6Ci0gVGhlIG9yaWdpbmFsIHRvdXItZmVlZGJhY2sgI2RlY2lzaW9ucyBjYXJkICh0cyBgMTc4NjExMTgwNS4yNTg4NTlgKSDigJQgbmV2ZXIKICByZWNlaXZlZCBpdHMgb3duIHJlYWN0aW9uLCBsZWZ0IGFzLWlzIHBlciB0aGUgcmVhY3Rpb24tb25seSBlbmdpbmUgZXZlbiB0aG91Z2gKICBpdCBub3cgcmVhZHMgYXMgc3VwZXJzZWRlZC4KLSBCdWRnZXRpbmcgdGhlIGV2ZW50dWFsIHNhbGUgcHJvY2VlZHMgaW50byB0aGUgb24tYnV0dG9uLXJlb3BlbiBwbGFuIOKAlCBubyB0ZXJtcwogIG9yIGRvbGxhciBmaWd1cmUgZXhpc3QgeWV0IChzdGlsbCBwZW5kaW5nIGZyb20gSmFzb24gImFmdGVyIHRoZSB3ZWVrZW5kIik7IHRoaXMKICBpcyBhIGZ1dHVyZSBQQVJUIEMvb24tYnV0dG9uLXBsYW4gYWN0aW9uIG9uY2UgcmVhbCBudW1iZXJzIGxhbmQsIG5vdCBzb21ldGhpbmcKICB0byBzdGFnZSBub3cuCgojIyBTb3VyY2VzCi0gZ21haWw6IHRocmVhZCBgMTlmZDIxZTFhNGM5NGVjZGAsIG1lc3NhZ2VzIGAxOWZkOGRhZDQxMjc4MmQ4YCAvIGAxOWZkOGRkN2U3MGQxNTY5YAogICgyMDI2LTA4LTA2KQotIHNsYWNrOiAjZGVjaXNpb25zIHRocmVhZCBgMTc4NjIwNTgwOC45NTM1OTlgIChjaGFubmVsIGBDMEJCWEE5NkZGVmApLCDwn6uhICsgcmVwbHkKICB0cyBgMTc4NjI0MTI5NS4yMTY3MDlgCg==
+---
+created: 2026-08-08T11:20-04:00
+updated: 2026-08-09T08:12-04:00
+domain: cuzzies
+type: task
+status: done
+tags: [camden-dispensary-sale, jason-klein, cann-dev, lease, m-and-a]
+source: gmail
+---
+
+# Camden dispensary sale — terms expected after the weekend, feedback answered by Donte
+
+New messages 2026-08-06 in the existing "Following up — Cuzzie's data room" thread
+(Gmail thread `19fd21e1a4c94ecd`), both cc'ing Lemar rather than addressed to him
+directly:
+
+- 20:54 ET — Donte Bronaugh (dontebronaugh@gmail.com) told Jason Klein (M&A,
+  Cann.Dev) the tour feedback "was positive from my understanding" and asked
+  whether the buyer wants to move forward with an offer and a new lease.
+- 20:56 ET — Jason replied he believes so, touched base with the buyer, and expects
+  to hear the proposed terms after the weekend.
+
+This effectively answers the still-open #decisions card (ts `1786111805.258859`,
+unreacted as of this scan, placeholder tour-feedback options) via a third party
+rather than Lemar directly. Not reply-worthy on its own (Lemar only cc'd, no direct
+question to him), so no new draft options staged here. Surfacing because a
+lease/offer terms package is likely inbound early next week and will need Lemar's
+read and judgment once it lands.
+
+## Update 2026-08-09 (PART A — closed via 🫡)
+
+Lemar reacted 🫡 on the #decisions card (thread `1786205808.953599`) and replied:
+"We'll keep an eye on this and figure out how to budget out the money from the sale
+for the alpha button on the off button on monday board" — i.e. once the sale
+proceeds are known, he wants them budgeted against the on-button-reopen plan.
+
+**Closed** — heads-up acknowledged, no reply needed to Jason/Donte right now. Still
+open/unresolved (carried forward, NOT closed by this card):
+- The original tour-feedback #decisions card (ts `1786111805.258859`) — never
+  received its own reaction, left as-is per the reaction-only engine even though
+  it now reads as superseded.
+- Budgeting the eventual sale proceeds into the on-button-reopen plan — no terms
+  or dollar figure exist yet (still pending from Jason "after the weekend"); this
+  is a future PART C/on-button-plan action once real numbers land, not something
+  to stage now.
+
+## Sources
+- gmail: thread `19fd21e1a4c94ecd`, messages `19fd8dad412782d8` / `19fd8dd7e70d1569`
+  (2026-08-06)
+- slack: #decisions thread `1786205808.953599` (channel `C0BBXA96FFV`), 🫡 + reply
+  ts `1786241295.216709`

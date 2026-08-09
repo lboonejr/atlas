@@ -1,1 +1,31 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDgtMDdUMDg6MDU6MDAtMDQ6MDAKdXBkYXRlZDogMjAyNi0wOC0wOVQwODowOC0wNDowMApkb21haW46IGN1enppZXMKdHlwZTogdGFzawpzdGF0dXM6IGF3YWl0aW5nLWRlY2lzaW9uCnRhZ3M6IFtndXN0bywgcGF5cm9sbF0Kc291cmNlOiBnbWFpbAotLS0KCiMgR3VzdG8g4oCUIHBheXJvbGwgZHVlIGluIDMgZGF5cyAoSnVsIDI2IOKAkyBBdWcgOCBwZXJpb2QsIGR1ZSB+QXVnIDEwKQoKR3VzdG8ncyBhdXRvbWF0ZWQgcmVtaW5kZXI6IHBheXJvbGwgZm9yIEN1enppZSdzIERpc3BlbnNhcnkgJiBEZWxpdmVyeSBMTEMgY292ZXJpbmcKSnVsIDI2LCAyMDI2IOKAkyBBdWcgOCwgMjAyNiBpcyBkdWUgaW4gMyBkYXlzICh+QXVnIDEwKS4gU2VudCB0byBhZG1pbkAsIGpvc2h1YUAsIGFuZApsZW1hckBjdXp6aWVzbmouY29tLgoKRmxhZ2dpbmcgd2l0aCBleHRyYSB3ZWlnaHQgZ2l2ZW4gdGhlIHN0YW5kaW5nIHBhdHRlcm4gdGhpcyBjeWNsZTogdGhlIHByaW9yIChKdWwgMTLigJMyNSkKb2ZmLWN5Y2xlIHBheXJvbGwgZ290IGNhbmNlbGVkIGFuZCBoYWQgdG8gYmUgcmUtcnVuIHNhbWUtZGF5ICg3LzI5KSwgYW5kIHRoZSBKdWwgMzEKZmluYWwgY2xvc2Utb3V0IGZvciBhbGwgOCBlbXBsb3llZXMgd2FzIHN0aWxsIG9wZW4vb3ZlcmR1ZSBhcyBvZiB0aGUgOC82IH40OjM1cG0gc2Nhbi4KTmVlZHMgTGVtYXIgZGlyZWN0bHkgaW4gYXBwLmd1c3RvLmNvbSDigJQgU2FtaXJhIGNhbm5vdCBydW4gcGF5cm9sbC4KCiMjIFVwZGF0ZSAyMDI2LTA4LTA5IDA4OjA4IEVUIOKAlCBmb2xsb3ctdXAgcmVtaW5kZXIsIG5vIG5ldyBmaWd1cmUKR3VzdG8gc2VudCBhIHNlY29uZCBhdXRvbWF0ZWQgcmVtaW5kZXIgKHRocmVhZCBgMTlmZTY1ZDdjYTRlNTQ5MmAsIDgvOSB+Nzo1MWFtIEVUKToKcGF5cm9sbCBkdWUgdG9tb3Jyb3cgKE1vbiBBdWcgMTApIGJ5IDc6MDBwbSBFRFQg4oCUIHNhbWUgZGVhZGxpbmUsIHNhbWUgSnVsIDI24oCTQXVnIDgKcGVyaW9kLCBubyBuZXcgYW1vdW50IG9yIGNoYW5nZS4gI2RlY2lzaW9ucyBjYXJkICh0cyBgMTc4NjEwNDYzMC41OTQzMzlgKSBzdGlsbAp1bnJlYWN0ZWQuIE5vdCByZS1lc2NhbGF0ZWQgYXMgYSBuZXcgaXRlbSDigJQgbG9nZ2VkIGFzIGEgcmVzdGF0ZW1lbnQgb2YgdGhlIHNhbWUKbWF0dGVyLgoKIyMgU291cmNlcwotIGdtYWlsOiB0aHJlYWQgYDE5ZmRjMGVjZGYxNGI5M2JgCi0gZ21haWw6IHRocmVhZCBgMTlmZTY1ZDdjYTRlNTQ5MmAgKDgvOSBmb2xsb3ctdXAgcmVtaW5kZXIpCg==
+---
+created: 2026-08-07T08:05:00-04:00
+updated: 2026-08-09T08:08-04:00
+domain: cuzzies
+type: task
+status: awaiting-decision
+tags: [gusto, payroll]
+source: gmail
+---
+
+# Gusto — payroll due in 3 days (Jul 26 – Aug 8 period, due ~Aug 10)
+
+Gusto's automated reminder: payroll for Cuzzie's Dispensary & Delivery LLC covering
+Jul 26, 2026 – Aug 8, 2026 is due in 3 days (~Aug 10). Sent to admin@, joshua@, and
+lemar@cuzziesnj.com.
+
+Flagging with extra weight given the standing pattern this cycle: the prior (Jul 12–25)
+off-cycle payroll got canceled and had to be re-run same-day (7/29), and the Jul 31
+final close-out for all 8 employees was still open/overdue as of the 8/6 ~4:35pm scan.
+Needs Lemar directly in app.gusto.com — Samira cannot run payroll.
+
+## Update 2026-08-09 08:08 ET — follow-up reminder, no new figure
+Gusto sent a second automated reminder (thread `19fe65d7ca4e5492`, 8/9 ~7:51am ET):
+payroll due tomorrow (Mon Aug 10) by 7:00pm EDT — same deadline, same Jul 26–Aug 8
+period, no new amount or change. #decisions card (ts `1786104630.594339`) still
+unreacted. Not re-escalated as a new item — logged as a restatement of the same
+matter.
+
+## Sources
+- gmail: thread `19fdc0ecdf14b93b`
+- gmail: thread `19fe65d7ca4e5492` (8/9 follow-up reminder)

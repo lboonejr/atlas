@@ -1,1 +1,70 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDgtMDhUMTE6MjAtMDQ6MDAKdXBkYXRlZDogMjAyNi0wOC0wOVQwODowOC0wNDowMApkb21haW46IGN1enppZXMKdHlwZTogdGFzawpzdGF0dXM6IGFjdGl2ZQp0YWdzOiBbbG91ZC1sYWJzLCBpbnZvaWNlLCBhY2NvdW50cy1wYXlhYmxlLCB3aW5kLWRvd24sIGZvbGxvdy11cCwgY29sbGVjdGlvbnNdCnNvdXJjZTogZ21haWwKLS0tCgojIExvdWQgTGFicyDigJQgcGF5bWVudCBzdGF0dXMgZm9sbG93LXVwLCBBYXJvbiBHcmVlbmUKCk5ldyBtZXNzYWdlIDIwMjYtMDgtMDcgfjEyOjI2cG0gRVQgKEdtYWlsIHRocmVhZCBgMTlmNGRhYTk1MTI3ZTg5Y2AsIG1lc3NhZ2UKYDE5ZmRkMGMyMTUyMjM5MjVgKSwgc2VudCBmcm9tIGFhcm9uQGxvdWRsYWJzLmNvIChEaXJlY3RvciBvZiBPcGVyYXRpb25zLCBMb3VkCkxhYnMpIHRvIGxlbWFyQGN1enppZXNuai5jb206ICJEbyB5b3UgaGF2ZSBhbiB1cGRhdGUgZm9yIG1lIG9uIHRoZSBjdXJyZW50CnNpdHVhdGlvbj8gQ2FuIHdlIGV4cGVjdCBwYXltZW50IHNvb24/IgoKU2FtZSB0aHJlYWQgYXMgdGhlIG9yaWdpbmFsIG92ZXJkdWUgaW52b2ljZSBKYWtlIEJlcnJ5IChDRU8pIHJhaXNlZCBvbiAyMDI2LTA3LTEwCihzZWUgYGhhdmVuL3ZhdWx0LzIwLUN1enppZXMvMjAyNi0wNy0xMC1sb3VkLWxhYnMtb3ZlcmR1ZS1pbnZvaWNlLm1kYCwgbWFya2VkIGRvbmUKYWZ0ZXIgTGVtYXIgcmVwbGllZCBkaXJlY3RseSBhbmQgZGlzY2xvc2VkIHRoZSB3aW5kLWRvd24gLyBubyBpbnZlbnRvcnkgaGVsZCAvIG5vCmZpcm0gdGltZWxpbmUpLiBUaGF0IG5vdGUgaXMgY2xvc2VkIGFuZCB1bnRvdWNoZWQgaGVyZTsgdGhpcyBpcyBhIG5ldyBjb250YWN0IGF0CnRoZSBzYW1lIHZlbmRvciByZW9wZW5pbmcgdGhlIHRocmVhZCBmaXZlIHdlZWtzIGxhdGVyLCBubyBuZXcgZG9sbGFyIGZpZ3VyZSBvcgpkZWFkbGluZSBzdGF0ZWQuCgpNYXRjaGVzIHRoZSBzdGFuZGluZyB3aW5kLWRvd24gaG9sZGluZy1yZXBseSBwYXR0ZXJuIGFscmVhZHkgdXNlZCB3aXRoIEJ1ZCdzCkdvb2RzLCBTdW4gRXh0cmFjdGlvbnMsIEFHQSwgRElNRSwgYW5kIFFDQyB0aGlzIGN5Y2xlOiBleHBsYWluIEN1enppZSdzIHJlbWFpbnMKaW4gYSB0ZW1wb3Jhcnkgb3BlcmF0aW9ucyBwYXVzZSwgbm8gZmlybSB0aW1lbGluZSB5ZXQsIHdpbGwgZm9sbG93IHVwLiBObyBwYXltZW50CmF1dGhvcml6ZWQgb3IgY29tbWl0dGVkOyB0aGF0IGRlY2lzaW9uIG5lZWRzIExlbWFyJ3Mgc3RlZXIuIFJlcGx5LXdvcnRoeSwgcm91dGVkIHRvCiNkZWNpc2lvbnMgd2l0aCAzIGRyYWZ0IG9wdGlvbnMgcmF0aGVyIHRoYW4gcmVwbHlpbmcgZGlyZWN0bHkuCgojIyBVcGRhdGUgMjAyNi0wOC0wOSAwODowOCBFVCDigJQgT3B0aW9uIEEgcGlja2VkIChlZGl0ZWQgd2FybWVyKSwgZHJhZnQgc2F2ZWQ7IG9uLWJ1dHRvbiBkcm9wIHN0YWdlZAoKTGVtYXIgcmVhY3RlZCDinIUgb24gT3B0aW9uIEEgaW4gdGhlICNkZWNpc2lvbnMgdGhyZWFkICh0cyBgMTc4NjIwNTgxMy4yNjYxNDlgKQphbmQgbGVmdCBhbiBpbi10aHJlYWQgaW5zdHJ1Y3Rpb24gKHRzIGAxNzg2MjQxMzg0LjMwNTA3OWApOiAiTGV0J3MgZ28gd2l0aApvcHRpb24gQS4gSnVzdCBtYWtlIGl0IHNvdW5kIGEgbGl0dGxlIGJpdCBuaWNlciBiZWZvcmUgeW91IHNhdmUgaXQgdG8gZHJhZnRzIGFuZAptYWtlIHN1cmUgdGhhdCB5b3UgYWRkIHRoZSBMb3VkIExhYnMgZW50cnkgdG8gdGhlIG9uLWJ1dHRvbiBNb25kYXkgYm9hcmQgd2l0aAphbGwgYXBwcm9wcmlhdGUgaW5mb3JtYXRpb24iLgoKTWVyZ2VkIHRoZSBwaWNrICsgZWRpdCBpbnRvIGEgd2FybWVyIHJlcGx5IGluIExlbWFyJ3Mgdm9pY2UsIHBhc3NlZCB0aGUgSGFyZC0KRmxvb3IgTGludCwgYW5kIHNhdmVkIGl0IHRvIEdtYWlsIERyYWZ0cyAobm90IHNlbnQpOgoKPiBIaSBBYXJvbiwKPgo+IFRoYW5rcyBzbyBtdWNoIGZvciBjaGVja2luZyBiYWNrIGluLCBhbmQgdGhhbmsgeW91IGZvciBoYW5naW5nIGluIHRoZXJlIHdpdGgKPiB1cyB0aHJvdWdoIHRoaXMuIFdlJ3JlIHN0aWxsIGluIGEgdGVtcG9yYXJ5IHBhdXNlIG9uIG9wZXJhdGlvbnMsIGFuZCB3ZSdyZQo+IHdvcmtpbmcgdGhyb3VnaCBldmVyeXRoaW5nIGFzIHF1aWNrbHkgYXMgd2UgY2FuIG9uIG91ciBlbmQuCj4KPiBJIGRvbid0IGhhdmUgYSBmaXJtIHRpbWVsaW5lIHRvIGdpdmUgeW91IGp1c3QgeWV0LCBidXQgaXQgaGFzbid0IGJlZW4KPiBmb3Jnb3R0ZW4sIEknbGwgZm9sbG93IHVwIGFzIHNvb24gYXMgdGhlcmUncyBzb21ldGhpbmcgY29uY3JldGUgdG8gc2hhcmUuCj4gUmVhbGx5IGFwcHJlY2lhdGUgeW91ciBwYXRpZW5jZSB3aXRoIHVzLgo+Cj4gQmVzdCwKPiBMZW1hcgoKR21haWwgZHJhZnQgYHItODE3MTQ3MDQ2MDk5NTIzNDQ2N2AsIHRocmVhZGVkIG9udG8gbWVzc2FnZSBgMTlmZGQwYzIxNTIyMzkyNWAsCnRvIGFhcm9uQGxvdWRsYWJzLmNvLiBUaHJlYWQgbGFiZWxlZCBgU2FtaXJhL2RyYWZ0ZWRgLiBDYXJkIHN0YXlzIG9wZW4gaW4KI2RlY2lzaW9ucyAodHMgYDE3ODYyMDU4MDUuNTE5OTY5YCkgYXdhaXRpbmcgTGVtYXIncyBzZW5kICsg8J+roSB0byBjbG9zZS4KClNlY29uZCBwYXJ0IG9mIGhpcyBpbnN0cnVjdGlvbiDigJQgYWRkIExvdWQgTGFicyB0byB0aGUgb24tYnV0dG9uIHJlb3Blbgp0cmFja2luZyDigJQgaXMgb3V0IG9mIHRoaXMgc2tpbGwncyBzY29wZSAobm8gbGl0ZXJhbCAiTW9uZGF5IGJvYXJkIiBleGlzdHMgZm9yCm9uLWJ1dHRvbjsgcGVyIGFuY2hvcnMgaXQncyB0aGUgdmF1bHQgaW5kZXggKyByZW5kZXJlZCBwYWdlICsgY2FudmFzKS4gUG9zdGVkCmFzIGEgZHJvcCB0byAjb24tYnV0dG9uIGZvciB0aGUgb24tYnV0dG9uLXBsYW4gc2tpbGwgdG8gaW5nZXN0IG9uIGl0cyBuZXh0IHBhc3MKKG5vIGRvbGxhciBmaWd1cmUgc3RhdGVkIGluIGVpdGhlciBlbWFpbCAtIGZsYWdnZWQgVEJELCBub3QgZ3Vlc3NlZCkuIE5vdGhpbmcKcGFpZCBvciBjb250YWN0ZWQgYmV5b25kIHRoZSBzYXZlZCBkcmFmdC4KCiMjIFNvdXJjZXMKLSBnbWFpbDogdGhyZWFkIGAxOWY0ZGFhOTUxMjdlODljYCwgbWVzc2FnZSBgMTlmZGQwYzIxNTIyMzkyNWAgKEFhcm9uIEdyZWVuZSwgTG91ZAogIExhYnMsIDIwMjYtMDgtMDcpCi0gc2xhY2s6ICNkZWNpc2lvbnMsIExlbWFyJ3MgcGljayArIGVkaXQgaW5zdHJ1Y3Rpb24sIHRzIGAxNzg2MjQxMzg0LjMwNTA3OWAKICAoMjAyNi0wOC0wOSkK
+---
+created: 2026-08-08T11:20-04:00
+updated: 2026-08-09T08:08-04:00
+domain: cuzzies
+type: task
+status: active
+tags: [loud-labs, invoice, accounts-payable, wind-down, follow-up, collections]
+source: gmail
+---
+
+# Loud Labs — payment status follow-up, Aaron Greene
+
+New message 2026-08-07 ~12:26pm ET (Gmail thread `19f4daa95127e89c`, message
+`19fdd0c215223925`), sent from aaron@loudlabs.co (Director of Operations, Loud
+Labs) to lemar@cuzziesnj.com: "Do you have an update for me on the current
+situation? Can we expect payment soon?"
+
+Same thread as the original overdue invoice Jake Berry (CEO) raised on 2026-07-10
+(see `haven/vault/20-Cuzzies/2026-07-10-loud-labs-overdue-invoice.md`, marked done
+after Lemar replied directly and disclosed the wind-down / no inventory held / no
+firm timeline). That note is closed and untouched here; this is a new contact at
+the same vendor reopening the thread five weeks later, no new dollar figure or
+deadline stated.
+
+Matches the standing wind-down holding-reply pattern already used with Bud's
+Goods, Sun Extractions, AGA, DIME, and QCC this cycle: explain Cuzzie's remains
+in a temporary operations pause, no firm timeline yet, will follow up. No payment
+authorized or committed; that decision needs Lemar's steer. Reply-worthy, routed to
+#decisions with 3 draft options rather than replying directly.
+
+## Update 2026-08-09 08:08 ET — Option A picked (edited warmer), draft saved; on-button drop staged
+
+Lemar reacted ✅ on Option A in the #decisions thread (ts `1786205813.266149`)
+and left an in-thread instruction (ts `1786241384.305079`): "Let's go with
+option A. Just make it sound a little bit nicer before you save it to drafts and
+make sure that you add the Loud Labs entry to the on-button Monday board with
+all appropriate information".
+
+Merged the pick + edit into a warmer reply in Lemar's voice, passed the Hard-
+Floor Lint, and saved it to Gmail Drafts (not sent):
+
+> Hi Aaron,
+>
+> Thanks so much for checking back in, and thank you for hanging in there with
+> us through this. We're still in a temporary pause on operations, and we're
+> working through everything as quickly as we can on our end.
+>
+> I don't have a firm timeline to give you just yet, but it hasn't been
+> forgotten, I'll follow up as soon as there's something concrete to share.
+> Really appreciate your patience with us.
+>
+> Best,
+> Lemar
+
+Gmail draft `r-8171470460995234467`, threaded onto message `19fdd0c215223925`,
+to aaron@loudlabs.co. Thread labeled `Samira/drafted`. Card stays open in
+#decisions (ts `1786205805.519969`) awaiting Lemar's send + 🫡 to close.
+
+Second part of his instruction — add Loud Labs to the on-button reopen
+tracking — is out of this skill's scope (no literal "Monday board" exists for
+on-button; per anchors it's the vault index + rendered page + canvas). Posted
+as a drop to #on-button for the on-button-plan skill to ingest on its next pass
+(no dollar figure stated in either email - flagged TBD, not guessed). Nothing
+paid or contacted beyond the saved draft.
+
+## Sources
+- gmail: thread `19f4daa95127e89c`, message `19fdd0c215223925` (Aaron Greene, Loud
+  Labs, 2026-08-07)
+- slack: #decisions, Lemar's pick + edit instruction, ts `1786241384.305079`
+  (2026-08-09)
