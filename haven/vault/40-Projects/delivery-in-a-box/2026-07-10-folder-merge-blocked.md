@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T17:05-04:00
-updated: 2026-07-20T20:15-04:00
+updated: 2026-08-09T11:30:00-04:00
 domain: project
 type: note
 status: active
@@ -249,3 +249,23 @@ before any doc is actually restyled - nothing applied to the docs yet.
 
 Source: #admin ts 1784575409.352109 (staged prompt) - Slack #delivery-in-a-box
 ts 1784574646.504269 (Lemar's ask) / ts 1784581998.727349 (prompt posted).
+
+## Update 2026-08-09 (PART C) - visual-theme application attempted, blocked on tooling
+
+Ran the staged `run:admin-3x` prompt `task:20260809_dib-template-theme-apply`
+(#admin ts `1786281763.061569`). The theme decision itself is closed (Option 1,
+Secure Logistics — see `haven/vault/00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md`),
+but this session has no tool that can format an *existing* Google Doc in place
+(add colored headers, table styling, callout boxes) while preserving its current
+text/structure. The available design tooling (Adobe-for-creativity) produces new
+assets/exports, not in-place edits to a live Google Doc, and no Google Docs
+formatting connector is available. Per the staged prompt's own instruction
+("if no tool this pass can actually write/format Google Docs, say so plainly and
+leave it staged rather than guessing at a workaround"), this is left staged/
+un-reacted in #admin rather than faked. Posted the blocker to
+#delivery-in-a-box (ts `1786288737.145129`). All three docs remain unchanged
+(plain text/tables) — nothing lost, nothing rewritten.
+
+**Next step:** needs either a Claude session with Google Docs write access, or
+Lemar applying the already-posted ready-to-paste design prompt himself via
+Claude-Design/Docs directly.
