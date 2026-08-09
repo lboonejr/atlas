@@ -1,6 +1,6 @@
 ---
 created: 2026-08-09T08:11:00-04:00
-updated: 2026-08-09T09:45:00-04:00
+updated: 2026-08-09T11:20:00-04:00
 domain: personal
 type: task
 status: active
@@ -106,7 +106,7 @@ or recreated):
 - `kce9ibkh596d6srmk0fupd03dc` — "Haven: Gusto Final Payroll Deadline — Complete
   Employee Close-Out (all 8 employees)" (7/31) — payroll-adjacent but phrased as an
   administrative deadline, not an explicit payment amount/due statement.
-- `o6tdpp801lmchgtfhvcqu83c` — "Haven: Liquidibee — forbearance ends 8/1, ACH
+- `o6tdpp801lmhcgtfhvcqu8q83c` — "Haven: Liquidibee — forbearance ends 8/1, ACH
   payments resume" (8/15) — signals recurring ACH debits resuming rather than a single
   bill/expense payment with an amount.
 - `joj8fqaktfuj8v0n4gvsgl08ps` — "Haven: TBT Barter — monthly statement arrived
@@ -149,3 +149,21 @@ cross-reference).
 - `.claude/skills/money-hub/SKILL.md` (CALENDAR + DAILY CALENDAR sections, for the
 lead-time gap finding).
 - Staged prompt: #admin `C0BBLUA7JLX` ts `1786277488.682039`.
+
+## Update 2026-08-09 (PART A — resolved the 3 ambiguous events)
+
+Lemar replied in-thread (#decisions ts `1786282518.816339`, reply ts
+`1786286113.537439`): wants a 7-day popup on Liquidibee, confirmed the Gusto Final
+Payroll Deadline is "purely administrative" (leave as-is, no popup), and will check
+the TBT Barter statement himself for past-due items (no Samira action).
+
+- **Liquidibee** (`o6tdpp801lmhcgtfhvcqu8q83c`) — `update_event`: added a 10080-min
+  popup alongside the existing 0-min popup. Both reminders now fire. Confirmed via the
+  event's returned `overrideReminders`.
+- **Gusto Final Payroll Deadline** (`kce9ibkh596d6srmk0fupd03dc`) — left unchanged
+  per Lemar's read (administrative, not a bill).
+- **TBT Barter** (`joj8fqaktfuj8v0n4gvsgl08ps`) — left unchanged; Lemar is checking
+  the statement himself for past-due items.
+
+Nothing paid, nothing contacted, no event deleted or recreated. Replied "Done ✅" in
+the #decisions thread.
