@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-09T08:53:00-04:00
+updated: 2026-08-09T09:20:00-04:00
 domain: personal
 type: reference
 status: active
@@ -112,17 +112,57 @@ bills:
      due: 2026-08-15, priority: p4, status: active,
      calendar_event_id: ptacguksk2rsf3md3403gljtes,
      note: "reported in #personal-finance 2026-08-09; priority p4 matches the existing Rahway→Newark commute pattern. Ramped 2026-08-09: due date under 8 days out when logged, so full $50 lands on 2026-08-10 (see daily_targets)."}
-plans: []                            # payment plans: {id, creditor, total, note, installments:
+plans:                                # payment plans: {id, creditor, total, note, installments:
                                      #   [{seq, amount, due, status, calendar_event_id}]}
+  - id: liquidibee-nomas-payment-plan
+    creditor: "Nomas Recovery LLC (Amanda Ortiz, collections for LIQUIDIBEE 1 LLC)"
+    total: 500
+    note: "Good-faith payment plan per Lemar's 2026-08-09 #decisions reply — split evenly
+           across 6 days so DoorDash earnings can cover it by the Aug 15 due date. Same
+           saga as the missed July 15 good-faith payment. Tracking/reminder only —
+           nothing paid or contacted."
+    installments:
+      - {seq: 1, amount: 83.33, due: 2026-08-10, status: pending, calendar_event_id: kli8jm1vlal3ntffr2lqdkpmuk}
+      - {seq: 2, amount: 83.33, due: 2026-08-11, status: pending, calendar_event_id: 2orriv7cr3cnb71vsc9vhnqjsc}
+      - {seq: 3, amount: 83.33, due: 2026-08-12, status: pending, calendar_event_id: 36p3d0st3kgcq2pdcgs2nf39b8}
+      - {seq: 4, amount: 83.33, due: 2026-08-13, status: pending, calendar_event_id: ctorpublicelukjo77eve3cipc}
+      - {seq: 5, amount: 83.33, due: 2026-08-14, status: pending, calendar_event_id: rgklgnofffcr2m4lb7cd4l4gis}
+      - {seq: 6, amount: 83.35, due: 2026-08-15, status: pending, calendar_event_id: 8cdo5givjtcjvc93hjd2os03a8}
 daily_targets:                       # even daily set-aside ramp (added 2026-08-09)
   "2026-08-10":
-    total: 170.28
+    total: 253.61
     calendar_event_id: kli8jm1vlal3ntffr2lqdkpmuk
     contributions:
       - {bill_id: metrc-fee, amount: 40, status: pending}
       - {bill_id: cleaning-supplies, amount: 30, status: pending}
       - {bill_id: comedy-show-tickets, amount: 50.28, status: pending}
       - {bill_id: station-travel, amount: 50, status: pending}
+      - {bill_id: liquidibee-nomas-payment-plan, amount: 83.33, status: pending}
+  "2026-08-11":
+    total: 83.33
+    calendar_event_id: 2orriv7cr3cnb71vsc9vhnqjsc
+    contributions:
+      - {bill_id: liquidibee-nomas-payment-plan, amount: 83.33, status: pending}
+  "2026-08-12":
+    total: 83.33
+    calendar_event_id: 36p3d0st3kgcq2pdcgs2nf39b8
+    contributions:
+      - {bill_id: liquidibee-nomas-payment-plan, amount: 83.33, status: pending}
+  "2026-08-13":
+    total: 83.33
+    calendar_event_id: ctorpublicelukjo77eve3cipc
+    contributions:
+      - {bill_id: liquidibee-nomas-payment-plan, amount: 83.33, status: pending}
+  "2026-08-14":
+    total: 83.33
+    calendar_event_id: rgklgnofffcr2m4lb7cd4l4gis
+    contributions:
+      - {bill_id: liquidibee-nomas-payment-plan, amount: 83.33, status: pending}
+  "2026-08-15":
+    total: 83.35
+    calendar_event_id: 8cdo5givjtcjvc93hjd2os03a8
+    contributions:
+      - {bill_id: liquidibee-nomas-payment-plan, amount: 83.35, status: pending}
 goals:
   - {id: own-car-running, name: "Get the car running", pocket: cashapp-checking,
      target: 2800, saved: 0,
@@ -212,7 +252,43 @@ No earnings, cash-on-hand, or payment-plan drops this sweep. No payments marked 
 Dashboard re-rendered (4 new upcoming-bills rows). One #decisions parent posted
 bundling the 3 unassigned priorities.
 
+## Update 2026-08-09 (Liquidibee/Nomas payment-plan setup — PART A)
+
+Per Lemar's reply in the #decisions thread (channel `C0BBXA96FFV`, parent ts
+`1786194812.913559`, his reply ts `1786241590.069229`, 2026-08-09): "Can we make sure
+that you put this in the #personal-finance channel and we're going to create a series
+of Google Calendar events that will serve as a payment plan for this amount. so split
+the full amount evenly from tomorrow to August 15th so that I will know how much I need
+to earn on Door Dash to be able to pay it on the 15th" — referring to the $500
+good-faith payment owed to Amanda Ortiz at Nomas Recovery LLC (collections for
+LIQUIDIBEE 1 LLC), due Saturday 2026-08-15, 9:00-9:30am ET (see
+[[2026-07-31-liquidibee-forbearance-ends]] for the full history of that saga, including
+the missed July 15 good-faith payment).
+
+Added a new `plans` entry, `liquidibee-nomas-payment-plan` ($500 total), split evenly
+across the 6 days from tomorrow (2026-08-10) through the due date (2026-08-15):
+$83.33/day for 2026-08-10 through 2026-08-14, $83.35 on 2026-08-15 (the extra $0.02
+lands on the last day so the six installments sum to exactly $500.00). Each installment
+now carries its own reminder-calendar event id.
+
+Calendar: the existing 2026-08-10 aggregate "Set aside today" event
+(`kli8jm1vlal3ntffr2lqdkpmuk`) was UPDATED in place — total moved from $170.28 to
+$253.61 to fold in this plan's first $83.33 installment alongside the four existing
+contributions (METRC, cleaning supplies, comedy tickets, Station travel); the four
+existing contributions were left untouched. Five NEW all-day aggregate events were
+created, one per remaining day (2026-08-11 through 2026-08-15), each titled "Set aside
+today: $83.33" ($83.35 on the 15th), all-day with a popup reminder, on the same
+reminder calendar, no attendees. `daily_targets` gained a 5th contribution on
+2026-08-10 and five brand-new date entries for 2026-08-11 through 2026-08-15.
+
+Posted a summary to #personal-finance (`C0BGLEMH99T`) and replied in the #decisions
+thread so Lemar can close it out. Nothing paid, nothing contacted — Nomas Recovery /
+Amanda Ortiz were not reached; this is a tracking/budgeting plan only, per the safety
+floor.
+
 ## Sources
 - Prior project note: `haven/vault/10-Personal/Money/2026-07-11-personal-finance-dashboard-project.md` (full Slack ts provenance lives there)
 - Staged prompt: #admin `C0BBLUA7JLX` ts `1786253312.218409`+`1786253312.241789`
   (`task:20260809_bill-payment-ramp-daily-calendar`)
+- #decisions `C0BBXA96FFV` parent ts `1786194812.913559`, Lemar reply ts
+  `1786241590.069229` (2026-08-09) — Liquidibee/Nomas payment-plan instruction
