@@ -1,12 +1,12 @@
 ---
 created: 2026-07-07T09:25:00-04:00
-updated: 2026-08-09T11:25:00-04:00
+updated: 2026-08-09T12:12:00-04:00
 domain: personal
 type: note
 status: active
 tags: [side-hustle, trading-cards]
 source: slack
-due: 2026-08-01T09:00:00-04:00
+due: 2026-09-01T09:00:00-04:00
 calendar_event_id: o9i482d50psgp7qf9uimvo33rs
 ---
 
@@ -29,6 +29,9 @@ and sell.
 ## Candidate buy locations
 - **Lurk Cards and Collectibles** (Philadelphia, PA)
 - **Lucky Strike** (Merchantville, NJ)
+- **Whatnot** — live-auction platform for buying decks/cards/boxes directly (not just
+  selling); Lemar flagged 2026-08-09 as worth a closer look for sourcing faster/better
+  cards than one-off local shop visits. See Update below — not yet researched deeper.
 
 ## Where to buy/sell
 - **eBay** - biggest marketplace, best for singles and grading arbitrage (buy raw,
@@ -117,6 +120,16 @@ forward the two shop names from the 7/29 update. Posted a check-in to #trading-c
 asking whether a first purchase against the $100–150 micro-test budget has happened —
 no purchase invented or assumed here.
 
+## Update 2026-08-09 (PART G, 12:12pm ET) - pushed to September 1, Whatnot flagged
+Lemar answered the check-in in #trading-cards (ts `1786289965.667309`): pushing the
+first micro-test buy to **September 1**, and separately flagged that he's heard
+about buying decks/cards/boxes directly off platforms like **Whatnot** (not just
+selling) as a possibly faster/better sourcing route than one-off local shop trips —
+"something I want to try to look into more." No decision needed yet — this is a
+lead to research before Sept 1, not a commitment. `due` moved to
+`2026-09-01T09:00-04:00`; the reminder-calendar event (`o9i482d50psgp7qf9uimvo33rs`)
+moved to match (vault wins). No purchase made yet.
+
 ## Sources
 - slack: #atlas capture, 2026-07-06 20:36:41 EDT (TS 1783384601.800979)
 - slack: #atlas, HTML request, 2026-07-07 15:06:12 EDT (TS 1783451172.932509)
@@ -127,4 +140,5 @@ no purchase invented or assumed here.
 - slack: #decisions, Option A picked, message ts 1783625662.399819 (2026-07-12, reaction on 2026-07-09 15:34:22 EDT reply)
 - slack: #trading-cards, follow-up deferral, 2026-07-12 10:58:41 EDT (TS 1783868321.223839)
 - slack: #trading-cards, local shop leads, 2026-07-29 09:35:26 EDT (TS 1785328926.295679)
+- slack: #trading-cards, pushed to Sept 1 + Whatnot buy-side lead, 2026-08-09 (TS 1786289965.667309)
 - staged prompt: #admin `C0BBLUA7JLX` ts `1786281769.032919` (task:20260809_trading-cards-shop-notes-checkin)
