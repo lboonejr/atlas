@@ -1,12 +1,13 @@
 ---
 created: 2026-08-09T13:07:19-04:00
-updated: 2026-08-09T13:07:19-04:00
+updated: 2026-08-09T14:13:24-04:00
 domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation (policy is "NJ Commercial Auto" addressed to lemar@cuzziesnj.com — could be Cuzzie's fleet or a personal policy on the business email; confirm)
 type: task
 status: active
 tags: [insurance, progressive, overdue, commercial-auto]
 source: gmail
 due: 2026-08-14T09:00-04:00
+calendar_event_id: 4bjk0iojh3cda0r8vftllqqv8o
 ---
 
 # Progressive Commercial Auto — overdue balance $1,107.20, due 8/14
