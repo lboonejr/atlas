@@ -1,6 +1,6 @@
 ---
 created: 2026-08-08T09:25:00-04:00
-updated: 2026-08-09T12:11:00-04:00
+updated: 2026-08-09T12:10:00-04:00
 domain: project
 type: log
 status: done
@@ -112,3 +112,30 @@ clear from the prior pass.
 
 - slack: #booking-agent (C0BHXTPST52), ts `1786281415.983219` (2026-08-09, status
   update posted)
+
+## Update 2026-08-09 12:10pm ET (Lemar confirmed the missing-piece guess — privacy policy is live-broken)
+
+Lemar replied in-thread (#booking-agent, ts `1786290959.551829`): clicking the
+privacy-policy link on fruntdeskhq.com returns `Cannot GET /privacy.html`, and there
+is no Terms of Service page either. This **confirms** the working assumption from
+the original kickoff pass above — privacy policy + ToS are the missing piece for
+OAuth verification, not a guess anymore.
+
+Also in the same window, Lemar asked (new top-level #booking-agent message, ts
+`1786290984.451329`): "Can you surface the operator onboarding guide as a link via
+Google Docs?" — the guide only existed as the Haven note
+`2026-07-27-fruntdesk-operator-onboarding-doc.md`. Copied its content verbatim (no
+edits) into a new Google Doc and posted the link in-thread:
+https://docs.google.com/document/d/15V42U3b4HmQmXRMn7hfNGdgzfizw4BJLImUa618ZrMg/edit
+
+**Still not automatable from this session:** actually writing/publishing the
+privacy policy + ToS pages on the live fruntdeskhq.com site — that's Lemar's site
+access (no deploy/hosting tool connected here), and content that size is a real
+product/legal commitment, not something to originate unsupervised per the existing
+instruction above. Pulling the OAuth consent-screen config from Google Cloud
+Console also remains open, same reason (no console access from this session).
+
+- slack: #booking-agent (C0BHXTPST52), ts `1786290959.551829` (Lemar's confirmation),
+  ts `1786290984.451329` (onboarding-guide-as-Doc ask)
+- drive: `15V42U3b4HmQmXRMn7hfNGdgzfizw4BJLImUa618ZrMg` (new Google Doc, operator
+  onboarding guide, copied verbatim from the Haven note)
