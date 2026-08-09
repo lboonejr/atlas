@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-09T09:20:00-04:00
+updated: 2026-08-09T11:20:00-04:00
 domain: personal
 type: reference
 status: active
@@ -99,70 +99,48 @@ bills:
      note: "unclear if inside or on top of the $2,000 repairs lump — unreconciled"}
   - {id: metrc-fee, name: METRC, amount: 40, cadence: once, due: 2026-08-14,
      priority: null, status: active, calendar_event_id: q36k3ogoblpe3i5amktigav8ig,
-     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09. Ramped 2026-08-09: due date under 8 days out when logged, so full $40 lands on 2026-08-10 (see daily_targets)."}
+     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09 (Lemar said 'high priority' 8/9, exact p1-vs-p2 bucket still unconfirmed). Ramped 2026-08-09: due date under 8 days out when logged, so full $40 lands on 2026-08-10 (see daily_targets)."}
   - {id: cleaning-supplies, name: "Cleaning supplies (house)", amount: 30, cadence: once,
      due: 2026-08-11, priority: null, status: active,
      calendar_event_id: ue8jtslgpl89qlmhdra710h13k,
-     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09. Ramped 2026-08-09: due date under 8 days out when logged, so full $30 lands on 2026-08-10 (see daily_targets)."}
+     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09 (Lemar said 'high priority' 8/9, exact p1-vs-p2 bucket still unconfirmed). Ramped 2026-08-09: due date under 8 days out when logged, so full $30 lands on 2026-08-10 (see daily_targets)."}
   - {id: comedy-show-tickets, name: "Comedy show tickets", amount: 50.28, cadence: once,
      due: 2026-08-12, priority: null, status: active,
      calendar_event_id: jfh8548cet84pcqo3o697fkbq8,
-     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09. Ramped 2026-08-09: due date under 8 days out when logged, so full $50.28 lands on 2026-08-10 (see daily_targets)."}
+     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09 (Lemar said 'low priority' 8/9; p5/p6/p7 are each tied to a specific pocket (own-car/side-projects/savings) so the bucket still needs confirming). Ramped 2026-08-09: due date under 8 days out when logged, so full $50.28 lands on 2026-08-10 (see daily_targets)."}
   - {id: station-travel, name: "Travel to The Station", amount: 50, cadence: once,
      due: 2026-08-15, priority: p4, status: active,
      calendar_event_id: ptacguksk2rsf3md3403gljtes,
-     note: "reported in #personal-finance 2026-08-09; priority p4 matches the existing Rahway→Newark commute pattern. Ramped 2026-08-09: due date under 8 days out when logged, so full $50 lands on 2026-08-10 (see daily_targets)."}
+     note: "reported in #personal-finance 2026-08-09; priority p4 matches the existing Rahway→Newark commute pattern, confirmed by Lemar 8/9 ('median priority'). Ramped 2026-08-09: due date under 8 days out when logged, so full $50 lands on 2026-08-10 (see daily_targets). Lemar 8/9: likely becoming a recurring weekly expense (new weekend job at The Station) — rate TBD, he'll post it in #personal-finance."}
 plans:                                # payment plans: {id, creditor, total, note, installments:
                                      #   [{seq, amount, due, status, calendar_event_id}]}
   - id: liquidibee-nomas-payment-plan
     creditor: "Nomas Recovery LLC (Amanda Ortiz, collections for LIQUIDIBEE 1 LLC)"
     total: 500
-    note: "Good-faith payment plan per Lemar's 2026-08-09 #decisions reply — split evenly
-           across 6 days so DoorDash earnings can cover it by the Aug 15 due date. Same
-           saga as the missed July 15 good-faith payment. Tracking/reminder only —
-           nothing paid or contacted."
+    note: "Good-faith payment plan. Originally split evenly across 6 days (2026-08-10
+           through the Aug 15 due date) per Lemar's 2026-08-09 #decisions reply; Lemar
+           said 2026-08-09 in #personal-finance he can't cover that pace and asked to
+           re-spread it across 4 weeks from today instead — RE-SPREAD 2026-08-09 to 4
+           weekly $125 installments (8/16, 8/23, 8/30, 9/06). Same saga as the missed
+           July 15 good-faith payment. Tracking/reminder only — nothing paid or
+           contacted. FLAG: the collector's actual stated deadline was Aug 15 —
+           this new schedule runs past that and has NOT been communicated to Nomas
+           Recovery/Amanda Ortiz; raised in #decisions since contacting them to
+           renegotiate is outside what Samira can do unattended."
     installments:
-      - {seq: 1, amount: 83.33, due: 2026-08-10, status: pending, calendar_event_id: kli8jm1vlal3ntffr2lqdkpmuk}
-      - {seq: 2, amount: 83.33, due: 2026-08-11, status: pending, calendar_event_id: 2orriv7cr3cnb71vsc9vhnqjsc}
-      - {seq: 3, amount: 83.33, due: 2026-08-12, status: pending, calendar_event_id: 36p3d0st3kgcq2pdcgs2nf39b8}
-      - {seq: 4, amount: 83.33, due: 2026-08-13, status: pending, calendar_event_id: ctorpublicelukjo77eve3cipc}
-      - {seq: 5, amount: 83.33, due: 2026-08-14, status: pending, calendar_event_id: rgklgnofffcr2m4lb7cd4l4gis}
-      - {seq: 6, amount: 83.35, due: 2026-08-15, status: pending, calendar_event_id: 8cdo5givjtcjvc93hjd2os03a8}
+      - {seq: 1, amount: 125, due: 2026-08-16, status: pending, calendar_event_id: tja7bjk9ri35n0bqb01c52j4es}
+      - {seq: 2, amount: 125, due: 2026-08-23, status: pending, calendar_event_id: gt4knt3i2m6lpjhlrjf8n2jqn8}
+      - {seq: 3, amount: 125, due: 2026-08-30, status: pending, calendar_event_id: locnmilchabhgq2o0kd8slf7r4}
+      - {seq: 4, amount: 125, due: 2026-09-06, status: pending, calendar_event_id: ekpni2dt25f0fe5tjh51sbjj64}
 daily_targets:                       # even daily set-aside ramp (added 2026-08-09)
   "2026-08-10":
-    total: 253.61
+    total: 170.28
     calendar_event_id: kli8jm1vlal3ntffr2lqdkpmuk
     contributions:
       - {bill_id: metrc-fee, amount: 40, status: pending}
       - {bill_id: cleaning-supplies, amount: 30, status: pending}
       - {bill_id: comedy-show-tickets, amount: 50.28, status: pending}
       - {bill_id: station-travel, amount: 50, status: pending}
-      - {bill_id: liquidibee-nomas-payment-plan, amount: 83.33, status: pending}
-  "2026-08-11":
-    total: 83.33
-    calendar_event_id: 2orriv7cr3cnb71vsc9vhnqjsc
-    contributions:
-      - {bill_id: liquidibee-nomas-payment-plan, amount: 83.33, status: pending}
-  "2026-08-12":
-    total: 83.33
-    calendar_event_id: 36p3d0st3kgcq2pdcgs2nf39b8
-    contributions:
-      - {bill_id: liquidibee-nomas-payment-plan, amount: 83.33, status: pending}
-  "2026-08-13":
-    total: 83.33
-    calendar_event_id: ctorpublicelukjo77eve3cipc
-    contributions:
-      - {bill_id: liquidibee-nomas-payment-plan, amount: 83.33, status: pending}
-  "2026-08-14":
-    total: 83.33
-    calendar_event_id: rgklgnofffcr2m4lb7cd4l4gis
-    contributions:
-      - {bill_id: liquidibee-nomas-payment-plan, amount: 83.33, status: pending}
-  "2026-08-15":
-    total: 83.35
-    calendar_event_id: 8cdo5givjtcjvc93hjd2os03a8
-    contributions:
-      - {bill_id: liquidibee-nomas-payment-plan, amount: 83.35, status: pending}
 goals:
   - {id: own-car-running, name: "Get the car running", pocket: cashapp-checking,
      target: 2800, saved: 0,
@@ -182,9 +160,11 @@ open_questions:
   - "Gym debt $75: which priority does it belong to?"
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
   - "Era Context: SoFi connection needs a reconnect at era.app; Cash App still syncing; plan tier caps at 2 linked accounts"
-  - "METRC $40 (due 8/14): which priority does it belong to? (raised in #decisions 2026-08-09)"
-  - "Cleaning supplies $30 (due 8/11): which priority does it belong to? (raised in #decisions 2026-08-09)"
-  - "Comedy show tickets $50.28 (due 8/12): which priority does it belong to? (raised in #decisions 2026-08-09)"
+  - "METRC $40 (due 8/14): p1 or p2? (Lemar said 'high priority' 8/9, exact bucket unconfirmed — raised in #decisions 2026-08-09)"
+  - "Cleaning supplies $30 (due 8/11): p1 or p2? (Lemar said 'high priority' 8/9, exact bucket unconfirmed — raised in #decisions 2026-08-09)"
+  - "Comedy show tickets $50.28 (due 8/12): p5/p6/p7, or no floor/waterfall bucket at all? (Lemar said 'low priority' 8/9, but the waterfall buckets are each tied to a specific pocket — raised in #decisions 2026-08-09)"
+  - "Liquidibee/Nomas: the re-spread 4-week savings schedule (through 9/06) runs past the collector's stated Aug 15 deadline — does Lemar want a draft message prepared for Nomas Recovery explaining the delay? Raised in #decisions 2026-08-09, nothing drafted or sent yet."
+  - "Station travel $50/wk: Lemar started a weekend job at The Station 8/9 — pay rate not yet known, he'll report it in #personal-finance"
 ```
 
 ## History
@@ -286,9 +266,45 @@ thread so Lemar can close it out. Nothing paid, nothing contacted — Nomas Reco
 Amanda Ortiz were not reached; this is a tracking/budgeting plan only, per the safety
 floor.
 
+## Update 2026-08-09 (Liquidibee/Nomas plan re-spread to 4 weeks — PART C)
+
+Lemar replied in #personal-finance (thread ts `1786281440.216369`, reply ts
+`1786286215.944749`): "I'm not going to be able to cover this payment plan right now.
+I need like four more weeks to take care of this so let's spread it out between four
+weeks from today."
+
+Reworked the plan from 6 daily $83.33 installments (8/10–8/15) to **4 weekly $125
+installments** (8/16, 8/23, 8/30, 9/06 — exactly 4 weeks from today, 8/9, with no
+rounding remainder since 500/4 is exact):
+
+- Calendar: the 2026-08-10 aggregate event (`kli8jm1vlal3ntffr2lqdkpmuk`) was UPDATED
+  in place — Liquidibee's $83.33 contribution removed, total reverted to $170.28
+  (METRC + cleaning supplies + comedy tickets + station travel only). The 4 pure
+  Liquidibee-only aggregate events for 8/11–8/15 were CANCELLED (not left stale) since
+  their sole purpose was this plan. 4 NEW standalone events created for the new weekly
+  installments (8/16, 8/23, 8/30, 9/06), each "$125" with day-of + 7-day-before popups.
+- `daily_targets` for 8/11–8/15 removed (no more contributions on those days);
+  8/10 total corrected to $170.28.
+- `plans.liquidibee-nomas-payment-plan.installments` replaced with the 4 new rows.
+
+**Flag, not decided:** the collector's (Nomas Recovery/Amanda Ortiz) stated deadline
+was Aug 15 — this new internal savings schedule runs through Sept 6, past that date.
+This is purely a change to Lemar's own savings pacing; nothing has been communicated to
+Nomas Recovery about paying later, and Samira has not and will not contact them without
+Lemar's explicit go-ahead (external-contact safety floor). Raised as an open question
+above and as a #decisions card asking whether he wants a draft message prepared (never
+sent) explaining a delayed payment.
+
+Nothing paid, nothing contacted, no event deleted-without-replacement (the 4 retired
+daily events were purpose-built solely for the old schedule; their function is fully
+replaced by the 4 new weekly events). Replied to #personal-finance thread confirming
+the rebuild.
+
 ## Sources
 - Prior project note: `haven/vault/10-Personal/Money/2026-07-11-personal-finance-dashboard-project.md` (full Slack ts provenance lives there)
 - Staged prompt: #admin `C0BBLUA7JLX` ts `1786253312.218409`+`1786253312.241789`
   (`task:20260809_bill-payment-ramp-daily-calendar`)
 - #decisions `C0BBXA96FFV` parent ts `1786194812.913559`, Lemar reply ts
   `1786241590.069229` (2026-08-09) — Liquidibee/Nomas payment-plan instruction
+- #personal-finance `C0BGLEMH99T` thread ts `1786281440.216369`, Lemar reply ts
+  `1786286215.944749` (2026-08-09) — 4-week re-spread instruction
