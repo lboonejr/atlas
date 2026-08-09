@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T09:25:00-04:00
-updated: 2026-07-29T09:40:00-04:00
+updated: 2026-08-09T11:25:00-04:00
 domain: personal
 type: note
 status: active
@@ -25,6 +25,10 @@ and sell.
   releases) hold value best; hype-driven cards (new draft picks) are volatile.
 - **Demand cycles** - sports cards spike around playoffs/draft season; Pokémon/TCG
   spikes around new set releases.
+
+## Candidate buy locations
+- **Lurk Cards and Collectibles** (Philadelphia, PA)
+- **Lucky Strike** (Merchantville, NJ)
 
 ## Where to buy/sell
 - **eBay** - biggest marketplace, best for singles and grading arbitrage (buy raw,
@@ -106,6 +110,13 @@ from — **Lurk Cards and Collectibles** (Philadelphia) and **Lucky Strike**
 journey"), not a question or a task. Logged only; no reply needed, nothing lifted to
 #decisions, still on track for the Aug 1 due date above.
 
+## Update 2026-08-09 (PART C) - Aug 1 check-in, now overdue
+The Aug 1 due-date marker has passed (today is 2026-08-09) with no purchase logged
+in #trading-cards yet. Added the "Candidate buy locations" list above pulling
+forward the two shop names from the 7/29 update. Posted a check-in to #trading-cards
+asking whether a first purchase against the $100–150 micro-test budget has happened —
+no purchase invented or assumed here.
+
 ## Sources
 - slack: #atlas capture, 2026-07-06 20:36:41 EDT (TS 1783384601.800979)
 - slack: #atlas, HTML request, 2026-07-07 15:06:12 EDT (TS 1783451172.932509)
@@ -116,3 +127,4 @@ journey"), not a question or a task. Logged only; no reply needed, nothing lifte
 - slack: #decisions, Option A picked, message ts 1783625662.399819 (2026-07-12, reaction on 2026-07-09 15:34:22 EDT reply)
 - slack: #trading-cards, follow-up deferral, 2026-07-12 10:58:41 EDT (TS 1783868321.223839)
 - slack: #trading-cards, local shop leads, 2026-07-29 09:35:26 EDT (TS 1785328926.295679)
+- staged prompt: #admin `C0BBLUA7JLX` ts `1786281769.032919` (task:20260809_trading-cards-shop-notes-checkin)
