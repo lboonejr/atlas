@@ -1,1 +1,63 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDgtMDlUMTU6MjU6MDAtMDQ6MDAKdXBkYXRlZDogMjAyNi0wOC0wOVQxNToyNTowMC0wNDowMApkb21haW46IGF1dG9tYXRpb24KdHlwZTogbG9nCnN0YXR1czogZG9uZQp0YWdzOiBbc2FtaXJhLCBwYXJ0LWEsIGRlY2lzaW9ucywgbW9uZXktaHViLCBsaXF1aWRpYmVlXQpzb3VyY2U6IGNsYXVkZQotLS0KCiMgUEFSVCBBIOKAlCB0aHJlZSAjZGVjaXNpb25zIGZvbGxvdy10aHJvdWdocyAoMjAyNi0wOC0wOSBydW4pCgpBY3RlZCBvbiB0aHJlZSDinIUnZC9hbnN3ZXJlZCAjZGVjaXNpb25zIHRocmVhZHMgZm91bmQgb3BlbiBmcm9tIGVhcmxpZXIgc2NhbnMgdGhpcwpydW4gKGNoYW5uZWwgYEMwQkJYQTk2RkZWYCk6CgoxLiAqKlBSICM1NyAoT3B0aW9uIDEg4pyFJ2QpKiog4oCUICJPcGVuIGRyYWZ0IFBSICM1NyBvbiB0aGUgdmF1bHQgcmVwbyIgKHBhcmVudCB0cwogICBgMTc4NjI4ODg3My4yMzI0MjlgKS4gTGVtYXIgcGlja2VkIE9wdGlvbiAxICgibGVhdmUgaXQgb3BlbiwgcmV2aWV3L21lcmdlIGl0CiAgIHlvdXJzZWxmIikuIE5vIHJlcG8gYWN0aW9uIHRha2VuICh0aGF0J3MgdGhlIHBvaW50IG9mIE9wdGlvbiAxKTsgcmVwbGllZAogICAiRG9uZSDinIUiIGluLXRocmVhZCBhY2tub3dsZWRnaW5nLgoKMi4gKipNb25leS1odWIgYmlsbHMgZGVmYXVsdCByZW1pbmRlcnMgZ2FwIChPcHRpb24gMSDinIUnZCkqKiDigJQgcGFyZW50IHRzCiAgIGAxNzg2MjgyNTQ3LjE0MzMxOWAuIExlbWFyIHBpY2tlZCBPcHRpb24gMSAoInVwZGF0ZSB0aGUgbW9uZXktaHViIHNraWxsJ3MKICAgZGVmYXVsdCBzbyBldmVyeSBuZXcgYmlsbCBldmVudCBnZXRzIGEgNy1kYXktYmVmb3JlIHBvcHVwIGF1dG9tYXRpY2FsbHkiKS4KICAgRWRpdGVkIGAuY2xhdWRlL3NraWxscy9tb25leS1odWIvU0tJTEwubWRgIChDQUxFTkRBUiBzZWN0aW9uKTogZXZlcnkgbmV3CiAgIHBlci1iaWxsIGR1ZS1kYXRlIGV2ZW50IG5vdyBnZXRzIEJPVEggYSA3LWRheS1iZWZvcmUgcG9wdXAgKGBtaW51dGVzOiAxMDA4MGApCiAgIGFuZCB0aGUgZXhpc3RpbmcgZGF5LW9mIHBvcHVwIChgbWludXRlczogMGApIGJ5IGRlZmF1bHQsIG1hdGNoaW5nIHRoZSBzaGFwZQogICB0aGUgcmV0cm9hY3RpdmUgYXVkaXQgYXBwbGllZCB0byB0aGUgMjAgZXhpc3RpbmcgZXZlbnRzIG9uIDIwMjYtMDgtMDkuCiAgIENvbW1pdHRlZCBkaXJlY3RseSB0byBgbWFpbmAgcGVyIHRoZSByZXBvJ3MgZ2l0LXdyaXRlIHBvbGljeSAoYC5jbGF1ZGUvYW5jaG9ycy5tZGAKICAg4oCUIG5ldmVyIGJyYW5jaCtQUiBmb3IgYC5jbGF1ZGUvKipgIHdyaXRlcyk6IGNvbW1pdCBgMDFlMDI3YWAgKGEgZmlyc3QgYXR0ZW1wdCwKICAgYDA1MGI4OGZgLCBoYWQgYSBoYW5kLWVuY29kaW5nIHRyYW5zY3JpcHRpb24gZXJyb3IgdGhhdCBjb3JydXB0ZWQgb25lIGJ5dGUKICAgcmFuZ2Ugb2YgdGhlIGZpbGU7IGNhdWdodCBpdCBvbiB2ZXJpZmljYXRpb24gYW5kIHJlLXB1c2hlZCBhIGJhc2U2NC12ZXJpZmllZAogICByb3VuZC10cmlwKS4gUmVwbGllZCAiRG9uZSDinIUiIGluLXRocmVhZCB3aXRoIHRoZSBjb21taXQgcmVmZXJlbmNlLgoKMy4gKipMaXF1aWRpYmVlL05vbWFzIDQtd2VlayByZS1zcHJlYWQgKE9wdGlvbiAxIOKchSdkLCB0aGVuIGNvcnJlY3RlZCkqKiDigJQgcGFyZW50IHRzCiAgIGAxNzg2Mjg4NjM5LjAzMzc1OWAuIExlbWFyIHBpY2tlZCBPcHRpb24gMSAoImRyYWZ0IGEgbWVzc2FnZSB0byBBbWFuZGEgT3J0aXoKICAgZXhwbGFpbmluZyB0aGUgZGVsYXkgYW5kIGFza2luZyBmb3IgdGhlIGV4dGVuc2lvbjsgc2hvdyBtZSBiZWZvcmUgYW55dGhpbmcKICAgc2VuZHMiKSwgdGhlbiBzZXBhcmF0ZWx5IHJlcGxpZWQgaW4tdGhyZWFkICJJIHdhbnRlZCA4IHBheW1lbnRzIG5vdCA0IiDigJQKICAgY29ycmVjdGluZyB0aGUgbGVkZ2VyJ3MgZXhpc3RpbmcgNMOXJDEyNSB3ZWVrbHkgcGxhbgogICAoYGhhdmVuL3ZhdWx0LzEwLVBlcnNvbmFsL01vbmV5L21vbmV5LWh1Yi1sZWRnZXIubWRgLAogICBgcGxhbnMubGlxdWlkaWJlZS1ub21hcy1wYXltZW50LXBsYW5gKS4KICAgLSAqKkRyYWZ0ZWQgKG5vdCBzZW50KToqKiBHbWFpbCBkcmFmdCBpZCBgci03MDYzNzAwNTE2ODE1MTk4OTUxYCwgdG8KICAgICBgQW1hbmRhQG5vbWFzcmVjb3ZlcnkuY29tYCwgc3ViamVjdCAiRXh0ZW5zaW9uIFJlcXVlc3Qg4oCUIEdvb2QtRmFpdGggUGF5bWVudAogICAgIFBsYW4sIExJUVVJRElCRUUgMSBMTEMgLyBDdXp6aWUncyBEaXNwZW5zYXJ5IiDigJQgYSBnZW5lcmFsIGV4dGVuc2lvbiByZXF1ZXN0CiAgICAgdGhhdCBkb2VzIG5vdCBjb21taXQgdG8gYW4gZXhhY3QgcGF5bWVudCBjb3VudC9zY2hlZHVsZSwgc2luY2UgdGhhdCdzIHN0aWxsCiAgICAgb3Blbi4gQ29udGFjdCBzb3VyY2VkIGZyb20gYGhhdmVuL3ZhdWx0LzUwLVJlZmVyZW5jZS9FbnRpdGllcy9ub21hcy1yZWNvdmVyeS5tZGAuCiAgIC0gKipOT1QgcmVidWlsdCB5ZXQ6KiogdGhlICI4IHBheW1lbnRzIiBjb3JyZWN0aW9uIGlzIGFtYmlndW91cyBvbiBjYWRlbmNlIOKAlAogICAgIHNhbWUgNC13ZWVrIHdpbmRvdyAoOC8xNuKAkzkvMDYsIHR3aWNlLXdlZWtseSBhdCAkNjIuNTApIHZzLiBhIGxvbmdlciA4LXdlZWsKICAgICBzdHJldGNoICh3ZWVrbHkgYXQgJDYyLjUwIHRocm91Z2ggfjEwLzI1KS4gUGVyIHRoZSBtb25leS1odWIgc2tpbGwncwogICAgIG5ldmVyLWd1ZXNzLWEtbnVtYmVyL2RhdGUgZmxvb3IsIGFza2VkIExlbWFyIHRvIHBpY2sgaW4tdGhyZWFkIHJhdGhlciB0aGFuCiAgICAgYXNzdW1pbmc7IHRoZSBsZWRnZXIgYW5kIGNhbGVuZGFyIGV2ZW50cyBhcmUgVU5DSEFOR0VEIHBlbmRpbmcgaGlzIGFuc3dlci4KICAgLSBOb3RoaW5nIHBhaWQsIG5vdGhpbmcgY29udGFjdGVkLCBub3RoaW5nIHNlbnQg4oCUIGRyYWZ0IG9ubHksIHBlciBTYWZldHkuCgojIyBTb3VyY2VzCi0gc2xhY2s6ICNkZWNpc2lvbnMgYEMwQkJYQTk2RkZWYCDigJQgcGFyZW50IHRzIGAxNzg2Mjg4ODczLjIzMjQyOWAgKFBSICM1NyksCiAgYDE3ODYyODI1NDcuMTQzMzE5YCAobW9uZXktaHViIHJlbWluZGVyIGRlZmF1bHQpLCBgMTc4NjI4ODYzOS4wMzM3NTlgCiAgKExpcXVpZGliZWUgcmUtc3ByZWFkICsgTGVtYXIncyAiOCBwYXltZW50cyIgY29ycmVjdGlvbiwgcmVwbHkgdHMKICBgMTc4NjI4OTY3NS4yMjI5MzlgKQotIGdpdGh1YjogY29tbWl0IGAwNTBiODhmYzNiMTU1ZTY5N2M5MTIyNDEyYzZjMTc0NTg3YTIxNGM3YCAoY29ycnVwdGVkLCBzdXBlcnNlZGVkKSwKICBgMDFlMDI3YTMwMDgxODgzOTY4MzgzMjYyMjg4MmUwNTk2NjAxZjE3MmAgKHZlcmlmaWVkIGZpeCkg4oCUCiAgYC5jbGF1ZGUvc2tpbGxzL21vbmV5LWh1Yi9TS0lMTC5tZGAKLSBnbWFpbDogZHJhZnQgYHItNzA2MzcwMDUxNjgxNTE5ODk1MWAgKEFtYW5kYSBPcnRpeiBleHRlbnNpb24gcmVxdWVzdCwgdW5zZW50KQotIGhhdmVuOiBgaGF2ZW4vdmF1bHQvMTAtUGVyc29uYWwvTW9uZXkvbW9uZXktaHViLWxlZGdlci5tZGAgKExpcXVpZGliZWUgcGxhbiwKICB1bmNoYW5nZWQgcGVuZGluZyBjYWRlbmNlIGFuc3dlcikK
+---
+created: 2026-08-09T15:25:00-04:00
+updated: 2026-08-09T15:25:00-04:00
+domain: automation
+type: log
+status: done
+tags: [samira, part-a, decisions, money-hub, liquidibee]
+source: claude
+---
+
+# PART A — three #decisions follow-throughs (2026-08-09 run)
+
+Acted on three ✅'d/answered #decisions threads found open from earlier scans this
+run (channel `C0BBXA96FFV`):
+
+1. **PR #57 (Option 1 ✅'d)** — "Open draft PR #57 on the vault repo" (parent ts
+   `1786288873.232429`). Lemar picked Option 1 ("leave it open, review/merge it
+   yourself"). No repo action taken (that's the point of Option 1); replied
+   "Done ✅" in-thread acknowledging.
+
+2. **Money-hub bills default reminders gap (Option 1 ✅'d)** — parent ts
+   `1786282547.143319`. Lemar picked Option 1 ("update the money-hub skill's
+   default so every new bill event gets a 7-day-before popup automatically").
+   Edited `.claude/skills/money-hub/SKILL.md` (CALENDAR section): every new
+   per-bill due-date event now gets BOTH a 7-day-before popup (`minutes: 10080`)
+   and the existing day-of popup (`minutes: 0`) by default, matching the shape
+   the retroactive audit applied to the 20 existing events on 2026-08-09.
+   Committed directly to `main` per the repo's git-write policy (`.claude/anchors.md`
+   — never branch+PR for `.claude/**` writes): commit `01e027a` (a first attempt,
+   `050b88f`, had a hand-encoding transcription error that corrupted one byte
+   range of the file; caught it on verification and re-pushed a base64-verified
+   round-trip). Replied "Done ✅" in-thread with the commit reference.
+
+3. **Liquidibee/Nomas 4-week re-spread (Option 1 ✅'d, then corrected)** — parent ts
+   `1786288639.033759`. Lemar picked Option 1 ("draft a message to Amanda Ortiz
+   explaining the delay and asking for the extension; show me before anything
+   sends"), then separately replied in-thread "I wanted 8 payments not 4" —
+   correcting the ledger's existing 4×$125 weekly plan
+   (`haven/vault/10-Personal/Money/money-hub-ledger.md`,
+   `plans.liquidibee-nomas-payment-plan`).
+   - **Drafted (not sent):** Gmail draft id `r-7063700516815198951`, to
+     `Amanda@nomasrecovery.com`, subject "Extension Request — Good-Faith Payment
+     Plan, LIQUIDIBEE 1 LLC / Cuzzie's Dispensary" — a general extension request
+     that does not commit to an exact payment count/schedule, since that's still
+     open. Contact sourced from `haven/vault/50-Reference/Entities/nomas-recovery.md`.
+   - **NOT rebuilt yet:** the "8 payments" correction is ambiguous on cadence —
+     same 4-week window (8/16–9/06, twice-weekly at $62.50) vs. a longer 8-week
+     stretch (weekly at $62.50 through ~10/25). Per the money-hub skill's
+     never-guess-a-number/date floor, asked Lemar to pick in-thread rather than
+     assuming; the ledger and calendar events are UNCHANGED pending his answer.
+   - Nothing paid, nothing contacted, nothing sent — draft only, per Safety.
+
+## Sources
+- slack: #decisions `C0BBXA96FFV` — parent ts `1786288873.232429` (PR #57),
+  `1786282547.143319` (money-hub reminder default), `1786288639.033759`
+  (Liquidibee re-spread + Lemar's "8 payments" correction, reply ts
+  `1786289675.222939`)
+- github: commit `050b88fc3b155e697c9122412c6c174587a214c7` (corrupted, superseded),
+  `01e027a300818839683832622882e0596601f172` (verified fix) —
+  `.claude/skills/money-hub/SKILL.md`
+- gmail: draft `r-7063700516815198951` (Amanda Ortiz extension request, unsent)
+- haven: `haven/vault/10-Personal/Money/money-hub-ledger.md` (Liquidibee plan,
+  unchanged pending cadence answer)
