@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-09T08:10:00-04:00
+updated: 2026-08-09T08:53:00-04:00
 domain: personal
 type: reference
 status: active
@@ -12,10 +12,11 @@ area: money
 # Money Hub — ledger (source of truth)
 
 This note is the ONE structured source of truth for Lemar's personal budget: bills,
-account pockets, payment plans, goals, allocation config, and reported cash. The
-**money-hub** skill (`.claude/skills/money-hub/SKILL.md`) reads and writes the single
-fenced `yaml` block below; the Money Hub dashboard artifact and all calendar reminder
-events are regenerated FROM it, never hand-edited (same doctrine as
+account pockets, payment plans, goals, allocation config, the daily set-aside ramp, and
+reported cash. The **money-hub** skill (`.claude/skills/money-hub/SKILL.md`) reads and
+writes the single fenced `yaml` block below; the Money Hub dashboard artifact and all
+calendar reminder events (both per-bill due-date events and the daily "set aside today"
+aggregate) are regenerated FROM it, never hand-edited (same doctrine as
 [[on-button-reopen]]'s index).
 
 Field rules (on-button-plan pattern):
@@ -25,6 +26,11 @@ Field rules (on-button-plan pattern):
 - `day` = day-of-month for monthly bills; `due` = ISO date for one-time items and
   installments. A `calendar_event_id` marks the reminder event that projects the line
   onto the reminder calendar (calendar is a one-way rendering; this note wins).
+- `daily_targets` = the even daily set-aside ramp (added 2026-08-09, see the
+  money-hub skill's RAMP/DAILY CALENDAR/ROLLOVER sections). ISO date key →
+  `{total, calendar_event_id, contributions: [{bill_id, amount, status}]}`, `status`
+  one of `pending` | `rolled` | `paid`. One aggregate calendar event per day; never a
+  duplicate for the same date.
 - The allocation SHAPE is a locked decision (Option 3 hybrid floor + waterfall,
   2026-07-24) — do not redesign it here. The floor DOLLAR figure is computed, not
   stored: sum active monthly bills with priority p1/p2/p4, ÷ 4.33.
@@ -83,7 +89,7 @@ bills:
   - {id: tmobile-split-1, name: "T-Mobile split payment 1 of 2", amount: 265, cadence: once,
      due: 2026-08-03, priority: p2, status: active,
      calendar_event_id: pg0a92rgg01l09mg3tatcfb3mk,
-     note: "due date has passed — confirm paid, then flip to paid and retire the event"}
+     note: "due date has passed — confirm paid, then flip to paid and retire the event. No ramp: due date already passed when the ramp feature was added 2026-08-09."}
   - {id: tmobile-split-2, name: "T-Mobile split payment 2 of 2", amount: null, cadence: once,
      due: null, priority: p2, status: active, note: "amount and date not given yet"}
   - {id: gym-debt, name: "Personal gym debt", amount: 75, cadence: once, due: null,
@@ -93,21 +99,30 @@ bills:
      note: "unclear if inside or on top of the $2,000 repairs lump — unreconciled"}
   - {id: metrc-fee, name: METRC, amount: 40, cadence: once, due: 2026-08-14,
      priority: null, status: active, calendar_event_id: q36k3ogoblpe3i5amktigav8ig,
-     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09"}
+     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09. Ramped 2026-08-09: due date under 8 days out when logged, so full $40 lands on 2026-08-10 (see daily_targets)."}
   - {id: cleaning-supplies, name: "Cleaning supplies (house)", amount: 30, cadence: once,
      due: 2026-08-11, priority: null, status: active,
      calendar_event_id: ue8jtslgpl89qlmhdra710h13k,
-     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09"}
+     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09. Ramped 2026-08-09: due date under 8 days out when logged, so full $30 lands on 2026-08-10 (see daily_targets)."}
   - {id: comedy-show-tickets, name: "Comedy show tickets", amount: 50.28, cadence: once,
      due: 2026-08-12, priority: null, status: active,
      calendar_event_id: jfh8548cet84pcqo3o697fkbq8,
-     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09"}
+     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09. Ramped 2026-08-09: due date under 8 days out when logged, so full $50.28 lands on 2026-08-10 (see daily_targets)."}
   - {id: station-travel, name: "Travel to The Station", amount: 50, cadence: once,
      due: 2026-08-15, priority: p4, status: active,
      calendar_event_id: ptacguksk2rsf3md3403gljtes,
-     note: "reported in #personal-finance 2026-08-09; priority p4 matches the existing Rahway→Newark commute pattern"}
+     note: "reported in #personal-finance 2026-08-09; priority p4 matches the existing Rahway→Newark commute pattern. Ramped 2026-08-09: due date under 8 days out when logged, so full $50 lands on 2026-08-10 (see daily_targets)."}
 plans: []                            # payment plans: {id, creditor, total, note, installments:
                                      #   [{seq, amount, due, status, calendar_event_id}]}
+daily_targets:                       # even daily set-aside ramp (added 2026-08-09)
+  "2026-08-10":
+    total: 170.28
+    calendar_event_id: kli8jm1vlal3ntffr2lqdkpmuk
+    contributions:
+      - {bill_id: metrc-fee, amount: 40, status: pending}
+      - {bill_id: cleaning-supplies, amount: 30, status: pending}
+      - {bill_id: comedy-show-tickets, amount: 50.28, status: pending}
+      - {bill_id: station-travel, amount: 50, status: pending}
 goals:
   - {id: own-car-running, name: "Get the car running", pocket: cashapp-checking,
      target: 2800, saved: 0,
@@ -140,6 +155,44 @@ budget from the first rough sketch through the locked Option 3 allocation decisi
 pocket mapping, and the calendar reminders. That note is closed; this ledger carries the
 live state forward. Weekly allocation runs and material changes append below.
 
+## Update 2026-08-09 (bill-payment ramp + daily set-aside calendar — PART C, task:20260809_bill-payment-ramp-daily-calendar)
+
+Extended the money-hub skill (`.claude/skills/money-hub/SKILL.md`) per the staged
+#admin prompt: every bill/expense with a due date now computes an even daily
+set-aside ramp, and the reminder calendar gets ONE combined "set aside today" event
+across everything active, instead of Lemar tracking each bill separately. Full spec
+(RAMP window math, DAILY CALENDAR aggregate-event rules, end-of-day ROLLOVER) now lives
+in the skill; this note adds the new `daily_targets` ledger block and applies the
+one-time backfill to the four bills already carrying a future `due` (added earlier this
+same run by PART M):
+
+- `metrc-fee` ($40, due 8/14), `cleaning-supplies` ($30, due 8/11),
+  `comedy-show-tickets` ($50.28, due 8/12), `station-travel` ($50, due 8/15) — for all
+  four, `end` (due − 7 days) fell before `start` (today, since the ramp window can't
+  reach into the past for a backfill), so per the rule the FULL amount lands on day 1.
+  All four independently land on **2026-08-10** (tomorrow) → one aggregate
+  `daily_targets["2026-08-10"]` entry, total **$170.28**, one calendar event
+  (`kli8jm1vlal3ntffr2lqdkpmuk`, "Set aside today: $170.28", all-day, popup reminder —
+  same convention as the existing per-bill due-date events).
+- `tmobile-split-1` ($265, due 2026-08-03) was excluded — its due date has already
+  passed, so no ramp window exists for it (not guessed, not back-dated).
+- `tmobile-split-2`, `cashapp-payback`, `gym-debt`, `water-pump` — all `due: null`,
+  excluded per the guardrail (never guess a date to force a ramp).
+- Recurring monthly-`day` bills (Claude, Wispr Flow, Patreon, etc.) were **not**
+  auto-backfilled this pass — per the skill's own guard, backfilling would require
+  inventing a "logged" date for bills that have existed for weeks; only a freshly
+  added/chained recurring cycle gets ramped going forward.
+- Each of the four bills' own note field now records the ramp outcome; their existing
+  per-bill due-date calendar events are unchanged (the daily aggregate is an ADDITIONAL
+  layer, not a replacement).
+- ROLLOVER (end-of-day, ≥5pm ET) did not fire this run (run time ≈ 8:53am ET) — it is
+  now specified in the skill for the day's last hourly scan going forward.
+
+Nothing paid, nothing contacted, no figure or date guessed. Dashboard re-render:
+deferred to the next mode-7/PART M render that touches this ledger (no live artifact
+session this pass — page fields for "Today's set-aside" already specified in the
+skill's DASHBOARD section for the next render to pick up).
+
 ## Update 2026-08-09 (PART M sweep)
 
 Swept #personal-finance (oldest 24h). Four new one-time bills reported by Lemar as
@@ -161,3 +214,5 @@ bundling the 3 unassigned priorities.
 
 ## Sources
 - Prior project note: `haven/vault/10-Personal/Money/2026-07-11-personal-finance-dashboard-project.md` (full Slack ts provenance lives there)
+- Staged prompt: #admin `C0BBLUA7JLX` ts `1786253312.218409`+`1786253312.241789`
+  (`task:20260809_bill-payment-ramp-daily-calendar`)
