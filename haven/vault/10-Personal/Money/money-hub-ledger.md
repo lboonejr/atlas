@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-05T07:47:00-04:00
+updated: 2026-08-09T08:10:00-04:00
 domain: personal
 type: reference
 status: active
@@ -91,6 +91,21 @@ bills:
   - {id: water-pump, name: "New water pump", amount: 184.79, cadence: once, due: null,
      priority: p5, status: active,
      note: "unclear if inside or on top of the $2,000 repairs lump — unreconciled"}
+  - {id: metrc-fee, name: METRC, amount: 40, cadence: once, due: 2026-08-14,
+     priority: null, status: active, calendar_event_id: q36k3ogoblpe3i5amktigav8ig,
+     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09"}
+  - {id: cleaning-supplies, name: "Cleaning supplies (house)", amount: 30, cadence: once,
+     due: 2026-08-11, priority: null, status: active,
+     calendar_event_id: ue8jtslgpl89qlmhdra710h13k,
+     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09"}
+  - {id: comedy-show-tickets, name: "Comedy show tickets", amount: 50.28, cadence: once,
+     due: 2026-08-12, priority: null, status: active,
+     calendar_event_id: jfh8548cet84pcqo3o697fkbq8,
+     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09"}
+  - {id: station-travel, name: "Travel to The Station", amount: 50, cadence: once,
+     due: 2026-08-15, priority: p4, status: active,
+     calendar_event_id: ptacguksk2rsf3md3403gljtes,
+     note: "reported in #personal-finance 2026-08-09; priority p4 matches the existing Rahway→Newark commute pattern"}
 plans: []                            # payment plans: {id, creditor, total, note, installments:
                                      #   [{seq, amount, due, status, calendar_event_id}]}
 goals:
@@ -112,6 +127,9 @@ open_questions:
   - "Gym debt $75: which priority does it belong to?"
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
   - "Era Context: SoFi connection needs a reconnect at era.app; Cash App still syncing; plan tier caps at 2 linked accounts"
+  - "METRC $40 (due 8/14): which priority does it belong to? (raised in #decisions 2026-08-09)"
+  - "Cleaning supplies $30 (due 8/11): which priority does it belong to? (raised in #decisions 2026-08-09)"
+  - "Comedy show tickets $50.28 (due 8/12): which priority does it belong to? (raised in #decisions 2026-08-09)"
 ```
 
 ## History
@@ -121,6 +139,25 @@ Everything before 2026-08-05 lives in
 budget from the first rough sketch through the locked Option 3 allocation decision, the
 pocket mapping, and the calendar reminders. That note is closed; this ledger carries the
 live state forward. Weekly allocation runs and material changes append below.
+
+## Update 2026-08-09 (PART M sweep)
+
+Swept #personal-finance (oldest 24h). Four new one-time bills reported by Lemar as
+plain text drops — added to the ledger, each projected onto the reminder calendar:
+
+- `metrc-fee` — METRC $40, due 2026-08-14. Priority left `null` (no clear ledger
+  pattern to match) — raised in #decisions.
+- `cleaning-supplies` — Cleaning supplies (house) $30, due 2026-08-11. Priority left
+  `null` — raised in #decisions.
+- `comedy-show-tickets` — Comedy show tickets $50.28, due 2026-08-12. Priority left
+  `null` — raised in #decisions.
+- `station-travel` — Travel to The Station $50, due 2026-08-15. Priority set `p4` —
+  matches the existing `transportation` (Rahway → Newark commute) line's priority, a
+  direct pattern match, not a guess.
+
+No earnings, cash-on-hand, or payment-plan drops this sweep. No payments marked paid.
+Dashboard re-rendered (4 new upcoming-bills rows). One #decisions parent posted
+bundling the 3 unassigned priorities.
 
 ## Sources
 - Prior project note: `haven/vault/10-Personal/Money/2026-07-11-personal-finance-dashboard-project.md` (full Slack ts provenance lives there)
