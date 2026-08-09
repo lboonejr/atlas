@@ -1,6 +1,6 @@
 ---
 created: 2026-07-27T08:25-04:00
-updated: 2026-07-27T08:25-04:00
+updated: 2026-08-09T18:45:00-04:00
 domain: project
 type: reference
 status: active
@@ -122,10 +122,23 @@ early pilot feedback is exactly what shapes the next round of fixes.
 *This is a draft for Lemar's review before it goes out to any operator. Flag anything
 that needs a tone change, missing step, or correction.*
 
+## Update — 2026-08-09
+Ran the staged admin-3x prompt (`task:20260809_booking-agent-onboarding-guide-link`,
+posted in #admin per Lemar's ask in #booking-agent, "Can you surface the operator
+onboarding guide as a link via Google Docs?"). A Google Doc with this note's exact text
+already existed in Drive (`FruntDesk — Operator Welcome & Onboarding Guide`, doc id
+`15V42U3b4HmQmXRMn7hfNGdgzfizw4BJLImUa618ZrMg`, created earlier today) but its link had
+never been posted anywhere. Posted the link to #booking-agent (ts `1786306503.409249`),
+still flagged as a draft awaiting Lemar's review — nothing sent to any operator.
+
 ## Sources
 - slack: #booking-agent (C0BHXTPST52), ts `1785153440.871199` (2026-07-27, Lemar's
   project update + the two asks — official FruntDesk name, approve-first flow
-  confirmation, intake channels, OAuth testing-mode note)
+  confirmation, intake channels, OAuth testing-mode note); ts `1786290984.451329`
+  (2026-08-09, Lemar's ask to surface the doc link); ts `1786306503.409249` (link posted)
+- slack: #admin (C0BBLUA7JLX), ts `1786299308.546229` (staged admin-3x prompt, ✅'d)
+- drive: doc `15V42U3b4HmQmXRMn7hfNGdgzfizw4BJLImUa618ZrMg` (FruntDesk operator
+  onboarding guide, matches this note's text verbatim)
 - haven: `haven/vault/40-Projects/booking-agent/2026-07-15-booking-agent-barbers-tattoo-artists.md`
   (product scope, tiered Basic/Full-Featured plan, dogfood pilots)
 - haven: `haven/vault/40-Projects/booking-agent/2026-07-25-phase1-foundations-design.md`
