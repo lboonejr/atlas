@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-08-01T10:20-04:00
+updated: 2026-08-09T13:00-04:00
 domain: project
 type: reference
 status: active
@@ -52,7 +52,7 @@ Guardrail: tracking & planning only — nothing is paid or contacted automatical
 constants:
   monthly_carry: 31200          # bare-bones crew; excludes cannabis tax
   target_open_days: 14
-  updated_label: "August 1, 2026 (Progressive Commercial reclassified)"
+  updated_label: "August 9, 2026 (Loud Labs added)"
 
 tax_gate:
   - id: nj-sales-tax
@@ -333,6 +333,15 @@ items:
     vendor: "Niche, LLC"
     account: "Statement 6/5"
     status: tbd
+  - id: loud-labs
+    label: "Loud Labs (Pyramid / Doinks / Zoobies / Rejuv)"
+    amount: null
+    tier: 2
+    vendor: "Loud Labs"
+    account: "Invoice PSI0001634"
+    contact: "Aaron Greene (Dir. Ops) aaron@loudlabs.co · Jake Berry (CEO) jake@loudlabs.co"
+    status: tbd
+    note: "Same wind-down vendor-debt pattern as Bud's Goods/Sun Extractions/QCC. Past-due, following up on payment status (8/7) — amount not stated in the 7/10 or 8/7 emails, TBD. Per Lemar's ask in the #decisions email card, 8/9. Haven: haven/vault/20-Cuzzies/2026-08-07-loud-labs-payment-followup.md"
   - id: fresh-grow
     label: "Fresh Grow"
     amount: 3262.06
@@ -444,14 +453,15 @@ carry:
   - {label: "Veriscan ID verification", amount: 30}
 ```
 
-## Snapshot (human-readable, as of 2026-08-01)
+## Snapshot (human-readable, as of 2026-08-09)
 - **Tier 1 (open & operate):** ≈ **$106,537.20** one-time (incl. $50K inventory restock, $40K
   intercompany loan repay; ADT reconciled to $2,842.83, was $1,637.84; PSE&G escalated to
   $1,051.51, was $391.58; Progressive Commercial ($2,117.80) moved out to Tier 3 8/1 — see
   below).
-- **Tier 2 (nice-to-have):** ≈ **$115,411.45** (Leafly escalated to collections 7/14, $653.30 —
-  was $279; Fresh Grow priced 7/15 at $3,262.06 — was TBD; Primo Brands/Ready Refresh $129.94
-  added 7/15; AIQ $2,481.51 added 7/17; 8 cannabis-vendor lines still TBD).
+- **Tier 2 (nice-to-have):** ≈ **$115,411.45** priced (Leafly escalated to collections 7/14,
+  $653.30 — was $279; Fresh Grow priced 7/15 at $3,262.06 — was TBD; Primo Brands/Ready
+  Refresh $129.94 added 7/15; AIQ $2,481.51 added 7/17; 9 cannabis-vendor lines still TBD,
+  incl. new Loud Labs added 8/9).
 - **Tier 3 (edge):** ≈ **$18,188.96** priced (Little Leaf Labs $8,331 + EPLI $4,051.12 +
   First Insurance Funding loan #106241219 $4,699.76, confirmed 7/12 as a separate policy,
   not a duplicate + Progressive Commercial $1,107.20, moved in 8/1; strategic lines TBD).
@@ -460,6 +470,21 @@ carry:
 - Reality check: opening (~$104.4K) + a 3-month cushion (~$93.6K carry) ≈ **$198K** before
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
+
+## Update — 2026-08-09 (Loud Labs added)
+Swept #on-button ts `1786277901.262699` — a new drop (not a restatement, no 🧹📌📊 tag):
+**Loud Labs** (Pyramid / Doinks / Zoobies / Rejuv brands), the same wind-down vendor-debt
+pattern as Bud's Goods/Sun Extractions/QCC, per Lemar's ask in the #decisions email card
+8/9. Contact: Aaron Greene (Director of Operations) aaron@loudlabs.co · Jake Berry (CEO)
+jake@loudlabs.co. Status: past-due, following up on payment status (8/7) against original
+invoice PSI0001634. **Amount not stated in either the 7/10 or 8/7 email — flagged `tbd`
+rather than guessed.** Checked for an existing entry first (this run's other PARTs, A and
+D, were noted as having independently posted the same vendor drop to #on-button) — no prior
+`loud-labs` id existed in this index, so added as a new Tier 2 cannabis-vendor-arrears line
+(`loud-labs`), dedupe-safe against any later restatement of the same drop. Tier 2 TBD count
+8 → 9. Nothing paid or contacted — tracking only. Page (`on-button-reopen.html`) and canvas
+(`F0BEN1167GB`) regenerated from this note in the same pass. Haven source:
+`haven/vault/20-Cuzzies/2026-08-07-loud-labs-payment-followup.md`.
 
 ## Update — 2026-08-01 (Progressive Commercial reclassified Tier 1 → Tier 3, balance reconciled)
 Swept #on-button ts `1785164745.763099` (2026-07-27, Samira's own report of the "let it
