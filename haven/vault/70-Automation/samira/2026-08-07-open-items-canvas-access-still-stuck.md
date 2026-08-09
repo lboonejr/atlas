@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T18:05:00-04:00
-updated: 2026-08-07T18:05:00-04:00
+updated: 2026-08-09T13:20:00-04:00
 domain: automation
 type: log
 status: awaiting-decision
@@ -33,3 +33,12 @@ rather than posting a 4th reply in the same thread.
 share settings (previous ✅ apparently didn't take, or didn't propagate), or confirm
 he'd rather retire the canvas and track Waiting/In-motion/Parked another way (that was
 offered as the 🫡 option on the original card and never picked).
+
+## Update 2026-08-09
+PART A (hourly reaction sweep) re-checked `slack_read_canvas` on `F0BDLSHD8JD` while
+processing the original `#decisions` card `1785590493.788109` (Lemar's ✅ still on it,
+no 🫡). Still `"access":"read"`, `"editors":["U0BC5UTHYG4"]` — the bot user
+(`U0BJQ771LJU`) is still absent from the editors list. No change since the 8/7 check.
+Not re-escalating (already raised as its own STUCK card 8/7 per above) — posted a
+status reply in the original thread instead and left the card open for Lemar's 🫡.
+No write attempted (still avoiding the 7/22 blind-overwrite failure mode).
