@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-10T17:15:00-04:00
+updated: 2026-08-10T17:26:00-04:00
 domain: personal
 type: reference
 status: active
@@ -106,18 +106,18 @@ bills:
      note: "unclear if inside or on top of the $2,000 repairs lump — unreconciled"}
   - {id: metrc-fee, name: METRC, amount: 40, cadence: once, due: 2026-08-14,
      priority: null, status: active, calendar_event_id: q36k3ogoblpe3i5amktigav8ig,
-     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09 (Lemar said 'high priority' 8/9, exact p1-vs-p2 bucket still unconfirmed). Ramped 2026-08-09: due date under 8 days out when logged, so full $40 lands on 2026-08-10 (see daily_targets)."}
+     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09 (Lemar said 'high priority' 8/9, exact p1-vs-p2 bucket still unconfirmed). Ramped 2026-08-09: due date under 8 days out when logged, so full $40 lands on 2026-08-10; ROLLED to 2026-08-11 by end-of-day ROLLOVER (see daily_targets)."}
   - {id: cleaning-supplies, name: "Cleaning supplies (house)", amount: 30, cadence: once,
      due: 2026-08-11, priority: null, status: paid,
      note: "PAID 2026-08-10 at $29.95 — confirmed by Lemar in #decisions (ts 1786395169, 'Yes the 29.95 is for the tract[ked] cleaning supplies. I paid it early'), picking Option 3 (the $29.95 purchase IS this bill). $0.05 under the tracked $30, not reconciled further. Due-date calendar event (ue8jtslgpl89qlmhdra710h13k) retired; its $30 daily-set-aside contribution on 2026-08-10 flipped to paid and removed from that day's aggregate total (now $140.28). Prior note: reported in #personal-finance 2026-08-09, ramped 2026-08-09 (due date under 8 days out when logged)."}
   - {id: comedy-show-tickets, name: "Comedy show tickets", amount: 50.28, cadence: once,
      due: 2026-08-12, priority: null, status: active,
      calendar_event_id: jfh8548cet84pcqo3o697fkbq8,
-     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09 (Lemar said 'low priority' 8/9; p5/p6/p7 are each tied to a specific pocket (own-car/side-projects/savings) so the bucket still needs confirming). Ramped 2026-08-09: due date under 8 days out when logged, so full $50.28 lands on 2026-08-10 (see daily_targets)."}
+     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09 (Lemar said 'low priority' 8/9; p5/p6/p7 are each tied to a specific pocket (own-car/side-projects/savings) so the bucket still needs confirming). Ramped 2026-08-09: due date under 8 days out when logged, so full $50.28 lands on 2026-08-10; ROLLED to 2026-08-11 by end-of-day ROLLOVER (see daily_targets)."}
   - {id: station-travel, name: "Travel to The Station", amount: 50, cadence: once,
      due: 2026-08-15, priority: p4, status: active,
      calendar_event_id: ptacguksk2rsf3md3403gljtes,
-     note: "reported in #personal-finance 2026-08-09; priority p4 matches the existing Rahway→Newark commute pattern, confirmed by Lemar 8/9 ('median priority'). Ramped 2026-08-09: due date under 8 days out when logged, so full $50 lands on 2026-08-10 (see daily_targets). Lemar 8/9: likely becoming a recurring weekly expense (new weekend job at The Station) — rate TBD, he'll post it in #personal-finance."}
+     note: "reported in #personal-finance 2026-08-09; priority p4 matches the existing Rahway→Newark commute pattern, confirmed by Lemar 8/9 ('median priority'). Ramped 2026-08-09: due date under 8 days out when logged, so full $50 lands on 2026-08-10; ROLLED to 2026-08-11 by end-of-day ROLLOVER (see daily_targets). Lemar 8/9: likely becoming a recurring weekly expense (new weekend job at The Station) — rate TBD, he'll post it in #personal-finance."}
 plans:                                # payment plans: {id, creditor, total, note, installments:
                                      #   [{seq, amount, due, status, calendar_event_id}]}
   - id: liquidibee-nomas-payment-plan
@@ -145,11 +145,17 @@ plans:                                # payment plans: {id, creditor, total, not
       - {seq: 4, amount: 125, due: 2026-09-06, status: pending, calendar_event_id: ekpni2dt25f0fe5tjh51sbjj64}
 daily_targets:                       # even daily set-aside ramp (added 2026-08-09)
   "2026-08-10":
+    total: 0
+    contributions:
+      - {bill_id: metrc-fee, amount: 40, status: rolled}
+      - {bill_id: cleaning-supplies, amount: 30, status: paid}
+      - {bill_id: comedy-show-tickets, amount: 50.28, status: rolled}
+      - {bill_id: station-travel, amount: 50, status: rolled}
+  "2026-08-11":
     total: 140.28
-    calendar_event_id: kli8jm1vlal3ntffr2lqdkpmuk
+    calendar_event_id: 1fjsh976g0p9ni4ud7urr3jivs
     contributions:
       - {bill_id: metrc-fee, amount: 40, status: pending}
-      - {bill_id: cleaning-supplies, amount: 30, status: paid}
       - {bill_id: comedy-show-tickets, amount: 50.28, status: pending}
       - {bill_id: station-travel, amount: 50, status: pending}
 goals:
@@ -428,6 +434,38 @@ No calendar changes beyond the two described above. Nothing paid, nothing contac
 figure guessed. Dashboard re-render deferred to the next pass that also picks up PART
 M's sweep (avoids rendering twice in one hourly cycle).
 
+## Update 2026-08-10 (PART M sweep, 4th pass — end-of-day ROLLOVER)
+
+Swept #personal-finance since the last run (3rd pass, ended at the DoorDash $51.70
+drop, ts `1786388799.564249`, followed by this bot's own 🌐 summary post at ts
+`1786393173.886619`). **No new money drops** — the channel's newest message is still
+that same 🌐 summary post; nothing from Lemar has landed since. (The two #decisions
+answers processed in between were handled by the separate PART A follow-through above,
+not a #personal-finance sweep.)
+
+Run time ≈5:26pm ET — the day's LAST hourly scan (gate ≥5pm ET) — so ROLLOVER fired per
+the money-hub skill's ROLLOVER section:
+
+- `daily_targets["2026-08-10"]` had three contributions still `status: pending`
+  (`metrc-fee` $40, `comedy-show-tickets` $50.28, `station-travel` $50 — total $140.28)
+  and one already `paid` (`cleaning-supplies` $30, untouched — a payment always wins
+  over a rollover). All three pending contributions flipped to `status: rolled` and
+  their amounts carried into a brand-new `daily_targets["2026-08-11"]` entry (that date
+  had no prior entry).
+- 2026-08-10's total recomputed to **$0** (every contribution now paid or rolled) — per
+  the DAILY CALENDAR rule, a day reaching $0 gets its aggregate event RETIRED: cancelled
+  `kli8jm1vlal3ntffr2lqdkpmuk` and cleared its `calendar_event_id` from the ledger.
+- 2026-08-11's total is **$140.28** — created a new all-day aggregate event
+  (`1fjsh976g0p9ni4ud7urr3jivs`, "Set aside today: $140.28", popup reminders at 0 and
+  10080 minutes matching the existing convention, no attendees, description flags all
+  three contributions as "rolled from 2026-08-10").
+- Each rolled bill's own note field updated to record the rollover (metrc-fee,
+  comedy-show-tickets, station-travel).
+
+This is a mechanical daily-housekeeping step, not a payment — nothing was assumed paid,
+nothing contacted. Dashboard re-rendered (Today's set-aside now $0, 2026-08-11 carries
+the $140.28 rolled target).
+
 ## Sources
 - Prior project note: `haven/vault/10-Personal/Money/2026-07-11-personal-finance-dashboard-project.md` (full Slack ts provenance lives there)
 - Staged prompt: #admin `C0BBLUA7JLX` ts `1786253312.218409`+`1786253312.241789`
@@ -447,3 +485,6 @@ M's sweep (avoids rendering twice in one hourly cycle).
 - #decisions `C0BBXA96FFV` ts `1786385477.411649` (SoFi manual-tracking answer, reply ts
   `1786388173.527179`), ts `1786393175.511769` (cleaning-supplies answer, reply ts
   `1786395169.639189`) — 2026-08-10 PART A follow-through
+- #personal-finance `C0BGLEMH99T` ts `1786393173.886619` (this bot's own 🌐 3rd-pass
+  summary, the channel's newest message as of this sweep) — 2026-08-10 PART M sweep,
+  4th pass / end-of-day ROLLOVER
