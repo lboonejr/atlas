@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T08:05:00-04:00
-updated: 2026-08-10T14:20:00-04:00
+updated: 2026-08-10T20:30:00-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -45,6 +45,22 @@ items and billing Cuzzie's, but that has not been confirmed or communicated back
 her. Status left `awaiting-decision` rather than `done`, since the matter itself isn't
 resolved — only the #decisions prompt is closed. No email sent, no reply drafted.
 
+## Update 2026-08-10 (PART D, email loop)
+
+New inbound since the last close: Lemar replied to Sherry directly himself (outside
+this loop, sent 2026-08-10 17:47 UTC) committing **Thursday** as the day the crew will
+be back to clear the space. Sherry replied again (2026-08-10 18:22 UTC, same Gmail
+thread, message id `19fece9af8a57dbd`): she can organize building access but needs a
+specific arrival time and an estimate of how many hours to plan for.
+
+This is a fresh reply-worthy ask (logistics, not a repeat of the earlier
+date/LL-removal-charge decision that was closed via 🫡 on 8/10). Raised as a new
+#decisions card with time/duration options rather than committing on Lemar's behalf.
+Status left `awaiting-decision` — the underlying clear-out still isn't scheduled with
+a confirmed time.
+
 ## Sources
 - gmail: thread `19fcdd80644e5973`
-- slack: #decisions card ts `1786378053.601639`
+- gmail: message `19fece9af8a57dbd` (2026-08-10 18:22 UTC, Sherry's arrival-time ask)
+- slack: #decisions card ts `1786378053.601969`
+- slack: #decisions card ts (this pass, PART D, arrival-time ask)
