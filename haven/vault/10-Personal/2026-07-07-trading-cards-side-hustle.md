@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T09:25:00-04:00
-updated: 2026-08-09T12:12:00-04:00
+updated: 2026-08-10T10:34:00-04:00
 domain: personal
 type: note
 status: active
@@ -130,6 +130,59 @@ lead to research before Sept 1, not a commitment. `due` moved to
 `2026-09-01T09:00-04:00`; the reminder-calendar event (`o9i482d50psgp7qf9uimvo33rs`)
 moved to match (vault wins). No purchase made yet.
 
+## Update 2026-08-10 (PART C) - full-collection sourcing research, answering the Aug 9 question
+
+Ran the staged `run:admin-3x` prompt `task:20260810_trading-cards-collection-sourcing`
+(#admin ts `1786365283.508839`) — a follow-up to Lemar's question in #trading-cards
+(ts `1786309104.308389`, 2026-08-09 ~4:58pm ET): "A friend said the safest bet would
+be to buy full collections. Where can I buy something like this?" Research only, no
+purchase made, no money moved.
+
+**Where to buy full collections/lots (vs. singles):**
+- **eBay** - largest online selection of bundled "Sports Trading Card Lots";
+  sellers looking for quick liquidity often bundle dense-parallel-count product
+  (e.g. Prizm/Donruss-style releases) into lots below their individual break-up value.
+- **Whatnot** - live-auction platform; lower-competition windows (smaller/quieter
+  rooms, off-peak stream times) tend to have less bidding-war pressure on bundled
+  lots and box breaks than prime-time streams.
+- **COMC bulk consignment** - lower-touch than singles-only selling, but as a buy
+  source it's more useful for picking off underpriced individual cards than for
+  whole-collection buys.
+- **Facebook Marketplace / local estate sales** - the least liquid, highest-variance
+  source: sellers are often non-collectors, which cuts both ways (real bargains on
+  underpriced boxes, but also real risk of a lowball ask on something valuable, or
+  an inflated ask on common bulk). Local card shops (see candidate list above) also
+  sometimes resell collections they've bought in.
+
+**Tradeoffs vs. the singles/dollar-bin approach already chosen (Option A, the
+Jul 12 decision):**
+- **Price-per-card:** bulk/collection buying is priced at a steep discount to
+  singles specifically because sorting, grading eligibility-checking, and reselling
+  bulk takes real labor - modern bulk commons run roughly 1-3 cents each wholesale,
+  pre-1980 bulk commons 50 cents-$2 each; a graded/key single can be 10-100x that.
+  Buying a "full collection" is a bet that a few key cards inside are worth more
+  than the average card drags the lot price up to.
+- **Dead-weight risk:** most of what's in any given collection will be low-value
+  bulk regardless of what a seller claims - the $100-150 micro-test budget buys very
+  few full "collections" before this risk eats the whole test budget on cards that
+  never resell for more than a few cents each.
+- **Authentication/condition unknowns:** unlike a graded single bought raw-verified
+  on eBay, a mixed collection is bought sight-mostly-unseen on condition (centering/
+  corners/surface) per card - the exact issue the starter framework above flags as
+  something to learn before submitting anything for grading.
+- **Net read:** full-collection buying is a real, valid sourcing channel (worth
+  keeping in the toolkit, especially once the budget is bigger than $100-150), but
+  it's a *higher-variance* version of the same dollar-bin logic already chosen in
+  Option A, not a faster/safer alternative to it - the "safest bet" framing from
+  Lemar's friend doesn't hold up cleanly for a budget this small. Singles/dollar-bin
+  stays the better fit for the current Sept 1 micro-test; collections are worth
+  revisiting once there's a track record and a bigger budget to average risk across
+  more lots.
+
+Posted this summary back to #trading-cards answering Lemar's question directly.
+Whatnot and the two local shops (Lurk Cards and Collectibles, Lucky Strike) remain
+logged above as candidate venues for either approach.
+
 ## Sources
 - slack: #atlas capture, 2026-07-06 20:36:41 EDT (TS 1783384601.800979)
 - slack: #atlas, HTML request, 2026-07-07 15:06:12 EDT (TS 1783451172.932509)
@@ -142,3 +195,5 @@ moved to match (vault wins). No purchase made yet.
 - slack: #trading-cards, local shop leads, 2026-07-29 09:35:26 EDT (TS 1785328926.295679)
 - slack: #trading-cards, pushed to Sept 1 + Whatnot buy-side lead, 2026-08-09 (TS 1786289965.667309)
 - staged prompt: #admin `C0BBLUA7JLX` ts `1786281769.032919` (task:20260809_trading-cards-shop-notes-checkin)
+- staged prompt: #admin `C0BBLUA7JLX` ts `1786365283.508839` (task:20260810_trading-cards-collection-sourcing)
+- web: eBay/Whatnot bulk-lot sourcing research, 2026-08-10 (Athlon Sports, thecardshopfinder.com, baseballcardroadshows.com, sportscollectorsdaily.com)

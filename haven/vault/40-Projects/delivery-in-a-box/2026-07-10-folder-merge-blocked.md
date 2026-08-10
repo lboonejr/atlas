@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T17:05-04:00
-updated: 2026-08-10T00:00:00-04:00
+updated: 2026-08-10T10:40:00-04:00
 domain: project
 type: note
 status: active
@@ -294,3 +294,35 @@ routine's stuck-escalation threshold — not yet raising to `#decisions`.
 
 Source: `#admin` ts `1786281763.061569` (staged prompt, unchanged) · `#reports`
 failure line posted this scan.
+
+## Update 2026-08-10 (PART C) - blocked a 3rd time, escalating to #decisions (STUCK)
+
+Re-checked `#admin` `task:20260809_dib-template-theme-apply` (ts
+`1786281763.061569`) — still un-reacted, this is the 3rd consecutive scan it has
+come up due with the identical blocker. Confirmed independently again: no tool
+available this session can format an *existing* Google Doc in place. `Google-Drive`
+connector tools (`create_file`, `copy_file`, `download_file_content`,
+`read_file_content`, `search_files`, `get_file_metadata`, `get_file_permissions`,
+`list_recent_files`) cover read/download/copy/create/list/search only — none
+update or format existing file content. `Adobe-for-creativity`'s design tools
+(HTML→Express import, image/asset generation) produce new assets/exports, not
+in-place edits to a live Google Doc. No Google Docs formatting connector is
+present in this environment. Same root cause as the 2026-08-09 and 2026-08-10
+(attempt 2) updates above — nothing new to try that wouldn't mean rebuilding the
+docs from scratch, which the staged prompt explicitly rules out (visual pass only,
+keep existing text/structure intact).
+
+Per the routine's 3-strike rule: reacted 🚗 on the `#admin` source message (ts
+`1786281763.061569`) to stop further silent retries, and raised ONE `#decisions`
+parent ("STUCK — needs Lemar: DIB template visual-theme pass, 3x blocked on
+tooling") asking Lemar to either (a) run the already-posted ready-to-paste design
+prompt (`#delivery-in-a-box` ts `1784581998.727349`) himself via a Claude session
+with Google Docs write access, or (b) confirm the docs can stay plain-text/table
+for now and this gets dropped from the retry queue. No further automatic retries
+of this task until Lemar answers.
+
+**Status:** `status: active`, marked stuck - all three docs remain unchanged
+(plain text/tables), nothing lost, nothing rewritten, no workaround guessed at.
+
+Source: `#admin` ts `1786281763.061569` (staged prompt, now reacted 🚗) · `#decisions`
+STUCK card posted this scan · `#reports` failure line (attempt 3) posted this scan.
