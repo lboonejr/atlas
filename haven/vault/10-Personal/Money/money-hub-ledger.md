@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-10T16:10:00-04:00
+updated: 2026-08-10T17:15:00-04:00
 domain: personal
 type: reference
 status: active
@@ -34,6 +34,10 @@ Field rules (on-button-plan pattern):
 - The allocation SHAPE is a locked decision (Option 3 hybrid floor + waterfall,
   2026-07-24) — do not redesign it here. The floor DOLLAR figure is computed, not
   stored: sum active monthly bills with priority p1/p2/p4, ÷ 4.33.
+- `reported_balances` = manually-reported account balances (added 2026-08-10, per
+  Lemar's #decisions call to use manual entry for SoFi checking instead of Era Context
+  until it reconnects). ISO date key per report; latest entry per `pocket` is current.
+  Never a substitute for `cash_on_hand` (physical cash only).
 - Weekly allocation runs append `## Update` sections below; the yaml holds state, the
   Updates hold history.
 
@@ -51,6 +55,9 @@ config:
 cash_on_hand:
   amount: 25                         # reported #personal-finance 2026-08-10 ("Cash on hand today: $25")
   as_of: 2026-08-10
+reported_balances:                   # manually-reported account balances (2026-08-10, see field rules above)
+  - {pocket: sofi-checking, amount: 2.54, as_of: 2026-08-10,
+     note: "Lemar #decisions 2026-08-10: 'SoFi checking and we will use manual entry instead of Era.' Manual tracking starts here — update this entry whenever a new SoFi checking balance is reported in #personal-finance."}
 pockets:                             # where delegated money goes (draft mapping 2026-07-24,
                                      # confirmed names 2026-07-25; no transfers made by anyone
                                      # but Lemar)
@@ -101,9 +108,8 @@ bills:
      priority: null, status: active, calendar_event_id: q36k3ogoblpe3i5amktigav8ig,
      note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09 (Lemar said 'high priority' 8/9, exact p1-vs-p2 bucket still unconfirmed). Ramped 2026-08-09: due date under 8 days out when logged, so full $40 lands on 2026-08-10 (see daily_targets)."}
   - {id: cleaning-supplies, name: "Cleaning supplies (house)", amount: 30, cadence: once,
-     due: 2026-08-11, priority: null, status: active,
-     calendar_event_id: ue8jtslgpl89qlmhdra710h13k,
-     note: "reported in #personal-finance 2026-08-09; priority unassigned — flagged in #decisions 2026-08-09 (Lemar said 'high priority' 8/9, exact p1-vs-p2 bucket still unconfirmed). Ramped 2026-08-09: due date under 8 days out when logged, so full $30 lands on 2026-08-10 (see daily_targets)."}
+     due: 2026-08-11, priority: null, status: paid,
+     note: "PAID 2026-08-10 at $29.95 — confirmed by Lemar in #decisions (ts 1786395169, 'Yes the 29.95 is for the tract[ked] cleaning supplies. I paid it early'), picking Option 3 (the $29.95 purchase IS this bill). $0.05 under the tracked $30, not reconciled further. Due-date calendar event (ue8jtslgpl89qlmhdra710h13k) retired; its $30 daily-set-aside contribution on 2026-08-10 flipped to paid and removed from that day's aggregate total (now $140.28). Prior note: reported in #personal-finance 2026-08-09, ramped 2026-08-09 (due date under 8 days out when logged)."}
   - {id: comedy-show-tickets, name: "Comedy show tickets", amount: 50.28, cadence: once,
      due: 2026-08-12, priority: null, status: active,
      calendar_event_id: jfh8548cet84pcqo3o697fkbq8,
@@ -121,12 +127,17 @@ plans:                                # payment plans: {id, creditor, total, not
            through the Aug 15 due date) per Lemar's 2026-08-09 #decisions reply; Lemar
            said 2026-08-09 in #personal-finance he can't cover that pace and asked to
            re-spread it across 4 weeks from today instead — RE-SPREAD 2026-08-09 to 4
-           weekly $125 installments (8/16, 8/23, 8/30, 9/06). Same saga as the missed
-           July 15 good-faith payment. Tracking/reminder only — nothing paid or
+           weekly $125 installments (8/16, 8/23, 8/30, 9/06). Lemar corrected 2026-08-10
+           in #decisions ('I wanted 8 payments not 4') — Samira asked whether that means
+           twice-weekly $62.50 within the same 8/16–9/06 window or 8 weekly $62.50
+           installments running through ~10/25; UNANSWERED, installments below still
+           reflect the old 4-payment schedule pending that reply. Same saga as the
+           missed July 15 good-faith payment. Tracking/reminder only — nothing paid or
            contacted. FLAG: the collector's actual stated deadline was Aug 15 —
-           this new schedule runs past that and has NOT been communicated to Nomas
-           Recovery/Amanda Ortiz; raised in #decisions since contacting them to
-           renegotiate is outside what Samira can do unattended."
+           this schedule already runs past that and has NOT been communicated to Nomas
+           Recovery/Amanda Ortiz; a general extension-request draft was saved to Gmail
+           Drafts (not sent) per Lemar's earlier option pick, but doesn't commit to an
+           exact payment count since that's still open."
     installments:
       - {seq: 1, amount: 125, due: 2026-08-16, status: pending, calendar_event_id: tja7bjk9ri35n0bqb01c52j4es}
       - {seq: 2, amount: 125, due: 2026-08-23, status: pending, calendar_event_id: gt4knt3i2m6lpjhlrjf8n2jqn8}
@@ -134,11 +145,11 @@ plans:                                # payment plans: {id, creditor, total, not
       - {seq: 4, amount: 125, due: 2026-09-06, status: pending, calendar_event_id: ekpni2dt25f0fe5tjh51sbjj64}
 daily_targets:                       # even daily set-aside ramp (added 2026-08-09)
   "2026-08-10":
-    total: 170.28
+    total: 140.28
     calendar_event_id: kli8jm1vlal3ntffr2lqdkpmuk
     contributions:
       - {bill_id: metrc-fee, amount: 40, status: pending}
-      - {bill_id: cleaning-supplies, amount: 30, status: pending}
+      - {bill_id: cleaning-supplies, amount: 30, status: paid}
       - {bill_id: comedy-show-tickets, amount: 50.28, status: pending}
       - {bill_id: station-travel, amount: 50, status: pending}
 goals:
@@ -159,16 +170,15 @@ open_questions:
   - "Water pump $184.79: inside or on top of the $2,000 repairs lump?"
   - "Gym debt $75: which priority does it belong to?"
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
-  - "Era Context: SoFi connection needs a reconnect at era.app; Cash App still syncing; plan tier caps at 2 linked accounts"
+  - "Era Context: SoFi connection needs a reconnect at era.app; Cash App still syncing; plan tier caps at 2 linked accounts. SoFi checking balance now tracked manually instead per Lemar's 2026-08-10 #decisions call (see reported_balances) — Era reconnect still open for SoFi savings + everything else."
   - "METRC $40 (due 8/14): p1 or p2? (Lemar said 'high priority' 8/9, exact bucket unconfirmed — raised in #decisions 2026-08-09)"
-  - "Cleaning supplies $30 (due 8/11): p1 or p2? (Lemar said 'high priority' 8/9, exact bucket unconfirmed — raised in #decisions 2026-08-09)"
   - "Comedy show tickets $50.28 (due 8/12): p5/p6/p7, or no floor/waterfall bucket at all? (Lemar said 'low priority' 8/9, but the waterfall buckets are each tied to a specific pocket — raised in #decisions 2026-08-09)"
-  - "Liquidibee/Nomas: the re-spread 4-week savings schedule (through 9/06) runs past the collector's stated Aug 15 deadline — does Lemar want a draft message prepared for Nomas Recovery explaining the delay? Raised in #decisions 2026-08-09, nothing drafted or sent yet."
+  - "Liquidibee/Nomas: does Lemar want the extension-request draft in Gmail Drafts edited/sent now that the payment count is being corrected to 8? Nothing sent yet."
+  - "Liquidibee/Nomas: 8 payments — twice-weekly $62.50 within 8/16–9/06, or 8 weekly $62.50 through ~10/25? Raised in #decisions 2026-08-10, ledger/calendar not yet rebuilt pending this answer."
   - "Station travel $50/wk: Lemar started a weekend job at The Station 8/9 — pay rate not yet known, he'll report it in #personal-finance"
-  - "'Gas $10' dropped in #personal-finance 2026-08-10 with a receipt photo (IMG_2080.jpeg) — doesn't match any existing bill line (no recurring gas bill, no due date) and isn't income or cash-on-hand. Unclear if Lemar wants this tracked as a new recurring/one-time expense line (and if so what cadence/pocket) or if it's just an FYI needing no ledger action. Raised in #decisions 2026-08-10, nothing added to the ledger."
-  - "'SoFi balance today: $2.54' dropped in #personal-finance 2026-08-10 — a reported bank balance, not cash on hand (the `cash_on_hand` field is for physical cash) and not tied to a specific pocket (both `sofi-checking` and `sofi-savings` map to SoFi). No ledger field exists for a manually-reported account balance (that's Era Context's job, and SoFi still needs reconnecting per the open question above). Left OUT of the ledger rather than guess which pocket/field it belongs in; raised in #decisions 2026-08-10."
-  - "'$29.95 spent on cleaning supplies' dropped in #personal-finance 2026-08-10 (ts 1786386505, receipt photo) — doesn't match any existing bill line (the tracked 'Cleaning supplies $30' bill is a separate upcoming due-8/11 item, not this purchase) and isn't income or cash-on-hand. Unclear if this is a payment against that $30 bill, a separate purchase, or an FYI needing no ledger action. Left OUT of the ledger rather than guess; raised in #decisions 2026-08-10."
-  - "DoorDash '$51.70' dropped in #personal-finance 2026-08-10 (ts 1786388799, no date range) — logged to income-log-2026.md as its own 2026-08-10 line, but its relationship to the already-logged $61.43 partial-week (Aug 10-16) figure is unclear (additional earnings on top, or a restated/corrected total). Nothing merged; raised in #decisions 2026-08-10."
+  - "'Gas $10' dropped in #personal-finance 2026-08-10 with a receipt photo (IMG_2080.jpeg) — doesn't match any existing bill line (no recurring gas bill, no due date) and isn't income or cash-on-hand. Lemar said in #decisions 2026-08-10 he wants to 'add in receipts for everything I paid for so that it comes off of the total amount I need to make today' — reads as a request for a broader receipts-offset feature, not a direct answer for this specific $10 item. Left OUT of the ledger; flagging for a follow-up #decisions clarification instead of guessing the feature shape or category."
+  - "SoFi checking manual balance ($2.54, reported 2026-08-10): now tracked in `reported_balances` per Lemar's #decisions call — no further open question, just noting for the dashboard's Cash position section."
+  - "DoorDash '$51.70' dropped in #personal-finance 2026-08-10 (ts 1786388799, no date range) — logged to income-log-2026.md as its own 2026-08-10 line, but its relationship to the already-logged $61.43 partial-week (Aug 10-16) figure is unclear (additional earnings on top, or a restated/corrected total). Nothing merged; raised in #decisions 2026-08-10, still unanswered."
 ```
 
 ## History
@@ -381,6 +391,43 @@ Dashboard re-render deferred to the next PART M pass — no material change to t
 headline numbers this pass beyond the new income line (which the "This week" section
 will pick up next render). Nothing paid, nothing contacted, no figure guessed.
 
+## Update 2026-08-10 (PART A follow-through — #decisions answers processed)
+
+Two #decisions cards Lemar answered this pass, processed directly (not a #personal-
+finance sweep — that's PART M, separate):
+
+- **SoFi checking manual tracking** (#decisions ts `1786385477.411649`, Lemar's reply
+  ts `1786388173.527179`: "SoFi checking and we will use manual entry instead of Era").
+  Added `reported_balances` block to the ledger, first entry `sofi-checking: $2.54,
+  as_of: 2026-08-10`. Resolved the open question; Era reconnect for everything else
+  (SoFi savings, Cash App) stays open. Replied "Done ✅" in the #decisions thread.
+- **Cleaning-supplies bill marked paid** (#decisions ts `1786393175.511769`, Lemar's
+  reply ts `1786395169.639189`: "Yes the 29.95 is for the tract[ked] cleaning supplies.
+  I paid it early") — Mode 6. Flipped `cleaning-supplies` to `status: paid`
+  ($29.95 actual, $0.05 under the tracked $30). Cancelled its due-date calendar event
+  (`ue8jtslgpl89qlmhdra710h13k`). Flipped its `daily_targets["2026-08-10"]` contribution
+  to `paid` and reduced that day's aggregate "Set aside today" event
+  (`kli8jm1vlal3ntffr2lqdkpmuk`) from $170.28 to $140.28 (METRC + comedy tickets +
+  station travel only now). The DoorDash $51.70 half of that same card is still
+  UNANSWERED — left open, nothing guessed. Replied "Done ✅" in the #decisions thread.
+
+Separately, Lemar's Liquidibee/Nomas correction ("I wanted 8 payments not 4," #decisions
+ts `1786288639.033759`, reply ts `1786289675.222939`) was already surfaced by Samira
+with a follow-up clarifying question (twice-weekly vs. 8-weekly cadence) — still
+unanswered, plan/calendar left as the old 4-payment schedule pending that reply (noted
+in the `plans` block above; not re-litigated here).
+
+Also noted: Lemar's reply to the "Gas $10" card ("I want to be able to add in receipts
+for everything that I paid for so that it comes off of the total amount that I need to
+make today") reads as a request for a new receipts-offset feature/design, not a direct
+answer to the two specific options originally posed. Left the $10 gas item OUT of the
+ledger rather than guess the feature shape; flagged for a follow-up #decisions
+clarification instead.
+
+No calendar changes beyond the two described above. Nothing paid, nothing contacted, no
+figure guessed. Dashboard re-render deferred to the next pass that also picks up PART
+M's sweep (avoids rendering twice in one hourly cycle).
+
 ## Sources
 - Prior project note: `haven/vault/10-Personal/Money/2026-07-11-personal-finance-dashboard-project.md` (full Slack ts provenance lives there)
 - Staged prompt: #admin `C0BBLUA7JLX` ts `1786253312.218409`+`1786253312.241789`
@@ -397,3 +444,6 @@ will pick up next render). Nothing paid, nothing contacted, no figure guessed.
 - #personal-finance `C0BGLEMH99T` ts `1786386505.063809` ("$29.95 spent on cleaning
   supplies", photo), `1786388799.564249` ("DoorDash Earnings : $51.70") — 2026-08-10
   PART M sweep, 3rd pass
+- #decisions `C0BBXA96FFV` ts `1786385477.411649` (SoFi manual-tracking answer, reply ts
+  `1786388173.527179`), ts `1786393175.511769` (cleaning-supplies answer, reply ts
+  `1786395169.639189`) — 2026-08-10 PART A follow-through
