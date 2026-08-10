@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-10T12:05:00-04:00
+updated: 2026-08-10T13:30:00-04:00
 domain: personal
 type: reference
 status: active
@@ -80,21 +80,34 @@ daily_allowances:                    # LOCKED 2026-08-10. FIRST claim on each da
 buckets:                             # accumulating balances, physically inside Set-Aside
   - {id: maintenance, name: "Car maintenance", balance: 0, pocket: set-aside,
      note: "Fed by the daily gas sweep. Funds repairs/maintenance. Money only leaves it
-            on Lemar's explicit say-so — it never silently backfills a missed bill."}
+            on Lemar's explicit say-so — it never silently backfills a missed bill.
+            FLAG 2026-08-10: `pocket: set-aside` now resolves to SoFi Checking, the
+            bill-paying account, which is a poor home for a savings balance — it will sit
+            mixed in with money earmarked for bills. Left as-is rather than moved to
+            SoFi Savings, because that is Lemar's call. See open_questions."}
 cash_on_hand:
   amount: null                       # Lemar reports: "I have $X cash"
   as_of: null
-pockets:                             # TWO pockets (locked 2026-08-10). Lemar moves the
-                                     # money; nothing here transfers anything.
-  - {id: spending, name: "Spending",  account: sofi-checking, era_account: "Checking - 4102",
-     status: active, role: "income lands here; day-to-day spending pays from here"}
-  - {id: set-aside, name: "Set-Aside", account: sofi-savings, era_account: "Savings - 6970",
-     status: active, role: "the daily set-aside number moves here; queued bills pay from here"}
-  # -- retired with the Option 3 model 2026-08-10; still Lemar's accounts, no longer
-  #    part of the model. Never resurrect without an explicit instruction.
+pockets:                             # TWO pockets. Account mapping CORRECTED 2026-08-10
+                                     # by Lemar (see the Update below) — the roles are
+                                     # unchanged, the accounts behind them swapped.
+                                     # Lemar moves the money; nothing here transfers.
+  - {id: spending, name: "Spending", account: doordash-crimson, era_account: null,
+     status: active, role: "income lands here (DoorDash payouts); gas and day-to-day
+            spending pay from here",
+     note: "NOT linked to Era — no live balance. This is the account the whole system
+            depends on most and the one it currently cannot see. See open_questions."}
+  - {id: set-aside, name: "Set-Aside", account: sofi-checking, era_account: "Checking - 4102",
+     status: active, role: "the daily set-aside number moves here; every recurring bill
+            is paid out of this account"}
+  # -- parked: still Lemar's accounts, not part of the model. Never resurrect without an
+  #    explicit instruction.
+  - {id: sofi-savings, status: parked, era_account: "Savings - 6970",
+     note: "was Set-Aside until the 2026-08-10 account correction. Now unassigned — the
+            natural home for the maintenance bucket, but Lemar has not said so. UNRESOLVED,
+            see open_questions; the bucket's pocket stays as written until he does."}
   - {id: cashapp-checking,  status: parked, note: "was p5 own-car pocket"}
   - {id: cashapp-savings,   status: parked, note: "was p6 side-projects pocket"}
-  - {id: doordash-crimson,  status: parked, note: "was p1 Cuzzie's buffer (checking + savings)"}
 bills:
   # -- monthly, queued (needs a billing day to be visible) --
   - {id: cuzzies-phone-workspace, name: "Cuzzie's phone + Google Workspace", amount: 550,
@@ -639,6 +652,8 @@ open_questions:
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
   - "Era Context: SoFi connection needs a reconnect at era.app (balances are stale to 2026-07-11); Cash App still syncing; plan tier caps at 2 linked accounts"
   - "Station travel $50/wk: Lemar started a weekend job at The Station 8/9 — pay rate not yet known, he'll report it in #personal-finance"
+  - "Where should the maintenance bucket live? The 2026-08-10 account correction left it in Set-Aside, which is now SoFi Checking (the bill-paying account). SoFi Savings is free and is the obvious home, but Lemar has not said so — not moved."
+  - "Era links only 2 accounts and they are now the wrong two: SoFi Checking (Set-Aside) and SoFi Savings (parked). DoorDash Crimson, where ALL income now lands, is not connected — so the system has no live view of the account it depends on most. Swap the linked pair, or raise the plan tier?"
   - "Gas/maintenance $30/day reserve is a rough cap Lemar named, not a measured figure — refine it once a few weeks of actual fill-ups are reported (it is now the largest single line in the ledger at ~$900/mo)"
   - "Income backlog: Lemar is posting ~2 weeks of DoorDash earnings to #personal-finance (2026-08-10). Until they land, income_target_weekly $500 is a guess and the overload check can't run."
 ```
@@ -650,6 +665,47 @@ Everything before 2026-08-05 lives in
 budget from the first rough sketch through the (now retired) Option 3 allocation
 decision, the six-pocket mapping, and the calendar reminders. That note is closed; this
 ledger carries the live state forward.
+
+## Update 2026-08-10 (account correction — which account plays which role)
+
+Lemar corrected the account mapping: "The SoFi checking account is going to be where all
+the recurring bills get paid. The account with the incoming money is gonna be the
+DoorDash crimson card."
+
+**The two roles are unchanged. Only the accounts behind them moved.**
+
+| Role | Was | Now |
+|---|---|---|
+| Spending (income lands, gas + day-to-day paid from) | SoFi Checking | **DoorDash Crimson** |
+| Set-Aside (daily bill number moves here, recurring bills paid from) | SoFi Savings | **SoFi Checking** |
+
+Everything else about the model is untouched: due-date order, the daily accrual, the $30
+gas reserve taking first claim, the one transfer a day. The instruction Lemar acts on each
+morning is still "move today's set-aside number from Spending to Set-Aside" — it now means
+DoorDash Crimson to SoFi Checking.
+
+**Two consequences he did not specify, flagged rather than decided:**
+
+1. **SoFi Savings is orphaned.** It was Set-Aside; now it has no role, so it is `parked`
+   (never deleted). The maintenance bucket was defined as living "inside Set-Aside", which
+   now resolves to SoFi Checking — the bill-paying account. That is a poor home for a
+   savings balance, since it will sit mixed in with money earmarked for bills, and SoFi
+   Savings is sitting free and already linked to Era. The obvious move is to point the
+   bucket at SoFi Savings, but Lemar did not say that, so the bucket's `pocket` is left
+   exactly as written and the question is open.
+
+2. **Era is now watching the wrong accounts.** The plan links two: SoFi Checking and SoFi
+   Savings. DoorDash Crimson, where 100% of income now lands, is not connected. So the
+   account the whole system leans on hardest — the one that answers "did today's earnings
+   cover today's number" — is the one it cannot see. SoFi Savings is parked and burning one
+   of the two slots for nothing. Swapping Savings out for DoorDash Crimson would fix it
+   inside the current plan tier. Not done: connecting an account is Lemar's own action at
+   era.app, and the ledger never guesses at account plumbing.
+
+`spending.era_account` is now `null`, recorded honestly rather than left pointing at an
+account that no longer plays that role.
+
+Nothing paid, nothing contacted, no money moved, no account connected or disconnected.
 
 ## Update 2026-08-10 (gas + maintenance — the operating reserve)
 

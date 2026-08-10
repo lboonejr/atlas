@@ -230,7 +230,8 @@ spending.
 | What | Value |
 |---|---|
 | Allocation model | **DUE-DATE ORDER**, locked 2026-08-10 by Lemar. Every dated line sorts into one queue by date; soonest funded first. No priority tiers, no weekly floor, no waterfall. Replaces the Option 3 hybrid floor + waterfall (2026-07-24, RETIRED). |
-| Pockets | TWO: **Spending** (SoFi Checking) and **Set-Aside** (SoFi Savings). One instruction a day — move the set-aside number from Spending to Set-Aside. The four Option-3 pockets (Cash App ×2, DoorDash Crimson) are parked, not deleted. |
+| Pockets | TWO roles, accounts corrected 2026-08-10: **Spending** = DoorDash Crimson (income lands, gas paid from) and **Set-Aside** = SoFi Checking (recurring bills paid from). One instruction a day — move the set-aside number from Spending to Set-Aside. SoFi Savings and both Cash App accounts are parked, not deleted. Read the live mapping from the ledger's `pockets` block, never from memory. |
+| Era coverage gap | Era links only 2 accounts: SoFi Checking and SoFi Savings (parked). **DoorDash Crimson, where all income lands, is not connected** — no live balance for the Spending pocket. Never render a missing balance as $0. Fixing it is Lemar's own action at era.app. |
 | The one number | `daily_targets[today].total` — the single figure Lemar acts on, and the top of the dashboard. Everything else explains it. |
 | Undated lines | A `track: queue` line with no date has no queue position, no event, and no ramp — it is INVISIBLE, not low-priority. Undated lines are a tracked defect class, surfaced in `open_questions`, on the dashboard, and in PART M's return token. Never invent a date. |
 | Living Money Hub artifact URL | `https://claude.ai/code/artifact/f3cbc24f-37ee-4cdd-8643-9eb33b305d00` — first published 2026-08-05. money-hub re-deploys to THIS same URL each render (pass it as `url`; keep title "Money Hub" + favicon 💵). |

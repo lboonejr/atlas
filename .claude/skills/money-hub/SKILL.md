@@ -53,14 +53,22 @@ does nothing. So every undated line is a live defect, not a footnote: surface al
 them in `open_questions`, in the dashboard's "NO DATE — not being tracked" strip, and
 in your PART M return token. Never invent a date to force a line into the queue.
 
-**Two pockets.**
-- **Spending** (SoFi Checking) — income lands here; this is money Lemar may spend.
-- **Set-Aside** (SoFi Savings) — every day, Lemar moves the day's set-aside number from
-  Spending to Set-Aside. Bills get paid out of Set-Aside.
-That is the only transfer instruction this skill ever produces. The four pockets from
-the retired model (Cash App checking/savings, DoorDash Crimson) are `status: parked` in
-the ledger — still Lemar's accounts, no longer part of the model. Never resurrect them
-without an explicit instruction.
+**Two pockets.** Roles are fixed; the ACCOUNTS behind them come from the ledger's
+`pockets` block and were corrected 2026-08-10 — always read them from the ledger, never
+from memory, and always name the account alongside the role so an instruction is
+unambiguous.
+- **Spending** (currently DoorDash Crimson) — income lands here; gas and day-to-day
+  spending pay from here.
+- **Set-Aside** (currently SoFi Checking) — every day, Lemar moves the day's set-aside
+  number from Spending to Set-Aside. Every recurring bill is paid out of Set-Aside.
+That is the only transfer instruction this skill ever produces. SoFi Savings and the two
+Cash App accounts are `status: parked` — still Lemar's accounts, no longer part of the
+model. Never resurrect one without an explicit instruction.
+
+**Era covers only part of this.** The plan links two accounts, and Spending is not
+currently one of them, so the account income lands in has no live balance. Render that
+gap honestly wherever a balance is shown (see DASHBOARD); never present a missing balance
+as a zero, and never infer Spending's balance from the income log.
 
 **Two figures, one claim.** A day has an `operating_reserve` (gas, kept in Spending —
 see OPERATING RESERVE) and a `target` (the bills, moved to Set-Aside — see ACCRUAL).
