@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-10T17:26:00-04:00
+updated: 2026-08-10T18:06:00-04:00
 domain: personal
 type: reference
 status: active
@@ -184,7 +184,6 @@ open_questions:
   - "Station travel $50/wk: Lemar started a weekend job at The Station 8/9 — pay rate not yet known, he'll report it in #personal-finance"
   - "'Gas $10' dropped in #personal-finance 2026-08-10 with a receipt photo (IMG_2080.jpeg) — doesn't match any existing bill line (no recurring gas bill, no due date) and isn't income or cash-on-hand. Lemar said in #decisions 2026-08-10 he wants to 'add in receipts for everything I paid for so that it comes off of the total amount I need to make today' — reads as a request for a broader receipts-offset feature, not a direct answer for this specific $10 item. Left OUT of the ledger; flagging for a follow-up #decisions clarification instead of guessing the feature shape or category."
   - "SoFi checking manual balance ($2.54, reported 2026-08-10): now tracked in `reported_balances` per Lemar's #decisions call — no further open question, just noting for the dashboard's Cash position section."
-  - "DoorDash '$51.70' dropped in #personal-finance 2026-08-10 (ts 1786388799, no date range) — logged to income-log-2026.md as its own 2026-08-10 line, but its relationship to the already-logged $61.43 partial-week (Aug 10-16) figure is unclear (additional earnings on top, or a restated/corrected total). Nothing merged; raised in #decisions 2026-08-10, still unanswered."
 ```
 
 ## History
@@ -488,3 +487,18 @@ the $140.28 rolled target).
 - #personal-finance `C0BGLEMH99T` ts `1786393173.886619` (this bot's own 🌐 3rd-pass
   summary, the channel's newest message as of this sweep) — 2026-08-10 PART M sweep,
   4th pass / end-of-day ROLLOVER
+
+## Update 2026-08-10 (PART A — DoorDash $51.70 clarification resolved)
+
+Lemar reacted ✅ on Option 1 in the "Money hub — 2 quick clarifications" card
+(#decisions ts `1786393175.511769`, option reply ts `1786393179.543229`): the
+$51.70 DoorDash drop is **additional** earnings on top of the already-logged $61.43
+partial-week (Aug 10-16) figure, not a restatement. Running week-so-far total is
+**$113.13**. Nothing re-summed here — `income-log-2026.md` is append-only, so the
+reconciliation is recorded there as a new zero-amount note line rather than editing
+the two existing entries. Removed the now-resolved DoorDash line from
+`open_questions` above. Replied "Done ✅" in-thread.
+
+## Sources (cont.)
+- #decisions `C0BBXA96FFV` ts `1786393175.511769`, option reply ts
+  `1786393179.543229`, Lemar ✅ — 2026-08-10 PART A follow-through
