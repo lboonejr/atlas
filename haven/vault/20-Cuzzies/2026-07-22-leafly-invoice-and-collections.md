@@ -1,6 +1,6 @@
 ---
 created: 2026-07-22T10:10:17-04:00
-updated: 2026-08-07T13:45-04:00
+updated: 2026-08-10T09:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -156,6 +156,20 @@ Per PART A's 🫡 rule, the Slack parent has been edited to begin "✅ CLOSED �
 and dropped from the queue. No new action; the standing dunning-notice saga (case
 #00160234, $1,002.60) continues to be tracked separately above.
 
+## Update 2026-08-10 (~08:44 ET) — another "AT RISK OF TERMINATION" AR notice, no new figure
+
+New automated notice landed (Gmail thread `19fead80b56a07a5`,
+`accountsreceivable@leafly.com`, "Cuzzie's Dispensary & Delivery is AT RISK OF
+TERMINATION."): account "pending escalation due to the past due balance," warns
+Leafly services are at risk of interruption unless Lemar contacts them today, offers
+payment assistance/payment methods. No dollar figure or case number given, and it
+doesn't reference the confirmed cancellation (case #00159743) or Lemar's own direct
+reply that the business is being sold and the balance will be settled before
+transition. Same automated dunning cadence as the rest of this saga — doesn't meet the
+escalation bar this note has used throughout (new/changed balance, or past a
+collections-transfer notice into legal/service-cutoff territory). Not drafting a new
+reply, not posting a new #decisions card. Labeled `Samira/seen` on the thread.
+
 ## Sources
 - gmail: thread `19fd3e48e947c061` (2026-08-05 ~17:46 ET, case #00160234, "Pay Today"
   collections notice, $1,002.60, no new figure)
@@ -186,3 +200,5 @@ and dropped from the queue. No new action; the standing dunning-notice saga (cas
   collections notice, $1,002.60, no new figure)
 - slack: #decisions (C0BBXA96FFV), card ts `1785788625.241099`, Lemar's 🫡 —
   formally closed 2026-08-07 (cancellation-form card, already superseded)
+- gmail: thread `19fead80b56a07a5` (2026-08-10 ~08:44 ET, "AT RISK OF TERMINATION"
+  AR notice, no new figure)
