@@ -1,6 +1,6 @@
 ---
 created: 2026-08-08T11:20-04:00
-updated: 2026-08-09T08:08-04:00
+updated: 2026-08-10T18:06-04:00
 domain: cuzzies
 type: task
 status: active
@@ -63,8 +63,27 @@ as a drop to #on-button for the on-button-plan skill to ingest on its next pass
 (no dollar figure stated in either email - flagged TBD, not guessed). Nothing
 paid or contacted beyond the saved draft.
 
+## Update 2026-08-10 (PART C — mirrored to the Off Button Monday board)
+
+Lemar clarified in #on-button (ts `1786395230.214129`) he meant the **Off
+Button — Vendor Wind-Down & Payoff** board (`18424191974`, workspace 16125924
+"Main workspace") — not the on-button-reopen tracking. That board wasn't in
+`anchors.md`'s Monday.com table; found it via `monday-com` search (exact name
+match, right workspace, description matches "winding down Cuzzie's vendor
+obligations"), so this was a confident identification, not a guess. Added
+Loud Labs as item `12767660655` in the "Vendors — Cannabis (Past Due / Open
+Balance)" group: Vendor Category = Cannabis Vendor, Contact = Aaron Greene
+(aaron@loudlabs.co), Latest Notice Date = 2026-08-07, Correspondence Status =
+Waiting on Us, Resolution Status = Negotiating. Amount Owed left blank — no
+dollar figure in either email, not guessed. `anchors.md` updated with this
+board so it's no longer ambiguous going forward.
+
 ## Sources
 - gmail: thread `19f4daa95127e89c`, message `19fdd0c215223925` (Aaron Greene, Loud
   Labs, 2026-08-07)
 - slack: #decisions, Lemar's pick + edit instruction, ts `1786241384.305079`
   (2026-08-09)
+- slack: #on-button ts `1786291143.947249` (original ask) / `1786395230.214129`
+  (clarification) — 2026-08-10
+- monday: board `18424191974` ("Off Button — Vendor Wind-Down & Payoff"), item
+  `12767660655` — https://lboonejrs-team.monday.com/boards/18424191974/pulses/12767660655
