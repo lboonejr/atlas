@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-05T07:47:00-04:00
+updated: 2026-08-10T10:30:00-04:00
 domain: personal
 type: log
 status: active
@@ -22,6 +22,10 @@ Append-only; a wrong entry is corrected by a new line with a note, never by edit
 history. New year → new file (`income-log-2027.md`).
 
 ```yaml
-entries: []
+entries:
+  - {date: 2026-07-20, source: doordash, amount: 153.94, note: "weekly total, week of Jul 20-26 — reported via #personal-finance screenshot (IMG_2079.png) + typed breakdown 2026-08-10"}
+  - {date: 2026-07-27, source: doordash, amount: 327.70, note: "weekly total, week of Jul 27-Aug 2 — same #personal-finance drop, 2026-08-10"}
+  - {date: 2026-08-03, source: doordash, amount: 457.40, note: "weekly total, week of Aug 3-9 — same #personal-finance drop, 2026-08-10"}
+  - {date: 2026-08-10, source: doordash, amount: 61.43, note: "weekly total, week of Aug 10-16, PARTIAL/in-progress as of 2026-08-10 (will grow through the week) — same #personal-finance drop"}
 # - {date: 2026-08-05, source: doordash, amount: 140, note: null}
 ```

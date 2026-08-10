@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-09T11:20:00-04:00
+updated: 2026-08-10T10:30:00-04:00
 domain: personal
 type: reference
 status: active
@@ -165,6 +165,7 @@ open_questions:
   - "Comedy show tickets $50.28 (due 8/12): p5/p6/p7, or no floor/waterfall bucket at all? (Lemar said 'low priority' 8/9, but the waterfall buckets are each tied to a specific pocket — raised in #decisions 2026-08-09)"
   - "Liquidibee/Nomas: the re-spread 4-week savings schedule (through 9/06) runs past the collector's stated Aug 15 deadline — does Lemar want a draft message prepared for Nomas Recovery explaining the delay? Raised in #decisions 2026-08-09, nothing drafted or sent yet."
   - "Station travel $50/wk: Lemar started a weekend job at The Station 8/9 — pay rate not yet known, he'll report it in #personal-finance"
+  - "'Gas $10' dropped in #personal-finance 2026-08-10 with a receipt photo (IMG_2080.jpeg) — doesn't match any existing bill line (no recurring gas bill, no due date) and isn't income or cash-on-hand. Unclear if Lemar wants this tracked as a new recurring/one-time expense line (and if so what cadence/pocket) or if it's just an FYI needing no ledger action. Raised in #decisions 2026-08-10, nothing added to the ledger."
 ```
 
 ## History
@@ -300,6 +301,30 @@ daily events were purpose-built solely for the old schedule; their function is f
 replaced by the 4 new weekly events). Replied to #personal-finance thread confirming
 the rebuild.
 
+## Update 2026-08-10 (PART M sweep)
+
+Swept #personal-finance since the last run (2026-08-09 re-spread). Three new messages,
+all from Lemar today, 2026-08-10:
+
+- **Earnings** — a "DoorDash Earnings" screenshot (`IMG_2079.png`, ts `1786369136`)
+  followed 8 minutes later by a typed breakdown (ts `1786369598`) giving four weekly
+  totals: Jul 20-26 $153.94, Jul 27-Aug 2 $327.70, Aug 3-9 $457.40, Aug 10-16 $61.43
+  (partial/in-progress week). Treated as one drop — the typed text supplies the exact
+  figures so no image read/confirm was needed. Logged as four entries to
+  `income-log-2026.md` (Monday-anchored per the mon-sun week convention), each noted as
+  a weekly total and the in-progress one flagged as partial. This is the FIRST income
+  logged since the log was created 2026-08-05 (it had sat empty).
+- **"Gas $10"** (ts `1786371101`) with a receipt photo (`IMG_2080.jpeg`) — doesn't match
+  any existing bill line, isn't income/cash-on-hand, and isn't a payment against a
+  tracked plan. Left OUT of the ledger rather than guessing a category; added to
+  `open_questions` and raised in #decisions 2026-08-10.
+- No cash-on-hand report, no new bills, no payment-plan terms, no "mark paid" this
+  sweep. No `daily_targets`/calendar changes (nothing new carries a `due`). ROLLOVER not
+  yet due this run.
+
+Dashboard re-rendered (income + this-week numbers now reflect the four logged weeks).
+Nothing paid, nothing contacted, no figure guessed.
+
 ## Sources
 - Prior project note: `haven/vault/10-Personal/Money/2026-07-11-personal-finance-dashboard-project.md` (full Slack ts provenance lives there)
 - Staged prompt: #admin `C0BBLUA7JLX` ts `1786253312.218409`+`1786253312.241789`
@@ -308,3 +333,6 @@ the rebuild.
   `1786241590.069229` (2026-08-09) — Liquidibee/Nomas payment-plan instruction
 - #personal-finance `C0BGLEMH99T` thread ts `1786281440.216369`, Lemar reply ts
   `1786286215.944749` (2026-08-09) — 4-week re-spread instruction
+- #personal-finance `C0BGLEMH99T` ts `1786369136.576589` (DoorDash Earnings screenshot),
+  `1786369598.347299` (typed weekly breakdown), `1786371101.191659` ("Gas $10" photo) —
+  2026-08-10 PART M sweep
