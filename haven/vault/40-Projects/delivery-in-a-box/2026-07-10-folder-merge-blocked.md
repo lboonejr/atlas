@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T17:05-04:00
-updated: 2026-08-09T11:30:00-04:00
+updated: 2026-08-10T00:00:00-04:00
 domain: project
 type: note
 status: active
@@ -269,3 +269,28 @@ un-reacted in #admin rather than faked. Posted the blocker to
 **Next step:** needs either a Claude session with Google Docs write access, or
 Lemar applying the already-posted ready-to-paste design prompt himself via
 Claude-Design/Docs directly.
+
+## Update 2026-08-10 (PART C) - visual-theme application attempted again, still blocked (attempt 2)
+
+Re-swept `#admin` for `task:20260809_dib-template-theme-apply` (ts
+`1786281763.061569`) — still un-reacted after yesterday's blocked attempt, so
+picked it up again per the routine's retry-until-3-failures rule.
+
+Checked for any newly available Google Docs formatting/write tool this
+session: none. Available Drive tooling (`Google-Drive` connector) covers
+read/download/copy/create/list/search only — no in-place content/formatting
+update call. `Adobe-for-creativity`'s design tools still only produce new
+assets/exports, not in-place edits to a live Google Doc. Same blocker as
+2026-08-09, confirmed independently rather than assumed.
+
+No attempt made to fake the pass or rebuild the docs as new files (the prompt
+is explicit: visual pass only, keep existing text/structure intact — a
+from-scratch rebuild would not satisfy that). Left staged/un-reacted in
+`#admin` again. Posted a short update to `#delivery-in-a-box` noting this is
+the second blocked attempt and the two real paths forward (a session with
+Docs write access, or Lemar running the already-posted design prompt himself
+via Claude-Design/Docs). This is failure **attempt 2 of 3** before the
+routine's stuck-escalation threshold — not yet raising to `#decisions`.
+
+Source: `#admin` ts `1786281763.061569` (staged prompt, unchanged) · `#reports`
+failure line posted this scan.
