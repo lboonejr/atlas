@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-10T11:20:00-04:00
+updated: 2026-08-10T12:05:00-04:00
 domain: personal
 type: reference
 status: active
@@ -27,11 +27,14 @@ Field rules (on-button-plan pattern):
   onto the calendar (calendar is a one-way rendering; this note wins).
 - `track` = `queue` (must carry a date; accrues daily and queues) or `spending` (paid
   as you go from the Spending pocket; no date, no accrual, not a defect). Added 2026-08-10.
-- `daily_targets` = the daily accrual. ISO date key → `{target, funded, shortfall,
+- `daily_targets` = the daily accrual. ISO date key → `{operating_reserve, target,
+  total_claim, gas_spent, swept_to_maintenance, funded, shortfall,
   calendar_event_id, contributions: [{line_id, amount, funded, status}]}`, `status` one
   of `pending` | `partial` | `funded` | `rolled` | `paid`. One aggregate calendar event
-  per day, maintained on a rolling 7-day window. `funded` = set aside; `paid` = the bill
-  was actually settled. Never conflate the two. Past days are history — never rewritten.
+  per day, maintained on a rolling 7-day window. `operating_reserve` stays in Spending
+  (gas); `target` moves to Set-Aside (bills); `total_claim` is the two added — what the
+  day costs. `funded` = set aside; `paid` = the bill was actually settled. Never conflate
+  the two. Past days are history — never rewritten.
 - **The allocation SHAPE is DUE-DATE ORDER, locked 2026-08-10** — no priority tiers, no
   weekly floor, no waterfall. Do not redesign it here.
 - **A `track: queue` line with no date is a defect, not a low priority.** It has no
@@ -62,6 +65,22 @@ config:
                                      # Separate from the 7-day calendar popup, which stays.
   daily_event_window: 7              # rolling: maintain aggregate calendar events for
                                      # today..+6 only; extend one day forward each scan
+daily_allowances:                    # LOCKED 2026-08-10. FIRST claim on each day's
+                                     # income — gas is the cost of earning it, not a bill
+                                     # competing with bills. Stays in the Spending pocket
+                                     # and is spent same-day; it never moves to Set-Aside.
+  gas_maintenance:
+    reserve: 30                      # held back daily (Lemar: "$25 to $30 max a day")
+    soft_target: 25                  # what he aims to actually spend
+    bucket: maintenance
+    note: "Unspent remainder (reserve − actual spend) sweeps to the maintenance bucket
+           ONLY when Lemar reports a figure. An unreported day is assumed spent — never
+           credit the bucket from silence. A spend above the reserve is recorded as-is,
+           never capped, and eats into that day's bill funding."
+buckets:                             # accumulating balances, physically inside Set-Aside
+  - {id: maintenance, name: "Car maintenance", balance: 0, pocket: set-aside,
+     note: "Fed by the daily gas sweep. Funds repairs/maintenance. Money only leaves it
+            on Lemar's explicit say-so — it never silently backfills a missed bill."}
 cash_on_hand:
   amount: null                       # Lemar reports: "I have $X cash"
   as_of: null
@@ -167,7 +186,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
                                      # days run hot (catch-up) and decay toward steady
                                      # state as the short-fuse lines clear.
   "2026-08-10":
+    operating_reserve: 30.00
     target: 136.96
+    total_claim: 166.96
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 136.96
     calendar_event_id: kli8jm1vlal3ntffr2lqdkpmuk
@@ -184,7 +207,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: station-travel, amount: 10.00, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 15.00, funded: 0, status: pending}
   "2026-08-11":
+    operating_reserve: 30.00
     target: 92.44
+    total_claim: 122.44
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 92.44
     calendar_event_id: vj19k5hjaq1krci59o1flcbj78
@@ -200,7 +227,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: station-travel, amount: 10.00, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
   "2026-08-12":
+    operating_reserve: 30.00
     target: 67.29
+    total_claim: 97.29
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 67.29
     calendar_event_id: hknnvpq91j5192c4ljvdskf9s4
@@ -215,7 +246,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: station-travel, amount: 10.00, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
   "2026-08-13":
+    operating_reserve: 30.00
     target: 67.29
+    total_claim: 97.29
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 67.29
     calendar_event_id: jho94o6sql4qjt6fdgjl0ej2oc
@@ -230,7 +265,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: station-travel, amount: 10.00, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
   "2026-08-14":
+    operating_reserve: 30.00
     target: 57.29
+    total_claim: 87.29
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 57.29
     calendar_event_id: d8ed3o469dh4r5j0c2qo73m6cs
@@ -244,7 +283,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: station-travel, amount: 10.00, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
   "2026-08-15":
+    operating_reserve: 30.00
     target: 47.29
+    total_claim: 77.29
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 47.29
     calendar_event_id: k9sog0mcpmisnn4p2hicernagk
@@ -257,7 +300,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
   "2026-08-16":
+    operating_reserve: 30.00
     target: 26.46
+    total_claim: 56.46
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 26.46
     calendar_event_id: i5aqp4u51gvj79113o7ls4ajqk
@@ -269,7 +316,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
   "2026-08-17":
+    operating_reserve: 30.00
     target: 26.45
+    total_claim: 56.45
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 26.45
     calendar_event_id: null
@@ -281,7 +332,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
   "2026-08-18":
+    operating_reserve: 30.00
     target: 26.45
+    total_claim: 56.45
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 26.45
     calendar_event_id: null
@@ -293,7 +348,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
   "2026-08-19":
+    operating_reserve: 30.00
     target: 26.45
+    total_claim: 56.45
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 26.45
     calendar_event_id: null
@@ -305,7 +364,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
   "2026-08-20":
+    operating_reserve: 30.00
     target: 26.45
+    total_claim: 56.45
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 26.45
     calendar_event_id: null
@@ -317,7 +380,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
   "2026-08-21":
+    operating_reserve: 30.00
     target: 26.45
+    total_claim: 56.45
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 26.45
     calendar_event_id: null
@@ -329,7 +396,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
   "2026-08-22":
+    operating_reserve: 30.00
     target: 26.45
+    total_claim: 56.45
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 26.45
     calendar_event_id: null
@@ -341,7 +412,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
   "2026-08-23":
+    operating_reserve: 30.00
     target: 16.83
+    total_claim: 46.83
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 16.83
     calendar_event_id: null
@@ -352,7 +427,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
   "2026-08-24":
+    operating_reserve: 30.00
     target: 16.83
+    total_claim: 46.83
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 16.83
     calendar_event_id: null
@@ -363,7 +442,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
   "2026-08-25":
+    operating_reserve: 30.00
     target: 16.83
+    total_claim: 46.83
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 16.83
     calendar_event_id: null
@@ -374,7 +457,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
   "2026-08-26":
+    operating_reserve: 30.00
     target: 16.83
+    total_claim: 46.83
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 16.83
     calendar_event_id: null
@@ -385,7 +472,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
   "2026-08-27":
+    operating_reserve: 30.00
     target: 15.36
+    total_claim: 45.36
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 15.36
     calendar_event_id: null
@@ -395,7 +486,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
   "2026-08-28":
+    operating_reserve: 30.00
     target: 15.36
+    total_claim: 45.36
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 15.36
     calendar_event_id: null
@@ -405,7 +500,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
   "2026-08-29":
+    operating_reserve: 30.00
     target: 15.36
+    total_claim: 45.36
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 15.36
     calendar_event_id: null
@@ -415,7 +514,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
   "2026-08-30":
+    operating_reserve: 30.00
     target: 9.11
+    total_claim: 39.11
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 9.11
     calendar_event_id: null
@@ -424,7 +527,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
   "2026-08-31":
+    operating_reserve: 30.00
     target: 9.11
+    total_claim: 39.11
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 9.11
     calendar_event_id: null
@@ -433,7 +540,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
   "2026-09-01":
+    operating_reserve: 30.00
     target: 9.11
+    total_claim: 39.11
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 9.11
     calendar_event_id: null
@@ -442,7 +553,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
   "2026-09-02":
+    operating_reserve: 30.00
     target: 9.11
+    total_claim: 39.11
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 9.11
     calendar_event_id: null
@@ -451,7 +566,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
   "2026-09-03":
+    operating_reserve: 30.00
     target: 9.11
+    total_claim: 39.11
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 9.11
     calendar_event_id: null
@@ -460,7 +579,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
   "2026-09-04":
+    operating_reserve: 30.00
     target: 5.11
+    total_claim: 35.11
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 5.11
     calendar_event_id: null
@@ -468,7 +591,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
   "2026-09-05":
+    operating_reserve: 30.00
     target: 5.10
+    total_claim: 35.10
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 5.10
     calendar_event_id: null
@@ -476,7 +603,11 @@ daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). E
       - {line_id: liquidibee-4, amount: 4.62, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
   "2026-09-06":
+    operating_reserve: 30.00
     target: 0.48
+    total_claim: 30.48
+    gas_spent: null
+    swept_to_maintenance: 0
     funded: 0
     shortfall: 0.48
     calendar_event_id: null
@@ -508,6 +639,7 @@ open_questions:
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
   - "Era Context: SoFi connection needs a reconnect at era.app (balances are stale to 2026-07-11); Cash App still syncing; plan tier caps at 2 linked accounts"
   - "Station travel $50/wk: Lemar started a weekend job at The Station 8/9 — pay rate not yet known, he'll report it in #personal-finance"
+  - "Gas/maintenance $30/day reserve is a rough cap Lemar named, not a measured figure — refine it once a few weeks of actual fill-ups are reported (it is now the largest single line in the ledger at ~$900/mo)"
   - "Income backlog: Lemar is posting ~2 weeks of DoorDash earnings to #personal-finance (2026-08-10). Until they land, income_target_weekly $500 is a guess and the overload check can't run."
 ```
 
@@ -518,6 +650,55 @@ Everything before 2026-08-05 lives in
 budget from the first rough sketch through the (now retired) Option 3 allocation
 decision, the six-pocket mapping, and the calendar reminders. That note is closed; this
 ledger carries the live state forward.
+
+## Update 2026-08-10 (gas + maintenance — the operating reserve)
+
+Lemar: "I also want to be able to factor in the gas. I really don't have a good number,
+but I would say try to keep it around $25 to $30 max in gas/maintenance a day. If my tank
+is full, I'll just put the rest of the money into a maintenance bucket."
+
+**Modelled as an operating reserve, not a bill — and the distinction is load-bearing.**
+A bill accrual moves money from Spending to Set-Aside and holds it there. Gas stays in
+Spending and gets burned the same day; it never changes pockets. More importantly it is
+the cost of *generating* the income, so it takes the **first claim on each day's
+earnings** — fund the bills ahead of the gas and there is no next day's earnings. That is
+a deliberate single-line exception to pure due-date order, made on that reasoning and not
+on priority, and the skill forbids generalising it into a second tier.
+
+`daily_allowances.gas_maintenance: {reserve: 30, soft_target: 25, bucket: maintenance}`.
+Reserve is the $30 max he named; soft_target is the $25 he's aiming at.
+
+**Every day now carries two figures, and no surface may show one without the other:**
+
+| | today (8/10) | 8/12 | 8/16 |
+|---|---|---|---|
+| keep in Spending (gas) | $30.00 | $30.00 | $30.00 |
+| move to Set-Aside (bills) | $136.96 | $67.29 | $26.46 |
+| **total claim** | **$166.96** | **$97.29** | **$56.46** |
+
+**The number that changed most.** The first seven days now claim **$705.02** — $495.02 of
+bills plus $210 of gas — against a $500/week income target that was already a guess. Gas
+alone runs **$900/month** at the $30 reserve, $750 at the $25 soft target. That is the
+single largest line in the entire ledger, larger than the Cuzzie's phone estimate, and it
+did not exist in the budget until today. Stated, not smoothed.
+
+**The sweep.** When Lemar reports actual spend ("$22 on gas", "tank's full"), the
+remainder sweeps into a new `maintenance` bucket (balance 0, living inside Set-Aside).
+**An unreported day is assumed spent** — no sweep, no bucket credit, no nagging. Gas
+genuinely does get spent, and inventing a maintenance balance he never confirmed would be
+worse than missing one; the bucket only ever grows from a figure he gave. A spend above
+the reserve is recorded as-is, never capped, and the overage is reported against the bill
+line it reaches.
+
+New skill sections: OPERATING RESERVE, mode 2b (report gas spend), and INCOME ALLOCATION
+now funds the reserve before any bill — with an explicit callout when a day's income
+doesn't even cover its own gas, which is the most important thing that can happen on a
+given day.
+
+Calendar: all seven rolling aggregate events retitled to show both figures
+("Today costs $166.96 — $30 gas + $136.96 set aside").
+
+Nothing paid, nothing contacted, no figure invented — the $30/$25 pair is Lemar's own.
 
 ## Update 2026-08-10 (daily accrual — every bill becomes its own payment plan)
 

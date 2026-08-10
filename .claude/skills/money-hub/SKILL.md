@@ -62,9 +62,10 @@ the retired model (Cash App checking/savings, DoorDash Crimson) are `status: par
 the ledger — still Lemar's accounts, no longer part of the model. Never resurrect them
 without an explicit instruction.
 
-**One number.** `daily_targets[today].target` is the single figure Lemar acts on — the
-sum of every dated line's daily drip (see ACCRUAL). Every other view exists to explain
-that number, never to compete with it.
+**Two figures, one claim.** A day has an `operating_reserve` (gas, kept in Spending —
+see OPERATING RESERVE) and a `target` (the bills, moved to Set-Aside — see ACCRUAL).
+`total_claim` is the two added: what the day genuinely costs. Lemar acts on all three,
+so never collapse them into one figure or let a surface show the friendlier one alone.
 
 ## THE SOURCE OF TRUTH — one ledger, one log
 - **`haven/vault/10-Personal/Money/money-hub-ledger.md`** — bills, plans, goals, the two
@@ -103,6 +104,12 @@ never a single lumped entry.
 
 **2. Report cash** — "I have $X cash / on hand". Set `cash_on_hand: {amount, as_of}` in
 the ledger. Re-render.
+
+**2b. Report gas spend** — "$22 on gas", "filled up for $28", "tank's full, didn't spend
+anything". Record the day's actual spend against `daily_allowances.gas_maintenance`,
+sweep `reserve − spent` into the maintenance bucket, and report the new bucket balance.
+A spend ABOVE the reserve is recorded as-is (never capped to make the budget look right)
+and the overage comes out of that day's bill funding — say exactly which line it reaches.
 
 **3. Add bill** — "new bill: car insurance $180 on the 15th", or a photo of a bill.
 From a photo, extract payee, amount, due date / billing day, and any account reference;
@@ -204,12 +211,46 @@ exceptions. Consistency is the point: Lemar asked for one format so he can stay 
   cycle rolling over. Recompute only the days from today forward — **never rewrite a past
   day**, which is history.
 
+## OPERATING RESERVE — gas + maintenance, first claim (locked 2026-08-10)
+Gas is not a bill. It is the cost of *generating* the income, so it gets the first claim
+on every day's earnings — fund the bills before the gas and there is no next day's
+earnings. **This is a deliberate, single-line exception to pure due-date order**, made on
+that reasoning and not on priority. Never generalise it into a second tier; if another
+line ever wants this treatment, that is Lemar's call to make explicitly.
+
+- **It never leaves the Spending pocket.** A bill accrual moves money Spending →
+  Set-Aside and holds it. The reserve stays in Spending and gets burned the same day. So
+  a day has TWO figures, and every surface must keep them distinct:
+  - `operating_reserve` — keep in Spending, spend on gas.
+  - `target` — move to Set-Aside for the bills (the accrual, see ACCRUAL).
+  - `total_claim` = the two added together: what the day actually costs.
+- **Config:** `daily_allowances.gas_maintenance` — `{reserve, soft_target, bucket}`.
+  Reserve is what gets held back each day; `soft_target` is what Lemar aims to actually
+  spend. Both come from Lemar; never adjust either to make a week fit.
+- **The sweep.** When Lemar reports what he actually spent ("$22 on gas", "tank's full"),
+  the unspent remainder `reserve − spent` sweeps into the **maintenance bucket** — and
+  THAT money does move to Set-Aside, because it is savings. Record the spend, the sweep,
+  and the new bucket balance.
+- **Unreported days are assumed spent.** No sweep, no bucket credit, no nagging — gas
+  genuinely does get spent, and inventing a maintenance balance Lemar never confirmed
+  would be worse than missing one. The bucket only ever grows from a reported figure.
+- **The bucket is real money with a job.** It funds car repairs and maintenance. It is
+  not a slush fund and never silently backfills a missed bill — moving money out of it
+  is Lemar's explicit call, and the ledger records the balance, never a projection.
+
 ## INCOME ALLOCATION — pour the day's earnings into the day's number
 Mode 1 (log earnings) now does a second thing: it funds the day.
 
-Given the day's logged income, walk `daily_targets[today].contributions` in **due-date
-order** (soonest due first; ties broken by smallest amount, so cheap lines clear rather
-than sit half-funded) and fill each one until the money runs out:
+Given the day's logged income, fund in this order:
+
+**First, the operating reserve** (see OPERATING RESERVE) — up to
+`daily_allowances.gas_maintenance.reserve`, held in Spending, not moved. If the day's
+income doesn't even cover the reserve, say so plainly: that is a day that didn't pay for
+its own gas, and it is the most important thing on the page.
+
+**Then the bills.** Walk `daily_targets[today].contributions` in **due-date order**
+(soonest due first; ties broken by smallest amount, so cheap lines clear rather than sit
+half-funded) and fill each one until the money runs out:
 - Fully covered → `funded = amount`, `status: funded`.
 - Partly covered → `funded = <what was left>`, `status: partial`.
 - Nothing left → untouched, `status: pending`.
@@ -306,24 +347,26 @@ phone-first, light/dark via `prefers-color-scheme` + `[data-theme]` overrides; l
 favicon 💵, "rendered HH:MM ET" stamp. Re-deploy to the stable URL in anchors (pass it
 as `url`). Sections, top to bottom, every number traceable to the ledger, the log, or
 Era:
-1. **Set aside today** — `daily_targets[today].target` as the biggest number on the
-   page, each contributing line's daily drip beneath it, how much today's logged income
-   has funded so far, and the one instruction: move it from Spending to Set-Aside. This
-   is the point of the page; nothing outranks it.
-2. **The two pockets** — Spending and Set-Aside balances from Era with as-of stamps,
+1. **Today** — `total_claim` as the biggest number on the page, split immediately into
+   its two parts: `operating_reserve` (keep in Spending, for gas) and `target` (move to
+   Set-Aside, for bills), then each contributing line's daily drip and how much today's
+   logged income has funded so far. This is the point of the page; nothing outranks it.
+   Never show the set-aside figure alone — it reads as a smaller day than it is.
+2. **Maintenance bucket** — current balance and what it's for, right under the fold.
+3. **The two pockets** — Spending and Set-Aside balances from Era with as-of stamps,
    plus reported cash on hand. Era data-health flags rendered honestly (⚠️ chip) with
    the true as-of date, never a friendlier one.
-3. **The queue — next 14 days** — every dated line, soonest first, with a running total
+4. **The queue — next 14 days** — every dated line, soonest first, with a running total
    so Lemar can see where the money runs out.
-4. **NO DATE — not being tracked** — every active line with no date, stated as a defect:
+5. **NO DATE — not being tracked** — every active line with no date, stated as a defect:
    these are invisible to the queue and will never ring. Each one is a question.
-5. **This week** — the latest run's numbers: income logged vs. what the next 7 days
+6. **This week** — the latest run's numbers: income logged vs. what the next 7 days
    need. No run yet this week → "say 'run my week'".
-6. **Goals** — target, saved, target date, and the weekly number it implies. A goal with
+7. **Goals** — target, saved, target date, and the weekly number it implies. A goal with
    no target date is listed under section 4, not here.
-7. **Spending snapshot** — Era categories/cash-flow when available; until SoFi is
+8. **Spending snapshot** — Era categories/cash-flow when available; until SoFi is
    reconnected, one honest "reconnect SoFi at era.app to unlock" line.
-8. **Open questions** — the ledger's `open_questions`, verbatim.
+9. **Open questions** — the ledger's `open_questions`, verbatim.
 
 ## PART M (inside Samira's scan)
 Sweep #personal-finance since the last run. A money drop is Lemar reporting earnings,
@@ -339,7 +382,8 @@ Re-render the dashboard once at the end ONLY if something changed. PART M captur
 accrues, funds, checks, and renders; it never runs the weekly view (mode 6 stays on-demand).
 
 ## SAFETY (applies to the whole skill)
-You MAY: read and write the two Money notes' data blocks + Update sections (including
+You MAY: record gas spend and sweep the remainder into the maintenance bucket from a
+figure Lemar reported; read and write the two Money notes' data blocks + Update sections (including
 the `daily_targets` block); append to the income log; create/update/cancel events on the
 personal reminder calendar (both per-bill due-date events AND the daily aggregate) and
 on the Cuzzie's (Owners) calendar for business bills, writing ids back; read Era Context;
@@ -358,8 +402,9 @@ attendees to any event; mark a `daily_targets` contribution `paid` except as the
 side-effect of Mode 7 (a rollover only ever sets `rolled`, never `paid`).
 
 ## Returns (to the Samira runbook, for the digest)
-`money ✓ <what changed — e.g. +1 bill · earnings +$140 · today $X funded $Y · undated N ·
-overload $X vs $Y · rolled $Z> · hub ✅/⚠️` — or `money —` when the sweep found nothing.
+`money ✓ <what changed — e.g. +1 bill · earnings +$140 · claim $X (gas $G + bills $B) ·
+funded $Y · maint +$M · undated N · overload $X vs $Y · rolled $Z> · hub ✅/⚠️` — or
+`money —` when the sweep found nothing.
 
 ## Worked example
 Lemar drops in #personal-finance: "New bill, car insurance $182 a month on the 15th.
