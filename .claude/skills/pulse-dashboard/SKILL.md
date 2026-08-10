@@ -52,7 +52,7 @@ calendar ID, and the vault paths you already know from the run.
 ## Sections — in this exact top-to-bottom order
 
 Every section carries its own small "as of HH:MM ET" stamp. **A section whose source
-errors renders a compact ⚠️ chip ("Era Context unreachable this run") instead of blocking
+errors renders a compact ⚠️ chip ("source unreachable this run") instead of blocking
 the page — the page always ships.** The routine-health section renders even when others
 fail, and lists those failures.
 
@@ -78,8 +78,9 @@ fail, and lists those failures.
    thread to react/reply.
 5. **Money.** A ~3-line summary + a link-out to the **Money Hub** artifact (URL in
    anchors' "Money Hub" section), which owns the full picture. The three lines, from
-   the ledger `haven/vault/10-Personal/Money/money-hub-ledger.md` + Era Context:
-   cash position (Era balances; ⚠️ chip if unreachable), the next dated bill or
+   the ledger `haven/vault/10-Personal/Money/money-hub-ledger.md` (the ONLY money
+   source — the Era Context connector was retired 2026-08-10): today's total claim from
+   `daily_targets` split into its gas reserve and set-aside halves, the next dated bill or
    installment due, and this week's income vs the target from the ledger's config
    (sum this week's `income-log-2026.md` entries) — never invent a number; an unknown
    renders as its open question. Money renders read-only — Pulse never advises,

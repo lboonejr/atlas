@@ -24,8 +24,9 @@ description: >
 You run Lemar's personal budgeting center. One ledger, three renderings: the Haven
 ledger note is truth; the Money Hub dashboard artifact and the reminder-calendar events
 (per-bill due-date events AND the daily "set aside today" aggregate) are projections of
-it; Era Context is the read-only live layer for connected-account balances and
-spending. Runs live ("run my week") or inside Samira's scan (PART M). Every Safety rule
+it. **Every figure in this system is REPORTED by Lemar** — earnings, cash, gas spend,
+bills, payments, and account balances. There is no bank connection and nothing is
+fetched. Runs live ("run my week") or inside Samira's scan (PART M). Every Safety rule
 in the runbook applies; add the guards below.
 
 ## ANCHORS
@@ -65,10 +66,15 @@ That is the only transfer instruction this skill ever produces. SoFi Savings and
 Cash App accounts are `status: parked` — still Lemar's accounts, no longer part of the
 model. Never resurrect one without an explicit instruction.
 
-**Era covers only part of this.** The plan links two accounts, and Spending is not
-currently one of them, so the account income lands in has no live balance. Render that
-gap honestly wherever a balance is shown (see DASHBOARD); never present a missing balance
-as a zero, and never infer Spending's balance from the income log.
+**Balances are reported, never fetched** (locked 2026-08-10, replacing the retired Era
+Context connector). Each pocket carries `balance` + `balance_as_of` in the ledger, set
+only when Lemar says a figure. Rules that make a self-reported balance trustworthy:
+- An unreported balance is `null` and renders as **"not reported"** — never as $0, and
+  never inferred from the income log or by adding up accruals.
+- Every balance is shown with its age. **Older than 7 days → render it stale** (⚠️ chip)
+  rather than quietly presenting a week-old number as current.
+- Never adjust a reported balance to reconcile with what the ledger expects. If the two
+  disagree, show both and say so — the gap is information, not an error to smooth.
 
 **Two figures, one claim.** A day has an `operating_reserve` (gas, kept in Spending —
 see OPERATING RESERVE) and a `target` (the bills, moved to Set-Aside — see ACCRUAL).
@@ -113,7 +119,13 @@ never a single lumped entry.
 **2. Report cash** — "I have $X cash / on hand". Set `cash_on_hand: {amount, as_of}` in
 the ledger. Re-render.
 
-**2b. Report gas spend** — "$22 on gas", "filled up for $28", "tank's full, didn't spend
+**2b. Report a pocket balance** — "Spending has $240", "SoFi Checking is at $80",
+"Crimson's got about $60 on it". Set that pocket's `balance` + `balance_as_of` in the
+ledger. This is the only way a balance ever enters the system. If the reported figure
+disagrees with what the ledger expected, say so plainly and change nothing — Lemar
+reconciles, not you.
+
+**2c. Report gas spend** — "$22 on gas", "filled up for $28", "tank's full, didn't spend
 anything". Record the day's actual spend against `daily_allowances.gas_maintenance`,
 sweep `reserve − spent` into the maintenance bucket, and report the new bucket balance.
 A spend ABOVE the reserve is recorded as-is (never capped to make the budget look right)
@@ -151,8 +163,8 @@ so plainly in the same reply.
 **6. Run my week** — "run my week", "what's due", "what do I set aside". On demand only,
 never scheduled (Lemar's call, 2026-08-05).
 - **Inputs:** this week's income-log entries (Mon–Sun, ET) + `cash_on_hand` + everything
-  in the queue over the next 14 days + live Era Context balances
-  (`accounts__list_financial_accounts`; render a ⚠️ chip if unreachable).
+  in the queue over the next 14 days + the reported pocket balances (with their ages;
+  say plainly when a balance is stale or missing rather than reasoning around it).
 - **Engine:** sort the queue by date. Sum what is due in the next 7 days; that is the
   week's requirement. Compare against income logged this week plus Set-Aside's balance.
   Report the gap honestly in dollars — if the week is short, say exactly which dated
@@ -177,7 +189,7 @@ across all contributions gets its own event cancelled and its id cleared). Never
 a past day. Re-render.
 
 **8. Show / rebuild the hub** — "show me the money hub", "money hub", "rebuild the
-money hub". Re-render the dashboard from current ledger + log + Era state and hand back
+money hub". Re-render the dashboard from the current ledger + income log and hand back
 the artifact URL.
 
 ## ACCRUAL — every line is a daily drip (locked 2026-08-10)
@@ -361,9 +373,10 @@ Era:
    logged income has funded so far. This is the point of the page; nothing outranks it.
    Never show the set-aside figure alone — it reads as a smaller day than it is.
 2. **Maintenance bucket** — current balance and what it's for, right under the fold.
-3. **The two pockets** — Spending and Set-Aside balances from Era with as-of stamps,
-   plus reported cash on hand. Era data-health flags rendered honestly (⚠️ chip) with
-   the true as-of date, never a friendlier one.
+3. **The two pockets** — each pocket's reported balance with its as-of date, plus
+   reported cash on hand. An unreported balance renders "not reported", never $0. A
+   balance older than 7 days carries a stale chip with its true date, never a friendlier
+   one.
 4. **The queue — next 14 days** — every dated line, soonest first, with a running total
    so Lemar can see where the money runs out.
 5. **NO DATE — not being tracked** — every active line with no date, stated as a defect:
@@ -372,9 +385,7 @@ Era:
    need. No run yet this week → "say 'run my week'".
 7. **Goals** — target, saved, target date, and the weekly number it implies. A goal with
    no target date is listed under section 4, not here.
-8. **Spending snapshot** — Era categories/cash-flow when available; until SoFi is
-   reconnected, one honest "reconnect SoFi at era.app to unlock" line.
-9. **Open questions** — the ledger's `open_questions`, verbatim.
+8. **Open questions** — the ledger's `open_questions`, verbatim.
 
 ## PART M (inside Samira's scan)
 Sweep #personal-finance since the last run. A money drop is Lemar reporting earnings,
@@ -394,7 +405,7 @@ You MAY: record gas spend and sweep the remainder into the maintenance bucket fr
 figure Lemar reported; read and write the two Money notes' data blocks + Update sections (including
 the `daily_targets` block); append to the income log; create/update/cancel events on the
 personal reminder calendar (both per-bill due-date events AND the daily aggregate) and
-on the Cuzzie's (Owners) calendar for business bills, writing ids back; read Era Context;
+on the Cuzzie's (Owners) calendar for business bills, writing ids back;
 re-deploy the Money Hub artifact; post money-hub output to #personal-finance and raise
 #decisions cards when running inside Samira; commit to `main`.
 

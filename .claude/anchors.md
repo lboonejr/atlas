@@ -215,7 +215,7 @@ pattern used by on-button-reopen.
 |---|---|
 | Living Pulse artifact URL | `https://claude.ai/code/artifact/6838142e-852c-44a5-8778-b584be1316d4` — first published 2026-07-12 (desktop session, v1). PART P re-deploys to THIS same URL each run (pass it as `url`; keep title "Pulse — Personal Dashboard" + favicon 📍). |
 | Workout plan artifact URL | `https://claude.ai/code/artifact/a723834f-6310-4575-8897-75ae8e30806e` ("Back to the Court — 12-Week Plan"; source-of-truth note `haven/vault/10-Personal/Health/2026-07-07-basketball-fitness-plan.md`, start Mon 2026-07-07). Pulse links out to it; its check-offs live in that page's own localStorage. |
-| Sections (Lemar's fixed top-to-bottom order, 2026-07-12: big ideas → details → execution) | quick-capture todo strip · Dawn as North Star (direction, NOT tasks) · calendar roadmap · #decisions respond list · money (Era Context + Haven budget note) · today's workout · Atlas open items · project pulses · Samira + routine health. Single column. EVERY item links to its source thread (Slack permalink) or calendar event (htmlLink). |
+| Sections (Lemar's fixed top-to-bottom order, 2026-07-12: big ideas → details → execution) | quick-capture todo strip · Dawn as North Star (direction, NOT tasks) · calendar roadmap · #decisions respond list · money (Haven budget ledger) · today's workout · Atlas open items · project pulses · Samira + routine health. Single column. EVERY item links to its source thread (Slack permalink) or calendar event (htmlLink). |
 
 ## Money Hub (personal financial hub — rendered by the money-hub skill)
 
@@ -224,14 +224,15 @@ money-hub-ledger.md` (bills, plans, goals, the two pockets, the daily ramp) +
 `income-log-2026.md` (earnings). The dashboard artifact and reminder-calendar events
 are regenerated FROM the ledger by `.claude/skills/money-hub/SKILL.md` — on any live
 interaction ("run my week", "new bill: …") and in Samira's **PART M** sweep of
-#personal-finance. Era Context connector is the read-only live layer for balances and
-spending.
+#personal-finance. **Every figure is reported by Lemar — there is no bank connection.**
+The Era Context connector was retired 2026-08-10 (kept disconnecting, data was a month
+stale, and it covered only 2 accounts, one of them parked).
 
 | What | Value |
 |---|---|
 | Allocation model | **DUE-DATE ORDER**, locked 2026-08-10 by Lemar. Every dated line sorts into one queue by date; soonest funded first. No priority tiers, no weekly floor, no waterfall. Replaces the Option 3 hybrid floor + waterfall (2026-07-24, RETIRED). |
 | Pockets | TWO roles, accounts corrected 2026-08-10: **Spending** = DoorDash Crimson (income lands, gas paid from) and **Set-Aside** = SoFi Checking (recurring bills paid from). One instruction a day — move the set-aside number from Spending to Set-Aside. SoFi Savings and both Cash App accounts are parked, not deleted. Read the live mapping from the ledger's `pockets` block, never from memory. |
-| Era coverage gap | Era links only 2 accounts: SoFi Checking and SoFi Savings (parked). **DoorDash Crimson, where all income lands, is not connected** — no live balance for the Spending pocket. Never render a missing balance as $0. Fixing it is Lemar's own action at era.app. |
+| Balances | **Reported, never fetched** (locked 2026-08-10). Each pocket carries `balance` + `balance_as_of`, set only when Lemar states a figure ("Spending has $240"). Unreported renders "not reported", never $0, and is never inferred from the income log. Older than 7 days renders stale with its true date. A reported balance is never adjusted to match what the ledger expected — show both and say so. |
 | The one number | `daily_targets[today].total` — the single figure Lemar acts on, and the top of the dashboard. Everything else explains it. |
 | Undated lines | A `track: queue` line with no date has no queue position, no event, and no ramp — it is INVISIBLE, not low-priority. Undated lines are a tracked defect class, surfaced in `open_questions`, on the dashboard, and in PART M's return token. Never invent a date. |
 | Living Money Hub artifact URL | `https://claude.ai/code/artifact/f3cbc24f-37ee-4cdd-8643-9eb33b305d00` — first published 2026-08-05. money-hub re-deploys to THIS same URL each render (pass it as `url`; keep title "Money Hub" + favicon 💵). |

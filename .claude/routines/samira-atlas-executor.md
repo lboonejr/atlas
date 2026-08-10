@@ -224,7 +224,7 @@ item into #decisions.
 ### PART P — render the Pulse dashboard (rendering only, last step before the digest)
 Invoke the **pulse-dashboard** skill (`.claude/skills/pulse-dashboard/`). It re-renders
 Lemar's one-page personal dashboard from what THIS run already holds (#decisions state,
-project pulses, tallies) plus the workout plan, Dawn's brief note, Era Context, Google
+project pulses, tallies) plus the workout plan, Dawn's brief note, the money ledger, Google
 Calendar, and the open Haven notes, then re-deploys it to the stable artifact URL in
 anchors ("Pulse dashboard" section). It writes NO vault notes and posts NOTHING to Slack
 — its status rides in your digest as one token. **Non-fatal by design:** if the render

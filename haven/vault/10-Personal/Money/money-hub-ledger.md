@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-10T13:30:00-04:00
+updated: 2026-08-10T14:45:00-04:00
 domain: personal
 type: reference
 status: active
@@ -25,6 +25,10 @@ Field rules (on-button-plan pattern):
 - `day` = day-of-month for monthly bills; `due` = ISO date for one-time items and
   installments. A `calendar_event_id` marks the reminder event that projects the line
   onto the calendar (calendar is a one-way rendering; this note wins).
+- `balance` / `balance_as_of` on a pocket = a figure LEMAR REPORTED, never fetched (the
+  Era connector was retired 2026-08-10). `null` renders "not reported", never $0, and is
+  never inferred from the income log. Older than 7 days renders stale with its true date.
+  A reported balance is never adjusted to match what the ledger expected.
 - `track` = `queue` (must carry a date; accrues daily and queues) or `spending` (paid
   as you go from the Spending pocket; no date, no accrual, not a defect). Added 2026-08-10.
 - `daily_targets` = the daily accrual. ISO date key → `{operating_reserve, target,
@@ -92,22 +96,24 @@ pockets:                             # TWO pockets. Account mapping CORRECTED 20
                                      # by Lemar (see the Update below) — the roles are
                                      # unchanged, the accounts behind them swapped.
                                      # Lemar moves the money; nothing here transfers.
-  - {id: spending, name: "Spending", account: doordash-crimson, era_account: null,
-     status: active, role: "income lands here (DoorDash payouts); gas and day-to-day
-            spending pay from here",
-     note: "NOT linked to Era — no live balance. This is the account the whole system
-            depends on most and the one it currently cannot see. See open_questions."}
-  - {id: set-aside, name: "Set-Aside", account: sofi-checking, era_account: "Checking - 4102",
-     status: active, role: "the daily set-aside number moves here; every recurring bill
-            is paid out of this account"}
+  - {id: spending, name: "Spending", account: doordash-crimson,
+     balance: null, balance_as_of: null, status: active,
+     role: "income lands here (DoorDash payouts); gas and day-to-day spending pay from here"}
+  - {id: set-aside, name: "Set-Aside", account: sofi-checking,
+     balance: null, balance_as_of: null, status: active,
+     role: "the daily set-aside number moves here; every recurring bill is paid out of
+            this account",
+     note: "last known $128.78 as of 2026-07-11 came from the retired Era connector and
+            is a month stale — deliberately NOT carried into `balance`, which only ever
+            holds a figure Lemar reported."}
   # -- parked: still Lemar's accounts, not part of the model. Never resurrect without an
   #    explicit instruction.
-  - {id: sofi-savings, status: parked, era_account: "Savings - 6970",
+  - {id: sofi-savings, status: parked, balance: null, balance_as_of: null,
      note: "was Set-Aside until the 2026-08-10 account correction. Now unassigned — the
             natural home for the maintenance bucket, but Lemar has not said so. UNRESOLVED,
             see open_questions; the bucket's pocket stays as written until he does."}
-  - {id: cashapp-checking,  status: parked, note: "was p5 own-car pocket"}
-  - {id: cashapp-savings,   status: parked, note: "was p6 side-projects pocket"}
+  - {id: cashapp-checking,  status: parked, balance: null, balance_as_of: null, note: "was p5 own-car pocket"}
+  - {id: cashapp-savings,   status: parked, balance: null, balance_as_of: null, note: "was p6 side-projects pocket"}
 bills:
   # -- monthly, queued (needs a billing day to be visible) --
   - {id: cuzzies-phone-workspace, name: "Cuzzie's phone + Google Workspace", amount: 550,
@@ -650,10 +656,9 @@ open_questions:
   - "Water pump $184.79: inside or on top of the car goal's $2,000 repairs figure?"
   - "Comedy tickets $50.28 were called 'low priority' 8/9 — due-date order has no low tier. Park it or leave it queued on 8/12?"
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
-  - "Era Context: SoFi connection needs a reconnect at era.app (balances are stale to 2026-07-11); Cash App still syncing; plan tier caps at 2 linked accounts"
+  - "No balance has been reported for either pocket since the Era connector was retired 2026-08-10 — say 'Spending has $X' / 'Set-Aside has $X' whenever convenient; both currently render 'not reported'"
   - "Station travel $50/wk: Lemar started a weekend job at The Station 8/9 — pay rate not yet known, he'll report it in #personal-finance"
   - "Where should the maintenance bucket live? The 2026-08-10 account correction left it in Set-Aside, which is now SoFi Checking (the bill-paying account). SoFi Savings is free and is the obvious home, but Lemar has not said so — not moved."
-  - "Era links only 2 accounts and they are now the wrong two: SoFi Checking (Set-Aside) and SoFi Savings (parked). DoorDash Crimson, where ALL income now lands, is not connected — so the system has no live view of the account it depends on most. Swap the linked pair, or raise the plan tier?"
   - "Gas/maintenance $30/day reserve is a rough cap Lemar named, not a measured figure — refine it once a few weeks of actual fill-ups are reported (it is now the largest single line in the ledger at ~$900/mo)"
   - "Income backlog: Lemar is posting ~2 weeks of DoorDash earnings to #personal-finance (2026-08-10). Until they land, income_target_weekly $500 is a guess and the overload check can't run."
 ```
@@ -665,6 +670,52 @@ Everything before 2026-08-05 lives in
 budget from the first rough sketch through the (now retired) Option 3 allocation
 decision, the six-pocket mapping, and the calendar reminders. That note is closed; this
 ledger carries the live state forward.
+
+## Update 2026-08-10 (Era Context retired — every figure is now reported)
+
+Lemar: "I think we should pull ERA out of the situation because it keeps disconnecting. I
+was just thinking maybe reporting might be good for this."
+
+**Era Context is out of the money system entirely.** It was the only component that
+fetched rather than received, and it was carrying very little: earnings, cash, gas spend,
+bills, payments, and plan terms were already reported by Lemar. Era supplied account
+balances and a spending-by-category view, and it did both badly — the connector dropped
+repeatedly, its last balance was **2026-07-11, a month stale**, and its 2-account plan
+tier covered SoFi Checking plus SoFi Savings, the latter now parked. After the 2026-08-10
+account correction it could not see DoorDash Crimson at all, which is where 100% of income
+now lands. It was watching the wrong accounts, out of date, and unreliable.
+
+**Balances are now reported, exactly like everything else.** Each pocket carries
+`balance` + `balance_as_of`, set only when Lemar states a figure ("Spending has $240").
+New skill mode 2b handles it. Three rules keep a self-reported balance honest:
+- `null` renders **"not reported"** — never $0, and never inferred from the income log or
+  by summing accruals. A number the system made up is worse than a blank.
+- Every balance shows its age; **older than 7 days renders stale**, so a week-old figure
+  can never pose as current.
+- A reported balance is **never adjusted** to reconcile with what the ledger expected. If
+  they disagree, both get shown and the gap gets named. The gap is information.
+
+The stale $128.78 was deliberately NOT carried into `balance` — it came from the retired
+connector, not from Lemar, so it stays in a note as history and both pockets start at
+"not reported".
+
+**Dropped, not replaced:** the dashboard's "Spending snapshot" section. It existed only to
+render Era's category/cash-flow feed. With no transaction feed there is nothing to put
+there, so the section is gone rather than left as a dead placeholder promising something
+that will never arrive.
+
+**Also cleaned up:** `pulse-dashboard` read Era for its money line and now reads the
+ledger's `daily_targets` (today's claim, split into gas and set-aside); the Samira runbook
+and anchors no longer list Era as a source.
+
+**The honest tradeoff.** Nothing independently verifies Lemar's numbers now. That was
+already true of every figure except balances, so the change is smaller than it sounds —
+but it makes the staleness stamp load-bearing. A forgotten report should read as *stale*,
+never as *current*, and the rules above are what enforce that.
+
+Nothing paid, nothing contacted, no figure invented, no account disconnected by this
+system — retiring the connector on Era's side is Lemar's own action if he wants it gone
+there too.
 
 ## Update 2026-08-10 (account correction — which account plays which role)
 
