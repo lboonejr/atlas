@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-10T14:09:00-04:00
+updated: 2026-08-10T16:10:00-04:00
 domain: personal
 type: reference
 status: active
@@ -167,6 +167,8 @@ open_questions:
   - "Station travel $50/wk: Lemar started a weekend job at The Station 8/9 — pay rate not yet known, he'll report it in #personal-finance"
   - "'Gas $10' dropped in #personal-finance 2026-08-10 with a receipt photo (IMG_2080.jpeg) — doesn't match any existing bill line (no recurring gas bill, no due date) and isn't income or cash-on-hand. Unclear if Lemar wants this tracked as a new recurring/one-time expense line (and if so what cadence/pocket) or if it's just an FYI needing no ledger action. Raised in #decisions 2026-08-10, nothing added to the ledger."
   - "'SoFi balance today: $2.54' dropped in #personal-finance 2026-08-10 — a reported bank balance, not cash on hand (the `cash_on_hand` field is for physical cash) and not tied to a specific pocket (both `sofi-checking` and `sofi-savings` map to SoFi). No ledger field exists for a manually-reported account balance (that's Era Context's job, and SoFi still needs reconnecting per the open question above). Left OUT of the ledger rather than guess which pocket/field it belongs in; raised in #decisions 2026-08-10."
+  - "'$29.95 spent on cleaning supplies' dropped in #personal-finance 2026-08-10 (ts 1786386505, receipt photo) — doesn't match any existing bill line (the tracked 'Cleaning supplies $30' bill is a separate upcoming due-8/11 item, not this purchase) and isn't income or cash-on-hand. Unclear if this is a payment against that $30 bill, a separate purchase, or an FYI needing no ledger action. Left OUT of the ledger rather than guess; raised in #decisions 2026-08-10."
+  - "DoorDash '$51.70' dropped in #personal-finance 2026-08-10 (ts 1786388799, no date range) — logged to income-log-2026.md as its own 2026-08-10 line, but its relationship to the already-logged $61.43 partial-week (Aug 10-16) figure is unclear (additional earnings on top, or a restated/corrected total). Nothing merged; raised in #decisions 2026-08-10."
 ```
 
 ## History
@@ -355,6 +357,30 @@ made by this pass (outside PART M's scope).
 Dashboard re-rendered (cash-on-hand figure now reflects the $25 report). Nothing paid,
 nothing contacted, no figure guessed.
 
+## Update 2026-08-10 (PART M sweep, 3rd pass)
+
+Swept #personal-finance since the last run (2nd pass, ended at the SoFi balance drop,
+ts `1786373508.071459`). Two new messages, both from Lemar today, 2026-08-10:
+
+- **"$29.95 spent on cleaning supplies"** (ts `1786386505.063809`, receipt photo
+  `IMG_2081.jpeg`) — doesn't cleanly match the existing "Cleaning supplies $30" bill
+  (due 8/11; unclear if this purchase IS that bill being paid early/differently, or a
+  separate expense) and isn't income or cash-on-hand. Left OUT of the ledger rather than
+  guess; added to `open_questions`.
+- **"DoorDash Earnings : $51.70"** (ts `1786388799.564249`) — Mode 1 (log earnings), no
+  date range given so treated as today (2026-08-10). Appended to `income-log-2026.md` as
+  its own line rather than merged into the already-logged $61.43 partial-week figure —
+  whether it's additional earnings on top or a restated total is unclear. Added to
+  `open_questions`.
+
+No cash-on-hand report, no new/updated bills with a `due`, no payment-plan terms, no
+"mark paid" this pass. No `daily_targets`/calendar changes needed (nothing carries a new
+`due`). ROLLOVER not yet due (run time ≈4:1x pm ET, gate is ≥5pm ET).
+
+Dashboard re-render deferred to the next PART M pass — no material change to the
+headline numbers this pass beyond the new income line (which the "This week" section
+will pick up next render). Nothing paid, nothing contacted, no figure guessed.
+
 ## Sources
 - Prior project note: `haven/vault/10-Personal/Money/2026-07-11-personal-finance-dashboard-project.md` (full Slack ts provenance lives there)
 - Staged prompt: #admin `C0BBLUA7JLX` ts `1786253312.218409`+`1786253312.241789`
@@ -368,3 +394,6 @@ nothing contacted, no figure guessed.
   2026-08-10 PART M sweep
 - #personal-finance `C0BGLEMH99T` ts `1786373460.228489` ("Cash on hand today: $25"),
   `1786373508.071459` ("SoFi balance today: $2.54") — 2026-08-10 PART M sweep, 2nd pass
+- #personal-finance `C0BGLEMH99T` ts `1786386505.063809` ("$29.95 spent on cleaning
+  supplies", photo), `1786388799.564249` ("DoorDash Earnings : $51.70") — 2026-08-10
+  PART M sweep, 3rd pass
