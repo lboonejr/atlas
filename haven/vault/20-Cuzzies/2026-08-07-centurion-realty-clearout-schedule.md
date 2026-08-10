@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T08:05:00-04:00
-updated: 2026-08-10T12:05:00-04:00
+updated: 2026-08-10T14:20:00-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -34,5 +34,17 @@ same open ask from 8/6–8/7, now with an added cost threat and a same-day respo
 request. Needs Lemar's call (a specific date, or accept the LL-removal charge) — raised
 in #decisions rather than committing a date on his behalf. Nothing replied to Sherry yet.
 
+## Update 2026-08-10 (PART A close)
+
+Lemar reacted 🫡 on the #decisions card directly (no ✅ on either Option 1 — give a
+date — or Option 2 — accept the LL-removal charge). Read as: close the card, no
+decision committed through this mechanism. No reply sent to Sherry Caldwell, no date
+given, no charge explicitly accepted. The underlying ask is still functionally open —
+by the terms Sherry stated, silence defaults to the landlord removing the remaining
+items and billing Cuzzie's, but that has not been confirmed or communicated back to
+her. Status left `awaiting-decision` rather than `done`, since the matter itself isn't
+resolved — only the #decisions prompt is closed. No email sent, no reply drafted.
+
 ## Sources
 - gmail: thread `19fcdd80644e5973`
+- slack: #decisions card ts `1786378053.601639`
