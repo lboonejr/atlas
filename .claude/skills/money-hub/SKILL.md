@@ -1,1 +1,334 @@
-LS0tCm5hbWU6IG1vbmV5LWh1YgpkZXNjcmlwdGlvbjogPgogIExlbWFyJ3MgcGVyc29uYWwgZmluYW5jaWFsIGh1YjogcmVwb3J0IGVhcm5pbmdzIGFuZCBjYXNoLCBwb3N0IGJpbGxzICh0eXBlZCBvciBmcm9tIGEKICBwaG90byksIHNldCB1cCBwYXltZW50IHBsYW5zLCBhbmQgZ2V0IHRoZSB3ZWVrJ3MgbW9uZXkgc3BsaXQuIFNvdXJjZSBvZiB0cnV0aCBpcyB0aGUKICBIYXZlbiBsZWRnZXIgbm90ZSBoYXZlbi92YXVsdC8xMC1QZXJzb25hbC9Nb25leS9tb25leS1odWItbGVkZ2VyLm1kIChiaWxscywgcG9ja2V0cywKICBwbGFucywgZ29hbHMsIGFsbG9jYXRpb24gY29uZmlnLCBhbmQgdGhlIGRhaWx5IHNldC1hc2lkZSByYW1wKSBwbHVzIHRoZSBpbmNvbWUgbG9nOwogIHRoZSBNb25leSBIdWIgZGFzaGJvYXJkIGFydGlmYWN0IGFuZCB0aGUgcmVtaW5kZXItY2FsZW5kYXIgZXZlbnRzIChpbmNsdWRpbmcgdGhlIE9ORQogIGRhaWx5ICJzZXQgYXNpZGUgdG9kYXkiIGFnZ3JlZ2F0ZSBldmVudCkgYXJlIHJlZ2VuZXJhdGVkIEZST00gdGhlIGxlZGdlciwgbmV2ZXIKICBoYW5kLWVkaXRlZC4gVGhlIGFsbG9jYXRpb24gZW5naW5lIGltcGxlbWVudHMgdGhlIGxvY2tlZCBPcHRpb24gMyBoeWJyaWQgZmxvb3IgKwogIHdhdGVyZmFsbCAoMjAyNi0wNy0yNCkgYW5kIG9ubHkgYWR2aXNlcyDigJQgTGVtYXIgbW92ZXMgdGhlIG1vbmV5IGhpbXNlbGYuIFRyaWdnZXIgb246CiAgImxvZyBlYXJuaW5ncyIsICJtYWRlICRYIHRvZGF5IiwgImRvb3JkYXNoIHBhaWQgbWUiLCAiSSBoYXZlICRYIGNhc2giLCAibmV3IGJpbGw6IiwgYQogIGJpbGwgcGhvdG8gb3IgcGF5b3V0IHNjcmVlbnNob3QsICJwYXltZW50IHBsYW46IiwgInJ1biBteSB3ZWVrIiwgImhvdyBzaG91bGQgSSBzcGxpdAogIHRoaXMiLCAid2hhdCBkbyBJIGRlbGVnYXRlIiwgInBhaWQgdGhlIFtiaWxsXSIsICJzaG93IG1lIHRoZSBtb25leSBodWIiLCAibW9uZXkgaHViIiwKICAicmVidWlsZCB0aGUgbW9uZXkgaHViIi4gQWxzbyBpbnZva2VkIGJ5IFNhbWlyYSdzIFBBUlQgTSBmb3IgbW9uZXkgZHJvcHMgaW4KICAjcGVyc29uYWwtZmluYW5jZS4gVGhpcyBza2lsbCBORVZFUiBtb3ZlcyBtb25leSwgbmV2ZXIgcGF5cyBhbnlvbmUsIG5ldmVyIGNvbnRhY3RzIGEKICBjcmVkaXRvciBvciBiaWxsZXIsIG5ldmVyIHNlbmRzIGVtYWlsIG9yIG91dHJlYWNoLCBhbmQgbmV2ZXIgaW52ZW50cyBhIG51bWJlciDigJQgYW4KICB1bmtub3duIHN0YXlzIG51bGwgYW5kIGdldHMgYXNrZWQuCgotLS0KCiMgTW9uZXkgSHViIOKAlCBlYXJuaW5ncywgYmlsbHMsIHBvY2tldHMsIGFuZCB0aGUgd2Vla2x5IHNwbGl0CgpZb3UgcnVuIExlbWFyJ3MgcGVyc29uYWwgYnVkZ2V0aW5nIGNlbnRlci4gT25lIGxlZGdlciwgdGhyZWUgcmVuZGVyaW5nczogdGhlIEhhdmVuCmxlZGdlciBub3RlIGlzIHRydXRoOyB0aGUgTW9uZXkgSHViIGRhc2hib2FyZCBhcnRpZmFjdCBhbmQgdGhlIHJlbWluZGVyLWNhbGVuZGFyIGV2ZW50cwoocGVyLWJpbGwgZHVlLWRhdGUgZXZlbnRzIEFORCB0aGUgZGFpbHkgInNldCBhc2lkZSB0b2RheSIgYWdncmVnYXRlKSBhcmUgcHJvamVjdGlvbnMgb2YKaXQ7IEVyYSBDb250ZXh0IGlzIHRoZSByZWFkLW9ubHkgbGl2ZSBsYXllciBmb3IgY29ubmVjdGVkLWFjY291bnQgYmFsYW5jZXMgYW5kCnNwZW5kaW5nLiBSdW5zIGxpdmUgKCJydW4gbXkgd2VlayIpIG9yIGluc2lkZSBTYW1pcmEncyBzY2FuIChQQVJUIE0pLiBFdmVyeSBTYWZldHkgcnVsZQppbiB0aGUgcnVuYm9vayBhcHBsaWVzOyBhZGQgdGhlIGd1YXJkcyBiZWxvdy4KCiMjIEFOQ0hPUlMKQWxsIHBsYXRmb3JtIElEcyBsaXZlIGluICoqYC5jbGF1ZGUvYW5jaG9ycy5tZGAqKiDigJQgcmVhZCBpdCBmaXJzdC4gWW91IHVzZTogdGhlCioqTW9uZXkgSHViIGFydGlmYWN0IFVSTCoqIChNb25leSBIdWIgc2VjdGlvbiksIHRoZSAqKnJlbWluZGVyIGNhbGVuZGFyIElEKiogKEdvb2dsZQpDYWxlbmRhciBzZWN0aW9uKSwgKiojcGVyc29uYWwtZmluYW5jZSoqIGBDMEJHTEVNSDk5VGAsIGFuZCB0aGUgZ2l0LXdyaXRlIHBvbGljeQooY29tbWl0IHN0cmFpZ2h0IHRvIGBtYWluYDsgcHJlZml4IGBtb25leS1odWI6YCkuIFZhdWx0IG91dGNvbWUgbm90ZXMgZ28gdGhyb3VnaAoqKnNhbWlyYS1yZXBvcnQtcmVzdWx0Kiogd2hlbiBydW5uaW5nIGluc2lkZSBTYW1pcmEuCgojIyBUSEUgU09VUkNFIE9GIFRSVVRIIOKAlCBvbmUgbGVkZ2VyLCBvbmUgbG9nCi0gKipgaGF2ZW4vdmF1bHQvMTAtUGVyc29uYWwvTW9uZXkvbW9uZXktaHViLWxlZGdlci5tZGAqKiDigJQgYmlsbHMsIHBvY2tldHMsIHBheW1lbnQKICBwbGFucywgZ29hbHMsIGNhc2ggb24gaGFuZCwgYWxsb2NhdGlvbiBjb25maWcsIHRoZSBkYWlseSBzZXQtYXNpZGUgcmFtcAogIChgZGFpbHlfdGFyZ2V0c2ApLCBvcGVuIHF1ZXN0aW9ucywgYWxsIGluIE9ORSBmZW5jZWQgYHlhbWxgIGJsb2NrLiBGaWVsZCBydWxlcyBsaXZlCiAgYXQgdGhlIHRvcCBvZiB0aGF0IG5vdGU6IGFtb3VudHMgcGxhaW4gbnVtYmVycywgYG51bGxgID0gdW5rbm93biAobmV2ZXIgaW52ZW50KSwKICBkZWR1cGUgYnkgYGlkYCwgbmV2ZXIgZGVsZXRlIGEgbGluZSAoZmxpcCBgc3RhdHVzYCksIHRoZSBhbGxvY2F0aW9uIFNIQVBFIGlzIGxvY2tlZAogIChPcHRpb24gMyksIHRoZSBmbG9vciBET0xMQVIgZmlndXJlIGlzIGNvbXB1dGVkIGZyb20gYWN0aXZlIG1vbnRobHkgcDEvcDIvcDQgYmlsbHMgw7cKICA0LjMzLgotICoqYGhhdmVuL3ZhdWx0LzEwLVBlcnNvbmFsL01vbmV5L2luY29tZS1sb2ctMjAyNi5tZGAqKiDigJQgYXBwZW5kLW9ubHkgZWFybmluZ3MgbGluZXMuCgpFZGl0aW5nIHRoZXNlIGJsb2NrcyArIHRvdWNoaW5nIGB1cGRhdGVkYCBpcyBhIHNhbmN0aW9uZWQgbWFjaGluZSB3cml0ZSAodGhlCm9uLWJ1dHRvbi1wbGFuIHBhdHRlcm4pLiBNYXRlcmlhbCBjaGFuZ2VzIGFuZCBldmVyeSBhbGxvY2F0aW9uIHJ1biBhbHNvIGFwcGVuZCBhbgpgIyMgVXBkYXRlIFlZWVktTU0tRERgIHNlY3Rpb24gdG8gdGhlIGxlZGdlciDigJQgeWFtbCBob2xkcyBzdGF0ZSwgVXBkYXRlcyBob2xkIGhpc3RvcnkuCgojIyBNT0RFUwoKKioxLiBMb2cgZWFybmluZ3MqKiDigJQgIm1hZGUgJDE0MCB0b2RheSIsICJsb2cgZWFybmluZ3MgMTQwIiwgImRvb3JkYXNoIHBhaWQgbWUgJDk1Iiwgb3IKYSBwYXlvdXQgc2NyZWVuc2hvdC4gQXBwZW5kIGB7ZGF0ZSwgc291cmNlLCBhbW91bnQsIG5vdGV9YCB0byB0aGUgaW5jb21lIGxvZyAoZGF0ZSA9CnRoZSBkYXkgZWFybmVkIGlmIHN0YXRlZCwgZWxzZSB0b2RheSwgRVQpLiBGcm9tIGEgc2NyZWVuc2hvdCwgcmVhZCB0aGUgYW1vdW50IGFuZCBkYXRlCm9mZiB0aGUgaW1hZ2UgYW5kIENPTkZJUk0gd2l0aCBMZW1hciBiZWZvcmUgd3JpdGluZyBpZiBlaXRoZXIgaXMgdW5jbGVhci4gUmUtcmVuZGVyIHRoZQpkYXNoYm9hcmQuCgoqKjIuIFJlcG9ydCBjYXNoKiog4oCUICJJIGhhdmUgJFggY2FzaCAvIG9uIGhhbmQiLiBTZXQgYGNhc2hfb25faGFuZDoge2Ftb3VudCwgYXNfb2Z9YCBpbgp0aGUgbGVkZ2VyLiBSZS1yZW5kZXIuCgoqKjMuIEFkZCBiaWxsKiog4oCUICJuZXcgYmlsbDogY2FyIGluc3VyYW5jZSAkMTgwIG9uIHRoZSAxNXRoIiwgb3IgYSBwaG90byBvZiBhIGJpbGwuCkZyb20gYSBwaG90bywgZXh0cmFjdCBwYXllZSwgYW1vdW50LCBkdWUgZGF0ZSAvIGJpbGxpbmcgZGF5LCBhbmQgYW55IGFjY291bnQgcmVmZXJlbmNlOwpzaG93IExlbWFyIHdoYXQgeW91IHJlYWQgYW5kIGdldCBhIGNvbmZpcm1hdGlvbiBiZWZvcmUgd3JpdGluZyAoYSBtaXNyZWFkIGJpbGwgcG9pc29ucwpldmVyeSBkb3duc3RyZWFtIG51bWJlcikuIERlZHVwZSBieSBgaWRgIC8gcGF5ZWUrYWNjb3VudCBhZ2FpbnN0IHRoZSBsZWRnZXIg4oCUIGFuCmV4aXN0aW5nIG1hdHRlciBnZXRzIFVQREFURUQgKGxhdGVzdCBmaWd1cmUsIGFubm90YXRlKSwgbmV2ZXIgYSBzaWJsaW5nIGxpbmUuIEFzc2lnbgpgcHJpb3JpdHlgIG9ubHkgd2hlbiBpdCdzIG9idmlvdXMgZnJvbSB0aGUgbGVkZ2VyJ3MgZXhpc3RpbmcgcGF0dGVybjsgb3RoZXJ3aXNlIGxlYXZlCmBwcmlvcml0eTogbnVsbGAgYW5kIGFzay4gVGhlbiBwcm9qZWN0IGl0IG9udG8gdGhlIGNhbGVuZGFyIChzZWUgQ0FMRU5EQVIpIEFORCBjb21wdXRlCml0cyBzZXQtYXNpZGUgcmFtcCAoc2VlIFJBTVApIGJlZm9yZSByZS1yZW5kZXJpbmcuCgoqKjQuIFNldCB1cCBhIHBheW1lbnQgcGxhbioqIOKAlCAicGF5bWVudCBwbGFuOiBbY3JlZGl0b3JdICQ2MDAgdG90YWwsIDQgcGF5bWVudHMgb2YgJDE1MApzdGFydGluZyBGcmlkYXkiLiBXcml0ZSBhIGBwbGFuc2AgZW50cnk6IGB7aWQsIGNyZWRpdG9yLCB0b3RhbCwgbm90ZSwgaW5zdGFsbG1lbnRzOgpbe3NlcSwgYW1vdW50LCBkdWUsIHN0YXR1czogcGVuZGluZywgY2FsZW5kYXJfZXZlbnRfaWQ6IG51bGx9XX1gLiBFdmVyeSBpbnN0YWxsbWVudApnZXRzIGl0cyBvd24gcmVtaW5kZXIgZXZlbnQgKHNlZSBDQUxFTkRBUikgQU5EIGl0cyBvd24gc2V0LWFzaWRlIHJhbXAgKHNlZSBSQU1QLApjb21wdXRlZCBwZXItaW5zdGFsbG1lbnQgYWdhaW5zdCB0aGF0IGluc3RhbGxtZW50J3MgYGR1ZWApLiBJZiB0aGUgbWF0aCBkb2Vzbid0IGNsb3NlCihpbnN0YWxsbWVudHMg4omgIHRvdGFsKSwgc2F5IHNvIGFuZCBhc2sgcmF0aGVyIHRoYW4gYWRqdXN0aW5nIGEgZmlndXJlIHlvdXJzZWxmLgpSZS1yZW5kZXIuCgoqKjUuIFJ1biBteSB3ZWVrKiog4oCUICJydW4gbXkgd2VlayIsICJob3cgc2hvdWxkIEkgc3BsaXQgdGhpcyIsICJ3aGF0IGRvIEkgZGVsZWdhdGUiLgpPbiBkZW1hbmQgb25seSwgbmV2ZXIgc2NoZWR1bGVkIChMZW1hcidzIGNhbGwsIDIwMjYtMDgtMDUpLgotICoqSW5wdXRzOioqIHRoaXMgd2VlaydzIGluY29tZS1sb2cgZW50cmllcyAoTW9u4oCTU3VuLCBFVCkgKyBgY2FzaF9vbl9oYW5kYCArIGJpbGxzIGFuZAogIGluc3RhbGxtZW50cyBkdWUgaW4gdGhlIG5leHQgNyBkYXlzICsgbGl2ZSBFcmEgQ29udGV4dCBiYWxhbmNlcwogIChgYWNjb3VudHNfX2xpc3RfZmluYW5jaWFsX2FjY291bnRzYDsgcmVuZGVyIGEg4pqg77iPIGNoaXAgaWYgdW5yZWFjaGFibGUpLgotICoqRW5naW5lIOKAlCB0aGUgbG9ja2VkIE9wdGlvbiAzIHNoYXBlOioqIGNvbXB1dGUgdGhlIHdlZWtseSBmbG9vciAoYWN0aXZlIG1vbnRobHkKICBwMS9wMi9wNCBiaWxscyDDtyA0LjMzLCBwbHVzIGFueSBvbmUtdGltZSBwMS9wMi9wNCBpdGVtIGR1ZSBUSElTIHdlZWspLiBGdW5kIHRoZSBmbG9vcgogIG9mZiB0aGUgdG9wIGluIHByaW9yaXR5IG9yZGVyIChwMSDihpIgcDIg4oaSIHA0KS4gSWYgdGhlIHdlZWsncyBtb25leSBkb2Vzbid0IGNvdmVyIHRoZQogIGZsb29yLCBmdW5kIGluIG9yZGVyIGFzIGZhciBhcyBpdCBnb2VzIGFuZCBzdGF0ZSBwbGFpbmx5IHdoYXQncyB1bmZ1bmRlZCBhbmQgcm9sbHMKICBmb3J3YXJkIOKAlCB0aGUgbG9ja2VkIGxvZ2ljIGRlZmluZXMgbm8gb3RoZXIgZmFsbGJhY2ssIHNvIG5ldmVyIGludmVudCBvbmUuIFdoYXRldmVyCiAgcmVtYWlucyB3YXRlcmZhbGxzIGBwNSDihpIgcDYg4oaSIHA3YCwgZWFjaCBwb2NrZXQgZnVuZGVkIHRvd2FyZCBpdHMgZ29hbCBpbiBmdWxsIGJlZm9yZQogIHRoZSBuZXh0IHNlZXMgYW55dGhpbmcuCi0gKipPdXRwdXQg4oCUIHRoZSBkZWxlZ2F0aW9uIHRhYmxlOioqIG9uZSByb3cgcGVyIHBvY2tldDogIm1vdmUgJFgg4oaSIFtwb2NrZXRdIChbd2hhdCBpdAogIGNvdmVyc10pIiwgdGhlbiB0aGUgd2VlaydzIGR1ZSBiaWxscyB3aXRoIGRhdGVzLCB0aGVuIGluY29tZSB2cyB0aGUgJDUwMCB0YXJnZXQuCiAgQWR2aXNvcnkgb25seTsgTGVtYXIgbWFrZXMgdGhlIHRyYW5zZmVycy4gQXBwZW5kIHRoZSB0YWJsZSBhcyBhbiBgIyMgVXBkYXRlYCB0byB0aGUKICBsZWRnZXIsIHBvc3QgaXQgdG8gI3BlcnNvbmFsLWZpbmFuY2UgKHdoZW4gcnVubmluZyB3aXRoIGEgU2xhY2sgc3VyZmFjZSksIHJlLXJlbmRlcgogIHRoZSBkYXNoYm9hcmQuCgoqKjYuIE1hcmsgcGFpZCoqIOKAlCAicGFpZCB0aGUgQ2xhdWRlIGJpbGwiLCAiaW5zdGFsbG1lbnQgMiBvZiBbcGxhbl0gcGFpZCIsIG9yIGEgcGF5bWVudApjb25maXJtYXRpb24gKHRleHQgb3IgcGhvdG8pIGluICNwZXJzb25hbC1maW5hbmNlLiBGbGlwIHRoZSBsaW5lJ3MgYHN0YXR1c2AgdG8gYHBhaWRgIChhCm1vbnRobHkgYmlsbCBqdXN0IGdldHMgYSBkYXRlZCBub3RlIOKAlCBpdCByZWN1cnMpLCByZXRpcmUgYSBvbmUtdGltZSBpdGVtJ3Mgb3IKaW5zdGFsbG1lbnQncyBjYWxlbmRhciBldmVudCAoc2VlIENBTEVOREFSKSwgYW5kIHdoZW4gYSBwbGFuJ3MgbGFzdCBpbnN0YWxsbWVudCBwYXlzLAptYXJrIHRoZSBwbGFuIGRvbmUuICoqUmFtcCBzaWRlLWVmZmVjdDoqKiBmbGlwIHRoYXQgYmlsbCdzIGBwZW5kaW5nYC9gcm9sbGVkYApgZGFpbHlfdGFyZ2V0c2AgY29udHJpYnV0aW9uKHMpIHRvIGBwYWlkYCwgc3VidHJhY3QgdGhlIHBhaWQgYW1vdW50IGZyb20gd2hpY2hldmVyCmRheShzKSBpdCB3YXMgc2l0dGluZyBpbiBhbmQgdXBkYXRlIHRob3NlIGRheXMnIGFnZ3JlZ2F0ZSBldmVudHMsIGFuZCBSRVRJUkUgdGhlIHJlc3QKb2YgdGhhdCBiaWxsJ3MgZnV0dXJlIHJhbXAgZGF5cyDigJQgYSBmdWxsIHBheW1lbnQgY2xlYXJzIHRoZSByZW1haW5pbmcgc2NoZWR1bGUgZm9yIHRoYXQKYmlsbCwgc28gcmVjb21wdXRlIGV2ZXJ5IGZ1dHVyZSBkYXkgaXQgd2FzIHRvdWNoaW5nIChhIGRheSB3aG9zZSB0b3RhbCB0aGVuIHJlYWNoZXMgJDAKYWNyb3NzIGFsbCBjb250cmlidXRpb25zIGdldHMgaXRzIG93biBldmVudCBjYW5jZWxsZWQgYW5kIGl0cyBpZCBjbGVhcmVkKS4gUmUtcmVuZGVyLgoKKio3LiBTaG93IC8gcmVidWlsZCB0aGUgaHViKiog4oCUICJzaG93IG1lIHRoZSBtb25leSBodWIiLCAibW9uZXkgaHViIiwgInJlYnVpbGQgdGhlCm1vbmV5IGh1YiIuIFJlLXJlbmRlciB0aGUgZGFzaGJvYXJkIGZyb20gY3VycmVudCBsZWRnZXIgKyBsb2cgKyBFcmEgc3RhdGUgYW5kIGhhbmQgYmFjawp0aGUgYXJ0aWZhY3QgVVJMLgoKIyMgUkFNUCDigJQgZXZlbiBkYWlseSBzZXQtYXNpZGUgKGV4dGVuZHMgTW9kZSAzICsgdGhlIHJlY3VycmluZy1iaWxsIHBhdGgpCkV2ZXJ5IGJpbGwvZXhwZW5zZSB0aGF0IGdldHMgYSBkdWUgZGF0ZSBzaG91bGQgdHVybiBpbnRvIGFuIGV2ZW4gZGFpbHkgc2F2aW5ncyB0YXJnZXQsCnNvIExlbWFyIHNlZXMgT05FIGNvbWJpbmVkICJzZXQgYXNpZGUgdG9kYXkiIG51bWJlciBpbnN0ZWFkIG9mIHRyYWNraW5nIGVhY2ggYmlsbApzZXBhcmF0ZWx5LgoKLSAqKldpbmRvdzoqKiBgc3RhcnRgID0gdGhlIGRheSBhZnRlciB0aGUgYmlsbCBpcyBsb2dnZWQgKGZvciBhIHJlY3VycmluZyBiaWxsJ3MgTEFURVIKICBjeWNsZXMg4oCUIGkuZS4gZXZlcnkgb2NjdXJyZW5jZSBhZnRlciB0aGUgZmlyc3Qg4oCUIGBzdGFydGAgPSB0aGUgZGF5IGFmdGVyIHRoZSBQUklPUgogIGN5Y2xlJ3MgZHVlIGRhdGUsIHNvIGN5Y2xlcyBjaGFpbiB3aXRoIG5vIGdhcCkuIGBlbmRgID0gdGhlIGR1ZSBkYXRlIG1pbnVzIDcgZGF5cy4KLSAqKmBlbmQgPCBzdGFydGAqKiAodGhlIGR1ZSBkYXRlIGlzIHVuZGVyIDggZGF5cyBvdXQgd2hlbiBsb2dnZWQvY2hhaW5lZCk6IHRoZSBGVUxMCiAgYW1vdW50IGxhbmRzIG9uIGRheSAxIChgc3RhcnRgKSDigJQgZG8gbm90IGludmVudCBhIGRpZmZlcmVudCBzcGxpdCBmb3IgYSBzaG9ydCBmdXNlLgotICoqRXZlbiBzcGxpdDoqKiBvdGhlcndpc2UgZGl2aWRlIHRoZSB0b3RhbCBldmVubHkgYWNyb3NzIGBzdGFydC4uZW5kYCBpbmNsdXNpdmUsIGluCiAgY2VudHMsIGRpc3RyaWJ1dGluZyBhbnkgcm91bmRpbmcgcmVtYWluZGVyIGFjcm9zcyB0aGUgZmlyc3QgZmV3IGRheXMgc28gdGhlIGRheXMgc3VtCiAgRVhBQ1RMWSB0byB0aGUgdG90YWwgKG5ldmVyIGxldCByb3VuZGluZyBzaWxlbnRseSBsb3NlIG9yIGdhaW4gYSBjZW50KS4KLSAqKk9uZS10aW1lIGJhY2tmaWxsOioqIHJ1biB0aGlzIG9uY2UgZm9yIGFueSBiaWxsIEFMUkVBRFkgaW4gdGhlIGxlZGdlciB0aGF0IGNhcnJpZXMgYQogIGZ1dHVyZSBgZHVlYCAobm90IHlldCByYW1wZWQpLiBJZiB0b2RheSBmYWxscyBpbnNpZGUgdGhlIGNvbXB1dGVkIHdpbmRvdywgdXNlIHRvZGF5IGFzCiAgYHN0YXJ0YCBpbnN0ZWFkIG9mICJ0aGUgZGF5IGFmdGVyIGxvZ2dlZCIgKHRoZSByYW1wIGNhbid0IHJlYWNoIGludG8gdGhlIHBhc3QpLgogIFJlY3VycmluZyBtb250aGx5IGJpbGxzIChkYXktb2YtbW9udGggb25seSwgbm8gZXhwbGljaXQgYGR1ZWApIGFyZSBOT1QgYXV0by1iYWNrZmlsbGVkCiAgYnkgdGhpcyBwYXNzIOKAlCBvbmx5IHJhbXAgYSByZWN1cnJpbmcgYmlsbCdzIGN5Y2xlIHdoZW4gaXQgaXMgZnJlc2hseSBhZGRlZC9jaGFpbmVkLCB0bwogIGF2b2lkIGludmVudGluZyBhICJsb2dnZWQiIGRhdGUgZm9yIGJpbGxzIHRoYXQgaGF2ZSBleGlzdGVkIGZvciB3ZWVrcy4KLSAqKlN0b3JhZ2U6Kiogd3JpdGUgcGVyLWRheSBhbW91bnRzIGludG8gYGRhaWx5X3RhcmdldHNgIGluIHRoZSBsZWRnZXIg4oCUIElTTyBkYXRlIGtleXMKICDihpIgYHt0b3RhbCwgY2FsZW5kYXJfZXZlbnRfaWQsIGNvbnRyaWJ1dGlvbnM6IFt7YmlsbF9pZCwgYW1vdW50LCBzdGF0dXM6IHBlbmRpbmd9XX1gLiBBCiAgZGF5IHRoYXQgYWxyZWFkeSBob2xkcyBvdGhlciBiaWxscycgY29udHJpYnV0aW9ucyBnZXRzIGl0cyBgdG90YWxgIFJFQ09NUFVURUQgKHN1bSBvZgogIGFsbCB0aGF0IGRheSdzIGNvbnRyaWJ1dGlvbnMpLCBuZXZlciBvdmVyd3JpdHRlbi9jbG9iYmVyZWQuCgojIyBEQUlMWSBDQUxFTkRBUiDigJQgb25lIGFnZ3JlZ2F0ZSAic2V0IGFzaWRlIiBldmVudCBwZXIgZGF5ClNlcGFyYXRlIGZyb20gZWFjaCBiaWxsJ3Mgb3duIGR1ZS1kYXRlIGV2ZW50IChzZWUgQ0FMRU5EQVIgYmVsb3cpIOKAlCB0aGlzIGlzIHRoZSAiaG93Cm11Y2ggdG8gc2V0IGFzaWRlIHRvZGF5IiBsYXllciwgdGhlIGR1ZS1kYXRlIGV2ZW50IGlzIHN0aWxsICJ3aGF0J3MgYWN0dWFsbHkgZHVlLiIKLSBSZW1pbmRlciBjYWxlbmRhciBvbmx5IChJRCBpbiBhbmNob3JzKSwgbm8gYXR0ZW5kZWVzLCBwb3B1cCByZW1pbmRlciAoYG1pbnV0ZXM6IDBgLAogIG1hdGNoaW5nIHRoZSBleGlzdGluZyBhbGwtZGF5IGJpbGwtZXZlbnQgY29udmVudGlvbikuCi0gVGl0bGU6IGBTZXQgYXNpZGUgdG9kYXk6ICQ8ZGFpbHlfdGFyZ2V0c1tkYXRlXS50b3RhbD5gLiBEZXNjcmlwdGlvbiBsaXN0cyBlYWNoCiAgY29udHJpYnV0aW5nIGJpbGwgKyBhbW91bnQsIGZsYWdnaW5nIGFueXRoaW5nIGNhcnJpZWQgaW4gZnJvbSBhIG1pc3NlZCBkYXkgKCJyb2xsZWQKICBmcm9tIGA8ZGF0ZT5gIiDigJQgc2VlIFJPTExPVkVSKS4KLSBBIGRheSdzIHRvdGFsIGNoYW5naW5nIChuZXcgYmlsbCBsYW5kcyBvbiBpdCwgYSBwYXltZW50IGNsZWFycyBwYXJ0IG9mIGl0LCBhIHJvbGxvdmVyCiAgYWRkcyB0byBpdCkgdXBkYXRlcyBUSEFUIFNBTUUgZXZlbnQg4oCUIHJldXNlIGBkYWlseV90YXJnZXRzW2RhdGVdLmNhbGVuZGFyX2V2ZW50X2lkYCwKICBuZXZlciBjcmVhdGUgYSBkdXBsaWNhdGUgZm9yIGEgZGF0ZSB0aGF0IGFscmVhZHkgaGFzIG9uZSAoRVhJU1RJTkcsIHNhbWUgZG9jdHJpbmUgYXMKICBoYXZlbi1jYWxlbmRhci1zeW5jKS4KLSBBIGRheSB3aG9zZSB0b3RhbCByZWFjaGVzICQwIChldmVyeSBjb250cmlidXRpb24gYHBhaWRgIG9yIG1vdmVkIG9mZiBpdCkg4oaSIGNhbmNlbCBpdHMKICBldmVudCBhbmQgY2xlYXIgdGhlIGlkIChSRVRJUkUpIOKAlCBuZXZlciBsZWF2ZSBhIHN0YWxlICQwIHJlbWluZGVyLgoKIyMgUk9MTE9WRVIg4oCUIGVuZCBvZiBkYXkgKHJ1bnMgaW5zaWRlIFBBUlQgTSwgbGFzdCBob3VybHkgc2NhbiBvZiB0aGUgZGF5KQpPbiBTYW1pcmEncyBMQVNUIGhvdXJseSBzY2FuIG9mIHRoZSBkYXkgKOKJpTVwbSBFVCDigJQgc2FtZSBzdHlsZSBhcyB0aGUgZXhpc3RpbmcgUEFSVCBDCnRpbWluZyBnYXRlLCBzbyB0aGlzIG5ldmVyIGZpcmVzIG1pZC1tb3JuaW5nKTogZm9yIGV2ZXJ5IGBkYWlseV90YXJnZXRzW3RvZGF5XWAKY29udHJpYnV0aW9uIHN0aWxsIGBzdGF0dXM6IHBlbmRpbmdgLCBmbGlwIGl0IHRvIGByb2xsZWRgIGFuZCBhZGQgaXRzIGFtb3VudCBpbnRvCmBkYWlseV90YXJnZXRzW3RvbW9ycm93XWAgKGNyZWF0ZSB0b21vcnJvdydzIGVudHJ5L2V2ZW50IGlmIGl0IGRvZXNuJ3QgZXhpc3QgeWV0KSwgdGhlbgp1cGRhdGUgQk9USCBkYXlzJyBhZ2dyZWdhdGUgZXZlbnRzICh0b2RheSdzIHRvdGFsIGRyb3BzIGJ5IHdoYXQgcm9sbGVkLCB0b21vcnJvdydzCnRvdGFsIGdhaW5zIGl0KS4gTmV2ZXIgdG91Y2ggYSBjb250cmlidXRpb24gYWxyZWFkeSBgcGFpZGAg4oCUIGEgcGF5bWVudCBhbHdheXMgd2lucyBvdmVyCmEgcm9sbG92ZXIuIFRoaXMgaXMgYSBtZWNoYW5pY2FsIGRhaWx5IGhvdXNla2VlcGluZyBzdGVwLCBub3QgYSAibWFyayBwYWlkIiDigJQgaXQgbmV2ZXIKYXNzdW1lcyBhbnl0aGluZyBnb3QgcGFpZCwgaXQgb25seSBtb3ZlcyBhbiB1bi1hY3RlZC1vbiB0YXJnZXQgZm9yd2FyZCBvbmUgZGF5IHNvCm5vdGhpbmcgc2lsZW50bHkgZGlzYXBwZWFycy4KCiMjIENBTEVOREFSIOKAlCBwcm9qZWN0aW9uLCBuZXZlciB0cnV0aApSZW1pbmRlciBjYWxlbmRhciBPTkxZIChJRCBpbiBhbmNob3JzKSwgbm8gYXR0ZW5kZWVzOyB0aGUgbGVkZ2VyIHdpbnMgZXZlcnkgY29uZmxpY3Q7CmV2ZXJ5IGV2ZW50IGlkIGlzIHdyaXR0ZW4gYmFjayB0byBpdHMgbGVkZ2VyIHJvdyBzbyBub3RoaW5nIGlzIGV2ZXIgZG91YmxlLWJvb2tlZAooaGF2ZW4tY2FsZW5kYXItc3luYydzIGxhdywgbWFuYWdlZCBoZXJlIGJlY2F1c2UgYmlsbHMgYW5kIGluc3RhbGxtZW50cyBhcmUKbWFueS1wZXItbm90ZSkuICoqRGVmYXVsdCByZW1pbmRlcnMgb24gZXZlcnkgbmV3IHBlci1iaWxsIGR1ZS1kYXRlIGV2ZW50OiBUV08gcG9wdXBzIOKAlAo3IGRheXMgYmVmb3JlIChgbWludXRlczogMTAwODBgKSBhbmQgZGF5LW9mIChgbWludXRlczogMGApKiogKGxvY2tlZCAyMDI2LTA4LTA5IHBlcgpMZW1hciwgI2RlY2lzaW9ucyDigJQgc2FtZSBzaGFwZSB0aGUgcmV0cm9hY3RpdmUgYXVkaXQgYXBwbGllZCB0byB0aGUgMjAgZXhpc3RpbmcKZXZlbnRzIHRoYXQgZGF5OyBuZXcgZXZlbnRzIG5vdyBjYXJyeSBib3RoIGZyb20gY3JlYXRpb24sIG5vIG1hbnVhbCBmaXgtdXAgbmVlZGVkKToKLSBNb250aGx5IGJpbGwgd2l0aCBhIGtub3duIGBkYXlgIOKGkiBPTkUgcmVjdXJyaW5nIGV2ZW50IChSUlVMRSBGUkVRPU1PTlRITFk7CiAgQllNT05USERBWT1kYXkpLCB0aXRsZSBgQmlsbDogPG5hbWU+IOKAlCAkPGFtb3VudD5gLgotIE9uZS10aW1lIGJpbGwgLyBwbGFuIGluc3RhbGxtZW50IHdpdGggYSBgZHVlYCDihpIgb25lIGV2ZW50LCB0aXRsZQogIGBCaWxsOiA8bmFtZT4g4oCUICQ8YW1vdW50PmAgb3IgYFBsYW46IDxjcmVkaXRvcj4gPHNlcT4vPE4+IOKAlCAkPGFtb3VudD5gLgotIGBkYXk6IG51bGxgIG9yIGBkdWU6IG51bGxgIOKGkiBOTyBldmVudCAoYW5kIG5vIHJhbXAg4oCUIHNlZSBSQU1QKTsgdGhlIGdhcCByaWRlcyBpbgogIGBvcGVuX3F1ZXN0aW9uc2AgdW50aWwgTGVtYXIgc3VwcGxpZXMgdGhlIGRhdGUuIE5ldmVyIGd1ZXNzIGEgZGF0ZS4KLSBQYWlkIC8gcGFya2VkIC8gZG9uZSDihpIgY2FuY2VsIHRoZSBldmVudCBhbmQgY2xlYXIgdGhlIGlkIChSRVRJUkUpLiBBbiBhbW91bnQgb3IgZGF0ZQogIGNoYW5nZSDihpIgdXBkYXRlIHRoZSBleGlzdGluZyBldmVudCwgbmV2ZXIgYSBkdXBsaWNhdGUgKEVYSVNUSU5HKS4KLSBUaGUgZm91ciBwcmUtaHViIGV2ZW50cyAoQ2xhdWRlLCBXaXNwciBGbG93LCBQYXRyZW9uLCBULU1vYmlsZSkgYXJlIGFkb3B0ZWQg4oCUIHRoZWlyCiAgaWRzIGFscmVhZHkgc2l0IGluIHRoZSBsZWRnZXI7IHVwZGF0ZSBvciByZXRpcmUgdGhlbSB0aHJvdWdoIHRoZSBsZWRnZXIgbGlrZSBhbnkKICBvdGhlciByb3csIG5ldmVyIHJlY3JlYXRlIHRoZW0uCi0gVGhlIERBSUxZIGFnZ3JlZ2F0ZSAic2V0IGFzaWRlIHRvZGF5IiBldmVudHMgKHNlZSBEQUlMWSBDQUxFTkRBUiBhYm92ZSkgYXJlIGEKICBTRVBBUkFURSBwYXJhbGxlbCBsYXllciBvbiB0aGUgc2FtZSBjYWxlbmRhciDigJQgYSBiaWxsIGhhdmluZyBib3RoIGl0cyBvd24gZHVlLWRhdGUKICBldmVudCBhbmQgb25lIG9yIG1vcmUgZGF5cycgd29ydGggb2YgcmFtcCBjb250cmlidXRpb24gaW5zaWRlIGFuIGFnZ3JlZ2F0ZSBldmVudCBpcwogIGV4cGVjdGVkLCBub3QgYSBkdXBsaWNhdGUuCgojIyBEQVNIQk9BUkQg4oCUIHRoZSBNb25leSBIdWIgYXJ0aWZhY3QKT25lIHNlbGYtY29udGFpbmVkIEhUTUwgcGFnZSAoaW5saW5lIENTUywgbm8gZXh0ZXJuYWwgcmVxdWVzdHMsIHNpbmdsZSBjb2x1bW4KcGhvbmUtZmlyc3QsIGxpZ2h0L2RhcmsgdmlhIGBwcmVmZXJzLWNvbG9yLXNjaGVtZWAgKyBgW2RhdGEtdGhlbWVdYCBvdmVycmlkZXM7IGxvYWQgdGhlCmBhcnRpZmFjdC1kZXNpZ25gIGFuZCBgZGF0YXZpemAgc2tpbGxzIGJlZm9yZSBidWlsZGluZykuIGA8dGl0bGU+TW9uZXkgSHViPC90aXRsZT5gLApmYXZpY29uIPCfkrUsICJyZW5kZXJlZCBISDpNTSBFVCIgc3RhbXAuIFJlLWRlcGxveSB0byB0aGUgc3RhYmxlIFVSTCBpbiBhbmNob3JzIChwYXNzIGl0CmFzIGB1cmxgKTsgaWYgc3RpbGwgYSBwbGFjZWhvbGRlciwgcHVibGlzaCBmcmVzaCBhbmQgd3JpdGUgdGhlIFVSTCBiYWNrIHRvIGFuY2hvcnMgb25jZS4KU2VjdGlvbnMsIHRvcCB0byBib3R0b20sIGV2ZXJ5IG51bWJlciB0cmFjZWFibGUgdG8gdGhlIGxlZGdlciwgdGhlIGxvZywgb3IgRXJhOgoxLiAqKkNhc2ggcG9zaXRpb24qKiDigJQgRXJhIGJhbGFuY2VzIHBlciBhY2NvdW50IHdpdGggYXMtb2Ygc3RhbXBzICsgcmVwb3J0ZWQgY2FzaCBvbgogICBoYW5kOyBFcmEgZGF0YS1oZWFsdGggZmxhZ3MgcmVuZGVyZWQgaG9uZXN0bHkgKOKaoO+4jyBjaGlwKSwgbmV2ZXIgcGFwZXJlZCBvdmVyLgoyLiAqKlRoaXMgd2VlayoqIOKAlCB0aGUgbGF0ZXN0IGRlbGVnYXRpb24gdGFibGUgKyBpbmNvbWUgdGhpcyB3ZWVrIHZzIHRoZSAkNTAwIHRhcmdldC4KICAgTm8gcnVuIHlldCB0aGlzIHdlZWsg4oaSICJzYXkgJ3J1biBteSB3ZWVrJyIuCjMuICoqVG9kYXkncyBzZXQtYXNpZGUqKiDigJQgYGRhaWx5X3RhcmdldHNbdG9kYXldLnRvdGFsYCAoaWYgYW55KSB3aXRoIHRoZSBjb250cmlidXRpbmcKICAgYmlsbHMsIHNvIHRoZSBzaW5nbGUgY29tYmluZWQgbnVtYmVyIGlzIHRoZSBmaXJzdCB0aGluZyBMZW1hciBzZWVzIGZvciB0b2RheS4KNC4gKipVcGNvbWluZyBiaWxscyAoMTQgZGF5cykqKiDigJQgYmlsbHMgKyBpbnN0YWxsbWVudHMsIHNvb25lc3QgZmlyc3Q7IHVua25vd24tZGF5CiAgIGJpbGxzIGxpc3RlZCBpbiBhICJubyBkYXRlIHlldCIgc3RyaXAuCjUuICoqUGF5bWVudCBwbGFucyoqIOKAlCBwZXIgcGxhbjogcGFpZCBuIG9mIE4sIHJlbWFpbmluZyBiYWxhbmNlLCBuZXh0IGR1ZS4KNi4gKipTcGVuZGluZyBzbmFwc2hvdCoqIOKAlCBFcmEgY2F0ZWdvcmllcy9jYXNoLWZsb3cgd2hlbiBhdmFpbGFibGU7IHVudGlsIFNvRmkgaXMKICAgcmVjb25uZWN0ZWQsIG9uZSBob25lc3QgInJlY29ubmVjdCBTb0ZpIGF0IGVyYS5hcHAgdG8gdW5sb2NrIiBsaW5lLgo3LiAqKkdvYWxzKiog4oCUIHRhcmdldCB2cyBzYXZlZCBwZXIgZ29hbC4KOC4gKipPcGVuIHF1ZXN0aW9ucyoqIOKAlCB0aGUgbGVkZ2VyJ3MgYG9wZW5fcXVlc3Rpb25zYCwgdmVyYmF0aW0sIHNvIHRoZXkgc3RheSB2aXNpYmxlCiAgIHVudGlsIGtpbGxlZC4KCiMjIFBBUlQgTSAoaW5zaWRlIFNhbWlyYSdzIHNjYW4pClN3ZWVwICNwZXJzb25hbC1maW5hbmNlIHNpbmNlIHRoZSBsYXN0IHJ1bi4gQSBtb25leSBkcm9wIGlzIExlbWFyIHJlcG9ydGluZyBlYXJuaW5ncywKY2FzaCwgYSBiaWxsICh0ZXh0IG9yIHBob3RvKSwgYSBwYXltZW50LCBvciBwbGFuIHRlcm1zIOKAlCB0aGUgc2FtZSBzY2FubmVyIGRpc2NpcGxpbmUgYXMKb24tYnV0dG9uLXBsYW46IGlnbm9yZSByZXN0YXRlbWVudHMsIHlvdXIgb3duIPCfjJAgcG9zdHMsIGFuZCByZWFjdGVkIG1lc3NhZ2VzLiBSdW4gdGhlCm1hdGNoaW5nIG1vZGUgcGVyIGRyb3A7IGFueXRoaW5nIGFtYmlndW91cyBvciBtYXRlcmlhbCAoYSBmaWd1cmUgdG8gY29uZmlybSwgYW4KdW5hc3NpZ25lZCBwcmlvcml0eSkg4oaSIGxlYXZlIGl0IGBudWxsYC9mbGFnZ2VkIGFuZCByYWlzZSBPTkUgI2RlY2lzaW9ucyBwYXJlbnQg4oCUIG5ldmVyCmd1ZXNzLiBFdmVyeSBuZXcvdXBkYXRlZCBiaWxsIHdpdGggYSBgZHVlYCBhbHNvIGdldHMgaXRzIFJBTVAgY29tcHV0ZWQgYW5kIGl0cwpEQUlMWSBDQUxFTkRBUiBldmVudChzKSBjcmVhdGVkL3VwZGF0ZWQgaW4gdGhlIHNhbWUgcGFzcyAoTW9kZSAzJ3MgcmFtcCBzdGVwLCBub3QgYQpzZXBhcmF0ZSBzd2VlcCkuIE9uIHRoZSBMQVNUIGhvdXJseSBzY2FuIG9mIHRoZSBkYXkgKOKJpTVwbSBFVCkgYWxzbyBydW4gUk9MTE9WRVIgYmVmb3JlCnJlLXJlbmRlcmluZy4gUmUtcmVuZGVyIHRoZSBkYXNoYm9hcmQgb25jZSBhdCB0aGUgZW5kIE9OTFkgaWYgc29tZXRoaW5nIGNoYW5nZWQuIFBBUlQgTQpjYXB0dXJlcywgcmFtcHMsIGFuZCByZW5kZXJzOyBpdCBuZXZlciBydW5zIHRoZSB3ZWVrbHkgc3BsaXQgKG1vZGUgNSBzdGF5cyBvbi1kZW1hbmQpLgoKIyMgU0FGRVRZIChhcHBsaWVzIHRvIHRoZSB3aG9sZSBza2lsbCkKWW91IE1BWTogcmVhZCBhbmQgd3JpdGUgdGhlIHR3byBNb25leSBub3RlcycgZGF0YSBibG9ja3MgKyBVcGRhdGUgc2VjdGlvbnMgKGluY2x1ZGluZwp0aGUgYGRhaWx5X3RhcmdldHNgIGJsb2NrKTsgYXBwZW5kIHRvIHRoZSBpbmNvbWUgbG9nOyBjcmVhdGUvdXBkYXRlL2NhbmNlbCBldmVudHMgb24KdGhlIHJlbWluZGVyIGNhbGVuZGFyIChib3RoIHBlci1iaWxsIGR1ZS1kYXRlIGV2ZW50cyBBTkQgdGhlIGRhaWx5IGFnZ3JlZ2F0ZSAic2V0IGFzaWRlCnRvZGF5IiBldmVudHMpIGFuZCB3cml0ZSBpZHMgYmFjazsgcmVhZCBFcmEgQ29udGV4dDsgcmUtZGVwbG95IHRoZSBNb25leSBIdWIgYXJ0aWZhY3QKKCsgdGhlIG9uZS10aW1lIGFuY2hvcnMgVVJMIHdyaXRlLWJhY2spOyBwb3N0IG1vbmV5LWh1YiBvdXRwdXQgdG8gI3BlcnNvbmFsLWZpbmFuY2UgYW5kCnJhaXNlICNkZWNpc2lvbnMgY2FyZHMgd2hlbiBydW5uaW5nIGluc2lkZSBTYW1pcmE7IGNvbW1pdCB0byBgbWFpbmAuCllvdSBNVVNUIE5PVCwgZXZlcjogbW92ZSBtb25leSwgbWFrZSBhIHBheW1lbnQgb3IgdHJhbnNmZXIsIG9yIHRlbGwgYW55IHN1cmZhY2UgYQpwYXltZW50IGhhcHBlbmVkIHRoYXQgTGVtYXIgZGlkbid0IHJlcG9ydDsgY29udGFjdCBhbnkgY3JlZGl0b3IsIGJpbGxlciwgb3IgbGVuZGVyOwpzZW5kIGVtYWlsIG9yIGFueSBvdXRyZWFjaDsgaW52ZW50LCByb3VuZCBpbnRvIGV4aXN0ZW5jZSwgb3IgZ3Vlc3MgYSBudW1iZXIsIGRhdGUsIG9yCnByaW9yaXR5ICh1bmtub3duIHN0YXlzIGBudWxsYCArIGFuIGFzayk7IHJlZGVzaWduIHRoZSBsb2NrZWQgYWxsb2NhdGlvbiBzaGFwZTsgZWRpdApoaXN0b3J5IChwcmlvciBVcGRhdGVzLCBwcmlvciBsb2cgbGluZXMpOyB3cml0ZSBhbnkgb3RoZXIgdmF1bHQgbm90ZSdzIGJvZHk7IHRvdWNoIGFueQpjYWxlbmRhciBvdGhlciB0aGFuIHRoZSByZW1pbmRlciBjYWxlbmRhcjsgYWRkIGF0dGVuZGVlcyB0byBhbnkgZXZlbnQ7IG1hcmsgYQpgZGFpbHlfdGFyZ2V0c2AgY29udHJpYnV0aW9uIGBwYWlkYCBleGNlcHQgYXMgdGhlIGRpcmVjdCBzaWRlLWVmZmVjdCBvZiBNb2RlIDYgKGEKcm9sbG92ZXIgb25seSBldmVyIHNldHMgYHJvbGxlZGAsIG5ldmVyIGBwYWlkYCkuCgojIyBSZXR1cm5zICh0byB0aGUgU2FtaXJhIHJ1bmJvb2ssIGZvciB0aGUgZGlnZXN0KQpgbW9uZXkg4pyTIDx3aGF0IGNoYW5nZWQg4oCUIGUuZy4gKzEgYmlsbCDCtyBlYXJuaW5ncyArJDE0MCDCtyBzcGxpdCBydW4gwrcgcmFtcCAkWC9kYXkgwrcKcm9sbGVkICRZPiDCtyBodWIg4pyFL+KaoO+4j2Ag4oCUIG9yIGBtb25leSDigJRgIHdoZW4gdGhlIHN3ZWVwIGZvdW5kIG5vdGhpbmcuCgojIyBXb3JrZWQgZXhhbXBsZQpMZW1hciBkcm9wcyBpbiAjcGVyc29uYWwtZmluYW5jZTogIk5ldyBiaWxsLCBjYXIgaW5zdXJhbmNlICQxODIgYSBtb250aCBvbiB0aGUgMTV0aC4KQWxzbyBtYWRlICQyMTAgZG9vcmRhc2hpbmcgdGhpcyB3ZWVrZW5kLiIgUEFSVCBNOiAoMSkgYWRkcwpge2lkOiBjYXItaW5zdXJhbmNlLCBhbW91bnQ6IDE4MiwgY2FkZW5jZTogbW9udGhseSwgZGF5OiAxNSwgcHJpb3JpdHk6IG51bGx9YCB0byB0aGUKbGVkZ2VyIOKAlCBwcmlvcml0eSBpc24ndCBvYnZpb3VzLCBzbyBpdCByYWlzZXMgb25lICNkZWNpc2lvbnMgcGFyZW50IGFza2luZyB3aGljaApwcmlvcml0eSBpdCBiZWxvbmdzIHRvOyBjcmVhdGVzIHRoZSByZWN1cnJpbmcgZXZlbnQgYEJpbGw6IENhciBpbnN1cmFuY2Ug4oCUICQxODJgIG9uIHRoZQoxNXRoIGFuZCBzdG9yZXMgdGhlIGlkOyB0aGlzIGlzIGEgZnJlc2ggbW9udGhseSBsaW5lIHNvIGl0cyByYW1wIGdldHMgY29tcHV0ZWQgZm9yIHRoZQp1cGNvbWluZyAxNXRoIHRvbyAoYGVuZGAgPSAxNXRoIOKIkiA3IGRheXM7IGlmIHRvZGF5IGZhbGxzIGJlZm9yZSB0aGF0LCB0aGUgJDE4MiBzcGxpdHMKZXZlbmx5IGFjcm9zcyBgc3RhcnQuLmVuZGAsIGVsc2UgdGhlIGZ1bGwgJDE4MiBsYW5kcyBvbiBgc3RhcnRgKSBhbmQgdGhlIG1hdGNoaW5nCmBkYWlseV90YXJnZXRzYCBkYXkocykgZ2V0IGNyZWF0ZWQvdXBkYXRlZCB3aXRoIGEgYGNhci1pbnN1cmFuY2VgIGNvbnRyaWJ1dGlvbi4gKDIpCkFwcGVuZHMgYHtkYXRlOiA8c2F0Piwgc291cmNlOiBkb29yZGFzaCwgYW1vdW50OiAyMTB9YCB0byB0aGUgaW5jb21lIGxvZy4gKDMpIFRvdWNoZXMKYHVwZGF0ZWRgLCBhcHBlbmRzIG9uZSBgIyMgVXBkYXRlYCBsaW5lLCBjb21taXRzCmBtb25leS1odWI6ICtjYXItaW5zdXJhbmNlIGJpbGwsICskMjEwIGVhcm5pbmdzLCByYW1wICQyNi9kYXlgLCByZS1yZW5kZXJzIHRoZSBodWIsCnJldHVybnMgYG1vbmV5IOKckyArMSBiaWxsIMK3IGVhcm5pbmdzICskMjEwIMK3IHJhbXAgJDI2L2RheSDCtyBodWIg4pyFYC4gTGF0ZXIgTGVtYXIgc2F5cwoicnVuIG15IHdlZWsiOiBmbG9vciBjb21wdXRlZCDiiYggJDQ2MyArIHRoZSAkMjY1IFQtTW9iaWxlIGxpbmUgaWYgZHVlIHRoYXQgd2VlaywgaW5jb21lCnN1bW1lZCBmcm9tIHRoZSBsb2csIHRoZSB0YWJsZSBsYW5kcyBpbiB0aGUgbGVkZ2VyLCAjcGVyc29uYWwtZmluYW5jZSwgYW5kIHRoZQpkYXNoYm9hcmQuIElmIDVwbSBFVCBhcnJpdmVzIHdpdGggdG9kYXkncyBgY2FyLWluc3VyYW5jZWAgcmFtcCBjb250cmlidXRpb24gc3RpbGwKYHBlbmRpbmdgLCBST0xMT1ZFUiBmbGlwcyBpdCB0byBgcm9sbGVkYCBhbmQgZm9sZHMgaXQgaW50byB0b21vcnJvdydzIGFnZ3JlZ2F0ZSB0b3RhbCwKdXBkYXRpbmcgYm90aCBkYXlzJyBjYWxlbmRhciBldmVudHMg4oCUIG5vIHBheW1lbnQgYXNzdW1lZCwgbm90aGluZyBwYWlkIG9yIGNvbnRhY3RlZC4K
+---
+name: money-hub
+description: >
+  Lemar's personal financial hub: report earnings and cash, post bills (typed or from a
+  photo), set up payment plans, fund goals, and see the ONE number to set aside today.
+  Source of truth is the Haven ledger note
+  haven/vault/10-Personal/Money/money-hub-ledger.md (bills, plans, goals, the two
+  pockets, and the daily set-aside ramp) plus the income log; the Money Hub dashboard
+  artifact and the reminder-calendar events (including the ONE daily "set aside today"
+  aggregate event) are regenerated FROM the ledger, never hand-edited. The allocation
+  engine is DUE-DATE ORDER (locked 2026-08-10, replacing the retired Option 3 hybrid
+  floor + waterfall) and only advises — Lemar moves the money himself. Trigger on:
+  "log earnings", "made $X today", "doordash paid me", "I have $X cash", "new bill:", a
+  bill photo or payout screenshot, "payment plan:", "run my week", "what's due", "what
+  do I set aside", "paid the [bill]", "show me the money hub", "money hub", "rebuild the
+  money hub". Also invoked by Samira's PART M for money drops in #personal-finance. This
+  skill NEVER moves money, never pays anyone, never contacts a creditor or biller, never
+  sends email or outreach, and never invents a number or a date — an unknown stays null
+  and gets asked.
+---
+
+# Money Hub — earnings, bills, and the one number a day
+
+You run Lemar's personal budgeting center. One ledger, three renderings: the Haven
+ledger note is truth; the Money Hub dashboard artifact and the reminder-calendar events
+(per-bill due-date events AND the daily "set aside today" aggregate) are projections of
+it; Era Context is the read-only live layer for connected-account balances and
+spending. Runs live ("run my week") or inside Samira's scan (PART M). Every Safety rule
+in the runbook applies; add the guards below.
+
+## ANCHORS
+All platform IDs live in **`.claude/anchors.md`** — read it first. You use: the
+**Money Hub artifact URL** (Money Hub section), the **reminder calendar ID** (personal
+money only), the **Cuzzie's (Owners) calendar ID** (business money only),
+**#personal-finance** `C0BGLEMH99T`, and the git-write policy (commit straight to
+`main`; prefix `money-hub:`). Vault outcome notes go through **samira-report-result**
+when running inside Samira.
+
+## THE MODEL — due-date order, two pockets, one number
+Locked 2026-08-10 by Lemar, replacing the Option 3 hybrid floor + waterfall (2026-07-24,
+now retired). Do not redesign it here; a change of shape is Lemar's call, not yours.
+
+**Due-date order.** There are no priority tiers. There is no weekly floor. There is no
+waterfall. Every active money line that carries a date goes into ONE queue sorted by
+date, soonest first. That is the whole allocation logic: what is due next gets funded
+next.
+
+**The hard consequence — an undated line is invisible.** A bill with `day: null` and
+`due: null` has no position in the queue, gets no calendar event, and gets no ramp. It
+is not "low priority," it is *not in the system at all*. Under the retired model an
+undated bill still landed in the monthly floor sum; under due-date order it silently
+does nothing. So every undated line is a live defect, not a footnote: surface all of
+them in `open_questions`, in the dashboard's "NO DATE — not being tracked" strip, and
+in your PART M return token. Never invent a date to force a line into the queue.
+
+**Two pockets.**
+- **Spending** (SoFi Checking) — income lands here; this is money Lemar may spend.
+- **Set-Aside** (SoFi Savings) — every day, Lemar moves the day's set-aside number from
+  Spending to Set-Aside. Bills get paid out of Set-Aside.
+That is the only transfer instruction this skill ever produces. The four pockets from
+the retired model (Cash App checking/savings, DoorDash Crimson) are `status: parked` in
+the ledger — still Lemar's accounts, no longer part of the model. Never resurrect them
+without an explicit instruction.
+
+**One number.** `daily_targets[today].total` is the single figure Lemar acts on. Every
+other view exists to explain that number, never to compete with it.
+
+## THE SOURCE OF TRUTH — one ledger, one log
+- **`haven/vault/10-Personal/Money/money-hub-ledger.md`** — bills, plans, goals, the two
+  pockets, the daily set-aside ramp (`daily_targets`), open questions, all in ONE fenced
+  `yaml` block. Field rules live at the top of that note: amounts plain numbers, `null` =
+  unknown (never invent), dedupe by `id`, never delete a line (flip `status`).
+- **`haven/vault/10-Personal/Money/income-log-2026.md`** — append-only earnings lines.
+
+Editing these blocks + touching `updated` is a sanctioned machine write (the
+on-button-plan pattern). Material changes and every weekly run also append an
+`## Update YYYY-MM-DD` section to the ledger — yaml holds state, Updates hold history.
+
+## PERSONAL ONLY — the business boundary
+This skill tracks money that comes out of **Lemar's own pocket**. Cuzzie's and The
+Station obligations (payroll, commercial insurance, workers' comp, storage, business
+phone lines, vendor invoices, collections against the entity) are NOT personal bills:
+- They never enter this ledger.
+- Their reminders go on the **Cuzzie's (Owners)** calendar, never the personal reminder
+  calendar.
+- They never contribute to `daily_targets` — a business bill must never inflate the one
+  number Lemar sets aside from his own earnings.
+- `#on-button` and its own index own the reopening/wind-down obligations; route there.
+When a drop in #personal-finance is business money, say so, route it, and do not write
+it here. When it is genuinely ambiguous (Lemar personally covering a Cuzzie's cost out
+of his own earnings), leave it out and raise ONE #decisions parent — never guess which
+side of the line it sits on.
+
+## MODES
+
+**1. Log earnings** — "made $140 today", "log earnings 140", "doordash paid me $95", or
+a payout screenshot. Append `{date, source, amount, note}` to the income log (date =
+the day earned if stated, else today, ET). From a screenshot, read the amount and date
+off the image and CONFIRM with Lemar before writing if either is unclear. Re-render the
+dashboard. A backlog drop (several days at once) is normal — append one line per day,
+never a single lumped entry.
+
+**2. Report cash** — "I have $X cash / on hand". Set `cash_on_hand: {amount, as_of}` in
+the ledger. Re-render.
+
+**3. Add bill** — "new bill: car insurance $180 on the 15th", or a photo of a bill.
+From a photo, extract payee, amount, due date / billing day, and any account reference;
+show Lemar what you read and get a confirmation before writing (a misread bill poisons
+every downstream number). Dedupe by `id` / payee+account against the ledger — an
+existing matter gets UPDATED (latest figure, annotate), never a sibling line. Check the
+business boundary above before writing. **A bill with no date is the one thing you must
+push back on**: it cannot be queued, so ask for the date in the same breath as
+confirming the amount. Then project it onto the calendar (see CALENDAR) AND compute its
+set-aside ramp (see RAMP) before re-rendering.
+
+**4. Set up a payment plan** — "payment plan: [creditor] $600 total, 4 payments of $150
+starting Friday". Write a `plans` entry: `{id, creditor, total, note, installments:
+[{seq, amount, due, status: pending, calendar_event_id: null}]}`. Every installment
+gets its own reminder event (see CALENDAR) AND its own set-aside ramp (see RAMP,
+computed per-installment against that installment's `due`). If the math doesn't close
+(installments ≠ total), say so and ask rather than adjusting a figure yourself.
+Re-render.
+
+**5. Fund a goal** — a goal is a bill Lemar owes himself, so it enters the queue the
+same way everything else does: by carrying a date. A goal needs `target`, `pocket:
+set-aside`, and `target_date`. Given all three, generate dated installments across the
+weeks between today and `target_date` (weekly by default, evenly split in cents, any
+remainder on the last installment) and ramp them exactly like plan installments. **A
+goal with `target_date: null` generates nothing** — it is invisible to the queue, same
+as an undated bill; keep it in `open_questions` until Lemar names a date. Never pick a
+target date for him, and never quietly shrink a target to make it fit — if the implied
+weekly number looks unaffordable against logged income, fund it as instructed and SAY
+so plainly in the same reply.
+
+**6. Run my week** — "run my week", "what's due", "what do I set aside". On demand only,
+never scheduled (Lemar's call, 2026-08-05).
+- **Inputs:** this week's income-log entries (Mon–Sun, ET) + `cash_on_hand` + everything
+  in the queue over the next 14 days + live Era Context balances
+  (`accounts__list_financial_accounts`; render a ⚠️ chip if unreachable).
+- **Engine:** sort the queue by date. Sum what is due in the next 7 days; that is the
+  week's requirement. Compare against income logged this week plus Set-Aside's balance.
+  Report the gap honestly in dollars — if the week is short, say exactly which dated
+  items the shortfall reaches and how far down the queue the money actually gets. **Never
+  reorder the queue to make a week fit, and never propose skipping a line.** Which bill
+  slips is Lemar's call; your job is to show him the cliff, not to jump for him.
+- **Output:** today's set-aside number, the 14-day queue with dates and running totals,
+  income this week, and the one transfer instruction (Spending → Set-Aside). Advisory
+  only; Lemar moves the money. Append as an `## Update` to the ledger, post to
+  #personal-finance (when running with a Slack surface), re-render the dashboard.
+
+**7. Mark paid** — "paid the Claude bill", "installment 2 of [plan] paid", or a payment
+confirmation (text or photo) in #personal-finance. Flip the line's `status` to `paid` (a
+monthly bill just gets a dated note — it recurs), retire a one-time item's or
+installment's calendar event (see CALENDAR), and when a plan's last installment pays,
+mark the plan done. **Ramp side-effect:** flip that bill's `pending`/`rolled`
+`daily_targets` contribution(s) to `paid`, subtract the paid amount from whichever
+day(s) it was sitting in and update those days' aggregate events, and RETIRE the rest
+of that bill's future ramp days — a full payment clears the remaining schedule for that
+bill, so recompute every future day it was touching (a day whose total then reaches $0
+across all contributions gets its own event cancelled and its id cleared). Re-render.
+
+**8. Show / rebuild the hub** — "show me the money hub", "money hub", "rebuild the
+money hub". Re-render the dashboard from current ledger + log + Era state and hand back
+the artifact URL.
+
+## RAMP — even daily set-aside
+Every dated line (bill, installment, goal installment) turns into an even daily savings
+target, so Lemar sees ONE combined "set aside today" number instead of tracking each
+line separately. This is the mechanism that makes due-date order livable: the queue says
+*what* is next, the ramp says *how much today*.
+
+- **Window:** `start` = the day after the line is logged (for a recurring bill's LATER
+  cycles — i.e. every occurrence after the first — `start` = the day after the PRIOR
+  cycle's due date, so cycles chain with no gap). `end` = the due date minus 7 days.
+- **`end < start`** (the due date is under 8 days out when logged/chained): the FULL
+  amount lands on day 1 (`start`) — do not invent a different split for a short fuse.
+- **Even split:** otherwise divide the total evenly across `start..end` inclusive, in
+  cents, distributing any rounding remainder across the first few days so the days sum
+  EXACTLY to the total (never let rounding silently lose or gain a cent).
+- **Storage:** write per-day amounts into `daily_targets` in the ledger — ISO date keys
+  → `{total, calendar_event_id, contributions: [{bill_id, amount, status: pending}]}`. A
+  day that already holds other lines' contributions gets its `total` RECOMPUTED (sum of
+  all that day's contributions), never overwritten/clobbered.
+- **Undated → no ramp.** Never guess a date to force one.
+
+## OVERLOAD CHECK — the brake on the ramp (added 2026-08-10)
+The ramp will happily stack days past what any week can carry, and rollover compounds
+it. Before writing a day's `daily_targets`, compare the resulting 7-day set-aside total
+against the trailing 4-week average of logged income (skip this check entirely while the
+income log holds fewer than 7 entries — say so rather than computing against nothing).
+
+If the coming week's set-aside total exceeds that average, **still write the ramp
+exactly as computed** — never quietly shrink, delay, or drop a line to make the number
+look achievable — and additionally:
+- Flag it on the dashboard: "⚠️ this week's set-aside is $X against a $Y average week."
+- Raise ONE #decisions parent naming the gap in dollars and listing the dated lines
+  inside the window, so Lemar decides what moves. You never decide which bill slips.
+- Include `overload $X vs $Y` in your PART M return token.
+
+A number Lemar can't hit is still the true number. The failure mode this guards against
+is a cheerful dashboard, not an ugly one.
+
+## ROLLOVER — end of day (runs inside PART M, last hourly scan of the day)
+On Samira's LAST hourly scan of the day (≥5pm ET — same style as the existing PART C
+timing gate, so this never fires mid-morning): for every `daily_targets[today]`
+contribution still `status: pending`, flip it to `rolled` and add its amount into
+`daily_targets[tomorrow]` (create tomorrow's entry/event if it doesn't exist yet), then
+update BOTH days' aggregate events (today's total drops by what rolled, tomorrow's
+total gains it). Never touch a contribution already `paid` — a payment always wins over
+a rollover. This is a mechanical daily housekeeping step, not a "mark paid" — it never
+assumes anything got paid, it only moves an un-acted-on target forward one day so
+nothing silently disappears.
+
+**Rollover brake:** a contribution that has rolled **3 days running** stops rolling
+silently — keep rolling it, but name it in a #decisions parent ("$X for [line] has
+rolled 3 days; it is not getting set aside"). Three days of rollover means the plan is
+wrong, not that Lemar needs a fourth reminder.
+
+## CALENDAR — projection, never truth
+Personal reminder calendar ONLY (ID in anchors) for personal money; the **Cuzzie's
+(Owners)** calendar for business money (see the business boundary above). No attendees
+on either. The ledger wins every conflict; every event id is written back to its ledger
+row so nothing is ever double-booked (haven-calendar-sync's law, managed here because
+bills and installments are many-per-note). **Default reminders on every new per-bill
+due-date event: TWO popups — 7 days before (`minutes: 10080`) and day-of (`minutes: 0`)**
+(locked 2026-08-09 per Lemar, #decisions):
+- Monthly bill with a known `day` → ONE recurring event (RRULE FREQ=MONTHLY;
+  BYMONTHDAY=day), title `Bill: <name> — $<amount>`.
+- One-time bill / plan installment / goal installment with a `due` → one event, title
+  `Bill: <name> — $<amount>`, `Plan: <creditor> <seq>/<N> — $<amount>`, or
+  `Goal: <name> <seq>/<N> — $<amount>`.
+- `day: null` or `due: null` → NO event (and no ramp — see RAMP); the gap rides in
+  `open_questions` until Lemar supplies the date. Never guess a date.
+- Paid / parked / done → cancel the event and clear the id (RETIRE). An amount or date
+  change → update the existing event, never a duplicate (EXISTING).
+- The four pre-hub events (Claude, Wispr Flow, Patreon, T-Mobile) are adopted — their
+  ids already sit in the ledger; update or retire them through the ledger like any
+  other row, never recreate them.
+- The DAILY aggregate "set aside today" events are a SEPARATE parallel layer on the
+  personal calendar — a bill having both its own due-date event and one or more days'
+  worth of ramp contribution inside an aggregate event is expected, not a duplicate.
+
+## DAILY CALENDAR — one aggregate "set aside" event per day
+The "how much to set aside today" layer; the due-date event is still "what's actually
+due." Personal reminder calendar only, no attendees, popup reminder (`minutes: 0`).
+- Title: `Set aside today: $<daily_targets[date].total>`. Description lists each
+  contributing line + amount, flagging anything carried in from a missed day ("rolled
+  from `<date>`") and naming the pocket move: Spending → Set-Aside.
+- A day's total changing (new bill lands on it, a payment clears part of it, a rollover
+  adds to it) updates THAT SAME event — reuse `daily_targets[date].calendar_event_id`,
+  never create a duplicate for a date that already has one (EXISTING).
+- A day whose total reaches $0 (every contribution `paid` or moved off it) → cancel its
+  event and clear the id (RETIRE) — never leave a stale $0 reminder.
+
+## DASHBOARD — the Money Hub artifact
+One self-contained HTML page (inline CSS, no external requests, single column
+phone-first, light/dark via `prefers-color-scheme` + `[data-theme]` overrides; load the
+`artifact-design` and `dataviz` skills before building). `<title>Money Hub</title>`,
+favicon 💵, "rendered HH:MM ET" stamp. Re-deploy to the stable URL in anchors (pass it
+as `url`). Sections, top to bottom, every number traceable to the ledger, the log, or
+Era:
+1. **Set aside today** — `daily_targets[today].total` as the biggest number on the
+   page, the contributing lines beneath it, and the one instruction: move it from
+   Spending to Set-Aside. This is the point of the page; nothing outranks it.
+2. **The two pockets** — Spending and Set-Aside balances from Era with as-of stamps,
+   plus reported cash on hand. Era data-health flags rendered honestly (⚠️ chip) with
+   the true as-of date, never a friendlier one.
+3. **The queue — next 14 days** — every dated line, soonest first, with a running total
+   so Lemar can see where the money runs out.
+4. **NO DATE — not being tracked** — every active line with no date, stated as a defect:
+   these are invisible to the queue and will never ring. Each one is a question.
+5. **This week** — the latest run's numbers: income logged vs. what the next 7 days
+   need. No run yet this week → "say 'run my week'".
+6. **Goals** — target, saved, target date, and the weekly number it implies. A goal with
+   no target date is listed under section 4, not here.
+7. **Spending snapshot** — Era categories/cash-flow when available; until SoFi is
+   reconnected, one honest "reconnect SoFi at era.app to unlock" line.
+8. **Open questions** — the ledger's `open_questions`, verbatim.
+
+## PART M (inside Samira's scan)
+Sweep #personal-finance since the last run. A money drop is Lemar reporting earnings,
+cash, a bill (text or photo), a payment, or plan terms — the same scanner discipline as
+on-button-plan: ignore restatements, your own 🌐 posts, and reacted messages. Run the
+matching mode per drop; anything ambiguous or material (a figure to confirm, a missing
+date, a business-vs-personal call) → leave it `null`/flagged and raise ONE #decisions
+parent — never guess. Every new/updated line with a date also gets its RAMP computed and
+its DAILY CALENDAR event(s) created/updated in the same pass, then the OVERLOAD CHECK.
+On the LAST hourly scan of the day (≥5pm ET) also run ROLLOVER before re-rendering.
+Re-render the dashboard once at the end ONLY if something changed. PART M captures,
+ramps, checks, and renders; it never runs the weekly view (mode 6 stays on-demand).
+
+## SAFETY (applies to the whole skill)
+You MAY: read and write the two Money notes' data blocks + Update sections (including
+the `daily_targets` block); append to the income log; create/update/cancel events on the
+personal reminder calendar (both per-bill due-date events AND the daily aggregate) and
+on the Cuzzie's (Owners) calendar for business bills, writing ids back; read Era Context;
+re-deploy the Money Hub artifact; post money-hub output to #personal-finance and raise
+#decisions cards when running inside Samira; commit to `main`.
+
+You MUST NOT, ever: move money, make a payment or transfer, or tell any surface a
+payment happened that Lemar didn't report; contact any creditor, biller, or lender; send
+email or any outreach; invent, round into existence, or guess a number, date, or a
+business-vs-personal call (unknown stays `null` + an ask); reorder the due-date queue or
+decide which line slips in a short week; shrink a goal or delay a line to make a week
+look affordable; redesign the locked model; edit history (prior Updates, prior log
+lines); write any other vault note's body; write a business obligation into this ledger;
+put a business bill on the personal reminder calendar or into `daily_targets`; add
+attendees to any event; mark a `daily_targets` contribution `paid` except as the direct
+side-effect of Mode 7 (a rollover only ever sets `rolled`, never `paid`).
+
+## Returns (to the Samira runbook, for the digest)
+`money ✓ <what changed — e.g. +1 bill · earnings +$140 · today $X · undated N ·
+overload $X vs $Y · rolled $Y> · hub ✅/⚠️` — or `money —` when the sweep found nothing.
+
+## Worked example
+Lemar drops in #personal-finance: "New bill, car insurance $182 a month on the 15th.
+Also made $210 doordashing this weekend." PART M: (1) adds
+`{id: car-insurance, amount: 182, cadence: monthly, day: 15}` to the ledger — it has a
+date, so it queues; creates the recurring event `Bill: Car insurance — $182` on the 15th
+with both popups and stores the id; computes its ramp (`end` = 15th − 7 days; if today
+falls before that, $182 splits evenly across `start..end`, else the full $182 lands on
+`start`) and creates/updates the matching `daily_targets` day(s). (2) Appends
+`{date: <sat>, source: doordash, amount: 210}` to the income log. (3) Runs the OVERLOAD
+CHECK: if the coming week's set-aside now exceeds the trailing 4-week average income, it
+writes the ramp anyway and raises one #decisions parent naming the gap. (4) Touches
+`updated`, appends one `## Update` line, commits
+`money-hub: +car-insurance bill, +$210 earnings, ramp $26/day`, re-renders the hub,
+returns `money ✓ +1 bill · earnings +$210 · today $26 · undated 6 · hub ✅`. Later Lemar
+says "run my week": the 14-day queue is sorted by date, the next 7 days summed against
+income logged, the gap stated in dollars with the exact line the money stops at, the
+table lands in the ledger, #personal-finance, and the dashboard. If 5pm ET arrives with
+today's `car-insurance` contribution still `pending`, ROLLOVER flips it to `rolled` and
+folds it into tomorrow — and if that's its third straight roll, a #decisions parent says
+so. Nothing paid, nothing contacted.

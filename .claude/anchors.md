@@ -99,7 +99,8 @@ gate, the mirror steps drop from the runbook + skills and the boards go read-onl
 
 | What | ID |
 |---|---|
-| Reminder calendar (calendar-sync target; personal, never business primary, no external attendees) | `c_205bab62b8bb2c4fe12eec38bbc6725abaf6f5f11b767fe99a542112cf5695d3@group.calendar.google.com` |
+| Reminder calendar (calendar-sync target; **personal money only**, never business primary, no external attendees) | `c_205bab62b8bb2c4fe12eec38bbc6725abaf6f5f11b767fe99a542112cf5695d3@group.calendar.google.com` |
+| Cuzzie's (Owners) — **business money only** (payroll, commercial insurance, workers' comp, storage, business phone, vendor invoices, entity collections). Business bills never ring on the personal reminder calendar and never enter `daily_targets` (locked 2026-08-10). | `c_5405960d86d1e2152cef29d5cb1ae6a4d7edd8a50f6f7eb3f5d66ab940874f1a@group.calendar.google.com` |
 
 ## Google Drive (binary files only — Drive owns PDFs/images/spreadsheet exports per schema §1)
 
@@ -219,7 +220,7 @@ pattern used by on-button-reopen.
 ## Money Hub (personal financial hub — rendered by the money-hub skill)
 
 Lemar's personal budgeting center. Source of truth: `haven/vault/10-Personal/Money/
-money-hub-ledger.md` (bills, pockets, plans, goals, allocation config) +
+money-hub-ledger.md` (bills, plans, goals, the two pockets, the daily ramp) +
 `income-log-2026.md` (earnings). The dashboard artifact and reminder-calendar events
 are regenerated FROM the ledger by `.claude/skills/money-hub/SKILL.md` — on any live
 interaction ("run my week", "new bill: …") and in Samira's **PART M** sweep of
@@ -228,9 +229,14 @@ spending.
 
 | What | Value |
 |---|---|
+| Allocation model | **DUE-DATE ORDER**, locked 2026-08-10 by Lemar. Every dated line sorts into one queue by date; soonest funded first. No priority tiers, no weekly floor, no waterfall. Replaces the Option 3 hybrid floor + waterfall (2026-07-24, RETIRED). |
+| Pockets | TWO: **Spending** (SoFi Checking) and **Set-Aside** (SoFi Savings). One instruction a day — move the set-aside number from Spending to Set-Aside. The four Option-3 pockets (Cash App ×2, DoorDash Crimson) are parked, not deleted. |
+| The one number | `daily_targets[today].total` — the single figure Lemar acts on, and the top of the dashboard. Everything else explains it. |
+| Undated lines | A `track: queue` line with no date has no queue position, no event, and no ramp — it is INVISIBLE, not low-priority. Undated lines are a tracked defect class, surfaced in `open_questions`, on the dashboard, and in PART M's return token. Never invent a date. |
 | Living Money Hub artifact URL | `https://claude.ai/code/artifact/f3cbc24f-37ee-4cdd-8643-9eb33b305d00` — first published 2026-08-05. money-hub re-deploys to THIS same URL each render (pass it as `url`; keep title "Money Hub" + favicon 💵). |
-| Weekly split | ON DEMAND ONLY ("run my week") — Lemar's call 2026-08-05; no scheduled allocation run. |
-| Calendar events | On the reminder calendar (see Google Calendar section); event ids live in the ledger rows, adopted from the four pre-hub events (Claude / Wispr Flow / Patreon / T-Mobile). |
+| Weekly view | ON DEMAND ONLY ("run my week", "what's due") — Lemar's call 2026-08-05; no scheduled allocation run. Shows the gap in dollars; never reorders the queue or picks which line slips. |
+| Calendar events | Personal money → the reminder calendar; business money → Cuzzie's (Owners) (both in the Google Calendar section). Event ids live in the ledger rows, adopted from the four pre-hub events (Claude / Wispr Flow / Patreon / T-Mobile). Two popups on every new bill event: 7-day (`10080`) + day-of (`0`), locked 2026-08-09. |
+| Guards | **OVERLOAD CHECK** (coming week's set-aside vs. trailing 4-week income average — flags the gap, never shrinks the number; dormant until the income log has ≥7 entries) and the **rollover brake** (a contribution rolling 3 days running gets named in #decisions instead of rolling forever). |
 
 ## Identity
 

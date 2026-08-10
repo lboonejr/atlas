@@ -196,11 +196,23 @@ Invoke the **money-hub** skill (`.claude/skills/money-hub/`) in its PART M mode:
 on hand, a bill (text or a photo), a payment made, or payment-plan terms. These are NOT
 prompts (same doctrine as ON-BUTTON DROPS in PART C — fenced/named instructions in this
 channel still run in PART C). The skill logs earnings to the income log, updates the
-ledger `haven/vault/10-Personal/Money/money-hub-ledger.md`, projects dated bills and
-installments onto the reminder calendar, and re-renders the Money Hub artifact only if
-something changed. Anything ambiguous or material (an unconfirmed figure, an unassigned
-priority) stays `null` and raises ONE #decisions parent — never guess a number. The
-weekly split (mode 5, "run my week") is ON DEMAND ONLY — never run it from a sweep.
+ledger `haven/vault/10-Personal/Money/money-hub-ledger.md`, projects dated lines onto the
+calendar, computes the daily set-aside ramp, runs the OVERLOAD CHECK, and re-renders the
+Money Hub artifact only if something changed.
+
+The allocation model is **due-date order** (locked 2026-08-10): one queue sorted by date,
+no priority tiers, no floor, no waterfall. Two consequences for you:
+- **A missing DATE is now the material gap** — not a missing priority. A `track: queue`
+  line with no date is invisible to the whole system. Leave it `null`, surface it, and
+  raise ONE #decisions parent asking for the date. Never invent one.
+- **Personal only.** Cuzzie's / Station obligations never enter this ledger, never ring
+  on the personal reminder calendar, and never touch `daily_targets` — they go to the
+  Cuzzie's (Owners) calendar and #on-button. Genuinely ambiguous (Lemar personally
+  covering a business cost) → leave it out and ask; never guess the side.
+
+Anything ambiguous or material stays `null` and raises ONE #decisions parent — never
+guess a number or a date. Never reorder the queue or decide which line slips. The weekly
+view (mode 6, "run my week") is ON DEMAND ONLY — never run it from a sweep.
 Returns `money ✓ <what changed> · hub ✅/⚠️` or `money —` for the digest.
 
 ### Canvas refresh
