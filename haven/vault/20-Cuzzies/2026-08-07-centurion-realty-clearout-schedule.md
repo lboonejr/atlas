@@ -1,6 +1,6 @@
 ---
 created: 2026-08-07T08:05:00-04:00
-updated: 2026-08-07T09:15:00-04:00
+updated: 2026-08-10T12:05:00-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -21,6 +21,18 @@ surfaced a new clear-out ask — space not clear"). No #decisions card existed f
 before this pass.
 
 Gmail thread: `19fcdd80644e5973` (latest message id `19fd94cc69e9fc89`)
+
+## Update 2026-08-10
+
+Sherry replied again (2026-08-10 16:01 UTC, thread same id): **all account balances
+remain tenant responsibility** (Centurion won't take over PSE&G/ADT/Waste Management —
+they'll just open new accounts as needed once the space transitions). She's asking for
+a firm date to return and remove the remaining items **this week**, and wants an answer
+**today if possible** — if landlord (LL) has to remove the furniture themselves, that
+cost gets added to Cuzzie's balance. Still nobody has committed a date; this is the
+same open ask from 8/6–8/7, now with an added cost threat and a same-day response
+request. Needs Lemar's call (a specific date, or accept the LL-removal charge) — raised
+in #decisions rather than committing a date on his behalf. Nothing replied to Sherry yet.
 
 ## Sources
 - gmail: thread `19fcdd80644e5973`
