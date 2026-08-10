@@ -1,6 +1,6 @@
 ---
 created: 2026-08-02T16:00-04:00
-updated: 2026-08-05T12:04:00-04:00
+updated: 2026-08-10T10:40:00-04:00
 domain: cuzzies
 type: log
 status: active
@@ -53,12 +53,45 @@ concrete sign of Jason's discreet listing producing an actual site visit since t
 **Need from Lemar:** nothing — informational. Worth asking Jason for buyer feedback
 post-walkthrough if/when Lemar wants to.
 
+## Update 2026-08-10 (PART E) — positive feedback, offer talk, license-transfer question — entirely self-managed
+Same thread (`19fd21e1a4c94ecd`) kept moving, all replies still sent directly by Lemar,
+nothing drafted or sent by Samira:
+- 2026-08-06 16:54 ET — Donte relayed the buyer's feedback on the 8/5 tour was
+  positive and asked whether they wanted to move to an offer and sign a new lease.
+  Jason confirmed (16:56 ET) he'd touched base with the buyer and expected proposed
+  terms "after the weekend." No dollar figure or lease terms stated by anyone in this
+  thread.
+- 2026-08-09 18:05 ET — Jason asked whether the license itself is transferable, and
+  whether it needs to be held two years first.
+- 2026-08-09 23:44 ET — Lemar replied directly: the license isn't a direct transfer;
+  Cuzzie's has already opened a conversation with the city about getting the buyer
+  their own license issued, and in the interim the buyer could operate under Cuzzie's
+  license while that moves through approval.
+- 2026-08-09 23:47 ET — Jason asked why it isn't transferable.
+- 2026-08-10 00:14 ET (most recent message in the thread) — Lemar cited the specific
+  CRC rule directly: **N.J.A.C. 17:30-9.3(a)** — a license holder can't change more
+  than 50% of the ownership interest in an annual license within two years of
+  commencing operations without Commission approval — and reiterated the
+  own-license-while-operating-under-ours path as the faster route for the buyer's
+  timeline.
+
+Status moved to **Negotiating** on the index (was "Sent"). No dollar terms or lease
+terms confirmed by anyone as of this pass — buyer still owes proposed terms. Samira
+drafted and represented nothing; Lemar is handling every reply himself, correctly and
+without any commitment beyond citing the actual regulation. Flagging the regulatory/
+legal content on the thread per the sensitive-thread guard, though no action is needed
+from Lemar beyond what he's already doing.
+
+**Need from Lemar:** nothing — informational, self-managed and current as of 8/10.
+
 ## Sources
 - gmail: thread `19eda7545ffe62f0` (Lemar → jason@cann.dev, NDA confirmation + license/
   price clarification + data room link, 2026-06-18/19)
 - gmail: thread `19f19d3bff0241cf` (follow-ups 2026-06-30 and 2026-07-07, no reply on
   file)
-- gmail: thread `19fd21e1a4c94ecd` (buyer walkthrough coordination, 2026-08-05)
+- gmail: thread `19fd21e1a4c94ecd` (buyer walkthrough coordination 2026-08-05; buyer
+  feedback + offer talk 2026-08-06; license-transferability Q&A 2026-08-09/10, citing
+  N.J.A.C. 17:30-9.3(a))
 - drive: https://drive.google.com/drive/folders/1DHm0MXPAfqvE2ewBXyO4IX-tKAENulSk
   ("Jason Klein — Data Room" folder, created 2026-07-10)
 - haven: `haven/vault/40-Projects/investor-pipeline/index.md` row "Jason Klein
