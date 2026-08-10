@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-10T10:05:00-04:00
+updated: 2026-08-10T11:20:00-04:00
 domain: personal
 type: reference
 status: active
@@ -12,8 +12,7 @@ area: money
 # Money Hub — ledger (source of truth)
 
 This note is the ONE structured source of truth for Lemar's personal budget: bills,
-payment plans, goals, the two account pockets, the daily set-aside ramp, and reported
-cash. The **money-hub** skill (`.claude/skills/money-hub/SKILL.md`) reads and writes the
+payment plans, goals, the two account pockets, the daily accrual, and reported cash. The **money-hub** skill (`.claude/skills/money-hub/SKILL.md`) reads and writes the
 single fenced `yaml` block below; the Money Hub dashboard artifact and all calendar
 reminder events (both per-bill due-date events and the daily "set aside today"
 aggregate) are regenerated FROM it, never hand-edited (same doctrine as
@@ -26,16 +25,18 @@ Field rules (on-button-plan pattern):
 - `day` = day-of-month for monthly bills; `due` = ISO date for one-time items and
   installments. A `calendar_event_id` marks the reminder event that projects the line
   onto the calendar (calendar is a one-way rendering; this note wins).
-- `track` = `queue` (must carry a date; gets ramped and queued) or `spending` (paid as
-  you go from the Spending pocket; no date, no ramp, not a defect). Added 2026-08-10.
-- `daily_targets` = the even daily set-aside ramp. ISO date key →
-  `{total, calendar_event_id, contributions: [{bill_id, amount, status}]}`, `status`
-  one of `pending` | `rolled` | `paid`. One aggregate calendar event per day.
+- `track` = `queue` (must carry a date; accrues daily and queues) or `spending` (paid
+  as you go from the Spending pocket; no date, no accrual, not a defect). Added 2026-08-10.
+- `daily_targets` = the daily accrual. ISO date key → `{target, funded, shortfall,
+  calendar_event_id, contributions: [{line_id, amount, funded, status}]}`, `status` one
+  of `pending` | `partial` | `funded` | `rolled` | `paid`. One aggregate calendar event
+  per day, maintained on a rolling 7-day window. `funded` = set aside; `paid` = the bill
+  was actually settled. Never conflate the two. Past days are history — never rewritten.
 - **The allocation SHAPE is DUE-DATE ORDER, locked 2026-08-10** — no priority tiers, no
   weekly floor, no waterfall. Do not redesign it here.
 - **A `track: queue` line with no date is a defect, not a low priority.** It has no
-  position in the queue, no calendar event, and no ramp — it is invisible. Every one of
-  them belongs in `open_questions` until Lemar supplies a date.
+  position in the queue, no calendar event, and accrues $0/day — it is invisible. Every
+  one of them belongs in `open_questions` until Lemar supplies a date.
 - Weekly runs append `## Update` sections below; the yaml holds state, the Updates hold
   history.
 
@@ -52,6 +53,15 @@ config:
                                      # the trailing 4-week average once entries land.
   overload_check: trailing-4wk-avg   # see the skill's OVERLOAD CHECK; skipped while the
                                      # income log holds fewer than 7 entries
+  accrual: daily-drip                # LOCKED 2026-08-10 — every dated line spreads evenly
+                                     # over [today .. due-1]; one combined daily number.
+                                     # Replaces the 7-day-window RAMP (2026-08-09).
+  funding_buffer_days: 0             # fully funded BY the due date (Lemar's framing:
+                                     # "$100/month is $3.33/day"). Set 7 to be funded a
+                                     # week early — raises every daily figure ~30%.
+                                     # Separate from the 7-day calendar popup, which stays.
+  daily_event_window: 7              # rolling: maintain aggregate calendar events for
+                                     # today..+6 only; extend one day forward each scan
 cash_on_hand:
   amount: null                       # Lemar reports: "I have $X cash"
   as_of: null
@@ -89,7 +99,7 @@ bills:
   - {id: patreon, name: Patreon, amount: 25, cadence: monthly, day: 27,
      track: queue, status: active, calendar_event_id: lf7pne54rrtcnrvekhq0fecec4,
      note: "27th confirmed 2026-07-28 after a 10th-vs-27th conflict"}
-  # -- day-to-day spending: paid as you go from the Spending pocket, never ramped --
+  # -- day-to-day spending: paid as you go from the Spending pocket, never accrued --
   - {id: food, name: Food, amount: 600, cadence: monthly, day: null,
      track: spending, status: active, note: "~$20/day, spread across the month. Not a
             defect: this is Spending-pocket money, not a set-aside line."}
@@ -148,15 +158,330 @@ plans:
       - {seq: 2, amount: 125, due: 2026-08-23, status: pending, calendar_event_id: gt4knt3i2m6lpjhlrjf8n2jqn8}
       - {seq: 3, amount: 125, due: 2026-08-30, status: pending, calendar_event_id: locnmilchabhgq2o0kd8slf7r4}
       - {seq: 4, amount: 125, due: 2026-09-06, status: pending, calendar_event_id: ekpni2dt25f0fe5tjh51sbjj64}
-daily_targets:
+daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). Every
+                                     # dated line drips a daily amount; target = the sum
+                                     # of that day's drips = what today costs. `funded` is
+                                     # what the day's logged income actually covered;
+                                     # `shortfall` drags to tomorrow via ROLLOVER.
+                                     # Computed 2026-08-10 from a zero start, so the first
+                                     # days run hot (catch-up) and decay toward steady
+                                     # state as the short-fuse lines clear.
   "2026-08-10":
-    total: 170.28
+    target: 136.96
+    funded: 0
+    shortfall: 136.96
     calendar_event_id: kli8jm1vlal3ntffr2lqdkpmuk
     contributions:
-      - {bill_id: metrc-fee, amount: 40, status: pending}
-      - {bill_id: cleaning-supplies, amount: 30, status: pending}
-      - {bill_id: comedy-show-tickets, amount: 50.28, status: pending}
-      - {bill_id: station-travel, amount: 50, status: pending}
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: cleaning-supplies, amount: 30.00, funded: 0, status: pending}
+      - {line_id: comedy-show-tickets, amount: 25.14, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 20.84, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 10.00, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.48, funded: 0, status: pending}
+      - {line_id: station-travel, amount: 10.00, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 15.00, funded: 0, status: pending}
+  "2026-08-11":
+    target: 92.44
+    funded: 0
+    shortfall: 92.44
+    calendar_event_id: vj19k5hjaq1krci59o1flcbj78
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: comedy-show-tickets, amount: 25.14, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 20.84, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 10.00, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
+      - {line_id: station-travel, amount: 10.00, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+  "2026-08-12":
+    target: 67.29
+    funded: 0
+    shortfall: 67.29
+    calendar_event_id: hknnvpq91j5192c4ljvdskf9s4
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 20.83, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 10.00, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
+      - {line_id: station-travel, amount: 10.00, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+  "2026-08-13":
+    target: 67.29
+    funded: 0
+    shortfall: 67.29
+    calendar_event_id: jho94o6sql4qjt6fdgjl0ej2oc
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 20.83, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 10.00, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
+      - {line_id: station-travel, amount: 10.00, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+  "2026-08-14":
+    target: 57.29
+    funded: 0
+    shortfall: 57.29
+    calendar_event_id: d8ed3o469dh4r5j0c2qo73m6cs
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 20.83, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
+      - {line_id: station-travel, amount: 10.00, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+  "2026-08-15":
+    target: 47.29
+    funded: 0
+    shortfall: 47.29
+    calendar_event_id: k9sog0mcpmisnn4p2hicernagk
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 20.83, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+  "2026-08-16":
+    target: 26.46
+    funded: 0
+    shortfall: 26.46
+    calendar_event_id: i5aqp4u51gvj79113o7ls4ajqk
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+  "2026-08-17":
+    target: 26.45
+    funded: 0
+    shortfall: 26.45
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 9.61, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+  "2026-08-18":
+    target: 26.45
+    funded: 0
+    shortfall: 26.45
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 9.61, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+  "2026-08-19":
+    target: 26.45
+    funded: 0
+    shortfall: 26.45
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 9.61, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+  "2026-08-20":
+    target: 26.45
+    funded: 0
+    shortfall: 26.45
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 9.61, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+  "2026-08-21":
+    target: 26.45
+    funded: 0
+    shortfall: 26.45
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 9.61, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+  "2026-08-22":
+    target: 26.45
+    funded: 0
+    shortfall: 26.45
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 9.61, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+  "2026-08-23":
+    target: 16.83
+    funded: 0
+    shortfall: 16.83
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+  "2026-08-24":
+    target: 16.83
+    funded: 0
+    shortfall: 16.83
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+  "2026-08-25":
+    target: 16.83
+    funded: 0
+    shortfall: 16.83
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+  "2026-08-26":
+    target: 16.83
+    funded: 0
+    shortfall: 16.83
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+  "2026-08-27":
+    target: 15.36
+    funded: 0
+    shortfall: 15.36
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+  "2026-08-28":
+    target: 15.36
+    funded: 0
+    shortfall: 15.36
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+  "2026-08-29":
+    target: 15.36
+    funded: 0
+    shortfall: 15.36
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+  "2026-08-30":
+    target: 9.11
+    funded: 0
+    shortfall: 9.11
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+  "2026-08-31":
+    target: 9.11
+    funded: 0
+    shortfall: 9.11
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+  "2026-09-01":
+    target: 9.11
+    funded: 0
+    shortfall: 9.11
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+  "2026-09-02":
+    target: 9.11
+    funded: 0
+    shortfall: 9.11
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+  "2026-09-03":
+    target: 9.11
+    funded: 0
+    shortfall: 9.11
+    calendar_event_id: null
+    contributions:
+      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+  "2026-09-04":
+    target: 5.11
+    funded: 0
+    shortfall: 5.11
+    calendar_event_id: null
+    contributions:
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+  "2026-09-05":
+    target: 5.10
+    funded: 0
+    shortfall: 5.10
+    calendar_event_id: null
+    contributions:
+      - {line_id: liquidibee-4, amount: 4.62, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+  "2026-09-06":
+    target: 0.48
+    funded: 0
+    shortfall: 0.48
+    calendar_event_id: null
+    contributions:
+      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
 goals:                               # a goal is a bill Lemar owes himself: it needs a
                                      # target_date to enter the queue (locked 2026-08-10)
   - {id: own-car-running, name: "Get the car running", pocket: set-aside,
@@ -193,6 +518,59 @@ Everything before 2026-08-05 lives in
 budget from the first rough sketch through the (now retired) Option 3 allocation
 decision, the six-pocket mapping, and the calendar reminders. That note is closed; this
 ledger carries the live state forward.
+
+## Update 2026-08-10 (daily accrual — every bill becomes its own payment plan)
+
+Lemar's second call of the day, and it replaces the ramp added 2026-08-09: **every dated
+line should spread evenly across the days until it's due, in one consistent format, so
+there is a single daily number to hit.** His framing: "Claude is a hundred a month
+($3.33 a day)... I want to make sure that all of these bills and expenses follow the same
+format so that I can stay on track." Then Samira takes the day's DoorDash total, assigns
+it against that number in due-date order, and drags any leftover into the next day.
+
+**What changed in the mechanism.** The 8/9 RAMP only began saving 7 days before a due
+date and dumped any shorter-fuse bill as a lump on day one — which is why all four
+one-time bills landed as a single $170.28 spike on 8/10. The new ACCRUAL spreads every
+line across its whole remaining window (`[today .. due − 1]`), so the number is smooth
+and every line is treated identically. `config.accrual: daily-drip`.
+
+**`funding_buffer_days: 0`.** Lemar's own arithmetic ($100/month = $3.33/day) funds a
+bill *by* its due date, not a week early, so the buffer defaults to 0. Set it to 7 and
+every window shrinks by a week and every daily figure rises ~30%. This is deliberately
+NOT the same thing as the 7-day calendar popup, which is a notification and stays on
+every bill event.
+
+**Catch-up vs steady state.** The schedule below was computed from a zero start, so the
+first days run hot and decay as short-fuse lines clear:
+
+| | today (8/10) | 8/12 | 8/17 | 8/23 |
+|---|---|---|---|---|
+| daily number | **$136.96** | $67.29 | $26.45 | $16.83 |
+
+Same effect per line: Claude is **$4.00/day** through this cycle (funding the full $100
+in the 25 days left before Sep 4) and settles to **$3.22/day** once caught up. Both
+figures get reported whenever a line is first accrued, so the opening number reads as a
+transition rather than the new normal.
+
+**The number that matters.** The first seven days (8/10–8/16) total **$495.02** — and
+that is only the *dated* lines. The eight undated lines (~$1,265/mo + $447 one-time,
+including Cuzzie's phone + Workspace and the student loans) accrue $0/day because they
+have no date. The real daily cost of living is materially higher than $136.96 and cannot
+be computed until those dates land. Stated, not estimated.
+
+**New in the ledger:** `daily_targets` restructured to
+`{target, funded, shortfall, calendar_event_id, contributions: [{line_id, amount, funded,
+status}]}` and populated for 28 days (8/10 → 9/6), totalling $823.36 — reconciled
+against the sum of the contributing lines to the cent. `funded` tracks what income
+actually covered; `paid` still means a bill was settled. The two are never conflated.
+
+**New in the skill:** an INCOME ALLOCATION step (pour the day's earnings into the day's
+contributions in due-date order; partial funding is a first-class state), and ROLLOVER
+now carries the *unfunded remainder* forward rather than a whole contribution — with a
+line whose due date passes unfunded leaving the accrual entirely and surfacing as
+overdue, instead of dripping forever against a date that has gone.
+
+Nothing paid, nothing contacted, no figure or date invented.
 
 ## Update 2026-08-10 (model rebuild — due-date order, two pockets, one number)
 

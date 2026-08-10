@@ -5,7 +5,7 @@ description: >
   photo), set up payment plans, fund goals, and see the ONE number to set aside today.
   Source of truth is the Haven ledger note
   haven/vault/10-Personal/Money/money-hub-ledger.md (bills, plans, goals, the two
-  pockets, and the daily set-aside ramp) plus the income log; the Money Hub dashboard
+  pockets, and the daily accrual) plus the income log; the Money Hub dashboard
   artifact and the reminder-calendar events (including the ONE daily "set aside today"
   aggregate event) are regenerated FROM the ledger, never hand-edited. The allocation
   engine is DUE-DATE ORDER (locked 2026-08-10, replacing the retired Option 3 hybrid
@@ -46,7 +46,7 @@ date, soonest first. That is the whole allocation logic: what is due next gets f
 next.
 
 **The hard consequence — an undated line is invisible.** A bill with `day: null` and
-`due: null` has no position in the queue, gets no calendar event, and gets no ramp. It
+`due: null` has no position in the queue, no calendar event, and accrues $0/day. It
 is not "low priority," it is *not in the system at all*. Under the retired model an
 undated bill still landed in the monthly floor sum; under due-date order it silently
 does nothing. So every undated line is a live defect, not a footnote: surface all of
@@ -62,12 +62,13 @@ the retired model (Cash App checking/savings, DoorDash Crimson) are `status: par
 the ledger — still Lemar's accounts, no longer part of the model. Never resurrect them
 without an explicit instruction.
 
-**One number.** `daily_targets[today].total` is the single figure Lemar acts on. Every
-other view exists to explain that number, never to compete with it.
+**One number.** `daily_targets[today].target` is the single figure Lemar acts on — the
+sum of every dated line's daily drip (see ACCRUAL). Every other view exists to explain
+that number, never to compete with it.
 
 ## THE SOURCE OF TRUTH — one ledger, one log
 - **`haven/vault/10-Personal/Money/money-hub-ledger.md`** — bills, plans, goals, the two
-  pockets, the daily set-aside ramp (`daily_targets`), open questions, all in ONE fenced
+  pockets, the daily accrual (`daily_targets`), open questions, all in ONE fenced
   `yaml` block. Field rules live at the top of that note: amounts plain numbers, `null` =
   unknown (never invent), dedupe by `id`, never delete a line (flip `status`).
 - **`haven/vault/10-Personal/Money/income-log-2026.md`** — append-only earnings lines.
@@ -111,12 +112,12 @@ existing matter gets UPDATED (latest figure, annotate), never a sibling line. Ch
 business boundary above before writing. **A bill with no date is the one thing you must
 push back on**: it cannot be queued, so ask for the date in the same breath as
 confirming the amount. Then project it onto the calendar (see CALENDAR) AND compute its
-set-aside ramp (see RAMP) before re-rendering.
+daily accrual (see ACCRUAL) before re-rendering.
 
 **4. Set up a payment plan** — "payment plan: [creditor] $600 total, 4 payments of $150
 starting Friday". Write a `plans` entry: `{id, creditor, total, note, installments:
 [{seq, amount, due, status: pending, calendar_event_id: null}]}`. Every installment
-gets its own reminder event (see CALENDAR) AND its own set-aside ramp (see RAMP,
+gets its own reminder event (see CALENDAR) AND its own daily accrual (see ACCRUAL,
 computed per-installment against that installment's `due`). If the math doesn't close
 (installments ≠ total), say so and ask rather than adjusting a figure yourself.
 Re-render.
@@ -125,7 +126,7 @@ Re-render.
 same way everything else does: by carrying a date. A goal needs `target`, `pocket:
 set-aside`, and `target_date`. Given all three, generate dated installments across the
 weeks between today and `target_date` (weekly by default, evenly split in cents, any
-remainder on the last installment) and ramp them exactly like plan installments. **A
+remainder on the last installment) and accrue them exactly like plan installments. **A
 goal with `target_date: null` generates nothing** — it is invisible to the queue, same
 as an undated bill; keep it in `open_questions` until Lemar names a date. Never pick a
 target date for him, and never quietly shrink a target to make it fit — if the implied
@@ -155,41 +156,81 @@ installment's calendar event (see CALENDAR), and when a plan's last installment 
 mark the plan done. **Ramp side-effect:** flip that bill's `pending`/`rolled`
 `daily_targets` contribution(s) to `paid`, subtract the paid amount from whichever
 day(s) it was sitting in and update those days' aggregate events, and RETIRE the rest
-of that bill's future ramp days — a full payment clears the remaining schedule for that
-bill, so recompute every future day it was touching (a day whose total then reaches $0
-across all contributions gets its own event cancelled and its id cleared). Re-render.
+of that bill's future accrual — a full payment clears the remaining schedule for that
+line, so recompute every future day it was touching (a day whose target then reaches $0
+across all contributions gets its own event cancelled and its id cleared). Never rewrite
+a past day. Re-render.
 
 **8. Show / rebuild the hub** — "show me the money hub", "money hub", "rebuild the
 money hub". Re-render the dashboard from current ledger + log + Era state and hand back
 the artifact URL.
 
-## RAMP — even daily set-aside
-Every dated line (bill, installment, goal installment) turns into an even daily savings
-target, so Lemar sees ONE combined "set aside today" number instead of tracking each
-line separately. This is the mechanism that makes due-date order livable: the queue says
-*what* is next, the ramp says *how much today*.
+## ACCRUAL — every line is a daily drip (locked 2026-08-10)
+**Every dated line is a payment plan against itself.** A bill is not an event on its due
+date; it is a daily amount that accrues from now until it's due. Claude at $100/month is
+not $100 on the 4th, it is ~$3.22 every single day. A $50 bill due in 10 days is $5/day
+for 10 days. Add every line's daily drip together and you get **one number: what today
+costs Lemar.** That number is the product of this skill.
 
-- **Window:** `start` = the day after the line is logged (for a recurring bill's LATER
-  cycles — i.e. every occurrence after the first — `start` = the day after the PRIOR
-  cycle's due date, so cycles chain with no gap). `end` = the due date minus 7 days.
-- **`end < start`** (the due date is under 8 days out when logged/chained): the FULL
-  amount lands on day 1 (`start`) — do not invent a different split for a short fuse.
-- **Even split:** otherwise divide the total evenly across `start..end` inclusive, in
-  cents, distributing any rounding remainder across the first few days so the days sum
-  EXACTLY to the total (never let rounding silently lose or gain a cent).
-- **Storage:** write per-day amounts into `daily_targets` in the ledger — ISO date keys
-  → `{total, calendar_event_id, contributions: [{bill_id, amount, status: pending}]}`. A
-  day that already holds other lines' contributions gets its `total` RECOMPUTED (sum of
-  all that day's contributions), never overwritten/clobbered.
-- **Undated → no ramp.** Never guess a date to force one.
+Every dated line follows this format — bills, plan installments, goal installments, no
+exceptions. Consistency is the point: Lemar asked for one format so he can stay on track.
 
-## OVERLOAD CHECK — the brake on the ramp (added 2026-08-10)
-The ramp will happily stack days past what any week can carry, and rollover compounds
+- **Window:** accrue over `[start .. due − 1]` inclusive, so a line is fully funded by
+  the end of the day BEFORE it's due. `start` = today (or the day the line is logged, if
+  later). `due` on or before today → the full remaining amount lands on today; never
+  back-date an accrual into the past.
+- **Recurring monthly bill:** the cycle is due-date to due-date. Steady-state daily rate
+  = `amount ÷ cycle_days`. **The current cycle is a catch-up:** nothing has been set
+  aside yet, so the remaining full amount spreads over `[today .. due − 1]`, which runs
+  hotter than steady state. Report BOTH numbers when a line is first accrued ("$4.00/day
+  now, $3.22/day once you're caught up") so the higher opening number reads as a
+  transition, not as the new normal. When a cycle's due date passes, chain the next cycle
+  starting the following day — cycles never gap and never overlap.
+- **Even split, exact to the cent:** divide in cents across the window, remainder on the
+  EARLIEST days, so the days sum EXACTLY to the total. Never let rounding lose or gain a
+  cent, and never round a daily figure "to something nicer."
+- **`funding_buffer_days`** (config, default `0`): days before the due date the line must
+  be fully funded. `0` means funded by the due date — this matches Lemar's own framing
+  ("$100 a month is $3.33 a day"). Raising it to `7` shrinks every window by a week and
+  raises every daily number ~30%; it is a knob, not a default. **Separate from the 7-day
+  calendar popup**, which is a notification and stays on every bill event regardless.
+- **Storage:** `daily_targets`, ISO date key →
+  `{target, funded, shortfall, calendar_event_id, contributions: [{line_id, amount,
+  funded, status}]}`. A day that already holds other lines' contributions gets `target`
+  RECOMPUTED (sum of that day's contributions), never overwritten.
+- **Undated → no accrual.** Never guess a date to force one. An undated line contributes
+  $0/day, which is exactly why it's invisible (see THE MODEL).
+- **Recompute triggers:** a new dated line, an amount or date change, a payment, or a
+  cycle rolling over. Recompute only the days from today forward — **never rewrite a past
+  day**, which is history.
+
+## INCOME ALLOCATION — pour the day's earnings into the day's number
+Mode 1 (log earnings) now does a second thing: it funds the day.
+
+Given the day's logged income, walk `daily_targets[today].contributions` in **due-date
+order** (soonest due first; ties broken by smallest amount, so cheap lines clear rather
+than sit half-funded) and fill each one until the money runs out:
+- Fully covered → `funded = amount`, `status: funded`.
+- Partly covered → `funded = <what was left>`, `status: partial`.
+- Nothing left → untouched, `status: pending`.
+Update the day's `funded` and `shortfall` totals, then report: what got covered, what
+didn't, and the shortfall figure that will drag into tomorrow.
+
+Guards: income is applied only to the day it was earned (a backlog drop funds ITS OWN
+day, not today — never let a backfill retroactively "cover" a day that already rolled).
+Income beyond the day's target does NOT auto-advance to tomorrow's accrual — surplus is
+reported as surplus and stays Lemar's call, because pre-funding tomorrow is a decision
+about his own cash, not bookkeeping. **Funding is not paying:** `funded` means money was
+set aside, `paid` means a bill was actually settled (Mode 7). Never conflate them on any
+surface.
+
+## OVERLOAD CHECK — the brake on the accrual (added 2026-08-10)
+The accrual will happily stack days past what any week can carry, and rollover compounds
 it. Before writing a day's `daily_targets`, compare the resulting 7-day set-aside total
 against the trailing 4-week average of logged income (skip this check entirely while the
 income log holds fewer than 7 entries — say so rather than computing against nothing).
 
-If the coming week's set-aside total exceeds that average, **still write the ramp
+If the coming week's set-aside total exceeds that average, **still write the accrual
 exactly as computed** — never quietly shrink, delay, or drop a line to make the number
 look achievable — and additionally:
 - Flag it on the dashboard: "⚠️ this week's set-aside is $X against a $Y average week."
@@ -200,16 +241,22 @@ look achievable — and additionally:
 A number Lemar can't hit is still the true number. The failure mode this guards against
 is a cheerful dashboard, not an ugly one.
 
-## ROLLOVER — end of day (runs inside PART M, last hourly scan of the day)
+## ROLLOVER — the leftovers drag forward (runs inside PART M, last scan of the day)
 On Samira's LAST hourly scan of the day (≥5pm ET — same style as the existing PART C
 timing gate, so this never fires mid-morning): for every `daily_targets[today]`
-contribution still `status: pending`, flip it to `rolled` and add its amount into
-`daily_targets[tomorrow]` (create tomorrow's entry/event if it doesn't exist yet), then
-update BOTH days' aggregate events (today's total drops by what rolled, tomorrow's
-total gains it). Never touch a contribution already `paid` — a payment always wins over
-a rollover. This is a mechanical daily housekeeping step, not a "mark paid" — it never
-assumes anything got paid, it only moves an un-acted-on target forward one day so
-nothing silently disappears.
+contribution with `funded < amount`, carry the **unfunded remainder** (`amount − funded`)
+into `daily_targets[tomorrow]` as a contribution for that same `line_id`, marked
+`rolled_from: <today>`; set today's contribution `status: rolled` and leave its `funded`
+figure intact as the historical record of what the day actually covered. Create
+tomorrow's entry/event if it doesn't exist. Update BOTH days' totals and aggregate
+events. Never touch a contribution already `funded` or `paid`.
+
+This is mechanical housekeeping, not a payment — it never assumes anything got paid, it
+only moves an uncovered amount forward one day so nothing silently disappears. A line
+whose due date passes while still unfunded stops rolling and becomes **overdue**: it
+leaves the accrual, gets its own flag on the dashboard, and rides in `open_questions`
+until Lemar says whether it was paid. Never keep silently dripping a bill whose date has
+already gone by.
 
 **Rollover brake:** a contribution that has rolled **3 days running** stops rolling
 silently — keep rolling it, but name it in a #decisions parent ("$X for [line] has
@@ -229,7 +276,7 @@ due-date event: TWO popups — 7 days before (`minutes: 10080`) and day-of (`min
 - One-time bill / plan installment / goal installment with a `due` → one event, title
   `Bill: <name> — $<amount>`, `Plan: <creditor> <seq>/<N> — $<amount>`, or
   `Goal: <name> <seq>/<N> — $<amount>`.
-- `day: null` or `due: null` → NO event (and no ramp — see RAMP); the gap rides in
+- `day: null` or `due: null` → NO event (and no accrual — see ACCRUAL); the gap rides in
   `open_questions` until Lemar supplies the date. Never guess a date.
 - Paid / parked / done → cancel the event and clear the id (RETIRE). An amount or date
   change → update the existing event, never a duplicate (EXISTING).
@@ -238,18 +285,18 @@ due-date event: TWO popups — 7 days before (`minutes: 10080`) and day-of (`min
   other row, never recreate them.
 - The DAILY aggregate "set aside today" events are a SEPARATE parallel layer on the
   personal calendar — a bill having both its own due-date event and one or more days'
-  worth of ramp contribution inside an aggregate event is expected, not a duplicate.
+  worth of accrual inside an aggregate event is expected, not a duplicate.
 
 ## DAILY CALENDAR — one aggregate "set aside" event per day
 The "how much to set aside today" layer; the due-date event is still "what's actually
 due." Personal reminder calendar only, no attendees, popup reminder (`minutes: 0`).
-- Title: `Set aside today: $<daily_targets[date].total>`. Description lists each
+- Title: `Set aside today: $<daily_targets[date].target>`. Description lists each
   contributing line + amount, flagging anything carried in from a missed day ("rolled
   from `<date>`") and naming the pocket move: Spending → Set-Aside.
-- A day's total changing (new bill lands on it, a payment clears part of it, a rollover
-  adds to it) updates THAT SAME event — reuse `daily_targets[date].calendar_event_id`,
+- A day's target changing (new line accrues onto it, a payment clears part of it, a
+  rollover adds to it) updates THAT SAME event — reuse `daily_targets[date].calendar_event_id`,
   never create a duplicate for a date that already has one (EXISTING).
-- A day whose total reaches $0 (every contribution `paid` or moved off it) → cancel its
+- A day whose target reaches $0 (every contribution cleared or moved off it) → cancel its
   event and clear the id (RETIRE) — never leave a stale $0 reminder.
 
 ## DASHBOARD — the Money Hub artifact
@@ -259,9 +306,10 @@ phone-first, light/dark via `prefers-color-scheme` + `[data-theme]` overrides; l
 favicon 💵, "rendered HH:MM ET" stamp. Re-deploy to the stable URL in anchors (pass it
 as `url`). Sections, top to bottom, every number traceable to the ledger, the log, or
 Era:
-1. **Set aside today** — `daily_targets[today].total` as the biggest number on the
-   page, the contributing lines beneath it, and the one instruction: move it from
-   Spending to Set-Aside. This is the point of the page; nothing outranks it.
+1. **Set aside today** — `daily_targets[today].target` as the biggest number on the
+   page, each contributing line's daily drip beneath it, how much today's logged income
+   has funded so far, and the one instruction: move it from Spending to Set-Aside. This
+   is the point of the page; nothing outranks it.
 2. **The two pockets** — Spending and Set-Aside balances from Era with as-of stamps,
    plus reported cash on hand. Era data-health flags rendered honestly (⚠️ chip) with
    the true as-of date, never a friendlier one.
@@ -283,11 +331,12 @@ cash, a bill (text or photo), a payment, or plan terms — the same scanner disc
 on-button-plan: ignore restatements, your own 🌐 posts, and reacted messages. Run the
 matching mode per drop; anything ambiguous or material (a figure to confirm, a missing
 date, a business-vs-personal call) → leave it `null`/flagged and raise ONE #decisions
-parent — never guess. Every new/updated line with a date also gets its RAMP computed and
+parent — never guess. Every new/updated line with a date gets its ACCRUAL computed and
 its DAILY CALENDAR event(s) created/updated in the same pass, then the OVERLOAD CHECK.
+Earnings drops also run INCOME ALLOCATION against the day they were earned.
 On the LAST hourly scan of the day (≥5pm ET) also run ROLLOVER before re-rendering.
 Re-render the dashboard once at the end ONLY if something changed. PART M captures,
-ramps, checks, and renders; it never runs the weekly view (mode 6 stays on-demand).
+accrues, funds, checks, and renders; it never runs the weekly view (mode 6 stays on-demand).
 
 ## SAFETY (applies to the whole skill)
 You MAY: read and write the two Money notes' data blocks + Update sections (including
@@ -309,26 +358,28 @@ attendees to any event; mark a `daily_targets` contribution `paid` except as the
 side-effect of Mode 7 (a rollover only ever sets `rolled`, never `paid`).
 
 ## Returns (to the Samira runbook, for the digest)
-`money ✓ <what changed — e.g. +1 bill · earnings +$140 · today $X · undated N ·
-overload $X vs $Y · rolled $Y> · hub ✅/⚠️` — or `money —` when the sweep found nothing.
+`money ✓ <what changed — e.g. +1 bill · earnings +$140 · today $X funded $Y · undated N ·
+overload $X vs $Y · rolled $Z> · hub ✅/⚠️` — or `money —` when the sweep found nothing.
 
 ## Worked example
 Lemar drops in #personal-finance: "New bill, car insurance $182 a month on the 15th.
-Also made $210 doordashing this weekend." PART M: (1) adds
-`{id: car-insurance, amount: 182, cadence: monthly, day: 15}` to the ledger — it has a
-date, so it queues; creates the recurring event `Bill: Car insurance — $182` on the 15th
-with both popups and stores the id; computes its ramp (`end` = 15th − 7 days; if today
-falls before that, $182 splits evenly across `start..end`, else the full $182 lands on
-`start`) and creates/updates the matching `daily_targets` day(s). (2) Appends
-`{date: <sat>, source: doordash, amount: 210}` to the income log. (3) Runs the OVERLOAD
-CHECK: if the coming week's set-aside now exceeds the trailing 4-week average income, it
-writes the ramp anyway and raises one #decisions parent naming the gap. (4) Touches
-`updated`, appends one `## Update` line, commits
-`money-hub: +car-insurance bill, +$210 earnings, ramp $26/day`, re-renders the hub,
-returns `money ✓ +1 bill · earnings +$210 · today $26 · undated 6 · hub ✅`. Later Lemar
-says "run my week": the 14-day queue is sorted by date, the next 7 days summed against
-income logged, the gap stated in dollars with the exact line the money stops at, the
-table lands in the ledger, #personal-finance, and the dashboard. If 5pm ET arrives with
-today's `car-insurance` contribution still `pending`, ROLLOVER flips it to `rolled` and
-folds it into tomorrow — and if that's its third straight roll, a #decisions parent says
-so. Nothing paid, nothing contacted.
+Also made $210 doordashing today." PART M:
+1. Adds `{id: car-insurance, amount: 182, cadence: monthly, day: 15}` — it has a date,
+   so it queues. Creates the recurring event `Bill: Car insurance — $182` on the 15th
+   with both popups, stores the id.
+2. **ACCRUAL:** the 15th is 5 days out, so the current catch-up cycle is $182 ÷ 5 =
+   $36.40/day; the steady-state rate once caught up is $182 ÷ 31 = $5.87/day. Both get
+   reported. Those amounts land as a `car-insurance` contribution on each of the next 5
+   days in `daily_targets`, and each day's `target` is recomputed.
+3. **INCOME ALLOCATION:** appends `{date: today, source: doordash, amount: 210}` to the
+   income log, then pours $210 into today's target in due-date order. Say today's target
+   is $173.36 — everything funds, `funded: 173.36`, `shortfall: 0`, and the extra $36.64
+   is reported as surplus (not auto-applied to tomorrow; that's Lemar's call).
+4. Runs the OVERLOAD CHECK, touches `updated`, appends one `## Update`, commits
+   `money-hub: +car-insurance, +$210 earnings, today $173.36 fully funded`, re-renders,
+   returns `money ✓ +1 bill · earnings +$210 · today $173.36 funded $173.36 · undated 8 · hub ✅`.
+
+Had he earned only $120, the pour would stop partway: the soonest-due lines fund, the
+line the money runs out on goes `partial`, the rest stay `pending`, and at the 5pm scan
+ROLLOVER drags the $53.36 remainder onto tomorrow — raising tomorrow's number rather
+than letting today's gap vanish. Nothing paid, nothing contacted.
