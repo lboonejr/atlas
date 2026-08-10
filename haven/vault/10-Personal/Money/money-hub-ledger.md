@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-10T10:30:00-04:00
+updated: 2026-08-10T14:09:00-04:00
 domain: personal
 type: reference
 status: active
@@ -49,8 +49,8 @@ config:
                                      # personal waterfall 2026-07-24 — moving to a
                                      # Cuzzie's-side deal, not structured yet
 cash_on_hand:
-  amount: null                       # Lemar reports: "I have $X cash"
-  as_of: null
+  amount: 25                         # reported #personal-finance 2026-08-10 ("Cash on hand today: $25")
+  as_of: 2026-08-10
 pockets:                             # where delegated money goes (draft mapping 2026-07-24,
                                      # confirmed names 2026-07-25; no transfers made by anyone
                                      # but Lemar)
@@ -166,6 +166,7 @@ open_questions:
   - "Liquidibee/Nomas: the re-spread 4-week savings schedule (through 9/06) runs past the collector's stated Aug 15 deadline — does Lemar want a draft message prepared for Nomas Recovery explaining the delay? Raised in #decisions 2026-08-09, nothing drafted or sent yet."
   - "Station travel $50/wk: Lemar started a weekend job at The Station 8/9 — pay rate not yet known, he'll report it in #personal-finance"
   - "'Gas $10' dropped in #personal-finance 2026-08-10 with a receipt photo (IMG_2080.jpeg) — doesn't match any existing bill line (no recurring gas bill, no due date) and isn't income or cash-on-hand. Unclear if Lemar wants this tracked as a new recurring/one-time expense line (and if so what cadence/pocket) or if it's just an FYI needing no ledger action. Raised in #decisions 2026-08-10, nothing added to the ledger."
+  - "'SoFi balance today: $2.54' dropped in #personal-finance 2026-08-10 — a reported bank balance, not cash on hand (the `cash_on_hand` field is for physical cash) and not tied to a specific pocket (both `sofi-checking` and `sofi-savings` map to SoFi). No ledger field exists for a manually-reported account balance (that's Era Context's job, and SoFi still needs reconnecting per the open question above). Left OUT of the ledger rather than guess which pocket/field it belongs in; raised in #decisions 2026-08-10."
 ```
 
 ## History
@@ -325,6 +326,35 @@ all from Lemar today, 2026-08-10:
 Dashboard re-rendered (income + this-week numbers now reflect the four logged weeks).
 Nothing paid, nothing contacted, no figure guessed.
 
+## Update 2026-08-10 (PART M sweep, 2nd pass)
+
+Swept #personal-finance since the last run (2026-08-10 first pass, which ended at the
+"Gas $10" drop, ts `1786371101.191659`). Two new messages, both from Lemar today,
+2026-08-10:
+
+- **Cash on hand** (ts `1786373460.228489`, "Cash on hand today: $25") — Mode 2. Set
+  `cash_on_hand: {amount: 25, as_of: 2026-08-10}`.
+- **"SoFi balance today: $2.54"** (ts `1786373508.071459`) — a reported bank balance,
+  not physical cash on hand and not tied to a specific pocket (`sofi-checking` vs.
+  `sofi-savings` both map to SoFi; Era Context is the intended live-balance layer, and
+  SoFi still needs reconnecting there per the existing open question). No ledger field
+  fits this cleanly, so left OUT rather than guess; added to `open_questions` and raised
+  in #decisions.
+
+No earnings, bills, payment-plan terms, or "mark paid" this pass. No `daily_targets`/
+calendar changes (nothing new carries a `due`). ROLLOVER not yet due (run time ≈2:09pm
+ET, gate is ≥5pm ET).
+
+Also found in #decisions (ts `1786307410.388389`, an earlier run today): the
+`.claude/skills/money-hub/SKILL.md` file itself is stored as a single base64 blob on
+disk (traced to commit `01e027a`) — decodes losslessly to the complete, correct skill
+text, and this run read it the same way (in-memory decode, nothing on disk touched).
+Still awaiting Lemar's call on that card; not duplicated here, and no skill-file write
+made by this pass (outside PART M's scope).
+
+Dashboard re-rendered (cash-on-hand figure now reflects the $25 report). Nothing paid,
+nothing contacted, no figure guessed.
+
 ## Sources
 - Prior project note: `haven/vault/10-Personal/Money/2026-07-11-personal-finance-dashboard-project.md` (full Slack ts provenance lives there)
 - Staged prompt: #admin `C0BBLUA7JLX` ts `1786253312.218409`+`1786253312.241789`
@@ -336,3 +366,5 @@ Nothing paid, nothing contacted, no figure guessed.
 - #personal-finance `C0BGLEMH99T` ts `1786369136.576589` (DoorDash Earnings screenshot),
   `1786369598.347299` (typed weekly breakdown), `1786371101.191659` ("Gas $10" photo) —
   2026-08-10 PART M sweep
+- #personal-finance `C0BGLEMH99T` ts `1786373460.228489` ("Cash on hand today: $25"),
+  `1786373508.071459` ("SoFi balance today: $2.54") — 2026-08-10 PART M sweep, 2nd pass
