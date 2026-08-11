@@ -1,6 +1,6 @@
 ---
 created: 2026-08-02T16:00-04:00
-updated: 2026-08-10T10:40:00-04:00
+updated: 2026-08-11T09:15:00-04:00
 domain: cuzzies
 type: log
 status: active
@@ -84,6 +84,28 @@ from Lemar beyond what he's already doing.
 
 **Need from Lemar:** nothing — informational, self-managed and current as of 8/10.
 
+## Update 2026-08-11 (PART E) — buyer question relayed, three-way call requested — entirely self-managed
+Same thread (`19fd21e1a4c94ecd`) kept moving 8/10 late morning, all replies still sent
+directly by Lemar, nothing drafted or sent by Samira:
+- 2026-08-10 11:20 ET — Jason confirmed he relayed Lemar's license-mechanics answer to
+  the buyer.
+- 2026-08-10 11:48 ET — Jason relayed a buyer question: how long has the store been
+  open?
+- 2026-08-10 11:55 ET — Lemar replied directly: first sale April 2025, license active
+  since January 2025.
+- 2026-08-10 11:58 ET — Jason asked if Lemar is available for a **three-way call with
+  the buyers** to discuss the transfer process, and asked for the best callback number.
+  No day/time proposed; not yet confirmed by Lemar as of this pass.
+
+Per the skill's meeting-scheduling guard (I5), no calendar action is taken until Lemar
+confirms a specific window himself — this is a self-managed thread, no Samira draft,
+no proposed windows inserted. Status stays **Negotiating** on the index. Sensitive-
+thread advisory carried forward (CRC license-transfer terms still live on the thread).
+
+**Need from Lemar:** if/when he wants the three-way call, confirm a window with Jason
+himself (or say the word and Samira will hold an internal placeholder on his calendar
+once a specific time is set — no external invitees).
+
 ## Sources
 - gmail: thread `19eda7545ffe62f0` (Lemar → jason@cann.dev, NDA confirmation + license/
   price clarification + data room link, 2026-06-18/19)
@@ -91,7 +113,9 @@ from Lemar beyond what he's already doing.
   file)
 - gmail: thread `19fd21e1a4c94ecd` (buyer walkthrough coordination 2026-08-05; buyer
   feedback + offer talk 2026-08-06; license-transferability Q&A 2026-08-09/10, citing
-  N.J.A.C. 17:30-9.3(a))
+  N.J.A.C. 17:30-9.3(a); buyer store-age question + three-way-call ask 2026-08-10
+  11:20am–11:58am ET, messages `19fec42d740ac3ee`, `19fec5cd54672e39`,
+  `19fec62a7f1d0b48`, `19fec65d89012d10`)
 - drive: https://drive.google.com/drive/folders/1DHm0MXPAfqvE2ewBXyO4IX-tKAENulSk
   ("Jason Klein — Data Room" folder, created 2026-07-10)
 - haven: `haven/vault/40-Projects/investor-pipeline/index.md` row "Jason Klein
