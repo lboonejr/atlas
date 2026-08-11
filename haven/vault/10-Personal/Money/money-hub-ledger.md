@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-11T08:18:00-04:00
+updated: 2026-08-11T08:36:00-04:00
 domain: personal
 type: reference
 status: active
@@ -53,8 +53,8 @@ config:
                                      # personal waterfall 2026-07-24 — moving to a
                                      # Cuzzie's-side deal, not structured yet
 cash_on_hand:
-  amount: 25                         # reported #personal-finance 2026-08-10 ("Cash on hand today: $25")
-  as_of: 2026-08-10
+  amount: 20                         # reported #personal-finance 2026-08-11 ("Cash on hand today - $20")
+  as_of: 2026-08-11
 reported_balances:                   # manually-reported account balances (2026-08-10, see field rules above)
   - {pocket: sofi-checking, amount: 2.54, as_of: 2026-08-10,
      note: "Lemar #decisions 2026-08-10: 'SoFi checking and we will use manual entry instead of Era.' Manual tracking starts here — update this entry whenever a new SoFi checking balance is reported in #personal-finance."}
@@ -553,3 +553,25 @@ income). Nothing paid, nothing contacted, no figure or date guessed.
 - #personal-finance `C0BGLEMH99T` ts `1786402207.550489` (mom's car oil change, "about
   $100," due "end of next week"), ts `1786413446.708309` (mom's car breakdown, "I think
   ... $500 repair") — 2026-08-11 PART M sweep
+
+## Update 2026-08-11 (PART M sweep, 2nd pass)
+
+Swept #personal-finance since the last run (1st pass 2026-08-11, ended at the mom's-car
+breakdown drop, ts `1786413446.708309`, followed by this bot's own 🌐 summary post ts
+`1786451044.122119`). One new message, from Lemar today, 2026-08-11:
+
+- **"Cash on hand today - $20"** (ts `1786464148.853639`) — Mode 2, unambiguous figure.
+  Set `cash_on_hand: {amount: 20, as_of: 2026-08-11}` (was $25 as of 2026-08-10).
+
+No earnings, bills, payment-plan terms, or "mark paid" this pass. No `daily_targets`/
+calendar changes (nothing new carries a `due`). ROLLOVER not due this run. The two
+mom's-car open questions from the prior pass remain unanswered — not re-pinged this
+pass (already surfaced in the bundled #decisions card).
+
+Dashboard re-render deferred — no live artifact session available this pass; the new
+cash-on-hand figure is captured here in the ledger (source of truth) and will render on
+the next PART P/M pass that touches the artifact.
+
+## Sources (cont. 3)
+- #personal-finance `C0BGLEMH99T` ts `1786464148.853639` ("Cash on hand today - $20") —
+  2026-08-11 PART M sweep, 2nd pass
