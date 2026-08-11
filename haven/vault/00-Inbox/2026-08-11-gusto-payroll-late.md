@@ -1,1 +1,27 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDgtMTFUMDg6MTY6MDAtMDQ6MDAKZG9tYWluOiBjdXp6aWVzCnR5cGU6IHRhc2sKc3RhdHVzOiBhY3RpdmUKdGFnczogW2d1c3RvLCBwYXlyb2xsLCBjdXp6aWVzLWRpc3BlbnNhcnldCnNvdXJjZTogZ21haWwKLS0tCgojIEd1c3RvOiBwYXlyb2xsIGlzIGxhdGUgZm9yIEN1enppZSdzIERpc3BlbnNhcnkgJiBEZWxpdmVyeSBMTEMKCkF1dG9tYXRlZCBHdXN0byBub3RpY2UgKGRvLW5vdC1yZXBseSksIHJlY2VpdmVkIDIwMjYtMDgtMTEgMTE6NDggVVRDLCBhZGRyZXNzZWQgdG8KYWRtaW5AY3V6emllc25qLmNvbSwgam9zaHVhQGN1enppZXNuai5jb20sIGxlbWFyQGN1enppZXNuai5jb206CgotIFBheSBwZXJpb2Q6IEp1bCAyNiAtIEF1ZyA4LCAyMDI2Ci0gT3JpZ2luYWwgcGF5ZGF5OiBGcmkgQXVnIDE0Ci0gU3RhdHVzIHBlciBHdXN0bzogKioxIGRheSBsYXRlKiogYXMgb2YgdGhpcyBub3RpY2UKLSBHdXN0byBmbGFncyBTYW1lLWRheSBwYXkgLyBJbnN0YW50IHBheSBhcyBwb3NzaWJsZSBhY2NlbGVyYXRlZCBvcHRpb25zIHRvIHN0aWxsIHBheQogIG9uIHRpbWUKClRoaXMgaXMgYSBwYXltZW50IGFjdGlvbiAocnVubmluZyBwYXlyb2xsIG1vdmVzIG1vbmV5KSDigJQgbm90IHNvbWV0aGluZyB0byBleGVjdXRlCndpdGhvdXQgTGVtYXIncyBhdXRob3JpemF0aW9uLiBSYWlzaW5nIGl0IGFzIGEgI2RlY2lzaW9ucyBjYXJkIHJhdGhlciB0aGFuIHJ1bm5pbmcKcGF5cm9sbCBvbiBoaXMgYmVoYWxmLiBObyBhbW91bnQgc3RhdGVkIGluIHRoZSBub3RpY2UgaXRzZWxmIChHdXN0byBkb2VzIG5vdCBzdXJmYWNlIGEKZG9sbGFyIHRvdGFsIGluIHRoaXMgZW1haWwpLgoKIyMgU291cmNlcwotIGdtYWlsOiB0aHJlYWQgYDE5ZmYwYTcyN2NhMjg5NTlgLCBtZXNzYWdlIGAxOWZmMGE3MjdjYTI4OTU5YAo=
+---
+created: 2026-08-11T08:16:00-04:00
+domain: cuzzies
+type: task
+status: active
+tags: [gusto, payroll, cuzzies-dispensary]
+source: gmail
+---
+
+# Gusto: payroll is late for Cuzzie's Dispensary & Delivery LLC
+
+Automated Gusto notice (do-not-reply), received 2026-08-11 11:48 UTC, addressed to
+admin@cuzziesnj.com, joshua@cuzziesnj.com, lemar@cuzziesnj.com:
+
+- Pay period: Jul 26 - Aug 8, 2026
+- Original payday: Fri Aug 14
+- Status per Gusto: **1 day late** as of this notice
+- Gusto flags Same-day pay / Instant pay as possible accelerated options to still pay
+  on time
+
+This is a payment action (running payroll moves money) — not something to execute
+without Lemar's authorization. Raising it as a #decisions card rather than running
+payroll on his behalf. No amount stated in the notice itself (Gusto does not surface a
+dollar total in this email).
+
+## Sources
+- gmail: thread `19ff0a727ca28959`, message `19ff0a727ca28959`
