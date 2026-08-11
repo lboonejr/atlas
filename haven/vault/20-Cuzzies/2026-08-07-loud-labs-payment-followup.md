@@ -1,6 +1,6 @@
 ---
 created: 2026-08-08T11:20-04:00
-updated: 2026-08-10T18:06-04:00
+updated: 2026-08-11T13:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -78,6 +78,17 @@ Waiting on Us, Resolution Status = Negotiating. Amount Owed left blank — no
 dollar figure in either email, not guessed. `anchors.md` updated with this
 board so it's no longer ambiguous going forward.
 
+## Update 2026-08-11 — #decisions card closed (🫡)
+
+Lemar reacted 🫡 on the #decisions card (ts `1786205805.519969`) for this
+thread, closing Samira's tracking on this specific card. Separately, the Gmail
+thread now shows a message from lemar@cuzziesnj.com to aaron@loudlabs.co dated
+2026-08-10 landing in Gmail's SENT — consistent with Lemar sending the saved
+draft himself, though that isn't asserted here, only observed from the thread's
+labels. A further reply from aaron@loudlabs.co arrived 2026-08-10T13:36 that has
+not yet been triaged; this closure covers only the #decisions card, not the
+full matter. Thread labeled `Samira/sent`.
+
 ## Sources
 - gmail: thread `19f4daa95127e89c`, message `19fdd0c215223925` (Aaron Greene, Loud
   Labs, 2026-08-07)
@@ -87,3 +98,4 @@ board so it's no longer ambiguous going forward.
   (clarification) — 2026-08-10
 - monday: board `18424191974` ("Off Button — Vendor Wind-Down & Payoff"), item
   `12767660655` — https://lboonejrs-team.monday.com/boards/18424191974/pulses/12767660655
+- slack: #decisions close signal, ts `1786205805.519969` (🫡, 2026-08-11)
