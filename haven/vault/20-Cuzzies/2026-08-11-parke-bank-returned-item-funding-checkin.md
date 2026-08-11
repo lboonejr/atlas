@@ -1,6 +1,6 @@
 ---
 created: 2026-08-11T08:25:00-04:00
-updated: 2026-08-11T08:25:00-04:00
+updated: 2026-08-11T13:05:00-04:00
 domain: cuzzies
 type: decision
 status: done
@@ -30,8 +30,17 @@ mhallworth@parkebank.com). **Draft only — not sent** (Samira never sends email
 
 **Status:** Done — draft staged in Gmail Drafts for Lemar to review and send himself.
 
+## Update 2026-08-11T13:05:00-04:00
+
+Lemar sent the drafted Option B text himself directly from Gmail at 12:24pm ET (thread
+`19ff0bc747aa5051`, message `19ff1a3e6d5e8bb4`, to ccabezas@parkebank.com cc
+mhallworth@parkebank.com) — text matches the staged draft verbatim. Thread fully closed;
+no Samira action needed (he never reacted 🫡 on the card, he just sent it himself).
+Posted a "Done ✅" note in the card thread for the record; not re-flagging.
+
 ## Sources
 - slack: #decisions ts `1786450627.342179` (card) / reply `1786450643.113529` (Option B,
   Lemar's ✅)
 - gmail: thread `19ff0bc747aa5051` — "secure: Cuzzie's Returned Item", draft
-  `r8723249641867605243`
+  `r8723249641867605243`, sent message `19ff1a3e6d5e8bb4` (2026-08-11 12:24pm ET, sent by
+  Lemar directly)
