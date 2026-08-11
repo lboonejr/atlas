@@ -1,6 +1,6 @@
 ---
 created: 2026-08-11T08:30:00-04:00
-updated: 2026-08-11T13:05:00-04:00
+updated: 2026-08-11T14:26:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -27,6 +27,15 @@ lemar@cuzziesnj.com):
 This is a payment action — Samira never pays or authorizes a transfer. Raising it in
 #decisions rather than acting on it. No payment link opened/clicked.
 
+## Update — 2026-08-11 14:26 ET
+Lemar replied in-thread on the #decisions card asking to add this to the Off Button
+Monday board for tracking. Done: item `12776779382` created on "Off Button — Vendor
+Wind-Down & Payoff" (`18424191974`), group Vendors — New/Unclassified, Vendor Category
+"Non-Cannabis Vendor", Correspondence Status "Not Yet Contacted", Amount Owed $7,500.
+No payment made or authorized. Replied Done ✅ in the #decisions thread. The
+pay/authorize decision itself is still open on the parent card (no ✅/🫡 yet).
+
 ## Sources
 - gmail: thread `19ff195625635da7` — "New payment request from Greenbooks CPA"
-- slack: #decisions ts `1786464745.180399` (card)
+- slack: #decisions ts `1786464745.180399` (card) / ts `1786475168.864539` (Done reply)
+- monday: board `18424191974`, item `12776779382`
