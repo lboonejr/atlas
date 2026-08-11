@@ -1,12 +1,13 @@
 ---
 created: 2026-08-11T08:30:00-04:00
-updated: 2026-08-11T08:30:00-04:00
+updated: 2026-08-11T08:33:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [samira, greenbooks-cpa, invoice, accounts-payable]
 source: gmail
 due: 2026-08-11T09:00:00-04:00
+calendar_event_id: f4m9r4b46hosbeo05uofrojrgk
 ---
 
 # Greenbooks CPA (Huljev CPA PLLC) — $7,500 invoice, due on receipt
@@ -28,3 +29,4 @@ This is a payment action — Samira never pays or authorizes a transfer. Raising
 
 ## Sources
 - gmail: thread `19ff195625635da7` — "New payment request from Greenbooks CPA"
+- slack: #decisions ts `1786464745.180399` (card)
