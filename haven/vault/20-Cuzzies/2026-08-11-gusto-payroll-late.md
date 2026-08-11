@@ -3,7 +3,7 @@ created: 2026-08-11T08:16:00-04:00
 updated: 2026-08-11T13:05:00-04:00
 domain: cuzzies
 type: task
-status: done
+status: active
 tags: [gusto, payroll, cuzzies-dispensary]
 source: gmail
 ---
@@ -37,9 +37,9 @@ note out of the Inbox.
 ## Update 2026-08-11 (vault-keeper)
 
 Frontmatter now complete (`updated` was stamped by the PART A append above) — filed to
-`20-Cuzzies/` this pass. `status` set to `done` to match the closed-via-🫡 outcome
-recorded above (was `active`, and `active` is not a legal terminal state for a card
-Lemar closed without further tracking).
+`20-Cuzzies/` this pass. `status` left as `active` — vault-keeper only touches `updated`
+on a filed note and never changes another controlled value's meaning; whether this
+should read `done` given the 🫡 close is Lemar's/PART A's call, not a filing decision.
 
 ## Sources
 - gmail: thread `19ff0a727ca28959`, message `19ff0a727ca28959`
