@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-10T18:06:00-04:00
+updated: 2026-08-11T08:18:00-04:00
 domain: personal
 type: reference
 status: active
@@ -118,6 +118,12 @@ bills:
      due: 2026-08-15, priority: p4, status: active,
      calendar_event_id: ptacguksk2rsf3md3403gljtes,
      note: "reported in #personal-finance 2026-08-09; priority p4 matches the existing Rahway→Newark commute pattern, confirmed by Lemar 8/9 ('median priority'). Ramped 2026-08-09: due date under 8 days out when logged, so full $50 lands on 2026-08-10; ROLLED to 2026-08-11 by end-of-day ROLLOVER (see daily_targets). Lemar 8/9: likely becoming a recurring weekly expense (new weekend job at The Station) — rate TBD, he'll post it in #personal-finance."}
+  - {id: moms-car-oil-change, name: "Mom's car oil change", amount: null, cadence: once,
+     due: null, priority: null, status: active,
+     note: "reported in #personal-finance 2026-08-11: 'It'll be about $100' due 'by the end of next week' — both amount and due date are hedged/unconfirmed, left null per the never-guess rule. Lemar asked for this to be worked into the payment plan, daily totals, and Google Calendar — that scheduling needs a confirmed dollar figure and exact ISO due date first; raised in #decisions."}
+  - {id: moms-car-repair-breakdown, name: "Mom's car repair (breakdown)", amount: null,
+     cadence: once, due: null, priority: null, status: active,
+     note: "reported in #personal-finance 2026-08-11: mom's car broke down, blocking Lemar from DoorDashing until it's fixed. Lemar estimated 'I think we're looking at a $500 repair' — unconfirmed figure, left null; no due date given. Raised in #decisions."}
 plans:                                # payment plans: {id, creditor, total, note, installments:
                                      #   [{seq, amount, due, status, calendar_event_id}]}
   - id: liquidibee-nomas-payment-plan
@@ -184,6 +190,8 @@ open_questions:
   - "Station travel $50/wk: Lemar started a weekend job at The Station 8/9 — pay rate not yet known, he'll report it in #personal-finance"
   - "'Gas $10' dropped in #personal-finance 2026-08-10 with a receipt photo (IMG_2080.jpeg) — doesn't match any existing bill line (no recurring gas bill, no due date) and isn't income or cash-on-hand. Lemar said in #decisions 2026-08-10 he wants to 'add in receipts for everything I paid for so that it comes off of the total amount I need to make today' — reads as a request for a broader receipts-offset feature, not a direct answer for this specific $10 item. Left OUT of the ledger; flagging for a follow-up #decisions clarification instead of guessing the feature shape or category."
   - "SoFi checking manual balance ($2.54, reported 2026-08-10): now tracked in `reported_balances` per Lemar's #decisions call — no further open question, just noting for the dashboard's Cash position section."
+  - "Mom's car oil change (reported 2026-08-11): Lemar said 'about $100' due 'by the end of next week' — need an exact dollar figure and ISO due date before this can be ramped and put on the calendar/payment plan as he asked."
+  - "Mom's car repair/breakdown (reported 2026-08-11): Lemar estimated 'I think we're looking at a $500 repair,' and it's blocking DoorDash income until fixed — need a confirmed amount and due date before this becomes a proper bill line."
 ```
 
 ## History
@@ -502,3 +510,46 @@ the two existing entries. Removed the now-resolved DoorDash line from
 ## Sources (cont.)
 - #decisions `C0BBXA96FFV` ts `1786393175.511769`, option reply ts
   `1786393179.543229`, Lemar ✅ — 2026-08-10 PART A follow-through
+
+## Update 2026-08-11 (PART M sweep)
+
+Swept #personal-finance since the last run (4th pass, 2026-08-10, ended at this bot's
+own 🌐 3rd-pass summary post ts `1786393173.886619`). Two new messages, both from Lemar
+today, 2026-08-11:
+
+- **"Okay notice that my mom's car is probably going to need an oil change by the end
+  of next week. It'll be about $100 so can we put that on the payment plan, make sure
+  that it's worked into our daily totals and on the Google event calendar?"**
+  (ts `1786402207.550489`). This reads as a genuine money drop (a bill being reported),
+  but both figures are hedged/unconfirmed — "about $100" and "by the end of next week"
+  is not an ISO date. Per the never-guess-a-number/date rule, added a new bill line
+  `moms-car-oil-change` with `amount: null, due: null, priority: null` rather than
+  inventing a figure or date. Because `due: null`, **no** ramp was computed and **no**
+  calendar event was created (per the skill's CALENDAR section: `day: null`/`due: null`
+  → no event, the gap rides in `open_questions` until Lemar supplies the date). His
+  explicit ask to wire this into "the payment plan," "daily totals," and "the Google
+  event calendar" is exactly what will happen once he confirms the amount and exact
+  date — nothing was executed instruction-style ahead of that confirmation.
+- **"My mom's car just broke down, meaning that I can't DoorDash until it's fixed. I
+  think we're looking at a $500 repair"** (ts `1786413446.708309`) — a second, separate
+  money drop (the routine oil-change need vs. an urgent breakdown are different
+  issues). "I think we're looking at a $500 repair" is an estimate, not a confirmed
+  figure, and no due date was given at all. Added a second new bill line
+  `moms-car-repair-breakdown` with `amount: null, due: null, priority: null` for the
+  same reason — left null rather than guessed. No ramp, no calendar event (no `due`).
+
+Both figures/dates raised together in ONE #decisions parent (bundling both items into a
+single card rather than two separate pings) asking Lemar to confirm: (1) the oil
+change's exact dollar amount and exact due date, and (2) the repair's exact dollar
+amount and due date. No earnings, cash-on-hand, or payment-plan-terms drops this sweep;
+no "mark paid." ROLLOVER not due this run (not the day's last hourly scan).
+
+Dashboard re-rendered: two new "no date yet" bills reflected in the Upcoming Bills
+section's "no date yet" strip, and the two new open questions appended to the Open
+Questions section — no other section changed (no amounts, no calendar events, no
+income). Nothing paid, nothing contacted, no figure or date guessed.
+
+## Sources (cont. 2)
+- #personal-finance `C0BGLEMH99T` ts `1786402207.550489` (mom's car oil change, "about
+  $100," due "end of next week"), ts `1786413446.708309` (mom's car breakdown, "I think
+  ... $500 repair") — 2026-08-11 PART M sweep
