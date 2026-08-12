@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-07-28T12:15:00-04:00
+updated: 2026-08-12T14:30:00-04:00
 domain: legal
 type: task
 status: active
@@ -282,6 +282,37 @@ same Sept 14 proof hearing. This is a business/legal decision only Lemar can mak
 than drafted as a reply, since it needs legal judgment before any number is confirmed
 back to counsel. No Samira action taken beyond flagging; nothing sent.
 
+## Update 2026-08-12T14:30:00-04:00 — Lemar re-engages Siciliano directly, past the Aug 10 window: requesting a motion to vacate + hearing adjournment
+
+The Aug 10 settlement-window deadline passed unanswered (flagged repeatedly by Samira
+and Dawn as the most urgent open item, escalated to Lemar's phone in real time
+2026-08-11). Today Lemar himself — not drafted, staged, or sent by Samira — sent two
+new emails on this matter:
+
+- **2026-08-12 ~2:14pm ET**, to `sjs@sicilianolaw.com` (same thread as the 2026-07-23
+  representation confirmation, `19f8fd0b123baf45`): "circling back," noting he reached
+  out too late to bring Siciliano on before the July 17 default judgment, and that
+  Cuzzie's has "been dealing with the fallout" since. States he wants to retain
+  Siciliano's office specifically to (1) **seek an adjournment of the Sept 14 proof
+  hearing** and (2) **file a motion to vacate the default judgment**. Says the case
+  background, defense timeline, and full insurance file are already assembled on his
+  end, so what's needed from Siciliano is "the filing itself." Asks for a call or,
+  alternatively, a ballpark cost estimate for the adjournment + motion-to-vacate work.
+- **2026-08-12 ~2:30pm ET**, forwarded the same message to `AA@sicilianolaw.com`
+  (Siciliano's office, likely the assistant "AA" referenced only by initials so far).
+
+**Read:** this reopens/advances the Siciliano litigation-defense track (separate from
+the Donte/Greenberg $150K settlement track above, which was tied to a sale-proceeds
+payoff and explicitly expired "the earlier of Aug 10 or the sale closing" — no
+confirmation the sale closed, so that window likely lapsed on the calendar date). A
+motion to vacate, if granted, would reopen the liability question entirely — a
+materially different path than either paying the $150K settlement or proceeding
+straight to the Sept 14 damages-only proof hearing. No response from Siciliano's
+office yet as of this update. Not escalating as a new urgent item since Lemar is
+already the one driving it directly; captured here so the record reflects real
+forward motion on the vault's standing highest-priority legal item rather than
+continued silence. Nothing drafted, sent, or represented by Samira on this exchange.
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
 - gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
@@ -291,7 +322,8 @@ back to counsel. No Samira action taken beyond flagging; nothing sent.
 - gmail: thread `19f8bbc734d83286` (2026-07-22 17:30 ET, default judgment entered +
   Sept 14 proof hearing + Aug 5 response deadline)
 - gmail: thread `19f8fd0b123baf45` (2026-07-23, Siciliano & Associates confirms
-  representation, Lyann to schedule consult)
+  representation, Lyann to schedule consult; 2026-08-12, Lemar's motion-to-vacate/
+  adjournment request)
 - gmail: thread `19f9053fb36e204f` (2026-07-23 18:54 ET, Berkley Select Claims, claim
   no. 57979, attachment not yet reviewed; 2026-07-24, adjuster Tyler Denis schedules
   Monday 7/27 call, Lemar replied directly confirming)
@@ -303,7 +335,7 @@ back to counsel. No Samira action taken beyond flagging; nothing sent.
 - gmail: thread `19fa39f99e758d24` (2026-07-27 8:40-8:54am ET, Donte/Greenberg
   co-counsel negotiation continuing — see `60-Legal/2026-07-25-unverified-nj-counsel-solicitation.md`
   for the prior fraud-risk flag and resolution on this same contact)
-
-## Sources (continued)
 - gmail: thread `19fa8704ab579217` (2026-07-28, Donte Bronaugh fwd of Marco Di
   Stefano's $150,000 settlement figure, open until Aug 10 or closing)
+- gmail: thread `19ff73da59bda63c` (2026-08-12 ~2:30pm ET, Lemar's fwd of the
+  motion-to-vacate/adjournment request to `AA@sicilianolaw.com`)
