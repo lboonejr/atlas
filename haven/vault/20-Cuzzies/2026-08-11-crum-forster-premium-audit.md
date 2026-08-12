@@ -1,6 +1,6 @@
 ---
 created: 2026-08-11T17:50-04:00
-updated: 2026-08-11T18:10-04:00
+updated: 2026-08-12T09:20-04:00
 domain: cuzzies
 type: task
 status: active
@@ -37,6 +37,29 @@ Lemar to pull current payroll/1099 detail directly (Gusto access) rather than Dr
 alone. The reply-only #decisions card (ts `1786482812.188359`) is separate and still open,
 awaiting Lemar's pick.
 
+## Update 2026-08-12 (PART C, run:admin-3x attempt 2)
+Re-ran the staged prompt. Re-checked Drive: the payroll export on file
+(`Cuzzies-...-Payroll-template-2025-04-01-to-2026-02-26.csv`) ends 2026-02-26, before the
+audit period starts (4/4/26) — confirms attempt 1's finding that no payroll/1099/quarterly
+data covering the actual policy term is available via Drive search; that data lives in Gusto,
+which isn't a connected tool here.
+
+Per the safety floor (Gmail Drafts only, never send), saved a reply draft on the original
+thread (Gmail thread `19ff22c4e7226c09`, draft id `r-6414875302012055811`) rather than sending
+anything: it confirms receipt, supplies the two items that ARE safely answerable from the
+company's own records without judgment calls (officer list — Lemar Boone & Joshua Evans, both
+Owners, per the Cuzzie's payroll template; and a one-line operations description — licensed NJ
+adult-use retail + delivery at 2750 Mount Ephraim Ave, Camden, no entity/location changes), and
+asks Jason Kanner for timing flexibility on the remaining payroll/1099/quarterly documents given
+Cuzzie's temporary closure since June 13. Nothing sent — draft is Lemar's to review/send.
+
+Full package assembly (payroll journals + 1099 detail + quarterlies for the exact audit period)
+remains blocked without Gusto-level access; this is the second `run:admin-3x` pass without a
+tool path to close it out. Recommend Lemar either grant a Gusto-connected tool or pull those
+three items directly — reacting ✅ on the #admin prompt to reflect the draft-reply progress made
+this pass, but the underlying document gap stays open in this note.
+
 ## Sources
-- gmail: thread `19ff22c4e7226c09` - Jason Kanner (Crum & Forster) final audit request, 2026-08-11
+- gmail: thread `19ff22c4e7226c09` - Jason Kanner (Crum & Forster) final audit request, 2026-08-11;
+  reply draft `r-6414875302012055811` saved 2026-08-12, not sent
 - slack: #admin ts `1786482807.791379` (staged run:admin-3x prompt) · #decisions ts `1786482812.188359` (reply card)
