@@ -1,11 +1,11 @@
 ---
 created: 2026-08-02T16:00-04:00
-updated: 2026-08-11T09:15:00-04:00
+updated: 2026-08-12T12:04:00-04:00
 domain: cuzzies
 type: log
 status: active
 tags: [samira, investor, jason-klein, cann-dev, broker]
-source: drive
+source: gmail
 ---
 
 # Jason Klein (Cann.Dev) — data room gap found, backfilled onto the index
@@ -106,6 +106,33 @@ thread advisory carried forward (CRC license-transfer terms still live on the th
 himself (or say the word and Samira will hold an internal placeholder on his calendar
 once a specific time is set — no external invitees).
 
+## Update 2026-08-12 (PART E) — buyer's broker asks for a pro forma; due diligence file in progress — entirely self-managed
+Same thread (`19fd21e1a4c94ecd`) picked up new activity this pass, still entirely
+self-managed by Lemar — nothing drafted or sent by Samira:
+- 2026-08-12 11:31 ET (Gmail message `19ff699ee3ba8cd7`) — Jason relayed a new ask from
+  the buyer ("Alex"): **can we get a pro forma for why the business has been doing?
+  What were the margins? All costs, etc.** No reply from Lemar in the thread yet as of
+  this pass.
+- 2026-08-12 11:35 ET (Gmail message `19ff69cf7ac8145f`) — Donte replied (to Jason, cc
+  Lemar): "Yes we're putting together a Due diligence file with that stuff in it along
+  with the deal structure" — signals Donte/the buyer side is compiling the pro forma
+  and deal-structure materials themselves rather than asking Lemar to produce them
+  outright, though the ask to Lemar (via Jason) is still open.
+- The 8/10 three-way-call ask (see prior update) remains unconfirmed — still no day/
+  time from Lemar, so no calendar action taken.
+
+This is a request for specific financial figures (margins, costs, business
+performance) — per the investor guards, Samira represents nothing and drafts nothing
+here: no financial figures, projections, or performance claims are Samira's to state
+on Lemar's behalf, and none were fabricated. Status stays **Negotiating** on the
+index. Sensitive-thread advisory carried forward (financial disclosure + CRC
+license-transfer terms both live on the thread — Lemar to review closely before
+sharing any figures).
+
+**Need from Lemar:** decide what (if anything) to share for the pro forma/margins/cost
+ask directly with Jason/the buyer — this is financial disclosure only Lemar can make;
+and separately, confirm a window for the three-way call if he wants it to happen.
+
 ## Sources
 - gmail: thread `19eda7545ffe62f0` (Lemar → jason@cann.dev, NDA confirmation + license/
   price clarification + data room link, 2026-06-18/19)
@@ -115,7 +142,9 @@ once a specific time is set — no external invitees).
   feedback + offer talk 2026-08-06; license-transferability Q&A 2026-08-09/10, citing
   N.J.A.C. 17:30-9.3(a); buyer store-age question + three-way-call ask 2026-08-10
   11:20am–11:58am ET, messages `19fec42d740ac3ee`, `19fec5cd54672e39`,
-  `19fec62a7f1d0b48`, `19fec65d89012d10`)
+  `19fec62a7f1d0b48`, `19fec65d89012d10`; buyer pro forma/margins ask + Donte's due
+  diligence file reply 2026-08-12 11:31am–11:35am ET, messages `19ff699ee3ba8cd7`,
+  `19ff69cf7ac8145f`)
 - drive: https://drive.google.com/drive/folders/1DHm0MXPAfqvE2ewBXyO4IX-tKAENulSk
   ("Jason Klein — Data Room" folder, created 2026-07-10)
 - haven: `haven/vault/40-Projects/investor-pipeline/index.md` row "Jason Klein
