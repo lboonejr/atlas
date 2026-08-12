@@ -1,1 +1,31 @@
-LS0tCmNyZWF0ZWQ6IDIwMjYtMDgtMTJUMTA6MDAtMDQ6MDAKdXBkYXRlZDogMjAyNi0wOC0xMlQxMDowMC0wNDowMApkb21haW46ICAgICMgVU5SRVNPTFZFRCDigJQgc2V0IG9uZSBvZjogcGVyc29uYWwgfCBjdXp6aWVzIHwgc3RhdGlvbiB8IHByb2plY3QgfCByZWZlcmVuY2UgfCBsZWdhbCB8IGF1dG9tYXRpb24KdHlwZTogdGFzawpzdGF0dXM6IGFjdGl2ZQp0YWdzOiBbZ29vZ2xlLXdvcmtzcGFjZSwgZ29vZ2xlLXZvaWNlLCBzdWJzY3JpcHRpb24sIGN1enppZXNuai1kb21haW5dCnNvdXJjZTogZ21haWwKLS0tCgojIEdvb2dsZSBWb2ljZSBzdWJzY3JpcHRpb24gKGN1enppZXNuai5jb20pIOKAlCBzY2hlZHVsZWQgZm9yIGNhbmNlbGxhdGlvbiBTZXAgMTEKCkF1dG9tYXRlZCBHb29nbGUgV29ya3NwYWNlIG5vdGljZSByZWNlaXZlZCAyMDI2LTA4LTEyOiB0aGUgR29vZ2xlIFZvaWNlClN0YXJ0ZXIgc3Vic2NyaXB0aW9uIG9uIHRoZSBgY3V6emllc25qLmNvbWAgV29ya3NwYWNlIGFjY291bnQKKGB1c2VybmFtZTogbGVtYXJAY3V6emllc25qLmNvbWApIHdhcyAqKnN1c3BlbmRlZCBKdWx5IDEzLCAyMDI2KiogYW5kIGlzCm5vdyAqKnNjaGVkdWxlZCBmb3IgY2FuY2VsbGF0aW9uIG9uL2FmdGVyIFNlcHRlbWJlciAxMSwgMjAyNioqLgoKSWYgbm90IHJlYWN0aXZhdGVkIGJlZm9yZSB0aGVuIChBZG1pbiBjb25zb2xlIOKGkiBCaWxsaW5nID4gU3Vic2NyaXB0aW9ucyksCkdvb2dsZSBzdGF0ZXMgKiphc3NvY2lhdGVkIGRhdGEgYW5kIHBob25lIG51bWJlcnMgd2lsbCBiZSBkZWxldGVkKiogb25jZQpjYW5jZWxsZWQuIE5vLXJlcGx5IGF1dG9tYXRlZCBzZW5kZXIgLSBub3RoaW5nIHRvIGNvcnJlc3BvbmQgb24sIGJ1dCBpdAppcyBhIHJlYWwgZGVjaXNpb24gcG9pbnQ6IHJlYWN0aXZhdGUgKHBhaWQgc3Vic2NyaXB0aW9uIHNwZW5kKSBvciBsZXQgaXQKbGFwc2UgLSByZWxldmFudCBnaXZlbiB0aGUgQ3V6emllJ3MgKENhbWRlbikgd2luZC1kb3duIGNvbnRleHQuIE5vdCBteQpjYWxsIHRvIG1ha2Ug4oCUIExlbWFyIGRlY2lkZXMuCgotICoqQWNjb3VudDoqKiBsZW1hckBjdXp6aWVzbmouY29tIChXb3Jrc3BhY2UgZG9tYWluIGN1enppZXNuai5jb20pCi0gKipTdXNwZW5kZWQ6KiogSnVseSAxMywgMjAyNgotICoqQ2FuY2VsbGF0aW9uIHRhcmdldDoqKiBvbi9hZnRlciBTZXB0ZW1iZXIgMTEsIDIwMjYKLSAqKkFjdGlvbiB0byBrZWVwOioqIHNpZ24gaW4gdG8gR29vZ2xlIEFkbWluIGNvbnNvbGUgKGh0dHBzOi8vYWRtaW4uZ29vZ2xlLmNvbSkg4oaSIEJpbGxpbmcgPiBTdWJzY3JpcHRpb25zIOKGkiByZWFjdGl2YXRlCgojIyBTb3VyY2VzCi0gZ21haWw6IHRocmVhZCBgMTlmZjYxYjVjMzQ1MjA4MmAgKCJZb3VyIEdvb2dsZSBWb2ljZSBzdWJzY3JpcHRpb24gaXMgc2NoZWR1bGVkIGZvciBjYW5jZWxsYXRpb24iLCB3b3Jrc3BhY2Utbm9yZXBseUBnb29nbGUuY29tLCAyMDI2LTA4LTEyKQo=
+---
+created: 2026-08-12T10:00-04:00
+updated: 2026-08-12T10:00-04:00
+domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation
+type: task
+status: active
+tags: [google-workspace, google-voice, subscription, cuzziesnj-domain]
+source: gmail
+---
+
+# Google Voice subscription (cuzziesnj.com) — scheduled for cancellation Sep 11
+
+Automated Google Workspace notice received 2026-08-12: the Google Voice
+Starter subscription on the `cuzziesnj.com` Workspace account
+(`username: lemar@cuzziesnj.com`) was **suspended July 13, 2026** and is
+now **scheduled for cancellation on/after September 11, 2026**.
+
+If not reactivated before then (Admin console → Billing > Subscriptions),
+Google states **associated data and phone numbers will be deleted** once
+cancelled. No-reply automated sender — nothing to correspond on, but it
+is a real decision point: reactivate (paid subscription spend) or let it
+lapse — relevant given the Cuzzie's (Camden) wind-down context. Not my
+call to make — Lemar decides.
+
+- **Account:** lemar@cuzziesnj.com (Workspace domain cuzziesnj.com)
+- **Suspended:** July 13, 2026
+- **Cancellation target:** on/after September 11, 2026
+- **Action to keep:** sign in to Google Admin console (https://admin.google.com) → Billing > Subscriptions → reactivate
+
+## Sources
+- gmail: thread `19ff61b5c3452082` ("Your Google Voice subscription is scheduled for cancellation", workspace-noreply@google.com, 2026-08-12)
