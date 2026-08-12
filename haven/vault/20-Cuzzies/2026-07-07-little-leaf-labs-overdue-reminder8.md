@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T09:15-04:00
-updated: 2026-08-05T08:13:00-04:00
+updated: 2026-08-12T09:15:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -109,6 +109,17 @@ standing position (no payment-date commitment while Cuzzie's status is unresolve
 line taken with Leafly/ADT/Weedmaps/Talaria/Chew & Chill), not re-drafting an unprompted
 reply this pass; logging only. Labeled `Samira/seen` on the new thread.
 
+## Update 2026-08-12 (email loop — Reminder 12, same figures, still "URGENT")
+
+Dhruvi sent a new "Reminder 12" (gmail thread `19ff518397e5b7be`, 2026-08-12 08:30 ET,
+cc Bronnie@littleleaflabs.net) — same two invoices (INV-0000762 $3,175 remaining,
+INV-0000889 $5,156), same **$8,331.00** total, same collections/state-notification
+threat, same "URGENT" framing as Reminders 9-11. No new figure, no new deadline — same
+templated-cadence read as the last four reminders. Consistent with Lemar's standing
+position (no payment-date commitment while Cuzzie's status is unresolved, same line
+taken with Leafly/ADT/Weedmaps/Talaria/Chew & Chill), not re-drafting an unprompted
+reply this pass; logging only. Labeled `Samira/seen` on the new thread.
+
 ## Sources
 - gmail: thread `19f3bff3a2daa78a`, message `19f3bff3a2daa78a`, 2026-07-07
   09:53 ET, from Accounting@littleleaflabs.net (Reminder 8)
@@ -129,4 +140,6 @@ reply this pass; logging only. Labeled `Samira/seen` on the new thread.
 - gmail: thread `19facff1634c2827`, 2026-07-29 08:30 ET ("Reminder 10", URGENT, same
   $8,331.00 total)
 - gmail: thread `19fd10b6f9079aad`, 2026-08-05 08:30 ET ("Reminder 11", URGENT, same
+  $8,331.00 total)
+- gmail: thread `19ff518397e5b7be`, 2026-08-12 08:30 ET ("Reminder 12", URGENT, same
   $8,331.00 total)
