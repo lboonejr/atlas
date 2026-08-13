@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-13T13:30:00-04:00
+updated: 2026-08-13T15:15:00-04:00
 domain: personal
 type: reference
 status: active
@@ -134,7 +134,22 @@ bills:
             Lemar 2026-08-13 — confirmed in the recompute session. Next cycle due
             2026-09-10 accrues normally from 2026-08-13 (recompute baseline)."}
   - {id: moms-expenses, name: "Mom's expenses", amount: 200, cadence: monthly, day: null,
-     track: queue, status: active, note: "billing day unknown — undated, invisible to the queue"}
+     track: queue, status: parked, note: "SUPERSEDED 2026-08-13 by moms-lump-0821 and
+            moms-weekly below, once Lemar gave concrete figures and dates. Parked, not
+            deleted, per field rules."}
+  - {id: moms-lump-0821, name: "Mom — one-time", amount: 110, cadence: once,
+     due: 2026-08-21, track: queue, status: active, calendar_event_id: 99shu89b5clms6up7c7ud8hk98,
+     note: "Added 2026-08-13, reported directly by Lemar."}
+  - {id: moms-weekly, name: "Mom's expenses — weekly", amount: 50, cadence: weekly,
+     weekday: friday, first_due: 2026-08-28, track: queue, status: active,
+     calendar_event_id: vf835hks1jb44drqroo9221of0,
+     note: "Added 2026-08-13: '$50 a week every Friday from then on', starting the Friday
+            after the 8/21 one-time payment. `cadence: weekly` is new to this ledger's
+            schema — accrues the same way a monthly bill does (spread over
+            [cycle_start..due-1], chain starts the day AFTER each due date so cycles
+            never gap or overlap), just on a 7-day period instead of a calendar month.
+            No end date given — chains for as long as daily_targets projects forward,
+            same as every other recurring line."}
   - {id: tidal, name: Tidal, amount: 14.92, cadence: monthly, day: null,
      track: queue, status: active, note: "billing day unknown — undated, invisible to the queue"}
   - {id: patreon, name: Patreon, amount: 25, cadence: monthly, day: 27,
@@ -193,6 +208,21 @@ bills:
      note: "reported in #personal-finance 2026-08-09. Ramped: full $50 on 2026-08-10.
             Lemar 8/9: likely becoming a recurring weekly expense (new weekend job at
             The Station) — rate TBD, he'll post it in #personal-finance."}
+  - {id: tow-truck-repay, name: "Tow truck advance repayment", amount: 500, cadence: once,
+     due: 2026-09-15, track: queue, status: active, calendar_event_id: 160350dborpf6c2cllcmbkr07o,
+     note: "Added 2026-08-13. Lemar borrowed $500 from the car-purchase fund to cover the
+            tow truck when the car broke down; this repays that fund. Car is currently
+            down — Lemar is hoping it's fixed and back on the road tomorrow (8/14) but
+            isn't certain yet."}
+  - {id: car-repair-payment, name: "Car repair payment", amount: 600, cadence: once,
+     due: 2026-09-30, track: queue, status: active, calendar_event_id: ef8fdfuovosp9imro92oj5ifn0,
+     note: "Added 2026-08-13. Lemar said 'Sept 31st', which doesn't exist (September has
+            30 days) — interpreted as 2026-09-30, the last day of the month. FLAG if a
+            different date was meant (e.g. Oct 1). Overlaps conceptually with the
+            'own-car-running' goal's ≈$2,000 repairs estimate below, but Lemar named it
+            as a separate near-term dated target rather than folding it into that
+            undated goal, so it's tracked here as its own line — worth reconciling once
+            the car goal gets a target_date."}
 plans:
   - id: liquidibee-nomas-payment-plan
     creditor: "Nomas Recovery LLC (Amanda Ortiz, collections for LIQUIDIBEE 1 LLC)"
@@ -209,27 +239,13 @@ plans:
       - {seq: 2, amount: 125, due: 2026-08-23, status: pending, calendar_event_id: gt4knt3i2m6lpjhlrjf8n2jqn8}
       - {seq: 3, amount: 125, due: 2026-08-30, status: pending, calendar_event_id: locnmilchabhgq2o0kd8slf7r4}
       - {seq: 4, amount: 125, due: 2026-09-06, status: pending, calendar_event_id: ekpni2dt25f0fe5tjh51sbjj64}
-daily_targets:                       # !!! STALE — DO NOT ACT ON THESE NUMBERS !!!
-                                     # Computed against today = 2026-08-10. The real
-                                     # date is 2026-08-13 (verified). The 8/10, 8/11 and
-                                     # 8/12 entries have ELAPSED UNFUNDED ($296.69 of
-                                     # set-aside + $90 of gas reserve), and their
-                                     # calendar events have already fired. Wispr Flow
-                                     # (8/10), cleaning supplies (8/11) and comedy
-                                     # tickets (8/12) are PAST DUE unless Lemar paid
-                                     # them. A full recompute against 2026-08-13 is the
-                                     # next action — see the Update below and
-                                     # open_questions. Nothing here was corrected
-                                     # automatically: how to treat three elapsed
-                                     # unfunded days is Lemar's call, not a guess.
-                                     # THE DAILY ACCRUAL (rebuilt 2026-08-10). Every
-                                     # dated line drips a daily amount; target = the sum
-                                     # of that day's drips = what today costs. `funded` is
-                                     # what the day's logged income actually covered;
-                                     # `shortfall` drags to tomorrow via ROLLOVER.
-                                     # Computed 2026-08-10 from a zero start, so the first
-                                     # days run hot (catch-up) and decay toward steady
-                                     # state as the short-fuse lines clear.
+daily_targets:                       # Revised 2026-08-13 (second revision,
+                                     # same day): Lemar pushed 8/13's target to
+                                     # 8/14 (car down, no income possible) and
+                                     # added mom's $110 one-time + $50/wk. See
+                                     # Update 2026-08-13 (SECOND REVISION) below.
+                                     # 8/10-8/13 entries are closed history, never
+                                     # rewritten -- see each day's `resolution` key.
   "2026-08-10":
     operating_reserve: 30.00
     target: 136.96
@@ -239,18 +255,23 @@ daily_targets:                       # !!! STALE — DO NOT ACT ON THESE NUMBERS
     funded: 0
     shortfall: 136.96
     calendar_event_id: kli8jm1vlal3ntffr2lqdkpmuk
+    resolution: "CLOSED 2026-08-13 — this day already fired with nothing funded (income
+                 log was empty). wispr-flow and cleaning-supplies were paid outside the
+                 system that weekend (flipped to paid below); every other contribution's
+                 dollar obligation is superseded by the fresh 2026-08-13 recompute, not
+                 added a second time — see Update 2026-08-13 (RECOMPUTE)."
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: cleaning-supplies, amount: 30.00, funded: 0, status: pending}
-      - {line_id: comedy-show-tickets, amount: 25.14, funded: 0, status: pending}
-      - {line_id: liquidibee-1, amount: 20.84, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: metrc-fee, amount: 10.00, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.48, funded: 0, status: pending}
-      - {line_id: station-travel, amount: 10.00, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 15.00, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.00, funded: 0, status: rolled}
+      - {line_id: cleaning-supplies, amount: 30.00, funded: 0, status: paid}
+      - {line_id: comedy-show-tickets, amount: 25.14, funded: 0, status: rolled}
+      - {line_id: liquidibee-1, amount: 20.84, funded: 0, status: rolled}
+      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: rolled}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: rolled}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: rolled}
+      - {line_id: metrc-fee, amount: 10.00, funded: 0, status: rolled}
+      - {line_id: patreon, amount: 1.48, funded: 0, status: rolled}
+      - {line_id: station-travel, amount: 10.00, funded: 0, status: rolled}
+      - {line_id: wispr-flow, amount: 15.00, funded: 0, status: paid}
   "2026-08-11":
     operating_reserve: 30.00
     target: 92.44
@@ -260,17 +281,20 @@ daily_targets:                       # !!! STALE — DO NOT ACT ON THESE NUMBERS
     funded: 0
     shortfall: 92.44
     calendar_event_id: vj19k5hjaq1krci59o1flcbj78
+    resolution: "CLOSED 2026-08-13 — already fired with nothing funded. Superseded by the
+                 fresh 2026-08-13 recompute, not added a second time — see Update
+                 2026-08-13 (RECOMPUTE)."
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: comedy-show-tickets, amount: 25.14, funded: 0, status: pending}
-      - {line_id: liquidibee-1, amount: 20.84, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: metrc-fee, amount: 10.00, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
-      - {line_id: station-travel, amount: 10.00, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.00, funded: 0, status: rolled}
+      - {line_id: comedy-show-tickets, amount: 25.14, funded: 0, status: rolled}
+      - {line_id: liquidibee-1, amount: 20.84, funded: 0, status: rolled}
+      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: rolled}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: rolled}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: rolled}
+      - {line_id: metrc-fee, amount: 10.00, funded: 0, status: rolled}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: rolled}
+      - {line_id: station-travel, amount: 10.00, funded: 0, status: rolled}
+      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: rolled}
   "2026-08-12":
     operating_reserve: 30.00
     target: 67.29
@@ -280,384 +304,763 @@ daily_targets:                       # !!! STALE — DO NOT ACT ON THESE NUMBERS
     funded: 0
     shortfall: 67.29
     calendar_event_id: hknnvpq91j5192c4ljvdskf9s4
+    resolution: "CLOSED 2026-08-13 — already fired with nothing funded. comedy-show-tickets
+                 became due today and was NOT paid (Lemar confirmed 2026-08-13); it is
+                 folded whole into the 2026-08-13 recompute rather than continuing to
+                 drip. Every other contribution is superseded by the fresh recompute, not
+                 added a second time — see Update 2026-08-13 (RECOMPUTE)."
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-1, amount: 20.83, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: metrc-fee, amount: 10.00, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
-      - {line_id: station-travel, amount: 10.00, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.00, funded: 0, status: rolled}
+      - {line_id: liquidibee-1, amount: 20.83, funded: 0, status: rolled}
+      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: rolled}
+      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: rolled}
+      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: rolled}
+      - {line_id: metrc-fee, amount: 10.00, funded: 0, status: rolled}
+      - {line_id: patreon, amount: 1.47, funded: 0, status: rolled}
+      - {line_id: station-travel, amount: 10.00, funded: 0, status: rolled}
+      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: rolled}
   "2026-08-13":
     operating_reserve: 30.00
-    target: 67.29
-    total_claim: 97.29
+    target: 216.56
+    total_claim: 246.56
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 67.29
+    shortfall: 216.56
     calendar_event_id: jho94o6sql4qjt6fdgjl0ej2oc
+    resolution: "CLOSED same day, 2026-08-13 — Lemar proactively pushed today's target to
+                 tomorrow: the car is down and he can't earn without it, so nothing could
+                 be funded today regardless of the schedule. This is the same rollover
+                 mechanic as any other day's shortfall, just invoked directly by Lemar
+                 instead of waiting for the automatic end-of-day scan. Every line below is
+                 superseded by the fresh 2026-08-14 recompute, not added a second time —
+                 see Update 2026-08-13 (SECOND REVISION). Contingent on the car actually
+                 being back tomorrow; if not, this may need pushing again."
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-1, amount: 20.83, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: metrc-fee, amount: 10.00, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
-      - {line_id: station-travel, amount: 10.00, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.50, funded: 0, status: rolled}
+      - {line_id: claude, amount: 4.55, funded: 0, status: rolled}
+      - {line_id: comedy-show-tickets, amount: 50.28, funded: 0, status: rolled}
+      - {line_id: liquidibee-1, amount: 41.67, funded: 0, status: rolled}
+      - {line_id: liquidibee-2, amount: 12.50, funded: 0, status: rolled}
+      - {line_id: liquidibee-3, amount: 7.36, funded: 0, status: rolled}
+      - {line_id: liquidibee-4, amount: 5.21, funded: 0, status: rolled}
+      - {line_id: metrc-fee, amount: 40.00, funded: 0, status: rolled}
+      - {line_id: patreon, amount: 1.79, funded: 0, status: rolled}
+      - {line_id: station-travel, amount: 25.00, funded: 0, status: rolled}
+      - {line_id: tow-truck-repay, amount: 15.16, funded: 0, status: rolled}
+      - {line_id: wispr-flow, amount: 0.54, funded: 0, status: rolled}
   "2026-08-14":
     operating_reserve: 30.00
-    target: 57.29
-    total_claim: 87.29
+    target: 284.89
+    total_claim: 314.89
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 57.29
+    shortfall: 284.89
     calendar_event_id: d8ed3o469dh4r5j0c2qo73m6cs
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-1, amount: 20.83, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
-      - {line_id: station-travel, amount: 10.00, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.77, funded: 0, status: pending}
+      - {line_id: comedy-show-tickets, amount: 50.28, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 62.50, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 13.89, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 7.82, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 40.00, funded: 0, status: pending}
+      - {line_id: moms-lump-0821, amount: 15.72, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.58, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.93, funded: 0, status: pending}
+      - {line_id: station-travel, amount: 50.00, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-15":
     operating_reserve: 30.00
-    target: 47.29
-    total_claim: 77.29
+    target: 144.61
+    total_claim: 174.61
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 47.29
+    shortfall: 144.61
     calendar_event_id: k9sog0mcpmisnn4p2hicernagk
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-1, amount: 20.83, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.77, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 62.50, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 13.89, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 7.82, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: moms-lump-0821, amount: 15.72, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.58, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.93, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-16":
     operating_reserve: 30.00
-    target: 26.46
-    total_claim: 56.46
+    target: 82.10
+    total_claim: 112.10
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 26.46
+    shortfall: 82.10
     calendar_event_id: i5aqp4u51gvj79113o7ls4ajqk
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 9.62, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.77, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 13.89, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 7.82, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: moms-lump-0821, amount: 15.72, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.93, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-17":
     operating_reserve: 30.00
-    target: 26.45
-    total_claim: 56.45
+    target: 82.09
+    total_claim: 112.09
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 26.45
-    calendar_event_id: null
+    shortfall: 82.09
+    calendar_event_id: 2f3r9682t2emqdu76snes086b8
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 9.61, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.77, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 13.89, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 7.82, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: moms-lump-0821, amount: 15.71, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.93, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-18":
     operating_reserve: 30.00
-    target: 26.45
-    total_claim: 56.45
+    target: 82.06
+    total_claim: 112.06
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 26.45
-    calendar_event_id: null
+    shortfall: 82.06
+    calendar_event_id: i2k3vo0025kbt3lbseppnf690s
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 9.61, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 13.89, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 7.81, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: moms-lump-0821, amount: 15.71, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.92, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-19":
     operating_reserve: 30.00
-    target: 26.45
-    total_claim: 56.45
+    target: 82.06
+    total_claim: 112.06
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 26.45
-    calendar_event_id: null
+    shortfall: 82.06
+    calendar_event_id: j6imqfltarucop954b1dkdvkq4
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 9.61, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 13.89, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 7.81, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: moms-lump-0821, amount: 15.71, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.92, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-20":
     operating_reserve: 30.00
-    target: 26.45
-    total_claim: 56.45
+    target: 82.06
+    total_claim: 112.06
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 26.45
+    shortfall: 82.06
     calendar_event_id: null
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 9.61, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 13.89, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 7.81, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: moms-lump-0821, amount: 15.71, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.92, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-21":
     operating_reserve: 30.00
-    target: 26.45
-    total_claim: 56.45
+    target: 66.35
+    total_claim: 96.35
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 26.45
+    shortfall: 66.35
     calendar_event_id: null
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 9.61, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 13.89, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 7.81, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.92, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-22":
     operating_reserve: 30.00
-    target: 26.45
-    total_claim: 56.45
+    target: 66.34
+    total_claim: 96.34
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 26.45
+    shortfall: 66.34
     calendar_event_id: null
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 9.61, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.49, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 13.88, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 7.81, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.92, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-23":
     operating_reserve: 30.00
-    target: 16.83
-    total_claim: 46.83
+    target: 52.46
+    total_claim: 82.46
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.83
+    shortfall: 52.46
     calendar_event_id: null
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 7.81, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.92, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-24":
     operating_reserve: 30.00
-    target: 16.83
-    total_claim: 46.83
+    target: 52.46
+    total_claim: 82.46
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.83
+    shortfall: 52.46
     calendar_event_id: null
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 7.81, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.92, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-25":
     operating_reserve: 30.00
-    target: 16.83
-    total_claim: 46.83
+    target: 52.45
+    total_claim: 82.45
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.83
+    shortfall: 52.45
     calendar_event_id: null
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 7.81, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.43, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.92, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-26":
     operating_reserve: 30.00
-    target: 16.83
-    total_claim: 46.83
+    target: 52.45
+    total_claim: 82.45
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.83
+    shortfall: 52.45
     calendar_event_id: null
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: patreon, amount: 1.47, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 7.81, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.43, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
+      - {line_id: patreon, amount: 1.92, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-27":
     operating_reserve: 30.00
-    target: 15.36
-    total_claim: 45.36
+    target: 50.53
+    total_claim: 80.53
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 15.36
+    shortfall: 50.53
     calendar_event_id: null
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 7.81, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.43, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-28":
     operating_reserve: 30.00
-    target: 15.36
-    total_claim: 45.36
+    target: 46.96
+    total_claim: 76.96
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 15.36
+    shortfall: 46.96
     calendar_event_id: null
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 7.81, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.43, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-29":
     operating_reserve: 30.00
-    target: 15.36
-    total_claim: 45.36
+    target: 55.29
+    total_claim: 85.29
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 15.36
+    shortfall: 55.29
     calendar_event_id: null
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 6.25, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 7.81, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.43, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.63, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.55, funded: 0, status: pending}
   "2026-08-30":
     operating_reserve: 30.00
-    target: 9.11
-    total_claim: 39.11
+    target: 47.47
+    total_claim: 77.47
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 9.11
+    shortfall: 47.47
     calendar_event_id: null
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.43, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.62, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.55, funded: 0, status: pending}
   "2026-08-31":
     operating_reserve: 30.00
-    target: 9.11
-    total_claim: 39.11
+    target: 47.46
+    total_claim: 77.46
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 9.11
+    shortfall: 47.46
     calendar_event_id: null
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.43, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.62, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.55, funded: 0, status: pending}
   "2026-09-01":
     operating_reserve: 30.00
-    target: 9.11
-    total_claim: 39.11
+    target: 47.46
+    total_claim: 77.46
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 9.11
+    shortfall: 47.46
     calendar_event_id: null
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.43, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.62, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.55, funded: 0, status: pending}
   "2026-09-02":
     operating_reserve: 30.00
-    target: 9.11
-    total_claim: 39.11
+    target: 47.46
+    total_claim: 77.46
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 9.11
+    shortfall: 47.46
     calendar_event_id: null
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.43, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.62, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.55, funded: 0, status: pending}
   "2026-09-03":
     operating_reserve: 30.00
-    target: 9.11
-    total_claim: 39.11
+    target: 47.46
+    total_claim: 77.46
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 9.11
+    shortfall: 47.46
     calendar_event_id: null
     contributions:
-      - {line_id: claude, amount: 4.00, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: claude, amount: 4.76, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.43, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.62, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.55, funded: 0, status: pending}
   "2026-09-04":
     operating_reserve: 30.00
-    target: 5.11
-    total_claim: 35.11
+    target: 34.37
+    total_claim: 64.37
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.11
+    shortfall: 34.37
     calendar_event_id: null
     contributions:
-      - {line_id: liquidibee-4, amount: 4.63, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.43, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.62, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.55, funded: 0, status: pending}
   "2026-09-05":
     operating_reserve: 30.00
-    target: 5.10
-    total_claim: 35.10
+    target: 42.71
+    total_claim: 72.71
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.10
+    shortfall: 42.71
     calendar_event_id: null
     contributions:
-      - {line_id: liquidibee-4, amount: 4.62, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 5.43, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.62, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.55, funded: 0, status: pending}
   "2026-09-06":
     operating_reserve: 30.00
-    target: 0.48
-    total_claim: 30.48
+    target: 37.28
+    total_claim: 67.28
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 0.48
+    shortfall: 37.28
     calendar_event_id: null
     contributions:
-      - {line_id: wispr-flow, amount: 0.48, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.62, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.55, funded: 0, status: pending}
+  "2026-09-07":
+    operating_reserve: 30.00
+    target: 37.27
+    total_claim: 67.27
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 37.27
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.62, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.55, funded: 0, status: pending}
+  "2026-09-08":
+    operating_reserve: 30.00
+    target: 37.27
+    total_claim: 67.27
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 37.27
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.62, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.55, funded: 0, status: pending}
+  "2026-09-09":
+    operating_reserve: 30.00
+    target: 37.27
+    total_claim: 67.27
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 37.27
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.62, funded: 0, status: pending}
+      - {line_id: wispr-flow, amount: 0.55, funded: 0, status: pending}
+  "2026-09-10":
+    operating_reserve: 30.00
+    target: 36.72
+    total_claim: 66.72
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 36.72
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.62, funded: 0, status: pending}
+  "2026-09-11":
+    operating_reserve: 30.00
+    target: 28.38
+    total_claim: 58.38
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 28.38
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.62, funded: 0, status: pending}
+  "2026-09-12":
+    operating_reserve: 30.00
+    target: 36.72
+    total_claim: 66.72
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 36.72
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.62, funded: 0, status: pending}
+  "2026-09-13":
+    operating_reserve: 30.00
+    target: 36.72
+    total_claim: 66.72
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 36.72
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.62, funded: 0, status: pending}
+  "2026-09-14":
+    operating_reserve: 30.00
+    target: 36.71
+    total_claim: 66.71
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 36.71
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+      - {line_id: tow-truck-repay, amount: 15.62, funded: 0, status: pending}
+  "2026-09-15":
+    operating_reserve: 30.00
+    target: 21.09
+    total_claim: 51.09
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 21.09
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+  "2026-09-16":
+    operating_reserve: 30.00
+    target: 21.09
+    total_claim: 51.09
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 21.09
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+  "2026-09-17":
+    operating_reserve: 30.00
+    target: 21.09
+    total_claim: 51.09
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 21.09
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+  "2026-09-18":
+    operating_reserve: 30.00
+    target: 12.76
+    total_claim: 42.76
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 12.76
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+  "2026-09-19":
+    operating_reserve: 30.00
+    target: 21.10
+    total_claim: 51.10
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 21.10
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
+  "2026-09-20":
+    operating_reserve: 30.00
+    target: 21.10
+    total_claim: 51.10
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 21.10
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
+  "2026-09-21":
+    operating_reserve: 30.00
+    target: 21.09
+    total_claim: 51.09
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 21.09
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+  "2026-09-22":
+    operating_reserve: 30.00
+    target: 21.09
+    total_claim: 51.09
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 21.09
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+  "2026-09-23":
+    operating_reserve: 30.00
+    target: 21.09
+    total_claim: 51.09
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 21.09
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+  "2026-09-24":
+    operating_reserve: 30.00
+    target: 21.09
+    total_claim: 51.09
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 21.09
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+  "2026-09-25":
+    operating_reserve: 30.00
+    target: 12.76
+    total_claim: 42.76
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 12.76
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+  "2026-09-26":
+    operating_reserve: 30.00
+    target: 21.10
+    total_claim: 51.10
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 21.10
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
+  "2026-09-27":
+    operating_reserve: 30.00
+    target: 21.10
+    total_claim: 51.10
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 21.10
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
+  "2026-09-28":
+    operating_reserve: 30.00
+    target: 21.09
+    total_claim: 51.09
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 21.09
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
+  "2026-09-29":
+    operating_reserve: 30.00
+    target: 21.09
+    total_claim: 51.09
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 21.09
+    calendar_event_id: null
+    contributions:
+      - {line_id: car-repair-payment, amount: 12.76, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
 goals:                               # a goal is a bill Lemar owes himself: it needs a
                                      # target_date to enter the queue (locked 2026-08-10)
   - {id: own-car-running, name: "Get the car running", pocket: set-aside,
@@ -672,16 +1075,15 @@ goals:                               # a goal is a bill Lemar owes himself: it n
             income' framing died with the waterfall on 2026-08-10; under due-date order
             savings is funded by naming an amount and a date like anything else."}
 open_questions:
-  - "**RECOMPUTE REQUIRED (blocking).** The whole accrual was computed against today = 2026-08-10; the real date is 2026-08-13. Days 8/10-8/12 elapsed unfunded. Before anything else: (a) did Lemar pay Wispr Flow $15 (due 8/10), cleaning supplies $30 (8/11), comedy tickets $50.28 (8/12)? (b) should the $296.69 of unfunded set-aside roll forward onto today — which pushes today's number to roughly $460 — or should those three lines be pulled out as plainly overdue and the schedule restarted clean from 8/13? Then rebuild daily_targets, the 8/13-8/19 calendar events, and the dashboard. Do NOT roll it forward silently; the rollover rule assumes a day ends, not that three vanish at once."
   # -- the new #1 class of defect: undated queue lines are invisible --
-  - "UNDATED (invisible to the queue — no event, no ramp, will never ring): student loans $500/mo · mom's $200/mo · Tidal $14.92/mo · Cuzzie's phone + Workspace ~$550/mo · Cash App payback $187.22 · gym debt $75 · water pump $184.79 · T-Mobile payment 2 (amount also unknown). Eight lines, ~$1,262/mo + $447 one-time, all silently outside the system until each gets a date."
+  - "UNDATED (invisible to the queue — no event, no ramp, will never ring): student loans $500/mo · Tidal $14.92/mo · Cuzzie's phone + Workspace ~$550/mo · Cash App payback $187.22 · gym debt $75 · water pump $184.79 · T-Mobile payment 2 (amount also unknown). Seven lines, ~$1,065/mo + $447 one-time, all silently outside the system until each gets a date. (Mom's expenses is no longer on this list — dated 2026-08-13, see moms-lump-0821 and moms-weekly.)"
   - "Car goal: what date do you want the car running by? Without it the goal generates nothing."
   - "Savings goal: how much, by when? Both fields are null."
   - "Cuzzie's phone + Workspace $550/mo is Lemar's estimate — actual total unconfirmed, and it is the largest line in the ledger."
   - "Confirm the 7/25 $1,000 allocation landed: $500 car payment, $200 tires, $50 mom"
   - "T-Mobile: confirm payment 1 ($265, was due 8/3) went through; payment 2 amount/date still needed"
   - "Water pump $184.79: inside or on top of the car goal's $2,000 repairs figure?"
-  - "Comedy tickets $50.28 were called 'low priority' 8/9 — due-date order has no low tier. Park it or leave it queued on 8/12?"
+  - "RESOLVED 2026-08-13 (recompute session): comedy tickets $50.28 confirmed unpaid, folded whole into the 2026-08-13 daily accrual per Lemar's Option A choice — see Update 2026-08-13 (RECOMPUTE). The 'low priority' framing from 8/9 no longer applies; it is simply the most-overdue line in the queue."
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
   - "No balance has been reported for either pocket since the Era connector was retired 2026-08-10 — say 'Spending has $X' / 'Set-Aside has $X' whenever convenient; both currently render 'not reported'"
   - "Station travel $50/wk: Lemar started a weekend job at The Station 8/9 — pay rate not yet known, he'll report it in #personal-finance"
@@ -697,6 +1099,125 @@ Everything before 2026-08-05 lives in
 budget from the first rough sketch through the (now retired) Option 3 allocation
 decision, the six-pocket mapping, and the calendar reminders. That note is closed; this
 ledger carries the live state forward.
+
+## Update 2026-08-13 (SECOND REVISION — 8/13's target pushed to 8/14; mom's payments added)
+
+**The car is still down as of this revision** — Lemar isn't certain it'll be fixed by
+tomorrow (8/14) either, just hopeful. Given that, he asked to push today's (8/13) target
+to tomorrow rather than let it sit there unfundable: he can't DoorDash without the car,
+so nothing was going to get earned today regardless of what the schedule said.
+
+**Mechanically, this is the ROLLOVER rule invoked directly by Lemar instead of waiting
+for the automatic end-of-day scan.** 8/13 closes as history exactly like 8/10-8/12 did
+in the recompute above — target/total_claim preserved as the historical record, every
+contribution flipped to `status: rolled`, nothing rewritten. Rather than literally
+duplicating each of 8/13's line items onto 8/14 (which risks double-listing a line that
+already has its own natural 8/14 drip), every dated line's window was rebuilt fresh with
+`today = 2026-08-14` — the same technique as the original recompute, scaled down from
+three days to one. Comedy tickets and METRC (due 8/12 and 8/14 respectively, both on or
+before the new baseline) land in full on 8/14 per the accrual rule itself.
+
+**Two new obligations, both reported by Lemar in this same conversation:**
+- **$110 to his mom by 2026-08-21** — new one-time bill `moms-lump-0821`.
+- **$50/week to his mom, every Friday starting 2026-08-28** (the Friday after the above)
+  — new bill `moms-weekly`, `cadence: weekly`. This is a new cadence type for this
+  ledger; it accrues the same way a monthly bill does (spread over
+  `[cycle_start..due-1]`, next cycle starts the day AFTER each due date so cycles never
+  gap or overlap — same rule that already governs Wispr Flow's monthly chain), just on
+  a 7-day period. The old undated `moms-expenses` ($200/mo estimate) is superseded and
+  parked — this is Lemar giving it real structure, not a separate obligation on top.
+
+**Today's effective number (now 8/14) is $314.89** — $30.00 gas + $284.89 set-aside,
+covering everything that would have been due today (8/13, rolled) plus 8/14's own
+lines plus both new mom's payments starting to accrue. The 7-day rolling calendar
+events were updated a third time; 8/13's own event now reads $0/rolled rather than being
+deleted, since the day itself still exists on the calendar. Two new due-date reminder
+events were created for the mom's lines (`moms-lump-0821` due 8/21, and the first
+`moms-weekly` cycle due 8/28). Dashboard re-rendered again.
+
+Nothing paid, nothing contacted — this records what Lemar reported and asked for.
+
+## Update 2026-08-13 (REVISION — two new car obligations added same day)
+
+**The car is currently down.** Lemar is hoping it's fixed and back on the road tomorrow
+(8/14) but isn't certain yet — logged for context, no ledger field tracks car status
+directly.
+
+Two new one-time bills, both added to the queue and accrued from today like everything
+else:
+- **`tow-truck-repay`, $500, due 2026-09-15.** Lemar borrowed $500 from the car-purchase
+  fund to cover the tow truck; this repays that fund.
+- **`car-repair-payment`, $600, due 2026-09-30.** Lemar said "Sept 31st" — September has
+  30 days, so this was interpreted as the last day of the month. **Flag if a different
+  date was meant** (e.g. Oct 1). This overlaps conceptually with the `own-car-running`
+  goal's ≈$2,000 repairs estimate (still `target_date: null`, so not in the queue) —
+  left as two separate lines rather than merged, since Lemar named this one with its own
+  near-term date; worth reconciling once the goal itself gets a target date.
+
+Both extend `daily_targets` out to **2026-09-29** (car-repair-payment's window) — 22 days
+further than the 2026-09-06 endpoint the recompute below had just established. Every day
+from 8/13 forward was rebuilt again to include these two new drips; the 8/10-8/12
+historical entries and the recompute methodology below are unaffected.
+
+**Today's number moves from $218.90 to $246.56** ($30.00 gas + $216.56 set-aside; the
+two new lines add $15.16 + $12.50 = $27.66). The rolling 7-day calendar events (8/13-
+8/19) were updated again with the new totals, and two new due-date reminder events were
+created for the two bills themselves (both popups, per the calendar's standard). The
+dashboard was re-rendered a second time.
+
+Nothing paid, nothing contacted — this records what Lemar reported.
+
+## Update 2026-08-13 (RECOMPUTE — daily_targets rebuilt against the real date)
+
+**This closes the blocking recompute from the v4 handoff doc and Update 2026-08-10
+(DATE ERROR) below.** Lemar answered both open questions in this recompute session:
+
+1. Of the three past-due bills, he paid **Wispr Flow ($15, was due 8/10)** and
+   **cleaning supplies ($30, was due 8/11)** outside the system over the weekend.
+   **Comedy show tickets ($50.28, was due 8/12) were NOT paid** — still owed.
+2. For the three elapsed unfunded days: **Option A — roll it forward.** The unfunded
+   set-aside drags onto today rather than being pulled out and tracked separately.
+
+**Bills block:** wispr-flow's 8/10 cycle and cleaning-supplies both flip to reflect the
+payment (cleaning-supplies fully `status: paid` and retired from the queue; wispr-flow's
+`status` stays `active` since it's monthly and recurs — only the paid cycle is done, the
+next cycle due 9/10 continues). comedy-show-tickets stays `active`, flagged `overdue: true`.
+
+**How Option A was actually applied — mechanically equivalent to a rollover, not a
+second lump on top of one.** The naive reading of "roll the $296.69 forward" would sum
+the old 8/10-8/12 targets and add them on top of a freshly recomputed 8/13. That
+double-counts: the total dollars owed on every still-future line (Claude, METRC, Patreon,
+Station travel, all four Liquidibee installments) hasn't changed, only the number of days
+left to spread it over has shrunk by three. So each line's accrual window was rebuilt
+fresh from `today = 2026-08-13` against its **true remaining balance** (nothing was ever
+funded 8/10-8/12 — the income log is empty, so nothing was actually lost, only the
+schedule was wrong). This produces the identical dollar result rolling forward would
+have, without compounding rounding error across three mechanical rollover passes. Comedy
+tickets — the one bill whose due date has now actually passed unpaid — needed no special
+rollover math at all: the ACCRUAL rule already says a line "due on or before today lands
+fully today," so its full $50.28 simply lands on 8/13 as a single-day contribution. The
+old 8/10-8/12 `daily_targets` entries are kept as closed history (never rewritten — see
+each day's new `resolution` key), not deleted or recomputed after the fact.
+
+**The gas operating reserve was deliberately NOT rolled forward.** The doc's "$90 of gas
+reserve elapsed unfunded" was flagged as a fact, not a debt to recoup — gas is a same-day
+allowance for actual driving, not an accrual with a carried balance (see OPERATING
+RESERVE in the skill). Each day from 8/13 forward still gets its own flat $30 reserve.
+Flagging this explicitly rather than silently deciding it, per the same rule that governs
+every other unknown here.
+
+**The result: today (2026-08-13) costs $218.90 — $30.00 gas + $188.90 set-aside**,
+materially below the doc's rough $460 estimate, because (a) two of the three past-due
+bills are now settled and (b) a from-scratch recompute doesn't stack a rollover lump on
+top of a fresh calculation of the same money. `daily_targets` rebuilt through 2026-09-06
+(the last Liquidibee/Nomas installment). The rolling 7-day aggregate calendar events for
+8/13-8/19 were updated/created and their ids written back (8/13-8/16 existing events
+updated in place; 8/17-8/19 newly created — 8/10-8/12's events already fired and were not
+retroactively cancelled). The Money Hub dashboard was re-rendered dropping the stale-date
+banner (see below).
+
+Nothing paid, nothing contacted — Wispr Flow and cleaning supplies were paid by Lemar
+himself outside this system; this session only recorded that.
 
 ## Update 2026-08-10 (DATE ERROR — schedule computed against the wrong day)
 
