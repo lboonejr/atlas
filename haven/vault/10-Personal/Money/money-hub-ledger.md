@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-13T16:20:00-04:00
+updated: 2026-08-13T17:00:00-04:00
 domain: personal
 type: reference
 status: active
@@ -123,6 +123,24 @@ bills:
             2026-07-22), so it stays in this ledger — but it is the single largest line
             here and it is BOTH undated and unverified. Its reminder, once dated,
             belongs on the Cuzzie's (Owners) calendar per the business boundary."}
+  - {id: cuzzies-google-voice, name: "Cuzzie's Google Voice (reseller billing lapse)",
+     amount: 38, cadence: once, due: 2026-08-18, track: queue, status: active,
+     business_origin: true, calendar_event_id: e0cc8cm48q6p7j9h14h61tdp5o,
+     note: "Added 2026-08-13. The cuzziesnj.com Workspace reseller relationship lapsed
+            (see haven/vault/00-Inbox/2026-08-12-google-voice-subscription-cancellation.md,
+            customer ID C00hppi2w) — this and cuzzies-google-workspace below are the
+            direct-billing catch-up charges Lemar found to fix it. Distinct from the
+            existing cuzzies-phone-workspace $550/mo estimate above, not a replacement
+            for it. Business-origin, carried personally per the same 2026-07-22 call —
+            accrues here, but its due-date reminder lives on the Cuzzie's (Owners)
+            calendar, not the personal one, per the business boundary."}
+  - {id: cuzzies-google-workspace, name: "Cuzzie's Google Workspace (direct billing setup)",
+     amount: 85, cadence: once, due: 2026-08-19, track: queue, status: active,
+     business_origin: true, calendar_event_id: u45glcg7992eg9q79nnb6brlco,
+     note: "Added 2026-08-13. Same reseller billing lapse as cuzzies-google-voice above —
+            all Workspace services for cuzziesnj.com (including lemar@cuzziesnj.com email
+            itself) suspend 2026-08-20 without this. Business-origin, carried personally;
+            due-date reminder lives on the Cuzzie's (Owners) calendar."}
   - {id: student-loans, name: Student loans, amount: 500, cadence: monthly, day: null,
      track: queue, status: active, note: "~$8,000 remaining; billing day unknown — undated, invisible to the queue"}
   - {id: claude, name: Claude subscription, amount: 100, cadence: monthly, day: 4,
@@ -386,16 +404,18 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
                                      # `resolution` key.
   "2026-08-15":
     operating_reserve: 30.00
-    target: 270.37
-    total_claim: 300.37
+    target: 304.29
+    total_claim: 334.29
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 270.37
+    shortfall: 304.29
     calendar_event_id: k9sog0mcpmisnn4p2hicernagk
     contributions:
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
+      - {line_id: cuzzies-google-voice, amount: 12.67, funded: 0, status: pending}
+      - {line_id: cuzzies-google-workspace, amount: 21.25, funded: 0, status: pending}
       - {line_id: liquidibee-1, amount: 125.00, funded: 0, status: pending}
       - {line_id: liquidibee-2, amount: 15.63, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 8.34, funded: 0, status: pending}
@@ -409,16 +429,18 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-16":
     operating_reserve: 30.00
-    target: 95.37
-    total_claim: 125.37
+    target: 129.29
+    total_claim: 159.29
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 95.37
+    shortfall: 129.29
     calendar_event_id: i5aqp4u51gvj79113o7ls4ajqk
     contributions:
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
+      - {line_id: cuzzies-google-voice, amount: 12.67, funded: 0, status: pending}
+      - {line_id: cuzzies-google-workspace, amount: 21.25, funded: 0, status: pending}
       - {line_id: liquidibee-2, amount: 15.63, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 8.34, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.69, funded: 0, status: pending}
@@ -430,16 +452,18 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-17":
     operating_reserve: 30.00
-    target: 95.36
-    total_claim: 125.36
+    target: 129.27
+    total_claim: 159.27
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 95.36
+    shortfall: 129.27
     calendar_event_id: 2f3r9682t2emqdu76snes086b8
     contributions:
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
+      - {line_id: cuzzies-google-voice, amount: 12.66, funded: 0, status: pending}
+      - {line_id: cuzzies-google-workspace, amount: 21.25, funded: 0, status: pending}
       - {line_id: liquidibee-2, amount: 15.63, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 8.34, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.69, funded: 0, status: pending}
@@ -451,16 +475,17 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-18":
     operating_reserve: 30.00
-    target: 95.36
-    total_claim: 125.36
+    target: 116.61
+    total_claim: 146.61
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 95.36
+    shortfall: 116.61
     calendar_event_id: i2k3vo0025kbt3lbseppnf690s
     contributions:
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
+      - {line_id: cuzzies-google-workspace, amount: 21.25, funded: 0, status: pending}
       - {line_id: liquidibee-2, amount: 15.63, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 8.34, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.69, funded: 0, status: pending}
@@ -1117,6 +1142,46 @@ Everything before 2026-08-05 lives in
 budget from the first rough sketch through the (now retired) Option 3 allocation
 decision, the six-pocket mapping, and the calendar reminders. That note is closed; this
 ledger carries the live state forward.
+
+## Update 2026-08-13 (FIFTH REVISION — two Cuzzie's billing-lapse bills added)
+
+Lemar: "I need $85 by the 19th so that I can pay for the Google Workspace before it gets
+suspended on the 20th. But before that earlier in the week, I gotta pay $38 for the
+Google Voice."
+
+**These are not new personal expenses — they're the fix for an already-tracked business
+issue.** `haven/vault/00-Inbox/2026-08-12-google-voice-subscription-cancellation.md`
+already documents that the cuzziesnj.com Workspace reseller relationship lapsed: without
+direct billing set up in the Google Admin console (customer ID `C00hppi2w`), **all**
+Workspace services — including `lemar@cuzziesnj.com` email itself — suspend 2026-08-20.
+That note was raised as a `#decisions` card and explicitly left as "outside Samira's
+authority" (a payment-method decision). Lemar's numbers here match that exact deadline.
+
+**Confirmed rather than assumed which side of the boundary this sits on.** Asked
+directly: personal ledger (matching the existing `cuzzies-phone-workspace` precedent
+from 2026-07-22) or route to Cuzzie's and stay out of this ledger entirely? Lemar chose
+personal — consistent with his standing call to carry Cuzzie's phone + Workspace costs
+from his own earnings. Two new one-time bills, `business_origin: true`, distinct from
+the existing undated $550/mo `cuzzies-phone-workspace` estimate (not a replacement for
+it — these are one-time catch-up charges, that's an ongoing monthly line):
+- **`cuzzies-google-voice`, $38, due 2026-08-18.** Date also asked rather than assumed —
+  "earlier in the week" was ambiguous between Monday and Tuesday; Lemar picked Tuesday.
+- **`cuzzies-google-workspace`, $85, due 2026-08-19.**
+
+**Accrue in the personal ledger (contributing to `daily_targets`), but their calendar
+reminders live on the Cuzzie's (Owners) calendar**, per the existing note on
+`cuzzies-phone-workspace` ("its reminder... belongs on the Cuzzie's (Owners) calendar
+per the business boundary") — the money comes from Lemar's own earnings, but the
+service being paid for is Cuzzie's, so the reminder sits where the business context is.
+Layered onto the already-computed 8/15-8/18 window rather than a full rebuild, since
+these two new lines don't change any other line's schedule.
+
+**8/15's number moves from $300.37 to $334.29.** The four affected personal aggregate
+calendar events (8/15-8/18) were updated with the new totals; two new due-date reminder
+events were created on the Cuzzie's (Owners) calendar.
+
+Nothing paid, nothing contacted, no admin console login — this records what Lemar
+reported and confirmed.
 
 ## Update 2026-08-13 (FOURTH REVISION — 8/14's target pushed to 8/15; car part delayed)
 
