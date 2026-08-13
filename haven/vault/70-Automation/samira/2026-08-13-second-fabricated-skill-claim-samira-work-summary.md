@@ -1,9 +1,9 @@
 ---
 created: 2026-08-13T13:00:00-04:00
-updated: 2026-08-13T13:00:00-04:00
+updated: 2026-08-13T13:20:00-04:00
 domain: automation
 type: log
-status: awaiting-decision
+status: done
 tags: [samira, safety-floor, anomaly, skills-lab]
 source: slack
 ---
@@ -58,8 +58,43 @@ integrity question — it is not a fenced prompt or a direct instruction to
 Samira to do a task; it's an unverifiable third-party status claim). Flagging
 to Lemar via #decisions rather than silently accepting or silently ignoring.
 
-**Needs Lemar:** same open question as 2026-08-03 — which session/integration
-is posting these "new skill, now live" claims under his identity, whether
-that integration's credentials need review, and whether anything claiming to
-be "live" from that source should be trusted before it's confirmed against
-`main`.
+## Update 2026-08-13 ~13:20 ET — correction, checked GitHub (not just `main`)
+
+Follow-on checking (Gmail turned up GitHub notification emails for **PR #59**,
+"Add samira-work-summary skill: thread-to-Samira handoff") found the fuller
+picture, and the framing above overstates the concern:
+
+- **PR #59 is real and transparent**: open, `draft: true`, not merged, base
+  `main`@`1f4d9d0`, authored by GitHub user `lboonejr` (Lemar's own account,
+  consistent with a Claude Code session run under his login —
+  `session_0179mzL8gfmfuBpAB6cfxNvj`). Two files added (`SKILL.md` +
+  a Slack-only fallback variant), well-structured, Haven-first, reuses
+  existing anchors/routing rather than inventing new surfaces, explicit
+  "never claims a handoff landed unless the Haven write actually succeeded"
+  language. PR comments are Vercel preview-deploy bot noise only — no signs
+  of tampering.
+- **This is NOT the 2026-08-03 pattern.** That incident found *zero* trace
+  anywhere — no PR, no branch, no file, nothing in git history at all. This
+  time there is real, attributable, in-progress work sitting in the normal
+  review pipeline, just not yet merged.
+- **What was still fair to flag**: the #skills-lab message described the
+  skill as "delivered... now showing as synced/live for this account" —
+  which overstates status given the PR is an unmerged draft. That's a
+  precision/overclaiming issue in the announcement, not evidence of
+  fabrication. The `samira-work-summary` name appearing in this run's tool
+  listing before the PR is merged to `main` is also now explained (some
+  environment-level skill discovery reaches open branches/sessions, not only
+  `main`) rather than unexplained.
+- Correcting the record rather than leaving the alarmist framing standing:
+  status downgraded from "trust/safety anomaly" to "FYI — an unmerged draft
+  PR exists, awaiting your review/merge decision; the Slack announcement of
+  it ran ahead of its actual merge status." Still did not invoke the skill,
+  still did not treat it as live — that call is unchanged and correct
+  regardless of the framing fix. Posted the correction in the #decisions
+  thread (ts `1786641448.278809`) rather than leaving readers with the
+  stronger original claim.
+
+`status` moved from `awaiting-decision` to `done` — nothing further needed
+from Lemar on the "is this legitimate" question; PR #59 itself (review/merge)
+is his call whenever he wants to look at it, but that's an ordinary PR review,
+not a flagged anomaly.
