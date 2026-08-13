@@ -1,10 +1,10 @@
 ---
 created: 2026-07-07T09:15-04:00
-updated: 2026-08-12T09:15:00-04:00
+updated: 2026-08-13T15:40:19-04:00
 domain: cuzzies
 type: task
 status: active
-tags: [vendor-payment, little-leaf-labs, collections-risk]
+tags: [vendor-payment, little-leaf-labs, collections-risk, collections-agency]
 source: gmail
 ---
 
@@ -120,6 +120,31 @@ position (no payment-date commitment while Cuzzie's status is unresolved, same l
 taken with Leafly/ADT/Weedmaps/Talaria/Chew & Chill), not re-drafting an unprompted
 reply this pass; logging only. Labeled `Samira/seen` on the new thread.
 
+## Update 2026-08-13T15:40:19-04:00 — referred to a collection agency, 48-hour demand ($8,331.00)
+
+Qualitative escalation: this is no longer Little Leaf Labs' own accounting cadence.
+**Mike Ganges, Case Analyst at CannaBIZ Collects** (`mike@cannabizcollects.com`,
+312-536-6845) emailed a formal **48-hour demand** (gmail thread `19ffca3c879d0cc9`,
+2026-08-13 15:40 ET) addressed to `admin@cuzziesnj.com`, cc `info@cuzziesnj.com`,
+`jenn@cuzziesnj.com`, `joshua@cuzziesnj.com`, `lemar@cuzziesnj.com`. Account #
+2026-2026, creditor Little Leaf Labs LLC, **same $8,331.00 total** as every prior
+reminder — no new figure, but a materially different actor and a hard clock:
+
+- 48 hours to settle or contact the agency; states "failure to do so may result in
+  the matter being expedited for further legal review."
+- Carries standard FDCPA dispute-rights language — a written dispute with supporting
+  documentation is an available path if the balance/amount is contested.
+- Payment link: `https://www.cannabizcollects.com/make-a-payment`. Not something
+  Samira pays, negotiates, or replies to — routed to Lemar.
+
+This is the same escalation pattern already seen with Leafly ("Final Demand" +
+collections, flagged 2026-08-13) and Curaleaf NJ II (A.G. Adjustments, flagged
+2026-08-13) — three separate Cuzzie's vendor balances now in third-party collections
+the same week. Posted as a new #decisions card (this matter had been logging-only
+under Lemar's standing "no date commitment" position, but a collections-agency
+referral with a 48-hour clock is a different decision than an accounting-team
+reminder). Gmail thread labeled `Samira/seen`.
+
 ## Sources
 - gmail: thread `19f3bff3a2daa78a`, message `19f3bff3a2daa78a`, 2026-07-07
   09:53 ET, from Accounting@littleleaflabs.net (Reminder 8)
@@ -143,3 +168,5 @@ reply this pass; logging only. Labeled `Samira/seen` on the new thread.
   $8,331.00 total)
 - gmail: thread `19ff518397e5b7be`, 2026-08-12 08:30 ET ("Reminder 12", URGENT, same
   $8,331.00 total)
+- gmail: thread `19ffca3c879d0cc9`, 2026-08-13 15:40 ET (CannaBIZ Collects 48-hour
+  demand, account #2026-2026, $8,331.00)
