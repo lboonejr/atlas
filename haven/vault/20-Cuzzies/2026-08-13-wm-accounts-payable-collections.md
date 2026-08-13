@@ -1,6 +1,6 @@
 ---
 created: 2026-08-13T11:15-04:00
-updated: 2026-08-13T11:22-04:00
+updated: 2026-08-13T14:55-04:00
 domain: cuzzies
 type: task
 status: active
@@ -27,8 +27,19 @@ department. Not something Samira pays or authorizes. Needs Lemar's call: pay it 
 or fold into the Off Button vendor wind-down tracking (Waste Management isn't yet a line
 item there).
 
+## Update 2026-08-13 (~14:55 ET) — third WM notice, same account
+A third, automated WM notice landed today (`noreply@communications.wm.com`, no-reply,
+nothing to draft): during the 08/12/2026 service visit at 2750 Mount Ephraim Ave, one or
+more containers were "filled incorrectly" (contamination/overage). Reference #77024217,
+service date 08/12/2026, listed as a **warning — no charge** this cycle, but the notice
+states a **$225.00 charge** applies after the warning period for repeat contaminations or
+overages. No reply needed now; flagging so a repeat incident isn't a surprise $225 hit.
+Not posted to #decisions separately — same account family already surfaced there via the
+dumpster-overflow and AP-collections cards above.
+
 ## Related
 - [[waste-management]] (entity note — none exists yet, needs a stub)
 
 ## Sources
 - gmail: thread `19ffb790c00105f4`
+- gmail: thread `19ffc6f57bfad3f1` (container-contamination warning, 8/13)
