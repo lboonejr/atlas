@@ -129,7 +129,10 @@ bills:
      track: queue, status: active, calendar_event_id: 7djf895pc8is0illrr8bcrra20,
      note: "card declined on the 4th May/Jun/Jul — Lemar to update payment method"}
   - {id: wispr-flow, name: Wispr Flow, amount: 15, cadence: monthly, day: 10,
-     track: queue, status: active, calendar_event_id: e7d9muku31setk1b10le3bf3ak}
+     track: queue, status: active, calendar_event_id: e7d9muku31setk1b10le3bf3ak,
+     note: "2026-08-10 cycle ($15) PAID outside the system over the weekend, per
+            Lemar 2026-08-13 — confirmed in the recompute session. Next cycle due
+            2026-09-10 accrues normally from 2026-08-13 (recompute baseline)."}
   - {id: moms-expenses, name: "Mom's expenses", amount: 200, cadence: monthly, day: null,
      track: queue, status: active, note: "billing day unknown — undated, invisible to the queue"}
   - {id: tidal, name: Tidal, amount: 14.92, cadence: monthly, day: null,
@@ -165,15 +168,25 @@ bills:
      note: "reported in #personal-finance 2026-08-09. Priority field retired 2026-08-10 —
             its due date is now its whole position in the queue. Ramped: full $40 on 2026-08-10."}
   - {id: cleaning-supplies, name: "Cleaning supplies (house)", amount: 30, cadence: once,
-     due: 2026-08-11, track: queue, status: active,
-     calendar_event_id: ue8jtslgpl89qlmhdra710h13k,
-     note: "reported in #personal-finance 2026-08-09. Ramped: full $30 on 2026-08-10."}
+     due: 2026-08-11, track: queue, status: paid, calendar_event_id: null,
+     note: "reported in #personal-finance 2026-08-09. PAID outside the system over the
+            weekend, per Lemar 2026-08-13 — confirmed in the recompute session. Due-date
+            event ue8jtslgpl89qlmhdra710h13k already fired 8/11 before the payment was
+            confirmed; retired here rather than cancelled retroactively. Out of the
+            accrual — no daily_targets contribution from 2026-08-13 forward."}
   - {id: comedy-show-tickets, name: "Comedy show tickets", amount: 50.28, cadence: once,
-     due: 2026-08-12, track: queue, status: active,
-     calendar_event_id: jfh8548cet84pcqo3o697fkbq8,
-     note: "reported in #personal-finance 2026-08-09. Ramped: full $50.28 on 2026-08-10.
-            The 'low priority' call from 8/9 no longer has anywhere to live under
-            due-date order — if this should slip behind the rest, say so and it parks."}
+     due: 2026-08-12, track: queue, status: active, overdue: true,
+     calendar_event_id: null,
+     note: "reported in #personal-finance 2026-08-09. NOT paid — confirmed by Lemar
+            2026-08-13 in the recompute session, the only one of the three past-due
+            lines still owed. Due date already passed as of the 2026-08-13 recompute
+            baseline, so per Lemar's Option A ('roll it forward') and the ACCRUAL rule
+            ('due on or before today lands fully today'), the full $50.28 is folded into
+            2026-08-13's target as a single-day contribution rather than parked
+            separately. Its due-date event jfh8548cet84pcqo3o697fkbq8 already fired
+            8/12; cleared rather than cancelled retroactively. The 'low priority' call
+            from 8/9 has nowhere to live under due-date order and is now moot — it is
+            simply the most-overdue line in the queue."}
   - {id: station-travel, name: "Travel to The Station", amount: 50, cadence: once,
      due: 2026-08-15, track: queue, status: active,
      calendar_event_id: ptacguksk2rsf3md3403gljtes,
