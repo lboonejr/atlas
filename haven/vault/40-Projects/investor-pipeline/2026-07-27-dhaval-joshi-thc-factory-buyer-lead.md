@@ -1,7 +1,7 @@
 ---
 created: 2026-07-27T15:35-04:00
-updated: 2026-07-27T15:35-04:00
-domain: cuzzies
+updated: 2026-08-13T18:13-04:00
+domain: project
 type: log
 status: active
 tags: [samira, investor, thc-factory, dhaval-joshi]
