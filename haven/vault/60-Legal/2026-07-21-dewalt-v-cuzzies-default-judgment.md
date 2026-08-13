@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-08-13T11:00:00-04:00
+updated: 2026-08-13T15:49:40-04:00
 domain: legal
 type: task
 status: active
@@ -329,7 +329,7 @@ Referral Service directly (thread `19ffb5e307994f7d`, ~9:45am ET):
   assembled.
 - Kara replied ~10:22am ET asking for address/phone; Lemar sent his info ~10:26am ET.
 - **~10:51am ET, the referral came back: Zachary Wall, Wall & London, LLC —
-  856-428-1480.** Discounted $30 first-half-hour consult per the referral program;
+  856-428-1480.** Discounted $30 first-half-hour consultation per the referral program;
   further fees are between Lemar and the attorney.
 
 **Read:** this is a third attorney now in the picture for this same matter — Siciliano
@@ -342,6 +342,38 @@ Worth Lemar's own call on how many tracks to run in parallel this close to Sept 
 No Samira action taken (informational, self-handled by Lemar); Gmail thread not
 labeled `Samira/seen` by this capture (three of the four messages already show
 `Label_2`/`Samira/seen` from an earlier pass).
+
+## Update 2026-08-13T15:49:40-04:00 — a fourth CCBA referral response landed (Rachael Brekke) — flagging a discrepancy, not resolving it
+
+A new email arrived (gmail thread `19ffcac62c2e95ac`, "Re: Camden County Bar
+Association - New Online LRS Request," from `intern@camdencountybar.org`, 2026-08-13
+~15:49 ET). It forwards an original LRS request submitted at **9:38am ET today**
+under Lemar's name, with a description that is word-for-word this DeWalt matter
+(CAM-L-1339-26, default judgment, Sept 14 proof hearing, adjournment + motion to
+vacate) — but the attorney it names as the referral is **Rachael Brekke, McDowell Law
+PC, 46 West Main Street, Maple Shade NJ, 856-482-5544** — the SAME attorney this note's
+2026-07-22 update recorded as Lemar's *first* (tenancy-matter) referral, not a new
+name.
+
+**Not resolving this — flagging it as a discrepancy for Lemar:**
+- This morning's 8/13 referral (logged in the update above, ~10:51am ET) named
+  **Zachary Wall, Wall & London LLC** for the same DeWalt request. This new message,
+  arriving ~5 hours later with a 9:38am timestamp *inside* its forwarded content,
+  reads as either (a) a second, separate 9:38am submission Lemar made that Samira
+  hasn't otherwise seen record of, or (b) an automated resend/mismatch that reattached
+  the DeWalt case description to Brekke's contact info from the earlier tenancy
+  referral. Samira cannot tell which from the email alone, and is not guessing.
+- **Net effect either way:** there are now potentially two fresh referral names in
+  play today (Zachary Wall this morning, Rachael Brekke this afternoon) on top of the
+  two already-active tracks (Siciliano & Associates — retained but non-responsive
+  since 8/12 — and the Donte/Greenberg settlement-review track). Worth Lemar's own
+  call on whether Brekke's inclusion here is a mistake to ignore or a genuine second
+  contact to pursue, and how many attorney tracks to actually run this close to
+  Sept 14.
+
+No Samira action taken — informational only, nothing drafted or sent. Posted as an
+update in the existing #decisions thread (ts `1784657518.918529`) rather than a new
+card, per routing. Gmail thread labeled `Samira/seen`.
 
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
@@ -371,3 +403,6 @@ labeled `Samira/seen` by this capture (three of the four messages already show
   motion-to-vacate/adjournment request to `AA@sicilianolaw.com`)
 - gmail: thread `19ffb5e307994f7d` (2026-08-13, third referral — Zachary Wall, Wall &
   London LLC, via Camden County Bar Association)
+- gmail: thread `19ffcac62c2e95ac` (2026-08-13 ~15:49pm ET, fourth referral response —
+  Rachael Brekke, McDowell Law PC — discrepancy vs. the Zachary Wall referral flagged,
+  not resolved)
