@@ -1,6 +1,6 @@
 ---
 created: 2026-08-12T10:00-04:00
-updated: 2026-08-12T10:00-04:00
+updated: 2026-08-13T13:30:00-04:00
 domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation
 type: task
 status: active
@@ -29,3 +29,34 @@ call to make — Lemar decides.
 
 ## Sources
 - gmail: thread `19ff61b5c3452082` ("Your Google Voice subscription is scheduled for cancellation", workspace-noreply@google.com, 2026-08-12)
+
+## Update 2026-08-13 — broader escalation, likely the same root cause
+
+A second, broader automated notice landed today: **"Set up billing for Google
+Workspace Business Standard for cuzziesnj.com"** — the *entire* Workspace
+subscription (not just Voice) "is no longer provided to you through your
+reseller." Services continue **until August 20, 2026**, after which **all
+Workspace services for all users on cuzziesnj.com are suspended** — this
+would include `lemar@cuzziesnj.com` email itself, not just Google Voice.
+
+This reads as the likely root cause of the Voice suspension above: the
+reseller relationship backing the whole Workspace account appears to have
+lapsed, not just the Voice add-on. Same decision shape, now higher-stakes
+and with a harder near-term deadline (8/20, vs. Voice's 9/11):
+- **Do nothing** → all Workspace services (including primary business
+  email) suspend 8/20/2026.
+- **Set up direct billing** → sign in to Google Admin console
+  (admin.google.com) → Billing, and add a payment method directly with
+  Google instead of through the (former) reseller.
+
+Not executed — setting up billing is a payment-method decision, outside
+Samira's authority. Raised as a #decisions card given the harder deadline
+and business-email-wide blast radius.
+
+- **Customer ID:** `C00hppi2w`
+- **Deadline:** services suspend after **August 20, 2026**
+
+### Sources (this update)
+- gmail: thread `19ffc043a83ed7d0` ("Set up billing for Google Workspace
+  Business Standard for cuzziesnj.com", workspace-noreply@google.com,
+  2026-08-13)
