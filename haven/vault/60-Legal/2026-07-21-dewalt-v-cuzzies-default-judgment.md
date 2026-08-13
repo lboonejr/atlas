@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-08-13T15:49:40-04:00
+updated: 2026-08-13T17:01:00-04:00
 domain: legal
 type: task
 status: active
@@ -375,6 +375,31 @@ No Samira action taken — informational only, nothing drafted or sent. Posted a
 update in the existing #decisions thread (ts `1784657518.918529`) rather than a new
 card, per routing. Gmail thread labeled `Samira/seen`.
 
+## Update 2026-08-13T17:01:00-04:00 — counsel-selection process recap; Brekke call set for 8/14 9am, comparison decision to follow
+
+Lemar handed off a summary via the Samira capture DM (auto-handoff from a separate
+Claude Code session, `samira-work-summary` skill) recapping the counsel search to
+date and flagging the immediate next step:
+
+- Full sequence to date: emailed Sal Siciliano about resuming representation (still
+  non-responsive per the 8/12 update above); submitted an LSNJ LAW Hotline
+  application; got redirected through the Worker Rights Law Project (a misroute —
+  they handle worker-side, not employer-side, matters); reached out to the Camden
+  County Bar Association's Lawyer Referral Service after their online form wouldn't
+  cooperate; received two referrals from CCBA Executive Director Kara Edens —
+  Zachary Wall (Wall & London, LLC) and Rachael Brekke (McDowell Law PC) — matching
+  the two referrals already logged in the updates above.
+- **New this update:** call scripts were built for both Wall and Brekke, and a call
+  with **Rachael Brekke is scheduled for tomorrow, 2026-08-14, 9:00 AM** (set up
+  directly by Lemar/the other session, not by Samira).
+- **No final decision on counsel yet.** Next step per Lemar: after the 8/14 9am
+  Brekke call, compare her against Zachary Wall (and Siciliano, if he ever responds)
+  and decide who to retain — explicitly time-sensitive given the Sept 14 proof
+  hearing.
+
+No action taken by Samira beyond landing this record (as asked) — nothing drafted,
+sent, or scheduled. React ✅ applied to the capture DM message.
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
 - gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
@@ -406,3 +431,5 @@ card, per routing. Gmail thread labeled `Samira/seen`.
 - gmail: thread `19ffcac62c2e95ac` (2026-08-13 ~15:49pm ET, fourth referral response —
   Rachael Brekke, McDowell Law PC — discrepancy vs. the Zachary Wall referral flagged,
   not resolved)
+- slack: Samira capture DM `D0BHPKMDNEP`, ts `1786654901.931749` (2026-08-13 ~5:01pm ET,
+  counsel-search recap + Brekke call set for 8/14 9am, via samira-work-summary auto-handoff)
