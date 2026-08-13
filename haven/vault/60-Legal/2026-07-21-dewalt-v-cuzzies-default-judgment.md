@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-08-12T14:30:00-04:00
+updated: 2026-08-13T11:00:00-04:00
 domain: legal
 type: task
 status: active
@@ -313,6 +313,36 @@ already the one driving it directly; captured here so the record reflects real
 forward motion on the vault's standing highest-priority legal item rather than
 continued silence. Nothing drafted, sent, or represented by Samira on this exchange.
 
+## Update 2026-08-13T11:00:00-04:00 — third attorney referral (Zachary Wall) sought, Siciliano still silent
+
+Siciliano's office has not replied to Lemar's 2026-08-12 motion-to-vacate/adjournment
+request (previous update) as of this morning. Today Lemar — again self-driven, not
+drafted or sent by Samira — went back to the Camden County Bar Association's Lawyer
+Referral Service directly (thread `19ffb5e307994f7d`, ~9:45am ET):
+
+- Emailed Kara Edens Graser (Executive Director, CCBA) explaining the online referral
+  form wasn't accepting submissions and a voicemail hadn't gotten a callback. Restated
+  the case background (DeWalt v. Cuzzie's, CAM-L-1339-26, default judgment on liability
+  entered 7/17, Sept 14 proof hearing, needs an adjournment + motion to vacate) and
+  asked for a referral to a business/civil litigation attorney who could move quickly,
+  noting the defense timeline, case background, and insurance file are already
+  assembled.
+- Kara replied ~10:22am ET asking for address/phone; Lemar sent his info ~10:26am ET.
+- **~10:51am ET, the referral came back: Zachary Wall, Wall & London, LLC —
+  856-428-1480.** Discounted $30 first-half-hour consult per the referral program;
+  further fees are between Lemar and the attorney.
+
+**Read:** this is a third attorney now in the picture for this same matter — Siciliano
+& Associates (retained 2026-07-23 for the litigation defense, requested but not yet
+executing the motion-to-vacate/adjournment as of 8/12, no reply since) and Greenberg
+(Donte-run settlement-review track, separate scope) being the other two. Reads as
+Lemar hedging on Siciliano's non-responsiveness rather than replacing him outright —
+nothing here confirms Wall has been contacted yet or that Siciliano has been dropped.
+Worth Lemar's own call on how many tracks to run in parallel this close to Sept 14.
+No Samira action taken (informational, self-handled by Lemar); Gmail thread not
+labeled `Samira/seen` by this capture (three of the four messages already show
+`Label_2`/`Samira/seen` from an earlier pass).
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
 - gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
@@ -339,3 +369,5 @@ continued silence. Nothing drafted, sent, or represented by Samira on this excha
   Stefano's $150,000 settlement figure, open until Aug 10 or closing)
 - gmail: thread `19ff73da59bda63c` (2026-08-12 ~2:30pm ET, Lemar's fwd of the
   motion-to-vacate/adjournment request to `AA@sicilianolaw.com`)
+- gmail: thread `19ffb5e307994f7d` (2026-08-13, third referral — Zachary Wall, Wall &
+  London LLC, via Camden County Bar Association)
