@@ -1,6 +1,6 @@
 ---
 created: 2026-07-31T14:00-04:00
-updated: 2026-08-01T12:00:00-04:00
+updated: 2026-08-13T14:55-04:00
 domain: cuzzies
 type: task
 status: active
@@ -32,6 +32,16 @@ No reply sent, nothing paid. Still awaiting Lemar's read on the underlying
 $2,607.61 collections notice above; not reposting to #decisions since the
 card is already open and unreacted.
 
+## Update 2026-08-13 (~14:55 ET) — repeat urgent notice, same balance
+IWG's collections mailbox (`AmericasDebtCollection@iwgplc.com`) sent the same
+demand again today: "This communication is **again** being sent" for the same
+$2,607.61 balance, account 16605480, same legal-action-escalation language.
+13 days since the original 7/31 notice with no reply, payment, or dispute —
+the #decisions card from 7/31 is still open and unreacted, so not reposting a
+duplicate this pass. Flagging in the run report given the repeated legal
+threat and the growing silence window.
+
 ## Sources
 - gmail: thread 19fb86ecefb2989b (Regus/IWG urgent past-due notice, 7/31)
 - gmail: thread 19fbd9d7689e78d4 (Regus invoice 8672-1518/1519, 8/1)
+- gmail: thread 19ffb9a5292974cd (repeat urgent notice, 8/13)
