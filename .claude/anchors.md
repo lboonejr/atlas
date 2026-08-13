@@ -100,7 +100,8 @@ gate, the mirror steps drop from the runbook + skills and the boards go read-onl
 
 | What | ID |
 |---|---|
-| Reminder calendar (calendar-sync target; personal, never business primary, no external attendees) | `c_205bab62b8bb2c4fe12eec38bbc6725abaf6f5f11b767fe99a542112cf5695d3@group.calendar.google.com` |
+| Reminder calendar (calendar-sync target; **personal money only**, never business primary, no external attendees) | `c_205bab62b8bb2c4fe12eec38bbc6725abaf6f5f11b767fe99a542112cf5695d3@group.calendar.google.com` |
+| Cuzzie's (Owners) — **business money only** (payroll, commercial insurance, workers' comp, storage, business phone, vendor invoices, entity collections). Business bills never ring on the personal reminder calendar and never enter `daily_targets` (locked 2026-08-10). | `c_5405960d86d1e2152cef29d5cb1ae6a4d7edd8a50f6f7eb3f5d66ab940874f1a@group.calendar.google.com` |
 
 ## Google Drive (binary files only — Drive owns PDFs/images/spreadsheet exports per schema §1)
 
@@ -215,23 +216,30 @@ pattern used by on-button-reopen.
 |---|---|
 | Living Pulse artifact URL | `https://claude.ai/code/artifact/6838142e-852c-44a5-8778-b584be1316d4` — first published 2026-07-12 (desktop session, v1). PART P re-deploys to THIS same URL each run (pass it as `url`; keep title "Pulse — Personal Dashboard" + favicon 📍). |
 | Workout plan artifact URL | `https://claude.ai/code/artifact/a723834f-6310-4575-8897-75ae8e30806e` ("Back to the Court — 12-Week Plan"; source-of-truth note `haven/vault/10-Personal/Health/2026-07-07-basketball-fitness-plan.md`, start Mon 2026-07-07). Pulse links out to it; its check-offs live in that page's own localStorage. |
-| Sections (Lemar's fixed top-to-bottom order, 2026-07-12: big ideas → details → execution) | quick-capture todo strip · Dawn as North Star (direction, NOT tasks) · calendar roadmap · #decisions respond list · money (Era Context + Haven budget note) · today's workout · Atlas open items · project pulses · Samira + routine health. Single column. EVERY item links to its source thread (Slack permalink) or calendar event (htmlLink). |
+| Sections (Lemar's fixed top-to-bottom order, 2026-07-12: big ideas → details → execution) | quick-capture todo strip · Dawn as North Star (direction, NOT tasks) · calendar roadmap · #decisions respond list · money (Haven budget ledger) · today's workout · Atlas open items · project pulses · Samira + routine health. Single column. EVERY item links to its source thread (Slack permalink) or calendar event (htmlLink). |
 
 ## Money Hub (personal financial hub — rendered by the money-hub skill)
 
 Lemar's personal budgeting center. Source of truth: `haven/vault/10-Personal/Money/
-money-hub-ledger.md` (bills, pockets, plans, goals, allocation config) +
+money-hub-ledger.md` (bills, plans, goals, the two pockets, the daily ramp) +
 `income-log-2026.md` (earnings). The dashboard artifact and reminder-calendar events
 are regenerated FROM the ledger by `.claude/skills/money-hub/SKILL.md` — on any live
 interaction ("run my week", "new bill: …") and in Samira's **PART M** sweep of
-#personal-finance. Era Context connector is the read-only live layer for balances and
-spending.
+#personal-finance. **Every figure is reported by Lemar — there is no bank connection.**
+The Era Context connector was retired 2026-08-10 (kept disconnecting, data was a month
+stale, and it covered only 2 accounts, one of them parked).
 
 | What | Value |
 |---|---|
+| Allocation model | **DUE-DATE ORDER**, locked 2026-08-10 by Lemar. Every dated line sorts into one queue by date; soonest funded first. No priority tiers, no weekly floor, no waterfall. Replaces the Option 3 hybrid floor + waterfall (2026-07-24, RETIRED). |
+| Pockets | TWO roles, accounts corrected 2026-08-10: **Spending** = DoorDash Crimson (income lands, gas paid from) and **Set-Aside** = SoFi Checking (recurring bills paid from). One instruction a day — move the set-aside number from Spending to Set-Aside. SoFi Savings and both Cash App accounts are parked, not deleted. Read the live mapping from the ledger's `pockets` block, never from memory. |
+| Balances | **Reported, never fetched** (locked 2026-08-10). Each pocket carries `balance` + `balance_as_of`, set only when Lemar states a figure ("Spending has $240"). Unreported renders "not reported", never $0, and is never inferred from the income log. Older than 7 days renders stale with its true date. A reported balance is never adjusted to match what the ledger expected — show both and say so. |
+| The one number | `daily_targets[today].total` — the single figure Lemar acts on, and the top of the dashboard. Everything else explains it. |
+| Undated lines | A `track: queue` line with no date has no queue position, no event, and no ramp — it is INVISIBLE, not low-priority. Undated lines are a tracked defect class, surfaced in `open_questions`, on the dashboard, and in PART M's return token. Never invent a date. |
 | Living Money Hub artifact URL | `https://claude.ai/code/artifact/f3cbc24f-37ee-4cdd-8643-9eb33b305d00` — first published 2026-08-05. money-hub re-deploys to THIS same URL each render (pass it as `url`; keep title "Money Hub" + favicon 💵). |
-| Weekly split | ON DEMAND ONLY ("run my week") — Lemar's call 2026-08-05; no scheduled allocation run. |
-| Calendar events | On the reminder calendar (see Google Calendar section); event ids live in the ledger rows, adopted from the four pre-hub events (Claude / Wispr Flow / Patreon / T-Mobile). |
+| Weekly view | ON DEMAND ONLY ("run my week", "what's due") — Lemar's call 2026-08-05; no scheduled allocation run. Shows the gap in dollars; never reorders the queue or picks which line slips. |
+| Calendar events | Personal money → the reminder calendar; business money → Cuzzie's (Owners) (both in the Google Calendar section). Event ids live in the ledger rows, adopted from the four pre-hub events (Claude / Wispr Flow / Patreon / T-Mobile). Two popups on every new bill event: 7-day (`10080`) + day-of (`0`), locked 2026-08-09. |
+| Guards | **OVERLOAD CHECK** (coming week's set-aside vs. trailing 4-week income average — flags the gap, never shrinks the number; dormant until the income log has ≥7 entries) and the **rollover brake** (a contribution rolling 3 days running gets named in #decisions instead of rolling forever). |
 
 ## Identity
 
