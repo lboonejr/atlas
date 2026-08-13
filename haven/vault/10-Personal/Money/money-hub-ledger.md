@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-11T17:19:00-04:00
+updated: 2026-08-13T11:23:00-04:00
 domain: personal
 type: reference
 status: active
@@ -164,8 +164,14 @@ daily_targets:                       # even daily set-aside ramp (added 2026-08-
       - {bill_id: comedy-show-tickets, amount: 50.28, status: rolled}
       - {bill_id: station-travel, amount: 50, status: rolled}
   "2026-08-12":
+    total: 0
+    contributions:
+      - {bill_id: metrc-fee, amount: 40, status: rolled}
+      - {bill_id: comedy-show-tickets, amount: 50.28, status: rolled}
+      - {bill_id: station-travel, amount: 50, status: rolled}
+  "2026-08-13":
     total: 140.28
-    calendar_event_id: p4nlnh093ub4pgap2asi190kl0
+    calendar_event_id: gmk9cuq0ro4arlp06h93om7uu0
     contributions:
       - {bill_id: metrc-fee, amount: 40, status: pending}
       - {bill_id: comedy-show-tickets, amount: 50.28, status: pending}
@@ -615,3 +621,38 @@ renders in one cycle).
 
 ## Sources (cont. 4)
 - Google Calendar `c_205bab62b8bb2c4fe12eec38bbc6725abaf6f5f11b767fe99a542112cf5695d3@group.calendar.google.com` — cancelled `1fjsh976g0p9ni4ud7urr3jivs` (2026-08-11 aggregate, $0), created `p4nlnh093ub4pgap2asi190kl0` (2026-08-12 aggregate, $140.28) — 2026-08-11 PART M sweep, 3rd pass / end-of-day ROLLOVER
+
+## Update 2026-08-13 (PART M — catch-up ROLLOVER, missed at end of 8/12)
+
+The ~6:05pm ET pass on 2026-08-12 (past the ≥5pm ET ROLLOVER gate) reported `money —`
+(no new #personal-finance drops) and skipped ROLLOVER entirely — the skill runs it
+unconditionally on the day's last scan, not only when there's a fresh drop. No pass ran
+between then and end of day, so `daily_targets["2026-08-12"]`'s three contributions
+(`metrc-fee` $40, `comedy-show-tickets` $50.28, `station-travel` $50 — total $140.28)
+sat `pending` straight through into 2026-08-13. Caught up now, applying the same
+mechanical rule a day late:
+
+- `daily_targets["2026-08-12"]`: all three contributions flipped `status: rolled`,
+  total recomputed to **$0**. Cancelled its aggregate event `p4nlnh093ub4pgap2asi190kl0`
+  (confirmed cancelled via the Calendar API).
+- `daily_targets["2026-08-13"]`: new entry, total **$140.28**, same three
+  contributions carried over as `status: pending`. Created aggregate event
+  `gmk9cuq0ro4arlp06h93om7uu0` ("Set aside today: $140.28", all-day, popup reminder
+  at 0 minutes, no attendees), description notes all three as "rolled from 2026-08-12".
+- Mechanical housekeeping only — nothing assumed paid, nothing contacted, no figure
+  invented. `cash_on_hand` ($20, as-of 2026-08-11) and `reported_balances` (SoFi
+  checking $2.54, as-of 2026-08-10) untouched — no fresher figures reported since.
+- Dashboard re-render deferred this pass (data-only fix; no #personal-finance drop to
+  fold in) — due next PART M pass per the skill's "only if something changed" gate,
+  which still applies to the render step even though the ledger itself changed.
+
+Skill-file note: `.claude/skills/money-hub/SKILL.md` is still the standing
+whole-file-base64 corruption flagged in #decisions (ts `1786307410.388389`, 0
+reactions) — decoded in-memory read-only to confirm the ROLLOVER rule's exact wording
+before applying it here; nothing on disk touched, not relitigating the standing
+decode-or-leave ask.
+
+## Sources (cont. 5)
+- Google Calendar — cancelled `p4nlnh093ub4pgap2asi190kl0` (2026-08-12 aggregate, now
+  $0), created `gmk9cuq0ro4arlp06h93om7uu0` (2026-08-13 aggregate, $140.28) —
+  2026-08-13 PART M catch-up ROLLOVER
