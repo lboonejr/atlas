@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-13T15:15:00-04:00
+updated: 2026-08-13T15:40:00-04:00
 domain: personal
 type: reference
 status: active
@@ -178,10 +178,13 @@ bills:
   - {id: water-pump, name: "New water pump", amount: 184.79, cadence: once, due: null,
      track: queue, status: active,
      note: "unclear if inside or on top of the car goal's repairs figure — unreconciled"}
-  - {id: metrc-fee, name: METRC, amount: 40, cadence: once, due: 2026-08-14,
+  - {id: metrc-fee, name: METRC, amount: 40, cadence: once, due: 2026-08-21,
      track: queue, status: active, calendar_event_id: q36k3ogoblpe3i5amktigav8ig,
      note: "reported in #personal-finance 2026-08-09. Priority field retired 2026-08-10 —
-            its due date is now its whole position in the queue. Ramped: full $40 on 2026-08-10."}
+            its due date is now its whole position in the queue. Due date pushed
+            2026-08-13 from 8/14 to 8/21 at Lemar's request — too many bills were
+            piling up on top of each other; this buys a week of breathing room. Now
+            spreads over 7 days instead of landing as a same-day lump."}
   - {id: cleaning-supplies, name: "Cleaning supplies (house)", amount: 30, cadence: once,
      due: 2026-08-11, track: queue, status: paid, calendar_event_id: null,
      note: "reported in #personal-finance 2026-08-09. PAID outside the system over the
@@ -190,18 +193,19 @@ bills:
             confirmed; retired here rather than cancelled retroactively. Out of the
             accrual — no daily_targets contribution from 2026-08-13 forward."}
   - {id: comedy-show-tickets, name: "Comedy show tickets", amount: 50.28, cadence: once,
-     due: 2026-08-12, track: queue, status: active, overdue: true,
+     due: 2026-08-12, track: queue, status: parked, overdue: true,
      calendar_event_id: null,
      note: "reported in #personal-finance 2026-08-09. NOT paid — confirmed by Lemar
-            2026-08-13 in the recompute session, the only one of the three past-due
-            lines still owed. Due date already passed as of the 2026-08-13 recompute
-            baseline, so per Lemar's Option A ('roll it forward') and the ACCRUAL rule
-            ('due on or before today lands fully today'), the full $50.28 is folded into
-            2026-08-13's target as a single-day contribution rather than parked
-            separately. Its due-date event jfh8548cet84pcqo3o697fkbq8 already fired
-            8/12; cleared rather than cancelled retroactively. The 'low priority' call
-            from 8/9 has nowhere to live under due-date order and is now moot — it is
-            simply the most-overdue line in the queue."}
+            2026-08-13, the only one of the three original past-due lines still owed at
+            that point. Due date already passed as of the 2026-08-13 recompute baseline,
+            so per Lemar's Option A ('roll it forward') and the ACCRUAL rule ('due on or
+            before today lands fully today'), the full $50.28 was folded into 8/13's
+            target, then rolled to 8/14 when the car stayed down.
+            CANCELLED 2026-08-13 (same day, later): Lemar isn't going — 'not needed right
+            now, too many bills are piling up' — so it's dropped from the accrual
+            entirely rather than parked-but-still-owed. Its due-date event
+            jfh8548cet84pcqo3o697fkbq8 already fired 8/12; cleared, not cancelled
+            retroactively. Parked per field rules, never deleted."}
   - {id: station-travel, name: "Travel to The Station", amount: 50, cadence: once,
      due: 2026-08-15, track: queue, status: active,
      calendar_event_id: ptacguksk2rsf3md3403gljtes,
@@ -239,13 +243,13 @@ plans:
       - {seq: 2, amount: 125, due: 2026-08-23, status: pending, calendar_event_id: gt4knt3i2m6lpjhlrjf8n2jqn8}
       - {seq: 3, amount: 125, due: 2026-08-30, status: pending, calendar_event_id: locnmilchabhgq2o0kd8slf7r4}
       - {seq: 4, amount: 125, due: 2026-09-06, status: pending, calendar_event_id: ekpni2dt25f0fe5tjh51sbjj64}
-daily_targets:                       # Revised 2026-08-13 (second revision,
-                                     # same day): Lemar pushed 8/13's target to
-                                     # 8/14 (car down, no income possible) and
-                                     # added mom's $110 one-time + $50/wk. See
-                                     # Update 2026-08-13 (SECOND REVISION) below.
-                                     # 8/10-8/13 entries are closed history, never
-                                     # rewritten -- see each day's `resolution` key.
+daily_targets:                       # Revised 2026-08-13 (third revision, same
+                                     # day): comedy tickets cancelled (Lemar's not
+                                     # going), METRC pushed 8/14 -> 8/21 to relieve
+                                     # bill pileup. See Update 2026-08-13 (THIRD
+                                     # REVISION) below. 8/10-8/13 entries are closed
+                                     # history, never rewritten -- see each day's
+                                     # `resolution` key.
   "2026-08-10":
     operating_reserve: 30.00
     target: 136.96
@@ -351,22 +355,21 @@ daily_targets:                       # Revised 2026-08-13 (second revision,
       - {line_id: wispr-flow, amount: 0.54, funded: 0, status: rolled}
   "2026-08-14":
     operating_reserve: 30.00
-    target: 284.89
-    total_claim: 314.89
+    target: 200.33
+    total_claim: 230.33
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 284.89
+    shortfall: 200.33
     calendar_event_id: d8ed3o469dh4r5j0c2qo73m6cs
     contributions:
       - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
       - {line_id: claude, amount: 4.77, funded: 0, status: pending}
-      - {line_id: comedy-show-tickets, amount: 50.28, funded: 0, status: pending}
       - {line_id: liquidibee-1, amount: 62.50, funded: 0, status: pending}
       - {line_id: liquidibee-2, amount: 13.89, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 7.82, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
-      - {line_id: metrc-fee, amount: 40.00, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 5.72, funded: 0, status: pending}
       - {line_id: moms-lump-0821, amount: 15.72, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 3.58, funded: 0, status: pending}
       - {line_id: patreon, amount: 1.93, funded: 0, status: pending}
@@ -375,12 +378,12 @@ daily_targets:                       # Revised 2026-08-13 (second revision,
       - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-15":
     operating_reserve: 30.00
-    target: 144.61
-    total_claim: 174.61
+    target: 150.33
+    total_claim: 180.33
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 144.61
+    shortfall: 150.33
     calendar_event_id: k9sog0mcpmisnn4p2hicernagk
     contributions:
       - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
@@ -389,6 +392,7 @@ daily_targets:                       # Revised 2026-08-13 (second revision,
       - {line_id: liquidibee-2, amount: 13.89, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 7.82, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 5.72, funded: 0, status: pending}
       - {line_id: moms-lump-0821, amount: 15.72, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 3.58, funded: 0, status: pending}
       - {line_id: patreon, amount: 1.93, funded: 0, status: pending}
@@ -396,12 +400,12 @@ daily_targets:                       # Revised 2026-08-13 (second revision,
       - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-16":
     operating_reserve: 30.00
-    target: 82.10
-    total_claim: 112.10
+    target: 87.82
+    total_claim: 117.82
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 82.10
+    shortfall: 87.82
     calendar_event_id: i5aqp4u51gvj79113o7ls4ajqk
     contributions:
       - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
@@ -409,6 +413,7 @@ daily_targets:                       # Revised 2026-08-13 (second revision,
       - {line_id: liquidibee-2, amount: 13.89, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 7.82, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 5.72, funded: 0, status: pending}
       - {line_id: moms-lump-0821, amount: 15.72, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
       - {line_id: patreon, amount: 1.93, funded: 0, status: pending}
@@ -416,12 +421,12 @@ daily_targets:                       # Revised 2026-08-13 (second revision,
       - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-17":
     operating_reserve: 30.00
-    target: 82.09
-    total_claim: 112.09
+    target: 87.80
+    total_claim: 117.80
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 82.09
+    shortfall: 87.80
     calendar_event_id: 2f3r9682t2emqdu76snes086b8
     contributions:
       - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
@@ -429,6 +434,7 @@ daily_targets:                       # Revised 2026-08-13 (second revision,
       - {line_id: liquidibee-2, amount: 13.89, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 7.82, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 5.71, funded: 0, status: pending}
       - {line_id: moms-lump-0821, amount: 15.71, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
       - {line_id: patreon, amount: 1.93, funded: 0, status: pending}
@@ -436,12 +442,12 @@ daily_targets:                       # Revised 2026-08-13 (second revision,
       - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-18":
     operating_reserve: 30.00
-    target: 82.06
-    total_claim: 112.06
+    target: 87.77
+    total_claim: 117.77
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 82.06
+    shortfall: 87.77
     calendar_event_id: i2k3vo0025kbt3lbseppnf690s
     contributions:
       - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
@@ -449,6 +455,7 @@ daily_targets:                       # Revised 2026-08-13 (second revision,
       - {line_id: liquidibee-2, amount: 13.89, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 7.81, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 5.71, funded: 0, status: pending}
       - {line_id: moms-lump-0821, amount: 15.71, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
       - {line_id: patreon, amount: 1.92, funded: 0, status: pending}
@@ -456,12 +463,12 @@ daily_targets:                       # Revised 2026-08-13 (second revision,
       - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-19":
     operating_reserve: 30.00
-    target: 82.06
-    total_claim: 112.06
+    target: 87.77
+    total_claim: 117.77
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 82.06
+    shortfall: 87.77
     calendar_event_id: j6imqfltarucop954b1dkdvkq4
     contributions:
       - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
@@ -469,6 +476,7 @@ daily_targets:                       # Revised 2026-08-13 (second revision,
       - {line_id: liquidibee-2, amount: 13.89, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 7.81, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 5.71, funded: 0, status: pending}
       - {line_id: moms-lump-0821, amount: 15.71, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
       - {line_id: patreon, amount: 1.92, funded: 0, status: pending}
@@ -476,19 +484,20 @@ daily_targets:                       # Revised 2026-08-13 (second revision,
       - {line_id: wispr-flow, amount: 0.56, funded: 0, status: pending}
   "2026-08-20":
     operating_reserve: 30.00
-    target: 82.06
-    total_claim: 112.06
+    target: 87.77
+    total_claim: 117.77
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 82.06
-    calendar_event_id: null
+    shortfall: 87.77
+    calendar_event_id: 7eg9gi4dqvae72l33nh0smr8c8
     contributions:
       - {line_id: car-repair-payment, amount: 12.77, funded: 0, status: pending}
       - {line_id: claude, amount: 4.76, funded: 0, status: pending}
       - {line_id: liquidibee-2, amount: 13.89, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 7.81, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.44, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 5.71, funded: 0, status: pending}
       - {line_id: moms-lump-0821, amount: 15.71, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 3.57, funded: 0, status: pending}
       - {line_id: patreon, amount: 1.92, funded: 0, status: pending}
@@ -1083,7 +1092,7 @@ open_questions:
   - "Confirm the 7/25 $1,000 allocation landed: $500 car payment, $200 tires, $50 mom"
   - "T-Mobile: confirm payment 1 ($265, was due 8/3) went through; payment 2 amount/date still needed"
   - "Water pump $184.79: inside or on top of the car goal's $2,000 repairs figure?"
-  - "RESOLVED 2026-08-13 (recompute session): comedy tickets $50.28 confirmed unpaid, folded whole into the 2026-08-13 daily accrual per Lemar's Option A choice — see Update 2026-08-13 (RECOMPUTE). The 'low priority' framing from 8/9 no longer applies; it is simply the most-overdue line in the queue."
+  - "RESOLVED 2026-08-13 (recompute session, updated same day): comedy tickets $50.28 confirmed unpaid and briefly folded into the accrual, then CANCELLED later the same day — Lemar isn't going, too many bills were piling up. Parked, out of the queue entirely, not owed. See Update 2026-08-13 (THIRD REVISION)."
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
   - "No balance has been reported for either pocket since the Era connector was retired 2026-08-10 — say 'Spending has $X' / 'Set-Aside has $X' whenever convenient; both currently render 'not reported'"
   - "Station travel $50/wk: Lemar started a weekend job at The Station 8/9 — pay rate not yet known, he'll report it in #personal-finance"
@@ -1099,6 +1108,31 @@ Everything before 2026-08-05 lives in
 budget from the first rough sketch through the (now retired) Option 3 allocation
 decision, the six-pocket mapping, and the calendar reminders. That note is closed; this
 ledger carries the live state forward.
+
+## Update 2026-08-13 (THIRD REVISION — comedy tickets cancelled, METRC pushed a week)
+
+**Too many bills were piling up on the near-term days**, so Lemar cut one and deferred
+another rather than let the daily number keep climbing.
+
+- **Comedy show tickets ($50.28) — cancelled.** He's not going. This is different from
+  the earlier "past due, unpaid" state (Update below): that was still an open debt
+  waiting on a payment decision; this is Lemar deciding there's no debt at all. Flipped
+  to `status: parked` per field rules (never deleted), `overdue: true` and the historical
+  `rolled` contributions on 8/10-8/13 stay exactly as they were — they correctly recorded
+  what the plan looked like at the time, and a decision made today doesn't rewrite that.
+  Simply drops out of every day from 8/14 forward.
+- **METRC ($40) — due date pushed one week, 8/14 to 8/21.** Lemar's explicit ask, scoped
+  to METRC alone (confirmed — not the whole schedule). It no longer lands as a same-day
+  lump; it spreads over the new 7-day window like everything else.
+
+**Today's number drops from $314.89 to $230.33** ($30.00 gas + $200.33 set-aside) — the
+two changes together remove $84.56 from 8/14 alone (comedy's full $50.28 plus $34.28 of
+METRC's former lump, since $5.72/day of METRC's $40 still lands on 8/14 under its new
+spread). The rolling aggregate calendar events (8/14-8/20) were updated with the new
+figures; METRC's own due-date reminder event was moved to 8/21 rather than duplicated.
+Dashboard re-rendered again.
+
+Nothing paid, nothing contacted — this records what Lemar decided.
 
 ## Update 2026-08-13 (SECOND REVISION — 8/13's target pushed to 8/14; mom's payments added)
 
