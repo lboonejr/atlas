@@ -69,7 +69,10 @@ Lemar" in #decisions.
 
 ## Run order
 
-V → S → A → B → C → D → E → Q → G → H → M (money) → canvas refresh → P (Pulse) → digest (+ _daily append).
+V → S → A → B → C → D → O → E → Q → G → H → M (money) → canvas refresh → P (Pulse) → digest (+ _daily append).
+
+PART O rides PART D's mail and must run immediately after it — it opens no Gmail sweep of
+its own except on its once-daily reconciliation.
 
 ---
 
@@ -147,6 +150,25 @@ Lemar's reactions, triage new mail (reply-worthy / substantive / investor-handof
 junk), draft 2–3 voice-matched options, save approved drafts to Gmail Drafts (NEVER
 send), detect tasks capture-first, and write the saved-draft / detected-task /
 closed-thread Haven notes. Returns E · R · Cl · T · O for the digest.
+
+### PART O — off-button vendor wind-down scanner
+Invoke the **samira-off-button** skill (`.claude/skills/samira-off-button/`). It rides the
+mail PART D just read — **do not open a second Gmail sweep** — and classifies vendor /
+creditor / tax / collections communications against the ledger
+`haven/vault/40-Projects/off-button/index.md` (the source of truth; the Monday board
+`18424191974` is a rendering regenerated FROM it). Two modes: per-scan triage every run
+(update only what moved), and ONE full reconciliation per day on the first scan at/after
+06:00 ET, which sweeps Gmail since `meta.last_scan`, verifies `correspondence` against SENT
+mail, and regenerates the board.
+NOISE RULE: cannabis vendors mail weekly menus constantly — marketing is NOT correspondence
+and must never move a date, a status, or the digest. When unsure, skip.
+Never guess an amount (`null` stays `null`), never pay, never contact a vendor. Out of
+scope and FLAG-ONLY: MCA obligations (Novus, Liquidibee/Elevate, Nomas) and litigation
+(DeWalt) — per Lemar 2026-08-13. Station-entity items stay flagged, never moved unilaterally.
+Escalate to ONE #decisions parent only for: a hard deadline inside 14 days, a new
+third-party collections placement, a legal threat, a CRC/state-notification risk, or a
+materially unexpected balance move. Everything else rides the digest.
+Log via samira-report-result. Returns `U updated · N new · D deadlines<14d · F flagged`.
 
 ### PART E — investor loop
 Invoke the **samira-investor** skill: work the Gmail `Samira/investor` handoffs + items
