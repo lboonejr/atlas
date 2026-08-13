@@ -1,6 +1,6 @@
 ---
 created: 2026-08-12T10:00-04:00
-updated: 2026-08-13T13:30:00-04:00
+updated: 2026-08-13T15:30:00-04:00
 domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation
 type: task
 status: active
@@ -60,3 +60,26 @@ and business-email-wide blast radius.
 - gmail: thread `19ffc043a83ed7d0` ("Set up billing for Google Workspace
   Business Standard for cuzziesnj.com", workspace-noreply@google.com,
   2026-08-13)
+
+## Update 2026-08-13 (2) — Lemar picks Option 1: self-serve direct billing
+
+Lemar reacted ✅ on Option 1 in the `#decisions` card ("Google Workspace
+(cuzziesnj.com) — billing lapse, ALL services suspend 8/20", ts
+`1786641661.331369`, option ts `1786641664.664189`): he will set up direct
+billing himself in the Google Admin console — no action needed from Samira
+on the billing setup itself.
+
+He then flagged a **dependency** in-thread: setting up the new Workspace
+billing/payment plan in Admin console will first require paying down the
+overdue **Google Voice** balance he's behind on (the suspension tracked
+above) — the two issues share the same reseller/billing root cause, and the
+Voice arrears look like they're blocking the Workspace fix.
+
+**Status:** decision logged, no payment made or authorized by Samira. Both
+the Google Voice reactivation (Update above) and this Workspace direct-billing
+setup remain Lemar's direct action in the Admin console; the sequencing is
+now: clear Google Voice balance → then Workspace billing can be set up.
+
+### Sources (this update)
+- slack: #decisions ts `1786641661.331369` (card) / `1786641664.664189`
+  (Option 1, ✅'d) / `1786642451.199409` (Lemar's dependency note)
