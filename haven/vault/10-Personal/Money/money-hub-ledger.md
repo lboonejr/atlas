@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-10T14:45:00-04:00
+updated: 2026-08-13T13:30:00-04:00
 domain: personal
 type: reference
 status: active
@@ -196,7 +196,20 @@ plans:
       - {seq: 2, amount: 125, due: 2026-08-23, status: pending, calendar_event_id: gt4knt3i2m6lpjhlrjf8n2jqn8}
       - {seq: 3, amount: 125, due: 2026-08-30, status: pending, calendar_event_id: locnmilchabhgq2o0kd8slf7r4}
       - {seq: 4, amount: 125, due: 2026-09-06, status: pending, calendar_event_id: ekpni2dt25f0fe5tjh51sbjj64}
-daily_targets:                       # THE DAILY ACCRUAL (rebuilt 2026-08-10). Every
+daily_targets:                       # !!! STALE — DO NOT ACT ON THESE NUMBERS !!!
+                                     # Computed against today = 2026-08-10. The real
+                                     # date is 2026-08-13 (verified). The 8/10, 8/11 and
+                                     # 8/12 entries have ELAPSED UNFUNDED ($296.69 of
+                                     # set-aside + $90 of gas reserve), and their
+                                     # calendar events have already fired. Wispr Flow
+                                     # (8/10), cleaning supplies (8/11) and comedy
+                                     # tickets (8/12) are PAST DUE unless Lemar paid
+                                     # them. A full recompute against 2026-08-13 is the
+                                     # next action — see the Update below and
+                                     # open_questions. Nothing here was corrected
+                                     # automatically: how to treat three elapsed
+                                     # unfunded days is Lemar's call, not a guess.
+                                     # THE DAILY ACCRUAL (rebuilt 2026-08-10). Every
                                      # dated line drips a daily amount; target = the sum
                                      # of that day's drips = what today costs. `funded` is
                                      # what the day's logged income actually covered;
@@ -646,6 +659,7 @@ goals:                               # a goal is a bill Lemar owes himself: it n
             income' framing died with the waterfall on 2026-08-10; under due-date order
             savings is funded by naming an amount and a date like anything else."}
 open_questions:
+  - "**RECOMPUTE REQUIRED (blocking).** The whole accrual was computed against today = 2026-08-10; the real date is 2026-08-13. Days 8/10-8/12 elapsed unfunded. Before anything else: (a) did Lemar pay Wispr Flow $15 (due 8/10), cleaning supplies $30 (8/11), comedy tickets $50.28 (8/12)? (b) should the $296.69 of unfunded set-aside roll forward onto today — which pushes today's number to roughly $460 — or should those three lines be pulled out as plainly overdue and the schedule restarted clean from 8/13? Then rebuild daily_targets, the 8/13-8/19 calendar events, and the dashboard. Do NOT roll it forward silently; the rollover rule assumes a day ends, not that three vanish at once."
   # -- the new #1 class of defect: undated queue lines are invisible --
   - "UNDATED (invisible to the queue — no event, no ramp, will never ring): student loans $500/mo · mom's $200/mo · Tidal $14.92/mo · Cuzzie's phone + Workspace ~$550/mo · Cash App payback $187.22 · gym debt $75 · water pump $184.79 · T-Mobile payment 2 (amount also unknown). Eight lines, ~$1,262/mo + $447 one-time, all silently outside the system until each gets a date."
   - "Car goal: what date do you want the car running by? Without it the goal generates nothing."
@@ -670,6 +684,45 @@ Everything before 2026-08-05 lives in
 budget from the first rough sketch through the (now retired) Option 3 allocation
 decision, the six-pocket mapping, and the calendar reminders. That note is closed; this
 ledger carries the live state forward.
+
+## Update 2026-08-10 (DATE ERROR — schedule computed against the wrong day)
+
+**Everything dated in this ledger was computed against today = 2026-08-10. The real date
+is 2026-08-13** (verified directly from the system clock: Thursday 2026-08-13 13:29 ET).
+Three days of real time passed inside the session that built this.
+
+How it happened, for the record: Era's `as_of` stamp read 2026-08-10T13:33, the newest
+Slack messages in #personal-finance were 2026-08-09, the calendar events had been created
+2026-08-09/10, and the first two handoff docs came back from Drive stamped 2026-08-10.
+Every available signal agreed on Aug 10, so the accrual was anchored there. The third
+handoff doc came back stamped 2026-08-13, which surfaced the conflict.
+
+**What is wrong:** only the dated schedule. `daily_targets` (all 28 days), the seven
+rolling calendar events, and the dashboard's date header. Consequences as of 2026-08-13:
+- `2026-08-10` ($136.96), `2026-08-11` ($92.44), `2026-08-12` ($67.29) have ELAPSED
+  UNFUNDED — $296.69 of set-aside, plus 3 × $30 = $90 of gas reserve.
+- Their calendar events have already fired.
+- Wispr Flow ($15, due 8/10), cleaning supplies ($30, 8/11) and comedy show tickets
+  ($50.28, 8/12) are PAST DUE unless Lemar paid them outside the system.
+- METRC ($40) is due TOMORROW with one day left to fund it, not four.
+
+**What is NOT wrong:** every structural decision holds — due-date order, the accrual
+mechanism itself, the gas operating reserve and its first claim, the two pockets and
+their corrected accounts, reported balances and the three honesty rules, the overload
+check, the rollover brake, the base64 skill repair, the business boundary. All five
+commits stand. Only the arithmetic's starting day is off.
+
+**Deliberately NOT auto-corrected.** Rolling all $296.69 onto today would push today's
+number to roughly $460 and cascade from there; the rollover rule was written for a day
+ending, not for three days vanishing at once. The alternative is to treat those three
+bills as plainly overdue, lift them out of the accrual, and restart clean from 2026-08-13.
+Which is right depends on whether Lemar actually paid them over the weekend, which this
+system has no way to know. Raised as a blocking open question rather than guessed —
+the same rule that governs every other unknown here.
+
+Lemar's call 2026-08-13: the recompute happens in a separate chat. This Update, the
+warning block on `daily_targets`, the dashboard banner, and the v4 handoff all carry the
+correction so the next session cannot act on Monday's numbers by accident.
 
 ## Update 2026-08-10 (Era Context retired — every figure is now reported)
 
