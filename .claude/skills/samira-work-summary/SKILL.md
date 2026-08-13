@@ -151,3 +151,12 @@ keeps landing in the capture-DM fallback, that's a signal for a real project cha
 which is Lemar's or Atlas's call, not this skill's). It never re-derives or duplicates a
 Haven note for the same matter — haven-capture's own step-zero dedupe (schema §7) handles
 a thread that's a continuation of an already-open matter.
+
+## No-GitHub chat / Cowork surfaces
+This version needs the GitHub connector (to write the Haven note directly, via
+haven-capture) and lands the record instantly. On a surface with a Slack connector but
+NO GitHub access — a plain claude.ai chat, or a Cowork session not attached to this repo
+— use **`samira-work-summary-slack-only.md`** in this same folder instead: it skips the
+direct Haven write and composes the Slack message so Samira's own scheduled run (which
+does have GitHub access) lands the record when she processes it on her next scan. Prefer
+this version whenever GitHub access is available.
