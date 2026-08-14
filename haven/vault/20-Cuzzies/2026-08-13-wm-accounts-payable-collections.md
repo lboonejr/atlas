@@ -1,6 +1,6 @@
 ---
 created: 2026-08-13T11:15-04:00
-updated: 2026-08-13T14:55-04:00
+updated: 2026-08-14T18:35:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -37,9 +37,31 @@ overages. No reply needed now; flagging so a repeat incident isn't a surprise $2
 Not posted to #decisions separately — same account family already surfaced there via the
 dumpster-overflow and AP-collections cards above.
 
+## Update 2026-08-14T18:35:00-04:00 — Mason Wales proposes doubling the bin rate; needs Lemar's authorization
+
+Lemar replied directly to the dumpster-overflow thread himself 2026-08-14 ~1:09pm ET
+(gmail thread `19ffb0c2f0236bf0`, matches the "Option B" draft Samira saved 8/13):
+disclosed the temporary closure since June 13, asked what WM needs to resolve it.
+Mason Wales (Inside Sales, WM Phoenix) replied 2026-08-14 ~1:43pm ET with a service
+change proposal for 2750 Mount Ephraim Ave:
+
+- **Current:** 2-yard trash bin, weekly Wednesday service, **$154.86/month**
+- **Recommended:** same bin size/schedule but marked for the larger-capacity
+  correction, **$309.72/month** (doubles the base rate)
+- Framed as avoiding overage charges ("upwards of $270/overfill"); asks Lemar to
+  reply "approved" to authorize the change; notes prorated charges may apply
+
+This is a recurring-cost authorization decision, not something Samira executes.
+Given the store has been closed since June 13 (per Lemar's own reply), doubling
+ongoing service spend is worth weighing against reducing/pausing service instead —
+raised in #decisions with drafted reply options rather than executed. Gmail thread
+labeled `Samira/seen`.
+
 ## Related
 - [[waste-management]] (entity note — none exists yet, needs a stub)
 
 ## Sources
 - gmail: thread `19ffb790c00105f4`
 - gmail: thread `19ffc6f57bfad3f1` (container-contamination warning, 8/13)
+- gmail: thread `19ffb0c2f0236bf0` (dumpster overflow → Mason Wales's 8/14 pricing
+  proposal to double the monthly bin rate)

@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-08-14T14:06:31-04:00
+updated: 2026-08-14T18:30:00-04:00
 domain: legal
 type: task
 status: active
@@ -428,6 +428,27 @@ Lemar's own promised comparison/decision step from the 8/13 update above.
 - slack: Samira capture DM `D0BHPKMDNEP`, ts `1786725703.099959`
 - calendar: event `7796p3d76b3lvo91dvtj0rk14c`, "Call: Hagner & Zohlman (DeWalt Case)",
   2026-08-14 1:30-2:00pm ET
+
+## Update 2026-08-14T18:30:00-04:00 — sixth firm contacted (Kaplan law/kaplaw.com); office confirms it "passed the information on"
+
+Today's email sweep found a new outbound Lemar sent directly (not drafted by Samira),
+2026-08-14 ~1:08pm ET, to `dcobb@kaplaw.com` (gmail thread `1a0013edc74f5864`): full
+case background (DeWalt v. Cuzzie's, CAM-L-1339-26, default judgment entered, Sept 14
+proof hearing), asking specifically for a motion to vacate the default judgment plus
+an adjournment of the proof hearing, and a ballpark fee structure. Deborah E. Cobb
+replied 2026-08-14 ~1:45pm ET: *"Thank you. I passed this information on."* — a pure
+routing acknowledgment, no attorney assigned yet, no timeline given.
+
+**Read:** this is a sixth name in the counsel search (after Siciliano — retained,
+non-responsive since 8/12; Wall; Brekke — called 8/14 9am, outcome not yet known to
+Samira; Greenberg — Donte's settlement-review track; Hagner & Zohlman — called 8/14
+1:30pm). No reply is owed from Lemar's side right now (the ack doesn't ask a question);
+flagging as a task to watch, not something requiring a drafted reply. Gmail thread
+labeled `Samira/seen`.
+
+**Open:** if Kaplan's office hasn't come back with an assigned attorney within a few
+business days, this becomes a candidate for the same "circle back" pattern Lemar has
+used with Siciliano and CCBA — his call, not assumed here.
 
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
