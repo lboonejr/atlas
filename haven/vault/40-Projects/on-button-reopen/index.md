@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-08-14T10:05:00-04:00
+updated: 2026-08-14T10:20:00-04:00
 domain: project
 type: reference
 status: active
@@ -422,7 +422,7 @@ items:
     account: "Policy #997268390 (cancelled 7/3/26)"
     contact: "progressivecommercial.com"
     status: lapsed
-    note: "Moved Tier 1 → Tier 3 (2026-08-01): Lemar decided 2026-07-27 in #decisions to let this lapse rather than pay — same 7/2 #decisions call that paired this with epli-reinstate above (ts 1783026740.943679). Balance reconciled to $1,107.20, the actual cancellation-confirmation amount owed; supersedes the old $2,117.80 pre-cancellation reinstatement-quote figure, which no longer applies since the policy is confirmed cancelled effective 7/3. Escalated to a collections-threat 'final notice' 7/27, repeated 7/30 — no dispute sent, no payment made, tracking only. Restore/reinstate coverage only if decided later; not a reopen blocker."
+    note: "Moved Tier 1 → Tier 3 (2026-08-01): Lemar decided 2026-07-27 in #decisions to let this lapse rather than pay — same 7/2 #decisions call that paired this with epli-reinstate above (ts 1783026740.943679). Balance reconciled to $1,107.20, the actual cancellation-confirmation amount owed; supersedes the old $2,117.80 pre-cancellation reinstatement-quote figure, which no longer applies since the policy is confirmed cancelled effective 7/3. Escalated to a collections-threat 'final notice' 7/27, repeated 7/30 — no dispute sent, no payment made, tracking only. Restore/reinstate coverage only if decided later; not a reopen blocker. A repeat automated notice landed again 8/9, cross-referenced 8/14 to this same tracked line — no change, no new action."
   - id: first-insurance-funding-notice
     label: "First Insurance Funding — loan #106241219 (separate policy from epli-reinstate)"
     amount: 4699.76
@@ -496,6 +496,23 @@ carry:
 - Reality check: opening (~$104.4K) + a 3-month cushion (~$93.6K carry) ≈ **$198K** before
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
+
+## Update — 2026-08-14 (accounting/bookkeeping staffing note — narrative only)
+New #on-button drop, ts `1786714257.383289` (after the 6-item batch logged in the entry
+below): Lemar — "For accounting/bookkeeping I'll definitely see what the Claude MCP
+features can do to help me with that but also suggest Julio that does the stations'
+bookkeeping." Two threads to track, neither dollar-denominated and neither a vendor/tier
+item:
+1. Lemar is evaluating whether Claude/MCP tooling can help run Cuzzie's reopening
+   bookkeeping directly.
+2. He's considering bringing in **Julio** — The Station (Newark)'s existing bookkeeper —
+   to also handle Cuzzie's books once reopened, rather than (or alongside) the currently
+   tracked GreenBooks CPA carry line (`Accounting — GreenBooks`, $1,600/mo in the carry
+   table above).
+No figure or decision yet — logged narratively for the reopening-plan record; not added
+as a tier item (nothing payable) and doesn't change the carry table until Lemar decides
+whether Julio replaces or supplements GreenBooks. Page/canvas not regenerated (no
+rendered data changed). Nothing contacted.
 
 ## Update — 2026-08-14 (Dutchie item added; Weedmaps/AIQ resolution plans; CRC/license/terminals logged narratively)
 Swept #on-button, 6 new drops since the 8/13 ~6:20pm checkpoint (all genuine — none
