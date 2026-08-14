@@ -8,7 +8,7 @@ When a workspace, board, account, or channel changes, edit THIS file and nothing
 > doing work is fine; maintaining a second list is not). The memory file
 > `shortlist_anchors.md` on Lemar's machine is a pointer to this file, not a copy.
 
-Last verified: 2026-07-16 (added the Voice profile section — canonical profile moved into the repo) · 2026-07-16 (Dawn rerouted off #daily-brief → now posts to Lemar's DM, bot IM `D0BJ0JPQD8C`; #daily-brief being archived) · 2026-07-16 (Atlas capture inbox moved off #atlas → Lemar's DM with Samira's bot, `D0BHPKMDNEP`; #atlas being archived) · 2026-07-17 (added Stormy the idea-baking engine, REFOLDED into Samira's run as PART Q per Lemar — no separate trigger/bot/DM; posts via Samira's existing bot to the private #stormy channel `C0BJ37SU1TL`, created + Samira bot confirmed in-channel 2026-07-17).
+Last verified: 2026-07-16 (added the Voice profile section — canonical profile moved into the repo) · 2026-07-16 (Dawn rerouted off #daily-brief → now posts to Lemar's DM, bot IM `D0BJ0JPQD8C`; #daily-brief being archived) · 2026-07-16 (Atlas capture inbox moved off #atlas → Lemar's DM with Samira's bot, `D0BHPKMDNEP`; #atlas being archived) · 2026-07-17 (added Stormy the idea-baking engine, REFOLDED into Samira's run as PART Q per Lemar — no separate trigger/bot/DM; posts via Samira's existing bot to the private #stormy channel `C0BJ37SU1TL`, created + Samira bot confirmed in-channel 2026-07-17) · 2026-08-13 (Pulse / Money Hub / Morning Brief / Meeting Prep artifact-URL rows replaced with Drive folder ids — Artifact tool retired for all four, see CHANGELOG).
 
 ## Repo / vault
 
@@ -134,8 +134,8 @@ Once-a-day 1am ET routine that complements Samira. Thin bootstrap
 | Cloud env | `env_01Xatmag93x2WA2Gd84D9iHj` (shared with Samira — same connectors + git access) |
 | Cron | `0 5 * * *` UTC (1am EDT) · `0 6 * * *` UTC during EST — revisit at DST |
 | Runbook (live behavior) | `.claude/routines/daily-brief.md` — editing on the default branch changes the next run |
-| Living brief artifact URL | `https://claude.ai/code/artifact/125d4d13-c1ae-4f9c-8861-e173b56635e5` — first published 2026-07-05 (manual dry run). morning-brief re-deploys to THIS same URL each run (pass it as `url`). |
-| Living meeting-prep artifact URL | `https://claude.ai/code/artifact/b0143e64-a665-44e1-af48-33db2f88457e` — first published 2026-07-08 (first day with a qualifying call). meeting-prep re-deploys to THIS same URL each run (pass it as `url`). |
+| Morning Brief Drive folder | `1bmBv1UZCptF20QgBzb5J-iOBUaG5MLj-` (`ATLAS/Dashboards/Morning Brief`, folder link `https://drive.google.com/drive/folders/1bmBv1UZCptF20QgBzb5J-iOBUaG5MLj-`). **Rendering target changed 2026-08-13** — Artifact tool retired (same reason as Pulse). Every run creates a NEW Doc here, filename `YYYY-MM-DD HHMM ET — Morning Brief`; never edited or deleted. No new notification plumbing needed — Dawn already DMs Lemar one line per run (below); that line now links to the new Doc instead of the old stable artifact URL. |
+| Meeting Prep Drive folder | `1oAWUzSzZPs71oBp5ERkLBNe7aSZa2L80` (`ATLAS/Dashboards/Meeting Prep`, folder link `https://drive.google.com/drive/folders/1oAWUzSzZPs71oBp5ERkLBNe7aSZa2L80`). Same 2026-08-13 change. Every run creates a NEW Doc here, filename `YYYY-MM-DD HHMM ET — Meeting Prep`; never edited or deleted. Dawn's existing DM line links to it instead of the old artifact URL. |
 | **Output surface** | **Lemar's DM — the Dawn bot IM `D0BJ0JPQD8C` with Lemar `U0BC5UTHYG4` (rerouted off #daily-brief 2026-07-16).** Dawn posts by sending to Lemar's user id, which auto-opens the IM (bot confirmed to have `im:write` — smoke-tested 2026-07-16, `ok:true`). This is Dawn's ONLY Slack surface. |
 | Slack connector (Dawn's own bot identity) | connector_uuid `947737c2-a978-4dd1-93bb-cdd55ce14c97`, custom connector named "Slack (Dawn bot)", MCP endpoint `https://dawn-beryl.vercel.app/mcp`. Swapped into this trigger's `mcp_connections` 2026-07-16, replacing the shared personal Slack connector (`7faf04c0-5bd6-4237-8430-f80040c482e1`) for Dawn ONLY — Samira has her own separate bot connector (see above); Basil still uses the personal connector. Same generic server code as Samira's (`apps/samira-slack-bot/` in this repo), deployed as its own separate Vercel project ("dawn") with Dawn's own bot token — purely branding consistency, Dawn is one-way (never reads reactions back). Dawn now **DMs Lemar directly** (bot IM `D0BJ0JPQD8C`) — no channel invite needed (a bot can DM a workspace user without an invite). #daily-brief is being archived. |
 
@@ -206,15 +206,24 @@ documented in the runbook, the PART Q entry, and the skill's runtime banner.
 ## Pulse dashboard (rendered by Samira — no separate trigger)
 
 Lemar's living one-page personal dashboard. Rendered at the END of every hourly Samira
-scan (runbook **PART P**) by the **pulse-dashboard** skill (`.claude/skills/pulse-dashboard/`)
-and re-deployed to ONE stable artifact URL. Rendering only — writes no vault notes, posts
-nothing to Slack; its status rides in Samira's digest as `pulse ✅/⚠️`. Fallback if the
-Artifact re-deploy breaks headless: a Slack canvas updated in place, or the githack
-pattern used by on-button-reopen.
+scan (runbook **PART P**) by the **pulse-dashboard** skill (`.claude/skills/pulse-dashboard/`).
+**Rendering target changed 2026-08-13** — the Artifact tool is retired for this skill (it
+kept re-prompting Lemar for tool approval on his phone, the surface he checks Pulse from
+most, and the repo-level permission allow-list couldn't reach that surface). Every render
+now creates a NEW Google Doc snapshot in the Pulse Drive folder below; nothing is
+re-deployed to a stable URL anymore, and no Slack canvas is involved (canvas creation is
+blocked on this workspace's Slack plan). Still writes no vault notes. **Notification
+changed 2026-08-13 too**: Pulse now DMs Lemar the new snapshot's link through the Samira
+capture DM (`D0BHPKMDNEP` — the only DM slot the shared bot has; safe to reuse because
+PART B's capture-sweep only develops messages FROM Lemar, never the bot's own posts) —
+but ONLY when this hour's run actually changed something (any of: a #decisions card
+closed/opened, a money change, a project-pulse status flip, a new Haven note). A fully
+quiet hour still creates the Drive doc for the record but sends no DM. Its status still
+rides in Samira's digest as `pulse ✅/⚠️` every hour regardless.
 
 | What | Value |
 |---|---|
-| Living Pulse artifact URL | `https://claude.ai/code/artifact/6838142e-852c-44a5-8778-b584be1316d4` — first published 2026-07-12 (desktop session, v1). PART P re-deploys to THIS same URL each run (pass it as `url`; keep title "Pulse — Personal Dashboard" + favicon 📍). |
+| Pulse Drive folder | `1Dj_MZDlqUzHfAyK8TMwwJ57dZhi29omX` (`ATLAS/Dashboards/Pulse`, folder link `https://drive.google.com/drive/folders/1Dj_MZDlqUzHfAyK8TMwwJ57dZhi29omX`). Every render creates a NEW Doc here — filename `YYYY-MM-DD HHMM ET — Pulse` (zero-padded, so name-sort and time-sort agree) — never edited or deleted afterward; history is the point. Primary access is the DM link above; the folder is the archive. |
 | Workout plan artifact URL | `https://claude.ai/code/artifact/a723834f-6310-4575-8897-75ae8e30806e` ("Back to the Court — 12-Week Plan"; source-of-truth note `haven/vault/10-Personal/Health/2026-07-07-basketball-fitness-plan.md`, start Mon 2026-07-07). Pulse links out to it; its check-offs live in that page's own localStorage. |
 | Sections (Lemar's fixed top-to-bottom order, 2026-07-12: big ideas → details → execution) | quick-capture todo strip · Dawn as North Star (direction, NOT tasks) · calendar roadmap · #decisions respond list · money (Haven budget ledger) · today's workout · Atlas open items · project pulses · Samira + routine health. Single column. EVERY item links to its source thread (Slack permalink) or calendar event (htmlLink). |
 
@@ -236,7 +245,7 @@ stale, and it covered only 2 accounts, one of them parked).
 | Balances | **Reported, never fetched** (locked 2026-08-10). Each pocket carries `balance` + `balance_as_of`, set only when Lemar states a figure ("Spending has $240"). Unreported renders "not reported", never $0, and is never inferred from the income log. Older than 7 days renders stale with its true date. A reported balance is never adjusted to match what the ledger expected — show both and say so. |
 | The one number | `daily_targets[today].total` — the single figure Lemar acts on, and the top of the dashboard. Everything else explains it. |
 | Undated lines | A `track: queue` line with no date has no queue position, no event, and no ramp — it is INVISIBLE, not low-priority. Undated lines are a tracked defect class, surfaced in `open_questions`, on the dashboard, and in PART M's return token. Never invent a date. |
-| Living Money Hub artifact URL | `https://claude.ai/code/artifact/f3cbc24f-37ee-4cdd-8643-9eb33b305d00` — first published 2026-08-05. money-hub re-deploys to THIS same URL each render (pass it as `url`; keep title "Money Hub" + favicon 💵). |
+| Money Hub Drive folder | `1GtoHCj6Os2GDkdVd1nQtqxZr0UyVnZo4` (`ATLAS/Dashboards/Money Hub`, folder link `https://drive.google.com/drive/folders/1GtoHCj6Os2GDkdVd1nQtqxZr0UyVnZo4`). **Rendering target changed 2026-08-13** — replaces the retired Artifact re-deploy (same reason as Pulse, see that section). Every render creates a NEW Doc here, filename `YYYY-MM-DD HHMM ET — Money Hub`; never edited or deleted afterward. **Notification**: unlike Pulse, money-hub already has standing permission to post to **#personal-finance** — whenever a render actually changes the dashboard (the existing "only if something changed" gate), reply in that channel with the new snapshot's link, right where the triggering drop landed. No separate DM (Samira's shared bot has only the one DM slot, already used for capture). Folder is the archive. |
 | Weekly view | ON DEMAND ONLY ("run my week", "what's due") — Lemar's call 2026-08-05; no scheduled allocation run. Shows the gap in dollars; never reorders the queue or picks which line slips. |
 | Calendar events | Personal money → the reminder calendar; business money → Cuzzie's (Owners) (both in the Google Calendar section). Event ids live in the ledger rows, adopted from the four pre-hub events (Claude / Wispr Flow / Patreon / T-Mobile). Two popups on every new bill event: 7-day (`10080`) + day-of (`0`), locked 2026-08-09. |
 | Guards | **OVERLOAD CHECK** (coming week's set-aside vs. trailing 4-week income average — flags the gap, never shrinks the number; dormant until the income log has ≥7 entries) and the **rollover brake** (a contribution rolling 3 days running gets named in #decisions instead of rolling forever). |

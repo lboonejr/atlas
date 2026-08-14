@@ -3,6 +3,50 @@
 The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NOW.
 History and cutover narratives live here.
 
+## 2026-08-13 — Pulse, Money Hub, morning-brief, meeting-prep move off the Artifact tool to Drive snapshot Docs
+- **The problem.** Lemar flagged (first on 2026-07-13, again on 2026-08-13) that the
+  Artifact tool kept prompting him for approval on his phone — the surface he checks
+  Pulse from most. A repo-level `.claude/settings.json` allow-list fix landed for the
+  Artifact tool, but it can only reach sessions that load this repo's project settings;
+  a phone session apparently doesn't (or didn't at the time). Rather than keep chasing a
+  permission-prompt fix, Lemar chose a different mechanism entirely.
+- **The new mechanism.** All four skills that used to publish/re-deploy a claude.ai
+  Artifact now write a **new, timestamped Google Doc into a dedicated Drive folder on
+  every render** — `ATLAS/Dashboards/{Pulse, Money Hub, Morning Brief, Meeting Prep}`
+  (folder ids in `.claude/anchors.md`). A prior snapshot is never edited or deleted;
+  the folder is the history. The HTML each skill already built for its Artifact is
+  reused verbatim as `textContent` with `contentMimeType: "text/html"` — Drive's
+  HTML→Doc conversion keeps headings/bold/color/tables but drops CSS grid/flexbox, so
+  the skills were told to keep markup simple.
+- **Two ruled-out alternatives, for the record.** A Drive **shortcut** file that gets
+  repointed to the newest snapshot (a stable one-bookmark link) isn't buildable — the
+  connected Google Drive tools have no shortcut-create/retarget primitive, only
+  create-new-file, copy, and read. A **Slack canvas** pointer, updated in place per
+  render, was the next choice, but canvas *creation* via API is blocked on this
+  workspace's Slack plan (`not_supported_free_team`) — the two existing pinned canvases
+  (Open Items, on-button) were created by hand through the Slack UI, not by a bot, and
+  *editing* an existing canvas still works fine. Lemar chose not to hand-create four
+  canvases and instead settled on the notification design below.
+- **How "latest" gets surfaced, per dashboard:**
+  - **Morning brief / meeting prep** — no new plumbing. Dawn already DMs Lemar one line
+    per daily run; that line now links to the new Doc instead of the old stable
+    artifact URL.
+  - **Pulse** — previously posted nothing to Slack by design (hourly, 8a–6p ET). Now
+    DMs the new snapshot link through the Samira capture DM (`D0BHPKMDNEP` — the shared
+    bot's only DM slot), but ONLY when the hour actually changed something (a
+    #decisions card opened/closed, money changed, a project pulse flipped, a new Haven
+    note). A quiet hour still creates the Doc for the record, just skips the DM.
+  - **Money Hub** — already had standing permission to post to #personal-finance; now
+    replies there with the new snapshot's link whenever a render changes something
+    (reusing the existing "only if changed" gate), in the same channel the triggering
+    drop landed in.
+- **Files touched:** `.claude/anchors.md` (Pulse/Money Hub/Morning Brief/Meeting Prep
+  Drive folder ids replace the four artifact-URL rows), the four skills' `SKILL.md`,
+  `.claude/routines/samira-atlas-executor.md` (PART P, PART M wording), and
+  `.claude/routines/daily-brief.md` (PART 1/2, SAFETY, pre-flight section rewritten for
+  the new mechanism — the old Artifact-viability pre-flight is superseded, not deleted
+  from history; see the 2026-07-05 entry below for that original bootstrap).
+
 ## 2026-08-03 — Integrity pass: vault-keeper now repairs broken frontmatter vault-wide
 - **The hole this closes.** Filing only ever looked at `00-Inbox`, so once a note was filed
   (or landed outside the Inbox by hand) nothing re-examined it. Malformed notes accumulated

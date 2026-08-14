@@ -6,7 +6,8 @@ description: >
   Source of truth is the Haven ledger note
   haven/vault/10-Personal/Money/money-hub-ledger.md (bills, plans, goals, the two
   pockets, and the daily accrual) plus the income log; the Money Hub dashboard
-  artifact and the reminder-calendar events (including the ONE daily "set aside today"
+  (a new timestamped Google Doc snapshot each render, since 2026-08-13 — see anchors)
+  and the reminder-calendar events (including the ONE daily "set aside today"
   aggregate event) are regenerated FROM the ledger, never hand-edited. The allocation
   engine is DUE-DATE ORDER (locked 2026-08-10, replacing the retired Option 3 hybrid
   floor + waterfall) and only advises — Lemar moves the money himself. Trigger on:
@@ -31,7 +32,7 @@ in the runbook applies; add the guards below.
 
 ## ANCHORS
 All platform IDs live in **`.claude/anchors.md`** — read it first. You use: the
-**Money Hub artifact URL** (Money Hub section), the **reminder calendar ID** (personal
+**Money Hub Drive folder id** (Money Hub section), the **reminder calendar ID** (personal
 money only), the **Cuzzie's (Owners) calendar ID** (business money only),
 **#personal-finance** `C0BGLEMH99T`, and the git-write policy (commit straight to
 `main`; prefix `money-hub:`). Vault outcome notes go through **samira-report-result**
@@ -189,8 +190,8 @@ across all contributions gets its own event cancelled and its id cleared). Never
 a past day. Re-render.
 
 **8. Show / rebuild the hub** — "show me the money hub", "money hub", "rebuild the
-money hub". Re-render the dashboard from the current ledger + income log and hand back
-the artifact URL.
+money hub". Re-render the dashboard from the current ledger + income log (a new Drive
+snapshot Doc) and hand back its link.
 
 ## ACCRUAL — every line is a daily drip (locked 2026-08-10)
 **Every dated line is a payment plan against itself.** A bill is not an event on its due
@@ -360,13 +361,24 @@ due." Personal reminder calendar only, no attendees, popup reminder (`minutes: 0
 - A day whose target reaches $0 (every contribution cleared or moved off it) → cancel its
   event and clear the id (RETIRE) — never leave a stale $0 reminder.
 
-## DASHBOARD — the Money Hub artifact
+## DASHBOARD — the Money Hub Drive snapshot
 One self-contained HTML page (inline CSS, no external requests, single column
-phone-first, light/dark via `prefers-color-scheme` + `[data-theme]` overrides; load the
-`artifact-design` and `dataviz` skills before building). `<title>Money Hub</title>`,
-favicon 💵, "rendered HH:MM ET" stamp. Re-deploy to the stable URL in anchors (pass it
-as `url`). Sections, top to bottom, every number traceable to the ledger, the log, or
-Era:
+phone-first; load the `artifact-design` and `dataviz` skills before building — their
+layout/color guidance still applies even though the target is a Doc, not an Artifact;
+keep markup simple — headings, paragraphs, tables, bold/color spans — since Drive's
+HTML→Doc conversion carries those over but drops CSS grid/flexbox). `<title>Money
+Hub</title>`, "rendered HH:MM ET" stamp. Write the HTML to a working file, then create it
+as a NEW Google Doc via `Google_Drive__create_file`: `parentId` = the Money Hub Drive
+folder id (anchors, "Money Hub" section), `title` = `"YYYY-MM-DD HHMM ET — Money Hub"`
+(ET, zero-padded), `textContent` = the HTML, `contentMimeType: "text/html"`. Every
+render creates a brand-new Doc — never edit or delete a prior snapshot (2026-08-13:
+replaces the retired Artifact re-deploy, which kept prompting for tool approval on
+Lemar's phone). When running inside Samira (PART M) and the render actually changed
+something, reply in **#personal-finance** with the new Doc's link — same channel the
+triggering drop landed in; no separate DM (Samira's shared bot has only one DM slot,
+already used for capture). On a live/on-demand run ("show me the money hub"), just hand
+back the link directly in your reply. Sections, top to bottom, every number traceable to
+the ledger or the log:
 1. **Today** — `total_claim` as the biggest number on the page, split immediately into
    its two parts: `operating_reserve` (keep in Spending, for gas) and `target` (move to
    Set-Aside, for bills), then each contributing line's daily drip and how much today's
@@ -406,8 +418,9 @@ figure Lemar reported; read and write the two Money notes' data blocks + Update 
 the `daily_targets` block); append to the income log; create/update/cancel events on the
 personal reminder calendar (both per-bill due-date events AND the daily aggregate) and
 on the Cuzzie's (Owners) calendar for business bills, writing ids back;
-re-deploy the Money Hub artifact; post money-hub output to #personal-finance and raise
-#decisions cards when running inside Samira; commit to `main`.
+create a new Money Hub snapshot Doc in the Money Hub Drive folder (never edit or delete a
+prior snapshot); post money-hub output to #personal-finance and raise #decisions cards
+when running inside Samira; commit to `main`.
 
 You MUST NOT, ever: move money, make a payment or transfer, or tell any surface a
 payment happened that Lemar didn't report; contact any creditor, biller, or lender; send

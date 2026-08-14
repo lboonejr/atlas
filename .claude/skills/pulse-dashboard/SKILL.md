@@ -2,17 +2,19 @@
 name: pulse-dashboard
 description: >
   Pulse — Lemar's living command center, re-rendered by Samira at the end of every
-  hourly scan (PART P of the runbook) and re-deployed to ONE stable claude.ai artifact
-  URL. One page, one column, ordered BIG IDEAS → SMALL DETAILS → EXECUTION: quick todo
+  hourly scan (PART P of the runbook) and published as a NEW timestamped Google Doc
+  snapshot in the Pulse Drive folder (2026-08-13: replaced the Artifact tool, which kept
+  prompting Lemar for approval on his phone — the surface he checks Pulse from most).
+  One page, one column, ordered BIG IDEAS → SMALL DETAILS → EXECUTION: quick todo
   capture on top, then Dawn as the North Star (direction, not tasks), the day's calendar
   roadmap, then execution — #decisions, money, today's workout, Atlas open items,
   project pulses, and routine health at the bottom. EVERY item links back to its source
   (the exact Slack thread or the Google Calendar event). The dashboard is a RENDERING
   like the Open Items canvas — the vault stays the source of truth and this skill writes
   NO Haven notes. Use it on Samira's scan or on demand: "refresh the dashboard", "render
-  Pulse", "update my dashboard". It reads everything and writes only the artifact (plus
-  the one-time URL write-back to anchors) — it never posts to Slack, never sends
-  anything, never sets reactions, never edits the vault.
+  Pulse", "update my dashboard". It reads everything and writes only the Drive snapshot
+  — it DMs Lemar the new link only when this run actually changed something (see
+  Notification below), never sets reactions, never edits the vault.
 ---
 
 # Pulse — the living command center (rendering only, vault stays truth)
@@ -38,16 +40,17 @@ run digest and move on.
    thread's permalink (`https://newworkspace-zlb6313.slack.com/archives/<channel_id>/
    p<ts with the decimal removed>`, `target="_blank"`); anything that traces to a
    calendar event gets its Google Calendar `htmlLink`; project rows get their channel
-   link. Link-out only, never a write-back — the artifact is static HTML with no
+   link. Link-out only, never a write-back — the Doc is static HTML with no
    backend. When an item has no source (a Haven-only note with no thread or event), it
    simply renders unlinked — skip a link rather than guess one; a missing link is fine,
    a dead link is not.
 
 ## ANCHORS
 All platform IDs live in **`.claude/anchors.md`** — read it first. You use the "Pulse
-dashboard" section: the **living Pulse artifact URL** (re-deploy target), the **workout
-artifact URL**, the **Dawn brief artifact URL**, plus the Slack channel IDs, the reminder
-calendar ID, and the vault paths you already know from the run.
+dashboard" section: the **Pulse Drive folder id** (create target) and the **Samira
+capture DM id** (notification target), plus the **workout artifact URL** and the
+**Morning Brief Drive folder** (for the North Star link-out), the Slack channel IDs, the
+reminder calendar ID, and the vault paths you already know from the run.
 
 ## Sections — in this exact top-to-bottom order
 
@@ -66,7 +69,8 @@ fail, and lists those failures.
    **2–4 directional themes** as first-class sections — lift them verbatim (distill
    yourself only if reading an older five-goals-format note). Never render a task list
    here — execution lives further down in #decisions. Loop tally as a small chip. Link
-   out to the full Dawn brief artifact. If today's note is missing (Dawn failed or
+   out to the Morning Brief Drive folder (anchors, "Daily Brief routine" section) so
+   Lemar can open today's full snapshot. If today's note is missing (Dawn failed or
    pre-1am), use yesterday's and flag it stale.
 3. **Calendar — today's roadmap.** Today as a timeline (primary + reminder calendar,
    ET), then this week (today+6d) as a compact day strip. All-day items render as
@@ -76,8 +80,9 @@ fail, and lists those failures.
    capped at ~10 with a "+N more in #decisions" channel link. Each card: severity dot,
    one-line summary, age ("2d"), and its 💬 thread permalink so one tap opens the exact
    thread to react/reply.
-5. **Money.** A ~3-line summary + a link-out to the **Money Hub** artifact (URL in
-   anchors' "Money Hub" section), which owns the full picture. The three lines, from
+5. **Money.** A ~3-line summary + a link-out to the **Money Hub** Drive folder (id in
+   anchors' "Money Hub" section — opens to today's newest snapshot), which owns the full
+   picture. The three lines, from
    the ledger `haven/vault/10-Personal/Money/money-hub-ledger.md` (the ONLY money
    source — the Era Context connector was retired 2026-08-10): today's total claim from
    `daily_targets` split into its gas reserve and set-aside halves, the next dated bill or
@@ -112,28 +117,46 @@ fail, and lists those failures.
    flags (e.g. Basil awaiting DRY_RUN vetting), each linked to #reports or its thread.
    This section also lists any sections of THIS page that errored this run.
 
-## Output — render and re-deploy
+## Output — render and file a new Drive snapshot
 
 Build ONE self-contained HTML page (inline CSS only, no external requests; load the
-`artifact-design` skill for calibration). Single column, phone-first; light/dark via
-`prefers-color-scheme` AND `:root[data-theme="dark"]`/`[data-theme="light"]` overrides;
-`<title>Pulse — Personal Dashboard</title>`. Header: "Pulse" masthead, date, "rendered
-HH:MM ET · refreshes hourly 8a–6p" line. Write the HTML to a working file, then publish
-with the **Artifact** tool:
-- If anchors holds a real Pulse URL → pass it as `url` to **re-deploy the same page**
-  (keep the same `title` and favicon 📍 so it stays the same tab/page).
-- If it's still a placeholder → publish fresh, capture the returned URL, and record it in
-  `.claude/anchors.md` under "Pulse dashboard" (one-time write, direct to `main` per the
-  git-write policy).
+`artifact-design` skill for calibration — its guidance on layout/typography/color still
+applies even though the target is now a Doc, not an Artifact). Single column,
+phone-first; keep the markup simple (headings, paragraphs, tables, bold/color text
+spans) since Drive's HTML→Doc conversion carries those over but drops CSS grid/flexbox
+layout. `<title>Pulse — Personal Dashboard</title>`. Header: "Pulse" masthead, date,
+"rendered HH:MM ET · refreshes hourly 8a–6p" line. Write the HTML to a working file,
+then create it as a NEW Google Doc via `Google_Drive__create_file`:
+- `parentId`: the Pulse Drive folder id (anchors, "Pulse dashboard" section).
+- `title`: `"YYYY-MM-DD HHMM ET — Pulse"` (ET, zero-padded).
+- `textContent`: the HTML you built; `contentMimeType: "text/html"` (Drive converts it
+  to a native Doc — do not set `disableConversionToGoogleType`).
+- Every render creates a brand-new Doc. Never edit or delete a prior snapshot — the
+  folder is the history.
+
+## Notification — DM only when something changed
+
+Pulse still writes NO Slack message on a quiet hour. After creating the snapshot,
+compare this run's signals against what you already know from this same scan: did any
+#decisions card open/close, did money change (PART M returned `money ✓ …` not
+`money —`), did a project pulse's status dot flip, or is there a new/updated open Haven
+note since the last render? If YES to any of those, send ONE line to the **Samira
+capture DM** (`D0BHPKMDNEP` — the shared bot's only DM slot; safe to reuse since PART B
+only develops messages FROM Lemar, never the bot's own posts):
+`📍 Pulse updated — [1-line summary of what changed]. [Drive doc link] — Samira`
+If NO signal changed this hour, skip the DM entirely — the Doc is still created for the
+record, just not announced.
 
 ## SAFETY (applies to the whole skill)
-You MAY: read every connected tool and the vault; publish/re-deploy the Pulse artifact;
-do the one-time anchors URL write-back.
-You MUST NOT, ever: post to any Slack channel (Samira's digest carries your status);
-send email or any outreach; set or change Lemar's reactions; write, move, edit, or file
-any vault note; touch the calendar; advise on, move, or commit money; run vault-keeper or
-calendar-sync. A render failure must never abort or degrade the rest of Samira's run.
+You MAY: read every connected tool and the vault; create a new Pulse snapshot Doc in the
+Pulse Drive folder; send ONE DM to the Samira capture DM (`D0BHPKMDNEP`), and only when
+something changed this run.
+You MUST NOT, ever: post to any Slack channel; DM on a quiet hour (nothing changed); send
+email or any outreach; set or change Lemar's reactions; write, move, edit, or file any
+vault note; touch the calendar; advise on, move, or commit money; run vault-keeper or
+calendar-sync; edit or delete a prior Drive snapshot. A render failure must never abort
+or degrade the rest of Samira's run.
 
 ## Returns (to the Samira runbook, for the digest)
-`pulse ✅ <artifact URL> · sections OK K/9 · <list any errored sections>` — or
-`pulse ⚠️ render failed: <one-line reason>`.
+`pulse ✅ <Drive doc URL> · sections OK K/9 · dm sent/skipped · <list any errored sections>`
+— or `pulse ⚠️ render failed: <one-line reason>`.

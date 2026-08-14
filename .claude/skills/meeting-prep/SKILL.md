@@ -5,13 +5,14 @@ description: >
   (1am ET, via the daily-brief routine) it finds today's real calls/meetings on Google
   Calendar, pulls each event's notes, searches Haven for the context behind it (the
   counterparty's entity note, prior meetings, related project notes, any prep script
-  already in the vault), and renders ONE combined visual prep doc for the day as a living
-  artifact. "Done = a filed Haven note": the prep lands as a `type: brief` note FIRST,
-  then the artifact, then a link in Lemar's DM. Use it on the daily run or on demand:
-  "prep me for today's calls", "meeting prep", "brief me before the call", "who am I
-  talking to today". It reads calendar + Haven and writes only the prep note + artifact +
-  one line in Lemar's DM — it never joins or declines invites, never emails an attendee,
-  never sends anything.
+  already in the vault), and renders ONE combined visual prep doc for the day as a NEW
+  timestamped Google Doc snapshot in the Meeting Prep Drive folder (2026-08-13: replaced
+  the Artifact tool's stable-URL re-deploy — see anchors). "Done = a filed Haven note":
+  the prep lands as a `type: brief` note FIRST, then the Drive snapshot, then a link in
+  Lemar's DM. Use it on the daily run or on demand: "prep me for today's calls", "meeting
+  prep", "brief me before the call", "who am I talking to today". It reads calendar +
+  Haven and writes only the prep note + Drive snapshot + one line in Lemar's DM — it
+  never joins or declines invites, never emails an attendee, never sends anything.
 ---
 
 # Meeting Prep (Haven-first, one combined doc)
@@ -21,16 +22,17 @@ Lemar's calendar today, assemble who he's talking to, why, what to say, and the 
 behind it — as one combined prep doc he can open before the first call and scroll through
 the day.
 
-**Order of operations: (1) durable record to Haven → (2) render the artifact → (3) post
-the link to Lemar's DM.** Same law as the morning brief: note first, rendering second.
+**Order of operations: (1) durable record to Haven → (2) create a new Drive snapshot Doc
+→ (3) post the link to Lemar's DM.** Same law as the morning brief: note first, rendering
+second.
 
 ## ANCHORS
 Read **`.claude/anchors.md`** first. You use: **Lemar's DM** (the Dawn bot IM
 `D0BJ0JPQD8C`, opened by posting to Lemar's user id `U0BC5UTHYG4` — the only surface you
 post to, rerouted off #daily-brief 2026-07-16); **Google Calendar** (his ET calendars); the
 **vault** `haven/vault/` incl. `50-Reference/Entities/`, `40-Projects/`, and the business
-`meetings/` folders; and the persisted **meeting-prep artifact URL** under "Daily Brief
-routine" in anchors.
+`meetings/` folders; and the **Meeting Prep Drive folder** id under "Daily Brief routine"
+in anchors.
 
 ## What you read (all read-only)
 1. **Google Calendar — today's events, filtered to real calls/meetings.** Keep events with
@@ -67,11 +69,14 @@ For each qualifying meeting, in chronological order:
    plus a `## Sources` block (calendar event ids, the Haven notes you pulled). Wiki-link the
    entity notes you cite (`[[happy-eddie]]`). Re-run same day → append `## Update HH:MM`,
    never rewrite.
-2. **Render the artifact.** One combined self-contained HTML doc (inline CSS; `artifact-design`
-   for calibration), one card/section per meeting, in time order — a day's-worth of prep on
-   one page. Publish with the **Artifact** tool: re-deploy to the persisted meeting-prep URL
-   in anchors if present (same `title`, favicon 🗓️); else publish fresh, capture the URL,
-   write it back to anchors under "Daily Brief routine".
+2. **Render a new Drive snapshot.** One combined self-contained HTML doc (inline CSS;
+   `artifact-design` for calibration — keep markup simple, since Drive's HTML→Doc
+   conversion drops CSS grid/flexbox), one card/section per meeting, in time order — a
+   day's-worth of prep on one page. Write the HTML to a working file, then create it as a
+   NEW Google Doc via `Google_Drive__create_file`: `parentId` = the Meeting Prep Drive
+   folder id (anchors, "Daily Brief routine" section), `title` = `"YYYY-MM-DD HHMM ET —
+   Meeting Prep"` (ET, zero-padded), `textContent` = the HTML, `contentMimeType:
+   "text/html"`. Every run creates a brand-new Doc — never edit or delete a prior one.
 3. **Post to Lemar's DM** (the Dawn bot IM `D0BJ0JPQD8C`) — ONE line, lead 🌅, sign "— Dawn":
    `🌅 Prepped for today's 3 calls — Eddie 2:30 · Gusto 9:00 · LSNJLAW 10:00. [link] — Dawn`.
    **If there are no meetings today**, post a single quiet line instead
@@ -80,13 +85,15 @@ For each qualifying meeting, in chronological order:
    (`🌅 Dawn · [time] — meeting prep: N calls · [note path]`).
 
 ## SAFETY (applies to the whole skill)
-You MAY: read calendar + vault; write the prep note into `_daily/`; publish/re-deploy the
-prep artifact; post ONE line to Lemar's DM; append the run marker.
+You MAY: read calendar + vault; write the prep note into `_daily/`; create a new prep
+snapshot Doc in the Meeting Prep Drive folder; post ONE line to Lemar's DM; append the
+run marker.
 You MUST NOT, ever: respond to, accept, or decline a calendar invite; add or remove an
 attendee; email or message anyone on the invite; send any outreach; post anywhere but
 Lemar's DM (never a channel, never #reports); run vault-keeper/calendar-sync; edit note
-bodies beyond your own Update/Log lines; delete or overwrite content; guess a controlled
-field. You prepare Lemar — you never touch the meeting itself.
+bodies beyond your own Update/Log lines; delete or overwrite content, INCLUDING a prior
+Drive snapshot; guess a controlled field. You prepare Lemar — you never touch the meeting
+itself.
 
 ## Returns (to the daily-brief routine)
-`prep note path · artifact URL · meeting count N` (N=0 → note/artifact skipped, quiet line posted).
+`prep note path · Drive doc URL · meeting count N` (N=0 → note/Doc skipped, quiet line posted).
