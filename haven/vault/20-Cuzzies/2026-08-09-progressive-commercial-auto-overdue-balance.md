@@ -1,13 +1,12 @@
 ---
 created: 2026-08-09T13:07:19-04:00
-updated: 2026-08-14T10:15:00-04:00
+updated: 2026-08-14T15:12:00-04:00
 domain: cuzzies
 type: task
 status: done
 tags: [insurance, progressive, overdue, commercial-auto]
 source: gmail
 due: 2026-08-14T09:00-04:00
-calendar_event_id: 4bjk0iojh3cda0r8vftllqqv8o
 ---
 
 # Progressive Commercial Auto — overdue balance $1,107.20, due 8/14
