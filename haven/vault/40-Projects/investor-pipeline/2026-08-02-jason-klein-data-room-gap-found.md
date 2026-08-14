@@ -1,6 +1,6 @@
 ---
 created: 2026-08-02T16:00-04:00
-updated: 2026-08-13T18:13-04:00
+updated: 2026-08-14T18:45-04:00
 domain: project
 type: log
 status: active
@@ -133,6 +133,40 @@ sharing any figures).
 ask directly with Jason/the buyer — this is financial disclosure only Lemar can make;
 and separately, confirm a window for the three-way call if he wants it to happen.
 
+## Update 2026-08-14T18:45:00-04:00 (PART E) — Donte sends a full pitch letter, asks Lemar to forward it to Jason
+
+New Gmail thread `1a00147c73d64446` (subject "THink you can send to jason on the
+thread," 2026-08-14 ~1:17pm ET), sent by Donte Bronaugh directly to Lemar with one
+attachment (`Cuzzies_Operating_Partner_Package (v1).xlsx` — P&L, 24-month reopening
+model, liability schedule). This reads as the concrete answer to the 8/12 "compiling
+a Due diligence file" reply above — Donte has now written the pitch letter itself,
+addressed to "Jason," and is asking Lemar to relay it on the buyer thread rather than
+sending it himself.
+
+**What the letter asks for** (Donte's draft, not confirmed as Lemar's position):
+- Fund a **$15,000 legal retainer** now (+$10,000 if it runs long) so counsel can move
+  to vacate the DeWalt default judgment — framed as the one blocker that has to clear
+  before anything else in the deal has value.
+- Negotiate a **60-day rent abatement** from the landlord in exchange for interior
+  work and parking-lot repairs, with $42,000 of arrears paid in full at the end.
+- Two structure options: buy the LLC (if the DeWalt matter settles/dismisses) or bring
+  a new license and transfer the operation, with the buyer funding as a creditor while
+  it resolves either way.
+- States trading history and a conservative Year-2 projection ($2,313,393 net sales,
+  $225,711 EBITDA) as the case for why it works.
+
+**What Samira did:** posted to #investor-pipeline (ts `1786735706.250489`) flagging
+this for Lemar's forward/edit/hold decision — did not draft a forward, did not send
+anything, and represented none of Donte's figures or asks as Lemar's own position.
+This is squarely the investor guard ("no terms, valuations, numbers, or timelines
+stated as Lemar's decision") — the letter as written commits Lemar to a specific ask
+of Jason's buyer that only Lemar can decide to make. Index row updated (Next step),
+status stays **Negotiating**.
+
+**Need from Lemar:** decide whether to forward Donte's letter as-is, edit it first, or
+hold it — and separately, the 8/10 three-way-call ask and the 8/12 pro forma/margins
+ask (both logged above) remain open and unconfirmed.
+
 ## Sources
 - gmail: thread `19eda7545ffe62f0` (Lemar → jason@cann.dev, NDA confirmation + license/
   price clarification + data room link, 2026-06-18/19)
@@ -149,3 +183,7 @@ and separately, confirm a window for the three-way call if he wants it to happen
   ("Jason Klein — Data Room" folder, created 2026-07-10)
 - haven: `haven/vault/40-Projects/investor-pipeline/index.md` row "Jason Klein
   (Cann.Dev)"
+- gmail: thread `1a00147c73d64446` (Donte Bronaugh full pitch letter for Jason's
+  buyer, 2026-08-14 ~1:17pm ET, xlsx attached)
+- slack: #investor-pipeline `C0BCCUKEUQ2` ts `1786735706.250489` (forward-decision
+  flag posted 2026-08-14)
