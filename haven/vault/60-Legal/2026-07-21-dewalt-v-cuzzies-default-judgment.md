@@ -1,12 +1,13 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-08-14T13:15:00-04:00
+updated: 2026-08-14T14:06:31-04:00
 domain: legal
 type: task
 status: active
 tags: [legal, dewalt, lawsuit, default-judgment, urgent]
 source: gmail
 due: 2026-08-17T10:00:00-04:00
+calendar_event_id: ltcu5dvvp6mh40kt07cpgs9fs4
 ---
 
 # DeWalt v. Cuzzie's Dispensary & Delivery, et al. — default judgment motion pending
