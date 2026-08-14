@@ -1,6 +1,6 @@
 ---
 created: 2026-08-11T17:50-04:00
-updated: 2026-08-12T09:20-04:00
+updated: 2026-08-14T16:50-04:00
 domain: cuzzies
 type: task
 status: active
@@ -59,7 +59,15 @@ tool path to close it out. Recommend Lemar either grant a Gusto-connected tool o
 three items directly — reacting ✅ on the #admin prompt to reflect the draft-reply progress made
 this pass, but the underlying document gap stays open in this note.
 
+## Update 2026-08-14 (PART B capture — Lemar's own priority signal)
+Lemar dropped a note in the capture DM: "Next week we're also gonna have to work on
+that final audit from Crum & Forster. Tryna knock that out" (ts `1786740623.047939`).
+Confirms he intends to prioritize closing out the document gap next week. No new
+action taken here — the open reply draft (Gmail draft `r-6414875302012055811`) is
+still his to review/send, and the underlying blocker (payroll/1099/quarterly detail
+lives in Gusto, not a connected tool) is unchanged. Logged as a priority signal only.
+
 ## Sources
 - gmail: thread `19ff22c4e7226c09` - Jason Kanner (Crum & Forster) final audit request, 2026-08-11;
   reply draft `r-6414875302012055811` saved 2026-08-12, not sent
-- slack: #admin ts `1786482807.791379` (staged run:admin-3x prompt) · #decisions ts `1786482812.188359` (reply card)
+- slack: #admin ts `1786482807.791379` (staged run:admin-3x prompt) · #decisions ts `1786482812.188359` (reply card) · capture DM `D0BHPKMDNEP` ts `1786740623.047939` (2026-08-14 priority signal)
