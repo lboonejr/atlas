@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-08-09T13:00-04:00
+updated: 2026-08-14T10:05:00-04:00
 domain: project
 type: reference
 status: active
@@ -52,7 +52,7 @@ Guardrail: tracking & planning only — nothing is paid or contacted automatical
 constants:
   monthly_carry: 31200          # bare-bones crew; excludes cannabis tax
   target_open_days: 14
-  updated_label: "August 9, 2026 (Loud Labs added)"
+  updated_label: "August 14, 2026 (Dutchie POS reactivation added)"
 
 tax_gate:
   - id: nj-sales-tax
@@ -124,6 +124,22 @@ items:
     vendor: "Related entity"
     status: owed
     note: "Related-entity repayment; goodwill/creditworthiness. Moved Tier 3 → Tier 1 per Lemar's 7/10 tier-shuffle instruction (#on-button ts 1783738175.999559)."
+  - id: dutchie-reactivation
+    label: "Dutchie — POS reactivation"
+    amount: null
+    tier: 1
+    vendor: "Dutchie"
+    account: "balance unknown — Lemar to ask Dutchie directly on reach-out"
+    contact: "Dutchie support"
+    status: tbd
+    note: "Added 2026-08-14 from Lemar's #on-button reactivation plan: reach out to let
+           Dutchie know Cuzzie's is turning back on, ask for the current balance, update
+           the payment method + user settings at reactivation. POS is required to sell
+           product, so this is Tier 1 even though the dollar figure is still unknown —
+           do not guess it. Separately (not a dollar line): Lemar also wants a loyalty
+           contract + app scoped, and a Dutchie-driven marketing push (text/email to the
+           existing customer list, graphics TBD) once reactivated — tracked narratively
+           in the Update below, not as its own tier item."
   - id: inventory-restock
     label: "Cannabis inventory restock"
     amount: 50000
@@ -148,7 +164,12 @@ items:
     account: "5-invoice batch · 58 days"
     contact: "Emma Donaldson, AR"
     status: past-due
-    note: "SIN830881 (due 7/16) amount still TBD — add when it lands."
+    note: "SIN830881 (due 7/16) amount still TBD — add when it lands.
+           Plan added 2026-08-14 (#on-button): once reopening, set up a NEW Weedmaps
+           account rather than reactivate this one — tell the rep a new ownership group
+           has taken over, fewer pins this time, more centralized toward Camden. This
+           $6,583 arrears line stays tracked as-is (old account's debt); the new account
+           is a separate, not-yet-priced Tier 2/3 line once Lemar names a figure."
   - id: loan-nicky
     label: "Loan from Nicky (personal)"
     amount: 4000
@@ -367,7 +388,12 @@ items:
     account: "Invoice 68388, issued 7/17"
     contact: "ar@aiq.com"
     status: past-due
-    note: "New invoice 7/17, no due date stated. Lemar asked in-thread (#decisions ts 1784305562.237219, replied \"throw this into the #on-button channel so we can take care of that upon returning\") to track it here. Not a reopen blocker — pay-or-lapse call still open in #decisions."
+    note: "New invoice 7/17, no due date stated. Lemar asked in-thread (#decisions ts 1784305562.237219, replied \"throw this into the #on-button channel so we can take care of that upon returning\") to track it here. Not a reopen blocker — pay-or-lapse call still open in #decisions.
+           RESOLVED 2026-08-14 (#on-button): Lemar's call — let it go to collections,
+           negotiate the collections price, then pay it down. NOT going back to Alpine
+           for loyalty. Only exception he'd consider: paying enough to regain access to
+           the existing customer data. Status stays past-due/collections-track, not
+           pay-or-lapse; not paid or contacted by Samira."
 
 # ---- TIER 3 — Competitive edge (restore / advantage) ----
   - id: little-leaf-labs
@@ -470,6 +496,45 @@ carry:
 - Reality check: opening (~$104.4K) + a 3-month cushion (~$93.6K carry) ≈ **$198K** before
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
+
+## Update — 2026-08-14 (Dutchie item added; Weedmaps/AIQ resolution plans; CRC/license/terminals logged narratively)
+Swept #on-button, 6 new drops since the 8/13 ~6:20pm checkpoint (all genuine — none
+🧹📌📊-tagged restatements), all part of Lemar dictating the reopening operations plan:
+
+1. **Dutchie POS reactivation** (ts `1786663918.745879`, edited) — new Tier 1 item
+   `dutchie-reactivation` added above: reach out that Cuzzie's is turning back on, ask
+   for the current balance (unknown — not guessed, `amount: null`), update payment
+   method + user settings at reactivation. Also wants a loyalty contract/app scoped and
+   a Dutchie-driven marketing push (text + email to the existing customer list, graphics
+   TBD) once live — tracked here narratively, not as a priced line since nothing is
+   dollar-denominated yet.
+2. **Debit card terminals** (ts `1786663975.759959`) — consolidate down to one company
+   (possibly Kartiq's), or let the buyer pick a new terminal company if they'd rather;
+   return all current terminals either way; whichever terminals end up in use must route
+   to **the buyer's bank account**. Not added as a tier item (no dollar figure, and the
+   "buyer's bank account" framing means this is part of the ownership-transition
+   handoff, not Lemar's own reopen spend) — logged here for the record.
+3. **City business license** (ts `1786664672.239019`) — renewal due ~October; Lemar wants
+   to (a) confirm the renewal fee doesn't need paying / set aside time in September if it
+   does, (b) have a tax plan in place by then, (c) check whether the city needs to be
+   told about the ownership change separately from the CRC change-of-ownership vote.
+   No dollar figure given — not added as a tier item; flagged here as a compliance
+   to-do, not tracked as a payable yet.
+4. **Alpine IQ (AIQ)** (ts `1786664761.933849`) — resolution plan folded into the
+   existing `aiq` item's note above (let it go to collections, negotiate, pay down; no
+   loyalty renewal; possible exception to regain customer-data access).
+5. **New Weedmaps account** (ts `1786707952.226469`) — plan folded into the existing
+   `weedmaps` item's note above (new account under new ownership, fewer/more-centralized
+   Camden pins, old $6,583 arrears line untouched).
+6. **CRC (NJ Cannabis Regulatory Commission)** (ts `1786710578.804169`) — inform them
+   Cuzzie's is reopening, ask what's required, badge any new employees, and be ready to
+   navigate whatever the CRC raises about the reopening. No dollar figure, no tier —
+   logged here as the compliance thread to track; ties into the change-of-ownership
+   question in item 3 above and the existing Jamone's-group transition-timeline work
+   (`haven/vault/00-Inbox/2026-08-10-jamones-group-lease-transition-timeline.md`).
+
+Nothing paid or contacted by Samira on any of these six. Page (`on-button-reopen.html`)
+and canvas (`F0BEN1167GB`) regenerated from this note in the same pass.
 
 ## Update — 2026-08-09 (Loud Labs added)
 Swept #on-button ts `1786277901.262699` — a new drop (not a restatement, no 🧹📌📊 tag):
