@@ -1,13 +1,13 @@
 ---
 created: 2026-07-05T08:15-04:00
-updated: 2026-07-05T09:10-04:00
+updated: 2026-08-14T15:15:00-04:00
 domain: cuzzies
 type: meeting
 status: active
 tags: [eddie, happy-eddie, license-transfer, white-label, wind-down]
 source: slack
 due: 2026-07-06T14:30-04:00
-calendar_event_id: d5ve5pg570bk90r5j3ajc5q9c4
+calendar_event_id: qmrshvdhut6apntu904ul8aa20
 ---
 
 # Call with Eddie Osefo (Happy Eddie) — license/ops transition + white-label angle

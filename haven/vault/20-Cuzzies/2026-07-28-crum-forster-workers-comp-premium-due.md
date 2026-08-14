@@ -1,13 +1,13 @@
 ---
 created: 2026-07-28T12:21:00-04:00
-updated: 2026-07-28T12:05:00-04:00
+updated: 2026-08-14T15:15:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [insurance, workers-comp, crum-forster, bill]
 source: gmail
 due: 2026-08-04T09:00:00-04:00
-calendar_event_id: uio9tr78osfv3l5bn551m6dge4
+calendar_event_id: ng06l9u7b64dc213or610cr90k
 ---
 
 # Crum & Forster — Workers' Comp premium installment due $805 (Aug 4)

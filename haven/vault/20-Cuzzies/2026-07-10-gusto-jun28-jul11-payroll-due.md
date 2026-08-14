@@ -1,13 +1,13 @@
 ---
 created: 2026-07-10T08:20-04:00
-updated: 2026-07-14T08:15-04:00
+updated: 2026-08-14T15:15:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [gusto, payroll, pay-period]
 source: gmail
 due: 2026-07-13T19:00-04:00
-calendar_event_id: 3mlurpnt5oejqpc55n6jbd8o1c
+calendar_event_id: 0gi4ohhuaqe2anbi7n4bb3fhm0
 ---
 
 # Gusto — payroll due Mon Jul 13, pay period Jun 28–Jul 11

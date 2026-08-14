@@ -1,13 +1,13 @@
 ---
 created: 2026-08-01T15:30:00-04:00
-updated: 2026-08-03T17:19-04:00
+updated: 2026-08-14T15:15:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [tbt-barter, statement, vendor, first-appearance]
 source: gmail
 due: 2026-08-07T09:00-04:00
-calendar_event_id: joj8fqaktfuj8v0n4gvsgl08ps
+calendar_event_id: 0iih2d9gdu5h5i5tgeof9s1fic
 ---
 
 # TBT Barter — monthly statement arrived (Cuzzie's, July activity)

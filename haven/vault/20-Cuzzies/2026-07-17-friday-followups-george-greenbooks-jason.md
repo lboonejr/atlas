@@ -1,13 +1,13 @@
 ---
 created: 2026-07-17T09:12-04:00
-updated: 2026-07-20T12:08-04:00
+updated: 2026-08-14T15:15:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [follow-up, investor, compliance, greenbooks, george-irwin, jason]
 source: slack
 due: 2026-07-20T15:00-04:00
-calendar_event_id: atv2la7ul1e0rmshdsi7rapvkc
+calendar_event_id: lpdo2u87kml6stpto6fl5pleq4
 ---
 
 # Friday follow-ups — George, GreenBooks tax info, Jason's buyers

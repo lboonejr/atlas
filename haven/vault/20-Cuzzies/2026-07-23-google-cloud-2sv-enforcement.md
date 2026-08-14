@@ -1,13 +1,13 @@
 ---
 created: 2026-07-23T08:15-04:00
-updated: 2026-07-23T09:08-04:00
+updated: 2026-08-14T15:15:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [google-cloud, security, 2sv, mfa, compliance, it]
 source: gmail
 due: 2026-10-20T09:00-04:00
-calendar_event_id: slvfpqvtaj14vf3iujpvk0l95k
+calendar_event_id: uivdom9g3509043lsk88op55vk
 ---
 
 # Google Cloud Identity — mandatory 2SV enforcement starting Oct 20, 2026
