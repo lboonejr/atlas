@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-13T17:00:00-04:00
+updated: 2026-08-14T08:18:00-04:00
 domain: personal
 type: reference
 status: active
@@ -90,8 +90,11 @@ buckets:                             # accumulating balances, physically inside 
             mixed in with money earmarked for bills. Left as-is rather than moved to
             SoFi Savings, because that is Lemar's call. See open_questions."}
 cash_on_hand:
-  amount: null                       # Lemar reports: "I have $X cash"
-  as_of: null
+  amount: 20                        # reported #personal-finance 2026-08-11 ts 1786464148
+                                     # ("Cash on hand today - $20"). Backfilled 2026-08-14
+                                     # PART M — a prior pass (2026-08-13) claimed this was
+                                     # "already logged" but it was never actually written.
+  as_of: 2026-08-11
 pockets:                             # TWO pockets. Account mapping CORRECTED 2026-08-10
                                      # by Lemar (see the Update below) — the roles are
                                      # unchanged, the accounts behind them swapped.
@@ -235,7 +238,23 @@ bills:
      note: "Added 2026-08-13. Lemar borrowed $500 from the car-purchase fund to cover the
             tow truck when the car broke down; this repays that fund. Car is currently
             down — Lemar is hoping it's fixed and back on the road tomorrow (8/14) but
-            isn't certain yet."}
+            isn't certain yet.
+            POSSIBLE DUPLICATE, flagged 2026-08-14 PART M: a #decisions thread reply from
+            2026-08-11 (answering the mom's-car breakdown question) reads 'Repair (Friend
+            Loaned me money to pay for it now) - $500 by 9/15' — same amount, same due
+            date, same underlying breakdown episode, but a different funding source
+            ('a friend' vs 'the car-purchase fund'). Treated as the SAME $500 obligation
+            rather than added as a second line, to avoid overstating the daily number —
+            see open_questions for the confirmation ask."}
+  - {id: moms-car-oil-change, name: "Mom's car — oil change", amount: 100, cadence: once,
+     due: 2026-08-16, track: queue, status: active, calendar_event_id: 1ia5n73c169uckbr0o8s5bakbk,
+     note: "Reported 2026-08-09 in #personal-finance ('about $100, by end of next week'),
+            confirmed 2026-08-11 in a #decisions thread reply: 'Oil Change - $100 by
+            8/16'. Personal — mom's car, not a Cuzzie's/Station cost. Backfilled
+            2026-08-14 PART M: the 2026-08-11 PART M pass raised this as an open question
+            in #decisions and Lemar answered it the same day, but the answer sat
+            unprocessed — a later pass (2026-08-13) incorrectly reported 'no new drops'
+            without checking the thread reply. Now added, accrued, and on the calendar."}
   - {id: car-repair-payment, name: "Car repair payment", amount: 600, cadence: once,
      due: 2026-09-30, track: queue, status: active, calendar_event_id: ef8fdfuovosp9imro92oj5ifn0,
      note: "Added 2026-08-13. Lemar said 'Sept 31st', which doesn't exist (September has
@@ -404,12 +423,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
                                      # `resolution` key.
   "2026-08-15":
     operating_reserve: 30.00
-    target: 304.29
-    total_claim: 334.29
+    target: 404.29
+    total_claim: 434.29
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 304.29
+    shortfall: 404.29
     calendar_event_id: k9sog0mcpmisnn4p2hicernagk
     contributions:
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
@@ -427,6 +446,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: station-travel, amount: 50.00, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
+      - {line_id: moms-car-oil-change, amount: 100.00, funded: 0, status: pending}
   "2026-08-16":
     operating_reserve: 30.00
     target: 129.29
@@ -1133,7 +1153,43 @@ open_questions:
   - "Where should the maintenance bucket live? The 2026-08-10 account correction left it in Set-Aside, which is now SoFi Checking (the bill-paying account). SoFi Savings is free and is the obvious home, but Lemar has not said so — not moved."
   - "Gas/maintenance $30/day reserve is a rough cap Lemar named, not a measured figure — refine it once a few weeks of actual fill-ups are reported (it is now the largest single line in the ledger at ~$900/mo)"
   - "Income backlog: Lemar is posting ~2 weeks of DoorDash earnings to #personal-finance (2026-08-10). Until they land, income_target_weekly $500 is a guess and the overload check can't run."
+  - "NEW 2026-08-14: is the $500 'friend loan' repair (confirmed 2026-08-11 in #decisions, due 9/15) the SAME debt as tow-truck-repay ($500, due 2026-09-15, described 2026-08-13 as borrowed from the car-purchase fund) — one breakdown, one $500 loan described two ways — or two separate $500 obligations from the same episode (a tow AND a repair)? Currently tracked as ONE line to avoid double-counting; confirm either way."
 ```
+
+## Update 2026-08-14 (PART M — backfilled two stranded confirmations)
+
+Samira's hourly PART M sweep of #personal-finance (72h window, back to 2026-08-11).
+The channel itself held no NEW drops this pass — the only post in-window was "Cash on
+hand today - $20" (2026-08-11), which a later automated pass (2026-08-13, ts
+1786638103) claimed was "already logged." **It wasn't** — `cash_on_hand` was still
+`null`/`null` going into this pass. Fixed now: `cash_on_hand.amount: 20`,
+`as_of: 2026-08-11`.
+
+While tracing that gap, found a second one: on 2026-08-11 Samira raised a #decisions
+card asking Lemar to confirm two hedged mom's-car figures (oil change ~$100, breakdown
+repair ~$500). Lemar replied the same day with real numbers — "Oil Change - $100 by
+8/16" and "Repair (Friend Loaned me money to pay for it now) - $500 by 9/15" — but no
+subsequent pass ever read that thread reply, so nothing was written.
+
+**Oil change — added as a new bill, `moms-car-oil-change`, $100 due 2026-08-16.**
+Personal (mom's car maintenance Lemar is covering), not Cuzzie's/Station. 8/14 is
+already closed history (Lemar pushed it to 8/15 on 2026-08-13, car still down), so this
+accrues onto the earliest open day: the full $100 lands on **2026-08-15** (window is
+just the one day, `[8/15..8/15]`, due date 8/16). 8/15's target moves from $304.29 to
+**$404.29** ($30 gas + $404.29 set-aside = $434.29 total claim). Its own due-date
+reminder event was created on 8/16 (both popups); 8/15's aggregate "set aside today"
+event was updated in place with the new total and the added line.
+
+**Repair ($500 by 9/15) — NOT added as a new line.** Amount and due date are identical
+to the existing `tow-truck-repay` line (added 2026-08-13, described then as "borrowed
+from the car-purchase fund" rather than "a friend"), both tracing back to the same car
+breakdown. Treated as the same $500 obligation rather than a sibling line, to avoid
+silently doubling Lemar's daily number on a guess. Flagged in `open_questions` for
+Lemar to confirm it's one debt, not two.
+
+Nothing paid, nothing contacted. No earnings drop this pass (income log still under 7
+entries — OVERLOAD CHECK stays dormant). Not confirmed to be the day's last scan
+(≥5pm ET), so ROLLOVER was not run. Dashboard re-rendered.
 
 ## History
 
