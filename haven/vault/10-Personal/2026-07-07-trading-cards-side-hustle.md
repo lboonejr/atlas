@@ -1,12 +1,12 @@
 ---
 created: 2026-07-07T09:25:00-04:00
-updated: 2026-08-10T10:34:00-04:00
+updated: 2026-08-14T09:00:00-04:00
 domain: personal
 type: note
 status: active
 tags: [side-hustle, trading-cards]
 source: slack
-due: 2026-09-01T09:00:00-04:00
+due: 2026-09-01T10:00:00-04:00
 calendar_event_id: o9i482d50psgp7qf9uimvo33rs
 ---
 
@@ -183,6 +183,51 @@ Posted this summary back to #trading-cards answering Lemar's question directly.
 Whatnot and the two local shops (Lurk Cards and Collectibles, Lucky Strike) remain
 logged above as candidate venues for either approach.
 
+## Update 2026-08-14 (PART G) - shops verified, buy plan set, final Sept 1 route locked, tracker built
+
+Between 2026-08-13 09:14 ET and 10:01 ET, Lemar worked this directly in #trading-cards
+with a live Claude session (posted under his own account, "Sent using Claude" — not
+this routine). Everything below was already decided and executed in-channel, not
+routed through #decisions, and there is no matching #decisions card to close (checked
+this scan, none found). Recording the outcome only; nothing further needed from
+Samira right now.
+
+- **Inventory & P&L tracker built**: Google Sheet (30 pre-built rows, auto-calculated
+  All-In Cost/Net P&L/ROI%/Days Held, $150 budget preset) —
+  https://docs.google.com/spreadsheets/d/1irXRvZcbYFSGdJwdAfr2gBsPOahuTJYz8IJPnV5M76A/edit
+- **Buy plan set**: $85 football (flip, in-season liquidity) / $40 basketball (hold,
+  off-season buy) / $25 supplies (sleeves/toploaders/mailers — flagged as a real cost
+  not previously on the tracker). Buy priority ranked: numbered parallels/inserts >
+  star names/rookies > 2025 NFL year-two class (base only, not premium) > Philly team
+  clusters. Sell as themed lots (3-4 clusters of 8-10), not singles — postage + ~13-15%
+  eBay fee eats margin on one-off $1-5 sales.
+- **Shops verified, route locked for Sept 1 (a Tuesday)**:
+  1. **Lucky Strike Cards**, 19 W Park Ave, Merchantville NJ (~4 mi) — CONFIRMED real,
+     best lead on the list, exact right profile (sports/memorabilia/graded/vintage).
+     Hours/phone not found anywhere — call or drive by before Sept 1.
+  2. **Evan's Sports Cards & Collectibles**, 2999 E Evesham Rd, Voorhees NJ,
+     (856) 489-1800, open Tue 10-6.
+  3. **TNT Baseball Cards**, 1158 S 11th St, Philadelphia PA, (215) 462-5816, open Tue
+     from 12:30pm — cross the bridge after 12:30.
+  - **Cut**: Lurk Cards and Collectibles (Lemar's July 29 note had it in Philly; it's
+    actually in Sicklerville NJ ~17 mi out, and it's a TCG/gaming shop — Pokémon/
+    Yu-Gi-Oh/Magic — wrong lane for a sports test). Also cut: JT Sports Cards (no real
+    Philly location), The Game Vault / Cardboard Classics / Comic Book Shoppe
+    (unverified, likely AI-listicle inventions), JL Cards (real but closed Tuesdays —
+    save for a Wednesday trip), Corliss Cards (real but ~30 mi, not worth it for a
+    $150 first trip).
+  - Calendar event updated directly by that session to **Sept 1, 10am-3pm** with the
+    full route/phone numbers/buy rules in the event body + two reminders (day-before
+    call-ahead, one hour out) — `calendar_event_id` unchanged
+    (`o9i482d50psgp7qf9uimvo33rs`); `due` above corrected from 09:00 to 10:00 ET to
+    match what's actually on the calendar now (vault was stale since that write
+    bypassed the normal vault-first flow).
+  - Checklist artifact updated with all of the above:
+    https://claude.ai/code/artifact/bf2e4bbc-f451-4c7d-9527-63f3c1591702
+- **Still open before Sept 1** (per that session's own tracker post): a seller account
+  ready to list on (eBay/Whatnot/etc.) — this needs Lemar's own signup (identity/
+  payment details), not something Samira can stage or complete. No other open item.
+
 ## Sources
 - slack: #atlas capture, 2026-07-06 20:36:41 EDT (TS 1783384601.800979)
 - slack: #atlas, HTML request, 2026-07-07 15:06:12 EDT (TS 1783451172.932509)
@@ -197,3 +242,7 @@ logged above as candidate venues for either approach.
 - staged prompt: #admin `C0BBLUA7JLX` ts `1786281769.032919` (task:20260809_trading-cards-shop-notes-checkin)
 - staged prompt: #admin `C0BBLUA7JLX` ts `1786365283.508839` (task:20260810_trading-cards-collection-sourcing)
 - web: eBay/Whatnot bulk-lot sourcing research, 2026-08-10 (Athlon Sports, thecardshopfinder.com, baseballcardroadshows.com, sportscollectorsdaily.com)
+- slack: #trading-cards, tracker sheet post, 2026-08-13 09:14:54 EDT (TS 1786612494.718369)
+- slack: #trading-cards, buy plan post, 2026-08-13 09:59:10 EDT (TS 1786614350.540839)
+- slack: #trading-cards, shop verification post, 2026-08-13 10:14:28 EDT (TS 1786614868.822699)
+- slack: #trading-cards, final route + calendar post, 2026-08-13 10:21:11 EDT (TS 1786615271.149489)
