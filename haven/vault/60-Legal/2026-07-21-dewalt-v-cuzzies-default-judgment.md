@@ -1,11 +1,12 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-08-13T17:01:00-04:00
+updated: 2026-08-14T13:15:00-04:00
 domain: legal
 type: task
 status: active
 tags: [legal, dewalt, lawsuit, default-judgment, urgent]
 source: gmail
+due: 2026-08-17T10:00:00-04:00
 ---
 
 # DeWalt v. Cuzzie's Dispensary & Delivery, et al. — default judgment motion pending
@@ -400,6 +401,33 @@ date and flagging the immediate next step:
 No action taken by Samira beyond landing this record (as asked) — nothing drafted,
 sent, or scheduled. React ✅ applied to the capture DM message.
 
+## Update 2026-08-14T13:15:00-04:00 — Hagner & Zohlman added to the counsel search; Monday follow-up reminder requested
+
+The counsel search widened further today. Lemar has a call script Google Doc titled
+"Call Scripts - Capehart, Kaplin Stewart, Hagner Zohlman, Selikoff Cohen - DeWalt Case"
+and a calendar event **"Call: Hagner & Zohlman (DeWalt Case)"**, today 2026-08-14
+1:30–2:00pm ET (Hagner & Zohlman, LLC, 57 Kresson Road, Cherry Hill NJ,
+856-320-5322) — a fourth+ firm beyond Siciliano/Wall/Brekke, self-scheduled by
+Lemar, not by Samira. Neither the call's outcome nor whether Capehart/Kaplin
+Stewart/Selikoff Cohen were also contacted is known yet — not guessing.
+
+Lemar asked in the capture DM (ts `1786725703.099959`, 2026-08-14 ~12:42pm ET):
+*"can you make sure that I follow up on Google Calendar with Hagner & Zohlman on
+Monday about the case (see 8/14) cal event."* Read as: he wants a reminder to
+follow up with Hagner & Zohlman on Monday 2026-08-17, after today's call has had a
+few days to land a reply. Set `due: 2026-08-17T10:00:00-04:00` on this note (no
+specific time given, defaulted to a standard business-hours reminder per the
+vault's usual pattern) — calendar-sync will ring it next pass. This is now a fifth
+name in an already-crowded counsel search (Siciliano — retained, non-responsive
+since 8/12; Wall; Brekke — called 8/14 9am, outcome not yet known to Samira;
+Greenberg — Donte's settlement-review track; now Hagner & Zohlman), still short of
+Lemar's own promised comparison/decision step from the 8/13 update above.
+
+### Sources (this update)
+- slack: Samira capture DM `D0BHPKMDNEP`, ts `1786725703.099959`
+- calendar: event `7796p3d76b3lvo91dvtj0rk14c`, "Call: Hagner & Zohlman (DeWalt Case)",
+  2026-08-14 1:30-2:00pm ET
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
 - gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
@@ -433,3 +461,5 @@ sent, or scheduled. React ✅ applied to the capture DM message.
   not resolved)
 - slack: Samira capture DM `D0BHPKMDNEP`, ts `1786654901.931749` (2026-08-13 ~5:01pm ET,
   counsel-search recap + Brekke call set for 8/14 9am, via samira-work-summary auto-handoff)
+- slack: Samira capture DM `D0BHPKMDNEP`, ts `1786725703.099959` (2026-08-14 ~12:42pm ET,
+  Monday Hagner & Zohlman follow-up request)
