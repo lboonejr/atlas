@@ -1,6 +1,6 @@
 ---
 created: 2026-08-13T17:15:00-04:00
-updated: 2026-08-13T18:15:00-04:00
+updated: 2026-08-14T09:35-04:00
 domain: automation
 type: task
 status: active
@@ -166,3 +166,45 @@ unless separately deleted — none were deleted this pass).
   #44, #46, #47, #58, #60, #61; `list_commits` on `money-hub-ledger.md` and
   `anchors.md`; `merge_pull_request` (#58, #60, #61 succeeded; #47 failed 405);
   `update_pull_request` (38 closes, 3 draft→ready conversions)
+
+## Update 2026-08-14 (~9:35am ET) — Lemar asked to revisit; #47 landed, one new stray PR found
+
+Lemar asked in-thread today ("I wanna revisit this today to make sure that
+everything is up to date on GitHub", #decisions ts `1786710133.904019`) to
+recheck state. Open-PR count held at 9 (down from 49) — no regrowth from the
+main hourly runs, which continue pushing straight to `main` correctly.
+
+**#47 landed:** cherry-picked its single commit directly onto `main` (no
+branch/PR) — `c4b7019`, "Fix domain on 6 notes; repair delivery-in-a-box
+frontmatter". Applied cleanly, no conflict this time. Closed #47 as landed.
+This also clears 2 of the 4 standing whole-vault integrity defects (the
+investor-pipeline `domain: cuzzies` pattern and the delivery-in-a-box
+frontmatter gap) that every recent digest had been re-flagging as known/
+unrepaired.
+
+**One new stray PR found: #62**, created ~8:05pm ET last night (2026-08-13) by
+a separate session — same git-write-policy miss as the batch closed yesterday
+(vault/skill work landed as a branch+PR instead of straight to `main`). Unlike
+yesterday's batch, this one is NOT routine noise: it's a real, sizeable design
+proposal (10 files, 288/156 +/-) to move Pulse, Money Hub, morning-brief, and
+meeting-prep off the Artifact tool onto per-render Google Doc snapshots in
+Drive, because the Artifact tool kept prompting Lemar for approval on mobile.
+Left OPEN and flagged in #decisions rather than merged unilaterally — it
+changes where Lemar finds his daily dashboards, which is his call, not a
+mechanical fix like #47 was.
+
+Remaining 8 open PRs unchanged from yesterday's flags (#1/#2/#22/#57 net-new
+skills, #46 skill-forge — hard-floor conflict, #32 root CLAUDE.md, #33 missing
+7/7 Dawn brief — 79-file dirty conflict).
+
+Reported back in the #decisions thread (ts `1786713899.377339`) and in this
+run's #reports digest.
+
+### Sources (this update)
+- slack: #decisions ts `1786710133.904019` (Lemar's ask) / `1786713899.377339`
+  (this reply)
+- GitHub: `list_pull_requests` (state=open, 9 total) · PR #47 `get_files` +
+  cherry-pick of commit `ac89f99` onto `main` as `c4b7019` · PR #62 `get`
+  (body, files-changed summary) · `update_pull_request` (#47 closed, #62 left
+  open)
+
