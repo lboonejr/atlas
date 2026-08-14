@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-14T09:25:00-04:00
+updated: 2026-08-14T09:45:00-04:00
 domain: personal
 type: reference
 status: active
@@ -192,8 +192,13 @@ bills:
      due: 2026-08-03, track: queue, status: active,
      calendar_event_id: pg0a92rgg01l09mg3tatcfb3mk,
      note: "due date has passed — confirm paid, then flip to paid and retire the event."}
-  - {id: tmobile-split-2, name: "T-Mobile split payment 2 of 2", amount: null, cadence: once,
-     due: null, track: queue, status: active, note: "amount and date not given yet"}
+  - {id: tmobile-split-2, name: "T-Mobile split payment 2 of 2", amount: 278, cadence: once,
+     due: 2026-08-28, track: queue, status: active, calendar_event_id: vkp5r31n2du2u9ubk0o3vof7go,
+     note: "Confirmed 2026-08-14 in #personal-finance: 'majority or at least half' of the
+            July T-Mobile payment plan already paid outside the system; this $278 is the
+            second half, due 8/28. daily_targets recompute for this new dated line
+            deferred to the next dedicated recompute pass — not hand-spread here to avoid
+            an arithmetic error across ~15 open days."}
   - {id: gym-debt, name: "Personal gym debt", amount: 75, cadence: once, due: null,
      track: queue, status: active, note: "undated, invisible to the queue"}
   - {id: water-pump, name: "New water pump", amount: 184.79, cadence: once, due: null,
@@ -253,8 +258,12 @@ bills:
             episode, two distinct $500 obligations. UNDATED — invisible to the queue
             (no event, no ramp) until Lemar names a date; see open_questions."}
   - {id: moms-car-oil-change, name: "Mom's car — oil change", amount: 100, cadence: once,
-     due: 2026-08-16, track: queue, status: active, calendar_event_id: 1ia5n73c169uckbr0o8s5bakbk,
-     note: "Reported 2026-08-09 in #personal-finance ('about $100, by end of next week'),
+     due: 2026-08-23, track: queue, status: active, calendar_event_id: 1ia5n73c169uckbr0o8s5bakbk,
+     note: "Pushed back 7 days 2026-08-14 per Lemar (#personal-finance: car wasn't driven
+            for a few days, so lighten the load on the next few days) — was 8/16, now
+            8/23. Calendar event moved to match. daily_targets recompute deferred to the
+            next dedicated recompute pass.
+            Reported 2026-08-09 in #personal-finance ('about $100, by end of next week'),
             confirmed 2026-08-11 in a #decisions thread reply: 'Oil Change - $100 by
             8/16'. Personal — mom's car, not a Cuzzie's/Station cost. Backfilled
             2026-08-14 PART M: the 2026-08-11 PART M pass raised this as an open question
@@ -1162,6 +1171,29 @@ open_questions:
   - "RESOLVED 2026-08-14: Lemar confirmed (#decisions ts 1786712349.341559) these ARE two separate $500 obligations from the same breakdown — a friend-funded tow ($500, tow-truck-repay, due 9/15) and a mechanic repair he'll repay 'down the road' with no date yet (mechanic-repair-repay, undated). Both now carry their own line; see the UNDATED bullet above for the second."
   - "NEW 2026-08-14: Lemar confirmed his new Station weekend job (#decisions ts 1786710731.810909) — $12/hour, ~23 hrs/week, security desk. No paycheck/earnings figure reported yet under this job; log actual pay via #personal-finance once it starts landing, same as DoorDash. Not the same thing as the 'Station travel $50/wk' expense line above (that's his travel cost, not this income)."
 ```
+
+## Update 2026-08-14 (PART M — T-Mobile amount/date + oil-change reschedule)
+
+Two new drops in #personal-finance this pass:
+- **T-Mobile split payment 2 of 2** — Lemar confirmed the amount/date that were
+  previously `null`: $278, due 2026-08-28 (the second half of the July bill's
+  payment plan; the first half is "already paid, majority or at least half").
+  Calendar event created (`vkp5r31n2du2u9ubk0o3vof7go`, both 7-day + day-of
+  popups).
+- **Mom's car oil change** — pushed back 7 days at Lemar's own request ("since
+  I didn't drive the car for a few days... lighten the load on the next few
+  days"): due moved from 2026-08-16 to 2026-08-23. Calendar event
+  `1ia5n73c169uckbr0o8s5bakbk` moved to match (caught a tool side-effect along
+  the way — the first update call silently converted it to an all-day event;
+  re-issued with an explicit timezone and confirmed it's a timed 9am event
+  again before moving on).
+
+Both lines updated in the yaml above. **daily_targets recompute NOT run this
+pass** for either change — spreading two new dated lines across ~15 open days
+by hand risks an arithmetic slip in a real financial number; deferring to the
+next dedicated recompute pass (same doctrine as other same-day drops earlier
+this week) rather than guess at the day-by-day split. Dashboard re-render also
+deferred to PART P.
 
 ## Update 2026-08-14 (PART M — mom's-car $500 debt split, resolved)
 
