@@ -1,6 +1,6 @@
 ---
 created: 2026-07-04T09:00-04:00
-updated: 2026-07-27T12:00:00-04:00
+updated: 2026-08-14T10:15:00-04:00
 domain: cuzzies
 type: log
 status: done
@@ -56,6 +56,17 @@ not paying. He asked for this to be logged in #on-button for tracking. No paymen
 no dispute correspondence sent to Progressive — tracking only, per the safety floor
 (payment authorization is his call). Posted to #on-button (`C0BEQUW5NPP`).
 
+## Update 2026-08-14 — repeat notice, same balance, no change
+
+A near-identical notice landed again 8/9 ("Overdue bill: Only a few days left to pay,"
+threatening collections by 8/14) and had been sitting as a separate, undomained stuck
+Inbox note for 5 days ([[2026-08-09-progressive-commercial-auto-overdue-balance]],
+same policy #997268390, same $1,107.20) — never cross-referenced back to this note or
+the 7/27 "let it lapse" decision, so it kept surfacing as a fresh 🔴 urgent item in
+Samira's digests. Cross-referenced and closed this run; the 7/27 decision stands, no
+new action needed.
+
 ## Sources
 - gmail: thread 19fa1e171bca3fae ("Final notice: You owe $1,107.20 on your policy.")
 - slack: #decisions ts `1785154455.692639` (card) / `1785154909.161039` (Lemar: let it lapse, update #on-button)
+- haven: [[2026-08-09-progressive-commercial-auto-overdue-balance]] — 8/9 repeat notice, closed 2026-08-14
