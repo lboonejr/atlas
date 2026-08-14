@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-14T09:45:00-04:00
+updated: 2026-08-14T14:12:00-04:00
 domain: personal
 type: reference
 status: active
@@ -279,6 +279,21 @@ bills:
             as a separate near-term dated target rather than folding it into that
             undated goal, so it's tracked here as its own line — worth reconciling once
             the car goal gets a target_date."}
+  - {id: am-botte-mechanical-past-due, name: "Am Botte Mechanical — past due balance",
+     amount: 431.83, cadence: once, due: 2026-10-31, track: queue, status: active,
+     calendar_event_id: pdvbut91vu3uuvrb8t3p1m8bu8,
+     note: "Reported 2026-08-14 in #decisions (ts 1786727804.674749): 'log the Am Botte
+            mechanical Past Due Balance ($431.83) to the cal and make a payment plan
+            spread evenly from tomorrow to October 31st.' Interpreted as a single dated
+            bill (due 2026-10-31) rather than a fixed-installment plan — the ACCRUAL
+            engine already spreads any dated line evenly, cent-exact, across every day
+            between now and its due date, which is exactly 'spread evenly' — so no
+            separate installment schedule was invented. FLAG if Lemar actually wanted
+            fixed weekly/monthly installments with their own individual due-date events
+            instead. daily_targets recompute for this new line deferred to the next
+            dedicated recompute pass (window runs ~78 days to 10/30, same reasoning as
+            tmobile-split-2/moms-car-oil-change above — not hand-spread here to avoid an
+            arithmetic error across that many open days)."}
 plans:
   - id: liquidibee-nomas-payment-plan
     creditor: "Nomas Recovery LLC (Amanda Ortiz, collections for LIQUIDIBEE 1 LLC)"
@@ -1819,6 +1834,21 @@ installments** (8/16, 8/23, 8/30, 9/06): the 8/10 aggregate event was updated in
 back to $170.28, the four Liquidibee-only daily events for 8/11–8/15 were cancelled, and
 4 new weekly events created. Nothing paid, nothing contacted. (See the 2026-08-10 Update
 above — Lemar has since taken the Nomas conversation directly.)
+
+## Update 2026-08-14 (2) — Am Botte Mechanical past-due balance added
+
+Per Lemar's #decisions message (ts `1786727804.674749`): "Can we log the Am Botte
+mechanical Past Due Balance ($431.83) to the cal and make a payment plan spread evenly
+from tomorrow to October 31st?" Added `am-botte-mechanical-past-due` as a single dated
+bill, `due: 2026-10-31`, calendar event `pdvbut91vu3uuvrb8t3p1m8bu8` created with both
+popups (7-day + day-of). Read "spread evenly from tomorrow to October 31st" as a
+description of the standard daily-accrual behavior (every dated line spreads cent-exact
+across every day between now and its due date) rather than a request for a fixed
+installment schedule with its own separate events — flagged in the line's note in case
+Lemar actually wants discrete installments instead. `daily_targets` recompute for this
+line deferred to the next dedicated recompute pass (the window runs ~78 days, matching
+the same reasoning already used for `tmobile-split-2` and `moms-car-oil-change` above).
+Nothing paid, nothing contacted.
 
 ## Sources
 - Prior project note: `haven/vault/10-Personal/Money/2026-07-11-personal-finance-dashboard-project.md` (full Slack ts provenance lives there)
