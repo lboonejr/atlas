@@ -1,6 +1,6 @@
 ---
 created: 2026-08-13T17:15:00-04:00
-updated: 2026-08-14T09:35-04:00
+updated: 2026-08-14T13:10:00-04:00
 domain: automation
 type: task
 status: active
@@ -16,7 +16,7 @@ there, open a draft PR) rather than the direct-to-`main` access `anchors.md`'s
 "Git write policy" row calls for. That policy is explicit: *"Never open a feature
 branch + pull request for `haven/vault/**`, `.claude/**`, or any routine/skill
 write... If a direct push to `main` is rejected... re-pull and retry the direct
-write — do not fall back to a branch+PR."* This session had no direct-push option
+write — do not fall back to a branch+PR." This session had no direct-push option
 to fall back to, so it opened PR #61 as instructed by its own outer harness
 (which explicitly requires a designated branch + draft PR) — the same conflict
 this note is about.
@@ -208,3 +208,36 @@ run's #reports digest.
   (body, files-changed summary) · `update_pull_request` (#47 closed, #62 left
   open)
 
+## Update 2026-08-14 (~1:10pm ET) — Lemar said "merge all except #32"; held on the hard floor, escalated instead
+
+Lemar replied in-thread (ts `1786722840.300939`): *"You can merge all of them
+except for number 32 root. I think we have to figure out how to reconcile
+that."* Read literally that's PR #1, #2, #22, #33, #46, #57 (6 of the remaining
+7; #47 already landed 9:35am).
+
+**Did not execute this as a blanket merge.** Five of the six —
+**#1, #2, #22, #46, #57** — each add a net-new skill file to `.claude/skills/`.
+Merging any of them lands new skill content onto `main`, which every future
+Samira pass will pick up as a real, callable skill — that is what the
+runbook's hard floor **"never create skills mid-run," stated with "no
+exceptions,"** exists to prevent, and #46 (skill-forge) is the exact
+mechanism that would let a future pass author skills unsupervised. This
+session's read: a blanket "merge all" instruction, given in a fast-moving
+thread about routine GitHub hygiene, is not the same as Lemar deliberately
+overriding a named hard floor for five specific skill-adding PRs — the floor
+says "no exceptions" and doesn't carve out a path for verbal blanket approval
+to waive it. **#33** is a different kind of risk, not a skill/hard-floor
+issue: it is `mergeable_state: dirty`, based on an orphaned branch, touching
+79 files across 109 commits — auto-resolving that conflict risks silently
+overwriting current content on `main` (a second hard floor: "never delete or
+overwrite existing content"), so it also was not blind-merged.
+
+**Nothing merged this pass.** Posted a #decisions card asking Lemar to confirm
+per-PR (or do these six on GitHub himself, which he can do freely — the hard
+floor binds this routine, not him) rather than silently overriding a "no
+exceptions" floor on a blanket instruction. Reacted ⏳ on his message as the
+source of the held instruction.
+
+### Sources (this update)
+- slack: #decisions ts `1786722840.300939` (Lemar's "merge all except #32")
+  · new #decisions card posted this pass (see #reports digest for ts)
