@@ -1,9 +1,9 @@
 ---
 created: 2026-08-14T08:20-04:00
-updated: 2026-08-14T09:15-04:00
+updated: 2026-08-14T13:10:00-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [weedmaps, ghost-management-group, contract, echosign]
 source: gmail
 ---
@@ -27,5 +27,14 @@ Surfacing it because it's a signed legal document Cuzzie's is now bound by and L
 should read the actual PDF to confirm the terms match what he expected before this
 gets filed away and forgotten.
 
+## Update 2026-08-14 — closed by Lemar, no further tracking
+
+Lemar reacted 🫡 on the #decisions card (ts `1786709997.432499`) — closing without
+further tracking. The signed PDF itself was never opened/reviewed by Samira (no tool
+available to read the attachment); this closes the tracking task only, not a
+confirmation that the terms were verified. If the actual terms ever need checking,
+the source thread below still has the attachment.
+
 ## Sources
 - gmail: thread 19ffd4bbf31c6ce5 (Echosign "Completed: File", 2026-08-13)
+- slack: #decisions ts `1786709997.432499` (card) / Lemar's 🫡 close reaction
