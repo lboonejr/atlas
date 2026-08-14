@@ -197,8 +197,9 @@ on hand, a bill (text or a photo), a payment made, or payment-plan terms. These 
 prompts (same doctrine as ON-BUTTON DROPS in PART C — fenced/named instructions in this
 channel still run in PART C). The skill logs earnings to the income log, updates the
 ledger `haven/vault/10-Personal/Money/money-hub-ledger.md`, projects dated lines onto the
-calendar, computes the daily set-aside ramp, runs the OVERLOAD CHECK, and re-renders the
-Money Hub artifact only if something changed.
+calendar, computes the daily set-aside ramp, runs the OVERLOAD CHECK, and creates a new
+Money Hub Drive snapshot (replying with its link in #personal-finance) only if something
+changed.
 
 The allocation model is **due-date order** (locked 2026-08-10): one queue sorted by date,
 no priority tiers, no floor, no waterfall. Two consequences for you:
@@ -225,12 +226,16 @@ item into #decisions.
 Invoke the **pulse-dashboard** skill (`.claude/skills/pulse-dashboard/`). It re-renders
 Lemar's one-page personal dashboard from what THIS run already holds (#decisions state,
 project pulses, tallies) plus the workout plan, Dawn's brief note, the money ledger, Google
-Calendar, and the open Haven notes, then re-deploys it to the stable artifact URL in
-anchors ("Pulse dashboard" section). It writes NO vault notes and posts NOTHING to Slack
-— its status rides in your digest as one token. **Non-fatal by design:** if the render
+Calendar, and the open Haven notes, then creates a NEW timestamped Google Doc snapshot in
+the Pulse Drive folder (anchors, "Pulse dashboard" section — 2026-08-13, replaced the
+Artifact tool re-deploy). It writes NO vault notes; it DMs Lemar the new snapshot link
+via the Samira capture DM ONLY when this hour's run changed something (see the skill's
+Notification rule) — a quiet hour still creates the Doc but sends no DM. Its status
+rides in your digest as one token either way. **Non-fatal by design:** if the render
 fails, note `pulse ⚠️ <reason>` for the digest and continue — a Pulse failure must never
 abort the digest or affect any other PART, and it does NOT count toward any task's
-3-strike stuck rule. Returns `pulse ✅ <url> · sections OK K/8` or `pulse ⚠️ <reason>`.
+3-strike stuck rule. Returns `pulse ✅ <Drive doc URL> · sections OK K/8 · dm sent/skipped`
+or `pulse ⚠️ <reason>`.
 
 ### Digest — #reports + the vault's own journal
 Via **samira-report-result** Mode 3:

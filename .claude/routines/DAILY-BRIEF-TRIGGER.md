@@ -17,8 +17,8 @@ BOOTSTRAP — do this first, before anything else:
 1. Via the GitHub connector, read the repo lboonejr/atlas (default branch).
 2. Open .claude/routines/daily-brief.md — that file IS your routine. Read it fully and
    execute it exactly, top to bottom, for this run.
-3. All platform IDs (channels, calendar, artifact URLs) are in .claude/anchors.md — read it
-   once at the start and use only those values.
+3. All platform IDs (channels, calendar, Drive folder ids) are in .claude/anchors.md — read
+   it once at the start and use only those values.
 4. Skills live in .claude/skills/ — invoke morning-brief and meeting-prep with the Skill tool
    as the runbook directs.
 
