@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-14T08:18:00-04:00
+updated: 2026-08-14T09:25:00-04:00
 domain: personal
 type: reference
 status: active
@@ -235,17 +235,23 @@ bills:
             The Station) — rate TBD, he'll post it in #personal-finance."}
   - {id: tow-truck-repay, name: "Tow truck advance repayment", amount: 500, cadence: once,
      due: 2026-09-15, track: queue, status: active, calendar_event_id: 160350dborpf6c2cllcmbkr07o,
-     note: "Added 2026-08-13. Lemar borrowed $500 from the car-purchase fund to cover the
-            tow truck when the car broke down; this repays that fund. Car is currently
-            down — Lemar is hoping it's fixed and back on the road tomorrow (8/14) but
-            isn't certain yet.
-            POSSIBLE DUPLICATE, flagged 2026-08-14 PART M: a #decisions thread reply from
-            2026-08-11 (answering the mom's-car breakdown question) reads 'Repair (Friend
-            Loaned me money to pay for it now) - $500 by 9/15' — same amount, same due
-            date, same underlying breakdown episode, but a different funding source
-            ('a friend' vs 'the car-purchase fund'). Treated as the SAME $500 obligation
-            rather than added as a second line, to avoid overstating the daily number —
-            see open_questions for the confirmation ask."}
+     note: "Added 2026-08-13, funding source corrected 2026-08-14. Lemar borrowed $500
+            from a friend to cover the tow truck when the car broke down; this repays
+            that friend (not the car-purchase fund, as first recorded — corrected per
+            Lemar's 2026-08-14 #decisions reply, ts 1786712349.341559). CONFIRMED
+            2026-08-14: this is a SEPARATE debt from mechanic-repair-repay below — one
+            $500 loan for the tow, a second $500 owed to the mechanic for the repair
+            itself. Car-fix status not reconfirmed since 8/13."}
+  - {id: mechanic-repair-repay, name: "Mechanic repair repayment (mom's car breakdown)",
+     amount: 500, cadence: once, due: null, track: queue, status: active,
+     calendar_event_id: null,
+     note: "Added 2026-08-14. Confirmed via #decisions (ts 1786709976.054069 /
+            1786712349.341559): the mechanic did the repair for free up front; Lemar
+            will pay him back $500 'down the road once my expenses stabilize a little
+            bit more' — no date given, explicitly open-ended. Separate debt from
+            tow-truck-repay (the $500 friend loan for the tow itself) — same breakdown
+            episode, two distinct $500 obligations. UNDATED — invisible to the queue
+            (no event, no ramp) until Lemar names a date; see open_questions."}
   - {id: moms-car-oil-change, name: "Mom's car — oil change", amount: 100, cadence: once,
      due: 2026-08-16, track: queue, status: active, calendar_event_id: 1ia5n73c169uckbr0o8s5bakbk,
      note: "Reported 2026-08-09 in #personal-finance ('about $100, by end of next week'),
@@ -1139,7 +1145,7 @@ goals:                               # a goal is a bill Lemar owes himself: it n
             savings is funded by naming an amount and a date like anything else."}
 open_questions:
   # -- the new #1 class of defect: undated queue lines are invisible --
-  - "UNDATED (invisible to the queue — no event, no ramp, will never ring): student loans $500/mo · Tidal $14.92/mo · Cuzzie's phone + Workspace ~$550/mo · Cash App payback $187.22 · gym debt $75 · water pump $184.79 · T-Mobile payment 2 (amount also unknown). Seven lines, ~$1,065/mo + $447 one-time, all silently outside the system until each gets a date. (Mom's expenses is no longer on this list — dated 2026-08-13, see moms-lump-0821 and moms-weekly.)"
+  - "UNDATED (invisible to the queue — no event, no ramp, will never ring): student loans $500/mo · Tidal $14.92/mo · Cuzzie's phone + Workspace ~$550/mo · Cash App payback $187.22 · gym debt $75 · water pump $184.79 · T-Mobile payment 2 (amount also unknown) · mechanic repair repayment $500 (added 2026-08-14, see mechanic-repair-repay — 'down the road once expenses stabilize', no date given). Eight lines, ~$1,065/mo + $947 one-time, all silently outside the system until each gets a date. (Mom's expenses is no longer on this list — dated 2026-08-13, see moms-lump-0821 and moms-weekly.)"
   - "Car goal: what date do you want the car running by? Without it the goal generates nothing."
   - "Savings goal: how much, by when? Both fields are null."
   - "Cuzzie's phone + Workspace $550/mo is Lemar's estimate — actual total unconfirmed, and it is the largest line in the ledger."
@@ -1153,8 +1159,33 @@ open_questions:
   - "Where should the maintenance bucket live? The 2026-08-10 account correction left it in Set-Aside, which is now SoFi Checking (the bill-paying account). SoFi Savings is free and is the obvious home, but Lemar has not said so — not moved."
   - "Gas/maintenance $30/day reserve is a rough cap Lemar named, not a measured figure — refine it once a few weeks of actual fill-ups are reported (it is now the largest single line in the ledger at ~$900/mo)"
   - "Income backlog: Lemar is posting ~2 weeks of DoorDash earnings to #personal-finance (2026-08-10). Until they land, income_target_weekly $500 is a guess and the overload check can't run."
-  - "NEW 2026-08-14: is the $500 'friend loan' repair (confirmed 2026-08-11 in #decisions, due 9/15) the SAME debt as tow-truck-repay ($500, due 2026-09-15, described 2026-08-13 as borrowed from the car-purchase fund) — one breakdown, one $500 loan described two ways — or two separate $500 obligations from the same episode (a tow AND a repair)? Currently tracked as ONE line to avoid double-counting; confirm either way."
+  - "RESOLVED 2026-08-14: Lemar confirmed (#decisions ts 1786712349.341559) these ARE two separate $500 obligations from the same breakdown — a friend-funded tow ($500, tow-truck-repay, due 9/15) and a mechanic repair he'll repay 'down the road' with no date yet (mechanic-repair-repay, undated). Both now carry their own line; see the UNDATED bullet above for the second."
+  - "NEW 2026-08-14: Lemar confirmed his new Station weekend job (#decisions ts 1786710731.810909) — $12/hour, ~23 hrs/week, security desk. No paycheck/earnings figure reported yet under this job; log actual pay via #personal-finance once it starts landing, same as DoorDash. Not the same thing as the 'Station travel $50/wk' expense line above (that's his travel cost, not this income)."
 ```
+
+## Update 2026-08-14 (PART M — mom's-car $500 debt split, resolved)
+
+Lemar answered the open question directly in #decisions (ts 1786712349.341559,
+replying to the card posted by the earlier interrupted pass this morning):
+"I borrowed 500 from my friend to get the tow truck. I have to pay that back
+separately. The repair cost is 500 and the mechanic did it for free so I'm going
+to pay him back 500 down the road once my expenses stabilize a little bit more."
+
+Confirmed: **two separate $500 debts**, not one described two ways.
+- `tow-truck-repay` ($500, due 2026-09-15) — funding source corrected to "a friend"
+  (was mis-recorded as "the car-purchase fund" on 2026-08-13). Amount/date/calendar
+  event unchanged.
+- `mechanic-repair-repay` ($500, **no date** — "down the road") — new line, `track:
+  queue`, `status: active`, no calendar event (nothing to ring against). Added to
+  the UNDATED open-questions bullet; total undated one-time exposure moves from
+  $447 to $947.
+
+Nothing paid, nothing invented — the no-date debt stays invisible-by-design until
+Lemar names one, per the skill's own rule. Also logged Lemar's new Station
+weekend-job pay rate ($12/hr, ~23 hrs/week, security desk — #decisions ts
+1786710731.810909) as a forward-looking open question; no earnings yet reported
+under it, so no income-log entry created. Replied "Done ✅" in both #decisions
+threads. Dashboard re-render deferred to PART P later this pass.
 
 ## Update 2026-08-14 (PART M — backfilled two stranded confirmations)
 
