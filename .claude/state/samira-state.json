@@ -3,35 +3,44 @@
   "lock": {
     "run_id": "run_20260815T190232Z",
     "run_started": "2026-08-15T19:02:32Z",
-    "run_completed": "2026-08-15T18:15:30Z"
+    "run_completed": "2026-08-15T19:12:00Z"
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1786810205.720709",
-      "C0BBZJL85RT": "1786817588.912819",
-      "D0BHPKMDNEP": "1786813996.875679",
+      "C0BBZJL85RT": "1786821084.879039",
+      "D0BHPKMDNEP": "1786821050.382579",
       "C0BGLEMH99T": "1786815396.631279",
-      "C0BEQUW5NPP": "1786815668.258749",
-      "C0BBLUA7JLX": "1786813856.196039",
+      "C0BEQUW5NPP": "1786818439.700099",
+      "C0BBLUA7JLX": "1786818961.467049",
       "C0BJ37SU1TL": "1785586607.101759",
-      "C0BCCUKEUQ2": "1786735706.250489"
+      "C0BCCUKEUQ2": "1786735706.250489",
+      "C0BCD7U5X2B": "1784895502.750959",
+      "C0BCH2C3GRM": "1783865910.025549",
+      "C0BDN2KQFD4": "1786365005.327169",
+      "C0BD8LTM1EK": "1783257200.297099",
+      "C0BGYM1UB4Y": "1786817353.240879",
+      "C0BGCAK0ML3": "1783695944.017839",
+      "C0BHXTPST52": "1786306503.409249",
+      "C0BC2A94142": "1782508078.495669",
+      "C0BBZ5J8805": "1786741654.908089"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709"
     },
-    "capture_dm": "1786813996.875679",
-    "gmail_after_epoch": 1786817109
+    "capture_dm": "1786821050.382579",
+    "gmail_after_epoch": 1786821053
   },
   "integrity": {
     "last_full_pass": "2026-08-15T18:12:00Z",
-    "last_scan_sha": "970fd2dd5575c17ee099d8d8ac4eb9c274a0fb2c"
+    "last_scan_sha": "a9e74627b1ed59a81098e84c5642c53c1f064d33"
   },
   "canvas_access": {
     "last_checked": "2026-08-15T18:12:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-15T17:13:44Z",
+    "pulse_last_rendered": "2026-08-15T19:10:37Z",
     "money_hub_last_rendered": "2026-08-15T16:10:05Z"
   }
 }
