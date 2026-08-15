@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T09:25:00-04:00
-updated: 2026-08-14T09:00:00-04:00
+updated: 2026-08-15T14:15:53-04:00
 domain: personal
 type: note
 status: active
@@ -246,3 +246,18 @@ Samira right now.
 - slack: #trading-cards, buy plan post, 2026-08-13 09:59:10 EDT (TS 1786614350.540839)
 - slack: #trading-cards, shop verification post, 2026-08-13 10:14:28 EDT (TS 1786614868.822699)
 - slack: #trading-cards, final route + calendar post, 2026-08-13 10:21:11 EDT (TS 1786615271.149489)
+
+## Update 2026-08-15 — Newark card shops near 201 Wright St (separate from the Sept 1 buy trip)
+
+Lemar asked Claude, separately from the Sept 1 buy-plan thread, for trading card shops
+near 201 Wright St, Newark NJ 07114 (airport/South Ward area). Closest option: Fortress
+of Solitude, 53 University Ave #101, Newark 07102 (~2.5 mi, downtown; comics + cards,
+4.7★). Short drive to Union (~5–6 mi): Clockwork Comics & Cards, 1003 Vauxhall Rd, Union
+07083 (4.9★) and Card Cave Central, 2464 Morris Ave, Union 07083 (5.0★, dedicated
+sports + TCG shop). Farther out: Skybox Sports Collectibles, 517 S Livingston Ave,
+Livingston 07039 (4.9★, sports-focused). Best TCG bets: Card Cave Central and Clockwork;
+best sports bet: Skybox. No decision made on which to visit; small card shops keep
+irregular hours, so call ahead.
+
+### Sources (this update)
+- slack: #trading-cards, handoff record post, 2026-08-15 (TS `1786817353.240879`)
