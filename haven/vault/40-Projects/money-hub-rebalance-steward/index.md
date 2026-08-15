@@ -1,9 +1,9 @@
 ---
 created: 2026-08-15T18:45-04:00
-updated: 2026-08-15T18:45-04:00
+updated: 2026-08-15T19:10-04:00
 domain: project
 type: brief
-status: awaiting-decision
+status: active
 tags: [stormy, money-hub]
 source: claude
 ---
@@ -95,6 +95,70 @@ as a new step inside `money-hub` or something adjacent to it.
   decision that comes back to Lemar directly, every time it fires (not batched).
 
 ## Pressure test complete — all 15 answered.
+
+## Locked plan
+
+### Mission
+Give `money-hub` a rebalance step: the moment its overload check fires, it doesn't just
+report the gap — it drafts real rework moves within Lemar's own personal ledger and
+puts them in front of him as a single #decisions card, so he approves or edits instead
+of doing the untangling math himself.
+
+### Success criteria
+Every overload event produces at least one proposal Lemar would actually act on (MVP:
+one real move, not just the number restated). Fails if it ever proposes moving a goal
+Lemar considers non-negotiable — that is the signal to retune or kill it, not iterate
+past it.
+
+### Timing & preconditions
+Activate ASAP, within the week. No preconditions — ships ahead of the next overload
+event, whenever that fires next.
+
+### Phases
+
+1. **Define the move types** — goal: lock the exact set of rework moves the steward is
+   allowed to draft (stretch/delay a goal's drip rate, re-tier a payment plan's
+   installment size or start date, flag a business-origin-but-personally-carried bill
+   for business reimbursement). Owner: Lemar + this session. Duration: same session.
+   Output: a short "allowed moves" list written into the `money-hub` skill file.
+   Dependency: none.
+2. **Add the non-negotiable guard** — goal: give goals in `money-hub-ledger.md` an
+   optional flag (e.g. `non-negotiable: true`) so the steward knows what it must never
+   propose stretching. Owner: this session. Duration: same session. Output: ledger
+   schema note + one field added to existing goal entries Lemar marks. Dependency:
+   phase 1 (need the move types defined to know what the guard blocks).
+3. **Wire the rebalance step into `money-hub`** — goal: the skill drafts proposals
+   immediately after an overload fires, using only ledger data + the move types +
+   the guard, and posts ONE #decisions card (proposal, not the plain report) instead of
+   today's report-only message. Owner: this session (implementation). Duration: same
+   session. Output: updated `money-hub` skill instructions. Dependency: phases 1-2.
+4. **Dry-run against today's real overload** — goal: before shipping, run the new logic
+   against the actual 2026-08-15 numbers ($2,193.73 need, $478 genuinely due, the goal
+   catch-up drip) and show Lemar what it would have proposed, as a sanity check with no
+   live posting. Owner: Lemar review. Duration: same session. Output: a sample proposal
+   Lemar confirms looks right (or doesn't). Dependency: phase 3.
+5. **Ship** — goal: live for the next real overload event. Owner: `money-hub` /
+   Samira's PART M. Duration: ongoing. Output: every future overload event posts a
+   rebalance proposal instead of a bare report. Dependency: phase 4 sign-off.
+
+### Risks & sign-offs
+Biggest risk is getting the reasoning logic wrong (Q7) — mitigated by phase 4's dry run
+against real numbers before it ever posts live. Sign-off is Lemar only (Q8); no other
+role is involved since everything in scope stays inside the personal ledger.
+
+### Compliance flags
+None. No regulated area, no external approval needed (Q11). Reggie stays uninvolved.
+
+### Automation map
+Runs autonomously: overload detection (already exists) + drafting the proposal (Q12).
+Needs a human gate: every proposal is a #decisions card Lemar must approve before
+anything is considered decided — the steward never edits the ledger itself (Q13, Q15).
+No new source of truth: `money-hub-ledger.md` stays the one ledger, #decisions stays
+the one surface (Q13).
+
+### Delegation brief
+No delegation — Lemar leads end-to-end, nobody else owns any part of this (Q14). Every
+proposal comes back to Lemar directly and individually, not batched (Q15).
 
 ## Sources
 - slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1786832078131649 (OVERLOAD CHECK message, Samira/Money Hub, 2026-08-15 6:14pm ET)
