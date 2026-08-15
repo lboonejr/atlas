@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-15T08:35:00-04:00
+updated: 2026-08-15T12:13:00-04:00
 domain: personal
 type: reference
 status: active
@@ -253,12 +253,23 @@ bills:
             entirely rather than parked-but-still-owed. Its due-date event
             jfh8548cet84pcqo3o697fkbq8 already fired 8/12; cleared, not cancelled
             retroactively. Parked per field rules, never deleted."}
-  - {id: station-travel, name: "Travel to The Station", amount: 50, cadence: once,
+  - {id: station-travel, name: "Travel to The Station", amount: 80, cadence: once,
      due: 2026-08-15, track: queue, status: active,
      calendar_event_id: ptacguksk2rsf3md3403gljtes,
      note: "reported in #personal-finance 2026-08-09. Ramped: full $50 on 2026-08-10.
-            Lemar 8/9: likely becoming a recurring weekly expense (new weekend job at
-            The Station) — rate TBD, he'll post it in #personal-finance."}
+            RATE CORRECTED 2026-08-15 per Lemar in #personal-finance: 'Round Trip
+            (Saturday & Sunday total): $80 per week' — this was the TBD rate flagged
+            8/9. Amount raised 50→80 for this week's already-open occurrence (today's
+            due date); future weeks tracked as the new recurring line
+            station-travel-weekly below, not as repeats of this one-time id."}
+  - {id: station-travel-weekly, name: "Travel to The Station — weekly", amount: 80,
+     cadence: weekly, weekday: saturday, first_due: 2026-08-22, track: queue,
+     status: active, calendar_event_id: 7ppstt92j8m4ben3u0v8iepink,
+     note: "Added 2026-08-15: recurring weekly round-trip travel cost for the new
+            weekend Station security-desk job (Sat+Sun combined, $80/week total),
+            confirmed rate per Lemar in #personal-finance. Starts the Saturday AFTER
+            this week's one-time station-travel occurrence (2026-08-15) so the two
+            never double-count. Same weekly-cadence accrual pattern as moms-weekly."}
   - {id: tow-truck-repay, name: "Tow truck advance repayment", amount: 500, cadence: once,
      due: 2026-09-15, track: queue, status: active, calendar_event_id: 160350dborpf6c2cllcmbkr07o,
      note: "Added 2026-08-13, funding source corrected 2026-08-14. Lemar borrowed $500
@@ -501,13 +512,19 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
                                      # `resolution` key.
   "2026-08-15":
     operating_reserve: 30.00
-    target: 564.81
-    total_claim: 594.81
+    target: 594.81
+    total_claim: 624.81
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 564.81
+    shortfall: 594.81
     calendar_event_id: k9sog0mcpmisnn4p2hicernagk
+    recompute_note: "2026-08-15 PART M: station-travel corrected $50.00 -> $80.00 per
+      Lemar's rate confirmation (+$30.00 to target/total_claim/shortfall). Every other
+      contribution/day unchanged; the new station-travel-weekly line (first_due
+      2026-08-22) is not yet hand-spread into daily_targets -- deferred to the next
+      dedicated recompute pass per this ledger's established practice for multi-day
+      additions (same treatment as tmobile-split-2 / moms-car-oil-change / am-botte)."
     contributions:
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
@@ -538,7 +555,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-9, amount: 4.05, funded: 0, status: pending}
       - {line_id: patreon, amount: 2.09, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
-      - {line_id: station-travel, amount: 50.00, funded: 0, status: pending}
+      - {line_id: station-travel, amount: 80.00, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.97, funded: 0, status: pending}
@@ -2764,7 +2781,8 @@ open_questions:
   - "RESOLVED 2026-08-13 (recompute session, updated same day): comedy tickets $50.28 confirmed unpaid and briefly folded into the accrual, then CANCELLED later the same day — Lemar isn't going, too many bills were piling up. Parked, out of the queue entirely, not owed. See Update 2026-08-13 (THIRD REVISION)."
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
   - "No balance has been reported for either pocket since the Era connector was retired 2026-08-10 — say 'Spending has $X' / 'Set-Aside has $X' whenever convenient; both currently render 'not reported'"
-  - "Station travel $50/wk: Lemar started a weekend job at The Station 8/9 — pay rate not yet known, he'll report it in #personal-finance"
+  - "RESOLVED 2026-08-15 (#personal-finance, unlabeled drop, ~14:31 ET): Lemar reported the round-trip travel rate — 'Round Trip (Saturday & Sunday total): $80 per week.' This week's one-time station-travel line corrected 50->80; a new recurring station-travel-weekly line ($80/wk, Saturdays, starting 2026-08-22) added. daily_targets beyond 2026-08-15 not yet hand-spread for the new recurring line — see the next line."
+  - "OPEN: station-travel-weekly ($80/wk, first_due 2026-08-22) is a new dated recurring line whose daily_targets accrual has NOT yet been hand-spread across the ~7 open days between now and 8/22 — deferred to the next dedicated recompute pass per this ledger's established practice (same treatment as tmobile-split-2/moms-car-oil-change/am-botte). The dashboard's queue section will show it as a dated future line; the per-day daily numbers 8/16-8/21 do not yet include its drip."
   - "Where should the maintenance bucket live? The 2026-08-10 account correction left it in Set-Aside, which is now SoFi Checking (the bill-paying account). SoFi Savings is free and is the obvious home, but Lemar has not said so — not moved."
   - "Gas/maintenance $30/day reserve is a rough cap Lemar named, not a measured figure — refine it once a few weeks of actual fill-ups are reported (it is now the largest single line in the ledger at ~$900/mo)"
   - "Income backlog: Lemar is posting ~2 weeks of DoorDash earnings to #personal-finance (2026-08-10). Until they land, income_target_weekly $500 is a guess and the overload check can't run."
@@ -3631,3 +3649,38 @@ RESOLVED with a pointer to the new `target_date`.
 
 Nothing paid but the gym debt (per Lemar's own report, not an inferred payment). Nothing
 contacted. Dashboard re-rendered (new Drive snapshot) since the ledger changed.
+
+## Update 2026-08-15 (2) (PART M — station travel rate confirmed, $50 → $80/wk)
+
+Lemar dropped an unlabeled top-level message in #personal-finance (no thread, ~14:31 ET
+this pass): "Just as an update to the Travel to The Station costs / Round Trip (Saturday
+& Sunday total): $80 per week." This resolves the TBD rate flagged 2026-08-09 (the
+original `station-travel` line was a $50 placeholder pending this exact confirmation).
+
+**Bill lines.** `station-travel` (the one-time line already due today, 2026-08-15)
+corrected `amount: 50 → 80`. A new recurring line `station-travel-weekly` added
+(`$80/wk`, `weekday: saturday`, `first_due: 2026-08-22`) for every week after this one,
+so the two never double-count. Calendar events: the existing one-time event
+(`ptacguksk2rsf3md3403gljtes`) retitled to reflect $80 and the correction; a new
+recurring event (`7ppstt92j8m4ben3u0v8iepink`, `RRULE:FREQ=WEEKLY;BYDAY=SA`, starting
+2026-08-22, both popups) created for the ongoing weekly line — same pattern as
+`moms-weekly`.
+
+**ACCRUAL.** Today's (2026-08-15) `daily_targets` entry is the only day touched: the
+`station-travel` contribution corrected $50.00 → $80.00, and `target`/`total_claim`/
+`shortfall` each raised by the same $30.00. Today's aggregate calendar event
+(`k9sog0mcpmisnn4p2hicernagk`) re-synced in the same pass — title now `$594.81`,
+description line updated to `station-travel: $80.00 (rate corrected 2026-08-15, was
+$50.00)`. `station-travel-weekly`'s own accrual (the ~7 open days between now and its
+2026-08-22 first due date) was **NOT** hand-spread this pass — deferred to the next
+dedicated recompute pass, consistent with this ledger's established practice for
+multi-day additions when a full walk-through across many already-open days risks an
+arithmetic slip (same treatment already used for `tmobile-split-2`,
+`moms-car-oil-change`, and `am-botte-mechanical-past-due`). Flagged in `open_questions`
+and in this pass's PART M return token so it isn't lost.
+
+**Not yet done, flagged for the next pass:** hand-spread `station-travel-weekly`'s
+accrual across 8/16–8/21 once the next dedicated recompute runs.
+
+Nothing paid, nothing contacted. Dashboard re-rendered (new Drive snapshot) since the
+ledger changed; reply posted in #personal-finance with the new link.

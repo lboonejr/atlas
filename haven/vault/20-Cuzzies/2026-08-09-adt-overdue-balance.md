@@ -1,6 +1,6 @@
 ---
 created: 2026-08-09T14:05:00-04:00
-updated: 2026-08-09T18:30:00-04:00
+updated: 2026-08-15T10:13:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -47,3 +47,20 @@ question raised in this run's #decisions card — not resolved here, flagged for
 - haven: [[2026-07-03-adt-90-days-past-due]] (2026-07-12 "let it lapse" decision, on the
   earlier $1,637.84 figure)
 - haven: `haven/vault/40-Projects/on-button-reopen/index.md` (tracked `adt` line, Tier 1)
+
+## Update 2026-08-15 — new bill cycle, balance now $3,493.42 (up from $2,842.83)
+
+A new routine billing-reminder notice ("Action Required: Your ADT Bill is Due")
+landed 2026-08-15T14:13:30Z. This is a different, larger figure than the 120-days-
+past-due notice above: **balance due $3,493.42, due 9/4/2026** — the account
+continuing to age (~$650 higher than the 8/9 figure), not a new incident. Same
+do-not-reply marketing sender, no new information beyond the balance. Not reply-
+worthy; no payment made or authorized. Still tracked as the `adt` Tier-1 line in the
+on-button reopening plan and still an open Lemar-decision (pay to Tier-1 status vs.
+let lapse per the 2026-07-12 stance) — this Update just refreshes the dollar figure
+for whichever way that decision lands; not raising a fresh #decisions card since the
+underlying question is already open and unreacted.
+
+### Sources (this update)
+- gmail: message `1a005c54f62e1873` — "Action Required: Your ADT Bill is Due",
+  received 2026-08-15T14:13:30Z from adt@t.adt.com to lemar@cuzziesnj.com

@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-08-14T18:30:00-04:00
+updated: 2026-08-15T13:00:00-04:00
 domain: legal
 type: task
 status: active
@@ -449,6 +449,20 @@ labeled `Samira/seen`.
 **Open:** if Kaplan's office hasn't come back with an assigned attorney within a few
 business days, this becomes a candidate for the same "circle back" pattern Lemar has
 used with Siciliano and CCBA — his call, not assumed here.
+
+## Update 2026-08-15T13:00:00-04:00 — correction from Lemar: Siciliano is NOT retained counsel
+
+Lemar corrected the record directly in the Samira capture DM (2026-08-15): "Siciliano
+isn't my official counsel. Official counsel hasn't been hired yet. I was just looking
+at their firm to see what the prices were. Counsel has still not been locked in."
+
+This contradicts the "retained"/"confirmed representation" language used for Siciliano
+& Associates throughout this note's earlier updates (2026-07-23 onward) — that framing
+was wrong. Correcting the standing status here: **no counsel is retained on this matter
+as of today.** Siciliano & Associates was a referral Lemar reached out to and priced,
+not a signed engagement; same open-referral status as Wall, Brekke, Hagner & Zohlman,
+and Kaplan. The counsel-selection decision remains entirely Lemar's, still unresolved,
+with the Sept 14 proof hearing approaching.
 
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")

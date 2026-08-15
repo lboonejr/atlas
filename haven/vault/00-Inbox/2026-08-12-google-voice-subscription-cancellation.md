@@ -1,6 +1,6 @@
 ---
 created: 2026-08-12T10:00-04:00
-updated: 2026-08-13T15:30:00-04:00
+updated: 2026-08-15T13:10:00-04:00
 domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation
 type: task
 status: active
@@ -83,3 +83,26 @@ now: clear Google Voice balance → then Workspace billing can be set up.
 ### Sources (this update)
 - slack: #decisions ts `1786641661.331369` (card) / `1786641664.664189`
   (Option 1, ✅'d) / `1786642451.199409` (Lemar's dependency note)
+
+## Update 2026-08-15 — direct-billing cost confirmed: $84/month
+
+Lemar reported in `#personal-finance` (2026-08-15): "Looks like the google workspace
+cost is going to be $84/month on the 1st of every month." This is the concrete figure
+resulting from the direct-billing setup he chose (Update above).
+
+**Routing call:** this is a `cuzziesnj.com` Workspace subscription cost — a Cuzzie's
+business obligation, not a personal one, even though Lemar reported it in
+`#personal-finance`. Per the money-hub skill's personal/business boundary rule, it does
+NOT go into the personal money-hub ledger or the personal reminder calendar. Created a
+recurring monthly reminder on the **Cuzzie's (Owners)** calendar instead: "Bill: Google
+Workspace (cuzziesnj.com) — $84/month", 1st of each month, both popups (7-day + day-of),
+starting 2026-09-01 (first charge after the Aug 20 suspension deadline passes under the
+new direct-billing arrangement). `calendar_event_id: t2hnvdjeo1enms39lehq48h1uk`.
+
+No payment made or authorized by Samira — Lemar is running the billing setup himself;
+this is a record + reminder only. If this $84/mo is actually being paid from Lemar's
+personal funds rather than a Cuzzie's business account, that changes the routing —
+flagging that as an open question rather than assuming.
+
+### Sources (this update)
+- slack: #personal-finance, ts `1786810837.270889` ("$84/month on the 1st")

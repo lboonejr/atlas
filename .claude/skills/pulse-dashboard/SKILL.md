@@ -136,16 +136,17 @@ then create it as a NEW Google Doc via `Google_Drive__create_file`:
 
 ## Notification — DM only when something changed
 
-Pulse still writes NO Slack message on a quiet hour. After creating the snapshot,
+Pulse still writes NO Slack message on a quiet hour. BEFORE building the snapshot,
 compare this run's signals against what you already know from this same scan: did any
 #decisions card open/close, did money change (PART M returned `money ✓ …` not
 `money —`), did a project pulse's status dot flip, or is there a new/updated open Haven
-note since the last render? If YES to any of those, send ONE line to the **Samira
-capture DM** (`D0BHPKMDNEP` — the shared bot's only DM slot; safe to reuse since PART B
-only develops messages FROM Lemar, never the bot's own posts):
+note since the last render? If NO signal changed this hour, skip the render entirely —
+no Doc, no DM (codified 2026-08-15; a folder of identical snapshots is noise, not
+history) — and return `pulse — carried (quiet pass)` for the digest. If YES to any,
+render, then send ONE line to the **Samira capture DM** (`D0BHPKMDNEP` — the shared
+bot's only DM slot; safe to reuse since PART B only develops messages FROM Lemar, never
+the bot's own posts):
 `📍 Pulse updated — [1-line summary of what changed]. [Drive doc link] — Samira`
-If NO signal changed this hour, skip the DM entirely — the Doc is still created for the
-record, just not announced.
 
 ## SAFETY (applies to the whole skill)
 You MAY: read every connected tool and the vault; create a new Pulse snapshot Doc in the

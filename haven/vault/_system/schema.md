@@ -167,15 +167,27 @@ A note whose frontmatter is missing a **value** a human must choose is **left in
 
 ---
 
-## 4.5 The integrity pass (whole-vault, every sweep)
+## 4.5 The integrity pass (whole-vault daily, incremental hourly)
 
 Filing only ever looks at `00-Inbox`, so for a long time nothing re-examined a note once
 it was filed. Malformed notes therefore accumulated *outside* the Inbox — where the
 enforcement mechanism could not see them — and stayed broken indefinitely. The integrity
-pass closes that hole: **every sweep checks every note in the vault**, not just the Inbox,
-and repairs the mechanical defects same-day.
+pass closes that hole: the whole vault gets checked, not just the Inbox, and mechanical
+defects get repaired same-day.
 
-Cost is small — it reads the frontmatter block of each note, not the whole body.
+**Cadence (amended 2026-08-15 — was "every sweep").** The FULL whole-vault pass runs
+once per day, on the day's first sweep. Every later sweep runs an INCREMENTAL pass:
+only the notes changed since the last pass's recorded commit
+(`git diff --name-only <integrity.last_scan_sha>..main -- haven/vault/`), plus anything
+that sweep itself writes. The state file (`.claude/state/samira-state.json`) records
+`last_full_pass` and `last_scan_sha`. Rationale: the vault only changes through the
+skills' own writes and Lemar's edits — both visible in git — so re-reading ~500
+unchanged notes hourly bought nothing (the July–August journals show 4–5 full passes a
+day, almost all reporting zero new defects). Same-day repair is preserved: a defect
+introduced between sweeps is in the diff and gets caught within the hour.
+
+Cost is small — the pass reads the frontmatter block of each checked note, not the
+whole body.
 
 ### Repairable (mechanical, uniquely determined, verifiable)
 

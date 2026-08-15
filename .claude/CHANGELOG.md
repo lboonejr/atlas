@@ -3,6 +3,42 @@
 The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NOW.
 History and cutover narratives live here.
 
+## 2026-08-15 — Routine-efficiency overhaul (run lock, watermarks, integrity cadence, dead-weight removal)
+Lemar asked for a review of where Samira's hourly routine wastes work; the July–August
+`_daily` journals supplied the evidence (ten passes on 8/14 alone). Changes, in one PR:
+- **PART 0 (new): run lock.** The overlapping-trigger-fire bug (recurring since at least
+  7/29) had concurrent passes duplicating #decisions cards, double-capturing facts, and
+  making wrong-premise calendar writes. A run now claims a lock in the new state file
+  `.claude/state/samira-state.json` and a second fire inside 45 minutes exits silently.
+- **PART 0 (new): per-surface watermarks.** The state file stores last-read Slack `ts`
+  per channel, per-thread latest-reply `ts` for open #decisions cards (a Lemar reply sat
+  unseen two scans on 8/15), the capture-DM `ts`, and a Gmail `after:` epoch. Passes
+  stop reconstructing "since the last run" from digest prose and stop re-reading full
+  histories. samira-email-loop D2 now runs ONE canonical query off the epoch.
+- **Integrity cadence** (schema §4.5 amended): full whole-vault pass once per day;
+  hourly passes go incremental via `git diff` since the last recorded scan commit. Was
+  4–5 full ~500-note passes a day, almost always zero-yield.
+- **PART G merged into PART C.** Every journal since early August said "covered inside
+  PART C's sweep" — the spec now matches; project channels are read once. G is a
+  tombstone like F.
+- **Monday gate formally closed.** The 7/11 gate passed a month ago with no review ever
+  run; the mirror board returned `not found` on 8/14. All mirror steps removed from the
+  runbook + samira-report-result; boards are read-only history in anchors.
+- **Dead text removed:** the #atlas transition glance (channel archived,
+  `not_in_channel` for weeks), the completed v5 pre-flight section, the retired car
+  count in the digest spec.
+- **Canvas refresh conditional:** while the bot lacks editor access (standing gap since
+  7/25), the step is skipped entirely; access re-checked once a day and recorded in the
+  state file.
+- **Batch renders:** PART M applies all of a pass's ledger changes (recompute included —
+  money-hub now locks "never deferred") then renders once; Pulse's quiet-pass skip
+  (no Doc, no DM when nothing changed) is codified in anchors + skill, replacing "a
+  quiet hour still creates the Doc."
+- **Slim `_daily` entries:** digest block + short delta list; the long per-PART
+  narrative is retired since checkpoints now live in the state file.
+- **Local-clone preference** codified in the runbook intro (faster than GitHub-API
+  roundtrips, first observed 8/14).
+
 ## 2026-08-13 — Pulse, Money Hub, morning-brief, meeting-prep move off the Artifact tool to Drive snapshot Docs
 - **The problem.** Lemar flagged (first on 2026-07-13, again on 2026-08-13) that the
   Artifact tool kept prompting him for approval on his phone — the surface he checks
