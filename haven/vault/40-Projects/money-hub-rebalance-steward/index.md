@@ -80,5 +80,21 @@ as a new step inside `money-hub` or something adjacent to it.
 - **Q9 (activation timing):** ASAP — within 1 week.
 - **Q10 (preconditions):** None. Ship it for the next overload event.
 
+## Update 2026-08-15: pressure test — Q11-Q15
+
+- **Q11 (compliance):** None — no regulated area, no external party needs to approve
+  anything. Reggie stays uninvolved.
+- **Q12 (automated workflows):** Overload detection (already exists in `money-hub`) plus
+  drafting the rework proposals both run automatically, triggered off the same overload
+  event.
+- **Q13 (data/status flow):** No new source of truth. The `money-hub-ledger.md` stays
+  the one ledger; proposals surface as a #decisions card, same pattern as today's
+  overload report and the same surface Chase/email-loop already use.
+- **Q14 (delegation):** No — Lemar leads. Nobody else owns any part of this.
+- **Q15 (what comes back / cadence):** N/A — nothing delegated. Every proposal is a
+  decision that comes back to Lemar directly, every time it fires (not batched).
+
+## Pressure test complete — all 15 answered.
+
 ## Sources
 - slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1786832078131649 (OVERLOAD CHECK message, Samira/Money Hub, 2026-08-15 6:14pm ET)
