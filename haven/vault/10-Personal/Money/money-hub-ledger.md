@@ -31,6 +31,11 @@ Field rules (on-button-plan pattern):
   A reported balance is never adjusted to match what the ledger expected.
 - `track` = `queue` (must carry a date; accrues daily and queues) or `spending` (paid
   as you go from the Spending pocket; no date, no accrual, not a defect). Added 2026-08-10.
+- `non_negotiable: true` (optional, added 2026-08-15) — Lemar's explicit flag on a bill,
+  plan, or goal line meaning REBALANCE (see SKILL.md) may never propose stretching,
+  re-tiering, or otherwise touching it, no matter how tight a week gets. Absent =
+  negotiable by default. Only Lemar sets or clears this flag; never infer it from a
+  line looking important.
 - `daily_targets` = the daily accrual. ISO date key → `{operating_reserve, target,
   total_claim, gas_spent, swept_to_maintenance, funded, shortfall,
   calendar_event_id, contributions: [{line_id, amount, funded, status}]}`, `status` one

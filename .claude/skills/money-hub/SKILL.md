@@ -310,6 +310,58 @@ look achievable — and additionally:
 A number Lemar can't hit is still the true number. The failure mode this guards against
 is a cheerful dashboard, not an ugly one.
 
+## REBALANCE — proposing rework when overload fires (added 2026-08-15, Stormy-baked)
+OVERLOAD CHECK stops at naming the gap. REBALANCE runs in the same pass, only when
+OVERLOAD CHECK actually flags, and turns the gap into a short list of real moves Lemar
+could take — then stops and asks, same as everything else in this skill. **It never
+applies a move itself.** This is a fixed set of three move types; adding a fourth is
+Lemar's call, not something to infer from a pattern.
+
+**The three allowed moves, and nothing else:**
+1. **Stretch a goal's drip** — propose pushing an active goal's `target_date` later.
+   Recompute what that does to the coming week's set-aside total (before/after), so the
+   size of the relief is concrete, not vague.
+2. **Re-tier a payment plan** — propose resizing or re-dating one or more of a plan's
+   still-`pending` installments. Never touch an installment already `funded` or `paid`.
+3. **Flag a business-origin-but-personally-carried line for business reimbursement** —
+   name it and recommend Lemar route it to Cuzzie's/Station for reimbursement instead of
+   personal accrual. This is a flag only: never move the line off this ledger, never
+   write anything into a business ledger, never make the business-vs-personal call
+   yourself.
+
+**Defaults conservative.** Propose the SMALLEST set of moves that closes the gap between
+the week's set-aside total and the trailing 4-week income average — do not touch more
+lines than the gap requires, and prefer move type 3 (flag, not stretch) wherever a line
+qualifies, since it costs Lemar nothing to lose.
+
+**Never touches:**
+- Any line carrying `non_negotiable: true` (see field rules) — not even a smaller stretch.
+- Any installment already `funded` or `paid`.
+- Move types 1 (stretch) and 2 (re-tier) never touch a genuinely due, dated bill inside
+  the current 7-day window — those are due, not catch-up drip, and REBALANCE only
+  reworks the catch-up portion of the gap. **Move type 3 (flag for business
+  reimbursement) is the one exception** — it applies BECAUSE a business-origin line is
+  genuinely due this week (that is the whole point: the money is due, it just shouldn't
+  be coming out of Lemar's own pocket). Flagging changes nothing about the accrual or
+  timing, only who should ultimately be paying.
+
+**The hard stop.** If closing the gap would require touching a `non_negotiable` line, or
+every eligible line is already exhausted and the gap still doesn't close, STOP proposing
+and say so plainly — same doctrine as OVERLOAD CHECK's "never shrink a goal to make a
+week fit," now extended: the skill may PROPOSE a stretch, it may never force one, and it
+may never manufacture a proposal that doesn't actually work just to have something to
+show.
+
+**Output.** One #decisions parent per overload event (the same card OVERLOAD CHECK
+already raises — do not raise a second one), with each proposed move as a labeled
+threaded reply option (mirrors the existing #decisions pattern). Lemar reacts to choose;
+nothing is applied until he does. If REBALANCE has nothing valid to propose (hard stop
+above), say so in that same card rather than staying silent.
+
+**Data needed:** just the `non_negotiable` flag (field rules, below) and the trailing
+4-week income average OVERLOAD CHECK already computed — reuse it, never recompute it
+twice in one pass.
+
 ## ROLLOVER — the leftovers drag forward (runs inside PART M, last scan of the day)
 On Samira's LAST hourly scan of the day (≥5pm ET — same style as the existing PART C
 timing gate, so this never fires mid-morning): for every `daily_targets[today]`
@@ -413,7 +465,9 @@ on-button-plan: ignore restatements, your own 🌐 posts, and reacted messages. 
 matching mode per drop; anything ambiguous or material (a figure to confirm, a missing
 date, a business-vs-personal call) → leave it `null`/flagged and raise ONE #decisions
 parent — never guess. Every new/updated line with a date gets its ACCRUAL computed and
-its DAILY CALENDAR event(s) created/updated in the same pass, then the OVERLOAD CHECK.
+its DAILY CALENDAR event(s) created/updated in the same pass, then the OVERLOAD CHECK,
+then REBALANCE if OVERLOAD CHECK flagged (attach its proposed moves, if any, to the same
+#decisions parent — never a second card).
 Earnings drops also run INCOME ALLOCATION against the day they were earned.
 On the LAST hourly scan of the day (≥5pm ET) also run ROLLOVER before re-rendering.
 Re-render the dashboard once at the end ONLY if something changed. PART M captures,
@@ -438,12 +492,16 @@ look affordable; redesign the locked model; edit history (prior Updates, prior l
 lines); write any other vault note's body; write a business obligation into this ledger;
 put a business bill on the personal reminder calendar or into `daily_targets`; add
 attendees to any event; mark a `daily_targets` contribution `paid` except as the direct
-side-effect of Mode 7 (a rollover only ever sets `rolled`, never `paid`).
+side-effect of Mode 7 (a rollover only ever sets `rolled`, never `paid`); **REBALANCE
+specifically must never** apply a proposed move itself, touch a `non_negotiable: true`
+line, touch an already-`funded`/`paid` installment, move a flagged business-origin line
+into a business ledger, or raise a second #decisions card when OVERLOAD CHECK already
+raised one.
 
 ## Returns (to the Samira runbook, for the digest)
 `money ✓ <what changed — e.g. +1 bill · earnings +$140 · claim $X (gas $G + bills $B) ·
-funded $Y · maint +$M · undated N · overload $X vs $Y · rolled $Z> · hub ✅/⚠️` — or
-`money —` when the sweep found nothing.
+funded $Y · maint +$M · undated N · overload $X vs $Y · rebalance N moves/none · rolled
+$Z> · hub ✅/⚠️` — or `money —` when the sweep found nothing.
 
 ## Worked example
 Lemar drops in #personal-finance: "New bill, car insurance $182 a month on the 15th.
