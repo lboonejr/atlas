@@ -1,6 +1,6 @@
 ---
 created: 2026-07-31T14:00-04:00
-updated: 2026-08-14T08:15-04:00
+updated: 2026-08-15T08:20-04:00
 domain: cuzzies
 type: task
 status: active
@@ -58,8 +58,22 @@ from 7/31 is still open and unreacted per the prior update, so — consistent wi
 established precedent — NOT reposting a duplicate #decisions card this pass; flagging
 the escalation and the amount discrepancy in the run digest instead.
 
+## Update 2026-08-15 (~06:47 ET) — "Payment Was Declined" notice, same account, two duplicate sends
+Regus (`donotreply@regus.com`) sent "URGENT COMMUNICATION - Your Payment Was Declined"
+this morning — same account name/number (Cuzzie's Dispensary & Delivery, #16605480),
+stating a card-on-file payment was declined and the invoice is now overdue. Invoice
+reference in the payment link is truncated (`...invoices=...72-1518`) but matches the
+pattern of the 8672-1518/1519 invoice already tracked above (Update 2026-08-01) — same
+underlying billing relationship, not a new balance figure (none stated in this notice).
+Sent as two near-identical messages/threads at the same minute — treating as one event,
+not two. No reply drafted (do-not-reply automated template, same as the legal-action
+notice). Nothing paid or authorized. The 7/31 #decisions card (ts `1785507210.877159`)
+remains open and unreacted — consistent with established precedent, not reposting a
+duplicate card this pass.
+
 ## Sources
 - gmail: thread 19fb86ecefb2989b (Regus/IWG urgent past-due notice, 7/31)
 - gmail: thread 19fbd9d7689e78d4 (Regus invoice 8672-1518/1519, 8/1)
 - gmail: thread 19ffb9a5292974cd (repeat urgent notice, 8/13)
 - gmail: thread 19ffded7294640c4 (NOTICE OF LEGAL ACTION, $1,048.60 claim amount, 8/14)
+- gmail: thread 1a0042cf50472d94 + 1a0042cf3b190690 (payment declined notice, 8/15, duplicate sends)
