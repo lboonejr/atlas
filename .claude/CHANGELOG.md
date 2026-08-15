@@ -3,7 +3,7 @@
 The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NOW.
 History and cutover narratives live here.
 
-## 2026-08-15 — Stormy's pressure test goes adaptive (the fixed 15 questions are retired)
+## 2026-08-15 — Stormy goes adaptive and single-owner (the fixed 15 questions are retired)
 Lemar asked that Stormy stop asking the same questions every bake and instead decide both the
 questions and how many of them from what is actually being presented. The evidence was the
 `money-hub-rebalance-steward` bake finished the same day: on a personal-ledger software change
@@ -34,11 +34,36 @@ What changed, in `.claude/skills/stormy/SKILL.md` and `.claude/routines/stormy-i
   days of scans — resumable. Resume now picks up at the first open dimension, not "the last
   answered question."
 - The retired form is kept as a **fallback wording library** at
-  `.claude/skills/stormy/references/fixed-15q.md`. Raid it for a genuinely generic dimension;
-  never run it top to bottom.
+  `.claude/skills/stormy/references/question-library.md`. Raid it for a genuinely generic
+  dimension; never run it top to bottom.
 
-Touched with it: the runbook's PART Q summary and the two anchors rows describing the
-instrument. Nothing about Stormy's surfaces, identity, gates, or the bake/execute line moved.
+**Same day, second pass — Stormy is single-owner now.** Lemar: *"strip the Cuzzie's of it all,
+this is a tool for me and will most likely only involve me."* The instrument was carrying
+scaffolding from a multi-store operation into ideas he builds for himself. Removed the Role
+Config Block (CEO, station ops lead, inventory lead, admin lead, counsel, both accountants) and
+replaced it with an **Owners** list whose default is Lemar and whose only other entries are his
+own agents — Samira's run, Atlas Gear 2, Dawn's run, a named skill. Two dimensions were
+repointed rather than deleted, since the business version of each has a sharper personal
+version:
+- **Compliance → Blast radius & reversibility.** What happens when it misfires, whether
+  anything leaves his control (money moved, mail sent, something posted, a vault note
+  overwritten), and how he undoes it. "It only proposes, so there is nothing to undo" is now a
+  first-class answer, and it is the shape most of his tools should have.
+- **Delegation → Ownership & upkeep.** Not *who else could run this* — nobody else will — but
+  whether he runs it by hand or it runs itself, what it costs to keep alive, and how he finds
+  out when it breaks. Silent failure is how these actually die.
+
+Dimension 1 moved from "problem & beneficiary" (the beneficiary is always him) to "problem &
+payoff," which also asks what he does today instead. The size bands are re-cut around personal
+blast radius, with a note that small and medium are the normal case and large is not something
+to talk an idea into. Reggie and Chase are now explicitly **exception gates** — a personal tool
+trips neither. The business-shaped questions survive in a clearly marked exception section of
+the question library, for the rare idea that genuinely reaches a store or an outside party;
+Stormy flags those and sizes them up a band rather than assuming them.
+
+Touched with both passes: the runbook's PART Q summary and the two anchors rows describing the
+instrument. Nothing about Stormy's surfaces, identity, capture-first law, the no-`due` rule, or
+the bake/execute line moved.
 
 ## 2026-08-15 — Routine-efficiency overhaul (run lock, watermarks, integrity cadence, dead-weight removal)
 Lemar asked for a review of where Samira's hourly routine wastes work; the July–August

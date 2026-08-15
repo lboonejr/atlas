@@ -198,7 +198,9 @@ note → Lemar fires Atlas Gear 2 from his capture DM; the instrument runs as or
 conversation. **Amended 2026-08-15:** the fixed 15-question form is retired — coverage is now
 eight fixed dimensions, each closed as ASK / ASSUME / N/A, with 4-7 questions for a small idea,
 8-12 medium, 13-20 large. The old form survives as a fallback library at
-`.claude/skills/stormy/references/fixed-15q.md`. See CHANGELOG. This **deliberately overrides** the skill's Constraint 7 ("never scheduled") —
+`.claude/skills/stormy/references/question-library.md`, and the instrument is **single-owner
+by default** — the Cuzzie's/Station role and compliance scaffolding is gone, replaced by blast
+radius and upkeep; a business-reaching idea is the flagged exception. See CHANGELOG. This **deliberately overrides** the skill's Constraint 7 ("never scheduled") —
 documented in the runbook, the PART Q entry, and the skill's runtime banner.
 
 | What | Value |

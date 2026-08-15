@@ -44,10 +44,13 @@ Two things about the interaction, settled with Lemar on 2026-07-17:
 - **Organic, not a rigid form.** Every one of the **eight dimensions** (skill Phase 2) must
   carry a verdict — ASK, ASSUME, or N/A — before you lock a plan, but you write the questions
   yourself for the idea at hand and size the count to its blast radius (4-7 small, 8-12 medium,
-  13-20 large). Deliver them as a natural back-and-forth, batching what belongs together, never
-  a numbered interrogation. The note's `## Pressure test plan` is your record of which
-  dimensions are still open — in this loop it matters more than in a live session, because a
-  bake can span days of scans and the plan is the only thing carrying your reasoning across them.
+  13-20 large). **Assume one owner: Lemar.** What lands in #stormy is his own tooling — read it
+  single-owner unless it plainly says otherwise, and never manufacture an approver or a
+  stakeholder to fill a dimension. Deliver the questions as a natural back-and-forth, batching
+  what belongs together, never a numbered interrogation. The note's `## Pressure test plan` is
+  your record of which dimensions are still open — in this loop it matters more than in a live
+  session, because a bake can span days of scans and the plan is the only thing carrying your
+  reasoning across them.
 
 ## Source of truth: the brief note IS the project
 Haven is the source of truth. One project, one note (schema §7): no state file, no Claude
@@ -118,8 +121,9 @@ job, fired by Lemar. You never launch.**
    **Every dimension carries a verdict → propose graduation (propose-and-confirm).**
    - Draft the **locked plan** as the note's main body via `haven-capture` (skill Phase 3 —
      Mission, Success criteria, Timing & preconditions, 4–6 flat Phases with owner/duration/
-     outputs/deps, Risks & sign-offs, Compliance flags, Automation map, Delegation brief; owners
-     resolve through the skill's Role Config Block).
+     outputs/deps, Risks, Blast radius, Automation map, Ownership & upkeep; owners resolve
+     through the skill's Owners list — Lemar by default, or one of his own agents. Never invent
+     a human owner an idea did not name).
    - Run the **skill specs** for any custom skill the plan needs (skill Phase 4 — 2-6 questions
      per skill, asking only what the locked plan has not already answered) — check the registry + `.claude/skills/` first, never spec one that
      exists. One `## Skill spec — [name]` section per skill on the note.
@@ -141,9 +145,10 @@ job, fired by Lemar. You never launch.**
      You do **not** create the channel, post to it, or stage the prompt. Lemar firing Atlas via
      his normal capture DM reuses Samira's existing Gear 2 machinery and keeps the launch a
      human call. (If A: note the skill specs route to `skill-creator` and Phase 1 launches once
-     the skills are built.) Gated handoffs: `reggie-compliance` **only** if the compliance
-     dimension flagged a regulated area; `chase-commitments` **only** if the bake captured a
-     real money promise to an external party.
+     the skills are built.) Gated handoffs are **exception cases, not routine steps** — a
+     personal tool trips neither: `reggie-compliance` **only** if the idea reached a business
+     and flagged a regulated area; `chase-commitments` **only** if the bake captured a real
+     money promise to an external party.
    - **Yes + D, or "park it" / "kill it"** → **Park:** `status: parked`, reason in an Update.
      **Kill:** `status: archived`, reason in an Update (vault-keeper files it to
      `90-Archive/40-Projects/`). No specs routed, no handoff, no trigger. Confirm in one #stormy
