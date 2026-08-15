@@ -50,5 +50,16 @@ defaults to, what data it needs beyond what Money Hub already tracks, where the 
 line is before it must stop and ask instead of just proposing, and whether this lives
 as a new step inside `money-hub` or something adjacent to it.
 
+## Update 2026-08-15: pressure test — Q1-Q3
+
+- **Q1 (core problem):** Operational efficiency — save Lemar from manually untangling
+  an overload every time it fires.
+- **Q2 (primary beneficiary):** Lemar, personal finances.
+- **Q3 (scope & hardest constraint):** In scope — personal-side moves (goal drip rates,
+  payment-plan re-tiering, timing shuffles within the personal ledger) **plus** flagging
+  business-origin-but-personally-carried bills for business reimbursement. Hardest
+  constraint: flagging is advisory only — the steward never touches a business ledger
+  or accounting entry automatically; it surfaces the flag and stops.
+
 ## Sources
 - slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1786832078131649 (OVERLOAD CHECK message, Samira/Money Hub, 2026-08-15 6:14pm ET)
