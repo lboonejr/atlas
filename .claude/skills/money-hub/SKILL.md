@@ -231,6 +231,13 @@ exceptions. Consistency is the point: Lemar asked for one format so he can stay 
 - **Recompute triggers:** a new dated line, an amount or date change, a payment, or a
   cycle rolling over. Recompute only the days from today forward — **never rewrite a past
   day**, which is history.
+- **Never deferred (locked 2026-08-15):** the recompute runs IN THE SAME PASS as the
+  change that triggered it — never punted to a "dedicated recompute pass" (that habit,
+  seen in the 2026-08-14/15 journals, left five lines' accruals unspread and the one
+  number wrong). When one pass adds several lines: apply every ledger change first,
+  recompute the affected days once, then render the dashboard ONCE at the end — never
+  per-drop, and never render mid-update (a snapshot one bill behind is a wrong number
+  with a confident face).
 
 ## OPERATING RESERVE — gas + maintenance, first claim (locked 2026-08-10)
 Gas is not a bill. It is the cost of *generating* the income, so it gets the first claim

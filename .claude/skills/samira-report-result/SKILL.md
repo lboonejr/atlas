@@ -4,28 +4,28 @@ description: >
   Samira's result-landing and #reports ritual — the single home for everything that
   records a finished task. "Done = a filed Haven note": every executed task first lands
   an outcome note in the vault (the durable record), THEN posts the two-line #reports
-  ping and (until the Monday gate) mirrors to the Samira board. Mode 3 posts the run
-  digest to #reports AND appends it to the vault's _daily journal. Use this every time
-  Samira finishes (or fails) a task instead of writing the record inline: "land the
-  result", "log the result to reports", "record this and report it", "log a failure",
-  "post the run digest". It writes to Haven (via haven-capture), the mirror board, and
-  #reports/#decisions only; it never sends email, pays, posts externally, or
-  deletes/overwrites existing content.
+  ping. Mode 3 posts the run digest to #reports AND appends it to the vault's _daily
+  journal. Use this every time Samira finishes (or fails) a task instead of writing the
+  record inline: "land the result", "log the result to reports", "record this and
+  report it", "log a failure", "post the run digest". It writes to Haven (via
+  haven-capture) and #reports/#decisions only; it never sends email, pays, posts
+  externally, or deletes/overwrites existing content. (Monday mirroring retired
+  2026-08-15 — gate closed, see anchors.)
 ---
 
 # Samira Report & Result Landing (Haven-first)
 
 Every executed task needs a **durable home AND a result line.** The durable home is a
-**filed Haven note** — not a Monday row, not a #reports message that scrolls away.
+**filed Haven note** — not a #reports message that scrolls away.
 **Done = a filed Haven note.**
 
 Order of operations, every time: **(1) outcome note to Haven → (2) ping #reports →
-(3) mirror to Monday until the gate → (4) green-check the source.** The Haven note is
-the record; Slack and Monday are notifications about it.
+(3) green-check the source.** The Haven note is the record; Slack is a notification
+about it.
 
 ## ANCHORS
-All platform IDs live in **`.claude/anchors.md`** — #reports/#decisions channel IDs, the
-mirror board, and the Monday gate date (2026-07-11) are there. Constants:
+All platform IDs live in **`.claude/anchors.md`** — the #reports/#decisions channel IDs
+are there. Constants:
 - Vault: `haven/vault/` on repo `lboonejr/atlas`, default branch. You never hand-write a
   note — call **haven-capture**, which returns the note path.
 - DO NOT write the retired local reader copy.
@@ -53,14 +53,11 @@ figures / decision / text produced), and file links/IDs in a `## Sources` block
    🌐 ✅ [what ran] — [headline output in a few words]
    [skill, or "direct"] · [Haven note path] — Samira
    ```
-3. **Mirror to Monday — only until the gate (2026-07-11, see anchors).** Find the item
-   by `task:[project-id]` (or create a Quick item), post an Update with the same record,
-   attach any generated file, set Status = Done, record the Haven note path on the item,
-   and add the item link as a third #reports line. After the gate passes, this step
-   drops entirely and the note path stands alone.
-4. **Green-check the source message** — your done-key everywhere EXCEPT the
-   reaction-engine surfaces (#decisions, #car-search, #investor-pipeline), where every
+3. **Green-check the source message** — your done-key everywhere EXCEPT the
+   reaction-engine surfaces (#decisions, #investor-pipeline), where every
    reaction is Lemar's and you set only the headline emoji.
+   (The Monday mirror step was removed 2026-08-15 — gate closed; the note path stands
+   alone.)
 
 ## Mode 2 — FAILURE
 1. **Land a failure note in Haven** (`type: log`, `status: active`, the error + attempt
@@ -86,6 +83,9 @@ figures / decision / text produced), and file links/IDs in a `## Sources` block
    day's note from `_templates/daily.md` if absent; append under `## Log` with a
    timestamp; never edit prior entries; commit `daily: run digest <time>`). The vault is
    the flight recorder — a #reports message scrolls away; the journal does not.
+   Keep it SLIM (2026-08-15): the digest block plus at most a short delta list —
+   the long per-PART narrative is retired now that checkpoints live in the state file
+   (`.claude/state/samira-state.json`); a genuine anomaly still gets its lines.
 
 ## Inputs this skill expects from the caller
 What ran + source link · `task:[project-id]` or "one-off" · skill used or "direct" · the

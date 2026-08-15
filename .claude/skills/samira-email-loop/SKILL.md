@@ -65,7 +65,11 @@ Read your open email cards touched since last run (thread + reactions):
   line, stop touching the thread.
 
 ## D2 — scan for new mail and triage
-`search_threads`: `in:inbox newer_than:2d -label:<Samira/seen ID>`. Read each thread
+`search_threads`: `in:inbox after:<gmail_after_epoch> -label:<Samira/seen ID>` — the
+epoch comes from `.claude/state/samira-state.json` (runbook PART 0); advance it when the
+scan finishes. ONE canonical query, never two overlapping `newer_than:` windows (they
+kept resurfacing already-seen threads). Fall back to `newer_than:2d` only if the
+watermark is null. Read each thread
 (`get_thread`), sort into ONE bucket, then apply `Samira/seen` to every thread examined:
 - **REPLY-WORTHY** (a real person waiting on a response; Lemar hasn't already sent the
   latest message; not a pure ack; not merely CC'd) → D3 + D4.
