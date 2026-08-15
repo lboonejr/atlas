@@ -61,5 +61,15 @@ as a new step inside `money-hub` or something adjacent to it.
   constraint: flagging is advisory only — the steward never touches a business ledger
   or accounting entry automatically; it surfaces the flag and stops.
 
+## Update 2026-08-15: pressure test — Q4-Q6
+
+- **Q4 (success metric):** Operational metric — a clean, accurate proposal every time
+  overload fires.
+- **Q5 (minimum viable success):** It proposes at least one real move Lemar would
+  actually take, instead of just re-reporting the number with no rework attached.
+- **Q6 (early warning sign):** It proposes a move Lemar wouldn't actually take (e.g.
+  stretching a goal he considers non-negotiable) — a sign its judgment is off and needs
+  retuning or killing.
+
 ## Sources
 - slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1786832078131649 (OVERLOAD CHECK message, Samira/Money Hub, 2026-08-15 6:14pm ET)
