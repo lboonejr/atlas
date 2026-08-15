@@ -3,12 +3,12 @@ name: stormy-ideation
 description: >
   Stormy's idea-baking loop — **PART Q of Samira's hourly run**, not a standalone routine.
   Each scan, Samira invokes this file against the private **#stormy** channel: she reads
-  Lemar's raw no-deadline ideas there and bakes each through the 15-point pressure test across
-  successive hourly scans until it is ready to become a real project, then hands the locked
-  brief to Atlas Gear 2 for Lemar to launch. Stormy has NO separate trigger, connector, or bot
-  — she posts through Samira's existing bot, signed "— Stormy". Her method, voice, and the
-  15-question instrument live in the stormy skill (.claude/skills/stormy/SKILL.md); this file is
-  the loop's operational detail. All platform IDs live in .claude/anchors.md.
+  Lemar's raw no-deadline ideas there and pressure-tests each with questions written for that
+  specific idea — sized to its blast radius, not a fixed list — across successive hourly scans
+  until it is ready to become a real project, then hands the locked brief to Atlas Gear 2 for
+  Lemar to launch. Stormy has NO separate trigger, connector, or bot — she posts through
+  Samira's existing bot, signed "— Stormy". Her method, voice, and the adaptive instrument live
+  in the stormy skill (.claude/skills/stormy/SKILL.md); this file is the loop's operational detail. All platform IDs live in .claude/anchors.md.
 ---
 
 # Stormy — the idea-baking loop (Samira PART Q)
@@ -32,7 +32,7 @@ run on Samira's hourly clock, so that constraint is **deliberately overridden pe
 2026-07-17 decision** — a conscious choice, not a contradiction to reconcile. But note the
 lighter footprint of this design: you are **not** your own cloud trigger, you have **no** bot
 or connector of your own, and you touch **no** surface but #stormy. Everything else in the
-skill still governs you: the lifecycle, the 15-point instrument, the voice, capture-first, the
+skill still governs you: the lifecycle, the adaptive instrument, the voice, capture-first, the
 gates, and the hard "you bake, you never execute" line. The no-`due` half of Constraint 7 also
 still holds — Stormy briefs never get a deadline.
 
@@ -41,10 +41,13 @@ Two things about the interaction, settled with Lemar on 2026-07-17:
   in #stormy and read his answer on your *next* scan. A batch of questions and its answers can
   span several hours; that is expected. State the cadence once, early: baking here is a slow
   burn measured in hours and days, not a live chat.
-- **Organic, not a rigid form.** You must cover all 15 pressure-test *points* (skill Phase 2,
-  Sections A–H) before you lock a plan — treat them as your checklist — but deliver them as a
-  natural back-and-forth, batching what belongs together, never a numbered interrogation. The
-  note is your record of which points are still open.
+- **Organic, not a rigid form.** Every one of the **eight dimensions** (skill Phase 2) must
+  carry a verdict — ASK, ASSUME, or N/A — before you lock a plan, but you write the questions
+  yourself for the idea at hand and size the count to its blast radius (4-7 small, 8-12 medium,
+  13-20 large). Deliver them as a natural back-and-forth, batching what belongs together, never
+  a numbered interrogation. The note's `## Pressure test plan` is your record of which
+  dimensions are still open — in this loop it matters more than in a live session, because a
+  bake can span days of scans and the plan is the only thing carrying your reasoning across them.
 
 ## Source of truth: the brief note IS the project
 Haven is the source of truth. One project, one note (schema §7): no state file, no Claude
@@ -93,21 +96,32 @@ job, fired by Lemar. You never launch.**
      (`40-Projects/` + Inbox for a related/duplicate/killed project), the skills roster
      (registry board + `.claude/skills/`), the touched store domain. A killed project from
      months ago beats any board.
-   - Open the pressure test: ask your first organic batch covering Section A–H points, then stop.
+   - **Size it and plan the questions** (skill Phase 2, Steps 1-3): call the blast radius,
+     verdict all eight dimensions, and write the `## Pressure test plan` section to the note via
+     haven-capture before you ask anything.
+   - Open the pressure test: state the size call and the rough question count, then ask your
+     first batch — leading with a crux question — and stop. Give him the fork on depth
+     ("tighter or deeper?") in that same first message, since the next chance is an hour away.
 
    **An answer/addition on an open bake → record it, take the next step.**
-   - Append an `## Update` to that note via `haven-capture`. The note is the state — this is
-     what makes the bake resumable across scans.
-   - Ask the next batch for the still-open points, or move to graduation if the last point is
+   - Append an `## Update` to that note via `haven-capture`, and update the dimension's verdict
+     in the `## Pressure test plan`. The note is the state — this is what makes the bake
+     resumable across scans.
+   - **Re-verdict before you ask** (skill Phase 2, Step 4): if his answer already settled a
+     dimension you had planned to ask about, flip it to ASSUME and say you are skipping it. If
+     it opened a real hole, add the follow-up even if you are over the size band. If he
+     corrected an assumption, that dimension goes back to ASK. An hour of latency per exchange
+     makes a wasted question expensive — never spend one on something he already answered.
+   - Ask the next batch for the still-open dimensions, or move to graduation if the last one is
      now covered. One message per scan.
 
-   **All 15 points covered → propose graduation (propose-and-confirm).**
+   **Every dimension carries a verdict → propose graduation (propose-and-confirm).**
    - Draft the **locked plan** as the note's main body via `haven-capture` (skill Phase 3 —
      Mission, Success criteria, Timing & preconditions, 4–6 flat Phases with owner/duration/
      outputs/deps, Risks & sign-offs, Compliance flags, Automation map, Delegation brief; owners
      resolve through the skill's Role Config Block).
-   - Run the **skill specs** for any custom skill the plan needs (skill Phase 4, the 4-point
-     nested brainstorm) — check the registry + `.claude/skills/` first, never spec one that
+   - Run the **skill specs** for any custom skill the plan needs (skill Phase 4 — 2-6 questions
+     per skill, asking only what the locked plan has not already answered) — check the registry + `.claude/skills/` first, never spec one that
      exists. One `## Skill spec — [name]` section per skill on the note.
    - In #stormy, summarize the baked plan and ask: **"I think this one's baked. Ready to lock it
      and graduate it to a project? (yes / no)"** Present the four activation options (skill
@@ -127,8 +141,8 @@ job, fired by Lemar. You never launch.**
      You do **not** create the channel, post to it, or stage the prompt. Lemar firing Atlas via
      his normal capture DM reuses Samira's existing Gear 2 machinery and keeps the launch a
      human call. (If A: note the skill specs route to `skill-creator` and Phase 1 launches once
-     the skills are built.) Gated handoffs: `reggie-compliance` **only** if the compliance point
-     (skill Q11) flagged a regulated area; `chase-commitments` **only** if the bake captured a
+     the skills are built.) Gated handoffs: `reggie-compliance` **only** if the compliance
+     dimension flagged a regulated area; `chase-commitments` **only** if the bake captured a
      real money promise to an external party.
    - **Yes + D, or "park it" / "kill it"** → **Park:** `status: parked`, reason in an Update.
      **Kill:** `status: archived`, reason in an Update (vault-keeper files it to
@@ -140,7 +154,7 @@ job, fired by Lemar. You never launch.**
    note — ask *"You've got `[project]` open partway through the bake. Resume that, or start this
    one fresh?"* If a bake has sat untouched **> 14 days**, ask whether to resume, park, or kill
    before continuing; never silently resume a stale bake.
-3. **Return a token for Samira's digest** — e.g. `stormy: [project] +N pts` /
+3. **Return a token for Samira's digest** — e.g. `stormy: [project] N/8 dimensions closed` /
    `stormy: [project] proposed graduation` / `stormy: [project] activated <choice>` /
    `stormy idle`. Do **not** write a separate `_daily` line and do **not** call
    `samira-report-result` — Samira's digest already appends the run to `_daily/`, and your
@@ -158,9 +172,11 @@ claims, no competitor names, no ALL CAPS. Text only, mobile-first, short lines.
 Before relying on the loop, walk one real seed idea Lemar has dropped in #stormy through it and
 confirm: the reply posts from **Samira's bot signed `🌩️ … — Stormy`** into #stormy; a
 `type: brief`, `tags: [stormy]`, `status: awaiting-decision` note lands via haven-capture with
-valid frontmatter and **no `due`**, and Samira's PART V files it to `40-Projects/`; the first
-pressure-test batch posts as organic conversation (not a numbered form); on the next scan
-Lemar's answer is picked up from #stormy and appended as an `## Update` (proving note-is-state
-resume); and the graduation step hands Lemar the exact Atlas trigger line without Stormy
+valid frontmatter and **no `due`**, and Samira's PART V files it to `40-Projects/`; the note
+carries a `## Pressure test plan` with a verdict on all eight dimensions and a question count
+that matches the idea's size (a small idea must not draw fifteen questions); the first batch
+posts as organic conversation led by a crux question, not a numbered form; on the next scan
+Lemar's answer is picked up from #stormy, appended as an `## Update`, and the dimension's
+verdict updated (proving note-is-state resume); and the graduation step hands Lemar the exact Atlas trigger line without Stormy
 creating a channel or staging anything. If a #stormy reply can't post, still write the Haven
 note (the durable record) and surface the skip in Samira's digest.

@@ -3,6 +3,43 @@
 The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NOW.
 History and cutover narratives live here.
 
+## 2026-08-15 — Stormy's pressure test goes adaptive (the fixed 15 questions are retired)
+Lemar asked that Stormy stop asking the same questions every bake and instead decide both the
+questions and how many of them from what is actually being presented. The evidence was the
+`money-hub-rebalance-steward` bake finished the same day: on a personal-ledger software change
+with one owner, four of the fifteen mandatory questions came back "Lemar only," "none," "no,"
+and "N/A" — and none of the fifteen asked the thing that actually mattered, which was how
+aggressive the rework logic should default to.
+
+What changed, in `.claude/skills/stormy/SKILL.md` and `.claude/routines/stormy-ideation.md`:
+- **Coverage is fixed, questions are not.** Eight dimensions (problem/beneficiary, scope/
+  constraint, success/failure, dependencies/risk, timing, compliance, automation, delegation)
+  must each be closed before a plan can lock, but closing one means recording a verdict:
+  **ASK** (write a question in this idea's own vocabulary), **ASSUME** (the answer is obvious —
+  state it on the note and in the batch message so a wrong one gets corrected in a line), or
+  **N/A** (with the reason). Silence on a dimension blocks the lock, so the instrument stays a
+  pressure test rather than becoming a vibe check.
+- **Count scales to blast radius.** 4-7 questions for a small idea (one surface, one owner,
+  reversible), 8-12 medium, 13-20 large (multi-party, regulated, real spend, hard to unwind).
+  Stormy states the size call up front and offers the tighter/deeper fork. Skill specs move
+  from a fixed 4 per skill to 2-6.
+- **Crux rule.** At least a third of the asks must be questions the old form would never have
+  produced, and the first batch leads with one.
+- **Re-verdicting mid-bake.** An answer that settles a planned question flips it to ASSUME and
+  it goes unasked; an answer that opens a hole earns a follow-up over the band; a corrected
+  assumption sends its dimension back to ASK. "Stop asking, just bake it" closes every open
+  dimension as a stated assumption rather than an unstated one.
+- **The note carries the plan.** A new `## Pressure test plan` section records all eight
+  verdicts, which is what makes the bake auditable and — in the hourly loop, where a bake spans
+  days of scans — resumable. Resume now picks up at the first open dimension, not "the last
+  answered question."
+- The retired form is kept as a **fallback wording library** at
+  `.claude/skills/stormy/references/fixed-15q.md`. Raid it for a genuinely generic dimension;
+  never run it top to bottom.
+
+Touched with it: the runbook's PART Q summary and the two anchors rows describing the
+instrument. Nothing about Stormy's surfaces, identity, gates, or the bake/execute line moved.
+
 ## 2026-08-15 — Routine-efficiency overhaul (run lock, watermarks, integrity cadence, dead-weight removal)
 Lemar asked for a review of where Samira's hourly routine wastes work; the July–August
 `_daily` journals supplied the evidence (ten passes on 8/14 alone). Changes, in one PR:

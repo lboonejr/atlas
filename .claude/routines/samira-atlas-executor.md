@@ -227,7 +227,9 @@ correct.
 ### PART Q — idea-baking loop (Stormy, #stormy)
 Invoke the **stormy-ideation** loop (`.claude/routines/stormy-ideation.md`) against the
 private **#stormy** channel. Read Lemar's new no-deadline ideas there and bake each through
-the 15-point pressure test one message per scan — posting as YOUR bot but signed
+an adaptive pressure test — questions written for that idea, count sized to its blast radius,
+all eight coverage dimensions closed as ASK / ASSUME / N/A — one message per scan, posting as
+YOUR bot but signed
 `🌩️ … — Stormy` (the Basil pattern: shared bot, own persona line). Land/append the brief
 note via haven-capture (`type: brief`, `tags: [stormy]`, no `due`); on graduation, hand
 Lemar the Atlas Gear 2 trigger line in #stormy. Stormy touches ONLY #stormy, never sets or

@@ -49,7 +49,7 @@ supersedes ALL other style guidance, including guides bundled inside skills.
 | #atlas (RETIRED) | `C0BBWHCJUV9` | Former raw capture inbox — **retired 2026-07-16**, replaced by the Samira capture DM (above). Being archived; during the transition Samira still glances here in PART B for stray top-level captures, but never posts here |
 | #admin | `C0BBLUA7JLX` | Staged run:admin-3x prompts |
 | Dawn DM (Lemar) | `D0BJ0JPQD8C` | **Dawn's output surface since 2026-07-16** — the Dawn bot's direct message with Lemar (`U0BC5UTHYG4`). The bot posts by sending to Lemar's user id, which auto-opens this IM (bot has `im:write`). Dawn's ONLY Slack surface; Samira never posts here. Replaced #daily-brief |
-| #stormy | `C0BJ37SU1TL` | **Stormy's ONLY surface — a PRIVATE channel** (created 2026-07-17). Lemar drops raw no-deadline ideas here; Samira's bot bakes each through the 15-point pressure test in **PART Q**, posting signed `🌩️ … — Stormy` (shared bot, own persona line — the Basil pattern). **Excluded from the PART C prompt-sweep.** It is a channel, not a DM, because a shared bot can hold only one DM per user (that's the Samira capture DM). Samira bot confirmed in-channel 2026-07-17 (members: Lemar `U0BC5UTHYG4` + bot `U0BJQ771LJU`); keep it invited (`/invite @Samira`). See "Idea-baking loop — Stormy" below |
+| #stormy | `C0BJ37SU1TL` | **Stormy's ONLY surface — a PRIVATE channel** (created 2026-07-17). Lemar drops raw no-deadline ideas here; Samira's bot bakes each through the adaptive pressure test in **PART Q**, posting signed `🌩️ … — Stormy` (shared bot, own persona line — the Basil pattern). **Excluded from the PART C prompt-sweep.** It is a channel, not a DM, because a shared bot can hold only one DM per user (that's the Samira capture DM). Samira bot confirmed in-channel 2026-07-17 (members: Lemar `U0BC5UTHYG4` + bot `U0BJQ771LJU`); keep it invited (`/invite @Samira`). See "Idea-baking loop — Stormy" below |
 | #daily-brief (RETIRED) | `C0BF73FF56H` | Dawn's former once-a-day surface — **retired 2026-07-16**, Dawn now DMs Lemar (see "Dawn DM" above). Being archived; read-only record, never posted to |
 | #car-search | `C0BEC2RFC00` | Car loop (samira-car-search); never swept in PART C |
 | #investor-pipeline | `C0BCCUKEUQ2` | Investor loop (samira-investor) |
@@ -188,13 +188,17 @@ Plus the rule: never trash the active FundCanna underwriting thread. Anything `i
 
 Stormy is Lemar's idea-baking engine, ported into the repo 2026-07-17 and — per Lemar the same
 day — **folded into Samira's hourly run as PART Q** rather than given her own trigger. Different
-lane from Atlas: Atlas captures right-now work; Stormy bakes no-deadline ideas through a fixed
-15-question pressure test until they are ready to launch, then hands off (she never executes).
+lane from Atlas: Atlas captures right-now work; Stormy bakes no-deadline ideas through an
+adaptive pressure test — she writes the questions for the specific idea and sizes the count to
+its blast radius — until they are ready to launch, then hands off (she never executes).
 **Design decisions (Lemar, 2026-07-17):** she runs inside Samira (no separate trigger/bot/
 connector), posts through **Samira's existing bot** to a **private #stormy channel** signed
 `🌩️ … — Stormy`; graduation is propose-and-confirm (no reaction engine); handoff is a Haven
-note → Lemar fires Atlas Gear 2 from his capture DM; the 15-Q instrument runs as organic
-conversation. This **deliberately overrides** the skill's Constraint 7 ("never scheduled") —
+note → Lemar fires Atlas Gear 2 from his capture DM; the instrument runs as organic
+conversation. **Amended 2026-08-15:** the fixed 15-question form is retired — coverage is now
+eight fixed dimensions, each closed as ASK / ASSUME / N/A, with 4-7 questions for a small idea,
+8-12 medium, 13-20 large. The old form survives as a fallback library at
+`.claude/skills/stormy/references/fixed-15q.md`. See CHANGELOG. This **deliberately overrides** the skill's Constraint 7 ("never scheduled") —
 documented in the runbook, the PART Q entry, and the skill's runtime banner.
 
 | What | Value |
