@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-15T12:13:00-04:00
+updated: 2026-08-15T18:03:00-04:00
 domain: personal
 type: reference
 status: active
@@ -516,15 +516,22 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     total_claim: 624.81
     gas_spent: null
     swept_to_maintenance: 0
-    funded: 0
-    shortfall: 594.81
+    funded: 114.00
+    shortfall: 480.81
     calendar_event_id: k9sog0mcpmisnn4p2hicernagk
     recompute_note: "2026-08-15 PART M: station-travel corrected $50.00 -> $80.00 per
       Lemar's rate confirmation (+$30.00 to target/total_claim/shortfall). Every other
       contribution/day unchanged; the new station-travel-weekly line (first_due
       2026-08-22) is not yet hand-spread into daily_targets -- deferred to the next
       dedicated recompute pass per this ledger's established practice for multi-day
-      additions (same treatment as tmobile-split-2 / moms-car-oil-change / am-botte)."
+      additions (same treatment as tmobile-split-2 / moms-car-oil-change / am-botte).
+      2026-08-15 PART M (2), INCOME ALLOCATION: $144 the-station earnings logged;
+      gas_maintenance.reserve $30.00 held in Spending first, $114.00 poured into
+      today's contributions in due-date order -- station-travel (due today) funded in
+      full ($80.00), liquidibee-1 (due 2026-08-16) partially funded ($34.00 of
+      $125.00), the rest of the queue untouched. Surplus: $0 (money ran out mid-line).
+      OVERLOAD CHECK ran for the first time this pass (income log crossed the 7-entry
+      floor) -- see Update below and the #decisions card raised for it."
     contributions:
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
@@ -533,7 +540,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: cuzzies-google-workspace, amount: 21.25, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.05, funded: 0, status: pending}
-      - {line_id: liquidibee-1, amount: 125.00, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 125.00, funded: 34.00, status: partial}
       - {line_id: liquidibee-2, amount: 15.63, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 8.34, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.69, funded: 0, status: pending}
@@ -555,7 +562,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-9, amount: 4.05, funded: 0, status: pending}
       - {line_id: patreon, amount: 2.09, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
-      - {line_id: station-travel, amount: 80.00, funded: 0, status: pending}
+      - {line_id: station-travel, amount: 80.00, funded: 80.00, status: funded}
       - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.97, funded: 0, status: pending}
@@ -3684,3 +3691,45 @@ accrual across 8/16–8/21 once the next dedicated recompute runs.
 
 Nothing paid, nothing contacted. Dashboard re-rendered (new Drive snapshot) since the
 ledger changed; reply posted in #personal-finance with the new link.
+
+## Update 2026-08-15 (3) — PART M: The Station earnings logged, income allocation, first OVERLOAD CHECK
+
+**Drop:** Lemar in #personal-finance (ts `1786829161.408529`, ~17:46 ET): "I made $144
+at The Station today." Personal earned income (he works there) — not a Cuzzie's/Station
+business bill — so it is Mode 1, logged to `income-log-2026.md`:
+`{date: 2026-08-15, source: "the-station", amount: 144, note: "reported in
+#personal-finance"}`.
+
+**INCOME ALLOCATION for 2026-08-15.** Gas/maintenance reserve ($30.00) claimed first,
+held in Spending, not moved — the day's $144 covers it. Remaining $114.00 poured into
+today's `daily_targets` contributions in due-date order (soonest due first, ties by
+smallest amount): `station-travel` (due today) funded in full, $80.00. Next in line,
+`liquidibee-1` (due 2026-08-16), partially funded — $34.00 of $125.00 — where the money
+ran out; status `partial`. Every later-due contribution (cuzzies-google-voice through
+self-account-balance-repay) stays `pending`, untouched. Day totals: `funded` 0 → 114.00,
+`shortfall` 594.81 → 480.81. No surplus — the $114.00 landed mid-line on liquidibee-1,
+so there was nothing left over to report. Rollover for the still-unfunded remainder
+(liquidibee-1's $91.00 + everything below it) is NOT run this pass per this run's
+scope — ROLLOVER is reserved for the day's LAST hourly scan; no `daily_targets` entry
+beyond today was touched here.
+
+**OVERLOAD CHECK — fired for the first time.** The income log crossed the 7-entry floor
+with this drop (6 → 7 lines), so the check ran instead of being skipped. Trailing 4-week
+average of logged income: (Jul 20-26 $153.94 + Jul 27-Aug 2 $327.70 + Aug 3-9 $457.40 +
+Aug 10-16 week-to-date $257.13 [$61.43 + $51.70 + $0 reconciliation + this $144]) ÷ 4 =
+**$299.04/week**. Coming 7-day set-aside total (`daily_targets` targets, 2026-08-15
+through 2026-08-21): 594.81 + 289.81 + 289.75 + 277.06 + 255.77 + 255.76 + 230.77 =
+**$2,193.73** — roughly 7.3x the average week. Per the skill, the accrual is written
+exactly as computed, nothing shrunk or delayed. Flagged on the dashboard and raised as
+ONE #decisions parent (see below) naming the gap and the dated lines inside the window:
+`station-travel` $80.00 (due 8/15), `liquidibee-1` $125.00 (due 8/16),
+`cuzzies-google-voice` $38.00 (due 8/18), `cuzzies-google-workspace` $85.00 (due 8/19),
+`metrc-fee` $40.00 (due 8/21), `moms-lump-0821` $110.00 (due 8/21) — $478.00 genuinely
+due this week, with the rest of the $2,193.73 coming from simultaneous catch-up drip on
+longer-horizon lines (the $2,800 car goal, $500 tow-truck-repay, $500
+mechanic-repair-repay, $242 self-account-balance-repay, and others) all accruing from
+today at once.
+
+Nothing paid, nothing contacted, nothing shrunk. Dashboard re-rendered (new Drive
+snapshot) since the ledger changed; reply posted in #personal-finance with the new
+link; one #decisions card raised for the overload.
