@@ -8,7 +8,7 @@ When a workspace, board, account, or channel changes, edit THIS file and nothing
 > doing work is fine; maintaining a second list is not). The memory file
 > `shortlist_anchors.md` on Lemar's machine is a pointer to this file, not a copy.
 
-Last verified: 2026-07-16 (added the Voice profile section — canonical profile moved into the repo) · 2026-07-16 (Dawn rerouted off #daily-brief → now posts to Lemar's DM, bot IM `D0BJ0JPQD8C`; #daily-brief being archived) · 2026-07-16 (Atlas capture inbox moved off #atlas → Lemar's DM with Samira's bot, `D0BHPKMDNEP`; #atlas being archived) · 2026-07-17 (added Stormy the idea-baking engine, REFOLDED into Samira's run as PART Q per Lemar — no separate trigger/bot/DM; posts via Samira's existing bot to the private #stormy channel `C0BJ37SU1TL`, created + Samira bot confirmed in-channel 2026-07-17) · 2026-08-13 (Pulse / Money Hub / Morning Brief / Meeting Prep artifact-URL rows replaced with Drive folder ids — Artifact tool retired for all four, see CHANGELOG).
+Last verified: 2026-08-15 (routine-efficiency review: added the run state file row, closed the Monday gate, codified the Pulse quiet-pass skip — see CHANGELOG) · 2026-07-16 (added the Voice profile section — canonical profile moved into the repo) · 2026-07-16 (Dawn rerouted off #daily-brief → now posts to Lemar's DM, bot IM `D0BJ0JPQD8C`; #daily-brief being archived) · 2026-07-16 (Atlas capture inbox moved off #atlas → Lemar's DM with Samira's bot, `D0BHPKMDNEP`; #atlas being archived) · 2026-07-17 (added Stormy the idea-baking engine, REFOLDED into Samira's run as PART Q per Lemar — no separate trigger/bot/DM; posts via Samira's existing bot to the private #stormy channel `C0BJ37SU1TL`, created + Samira bot confirmed in-channel 2026-07-17) · 2026-08-13 (Pulse / Money Hub / Morning Brief / Meeting Prep artifact-URL rows replaced with Drive folder ids — Artifact tool retired for all four, see CHANGELOG).
 
 ## Repo / vault
 
@@ -19,6 +19,7 @@ Last verified: 2026-07-16 (added the Voice profile section — canonical profile
 | Vault root | `haven/vault/` · Inbox `haven/vault/00-Inbox/` · Schema `haven/vault/_system/schema.md` |
 | Skills (canonical) | `.claude/skills/` (repo). Local `C:\Users\lemar\.claude\skills\` copies are read-only mirrors. |
 | Runbook (live behavior) | `.claude/routines/samira-atlas-executor.md` — the trigger bootstraps into this file; editing it changes the live routine. |
+| Run state file | `.claude/state/samira-state.json` — run-lock + per-surface watermarks (runbook PART 0, added 2026-08-15). Written to `main` at run start (lock) and run end (watermarks). The ONE source of "since the last run"; digest prose is no longer a checkpoint. |
 | Transport | GitHub MCP connector (cloud). Desktop raw git only when github.com is reachable (home Wi-Fi blocks it — see PORTABILITY.md). |
 | **Git write policy** | **Never open a feature branch + pull request for `haven/vault/**`, `.claude/**`, or any routine/skill write.** Every session (hourly Samira scan, Dawn's daily run, or a one-off session) commits and pushes straight to `main` — GitHub MCP connector's `create_or_update_file`/`push_files`, or local git `commit` + `push origin main`. A branch+PR strands that session's work off `main`, where no later run or skill ever sees it (root-caused 2026-07-08: PRs #34/#35 each re-did work already done on `main`, and #35's Gusto Jul 8 note existed nowhere else). Lemar's call 2026-07-08 1:23pm ET: fix this with guidance here rather than flipping repo auto-merge settings. If a direct push to `main` is rejected (someone pushed since your last pull), re-pull and retry the direct write — do not fall back to a branch+PR. |
 | Local working clone | `C:\Users\lemar\Haven-repo` (desktop; also what Obsidian reads) |
@@ -70,9 +71,12 @@ supersedes ALL other style guidance, including guides bundled inside skills.
 
 ## Monday.com (account l.boonejr@gmail.com, workspace "Main workspace" 16125924)
 
-**Cutover gate: Monday mirroring runs through 2026-07-11.** Gate = 7 consecutive days in
-which every #reports result line has a matching Haven note and no discrepancies. After the
-gate, the mirror steps drop from the runbook + skills and the boards go read-only.
+**Gate CLOSED 2026-08-15 — Monday mirroring is retired.** The gate date (2026-07-11) had
+passed a month earlier with no formal review ever run (flagged in the 7/21 journal), and
+the "Samira" mirror board returned `not found` on 2026-08-14. Lemar closed it out during
+the 2026-08-15 routine-efficiency review: every mirror step is removed from the runbook
+and skills; the boards below are read-only history. (The "Off Button" board is separate
+live tooling, not part of the retired mirror.)
 
 | Board | ID | Status |
 |---|---|---|
@@ -218,8 +222,10 @@ capture DM (`D0BHPKMDNEP` — the only DM slot the shared bot has; safe to reuse
 PART B's capture-sweep only develops messages FROM Lemar, never the bot's own posts) —
 but ONLY when this hour's run actually changed something (any of: a #decisions card
 closed/opened, a money change, a project-pulse status flip, a new Haven note). A fully
-quiet hour still creates the Drive doc for the record but sends no DM. Its status still
-rides in Samira's digest as `pulse ✅/⚠️` every hour regardless.
+quiet hour skips the render entirely — no Doc, no DM (codified 2026-08-15; this matches
+what runs were already doing and stops filling the Drive folder with identical
+snapshots). Its status still rides in Samira's digest every hour regardless:
+`pulse ✅/⚠️` or `pulse — carried (quiet pass)`.
 
 | What | Value |
 |---|---|
