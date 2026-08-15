@@ -1,9 +1,9 @@
 ---
 created: 2026-08-15T18:45-04:00
-updated: 2026-08-15T19:10-04:00
+updated: 2026-08-15T19:35-04:00
 domain: project
 type: brief
-status: active
+status: done
 tags: [stormy, money-hub]
 source: claude
 ---
@@ -170,6 +170,40 @@ modification to it (phases 1-3 above), not a new build. Nothing routes to
 
 **C) EXECUTE NOW** — 2026-08-15. Launch phases 1-5 immediately. No skill-creator step
 (no new skill). Handed to Atlas Gear 2 to stage phases 1-4 as a run-ready task.
+
+## Update 2026-08-15: phases 1-4 built, shipped
+
+Built directly in this session rather than staged through Slack — the work was a skill
+file + ledger schema edit, not something Samira's Slack loop executes.
+
+- **Phase 1-2 (move types + guard):** `.claude/skills/money-hub/SKILL.md` gets a new
+  REBALANCE section — the 3 allowed moves (stretch a goal's drip, re-tier a plan
+  installment, flag a business-origin-but-personally-carried line for reimbursement),
+  conservative-by-default, and the hard stop (never touch a `non_negotiable` line, never
+  force a proposal that doesn't work). `money-hub-ledger.md` field rules get the new
+  optional `non_negotiable: true` flag Lemar can set on any bill/plan/goal line.
+- **Phase 3 (wiring):** PART M now runs REBALANCE right after OVERLOAD CHECK, attaching
+  proposed moves to the SAME #decisions card OVERLOAD CHECK already raises (never a
+  second card). SAFETY and the Returns token both updated.
+- **Bug caught before shipping:** the first draft blocked REBALANCE from touching any
+  genuinely-due bill, which would have excluded exactly the case that motivated this
+  project — `cuzzies-google-voice`/`cuzzies-google-workspace` are due THIS week and are
+  exactly the kind of business-origin line move-type 3 should flag. Fixed: move types 1
+  and 2 stay off genuinely-due bills (that's the catch-up-only rule), move type 3 is the
+  explicit exception since flagging doesn't touch timing, only who should pay.
+- **Phase 4 (dry run):** ran against the real 2026-08-15 numbers in chat (not posted,
+  not written to the ledger). REBALANCE would lead with flagging the two Cuzzie's lines
+  ($123, costs nothing), surface re-tiering `mechanic-repair-repay` (Lemar's own "down
+  the road" framing), and surface stretching the `own-car-running` goal as a candidate
+  while flagging that Lemar likely wants it marked `non_negotiable` given he just dated
+  it with a firm end-of-October framing. Even all three together don't fully close the
+  gap to the $299/week average — correct behavior, not a bug; REBALANCE reports honest
+  partial relief rather than manufacturing a false full close.
+- **Phase 5 (ship):** live for the next real overload event via `money-hub` / Samira's
+  PART M. No further action needed.
+
+Commits: `capture:`/`update:` sequence on this note, plus `money-hub: add REBALANCE
+step (Stormy-baked rework proposals on overload)` on `main`.
 
 ## Sources
 - slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1786832078131649 (OVERLOAD CHECK message, Samira/Money Hub, 2026-08-15 6:14pm ET)
