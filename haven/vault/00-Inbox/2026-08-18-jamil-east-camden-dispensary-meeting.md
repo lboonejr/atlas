@@ -1,12 +1,13 @@
 ---
 created: 2026-08-15T08:04-04:00
-updated: 2026-08-15T08:04-04:00
+updated: 2026-08-15T08:11-04:00
 domain: cuzzies
 type: meeting
 status: active
 tags: [jamil, east-camden, dispensary, license, prospective-buyer, cuzzies-license]
 source: slack
 due: 2026-08-18T17:00-04:00
+calendar_event_id: 680p70j75lp2hmlajahthqbvhc
 ---
 
 # Jamil — East Camden prospective dispensary — meeting Tue 8/18 5pm
@@ -36,9 +37,11 @@ correspond on until he's identified more fully.
   list of questions to ask Jamil to figure out which scenario this actually is.
 
 ## Status
-Meeting is on the calendar (`due` above → reminder calendar via calendar-sync). Weekend
-prep work staged un-reacted to `#admin` for a later scan to pick up (this run's
-buffer rule: not run in the same pass it was staged).
+Meeting is on the calendar (`due` above → reminder calendar via calendar-sync,
+`calendar_event_id` written back below). Weekend prep work staged un-reacted to
+`#admin` for a later scan to pick up (this run's buffer rule: not run in the same pass
+it was staged).
 
 ## Sources
 - slack: capture DM `D0BHPKMDNEP` ts `1786753925.923869` (Lemar's original drop)
+- slack: #admin ts `1786795827.272729` (staged prep prompt)
