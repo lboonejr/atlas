@@ -166,5 +166,10 @@ No new skill needed. `money-hub` already exists on the roster — this project i
 modification to it (phases 1-3 above), not a new build. Nothing routes to
 `skill-creator`.
 
+## Activation
+
+**C) EXECUTE NOW** — 2026-08-15. Launch phases 1-5 immediately. No skill-creator step
+(no new skill). Handed to Atlas Gear 2 to stage phases 1-4 as a run-ready task.
+
 ## Sources
 - slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1786832078131649 (OVERLOAD CHECK message, Samira/Money Hub, 2026-08-15 6:14pm ET)
