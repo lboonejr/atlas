@@ -71,5 +71,14 @@ as a new step inside `money-hub` or something adjacent to it.
   stretching a goal he considers non-negotiable) — a sign its judgment is off and needs
   retuning or killing.
 
+## Update 2026-08-15: pressure test — Q7-Q10
+
+- **Q7 (most likely blocker):** Tech/tools — getting the rework-reasoning logic right
+  inside `money-hub`.
+- **Q8 (sign-off / involvement):** Lemar only. No other role needed — everything in
+  scope is personal-ledger; business-origin bills are only *flagged*, never touched.
+- **Q9 (activation timing):** ASAP — within 1 week.
+- **Q10 (preconditions):** None. Ship it for the next overload event.
+
 ## Sources
 - slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1786832078131649 (OVERLOAD CHECK message, Samira/Money Hub, 2026-08-15 6:14pm ET)
