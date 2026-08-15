@@ -121,8 +121,8 @@ vault directly.
 `clean scan`, no DM, one line in the run digest.
 
 ## Note on scheduling
-This skill is invokable on demand today ("scan #reports for contradictions"). Joining
-the unattended hourly loop as its own PART is a separate call for Lemar to make
-explicitly — the same way Stormy was folded in as PART Q only after he said so in
-#decisions. Until then, nothing about the hourly runbook (`.claude/routines/samira-atlas-executor.md`)
-changes.
+This skill is also invokable on demand ("scan #reports for contradictions") outside its
+scheduled run. It runs unattended as **PART R** of the hourly loop
+(`.claude/routines/samira-atlas-executor.md`), after PART M (money) and before the
+canvas refresh — Lemar's call, made explicitly, the same way Stormy was folded in as
+PART Q.

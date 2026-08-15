@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T16:56-04:00
-updated: 2026-08-15T00:00-04:00
+updated: 2026-08-15T10:42-04:00
 domain: project
 type: task
 status: done
@@ -32,6 +32,15 @@ worded as directly executable options so PART A's existing reaction engine handl
 handoff — no new execution logic needed. Not yet wired into the hourly runbook as its
 own PART; invokable on demand until Lemar makes that call explicitly (same gate Stormy's
 PART Q went through).
+
+## Update 2026-08-15 (2)
+Lemar asked to add it to the scheduled loop. Wired into
+`.claude/routines/samira-atlas-executor.md` as **PART R**, run order
+`... → M (money) → R (reports scan) → canvas refresh → P (Pulse) → digest`, and added
+to the digest's tally line (`reports-scan: found N/open O` or `reports-scan: clean`).
+No change to Safety or the reaction engine — PART R only reads, lands its own Haven log
+note, DMs, and posts normal #decisions cards; PART A already executes anything Lemar
+picks.
 
 ## Sources
 - slack: capture DM `D0BHPKMDNEP` ts `1786740991.727389` (2026-08-14)

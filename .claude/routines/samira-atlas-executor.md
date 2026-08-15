@@ -69,7 +69,7 @@ Lemar" in #decisions.
 
 ## Run order
 
-V → S → A → B → C → D → E → Q → G → H → M (money) → canvas refresh → P (Pulse) → digest (+ _daily append).
+V → S → A → B → C → D → E → Q → G → H → M (money) → R (reports scan) → canvas refresh → P (Pulse) → digest (+ _daily append).
 
 ---
 
@@ -216,6 +216,23 @@ guess a number or a date. Never reorder the queue or decide which line slips. Th
 view (mode 6, "run my week") is ON DEMAND ONLY — never run it from a sweep.
 Returns `money ✓ <what changed> · hub ✅/⚠️` or `money —` for the digest.
 
+### PART R — #reports contradiction scan
+Invoke the **reports-contradiction-scanner** skill (`.claude/skills/reports-contradiction-scanner/`),
+after PART M so it's scanning the freshest picture of #reports this run has produced.
+It reads #reports since its own bookmark for conflicting figures/status, unresolved
+self-corrections, and stale claims; checks each against the cited Haven note as ground
+truth; lands its own Haven log note (its durable record, same as every other skill
+here); DMs Lemar a findings summary via the capture DM ONLY when something's found
+(silent on a clean scan, same non-spam rule PART P follows); stages any obvious fix as
+a normal un-reacted #reports correction line for a LATER PART C pass (never edits a
+prior #reports line — append-only, same doctrine as every other skill here); and posts
+any genuinely open question to #decisions as directly executable options. That last
+part needs no new handling from you — it's just another #decisions card, so PART A's
+existing reaction engine picks up the ✅ and executes it on a later scan like any other
+task. Non-fatal by design, same as PART P: a scan failure never blocks canvas refresh,
+Pulse, or the digest. Returns `reports-scan: found N/open O` or `reports-scan: clean`
+for the digest.
+
 ### Canvas refresh
 Edit the Open Items canvas IN PLACE (read to get section IDs; replace per-section, never
 the whole canvas): ⏳ Waiting · ⚙️ In motion · ⛔ Parked — one line each: title · what it
@@ -246,8 +263,9 @@ Via **samira-report-result** Mode 3:
    · `🧵 Standing list → Open Items canvas`
    (Full tallies: filed/stuck, rang, decisions handled H, captures G, staged L, ran Y,
    done Z, failed Fl, parked P, deferred D; email E/R/Cl/T; investor + car + Stormy counts;
-   junk J; PART M's token: `money ✓ …` or `money —`; plus PART P's one token: `pulse ✅`
-   or `pulse ⚠️ <reason>`.
+   junk J; PART M's token: `money ✓ …` or `money —`; PART R's token: `reports-scan: found
+   N/open O` or `reports-scan: clean`; plus PART P's one token: `pulse ✅` or
+   `pulse ⚠️ <reason>`.
    Stuck notes surface ONLY via the batched #decisions card, never line-by-line here.)
 2. APPEND the same digest block to `haven/vault/_daily/YYYY-MM-DD.md` (create the day's
    note from `_templates/daily.md` if absent; append-only; never edit prior entries).
