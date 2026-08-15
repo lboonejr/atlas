@@ -160,5 +160,11 @@ the one surface (Q13).
 No delegation — Lemar leads end-to-end, nobody else owns any part of this (Q14). Every
 proposal comes back to Lemar directly and individually, not batched (Q15).
 
+## Skill specs
+
+No new skill needed. `money-hub` already exists on the roster — this project is a
+modification to it (phases 1-3 above), not a new build. Nothing routes to
+`skill-creator`.
+
 ## Sources
 - slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1786832078131649 (OVERLOAD CHECK message, Samira/Money Hub, 2026-08-15 6:14pm ET)
