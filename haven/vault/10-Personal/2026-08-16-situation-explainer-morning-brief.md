@@ -1,6 +1,6 @@
 ---
 created: 2026-08-16T13:13:00-04:00
-updated: 2026-08-16T13:13:00-04:00
+updated: 2026-08-16T10:04:00-04:00
 domain: personal
 type: brief
 status: active
