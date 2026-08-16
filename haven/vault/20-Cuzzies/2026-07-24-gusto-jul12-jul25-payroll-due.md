@@ -1,13 +1,13 @@
 ---
 created: 2026-07-24T12:20-04:00
-updated: 2026-08-14T15:15:00-04:00
+updated: 2026-08-16T14:15:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [gusto, payroll, pay-period]
 source: gmail
 due: 2026-07-29T19:00:00-04:00
-calendar_event_id: r99cafdgphtqf15l6g54bq03s0
+calendar_event_id: fito4ndri4t5rfkhol8k2ts3lg
 ---
 
 # Gusto — payroll due Mon Jul 27, pay period Jul 12–25
@@ -118,3 +118,11 @@ before 7pm ET.
 - calendar: event `7jjg70sv94gt6rk92r9glqrv2o` cancelled (stale, from the 15:39 ET
   "resolved" pass) → new event `474nemh5ki2hj3k81211pfouvo` created for the 7pm ET
   Jul 29 re-run deadline
+
+## Update 2026-08-16 (PART S calendar-sync — dead event recreated)
+The `calendar_event_id` on file (`r99cafdgphtqf15l6g54bq03s0`) no longer resolved on
+either calendar (deleted) as of this pass. Per the calendar-sync RECREATE rule (`due`
+remains, id points to a deleted event), recreated the event — same title/time/
+description — on the personal reminder calendar (`fito4ndri4t5rfkhol8k2ts3lg`). Note
+`due` is unchanged and already in the past; this keeps the vault↔calendar mapping
+consistent per the skill's letter even though the reminder itself won't fire.
