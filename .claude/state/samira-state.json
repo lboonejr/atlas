@@ -3,20 +3,20 @@
   "lock": {
     "run_id": "run_20260816T120327Z",
     "run_started": "2026-08-16T12:03:27Z",
-    "run_completed": "2026-08-15T22:34:42Z"
+    "run_completed": "2026-08-16T12:31:57Z"
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1786832078.131649",
-      "C0BBZJL85RT": "1786833128.940819",
-      "D0BHPKMDNEP": "1786824853.806029",
+      "C0BBZJL85RT": "1786883488.920849",
+      "D0BHPKMDNEP": "1786833069.004819",
       "C0BGLEMH99T": "1786829161.408529",
-      "C0BEQUW5NPP": "1786826644.470099",
+      "C0BEQUW5NPP": "1786858188.657619",
       "C0BBLUA7JLX": "1786820943.028119",
       "C0BJ37SU1TL": "1785586607.101759",
-      "C0BCCUKEUQ2": "1786735706.250489",
+      "C0BCCUKEUQ2": "1786882058.498619",
       "C0BCD7U5X2B": "1784895502.750959",
-      "C0BCH2C3GRM": "1783865910.025549",
+      "C0BCH2C3GRM": "1784226868.999839",
       "C0BDN2KQFD4": "1786365005.327169",
       "C0BD8LTM1EK": "1783257200.297099",
       "C0BGYM1UB4Y": "1786817353.240879",
@@ -29,19 +29,19 @@
       "1786730750.838049": "1786810205.720709",
       "1786832078.131649": "1786832078.131649"
     },
-    "capture_dm": "1786824853.806029",
-    "gmail_after_epoch": 1786831648
+    "capture_dm": "1786833069.004819",
+    "gmail_after_epoch": 1786881798
   },
   "integrity": {
-    "last_full_pass": "2026-08-15T18:12:00Z",
-    "last_scan_sha": "769651f6d2d1519d73957f23f295e1897d34a2fa"
+    "last_full_pass": "2026-08-16T08:12:00-04:00",
+    "last_scan_sha": "5d1a47a831e52f674862ec93a0d58b7e6b9148f7"
   },
   "canvas_access": {
-    "last_checked": "2026-08-15T18:12:00Z",
+    "last_checked": "2026-08-16T12:31:57Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-15T22:24:00Z",
+    "pulse_last_rendered": "2026-08-16T12:31:57Z",
     "money_hub_last_rendered": "2026-08-15T22:10:00Z"
   }
 }
