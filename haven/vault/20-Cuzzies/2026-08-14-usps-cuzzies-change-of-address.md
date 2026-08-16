@@ -1,13 +1,13 @@
 ---
 created: 2026-08-13T14:10:00-04:00
-updated: 2026-08-14T15:15:00-04:00
+updated: 2026-08-16T14:15:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [usps, change-of-address, cuzzies, camden-eviction, pennsauken]
 source: claude
 due: 2026-08-14T09:00:00-04:00
-calendar_event_id: kqm31edso6ah8aieob46sle9t8
+calendar_event_id: vr0ote58jci0cg5r64tthc3cps
 ---
 
 # USPS business Change of Address — Cuzzie's, Camden → Pennsauken
@@ -26,6 +26,13 @@ verification.
 
 Calendar reminder set for tomorrow morning (8/14, 9:00am ET) at the
 Pennsauken office.
+
+## Update 2026-08-16 (PART S calendar-sync — corrected wrong-calendar event)
+The `calendar_event_id` on file (`kqm31edso6ah8aieob46sle9t8`) pointed to an event on
+the Cuzzie's (Owners) business calendar, not the personal reminder calendar this skill
+is scoped to. Left that stray business-calendar event untouched and created a correct
+event (`vr0ote58jci0cg5r64tthc3cps`, same title/time/description/location) on the
+personal reminder calendar.
 
 ## Sources
 - slack: #on-button ts `1786643241.055049` (auto-handoff via the
