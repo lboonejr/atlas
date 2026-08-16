@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260816T150333Z",
     "run_started": "2026-08-16T15:03:33Z",
-    "run_completed": "2026-08-16T14:12:02Z"
+    "run_completed": "2026-08-16T15:15:24Z"
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1786832078.131649",
-      "C0BBZJL85RT": "1786889485.856479",
-      "D0BHPKMDNEP": "1786889462.108379",
-      "C0BGLEMH99T": "1786886895.478709",
+      "C0BBZJL85RT": "1786893270.184269",
+      "D0BHPKMDNEP": "1786893251.950559",
+      "C0BGLEMH99T": "1786893095.499039",
       "C0BEQUW5NPP": "1786858188.657619",
       "C0BBLUA7JLX": "1786882100.056889",
       "C0BJ37SU1TL": "1785586607.101759",
@@ -31,19 +31,19 @@
       "1786713941.609669": "1786716585.591279",
       "1786824337.657789": "1786831565.789469"
     },
-    "capture_dm": "1786889462.108379",
-    "gmail_after_epoch": 1786889522
+    "capture_dm": "1786893251.950559",
+    "gmail_after_epoch": 1786892819
   },
   "integrity": {
     "last_full_pass": "2026-08-16T08:12:00-04:00",
-    "last_scan_sha": "9fd6fbe856b0f5cb6aea1168f34662f7f5b4723c"
+    "last_scan_sha": "096b0f6942ddb87401e25617f5f4134c8d6c06d5"
   },
   "canvas_access": {
     "last_checked": "2026-08-16T12:31:57Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-16T10:07:00-04:00",
-    "money_hub_last_rendered": "2026-08-16T09:24:00-04:00"
+    "pulse_last_rendered": "2026-08-16T11:14:00-04:00",
+    "money_hub_last_rendered": "2026-08-16T11:10:00-04:00"
   }
 }
