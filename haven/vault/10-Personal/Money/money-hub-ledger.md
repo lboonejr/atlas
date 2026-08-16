@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-16T10:07:00-04:00
+updated: 2026-08-16T15:07:00-04:00
 domain: personal
 type: reference
 status: active
@@ -259,14 +259,18 @@ bills:
             jfh8548cet84pcqo3o697fkbq8 already fired 8/12; cleared, not cancelled
             retroactively. Parked per field rules, never deleted."}
   - {id: station-travel, name: "Travel to The Station", amount: 80, cadence: once,
-     due: 2026-08-15, track: queue, status: active,
-     calendar_event_id: ptacguksk2rsf3md3403gljtes,
+     due: 2026-08-15, track: queue, status: paid,
+     calendar_event_id: null,
      note: "reported in #personal-finance 2026-08-09. Ramped: full $50 on 2026-08-10.
             RATE CORRECTED 2026-08-15 per Lemar in #personal-finance: 'Round Trip
             (Saturday & Sunday total): $80 per week' — this was the TBD rate flagged
             8/9. Amount raised 50→80 for this week's already-open occurrence (today's
             due date); future weeks tracked as the new recurring line
-            station-travel-weekly below, not as repeats of this one-time id."}
+            station-travel-weekly below, not as repeats of this one-time id.
+            PAID 2026-08-16 per Lemar in #personal-finance ('made it to The Station
+            today, so the travel cost has officially been fully covered') — funded in
+            full 2026-08-15 via income allocation, now confirmed settled. Reminder
+            event ptacguksk2rsf3md3403gljtes cancelled/cleared."}
   - {id: station-travel-weekly, name: "Travel to The Station — weekly", amount: 80,
      cadence: weekly, weekday: saturday, first_due: 2026-08-22, track: queue,
      status: active, calendar_event_id: 7ppstt92j8m4ben3u0v8iepink,
@@ -572,7 +576,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-9, amount: 4.05, funded: 0, status: pending}
       - {line_id: patreon, amount: 2.09, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
-      - {line_id: station-travel, amount: 80.00, funded: 80.00, status: funded}
+      - {line_id: station-travel, amount: 80.00, funded: 80.00, status: paid}
       - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.97, funded: 0, status: pending}
@@ -3811,3 +3815,24 @@ travel to the station." Read as a clarification, not a change request — the $8
 and no figure needs to move. Annotated the line's note for the record; no amount, date,
 or accrual touched, no calendar event changed, dashboard not re-rendered (nothing
 visible would differ).
+
+## Update 2026-08-16 (3) — PART M (Mode 7): station-travel marked paid
+
+**Drop:** Lemar in #personal-finance (ts `1786891041.387329`): "I made it to The
+Station today, so the travel cost has officially been fully covered." Read as a
+payment confirmation for the `station-travel` one-time line (already funded in full,
+$80.00, via the 2026-08-15 income allocation from The Station earnings).
+
+**Action:** flipped `bills.station-travel.status` active → `paid`. Its 2026-08-15
+`daily_targets` contribution flipped `funded` → `paid` (amount unchanged, $80.00 —
+funding was already set aside; this just records that it was actually settled).
+Retired the one-time reminder event `ptacguksk2rsf3md3403gljtes` (cancelled, id
+cleared) — no future accrual to retire, this was a one-time line and today's target
+total is unaffected (the $80 was already counted as funded, not pending). No change to
+any other day's `daily_targets`, no OVERLOAD CHECK re-run (no accrual or income
+changed). `station-travel-weekly` (the ongoing $80/wk line, first due 2026-08-22) is
+unaffected — separate line, still active.
+
+Nothing paid or contacted by Samira — this only records Lemar's own confirmation.
+Dashboard re-rendered (new Drive snapshot) since a line's status changed; reply posted
+in #personal-finance with the new link.
