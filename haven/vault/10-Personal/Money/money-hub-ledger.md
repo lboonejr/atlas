@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-15T18:03:00-04:00
+updated: 2026-08-16T09:21:00-04:00
 domain: personal
 type: reference
 status: active
@@ -370,7 +370,7 @@ plans:
            is his. The collector's stated deadline was Aug 15 and this schedule runs to
            Sept 6; that is Lemar's informed call, not an open question."
     installments:
-      - {seq: 1, amount: 125, due: 2026-08-16, status: pending, calendar_event_id: tja7bjk9ri35n0bqb01c52j4es}
+      - {seq: 1, amount: 125, due: 2026-08-17, status: pending, calendar_event_id: tja7bjk9ri35n0bqb01c52j4es}
       - {seq: 2, amount: 125, due: 2026-08-23, status: pending, calendar_event_id: gt4knt3i2m6lpjhlrjf8n2jqn8}
       - {seq: 3, amount: 125, due: 2026-08-30, status: pending, calendar_event_id: locnmilchabhgq2o0kd8slf7r4}
       - {seq: 4, amount: 125, due: 2026-09-06, status: pending, calendar_event_id: ekpni2dt25f0fe5tjh51sbjj64}
@@ -615,13 +615,23 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-17":
     operating_reserve: 30.00
-    target: 289.75
-    total_claim: 319.75
+    target: 380.75
+    total_claim: 410.75
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 289.75
+    shortfall: 380.75
     calendar_event_id: 2f3r9682t2emqdu76snes086b8
+    recompute_note: "2026-08-16 PART M: liquidibee-1's due date moved 8/16->8/17 (Lemar's
+      Monday-call renegotiation plan). Its $91.00 remaining balance ($125.00 total minus
+      the $34.00 already funded 2026-08-15, historical/untouched) added here as a new
+      contribution; target/total_claim/shortfall raised by the same $91.00. 2026-08-16's
+      daily_targets had NO existing liquidibee-1 contribution to remove -- the automatic
+      ROLLOVER that should have carried the $91.00 shortfall from 2026-08-15 into
+      2026-08-16 was explicitly deferred in that pass (see Update 2026-08-15 (3):
+      'ROLLOVER is reserved for the day's LAST hourly scan') and no later pass ran it, so
+      2026-08-16 never actually held the contribution this change was expected to move.
+      Discrepancy flagged; nothing else on 2026-08-16 touched."
     contributions:
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
@@ -630,6 +640,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: cuzzies-google-workspace, amount: 21.25, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.05, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 91.00, funded: 0, status: pending}
       - {line_id: liquidibee-2, amount: 15.63, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 8.34, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.69, funded: 0, status: pending}
@@ -3738,3 +3749,50 @@ today at once.
 Nothing paid, nothing contacted, nothing shrunk. Dashboard re-rendered (new Drive
 snapshot) since the ledger changed; reply posted in #personal-finance with the new
 link; one #decisions card raised for the overload.
+
+## Update 2026-08-16 — PART M: liquidibee-1 due date moved 8/16 → 8/17 (Monday call plan)
+
+**What changed:** Lemar committed today (capture DM, 2026-08-16) to call Nomas Recovery
+Monday instead of paying today, to renegotiate the plan. Per that plan, the Nomas/
+Liquidibee payment-plan installment 1 of 4 (`liquidibee-1`) moved:
+`due: 2026-08-16` → `due: 2026-08-17` on `plans: liquidibee-nomas-payment-plan`,
+`installments[seq: 1]`. Its `calendar_event_id` (`tja7bjk9ri35n0bqb01c52j4es`) is
+unchanged — the existing event is updated to the new date, not recreated. The
+corresponding Haven note `haven/vault/20-Cuzzies/2026-07-31-liquidibee-forbearance-ends.md`
+already carries this plan and was not touched here.
+
+**ACCRUAL recompute (this line only).** The $91.00 still owed on this installment
+($125.00 total − $34.00 already funded via 2026-08-15's INCOME ALLOCATION, see Update
+2026-08-15 (3)) is added as a new contribution on **2026-08-17**
+(`{line_id: liquidibee-1, amount: 91.00, funded: 0, status: pending}`); that day's
+`target`/`total_claim`/`shortfall` each raised $289.75 → $380.75 / $319.75 → $410.75 /
+$289.75 → $380.75. **Discrepancy found and flagged:** the brief this morning described
+an existing 2026-08-16 contribution to remove, but 2026-08-16's `daily_targets` never
+actually held one — the ROLLOVER that should have carried this $91.00 shortfall forward
+from 2026-08-15 (due-1) into 2026-08-16 (the day the installment's original due date
+arrived) was explicitly deferred in the 2026-08-15 (3) pass ("ROLLOVER is reserved for
+the day's LAST hourly scan") and no pass since has run it. So there was nothing to
+remove from 2026-08-16 — only the $91.00 addition to 2026-08-17 was needed. 2026-08-15
+(closed, historical) was NOT rewritten; its `liquidibee-1` contribution stays
+`{amount: 125.00, funded: 34.00, status: partial}` exactly as it closed. 2026-08-16's
+`daily_targets` is otherwise untouched (target still $289.81) — no other line's
+contribution was touched.
+
+**OVERLOAD CHECK (informational, not a new flag — the standing card already covers
+today).** Recomputed the correct current 7-day window (2026-08-16 through 2026-08-22,
+now that today has rolled from 8/15 to 8/16) against the same $299.04/wk trailing 4-week
+average from this morning's run (income log unchanged since): 289.81 + 380.75 + 277.06 +
+255.77 + 255.76 + 230.77 + 194.41 = **$1,884.33** post-move (was $1,793.33 pre-move for
+the same window, before this $91.00 landed on 8/17 — the move raises the flagged 7-day
+total by exactly $91.00, since that amount previously sat uncounted in any forward-
+looking window at all). Both figures are well above the $299.04/wk average, same
+standing overload already carried in #decisions `C0BBXA96FFV`; no second card raised.
+(Note: the $2,193.73 figure from this morning's run used the 2026-08-15–08-21 window,
+which included 2026-08-15's own $594.81 catch-up day and is no longer the correct
+comparison base now that 8/15 has closed.)
+
+Nothing paid, nothing contacted, nothing shrunk, no other bill/plan/goal touched.
+Reminder-calendar event for this installment moved 8/16 → 8/17 (same event id, no
+duplicate); the 2026-08-16 and 2026-08-17 daily aggregate "set aside today" events
+re-synced to the new targets. Dashboard re-rendered (new Drive snapshot) since the
+ledger changed; reply posted in #personal-finance with the new link.
