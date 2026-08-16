@@ -3,45 +3,45 @@
   "lock": {
     "run_id": "run_20260816T130358Z",
     "run_started": "2026-08-16T13:03:58Z",
-    "run_completed": "2026-08-16T12:31:57Z"
+    "run_completed": "2026-08-16T13:41:09Z"
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1786832078.131649",
-      "C0BBZJL85RT": "1786883488.920849",
-      "D0BHPKMDNEP": "1786833069.004819",
-      "C0BGLEMH99T": "1786829161.408529",
+      "C0BBZJL85RT": "1786886166.875949",
+      "D0BHPKMDNEP": "1786886047.892839",
+      "C0BGLEMH99T": "1786886762.750229",
       "C0BEQUW5NPP": "1786858188.657619",
-      "C0BBLUA7JLX": "1786820943.028119",
+      "C0BBLUA7JLX": "1786882100.056889",
       "C0BJ37SU1TL": "1785586607.101759",
       "C0BCCUKEUQ2": "1786882058.498619",
       "C0BCD7U5X2B": "1784895502.750959",
       "C0BCH2C3GRM": "1784226868.999839",
       "C0BDN2KQFD4": "1786365005.327169",
-      "C0BD8LTM1EK": "1783257200.297099",
+      "C0BD8LTM1EK": "1784226859.587739",
       "C0BGYM1UB4Y": "1786817353.240879",
-      "C0BGCAK0ML3": "1783695944.017839",
+      "C0BGCAK0ML3": "1784227019.223439",
       "C0BHXTPST52": "1786306503.409249",
-      "C0BC2A94142": "1782508078.495669",
+      "C0BC2A94142": "1784227043.639249",
       "C0BBZ5J8805": "1786741654.908089"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
       "1786832078.131649": "1786832078.131649"
     },
-    "capture_dm": "1786833069.004819",
-    "gmail_after_epoch": 1786881798
+    "capture_dm": "1786886047.892839",
+    "gmail_after_epoch": 1786887669
   },
   "integrity": {
     "last_full_pass": "2026-08-16T08:12:00-04:00",
-    "last_scan_sha": "5d1a47a831e52f674862ec93a0d58b7e6b9148f7"
+    "last_scan_sha": "e6ba9acf4bf219199bed53db2596efc0b21cc6b5"
   },
   "canvas_access": {
     "last_checked": "2026-08-16T12:31:57Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-16T12:31:57Z",
-    "money_hub_last_rendered": "2026-08-15T22:10:00Z"
+    "pulse_last_rendered": "2026-08-16T13:33:00-04:00",
+    "money_hub_last_rendered": "2026-08-16T09:24:00-04:00"
   }
 }
