@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-16T09:21:00-04:00
+updated: 2026-08-16T10:07:00-04:00
 domain: personal
 type: reference
 status: active
@@ -274,7 +274,12 @@ bills:
             weekend Station security-desk job (Sat+Sun combined, $80/week total),
             confirmed rate per Lemar in #personal-finance. Starts the Saturday AFTER
             this week's one-time station-travel occurrence (2026-08-15) so the two
-            never double-count. Same weekly-cadence accrual pattern as moms-weekly."}
+            never double-count. Same weekly-cadence accrual pattern as moms-weekly.
+            CLARIFIED 2026-08-16 per Lemar in #personal-finance: this $80/weekend is
+            train fare, not gas — he won't be driving to weekend shifts for now. No
+            figure changes: this line was already tracked as its own $80 accrual
+            separate from daily_allowances.gas_maintenance, so nothing double-counted
+            and nothing to remove. Noted for the record only."}
   - {id: tow-truck-repay, name: "Tow truck advance repayment", amount: 500, cadence: once,
      due: 2026-09-15, track: queue, status: active, calendar_event_id: 160350dborpf6c2cllcmbkr07o,
      note: "Added 2026-08-13, funding source corrected 2026-08-14. Lemar borrowed $500
@@ -3796,3 +3801,13 @@ Reminder-calendar event for this installment moved 8/16 → 8/17 (same event id,
 duplicate); the 2026-08-16 and 2026-08-17 daily aggregate "set aside today" events
 re-synced to the new targets. Dashboard re-rendered (new Drive snapshot) since the
 ledger changed; reply posted in #personal-finance with the new link.
+
+## Update 2026-08-16 (2) — PART M: station-travel-weekly clarified as train fare, not gas
+Lemar dropped in #personal-finance (ts `1786886895.478709`): "we won't need the gas
+reserves on the weekends for now, I'll be taking the train, thus the $80 per weekend to
+travel to the station." Read as a clarification, not a change request — the $80/weekend
+`station-travel-weekly` line already exists as its own dated accrual, separate from
+`daily_allowances.gas_maintenance`'s flat $30/day reserve, so nothing was double-counted
+and no figure needs to move. Annotated the line's note for the record; no amount, date,
+or accrual touched, no calendar event changed, dashboard not re-rendered (nothing
+visible would differ).
