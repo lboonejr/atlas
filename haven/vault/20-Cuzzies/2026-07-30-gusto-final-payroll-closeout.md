@@ -1,13 +1,13 @@
 ---
 created: 2026-07-30T14:30-04:00
-updated: 2026-08-14T15:15:00-04:00
+updated: 2026-08-16T14:15:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [gusto, payroll, wind-down, close-out]
 source: gmail
 due: 2026-07-31T09:00:00-04:00
-calendar_event_id: 77r5jovbnr8mllc6iut76o4p9k
+calendar_event_id: khoco24s6jln5ctdud5n20vnag
 ---
 
 # Gusto Final Payroll Deadline — Complete Employee Close-Out (all 8 employees)
@@ -43,3 +43,10 @@ not one pay period).
 Reminder event created on the reminder calendar (`Haven: Gusto Final Payroll Deadline —
 Complete Employee Close-Out`, Jul 31 9:00-9:30am ET, popup notification). Event id
 written back above.
+
+## Update 2026-08-16 (PART S calendar-sync — corrected wrong-calendar event)
+The event referenced in the update above had actually landed on the Cuzzie's (Owners)
+business calendar (`77r5jovbnr8mllc6iut76o4p9k`), not the personal reminder calendar
+this skill is scoped to. Left that stray business-calendar event untouched and created
+a correct event (`khoco24s6jln5ctdud5n20vnag`, same title/time/description) on the
+personal reminder calendar.
