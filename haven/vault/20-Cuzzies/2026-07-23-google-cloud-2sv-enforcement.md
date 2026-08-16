@@ -1,13 +1,13 @@
 ---
 created: 2026-07-23T08:15-04:00
-updated: 2026-08-14T15:15:00-04:00
+updated: 2026-08-16T14:15:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [google-cloud, security, 2sv, mfa, compliance, it]
 source: gmail
 due: 2026-10-20T09:00-04:00
-calendar_event_id: uivdom9g3509043lsk88op55vk
+calendar_event_id: pvgj7b871tu5pfcr0ii99hfi7s
 ---
 
 # Google Cloud Identity — mandatory 2SV enforcement starting Oct 20, 2026
@@ -35,6 +35,13 @@ deadline:
 
 No dollar amount, no lender/regulator on this thread — plain IT/security
 housekeeping. Long lead time (about 3 months out), low urgency today.
+
+## Update 2026-08-16 (PART S calendar-sync — corrected wrong-calendar event)
+The `calendar_event_id` on file (`uivdom9g3509043lsk88op55vk`) pointed to an event on
+the Cuzzie's (Owners) business calendar, not the personal reminder calendar this skill
+is scoped to. Left that stray business-calendar event untouched and created a correct
+event (`pvgj7b871tu5pfcr0ii99hfi7s`, same title/time/description) on the personal
+reminder calendar.
 
 ## Sources
 - gmail: thread `19f8c8425da21d79` (subject "[Action Advised] Secure Google Cloud
