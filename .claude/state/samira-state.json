@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260816T140305Z",
     "run_started": "2026-08-16T14:03:05Z",
-    "run_completed": "2026-08-16T13:41:09Z"
+    "run_completed": "2026-08-16T14:12:02Z"
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1786832078.131649",
-      "C0BBZJL85RT": "1786886166.875949",
-      "D0BHPKMDNEP": "1786886047.892839",
-      "C0BGLEMH99T": "1786886762.750229",
+      "C0BBZJL85RT": "1786889485.856479",
+      "D0BHPKMDNEP": "1786889462.108379",
+      "C0BGLEMH99T": "1786886895.478709",
       "C0BEQUW5NPP": "1786858188.657619",
       "C0BBLUA7JLX": "1786882100.056889",
       "C0BJ37SU1TL": "1785586607.101759",
@@ -27,21 +27,23 @@
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
-      "1786832078.131649": "1786832078.131649"
+      "1786832078.131649": "1786832078.131649",
+      "1786713941.609669": "1786716585.591279",
+      "1786824337.657789": "1786831565.789469"
     },
-    "capture_dm": "1786886047.892839",
-    "gmail_after_epoch": 1786887669
+    "capture_dm": "1786889462.108379",
+    "gmail_after_epoch": 1786889522
   },
   "integrity": {
     "last_full_pass": "2026-08-16T08:12:00-04:00",
-    "last_scan_sha": "e6ba9acf4bf219199bed53db2596efc0b21cc6b5"
+    "last_scan_sha": "9fd6fbe856b0f5cb6aea1168f34662f7f5b4723c"
   },
   "canvas_access": {
     "last_checked": "2026-08-16T12:31:57Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-16T13:33:00-04:00",
+    "pulse_last_rendered": "2026-08-16T10:07:00-04:00",
     "money_hub_last_rendered": "2026-08-16T09:24:00-04:00"
   }
 }
