@@ -1,13 +1,13 @@
 ---
 created: 2026-07-17T09:12-04:00
-updated: 2026-08-14T15:15:00-04:00
+updated: 2026-08-16T14:15:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [follow-up, investor, compliance, greenbooks, george-irwin, jason]
 source: slack
 due: 2026-07-20T15:00-04:00
-calendar_event_id: lpdo2u87kml6stpto6fl5pleq4
+calendar_event_id: ftu65qg7np0tr462q159ajh12g
 ---
 
 # Friday follow-ups — George, GreenBooks tax info, Jason's buyers
@@ -94,6 +94,13 @@ Created the reminder-calendar event for the 3pm Jason call (`calendar_event_id`
 above), popup at the top of the hour. `calendar_event_id` written back per
 schema — do not hand-edit it. Reacted ✅ on the capture DM ask (ts
 `1784556529.671089`).
+
+## Update 2026-08-16 (PART S calendar-sync — corrected wrong-calendar event)
+The 2026-07-20 event above had drifted onto the Cuzzie's (Owners) business
+calendar (`lpdo2u87kml6stpto6fl5pleq4`), not the personal reminder calendar this
+skill is scoped to. Left that stray business-calendar event untouched and created
+a correct event (`ftu65qg7np0tr462q159ajh12g`, same title/time/description) on
+the personal reminder calendar.
 
 ## Sources
 - slack: Samira capture DM (D0BHPKMDNEP), ts 1784292479.736069, 2026-07-17 ET
