@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-08-15T13:00:00-04:00
+updated: 2026-08-16T13:05:00-04:00
 domain: legal
 type: task
 status: active
@@ -464,6 +464,21 @@ not a signed engagement; same open-referral status as Wall, Brekke, Hagner & Zoh
 and Kaplan. The counsel-selection decision remains entirely Lemar's, still unresolved,
 with the Sept 14 proof hearing approaching.
 
+## Update 2026-08-16T13:05:00-04:00 — Monday plan: finish current firms, then expand the list
+
+Lemar in the capture DM (`D0BHPKMDNEP`, ts `1786885198.136079`): "On Monday I will
+also continue my lawyer search. I'll finish following up on the people that I have
+thus far and then expand my list to see if I can find anybody else." Six firms have
+been contacted to date (Wall, Brekke, Greenberg, Hagner & Zohlman, Kaplan/kaplaw.com,
+plus the Siciliano non-engagement corrected 8/15) with none retained. This is Lemar
+committing to close out follow-up on those six on Monday 2026-08-17 — the same day as
+the already-scheduled Hagner & Zohlman follow-up (`due` above) — before widening the
+search further if none convert. No counsel selection made yet; Sept 14 proof hearing
+remains the operative deadline.
+
+### Sources (this update)
+- slack: Samira capture DM `D0BHPKMDNEP`, ts `1786885198.136079`
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
 - gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
@@ -499,3 +514,4 @@ with the Sept 14 proof hearing approaching.
   counsel-search recap + Brekke call set for 8/14 9am, via samira-work-summary auto-handoff)
 - slack: Samira capture DM `D0BHPKMDNEP`, ts `1786725703.099959` (2026-08-14 ~12:42pm ET,
   Monday Hagner & Zohlman follow-up request)
+- slack: Samira capture DM `D0BHPKMDNEP`, ts `1786885198.136079` (2026-08-16 — Monday follow-up plan)
