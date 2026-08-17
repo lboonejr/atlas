@@ -1,13 +1,13 @@
 ---
 created: 2026-07-15T16:52-04:00
-updated: 2026-08-16T14:15:00-04:00
+updated: 2026-08-17T14:20:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [liquidibee, mca, forbearance, wind-down-creditor, payment, disclosure]
 source: gmail
 due: 2026-07-15T23:59-04:00
-calendar_event_id: 6cacmkj77aoudhdmp9ickajgt8
+calendar_event_id: 4u73fa8egqk8u5g5teof08v0nk
 ---
 
 # Liquidibee — $500 good-faith forbearance payment not received (due today)

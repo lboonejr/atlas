@@ -1,13 +1,13 @@
 ---
 created: 2026-07-11T09:38:00-04:00
-updated: 2026-08-16T14:15:00-04:00
+updated: 2026-08-17T14:20:00-04:00
 domain: station
 type: task
 status: active
 tags: [the-station, crc, agent-job-letter, hiring]
 source: slack
 due: 2026-07-13T09:00:00-04:00
-calendar_event_id: nqfluqb1a3h2skbfj9pecqnpes
+calendar_event_id: vgi54ndm6cd727169khflpvjdc
 ---
 
 # The Station — agent job letter (no fingerprinting) + Monday coordination meeting

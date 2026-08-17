@@ -1,13 +1,13 @@
 ---
 created: 2026-07-18T11:00:00-04:00
-updated: 2026-08-16T14:15:00-04:00
+updated: 2026-08-17T14:20:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [mail, usps, cuzzies-closure, admin]
 source: slack
 due: 2026-07-21T09:00:00-04:00
-calendar_event_id: t76b2aj7r3trpa2leu4qi9huec
+calendar_event_id: tlmuo8hdjt8vomi2ile1gdlt1g
 ---
 
 # Cuzzie's mail pickup / reroute since closure
