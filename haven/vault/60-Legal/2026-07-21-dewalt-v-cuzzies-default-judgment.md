@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-08-16T13:05:00-04:00
+updated: 2026-08-17T15:12:00-04:00
 domain: legal
 type: task
 status: active
@@ -478,6 +478,27 @@ remains the operative deadline.
 
 ### Sources (this update)
 - slack: Samira capture DM `D0BHPKMDNEP`, ts `1786885198.136079`
+
+## Update 2026-08-17T15:12:00-04:00 — Lemar follows up with Kaplan directly; office confirms it was routed
+
+Continuing the Kaplan/kaplaw.com thread (`1a0013edc74f5864`) from the 2026-08-14 18:30
+ET update above: Lemar sent a follow-up himself 2026-08-17 ~17:27 ET (not drafted by
+Samira) — "Following up on my note from Friday. Wanted to check in on where things stand
+now that the information's had a chance to make its way to the right attorney. With the
+proof hearing set..." Deborah E. Cobb replied ~18:14 ET: *"I sent this email to the
+appropriate people, hopefully you'll get a call back soon."* Same routing-ack pattern as
+her 8/14 reply — no attorney assigned yet, no reply owed from Lemar's side right now.
+
+**Read:** this is Lemar himself executing the "finish following up on current firms"
+plan from the 8/16 update, one name at a time. No confirmation yet that any of the six
+contacted firms (Siciliano, Wall, Brekke, Greenberg, Hagner & Zohlman, Kaplan) has
+actually assigned counsel. Sept 14 proof hearing remains the operative deadline, now 4
+weeks out. No Samira action taken — informational only, nothing drafted or sent. Gmail
+thread labeled `Samira/seen`.
+
+### Sources (this update)
+- gmail: thread `1a0013edc74f5864`, message `1a010c3d3369a690` (Lemar's follow-up,
+  17:27 ET) / `1a010ef03d42f6ed` (Cobb's reply, 18:14 ET)
 
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
