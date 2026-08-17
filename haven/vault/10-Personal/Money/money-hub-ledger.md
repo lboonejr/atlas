@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-16T15:07:00-04:00
+updated: 2026-08-17T16:50:00-04:00
 domain: personal
 type: reference
 status: active
@@ -108,7 +108,7 @@ pockets:                             # TWO pockets. Account mapping CORRECTED 20
      balance: null, balance_as_of: null, status: active,
      role: "income lands here (DoorDash payouts); gas and day-to-day spending pay from here"}
   - {id: set-aside, name: "Set-Aside", account: sofi-checking,
-     balance: null, balance_as_of: null, status: active,
+     balance: 13.00, balance_as_of: 2026-08-17, status: active,
      role: "the daily set-aside number moves here; every recurring bill is paid out of
             this account",
      note: "last known $128.78 as of 2026-07-11 came from the retired Era connector and
@@ -148,7 +148,12 @@ bills:
      note: "Added 2026-08-13. Same reseller billing lapse as cuzzies-google-voice above —
             all Workspace services for cuzziesnj.com (including lemar@cuzziesnj.com email
             itself) suspend 2026-08-20 without this. Business-origin, carried personally;
-            due-date reminder lives on the Cuzzie's (Owners) calendar."}
+            due-date reminder lives on the Cuzzie's (Owners) calendar.
+            PAYMENT ATTEMPTED 2026-08-17 per Lemar in #personal-finance (ts
+            1786999318.129009): 'I paid for google workspace but the transaction didn't
+            process yet.' Left `status: active`/unpaid and still accruing pending
+            confirmation the charge actually clears — see open_questions. Never flip to
+            paid on an unconfirmed transaction."}
   - {id: student-loans, name: Student loans, amount: 500, cadence: monthly, day: 16,
      track: queue, status: active, calendar_event_id: eo3u9f3dm97hc987tvvkcblaig,
      note: "~$8,000 remaining. DATED 2026-08-15 per Lemar in #personal-finance
@@ -2820,6 +2825,9 @@ open_questions:
   - "Income backlog: Lemar is posting ~2 weeks of DoorDash earnings to #personal-finance (2026-08-10). Until they land, income_target_weekly $500 is a guess and the overload check can't run."
   - "RESOLVED 2026-08-14: Lemar confirmed (#decisions ts 1786712349.341559) these ARE two separate $500 obligations from the same breakdown — a friend-funded tow ($500, tow-truck-repay, due 9/15) and a mechanic repair he'll repay 'down the road' with no date yet (mechanic-repair-repay, undated). Both now carry their own line; see the UNDATED bullet above for the second."
   - "NEW 2026-08-14: Lemar confirmed his new Station weekend job (#decisions ts 1786710731.810909) — $12/hour, ~23 hrs/week, security desk. No paycheck/earnings figure reported yet under this job; log actual pay via #personal-finance once it starts landing, same as DoorDash. Not the same thing as the 'Station travel $50/wk' expense line above (that's his travel cost, not this income)."
+  - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Lemar says he 'paid for google workspace but the transaction didn't process yet' — the cuzzies-google-workspace $85 bill (due 8/19) is left active/unpaid pending confirmation. #decisions parent raised asking whether the charge actually cleared so this can be flipped to paid (and its accrual retired) or left as-is."
+  - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Lemar was unexpectedly charged $119 by Edge Fitness for personal training and is disputing it with SoFi. Already happened (not a future dated line) so nothing was added to `bills` — no due date exists to queue and inventing one would violate the never-invent-a-date rule. #decisions parent raised asking how he wants this reflected once the dispute resolves (refunded → no entry needed; upheld → a dated personal expense/loss line, his call). No income reported today."
+  - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Set-Aside (SoFi Checking) balance reported at $13.00 as_of 2026-08-17 — first balance ever reported for this pocket since the Era connector retired 2026-08-10. Very low against the ~$380/day accrual target; flagged on the dashboard, not smoothed or explained away."
 ```
 
 ## Update 2026-08-14 (PART M — two new personal bills: fantasy football + Dil's Christmas gift)
@@ -3836,3 +3844,46 @@ unaffected — separate line, still active.
 Nothing paid or contacted by Samira — this only records Lemar's own confirmation.
 Dashboard re-rendered (new Drive snapshot) since a line's status changed; reply posted
 in #personal-finance with the new link.
+
+## Update 2026-08-17 — PART M: Google Workspace payment unconfirmed, Edge Fitness disputed charge, Set-Aside balance $13
+
+**Drop:** Lemar in #personal-finance (ts `1786999318.129009`, ~16:41 ET): "Okay here's
+the deal I paid for google workspace but the transaction didn't process yet. Instead I
+was charged $119 by edge fitness for personal training. Right now I'm trying to dispute
+the transaction with sofi. No income today but now my sofi checking account reads
+$13.00."
+
+**1. `cuzzies-google-workspace` ($85, due 2026-08-19) — payment attempted, not
+confirmed.** "Didn't process yet" is not a payment confirmation, so Mode 7 was NOT run —
+`status` stays `active`, no calendar event retired, no `daily_targets` contribution
+cleared. Annotated the bill's note with the attempt and the open question. Never flip a
+bill to paid on an unconfirmed transaction.
+
+**2. Edge Fitness $119 personal-training charge — not added as a bill.** This already
+happened (a past, disputed charge), not a future dated obligation — there is no due date
+to queue and none was invented. Clearly personal (his own gym), so no business-vs-personal
+ask needed. Logged only as an open question: #decisions asked how to reflect it once the
+SoFi dispute resolves (refunded → nothing to add; upheld → Lemar names the date/line
+himself). Nothing paid or contacted by Samira; the dispute is Lemar's own action with
+SoFi.
+
+**3. Mode 2b — Set-Aside pocket balance.** "Sofi checking account reads $13.00" maps to
+the `set-aside` pocket (account `sofi-checking` per the ledger's account mapping).
+Set `balance: 13.00`, `balance_as_of: 2026-08-17` — the first balance ever reported for
+this pocket since the Era connector retired 2026-08-10. No prior expected figure existed
+to reconcile against, so the reported number was written as-is, not adjusted. Flagged on
+the dashboard: $13 in the bill-paying account against a ~$380/day accrual target is a
+stark number, shown plainly rather than smoothed.
+
+**No income logged.** "No income today" is not an earnings line — nothing appended to
+`income-log-2026.md`.
+
+**No accrual/calendar changes.** No new dated line, amount, or date changed, so ACCRUAL,
+the calendars, and OVERLOAD CHECK were not re-run this pass — nothing about the queue or
+`daily_targets` shifted, only balance/annotation/open-questions.
+
+**#decisions:** one parent raised covering both open items above (Google Workspace
+payment status + how to record the Edge Fitness dispute outcome) — Lemar decides, nothing
+guessed. Nothing paid, nothing contacted. Dashboard re-rendered (new Drive snapshot)
+since the ledger changed (balance + annotations + open questions); reply posted in
+#personal-finance with the new link.
