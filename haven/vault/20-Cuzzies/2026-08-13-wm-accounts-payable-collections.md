@@ -1,6 +1,6 @@
 ---
 created: 2026-08-13T11:15-04:00
-updated: 2026-08-17T14:20-04:00
+updated: 2026-08-17T15:04-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -107,6 +107,30 @@ authorization decision only Lemar can make; nothing approved or sent.
 
 ### Sources (this update)
 - gmail: thread `19ffb0c2f0236bf0` (message `1a010c6d2c1caf66`, 2026-08-17 17:30:55 UTC)
+
+## Update 2026-08-17T15:04-04:00 — Lemar picks Option B + flags a possible account-transition; draft saved
+
+Lemar reacted ✅ on Option B (lock service only, hold off on the bigger bin) on the
+2026-08-17 14:20 ET card (ts `1786990354.291129`), then added in-thread: he also needs to
+navigate this through the possibility of the account "trading hands" — Cuzzie's is still
+working through a deal and it's unclear what happens to the WM account during that
+process (consistent with the Off Button vendor wind-down / location-transition context
+already tagged on this note).
+
+Merged his pick + his added context into the final reply rather than sending Option B
+verbatim: authorizes the $15.00/month lock service, holds off on the 4-yard bin upgrade,
+and flags to Mason that Cuzzie's is working through a possible change in who operates the
+location so he has that context for how he handles the account. Ran the voice profile's
+Hard-Floor Lint before saving — passed.
+
+**Not sent** — saved to Gmail Drafts only (thread `19ffb0c2f0236bf0`, labeled
+`Samira/drafted`); Lemar sends it himself when ready.
+
+### Sources (this update)
+- slack: #decisions ts `1786990354.291129` (card) / `1786990363.207019` (Option B, ✅'d) /
+  `1786991925.456159` (Lemar's account-transition note) / `1786993750.159969` (this
+  closeout reply)
+- gmail: thread `19ffb0c2f0236bf0`, draft `r-2360515012652679759`
 
 ## Related
 - [[waste-management]] (entity note — none exists yet, needs a stub)
