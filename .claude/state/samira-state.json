@@ -3,12 +3,12 @@
   "lock": {
     "run_id": "run_20260817T200424Z",
     "run_started": "2026-08-17T20:04:24Z",
-    "run_completed": "2026-08-17T19:19:00Z"
+    "run_completed": "2026-08-17T20:10:43Z"
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1786994210.208159",
-      "C0BBZJL85RT": "1786994210.208159",
+      "C0BBZJL85RT": "1786997369.611959",
       "D0BHPKMDNEP": "1786994167.563859",
       "C0BGLEMH99T": "1786994180.000000",
       "C0BEQUW5NPP": "1786994180.000000",
@@ -39,11 +39,11 @@
       "1786990354.291129": "1786993750.159969"
     },
     "capture_dm": "1786994167.563859",
-    "gmail_after_epoch": 1786994180
+    "gmail_after_epoch": 1786997357
   },
   "integrity": {
     "last_full_pass": "2026-08-17T08:10:00-04:00",
-    "last_scan_sha": "a93d6805d3e304a97b4726ccfe6dd0d0082040ba"
+    "last_scan_sha": "515791a3028f642bb54f6c1a8ff21ef9dd1c9f97"
   },
   "canvas_access": {
     "last_checked": "2026-08-17T12:17:57Z",
