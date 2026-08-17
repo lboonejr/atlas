@@ -1,9 +1,9 @@
 ---
 created: 2026-08-13T11:15-04:00
-updated: 2026-08-17T11:02:56-04:00
+updated: 2026-08-17T14:02-04:00
 domain: cuzzies
 type: task
-status: active
+status: awaiting-decision
 tags: [waste-management, collections, accounts-payable, off-button]
 source: gmail
 ---
@@ -57,15 +57,6 @@ ongoing service spend is worth weighing against reducing/pausing service instead
 raised in #decisions with drafted reply options rather than executed. Gmail thread
 labeled `Samira/seen`.
 
-## Related
-- [[waste-management]] (entity note — none exists yet, needs a stub)
-
-## Sources
-- gmail: thread `19ffb790c00105f4`
-- gmail: thread `19ffc6f57bfad3f1` (container-contamination warning, 8/13)
-- gmail: thread `19ffb0c2f0236bf0` (dumpster overflow → Mason Wales's 8/14 pricing
-  proposal to double the monthly bin rate)
-
 ## Update 2026-08-17 — automated suspension warning, same account
 
 A fourth, automated WM notice ("Make a payment to maintain service",
@@ -78,5 +69,27 @@ proposal (double the bin rate, needs Lemar's "approved") is still the live
 #decisions ask; this just raises the cost of continuing to sit on it. Not
 re-raised as a separate card.
 
+## Update 2026-08-17T14:02-04:00 — PART A pass, AP-collections card still awaiting Lemar
+
+This update is specifically about the AP-collections card (ts `1786631841.945579`,
+distinct from Mason Wales's bin-rate proposal above). Lemar reacted ✅ on it, but
+Samira's in-thread follow-up (ts `1786634472.215389`, posted an earlier run) asking
+whether he already paid/authorized this WM balance directly, or wants it added to the
+Off Button vendor wind-down tracking instead, is still unanswered as of this pass
+(checked live: no reaction, no reply). No dollar amount has ever been stated in WM's
+AP-collections notice. Outcome this pass: nothing executed — no confirmed disposition
+and no amount to act on, and contacting/paying WM is outside what Samira can do
+unattended. Card stays open in #decisions, awaiting Lemar's answer.
+
 ### Sources (this update)
 - gmail: thread `1a010322199a8487` ("Make a payment to maintain service", 8/17)
+- slack: #decisions ts `1786631841.945579`
+
+## Related
+- [[waste-management]] (entity note — none exists yet, needs a stub)
+
+## Sources
+- gmail: thread `19ffb790c00105f4`
+- gmail: thread `19ffc6f57bfad3f1` (container-contamination warning, 8/13)
+- gmail: thread `19ffb0c2f0236bf0` (dumpster overflow → Mason Wales's 8/14 pricing
+  proposal to double the monthly bin rate)
