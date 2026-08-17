@@ -1,6 +1,6 @@
 ---
 created: 2026-08-13T11:15-04:00
-updated: 2026-08-14T18:35:00-04:00
+updated: 2026-08-17T11:02:56-04:00
 domain: cuzzies
 type: task
 status: active
@@ -65,3 +65,18 @@ labeled `Samira/seen`.
 - gmail: thread `19ffc6f57bfad3f1` (container-contamination warning, 8/13)
 - gmail: thread `19ffb0c2f0236bf0` (dumpster overflow → Mason Wales's 8/14 pricing
   proposal to double the monthly bin rate)
+
+## Update 2026-08-17 — automated suspension warning, same account
+
+A fourth, automated WM notice ("Make a payment to maintain service",
+`noreply@communications.wm.com`): account is past due and "being reviewed for
+potential service interruption or may have already been interrupted" — an
+automatic charge may apply to resume service if suspended. No new dollar amount
+given; same Customer ID `32-81926-53003`, same service address. No-reply sender,
+nothing to draft. Doesn't change the decision shape — Mason Wales's 8/14 pricing
+proposal (double the bin rate, needs Lemar's "approved") is still the live
+#decisions ask; this just raises the cost of continuing to sit on it. Not
+re-raised as a separate card.
+
+### Sources (this update)
+- gmail: thread `1a010322199a8487` ("Make a payment to maintain service", 8/17)
