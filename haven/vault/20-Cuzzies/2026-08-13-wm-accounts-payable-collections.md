@@ -1,6 +1,6 @@
 ---
 created: 2026-08-13T11:15-04:00
-updated: 2026-08-17T14:02-04:00
+updated: 2026-08-17T14:20-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -85,6 +85,29 @@ unattended. Card stays open in #decisions, awaiting Lemar's answer.
 - gmail: thread `1a010322199a8487` ("Make a payment to maintain service", 8/17)
 - slack: #decisions ts `1786631841.945579`
 
+## Update 2026-08-17T14:20-04:00 — Mason Wales revises the offer: smaller increase, adds a lock
+
+Lemar never picked an option on the 8/14 doubled-rate card (`1786735634.057039`); it's
+still sitting unreacted. Mason Wales came back today (~1:30pm ET, same gmail thread
+`19ffb0c2f0236bf0`) unprompted with a lower counter-offer that also addresses the root
+cause Lemar raised (neighborhood dumping into the bin since the location's closure, not
+Cuzzie's own volume):
+
+- **Current:** 2-yard bin, weekly Wednesday service, **$154.86/month**
+- **New recommendation:** 4-yard bin, weekly Wednesday service, **$250.00/month**,
+  plus a bin-lock service at **$15.00/month** — **$265.00/month total**
+  (down from the previously floated $309.72/month; prorated charges may apply to
+  the next invoice)
+- Same ask: reply "approved" to authorize
+
+This supersedes the 8/14 pricing entirely — the old $309.72/mo card is stale. Staged a
+fresh #decisions card with updated reply options (approve as offered / counter for
+lock-only, hold the bin upgrade / no reply, fold into Off Button tracking). Still an
+authorization decision only Lemar can make; nothing approved or sent.
+
+### Sources (this update)
+- gmail: thread `19ffb0c2f0236bf0` (message `1a010c6d2c1caf66`, 2026-08-17 17:30:55 UTC)
+
 ## Related
 - [[waste-management]] (entity note — none exists yet, needs a stub)
 
@@ -92,4 +115,4 @@ unattended. Card stays open in #decisions, awaiting Lemar's answer.
 - gmail: thread `19ffb790c00105f4`
 - gmail: thread `19ffc6f57bfad3f1` (container-contamination warning, 8/13)
 - gmail: thread `19ffb0c2f0236bf0` (dumpster overflow → Mason Wales's 8/14 pricing
-  proposal to double the monthly bin rate)
+  proposal to double the monthly bin rate, superseded 8/17 by the lock+4-yard offer)
