@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-08-17T15:12:00-04:00
+updated: 2026-08-18T13:04:00-04:00
 domain: legal
 type: task
 status: active
@@ -500,6 +500,38 @@ thread labeled `Samira/seen`.
 - gmail: thread `1a0013edc74f5864`, message `1a010c3d3369a690` (Lemar's follow-up,
   17:27 ET) / `1a010ef03d42f6ed` (Cobb's reply, 18:14 ET)
 
+## Update 2026-08-18T13:04:00-04:00 — Kaplin Stewart (Kaplan/kaplaw.com) declines: "unable to assist due to timing and ongoing trials"; refers Lemar to County Lawyer Referral Service
+
+Continuing the Kaplan/kaplaw.com thread (`1a0013edc74f5864` / message thread now shows
+as `1a015d0c3734eae0`) from the 2026-08-14/17 updates above: earlier today (2026-08-18
+~12:30pm ET, self-sent by Lemar, not drafted by Samira) Lemar replied to Danielle
+Borzor's request for documentation by attaching the verified complaint/summons, the
+motion-for-default-judgment packet, and the pre-litigation demand letter, and asked
+specifically for help filing a **motion to adjourn the Sept 14 proof hearing**.
+
+Danielle Borzor replied ~16:59 ET with a **final answer, not a routing ack this time**:
+*"my employment attorney is unable to assist you due to timing and ongoing trials. I
+suggest that you contact the County Lawyer Referral Service in your county."*
+
+**Read:** this is the seventh firm/track in the counsel search (Siciliano — priced but
+never retained per the 8/15 correction; Wall; Brekke; Greenberg — Donte's
+settlement-review track; Hagner & Zohlman; Kaplan/Kaplin Stewart) to end without
+assigned counsel, and the first to give an explicit **no** rather than a pending
+routing acknowledgment. With the Sept 14 proof hearing now **27 days out** and no
+counsel of record on file, the standing gap flagged since 2026-07-22 ("an LLC cannot
+appear pro se in NJ Superior Court; Cuzzie's needs counsel of record before [the
+hearing]") is unresolved and the clock is shorter. Not reply-worthy in the ordinary
+sense — Borzor's message closes out this specific firm, nothing is pending from
+Cuzzie's side on this thread — so no draft reply was prepared; flagging the standing
+gap in #decisions instead (thread ts `1787069259.543559`, the card already open on
+this matter from earlier today) rather than opening a new card, per routing. No
+Samira action taken beyond this note and the #decisions flag — nothing drafted or
+sent. Gmail thread labeled `Samira/seen`.
+
+### Sources (this update)
+- gmail: thread `1a015d0c3734eae0` (Danielle Borzor's decline, 16:59 ET, and Lemar's
+  12:30pm ET self-sent reply attaching case documents)
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
 - gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
@@ -536,3 +568,5 @@ thread labeled `Samira/seen`.
 - slack: Samira capture DM `D0BHPKMDNEP`, ts `1786725703.099959` (2026-08-14 ~12:42pm ET,
   Monday Hagner & Zohlman follow-up request)
 - slack: Samira capture DM `D0BHPKMDNEP`, ts `1786885198.136079` (2026-08-16 — Monday follow-up plan)
+- gmail: thread `1a0013edc74f5864` / `1a015d0c3734eae0` (2026-08-14 through 2026-08-18,
+  Kaplan/Kaplin Stewart — routed 8/14, followed up 8/17, declined 8/18)
