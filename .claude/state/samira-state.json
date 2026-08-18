@@ -3,13 +3,13 @@
   "lock": {
     "run_id": "run_20260818T140309Z",
     "run_started": "2026-08-18T14:03:09Z",
-    "run_completed": "2026-08-18T13:14:20Z",
-    "note": "Lock acquired for hourly run at 14:03:09Z. Prior run (run_20260818T130333Z) completed cleanly at 13:14:20Z, well outside the 45min in-flight window — proceeding normally."
+    "run_completed": "2026-08-18T14:12:00Z",
+    "note": "Quiet verification pass. All surfaces re-checked against fresh reads; every #decisions thread's latest reply matched its stored watermark exactly (0 new signals), all 11 swept project/admin channels were empty since watermark, 7 email threads triaged (all junk/automated), investor + Stormy quiet, money-hub no drops, canvas still blocked (checked earlier today), pulse carried (quiet-pass gate). 4 already-🫡-closed #decisions threads (Weedmaps, Gusto payroll, Centurion Realty, suspicious-bot-message) dropped from decisions_threads tracking now that their closes are fully recorded in Haven + #reports."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787001107.337499",
-      "C0BBZJL85RT": "1787058822.866859",
+      "C0BBZJL85RT": "1787062261.555119",
       "D0BHPKMDNEP": "1787056371.730329",
       "C0BGLEMH99T": "1787001280.999719",
       "C0BEQUW5NPP": "1786994180.000000",
@@ -31,22 +31,18 @@
       "1786832078.131649": "1786832078.131649",
       "1786713941.609669": "1786716585.591279",
       "1786986503.368599": "1786986503.368599",
-      "1786709997.432499": "1786727321.939139",
       "1786631846.014899": "1786990331.307329",
       "1786631841.945579": "1786990332.792009",
-      "1786450624.541359": "1786464593.705969",
-      "1786378053.601639": "1786389366.167799",
-      "1786824337.657789": "1786831565.789469",
       "1786990354.291129": "1786993750.159969",
       "1787001107.337499": "1787055300.092309"
     },
     "capture_dm": "1787056371.730329",
-    "gmail_after_epoch": 1787058687
+    "gmail_after_epoch": 1787061789
   },
   "integrity": {
     "last_full_pass": "2026-08-18T09:14:20-04:00",
-    "last_scan_sha": "9fafc9c7affd919598a9d549d4b8ea32599a6d34",
-    "note": "Full whole-vault pass (534 notes, today's first run). 0 repairs needed. 1 known/decided defect carried unchanged (_daily/2026-08-01.md, lossy base64, decided 8/1, not re-flagged). _system/ domain-location entries (schema.md, home.md, both maps) reconfirmed as an established exemption per the 2026-08-04 journal precedent, not a new defect. Zero new mechanical or value issues found."
+    "last_scan_sha": "0b2dc1b328b175f22b701a833f9b354d1ff52bff",
+    "note": "Incremental scan this run: 0 vault files changed since last_scan_sha (0b2dc1b, this run's own lock-acquire commit), so 0 repairs/0 new value-defects to check. Full whole-vault pass still stands from today's first run (534 notes, 0 repairs, 1 known/decided defect carried: _daily/2026-08-01.md lossy base64)."
   },
   "canvas_access": {
     "last_checked": "2026-08-18T13:14:20Z",
