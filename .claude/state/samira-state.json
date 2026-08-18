@@ -1,8 +1,8 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260818T170317Z",
-    "run_started": "2026-08-18T17:03:17Z",
+    "run_id": "run_20260818T180217Z",
+    "run_started": "2026-08-18T18:02:17Z",
     "run_completed": "2026-08-18T17:15:01Z",
     "note": "Light pass, one real development. Gmail: Kaplin Stewart (Danielle Borzor) gave a final decline on the DeWalt matter (\"unable to assist due to timing and ongoing trials,\" referred to County Lawyer Referral Service) — 7th firm/track (Siciliano, Wall, Brekke, Greenberg, Hagner & Zohlman, Kaplan/Kaplin Stewart) to end without retained counsel, first to give an explicit no rather than a routing ack. Sept 14 proof hearing now 27 days out. Not reply-worthy (Lemar had already sent case docs himself, nothing pending from Cuzzie's side) — appended a Haven Update and flagged the standing gap in the existing #decisions thread rather than opening a new card. 6 junk emails. Investor pipeline quiet, Stormy idle, money hub no drops, all 12 project/admin channels + capture DM quiet, 9 pre-existing #decisions cards/threads re-checked with 0 new signals beyond the DeWalt decline. Pulse rendered (new Haven update + #decisions flag crossed the change gate) and DM'd; one transient Drive quota error on the first create_file call, retried successfully, the failed intermediate test doc was trashed."
   },
