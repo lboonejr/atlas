@@ -3,19 +3,19 @@
   "lock": {
     "run_id": "run_20260818T160305Z",
     "run_started": "2026-08-18T16:03:05Z",
-    "run_completed": "2026-08-18T15:25:12Z",
-    "note": "Light pass. Backfilled 3 #decisions threads closed/handled by the earlier 12:0x run (run_20260818T120407Z) that never got written into decisions_threads (Jason Klein $700K ask, '3 bills need priority', corrupted 8/09 daily-log) — Jason Klein kept tracked (still open, awaiting Lemar's eventual salute), the other two dropped as closed. One real new item: Regus/IWG past-due notice escalated with a first-ever concrete 5-day deadline (~8/23) — appended to the existing active Haven note, not reposted to #decisions per established precedent on that matter. 2 junk emails. All Slack channels (11 project/admin + capture DM + #personal-finance + #investor-pipeline + #stormy) quiet. Pulse rendered (Regus note-write crossed the change gate) and DM'd."
+    "run_completed": "2026-08-18T16:29:54Z",
+    "note": "Light pass, two real developments. (1) Gmail: Kaplin Stewart (Danielle Borzor) asked Lemar to send DeWalt v. Cuzzie's case documentation ahead of the Sept 14 proof hearing — posted a new #decisions card with 3 draft-reply options (⚠️ counsel-facing), nothing sent/saved yet (awaiting Lemar's pick). (2) Investor pipeline: Dave Miesner (420 Solutions/Suite420) sent Joshua rough loan terms on the existing $250K lender thread ($250K principal, 20% annual, 36mo, 3% origination, $9,790.90/mo total, no prepay penalty after month 12) — index row moved Working→Negotiating, Haven receipt appended, posted to #investor-pipeline for Lemar's pursue/negotiate/decline call. 3 junk emails. All 13 project/admin channels + capture DM + #personal-finance + #stormy quiet; 9 pre-existing #decisions cards re-checked, 0 new reactions/replies; Stormy idle. Pulse rendered (new #decisions card + investor update crossed the change gate) and DM'd."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787001107.337499",
-      "C0BBZJL85RT": "1787066641.850329",
-      "D0BHPKMDNEP": "1787056371.730329",
+      "C0BBXA96FFV": "1787069259.543559",
+      "C0BBZJL85RT": "1787070529.739759",
+      "D0BHPKMDNEP": "1787066600.367859",
       "C0BGLEMH99T": "1787001280.999719",
       "C0BEQUW5NPP": "1786994180.000000",
       "C0BBLUA7JLX": "1786994180.000000",
       "C0BJ37SU1TL": "1786994180.000000",
-      "C0BCCUKEUQ2": "1787000964.740669",
+      "C0BCCUKEUQ2": "1787069861.387379",
       "C0BCD7U5X2B": "1786994180.000000",
       "C0BCH2C3GRM": "1786994180.000000",
       "C0BDN2KQFD4": "1786994180.000000",
@@ -35,22 +35,23 @@
       "1786631841.945579": "1786990332.792009",
       "1786990354.291129": "1786993750.159969",
       "1787001107.337499": "1787055300.092309",
-      "1786990384.507289": "1787055521.111979"
+      "1786990384.507289": "1787055521.111979",
+      "1787069259.543559": "1787069269.518069"
     },
-    "capture_dm": "1787056371.730329",
-    "gmail_after_epoch": 1787065530
+    "capture_dm": "1787066600.367859",
+    "gmail_after_epoch": 1787068950
   },
   "integrity": {
     "last_full_pass": "2026-08-18T09:14:20-04:00",
-    "last_scan_sha": "33c5943ba790ef6e8a0508a9ab66cfefdfba1d62",
-    "note": "Incremental scan this run: only this run's own commits touched haven/vault/ (the Regus Update + this daily-journal append), no other vault drift. Full whole-vault pass still stands from today's first run (534 notes, 0 repairs, 1 known/decided defect carried: _daily/2026-08-01.md lossy base64)."
+    "last_scan_sha": "e2840226a181ea3fff44c1f12a53db4af0b99fca",
+    "note": "Incremental scan this run: only prior runs' own commits (Regus Update, daily-journal appends, investor-index update, this run's own Haven receipt) touched haven/vault/, no other vault drift. Full whole-vault pass still stands from today's first run (534 notes, 0 repairs, 1 known/decided defect carried: _daily/2026-08-01.md lossy base64)."
   },
   "canvas_access": {
     "last_checked": "2026-08-18T13:14:20Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-18T11:19:00-04:00",
+    "pulse_last_rendered": "2026-08-18T12:29:00-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
