@@ -3,13 +3,13 @@
   "lock": {
     "run_id": "run_20260818T200230Z",
     "run_started": "2026-08-18T20:02:30Z",
-    "run_completed": "2026-08-18T19:09:07Z",
-    "note": "Run in progress."
+    "run_completed": "2026-08-18T20:07:36Z",
+    "note": "Quiet verification pass. Vault: 0 files changed since last_scan_sha besides the prior run's own daily-journal append, 0 repairs. No new Inbox notes; 2 pre-existing stuck notes (DIB template closeout, Google Voice domain-UNRESOLVED) unchanged. Due-notes untouched (no vault due-note changes) so calendar sync is a no-op (+0/~0/-0). All 10 open #decisions threads re-checked, every reply ts matched stored watermarks exactly, 0 new reactions/replies. Capture DM + all 12 project/admin channels + #stormy + #investor-pipeline swept, empty since watermark. Gmail: 2 threads triaged (Fresh Grow menu blast, BitX Funding cold-financing spam) — both junk, 0 reply-worthy, 0 drafts, 0 tasks. Investor pipeline quiet. Stormy idle. Money hub: no drops. Canvas: skipped (blocked, checked earlier today). Pulse: carried (quiet pass)."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787072988.466919",
-      "C0BBZJL85RT": "1787080076.742889",
+      "C0BBZJL85RT": "1787083556.264309",
       "D0BHPKMDNEP": "1787076741.289239",
       "C0BGLEMH99T": "1787073003.000000",
       "C0BEQUW5NPP": "1787073003.000000",
@@ -39,12 +39,12 @@
       "1787069259.543559": "1787072988.466919"
     },
     "capture_dm": "1787076741.289239",
-    "gmail_after_epoch": 1787080011
+    "gmail_after_epoch": 1787082999
   },
   "integrity": {
     "last_full_pass": "2026-08-18T09:14:20-04:00",
-    "last_scan_sha": "b3a1042522c669e2063960db9ce08ad04230d173",
-    "note": "Incremental scan this run: diff against last_scan_sha showed only _daily/2026-08-18.md changed (clean frontmatter, no repair needed). No new Inbox notes; 2 pre-existing stuck notes (DIB template closeout, Google Voice domain-UNRESOLVED) unchanged. Full whole-vault pass still stands from today's first run (534 notes, 0 repairs, 1 known/decided defect carried: _daily/2026-08-01.md lossy base64)."
+    "last_scan_sha": "630291458b981fbd2db275fe9692068722b062c9",
+    "note": "Incremental scan this run: diff against b3a1042522c669e2063960db9ce08ad04230d173 showed only the prior run's own _daily/2026-08-18.md append (clean, no repair needed). No new Inbox notes; 2 pre-existing stuck notes unchanged. Full whole-vault pass still stands from today's first run (534 notes, 0 repairs, 1 known/decided defect carried: _daily/2026-08-01.md lossy base64)."
   },
   "canvas_access": {
     "last_checked": "2026-08-18T13:14:20Z",
