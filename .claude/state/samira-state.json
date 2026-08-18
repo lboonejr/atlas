@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260818T140309Z",
-    "run_started": "2026-08-18T14:03:09Z",
+    "run_id": "run_20260818T150318Z",
+    "run_started": "2026-08-18T15:03:18Z",
     "run_completed": "2026-08-18T14:12:00Z",
-    "note": "Quiet verification pass. All surfaces re-checked against fresh reads; every #decisions thread's latest reply matched its stored watermark exactly (0 new signals), all 11 swept project/admin channels were empty since watermark, 7 email threads triaged (all junk/automated), investor + Stormy quiet, money-hub no drops, canvas still blocked (checked earlier today), pulse carried (quiet-pass gate). 4 already-🫡-closed #decisions threads (Weedmaps, Gusto payroll, Centurion Realty, suspicious-bot-message) dropped from decisions_threads tracking now that their closes are fully recorded in Haven + #reports."
+    "note": "Run in progress."
   },
   "watermarks": {
     "slack_channels": {
