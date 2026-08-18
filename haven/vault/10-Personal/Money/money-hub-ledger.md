@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-17T16:50:00-04:00
+updated: 2026-08-18T12:15:00-04:00
 domain: personal
 type: reference
 status: active
@@ -151,9 +151,11 @@ bills:
             due-date reminder lives on the Cuzzie's (Owners) calendar.
             PAYMENT ATTEMPTED 2026-08-17 per Lemar in #personal-finance (ts
             1786999318.129009): 'I paid for google workspace but the transaction didn't
-            process yet.' Left `status: active`/unpaid and still accruing pending
-            confirmation the charge actually clears — see open_questions. Never flip to
-            paid on an unconfirmed transaction."}
+            process yet.' CONFIRMED NOT CLEARED 2026-08-18 (#decisions ts 1787001107.337499,
+            reply 1787009888.775939): 'The charge did not clear.' Stays `status: active`/
+            unpaid, still accruing toward the 8/19 due date and still suspension-risk if
+            not resolved by 8/20 — Lemar carries the actual re-attempt himself, Samira
+            cannot retry billing."}
   - {id: student-loans, name: Student loans, amount: 500, cadence: monthly, day: 16,
      track: queue, status: active, calendar_event_id: eo3u9f3dm97hc987tvvkcblaig,
      note: "~$8,000 remaining. DATED 2026-08-15 per Lemar in #personal-finance
@@ -2825,7 +2827,7 @@ open_questions:
   - "Income backlog: Lemar is posting ~2 weeks of DoorDash earnings to #personal-finance (2026-08-10). Until they land, income_target_weekly $500 is a guess and the overload check can't run."
   - "RESOLVED 2026-08-14: Lemar confirmed (#decisions ts 1786712349.341559) these ARE two separate $500 obligations from the same breakdown — a friend-funded tow ($500, tow-truck-repay, due 9/15) and a mechanic repair he'll repay 'down the road' with no date yet (mechanic-repair-repay, undated). Both now carry their own line; see the UNDATED bullet above for the second."
   - "NEW 2026-08-14: Lemar confirmed his new Station weekend job (#decisions ts 1786710731.810909) — $12/hour, ~23 hrs/week, security desk. No paycheck/earnings figure reported yet under this job; log actual pay via #personal-finance once it starts landing, same as DoorDash. Not the same thing as the 'Station travel $50/wk' expense line above (that's his travel cost, not this income)."
-  - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Lemar says he 'paid for google workspace but the transaction didn't process yet' — the cuzzies-google-workspace $85 bill (due 8/19) is left active/unpaid pending confirmation. #decisions parent raised asking whether the charge actually cleared so this can be flipped to paid (and its accrual retired) or left as-is."
+  - "RESOLVED 2026-08-18 (#decisions ts 1787001107.337499, Lemar reply 1787009888.775939): 'The charge did not clear.' cuzzies-google-workspace $85 (due 8/19) confirmed still unpaid — stays `status: active`, still accruing. Suspension risk (all cuzziesnj.com Workspace services, incl. lemar@cuzziesnj.com email, per the 8/20 deadline) is unchanged; Lemar owns the re-attempt, not logged here as resolved-to-paid."
   - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Lemar was unexpectedly charged $119 by Edge Fitness for personal training and is disputing it with SoFi. Already happened (not a future dated line) so nothing was added to `bills` — no due date exists to queue and inventing one would violate the never-invent-a-date rule. #decisions parent raised asking how he wants this reflected once the dispute resolves (refunded → no entry needed; upheld → a dated personal expense/loss line, his call). No income reported today."
   - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Set-Aside (SoFi Checking) balance reported at $13.00 as_of 2026-08-17 — first balance ever reported for this pocket since the Era connector retired 2026-08-10. Very low against the ~$380/day accrual target; flagged on the dashboard, not smoothed or explained away."
 ```
