@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260818T210357Z",
-    "run_started": "2026-08-18T21:03:57Z",
+    "run_id": "run_20260818T220337Z",
+    "run_started": "2026-08-18T22:03:37Z",
     "run_completed": "2026-08-18T21:07:52Z",
-    "note": "Quiet verification pass, 3rd consecutive quiet hour. Vault: 0 files changed since last_scan_sha besides prior runs' own daily-journal appends, 0 repairs. No new Inbox notes; 2 pre-existing stuck notes (DIB template closeout, Google Voice domain-UNRESOLVED) unchanged. Due-notes untouched so calendar sync is a no-op (+0/~0/-0). All 10 open #decisions threads re-checked, every reply ts matched stored watermarks exactly, 0 new reactions/replies. Capture DM + all 12 project/admin channels + #stormy + #investor-pipeline swept, empty since watermark. Gmail: 4 threads returned, 1 already seen; 3 newly triaged (Sussex Cultivation menu, First Insurance Funding auto-ack, Microsoft Store promo) — all junk, 0 reply-worthy, 0 drafts, 0 tasks. Investor pipeline quiet. Stormy idle. Money hub: no drops. Canvas: skipped (blocked, checked earlier today). Pulse: carried (quiet pass)."
+    "note": "In flight."
   },
   "watermarks": {
     "slack_channels": {
