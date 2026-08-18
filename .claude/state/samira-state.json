@@ -3,13 +3,13 @@
   "lock": {
     "run_id": "run_20260818T150318Z",
     "run_started": "2026-08-18T15:03:18Z",
-    "run_completed": "2026-08-18T14:12:00Z",
-    "note": "Run in progress."
+    "run_completed": "2026-08-18T15:25:12Z",
+    "note": "Light pass. Backfilled 3 #decisions threads closed/handled by the earlier 12:0x run (run_20260818T120407Z) that never got written into decisions_threads (Jason Klein $700K ask, '3 bills need priority', corrupted 8/09 daily-log) — Jason Klein kept tracked (still open, awaiting Lemar's eventual salute), the other two dropped as closed. One real new item: Regus/IWG past-due notice escalated with a first-ever concrete 5-day deadline (~8/23) — appended to the existing active Haven note, not reposted to #decisions per established precedent on that matter. 2 junk emails. All Slack channels (11 project/admin + capture DM + #personal-finance + #investor-pipeline + #stormy) quiet. Pulse rendered (Regus note-write crossed the change gate) and DM'd."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787001107.337499",
-      "C0BBZJL85RT": "1787062261.555119",
+      "C0BBZJL85RT": "1787066641.850329",
       "D0BHPKMDNEP": "1787056371.730329",
       "C0BGLEMH99T": "1787001280.999719",
       "C0BEQUW5NPP": "1786994180.000000",
@@ -34,22 +34,23 @@
       "1786631846.014899": "1786990331.307329",
       "1786631841.945579": "1786990332.792009",
       "1786990354.291129": "1786993750.159969",
-      "1787001107.337499": "1787055300.092309"
+      "1787001107.337499": "1787055300.092309",
+      "1786990384.507289": "1787055521.111979"
     },
     "capture_dm": "1787056371.730329",
-    "gmail_after_epoch": 1787061789
+    "gmail_after_epoch": 1787065530
   },
   "integrity": {
     "last_full_pass": "2026-08-18T09:14:20-04:00",
-    "last_scan_sha": "0b2dc1b328b175f22b701a833f9b354d1ff52bff",
-    "note": "Incremental scan this run: 0 vault files changed since last_scan_sha (0b2dc1b, this run's own lock-acquire commit), so 0 repairs/0 new value-defects to check. Full whole-vault pass still stands from today's first run (534 notes, 0 repairs, 1 known/decided defect carried: _daily/2026-08-01.md lossy base64)."
+    "last_scan_sha": "33c5943ba790ef6e8a0508a9ab66cfefdfba1d62",
+    "note": "Incremental scan this run: only this run's own commits touched haven/vault/ (the Regus Update + this daily-journal append), no other vault drift. Full whole-vault pass still stands from today's first run (534 notes, 0 repairs, 1 known/decided defect carried: _daily/2026-08-01.md lossy base64)."
   },
   "canvas_access": {
     "last_checked": "2026-08-18T13:14:20Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-18T08:32:51-04:00",
+    "pulse_last_rendered": "2026-08-18T11:19:00-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
