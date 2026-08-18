@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260818T180217Z",
-    "run_started": "2026-08-18T18:02:17Z",
+    "run_id": "run_20260818T190301Z",
+    "run_started": "2026-08-18T19:03:01Z",
     "run_completed": "2026-08-18T18:14:53Z",
-    "note": "Light pass, corroborating signal + new investor pickup. Gmail: 9 threads — 5 junk (2x Hillview/Ares vendor menus, Tivly financing spam, Fernway newsletter, iSeeCars alert), 2 NJ Tax Portal notices (Return Filed/Return Posted, confirmation FR1101149404, period end 2023-09-30) folded as a corroborating Update into the existing NJ annual-report revocation note rather than a new #decisions card, 1 investor handoff (Strike Partners/David Kram dealflow broker fwd'd by Joshua — new investor index row + #investor-pipeline flag posted). 420 Solutions row updated: Lemar personally forwarded the lender-package thread to Donte Bronaugh, self-managed, nothing drafted by Samira. All 12 project/admin channels + capture DM swept, empty since watermark. 10 pre-existing #decisions cards/threads re-checked (including all thread-reply ts against decisions_threads), 0 new reactions/replies beyond already-known ones. Investor pipeline: 2 updates. Stormy idle. Money hub: no drops. Canvas: skipped (blocked, checked earlier today). Pulse rendered (NJ Update + investor changes crossed the change gate) and DM'd to the capture DM."
+    "note": "Run in progress."
   },
   "watermarks": {
     "slack_channels": {
