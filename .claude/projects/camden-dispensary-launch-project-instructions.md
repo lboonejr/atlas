@@ -136,6 +136,19 @@ cleared to open. The engagement ends here.
 
 ## 8. The loop, bound to this engagement
 
+### 8.0 Name it first
+Skill section 1.1 governs, with one addition for this engagement: lead the name with the phase
+so the thread's place in the arc is visible without opening it.
+
+```
+📌 P02 Security plan
+```
+
+Three to seven words after the phase tag, the thing rather than the verb, no dates and no
+status words. That same name is the Haven note title, the PT card title, the pt slug, and the
+file name's `[what it is]` per section 6. One name, every surface, so a thread reopened next
+week says what it is before he reads a word of it.
+
 ### 8.1 What trips it
 Any engagement artifact a thread produces: a Position Report section, an SOP, a security
 plan, an endorsement package, a deficiency response, a mock inspection checklist, a client

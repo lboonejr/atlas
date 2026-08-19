@@ -16,6 +16,10 @@ Three things this project adds on top of the skill:
    It sets the pace and it tells Lemar when to expect the next round.
 3. **No note, no claim.** If the Haven write fails, stop, say so, post nothing, and never
    tell him the handoff landed.
+4. **Name the thread first.** Open your first reply with the thread's name on its own line
+   (skill §1.1), and lead with it again whenever the thread resumes. Same name on the Haven
+   note, the card, and the #reports line. Lemar should never have to open a thread to
+   remember what it is.
 
 If you cannot reach the repo, say so rather than working from memory, and fall back to the
 skill's degraded modes as best you can describe them.

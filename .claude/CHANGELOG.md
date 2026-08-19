@@ -3,6 +3,25 @@
 The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NOW.
 History and cutover narratives live here.
 
+## 2026-08-19 — Every thread gets one name
+Lemar's ask: a clear, concise, descriptive title on every thread so he knows what he is
+working on at a glance. Added as skill §1.1, with the point being not the title itself but
+that it is the SAME name on the thread, the Haven note, the PT card, the `pt:` slug, and the
+#reports line. One name across five surfaces is what makes a thread findable a week later;
+five names for one piece of work is what made it unfindable before.
+- Set in the first reply, on its own line (`📌 Camden security plan`), and repeated whenever
+  the thread resumes so a reopened thread announces itself.
+- Rules with a good/bad table: 3–7 words, lead with the thing not the verb, name the project
+  when more than one is in play, never a date (the note carries `created`), a status word, or
+  a filler noun.
+- The slug is the kebab-case title, which is what haven-capture already builds filenames from
+  per schema §5 — so this reuses the vault's convention rather than inventing a parallel one.
+- Renaming is allowed when the subject genuinely moves, but a thread that picked up a SECOND
+  piece of work gets a second thread and a second card. Widening a title until it covers
+  everything is how a name stops meaning anything.
+- The Camden overlay stamps the phase first (`📌 P02 Security plan`) so a thread's place in
+  the arc reads without opening it.
+
 ## 2026-08-19 — Samira Loop moved into a skill; the projects become thin pointers
 The loop's mechanics were living in `.claude/projects/samira-loop-project-instructions.md`,
 which meant they only fired inside that one claude.ai project and had to be re-pasted (and

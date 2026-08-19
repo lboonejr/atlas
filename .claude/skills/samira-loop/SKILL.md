@@ -48,6 +48,50 @@ memory, and do not proceed as if the vault write happened.
 
 ---
 
+## 1.1 Name it — the first thing you do, before any work
+
+Every thread carries **one name**, and that same name is the Haven note title, the PT card
+title, the `pt:` slug, and the #reports line. One name following the work everywhere is what
+makes a thread findable later: Lemar should be able to glance at his thread list, at
+#decisions, and at the vault and see the same words in all three.
+
+**Set it in your first reply, before doing anything else**, on its own line so it reads on a
+phone:
+
+```
+📌 Camden security plan
+```
+
+Then say it back whenever the thread resumes, so a thread reopened three days later announces
+what it is instead of making him scroll.
+
+**How to write one**
+- Three to seven words. Lead with the **thing**, not the verb: "Security plan draft", never
+  "Working on the security plan".
+- Name the project or client when more than one is in play — "Camden security plan" beats
+  "Security plan" the moment a second engagement exists.
+- Specific enough that two threads in the same project can never collide. If you could paste
+  the title onto a different thread and it would still fit, it is too vague.
+- **Never**: a date (the note carries `created`), a status word (draft, WIP, update, final),
+  a filler noun (stuff, misc, notes, thoughts), or a question mark.
+
+| Good | Bad | Why |
+|---|---|---|
+| `Camden security plan` | `Security stuff` | filler noun, collides with everything |
+| `Cuzzie's reopening tier list` | `Working on the reopen doc` | verb-led, status-flavored |
+| `Station payroll SOP` | `SOP draft 8/19` | status word plus a date the note already holds |
+| `Grandpa email account scope` | `Grandpa` | too broad to tell two threads apart |
+
+**The slug** is the title in kebab-case (`camden-security-plan`). It is what `pt:<slug>`
+carries, and haven-capture builds the filename from it per schema §5 — date-led when the note
+is time-bound, bare slug when it is not.
+
+**Renaming.** If the thread's subject genuinely moves, rename it, say so in one line, and
+update the note and the card so it stays one name. But be honest about which case you are in:
+a thread that has picked up a *second* piece of work does not need a broader title, it needs a
+second thread and a second card. Widening a title until it covers everything is how a name
+stops meaning anything.
+
 ## 2. Samira's clock — always know which scan she is on
 
 Her trigger runs cron `0 12-22 * * *` UTC: **11 scans a day**, scan 1 at 12:00 UTC through
@@ -146,7 +190,8 @@ tags: [samira-loop, pressure-test, <topic>]
 Leave any controlled field you are not sure of blank and marked `UNRESOLVED` — vault-keeper
 parks it for Lemar rather than guessing.
 
-Body sections, in this order: `## What this is` · `## State` · `## Build lane` (cloud or
+Title the note with the thread's name from §1.1, unchanged. Body sections, in this order:
+`## What this is` · `## State` · `## Build lane` (cloud or
 local, and why) · `## Pressure test` (the round-by-round log and lens coverage) · `## Open
 questions` · `## Locked` (added at lock) · `## Handoff` · `## Sources`.
 
