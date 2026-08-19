@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T00:10-04:00
-updated: 2026-08-19T00:10-04:00
+updated: 2026-08-19T09:40:00-04:00
 domain: project
 type: brief
 status: awaiting-decision
@@ -128,9 +128,52 @@ carrying the form link goes to 01 Client-Facing, Phase 00, Intake. Nothing is su
 
 gates 6/6.
 
+Round 1 answered, 2026-08-19T09:40:00-04:00 ET, in-thread reply from Lemar (no
+reactions used, read as a plain answer per the loop's signal rule):
+
+- Q1 — after signing, not with the proposal. He also raised a new small item: a
+  welcome email that attaches the Jotform link, to go out at signing. Not part of
+  this build; logged below as a new open item rather than reopening the lens.
+- Q2 — live with one master form. This group is small, so the per-principal split
+  is not warranted for round one.
+- Q3 — hold the form until the Drive integration is confirmed. He asked for the
+  Chrome run to be sent to #camden-launch so he can run it. Sent 2026-08-19
+  09:36 ET (task:camden-intake-system, phase:00, from the register).
+- Q4 — 24 hours max to come back with open items after a submission. This is now
+  a stated commitment to the group, not just prose on the thank-you page — carried
+  into round 2's fit lens rather than assumed clean.
+
+Round 2, written 2026-08-19T09:40:00-04:00 ET. Lens coverage after this round:
+gaps, accuracy, edge, and fit posed. lenses 4/8 answered + 4/8 posed = 8/8 once
+this round closes.
+
+Q5 — Accuracy. The 24-hour commitment: does the clock start when the submission
+lands, or when someone finishes reading it field by field? The register's own
+read-through is a manual step, and a submission that lands Friday evening tests
+whether weekends count. Worth confirming the clock start and whether it is
+business hours or calendar hours before this goes on a thank-you page or a
+welcome email.
+
+Q6 — Gaps. The form does not ask whether the property carries any existing City
+violations, liens, or code enforcement actions. An inspector or the City surfaces
+this eventually regardless. Add a direct question to the form, or leave it to the
+register's browser permit-portal check (item 10) to catch on the public record?
+
+Q7 — Edge. Before the after-signing send, pre-filling what is already public
+record — entity standing, zoning district — so the group only confirms or
+corrects rather than researching from scratch, would cut round-trip time and
+signal the homework is already done. Worth building that pre-fill pass before
+this goes out, or is one master blank form the simpler and equally defensible
+choice?
+
+Q8 — Fit. The 24-hour turnaround is now a standing commitment to an outside
+party. Does it belong logged in `chase-commitments` so it is tracked as a
+promise rather than living only in this note and a thank-you page?
+
 ## Open questions
 
-The four above, posted as threaded replies on the card in #decisions.
+Round 1's four, answered above. Round 2's four (Q5-Q8), posted as threaded
+replies on the card in #decisions, open.
 
 ## Locked
 
@@ -147,6 +190,10 @@ and permit record checks. Run blocks are in the register.
 
 Cloud, once a submission lands: read it field by field, write the gap list into the
 register, update this note, advance the card, and draft the Working Log text.
+
+Cloud, new from round 1 (2026-08-19): draft a welcome email that attaches the
+Jotform link, to go out at signing per Lemar's Q1 answer. Not yet built — this is
+a new open item, not part of the intake build itself.
 
 ## Working Log entry
 
