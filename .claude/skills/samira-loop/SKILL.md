@@ -152,7 +152,7 @@ questions` · `## Locked` (added at lock) · `## Handoff` · `## Sources`.
 
 ---
 
-## 5. Build it — the two lanes
+## 5. Build it — the three lanes
 
 ### CLOUD — hand it to Samira
 Post to the matched channel, top-level, un-reacted, 🌐-led, with a fenced prompt her PART C
