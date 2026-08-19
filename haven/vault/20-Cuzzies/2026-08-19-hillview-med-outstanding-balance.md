@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T13:10:00-04:00
-updated: 2026-08-19T14:04-04:00
+updated: 2026-08-19T14:16-04:00
 domain: cuzzies
 type: task
 status: active
@@ -34,3 +34,10 @@ sit with the rest of the Off Button wind-down tracking).
   Required", David Alston, 2026-08-19 16:47 UTC)
 - haven: `haven/vault/40-Projects/on-button-reopen/index.md` (existing tracking, id
   `hillview-med`)
+
+## Update — 2026-08-19T14:16-04:00
+Lemar picked Option A (disclose the closure, ask for a payment arrangement) via ✅ in
+#decisions. Reply drafted in his voice, saved to Gmail Drafts (threaded on the original
+message, to David@hillviewmed.com, cc Beverly@hillviewmed.com) — NOT sent. Thread
+labeled `Samira/drafted`. Awaiting his 🫡 in #decisions to close, or he can edit/send the
+draft himself.
