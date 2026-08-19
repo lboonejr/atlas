@@ -3,6 +3,30 @@
 The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NOW.
 History and cutover narratives live here.
 
+## 2026-08-19 — Samira Loop: the thread-to-build lane (PART R)
+Lemar's ask: nothing built in a Claude thread should die in the thread. Whatever a thread
+produces either goes to Samira to build in the cloud, or gets built in the thread with
+Samira as PM — and either way it gets pressure-tested across the day's remaining scans
+before it counts as done. Delivered as one spec plus its scan-side loop:
+- **`.claude/projects/samira-loop-project-instructions.md` (new)** — the custom
+  instructions for the claude.ai project "Samira's Loop," and the same file Samira reads
+  at PART R. Covers the cadence math (which of the day's 11 scans she is on, read from
+  `lock.run_id`, and how batch size follows from scans-left), the cloud-vs-local lane
+  call, capture-first framing for the note, the 🧪 PT card format, the eight-lens
+  instrument (premise · reader · accuracy · gaps · failure modes · edge · execution ·
+  fit), closeout in both lanes, the #reports line, the safety floor, and degraded modes.
+- **`.claude/routines/samira-build-loop.md` (new)** — PART R's operational detail: find
+  open PT cards, one round per card per scan, note-before-post, 3-card cap, lock and
+  finish, two-day rule, digest token.
+- **Runbook** — run order becomes `… → Q → R → H → M → …`; PART R section added; **PART A
+  now skips any parent containing `🧪 PT`** so a card is never executed by two PARTs in
+  one scan; PART R's token added to the digest tallies.
+- **No new state key** — PT cards are #decisions cards and reuse `decisions_threads`.
+- **One correction to the original framing:** #reports stays one-way. It gets a line on
+  every state change because that is the record Lemar reads, but it is not how Samira
+  stays current between scans — the Haven note, the #decisions card, and the state file
+  are. The instructions say so explicitly so the mental model matches the machine.
+
 ## 2026-08-15 — Routine-efficiency overhaul (run lock, watermarks, integrity cadence, dead-weight removal)
 Lemar asked for a review of where Samira's hourly routine wastes work; the July–August
 `_daily` journals supplied the evidence (ten passes on 8/14 alone). Changes, in one PR:

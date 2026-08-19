@@ -75,8 +75,8 @@ Lemar" in #decisions.
 
 ## Run order
 
-0 (lock + watermarks) → V → S → A → B → C (incl. former G) → D → E → Q → H → M (money) →
-canvas refresh (conditional) → P (Pulse) → digest (+ _daily append + state write).
+0 (lock + watermarks) → V → S → A → B → C (incl. former G) → D → E → Q → R → H → M (money)
+→ canvas refresh (conditional) → P (Pulse) → digest (+ _daily append + state write).
 
 ---
 
@@ -129,6 +129,8 @@ PART V. It projects every `due` note onto the reminder calendar (create/update/r
 vault always wins), writes `calendar_event_id` back, and returns `+A · ~B · -C`.
 
 ### PART A — act on Lemar's reactions in #decisions
+**Skip every parent whose first line contains `🧪 PT`** — those are Samira Loop cards, worked
+only in PART R, and executing one here would double-run it.
 Read #decisions from the state file's channel watermark: every OPEN card you posted (no
 🫡, no "Done ✅ — closed" reply of yours), its thread, and reactions on the parent AND
 option replies. For each open card ALSO compare the thread's latest reply `ts` against
@@ -242,6 +244,21 @@ journal since early August recorded "PART G: covered inside PART C's sweep," so 
 spec now matches practice; the channels are no longer read twice. Slot kept as a
 tombstone (like PART F) so historical references stay correct.
 
+### PART R — the Samira Loop (build + pressure-test)
+Invoke the **build loop** (`.claude/routines/samira-build-loop.md`) against the open
+**🧪 PT cards** in #decisions. Threads in Lemar's "Samira's Loop" Claude project land what
+they build as a Haven note plus one PT card; each scan you advance every open card ONE
+round of the eight-lens pressure test (note first, then the questions), lock it when the
+questions run out or he 🫡s, then finish the lane — a cloud build staged as a `run:admin-3x`
+prompt for PART C (buffer applies) or executed directly when small and safe, a local build
+handed back as a self-contained `run:manual` prompt with Samira as PM (one status check a
+day, max, in-thread, never a new card). The full spec — lanes, card format, the eight
+lenses, the reaction reading, closeout, and the #reports lines — lives in
+`.claude/projects/samira-loop-project-instructions.md`; read it once per run before working
+a card. Cap: 3 cards get a round per scan, oldest first; the rest carry. PT cards reuse the
+`decisions_threads` watermarks — no new state key. Outcomes ALWAYS via
+**samira-report-result**. Returns `pt: <slug> r3 5/8 · <slug> locked · N carried` or `pt —`.
+
 ### PART H — skill candidates
 When a PART C task ran "no skill — direct" for the 3rd time in the same shape, post ONE
 candidate proposal to #skills-lab (what recurs, inputs/outputs, rough starter prompt).
@@ -313,7 +330,8 @@ Via **samira-report-result** Mode 3:
    · `🧵 Standing list → Open Items canvas`
    (Full tallies: filed/stuck, rang, decisions handled H, captures G, staged L, ran Y,
    done Z, failed Fl, parked P, deferred D; email E/R/Cl/T; investor + Stormy counts;
-   junk J; PART M's token: `money ✓ …` or `money —`; plus PART P's one token: `pulse ✅`
+   junk J; PART R's token: `pt: …` or `pt —`; PART M's token: `money ✓ …` or `money —`;
+   plus PART P's one token: `pulse ✅`
    or `pulse ⚠️ <reason>`.
    Stuck notes surface ONLY via the batched #decisions card, never line-by-line here.)
 2. APPEND the same digest block to `haven/vault/_daily/YYYY-MM-DD.md` (create the day's

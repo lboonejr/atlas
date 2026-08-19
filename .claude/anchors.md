@@ -207,6 +207,28 @@ documented in the runbook, the PART Q entry, and the skill's runtime banner.
 | Setup status | **Live-ready 2026-07-17:** #stormy created (`C0BJ37SU1TL`), Samira bot invited + confirmed in-channel. Remaining: one supervised PART Q run per `stormy-ideation.md`'s "First supervised run" (drop a seed idea in #stormy, watch one Samira scan bake it). |
 | Persona | lead `🌩️`, sign "— Stormy" (placeholder name, rename-able like "Dawn"/"Basil") |
 
+## Samira Loop — build + pressure-test (folded into Samira's run as PART R)
+
+Lemar's thread-to-build lane, added 2026-08-19. Anything a Claude thread produces (idea,
+doc, deck, spec, page, code) is landed as a Haven note and opened as a **🧪 PT card** in
+#decisions; Samira advances that card ONE round of an eight-lens pressure test per scan
+until it locks, then either builds it in the cloud or hands Lemar a run-ready `run:manual`
+prompt for his machine and runs PM on it. Different lane from Stormy (no-deadline ideas,
+#stormy, never executes) and from Atlas Gear 1 (capture and develop): this one is the
+same-day build lane.
+
+| What | Value |
+|---|---|
+| Runs as | **PART R of Samira** — no trigger, env, bot, or connector of its own. Uses Samira's trigger `trig_01VGzAWGSadjRbJbKURxCYvG` and cadence (`0 12-22 * * *` UTC, 11 scans a day, 8a–6p ET). |
+| Project instructions (the spec) | `.claude/projects/samira-loop-project-instructions.md` — pasted into the claude.ai project "Samira's Loop" as its custom instructions, and read by Samira at PART R. One file governs both halves. |
+| Behavior file (PART R detail) | `.claude/routines/samira-build-loop.md` — invoked at PART R. Editing on `main` changes the next run. |
+| Surfaces | **#decisions `C0BBXA96FFV`** (the PT cards + every question — the only channel that pings him) · **#reports `C0BBZJL85RT`** (one line per state change, one-way) · the item's own project channel (cloud builds staged there as `run:admin-3x` for PART C) · Haven (the durable record). |
+| Card marker | Parent's first line contains `🧪 PT ·`; last line of the parent is the control line `pt:<slug> · note:<path> · lane:<cloud\|local> · lenses:k/8`. **PART A skips any parent containing `🧪 PT`** so a card is never worked by two PARTs in one scan. |
+| State | Reuses the existing `decisions_threads` watermarks in `.claude/state/samira-state.json` — **no new state key**. |
+| Reactions | The standard engine, unchanged: ✅ agree · 👀 seen (carry, never re-ask) · ⛔ drop that line · 🫡 on the parent = lock it and build. Samira sets only the headline (🟡 baking · 🔴 needed today · 🟢 build ready · ⏳ waiting). |
+| Cap | 3 cards get a round per scan, oldest first; the rest carry and the digest says so. |
+| Digest token | `pt: <slug> r3 5/8 · <slug> locked · N carried` or `pt —`. |
+
 ## Pulse dashboard (rendered by Samira — no separate trigger)
 
 Lemar's living one-page personal dashboard. Rendered at the END of every hourly Samira
