@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260819T180224Z",
     "run_started": "2026-08-19T18:02:24Z",
-    "run_completed": "2026-08-19T17:20:00Z",
-    "note": "In flight — acquired 18:02:24Z, prior run completed cleanly at 17:20:00Z."
+    "run_completed": "2026-08-19T18:24:19Z",
+    "note": "Complete. Filed Hillview Med (vault-keeper), executed Lemar's Hillview Med Option A pick (Gmail draft saved), swept 13 project channels (all quiet), triaged 4 email threads, advanced Camden Launch PT card p00-advisory-proposal-package to round 2 (8/8 lenses posed), rendered Pulse."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787159746.599809",
-      "C0BBZJL85RT": "1787159985.636429",
+      "C0BBZJL85RT": "1787163793.881519",
       "D0BHPKMDNEP": "1787159924.834629",
-      "C0BGLEMH99T": "1787148900.000000",
-      "C0BEQUW5NPP": "1787148900.000000",
-      "C0BBLUA7JLX": "1787148900.000000",
-      "C0BJ37SU1TL": "1787148900.000000",
-      "C0BCCUKEUQ2": "1787148900.000000",
-      "C0BCD7U5X2B": "1787148900.000000",
-      "C0BCH2C3GRM": "1787148900.000000",
-      "C0BDN2KQFD4": "1787148900.000000",
-      "C0BD8LTM1EK": "1787148900.000000",
-      "C0BGYM1UB4Y": "1787148900.000000",
-      "C0BGCAK0ML3": "1787148900.000000",
-      "C0BHXTPST52": "1787148900.000000",
-      "C0BC2A94142": "1787148900.000000",
-      "C0BBZ5J8805": "1787148900.000000",
-      "C0BRZT2V89W": "1787156572.068829"
+      "C0BGLEMH99T": "1787163770.000000",
+      "C0BEQUW5NPP": "1787163770.000000",
+      "C0BBLUA7JLX": "1787163770.000000",
+      "C0BJ37SU1TL": "1787163770.000000",
+      "C0BCCUKEUQ2": "1787163770.000000",
+      "C0BCD7U5X2B": "1787163770.000000",
+      "C0BCH2C3GRM": "1787163770.000000",
+      "C0BDN2KQFD4": "1787163770.000000",
+      "C0BD8LTM1EK": "1787163770.000000",
+      "C0BGYM1UB4Y": "1787163770.000000",
+      "C0BGCAK0ML3": "1787163770.000000",
+      "C0BHXTPST52": "1787163770.000000",
+      "C0BC2A94142": "1787163770.000000",
+      "C0BBZ5J8805": "1787163770.000000",
+      "C0BRZT2V89W": "1787163770.000000"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
@@ -40,24 +40,24 @@
       "1787069259.543559": "1787145016.517439",
       "1787112734.344369": "1787148659.182229",
       "1787152085.518979": "1787159332.480679",
-      "1787159607.185319": "1787159620.896369",
+      "1787159607.185319": "1787162996.829679",
       "1787155581.357669": "1787155620.300329",
-      "1787157130.471099": "1787159746.599809"
+      "1787157130.471099": "1787163453.430099"
     },
     "capture_dm": "1787159924.834629",
-    "gmail_after_epoch": 1787159157
+    "gmail_after_epoch": 1787163770
   },
   "integrity": {
     "last_full_pass": "2026-08-19T09:15:00-04:00",
-    "last_scan_sha": "0076599d26e2c65d1fb5ff44c1d5f2364a4a76b7",
-    "note": "Changed-since-SHA check only this run. Two files changed since prior scan SHA (both Camden Launch, neither carries `due`): 2026-08-19-p00-advisory-proposal-package.md (valid) and ops-admin-lane-and-ariana.md (missing created/updated entirely, filed outside the Inbox — flagged, not repaired, not previously known). Inbox unchanged: same 2 known stuck notes, 0 new."
+    "last_scan_sha": "8725a08c999ebf65a228cf8bddd7b84c51b363f0",
+    "note": "Changed-since-SHA check this run (against prior last_scan_sha 0076599): 1 vault file changed (2026-08-19-p00-advisory-proposal-package.md), valid frontmatter, no repair needed. Inbox: 1 new file-ready note (hillview-med) filed; same 2 known stuck notes unchanged, 0 new stuck."
   },
   "canvas_access": {
     "last_checked": "2026-08-18T13:14:20Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-19T13:20:00-04:00",
+    "pulse_last_rendered": "2026-08-19T14:15:00-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
