@@ -8,7 +8,7 @@ description: >
   builds it in the cloud, hands Lemar a Chrome run block for anything behind a login, or
   hands him a run-ready prompt for his machine. The full spec
   — lanes, card format, the eight lenses, closeout, #reports lines — lives in
-  `.claude/projects/samira-loop-project-instructions.md`; this file is the loop's
+  the **samira-loop** skill (`.claude/skills/samira-loop/SKILL.md`); this file is the loop's
   operational detail. All platform IDs live in `.claude/anchors.md`.
 ---
 
@@ -18,10 +18,11 @@ Lemar works in threads. Whatever a thread produces gets landed as a Haven note a
 as a **🧪 PT card** in #decisions; your job at PART R is to move every open PT card one
 round forward each scan until it locks, then finish it.
 
-**Read the project instructions file once per run before working any card:**
-`.claude/projects/samira-loop-project-instructions.md`. Sections 2 (cadence), 6 (the card,
-the eight lenses, the signals), 7 (closeout), and 8 (#reports) govern; do not restate or
-re-derive them here.
+**Invoke the samira-loop skill once per run before working any card**
+(`.claude/skills/samira-loop/SKILL.md`). Its sections 2 (cadence), 6 (the card, the eight
+lenses, the signals), 7 (closeout), and 8 (#reports) govern; do not restate or re-derive them
+here. The thin project rulebooks that live in `.claude/projects/` point at the same skill, so
+a thread and a scan are always working from one text.
 
 Different lane from Stormy: **Stormy bakes no-deadline ideas in #stormy and never
 executes.** This loop is the right-now lane — same-day pressure test, then a real build.
@@ -56,7 +57,7 @@ from being executed twice by two PARTs in the same scan.
    (`pt:<slug> · note:<path> · lane:<cloud|browser|local> · lenses:k/8`) for state. If the control
    line is missing or unparseable, rebuild it from the Haven note — the note is truth, the
    card is a rendering.
-2. **Compute the cadence** (project instructions §2): which scan of 11 this is and how many
+2. **Compute the cadence** (the skill's §2): which scan of 11 this is and how many
    are left today. It sets the batch size and whether you compress to close today.
 3. **Cap the work.** At most **three** active PT cards get a round in one scan, oldest
    first. Any beyond that carry, and the digest says so — a scan that half-answers six
@@ -73,7 +74,7 @@ from being executed twice by two PARTs in the same scan.
      together, each with its one-line "why", as numbered replies under the parent. Refresh
      the parent's control line (`lenses:k/8`, `round N`) and its headline emoji.
    - **Or lock it** when all eight lenses are covered with nothing unanswered, or he 🫡'd.
-5. **Closeout** per project instructions §7 — three lanes, not two: **cloud** builds get
+5. **Closeout** per the skill's §7 — three lanes, not two: **cloud** builds get
    staged (buffer: never run in the scan they were staged) or executed directly when small
    and safe; **browser** items get the `CHROME RUN` block (Lemar drives Chrome, and it never
    submits, pays, sends, or clicks a binding button); **local** items get the `run:manual`
@@ -89,7 +90,7 @@ from being executed twice by two PARTs in the same scan.
 
 ## New work arriving from a thread
 A thread that had GitHub access has already written the note and opened the card — you just
-pick it up in step 1. A thread in a degraded mode (project instructions §10) drops its
+pick it up in step 1. A thread in a degraded mode (the skill's §10) drops its
 summary in the **Samira capture DM** instead; that is **PART B's** job, not yours. When
 PART B develops a capture tagged `samira-loop` / `pressure-test`, it opens the PT card and
 this loop takes it from the next scan.

@@ -220,7 +220,8 @@ same-day build lane.
 | What | Value |
 |---|---|
 | Runs as | **PART R of Samira** — no trigger, env, bot, or connector of its own. Uses Samira's trigger `trig_01VGzAWGSadjRbJbKURxCYvG` and cadence (`0 12-22 * * *` UTC, 11 scans a day, 8a–6p ET). |
-| Project instructions (the spec) | `.claude/projects/samira-loop-project-instructions.md` — pasted into the claude.ai project "Samira's Loop" as its custom instructions, and read by Samira at PART R. One file governs both halves. |
+| The spec (one file, both halves) | **`.claude/skills/samira-loop/SKILL.md`** — the whole rulebook: cadence, lanes, capture-first, the PT card, the eight lenses, signals, closeout, reports, safety, degraded modes. A live thread invokes it when it builds something; Samira invokes it at PART R. |
+| Project rulebooks (thin pointers) | `.claude/projects/samira-loop-project-instructions.md` (pasted into the claude.ai project "Samira's Loop") and `.claude/projects/camden-dispensary-launch-project-instructions.md`. Each is a short always-on wrapper that names the skill — the mechanics live in the skill and are never duplicated into a project box. Moved out of the projects file 2026-08-19, see CHANGELOG. |
 | Behavior file (PART R detail) | `.claude/routines/samira-build-loop.md` — invoked at PART R. Editing on `main` changes the next run. |
 | Surfaces | **#decisions `C0BBXA96FFV`** (the PT cards + every question — the only channel that pings him) · **#reports `C0BBZJL85RT`** (one line per state change, one-way) · the item's own project channel (cloud builds staged there as `run:admin-3x` for PART C) · Haven (the durable record). |
 | Card marker | Parent's first line contains `🧪 PT ·`; last line of the parent is the control line `pt:<slug> · note:<path> · lane:<cloud\|local> · lenses:k/8`. **PART A skips any parent containing `🧪 PT`** so a card is never worked by two PARTs in one scan. |

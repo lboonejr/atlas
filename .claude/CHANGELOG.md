@@ -3,6 +3,23 @@
 The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NOW.
 History and cutover narratives live here.
 
+## 2026-08-19 — Samira Loop moved into a skill; the projects become thin pointers
+The loop's mechanics were living in `.claude/projects/samira-loop-project-instructions.md`,
+which meant they only fired inside that one claude.ai project and had to be re-pasted (and
+kept in sync) anywhere else. Lemar's call: put the mechanics in a skill and let the projects
+point at it.
+- **`.claude/skills/samira-loop/SKILL.md` (new)** — the whole rulebook, sections unchanged
+  and renumbered nowhere, so every existing `§2 / §6 / §7 / §8` reference still resolves. A
+  live thread invokes it when it produces something; Samira invokes it at PART R. Same text
+  drives both halves, so they cannot drift.
+- **`.claude/projects/samira-loop-project-instructions.md`** cut from ~300 lines to a
+  ~20-line wrapper: invoke the skill, do not wait to be asked, state the scan index, and no
+  claim without the note. The always-on behavior is the only thing a project box adds that a
+  skill cannot — skills are trigger-matched, and "do not wait to be asked" is exactly what
+  trigger-matching is worst at.
+- **Camden overlay, PART R, the runbook, and anchors** all repointed at the skill.
+- Nothing about the loop's behavior changed in this move.
+
 ## 2026-08-19 — Samira Loop: the thread-to-build lane (PART R)
 Lemar's ask: nothing built in a Claude thread should die in the thread. Whatever a thread
 produces either goes to Samira to build in the cloud, or gets built in the thread with

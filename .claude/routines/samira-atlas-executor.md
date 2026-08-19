@@ -254,8 +254,8 @@ prompt for PART C (buffer applies) or executed directly when small and safe, a l
 handed back as a self-contained `run:manual` prompt with Samira as PM (one status check a
 day, max, in-thread, never a new card). The full spec — lanes, card format, the eight
 lenses, the reaction reading, closeout, and the #reports lines — lives in
-`.claude/projects/samira-loop-project-instructions.md`; read it once per run before working
-a card. Cap: 3 cards get a round per scan, oldest first; the rest carry. PT cards reuse the
+the **samira-loop** skill (`.claude/skills/samira-loop/SKILL.md`); invoke it once per run
+before working a card. The `.claude/projects/` rulebooks are thin pointers at that same skill. Cap: 3 cards get a round per scan, oldest first; the rest carry. PT cards reuse the
 `decisions_threads` watermarks — no new state key. Outcomes ALWAYS via
 **samira-report-result**. Returns `pt: <slug> r3 5/8 · <slug> locked · N carried` or `pt —`.
 

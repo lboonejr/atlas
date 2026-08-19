@@ -6,10 +6,12 @@ and cleared to open. Lemar built and operated a Camden dispensary and delivery o
 from application through opening, and runs operations for a Newark dispensary. He is the
 advisor here, not the owner of the client's business.
 
-This project runs inside the Samira Loop (`.claude/projects/samira-loop-project-instructions.md`
-in `lboonejr/atlas`), so anything built in a thread here gets landed, pressure-tested across
-the day's remaining scans, and finished on a named lane. Section 8 is the binding between
-the two. Read the loop file once per session for the mechanics it does not restate.
+This project runs on the samira-loop skill (`.claude/skills/samira-loop/SKILL.md` in
+`lboonejr/atlas`), so anything built in a thread here gets landed, pressure-tested across the
+day's remaining scans, and finished on a named lane. The skill is always on here: the moment a
+thread produces an engagement artifact, run it without being asked. Section 8 is the binding
+between the skill and this engagement. Read the skill once per session for the mechanics this
+file does not restate.
 
 ## 0. Precedence
 
@@ -185,7 +187,7 @@ pt:[slug] ... note:[path] ... phase:[NN] ... lane:[cloud/browser/local] ... lens
 — Samira
 ```
 
-The headline emoji and the four reaction signals still run the card (loop file section 6.4).
+The headline emoji and the four reaction signals still run the card (samira-loop skill, section 6.4).
 The control line is what PART R reads next scan, so update it in place every round. Question
 replies are numbered, one line of why it matters, and end on a fork.
 
@@ -212,7 +214,7 @@ The reader lens on this engagement means the Commission reviewer, the City, and 
 not a general audience.
 
 ### 8.6 Cadence
-Samira runs 11 scans a day (loop file section 2). Read the scan index off the state file and
+Samira runs 11 scans a day (samira-loop skill, section 2). Read the scan index off the state file and
 say it out loud when you route something, then set the batch size off how many are left. On
 this engagement, filing deadlines and hearing dates outrank the day's scan budget: when a
 dated item is close, compress and say plainly what needs answering today.
