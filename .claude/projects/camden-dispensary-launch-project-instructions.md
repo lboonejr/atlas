@@ -169,13 +169,20 @@ recorded a real call), status awaiting-decision, source claude, tags
 Body: What this is, State, Phase, Build lane (cloud, browser, or local, and why), Pressure
 test, Open questions, Locked, Handoff, Working Log entry (the exact text to append), Sources.
 
-The file itself goes to the Drive folder the naming rule points at. Client facing goes to 01
-under its phase, ours goes to 02, unsure goes to 02. If the vault write fails, stop, say so,
-post nothing, and do not claim it landed.
+The file itself goes to the Drive folder the naming rule points at (ids are in
+`.claude/anchors.md`, section "Camden Dispensary Launch"). Client facing goes to 01 under its
+phase, ours goes to 02, unsure goes to 02. If the vault write fails, stop, say so, post
+nothing, and do not claim it landed.
 
 ### 8.4 The card
 One parent card in #decisions per item. Questions are threaded replies. Never a second card
 for the same item, never a re-post, never a nudge.
+
+Two surfaces, and they do not swap jobs. Questions and decisions live in #decisions, titled so
+they read as this engagement's ("Camden Launch"). The work lives in the project channel
+**#camden-launch** (`C0BRZT2V89W`, private): staged prompts, artifacts, and outcomes looping
+back. That is the same split every other project runs on, and it is what keeps one channel
+pinging Lemar instead of five.
 
 ```
 PT ... [Title] ... Phase [NN] ... [cloud / browser / local] ... round 1
@@ -314,14 +321,18 @@ price it once we can see what the operation needs.
 Never quote a number that is not on this list. If the client asks about a cost we have not
 priced, say we will come back with it.
 
-## 12. Setup items not yet recorded
+## 12. Still unknown
 
-These are unknown, not assumed. Ask rather than fill them:
+Recorded 2026-08-19: the Slack channel (#camden-launch `C0BRZT2V89W`) and every Drive folder
+id, all in `.claude/anchors.md` under "Camden Dispensary Launch". Read them from there, never
+from memory.
 
-- The Slack home for this engagement. Until a dedicated channel exists and its id is recorded
-  in `.claude/anchors.md`, cards go to #decisions with "Camden Launch" in the title and results
-  go to #reports. Never create the channel yourself.
-- The Drive folder ids for 00 Command Center, 01 Client-Facing, and 02 Internal. Until they are
-  in anchors, name the folder in words and ask for the link rather than guessing an id.
+Samira's bot was confirmed in #camden-launch on 2026-08-19, so the channel is live and PART C
+sweeps it. Keep the bot invited; if a post there ever fails with `not_in_channel`, say so
+rather than silently rerouting.
+
+These stay unknown until the client or Phase 00 resolves them. Ask rather than fill them:
+
 - The group's name, property address, and contact.
-- The planning board approval's conditions and expiration, and whether site control is executed.
+- The planning board approval's conditions and expiration.
+- Whether site control is actually executed.
