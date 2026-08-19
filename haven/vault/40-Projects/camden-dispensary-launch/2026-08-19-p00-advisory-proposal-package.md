@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T12:14-04:00
-updated: 2026-08-19T13:05-04:00
+updated: 2026-08-19T13:15-04:00
 domain: project
 type: brief
 status: awaiting-decision
@@ -98,7 +98,19 @@ Lenses 4/8 covered. Gates 6/6 covered.
 
 ## Locked
 
-Not locked. Waiting on the send and on the five questions above.
+Not locked. Round 1 answers received on the PT card (2026-08-19, PART R):
+
+- Q3 ✅ correct the planning-board language in both the Working Log and the claude.ai
+  project custom instructions. The Working Log correction folds into the LOCAL "append
+  the decision record" slice above; the claude.ai paste stays Lemar's alone (only he can
+  edit that project's custom instructions).
+- Q4 ✅ retire the old claude.ai web artifact link rather than rebuild it.
+- Q5 ✅ build the opening-services scope and price in the next two weeks — new work item,
+  not started this scan; belongs to a future thread once Phase 00 items settle.
+- Q1 (sign as individual vs. hold for entity) and Q2 (PDF into 00 Command Center — drag
+  vs. device bridge) — still open, no reply yet.
+
+Not locked — two questions outstanding.
 
 ## Handoff
 
