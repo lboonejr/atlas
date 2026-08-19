@@ -256,7 +256,13 @@ day, max, in-thread, never a new card). The full spec — lanes, card format, th
 lenses, the reaction reading, closeout, and the #reports lines — lives in
 the **samira-loop** skill (`.claude/skills/samira-loop/SKILL.md`); invoke it once per run
 before working a card. The `.claude/projects/` rulebooks are thin pointers at that same skill. Cap: 3 cards get a round per scan, oldest first; the rest carry. PT cards reuse the
-`decisions_threads` watermarks — no new state key. Outcomes ALWAYS via
+`decisions_threads` watermarks — no new state key.
+ENGAGEMENT OVERLAYS: a card whose title names a client engagement (today: "Camden Launch")
+is NOT worked on generic loop rules. Read that engagement's overlay in `.claude/projects/`
+FIRST — its scope, role, accuracy, and voice rules outrank the loop's mechanics, and it adds
+gates that must clear before anything locks. Its index note in the vault
+(`40-Projects/<engagement>/index.md`) carries the pointers. Working a client card without the
+overlay is how a promise we cannot make ends up in a client document. Outcomes ALWAYS via
 **samira-report-result**. Returns `pt: <slug> r3 5/8 · <slug> locked · N carried` or `pt —`.
 
 ### PART H — skill candidates

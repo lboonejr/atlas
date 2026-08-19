@@ -3,6 +3,22 @@
 The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NOW.
 History and cutover narratives live here.
 
+## 2026-08-19 — Samira made aware of the Camden engagement
+The engagement existed in anchors, Drive, and Slack, but Haven had no note for it, and PART R
+had no reason to treat a client card differently from any other. Both fixed:
+- **`haven/vault/40-Projects/camden-dispensary-launch/index.md` (new)** — the vault's pointer
+  to the engagement: the scope line (ends at inspection clearance, opening services is
+  separate), where every surface lives, the two-records split, the six gates, the standing
+  hazards (no outcome promises, not their attorney, adult-use only, the two approvals are
+  different things, never quote an unlisted number), and what stays unknown. Written to its
+  final project path like the investor-pipeline and on-button-reopen indexes rather than
+  routed through 00-Inbox, since a bare `index.md` in the Inbox has nowhere unambiguous to
+  file to.
+- **PART R now checks for an engagement overlay before working a card.** A card titled for a
+  client engagement is read against that engagement's overlay first, because its rules
+  outrank the loop's mechanics and it adds gates. Working a client card on generic loop rules
+  is how a promise we cannot make ends up in a client document.
+
 ## 2026-08-19 — Every thread gets one name
 Lemar's ask: a clear, concise, descriptive title on every thread so he knows what he is
 working on at a glance. Added as skill §1.1, with the point being not the title itself but
