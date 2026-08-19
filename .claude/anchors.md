@@ -243,6 +243,7 @@ the samira-loop skill wherever the two disagree.
 
 | What | Value |
 |---|---|
+| Vault index | `haven/vault/40-Projects/camden-dispensary-launch/index.md` — the engagement's note in Haven: the scope line, where everything lives, the six gates, the standing hazards, and what stays unknown. Start here when a Camden item surfaces and you need orientation. |
 | Overlay (the rules) | `.claude/projects/camden-dispensary-launch-project-instructions.md` — pasted into the claude.ai project "Camden Dispensary Launch"; also read by any thread working the engagement. |
 | Mechanics | the **samira-loop** skill (`.claude/skills/samira-loop/SKILL.md`), unchanged. |
 | Questions / decisions | **#decisions `C0BBXA96FFV`**, cards titled "Camden Launch". Never the project channel — same doctrine as every other project. |

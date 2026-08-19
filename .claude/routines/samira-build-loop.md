@@ -57,12 +57,18 @@ from being executed twice by two PARTs in the same scan.
    (`pt:<slug> · note:<path> · lane:<cloud|browser|local> · lenses:k/8`) for state. If the control
    line is missing or unparseable, rebuild it from the Haven note — the note is truth, the
    card is a rendering.
-2. **Compute the cadence** (the skill's §2): which scan of 11 this is and how many
+2. **Check for an engagement overlay.** A card whose title names a client engagement
+   (today: "Camden Launch") is worked under that engagement's overlay in `.claude/projects/`,
+   read BEFORE the round: its rules outrank the skill's mechanics and it adds gates that must
+   clear before the card can lock. The engagement's index note
+   (`40-Projects/<engagement>/index.md`) carries the pointers. No overlay named → generic
+   loop rules apply.
+3. **Compute the cadence** (the skill's §2): which scan of 11 this is and how many
    are left today. It sets the batch size and whether you compress to close today.
-3. **Cap the work.** At most **three** active PT cards get a round in one scan, oldest
+4. **Cap the work.** At most **three** active PT cards get a round in one scan, oldest
    first. Any beyond that carry, and the digest says so — a scan that half-answers six
    cards is worse than one that fully advances three.
-4. **For each card, in order:**
+5. **For each card, in order:**
    - **Read the thread** from its stored `ts` plus reactions on the parent and every
      question reply. Plain replies count as answers; ✅ agrees; 👀 means seen, carry it and
      never re-ask; ⛔ drops that line; 🫡 on the parent means lock it now.
@@ -74,17 +80,17 @@ from being executed twice by two PARTs in the same scan.
      together, each with its one-line "why", as numbered replies under the parent. Refresh
      the parent's control line (`lenses:k/8`, `round N`) and its headline emoji.
    - **Or lock it** when all eight lenses are covered with nothing unanswered, or he 🫡'd.
-5. **Closeout** per the skill's §7 — three lanes, not two: **cloud** builds get
+6. **Closeout** per the skill's §7 — three lanes, not two: **cloud** builds get
    staged (buffer: never run in the scan they were staged) or executed directly when small
    and safe; **browser** items get the `CHROME RUN` block (Lemar drives Chrome, and it never
    submits, pays, sends, or clicks a binding button); **local** items get the `run:manual`
    run-ready prompt. Browser and local both put Samira in PM mode (one status check a day,
    max, in-thread). Every outcome lands through **samira-report-result**: Haven note first,
    then the #reports block, then `✅ CLOSED — [outcome]` on the parent.
-6. **Housekeeping.** Apply the two-day rule (one honest "still worth doing?" line at day
+7. **Housekeeping.** Apply the two-day rule (one honest "still worth doing?" line at day
    two, park on ⛔ or on silence by day four). Hand a no-date item to #stormy and close its
    card with the reason.
-7. **Return a digest token**: `pt: <slug> r3 5/8 · <slug> locked · <slug> built · 2 carried`
+8. **Return a digest token**: `pt: <slug> r3 5/8 · <slug> locked · <slug> built · 2 carried`
    — or `pt —` when nothing is open. Do not write a separate `_daily` line; the run digest
    already appends the run.
 
