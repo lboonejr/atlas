@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-08-18T13:04:00-04:00
+updated: 2026-08-19T09:20:00-04:00
 domain: legal
 type: task
 status: active
@@ -570,3 +570,24 @@ sent. Gmail thread labeled `Samira/seen`.
 - slack: Samira capture DM `D0BHPKMDNEP`, ts `1786885198.136079` (2026-08-16 — Monday follow-up plan)
 - gmail: thread `1a0013edc74f5864` / `1a015d0c3734eae0` (2026-08-14 through 2026-08-18,
   Kaplan/Kaplin Stewart — routed 8/14, followed up 8/17, declined 8/18)
+
+## Update 2026-08-19T09:20:00-04:00 — eighth referral request sent to Camden County Bar Association (draft only, not sent)
+
+Lemar replied in the #decisions thread (ts `1787069259.543559`) to Kaplin Stewart's
+8/18 decline: *"I think we try the County Lawyer Referral Service she named."* That
+service is the same Camden County Bar Association Lawyer Referral Service Lemar
+already used twice (2026-07-22 for the tenancy referral, 2026-08-13 for this matter —
+see the update above), so this reads as asking for a fresh/updated referral rather
+than a new organization.
+
+A follow-up reply was drafted on the existing CCBA thread (`19ffb5e307994f7d`, to
+`kara@camdencountybar.org`) noting neither Zachary Wall nor Rachael Brekke converted
+to retained counsel, restating the Sept 14 proof hearing urgency, and asking whether
+another attorney on her list has availability on this timeline. **Saved to Gmail
+Drafts only — not sent** (outreach requires Lemar's own send, per standing safety
+floor). Draft id `r-6653243393633460968`.
+
+This is now the eighth firm/track in the counsel search (Siciliano — priced, never
+retained per 8/15 correction; Wall; Brekke; Greenberg — Donte's settlement-review
+track; Hagner & Zohlman; Kaplan/Kaplin Stewart — declined 8/18; now a second CCBA
+ask) with the Sept 14 proof hearing 26 days out and still no counsel of record.
