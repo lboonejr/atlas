@@ -327,11 +327,9 @@ Recorded 2026-08-19: the Slack channel (#camden-launch `C0BRZT2V89W`) and every 
 id, all in `.claude/anchors.md` under "Camden Dispensary Launch". Read them from there, never
 from memory.
 
-One setup step is outstanding and blocks the project channel: **Samira's bot is not in
-#camden-launch yet** (members: Lemar only, checked 2026-08-19). Until someone runs
-`/invite @Samira` there, she cannot read or post in it and PART C will not sweep it. Work the
-engagement through #decisions and Haven in the meantime, and say so rather than posting into a
-channel she cannot see.
+Samira's bot was confirmed in #camden-launch on 2026-08-19, so the channel is live and PART C
+sweeps it. Keep the bot invited; if a post there ever fails with `not_in_channel`, say so
+rather than silently rerouting.
 
 These stay unknown until the client or Phase 00 resolves them. Ask rather than fill them:
 
