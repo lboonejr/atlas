@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260819T170340Z",
     "run_started": "2026-08-19T17:03:40Z",
-    "run_completed": "2026-08-19T14:16:00Z",
-    "note": "In flight. Prior lock (run_20260819T150251Z, started 15:02:51Z) had no completion recorded and was >45min old at pickup (17:03:40Z) — treated as died-mid-flight per PART 0, lock reacquired."
+    "run_completed": "2026-08-19T17:20:00Z",
+    "note": "Complete. Prior lock (run_20260819T150251Z, started 15:02:51Z) had no completion recorded and was >45min old at pickup (17:03:40Z) — treated as died-mid-flight per PART 0, lock reacquired and this run finished cleanly."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787148659.182229",
-      "C0BBZJL85RT": "1787148918.409899",
-      "D0BHPKMDNEP": "1787148903.299699",
+      "C0BBXA96FFV": "1787159746.599809",
+      "C0BBZJL85RT": "1787159985.636429",
+      "D0BHPKMDNEP": "1787159924.834629",
       "C0BGLEMH99T": "1787148900.000000",
       "C0BEQUW5NPP": "1787148900.000000",
       "C0BBLUA7JLX": "1787148900.000000",
@@ -25,7 +25,7 @@
       "C0BHXTPST52": "1787148900.000000",
       "C0BC2A94142": "1787148900.000000",
       "C0BBZ5J8805": "1787148900.000000",
-      "C0BRZT2V89W": "1787148674.578339"
+      "C0BRZT2V89W": "1787156572.068829"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
@@ -38,22 +38,26 @@
       "1787001107.337499": "1787055300.092309",
       "1786990384.507289": "1787055521.111979",
       "1787069259.543559": "1787145016.517439",
-      "1787112734.344369": "1787148659.182229"
+      "1787112734.344369": "1787148659.182229",
+      "1787152085.518979": "1787159332.480679",
+      "1787159607.185319": "1787159620.896369",
+      "1787155581.357669": "1787155620.300329",
+      "1787157130.471099": "1787159746.599809"
     },
-    "capture_dm": "1787076741.289239",
-    "gmail_after_epoch": 1787148900
+    "capture_dm": "1787159924.834629",
+    "gmail_after_epoch": 1787159157
   },
   "integrity": {
     "last_full_pass": "2026-08-19T09:15:00-04:00",
-    "last_scan_sha": "2d194f2dcc8d71816cd111070b4b1e5ea60c214b",
-    "note": "Changed-since-SHA check only this run (full pass already ran on the day's first completing run). No vault changes between 992f36c9 and the start of this run, so nothing to re-check. Inbox unchanged: same 2 known stuck notes, 0 new."
+    "last_scan_sha": "0076599d26e2c65d1fb5ff44c1d5f2364a4a76b7",
+    "note": "Changed-since-SHA check only this run. Two files changed since prior scan SHA (both Camden Launch, neither carries `due`): 2026-08-19-p00-advisory-proposal-package.md (valid) and ops-admin-lane-and-ariana.md (missing created/updated entirely, filed outside the Inbox — flagged, not repaired, not previously known). Inbox unchanged: same 2 known stuck notes, 0 new."
   },
   "canvas_access": {
     "last_checked": "2026-08-18T13:14:20Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-19T10:30:00-04:00",
+    "pulse_last_rendered": "2026-08-19T13:20:00-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
