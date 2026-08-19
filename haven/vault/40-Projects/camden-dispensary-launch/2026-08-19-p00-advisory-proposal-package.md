@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T12:14-04:00
-updated: 2026-08-19T13:15-04:00
+updated: 2026-08-19T13:45-04:00
 domain: project
 type: brief
 status: awaiting-decision
@@ -167,11 +167,75 @@ table, and a proper signature block. Content is identical to the v3 filled Doc, 
 word. Source HTML and the PDF both live in the session, delivered to Lemar; neither is in
 Drive yet, which folds into open question 2.
 
+## Update 2026-08-19, 13:45 ET
+
+Written from the live thread, after PART R recorded the round 1 answers above. Nothing in
+that Locked section was edited; this appends to it.
+
+**Correction to the first update.** It recorded two documents as still in place. They are
+not. 00 Command Center now holds four items only: the designed proposal PDF, the current
+Project Instructions, the Working Log, and the 2240 handoff. So
+"Superseded 2026-08-18b — Project Instructions (before working log)" and
+`handoff_camden-dispensary-launch_20260818-2205` were trashed as well, bringing the total to
+seven documents in Drive trash rather than five. Recovery window unchanged. Recording the
+correction rather than editing the earlier line, per schema section 7.
+
+**Q2 closed.** The designed PDF is in 00 Command Center as
+`Camden_Advisory_Proposal_20260819_designed.pdf`, Drive `1z5ltUe4kSo12WD1aAUb-6-W68r3nizj4`,
+229,125 bytes, matching the built file byte for byte. Lemar moved it himself. One loose
+thread: the filename is the build name rather than the engagement's naming convention, and
+00 Command Center's other files use descriptive titles rather than the
+`[phase]_[what it is]_[date]` pattern, so which convention governs that folder has never
+actually been decided. Flagged, not acted on.
+
+**Q1 answered in practice.** No entity was named, so the proposal is addressed to Jamil
+Tyson personally and he countersigns as an individual. Forming the entity stays a Phase 00
+item. Worth one more look before signature rather than treating it as settled.
+
+**The device bridge is connected.** Lemar's Desktop (`C:\Users\lemar\Desktop`) is granted to
+the session, so deliverables can be written to his machine directly instead of round
+tripping through a download. No Google Drive sync folder was visible in his home directory,
+so writing into a Drive phase folder still means a manual move.
+
+**Two of the engagement's three standing unknowns are now known.** Contact: Jamil Tyson,
+jamil_tyson@yahoo.com. Property: 2630 Federal St., Camden, NJ. The group's name stays
+unknown because there is no entity to name. The Project Instructions section 12 and
+`.claude/anchors.md` both still list the address and contact as unknown, and both should be
+updated so the next thread does not treat them as unfillable. This rides alongside the Q3
+correction, which touches the same two files.
+
+**Intake sequencing decided: proposal first, intake form after.** This closes the open
+decision in `p00-client-intake-system` (does the intake go with the proposal, after signing,
+or before we quote). Reasoning: an eleven section form arriving alongside a proposal reads
+as homework before there is a relationship, and the two documents actually needed first (the
+planning board resolution and site control) are asked for in the cover email itself. It also
+buys the time to wire the Jotform to Drive, which is still not done.
+
+**Cover email drafted, not sent.** Gmail draft to jamil_tyson@yahoo.com, subject "Camden
+Advisory Proposal." Written against the canonical voice profile with the hard floor lint run
+on it. It names the TO CONFIRM line directly so the change does not read as doubt about him,
+asks for the two documents, alludes to the intake questionnaire without linking it, and
+invites questions. The PDF is not attached to the draft (too large to hand across as inline
+base64) and has to be attached before sending. Sending is Lemar's, and only Lemar's.
+
+**Chrome run block written** for the Jotform to Google Drive integration, in two segments
+around the Google sign in, since Chrome does not work around login walls. Segment 1 stops at
+the authorization screen. Segment 2 sets the destination to the Intake folder
+(`17tQP09hT1cRcFzZASa32H23yI8Hv2Mc4`), reads back the notification setting, and captures
+evidence. Neither segment submits a test entry, because a test submission on a client facing
+form is a real record in the engagement's file.
+
+**Full Working Log text drafted** covering the whole day: current state, waiting on, eight
+open items, the milestone label note, and six decision record entries. Delivered to Lemar to
+paste. It supersedes the two partial drafts handed over earlier in the thread.
+
 ## Sources
 
 - drive: https://docs.google.com/document/d/1PJ4Ix_dizeptAKHBq__G5prlUooQ2A2BVtDFsZbfCms/edit (proposal, v3 filled)
+- drive: https://drive.google.com/file/d/1z5ltUe4kSo12WD1aAUb-6-W68r3nizj4/view (designed PDF, 00 Command Center)
 - drive: https://docs.google.com/document/d/12JG69I2RWZ9l3rR7AdFZXhyiuM52FEhmqi-52S3OC9Q/edit (Working Log)
 - drive: folder 1SE4aln7I35W0M_NSFA0Mo3sYuEkYRWAv (01 Client-Facing)
-- drive: folder 1waKvkdsc9yr2ZAu_BhY8EneONKvtDhcM (00 Command Center, where the PDF belongs)
+- drive: folder 1waKvkdsc9yr2ZAu_BhY8EneONKvtDhcM (00 Command Center)
+- drive: folder 17tQP09hT1cRcFzZASa32H23yI8Hv2Mc4 (Intake — Documents from the Group)
 - slack: https://app.slack.com/archives/C0BRZT2V89W/p1787156572068829 (staged prompt, superseded by this note)
 - slack: https://app.slack.com/archives/C0BBXA96FFV/p1787157130471099 (PT card)
