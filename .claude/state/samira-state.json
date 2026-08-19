@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260819T140318Z",
     "run_started": "2026-08-19T14:03:18Z",
-    "run_completed": "2026-08-19T13:24:26Z",
-    "note": "Prior run (run_20260819T130524Z) completed cleanly. This run takes over at PART 0."
+    "run_completed": "2026-08-19T14:16:00Z",
+    "note": "Completed. Camden Launch PT card locked 8/8; Q6 form question built; placement failed twice and rerouted to the browser lane rather than retried."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787145457.563609",
-      "C0BBZJL85RT": "1787145815.702089",
-      "D0BHPKMDNEP": "1787145796.537779",
-      "C0BGLEMH99T": "1787145900.000000",
-      "C0BEQUW5NPP": "1787145900.000000",
-      "C0BBLUA7JLX": "1787145900.000000",
-      "C0BJ37SU1TL": "1787145900.000000",
-      "C0BCCUKEUQ2": "1787145287.175769",
-      "C0BCD7U5X2B": "1787145900.000000",
-      "C0BCH2C3GRM": "1787145900.000000",
-      "C0BDN2KQFD4": "1787145900.000000",
-      "C0BD8LTM1EK": "1787145900.000000",
-      "C0BGYM1UB4Y": "1787145900.000000",
-      "C0BGCAK0ML3": "1787145900.000000",
-      "C0BHXTPST52": "1787145900.000000",
-      "C0BC2A94142": "1787145900.000000",
-      "C0BBZ5J8805": "1787145900.000000",
-      "C0BRZT2V89W": "1787145372.677909"
+      "C0BBXA96FFV": "1787148659.182229",
+      "C0BBZJL85RT": "1787148918.409899",
+      "D0BHPKMDNEP": "1787148903.299699",
+      "C0BGLEMH99T": "1787148900.000000",
+      "C0BEQUW5NPP": "1787148900.000000",
+      "C0BBLUA7JLX": "1787148900.000000",
+      "C0BJ37SU1TL": "1787148900.000000",
+      "C0BCCUKEUQ2": "1787148900.000000",
+      "C0BCD7U5X2B": "1787148900.000000",
+      "C0BCH2C3GRM": "1787148900.000000",
+      "C0BDN2KQFD4": "1787148900.000000",
+      "C0BD8LTM1EK": "1787148900.000000",
+      "C0BGYM1UB4Y": "1787148900.000000",
+      "C0BGCAK0ML3": "1787148900.000000",
+      "C0BHXTPST52": "1787148900.000000",
+      "C0BC2A94142": "1787148900.000000",
+      "C0BBZ5J8805": "1787148900.000000",
+      "C0BRZT2V89W": "1787148674.578339"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
@@ -38,22 +38,22 @@
       "1787001107.337499": "1787055300.092309",
       "1786990384.507289": "1787055521.111979",
       "1787069259.543559": "1787145016.517439",
-      "1787112734.344369": "1787145457.563609"
+      "1787112734.344369": "1787148659.182229"
     },
     "capture_dm": "1787076741.289239",
-    "gmail_after_epoch": 1787142966
+    "gmail_after_epoch": 1787148900
   },
   "integrity": {
     "last_full_pass": "2026-08-19T09:15:00-04:00",
-    "last_scan_sha": "992f36c94742833b9460392872f2cfc2917d374c",
-    "note": "Full whole-vault pass already ran today (day's first completing run). This run does the changed-since-SHA check only."
+    "last_scan_sha": "2d194f2dcc8d71816cd111070b4b1e5ea60c214b",
+    "note": "Changed-since-SHA check only this run (full pass already ran on the day's first completing run). No vault changes between 992f36c9 and the start of this run, so nothing to re-check. Inbox unchanged: same 2 known stuck notes, 0 new."
   },
   "canvas_access": {
     "last_checked": "2026-08-18T13:14:20Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-19T09:45:00-04:00",
+    "pulse_last_rendered": "2026-08-19T10:30:00-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
