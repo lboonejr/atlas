@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T12:14-04:00
-updated: 2026-08-19T12:14-04:00
+updated: 2026-08-19T13:05-04:00
 domain: project
 type: brief
 status: awaiting-decision
@@ -30,7 +30,7 @@ Built and waiting on Lemar to send. Three surfaces now exist and agree:
 - Editable Doc: "Camden Dispensary Launch — Advisory Proposal (editable) 20260819v3 FILLED",
   Drive `1PJ4Ix_dizeptAKHBq__G5prlUooQ2A2BVtDFsZbfCms`, in 01 Client-Facing.
 - PDF: `Camden_Advisory_Proposal_20260819.pdf`, nine pages, delivered to Lemar in the thread.
-  NOT yet in 00 Command Center (see Handoff).
+  NOT yet in 00 Command Center (see Handoff). Superseded by the designed version, see Update.
 - Web: rebuilt from the same HTML source as the PDF, delivered to Lemar for review. The old
   claude.ai artifact still carries the 2026-08-18 text and must not be shared.
 
@@ -122,6 +122,39 @@ The decision record text was delivered to Lemar in thread
 and it needs one addition covering the filled placeholders, the milestone relabel, and the
 PDF build.
 
+## Update 2026-08-19
+
+Two things closed after the note first landed.
+
+**Superseded copies trashed.** Lemar's call, and he did it himself rather than having it
+done for him. Moved to Drive trash (recoverable for thirty days, permanently deleted after):
+
+- 00 Command Center — Superseded 2026-08-18 — Project Instructions (old through-opening scope)
+- 01 Client-Facing — Superseded 2026-08-18 — Advisory Proposal (old through-opening scope)
+- 01 Client-Facing — Superseded 2026-08-19 — Advisory Proposal (planning board stated as secured)
+- 01 Client-Facing — Superseded 2026-08-19 — Advisory Proposal (v1, residual approval language)
+- 01 Client-Facing — Superseded 2026-08-19 — Advisory Proposal (v2, unfilled placeholders)
+
+So the three titles listed under State no longer resolve, and neither does the pre-scope-cut
+proposal. The reasoning survives here and in the Working Log decision record; the documents
+themselves do not. Worth being deliberate about that: the 2026-08-18 through-opening version
+was the only artifact showing what the engagement looked like before the scope was cut to
+inspection, and it is now recoverable only until roughly 2026-09-18.
+
+Still in place, not trashed: "Superseded 2026-08-18b — Project Instructions (before working
+log)" and `handoff_camden-dispensary-launch_20260818-2205`.
+
+**A designed proposal exists.** The nine page PDF was a typographic pass on flowing HTML.
+Lemar asked for a real design pass, unbranded and signed in his own name rather than
+Cuzzie's, on the reasoning that Cuzzie's winds down mid-2026 and this engagement runs ten
+months. Built as an eleven page fixed canvas document (US Letter), authored through the
+Adobe visual design skill: Source Serif 4 for reading, Acumin Pro for structure and figures,
+a deep green accent used only on the cover band, section rules, status chips, and the
+milestone numerals. Cover page, status chips on the Where You Stand board, a set milestone
+table, and a proper signature block. Content is identical to the v3 filled Doc, word for
+word. Source HTML and the PDF both live in the session, delivered to Lemar; neither is in
+Drive yet, which folds into open question 2.
+
 ## Sources
 
 - drive: https://docs.google.com/document/d/1PJ4Ix_dizeptAKHBq__G5prlUooQ2A2BVtDFsZbfCms/edit (proposal, v3 filled)
@@ -129,3 +162,4 @@ PDF build.
 - drive: folder 1SE4aln7I35W0M_NSFA0Mo3sYuEkYRWAv (01 Client-Facing)
 - drive: folder 1waKvkdsc9yr2ZAu_BhY8EneONKvtDhcM (00 Command Center, where the PDF belongs)
 - slack: https://app.slack.com/archives/C0BRZT2V89W/p1787156572068829 (staged prompt, superseded by this note)
+- slack: https://app.slack.com/archives/C0BBXA96FFV/p1787157130471099 (PT card)
