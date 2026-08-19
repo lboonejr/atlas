@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T00:10-04:00
-updated: 2026-08-19T09:40:00-04:00
+updated: 2026-08-19T10:20:00-04:00
 domain: project
 type: brief
 status: awaiting-decision
@@ -170,20 +170,85 @@ Q8 — Fit. The 24-hour turnaround is now a standing commitment to an outside
 party. Does it belong logged in `chase-commitments` so it is tracked as a
 promise rather than living only in this note and a thank-you page?
 
-## Open questions
+## Update — 2026-08-19T10:20:00-04:00, round 2 answered, pressure test locked
 
-Round 1's four, answered above. Round 2's four (Q5-Q8), posted as threaded
-replies on the card in #decisions, open.
+Round 2 answered by reaction on the card. Each of those replies stated its own fork
+on its last line, so the reactions are read against that stated fork rather than
+against the generic signal table:
+
+- Q5, accuracy. Checked. Business days, and the clock starts when the submission
+  lands. The commitment now reads: open items back within one business day of the
+  submission landing, weekends and holidays not counted.
+- Q6, gaps. Blocked, which on that line meant add a direct question to the form
+  rather than leave it to the register's permit-portal check. Built this scan, see
+  below.
+- Q7, edge. Blocked, which on that line meant send it blank. No public-record
+  pre-fill pass before the first send. Simpler for round one.
+- Q8, fit. Blocked, which on that line meant this note is tracking enough. The
+  turnaround commitment does not go into chase-commitments.
+
+lenses 8/8. gates 6/6, unchanged, nothing in round 2 reopened one. Locked.
+
+### Built this scan, cloud
+
+Added to the form per Q6: "Does the property currently have any open City violations,
+liens, or code enforcement actions?" with a follow-up, "If yes, what are you aware of?".
+
+Two things went wrong on the way, and both are recorded rather than smoothed over.
+
+The first edit added six questions instead of two. Four of them were contextless
+duplicates, two copies each of "Has this issue occurred?" and "If yes, please describe".
+A second, narrowly scoped edit deleted exactly those four and nothing else. Verified
+after it settled: 123 questions against 121 before this scan, with all 121 originals
+present and in their original order. Nothing of the original form was lost.
+
+The placement did not take. Both new questions sit at the end of the form, after the
+Acknowledgement and the Submit button, rather than inside "The property" after "Anything
+else about the property". The second edit was asked to move them and did not. That is two
+failures on the same sub-task, so it stops here and moves to the browser lane rather than
+taking a third attempt at it.
+
+One thing worth knowing for anyone who runs this connector again: a fetch taken while a
+Jotform edit is still applying reports a partial form. Mid-edit this one read 91 questions
+against its true 121. Do not read a mid-edit fetch as data loss and do not act on one.
+Re-fetch until the count settles.
+
+### Still open, and all of it is Lemar's
+
+- Placement fix, browser. Drag the two new property questions from the end of the form up
+  into "The property", directly after "Anything else about the property". About a minute
+  in the builder, and he is opening it anyway for the Drive integration.
+- Thank-you page wording, browser. The page still says we come back with the open items
+  without a number. Per Q4 and Q5 it should now say we come back with the open items
+  within one business day of the submission landing. Not edited from the cloud, because
+  the thank-you page is not visible to the connector's fetch, so a change there could not
+  be verified afterwards.
+- Drive integration, browser, from round 1 Q3. Chrome run already staged in
+  #camden-launch 2026-08-19 09:36 ET. The form stays held from sending until it is
+  confirmed.
+- Welcome email attaching the form link, to go out at signing, from round 1 Q1. Not built.
 
 ## Locked
 
-Not yet.
+2026-08-19. Eight lenses answered, six gates clear. The intake system is settled as: one
+master form, no identifiers, sent after signing with a welcome email carrying the link,
+held until the Drive integration is confirmed, no public-record pre-fill for round one,
+one business day to come back with open items measured from when the submission lands,
+and a direct question on the form about open City violations, liens, and code enforcement.
+
+The card stays open on the browser slice rather than closing, per the overlay's closeout
+rule. Nothing further is waiting on Samira.
+
+## Open questions
+
+None. Round 1 and round 2 are both answered and the pressure test is locked.
 
 ## Handoff
 
 Browser, before the form goes anywhere: wire the Jotform to Google Drive integration to
 the Intake folder 17tQP09hT1cRcFzZASa32H23yI8Hv2Mc4 and confirm the submission
-notification. Run block is in the register.
+notification. Run block is in the register. While in the builder, also move the two new
+property questions into "The property" and update the thank-you page wording, both above.
 
 Browser, once the group answers: entity and property record lookups, then the City clerk
 and permit record checks. Run blocks are in the register.
@@ -212,6 +277,17 @@ will want identifiers at filing, and those move through their counsel and the st
 rather than through an intake form. Every blank on a returned form becomes an open item
 with an owner, a phase, a lane, and a written route to producing it.
 
+2026-08-19 — Intake sequencing, turnaround, and scope of the first send settled.
+The form goes out after signing rather than with the proposal, carried by a welcome email
+that attaches the link. We come back with the open items within one business day of a
+submission landing, counting business days only. The first send goes out blank rather than
+pre-filled from public record, because one master blank form is simpler and equally
+defensible for round one. Added a direct question on open City violations, liens, and code
+enforcement against the property, rather than relying on the permit-portal check to surface
+it later, since the City and the inspector reach it regardless and it is far cheaper to
+know in Phase 00. The form stays held from sending until its Google Drive integration is
+confirmed, so uploads land in the Phase 00 Intake folder rather than in a vendor account.
+
 Add to OPEN ITEMS:
 
 6. Wire the intake form's Google Drive integration before the form goes to anyone.
@@ -222,6 +298,15 @@ Add to OPEN ITEMS:
 7. Decide when the intake goes out: with the proposal, after signing, or before we quote.
    Owner: Lemar. Due: before the proposal is sent, because it changes what the proposal
    says about what happens next.
+   Closed 2026-08-19: after signing, with a welcome email attaching the link.
+
+8. Move the two new property questions into "The property" section and update the
+   thank-you page to state the one business day turnaround.
+   Owner: Lemar, with Claude in Chrome, in the same builder session as item 6.
+   Due: before the form is sent.
+
+9. Draft the welcome email that carries the form link at signing.
+   Owner: Samira, cloud. Due: before the proposal goes out.
 
 ## Sources
 
