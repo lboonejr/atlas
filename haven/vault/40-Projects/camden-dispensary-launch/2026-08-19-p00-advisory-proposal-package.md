@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T12:14-04:00
-updated: 2026-08-19T13:45-04:00
+updated: 2026-08-19T14:10-04:00
 domain: project
 type: brief
 status: awaiting-decision
@@ -81,6 +81,59 @@ the eight lenses plus the engagement's six gates:
 
 Lenses 4/8 covered. Gates 6/6 covered.
 
+### Round 1 — closed, 2026-08-19 (PART R)
+
+All five round 1 questions are now answered. Q3, Q4, and Q5 were ✅'d on the card (see
+Locked, below). Q1 (sign as individual vs. hold for entity) and Q2 (PDF into 00 Command
+Center) were answered in practice in the thread's 13:45 ET update rather than by reaction:
+Q1 — the proposal is addressed to Jamil Tyson personally and he countersigns as an
+individual; forming the entity stays a separate Phase 00 item, worth one more look before
+signature. Q2 — the designed PDF landed in 00 Command Center, Lemar moved it himself.
+
+Lens coverage is still 4/8. Round 1 never asked a lens 1/5/6/7 question — it ran as
+build-note review questions rather than a lens-by-lens pass. Round 2 below closes the four
+remaining lenses.
+
+### Round 2, posed 2026-08-19 (PART R)
+
+Q6 — Premise. The whole package assumes Jamil is the group's actual decision-maker and can
+bind them to a ten-month engagement and countersign personally. If there is a co-owner or
+partner who actually holds that authority, the proposal goes to the wrong person and the
+first thing that happens after signing is restructuring paperwork instead of work.
+Why: this is the one assumption that costs the most if it's wrong, and nothing in the
+package currently tests it.
+✅ acceptable risk at this stage, send as is · reply if you want his authority confirmed
+first · ⛔ to drop this line
+
+Q7 — Failure modes. Worst realistic outcome once this goes out: he reads TO CONFIRM where
+he expected SECURED and takes it as a walk-back or a sign of distrust, even though the
+cover email is written to name the change directly rather than let him find it.
+Why: this is a ten-month relationship starting on a corrected claim — worth knowing the
+fallback before it is tested live.
+✅ hold firm, TO CONFIRM stands as written · reply with a softer phrasing you want tried
+first · ⛔ to drop this line
+
+Q8 — Edge. The eleven-page designed PDF (Source Serif 4, Acumin Pro, a real signature
+block) versus a typical local consultant's boilerplate proposal is the current unfair
+advantage. The intake form's public-record pre-fill pass was declined at round 1 (its own
+Q7) for round one simplicity.
+Why: worth naming on purpose whether the designed PDF is the differentiator this proposal
+leans on, or whether something sharper should exist before this goes out.
+✅ the designed PDF is the differentiator, ship as is · reply if something sharper is worth
+building first · ⛔ to drop this line
+
+Q9 — Execution. Four pieces are still unsequenced around the send: attaching the PDF to
+the Gmail draft, correcting Project Instructions section 4 (Working Log slice is
+Samira's, the claude.ai project-instructions paste is Lemar's alone), and the Jotform to
+Drive Chrome run staged in #camden-launch.
+Why: naming what has to land before send versus what can trail it keeps the send from
+waiting on something that was never actually a blocker.
+✅ nothing blocks the send, the rest can trail it · reply naming what must happen first ·
+⛔ to drop this line
+
+lenses 8/8 posed (4/8 answered via round 1's build-note pass, 4/8 newly posed this round,
+awaiting reply). gates 6/6, unchanged.
+
 ## Open questions
 
 1. The proposal is addressed to Jamil Tyson personally because no entity was named. Forming
@@ -95,6 +148,10 @@ Lenses 4/8 covered. Gates 6/6 covered.
    Retire it, or rebuild it from the new HTML?
 5. Opening services still has no scope and no price. Not blocking the send, but better built
    well before inspection than under pressure.
+
+Questions 1 and 2 above are answered in practice (see Round 1 — closed, above) but left
+as written rather than edited, per the no-rewrite rule; the current answer lives in the
+Pressure test section.
 
 ## Locked
 
@@ -111,6 +168,13 @@ Not locked. Round 1 answers received on the PT card (2026-08-19, PART R):
   vs. device bridge) — still open, no reply yet.
 
 Not locked — two questions outstanding.
+
+### Update, 2026-08-19 (PART R)
+
+Round 1 is now fully closed (see Pressure test, above) — Q1 and Q2 both resolved in the
+thread's 13:45 ET update. Still not locked: lens coverage is 4/8 with premise, failure
+modes, edge, and execution open. Round 2 (Q6–Q9, above) poses all four. Will lock once
+those are answered and nothing is left open, or the moment Lemar 🫡s the parent.
 
 ## Handoff
 
@@ -228,6 +292,17 @@ form is a real record in the engagement's file.
 **Full Working Log text drafted** covering the whole day: current state, waiting on, eight
 open items, the milestone label note, and six decision record entries. Delivered to Lemar to
 paste. It supersedes the two partial drafts handed over earlier in the thread.
+
+## Update 2026-08-19, PART R (round 2 posed)
+
+Scan clock: run `run_20260819T180224Z`, scan 7 of 11, 4 scans left today — compressed
+pace. Reactions on Q3, Q4, Q5 read (all ✅); Q1/Q2 read as answered-in-practice per the
+13:45 ET update above, per the loop's rule that a plain reply/action counts as an answer
+with no reaction attached. No 🫡 on the parent, so this does not lock this round even
+though gates are 6/6 — lenses were only 4/8. Q6–Q9 posed above to close premise, failure
+modes, edge, and execution — the last four lenses. Posted to the thread as round 2
+immediately after this note lands. #reports line: `round 2 (lenses 8/8 posed, 4/8
+pending reply)`.
 
 ## Sources
 
