@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260819T190230Z",
     "run_started": "2026-08-19T19:02:30Z",
-    "run_completed": "2026-08-19T18:24:19Z",
-    "note": "Complete. Filed Hillview Med (vault-keeper), executed Lemar's Hillview Med Option A pick (Gmail draft saved), swept 13 project channels (all quiet), triaged 4 email threads, advanced Camden Launch PT card p00-advisory-proposal-package to round 2 (8/8 lenses posed), rendered Pulse."
+    "run_completed": "2026-08-19T19:09:52Z",
+    "note": "Complete, quiet scan. 0 closed / 0 new / 1 urgent carried (NJ annual report, still red, unreacted). Vault-keeper: 0 vault commits since last scan, 2 known stuck notes unchanged, card composition unchanged (no refresh). Calendar-sync: 0 drift, 0 writes. #decisions: all 15 open threads (13 regular + 2 PT cards skipped for PART R) checked, no new reactions/replies since their stored watermarks. Capture DM: only Samira's own prior post, nothing to develop. 13 project channels swept, zero activity. Email: 1 new thread (Headset auto-report, junk, seen-labelled), 0 drafts/tasks. Investor/Stormy quiet. PART R: no new replies on either open PT card, so no round advanced this scan (p00-client-intake-system stays locked/PM mode; ops-admin-lane-and-ariana round 1 still 0/5; p00-advisory-proposal-package round 2 still 4/8). Money hub quiet. Canvas skipped (blocked, not day's first run). Pulse skipped (quiet-pass gate, nothing changed)."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787159746.599809",
-      "C0BBZJL85RT": "1787163793.881519",
-      "D0BHPKMDNEP": "1787159924.834629",
+      "C0BBZJL85RT": "1787166542.101149",
+      "D0BHPKMDNEP": "1787163698.736269",
       "C0BGLEMH99T": "1787163770.000000",
       "C0BEQUW5NPP": "1787163770.000000",
       "C0BBLUA7JLX": "1787163770.000000",
@@ -44,13 +44,13 @@
       "1787155581.357669": "1787155620.300329",
       "1787157130.471099": "1787163453.430099"
     },
-    "capture_dm": "1787159924.834629",
-    "gmail_after_epoch": 1787163770
+    "capture_dm": "1787163698.736269",
+    "gmail_after_epoch": 1787166445
   },
   "integrity": {
     "last_full_pass": "2026-08-19T09:15:00-04:00",
     "last_scan_sha": "8725a08c999ebf65a228cf8bddd7b84c51b363f0",
-    "note": "Changed-since-SHA check this run (against prior last_scan_sha 0076599): 1 vault file changed (2026-08-19-p00-advisory-proposal-package.md), valid frontmatter, no repair needed. Inbox: 1 new file-ready note (hillview-med) filed; same 2 known stuck notes unchanged, 0 new stuck."
+    "note": "Changed-since-SHA check this run: 0 vault files changed (HEAD unchanged since last scan point). Inbox: same 2 known stuck notes unchanged, 0 new stuck, 0 new file-ready."
   },
   "canvas_access": {
     "last_checked": "2026-08-18T13:14:20Z",
