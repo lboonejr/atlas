@@ -3,28 +3,29 @@
   "lock": {
     "run_id": "run_20260819T130524Z",
     "run_started": "2026-08-19T13:05:24Z",
-    "run_completed": "2026-08-18T22:07:43Z",
-    "note": "Prior run (run_20260819T120358Z) died mid-flight — lock aged out (>45min, no completion). This run takes over."
+    "run_completed": "2026-08-19T13:24:26Z",
+    "note": "Completed. Prior run (run_20260819T120358Z) had died mid-flight and aged out (>45min, no completion) — this run took over at PART 0."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787072988.466919",
-      "C0BBZJL85RT": "1787090766.523189",
-      "D0BHPKMDNEP": "1787076741.289239",
-      "C0BGLEMH99T": "1787073003.000000",
-      "C0BEQUW5NPP": "1787073003.000000",
-      "C0BBLUA7JLX": "1787073003.000000",
-      "C0BJ37SU1TL": "1787073003.000000",
-      "C0BCCUKEUQ2": "1787076577.749139",
-      "C0BCD7U5X2B": "1787073003.000000",
-      "C0BCH2C3GRM": "1787073003.000000",
-      "C0BDN2KQFD4": "1787073003.000000",
-      "C0BD8LTM1EK": "1787073003.000000",
-      "C0BGYM1UB4Y": "1787073003.000000",
-      "C0BGCAK0ML3": "1787073003.000000",
-      "C0BHXTPST52": "1787073003.000000",
-      "C0BC2A94142": "1787073003.000000",
-      "C0BBZ5J8805": "1787073003.000000"
+      "C0BBXA96FFV": "1787145457.563609",
+      "C0BBZJL85RT": "1787145815.702089",
+      "D0BHPKMDNEP": "1787145796.537779",
+      "C0BGLEMH99T": "1787145900.000000",
+      "C0BEQUW5NPP": "1787145900.000000",
+      "C0BBLUA7JLX": "1787145900.000000",
+      "C0BJ37SU1TL": "1787145900.000000",
+      "C0BCCUKEUQ2": "1787145287.175769",
+      "C0BCD7U5X2B": "1787145900.000000",
+      "C0BCH2C3GRM": "1787145900.000000",
+      "C0BDN2KQFD4": "1787145900.000000",
+      "C0BD8LTM1EK": "1787145900.000000",
+      "C0BGYM1UB4Y": "1787145900.000000",
+      "C0BGCAK0ML3": "1787145900.000000",
+      "C0BHXTPST52": "1787145900.000000",
+      "C0BC2A94142": "1787145900.000000",
+      "C0BBZ5J8805": "1787145900.000000",
+      "C0BRZT2V89W": "1787145372.677909"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
@@ -36,22 +37,23 @@
       "1786990354.291129": "1786993750.159969",
       "1787001107.337499": "1787055300.092309",
       "1786990384.507289": "1787055521.111979",
-      "1787069259.543559": "1787072988.466919"
+      "1787069259.543559": "1787145016.517439",
+      "1787112734.344369": "1787145457.563609"
     },
     "capture_dm": "1787076741.289239",
-    "gmail_after_epoch": 1787088586
+    "gmail_after_epoch": 1787142966
   },
   "integrity": {
-    "last_full_pass": "2026-08-18T09:14:20-04:00",
-    "last_scan_sha": "f0d44c93a0e3eabadb8fc40742bf22bb69c1443d",
-    "note": "Incremental scan this run: 1 vault file changed since last_scan_sha (this run's own _daily append), 0 repairs. No new Inbox notes; 2 pre-existing stuck notes unchanged. Full whole-vault pass still stands from today's first run (534 notes, 0 repairs, 1 known/decided defect carried: _daily/2026-08-01.md lossy base64)."
+    "last_full_pass": "2026-08-19T09:15:00-04:00",
+    "last_scan_sha": "992f36c94742833b9460392872f2cfc2917d374c",
+    "note": "Full whole-vault pass this run (day's first completing run of 2026-08-19): 530 notes scanned OK (6 templates/examples skipped), 1 known lossy-base64 carried (_daily/2026-08-01.md, prior decision stands, no repair attempted), 0 new repairs. Inbox: filed 1 (2026-08-19-inbox-janitor-run.md), 2 pre-existing stuck notes unchanged (dib-template-theme-decision-closeout domain/type/status/tags/source gaps; google-voice-subscription-cancellation domain? gap)."
   },
   "canvas_access": {
     "last_checked": "2026-08-18T13:14:20Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-18T14:12:14-04:00",
+    "pulse_last_rendered": "2026-08-19T09:45:00-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
