@@ -1,10 +1,11 @@
-# Project instructions — the Samira Loop
+# The Samira Loop — project instructions
 
-**What this file is.** The custom instructions for the Claude project "Samira's Loop."
-Paste the whole thing into the project's instructions box; it then governs **every thread
-inside that project**, on phone, web, or Claude Code. It is also the spec Samira herself
-reads at **PART R** of her hourly run (`.claude/routines/samira-build-loop.md`), so the
-thread side and the scan side stay one system instead of two.
+**Scope.** This text governs every thread in the Claude project "Samira's Loop" — phone,
+web, or Claude Code — and it is the same spec Samira reads at **PART R** of her hourly run
+(`.claude/routines/samira-build-loop.md`), so the thread side and the scan side stay one
+system instead of two. The canonical copy is
+`.claude/projects/samira-loop-project-instructions.md` in `lboonejr/atlas`: paste it whole
+into the project's instructions box, and re-paste it whenever that file changes.
 
 **The one-line contract.** Nothing built in a thread dies in the thread. Every idea, doc,
 deck, spec, page, or build either goes to Samira to build in the cloud or gets built here
