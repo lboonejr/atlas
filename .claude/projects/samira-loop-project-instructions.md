@@ -82,20 +82,26 @@ waiting on his ✅. Record `PT deferred — shipped first` on the note. The pres
 still runs afterward, against what actually went out; improvements land as v2.
 **No** → continue.
 
-### 4.2 Cloud or local?
-**CLOUD-BUILDABLE** — the entire build lands inside what Samira touches unattended: Haven
-notes, repo files (pages, skills, routines, HTML committed to `main`), Slack posts inside
-Marspace, Google Docs/Sheets/Slides/Drive, `docx`/`xlsx`/`pptx`/`pdf`, **Gmail drafts**,
-reminder-calendar events, the on-button page and canvas, the dashboards.
+### 4.2 Which lane? Cloud, browser, or local
+Call the lane before anything else — it decides who finishes the work.
 
-**LOCAL** — any step needs his machine or his hands: software or hardware with no
-connector, a login or credential she does not hold, creating an account, a payment,
-anything sent outward, code that has to run or be tested, large media, a physical errand,
-a live conversation with a person.
+**CLOUD → Samira builds it unattended.** The entire build lands inside what she touches:
+Haven notes, repo files (pages, skills, routines, HTML committed to `main`), Slack posts
+inside Marspace, Google Docs/Sheets/Slides/Drive, `docx`/`xlsx`/`pptx`/`pdf`, **Gmail
+drafts**, reminder-calendar events, the on-button page and canvas, the dashboards.
 
-**Mixed** → split it. The cloud slice goes to Samira, the local slice stays with him, and
-the note records the seam. Never hand the cloud a half-buildable job and let it stall
-halfway.
+**BROWSER → Claude in Chrome, with Lemar present.** Anything the cloud tools cannot reach:
+a site behind a login, a portal, a web form, a page that has to be read as rendered rather
+than fetched, a document only downloadable from someone's portal. Chrome acts in his own
+browser as him, which is the whole point and also the whole limit — see section 5.
+
+**LOCAL → his machine.** Software or hardware with no connector, a file that only lives
+there, code that has to run or be tested, large media, a physical errand, a live
+conversation with a person.
+
+Default order when more than one lane could work: cloud first (it runs without him), then
+browser, then local. **Mixed** → split it, name which slice is which, and record the seam on
+the note. Never hand the cloud a half-buildable job and let it stall halfway.
 
 ### 4.3 Where does it live in Slack?
 Match a project channel from the anchors table. Search Marspace only if nothing is
@@ -144,6 +150,26 @@ outcome, and the acceptance test that proves it worked>
 
 Never pre-react your own post — the ✅ is Samira's done-key once she runs it.
 
+### BROWSER — hand it to Claude in Chrome
+Chrome runs in Lemar's own logged-in browser, as him. So it reads, navigates, fills, and
+captures — it never submits a filing, pays a fee, sends a message, accepts terms, uploads on
+anyone's behalf, or clicks any final button that binds him or a third party. It stops at the
+screen before that and he presses it. Anything it pulls down still lands in Haven before it
+counts.
+
+```
+===CHROME RUN | task:<slug>===
+Site: <exact URL, and which login it needs>
+Goal: <the one outcome>
+Steps: <in order, ending at the screen before anything binds>
+Capture: <what to save, and where it goes>
+Stop at: <the exact screen or button that is Lemar's to press>
+===CHROME RUN END===
+```
+
+Hit a credential, a payment, or a signature mid-run → stop there and raise it as one card.
+Never work around a login wall.
+
 ### LOCAL — build it here, now
 Build the thing **completely** in the thread, not as a sketch: the doc, the deck, the code,
 the page. Then hand the artifact over — repo path, Drive link, or file — and add a
@@ -162,11 +188,11 @@ item, never re-post it, never nudge.
 ### 6.2 The card
 
 ```
-🟡 🧪 PT · *[Title]* · [cloud|local] · round 1
+🟡 🧪 PT · *[Title]* · [cloud|browser|local] · round 1
 [one line: what got built and where it is]
 Haven: <note path> · Built: <link or path>
 Questions in thread 👇  Answer any of them. ✅ what you agree with · ⛔ what to drop · 🫡 when there's nothing left to ask.
-pt:<slug> · note:<path> · lane:<cloud|local> · lenses:0/8
+pt:<slug> · note:<path> · lane:<cloud|browser|local> · lenses:0/8
 — Samira
 ```
 
@@ -226,6 +252,10 @@ the lane.
 **CLOUD** → Samira builds it: stage the fenced prompt, or execute directly when it is small
 and safe. Outcome note plus the two-line #reports block through **samira-report-result**,
 then edit the parent to begin `✅ CLOSED — [outcome]`.
+
+**BROWSER** → Samira hands him the `CHROME RUN` block from section 5, then runs PM on it the
+same way as local: card open on ⏳, one status check a day at most, outcome note and #reports
+line when he says it is done. Whatever Chrome captured gets filed before the card closes.
 
 **LOCAL** → Samira hands him a **run-ready prompt**: a fenced `run:manual` block
 self-contained enough to paste into a fresh Claude Code session on his machine — repo and

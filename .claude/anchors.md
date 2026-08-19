@@ -228,6 +228,8 @@ same-day build lane.
 | Reactions | The standard engine, unchanged: ✅ agree · 👀 seen (carry, never re-ask) · ⛔ drop that line · 🫡 on the parent = lock it and build. Samira sets only the headline (🟡 baking · 🔴 needed today · 🟢 build ready · ⏳ waiting). |
 | Cap | 3 cards get a round per scan, oldest first; the rest carry and the digest says so. |
 | Digest token | `pt: <slug> r3 5/8 · <slug> locked · N carried` or `pt —`. |
+| Lanes | **cloud** (Samira builds unattended) · **browser** (Claude in Chrome, in Lemar's own logged-in browser, with him present — reads/fills/captures, never submits, pays, sends, or clicks a binding button) · **local** (his machine). Default order cloud → browser → local. |
+| Engagement overlays | A client engagement can layer its own rules on top of the loop: `.claude/projects/camden-dispensary-launch-project-instructions.md` (Camden Dispensary Launch — CRC licensing through inspection clearance). The overlay's engagement rules and safety floor outrank the loop's mechanics wherever they conflict. Its Slack channel and Drive folder ids are **not yet recorded** — until they are, its cards go to #decisions titled "Camden Launch" and its results to #reports; never create the channel or guess a folder id. |
 
 ## Pulse dashboard (rendered by Samira — no separate trigger)
 

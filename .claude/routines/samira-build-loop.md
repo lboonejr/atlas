@@ -5,7 +5,8 @@ description: >
   routine. Threads in the "Samira's Loop" Claude project hand her things they built (or
   things they want built in the cloud); this loop advances each one's pressure test across
   the day's remaining scans in #decisions, locks it when the questions run out, then either
-  builds it in the cloud or hands Lemar a run-ready prompt for his machine. The full spec
+  builds it in the cloud, hands Lemar a Chrome run block for anything behind a login, or
+  hands him a run-ready prompt for his machine. The full spec
   — lanes, card format, the eight lenses, closeout, #reports lines — lives in
   `.claude/projects/samira-loop-project-instructions.md`; this file is the loop's
   operational detail. All platform IDs live in `.claude/anchors.md`.
@@ -52,7 +53,7 @@ from being executed twice by two PARTs in the same scan.
 ## The loop
 1. **Find the open cards.** #decisions parents you posted whose first line contains
    `🧪 PT ·` and which do **not** begin `✅ CLOSED`. Parse the control line
-   (`pt:<slug> · note:<path> · lane:<cloud|local> · lenses:k/8`) for state. If the control
+   (`pt:<slug> · note:<path> · lane:<cloud|browser|local> · lenses:k/8`) for state. If the control
    line is missing or unparseable, rebuild it from the Haven note — the note is truth, the
    card is a rendering.
 2. **Compute the cadence** (project instructions §2): which scan of 11 this is and how many
@@ -72,9 +73,11 @@ from being executed twice by two PARTs in the same scan.
      together, each with its one-line "why", as numbered replies under the parent. Refresh
      the parent's control line (`lenses:k/8`, `round N`) and its headline emoji.
    - **Or lock it** when all eight lenses are covered with nothing unanswered, or he 🫡'd.
-5. **Closeout** per project instructions §7 — cloud builds get staged (buffer: never run in
-   the scan they were staged) or executed directly when small and safe; local builds get the
-   `run:manual` run-ready prompt and Samira switches to PM mode (one status check a day,
+5. **Closeout** per project instructions §7 — three lanes, not two: **cloud** builds get
+   staged (buffer: never run in the scan they were staged) or executed directly when small
+   and safe; **browser** items get the `CHROME RUN` block (Lemar drives Chrome, and it never
+   submits, pays, sends, or clicks a binding button); **local** items get the `run:manual`
+   run-ready prompt. Browser and local both put Samira in PM mode (one status check a day,
    max, in-thread). Every outcome lands through **samira-report-result**: Haven note first,
    then the #reports block, then `✅ CLOSED — [outcome]` on the parent.
 6. **Housekeeping.** Apply the two-day rule (one honest "still worth doing?" line at day
