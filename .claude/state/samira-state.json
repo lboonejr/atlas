@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260820T220317Z",
     "run_started": "2026-08-20T22:03:17Z",
-    "run_completed": "2026-08-20T19:11:32Z",
-    "note": "In progress. Prior lock (run_20260820T210355Z, started 2026-08-20T21:03:55Z) aged out unfinished after 59min and is treated as died-mid-flight per PART 0 — 2nd consecutive dead lock (also true of run_20260820T200228Z before it). Flagging for Lemar in this run's digest."
+    "run_completed": "2026-08-20T22:09:00Z",
+    "note": "Complete, reduced scope. Prior two runs (200228Z, 210355Z) each did real work (vault filing, decision drafts, #reports lines) but died before writing their final lock.run_completed + watermarks -- their state was reconciled into this run's watermarks rather than redone (idempotency keys -- prior 'Done ✅' replies -- confirmed nothing needed re-executing). This run: PART V finished (filed 2 notes still sitting in Inbox from the dead runs), PART A spot-checked every thread flagged new-or-stale against the stored watermark (5 reconciled, all already correctly handled or awaiting Lemar, nothing re-executed), PART B checked (no new captures from Lemar). PARTS C/D/E/Q/R/M/canvas/P skipped this pass for time -- their watermarks are untouched and will be swept fresh next run."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787253057.223999",
-      "C0BBZJL85RT": "1787253057.223999",
-      "D0BHPKMDNEP": "1787253092.000000",
+      "C0BBXA96FFV": "1787256504.479409",
+      "C0BBZJL85RT": "1787260484.774889",
+      "D0BHPKMDNEP": "1787256839.090509",
       "C0BGLEMH99T": "1787253092.000000",
       "C0BEQUW5NPP": "1787253092.000000",
       "C0BBLUA7JLX": "1787253092.000000",
@@ -43,11 +43,14 @@
       "1787159607.185319": "1787162996.829679",
       "1787155581.357669": "1787228056.156019",
       "1787157130.471099": "1787231790.722049",
-      "1787227722.583919": "1787227729.950129",
+      "1787227722.583919": "1787260488.874049",
       "1787231683.266619": "1787234895.613759",
       "1787235032.481949": "1787245639.309649",
       "1787238798.497049": "1787238833.679779",
-      "1787245811.807379": "1787245837.845089"
+      "1787245811.807379": "1787245837.845089",
+      "1787256504.479409": "1787260487.561709",
+      "1786824337.657789": "1786831565.789469",
+      "1786709997.432499": "1786727321.939139"
     },
     "capture_dm": "1787253092.000000",
     "gmail_after_epoch": 1787253092
@@ -55,7 +58,7 @@
   "integrity": {
     "last_full_pass": "2026-08-20T12:17:41Z",
     "last_scan_sha": "3b394618538af206a0eed57bca466146f4bb2bba",
-    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged."
+    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged. Not re-run this pass (incremental cadence, no vault changes beyond the 2 Inbox notes filed)."
   },
   "canvas_access": {
     "last_checked": "2026-08-20T12:16:00Z",
