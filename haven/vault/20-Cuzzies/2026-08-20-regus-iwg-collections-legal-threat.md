@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T10:15-04:00
-updated: 2026-08-20T11:06-04:00
+updated: 2026-08-20T13:12-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -85,6 +85,39 @@ Projected onto the **Cuzzie's (Owners)** calendar (business money, per the 2026-
 lock — never the personal reminder calendar): event `rdvh4u83qhr0rg26t64fncvpa0`,
 2026-08-23 09:00 ET, popups at 24h and day-of. Until this run the 8/23 date lived only in
 Dawn's 8/19 brief prose and would not have alerted anyone.
+
+## Update 2026-08-20T13:12-04:00 — contact-establishing reply drafted (NOT sent)
+
+Lemar replied in the #decisions thread at 11:59am ET: "Can you draft an email establishing
+contact and letting them know of the current situation?" That is the fifth path named in
+the correction reply above (contact alone stops the five-day clock per IWG's own letter),
+not one of the four staged options.
+
+Drafted and **saved to Gmail Drafts, unsent** (draft `r4484351957198649724`, message
+`1a02023a8c39a510`, in thread `1a01f7e77adffb82` to `AmericasDebtCollection@iwgplc.com`).
+The send stays Lemar's.
+
+What the draft does:
+- Establishes contact and acknowledges both the 8/18 letter and the 8/20 follow-up by name.
+- States plainly that Cuzzie's is winding down and that obligations are being worked
+  through one at a time.
+- **Commits to no figure and no date.** Voice-profile hard floor 5 (process verbs, never
+  outcome verbs that could be held as a commitment) is doing real work here, because
+  anything he writes to a collections arm three days from a threatened filing could be
+  quoted back at him.
+- Asks them to walk through the **$1,048.60 §1.7 agreement-value line** and what the
+  agreement provides for it, given the office was cleared and keys returned 7/13–7/15.
+  Framed as a question, not a dispute, so it opens the issue without conceding or
+  contesting the $3,131.91 in unpaid invoices.
+- Offers open availability by phone or email.
+
+Deliberately left out, as Lemar's judgment rather than Samira's: any mention of the
+Camden sale or prospective buyers, any reference to the DeWalt matter or the Curaleaf/AGA
+notice, and any settlement or payoff number. Naming other creditors or a pending
+transaction to a collections arm is a disclosure decision, not a drafting one.
+
+Nothing was sent, paid, or promised. The 8/23 deadline event
+`rdvh4u83qhr0rg26t64fncvpa0` stands unchanged on the Cuzzie's (Owners) calendar.
 
 ## Related
 - [[regus-iwg]]
