@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260820T120254Z",
-    "run_started": "2026-08-20T12:02:54Z",
+    "run_id": "run_20260820T130424Z",
+    "run_started": "2026-08-20T13:04:24Z",
     "run_completed": "2026-08-20T12:17:41Z",
-    "note": "Day's first run. Vault-keeper: filed 1 (basil inbox-janitor note), 2 known stuck Inbox notes unchanged, full integrity pass run (day's first run): 541 checked, 0 repaired, 3 known carried, 1 new finding (ops-admin-lane-and-ariana.md missing created/updated, already tracked via open PR #73, not duplicated). Calendar-sync clean no-op. #decisions: 15 open threads checked via thread reads against stored watermarks; only new activity was Lemar's round-1 answer on the ops-admin-lane-and-ariana PT card (all 5 answered) — locked, note updated, reply posted. NJ annual report still red/unreacted (urgent, carried). Capture DM empty. 13 project channels + #camden-launch + #stormy + #investor-pipeline swept, zero activity except the investor thread found in email triage. Email: 10 new threads since last epoch — 1 reply-worthy (Headset, 3 options drafted to #decisions), 1 investor handoff (Donte Bronaugh 'HR Investor Package', backfilled onto the index, self-managed), 5 junk, 2 informational (Cova incident resolved, LeafLogix exec summary), all labelled Samira/seen. PART R: ops-admin-lane-and-ariana locked; p00-advisory-proposal-package carried at round 2 (4/8 lenses open, no new reply); p00-client-intake-system already locked. Money hub quiet (#personal-finance empty this scan) — Google Workspace $85 suspension risk lands today, flagged on Pulse, retry is Lemar's. Canvas re-checked (day's first run): still bot-read-only, unchanged. Pulse rendered (something changed this run) and DM'd."
+    "note": "Day's second run (in progress)."
   },
   "watermarks": {
     "slack_channels": {
@@ -51,7 +51,7 @@
   "integrity": {
     "last_full_pass": "2026-08-20T12:17:41Z",
     "last_scan_sha": "5b396bfdc51b8501332f791a34fe86bb863d070f",
-    "note": "Full whole-vault pass this run (day's first run): 541 notes checked, 0 repaired, 3 known defects carried (2 Inbox domain/type gaps — dib-template-theme, google-voice-cancellation; 1 lossy b64 _daily/2026-08-01.md, decided 8/1), 1 new finding (40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md missing created/updated — required field absent on a filed note, flagged not fixed; already recorded durably via open PR #73 from a separate session, not duplicated here)."
+    "note": "Full whole-vault pass ran on day's first run; this run does incremental-only (diff vs last_scan_sha)."
   },
   "canvas_access": {
     "last_checked": "2026-08-20T12:16:00Z",
