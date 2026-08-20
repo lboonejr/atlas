@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260819T220327Z",
-    "run_started": "2026-08-19T22:03:27Z",
+    "run_id": "run_20260820T120254Z",
+    "run_started": "2026-08-20T12:02:54Z",
     "run_completed": "2026-08-19T22:06:30Z",
-    "note": "Quiet scan, ~1hr after the prior run closed. 0 closed / 0 new / 1 urgent carried (NJ annual report, still red, unreacted). Vault-keeper: 0 new Inbox notes, 2 known stuck notes unchanged (DIB template theme, Google Voice cancellation) — no card refresh needed, composition unchanged. #decisions: all 15 open threads (12 regular + 3 PT cards) checked via thread reads, no new replies/reactions since stored watermarks. Capture DM: empty since last watermark. 13 project channels + #camden-launch + #stormy + #investor-pipeline swept, zero activity. Email: 2 new threads since last epoch — Verano marketing (\"Short Lifts are back!\") and a Cova status-page incident thread (identified -> monitoring -> resolved), both automated/marketing, labelled Samira/seen, no drafts/tasks. PART R: no new replies on any open PT card — ops-admin-lane-and-ariana round 1 still unanswered (5 questions open), p00-advisory-proposal-package round 2 still open (Q6-Q9 unanswered), p00-client-intake-system locked (PM mode). Money hub quiet (#personal-finance empty). Canvas skipped (blocked, not day's first run). Pulse skipped (quiet-pass gate, nothing changed)."
+    "note": "In flight."
   },
   "watermarks": {
     "slack_channels": {
