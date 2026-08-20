@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260820T120254Z",
     "run_started": "2026-08-20T12:02:54Z",
-    "run_completed": "2026-08-19T22:06:30Z",
-    "note": "In flight."
+    "run_completed": "2026-08-20T12:17:41Z",
+    "note": "Day's first run. Vault-keeper: filed 1 (basil inbox-janitor note), 2 known stuck Inbox notes unchanged, full integrity pass run (day's first run): 541 checked, 0 repaired, 3 known carried, 1 new finding (ops-admin-lane-and-ariana.md missing created/updated, already tracked via open PR #73, not duplicated). Calendar-sync clean no-op. #decisions: 15 open threads checked via thread reads against stored watermarks; only new activity was Lemar's round-1 answer on the ops-admin-lane-and-ariana PT card (all 5 answered) — locked, note updated, reply posted. NJ annual report still red/unreacted (urgent, carried). Capture DM empty. 13 project channels + #camden-launch + #stormy + #investor-pipeline swept, zero activity except the investor thread found in email triage. Email: 10 new threads since last epoch — 1 reply-worthy (Headset, 3 options drafted to #decisions), 1 investor handoff (Donte Bronaugh 'HR Investor Package', backfilled onto the index, self-managed), 5 junk, 2 informational (Cova incident resolved, LeafLogix exec summary), all labelled Samira/seen. PART R: ops-admin-lane-and-ariana locked; p00-advisory-proposal-package carried at round 2 (4/8 lenses open, no new reply); p00-client-intake-system already locked. Money hub quiet (#personal-finance empty this scan) — Google Workspace $85 suspension risk lands today, flagged on Pulse, retry is Lemar's. Canvas re-checked (day's first run): still bot-read-only, unchanged. Pulse rendered (something changed this run) and DM'd."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787159746.599809",
-      "C0BBZJL85RT": "1787177142.800769",
-      "D0BHPKMDNEP": "1787163698.736269",
-      "C0BGLEMH99T": "1787163770.000000",
-      "C0BEQUW5NPP": "1787163770.000000",
-      "C0BBLUA7JLX": "1787163770.000000",
-      "C0BJ37SU1TL": "1787163770.000000",
-      "C0BCCUKEUQ2": "1787163770.000000",
-      "C0BCD7U5X2B": "1787163770.000000",
-      "C0BCH2C3GRM": "1787163770.000000",
-      "C0BDN2KQFD4": "1787163770.000000",
-      "C0BD8LTM1EK": "1787163770.000000",
-      "C0BGYM1UB4Y": "1787163770.000000",
-      "C0BGCAK0ML3": "1787163770.000000",
-      "C0BHXTPST52": "1787163770.000000",
-      "C0BC2A94142": "1787163770.000000",
-      "C0BBZ5J8805": "1787163770.000000",
-      "C0BRZT2V89W": "1787163770.000000"
+      "C0BBXA96FFV": "1787228056.156019",
+      "C0BBZJL85RT": "1787228222.202109",
+      "D0BHPKMDNEP": "1787228195.822939",
+      "C0BGLEMH99T": "1787228261.000000",
+      "C0BEQUW5NPP": "1787228261.000000",
+      "C0BBLUA7JLX": "1787228261.000000",
+      "C0BJ37SU1TL": "1787228261.000000",
+      "C0BCCUKEUQ2": "1787228261.000000",
+      "C0BCD7U5X2B": "1787228261.000000",
+      "C0BCH2C3GRM": "1787228261.000000",
+      "C0BDN2KQFD4": "1787228261.000000",
+      "C0BD8LTM1EK": "1787228261.000000",
+      "C0BGYM1UB4Y": "1787228261.000000",
+      "C0BGCAK0ML3": "1787228261.000000",
+      "C0BHXTPST52": "1787228261.000000",
+      "C0BC2A94142": "1787228261.000000",
+      "C0BBZ5J8805": "1787228261.000000",
+      "C0BRZT2V89W": "1787228261.000000"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
@@ -41,23 +41,24 @@
       "1787112734.344369": "1787148659.182229",
       "1787152085.518979": "1787159332.480679",
       "1787159607.185319": "1787162996.829679",
-      "1787155581.357669": "1787155620.300329",
-      "1787157130.471099": "1787163453.430099"
+      "1787155581.357669": "1787228056.156019",
+      "1787157130.471099": "1787163453.430099",
+      "1787227722.583919": "1787227729.950129"
     },
-    "capture_dm": "1787163698.736269",
-    "gmail_after_epoch": 1787177101
+    "capture_dm": "1787228195.822939",
+    "gmail_after_epoch": 1787227743
   },
   "integrity": {
-    "last_full_pass": "2026-08-19T09:15:00-04:00",
-    "last_scan_sha": "8725a08c999ebf65a228cf8bddd7b84c51b363f0",
-    "note": "Changed-since-SHA check this run: only this run's own daily-journal append touched haven/vault/. 2 known stuck Inbox notes unchanged, 0 new stuck, 0 new file-ready."
+    "last_full_pass": "2026-08-20T12:17:41Z",
+    "last_scan_sha": "5b396bfdc51b8501332f791a34fe86bb863d070f",
+    "note": "Full whole-vault pass this run (day's first run): 541 notes checked, 0 repaired, 3 known defects carried (2 Inbox domain/type gaps — dib-template-theme, google-voice-cancellation; 1 lossy b64 _daily/2026-08-01.md, decided 8/1), 1 new finding (40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md missing created/updated — required field absent on a filed note, flagged not fixed; already recorded durably via open PR #73 from a separate session, not duplicated here)."
   },
   "canvas_access": {
-    "last_checked": "2026-08-18T13:14:20Z",
+    "last_checked": "2026-08-20T12:16:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-19T14:15:00-04:00",
+    "pulse_last_rendered": "2026-08-20T08:16:00-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
