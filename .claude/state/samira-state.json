@@ -1,47 +1,63 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260815T220334Z",
-    "run_started": "2026-08-15T22:03:34Z",
-    "run_completed": "2026-08-15T22:34:42Z"
+    "run_id": "run_20260819T220327Z",
+    "run_started": "2026-08-19T22:03:27Z",
+    "run_completed": "2026-08-19T22:06:30Z",
+    "note": "Quiet scan, ~1hr after the prior run closed. 0 closed / 0 new / 1 urgent carried (NJ annual report, still red, unreacted). Vault-keeper: 0 new Inbox notes, 2 known stuck notes unchanged (DIB template theme, Google Voice cancellation) — no card refresh needed, composition unchanged. #decisions: all 15 open threads (12 regular + 3 PT cards) checked via thread reads, no new replies/reactions since stored watermarks. Capture DM: empty since last watermark. 13 project channels + #camden-launch + #stormy + #investor-pipeline swept, zero activity. Email: 2 new threads since last epoch — Verano marketing (\"Short Lifts are back!\") and a Cova status-page incident thread (identified -> monitoring -> resolved), both automated/marketing, labelled Samira/seen, no drafts/tasks. PART R: no new replies on any open PT card — ops-admin-lane-and-ariana round 1 still unanswered (5 questions open), p00-advisory-proposal-package round 2 still open (Q6-Q9 unanswered), p00-client-intake-system locked (PM mode). Money hub quiet (#personal-finance empty). Canvas skipped (blocked, not day's first run). Pulse skipped (quiet-pass gate, nothing changed)."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1786832078.131649",
-      "C0BBZJL85RT": "1786833128.940819",
-      "D0BHPKMDNEP": "1786824853.806029",
-      "C0BGLEMH99T": "1786829161.408529",
-      "C0BEQUW5NPP": "1786826644.470099",
-      "C0BBLUA7JLX": "1786820943.028119",
-      "C0BJ37SU1TL": "1785586607.101759",
-      "C0BCCUKEUQ2": "1786735706.250489",
-      "C0BCD7U5X2B": "1784895502.750959",
-      "C0BCH2C3GRM": "1783865910.025549",
-      "C0BDN2KQFD4": "1786365005.327169",
-      "C0BD8LTM1EK": "1783257200.297099",
-      "C0BGYM1UB4Y": "1786817353.240879",
-      "C0BGCAK0ML3": "1783695944.017839",
-      "C0BHXTPST52": "1786306503.409249",
-      "C0BC2A94142": "1782508078.495669",
-      "C0BBZ5J8805": "1786741654.908089"
+      "C0BBXA96FFV": "1787159746.599809",
+      "C0BBZJL85RT": "1787177142.800769",
+      "D0BHPKMDNEP": "1787163698.736269",
+      "C0BGLEMH99T": "1787163770.000000",
+      "C0BEQUW5NPP": "1787163770.000000",
+      "C0BBLUA7JLX": "1787163770.000000",
+      "C0BJ37SU1TL": "1787163770.000000",
+      "C0BCCUKEUQ2": "1787163770.000000",
+      "C0BCD7U5X2B": "1787163770.000000",
+      "C0BCH2C3GRM": "1787163770.000000",
+      "C0BDN2KQFD4": "1787163770.000000",
+      "C0BD8LTM1EK": "1787163770.000000",
+      "C0BGYM1UB4Y": "1787163770.000000",
+      "C0BGCAK0ML3": "1787163770.000000",
+      "C0BHXTPST52": "1787163770.000000",
+      "C0BC2A94142": "1787163770.000000",
+      "C0BBZ5J8805": "1787163770.000000",
+      "C0BRZT2V89W": "1787163770.000000"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
-      "1786832078.131649": "1786832078.131649"
+      "1786832078.131649": "1786832078.131649",
+      "1786713941.609669": "1786716585.591279",
+      "1786986503.368599": "1786986503.368599",
+      "1786631846.014899": "1786990331.307329",
+      "1786631841.945579": "1786990332.792009",
+      "1786990354.291129": "1786993750.159969",
+      "1787001107.337499": "1787055300.092309",
+      "1786990384.507289": "1787055521.111979",
+      "1787069259.543559": "1787145016.517439",
+      "1787112734.344369": "1787148659.182229",
+      "1787152085.518979": "1787159332.480679",
+      "1787159607.185319": "1787162996.829679",
+      "1787155581.357669": "1787155620.300329",
+      "1787157130.471099": "1787163453.430099"
     },
-    "capture_dm": "1786824853.806029",
-    "gmail_after_epoch": 1786831648
+    "capture_dm": "1787163698.736269",
+    "gmail_after_epoch": 1787177101
   },
   "integrity": {
-    "last_full_pass": "2026-08-15T18:12:00Z",
-    "last_scan_sha": "769651f6d2d1519d73957f23f295e1897d34a2fa"
+    "last_full_pass": "2026-08-19T09:15:00-04:00",
+    "last_scan_sha": "8725a08c999ebf65a228cf8bddd7b84c51b363f0",
+    "note": "Changed-since-SHA check this run: only this run's own daily-journal append touched haven/vault/. 2 known stuck Inbox notes unchanged, 0 new stuck, 0 new file-ready."
   },
   "canvas_access": {
-    "last_checked": "2026-08-15T18:12:00Z",
+    "last_checked": "2026-08-18T13:14:20Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-15T22:24:00Z",
-    "money_hub_last_rendered": "2026-08-15T22:10:00Z"
+    "pulse_last_rendered": "2026-08-19T14:15:00-04:00",
+    "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }

@@ -53,6 +53,7 @@ supersedes ALL other style guidance, including guides bundled inside skills.
 | #daily-brief (RETIRED) | `C0BF73FF56H` | Dawn's former once-a-day surface — **retired 2026-07-16**, Dawn now DMs Lemar (see "Dawn DM" above). Being archived; read-only record, never posted to |
 | #car-search | `C0BEC2RFC00` | Car loop (samira-car-search); never swept in PART C |
 | #investor-pipeline | `C0BCCUKEUQ2` | Investor loop (samira-investor) |
+| #camden-launch | `C0BRZT2V89W` | **PRIVATE** — the Camden Dispensary Launch engagement's project channel (created 2026-08-18). Work surface only: staged `run:admin-3x` prompts, artifacts, and outcomes loop back here. The engagement's QUESTIONS still live in #decisions (titled "Camden Launch"), same as every other project channel — see the overlay `.claude/projects/camden-dispensary-launch-project-instructions.md`. Samira's bot confirmed in-channel 2026-08-19 (members: Lemar `U0BC5UTHYG4` + bot `U0BJQ771LJU`); keep it invited. Swept in PART C going forward. |
 | #skills-lab | `C0BBZ5J8805` | Skill-candidate proposals |
 | #on-button | `C0BEQUW5NPP` | Reopening command center — drop past-due bills/screenshots here. The **on-button-plan** skill ingests drops into the ONE source of truth `haven/vault/40-Projects/on-button-reopen/index.md`, then regenerates the interactive page `on-button-reopen.html` (githack: `https://raw.githack.com/lboonejr/atlas/main/on-button-reopen.html`) and the pinned canvas `F0BEN1167GB`. Tracking only, nothing paid/contacted. |
 | #personal-finance | `C0BGLEMH99T` | Personal money hub — Lemar drops earnings, cash, bills (text or photo), payments, and plan terms here; Samira's **PART M** sweeps them via the **money-hub** skill. Source of truth: `haven/vault/10-Personal/Money/money-hub-ledger.md` (+ `income-log-2026.md`). The 2026-07-11 project note that built this is closed (`status: done`, history only). |
@@ -212,6 +213,61 @@ documented in the runbook, the PART Q entry, and the skill's runtime banner.
 | Identity / bot | **Samira's existing bot** (connector `01519dfa-b91a-47eb-beb4-cdc04444144e`, bot user `U0BJQ771LJU`), posts signed `🌩️ … — Stormy`. **No new Slack app, Vercel deploy, or connector** — that whole playbook is skipped because Stormy uses no reactions and only posts signed messages, so the identity-confusion the playbook solves does not apply. |
 | Setup status | **Live-ready 2026-07-17:** #stormy created (`C0BJ37SU1TL`), Samira bot invited + confirmed in-channel. Remaining: one supervised PART Q run per `stormy-ideation.md`'s "First supervised run" (drop a seed idea in #stormy, watch one Samira scan bake it). |
 | Persona | lead `🌩️`, sign "— Stormy" (placeholder name, rename-able like "Dawn"/"Basil") |
+
+## Samira Loop — build + pressure-test (folded into Samira's run as PART R)
+
+Lemar's thread-to-build lane, added 2026-08-19. Anything a Claude thread produces (idea,
+doc, deck, spec, page, code) is landed as a Haven note and opened as a **🧪 PT card** in
+#decisions; Samira advances that card ONE round of an eight-lens pressure test per scan
+until it locks, then either builds it in the cloud or hands Lemar a run-ready `run:manual`
+prompt for his machine and runs PM on it. Different lane from Stormy (no-deadline ideas,
+#stormy, never executes) and from Atlas Gear 1 (capture and develop): this one is the
+same-day build lane.
+
+| What | Value |
+|---|---|
+| Runs as | **PART R of Samira** — no trigger, env, bot, or connector of its own. Uses Samira's trigger `trig_01VGzAWGSadjRbJbKURxCYvG` and cadence (`0 12-22 * * *` UTC, 11 scans a day, 8a–6p ET). |
+| The spec (one file, both halves) | **`.claude/skills/samira-loop/SKILL.md`** — the whole rulebook: cadence, lanes, capture-first, the PT card, the eight lenses, signals, closeout, reports, safety, degraded modes. A live thread invokes it when it builds something; Samira invokes it at PART R. |
+| Project rulebooks (thin pointers) | `.claude/projects/samira-loop-project-instructions.md` (pasted into the claude.ai project "Samira's Loop") and `.claude/projects/camden-dispensary-launch-project-instructions.md`. Each is a short always-on wrapper that names the skill — the mechanics live in the skill and are never duplicated into a project box. Moved out of the projects file 2026-08-19, see CHANGELOG. |
+| Behavior file (PART R detail) | `.claude/routines/samira-build-loop.md` — invoked at PART R. Editing on `main` changes the next run. |
+| Surfaces | **#decisions `C0BBXA96FFV`** (the PT cards + every question — the only channel that pings him) · **#reports `C0BBZJL85RT`** (one line per state change, one-way) · the item's own project channel (cloud builds staged there as `run:admin-3x` for PART C) · Haven (the durable record). |
+| Card marker | Parent's first line contains `🧪 PT ·`; last line of the parent is the control line `pt:<slug> · note:<path> · lane:<cloud\|local> · lenses:k/8`. **PART A skips any parent containing `🧪 PT`** so a card is never worked by two PARTs in one scan. |
+| State | Reuses the existing `decisions_threads` watermarks in `.claude/state/samira-state.json` — **no new state key**. |
+| Reactions | The standard engine, unchanged: ✅ agree · 👀 seen (carry, never re-ask) · ⛔ drop that line · 🫡 on the parent = lock it and build. Samira sets only the headline (🟡 baking · 🔴 needed today · 🟢 build ready · ⏳ waiting). |
+| Cap | 3 cards get a round per scan, oldest first; the rest carry and the digest says so. |
+| Digest token | `pt: <slug> r3 5/8 · <slug> locked · N carried` or `pt —`. |
+| Lanes | **cloud** (Samira builds unattended) · **browser** (Claude in Chrome, in Lemar's own logged-in browser, with him present — reads/fills/captures, never submits, pays, sends, or clicks a binding button) · **local** (his machine). Default order cloud → browser → local. |
+| Engagement overlays | A client engagement can layer its own rules on top of the loop: `.claude/projects/camden-dispensary-launch-project-instructions.md` (Camden Dispensary Launch — CRC licensing through inspection clearance). The overlay's engagement rules and safety floor outrank the loop's mechanics wherever they conflict. Its channel and folder ids are recorded below. |
+
+## Camden Dispensary Launch (client engagement — overlay on the Samira Loop)
+
+Lemar advising a client group through NJ CRC licensing to an inspected, cleared facility. He
+is the advisor, not the owner. The engagement ENDS at inspection clearance; opening the store
+is a separate, unpriced engagement ("opening services"). Rules, gates, and phase deliverables
+live in `.claude/projects/camden-dispensary-launch-project-instructions.md`, which outranks
+the samira-loop skill wherever the two disagree.
+
+| What | Value |
+|---|---|
+| Vault index | `haven/vault/40-Projects/camden-dispensary-launch/index.md` — the engagement's note in Haven: the scope line, where everything lives, the six gates, the standing hazards, and what stays unknown. Start here when a Camden item surfaces and you need orientation. |
+| Overlay (the rules) | `.claude/projects/camden-dispensary-launch-project-instructions.md` — pasted into the claude.ai project "Camden Dispensary Launch"; also read by any thread working the engagement. |
+| Mechanics | the **samira-loop** skill (`.claude/skills/samira-loop/SKILL.md`), unchanged. |
+| Questions / decisions | **#decisions `C0BBXA96FFV`**, cards titled "Camden Launch". Never the project channel — same doctrine as every other project. |
+| Project channel (work) | **#camden-launch `C0BRZT2V89W`** (private). Staged prompts, artifacts, outcomes. Bot confirmed in-channel 2026-08-19; swept in PART C. |
+| Drive root | `1oLwp2UkmXX2AgxcxDO6sEfuxWtQUmBs1` — "Camden Dispensary Launch" (My Drive root, created 2026-08-19) |
+| 00 Command Center | `1waKvkdsc9yr2ZAu_BhY8EneONKvtDhcM` — Working Log (read first), project instructions, handoffs, proposal PDF |
+| ↳ Working Log | Doc `12JG69I2RWZ9l3rR7AdFZXhyiuM52FEhmqi-52S3OC9Q`. **The engagement's source of truth** for phase, status, milestones, and the decision record. Read before answering anything about where things stand; append to the decision record, never rewrite. |
+| 01 Client-Facing | `1SE4aln7I35W0M_NSFA0Mo3sYuEkYRWAv` — everything the group could see; also holds the editable proposal |
+| ↳ Phase 00 — Position Audit | `1IQLtHzpwgNMzt1Ko3iDgwmw1imoHcthB` |
+| ↳↳ Intake — Documents from the Group | `17tQP09hT1cRcFzZASa32H23yI8Hv2Mc4` — everything they send lands here first |
+| ↳ Phase 01 — Site Control and Local Endorsement | `19LZSkEsNPOK-UzU4ltvSg7Hmym9j9Tb_` |
+| ↳ Phase 02 — Application Build | `1RPrKOTd36N03JaQRVreU3C806Yw39Z_u` |
+| ↳ Phase 03 — Filing and Response | `1GZZg5OU__RLz95CrLUJ7s11FKLGy463g` |
+| ↳ Phase 04 — Compliance Build | `1kzhifQen6G6zCCfvZ_a0RWPr57ZazPBR` |
+| ↳ Phase 05 — Inspection and Clearance | `1S6HVdIYYx1i6qwu_ewLQwZ02KzgI-ddn` |
+| 02 Internal | `13Xa1IbE4DUrTFT4xb04AFRTW1sfXVoay` — fee thinking, assessments of the group, opening-services planning. **Never shared or linked outward.** When unsure whether something is 01 or 02, it is 02. |
+| Naming | `[phase]_[what it is]_[YYYYMMDD]`. New versions, never overwrites; the replaced file gets a `Superseded [date]` prefix. Already in practice — see the two superseded instruction/proposal docs in 00. |
+| Still unknown (ask, never guess) | the group's name, property address, and contact · the planning board approval's conditions and expiration · whether site control is executed. |
 
 ## Pulse dashboard (rendered by Samira — no separate trigger)
 

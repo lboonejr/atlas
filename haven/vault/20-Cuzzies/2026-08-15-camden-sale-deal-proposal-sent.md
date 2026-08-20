@@ -1,6 +1,6 @@
 ---
 created: 2026-08-15T11:08:00-04:00
-updated: 2026-08-15T11:08:00-04:00
+updated: 2026-08-16T15:03:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -41,3 +41,13 @@ here so it isn't lost, not staged as a task for Samira to execute.
   `1a005d5ad28b7f8a` (Jason Klein) / `1a005e538419fbac` (Alex,
   elevatedconsultingca@gmail.com) / `1a005e8cb6aca86c` (Lemar, sent)
 - haven: [[2026-08-06-camden-sale-terms-pending]] (prior note, now superseded/done)
+
+## Update — 2026-08-16 (Samira, PART D scan)
+Same thread, fully Lemar-handled again — no Samira draft, no action needed.
+- ~2:33pm ET (msg `1a00bd9b9ed555c3`) — Alex proposed late afternoon Monday or
+  Tuesday for the call, and said he'll reach out to the landlord's rep tomorrow
+  (2026-08-17).
+- ~2:37pm ET (msg `1a00bdda2d68c222`) — Lemar replied directly: **late afternoon
+  Monday works best** on Cuzzie's end.
+No open item for Samira; the landlord-rep outreach commitment above still stands
+(now due 2026-08-17, buyer side).

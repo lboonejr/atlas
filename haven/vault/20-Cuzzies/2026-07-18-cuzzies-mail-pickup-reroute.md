@@ -1,6 +1,6 @@
 ---
 created: 2026-07-18T11:00:00-04:00
-updated: 2026-08-14T15:15:00-04:00
+updated: 2026-08-17T14:20:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -41,6 +41,13 @@ carrier-only annex (no retail window) — if Lemar hits a retail-only location i
 ask staff there to redirect him to the carrier annex for held mail.
 Still open: Lemar still needs to physically go (ID in hand) or file the USPS COA online —
 neither step can be done on his behalf.
+
+## Update 2026-08-16 (PART S calendar-sync — corrected wrong-calendar event)
+The `calendar_event_id` on file (`tlmuo8hdjt8vomi2ile1gdlt1g`) pointed to an event on
+the Cuzzie's (Owners) business calendar, not the personal reminder calendar this skill
+is scoped to. Left that stray business-calendar event untouched and created a correct
+event (`t76b2aj7r3trpa2leu4qi9huec`, same title/time/description) on the personal
+reminder calendar.
 
 ## Sources
 - slack: Samira capture DM (D0BHPKMDNEP), ts 1784293032.198689 (original question) /

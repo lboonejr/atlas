@@ -3,6 +3,83 @@
 The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NOW.
 History and cutover narratives live here.
 
+
+## 2026-08-19 — Samira made aware of the Camden engagement
+The engagement existed in anchors, Drive, and Slack, but Haven had no note for it, and PART R
+had no reason to treat a client card differently from any other. Both fixed:
+- **`haven/vault/40-Projects/camden-dispensary-launch/index.md` (new)** — the vault's pointer
+  to the engagement: the scope line (ends at inspection clearance, opening services is
+  separate), where every surface lives, the two-records split, the six gates, the standing
+  hazards (no outcome promises, not their attorney, adult-use only, the two approvals are
+  different things, never quote an unlisted number), and what stays unknown. Written to its
+  final project path like the investor-pipeline and on-button-reopen indexes rather than
+  routed through 00-Inbox, since a bare `index.md` in the Inbox has nowhere unambiguous to
+  file to.
+- **PART R now checks for an engagement overlay before working a card.** A card titled for a
+  client engagement is read against that engagement's overlay first, because its rules
+  outrank the loop's mechanics and it adds gates. Working a client card on generic loop rules
+  is how a promise we cannot make ends up in a client document.
+
+## 2026-08-19 — Every thread gets one name
+Lemar's ask: a clear, concise, descriptive title on every thread so he knows what he is
+working on at a glance. Added as skill §1.1, with the point being not the title itself but
+that it is the SAME name on the thread, the Haven note, the PT card, the `pt:` slug, and the
+#reports line. One name across five surfaces is what makes a thread findable a week later;
+five names for one piece of work is what made it unfindable before.
+- Set in the first reply, on its own line (`📌 Camden security plan`), and repeated whenever
+  the thread resumes so a reopened thread announces itself.
+- Rules with a good/bad table: 3–7 words, lead with the thing not the verb, name the project
+  when more than one is in play, never a date (the note carries `created`), a status word, or
+  a filler noun.
+- The slug is the kebab-case title, which is what haven-capture already builds filenames from
+  per schema §5 — so this reuses the vault's convention rather than inventing a parallel one.
+- Renaming is allowed when the subject genuinely moves, but a thread that picked up a SECOND
+  piece of work gets a second thread and a second card. Widening a title until it covers
+  everything is how a name stops meaning anything.
+- The Camden overlay stamps the phase first (`📌 P02 Security plan`) so a thread's place in
+  the arc reads without opening it.
+
+## 2026-08-19 — Samira Loop moved into a skill; the projects become thin pointers
+The loop's mechanics were living in `.claude/projects/samira-loop-project-instructions.md`,
+which meant they only fired inside that one claude.ai project and had to be re-pasted (and
+kept in sync) anywhere else. Lemar's call: put the mechanics in a skill and let the projects
+point at it.
+- **`.claude/skills/samira-loop/SKILL.md` (new)** — the whole rulebook, sections unchanged
+  and renumbered nowhere, so every existing `§2 / §6 / §7 / §8` reference still resolves. A
+  live thread invokes it when it produces something; Samira invokes it at PART R. Same text
+  drives both halves, so they cannot drift.
+- **`.claude/projects/samira-loop-project-instructions.md`** cut from ~300 lines to a
+  ~20-line wrapper: invoke the skill, do not wait to be asked, state the scan index, and no
+  claim without the note. The always-on behavior is the only thing a project box adds that a
+  skill cannot — skills are trigger-matched, and "do not wait to be asked" is exactly what
+  trigger-matching is worst at.
+- **Camden overlay, PART R, the runbook, and anchors** all repointed at the skill.
+- Nothing about the loop's behavior changed in this move.
+
+## 2026-08-19 — Samira Loop: the thread-to-build lane (PART R)
+Lemar's ask: nothing built in a Claude thread should die in the thread. Whatever a thread
+produces either goes to Samira to build in the cloud, or gets built in the thread with
+Samira as PM — and either way it gets pressure-tested across the day's remaining scans
+before it counts as done. Delivered as one spec plus its scan-side loop:
+- **`.claude/projects/samira-loop-project-instructions.md` (new)** — the custom
+  instructions for the claude.ai project "Samira's Loop," and the same file Samira reads
+  at PART R. Covers the cadence math (which of the day's 11 scans she is on, read from
+  `lock.run_id`, and how batch size follows from scans-left), the cloud-vs-local lane
+  call, capture-first framing for the note, the 🧪 PT card format, the eight-lens
+  instrument (premise · reader · accuracy · gaps · failure modes · edge · execution ·
+  fit), closeout in both lanes, the #reports line, the safety floor, and degraded modes.
+- **`.claude/routines/samira-build-loop.md` (new)** — PART R's operational detail: find
+  open PT cards, one round per card per scan, note-before-post, 3-card cap, lock and
+  finish, two-day rule, digest token.
+- **Runbook** — run order becomes `… → Q → R → H → M → …`; PART R section added; **PART A
+  now skips any parent containing `🧪 PT`** so a card is never executed by two PARTs in
+  one scan; PART R's token added to the digest tallies.
+- **No new state key** — PT cards are #decisions cards and reuse `decisions_threads`.
+- **One correction to the original framing:** #reports stays one-way. It gets a line on
+  every state change because that is the record Lemar reads, but it is not how Samira
+  stays current between scans — the Haven note, the #decisions card, and the state file
+  are. The instructions say so explicitly so the mental model matches the machine.
+
 ## 2026-08-15 — Stormy goes adaptive and single-owner (the fixed 15 questions are retired)
 Lemar asked that Stormy stop asking the same questions every bake and instead decide both the
 questions and how many of them from what is actually being presented. The evidence was the
@@ -64,6 +141,7 @@ Stormy flags those and sizes them up a band rather than assuming them.
 Touched with both passes: the runbook's PART Q summary and the two anchors rows describing the
 instrument. Nothing about Stormy's surfaces, identity, capture-first law, the no-`due` rule, or
 the bake/execute line moved.
+
 
 ## 2026-08-15 — Routine-efficiency overhaul (run lock, watermarks, integrity cadence, dead-weight removal)
 Lemar asked for a review of where Samira's hourly routine wastes work; the July–August

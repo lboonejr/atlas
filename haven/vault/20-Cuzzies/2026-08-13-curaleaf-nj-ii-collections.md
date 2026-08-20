@@ -1,9 +1,9 @@
 ---
 created: 2026-08-13T11:15-04:00
-updated: 2026-08-13T11:22-04:00
+updated: 2026-08-17T14:02-04:00
 domain: cuzzies
 type: task
-status: active
+status: awaiting-decision
 tags: [curaleaf, collections, past-due, legal-adjacent]
 source: gmail
 ---
@@ -30,8 +30,25 @@ Curaleaf Logistics delivery-info-request thread (different department, same bran
 Needs Lemar's judgment: pay, negotiate a plan, dispute, or route through counsel given
 the active DeWalt litigation precedent (default judgment risk if ignored).
 
+## Update 2026-08-17T14:02-04:00 — PART A pass, still awaiting Lemar's path
+
+Lemar reacted ✅ on the #decisions card (ts `1786631846.014899`), but Samira's in-thread
+follow-up (ts `1786634471.146369`, posted an earlier run) asking which path he wants —
+pay in full, negotiate a plan, dispute within the 30-day FDCPA window, or route to
+counsel given the active DeWalt precedent — is still unanswered as of this pass (checked
+live: no reaction, no reply). Reminder noted in that reply: this is the same underlying
+debt as the 8/3 "AGA Adjustments" card (`[[2026-08-03-aga-adjustments-curaleaf-collections]]`,
+account CNJ2-000241, same $25,601.41), which already has an unsent holding-reply draft in
+Gmail Drafts to mail@agaltd.com if Lemar just wants to buy time again.
+
+Outcome this pass: nothing executed. Paying, negotiating, disputing, or routing to
+counsel are all payment or outbound-correspondence actions outside what Samira can do
+unattended — none of them were taken. Card stays open in #decisions, awaiting Lemar's
+specific path.
+
 ## Related
 - [[curaleaf]]
 
 ## Sources
 - gmail: thread `19ffb0bb3846886a`
+- slack: #decisions ts `1786631846.014899`

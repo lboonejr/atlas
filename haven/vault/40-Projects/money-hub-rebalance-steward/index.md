@@ -1,9 +1,9 @@
 ---
 created: 2026-08-15T18:45-04:00
-updated: 2026-08-15T18:45-04:00
+updated: 2026-08-15T19:35-04:00
 domain: project
 type: brief
-status: awaiting-decision
+status: done
 tags: [stormy, money-hub]
 source: claude
 ---
@@ -95,6 +95,115 @@ as a new step inside `money-hub` or something adjacent to it.
   decision that comes back to Lemar directly, every time it fires (not batched).
 
 ## Pressure test complete — all 15 answered.
+
+## Locked plan
+
+### Mission
+Give `money-hub` a rebalance step: the moment its overload check fires, it doesn't just
+report the gap — it drafts real rework moves within Lemar's own personal ledger and
+puts them in front of him as a single #decisions card, so he approves or edits instead
+of doing the untangling math himself.
+
+### Success criteria
+Every overload event produces at least one proposal Lemar would actually act on (MVP:
+one real move, not just the number restated). Fails if it ever proposes moving a goal
+Lemar considers non-negotiable — that is the signal to retune or kill it, not iterate
+past it.
+
+### Timing & preconditions
+Activate ASAP, within the week. No preconditions — ships ahead of the next overload
+event, whenever that fires next.
+
+### Phases
+
+1. **Define the move types** — goal: lock the exact set of rework moves the steward is
+   allowed to draft (stretch/delay a goal's drip rate, re-tier a payment plan's
+   installment size or start date, flag a business-origin-but-personally-carried bill
+   for business reimbursement). Owner: Lemar + this session. Duration: same session.
+   Output: a short "allowed moves" list written into the `money-hub` skill file.
+   Dependency: none.
+2. **Add the non-negotiable guard** — goal: give goals in `money-hub-ledger.md` an
+   optional flag (e.g. `non-negotiable: true`) so the steward knows what it must never
+   propose stretching. Owner: this session. Duration: same session. Output: ledger
+   schema note + one field added to existing goal entries Lemar marks. Dependency:
+   phase 1 (need the move types defined to know what the guard blocks).
+3. **Wire the rebalance step into `money-hub`** — goal: the skill drafts proposals
+   immediately after an overload fires, using only ledger data + the move types +
+   the guard, and posts ONE #decisions card (proposal, not the plain report) instead of
+   today's report-only message. Owner: this session (implementation). Duration: same
+   session. Output: updated `money-hub` skill instructions. Dependency: phases 1-2.
+4. **Dry-run against today's real overload** — goal: before shipping, run the new logic
+   against the actual 2026-08-15 numbers ($2,193.73 need, $478 genuinely due, the goal
+   catch-up drip) and show Lemar what it would have proposed, as a sanity check with no
+   live posting. Owner: Lemar review. Duration: same session. Output: a sample proposal
+   Lemar confirms looks right (or doesn't). Dependency: phase 3.
+5. **Ship** — goal: live for the next real overload event. Owner: `money-hub` /
+   Samira's PART M. Duration: ongoing. Output: every future overload event posts a
+   rebalance proposal instead of a bare report. Dependency: phase 4 sign-off.
+
+### Risks & sign-offs
+Biggest risk is getting the reasoning logic wrong (Q7) — mitigated by phase 4's dry run
+against real numbers before it ever posts live. Sign-off is Lemar only (Q8); no other
+role is involved since everything in scope stays inside the personal ledger.
+
+### Compliance flags
+None. No regulated area, no external approval needed (Q11). Reggie stays uninvolved.
+
+### Automation map
+Runs autonomously: overload detection (already exists) + drafting the proposal (Q12).
+Needs a human gate: every proposal is a #decisions card Lemar must approve before
+anything is considered decided — the steward never edits the ledger itself (Q13, Q15).
+No new source of truth: `money-hub-ledger.md` stays the one ledger, #decisions stays
+the one surface (Q13).
+
+### Delegation brief
+No delegation — Lemar leads end-to-end, nobody else owns any part of this (Q14). Every
+proposal comes back to Lemar directly and individually, not batched (Q15).
+
+## Skill specs
+
+No new skill needed. `money-hub` already exists on the roster — this project is a
+modification to it (phases 1-3 above), not a new build. Nothing routes to
+`skill-creator`.
+
+## Activation
+
+**C) EXECUTE NOW** — 2026-08-15. Launch phases 1-5 immediately. No skill-creator step
+(no new skill). Handed to Atlas Gear 2 to stage phases 1-4 as a run-ready task.
+
+## Update 2026-08-15: phases 1-4 built, shipped
+
+Built directly in this session rather than staged through Slack — the work was a skill
+file + ledger schema edit, not something Samira's Slack loop executes.
+
+- **Phase 1-2 (move types + guard):** `.claude/skills/money-hub/SKILL.md` gets a new
+  REBALANCE section — the 3 allowed moves (stretch a goal's drip, re-tier a plan
+  installment, flag a business-origin-but-personally-carried line for reimbursement),
+  conservative-by-default, and the hard stop (never touch a `non_negotiable` line, never
+  force a proposal that doesn't work). `money-hub-ledger.md` field rules get the new
+  optional `non_negotiable: true` flag Lemar can set on any bill/plan/goal line.
+- **Phase 3 (wiring):** PART M now runs REBALANCE right after OVERLOAD CHECK, attaching
+  proposed moves to the SAME #decisions card OVERLOAD CHECK already raises (never a
+  second card). SAFETY and the Returns token both updated.
+- **Bug caught before shipping:** the first draft blocked REBALANCE from touching any
+  genuinely-due bill, which would have excluded exactly the case that motivated this
+  project — `cuzzies-google-voice`/`cuzzies-google-workspace` are due THIS week and are
+  exactly the kind of business-origin line move-type 3 should flag. Fixed: move types 1
+  and 2 stay off genuinely-due bills (that's the catch-up-only rule), move type 3 is the
+  explicit exception since flagging doesn't touch timing, only who should pay.
+- **Phase 4 (dry run):** ran against the real 2026-08-15 numbers in chat (not posted,
+  not written to the ledger). REBALANCE would lead with flagging the two Cuzzie's lines
+  ($123, costs nothing), surface re-tiering `mechanic-repair-repay` (Lemar's own "down
+  the road" framing), and surface stretching the `own-car-running` goal as a candidate
+  while flagging that Lemar likely wants it marked `non_negotiable` given he just dated
+  it with a firm end-of-October framing. Even all three together don't fully close the
+  gap to the $299/week average — correct behavior, not a bug; REBALANCE reports honest
+  partial relief rather than manufacturing a false full close.
+- **Phase 5 (ship):** live for the next real overload event via `money-hub` / Samira's
+  PART M. No further action needed.
+
+Commits: `capture:`/`update:` sequence on this note, plus `money-hub: add REBALANCE
+step (Stormy-baked rework proposals on overload)` on `main`.
 
 ## Sources
 - slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1786832078131649 (OVERLOAD CHECK message, Samira/Money Hub, 2026-08-15 6:14pm ET)

@@ -1,6 +1,6 @@
 ---
 created: 2026-07-13T13:20-04:00
-updated: 2026-08-14T15:15:00-04:00
+updated: 2026-08-17T14:20:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -29,6 +29,13 @@ Nothing is reply-worthy right now — every message needed was already sent by L
 directly, and the meeting is confirmed. Open item is the task: attend/prep for the
 7/14 1:45pm meeting, and follow up on actually receiving the tax return / sales tax
 filing / payroll records from GreenBooks for Cuzzie's wind-down financial reporting.
+
+## Update 2026-08-16 (PART S calendar-sync — corrected wrong-calendar event)
+The `calendar_event_id` on file (`okad6h26cjeqsjqr84hvj5lhik`) pointed to an event on
+the Cuzzie's (Owners) business calendar, not the personal reminder calendar this skill
+is scoped to. Left that stray business-calendar event untouched and created a correct
+event (`kjlevjnlr1il283c15rvk98iqc`, same title/time/description) on the personal
+reminder calendar.
 
 ## Sources
 - gmail: thread 19f5c58b93d105c8 ("Checking in - Cuzzie's" — records request + redirect + booking link)

@@ -1,6 +1,6 @@
 ---
 created: 2026-07-28T12:21:00-04:00
-updated: 2026-08-14T15:15:00-04:00
+updated: 2026-08-17T14:20:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -24,6 +24,13 @@ No reply-worthy correspondence here (auto-notification, no person waiting on a
 response) — logging as a task for tracking. Paying this is a payment action only Lemar
 can take; not staged as anything Samira can execute. Flagged for the calendar sync so
 it rings as a reminder ahead of Aug 4.
+
+## Update 2026-08-16 (PART S calendar-sync — corrected wrong-calendar event)
+The `calendar_event_id` on file (`ng06l9u7b64dc213or610cr90k`) pointed to an event on
+the Cuzzie's (Owners) business calendar, not the personal reminder calendar this skill
+is scoped to. Left that stray business-calendar event untouched and created a correct
+event (`83bod8eag8ci045huhdsq6r5f8`, same title/time/description) on the personal
+reminder calendar.
 
 ## Sources
 - gmail: thread `19fa6dd11bd57e62` (2026-07-28, Google Calendar auto-notification,

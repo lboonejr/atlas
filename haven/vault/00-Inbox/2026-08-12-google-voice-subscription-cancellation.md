@@ -1,6 +1,6 @@
 ---
 created: 2026-08-12T10:00-04:00
-updated: 2026-08-15T13:10:00-04:00
+updated: 2026-08-17T09:09:57-04:00
 domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation
 type: task
 status: active
@@ -106,3 +106,25 @@ flagging that as an open question rather than assuming.
 
 ### Sources (this update)
 - slack: #personal-finance, ts `1786810837.270889` ("$84/month on the 1st")
+
+## Update 2026-08-17 — Voice reactivated; related Payments-profile change noted
+
+Two automated Google notices landed today: (1) **"Thank you for activating your
+subscription"** (12:45 UTC) confirms the Google Voice Starter subscription on
+`cuzziesnj.com` is now activated — the reactivation tracked as an open action item
+above appears to have gone through. (2) A separate Google Payments notice, same minute,
+says a payment method was updated on the **"Cuzzie's Dispensary & Delivery"** payments
+profile (ID `1078-7383-2495`) — no detail on what changed. This lines up with the
+self-serve direct-billing setup Lemar chose (Update 2026-08-13 (2)), so read as his own
+action, not flagged as suspicious. No action taken or needed from Samira — both are
+no-reply automated notices with nothing to correspond on.
+
+**Status:** Voice reactivation appears complete; Workspace-wide direct-billing setup
+(the harder 8/20 deadline, Update 2026-08-13) is unconfirmed — no notice yet on that
+piece specifically.
+
+### Sources (this update)
+- gmail: thread `1a00fc1179bd52f6` ("Thank you for activating your subscription",
+  workspace-noreply@google.com, 2026-08-17)
+- gmail: thread `1a00fc1783298e16` ("Google Payments: Payment method updated for
+  Cuzzie's Dispensary & Delivery", payments-noreply@google.com, 2026-08-17)
