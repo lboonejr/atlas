@@ -1,10 +1,10 @@
 {
-  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
+  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded \u2014 fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260820T150347Z",
-    "run_started": "2026-08-20T15:03:47Z",
+    "run_id": "run_20260820T170336Z",
+    "run_started": "2026-08-20T17:03:36Z",
     "run_completed": "2026-08-20T15:42:00Z",
-    "note": "Day's 4th run. One new item, one self-correction, otherwise quiet. NEW: GTI AR (Mindy Kramer, GTIAR@gtigrows.com) checked in 10:32am ET ahead of GTI's 8/21 account review -- first contact on that thread in ~4 weeks, and the most cooperative creditor on the book. Note 00-Inbox/2026-08-20-gti-ar-account-review-checkin.md, holding reply saved to Gmail Drafts (unsent), 4-option card ts 1787238798.497049, calendar event lgqqfal2v2m0lasmv3rh8m0qp8 on Cuzzie's (Owners) for 9am 8/21 (business money, never the personal calendar). No figure asserted -- GTI stated none and the last number in the thread is a June statement. Deliberately omitted from the draft: the existence of a second interested buyer; disclosing that to a creditor is Lemar's judgment. SELF-CORRECTION: staged prompt p00-client-intake-system in #camden-launch (ts 1787112778.500599) carried an in-thread 'done, skip it' reply from 8/19 but no white_check_mark done-key, so it re-presented as runnable this sweep; verified the note is on main, then set the key. An in-thread done-reply is not a done-key. V: filed 1 (Regus/IWG to 20-Cuzzies), stuck 2 unchanged. S: every due note already carried an event, +0/~0/-0. A: no new reactions or replies on any open card -- all prior checkmarks were already executed on earlier runs. B/C/E/Q/M all quiet no-ops. R: 3 PT cards carry unchanged (advisory proposal 7/8, Q6 still open; intake locked; ops-admin 0/5). Canvas re-check skipped (write-blocked, already re-checked on the day's first run). Pulse rendered 9/9 and DM'd. PR #73 left unmerged on purpose -- its disposition sits behind the open stranded-PRs card. Nothing paid, sent, disputed, or contacted."
+    "note": "Run in flight (day's 5th run, 1:03pm ET). Prior run's note archived in git history."
   },
   "watermarks": {
     "slack_channels": {
