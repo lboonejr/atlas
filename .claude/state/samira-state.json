@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260820T140311Z",
-    "run_started": "2026-08-20T14:03:11Z",
+    "run_id": "run_20260820T150347Z",
+    "run_started": "2026-08-20T15:03:47Z",
     "run_completed": "2026-08-20T14:20:26Z",
-    "note": "Day's 3rd run. Two defects found and corrected. (1) DUPLICATE: the 09:33 run opened a third #decisions card + third Haven note for the same $25,601.41 Curaleaf/AGA debt -- identical File# 2532730_AGA and every figure; root cause was matching on the email subject line instead of file number + amount. Consolidated as an Update on the canonical note 20-Cuzzies/2026-08-13-curaleaf-nj-ii-collections.md; the 8/20 note set status:archived + tagged superseded (body intact); duplicate card ts 1787231683.266619 replied to and pointed at canonical ts 1786631846.014899. Also corrected the FDCPA clock: window runs from the 8/3 FIRST notice so it closes ~2026-09-02, and the path has been unanswered 17 days across three notices. (2) UNTRACKED DEADLINE: Regus/IWG's 8/23 arbitration deadline existed only as prose in Dawn's 8/19 brief -- no note, no card, no calendar event, nothing counting down. Opened note 00-Inbox/2026-08-20-regus-iwg-collections-legal-threat.md (due 2026-08-23), card ts 1787235032.481949 with 4 options, and event rdvh4u83qhr0rg26t64fncvpa0 on Cuzzie's (Owners) -- business money, never the personal calendar. Recovered the itemization from the 8/18 letter: 3131.91 + 1048.60 - 1572.90 = 2607.61 (reconciles). Entity stub ag-adjustments created. A/B/C/E/Q/M all quiet no-ops. R: p00-advisory-proposal-package still 7/8 (Q6 carries, not re-asked); other two locked. Canvas re-check skipped (write-blocked, confirmed day's first run). Pulse rendered 9/9 and DM'd. Nothing paid, disputed, sent, or contacted."
+    "note": "Day's 4th run — in flight."
   },
   "watermarks": {
     "slack_channels": {
