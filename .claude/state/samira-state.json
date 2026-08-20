@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260820T170336Z",
     "run_started": "2026-08-20T17:03:36Z",
-    "run_completed": "2026-08-20T15:42:00Z",
-    "note": "Run in flight (day's 5th run, 1:03pm ET). Prior run's note archived in git history."
+    "run_completed": "2026-08-20T17:20:00Z",
+    "note": "Day's 5th run (1:03-1:20pm ET). TWO real items. (1) Lemar answered the Regus/IWG card with a plain in-thread REPLY, no reaction -- 'draft an email establishing contact and letting them know of the current situation.' That is the fifth path (contact stops the 5-day clock), not one of the four staged options; the decisions_threads watermark is what caught it. Drafted in hard-news-outsider voice, saved to Gmail Drafts UNSENT (r4484351957198649724, thread 1a01f7e77adffb82). Commits to no figure and no date; asks IWG to itemize the $1,048.60 \u00a71.7 agreement-value line. Omitted on purpose: the Camden sale, DeWalt, and the Curaleaf notice -- disclosing another creditor or a pending transaction to a collections arm is Lemar's call. (2) NEW \ud83d\udd34 card ts 1787245811.807379: at 1:02pm Lemar replied 'Yes, that is correct' to Peter Abdallah (KW) asking for '10% commission same as your current broker'. Agreed in writing; additive-vs-shared, what the 10% is OF, and the trigger are all undefined, and he already has a broker with Haason's team introduced through Peter. No dollar exposure computed -- the sale price is not in that thread. 4 options staged. Also captured with no card: Camden County Bar lawyer-referral confirmation (11:34am), first evidence a counsel search is in flight, which bears on Regus Option 3 / Curaleaf / DeWalt. V: filed 1 (GTI AR to 20-Cuzzies), stubbed the missing GTI entity, stuck 2 unchanged. S: +0/~0/-0, every due note already had an event. B/C/E/Q/M all quiet no-ops. R: same 3 PT cards carry, no new signal. Canvas re-check skipped (write-blocked, done on the day's first run). Pulse rendered 9/9 and DM'd. Nothing sent, paid, contacted, or disputed."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787238833.679779",
-      "C0BBZJL85RT": "1787239296.093659",
-      "D0BHPKMDNEP": "1787239282.060989",
-      "C0BGLEMH99T": "1787239320.000000",
-      "C0BEQUW5NPP": "1787239320.000000",
-      "C0BBLUA7JLX": "1787239320.000000",
-      "C0BJ37SU1TL": "1787239320.000000",
-      "C0BCCUKEUQ2": "1787239320.000000",
-      "C0BCD7U5X2B": "1787239320.000000",
-      "C0BCH2C3GRM": "1787239320.000000",
-      "C0BDN2KQFD4": "1787239320.000000",
-      "C0BD8LTM1EK": "1787239320.000000",
-      "C0BGYM1UB4Y": "1787239320.000000",
-      "C0BGCAK0ML3": "1787239320.000000",
-      "C0BHXTPST52": "1787239320.000000",
-      "C0BC2A94142": "1787239320.000000",
-      "C0BBZ5J8805": "1787239320.000000",
-      "C0BRZT2V89W": "1787239320.000000"
+      "C0BBXA96FFV": "1787245837.845089",
+      "C0BBZJL85RT": "1787246178.650689",
+      "D0BHPKMDNEP": "1787246164.807629",
+      "C0BGLEMH99T": "1787246200.000000",
+      "C0BEQUW5NPP": "1787246200.000000",
+      "C0BBLUA7JLX": "1787246200.000000",
+      "C0BJ37SU1TL": "1787246200.000000",
+      "C0BCCUKEUQ2": "1787246200.000000",
+      "C0BCD7U5X2B": "1787246200.000000",
+      "C0BCH2C3GRM": "1787246200.000000",
+      "C0BDN2KQFD4": "1787246200.000000",
+      "C0BD8LTM1EK": "1787246200.000000",
+      "C0BGYM1UB4Y": "1787246200.000000",
+      "C0BGCAK0ML3": "1787246200.000000",
+      "C0BHXTPST52": "1787246200.000000",
+      "C0BC2A94142": "1787246200.000000",
+      "C0BBZ5J8805": "1787246200.000000",
+      "C0BRZT2V89W": "1787246200.000000"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
@@ -45,23 +45,24 @@
       "1787157130.471099": "1787231790.722049",
       "1787227722.583919": "1787227729.950129",
       "1787231683.266619": "1787234895.613759",
-      "1787235032.481949": "1787235219.094339",
-      "1787238798.497049": "1787238833.679779"
+      "1787235032.481949": "1787245639.309649",
+      "1787238798.497049": "1787238833.679779",
+      "1787245811.807379": "1787245837.845089"
     },
-    "capture_dm": "1787239282.060989",
-    "gmail_after_epoch": 1787239320
+    "capture_dm": "1787246164.807629",
+    "gmail_after_epoch": 1787246200
   },
   "integrity": {
     "last_full_pass": "2026-08-20T12:17:41Z",
-    "last_scan_sha": "a38c32f0ae3b8a8113e5a241d4e63e15fa190298",
-    "note": "Day's 4th run: incremental only. Zero .md under haven/vault/ had changed between the prior scan sha and this run's start, so there was nothing new to inspect; the notes this run wrote (GTI capture, Regus filing, _daily append) were authored here with valid frontmatter. Zero repairs. 3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (domain/status gap), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain gap), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged -- its disposition belongs to the open stranded-PRs decision card."
+    "last_scan_sha": "37d87b34f5a74fea822014cf791cf759df2706ee",
+    "note": "Day's 5th run: incremental only (full pass already ran 12:17Z). Zero .md under haven/vault/ had changed between the prior scan sha and this run's start. Zero repairs. Notes written this run (Peter Abdallah commission, Camden County Bar referral, GTI entity stub, GTI filing, Regus Update, _daily append) were authored here with valid frontmatter. 3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (domain/status gap), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain gap), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged."
   },
   "canvas_access": {
     "last_checked": "2026-08-20T12:16:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-20T11:35:00-04:00",
+    "pulse_last_rendered": "2026-08-20T13:15:57-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
