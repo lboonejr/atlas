@@ -1,6 +1,6 @@
 ---
 created: 2026-08-13T11:15-04:00
-updated: 2026-08-17T14:02-04:00
+updated: 2026-08-20T10:10-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -46,9 +46,44 @@ counsel are all payment or outbound-correspondence actions outside what Samira c
 unattended — none of them were taken. Card stays open in #decisions, awaiting Lemar's
 specific path.
 
+## Update 2026-08-20T10:10-04:00 — third notice arrived; duplicate note + card consolidated here
+
+**A.G. Adjustments re-sent the identical notice on 2026-08-20** (gmail thread
+`1a01f179798e9ead`, received 12:13:54Z). Every material figure matches this note exactly
+— **same File No. 2532730_AGA**, same placed principal $23,274.01, same collection
+interest $2,327.40, same placed total $25,601.41, same $0.00 paid to date, same agent
+contact (Michael Mintz). It is a re-send of the same demand, not a new or escalated one.
+The only new detail is the remittance channels spelled out: `pay.agaltd.com`, fax
+(631) 425-8861, or a check photo to `pay@agaltd.com` — payable to "A.G. Adjustments,"
+memo file# 2532730_AGA, with instructions not to mail the check.
+
+**Defect corrected this pass.** The 09:33 ET run treated the re-send as a new matter and
+created a duplicate: Haven note `20-Cuzzies/2026-08-20-curaleaf-aga-collections-notice.md`
+(now marked superseded, pointing here) and #decisions card ts `1787231683.266619` (now
+replied to, pointing at the canonical card ts `1786631846.014899`). This note is the
+canonical record for the matter. Root cause: the 8/20 email arrived under a different
+subject line and the capture pass matched on subject rather than on the file number and
+amount, which were identical. Counting the 8/3 "AGA Adjustments" card, **one debt has now
+produced three #decisions cards and three Haven notes.**
+
+**The material fact this re-send changes: the clock.** The FDCPA 30-day written-dispute
+window runs from receipt of the FIRST notice, which was 2026-08-03 — so the window to
+dispute the debt's validity in writing closes on or about **2026-09-02, roughly 13 days
+out**. After that the agency will treat the debt as valid, and the dispute path stops
+being available. Lemar's ✅ from 8/13 recorded that he saw it; the specific path — pay in
+full, negotiate a plan, dispute in writing, or route to counsel on the DeWalt precedent —
+has now been open and unanswered for 17 days across three notices.
+
+Outcome this pass: nothing paid, disputed, sent, or contacted — all four paths are
+payment or outbound-correspondence actions outside what Samira does unattended. The
+holding-reply draft to `mail@agaltd.com` still sits unsent in Gmail Drafts.
+
 ## Related
 - [[curaleaf]]
+- [[ag-adjustments]]
+- [[2026-08-03-aga-adjustments-curaleaf-collections]]
 
 ## Sources
-- gmail: thread `19ffb0bb3846886a`
-- slack: #decisions ts `1786631846.014899`
+- gmail: thread `19ffb0bb3846886a` · re-send thread `1a01f179798e9ead` (2026-08-20)
+- slack: #decisions ts `1786631846.014899` (canonical card) · duplicate card ts
+  `1787231683.266619` (2026-08-20)
