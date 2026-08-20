@@ -1,7 +1,7 @@
 ---
 domain: project
 type: decision
-status: awaiting-decision
+status: active
 source: claude
 tags: [samira-loop, camden-launch, phase-00]
 ---
@@ -116,9 +116,37 @@ adding a surface.
    rules list as 1,1,1 with visible list artifacts. Cosmetic, and worth a cleanup pass
    before the packet is handed to Ariana.
 
+## Round 1 answers (2026-08-20, PART R)
+
+Lemar answered all five in #decisions (ts 1787187401):
+
+1. The 02 Internal carve-out — **no need.** Grant the folder as it stands; no
+   "Principal only" subfolder split before Ariana's access.
+2. The GitHub connector write permission (asked alongside the open questions, not one
+   of the five numbered above) — **yes, grant the app Contents write** on
+   `lboonejr/atlas`. Not something Samira can do herself — it's a GitHub App
+   installation-permission change, made in GitHub's own admin UI (Settings → GitHub
+   Apps → this app → Permissions), not exposed through any connected tool. Lemar's to
+   do directly; the browser/local lane stays the fallback until then.
+3. The client-facing send split — **run it as written** for the first month (Ariana:
+   routine logistics; Lemar: anything carrying substance, a date, a number, or a
+   judgment). Revisit after a month of real traffic, per the open question as written.
+4. The "Ops_" prefix — **blessed** as a convention extension for engagement-operations
+   documents that aren't phase-bound deliverables.
+5. Her introduction to the group at signing — **make it an assignment from her**, not
+   something Samira drafts now; it's on Ariana to produce at signing.
+
+Not asked as a numbered question but flagged in the original list (item 5, the cosmetic
+Docs-conversion cleanup on the onboarding packet): carried, not yet done — cosmetic only,
+waits until the access checklist and the Contents-write grant land.
+
 ## Locked
 
-Nothing. Awaiting decision on all five.
+Round 1 closed 2026-08-20 — all five open questions answered, nothing reopened. Lens
+coverage was already posed 8/8 at round 1 (this ran as a single-round card, unlike the
+two-round split on other Camden Launch cards). Remaining before the ADMIN lane goes
+live: the GitHub Contents-write grant (Lemar, GitHub admin UI), the access checklist
+(Lemar, Workspace/Slack admin), and the cosmetic cleanup pass on the onboarding packet.
 
 ## Handoff
 
