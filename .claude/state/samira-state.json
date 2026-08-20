@@ -3,13 +3,13 @@
   "lock": {
     "run_id": "run_20260820T130424Z",
     "run_started": "2026-08-20T13:04:24Z",
-    "run_completed": "2026-08-20T12:17:41Z",
-    "note": "Day's second run (in progress)."
+    "run_completed": "2026-08-20T13:34:42Z",
+    "note": "Day's 2nd run. Quiet across V/S/A/B/C/E/Q/M (all no-op or clean carry). D detected 1 new task (Curaleaf/A.G. Adjustments collections, $25,601.41, Haven note + #decisions card opened). R advanced p00-advisory-proposal-package 4/8 -> 7/8 lenses (Q6 signer-authority still open); ops-admin-lane-and-ariana and p00-client-intake-system confirmed still locked. Corrected a bookkeeping error: the NJ annual report/Cuzzie's LLC revocation card is parent ts 1786986503.368599, not 1787227722.583919 (that's the separate Headset/Ashley Wallace card) -- both still red/unreacted. Canvas re-check skipped (already confirmed write-blocked on day's first run). Pulse rendered (9/9 sections) and DM'd -- something changed this run (new #decisions card + PT progress)."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787228056.156019",
-      "C0BBZJL85RT": "1787228222.202109",
+      "C0BBZJL85RT": "1787232856.796999",
       "D0BHPKMDNEP": "1787228195.822939",
       "C0BGLEMH99T": "1787228261.000000",
       "C0BEQUW5NPP": "1787228261.000000",
@@ -42,7 +42,7 @@
       "1787152085.518979": "1787159332.480679",
       "1787159607.185319": "1787162996.829679",
       "1787155581.357669": "1787228056.156019",
-      "1787157130.471099": "1787163453.430099",
+      "1787157130.471099": "1787231790.722049",
       "1787227722.583919": "1787227729.950129",
       "1787231683.266619": "1787231683.266619"
     },
@@ -52,14 +52,14 @@
   "integrity": {
     "last_full_pass": "2026-08-20T12:17:41Z",
     "last_scan_sha": "5b396bfdc51b8501332f791a34fe86bb863d070f",
-    "note": "Full whole-vault pass ran on day's first run; this run does incremental-only (diff vs last_scan_sha)."
+    "note": "Day's 2nd run: incremental check only (per amended cadence). Zero .md files under haven/vault/ changed between last_scan_sha and this run's start -- zero notes re-inspected, zero repairs. 3 known carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (domain/type gap), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain gap), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) stays tracked via open PR #73."
   },
   "canvas_access": {
     "last_checked": "2026-08-20T12:16:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-20T08:16:00-04:00",
+    "pulse_last_rendered": "2026-08-20T09:35:00-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
