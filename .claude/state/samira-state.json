@@ -3,36 +3,36 @@
   "lock": {
     "run_id": "run_20260820T140311Z",
     "run_started": "2026-08-20T14:03:11Z",
-    "run_completed": "2026-08-20T13:34:42Z",
-    "note": "Day's 2nd run. Quiet across V/S/A/B/C/E/Q/M (all no-op or clean carry). D detected 1 new task (Curaleaf/A.G. Adjustments collections, $25,601.41, Haven note + #decisions card opened). R advanced p00-advisory-proposal-package 4/8 -> 7/8 lenses (Q6 signer-authority still open); ops-admin-lane-and-ariana and p00-client-intake-system confirmed still locked. Corrected a bookkeeping error: the NJ annual report/Cuzzie's LLC revocation card is parent ts 1786986503.368599, not 1787227722.583919 (that's the separate Headset/Ashley Wallace card) -- both still red/unreacted. Canvas re-check skipped (already confirmed write-blocked on day's first run). Pulse rendered (9/9 sections) and DM'd -- something changed this run (new #decisions card + PT progress)."
+    "run_completed": "2026-08-20T14:20:26Z",
+    "note": "Day's 3rd run. Two defects found and corrected. (1) DUPLICATE: the 09:33 run opened a third #decisions card + third Haven note for the same $25,601.41 Curaleaf/AGA debt -- identical File# 2532730_AGA and every figure; root cause was matching on the email subject line instead of file number + amount. Consolidated as an Update on the canonical note 20-Cuzzies/2026-08-13-curaleaf-nj-ii-collections.md; the 8/20 note set status:archived + tagged superseded (body intact); duplicate card ts 1787231683.266619 replied to and pointed at canonical ts 1786631846.014899. Also corrected the FDCPA clock: window runs from the 8/3 FIRST notice so it closes ~2026-09-02, and the path has been unanswered 17 days across three notices. (2) UNTRACKED DEADLINE: Regus/IWG's 8/23 arbitration deadline existed only as prose in Dawn's 8/19 brief -- no note, no card, no calendar event, nothing counting down. Opened note 00-Inbox/2026-08-20-regus-iwg-collections-legal-threat.md (due 2026-08-23), card ts 1787235032.481949 with 4 options, and event rdvh4u83qhr0rg26t64fncvpa0 on Cuzzie's (Owners) -- business money, never the personal calendar. Recovered the itemization from the 8/18 letter: 3131.91 + 1048.60 - 1572.90 = 2607.61 (reconciles). Entity stub ag-adjustments created. A/B/C/E/Q/M all quiet no-ops. R: p00-advisory-proposal-package still 7/8 (Q6 carries, not re-asked); other two locked. Canvas re-check skipped (write-blocked, confirmed day's first run). Pulse rendered 9/9 and DM'd. Nothing paid, disputed, sent, or contacted."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787228056.156019",
-      "C0BBZJL85RT": "1787232856.796999",
-      "D0BHPKMDNEP": "1787228195.822939",
-      "C0BGLEMH99T": "1787228261.000000",
-      "C0BEQUW5NPP": "1787228261.000000",
-      "C0BBLUA7JLX": "1787228261.000000",
-      "C0BJ37SU1TL": "1787228261.000000",
-      "C0BCCUKEUQ2": "1787228261.000000",
-      "C0BCD7U5X2B": "1787228261.000000",
-      "C0BCH2C3GRM": "1787228261.000000",
-      "C0BDN2KQFD4": "1787228261.000000",
-      "C0BD8LTM1EK": "1787228261.000000",
-      "C0BGYM1UB4Y": "1787228261.000000",
-      "C0BGCAK0ML3": "1787228261.000000",
-      "C0BHXTPST52": "1787228261.000000",
-      "C0BC2A94142": "1787228261.000000",
-      "C0BBZ5J8805": "1787228261.000000",
-      "C0BRZT2V89W": "1787228261.000000"
+      "C0BBXA96FFV": "1787235219.094339",
+      "C0BBZJL85RT": "1787235572.730089",
+      "D0BHPKMDNEP": "1787235546.902109",
+      "C0BGLEMH99T": "1787235626.000000",
+      "C0BEQUW5NPP": "1787235626.000000",
+      "C0BBLUA7JLX": "1787235626.000000",
+      "C0BJ37SU1TL": "1787235626.000000",
+      "C0BCCUKEUQ2": "1787235626.000000",
+      "C0BCD7U5X2B": "1787235626.000000",
+      "C0BCH2C3GRM": "1787235626.000000",
+      "C0BDN2KQFD4": "1787235626.000000",
+      "C0BD8LTM1EK": "1787235626.000000",
+      "C0BGYM1UB4Y": "1787235626.000000",
+      "C0BGCAK0ML3": "1787235626.000000",
+      "C0BHXTPST52": "1787235626.000000",
+      "C0BC2A94142": "1787235626.000000",
+      "C0BBZ5J8805": "1787235626.000000",
+      "C0BRZT2V89W": "1787235626.000000"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
       "1786832078.131649": "1786832078.131649",
       "1786713941.609669": "1786716585.591279",
       "1786986503.368599": "1786986503.368599",
-      "1786631846.014899": "1786990331.307329",
+      "1786631846.014899": "1787234906.491849",
       "1786631841.945579": "1786990332.792009",
       "1786990354.291129": "1786993750.159969",
       "1787001107.337499": "1787055300.092309",
@@ -44,22 +44,23 @@
       "1787155581.357669": "1787228056.156019",
       "1787157130.471099": "1787231790.722049",
       "1787227722.583919": "1787227729.950129",
-      "1787231683.266619": "1787231683.266619"
+      "1787231683.266619": "1787234895.613759",
+      "1787235032.481949": "1787235219.094339"
     },
-    "capture_dm": "1787228195.822939",
-    "gmail_after_epoch": 1787230789
+    "capture_dm": "1787235546.902109",
+    "gmail_after_epoch": 1787235626
   },
   "integrity": {
     "last_full_pass": "2026-08-20T12:17:41Z",
-    "last_scan_sha": "5b396bfdc51b8501332f791a34fe86bb863d070f",
-    "note": "Day's 2nd run: incremental check only (per amended cadence). Zero .md files under haven/vault/ changed between last_scan_sha and this run's start -- zero notes re-inspected, zero repairs. 3 known carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (domain/type gap), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain gap), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) stays tracked via open PR #73."
+    "last_scan_sha": "6a5f97eaa0521296b608300ae487e8fece76cfd4",
+    "note": "Day's 3rd run: incremental check only (per amended cadence). 3 .md under haven/vault/ changed since the prior scan sha (the 8/20 capture note, the PT note, the _daily journal) -- all inspected, frontmatter valid, zero repairs. 3 known carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (domain/type gap), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain gap), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) stays tracked via open PR #73. New this run and NOT a defect: 00-Inbox/2026-08-20-regus-iwg-collections-legal-threat.md has complete valid frontmatter and files to 20-Cuzzies/ on the next sweep."
   },
   "canvas_access": {
     "last_checked": "2026-08-20T12:16:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-20T09:35:00-04:00",
+    "pulse_last_rendered": "2026-08-20T10:18:55-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
