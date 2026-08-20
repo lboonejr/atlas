@@ -1,6 +1,6 @@
 ---
 created: 2026-07-28T14:11:00-04:00
-updated: 2026-07-28T14:11:00-04:00
+updated: 2026-08-20T15:05:00-04:00
 domain: reference
 type: entity
 status: active
@@ -28,3 +28,12 @@ angle — not confirmed by Lemar.
 ## Related
 - [[2026-07-28-peter-abdallah-vantage-res-backfill]]
 - `haven/vault/40-Projects/investor-pipeline/index.md`
+
+## Update — 2026-08-20
+Now corresponding from **KW Premier / Keller Williams Realty** (Broker Associate,
+NJ license 0457309) — `theateamre@gmail.com` / `peterabdallah@kw.com`, same cell
+(609) 505-3993. Whether this replaces or runs alongside the Vantage RES role is
+not confirmed. On 8/20 he asked for "10% commission same as your current broker"
+on the Camden package passed to Haason's team, and Lemar answered "Yes, that is
+correct" in writing before the terms were defined — see
+[[2026-08-20-peter-abdallah-kw-10-percent-commission]] (`20-Cuzzies/`).

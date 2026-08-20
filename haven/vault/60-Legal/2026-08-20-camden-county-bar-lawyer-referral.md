@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T13:20-04:00
-updated: 2026-08-20T13:20-04:00
+updated: 2026-08-20T15:05:00-04:00
 domain: legal
 type: note
 status: active
