@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T12:14-04:00
-updated: 2026-08-19T14:10-04:00
+updated: 2026-08-20T13:14-04:00
 domain: project
 type: brief
 status: awaiting-decision
@@ -134,6 +134,23 @@ waiting on something that was never actually a blocker.
 lenses 8/8 posed (4/8 answered via round 1's build-note pass, 4/8 newly posed this round,
 awaiting reply). gates 6/6, unchanged.
 
+### Round 2 — reactions read, 2026-08-20 (PART R)
+
+Three of the four round 2 questions came back ✅ by reaction, read against each question's
+own stated default fork (no plain replies this time):
+
+- Q7 ✅ — hold firm, TO CONFIRM stands as written. No softer phrasing requested.
+- Q8 ✅ — the designed PDF is the differentiator; ship as is. Nothing sharper to build first.
+- Q9 ✅ — nothing blocks the send, the rest (Working Log correction, claude.ai paste, Jotform
+  Chrome run) can trail it.
+
+Q6 (premise — whether Jamil is confirmed as the group's actual signing authority) carries
+neither a reaction nor a reply. Per the standard engine, an un-reacted question with no
+answer is carried forward, not re-asked.
+
+Lens coverage: lens 5 failure modes ✓, lens 6 edge ✓, lens 7 execution ✓. Lens 1 premise —
+still OPEN. **7/8 lenses now closed.** Gates unchanged, 6/6.
+
 ## Open questions
 
 1. The proposal is addressed to Jamil Tyson personally because no entity was named. Forming
@@ -148,6 +165,8 @@ awaiting reply). gates 6/6, unchanged.
    Retire it, or rebuild it from the new HTML?
 5. Opening services still has no scope and no price. Not blocking the send, but better built
    well before inspection than under pressure.
+6. Is Jamil Tyson confirmed as the group's actual signing authority, or could a co-owner or
+   partner hold that instead? (Q6, round 2 — still open, no signal yet.)
 
 Questions 1 and 2 above are answered in practice (see Round 1 — closed, above) but left
 as written rather than edited, per the no-rewrite rule; the current answer lives in the
@@ -175,6 +194,14 @@ Round 1 is now fully closed (see Pressure test, above) — Q1 and Q2 both resolv
 thread's 13:45 ET update. Still not locked: lens coverage is 4/8 with premise, failure
 modes, edge, and execution open. Round 2 (Q6–Q9, above) poses all four. Will lock once
 those are answered and nothing is left open, or the moment Lemar 🫡s the parent.
+
+### Update, 2026-08-20 (PART R) — still not locked, one lens open
+
+7/8 lenses now closed (Q7, Q8, Q9 read ✅ by reaction this scan — see Pressure test, Round
+2 — reactions read, above). Q6 (premise) is the sole holdout: no reaction, no reply. Per
+the standard engine this is carried, not re-asked, and no new round is posted — all eight
+lenses were already posed in round 2, so there is nothing left to ask that has not already
+been put to him. The card stays open on round 2, waiting on Q6 or a 🫡 on the parent.
 
 ## Handoff
 
@@ -303,6 +330,16 @@ though gates are 6/6 — lenses were only 4/8. Q6–Q9 posed above to close prem
 modes, edge, and execution — the last four lenses. Posted to the thread as round 2
 immediately after this note lands. #reports line: `round 2 (lenses 8/8 posed, 4/8
 pending reply)`.
+
+## Update 2026-08-20, PART R (round 2 reactions read — 7/8)
+
+Scan clock: run `run_20260820T130424Z`, scan 2 of 11, 9 scans left today — normal pace.
+Read the thread since the watermark (`1787163453.430099`, unchanged — no new message, only
+new reactions): Q7 ✅, Q8 ✅, Q9 ✅. Q6 carries no reaction and no reply. Lens coverage moves
+to 7/8 (see Pressure test and Locked updates above). Not locked — Q6 (premise) is the last
+open item. No new round posted; a status reply went to the thread instead, since all eight
+lenses are already posed and nothing new is left to ask. #reports line: `round 2, 7/8
+lenses (Q6 premise open) — carried`.
 
 ## Sources
 
