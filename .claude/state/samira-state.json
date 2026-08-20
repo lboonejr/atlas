@@ -1,8 +1,8 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260820T130424Z",
-    "run_started": "2026-08-20T13:04:24Z",
+    "run_id": "run_20260820T140311Z",
+    "run_started": "2026-08-20T14:03:11Z",
     "run_completed": "2026-08-20T13:34:42Z",
     "note": "Day's 2nd run. Quiet across V/S/A/B/C/E/Q/M (all no-op or clean carry). D detected 1 new task (Curaleaf/A.G. Adjustments collections, $25,601.41, Haven note + #decisions card opened). R advanced p00-advisory-proposal-package 4/8 -> 7/8 lenses (Q6 signer-authority still open); ops-admin-lane-and-ariana and p00-client-intake-system confirmed still locked. Corrected a bookkeeping error: the NJ annual report/Cuzzie's LLC revocation card is parent ts 1786986503.368599, not 1787227722.583919 (that's the separate Headset/Ashley Wallace card) -- both still red/unreacted. Canvas re-check skipped (already confirmed write-blocked on day's first run). Pulse rendered (9/9 sections) and DM'd -- something changed this run (new #decisions card + PT progress)."
   },
