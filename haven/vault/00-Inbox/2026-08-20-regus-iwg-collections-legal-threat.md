@@ -1,12 +1,13 @@
 ---
 created: 2026-08-20T10:15-04:00
-updated: 2026-08-20T10:25-04:00
+updated: 2026-08-20T10:14-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
 tags: [regus, iwg, collections, past-due, wind-down, legal-adjacent, off-button]
 source: gmail
 due: 2026-08-23T09:00-04:00
+calendar_event_id: rdvh4u83qhr0rg26t64fncvpa0
 ---
 
 # Regus / IWG — $2,607.61, arbitration threatened, 5-day clock expires 2026-08-23
@@ -76,8 +77,14 @@ has been paid, replied to, or contacted** — all four are payment or outbound
 correspondence, outside what Samira does unattended.
 
 This is a **business** obligation: Cuzzie's wind-down, never the personal money-hub ledger
-and never the personal reminder calendar. Any calendar reminder belongs on Cuzzie's
-(Owners).
+and never the personal reminder calendar.
+
+## Update 2026-08-20T10:14-04:00 — deadline now rings
+
+Projected onto the **Cuzzie's (Owners)** calendar (business money, per the 2026-08-10
+lock — never the personal reminder calendar): event `rdvh4u83qhr0rg26t64fncvpa0`,
+2026-08-23 09:00 ET, popups at 24h and day-of. Until this run the 8/23 date lived only in
+Dawn's 8/19 brief prose and would not have alerted anyone.
 
 ## Related
 - [[regus-iwg]]
@@ -90,3 +97,4 @@ and never the personal reminder calendar. Any calendar reminder belongs on Cuzzi
 - gmail: threads `19ffb9a5292974cd` (8/13), `19fb86ecefb2989b` (7/31), `19f8a267e2148607`
   (7/22) — earlier collection notices on the same account
 - haven: `_daily/brief-2026-08-19.md` (where the 8/23 deadline was first written down)
+- slack: #decisions ts `1787235032.481949`
