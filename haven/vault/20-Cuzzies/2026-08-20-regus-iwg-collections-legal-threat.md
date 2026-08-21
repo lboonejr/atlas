@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T10:15-04:00
-updated: 2026-08-21T11:10-04:00
+updated: 2026-08-21T13:20-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -173,6 +173,19 @@ Drafts, unsent** (draft `r-3588301330860063719`, message `1a024df7db36b0a7`) —
 and any per-installment figure Lemar is willing to commit to, stays his. Nothing paid,
 promised, or sent by Samira.
 
+## Update 2026-08-21T13:20-04:00 — IWG declined the payment plan; posted options for the lump sum
+
+Fernanda replied 2026-08-21 4:13pm ET: "Unfortunately, we are unable to offer a
+financial plan as this is an overdue balance." The payment-plan ask from the prior
+update is closed out — no installment path on offer. The $1,506.05 lump-sum settlement
+still stands, valid 7 days from 8/21 (~through 8/28); nothing else has changed.
+
+Posted three options as a threaded update on the existing #decisions card (accept the
+lump sum outright, push once more for a two-payment split rather than a formal "plan,"
+or hold and route to counsel alongside DeWalt — the Archer & Greiner engagement moved
+today, see `60-Legal/2026-07-21-dewalt-v-cuzzies-default-judgment.md`). No draft sent
+to Fernanda yet — waiting on Lemar's pick. Gmail thread labeled `Samira/seen`.
+
 ## Related
 - [[regus-iwg]]
 - [[2026-07-09-regus-mount-laurel-office-clearout]]
@@ -180,7 +193,8 @@ promised, or sent by Samira.
 ## Sources
 - gmail: thread `1a0155edacd0c56d` (2026-08-18, the operative 5-day letter + itemization)
 - gmail: thread `1a01f7e77adffb82` (2026-08-20 → 2026-08-21, repeat demand → settlement
-  offer raised → Lemar asked for it in writing → payment-plan reply drafted)
+  offer raised → Lemar asked for it in writing → payment-plan reply drafted → plan
+  declined 4:13pm ET, options re-posted)
 - gmail: thread `19ffded7294640c4` (2026-08-14, "NOTICE OF LEGAL ACTION", $1,048.60)
 - gmail: threads `19ffb9a5292974cd` (8/13), `19fb86ecefb2989b` (7/31), `19f8a267e2148607`
   (7/22) — earlier collection notices on the same account
