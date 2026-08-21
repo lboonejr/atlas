@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T10:15-04:00
-updated: 2026-08-21T10:20-04:00
+updated: 2026-08-21T11:10-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -159,6 +159,20 @@ to counsel (referral request already in flight, see
 [[2026-08-20-camden-county-bar-lawyer-referral]]) — not something Samira decides or
 pays. Nothing sent, paid, or agreed by Samira. Posted to `#decisions`.
 
+## Update 2026-08-21T11:10-04:00 — Lemar picked Option 1 (accept), then asked about a payment plan
+
+Reactions/replies read on the 10:20am card: Lemar reacted :one: (accept the $1,506.05
+settlement) on the options message, then followed up in-thread: "But can I put it on a
+payment plan?" — modifying the accept into "accept, but as installments" rather than a
+lump sum.
+
+Drafted a reply to Fernanda (message `1a024ab7b11cd4ab`, the settlement-offer message)
+asking whether the $1,506.05 can be structured as a short payment plan instead of one
+payment, and asking for the installment options given the 7-day window. **Saved to Gmail
+Drafts, unsent** (draft `r-3588301330860063719`, message `1a024df7db36b0a7`) — the send,
+and any per-installment figure Lemar is willing to commit to, stays his. Nothing paid,
+promised, or sent by Samira.
+
 ## Related
 - [[regus-iwg]]
 - [[2026-07-09-regus-mount-laurel-office-clearout]]
@@ -166,7 +180,7 @@ pays. Nothing sent, paid, or agreed by Samira. Posted to `#decisions`.
 ## Sources
 - gmail: thread `1a0155edacd0c56d` (2026-08-18, the operative 5-day letter + itemization)
 - gmail: thread `1a01f7e77adffb82` (2026-08-20 → 2026-08-21, repeat demand → settlement
-  offer raised → Lemar asked for it in writing)
+  offer raised → Lemar asked for it in writing → payment-plan reply drafted)
 - gmail: thread `19ffded7294640c4` (2026-08-14, "NOTICE OF LEGAL ACTION", $1,048.60)
 - gmail: threads `19ffb9a5292974cd` (8/13), `19fb86ecefb2989b` (7/31), `19f8a267e2148607`
   (7/22) — earlier collection notices on the same account

@@ -1,31 +1,31 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260821T140947Z",
-    "run_started": "2026-08-21T14:09:47Z",
-    "run_completed": "2026-08-21T14:20:52Z",
-    "note": "Complete, ~10:20am ET (this session's git access is scoped to branch claude/wizardly-cori-0of3ip, not direct main -- see PR #77). Reconciled two stranded same-day PRs (#75 Dawn's brief, #76 Samira's 8am scan) that hit a real add/add conflict on _daily/2026-08-21.md, folding both onto main via this session's branch. PART V: removed 1 filed duplicate from Inbox; incremental integrity check clean, 3 carried defects unchanged. PART A: closed GTI AR card (Lemar handled directly); Gusto payroll flagged as a likely account-termination issue, not a funding question, left open. PART D: 12 Gmail threads triaged, 0 reply-worthy; Regus/IWG settlement offer ($1,506.05) logged + posted to #decisions; McOmber Luber counsel declination logged. PART C: logged Drive file-organizing handoff from #admin. PART E/M/Q/T/canvas: quiet. PART P: Pulse rendered and DM'd."
+    "run_id": "run_20260821T151005Z",
+    "run_started": "2026-08-21T15:10:05Z",
+    "run_completed": "2026-08-21T15:20:00Z",
+    "note": "Complete, ~11:20am ET (this session's git access is scoped to branch claude/wizardly-cori-1qr7va, not direct main -- same recurring conflict as PR #77/#75/#76, see anchors git-write policy; landing via this branch's PR). PART V: 0 filed, 2 stuck carried unchanged (both known/documented), no new defects since last integrity scan (1 file changed, the daily journal itself). PART S: retired the GTI AR calendar event (status already done; event already gone server-side, cleared the stale calendar_event_id). PART A: swept all 25 tracked #decisions threads for reactions + plain replies; found one genuinely new signal -- Lemar's plain reply on the Regus/IWG thread asking about a payment plan (arrived after the prior run's watermark) -- drafted a reply to Fernanda, saved to Gmail Drafts, logged. All other tracked threads confirmed unchanged since last run. PART B/C: capture DM and all 13 project channels quiet. PART D: 2 new Gmail threads since watermark, both marketing junk, labeled seen. PART E: #investor-pipeline and Samira/investor label quiet -- index already reflects Donte's $250K commitment from an earlier run today. PART Q: #stormy quiet. PART R: worked the 3 open Camden Launch PT cards (cap 3) -- p00-advisory-proposal-package's last open lens (Q6, signing authority) answered 'confirm authority first', locking lens coverage 8/8 and holding the send on that confirmation; ops-admin-lane-and-ariana and p00-client-intake-system already locked, carried unchanged. PART M/T/canvas: quiet/unchanged. PART P: Pulse rendered (real changes this run) and DM'd."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787314456.900919",
-      "C0BBZJL85RT": "1787322104.777719",
+      "C0BBXA96FFV": "1787325176.441849",
+      "C0BBZJL85RT": "1787325416.785779",
       "D0BHPKMDNEP": "1787322030.199199",
-      "C0BGLEMH99T": "1787322052.000000",
-      "C0BEQUW5NPP": "1787322052.000000",
-      "C0BBLUA7JLX": "1787318037.031199",
-      "C0BJ37SU1TL": "1787253092.000000",
-      "C0BCCUKEUQ2": "1787322052.000000",
-      "C0BCD7U5X2B": "1787322052.000000",
-      "C0BCH2C3GRM": "1787322052.000000",
-      "C0BDN2KQFD4": "1787322052.000000",
-      "C0BD8LTM1EK": "1787322052.000000",
-      "C0BGYM1UB4Y": "1787322052.000000",
-      "C0BGCAK0ML3": "1787322052.000000",
-      "C0BHXTPST52": "1787322052.000000",
-      "C0BC2A94142": "1787322052.000000",
-      "C0BBZ5J8805": "1787322052.000000",
-      "C0BRZT2V89W": "1787322052.000000"
+      "C0BGLEMH99T": "1787325500.000000",
+      "C0BEQUW5NPP": "1787325500.000000",
+      "C0BBLUA7JLX": "1787325500.000000",
+      "C0BJ37SU1TL": "1787325500.000000",
+      "C0BCCUKEUQ2": "1787325500.000000",
+      "C0BCD7U5X2B": "1787325500.000000",
+      "C0BCH2C3GRM": "1787325500.000000",
+      "C0BDN2KQFD4": "1787325500.000000",
+      "C0BD8LTM1EK": "1787325500.000000",
+      "C0BGYM1UB4Y": "1787325500.000000",
+      "C0BGCAK0ML3": "1787325500.000000",
+      "C0BHXTPST52": "1787325500.000000",
+      "C0BC2A94142": "1787325500.000000",
+      "C0BBZ5J8805": "1787325500.000000",
+      "C0BRZT2V89W": "1787325500.000000"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
@@ -42,10 +42,10 @@
       "1787152085.518979": "1787159332.480679",
       "1787159607.185319": "1787162996.829679",
       "1787155581.357669": "1787228056.156019",
-      "1787157130.471099": "1787231790.722049",
+      "1787157130.471099": "1787325176.441849",
       "1787227722.583919": "1787260488.874049",
       "1787231683.266619": "1787234895.613759",
-      "1787235032.481949": "1787321855.578339",
+      "1787235032.481949": "1787325027.294169",
       "1787238798.497049": "1787238833.679779",
       "1787245811.807379": "1787245837.845089",
       "1787256504.479409": "1787260487.561709",
@@ -55,19 +55,19 @@
       "1787314456.900919": "1787321654.863689"
     },
     "capture_dm": "1787322030.199199",
-    "gmail_after_epoch": 1787322052
+    "gmail_after_epoch": 1787325600
   },
   "integrity": {
     "last_full_pass": "2026-08-20T12:17:41Z",
     "last_scan_sha": "048175a764e39822fe52036f99f58f31bc3103f9",
-    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged. This pass: incremental check of files changed since last scan (11 files, mostly this pass's own writes) found no new defects; full whole-vault pass not re-run (not the day's first run)."
+    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged. This pass: incremental check of files changed since last scan sha (1 file, _daily/2026-08-21.md, this run's own append) found no new defects; full whole-vault pass not re-run (not the day's first run)."
   },
   "canvas_access": {
     "last_checked": "2026-08-20T12:16:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-21T10:20:14-04:00",
+    "pulse_last_rendered": "2026-08-21T11:16:20-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }

@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T12:14-04:00
-updated: 2026-08-20T13:14-04:00
+updated: 2026-08-21T11:20-04:00
 domain: project
 type: brief
 status: awaiting-decision
@@ -202,6 +202,18 @@ those are answered and nothing is left open, or the moment Lemar 🫡s the paren
 the standard engine this is carried, not re-asked, and no new round is posted — all eight
 lenses were already posed in round 2, so there is nothing left to ask that has not already
 been put to him. The card stays open on round 2, waiting on Q6 or a 🫡 on the parent.
+
+### Update, 2026-08-21T11:20-04:00 (PART R) — Q6 answered, 8/8 lenses closed, send held
+
+Lemar replied in-thread: "I'd like to confirm authority first" — not the ✅ default
+(acceptable risk, send as is). Lens 1 premise is now closed on the answer that costs
+more to skip: **the send is held until Jamil Tyson's signing authority for the group is
+confirmed.** All eight lenses are now answered. Gates remain 6/6, unchanged.
+
+This changes State: the proposal is no longer just "waiting on Lemar to send" — it is
+waiting on an authority confirmation that has to happen first, and how that confirmation
+happens (a direct question to Jamil, a call, something else) is Lemar's judgment, not
+drafted here. Nothing sent, drafted, or proposed toward Jamil on this point this scan.
 
 ## Handoff
 
