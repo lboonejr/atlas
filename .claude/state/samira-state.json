@@ -4,7 +4,7 @@
     "run_id": "run_20260821T170335Z",
     "run_started": "2026-08-21T17:03:35Z",
     "run_completed": "2026-08-21T15:20:00Z",
-    "note": "In flight — PART 0 lock acquired 17:03:35Z. Previous run's summary retained below until this run's digest overwrites it. (2026-08-21T15:20:00Z run note: PART V: 0 filed, 2 stuck carried unchanged. PART S: retired GTI AR calendar event. PART A: drafted Regus/IWG payment-plan reply. PART D: 2 marketing threads labeled seen. PART E/Q quiet. PART R: worked 3 open Camden Launch PT cards. PART M/T/canvas quiet/unchanged. PART P: Pulse rendered + DM'd.)"
+    "note": "In flight — PART 0 lock acquired 17:03:35Z. Previous run's summary retained below until this run's digest overwrites it. (2026-08-21T15:20:00Z run note: PART V: 0 filed, 2 stuck carried unchanged. PART S: retired GTI AR calendar event. PART A: drafted Regus/IWG payment-plan reply. PART D: 2 marketing threads labeled seen. PART E/Q quiet. PART R: worked 3 open Camden Launch PT cards. PART M/T/canvas quiet/unchanged. PART P: Pulse rendered + DM'd. PART D re-run 17:03:35Z lock: D1 found GTI AR/Gusto/Regus/Peter Abdallah already resolved by an earlier pass; D2 scanned 12 new threads — DeWalt engagement-letter card opened, Regus/IWG payment-plan-declined update posted, Station Newark AR update logged, 4 junk + 4 already-seen threads skipped.)"
   },
   "watermarks": {
     "slack_channels": {
@@ -45,17 +45,18 @@
       "1787157130.471099": "1787325176.441849",
       "1787227722.583919": "1787260488.874049",
       "1787231683.266619": "1787234895.613759",
-      "1787235032.481949": "1787325027.294169",
+      "1787235032.481949": "1787333215.335379",
       "1787238798.497049": "1787238833.679779",
       "1787245811.807379": "1787245837.845089",
       "1787256504.479409": "1787260487.561709",
       "1786824337.657789": "1786831565.789469",
       "1786709997.432499": "1786727321.939139",
       "1787314219.825659": "1787321658.713409",
-      "1787314456.900919": "1787321654.863689"
+      "1787314456.900919": "1787321654.863689",
+      "1787333131.938499": "1787333167.963579"
     },
     "capture_dm": "1787322030.199199",
-    "gmail_after_epoch": 1787325600
+    "gmail_after_epoch": 1787331600
   },
   "integrity": {
     "last_full_pass": "2026-08-20T12:17:41Z",
