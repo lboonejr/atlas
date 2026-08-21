@@ -1,9 +1,9 @@
 ---
 created: 2026-08-19T12:14-04:00
-updated: 2026-08-21T11:20-04:00
+updated: 2026-08-21T12:04-04:00
 domain: project
 type: brief
-status: awaiting-decision
+status: done
 tags: [samira-loop, camden-launch, phase-00, pressure-test, proposal]
 source: claude
 ---
@@ -214,6 +214,16 @@ This changes State: the proposal is no longer just "waiting on Lemar to send" �
 waiting on an authority confirmation that has to happen first, and how that confirmation
 happens (a direct question to Jamil, a call, something else) is Lemar's judgment, not
 drafted here. Nothing sent, drafted, or proposed toward Jamil on this point this scan.
+
+## Update, 2026-08-21T12:04-04:00 (PART A) — sent; card locked and closed
+
+Lemar replied in-thread: "My apologies, authority confirmed, just sent the proposal."
+Jamil Tyson's signing authority is confirmed and Lemar sent the proposal himself — the
+hold from the prior update is lifted by the fact of the send, not by a Samira action.
+**8/8 lenses closed, 6/6 gates, proposal delivered.** This is the terminal state for the
+PT card: nothing left to build, question, or hold on. Card closed; the engagement's next
+step (Jamil's response, then intake sequencing per the 2026-08-19 update above) is a new
+thread when it happens, not a reopening of this one.
 
 ## Handoff
 
