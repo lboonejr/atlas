@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260821T140947Z",
     "run_started": "2026-08-21T14:09:47Z",
-    "run_completed": "2026-08-21T12:17:31Z",
-    "note": "Active pass, ~10:09am ET (this session's git access is scoped to branch claude/wizardly-cori-0of3ip, not direct main -- see PR #77). Prior pass's lock (run_20260821T121731Z) had run_completed==run_started, an incomplete write from that run; treated as stale/free since it is well past the 45-min staleness window."
+    "run_completed": "2026-08-21T14:20:52Z",
+    "note": "Complete, ~10:20am ET (this session's git access is scoped to branch claude/wizardly-cori-0of3ip, not direct main -- see PR #77). Reconciled two stranded same-day PRs (#75 Dawn's brief, #76 Samira's 8am scan) that hit a real add/add conflict on _daily/2026-08-21.md, folding both onto main via this session's branch. PART V: removed 1 filed duplicate from Inbox; incremental integrity check clean, 3 carried defects unchanged. PART A: closed GTI AR card (Lemar handled directly); Gusto payroll flagged as a likely account-termination issue, not a funding question, left open. PART D: 12 Gmail threads triaged, 0 reply-worthy; Regus/IWG settlement offer ($1,506.05) logged + posted to #decisions; McOmber Luber counsel declination logged. PART C: logged Drive file-organizing handoff from #admin. PART E/M/Q/T/canvas: quiet. PART P: Pulse rendered and DM'd."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787314456.900919",
-      "C0BBZJL85RT": "1787281925.881449",
-      "D0BHPKMDNEP": "1787314595.450939",
-      "C0BGLEMH99T": "1787253092.000000",
-      "C0BEQUW5NPP": "1787253092.000000",
-      "C0BBLUA7JLX": "1787253092.000000",
+      "C0BBZJL85RT": "1787322104.777719",
+      "D0BHPKMDNEP": "1787322030.199199",
+      "C0BGLEMH99T": "1787322052.000000",
+      "C0BEQUW5NPP": "1787322052.000000",
+      "C0BBLUA7JLX": "1787318037.031199",
       "C0BJ37SU1TL": "1787253092.000000",
-      "C0BCCUKEUQ2": "1787253092.000000",
-      "C0BCD7U5X2B": "1787253092.000000",
-      "C0BCH2C3GRM": "1787253092.000000",
-      "C0BDN2KQFD4": "1787253092.000000",
-      "C0BD8LTM1EK": "1787253092.000000",
-      "C0BGYM1UB4Y": "1787253092.000000",
-      "C0BGCAK0ML3": "1787253092.000000",
-      "C0BHXTPST52": "1787253092.000000",
-      "C0BC2A94142": "1787253092.000000",
-      "C0BBZ5J8805": "1787253092.000000",
-      "C0BRZT2V89W": "1787253092.000000"
+      "C0BCCUKEUQ2": "1787322052.000000",
+      "C0BCD7U5X2B": "1787322052.000000",
+      "C0BCH2C3GRM": "1787322052.000000",
+      "C0BDN2KQFD4": "1787322052.000000",
+      "C0BD8LTM1EK": "1787322052.000000",
+      "C0BGYM1UB4Y": "1787322052.000000",
+      "C0BGCAK0ML3": "1787322052.000000",
+      "C0BHXTPST52": "1787322052.000000",
+      "C0BC2A94142": "1787322052.000000",
+      "C0BBZ5J8805": "1787322052.000000",
+      "C0BRZT2V89W": "1787322052.000000"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
@@ -45,29 +45,29 @@
       "1787157130.471099": "1787231790.722049",
       "1787227722.583919": "1787260488.874049",
       "1787231683.266619": "1787234895.613759",
-      "1787235032.481949": "1787245639.309649",
+      "1787235032.481949": "1787321855.578339",
       "1787238798.497049": "1787238833.679779",
       "1787245811.807379": "1787245837.845089",
       "1787256504.479409": "1787260487.561709",
       "1786824337.657789": "1786831565.789469",
       "1786709997.432499": "1786727321.939139",
-      "1787314219.825659": "1787314219.825659",
-      "1787314456.900919": "1787314456.900919"
+      "1787314219.825659": "1787321658.713409",
+      "1787314456.900919": "1787321654.863689"
     },
-    "capture_dm": "1787314595.450939",
-    "gmail_after_epoch": 1787314651
+    "capture_dm": "1787322030.199199",
+    "gmail_after_epoch": 1787322052
   },
   "integrity": {
     "last_full_pass": "2026-08-20T12:17:41Z",
-    "last_scan_sha": "0b72a24f29ecf80b464952660b6fea797340e94e",
-    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged. This pass: incremental check of files changed since the last full pass (5 files) found no new defects; full whole-vault pass not re-run (not the day's first run)."
+    "last_scan_sha": "048175a764e39822fe52036f99f58f31bc3103f9",
+    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged. This pass: incremental check of files changed since last scan (11 files, mostly this pass's own writes) found no new defects; full whole-vault pass not re-run (not the day's first run)."
   },
   "canvas_access": {
     "last_checked": "2026-08-20T12:16:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-21T08:35:00-04:00",
+    "pulse_last_rendered": "2026-08-21T10:20:14-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
