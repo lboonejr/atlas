@@ -3,13 +3,13 @@
   "lock": {
     "run_id": "run_20260821T220251Z",
     "run_started": "2026-08-21T22:02:51Z",
-    "run_completed": "2026-08-21T21:17:16Z",
-    "note": "In flight."
+    "run_completed": "2026-08-21T22:06:40Z",
+    "note": "Complete, ~6:02pm ET. Quiet hour: #decisions (0 new top-level; spot-checked Curaleaf/DeWalt-adjacent, Camden P00 advisory-proposal, and Regus/IWG threads directly -- each thread's latest reply ts matched the recorded watermark exactly, no new replies), capture DM, all 18 swept project/admin channels, #investor-pipeline, #stormy, #personal-finance all silent since the prior scan's watermarks. PART V: 0 vault content commits since last_scan_sha beyond the prior scan's own watermark write -- 0 repairs, 0 new defects; 2 known-carried stuck Inbox notes unchanged. PART S: no due-date changes. PART D: 0 new Gmail threads since watermark. PART E/Q/R/M: nothing to pick up. PART T: reports-scan clean. Canvas: still blocked, not re-checked (not day's first run). Pulse: not re-rendered -- nothing this pass met the change-gate -- pulse — carried (quiet pass). Wrote directly to main throughout via the GitHub API (create_or_update_file) per the git-write policy -- no branch+PR."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787339264.143129",
-      "C0BBZJL85RT": "1787346953.990269",
+      "C0BBZJL85RT": "1787349910.361989",
       "D0BHPKMDNEP": "1787339486.323229",
       "C0BGLEMH99T": "1787339502.000000",
       "C0BEQUW5NPP": "1787339502.000000",
@@ -42,7 +42,7 @@
       "1787152085.518979": "1787159332.480679",
       "1787159607.185319": "1787162996.829679",
       "1787155581.357669": "1787228056.156019",
-      "1787157130.471099": "1787333215.335379",
+      "1787157130.471099": "1787328710.030059",
       "1787227722.583919": "1787260488.874049",
       "1787231683.266619": "1787234895.613759",
       "1787235032.481949": "1787333215.335379",
@@ -59,12 +59,12 @@
       "1787339264.143129": "1787339264.143129"
     },
     "capture_dm": "1787339486.323229",
-    "gmail_after_epoch": 1787346740
+    "gmail_after_epoch": 1787349771
   },
   "integrity": {
     "last_full_pass": "2026-08-20T12:17:41Z",
     "last_scan_sha": "77487d24590b2d773b807d5251c354e8a0a1867a",
-    "note": "Diff-scan this pass (against prior last_scan_sha fd2526f8) found 0 files changed under haven/vault/. 0 new defects. 3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged. last_scan_sha bumped to this run's HEAD."
+    "note": "Diff-scan this pass (against last_scan_sha 77487d24) found 0 vault content files changed -- only the prior scan's own _daily watermark commit. 0 new defects. 3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged."
   },
   "canvas_access": {
     "last_checked": "2026-08-20T12:16:00Z",
