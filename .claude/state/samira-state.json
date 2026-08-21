@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260821T190238Z",
     "run_started": "2026-08-21T19:02:38Z",
-    "run_completed": "2026-08-21T18:13:57Z",
-    "note": "In flight."
+    "run_completed": "2026-08-21T19:14:00Z",
+    "note": "Complete, ~3:14pm ET. PART V: diff-scan (1 file changed since last scan sha, _daily/2026-08-21.md, clean) + filed 2026-08-21-desktop-downloads-cleanup.md from Inbox to 10-Personal/ (was file-ready, missed by the prior run since PART V precedes PART C). 2 known-carried stuck notes unchanged. PART S: no due-date changes. PART A: #decisions quiet beyond the still-open DeWalt engagement-letter card (Archer & Greiner) -- confirmed no new reply/reaction. PART B: capture DM quiet. PART C: swept 13 project/admin channels, all quiet. PART D: 5 new Gmail threads -- 2 junk (Headset scheduled report, Nova Farms marketing), 3 captured to Haven + posted as #decisions cards (Waste Management past-due; Garden Society 95d past-due flagging suspicious 'new banking instructions', told Lemar to verify before paying; Camden County Bar attorney referral, Salvatore Siciliano). PART E/Q/M: investor-pipeline, Samira/investor label, #stormy, #personal-finance all quiet. PART R: no open PT card needed a round. PART T: reports-scan clean (not deep-scanned, nothing new beyond this run's own lines). Canvas: still blocked, not re-checked (not day's first run). Pulse: rendered (3 new cards + 3 new notes qualified the change-gate) -- doc https://docs.google.com/document/d/1UFdh5Wz5dMwLzU1tHBp0T1y7VX1Ko3JLdvVSLY1QsL8/edit, dm sent. Wrote directly to main throughout via the GitHub API (create_or_update_file/delete_file) per the git-write policy -- no branch+PR."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787333131.938499",
-      "C0BBZJL85RT": "1787336037.742069",
-      "D0BHPKMDNEP": "1787335235.169599",
-      "C0BGLEMH99T": "1787335927.000000",
-      "C0BEQUW5NPP": "1787335927.000000",
-      "C0BBLUA7JLX": "1787328820.346459",
-      "C0BJ37SU1TL": "1787335927.000000",
-      "C0BCCUKEUQ2": "1787335927.000000",
-      "C0BCD7U5X2B": "1787335927.000000",
-      "C0BCH2C3GRM": "1787335927.000000",
-      "C0BDN2KQFD4": "1787335927.000000",
-      "C0BD8LTM1EK": "1787335927.000000",
-      "C0BGYM1UB4Y": "1787335927.000000",
-      "C0BGCAK0ML3": "1787335927.000000",
-      "C0BHXTPST52": "1787335927.000000",
-      "C0BC2A94142": "1787335927.000000",
-      "C0BBZ5J8805": "1787335927.000000",
-      "C0BRZT2V89W": "1787335927.000000"
+      "C0BBXA96FFV": "1787339264.143129",
+      "C0BBZJL85RT": "1787339534.874689",
+      "D0BHPKMDNEP": "1787339486.323229",
+      "C0BGLEMH99T": "1787339502.000000",
+      "C0BEQUW5NPP": "1787339502.000000",
+      "C0BBLUA7JLX": "1787339502.000000",
+      "C0BJ37SU1TL": "1787339502.000000",
+      "C0BCCUKEUQ2": "1787339502.000000",
+      "C0BCD7U5X2B": "1787339502.000000",
+      "C0BCH2C3GRM": "1787339502.000000",
+      "C0BDN2KQFD4": "1787339502.000000",
+      "C0BD8LTM1EK": "1787339502.000000",
+      "C0BGYM1UB4Y": "1787339502.000000",
+      "C0BGCAK0ML3": "1787339502.000000",
+      "C0BHXTPST52": "1787339502.000000",
+      "C0BC2A94142": "1787339502.000000",
+      "C0BBZ5J8805": "1787339502.000000",
+      "C0BRZT2V89W": "1787339502.000000"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
@@ -53,22 +53,25 @@
       "1786709997.432499": "1786727321.939139",
       "1787314219.825659": "1787321658.713409",
       "1787314456.900919": "1787321654.863689",
-      "1787333131.938499": "1787333167.963579"
+      "1787333131.938499": "1787333167.963579",
+      "1787339259.215559": "1787339259.215559",
+      "1787339261.864519": "1787339261.864519",
+      "1787339264.143129": "1787339264.143129"
     },
-    "capture_dm": "1787335235.169599",
-    "gmail_after_epoch": 1787335927
+    "capture_dm": "1787339486.323229",
+    "gmail_after_epoch": 1787339278
   },
   "integrity": {
     "last_full_pass": "2026-08-20T12:17:41Z",
-    "last_scan_sha": "ef6222a80bee25b6389fcd7a2cb6b772ce4563d4",
-    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged. This pass's diff-scan (7 files changed since prior scan sha) found 0 new defects."
+    "last_scan_sha": "773447fef1ba982ec2aba866bcaaf935ba6ba7b6",
+    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged. This pass's diff-scan (1 file changed since prior scan sha) found 0 new defects; also filed the one file-ready Inbox note (desktop-downloads-cleanup)."
   },
   "canvas_access": {
     "last_checked": "2026-08-20T12:16:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-21T11:16:20-04:00",
+    "pulse_last_rendered": "2026-08-21T15:11:13-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
