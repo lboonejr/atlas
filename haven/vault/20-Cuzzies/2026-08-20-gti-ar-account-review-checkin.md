@@ -1,9 +1,9 @@
 ---
 created: 2026-08-20T11:20-04:00
-updated: 2026-08-21T08:30-04:00
+updated: 2026-08-21T10:15-04:00
 domain: cuzzies
 type: task
-status: awaiting-decision
+status: done
 tags: [gti, green-thumb, accounts-receivable, collections, wind-down, camden-sale, off-button]
 source: gmail
 due: 2026-08-21T09:00-04:00
@@ -84,6 +84,14 @@ on file.** Not attempting to reconstruct or draft a replacement here — the pri
 exact content (and whether it disclosed anything about the second prospective buyer) is
 unknown, and re-drafting on a time crunch right before the call risks the same
 naming-a-second-buyer judgment call this note already flagged as Lemar's alone.
+
+## Update 2026-08-21T10:15-04:00 — closed by Lemar
+
+Lemar replied directly in `#decisions` (not a reaction — a plain thread reply, read as a
+close signal per the reaction-engine doctrine): "I just sent a message to Mindy
+yesterday, reaching out so I think we can close this." He handled the outreach himself,
+entirely outside Samira's drafted reply. Nothing sent, drafted, or promised by Samira on
+this closing pass. Closing per his call.
 
 ## Sources
 
