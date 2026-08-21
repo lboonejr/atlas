@@ -3,13 +3,13 @@
   "lock": {
     "run_id": "run_20260821T200500Z",
     "run_started": "2026-08-21T20:05:00Z",
-    "run_completed": "2026-08-21T19:14:00Z",
-    "note": "In progress."
+    "run_completed": "2026-08-21T20:10:00Z",
+    "note": "Complete, ~4:10pm ET. Quiet hour: #decisions (0 new messages, 0 reactions on the 6 most-recent cards + carried DeWalt card), capture DM, all 12 swept project/admin channels, #investor-pipeline, Samira/investor label, #stormy, #personal-finance all silent since the prior scan's watermarks. PART V: filed the 3 notes captured by the prior scan's email loop (Garden Society, Waste Management, Siciliano referral) from 00-Inbox to 20-Cuzzies/ and 60-Legal/ -- both entity stubs (garden-society, waste-management) already existed, no new stubs; integrity diff-scan against last_scan_sha 773447f found 0 new defects (only _daily/2026-08-21.md had changed, and it was clean); 2 known-carried stuck notes (dib-template-theme-decision-closeout, google-voice-subscription-cancellation) unchanged. PART S: no due-date changes -- all synced due notes stable, no new/updated/retired events. PART D: 1 new Gmail thread (NYT newsletter) -- junk, tagged Samira/seen. PART E/Q/M: nothing to pick up. PART R: no PT card needed a round (no #decisions activity at all). PART T: reports-scan clean (not deep-scanned, no new #reports content this run beyond this scan's own lines). Canvas: still blocked, not re-checked (not day's first run). Pulse: not re-rendered -- nothing this pass met the change-gate (no card opened/closed, no money change, no project-pulse flip, no genuinely new Haven note -- the 3 filed notes were captured, and cards opened, by the PRIOR scan) -- pulse — carried (quiet pass). Wrote directly to main throughout via the GitHub API (create_or_update_file/delete_file) per the git-write policy -- no branch+PR."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787339264.143129",
-      "C0BBZJL85RT": "1787339534.874689",
+      "C0BBZJL85RT": "1787342962.347609",
       "D0BHPKMDNEP": "1787339486.323229",
       "C0BGLEMH99T": "1787339502.000000",
       "C0BEQUW5NPP": "1787339502.000000",
@@ -59,12 +59,12 @@
       "1787339264.143129": "1787339264.143129"
     },
     "capture_dm": "1787339486.323229",
-    "gmail_after_epoch": 1787339278
+    "gmail_after_epoch": 1787343000
   },
   "integrity": {
     "last_full_pass": "2026-08-20T12:17:41Z",
-    "last_scan_sha": "773447fef1ba982ec2aba866bcaaf935ba6ba7b6",
-    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged."
+    "last_scan_sha": "fd2526f8a3237b4dcc837c01c0b659cf38de227f",
+    "note": "Diff-scan this pass (against prior last_scan_sha 773447f) found 1 file changed (_daily/2026-08-21.md, clean) plus this run's own filing commits (3 Inbox notes moved out, no frontmatter change beyond `updated`). 0 new defects. 3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged. last_scan_sha bumped to this run's HEAD."
   },
   "canvas_access": {
     "last_checked": "2026-08-20T12:16:00Z",
