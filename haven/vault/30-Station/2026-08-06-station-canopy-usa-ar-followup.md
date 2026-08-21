@@ -1,6 +1,6 @@
 ---
 created: 2026-08-06T11:15:00-04:00
-updated: 2026-08-12T17:01:00-04:00
+updated: 2026-08-21T13:15:00-04:00
 domain: station
 type: task
 status: active
@@ -34,7 +34,19 @@ requests. Same judgment as 8/6 still applies (not Lemar's direct reply to
 make), but flagging the still-open pattern here rather than staying silent a
 second time given the added end-of-week pressure.
 
+## Update — 2026-08-21T13:15:00-04:00
+A third message landed in the same thread (2026-08-21 ~12:09pm ET): Terrence
+says he and Mark(ony) spoke ("It was nice speaking with you") and re-attached
+the outstanding invoice for his records — read as a phone call finally
+happened, in the 9 days since the 8/12 follow-up. This appears to close the
+"unanswered for 6 days" pattern flagged above, though the balance itself
+still shows as unresolved (invoice re-sent, not marked paid or on a plan).
+Still addressed to Markony, Lemar still cc-only, still not something Samira
+drafts a reply to — logging the apparent contact for the record. Gmail
+thread labeled `Samira/seen`.
+
 ## Sources
 - gmail: thread `19fd793b3fdbe929` (2026-08-06, "The Station - Newark - 3105",
   Terrence Guthrie → Markony, cc Lemar + gary.pagano@canopy-usa.com; follow-up
-  2026-08-12 20:40 UTC, same thread)
+  2026-08-12 20:40 UTC; call + re-sent invoice 2026-08-21 16:09 UTC, same
+  thread)
