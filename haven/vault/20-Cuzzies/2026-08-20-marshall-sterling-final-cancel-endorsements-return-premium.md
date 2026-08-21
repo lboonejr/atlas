@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T16:05:00-04:00
-updated: 2026-08-20T16:22:00-04:00
+updated: 2026-08-21T08:19-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -66,11 +66,22 @@ Cuzzie's is winding down under broad collections pressure and the reopening plan
 high four figures would be a live input to that plan; an assumed one would be a wrong
 premise baked into it. Hence: confirm in writing first.
 
+## Update 2026-08-21T08:19-04:00 — new FIRST statement on the same loan, unread
+
+FIRST Insurance Funding sent a no-reply paperless statement/notice on loan
+**#106241219** (2026-08-21 02:36 ET, "Payment Invoice - 106241219") — the same loan
+number this note's open question already turns on. The figure is in a PDF attachment
+Samira cannot read from the email body; **no new dollar amount is confirmed here.** This
+does not resolve the "already applied vs. additional" question above — it is logged as a
+pointer for whoever reviews the PDF, not as new information.
+
 ## Sources
 - gmail: thread `1a020b9cd6bd94c0` (SSC-00003261-00, Commercial Property & GL final
   cancellation, $6,524.00 return premium, attachment `PKG Final Cancel Endorsement.PDF`)
 - gmail: thread `1a020adba88b3efa` (SSC-00003260-00, General Liability final
   cancellation, $2,665.00 return premium, attachment `GL Final Cancel Endorsement.PDF`)
+- gmail: thread `1a0222e9af389e50` (2026-08-21, "Payment Invoice - 106241219", PDF
+  statement unread by Samira)
 - vault: `haven/vault/20-Cuzzies/2026-07-23-first-insurance-funding-account-cancelled.md`
   (loan #106241219 balance $452.60, $10,907.40 unearned premium applied)
 - vault: `haven/vault/50-Reference/Entities/marshall-sterling.md`

@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T11:20-04:00
-updated: 2026-08-20T13:05-04:00
+updated: 2026-08-21T08:30-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -68,8 +68,28 @@ industry figures points the same way. Drafted the reply without it.
 Holding reply drafted and saved to Gmail Drafts (never sent). Decision card posted to
 `#decisions`. Nothing paid, promised, or committed. No figure asserted.
 
+## Update 2026-08-21T08:30-04:00 — the drafted reply is not actually in Gmail Drafts
+
+Dawn's 2026-08-21 morning brief flagged that the holding reply "doesn't appear to be
+there this morning." Checked directly this pass: `list_drafts` (both a targeted
+`to:GTIAR@gtigrows.com` query and a full 14-draft listing) returns **no draft to Mindy
+Kramer or GTIAR@gtigrows.com at all.** The 14 drafts currently in Gmail cover Station
+CRC/tax items, Headset, First Insurance Funding (x2), Donte Bronaugh (x2), Parke Bank
+(x2), APG&E, Verano, and Willow Capital — none reference GTI.
+
+Whatever happened — the draft was never actually saved despite this note's prior status
+line, or it was saved and has since been deleted/sent/discarded outside this system —
+**Lemar is going into the 9:00 AM ET GTI AR account review today with no prepared reply
+on file.** Not attempting to reconstruct or draft a replacement here — the prior draft's
+exact content (and whether it disclosed anything about the second prospective buyer) is
+unknown, and re-drafting on a time crunch right before the call risks the same
+naming-a-second-buyer judgment call this note already flagged as Lemar's alone.
+
 ## Sources
 
 - gmail: thread `19c8b8e2ede6e226`, latest message `1a01f968728f2549` (2026-08-20 14:32 UTC)
+- gmail: `list_drafts` (2026-08-21 08:30 ET) — 14 drafts on file, none to GTI/Mindy Kramer
+- haven: `_daily/brief-2026-08-21.md` (Dawn's brief, where the gap was first flagged —
+  not yet merged to `main`, see PR #75)
 - Contact: Mindy Kramer, GTIAR@gtigrows.com, 815-878-9054. Cc on thread:
   kate.juliano@gtigrows.com, joshua@cuzziesnj.com
