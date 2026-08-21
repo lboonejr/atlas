@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-08-19T09:20:00-04:00
+updated: 2026-08-21T13:00:00-04:00
 domain: legal
 type: task
 status: active
@@ -532,6 +532,73 @@ sent. Gmail thread labeled `Samira/seen`.
 - gmail: thread `1a015d0c3734eae0` (Danielle Borzor's decline, 16:59 ET, and Lemar's
   12:30pm ET self-sent reply attaching case documents)
 
+## Update 2026-08-19T09:20:00-04:00 — eighth referral request sent to Camden County Bar Association (draft only, not sent)
+
+Lemar replied in the #decisions thread (ts `1787069259.543559`) to Kaplin Stewart's
+8/18 decline: *"I think we try the County Lawyer Referral Service she named."* That
+service is the same Camden County Bar Association Lawyer Referral Service Lemar
+already used twice (2026-07-22 for the tenancy referral, 2026-08-13 for this matter —
+see the update above), so this reads as asking for a fresh/updated referral rather
+than a new organization.
+
+A follow-up reply was drafted on the existing CCBA thread (`19ffb5e307994f7d`, to
+`kara@camdencountybar.org`) noting neither Zachary Wall nor Rachael Brekke converted
+to retained counsel, restating the Sept 14 proof hearing urgency, and asking whether
+another attorney on her list has availability on this timeline. **Saved to Gmail
+Drafts only — not sent** (outreach requires Lemar's own send, per standing safety
+floor). Draft id `r-6653243393633460968`.
+
+This is now the eighth firm/track in the counsel search (Siciliano — priced, never
+retained per 8/15 correction; Wall; Brekke; Greenberg — Donte's settlement-review
+track; Hagner & Zohlman; Kaplan/Kaplin Stewart — declined 8/18; now a second CCBA
+ask) with the Sept 14 proof hearing 26 days out and still no counsel of record.
+
+## Update 2026-08-21T13:00:00-04:00 — counsel finally engaged: Douglas Diaz, Archer & Greiner P.C.; engagement letter sent; he's asking for excusable-neglect facts
+
+After eight prior tracks with no retained counsel (Siciliano — priced only per the
+8/15 correction; Wall; Brekke; Greenberg; Hagner & Zohlman; Kaplan/Kaplin Stewart —
+declined 8/18; a second CCBA ask 8/19), a ninth attorney is now actively engaging.
+Lemar emailed **Douglas Diaz, Esq.** (`ddiaz@archerlaw.com`, Archer & Greiner P.C.,
+1025 Laurel Oak Road, Voorhees NJ, 856-616-2614) directly 2026-08-21 ~2:23pm ET
+(gmail thread `1a024b065a8e8ff2`, not drafted by Samira) — a recap of the case
+(docket CAM-L-1339-26, default judgment on liability entered 7/17, proof hearing
+9/14) plus six attached documents (order granting default judgment, Di Stefano
+status letter, verified complaint/summons, motion-for-default-judgment packet,
+Berkley Select claim-notice email, and the pre-litigation demand letter).
+
+**This reads as an existing conversation, not a cold outreach** — Diaz's reply
+opens "Following up on our conversation," implying Lemar spoke with him (phone or
+in person) before today's email. Not previously logged in this note; first record
+of Diaz's name here.
+
+Diaz replied ~4:48pm ET with the **engagement letter attached** — covering both
+Lemar and Josh Evans as named defendants — and flagged the substantive issue:
+the complaint was served on all defendants **April 22**, the answer was due
+**May 27**, and nothing was filed by that date, which is what let the default
+judgment through. To move on the **motion to vacate**, Diaz needs facts
+establishing **"excusable neglect"** for missing that answer deadline — "the more
+facts for excusable neglect, the better." His plan: file the motion to vacate
+first, and ask at the same time to adjourn the Sept 14 hearing so the court
+decides the vacate motion first.
+
+**This is the strongest signal yet that counsel is finally moving** on both fronts
+this note has tracked since 7/22 as a standing gap (no counsel of record; no
+motion to vacate filed). Two things are needed from Lemar specifically, and
+neither is something Samira can supply: signing/returning the engagement letter,
+and the excusable-neglect facts themselves (what happened between the April 22
+service and the May 27 answer deadline — nobody in this system has that account).
+Posted to #decisions with three reply options (acknowledge + propose a call,
+acknowledge + commit to gathering facts, or ask Diaz to scope exactly what he
+needs) — none of them attempt to supply the facts. Nothing sent, signed, or
+represented by Samira. Gmail thread labeled `Samira/seen`.
+
+### Sources (this update)
+- gmail: thread `1a024b065a8e8ff2` ("DeWalt v. Cuzzie's Dispensary & Delivery
+  (CAM-L-1339-26) — Case Documents Attached"), message `1a024b4627074178` (Lemar's
+  2:23pm ET recap + 6 attachments) / `1a0253a019db9fa8` (Diaz's 4:48pm ET reply,
+  engagement letter attached)
+- slack: #decisions ts `1787333131.938499`
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
 - gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
@@ -570,24 +637,5 @@ sent. Gmail thread labeled `Samira/seen`.
 - slack: Samira capture DM `D0BHPKMDNEP`, ts `1786885198.136079` (2026-08-16 — Monday follow-up plan)
 - gmail: thread `1a0013edc74f5864` / `1a015d0c3734eae0` (2026-08-14 through 2026-08-18,
   Kaplan/Kaplin Stewart — routed 8/14, followed up 8/17, declined 8/18)
-
-## Update 2026-08-19T09:20:00-04:00 — eighth referral request sent to Camden County Bar Association (draft only, not sent)
-
-Lemar replied in the #decisions thread (ts `1787069259.543559`) to Kaplin Stewart's
-8/18 decline: *"I think we try the County Lawyer Referral Service she named."* That
-service is the same Camden County Bar Association Lawyer Referral Service Lemar
-already used twice (2026-07-22 for the tenancy referral, 2026-08-13 for this matter —
-see the update above), so this reads as asking for a fresh/updated referral rather
-than a new organization.
-
-A follow-up reply was drafted on the existing CCBA thread (`19ffb5e307994f7d`, to
-`kara@camdencountybar.org`) noting neither Zachary Wall nor Rachael Brekke converted
-to retained counsel, restating the Sept 14 proof hearing urgency, and asking whether
-another attorney on her list has availability on this timeline. **Saved to Gmail
-Drafts only — not sent** (outreach requires Lemar's own send, per standing safety
-floor). Draft id `r-6653243393633460968`.
-
-This is now the eighth firm/track in the counsel search (Siciliano — priced, never
-retained per 8/15 correction; Wall; Brekke; Greenberg — Donte's settlement-review
-track; Hagner & Zohlman; Kaplan/Kaplin Stewart — declined 8/18; now a second CCBA
-ask) with the Sept 14 proof hearing 26 days out and still no counsel of record.
+- gmail: thread `1a024b065a8e8ff2` (2026-08-21, Douglas Diaz / Archer & Greiner P.C.
+  engaged, engagement letter sent, excusable-neglect facts requested)
