@@ -75,8 +75,8 @@ Lemar" in #decisions.
 
 ## Run order
 
-0 (lock + watermarks) → V → S → A → B → C (incl. former G) → D → E → Q → H → M (money) →
-R (reports scan) → canvas refresh (conditional) → P (Pulse) → digest (+ _daily append +
+0 (lock + watermarks) → V → S → A → B → C (incl. former G) → D → E → Q → R → H → M (money)
+→ T (reports scan) → canvas refresh (conditional) → P (Pulse) → digest (+ _daily append +
 state write).
 
 ---
@@ -105,8 +105,8 @@ stored watermark and advance it as you finish that surface:
   `newer_than:` windows.
 - `integrity` / `canvas_access` / `renders` — see PART V, canvas refresh, and PART P.
 A `null` watermark (first run after this file lands) → fall back to that PART's legacy
-cutoff once, then record. PART R keeps its own bookmark in its Haven log note rather
-than the state file (see PART R) — its dedupe key is per-contradiction, not per-message.
+cutoff once, then record. PART T keeps its own bookmark in its Haven log note rather
+than the state file (see PART T) — its dedupe key is per-contradiction, not per-message.
 
 At the very end of the run (after the digest), write `lock.run_completed` = now plus the
 final watermarks, and push.
@@ -131,6 +131,8 @@ PART V. It projects every `due` note onto the reminder calendar (create/update/r
 vault always wins), writes `calendar_event_id` back, and returns `+A · ~B · -C`.
 
 ### PART A — act on Lemar's reactions in #decisions
+**Skip every parent whose first line contains `🧪 PT`** — those are Samira Loop cards, worked
+only in PART R, and executing one here would double-run it.
 Read #decisions from the state file's channel watermark: every OPEN card you posted (no
 🫡, no "Done ✅ — closed" reply of yours), its thread, and reactions on the parent AND
 option replies. For each open card ALSO compare the thread's latest reply `ts` against
@@ -229,7 +231,9 @@ correct.
 ### PART Q — idea-baking loop (Stormy, #stormy)
 Invoke the **stormy-ideation** loop (`.claude/routines/stormy-ideation.md`) against the
 private **#stormy** channel. Read Lemar's new no-deadline ideas there and bake each through
-the 15-point pressure test one message per scan — posting as YOUR bot but signed
+an adaptive pressure test — questions written for that idea, count sized to its blast radius,
+all eight coverage dimensions closed as ASK / ASSUME / N/A — one message per scan, posting as
+YOUR bot but signed
 `🌩️ … — Stormy` (the Basil pattern: shared bot, own persona line). Land/append the brief
 note via haven-capture (`type: brief`, `tags: [stormy]`, no `due`); on graduation, hand
 Lemar the Atlas Gear 2 trigger line in #stormy. Stormy touches ONLY #stormy, never sets or
@@ -243,6 +247,27 @@ in-channel, stage admin prompts) now run inside PART C's single sweep — every 
 journal since early August recorded "PART G: covered inside PART C's sweep," so the
 spec now matches practice; the channels are no longer read twice. Slot kept as a
 tombstone (like PART F) so historical references stay correct.
+
+### PART R — the Samira Loop (build + pressure-test)
+Invoke the **build loop** (`.claude/routines/samira-build-loop.md`) against the open
+**🧪 PT cards** in #decisions. Threads in Lemar's "Samira's Loop" Claude project land what
+they build as a Haven note plus one PT card; each scan you advance every open card ONE
+round of the eight-lens pressure test (note first, then the questions), lock it when the
+questions run out or he 🫡s, then finish the lane — a cloud build staged as a `run:admin-3x`
+prompt for PART C (buffer applies) or executed directly when small and safe, a local build
+handed back as a self-contained `run:manual` prompt with Samira as PM (one status check a
+day, max, in-thread, never a new card). The full spec — lanes, card format, the eight
+lenses, the reaction reading, closeout, and the #reports lines — lives in
+the **samira-loop** skill (`.claude/skills/samira-loop/SKILL.md`); invoke it once per run
+before working a card. The `.claude/projects/` rulebooks are thin pointers at that same skill. Cap: 3 cards get a round per scan, oldest first; the rest carry. PT cards reuse the
+`decisions_threads` watermarks — no new state key.
+ENGAGEMENT OVERLAYS: a card whose title names a client engagement (today: "Camden Launch")
+is NOT worked on generic loop rules. Read that engagement's overlay in `.claude/projects/`
+FIRST — its scope, role, accuracy, and voice rules outrank the loop's mechanics, and it adds
+gates that must clear before anything locks. Its index note in the vault
+(`40-Projects/<engagement>/index.md`) carries the pointers. Working a client card without the
+overlay is how a promise we cannot make ends up in a client document. Outcomes ALWAYS via
+**samira-report-result**. Returns `pt: <slug> r3 5/8 · <slug> locked · N carried` or `pt —`.
 
 ### PART H — skill candidates
 When a PART C task ran "no skill — direct" for the 3rd time in the same shape, post ONE
@@ -279,7 +304,7 @@ is never deferred to a "dedicated recompute pass" (see the skill's Recompute tri
 then render the dashboard ONCE at the end. Never render per-drop.
 Returns `money ✓ <what changed> · hub ✅/⚠️` or `money —` for the digest.
 
-### PART R — #reports contradiction scan
+### PART T — #reports contradiction scan
 Invoke the **reports-contradiction-scanner** skill (`.claude/skills/reports-contradiction-scanner/`),
 after PART M so it's scanning the freshest picture of #reports this run has produced.
 It reads #reports since its own bookmark for conflicting figures/status, unresolved
@@ -332,9 +357,9 @@ Via **samira-report-result** Mode 3:
    · `🧵 Standing list → Open Items canvas`
    (Full tallies: filed/stuck, rang, decisions handled H, captures G, staged L, ran Y,
    done Z, failed Fl, parked P, deferred D; email E/R/Cl/T; investor + Stormy counts;
-   junk J; PART M's token: `money ✓ …` or `money —`; PART R's token: `reports-scan: found
-   N/open O` or `reports-scan: clean`; plus PART P's one token: `pulse ✅` or
-   `pulse ⚠️ <reason>`.
+   junk J; PART R's token: `pt: …` or `pt —`; PART M's token: `money ✓ …` or `money —`;
+   PART T's token: `reports-scan: found N/open O` or `reports-scan: clean`; plus PART P's
+   one token: `pulse ✅` or `pulse ⚠️ <reason>`.
    Stuck notes surface ONLY via the batched #decisions card, never line-by-line here.)
 2. APPEND the same digest block to `haven/vault/_daily/YYYY-MM-DD.md` (create the day's
    note from `_templates/daily.md` if absent; append-only; never edit prior entries).

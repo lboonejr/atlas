@@ -1,6 +1,6 @@
 ---
 created: 2026-07-13T08:15-04:00
-updated: 2026-07-27T00:00-04:00
+updated: 2026-08-17T11:02:56-04:00
 domain: cuzzies
 type: task
 status: active
@@ -48,3 +48,20 @@ awaiting Lemar's pay/dispute/hold call.
 
 ## Sources
 - gmail: thread 19fa32e9c881f512 (2 messages: repeat High_G-918 and High_G-440 reminders)
+
+## Update — 2026-08-17
+
+A third round of QuickBooks auto-reminders landed, both still unpaid — and
+**High_G-918's balance grew**:
+
+- **Invoice High_G-918** — **$1,846.91** (up from $1,810.70 on 7/27 — +$36.21,
+  reads as accrued late/interest charge), due 02/27/2026
+- **Invoice High_G-440** — $718.18 (unchanged), due 11/09/2025
+
+Still no live reply thread (no-reply QuickBooks sender); still awaiting Lemar's
+pay/dispute/hold call. Not re-raised as a new #decisions card — the existing draft
+options already staged there cover this vendor; the balance drift alone doesn't
+change the decision shape.
+
+### Sources (this update)
+- gmail: thread `1a0101edc58f5bb3` (2 messages: High_G-440 and High_G-918 reminders)

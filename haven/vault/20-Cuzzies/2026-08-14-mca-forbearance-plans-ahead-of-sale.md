@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T16:50-04:00
-updated: 2026-08-14T17:08-04:00
+updated: 2026-08-17T14:20:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -34,6 +34,14 @@ proposed or accepted — this note captures Lemar's stated intent/timing ahead o
 work starting. A `run:admin-3x` prompt has been staged in #admin, parked 🚗 (gated
 until early next week) rather than run now — see that card for the release plan.
 
+## Update 2026-08-16 (PART S calendar-sync — corrected wrong-calendar event)
+The `calendar_event_id` written on 2026-08-14 (`gtp95qq1vki3ce9lopij5v4be4`) pointed
+to an event on the **Cuzzie's (Owners) business calendar**, not the personal reminder
+calendar this skill is scoped to (per `.claude/anchors.md`). Left that stray business-
+calendar event untouched (never touch that calendar) and created a correct event
+(`28frfscuca19gl449akaj4ss28`, same title/time/description) on the personal reminder
+calendar; `calendar_event_id` above now points to it.
+
 ## Sources
 - slack: capture DM `D0BHPKMDNEP` ts `1786740078.481359` (2026-08-14)
-- calendar: `gtp95qq1vki3ce9lopij5v4be4` on Cuzzie's (Owners), 2026-08-17 9:00am ET
+- calendar: `28frfscuca19gl449akaj4ss28` on the personal reminder calendar, 2026-08-17 9:00am ET (corrected 2026-08-16 from a stray Cuzzie's Owners-calendar event)

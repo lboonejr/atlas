@@ -1,6 +1,6 @@
 ---
 created: 2026-07-31T15:55:00-04:00
-updated: 2026-07-31T16:04:34-04:00
+updated: 2026-08-17T16:04:59-04:00
 domain: legal
 type: task
 status: awaiting-decision
@@ -52,3 +52,24 @@ without his read. Open questions, left UNRESOLVED rather than guessed:
   Judgment - Pay And Leave, CAM-LT-004393-26, 2026-07-31)
 - gmail: thread `19fb99491ca2911a` (ClickPay payment reminder, 2778 Mount Ephraim #C3,
   Camden NJ, 2026-07-31 — possibly related, not confirmed)
+
+## Update 2026-08-17 — LT Trial Sheet submitted (same docket)
+
+A second no-reply NJ eCourts notification (gmail thread `1a01153cf878481b`, received
+2026-08-17 ~16:04 ET) landed on the same docket **CAM-LT-004393-26**: "LT TRIAL SHEET
+Submitted by Case Management Staff" (Transaction ID `SCP20263828155`). No trial date,
+dollar figure, or ask is included in the notice itself — it is a case-management filing,
+not an action request, and the sending address is notification-only.
+
+Context: the Camden location has been physically inaccessible "since the eviction,
+CAM-LT-004393-26" per the 2026-08-14 USPS change-of-address note, so possession has
+already changed hands. A trial sheet at this stage most likely concerns the remaining
+money judgment (the "pay" side of "pay and leave"), not possession, but that's a read,
+not a confirmed fact — still Lemar's/counsel's call, not Samira's. No reply drafted, no
+#decisions card raised (no explicit ask or deadline in this notice); logged here since
+this note is already the tracked record for this docket, status stays
+`awaiting-decision`.
+
+### Sources (this update)
+- gmail: thread `1a01153cf878481b` (NJ eCourts notification, LT TRIAL SHEET, docket
+  CAM-LT-004393-26, 2026-08-17)

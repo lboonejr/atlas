@@ -1,6 +1,6 @@
 ---
 created: 2026-07-05T08:15-04:00
-updated: 2026-08-14T15:15:00-04:00
+updated: 2026-08-17T14:20:00-04:00
 domain: cuzzies
 type: meeting
 status: active
@@ -77,6 +77,13 @@ dive into the license/ops side first, then I've got a second idea I'd love your 
 **Wrap-up**
 "Really appreciate you being straight with me on both of these — let's stay in touch on
 whichever piece moves first." Note anything Eddie commits to and follow up by email.
+
+## Update 2026-08-16 (PART S calendar-sync — corrected wrong-calendar event)
+The `calendar_event_id` on file (`qmrshvdhut6apntu904ul8aa20`) pointed to an event on
+the Cuzzie's (Owners) business calendar, not the personal reminder calendar this skill
+is scoped to. Left that stray business-calendar event untouched and created a correct
+event (`ln1c1cg2r8s62deraj8g99hao4`, same title/time/description) on the personal
+reminder calendar.
 
 ## Sources
 - slack: #atlas capture, 2026-07-04 18:22 ET (channel C0BBWHCJUV9, ts 1783203770.523559)

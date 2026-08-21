@@ -1,6 +1,6 @@
 ---
 created: 2026-07-23T19:20:00-04:00
-updated: 2026-08-04T08:10:00-04:00
+updated: 2026-08-19T13:10:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -90,3 +90,34 @@ still unconfirmed by FIRST) stands, still awaiting Lemar in #decisions.
 ## Sources (cont.)
 - gmail: thread `19fcab4318838661` ("FIRST Insurance Funding - Insured Breakdown
   Letter - 106241219", 2026-08-04 02:55:27 UTC, automated statement mailer)
+
+## Update 2026-08-19 — Tiffany Coleman reply; #4 (retroactivity) still unanswered; decision closed, Off Button board updated
+
+Tiffany Coleman (CSR, FIRST Insurance Funding) replied 2026-08-19 on Gmail thread
+`1a01a7a61cf6f576` to Lemar's 8/18 written request, covering both accounts:
+
+- **Loan #106241219**: canceled effective 06/05/2026, balance **$452.60** (past due
+  $150.77), $10,907.40 unearned premium already applied.
+- **Loan #105889646** (Sutton/Berkley, Policy DEP-2335743-P1): **$3,667.00 received
+  8/10/26**; balance now **$10,466.68** (past due $6,006.80), down from $14,133.68.
+
+She did **not** answer point 4 — whether reinstatement, if it happens, would be
+retroactive to the cancellation date with no coverage gap, or effective only as of the
+reinstatement date (the one item Lemar most needed in writing given the DeWalt
+coverage question, Update 2026-07-24 above). She again punted reinstatement
+availability (#1/#3) to the agent/carrier, Risk Strategies (617-330-5700).
+
+Lemar picked **Option C — no reply, let ride** (#decisions `C0BBXA96FFV` ts
+`1787152085.518979`, option ts `1787152095.720809`) on the 2026-08-19 #decisions
+card presenting this reply. No email sent. He then asked in-thread (ts
+`1787152313.047459`) to update the Off Button Monday board with the balances — done:
+board `18424191974`, item `12710658896` (Loan #106241219) and item `12659482547`
+(EPLI/Berkley Select → [[2026-07-23-epli-berkley-select-cancellation-confirmed]],
+Amount Owed corrected 14133.68 → 10466.68, Amount Paid to Date 3667.00). No payment
+made or authorized by Samira.
+
+### Sources (this update)
+- slack: #decisions ts `1787152085.518979` (card) / `1787152095.720809` (Option C,
+  ✅'d) / `1787152313.047459` (Lemar's Monday-board ask)
+- gmail: thread `1a01a7a61cf6f576` (Tiffany Coleman reply, 2026-08-19)
+- monday: board `18424191974`, items `12710658896` / `12659482547`

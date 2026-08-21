@@ -1,6 +1,6 @@
 ---
 created: 2026-07-05T13:25-04:00
-updated: 2026-08-14T15:15:00-04:00
+updated: 2026-08-17T14:20:00-04:00
 domain: cuzzies
 type: meeting
 status: active
@@ -61,6 +61,13 @@ Doesn't sound like they're offering to inject money — more using their cultiva
 resources/power to help the dispensary. They said they'd send a proposal in the next
 few days. No action needed until it arrives; watch for the Jerzey Grown proposal (no
 timeline beyond "next few days" as of 2026-07-06).
+
+## Update 2026-08-16 (PART S calendar-sync — corrected wrong-calendar event)
+The `calendar_event_id` on file (`6drq9vh1b29kjnqbbbn6hbf9h8`) pointed to an event on
+the Cuzzie's (Owners) business calendar, not the personal reminder calendar this skill
+is scoped to. Left that stray business-calendar event untouched and created a correct
+event (`she30t4rn3r3cn0d9va411ima4`, same title/time/description) on the personal
+reminder calendar.
 
 ## Sources
 - slack: #atlas capture, 2026-07-05 08:56 ET (channel C0BBWHCJUV9, ts 1783256167.814249)

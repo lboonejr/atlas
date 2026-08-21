@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T09:15-04:00
-updated: 2026-08-13T15:40:19-04:00
+updated: 2026-08-19T09:30:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -170,3 +170,14 @@ reminder). Gmail thread labeled `Samira/seen`.
   $8,331.00 total)
 - gmail: thread `19ffca3c879d0cc9`, 2026-08-13 15:40 ET (CannaBIZ Collects 48-hour
   demand, account #2026-2026, $8,331.00)
+
+## Update 2026-08-19T09:30:00-04:00 (email loop — Reminder 13, same figures, same "URGENT")
+
+Dhruvi sent a new "Reminder 13" (gmail thread `1a019245ba8c21e3`, 2026-08-19 08:30 ET,
+cc Bronnie@littleleaflabs.net) — same two invoices (INV-0000762 $3,175 remaining,
+INV-0000889 $5,156), same **$8,331.00** total, same collections/state-notification
+threat. No new figure, no new deadline beyond the CannaBIZ Collects 48-hour demand
+already logged 2026-08-13 (which superseded this vendor-accounting cadence with a
+harder collections-agency clock). Not re-drafting or opening a new #decisions card —
+the 8/13 collections-referral card already covers this matter and nothing here changes
+its facts. Logging only. Labeled `Samira/seen` on the new thread.

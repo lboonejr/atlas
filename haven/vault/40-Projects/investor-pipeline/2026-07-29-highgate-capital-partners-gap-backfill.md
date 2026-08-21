@@ -1,6 +1,6 @@
 ---
 created: 2026-07-29T14:15-04:00
-updated: 2026-08-13T18:13-04:00
+updated: 2026-08-19T09:35:00-04:00
 domain: project
 type: log
 status: active
@@ -50,3 +50,19 @@ flagging it for Lemar's review.
   2026-06-13 through 2026-06-30)
 - slack: #investor-pipeline `C0BCCUKEUQ2` ts `1785289589.016109` (gap-found flag posted
   2026-07-29)
+
+## Update 2026-08-19T09:35:00-04:00 — Camilo checks in, asks about DocuSign
+
+Camilo Basto emailed 2026-08-19 ~06:11 ET (gmail thread `19fa3ba25917d2cd`, same
+engagement-letter thread as the 7/27 send): "Checking in on the engagement letter.
+Would it be best to send via docusign to execute?" No new terms — same $10K flat +
+10% at sale from the 7/7 confirmation. This is a nudge on the still-open sign/no-sign
+decision, not a new ask. No draft prepared and no terms represented as decided — the
+underlying question (sign the engagement letter or not) is Lemar's alone. Labeled
+`Samira/investor` + `Samira/seen` on the thread. Flagging the check-in in
+#investor-pipeline; not opening a new #decisions card since the sign/no-sign question
+is already standing there.
+
+### Sources (this update)
+- gmail: thread `19fa3ba25917d2cd`, message `1a01980f29775c7b` (Camilo's check-in,
+  2026-08-19 06:11 ET)

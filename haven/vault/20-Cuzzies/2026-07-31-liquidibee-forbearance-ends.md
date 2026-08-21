@@ -1,13 +1,13 @@
 ---
 created: 2026-07-31T14:00-04:00
-updated: 2026-08-15T10:05:00-04:00
+updated: 2026-08-17T14:20:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [liquidibee, forbearance, ach, lender, nomas-recovery]
 source: gmail
 due: 2026-08-15T09:00-04:00
-calendar_event_id: td34fkhu9vvtui8fkrommupk8k
+calendar_event_id: 02bg33r2b7pu4kosmhk3kb2r74
 ---
 
 # Liquidibee — forbearance ends 8/1, ACH payments resume
@@ -70,6 +70,22 @@ Nothing paid, nothing contacted — Nomas Recovery / Amanda Ortiz have not been
 reached. This remains tracking/budgeting only; the underlying commitment,
 funding decision, and any outreach to Nomas Recovery are still Lemar's calls.
 
+## Update 2026-08-16T13:05:00-04:00 — call to Nomas Recovery pushed to Monday 8/17
+
+Lemar in the capture DM (`D0BHPKMDNEP`, ts `1786885145.057229`, edited): "we can move
+the LiquidiBee event to Monday. I'm going to give them a call Monday and try to
+establish a new payment plan on a new timeline." The $500 payment plan finished
+funding 8/15 (per the 2026-08-09 update above) but the actual call to Amanda Ortiz at
+Nomas Recovery was never made — flagged as overdue in both today's Money Hub OVERLOAD
+CHECK and the 2026-08-16 morning brief. Lemar is now committing to make the call
+Monday 2026-08-17 and negotiate a new payment plan/timeline directly with Nomas
+Recovery.
+
+Not executed by Samira: the money-hub ledger's `liquidibee-1` line (currently due
+8/16) needs its due date moved to 8/17 to match — flagged for PART M
+(money-hub skill), which owns the ledger and the `daily_targets` recompute. Nothing
+paid, nothing contacted by Samira.
+
 ## Sources
 - gmail: thread 19fb842844a4eab0 (Google Calendar notification, 7/31)
 - gmail: thread 19fe175982e8f9ba (Google Calendar notification, new $500
@@ -77,3 +93,4 @@ funding decision, and any outreach to Nomas Recovery are still Lemar's calls.
 - #decisions `C0BBXA96FFV` parent ts `1786194812.913559`, Lemar reply ts
   `1786241590.069229` (2026-08-09) — payment-plan instruction
 - `haven/vault/10-Personal/Money/money-hub-ledger.md` — `plans.liquidibee-nomas-payment-plan`
+- slack: Samira capture DM `D0BHPKMDNEP`, ts `1786885145.057229` (2026-08-16 — Monday call plan)

@@ -1,6 +1,6 @@
 ---
 created: 2026-07-31T14:00-04:00
-updated: 2026-08-15T08:20-04:00
+updated: 2026-08-18T11:03-04:00
 domain: cuzzies
 type: task
 status: active
@@ -71,9 +71,40 @@ notice). Nothing paid or authorized. The 7/31 #decisions card (ts `1785507210.87
 remains open and unreacted — consistent with established precedent, not reposting a
 duplicate card this pass.
 
+## Update 2026-08-18 (~11:03 ET) — new notice states a 5-day deadline, itemizes the balance
+`AmericasDebtCollection@iwgplc.com` sent another "Past Due Invoices" notice today, same
+account #16605480 (Cuzzie's Dispensary & Delivery), sender "Fernanda R.," phone
+469-257-3503. This one is the most concrete on timing yet: **"if payment... is not
+received or you do not contact us within five (5) days of the date of this letter to
+make payment in full, we will be forced to pursue... arbitration proceedings and/or
+filing a lawsuit."** It also itemizes the balance for the first time:
+
+- Unpaid invoices: **$3,131.91**
+- Agreement value (per section 1.7 of the services agreement): **$1,048.60** — this
+  matches the "Claim Amount" figure from the 8/14 NOTICE OF LEGAL ACTION update above,
+  which didn't line up with the running $2,607.61 balance at the time. Reading these two
+  notices together, $1,048.60 looks like it's one component of the larger claim, not a
+  separate/conflicting balance — not asserting the math beyond what's stated, since IWG
+  hasn't shown the reconciliation itself.
+- (Invoiced) retainer: **$1,572.90**
+- **Amount Due: $2,607.61** — matches the original 7/31 balance; still the operative
+  number.
+
+No reply sent, nothing paid or authorized. The 7/31 #decisions card (ts
+`1785507210.877159`) is still open with zero reactions after 18 days — per the
+established precedent in the updates above, NOT reposting a duplicate card. Flagging
+here because this is the first notice with an explicit, countable deadline (5 days from
+today, i.e. **on/around 2026-08-23**) rather than "today" or "immediately" — the open
+card is no longer just aging, there's now a concrete date IWG says it acts by.
+
+### Sources (this update)
+- gmail: thread `1a0155edacd0c56d` ("Past Due Invoices for your Regus Office
+  Agreement", AmericasDebtCollection@iwgplc.com, 2026-08-18, 5-day deadline stated)
+
 ## Sources
 - gmail: thread 19fb86ecefb2989b (Regus/IWG urgent past-due notice, 7/31)
 - gmail: thread 19fbd9d7689e78d4 (Regus invoice 8672-1518/1519, 8/1)
 - gmail: thread 19ffb9a5292974cd (repeat urgent notice, 8/13)
 - gmail: thread 19ffded7294640c4 (NOTICE OF LEGAL ACTION, $1,048.60 claim amount, 8/14)
 - gmail: thread 1a0042cf50472d94 + 1a0042cf3b190690 (payment declined notice, 8/15, duplicate sends)
+- gmail: thread 1a0155edacd0c56d (5-day deadline notice, itemized balance, 8/18)

@@ -1,6 +1,6 @@
 ---
 created: 2026-08-01T15:30:00-04:00
-updated: 2026-08-14T15:15:00-04:00
+updated: 2026-08-17T14:20:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -32,6 +32,13 @@ sure that I pay for this by the end of the week." Added `due: 2026-08-07T09:00-0
 (Friday, end of this week) and created the reminder event on the reminder calendar
 (`calendar_event_id` below). Amount is still unresolved — Lemar needs to open the PDF
 to confirm what's owed before paying.
+
+## Update 2026-08-16 (PART S calendar-sync — corrected wrong-calendar event)
+The 2026-08-03 event above had actually landed on the Cuzzie's (Owners) business
+calendar (`0iih2d9gdu5h5i5tgeof9s1fic`), not the personal reminder calendar this skill
+is scoped to. Left that stray business-calendar event untouched and created a correct
+event (`dv3cmkqec4coiqn1aem2qgcjnc`, same title/time/description) on the personal
+reminder calendar.
 
 ## Sources
 - gmail: thread `19fbc632700d906e` (bsoper@tbtbarter.com, "Your statement has arrived",

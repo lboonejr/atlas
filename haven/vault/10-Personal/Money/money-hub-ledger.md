@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-15T12:13:00-04:00
+updated: 2026-08-18T12:15:00-04:00
 domain: personal
 type: reference
 status: active
@@ -31,6 +31,11 @@ Field rules (on-button-plan pattern):
   A reported balance is never adjusted to match what the ledger expected.
 - `track` = `queue` (must carry a date; accrues daily and queues) or `spending` (paid
   as you go from the Spending pocket; no date, no accrual, not a defect). Added 2026-08-10.
+- `non_negotiable: true` (optional, added 2026-08-15) — Lemar's explicit flag on a bill,
+  plan, or goal line meaning REBALANCE (see SKILL.md) may never propose stretching,
+  re-tiering, or otherwise touching it, no matter how tight a week gets. Absent =
+  negotiable by default. Only Lemar sets or clears this flag; never infer it from a
+  line looking important.
 - `daily_targets` = the daily accrual. ISO date key → `{operating_reserve, target,
   total_claim, gas_spent, swept_to_maintenance, funded, shortfall,
   calendar_event_id, contributions: [{line_id, amount, funded, status}]}`, `status` one
@@ -103,7 +108,7 @@ pockets:                             # TWO pockets. Account mapping CORRECTED 20
      balance: null, balance_as_of: null, status: active,
      role: "income lands here (DoorDash payouts); gas and day-to-day spending pay from here"}
   - {id: set-aside, name: "Set-Aside", account: sofi-checking,
-     balance: null, balance_as_of: null, status: active,
+     balance: 13.00, balance_as_of: 2026-08-17, status: active,
      role: "the daily set-aside number moves here; every recurring bill is paid out of
             this account",
      note: "last known $128.78 as of 2026-07-11 came from the retired Era connector and
@@ -143,7 +148,14 @@ bills:
      note: "Added 2026-08-13. Same reseller billing lapse as cuzzies-google-voice above —
             all Workspace services for cuzziesnj.com (including lemar@cuzziesnj.com email
             itself) suspend 2026-08-20 without this. Business-origin, carried personally;
-            due-date reminder lives on the Cuzzie's (Owners) calendar."}
+            due-date reminder lives on the Cuzzie's (Owners) calendar.
+            PAYMENT ATTEMPTED 2026-08-17 per Lemar in #personal-finance (ts
+            1786999318.129009): 'I paid for google workspace but the transaction didn't
+            process yet.' CONFIRMED NOT CLEARED 2026-08-18 (#decisions ts 1787001107.337499,
+            reply 1787009888.775939): 'The charge did not clear.' Stays `status: active`/
+            unpaid, still accruing toward the 8/19 due date and still suspension-risk if
+            not resolved by 8/20 — Lemar carries the actual re-attempt himself, Samira
+            cannot retry billing."}
   - {id: student-loans, name: Student loans, amount: 500, cadence: monthly, day: 16,
      track: queue, status: active, calendar_event_id: eo3u9f3dm97hc987tvvkcblaig,
      note: "~$8,000 remaining. DATED 2026-08-15 per Lemar in #personal-finance
@@ -254,14 +266,18 @@ bills:
             jfh8548cet84pcqo3o697fkbq8 already fired 8/12; cleared, not cancelled
             retroactively. Parked per field rules, never deleted."}
   - {id: station-travel, name: "Travel to The Station", amount: 80, cadence: once,
-     due: 2026-08-15, track: queue, status: active,
-     calendar_event_id: ptacguksk2rsf3md3403gljtes,
+     due: 2026-08-15, track: queue, status: paid,
+     calendar_event_id: null,
      note: "reported in #personal-finance 2026-08-09. Ramped: full $50 on 2026-08-10.
             RATE CORRECTED 2026-08-15 per Lemar in #personal-finance: 'Round Trip
             (Saturday & Sunday total): $80 per week' — this was the TBD rate flagged
             8/9. Amount raised 50→80 for this week's already-open occurrence (today's
             due date); future weeks tracked as the new recurring line
-            station-travel-weekly below, not as repeats of this one-time id."}
+            station-travel-weekly below, not as repeats of this one-time id.
+            PAID 2026-08-16 per Lemar in #personal-finance ('made it to The Station
+            today, so the travel cost has officially been fully covered') — funded in
+            full 2026-08-15 via income allocation, now confirmed settled. Reminder
+            event ptacguksk2rsf3md3403gljtes cancelled/cleared."}
   - {id: station-travel-weekly, name: "Travel to The Station — weekly", amount: 80,
      cadence: weekly, weekday: saturday, first_due: 2026-08-22, track: queue,
      status: active, calendar_event_id: 7ppstt92j8m4ben3u0v8iepink,
@@ -269,7 +285,12 @@ bills:
             weekend Station security-desk job (Sat+Sun combined, $80/week total),
             confirmed rate per Lemar in #personal-finance. Starts the Saturday AFTER
             this week's one-time station-travel occurrence (2026-08-15) so the two
-            never double-count. Same weekly-cadence accrual pattern as moms-weekly."}
+            never double-count. Same weekly-cadence accrual pattern as moms-weekly.
+            CLARIFIED 2026-08-16 per Lemar in #personal-finance: this $80/weekend is
+            train fare, not gas — he won't be driving to weekend shifts for now. No
+            figure changes: this line was already tracked as its own $80 accrual
+            separate from daily_allowances.gas_maintenance, so nothing double-counted
+            and nothing to remove. Noted for the record only."}
   - {id: tow-truck-repay, name: "Tow truck advance repayment", amount: 500, cadence: once,
      due: 2026-09-15, track: queue, status: active, calendar_event_id: 160350dborpf6c2cllcmbkr07o,
      note: "Added 2026-08-13, funding source corrected 2026-08-14. Lemar borrowed $500
@@ -365,7 +386,7 @@ plans:
            is his. The collector's stated deadline was Aug 15 and this schedule runs to
            Sept 6; that is Lemar's informed call, not an open question."
     installments:
-      - {seq: 1, amount: 125, due: 2026-08-16, status: pending, calendar_event_id: tja7bjk9ri35n0bqb01c52j4es}
+      - {seq: 1, amount: 125, due: 2026-08-17, status: pending, calendar_event_id: tja7bjk9ri35n0bqb01c52j4es}
       - {seq: 2, amount: 125, due: 2026-08-23, status: pending, calendar_event_id: gt4knt3i2m6lpjhlrjf8n2jqn8}
       - {seq: 3, amount: 125, due: 2026-08-30, status: pending, calendar_event_id: locnmilchabhgq2o0kd8slf7r4}
       - {seq: 4, amount: 125, due: 2026-09-06, status: pending, calendar_event_id: ekpni2dt25f0fe5tjh51sbjj64}
@@ -516,15 +537,22 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     total_claim: 624.81
     gas_spent: null
     swept_to_maintenance: 0
-    funded: 0
-    shortfall: 594.81
+    funded: 114.00
+    shortfall: 480.81
     calendar_event_id: k9sog0mcpmisnn4p2hicernagk
     recompute_note: "2026-08-15 PART M: station-travel corrected $50.00 -> $80.00 per
       Lemar's rate confirmation (+$30.00 to target/total_claim/shortfall). Every other
       contribution/day unchanged; the new station-travel-weekly line (first_due
       2026-08-22) is not yet hand-spread into daily_targets -- deferred to the next
       dedicated recompute pass per this ledger's established practice for multi-day
-      additions (same treatment as tmobile-split-2 / moms-car-oil-change / am-botte)."
+      additions (same treatment as tmobile-split-2 / moms-car-oil-change / am-botte).
+      2026-08-15 PART M (2), INCOME ALLOCATION: $144 the-station earnings logged;
+      gas_maintenance.reserve $30.00 held in Spending first, $114.00 poured into
+      today's contributions in due-date order -- station-travel (due today) funded in
+      full ($80.00), liquidibee-1 (due 2026-08-16) partially funded ($34.00 of
+      $125.00), the rest of the queue untouched. Surplus: $0 (money ran out mid-line).
+      OVERLOAD CHECK ran for the first time this pass (income log crossed the 7-entry
+      floor) -- see Update below and the #decisions card raised for it."
     contributions:
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
@@ -533,7 +561,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: cuzzies-google-workspace, amount: 21.25, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.05, funded: 0, status: pending}
-      - {line_id: liquidibee-1, amount: 125.00, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 125.00, funded: 34.00, status: partial}
       - {line_id: liquidibee-2, amount: 15.63, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 8.34, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.69, funded: 0, status: pending}
@@ -555,7 +583,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-9, amount: 4.05, funded: 0, status: pending}
       - {line_id: patreon, amount: 2.09, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
-      - {line_id: station-travel, amount: 80.00, funded: 0, status: pending}
+      - {line_id: station-travel, amount: 80.00, funded: 80.00, status: paid}
       - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.97, funded: 0, status: pending}
@@ -603,13 +631,23 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-17":
     operating_reserve: 30.00
-    target: 289.75
-    total_claim: 319.75
+    target: 380.75
+    total_claim: 410.75
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 289.75
+    shortfall: 380.75
     calendar_event_id: 2f3r9682t2emqdu76snes086b8
+    recompute_note: "2026-08-16 PART M: liquidibee-1's due date moved 8/16->8/17 (Lemar's
+      Monday-call renegotiation plan). Its $91.00 remaining balance ($125.00 total minus
+      the $34.00 already funded 2026-08-15, historical/untouched) added here as a new
+      contribution; target/total_claim/shortfall raised by the same $91.00. 2026-08-16's
+      daily_targets had NO existing liquidibee-1 contribution to remove -- the automatic
+      ROLLOVER that should have carried the $91.00 shortfall from 2026-08-15 into
+      2026-08-16 was explicitly deferred in that pass (see Update 2026-08-15 (3):
+      'ROLLOVER is reserved for the day's LAST hourly scan') and no later pass ran it, so
+      2026-08-16 never actually held the contribution this change was expected to move.
+      Discrepancy flagged; nothing else on 2026-08-16 touched."
     contributions:
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
@@ -618,6 +656,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: cuzzies-google-workspace, amount: 21.25, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.05, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 91.00, funded: 0, status: pending}
       - {line_id: liquidibee-2, amount: 15.63, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 8.34, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.69, funded: 0, status: pending}
@@ -2788,6 +2827,9 @@ open_questions:
   - "Income backlog: Lemar is posting ~2 weeks of DoorDash earnings to #personal-finance (2026-08-10). Until they land, income_target_weekly $500 is a guess and the overload check can't run."
   - "RESOLVED 2026-08-14: Lemar confirmed (#decisions ts 1786712349.341559) these ARE two separate $500 obligations from the same breakdown — a friend-funded tow ($500, tow-truck-repay, due 9/15) and a mechanic repair he'll repay 'down the road' with no date yet (mechanic-repair-repay, undated). Both now carry their own line; see the UNDATED bullet above for the second."
   - "NEW 2026-08-14: Lemar confirmed his new Station weekend job (#decisions ts 1786710731.810909) — $12/hour, ~23 hrs/week, security desk. No paycheck/earnings figure reported yet under this job; log actual pay via #personal-finance once it starts landing, same as DoorDash. Not the same thing as the 'Station travel $50/wk' expense line above (that's his travel cost, not this income)."
+  - "RESOLVED 2026-08-18 (#decisions ts 1787001107.337499, Lemar reply 1787009888.775939): 'The charge did not clear.' cuzzies-google-workspace $85 (due 8/19) confirmed still unpaid — stays `status: active`, still accruing. Suspension risk (all cuzziesnj.com Workspace services, incl. lemar@cuzziesnj.com email, per the 8/20 deadline) is unchanged; Lemar owns the re-attempt, not logged here as resolved-to-paid."
+  - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Lemar was unexpectedly charged $119 by Edge Fitness for personal training and is disputing it with SoFi. Already happened (not a future dated line) so nothing was added to `bills` — no due date exists to queue and inventing one would violate the never-invent-a-date rule. #decisions parent raised asking how he wants this reflected once the dispute resolves (refunded → no entry needed; upheld → a dated personal expense/loss line, his call). No income reported today."
+  - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Set-Aside (SoFi Checking) balance reported at $13.00 as_of 2026-08-17 — first balance ever reported for this pocket since the Era connector retired 2026-08-10. Very low against the ~$380/day accrual target; flagged on the dashboard, not smoothed or explained away."
 ```
 
 ## Update 2026-08-14 (PART M — two new personal bills: fantasy football + Dil's Christmas gift)
@@ -3684,3 +3726,166 @@ accrual across 8/16–8/21 once the next dedicated recompute runs.
 
 Nothing paid, nothing contacted. Dashboard re-rendered (new Drive snapshot) since the
 ledger changed; reply posted in #personal-finance with the new link.
+
+## Update 2026-08-15 (3) — PART M: The Station earnings logged, income allocation, first OVERLOAD CHECK
+
+**Drop:** Lemar in #personal-finance (ts `1786829161.408529`, ~17:46 ET): "I made $144
+at The Station today." Personal earned income (he works there) — not a Cuzzie's/Station
+business bill — so it is Mode 1, logged to `income-log-2026.md`:
+`{date: 2026-08-15, source: "the-station", amount: 144, note: "reported in
+#personal-finance"}`.
+
+**INCOME ALLOCATION for 2026-08-15.** Gas/maintenance reserve ($30.00) claimed first,
+held in Spending, not moved — the day's $144 covers it. Remaining $114.00 poured into
+today's `daily_targets` contributions in due-date order (soonest due first, ties by
+smallest amount): `station-travel` (due today) funded in full, $80.00. Next in line,
+`liquidibee-1` (due 2026-08-16), partially funded — $34.00 of $125.00 — where the money
+ran out; status `partial`. Every later-due contribution (cuzzies-google-voice through
+self-account-balance-repay) stays `pending`, untouched. Day totals: `funded` 0 → 114.00,
+`shortfall` 594.81 → 480.81. No surplus — the $114.00 landed mid-line on liquidibee-1,
+so there was nothing left over to report. Rollover for the still-unfunded remainder
+(liquidibee-1's $91.00 + everything below it) is NOT run this pass per this run's
+scope — ROLLOVER is reserved for the day's LAST hourly scan; no `daily_targets` entry
+beyond today was touched here.
+
+**OVERLOAD CHECK — fired for the first time.** The income log crossed the 7-entry floor
+with this drop (6 → 7 lines), so the check ran instead of being skipped. Trailing 4-week
+average of logged income: (Jul 20-26 $153.94 + Jul 27-Aug 2 $327.70 + Aug 3-9 $457.40 +
+Aug 10-16 week-to-date $257.13 [$61.43 + $51.70 + $0 reconciliation + this $144]) ÷ 4 =
+**$299.04/week**. Coming 7-day set-aside total (`daily_targets` targets, 2026-08-15
+through 2026-08-21): 594.81 + 289.81 + 289.75 + 277.06 + 255.77 + 255.76 + 230.77 =
+**$2,193.73** — roughly 7.3x the average week. Per the skill, the accrual is written
+exactly as computed, nothing shrunk or delayed. Flagged on the dashboard and raised as
+ONE #decisions parent (see below) naming the gap and the dated lines inside the window:
+`station-travel` $80.00 (due 8/15), `liquidibee-1` $125.00 (due 8/16),
+`cuzzies-google-voice` $38.00 (due 8/18), `cuzzies-google-workspace` $85.00 (due 8/19),
+`metrc-fee` $40.00 (due 8/21), `moms-lump-0821` $110.00 (due 8/21) — $478.00 genuinely
+due this week, with the rest of the $2,193.73 coming from simultaneous catch-up drip on
+longer-horizon lines (the $2,800 car goal, $500 tow-truck-repay, $500
+mechanic-repair-repay, $242 self-account-balance-repay, and others) all accruing from
+today at once.
+
+Nothing paid, nothing contacted, nothing shrunk. Dashboard re-rendered (new Drive
+snapshot) since the ledger changed; reply posted in #personal-finance with the new
+link; one #decisions card raised for the overload.
+
+## Update 2026-08-16 — PART M: liquidibee-1 due date moved 8/16 → 8/17 (Monday call plan)
+
+**What changed:** Lemar committed today (capture DM, 2026-08-16) to call Nomas Recovery
+Monday instead of paying today, to renegotiate the plan. Per that plan, the Nomas/
+Liquidibee payment-plan installment 1 of 4 (`liquidibee-1`) moved:
+`due: 2026-08-16` → `due: 2026-08-17` on `plans: liquidibee-nomas-payment-plan`,
+`installments[seq: 1]`. Its `calendar_event_id` (`tja7bjk9ri35n0bqb01c52j4es`) is
+unchanged — the existing event is updated to the new date, not recreated. The
+corresponding Haven note `haven/vault/20-Cuzzies/2026-07-31-liquidibee-forbearance-ends.md`
+already carries this plan and was not touched here.
+
+**ACCRUAL recompute (this line only).** The $91.00 still owed on this installment
+($125.00 total − $34.00 already funded via 2026-08-15's INCOME ALLOCATION, see Update
+2026-08-15 (3)) is added as a new contribution on **2026-08-17**
+(`{line_id: liquidibee-1, amount: 91.00, funded: 0, status: pending}`); that day's
+`target`/`total_claim`/`shortfall` each raised $289.75 → $380.75 / $319.75 → $410.75 /
+$289.75 → $380.75. **Discrepancy found and flagged:** the brief this morning described
+an existing 2026-08-16 contribution to remove, but 2026-08-16's `daily_targets` never
+actually held one — the ROLLOVER that should have carried this $91.00 shortfall forward
+from 2026-08-15 (due-1) into 2026-08-16 (the day the installment's original due date
+arrived) was explicitly deferred in the 2026-08-15 (3) pass ("ROLLOVER is reserved for
+the day's LAST hourly scan") and no pass since has run it. So there was nothing to
+remove from 2026-08-16 — only the $91.00 addition to 2026-08-17 was needed. 2026-08-15
+(closed, historical) was NOT rewritten; its `liquidibee-1` contribution stays
+`{amount: 125.00, funded: 34.00, status: partial}` exactly as it closed. 2026-08-16's
+`daily_targets` is otherwise untouched (target still $289.81) — no other line's
+contribution was touched.
+
+**OVERLOAD CHECK (informational, not a new flag — the standing card already covers
+today).** Recomputed the correct current 7-day window (2026-08-16 through 2026-08-22,
+now that today has rolled from 8/15 to 8/16) against the same $299.04/wk trailing 4-week
+average from this morning's run (income log unchanged since): 289.81 + 380.75 + 277.06 +
+255.77 + 255.76 + 230.77 + 194.41 = **$1,884.33** post-move (was $1,793.33 pre-move for
+the same window, before this $91.00 landed on 8/17 — the move raises the flagged 7-day
+total by exactly $91.00, since that amount previously sat uncounted in any forward-
+looking window at all). Both figures are well above the $299.04/wk average, same
+standing overload already carried in #decisions `C0BBXA96FFV`; no second card raised.
+(Note: the $2,193.73 figure from this morning's run used the 2026-08-15–08-21 window,
+which included 2026-08-15's own $594.81 catch-up day and is no longer the correct
+comparison base now that 8/15 has closed.)
+
+Nothing paid, nothing contacted, nothing shrunk, no other bill/plan/goal touched.
+Reminder-calendar event for this installment moved 8/16 → 8/17 (same event id, no
+duplicate); the 2026-08-16 and 2026-08-17 daily aggregate "set aside today" events
+re-synced to the new targets. Dashboard re-rendered (new Drive snapshot) since the
+ledger changed; reply posted in #personal-finance with the new link.
+
+## Update 2026-08-16 (2) — PART M: station-travel-weekly clarified as train fare, not gas
+Lemar dropped in #personal-finance (ts `1786886895.478709`): "we won't need the gas
+reserves on the weekends for now, I'll be taking the train, thus the $80 per weekend to
+travel to the station." Read as a clarification, not a change request — the $80/weekend
+`station-travel-weekly` line already exists as its own dated accrual, separate from
+`daily_allowances.gas_maintenance`'s flat $30/day reserve, so nothing was double-counted
+and no figure needs to move. Annotated the line's note for the record; no amount, date,
+or accrual touched, no calendar event changed, dashboard not re-rendered (nothing
+visible would differ).
+
+## Update 2026-08-16 (3) — PART M (Mode 7): station-travel marked paid
+
+**Drop:** Lemar in #personal-finance (ts `1786891041.387329`): "I made it to The
+Station today, so the travel cost has officially been fully covered." Read as a
+payment confirmation for the `station-travel` one-time line (already funded in full,
+$80.00, via the 2026-08-15 income allocation from The Station earnings).
+
+**Action:** flipped `bills.station-travel.status` active → `paid`. Its 2026-08-15
+`daily_targets` contribution flipped `funded` → `paid` (amount unchanged, $80.00 —
+funding was already set aside; this just records that it was actually settled).
+Retired the one-time reminder event `ptacguksk2rsf3md3403gljtes` (cancelled, id
+cleared) — no future accrual to retire, this was a one-time line and today's target
+total is unaffected (the $80 was already counted as funded, not pending). No change to
+any other day's `daily_targets`, no OVERLOAD CHECK re-run (no accrual or income
+changed). `station-travel-weekly` (the ongoing $80/wk line, first due 2026-08-22) is
+unaffected — separate line, still active.
+
+Nothing paid or contacted by Samira — this only records Lemar's own confirmation.
+Dashboard re-rendered (new Drive snapshot) since a line's status changed; reply posted
+in #personal-finance with the new link.
+
+## Update 2026-08-17 — PART M: Google Workspace payment unconfirmed, Edge Fitness disputed charge, Set-Aside balance $13
+
+**Drop:** Lemar in #personal-finance (ts `1786999318.129009`, ~16:41 ET): "Okay here's
+the deal I paid for google workspace but the transaction didn't process yet. Instead I
+was charged $119 by edge fitness for personal training. Right now I'm trying to dispute
+the transaction with sofi. No income today but now my sofi checking account reads
+$13.00."
+
+**1. `cuzzies-google-workspace` ($85, due 2026-08-19) — payment attempted, not
+confirmed.** "Didn't process yet" is not a payment confirmation, so Mode 7 was NOT run —
+`status` stays `active`, no calendar event retired, no `daily_targets` contribution
+cleared. Annotated the bill's note with the attempt and the open question. Never flip a
+bill to paid on an unconfirmed transaction.
+
+**2. Edge Fitness $119 personal-training charge — not added as a bill.** This already
+happened (a past, disputed charge), not a future dated obligation — there is no due date
+to queue and none was invented. Clearly personal (his own gym), so no business-vs-personal
+ask needed. Logged only as an open question: #decisions asked how to reflect it once the
+SoFi dispute resolves (refunded → nothing to add; upheld → Lemar names the date/line
+himself). Nothing paid or contacted by Samira; the dispute is Lemar's own action with
+SoFi.
+
+**3. Mode 2b — Set-Aside pocket balance.** "Sofi checking account reads $13.00" maps to
+the `set-aside` pocket (account `sofi-checking` per the ledger's account mapping).
+Set `balance: 13.00`, `balance_as_of: 2026-08-17` — the first balance ever reported for
+this pocket since the Era connector retired 2026-08-10. No prior expected figure existed
+to reconcile against, so the reported number was written as-is, not adjusted. Flagged on
+the dashboard: $13 in the bill-paying account against a ~$380/day accrual target is a
+stark number, shown plainly rather than smoothed.
+
+**No income logged.** "No income today" is not an earnings line — nothing appended to
+`income-log-2026.md`.
+
+**No accrual/calendar changes.** No new dated line, amount, or date changed, so ACCRUAL,
+the calendars, and OVERLOAD CHECK were not re-run this pass — nothing about the queue or
+`daily_targets` shifted, only balance/annotation/open-questions.
+
+**#decisions:** one parent raised covering both open items above (Google Workspace
+payment status + how to record the Edge Fitness dispute outcome) — Lemar decides, nothing
+guessed. Nothing paid, nothing contacted. Dashboard re-rendered (new Drive snapshot)
+since the ledger changed (balance + annotations + open questions); reply posted in
+#personal-finance with the new link.

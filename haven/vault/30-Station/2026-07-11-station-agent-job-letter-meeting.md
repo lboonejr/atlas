@@ -1,6 +1,6 @@
 ---
 created: 2026-07-11T09:38:00-04:00
-updated: 2026-08-14T15:15:00-04:00
+updated: 2026-08-17T14:20:00-04:00
 domain: station
 type: task
 status: active
@@ -30,6 +30,13 @@ afternoon work better on your end?"
 ## Next step
 Once a time is confirmed, add `due:` with the exact time here so calendar-sync rings it;
 right now it's a placeholder for "Monday."
+
+## Update 2026-08-16 (PART S calendar-sync — corrected wrong-calendar event)
+The `calendar_event_id` on file (`vgi54ndm6cd727169khflpvjdc`) pointed to an event on
+the Cuzzie's (Owners) business calendar, not the personal reminder calendar this skill
+is scoped to. Left that stray business-calendar event untouched and created a correct
+event (`nqfluqb1a3h2skbfj9pecqnpes`, same title/time/description) on the personal
+reminder calendar.
 
 ## Sources
 - slack: #atlas (C0BBWHCJUV9), ts 1783772005.089379 (2026-07-11 08:13 ET)

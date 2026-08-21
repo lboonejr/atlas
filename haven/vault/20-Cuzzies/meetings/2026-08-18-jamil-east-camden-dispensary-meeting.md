@@ -1,13 +1,13 @@
 ---
 created: 2026-08-15T08:04-04:00
-updated: 2026-08-15T15:45-04:00
+updated: 2026-08-17T14:20:00-04:00
 domain: cuzzies
 type: meeting
 status: active
 tags: [jamil, east-camden, dispensary, license, prospective-buyer, cuzzies-license]
 source: slack
 due: 2026-08-18T17:00-04:00
-calendar_event_id: 680p70j75lp2hmlajahthqbvhc
+calendar_event_id: na455usns0mu7pn8jfla1l0co4
 ---
 
 # Jamil — East Camden prospective dispensary — meeting Tue 8/18 5pm
@@ -144,6 +144,13 @@ public info available Aug 2026 — verify with counsel before relying on specifi
   ownership rules (2026 legislative update, S4847)
 - General NJ cannabis licensing/municipal-approval overviews (covasoftware.com,
   cannaspire.com, sweedpos.com industry guides)
+
+## Update 2026-08-16 (PART S calendar-sync — corrected wrong-calendar event)
+The `calendar_event_id` on file (`na455usns0mu7pn8jfla1l0co4`) pointed to an event on
+the Cuzzie's (Owners) business calendar, not the personal reminder calendar this skill
+is scoped to. Left that stray business-calendar event untouched and created a correct
+event (`04h2keng09tasu8g3kvbtl71go`, same title/time/description) on the personal
+reminder calendar.
 
 ## Sources
 - slack: capture DM `D0BHPKMDNEP` ts `1786753925.923869` (Lemar's original drop)

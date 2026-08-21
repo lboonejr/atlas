@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14T16:56-04:00
-updated: 2026-08-15T10:42-04:00
+updated: 2026-08-16T15:44-04:00
 domain: project
 type: task
 status: done
@@ -41,6 +41,16 @@ to the digest's tally line (`reports-scan: found N/open O` or `reports-scan: cle
 No change to Safety or the reaction engine — PART R only reads, lands its own Haven log
 note, DMs, and posts normal #decisions cards; PART A already executes anything Lemar
 picks.
+
+## Update 2026-08-16
+Relettered PART R → **PART T** while this was still in PR review: an unrelated,
+concurrently-merged change claimed PART R for a separate feature (samira-loop, the
+build/pressure-test lane, `.claude/routines/samira-build-loop.md`) — different skill,
+same letter. Run order is now `... → Q → R (samira-loop) → H → M (money) → T (reports
+scan) → canvas refresh → P (Pulse) → digest`; digest token unchanged
+(`reports-scan: found N/open O` or `reports-scan: clean`). No functional change to this
+skill — reads, Haven log note, DM, and #decisions cards all behave exactly as described
+above.
 
 ## Sources
 - slack: capture DM `D0BHPKMDNEP` ts `1786740991.727389` (2026-08-14)

@@ -1,6 +1,6 @@
 ---
 created: 2026-08-11T08:30:00-04:00
-updated: 2026-08-14T15:15:00-04:00
+updated: 2026-08-17T14:20:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -34,6 +34,13 @@ Wind-Down & Payoff" (`18424191974`), group Vendors — New/Unclassified, Vendor 
 "Non-Cannabis Vendor", Correspondence Status "Not Yet Contacted", Amount Owed $7,500.
 No payment made or authorized. Replied Done ✅ in the #decisions thread. The
 pay/authorize decision itself is still open on the parent card (no ✅/🫡 yet).
+
+## Update 2026-08-16 (PART S calendar-sync — corrected wrong-calendar event)
+The `calendar_event_id` on file (`a9uokh12kt06f3ac4a701ooie4`) pointed to an event on
+the Cuzzie's (Owners) business calendar, not the personal reminder calendar this skill
+is scoped to. Left that stray business-calendar event untouched and created a correct
+event (`1uo4jacn0rpmvvs1vsgtnn2ipk`, same title/time/description) on the personal
+reminder calendar.
 
 ## Sources
 - gmail: thread `19ff195625635da7` — "New payment request from Greenbooks CPA"

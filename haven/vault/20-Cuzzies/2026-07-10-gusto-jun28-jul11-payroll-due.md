@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T08:20-04:00
-updated: 2026-08-14T15:15:00-04:00
+updated: 2026-08-17T14:20:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -45,6 +45,13 @@ toward a missed real payday for employees rather than a clean skip. Worth Lemar 
 in app.gusto.com whether the 7/10 skip/cancel was actually completed, or whether this
 period needs to be run (late) so employees get paid. Flagged in #decisions rather than
 assumed either way — Samira has no Gusto credential to check or act.
+
+## Update 2026-08-16 (PART S calendar-sync — corrected wrong-calendar event)
+The `calendar_event_id` on file (`0gi4ohhuaqe2anbi7n4bb3fhm0`) pointed to an event on
+the Cuzzie's (Owners) business calendar, not the personal reminder calendar this skill
+is scoped to. Left that stray business-calendar event untouched and created a correct
+event (`h8312ahaekl4g7hkenrlvklfls`, same title/time/description) on the personal
+reminder calendar.
 
 ## Sources
 - gmail: thread 19f4bddf75aeda3d, automated@gusto.com, 2026-07-10 11:51 UTC

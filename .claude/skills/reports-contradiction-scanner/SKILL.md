@@ -122,7 +122,9 @@ vault directly.
 
 ## Note on scheduling
 This skill is also invokable on demand ("scan #reports for contradictions") outside its
-scheduled run. It runs unattended as **PART R** of the hourly loop
+scheduled run. It runs unattended as **PART T** of the hourly loop
 (`.claude/routines/samira-atlas-executor.md`), after PART M (money) and before the
 canvas refresh — Lemar's call, made explicitly, the same way Stormy was folded in as
-PART Q.
+PART Q. (Originally slotted as PART R; relettered to PART T when an unrelated,
+concurrently-merged change claimed PART R for the separate samira-loop build/
+pressure-test feature.)
