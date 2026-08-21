@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260821T170335Z",
-    "run_started": "2026-08-21T17:03:35Z",
+    "run_id": "run_20260821T180336Z",
+    "run_started": "2026-08-21T18:03:36Z",
     "run_completed": "2026-08-21T15:20:00Z",
-    "note": "In flight — PART 0 lock acquired 17:03:35Z. Previous run's summary retained below until this run's digest overwrites it. (2026-08-21T15:20:00Z run note: PART V: 0 filed, 2 stuck carried unchanged. PART S: retired GTI AR calendar event. PART A: drafted Regus/IWG payment-plan reply. PART D: 2 marketing threads labeled seen. PART E/Q quiet. PART R: worked 3 open Camden Launch PT cards. PART M/T/canvas quiet/unchanged. PART P: Pulse rendered + DM'd. PART D re-run 17:03:35Z lock: D1 found GTI AR/Gusto/Regus/Peter Abdallah already resolved by an earlier pass; D2 scanned 12 new threads — DeWalt engagement-letter card opened, Regus/IWG payment-plan-declined update posted, Station Newark AR update logged, 4 junk + 4 already-seen threads skipped.)"
+    "note": "In flight — PART 0 lock acquired 18:03:36Z. Prior lock (run_20260821T170335Z, started 17:03:35Z) was still marked in-flight but exceeded the 45-minute TTL (aged to ~60min with no completion) — treated as a dead run per PART 0's aging-out rule, not a live overlap. Previous completed run's summary retained below until this run's digest overwrites it. (2026-08-21T15:20:00Z run note: PART V: 0 filed, 2 stuck carried unchanged. PART S: retired GTI AR calendar event. PART A: drafted Regus/IWG payment-plan reply. PART D: 2 marketing threads labeled seen. PART E/Q quiet. PART R: worked 3 open Camden Launch PT cards. PART M/T/canvas quiet/unchanged. PART P: Pulse rendered + DM'd. PART D re-run 17:03:35Z lock: D1 found GTI AR/Gusto/Regus/Peter Abdallah already resolved by an earlier pass; D2 scanned 12 new threads — DeWalt engagement-letter card opened, Regus/IWG payment-plan-declined update posted, Station Newark AR update logged, 4 junk + 4 already-seen threads skipped.)"
   },
   "watermarks": {
     "slack_channels": {
