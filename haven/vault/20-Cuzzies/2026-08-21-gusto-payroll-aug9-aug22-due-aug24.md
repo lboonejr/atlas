@@ -1,6 +1,6 @@
 ---
 created: 2026-08-21T08:17-04:00
-updated: 2026-08-21T10:15-04:00
+updated: 2026-08-21T12:04-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -55,9 +55,25 @@ this card outright — leaving it `awaiting-decision` until Lemar confirms the G
 account itself has been terminated, at which point this whole recurring note string can
 close for good.
 
+## Update 2026-08-21T12:04-04:00 (PART D) — Gusto: cash balance may not cover payroll 8/28
+
+A second, separate Gusto task notice landed (`gustonoreply@gusto.com`, 2026-08-21
+12:00 ET): "Review payroll funding — Based on known expenses, the current cash balance
+from connected bank accounts may not fully cover payroll on Fri Aug 28," due Mon 8/24.
+This is a distinct task from the "time to run payroll" notice already logged above, but
+the same underlying pattern this note already flagged — a funding question surfacing
+before a payroll run that, per Lemar's 10:15am reply, shouldn't be running at all since
+the business closed 6/13. Not something Samira can review or fund (no Gusto login, no
+bank visibility — balances are reported, never fetched, per the 2026-08-10 lock). Left
+`awaiting-decision`, same as above; no new card opened, replied in-thread on the existing
+one pointing to this as further evidence the Gusto account itself needs terminating, not
+another off-cycle run. Gmail thread `1a0250d7b7efbc78` labeled seen.
+
 ## Sources
 - gmail: thread `1a024238c4662406` ("Time to run payroll for Cuzzie's Dispensary &
   Delivery LLC," automated@gusto.com, 2026-08-21 07:45 ET)
+- gmail: thread `1a0250d7b7efbc78` ("Review payroll funding" task, gustonoreply@gusto.com,
+  2026-08-21 12:00 ET — cash balance may not cover payroll 8/28)
 - slack: #decisions ts `1787314219.825659` (card) / `1787315320.109899` (Lemar's reply)
 - haven: [[2026-07-30-gusto-final-payroll-closeout]] (the 7/31 "final payroll" run that
   did not stop these notices), [[2026-08-11-gusto-payroll-late]], the
