@@ -1,16 +1,16 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260821T014105Z",
-    "run_started": "2026-08-21T01:41:05Z",
-    "run_completed": "2026-08-21T01:56:00Z",
-    "note": "Off-cadence quiet pass (outside the normal 8a-6p ET cron window; this session's git access is scoped to a feature branch, not direct main -- see the daily note's session note and the PR this run opened). PART V: vault Inbox re-checked directly, still only the 2 known carried notes, nothing new to file. PART A: #decisions re-read since the 6:09pm watermark, zero new top-level messages. PART B: capture DM re-read since watermark, one new message but it was Samira's own auto-handoff post (samira-work-summary), not from Lemar -- no action per PART B's own-post exclusion. PARTS C/D/E/Q/R/M/T/canvas/P not swept this pass (nothing new surfaced to justify them)."
+    "run_id": "run_20260821T121731Z",
+    "run_started": "2026-08-21T12:17:31Z",
+    "run_completed": "2026-08-21T12:17:31Z",
+    "note": "Active pass, 8:xx AM ET (this session's git access is scoped to branch claude/wizardly-cori-whkdlw, not direct main -- see the daily note's session note and the PR this run opened). PART V: filed Basil's 8/21 inbox-janitor note; 2 known-carried Inbox defects unchanged; incremental integrity check (files changed since last full pass) found no new defects. PART A: #decisions + capture DM + all 14 project channels quiet since watermark -- nothing to act on beyond this run's own new cards. PART D: 20 Gmail threads triaged, 0 reply-worthy; Gusto payroll + Regus/Marshall-Sterling updates captured. PART E: investor-pipeline index updated (Donte $250K, Peter Abdallah). Urgent out-of-band finding: GTI AR holding reply confirmed missing from Gmail Drafts ahead of 9am ET review -- flagged in #decisions and pushed to Lemar directly. PART M/Q/T: quiet. Canvas: still blocked, not re-checked (not day's first run). PART P: Pulse rendered (real changes this run) and DM'd."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787256504.479409",
-      "C0BBZJL85RT": "1787276650.476069",
-      "D0BHPKMDNEP": "1787266829.354459",
+      "C0BBXA96FFV": "1787314456.900919",
+      "C0BBZJL85RT": "1787281925.881449",
+      "D0BHPKMDNEP": "1787314595.450939",
       "C0BGLEMH99T": "1787253092.000000",
       "C0BEQUW5NPP": "1787253092.000000",
       "C0BBLUA7JLX": "1787253092.000000",
@@ -50,22 +50,24 @@
       "1787245811.807379": "1787245837.845089",
       "1787256504.479409": "1787260487.561709",
       "1786824337.657789": "1786831565.789469",
-      "1786709997.432499": "1786727321.939139"
+      "1786709997.432499": "1786727321.939139",
+      "1787314219.825659": "1787314219.825659",
+      "1787314456.900919": "1787314456.900919"
     },
-    "capture_dm": "1787253092.000000",
-    "gmail_after_epoch": 1787253092
+    "capture_dm": "1787314595.450939",
+    "gmail_after_epoch": 1787314651
   },
   "integrity": {
     "last_full_pass": "2026-08-20T12:17:41Z",
-    "last_scan_sha": "3b394618538af206a0eed57bca466146f4bb2bba",
-    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged. Not re-run this pass (incremental cadence, no vault changes beyond the 2 Inbox notes filed)."
+    "last_scan_sha": "0b72a24f29ecf80b464952660b6fea797340e94e",
+    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged. This pass: incremental check of files changed since the last full pass (5 files) found no new defects; full whole-vault pass not re-run (not the day's first run)."
   },
   "canvas_access": {
     "last_checked": "2026-08-20T12:16:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-20T13:15:57-04:00",
+    "pulse_last_rendered": "2026-08-21T08:35:00-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }

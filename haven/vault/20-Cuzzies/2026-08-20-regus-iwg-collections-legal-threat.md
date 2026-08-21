@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T10:15-04:00
-updated: 2026-08-20T13:12-04:00
+updated: 2026-08-21T08:10-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -119,13 +119,32 @@ transaction to a collections arm is a disclosure decision, not a drafting one.
 Nothing was sent, paid, or promised. The 8/23 deadline event
 `rdvh4u83qhr0rg26t64fncvpa0` stands unchanged on the Cuzzie's (Owners) calendar.
 
+## Update 2026-08-21T08:10-04:00 — IWG offered a settlement; Lemar asked for it in writing
+
+Same evening the contact-establishing draft above went out, the thread moved — all of it
+Lemar corresponding directly, nothing drafted or sent by Samira:
+
+- **2026-08-20 22:31 ET** — Fernanda Romancini replied: "As per the agreement, when you
+  terminate, you are liable for the entire term of agreement. We can offer a settlement
+  to clear and close your account. Should you choose not [to]..." (message cuts off in
+  the snippet available to Samira).
+- **2026-08-21 00:21 ET** — Lemar replied: "Thank you for the explanation. Since we are
+  trying to resolve this directly, could you send over the details of the settlement
+  offer you mentioned in writing? I'd like to see what..." — asking for the number before
+  committing to anything.
+
+No settlement figure has been stated yet. The 8/23 09:00 ET clock
+(`rdvh4u83qhr0rg26t64fncvpa0`) still stands — waiting on IWG's written offer, which may
+or may not land before it. Nothing paid, nothing agreed.
+
 ## Related
 - [[regus-iwg]]
 - [[2026-07-09-regus-mount-laurel-office-clearout]]
 
 ## Sources
 - gmail: thread `1a0155edacd0c56d` (2026-08-18, the operative 5-day letter + itemization)
-- gmail: thread `1a01f7e77adffb82` (2026-08-20, repeat demand)
+- gmail: thread `1a01f7e77adffb82` (2026-08-20 → 2026-08-21, repeat demand → settlement
+  offer raised → Lemar asked for it in writing)
 - gmail: thread `19ffded7294640c4` (2026-08-14, "NOTICE OF LEGAL ACTION", $1,048.60)
 - gmail: threads `19ffb9a5292974cd` (8/13), `19fb86ecefb2989b` (7/31), `19f8a267e2148607`
   (7/22) — earlier collection notices on the same account
