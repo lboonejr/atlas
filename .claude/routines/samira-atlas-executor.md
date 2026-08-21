@@ -76,7 +76,8 @@ Lemar" in #decisions.
 ## Run order
 
 0 (lock + watermarks) → V → S → A → B → C (incl. former G) → D → E → Q → R → H → M (money)
-→ canvas refresh (conditional) → P (Pulse) → digest (+ _daily append + state write).
+→ T (reports scan) → canvas refresh (conditional) → P (Pulse) → digest (+ _daily append +
+state write).
 
 ---
 
@@ -104,7 +105,8 @@ stored watermark and advance it as you finish that surface:
   `newer_than:` windows.
 - `integrity` / `canvas_access` / `renders` — see PART V, canvas refresh, and PART P.
 A `null` watermark (first run after this file lands) → fall back to that PART's legacy
-cutoff once, then record.
+cutoff once, then record. PART T keeps its own bookmark in its Haven log note rather
+than the state file (see PART T) — its dedupe key is per-contradiction, not per-message.
 
 At the very end of the run (after the digest), write `lock.run_completed` = now plus the
 final watermarks, and push.
@@ -302,6 +304,23 @@ is never deferred to a "dedicated recompute pass" (see the skill's Recompute tri
 then render the dashboard ONCE at the end. Never render per-drop.
 Returns `money ✓ <what changed> · hub ✅/⚠️` or `money —` for the digest.
 
+### PART T — #reports contradiction scan
+Invoke the **reports-contradiction-scanner** skill (`.claude/skills/reports-contradiction-scanner/`),
+after PART M so it's scanning the freshest picture of #reports this run has produced.
+It reads #reports since its own bookmark for conflicting figures/status, unresolved
+self-corrections, and stale claims; checks each against the cited Haven note as ground
+truth; lands its own Haven log note (its durable record, same as every other skill
+here); DMs Lemar a findings summary via the capture DM ONLY when something's found
+(silent on a clean scan, same non-spam rule PART P follows); stages any obvious fix as
+a normal un-reacted #reports correction line for a LATER PART C pass (never edits a
+prior #reports line — append-only, same doctrine as every other skill here); and posts
+any genuinely open question to #decisions as directly executable options. That last
+part needs no new handling from you — it's just another #decisions card, so PART A's
+existing reaction engine picks up the ✅ and executes it on a later scan like any other
+task. Non-fatal by design, same as PART P: a scan failure never blocks canvas refresh,
+Pulse, or the digest. Returns `reports-scan: found N/open O` or `reports-scan: clean`
+for the digest.
+
 ### Canvas refresh (conditional)
 If the state file marks the canvas write-blocked (`canvas_access.writable: false` —
 standing gap since 7/25, 3-strike applied 8/7), SKIP this step entirely: no read, no
@@ -339,8 +358,8 @@ Via **samira-report-result** Mode 3:
    (Full tallies: filed/stuck, rang, decisions handled H, captures G, staged L, ran Y,
    done Z, failed Fl, parked P, deferred D; email E/R/Cl/T; investor + Stormy counts;
    junk J; PART R's token: `pt: …` or `pt —`; PART M's token: `money ✓ …` or `money —`;
-   plus PART P's one token: `pulse ✅`
-   or `pulse ⚠️ <reason>`.
+   PART T's token: `reports-scan: found N/open O` or `reports-scan: clean`; plus PART P's
+   one token: `pulse ✅` or `pulse ⚠️ <reason>`.
    Stuck notes surface ONLY via the batched #decisions card, never line-by-line here.)
 2. APPEND the same digest block to `haven/vault/_daily/YYYY-MM-DD.md` (create the day's
    note from `_templates/daily.md` if absent; append-only; never edit prior entries).

@@ -1,9 +1,9 @@
 ---
 created: 2026-08-14T16:56-04:00
-updated: 2026-08-14T16:56-04:00
+updated: 2026-08-16T15:44-04:00
 domain: project
 type: task
-status: active
+status: done
 tags: [skill-candidate, samira, reports, contradiction-scanner]
 source: slack
 ---
@@ -21,5 +21,37 @@ routed as a candidate proposal to #skills-lab (`C0BBZ5J8805`) instead, in PART H
 format (what recurs, inputs/outputs, rough starter prompt). A human picks it up from
 there.
 
+## Update 2026-08-15
+Lemar picked this up directly (Slack #skills-lab thread, ts `1786741654.908089`) and had
+it built. Skill lives at `.claude/skills/reports-contradiction-scanner/`. It scans
+#reports for conflicting figures, unresolved self-corrections, and stale claims; checks
+each against the cited Haven note as ground truth; DMs Lemar a findings summary
+(capture DM, only when something's found); stages obvious fixes for a later PART C pass
+(new #reports line, never an edit); and posts genuinely open questions to #decisions,
+worded as directly executable options so PART A's existing reaction engine handles the
+handoff — no new execution logic needed. Not yet wired into the hourly runbook as its
+own PART; invokable on demand until Lemar makes that call explicitly (same gate Stormy's
+PART Q went through).
+
+## Update 2026-08-15 (2)
+Lemar asked to add it to the scheduled loop. Wired into
+`.claude/routines/samira-atlas-executor.md` as **PART R**, run order
+`... → M (money) → R (reports scan) → canvas refresh → P (Pulse) → digest`, and added
+to the digest's tally line (`reports-scan: found N/open O` or `reports-scan: clean`).
+No change to Safety or the reaction engine — PART R only reads, lands its own Haven log
+note, DMs, and posts normal #decisions cards; PART A already executes anything Lemar
+picks.
+
+## Update 2026-08-16
+Relettered PART R → **PART T** while this was still in PR review: an unrelated,
+concurrently-merged change claimed PART R for a separate feature (samira-loop, the
+build/pressure-test lane, `.claude/routines/samira-build-loop.md`) — different skill,
+same letter. Run order is now `... → Q → R (samira-loop) → H → M (money) → T (reports
+scan) → canvas refresh → P (Pulse) → digest`; digest token unchanged
+(`reports-scan: found N/open O` or `reports-scan: clean`). No functional change to this
+skill — reads, Haven log note, DM, and #decisions cards all behave exactly as described
+above.
+
 ## Sources
 - slack: capture DM `D0BHPKMDNEP` ts `1786740991.727389` (2026-08-14)
+- slack: #skills-lab `C0BBZ5J8805` ts `1786741654.908089` (2026-08-14, candidate proposal)
