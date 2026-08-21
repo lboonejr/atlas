@@ -1,9 +1,9 @@
 ---
 created: 2026-08-19T12:14-04:00
-updated: 2026-08-21T11:20-04:00
+updated: 2026-08-21T12:04-04:00
 domain: project
 type: brief
-status: awaiting-decision
+status: done
 tags: [samira-loop, camden-launch, phase-00, pressure-test, proposal]
 source: claude
 ---
@@ -352,6 +352,16 @@ to 7/8 (see Pressure test and Locked updates above). Not locked — Q6 (premise)
 open item. No new round posted; a status reply went to the thread instead, since all eight
 lenses are already posed and nothing new is left to ask. #reports line: `round 2, 7/8
 lenses (Q6 premise open) — carried`.
+
+## Update, 2026-08-21T12:04-04:00 (PART A) — sent; card locked and closed
+
+Lemar replied in-thread: "My apologies, authority confirmed, just sent the proposal."
+Jamil Tyson's signing authority is confirmed and Lemar sent the proposal himself — the
+hold from the prior update is lifted by the fact of the send, not by a Samira action.
+**8/8 lenses closed, 6/6 gates, proposal delivered.** This is the terminal state for the
+PT card: nothing left to build, question, or hold on. Card closed; the engagement's next
+step (Jamil's response, then intake sequencing per the 2026-08-19 update above) is a new
+thread when it happens, not a reopening of this one.
 
 ## Sources
 
