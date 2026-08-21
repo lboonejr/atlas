@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260821T200500Z",
-    "run_started": "2026-08-21T20:05:00Z",
+    "run_id": "run_20260821T211220Z",
+    "run_started": "2026-08-21T21:12:20Z",
     "run_completed": "2026-08-21T20:10:00Z",
-    "note": "Complete, ~4:10pm ET. Quiet hour: #decisions (0 new messages, 0 reactions on the 6 most-recent cards + carried DeWalt card), capture DM, all 12 swept project/admin channels, #investor-pipeline, Samira/investor label, #stormy, #personal-finance all silent since the prior scan's watermarks. PART V: filed the 3 notes captured by the prior scan's email loop (Garden Society, Waste Management, Siciliano referral) from 00-Inbox to 20-Cuzzies/ and 60-Legal/ -- both entity stubs (garden-society, waste-management) already existed, no new stubs; integrity diff-scan against last_scan_sha 773447f found 0 new defects (only _daily/2026-08-21.md had changed, and it was clean); 2 known-carried stuck notes (dib-template-theme-decision-closeout, google-voice-subscription-cancellation) unchanged. PART S: no due-date changes -- all synced due notes stable, no new/updated/retired events. PART D: 1 new Gmail thread (NYT newsletter) -- junk, tagged Samira/seen. PART E/Q/M: nothing to pick up. PART R: no PT card needed a round (no #decisions activity at all). PART T: reports-scan clean (not deep-scanned, no new #reports content this run beyond this scan's own lines). Canvas: still blocked, not re-checked (not day's first run). Pulse: not re-rendered -- nothing this pass met the change-gate (no card opened/closed, no money change, no project-pulse flip, no genuinely new Haven note -- the 3 filed notes were captured, and cards opened, by the PRIOR scan) -- pulse — carried (quiet pass). Wrote directly to main throughout via the GitHub API (create_or_update_file/delete_file) per the git-write policy -- no branch+PR."
+    "note": "In flight."
   },
   "watermarks": {
     "slack_channels": {
