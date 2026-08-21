@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260821T151005Z",
-    "run_started": "2026-08-21T15:10:05Z",
+    "run_id": "run_20260821T170335Z",
+    "run_started": "2026-08-21T17:03:35Z",
     "run_completed": "2026-08-21T15:20:00Z",
-    "note": "Complete, ~11:20am ET (this session's git access is scoped to branch claude/wizardly-cori-1qr7va, not direct main -- same recurring conflict as PR #77/#75/#76, see anchors git-write policy; landing via this branch's PR). PART V: 0 filed, 2 stuck carried unchanged (both known/documented), no new defects since last integrity scan (1 file changed, the daily journal itself). PART S: retired the GTI AR calendar event (status already done; event already gone server-side, cleared the stale calendar_event_id). PART A: swept all 25 tracked #decisions threads for reactions + plain replies; found one genuinely new signal -- Lemar's plain reply on the Regus/IWG thread asking about a payment plan (arrived after the prior run's watermark) -- drafted a reply to Fernanda, saved to Gmail Drafts, logged. All other tracked threads confirmed unchanged since last run. PART B/C: capture DM and all 13 project channels quiet. PART D: 2 new Gmail threads since watermark, both marketing junk, labeled seen. PART E: #investor-pipeline and Samira/investor label quiet -- index already reflects Donte's $250K commitment from an earlier run today. PART Q: #stormy quiet. PART R: worked the 3 open Camden Launch PT cards (cap 3) -- p00-advisory-proposal-package's last open lens (Q6, signing authority) answered 'confirm authority first', locking lens coverage 8/8 and holding the send on that confirmation; ops-admin-lane-and-ariana and p00-client-intake-system already locked, carried unchanged. PART M/T/canvas: quiet/unchanged. PART P: Pulse rendered (real changes this run) and DM'd."
+    "note": "In flight — PART 0 lock acquired 17:03:35Z. Previous run's summary retained below until this run's digest overwrites it. (2026-08-21T15:20:00Z run note: PART V: 0 filed, 2 stuck carried unchanged. PART S: retired GTI AR calendar event. PART A: drafted Regus/IWG payment-plan reply. PART D: 2 marketing threads labeled seen. PART E/Q quiet. PART R: worked 3 open Camden Launch PT cards. PART M/T/canvas quiet/unchanged. PART P: Pulse rendered + DM'd.)"
   },
   "watermarks": {
     "slack_channels": {
@@ -60,7 +60,7 @@
   "integrity": {
     "last_full_pass": "2026-08-20T12:17:41Z",
     "last_scan_sha": "048175a764e39822fe52036f99f58f31bc3103f9",
-    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged. This pass: incremental check of files changed since last scan sha (1 file, _daily/2026-08-21.md, this run's own append) found no new defects; full whole-vault pass not re-run (not the day's first run)."
+    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged."
   },
   "canvas_access": {
     "last_checked": "2026-08-20T12:16:00Z",
