@@ -1,16 +1,16 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260820T220317Z",
-    "run_started": "2026-08-20T22:03:17Z",
-    "run_completed": "2026-08-20T22:09:00Z",
-    "note": "Complete, reduced scope. Prior two runs (200228Z, 210355Z) each did real work (vault filing, decision drafts, #reports lines) but died before writing their final lock.run_completed + watermarks -- their state was reconciled into this run's watermarks rather than redone (idempotency keys -- prior 'Done ✅' replies -- confirmed nothing needed re-executing). This run: PART V finished (filed 2 notes still sitting in Inbox from the dead runs), PART A spot-checked every thread flagged new-or-stale against the stored watermark (5 reconciled, all already correctly handled or awaiting Lemar, nothing re-executed), PART B checked (no new captures from Lemar). PARTS C/D/E/Q/R/M/canvas/P skipped this pass for time -- their watermarks are untouched and will be swept fresh next run."
+    "run_id": "run_20260821T014105Z",
+    "run_started": "2026-08-21T01:41:05Z",
+    "run_completed": "2026-08-21T01:56:00Z",
+    "note": "Off-cadence quiet pass (outside the normal 8a-6p ET cron window; this session's git access is scoped to a feature branch, not direct main -- see the daily note's session note and the PR this run opened). PART V: vault Inbox re-checked directly, still only the 2 known carried notes, nothing new to file. PART A: #decisions re-read since the 6:09pm watermark, zero new top-level messages. PART B: capture DM re-read since watermark, one new message but it was Samira's own auto-handoff post (samira-work-summary), not from Lemar -- no action per PART B's own-post exclusion. PARTS C/D/E/Q/R/M/T/canvas/P not swept this pass (nothing new surfaced to justify them)."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787256504.479409",
-      "C0BBZJL85RT": "1787260484.774889",
-      "D0BHPKMDNEP": "1787256839.090509",
+      "C0BBZJL85RT": "1787276650.476069",
+      "D0BHPKMDNEP": "1787266829.354459",
       "C0BGLEMH99T": "1787253092.000000",
       "C0BEQUW5NPP": "1787253092.000000",
       "C0BBLUA7JLX": "1787253092.000000",
