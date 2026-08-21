@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T13:20-04:00
-updated: 2026-08-20T15:05:00-04:00
+updated: 2026-08-21T10:20:00-04:00
 domain: legal
 type: note
 status: active
@@ -32,5 +32,20 @@ assumed.
 Informational. No card raised, nothing to answer, nothing sent. Recorded so that the next
 run working any of the three matters above knows a counsel search is already in flight.
 
+## Update 2026-08-21T10:20-04:00 — a declination, from a firm not obviously on the referral list
+
+Matthew Luber, Managing Partner at McOmber McOmber & Luber, P.C. (Marlton/Red Bank/
+Newark/NY/Philadelphia), replied 2026-08-21 12:49pm ET declining: "this is not a matter
+that our law firm would handle... reach out to your local county bar association
+referral service for a referral to a qualified attorney." His email footer carries
+standard debt-collection-matter notice language, suggesting Lemar may have reached out
+about the collections/DeWalt side specifically rather than through the bar's referral
+intake — not assumed either way, just flagged as a data point.
+
+Reads as another closed door in the same counsel search, whether or not it's formally
+part of the bar referral list. No reply needed — a firm declining doesn't call for a
+response, and nothing for Samira to draft. Purely a record.
+
 ## Sources
 - gmail: thread `1a01fcf2c3b938bf`
+- gmail: message `1a0245f0769561a4` ("Declination," mal@njlegal.com, 2026-08-21 12:49pm ET)
