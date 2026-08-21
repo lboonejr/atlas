@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T10:15-04:00
-updated: 2026-08-21T08:10-04:00
+updated: 2026-08-21T10:20-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -136,6 +136,28 @@ Lemar corresponding directly, nothing drafted or sent by Samira:
 No settlement figure has been stated yet. The 8/23 09:00 ET clock
 (`rdvh4u83qhr0rg26t64fncvpa0`) still stands — waiting on IWG's written offer, which may
 or may not land before it. Nothing paid, nothing agreed.
+
+## Update 2026-08-21T10:20-04:00 — settlement figure landed: $1,506.05, offer valid 7 days
+
+Fernanda replied 2026-08-21 10:13 ET with the written breakdown Lemar asked for:
+
+| Line | Amount |
+|---|---|
+| Outstanding Balance | $3,131.91 |
+| Remaining Agreement Value | $1,048.60 |
+| Retainer | $1,572.90 |
+| **Total Debt** | **$2,607.61** |
+| **Settlement Offer** | **$1,506.05** |
+
+"This quote is valid per 7 days" (from 2026-08-21, so roughly through ~2026-08-28) — a
+harder, more concrete clock than the original 8/23 escalation-threat date, and it
+supersedes it as the operative deadline. If declined: "the full amount of $2,607.61
+will be sought either through small claims court or arbitration."
+
+This is a real decision point — accept the ~42%-off settlement now, counter, or route
+to counsel (referral request already in flight, see
+[[2026-08-20-camden-county-bar-lawyer-referral]]) — not something Samira decides or
+pays. Nothing sent, paid, or agreed by Samira. Posted to `#decisions`.
 
 ## Related
 - [[regus-iwg]]
