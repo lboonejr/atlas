@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-22T13:45:00-04:00
+updated: 2026-08-22T15:02:00-04:00
 domain: project
 type: log
 status: active
@@ -124,3 +124,13 @@ scanner finding.
   for both the Money Hub overload re-verification and the Google Workspace check)
 - haven/vault/20-Cuzzies/2026-08-20-regus-iwg-collections-legal-threat.md (checked —
   not a contradiction)
+
+## Update 2026-08-22 (third run)
+
+**Scanned:** #reports ts `1787419214`–`1787422561` (2026-08-22 ~2:15pm ET, one message —
+the prior run's own closing digest). **Found: 0.** The digest's "25 in #decisions
+(carried from this morning's audit, not re-audited this pass)" line is consistent with
+the backlog audit and self-labeled as carried, not a fresh claim — no contradiction.
+
+## Sources (third run)
+- slack: #reports `C0BBZJL85RT`, ts `1787422561`
