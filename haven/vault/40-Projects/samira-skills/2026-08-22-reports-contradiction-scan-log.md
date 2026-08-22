@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-22T08:04:00-04:00
+updated: 2026-08-22T13:45:00-04:00
 domain: project
 type: log
 status: active
@@ -52,3 +52,75 @@ the available recent range rather than the full history).
 - slack: #reports `C0BBZJL85RT`, ts range `1786745196`–`1787062261`
 - haven/vault/10-Personal/Money/money-hub-ledger.md (Update 2026-08-16, overload-check
   recompute)
+
+## Update 2026-08-22 (second run)
+
+**Scanned:** #reports ts `1787062261`–`1787419214` (2026-08-18 ~10:11am ET through
+2026-08-22 ~1:20pm ET, 82 messages — the boundary message `1787062261` itself was the
+last message of the first run's scanned range and was used only for grouping context,
+not re-flagged).
+
+**Found: 1.**
+
+1. **Obvious fix — the "waiting on you" count self-contradicted within a single entry.**
+   - 8/21 4:09pm ET (`1787342962`): "👉 Waiting on you: 3 in #decisions (Garden Society
+     ⚠️, Waste Management, Siciliano referral, carried) + DeWalt engagement-letter,
+     Marshall & Sterling, Headset, Regus/IWG" — states "3 in #decisions" in the same
+     breath as naming 7 distinct items that are themselves sitting in #decisions.
+   - 8/21 5:15pm ET (`1787346953`) self-corrected to "7 in #decisions" (matching the
+     full 7-item list) with no note that the prior "3" had been wrong.
+   - **Ground truth:** `haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md`
+     (created 2026-08-22T13:30, triggered by this scanner's own first-run card) root-
+     causes exactly this class of error: "earlier digests weren't counting against the
+     tracked `decisions_threads` set at all — they were eyeballing recent channel
+     activity," and locks in a deterministic count going forward. **No #decisions
+     card** — the fix already landed (see carried-item check below) and supersedes
+     this instance; logged here only as a second data point on the same, now-closed
+     defect.
+
+**Carried-item check — 8/15 open question ("#decisions waiting-on-you count
+undercounting") — RESOLVED this range.**
+This scanner's own first run posted that open question to #decisions (ts
+`1787401047.824359`, per the backlog-audit note's "Trigger" line, ~8/22 8:20am).
+Lemar reacted ✅ Option 1 ("run a full #decisions backlog audit"). Samira executed it
+and landed `haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md`:
+31 tracked #decisions threads read against `.claude/state/samira-state.json`
+watermarks → 6 functionally closed but never 🫡'd (PR #62, Camden advisory proposal,
+Peter Abdallah/KW, suspicious #admin bot message, Weedmaps/Ghost Mgmt, Camden County Bar
+referral) + 25 genuinely open. Root cause identified and fixed going forward: the digest
+now counts the tracked thread set, not a fresh eyeball each pass. Confirmed live in
+#reports itself — 8/22 8:26am (`1787401603`) "reports-scan: found 2/open 1" (this
+scanner's own first-run result echoed in the hourly digest) and 8/22 9:15am
+(`1787404541`) "Closed: #reports-scan 'waiting on you' count audit ... 25 genuinely
+open / 6 closed-but-unsaluted out of 31 tracked." **Nothing further to post — this item
+is closed, not carried forward.**
+
+**Also confirmed this range:** the first run's obvious fix (Money Hub overload figure)
+was independently re-verified by a normal Samira PART M pass on 8/22 9:15am
+(`1787404541`): "confirmed the $2,193.73/$1,884.33 discrepancy PART T flagged lives
+only in past digest text, ledger already correct since 8/16." No outstanding action.
+
+**Checked, not flagged:** Regus/IWG figure evolution ($2,607.61 total debt → $1,506.05
+settlement offer, 8/20–8/21) is fully reconciled and narrated in
+`haven/vault/20-Cuzzies/2026-08-20-regus-iwg-collections-legal-threat.md` — a real
+settlement negotiation, not a contradiction. Cuzzie's Google Workspace $85 bill (urgent
+through 8/20 10:19am, then absent from every #reports digest from 8/20 6:09pm onward
+with no reported outcome) was checked against `haven/vault/10-Personal/Money/
+money-hub-ledger.md`, whose last update (8/18 12:15pm, before the 8/20 suspension
+deadline) leaves it `status: active`/unpaid with no resolution recorded either way.
+Not raised as a separate open question here: a #decisions card already exists for this
+exact matter (opened 8/17, ts `1787001107.337499`) and almost certainly falls inside the
+backlog audit's "25 genuinely open" set above — a second card would duplicate it,
+which is the exact defect Samira caught and fixed for Curaleaf/AGA on 8/20 (`1787235572`).
+Worth a human glance next time that card comes up for a decision, but not a new
+scanner finding.
+
+**Open questions posted to #decisions this run: 0.**
+
+## Sources
+- slack: #reports `C0BBZJL85RT`, ts range `1787062261`–`1787419214`
+- haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md
+- haven/vault/10-Personal/Money/money-hub-ledger.md (last updated 2026-08-18, checked
+  for both the Money Hub overload re-verification and the Google Workspace check)
+- haven/vault/20-Cuzzies/2026-08-20-regus-iwg-collections-legal-threat.md (checked —
+  not a contradiction)
