@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260822T031500Z",
-    "run_started": "2026-08-22T12:04:21Z",
-    "run_completed": "2026-08-22T12:20:00Z",
-    "note": "Complete, ~8:20am ET, day's first scan. 1 closed (Camden Bar referral, Lemar 🫡) · 2 new (Leafly invoice $349.30 due today; #reports-scan count-discrepancy question). PART V: full whole-vault integrity pass ran (day's first run) -- 566 notes, 0 new defects, 3 known carried unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, _daily/2026-08-01.md lossy b64) + ops-admin-lane-and-ariana.md tracked via open PR #73. PART S: 0 changes -- all due-notes cross-checked against both the reminder calendar and Cuzzie's (Owners) calendar, all correctly routed and current. PART A: #decisions read fully, 1 card closed (Camden Bar referral), Curaleaf/WM AR cards still open awaiting Lemar's path choice (no new signal). PART B: 0 new captures. PART C: 13 project/admin channels swept, all silent since last watermark. PART D: 8 Gmail threads triaged (1 substantive -> Leafly AR update + new #decisions card, 7 junk/routine automated report), gmail watermark advanced. PART E/Q: quiet. PART R: 3 Camden Launch PT cards checked (p00-advisory-proposal-package closed prior scan, ops-admin-lane-and-ariana + p00-client-intake-system locked/carried from prior rounds), no new rounds this pass. PART M: #personal-finance silent, no render. PART T (first run): 2 findings -- 1 obvious fix (Money Hub overload figure reverted to a stale $2,193.73 vs the corrected $1,884.33, staged for next money-hub pass) + 1 open question (#decisions 'waiting on you' count discrepancy, posted to #decisions). Canvas: re-checked (day's first run) -- still write-blocked (access:read only for the bot). Pulse: rendered fresh (something changed this run) -- 9/9 sections, DM sent to capture DM. Full #decisions recount this scan: 35 open cards (addresses the exact undercounting flagged by PART T). Wrote directly to main throughout via local git clone + push per the git-write policy -- no branch+PR."
+    "run_id": "run_20260822T130322Z",
+    "run_started": "2026-08-22T13:03:22Z",
+    "run_completed": null,
+    "note": "In progress."
   },
   "watermarks": {
     "slack_channels": {
