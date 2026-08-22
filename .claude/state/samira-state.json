@@ -2,15 +2,15 @@
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
     "run_id": "run_20260822T031500Z",
-    "run_started": "2026-08-22T03:15:00Z",
-    "run_completed": "2026-08-21T22:06:40Z",
-    "note": "In flight."
+    "run_started": "2026-08-22T12:04:21Z",
+    "run_completed": "2026-08-22T12:20:00Z",
+    "note": "Complete, ~8:20am ET, day's first scan. 1 closed (Camden Bar referral, Lemar 🫡) · 2 new (Leafly invoice $349.30 due today; #reports-scan count-discrepancy question). PART V: full whole-vault integrity pass ran (day's first run) -- 566 notes, 0 new defects, 3 known carried unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, _daily/2026-08-01.md lossy b64) + ops-admin-lane-and-ariana.md tracked via open PR #73. PART S: 0 changes -- all due-notes cross-checked against both the reminder calendar and Cuzzie's (Owners) calendar, all correctly routed and current. PART A: #decisions read fully, 1 card closed (Camden Bar referral), Curaleaf/WM AR cards still open awaiting Lemar's path choice (no new signal). PART B: 0 new captures. PART C: 13 project/admin channels swept, all silent since last watermark. PART D: 8 Gmail threads triaged (1 substantive -> Leafly AR update + new #decisions card, 7 junk/routine automated report), gmail watermark advanced. PART E/Q: quiet. PART R: 3 Camden Launch PT cards checked (p00-advisory-proposal-package closed prior scan, ops-admin-lane-and-ariana + p00-client-intake-system locked/carried from prior rounds), no new rounds this pass. PART M: #personal-finance silent, no render. PART T (first run): 2 findings -- 1 obvious fix (Money Hub overload figure reverted to a stale $2,193.73 vs the corrected $1,884.33, staged for next money-hub pass) + 1 open question (#decisions 'waiting on you' count discrepancy, posted to #decisions). Canvas: re-checked (day's first run) -- still write-blocked (access:read only for the bot). Pulse: rendered fresh (something changed this run) -- 9/9 sections, DM sent to capture DM. Full #decisions recount this scan: 35 open cards (addresses the exact undercounting flagged by PART T). Wrote directly to main throughout via local git clone + push per the git-write policy -- no branch+PR."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787339264.143129",
-      "C0BBZJL85RT": "1787349910.361989",
-      "D0BHPKMDNEP": "1787339486.323229",
+      "C0BBXA96FFV": "1787401047.824359",
+      "C0BBZJL85RT": "1787401043.491319",
+      "D0BHPKMDNEP": "1787401043.491319",
       "C0BGLEMH99T": "1787339502.000000",
       "C0BEQUW5NPP": "1787339502.000000",
       "C0BBLUA7JLX": "1787339502.000000",
@@ -56,22 +56,24 @@
       "1787333131.938499": "1787333167.963579",
       "1787339259.215559": "1787339259.215559",
       "1787339261.864519": "1787339261.864519",
-      "1787339264.143129": "1787339264.143129"
+      "1787339264.143129": "1787400587.679849",
+      "1787400711.689609": "1787400711.689609",
+      "1787401047.824359": "1787401047.824359"
     },
     "capture_dm": "1787339486.323229",
-    "gmail_after_epoch": 1787349771
+    "gmail_after_epoch": 1787400251
   },
   "integrity": {
-    "last_full_pass": "2026-08-20T12:17:41Z",
-    "last_scan_sha": "77487d24590b2d773b807d5251c354e8a0a1867a",
-    "note": "Diff-scan this pass (against last_scan_sha 77487d24) found 0 vault content files changed -- only the prior scan's own _daily watermark commit. 0 new defects. 3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged."
+    "last_full_pass": "2026-08-22T12:04:00Z",
+    "last_scan_sha": "dc6f2b945c9f053c0512fcb0866461febac56196",
+    "note": "Full whole-vault pass this run (day's first) -- 566 notes, 0 new defects. 3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged."
   },
   "canvas_access": {
-    "last_checked": "2026-08-20T12:16:00Z",
+    "last_checked": "2026-08-22T12:11:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-21T15:11:13-04:00",
+    "pulse_last_rendered": "2026-08-22T08:19:00-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
