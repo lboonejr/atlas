@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260822T130322Z",
     "run_started": "2026-08-22T13:03:22Z",
-    "run_completed": null,
-    "note": "In progress."
+    "run_completed": "2026-08-22T13:15:33Z",
+    "note": "Complete, ~9:15am ET. 1 closed (#reports-scan backlog-count audit, Lemar's approved Option 1) · 0 new. PART V: incremental integrity scan (only _daily/2026-08-22.md touched since last full pass) -- clean, 2 known stuck notes unchanged, no repairs needed. PART S: 0 calendar changes -- no vault changes since the last verified-good sync, skipped redundant re-check. PART A: read all 31 tracked #decisions threads in full (parent+replies+reactions) -- 30 unchanged since last watermark, 1 new signal (Lemar's white_check_mark on the #reports-scan card) -- executed a full backlog audit: 25 genuinely open, 6 functionally closed but never saluted (itemized in the new Haven note), replied Done in-thread. PART B: 0 new captures (capture DM only held Samira's own posts). PART C: 13 project/admin channels swept, all silent. PART D: 1 new Gmail thread (NYT newsletter, junk), gmail watermark advanced; D1 in-flight cards already covered by PART A's full sweep. PART E/Q: quiet. PART R: 2 open Camden Launch PT cards checked, no new signal, carried unchanged (1 had already closed in the prior run). PART M: #personal-finance silent, no drops; confirmed the $2,193.73/$1,884.33 discrepancy PART T flagged lives only in stale #reports digest text -- the ledger itself has carried the correct $1,884.33 since its own 8/16 Update, nothing to edit. PART T: nothing new since last scan (only the prior digest itself, already reviewed) -- clean. Canvas: not re-checked, same day as last check (still write-blocked). Pulse: not rendered -- this run's only change (a housekeeping count-audit) judged non-material under the quiet-pass doctrine (no bill paid, no project-pulse flip, no substantive decision). Self-caught mid-run: a `cd haven/vault` left uncleared caused one new note (this run's own audit note) to commit to a doubly-nested path -- caught via resulting file-not-found errors, fixed with `git mv` + a follow-up commit, no data loss, no other file affected. Wrote directly to main throughout via local git clone + push per the git-write policy -- no branch+PR."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787401047.824359",
-      "C0BBZJL85RT": "1787401043.491319",
-      "D0BHPKMDNEP": "1787401043.491319",
+      "C0BBXA96FFV": "1787404082.261989",
+      "C0BBZJL85RT": "1787404541.175659",
+      "D0BHPKMDNEP": "1787401458.434059",
       "C0BGLEMH99T": "1787339502.000000",
       "C0BEQUW5NPP": "1787339502.000000",
       "C0BBLUA7JLX": "1787339502.000000",
@@ -58,15 +58,15 @@
       "1787339261.864519": "1787339261.864519",
       "1787339264.143129": "1787400587.679849",
       "1787400711.689609": "1787400711.689609",
-      "1787401047.824359": "1787401047.824359"
+      "1787401047.824359": "1787404082.261989"
     },
-    "capture_dm": "1787339486.323229",
-    "gmail_after_epoch": 1787400251
+    "capture_dm": "1787401458.434059",
+    "gmail_after_epoch": 1787404570
   },
   "integrity": {
     "last_full_pass": "2026-08-22T12:04:00Z",
-    "last_scan_sha": "dc6f2b945c9f053c0512fcb0866461febac56196",
-    "note": "Full whole-vault pass this run (day's first) -- 566 notes, 0 new defects. 3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged."
+    "last_scan_sha": "b5b2543aec74de7a446ce08b7e816c116f61722c",
+    "note": "Full whole-vault pass 2026-08-22 (day's first run) -- 566 notes, 0 new defects. This run: incremental scan only (1 file touched, _daily/2026-08-22.md, since last pass -- clean). 3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged."
   },
   "canvas_access": {
     "last_checked": "2026-08-22T12:11:00Z",
