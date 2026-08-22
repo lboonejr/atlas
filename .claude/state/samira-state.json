@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260822T190245Z",
-    "run_started": "2026-08-22T19:02:45Z",
-    "run_completed": "2026-08-22T19:11:54Z",
-    "note": "Complete, 3:11pm ET. 0 closed · 0 new · 0 urgent. Fully quiet pass: #decisions 0 new top-level (spot-checked 4 most-recently-active threads for reply/reaction drift, none found); capture DM 0 new from Lemar; all 13 project/admin channels + #investor-pipeline + #stormy 0 new; #personal-finance 0 drops. Gmail found 4 new threads -- 1 automated Headset report + 1 retired-address car-hunt alert (junk, labeled seen), 2 self-sent document attachments (Labor Peace Agreement attestation, Station attestations zip) from the same live 'Reggie' session driving The Station's NJ-CRC 973 renewal -- left untouched, that session owns the record, labeled seen only. PART R checked 3 Camden Launch PT cards: 1 already closed (P00 Advisory proposal, sent), 2 already locked with no new Lemar reactions (Ops ADMIN/Ariana carries a small non-blocking cosmetic Doc cleanup; Client intake system intentionally stays open on the browser lane per its own closeout rule). PART T ran a third scan (one new #reports message, the prior digest) -- clean, 0 found, logged to haven/vault/40-Projects/samira-skills/2026-08-22-reports-contradiction-scan-log.md. Canvas access not re-checked (still write-blocked, same day as last check). Pulse skipped -- nothing this pass met the 'something changed' gate. Wrote via local git (push origin main) throughout, per the anchors.md git-write policy."
+    "run_id": "run_20260822T200325Z",
+    "run_started": "2026-08-22T20:03:25Z",
+    "run_completed": null,
+    "note": "In flight."
   },
   "watermarks": {
     "slack_channels": {
