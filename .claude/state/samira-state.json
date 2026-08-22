@@ -3,17 +3,17 @@
   "lock": {
     "run_id": "run_20260822T160320Z",
     "run_started": "2026-08-22T16:03:20Z",
-    "run_completed": "2026-08-22T13:15:33Z",
-    "note": "In progress."
+    "run_completed": "2026-08-22T16:11:21Z",
+    "note": "Complete, ~12:10pm ET. 1 closed (Eden Estates AI-sent-emails CRC disclosure incident, Lemar's approved Option 3 -- confirmed authorized, false alarm) · 1 new (same card, closed same pass). PART V: filed 2 Inbox notes -- a Drive-organizing run log (-> 70-Automation/file-organizing/) and the Eden Estates incident note (-> 30-Station/); entity stub created for Eden Estates LLC; 2 known-stuck notes unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation), incremental integrity scan clean. PART S: no due-field changes since last verified sync, skipped redundant re-check. PART A: channel-level scan of #decisions since watermark found one new top-level card (the Eden Estates incident, posted by an earlier session before this run started) -- Lemar had already reacted white_check_mark on Option 3, executed it (closed, no email sent, no CRC/counsel contact). Full thread-by-thread reaction re-sweep of all 31 tracked cards NOT repeated this pass (last full audit 9:07-9:22am ET this morning) -- relying on the channel-level watermark scan only; noting this as a coverage gap for the digest. PART B: 0 new captures. PART C: 13 project/admin channels swept -- 12 silent, #admin had one new informational post from a separate CRC-renewal session (portal-login check blocked, addressed directly to Lemar) -- not a fenced/named prompt, no action. PART D: 3 new Gmail threads (newsletter, a CRC-tax self-note already actioned in that other session, a CarGurus listing notice) -- all junk/non-actionable, labeled seen, gmail watermark advanced. PART E/Q: quiet, no new investor or Stormy activity. PART R: not re-checked this pass (no new #decisions signal besides Eden Estates) -- carried unchanged from this morning's check. PART M: #personal-finance silent. PART T: #reports since last watermark showed only this run's own posts plus one duplicate-identity Haven-keeper digest (0/0/0, no contradiction) -- clean. Canvas: not re-checked, same day as last check (still write-blocked). Pulse: SKIPPED this pass despite the 'something changed' gate being met (a #decisions card closed) -- budget for this pass was prioritized to the incident triage and a full-surface sweep; flagging this as a real gap, not a doctrine change, for the next scan to pick up. Wrote directly to main throughout via the GitHub MCP connector (local git clone in this session returned stale/mismatched content vs. the true `main` HEAD -- confirmed via mcp__github__list_commits -- so all reads/writes this run used the connector, not local git)."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787404082.261989",
-      "C0BBZJL85RT": "1787404541.175659",
+      "C0BBXA96FFV": "1787414880.127769",
+      "C0BBZJL85RT": "1787415040.880129",
       "D0BHPKMDNEP": "1787401458.434059",
       "C0BGLEMH99T": "1787339502.000000",
       "C0BEQUW5NPP": "1787339502.000000",
-      "C0BBLUA7JLX": "1787339502.000000",
+      "C0BBLUA7JLX": "1787408489.243449",
       "C0BJ37SU1TL": "1787339502.000000",
       "C0BCCUKEUQ2": "1787339502.000000",
       "C0BCD7U5X2B": "1787339502.000000",
@@ -58,14 +58,15 @@
       "1787339261.864519": "1787339261.864519",
       "1787339264.143129": "1787400587.679849",
       "1787400711.689609": "1787400711.689609",
-      "1787401047.824359": "1787404082.261989"
+      "1787401047.824359": "1787404082.261989",
+      "1787408466.876989": "1787414880.127769"
     },
     "capture_dm": "1787401458.434059",
-    "gmail_after_epoch": 1787404570
+    "gmail_after_epoch": 1787414968
   },
   "integrity": {
     "last_full_pass": "2026-08-22T12:04:00Z",
-    "last_scan_sha": "b5b2543aec74de7a446ce08b7e816c116f61722c",
+    "last_scan_sha": "cdc89081d3830762457b335f55889f9dc39314bf",
     "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged."
   },
   "canvas_access": {
