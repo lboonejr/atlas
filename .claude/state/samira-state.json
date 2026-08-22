@@ -3,13 +3,13 @@
   "lock": {
     "run_id": "run_20260822T170308Z",
     "run_started": "2026-08-22T17:03:08Z",
-    "run_completed": "2026-08-22T16:20:35Z",
-    "note": "IN PROGRESS"
+    "run_completed": "2026-08-22T17:05:26Z",
+    "note": "Complete, 1:04pm ET. 0 closed · 0 new · 0 urgent. Fully quiet pass: #decisions 0 new top-level (thread-by-thread reply re-audit not repeated this pass, same coverage-gap note as prior passes); Samira capture DM 0 new; all 13 swept project/admin channels 0 new; Gmail search since watermark found 1 thread (AutoTempest car-search alert to the retired car-hunt address, car-search loop sunset 2026-07-21) -- not reply-worthy, no task, labeled Samira/seen, no draft. Investor/Stormy/PT cards/money-hub/#reports-scan all quiet, no new signal. Vault Inbox unchanged (still only the 2 known-stuck carried notes; no incremental integrity re-scan run, no vault content changed beyond this run's own state/digest commits). Canvas access not re-checked (still write-blocked, same day as last check). Pulse skipped -- nothing this pass met the 'something changed' gate. Wrote via the GitHub MCP connector throughout."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787414880.127769",
-      "C0BBZJL85RT": "1787415598.814349",
+      "C0BBZJL85RT": "1787418293.244869",
       "D0BHPKMDNEP": "1787415367.879599",
       "C0BGLEMH99T": "1787339502.000000",
       "C0BEQUW5NPP": "1787339502.000000",
@@ -62,12 +62,12 @@
       "1787408466.876989": "1787414880.127769"
     },
     "capture_dm": "1787415367.879599",
-    "gmail_after_epoch": 1787415582
+    "gmail_after_epoch": 1787418266
   },
   "integrity": {
     "last_full_pass": "2026-08-22T12:04:00Z",
     "last_scan_sha": "cdc89081d3830762457b335f55889f9dc39314bf",
-    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged."
+    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged. No incremental scan run this pass -- no vault files changed beyond this run's own state/digest commits."
   },
   "canvas_access": {
     "last_checked": "2026-08-22T12:11:00Z",
