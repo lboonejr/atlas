@@ -1,9 +1,9 @@
 ---
 created: 2026-08-21T15:03:00-04:00
-updated: 2026-08-21T16:05:00-04:00
+updated: 2026-08-22T08:04:00-04:00
 domain: legal
 type: task
-status: active
+status: done
 tags: [legal, attorney-referral, camden-county-bar]
 source: gmail
 ---
@@ -28,3 +28,8 @@ Samira drafts or sends without being asked.
 
 ## Sources
 - gmail: thread `1a020dd0bde2c1bf`, "Re: Attorney Referral Assistance", 2026-08-21
+
+## Update — 2026-08-22
+Lemar reacted 🫡 on the #decisions card (parent ts `1787339264.143129`) — closing
+without further tracking. No outreach to Siciliano made. Referral info above stays on
+file if the matter resurfaces later.
