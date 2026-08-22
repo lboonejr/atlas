@@ -66,8 +66,8 @@
   },
   "integrity": {
     "last_full_pass": "2026-08-22T12:04:00Z",
-    "last_scan_sha": "7a397b61d9d2204cf8323e4d6d1bcc718a05aa60",
-    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged. This pass's incremental diff (since prior last_scan_sha cdc89081) covered 2 changed files -- an already-correctly-filed automation log and the daily journal -- both clean, no repairs needed."
+    "last_scan_sha": "ddda7527867e14489b466fd63cd3cf718e3798c5",
+    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged. This pass's incremental diff (since prior last_scan_sha 7a397b61) covered 2 changed files -- the reports-contradiction-scanner log and the daily journal -- both clean, no repairs needed. Inbox unchanged: same 2 stuck notes, no new arrivals."
   },
   "canvas_access": {
     "last_checked": "2026-08-22T12:11:00Z",
