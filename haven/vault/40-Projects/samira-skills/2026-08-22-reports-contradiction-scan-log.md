@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-23T09:25:00-04:00
+updated: 2026-08-23T13:35:00-04:00
 domain: project
 type: log
 status: active
@@ -186,4 +186,58 @@ No new messages posted to #reports since the prior digest — nothing to check.
 
 ## Sources (fifth run)
 - slack: #reports `C0BBZJL85RT`, ts range `1787425974`–`1787491189`
+- haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md
+
+## Update 2026-08-23 (sixth run)
+
+**Scanned:** #reports ts `1787491189`–`1787506120` (2026-08-23 ~9:20am ET through
+~1:16pm ET, 6 messages — the boundary message `1787491189.919269` was the last message
+of the fifth run's scanned range and was used only for grouping context, not
+re-flagged).
+
+**Found: 1.**
+
+1. **Obvious fix — "#decisions waiting-on-you" count undercounted by 1 for two
+   consecutive digests while a newly-opened same-day card sat open.**
+   - 8/23 10:48am ET (`1787496565`): "Waiting on you: 26 in #decisions" — this run
+     opened a NEW card for the calendar-sync wrong-calendar bug (#decisions ts
+     `1787495798.327079`), correctly reflected as the +1 that brought the reconciled
+     25 up to 26.
+   - 8/23 11:06am ET (`1787497592`), 18 minutes later, reporting "0 closed · 0 new ·
+     0 urgent": "Waiting on you: 25 in #decisions (unchanged, per the 8/22 reconciled
+     audit)" — reverts to 25 with no closure reported anywhere and no explanation for
+     where the just-opened calendar-sync card went.
+   - 8/23 12:23pm ET (`1787502228`): "Waiting on you: 25 in #decisions (unchanged, per
+     the 8/22 reconciled audit)" — repeats the same 25, still with the calendar-sync
+     card open and unaddressed.
+   - **Ground truth:** #decisions itself (`C0BBXA96FFV`, ts `1787495798.327079`) shows
+     the calendar-sync card was posted before the 10:48am digest and was not reacted to
+     until ts `1787504854` (~12:47pm ET, between the 12:23pm and 1:16pm digests) — so
+     it was genuinely open and un-executed through both the 11:06am and 12:23pm
+     digests. Per the reconciled-count methodology locked in
+     `haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md`
+     ("the count of tracked threads with no 🫡 and no '✅ CLOSED' resolution"), this
+     card should have counted at both 11:06am and 12:23pm, making the true figure 26,
+     not 25, for that whole window. The 8/23 1:16pm ET (`1787506120`) digest is
+     internally consistent again: "26 in #decisions (25 carried + 1 new)" — the
+     calendar-sync card had been executed that run (removed from the open count once
+     Samira replied Done ✅) and a new shopcuzzies Search-Console card (ts
+     `1787505030.902159`) took its place as the +1.
+   - **Fix (not yet posted — stages for a later PART C pass, per doctrine):** no
+     correction needed to any currently-live figure — by 1:16pm the count is accurate
+     again. Flag on a future digest, as process hygiene only, that the 11:06am/12:23pm
+     "25 unchanged" readings briefly missed a same-day newly-opened card. This is the
+     same undercount failure mode already logged in this note's first and fifth runs —
+     the digest occasionally reports the last-reconciled baseline instead of
+     re-checking for cards opened earlier the same run-day. No #decisions card — the
+     backlog-audit note and #decisions channel state already resolve exactly what the
+     correct count and method are.
+
+**Open questions posted to #decisions this run: 0.**
+
+## Sources (sixth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787491189`–`1787506120`
+- slack: #decisions `C0BBXA96FFV`, ts `1787495798.327079` (calendar-sync card, opened
+  10:48am, reacted `1787504854` ~12:47pm) and `1787505030.902159` (shopcuzzies card,
+  opened 1:16pm)
 - haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md
