@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260823T140306Z",
-    "run_started": "2026-08-23T14:03:06Z",
+    "run_id": "run_20260823T150256Z",
+    "run_started": "2026-08-23T15:02:56Z",
     "run_completed": "2026-08-23T14:50:35Z",
-    "note": "Completed. Found + reverted a real bug this run: calendar-sync's RECREATE check only looked at the personal reminder calendar before concluding an event was deleted, so it wrongly duplicated 22 live Cuzzie's/Station business-calendar reminders onto the personal calendar (2nd occurrence of this exact failure mode today, after the 9:11am run's Regus/IWG + Gusto false positives). Verified 2 of 22 directly against the Cuzzie's (Owners) calendar, confirmed live and correct; reverted all 22 notes' calendar_event_id + deleted all 22 wrong-calendar duplicates same run; logged to haven/vault/40-Projects/samira-skills/2026-08-23-calendar-sync-wrong-calendar-bug.md; flagged in #decisions (ts 1787495798.327079) for a structural fix rather than a third one-off patch. Full 32-thread #decisions backlog re-check: 0 drift, nothing new to execute. 13-channel PART C sweep, capture DM, investor pipeline, #stormy: all quiet. 2 new emails, both junk. PART R: p00-client-intake-system hit its day-4 PM checkpoint (posted status-check listing 4 outstanding items), ops-admin-lane-and-ariana carried (waiting on Lemar's manual GitHub App write grant). #personal-finance quiet. Reports-contradiction-scan: 1 obvious-fix finding noted for a later pass. Pulse rendered (9/9 sections) since this run changed things; DM sent."
+    "note": "IN PROGRESS"
   },
   "watermarks": {
     "slack_channels": {
