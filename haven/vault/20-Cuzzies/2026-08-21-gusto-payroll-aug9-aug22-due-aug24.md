@@ -1,6 +1,6 @@
 ---
 created: 2026-08-21T08:17-04:00
-updated: 2026-08-23T08:08-04:00
+updated: 2026-08-23T13:07-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -76,6 +76,19 @@ This run found the Cuzzie's (Owners) calendar had no event with id
 `v5kjoasoqugfg34n10glv8834c`, same 2026-08-24 7:00 PM ET slot, popups at 24h + day-of.
 Still `awaiting-decision` — Lemar's 8/21 point that the Gusto account itself needs
 terminating (not just another off-cycle run) stands.
+
+## Update 2026-08-23T13:07-04:00 (calendar-sync) — the 08:08 "recreate" was a false positive; duplicate deleted
+
+This run's calendar-sync found event `s6fnevfjb1cilcak3cl4u5ke70` — the one the
+08:08 update above says was "deleted outside the vault" — still live on the Cuzzie's
+(Owners) calendar, alongside the "recreated" `v5kjoasoqugfg34n10glv8834c`. It was never
+actually deleted; the 08:08 pass's list query missed it and recreated a duplicate, so
+Lemar has had two identical 8/24 7:00 PM ET reminders firing since this morning.
+
+Cancelled the orphaned original (`s6fnevfjb1cilcak3cl4u5ke70`) — it was not referenced
+by this note's `calendar_event_id` (which already pointed at the newer
+`v5kjoasoqugfg34n10glv8834c`), so nothing this note tracks changed. One event remains:
+`v5kjoasoqugfg34n10glv8834c`, 2026-08-24 7:00 PM ET, popups at 24h + day-of.
 
 ## Sources
 - gmail: thread `1a024238c4662406` ("Time to run payroll for Cuzzie's Dispensary &
