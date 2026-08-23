@@ -1,13 +1,13 @@
 ---
 created: 2026-08-21T08:17-04:00
-updated: 2026-08-21T12:04-04:00
+updated: 2026-08-23T08:08-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
 tags: [gusto, payroll, funding, wind-down]
 due: 2026-08-24T19:00-04:00
 source: gmail
-calendar_event_id: s6fnevfjb1cilcak3cl4u5ke70
+calendar_event_id: v5kjoasoqugfg34n10glv8834c
 ---
 
 # Gusto payroll — Aug 9–22 period, due Monday 2026-08-24 7:00 PM ET
@@ -68,6 +68,14 @@ bank visibility — balances are reported, never fetched, per the 2026-08-10 loc
 `awaiting-decision`, same as above; no new card opened, replied in-thread on the existing
 one pointing to this as further evidence the Gusto account itself needs terminating, not
 another off-cycle run. Gmail thread `1a0250d7b7efbc78` labeled seen.
+
+## Update 2026-08-23T08:08-04:00 (calendar-sync) — deadline event was gone, recreated
+
+This run found the Cuzzie's (Owners) calendar had no event with id
+`s6fnevfjb1cilcak3cl4u5ke70` (deleted outside the vault — cause unknown). Recreated as
+`v5kjoasoqugfg34n10glv8834c`, same 2026-08-24 7:00 PM ET slot, popups at 24h + day-of.
+Still `awaiting-decision` — Lemar's 8/21 point that the Gusto account itself needs
+terminating (not just another off-cycle run) stands.
 
 ## Sources
 - gmail: thread `1a024238c4662406` ("Time to run payroll for Cuzzie's Dispensary &
