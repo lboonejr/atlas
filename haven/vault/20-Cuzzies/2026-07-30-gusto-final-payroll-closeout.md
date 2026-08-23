@@ -1,13 +1,13 @@
 ---
 created: 2026-07-30T14:30-04:00
-updated: 2026-08-17T14:20:00-04:00
+updated: 2026-08-23T10:15:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [gusto, payroll, wind-down, close-out]
 source: gmail
 due: 2026-07-31T09:00:00-04:00
-calendar_event_id: 77r5jovbnr8mllc6iut76o4p9k
+calendar_event_id: o1r5t034nm6omfcn02vuhahkuo
 ---
 
 # Gusto Final Payroll Deadline — Complete Employee Close-Out (all 8 employees)

@@ -1,13 +1,13 @@
 ---
 created: 2026-08-21T08:17-04:00
-updated: 2026-08-23T13:07-04:00
+updated: 2026-08-23T10:15:00-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
 tags: [gusto, payroll, funding, wind-down]
 due: 2026-08-24T19:00-04:00
 source: gmail
-calendar_event_id: v5kjoasoqugfg34n10glv8834c
+calendar_event_id: vo1l561sua6vlg9p3s7m56e9es
 ---
 
 # Gusto payroll — Aug 9–22 period, due Monday 2026-08-24 7:00 PM ET

@@ -1,13 +1,13 @@
 ---
 created: 2026-07-31T14:00-04:00
-updated: 2026-08-17T14:20:00-04:00
+updated: 2026-08-23T10:15:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [liquidibee, forbearance, ach, lender, nomas-recovery]
 source: gmail
 due: 2026-08-15T09:00-04:00
-calendar_event_id: 02bg33r2b7pu4kosmhk3kb2r74
+calendar_event_id: 9k3gpf0hmfes1a3lnc5e16f0kk
 ---
 
 # Liquidibee — forbearance ends 8/1, ACH payments resume

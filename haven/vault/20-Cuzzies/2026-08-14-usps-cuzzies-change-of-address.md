@@ -1,13 +1,13 @@
 ---
 created: 2026-08-13T14:10:00-04:00
-updated: 2026-08-17T14:20:00-04:00
+updated: 2026-08-23T10:15:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [usps, change-of-address, cuzzies, camden-eviction, pennsauken]
 source: claude
 due: 2026-08-14T09:00:00-04:00
-calendar_event_id: kqm31edso6ah8aieob46sle9t8
+calendar_event_id: 604m2oakteouapd652vrmji2d4
 ---
 
 # USPS business Change of Address — Cuzzie's, Camden → Pennsauken
