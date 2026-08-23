@@ -1,13 +1,13 @@
 ---
 created: 2026-08-15T08:04-04:00
-updated: 2026-08-23T10:15:00-04:00
+updated: 2026-08-23T10:30:00-04:00
 domain: cuzzies
 type: meeting
 status: active
 tags: [jamil, east-camden, dispensary, license, prospective-buyer, cuzzies-license]
 source: slack
 due: 2026-08-18T17:00-04:00
-calendar_event_id: 7086ra9fucsnnotbh5grkb3j18
+calendar_event_id: na455usns0mu7pn8jfla1l0co4
 ---
 
 # Jamil — East Camden prospective dispensary — meeting Tue 8/18 5pm
