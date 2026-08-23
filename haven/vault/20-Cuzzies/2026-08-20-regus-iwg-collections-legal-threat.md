@@ -1,13 +1,13 @@
 ---
 created: 2026-08-20T10:15-04:00
-updated: 2026-08-21T13:20-04:00
+updated: 2026-08-23T08:08-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
 tags: [regus, iwg, collections, past-due, wind-down, legal-adjacent, off-button]
 source: gmail
 due: 2026-08-23T09:00-04:00
-calendar_event_id: rdvh4u83qhr0rg26t64fncvpa0
+calendar_event_id: ebc79d4jj3niuos29u9g4jmfjc
 ---
 
 # Regus / IWG — $2,607.61, arbitration threatened, 5-day clock expires 2026-08-23
@@ -185,6 +185,16 @@ lump sum outright, push once more for a two-payment split rather than a formal "
 or hold and route to counsel alongside DeWalt — the Archer & Greiner engagement moved
 today, see `60-Legal/2026-07-21-dewalt-v-cuzzies-default-judgment.md`). No draft sent
 to Fernanda yet — waiting on Lemar's pick. Gmail thread labeled `Samira/seen`.
+
+## Update 2026-08-23T08:08-04:00 (calendar-sync) — deadline event was gone, recreated
+
+This run found the Cuzzie's (Owners) calendar had no event with id
+`rdvh4u83qhr0rg26t64fncvpa0` (deleted outside the vault — cause unknown). The 8/23 09:00
+ET date is still what this note's `due` field says, so it was recreated as
+`ebc79d4jj3niuos29u9g4jmfjc`, same slot, popups at 24h + day-of. Per the 8/21 10:20am
+update above, the $1,506.05 settlement offer (valid ~through 8/28) is the operative
+deadline now, not this 8/23 date — flagging that the `due` field itself may need updating
+to the settlement window is Lemar's call, not something this sync makes on its own.
 
 ## Related
 - [[regus-iwg]]
