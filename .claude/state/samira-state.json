@@ -3,19 +3,19 @@
   "lock": {
     "run_id": "run_20260823T140306Z",
     "run_started": "2026-08-23T14:03:06Z",
-    "run_completed": "2026-08-23T13:12:38Z",
-    "note": "In progress."
+    "run_completed": "2026-08-23T14:50:35Z",
+    "note": "Completed. Found + reverted a real bug this run: calendar-sync's RECREATE check only looked at the personal reminder calendar before concluding an event was deleted, so it wrongly duplicated 22 live Cuzzie's/Station business-calendar reminders onto the personal calendar (2nd occurrence of this exact failure mode today, after the 9:11am run's Regus/IWG + Gusto false positives). Verified 2 of 22 directly against the Cuzzie's (Owners) calendar, confirmed live and correct; reverted all 22 notes' calendar_event_id + deleted all 22 wrong-calendar duplicates same run; logged to haven/vault/40-Projects/samira-skills/2026-08-23-calendar-sync-wrong-calendar-bug.md; flagged in #decisions (ts 1787495798.327079) for a structural fix rather than a third one-off patch. Full 32-thread #decisions backlog re-check: 0 drift, nothing new to execute. 13-channel PART C sweep, capture DM, investor pipeline, #stormy: all quiet. 2 new emails, both junk. PART R: p00-client-intake-system hit its day-4 PM checkpoint (posted status-check listing 4 outstanding items), ops-admin-lane-and-ariana carried (waiting on Lemar's manual GitHub App write grant). #personal-finance quiet. Reports-contradiction-scan: 1 obvious-fix finding noted for a later pass. Pulse rendered (9/9 sections) since this run changed things; DM sent."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787490724.663969",
-      "C0BBZJL85RT": "1787490724.663969",
+      "C0BBXA96FFV": "1787495798.327079",
+      "C0BBZJL85RT": "1787496565.805359",
       "D0BHPKMDNEP": "1787490758.000000",
       "C0BGLEMH99T": "1787490758.000000",
       "C0BEQUW5NPP": "1787490758.000000",
       "C0BBLUA7JLX": "1787490758.000000",
       "C0BJ37SU1TL": "1787490758.000000",
-      "C0BCCUKEUQ2": "1787490758.000000",
+      "C0BCCUKEUQ2": "1787494295.000000",
       "C0BCD7U5X2B": "1787490758.000000",
       "C0BCH2C3GRM": "1787490758.000000",
       "C0BDN2KQFD4": "1787490758.000000",
@@ -59,22 +59,23 @@
       "1787339264.143129": "1787400587.679849",
       "1787400711.689609": "1787400711.689609",
       "1787401047.824359": "1787404082.261989",
-      "1787408466.876989": "1787414880.127769"
+      "1787408466.876989": "1787414880.127769",
+      "1787495798.327079": "1787495798.327079"
     },
     "capture_dm": "1787490758.000000",
-    "gmail_after_epoch": 1787490758
+    "gmail_after_epoch": 1787496635
   },
   "integrity": {
     "last_full_pass": "2026-08-23T12:06:00Z",
-    "last_scan_sha": "302106fa1a7346d1ddefd889955e42b89dccdf61",
-    "note": "Incremental pass this run (not day's first): 5 vault files changed since 302106f, 0 new mechanical defects, 0 new value-validation flags. 4 known/carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave), 40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md (missing created/updated, tracked via open PR #73, deliberately not merged)."
+    "last_scan_sha": "dfff93129a058053e94a5694dc4cb282f07926f9",
+    "note": "This run was incremental (not day's first). 0 new mechanical defects, 0 new value-validation flags on the files touched. 4 known/carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave), 40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md (missing created/updated, tracked via open PR #73, deliberately not merged). last_scan_sha advanced to this run's final commit so the next incremental pass diffs from here."
   },
   "canvas_access": {
     "last_checked": "2026-08-22T12:11:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-22T08:19:00-04:00",
+    "pulse_last_rendered": "2026-08-23T10:41:00-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
