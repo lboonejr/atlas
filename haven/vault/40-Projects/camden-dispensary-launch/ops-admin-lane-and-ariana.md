@@ -4,6 +4,7 @@ type: decision
 status: active
 source: claude
 tags: [samira-loop, camden-launch, phase-00]
+updated: 2026-08-23T14:15:00-04:00
 ---
 
 # Ops ADMIN lane and Ariana
@@ -147,6 +148,30 @@ coverage was already posed 8/8 at round 1 (this ran as a single-round card, unli
 two-round split on other Camden Launch cards). Remaining before the ADMIN lane goes
 live: the GitHub Contents-write grant (Lemar, GitHub admin UI), the access checklist
 (Lemar, Workspace/Slack admin), and the cosmetic cleanup pass on the onboarding packet.
+
+## Update — 2026-08-23T14:15:00-04:00, scan 7, PM status check
+
+Day 3 since round 1 locked (2026-08-20), and no signal at all has landed in the card's
+thread since — no reply, no reaction, no status check ever posted. This is the first PM
+checkpoint for this card, posted now in-thread rather than as a new round (there is
+nothing left to ask; 8/8 lenses and 6/6 gates were already closed at round 1).
+
+Lens/gate status unchanged: lenses 8/8, gates 6/6, locked.
+
+Still outstanding, all of it Lemar's, none of it buildable from a cloud session:
+
+- GitHub Contents-write grant (round 1 answer 2) — approved in principle, not yet
+  actioned. GitHub Settings → GitHub Apps → this app → Permissions, on `lboonejr/atlas`.
+- Ariana's access checklist (Workspace/Slack admin) — account creation, the 02 Internal
+  grant (no carve-out needed per round 1 answer 1), and channel access. Not started.
+- Cosmetic cleanup pass on the onboarding packet (Docs-conversion left literal markdown
+  headings and a 1,1,1 rules list) — waits on the checklist landing before it is worth
+  touching, per the original open question.
+
+Per the overlay's two-day rule: if this stays quiet, it parks on ⛔ at the next PM check.
+
+pt:ops-admin-lane-and-ariana · note:haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md · phase:00 · lane:mixed · lenses:8/8 · gates:6/6 · locked · PM check:2026-08-23 (day 3, first check)
+— Samira
 
 ## Handoff
 
