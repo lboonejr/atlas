@@ -1,6 +1,6 @@
----
+--- 
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-23T15:06:00-04:00
+updated: 2026-08-23T17:03:00-04:00
 domain: project
 type: log
 status: active
@@ -259,3 +259,22 @@ cited Haven note.
 
 ### Sources (seventh run)
 - slack: #reports `C0BBZJL85RT`, ts range `1787506120`–`1787509552`
+
+## Update 2026-08-23 (eighth run)
+
+**Scanned:** #reports ts `1787509552`–`1787512539` (2026-08-23 ~2:25pm ET through ~3:03pm
+ET, 1 new message — the run_20260823T190312Z digest).
+
+**Found: 0. Clean scan.**
+
+The one new digest (`1787512539`, 3:03pm ET) reports "26 in #decisions (unchanged — DeWalt
+reply still awaiting your 🫡)" and "PART T: clean scan... 0 contradictions" — consistent
+with the prior (seventh) run's reconciled figures and with this run's own findings. No
+conflicting figures, no unresolved self-corrections, no stale claims against any cited
+Haven note. Note: the run that posted this digest (run_20260823T190312Z) never completed
+its own state-file write (superseded by two subsequent runs that also died mid-flight
+before this run resumed cleanly at run_20260823T210305Z) — an infra/lock issue, not a
+#reports contradiction, so out of this skill's scope; not flagged here.
+
+### Sources (eighth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787509552`–`1787512539`
