@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260823T150256Z",
-    "run_started": "2026-08-23T15:02:56Z",
+    "run_id": "run_20260823T160325Z",
+    "run_started": "2026-08-23T16:03:25Z",
     "run_completed": "2026-08-23T15:07:30Z",
-    "note": "Quiet pass. No vault changes since the prior run at all (git diff empty against f6b9677) — integrity/calendar-sync were no-ops. #decisions: 0 new top-level cards; spot-checked the 3 most-recently-touched threads, no new reactions beyond what's already actioned (the reconciled-audit thread's Done reply already stands, awaiting Lemar's salute). Capture DM, 17-channel PART C sweep, #investor-pipeline, #stormy, #personal-finance, #reports: all 0 new. Gmail (in:inbox after:<watermark> -label:Samira/seen): 0 new threads. PART R: both open cards (p00-client-intake-system, ops-admin-lane-and-ariana) already had their once-a-day status check on the prior (10:48am) run — not re-touched this pass per the once-a-day cap. reports-scan and Pulse both carried (nothing new to scan/render). Canvas recheck skipped (not today's first run, still ⛔ blocked)."
+    "note": "In progress."
   },
   "watermarks": {
     "slack_channels": {
