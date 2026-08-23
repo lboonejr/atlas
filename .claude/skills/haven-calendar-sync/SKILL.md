@@ -26,13 +26,36 @@ corrects the event. **The vault always wins.**
 > the single machine-managed field `calendar_event_id`, which this skill owns).
 
 ## ANCHORS
-All platform IDs live in **`.claude/anchors.md`** — the reminder-calendar ID is there.
+All platform IDs live in **`.claude/anchors.md`** — the reminder-calendar ID and the
+Cuzzie's (Owners) calendar ID are both there (Google Calendar section).
 Constants:
 - Vault: `haven/vault/` on repo `lboonejr/atlas`, default branch.
 - Transport: GitHub connector. Pull → read `due` notes → write back `calendar_event_id`
   → commit → push.
-- Target: the reminder calendar ONLY — personal, never a business primary, never
-  external attendees. DO NOT write the retired local reader copy.
+- **Target calendar is per-note, by `domain`** (locked 2026-08-10, per anchors.md and the
+  money-hub skill): `domain: personal` (and anything without a business domain) →
+  the **reminder calendar**. `domain: cuzzies` / `domain: station` → the **Cuzzie's
+  (Owners)** business calendar. Never mix them, never add external attendees, and
+  never write the retired local reader copy.
+
+## Which calendar owns a note (read this before Classify)
+
+Every `due` note has exactly one home calendar, decided by its `domain` — never by
+where a note last happened to be:
+- `domain: personal` → reminder calendar.
+- `domain: cuzzies` / `domain: station` → Cuzzie's (Owners) calendar.
+- Any other domain carrying a `due` (rare) → treat as personal (reminder calendar)
+  unless the note itself says otherwise; ask rather than guess if truly ambiguous.
+
+**Always resolve a note's home calendar from its `domain` first, then look there** —
+never assume every note lives on the reminder calendar. Checking the wrong calendar
+and finding nothing is not evidence the event was deleted; it is evidence you looked
+in the wrong place. (Root cause of the 2026-08-23 incident, see
+`haven/vault/40-Projects/samira-skills/2026-08-23-calendar-sync-wrong-calendar-bug.md`:
+the RECREATE check looked up cuzzies/station notes' ids on the reminder calendar only,
+found nothing there — because the event was correctly living on the Cuzzie's (Owners)
+calendar — concluded "deleted," and recreated 22 duplicates in the wrong place while
+overwriting the correct event ids.)
 
 ---
 
@@ -48,17 +71,26 @@ Constants:
 1. **Pull** the latest `haven/vault/`. Find every note (filed folders + `00-Inbox`)
    whose frontmatter contains a `due`. A stuck Inbox note can still ring.
 
-2. **Classify** each `due` note by comparing note ↔ calendar:
-   - `due`, no `calendar_event_id` → **NEW**: create the event; write the id back.
-   - `due` + id, note still `active`/`parked`/`awaiting-decision` → **EXISTING**: if the
-     start, title, or note link drifted, UPDATE the event to match the note; else nothing.
-   - `status: done`/`archived` with an id → **RETIRE**: cancel the event, clear the id.
-   - id present but `due` removed → cancel the event, clear the id.
-   - id points to a deleted event but `due` remains → **RECREATE** (the vault wins).
+2. **Classify** each `due` note by comparing note ↔ calendar. First resolve the note's
+   **home calendar from its `domain`** (see "Which calendar owns a note" above), then
+   look up its `calendar_event_id` **on that calendar only** — never on the other one:
+   - `due`, no `calendar_event_id` → **NEW**: create the event on the note's home
+     calendar; write the id back.
+   - `due` + id, note still `active`/`parked`/`awaiting-decision` → **EXISTING**: look
+     up the id on the note's home calendar. If found and the start, title, or note link
+     drifted, UPDATE the event to match the note; if found and unchanged, do nothing.
+   - `status: done`/`archived` with an id → **RETIRE**: cancel the event (on the note's
+     home calendar), clear the id.
+   - id present but `due` removed → cancel the event (home calendar), clear the id.
+   - id present but not found on the note's home calendar and `due` remains →
+     **RECREATE** (the vault wins) — but only after confirming the id is genuinely
+     absent from the home calendar. A lookup against the *wrong* calendar returning
+     nothing is not a deleted event; re-check `domain` before concluding RECREATE for
+     any `cuzzies`/`station` note.
 
-3. **Event shape**: reminder calendar; no attendees; start = `due`; 30-min default;
-   title `Haven: <note title>`; description = the note's repo path + one-line summary;
-   popup notification on.
+3. **Event shape**: the note's home calendar (see above); no attendees; start = `due`;
+   30-min default; title `Haven: <note title>`; description = the note's repo path +
+   one-line summary; popup notification on.
 
 4. **Write back** `calendar_event_id` (or clear it), **touch `updated`**, commit + push:
    `calendar-sync: +A ~B -C`.
