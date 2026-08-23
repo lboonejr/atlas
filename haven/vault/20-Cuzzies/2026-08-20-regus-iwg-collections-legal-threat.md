@@ -1,13 +1,13 @@
 ---
 created: 2026-08-20T10:15-04:00
-updated: 2026-08-23T10:15:00-04:00
+updated: 2026-08-23T10:30:00-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
 tags: [regus, iwg, collections, past-due, wind-down, legal-adjacent, off-button]
 source: gmail
 due: 2026-08-23T09:00-04:00
-calendar_event_id: 48dimg5eevaop1nso5d4ctp0n8
+calendar_event_id: ebc79d4jj3niuos29u9g4jmfjc
 ---
 
 # Regus / IWG — $2,607.61, arbitration threatened, 5-day clock expires 2026-08-23

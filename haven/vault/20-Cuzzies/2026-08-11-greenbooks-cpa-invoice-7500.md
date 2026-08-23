@@ -1,13 +1,13 @@
 ---
 created: 2026-08-11T08:30:00-04:00
-updated: 2026-08-23T10:15:00-04:00
+updated: 2026-08-23T10:30:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [samira, greenbooks-cpa, invoice, accounts-payable]
 source: gmail
 due: 2026-08-11T09:00:00-04:00
-calendar_event_id: tcad0g0bij0i0oro6l6mkl9kbs
+calendar_event_id: a9uokh12kt06f3ac4a701ooie4
 ---
 
 # Greenbooks CPA (Huljev CPA PLLC) — $7,500 invoice, due on receipt

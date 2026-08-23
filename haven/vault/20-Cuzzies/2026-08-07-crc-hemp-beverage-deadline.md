@@ -1,13 +1,13 @@
 ---
 created: 2026-08-07T16:12-04:00
-updated: 2026-08-23T10:15:00-04:00
+updated: 2026-08-23T10:30:00-04:00
 domain: cuzzies
 type: reference
 status: active
 tags: [crc, compliance, hemp-beverages]
 source: gmail
 due: 2026-11-13T09:00-04:00
-calendar_event_id: r5krjrt8us97esjivhll7e9duc
+calendar_event_id: qrg5ef3socj6us3h69e6a0cqq8
 ---
 
 # CRC — intoxicating hemp beverage grace period ends Nov 13, 2026

@@ -1,13 +1,13 @@
 ---
 created: 2026-08-14T16:50-04:00
-updated: 2026-08-23T10:15:00-04:00
+updated: 2026-08-23T10:30:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [mca, forbearance, payment-plans, camden-dispensary-sale]
 source: slack
 due: 2026-08-17T09:00-04:00
-calendar_event_id: aqdbcb77904ff0aj41golt6go0
+calendar_event_id: gtp95qq1vki3ce9lopij5v4be4
 ---
 
 # MCA forbearance/payment-plan push — ahead of Cuzzie's (Camden) sale
