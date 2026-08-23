@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260823T210305Z",
     "run_started": "2026-08-23T21:03:05Z",
-    "run_completed": "2026-08-23T18:25:20Z",
-    "note": "IN PROGRESS. Prior lock (run_20260823T200244Z, started 2026-08-23T20:02:44Z) aged out unfinished after 45+ min and is treated as died-mid-flight per PART 0 (second consecutive run to die mid-flight — worth a look if it keeps happening)."
+    "run_completed": "2026-08-23T21:18:00Z",
+    "note": "Completed cleanly. Prior two runs (run_20260823T190312Z, run_20260823T200244Z) died mid-flight without releasing the lock or writing watermarks; this run caught up their unrecorded backlog (individually re-verified all 34 tracked #decisions threads, confirmed 4 already closed and dropped them from tracking) and completed normally."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787509508.677979",
-      "C0BBZJL85RT": "1787509552.018409",
-      "D0BHPKMDNEP": "1787506085.446339",
+      "C0BBZJL85RT": "1787519826.710749",
+      "D0BHPKMDNEP": "1787509463.413119",
       "C0BGLEMH99T": "1787490758.000000",
       "C0BEQUW5NPP": "1787490758.000000",
       "C0BBLUA7JLX": "1787490758.000000",
@@ -41,35 +41,31 @@
       "1787112734.344369": "1787494618.161649",
       "1787152085.518979": "1787159332.480679",
       "1787159607.185319": "1787162996.829679",
-      "1787155581.357669": "1787509387.000000",
-      "1787157130.471099": "1787328710.030059",
+      "1787155581.357669": "1787509076.997969",
       "1787227722.583919": "1787260488.874049",
       "1787231683.266619": "1787234895.613759",
       "1787235032.481949": "1787333215.335379",
       "1787238798.497049": "1787238833.679779",
       "1787245811.807379": "1787328711.329099",
       "1787256504.479409": "1787260487.561709",
-      "1786824337.657789": "1786831565.789469",
-      "1786709997.432499": "1786727321.939139",
       "1787314219.825659": "1787328547.699749",
       "1787314456.900919": "1787321654.863689",
       "1787333131.938499": "1787509508.677979",
       "1787339259.215559": "1787339259.215559",
       "1787339261.864519": "1787339261.864519",
-      "1787339264.143129": "1787400587.679849",
       "1787400711.689609": "1787400711.689609",
       "1787401047.824359": "1787404082.261989",
       "1787408466.876989": "1787414880.127769",
       "1787495798.327079": "1787504854.928079",
       "1787505030.902159": "1787505030.902159"
     },
-    "capture_dm": "1787506085.446339",
-    "gmail_after_epoch": 1787507055
+    "capture_dm": "1787509463.413119",
+    "gmail_after_epoch": 1787519783
   },
   "integrity": {
     "last_full_pass": "2026-08-23T12:06:00Z",
-    "last_scan_sha": "a4aae4d8487c411a37f08e37566f4dec369248d3",
-    "note": "Incremental pass again this run (not day's first): 0 files under haven/vault/ changed since the prior scan_sha (only the state file itself had moved), so 0 notes checked, 0 repairs, 0 new defects. 4 known/carried defects unchanged (00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md, 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md, _daily/2026-08-01.md lossy b64, camden-dispensary-launch/ops-admin-lane-and-ariana.md). scan_sha advanced to this run's final main HEAD (post vault-keeper filing commit) so the next run's diff starts clean from here."
+    "last_scan_sha": "6fd99ef665510a6ddab115238eaa40193785554b",
+    "note": "Incremental pass again this run (not day's first): 4 files under haven/vault/ changed since the prior scan_sha, all already checked (ops-admin-lane-and-ariana carried defect confirmed unchanged; 3 others valid). 4 known/carried defects unchanged (00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md, 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md, _daily/2026-08-01.md lossy b64, camden-dispensary-launch/ops-admin-lane-and-ariana.md). scan_sha advanced to this run's final main HEAD."
   },
   "canvas_access": {
     "last_checked": "2026-08-22T12:11:00Z",
