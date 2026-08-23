@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-22T16:03:00-04:00
+updated: 2026-08-23T09:25:00-04:00
 domain: project
 type: log
 status: active
@@ -142,3 +142,48 @@ No new messages posted to #reports since the prior digest — nothing to check.
 
 ## Sources (fourth run)
 - slack: #reports `C0BBZJL85RT`, watermark `1787425929.782849`
+
+## Update 2026-08-23 (fifth run)
+
+**Scanned:** #reports ts `1787425974`–`1787491189` (2026-08-22 ~3:13pm ET through
+2026-08-23 ~9:20am ET, 8 messages).
+
+**Found: 1.**
+
+1. **Obvious fix — "#decisions waiting-on-you" count reverted to pre-audit eyeballing
+   for one digest, then silently reverted back.**
+   - 8/22 4:03pm ET (`1787429243`): "Waiting on you: 25 in #decisions (carried from the
+     8/22 morning audit, not re-audited this pass)."
+   - 8/22 6:10pm ET (`1787436617`): "Waiting on you: 25 in #decisions (reconciled 8/22
+     4pm audit, re-checked this pass — no drift, all 32 tracked threads unchanged since
+     their last watermark)."
+   - 8/23 8:03am ET (`1787487290`): "Waiting on you: ~46 open cards in #decisions
+     (backlog, mostly pre-existing — see note below)" — body explains: "spot-checked
+     the 2 threads showing post-watermark activity ... Did NOT re-verify the ~44 older
+     reacted-but-unclosed cards individually this pass — flagging as a backlog worth a
+     dedicated look, not confirmed stuck." This is a return to the exact "eyeballing
+     recent channel activity" method the backlog audit explicitly retired.
+   - 8/23 9:11am ET (`1787490724`): "Waiting on you: 25 in #decisions (per the 8/22
+     reconciled backlog audit)" — back to the correct reconciled figure one hour later,
+     but with no acknowledgment that the prior digest had reported ~46, and no
+     explanation of what happened to the ~44 "backlog" cards it named.
+   - **Ground truth:** `haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md`
+     is unambiguous: "Going forward, the digest's 'waiting on you' figure is the count
+     of tracked threads with no 🫡 and no '✅ CLOSED' resolution, not a fresh eyeball
+     each time," with the reconciled count fixed at 25 (as of 8/22, 31 tracked threads).
+     Nothing changed in #decisions between 6:10pm 8/22 and 9:11am 8/23 to justify a jump
+     to ~46 — the vault resolves this cleanly: 25 was and remains correct, the 8:03am
+     ~46 figure was a one-off methodology regression (eyeballing crept back in), and
+     9:11am's return to 25 is the accurate figure, just posted without saying so.
+   - **Fix (not yet posted — stages for a later PART C pass, per doctrine):** no
+     correction needed to the *figure* itself (25 is currently accurate per the tracked
+     set), but flag on the next digest that the ~46 line was a transient methodology
+     regression, not a real backlog spike, so it isn't mistaken for new open items. No
+     #decisions card — the audit note already resolves what the correct count and
+     method are; this is process hygiene, not a decision for Lemar.
+
+**Open questions posted to #decisions this run: 0.**
+
+## Sources (fifth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787425974`–`1787491189`
+- haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md
