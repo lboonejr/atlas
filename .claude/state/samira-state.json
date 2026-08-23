@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260823T130404Z",
-    "run_started": "2026-08-23T13:04:04Z",
+    "run_id": "run_20260823T140306Z",
+    "run_started": "2026-08-23T14:03:06Z",
     "run_completed": "2026-08-23T13:12:38Z",
-    "note": "Completed. Found + fixed a real bug from the 8:03am run: its calendar-sync 'recreate deleted event' pass for Regus/IWG and Gusto payroll was a false positive on both — the originals were still live, so duplicate reminders were firing. Cancelled both orphaned originals. Full 32-thread #decisions backlog re-check: 0 drift. 13-channel PART C sweep, capture DM, investor pipeline, #stormy: all quiet. 1 new email (junk, labeled seen). PART R: ops-admin-lane-and-ariana carried, waiting on Lemar's manual GitHub App write grant. #personal-finance and #reports-scan clean, Pulse skipped (quiet-pass gate)."
+    "note": "In progress."
   },
   "watermarks": {
     "slack_channels": {
