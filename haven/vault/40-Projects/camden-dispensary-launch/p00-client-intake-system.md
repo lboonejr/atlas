@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T00:10-04:00
-updated: 2026-08-19T10:20:00-04:00
+updated: 2026-08-23T10:14:00-04:00
 domain: project
 type: brief
 status: awaiting-decision
@@ -239,9 +239,43 @@ and a direct question on the form about open City violations, liens, and code en
 The card stays open on the browser slice rather than closing, per the overlay's closeout
 rule. Nothing further is waiting on Samira.
 
+## Update — 2026-08-23T10:14:00-04:00, scan 3, PM status check
+
+Day 4 since round 2 locked (2026-08-19), and no signal at all had landed in the card's
+thread since — no reply, no reaction, no status check ever posted. That is past the
+overlay's two-day PM checkpoint (section 8.7), so this scan posts the one honest line the
+rule calls for, in-thread on the card, rather than opening a new round or a new card.
+Lens/gate status is unchanged: lenses 8/8, gates 6/6, locked.
+
+Cross-check against the sibling card: the P00 Advisory proposal package PT card closed
+2026-08-21 — Jamil's signing authority was confirmed and Lemar sent the proposal himself.
+That means the welcome-email item below (Working Log open item 9, owner Samira/cloud, due
+"before the proposal goes out") is now past its own due date. It was not built this scan —
+drafting it needs Gmail, which is outside this scan's toolset (Slack + GitHub only) — and
+it is not being claimed as done.
+
+Still open, all of it Lemar's, one Chrome session covers the first three:
+
+- Drive integration wiring (round 1 Q3). Run block staged in #camden-launch 2026-08-19.
+  The form stays held from sending until this is confirmed.
+- Move the two new property questions into "The property" section, after "Anything else
+  about the property" (round 2 build note).
+- Thank-you page wording: state the one business day turnaround instead of the current
+  open-ended line (Q4/Q5).
+- Welcome email at signing (round 1 Q1) — now overdue against its stated due date; flagged
+  above, not actioned this scan.
+
+Per the overlay's closeout rule, if the status check posted this scan draws no signal, the
+card parks on the next PM check rather than staying open indefinitely.
+
+pt:p00-client-intake-system · note:haven/vault/40-Projects/camden-dispensary-launch/p00-client-intake-system.md · phase:00 · lane:cloud+browser · lenses:8/8 · gates:6/6 · locked · PM check:2026-08-23 (day 4, first check)
+— Samira
+
 ## Open questions
 
-None. Round 1 and round 2 are both answered and the pressure test is locked.
+None. Round 1 and round 2 are both answered and the pressure test is locked. Four browser
+lane items remain to be executed by Lemar (see the 2026-08-23 PM status check above);
+none of them are open pressure-test questions.
 
 ## Handoff
 
@@ -258,7 +292,8 @@ register, update this note, advance the card, and draft the Working Log text.
 
 Cloud, new from round 1 (2026-08-19): draft a welcome email that attaches the
 Jotform link, to go out at signing per Lemar's Q1 answer. Not yet built — this is
-a new open item, not part of the intake build itself.
+a new open item, not part of the intake build itself. Now overdue (see 2026-08-23
+status check above); needs a session with Gmail tooling to draft.
 
 ## Working Log entry
 
@@ -307,6 +342,8 @@ Add to OPEN ITEMS:
 
 9. Draft the welcome email that carries the form link at signing.
    Owner: Samira, cloud. Due: before the proposal goes out.
+   Now overdue: the proposal went out 2026-08-21 (P00 Advisory proposal package card,
+   closed) and this was not drafted. Flagged 2026-08-23; needs a Gmail-capable session.
 
 ## Sources
 
