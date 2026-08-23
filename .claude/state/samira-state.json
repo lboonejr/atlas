@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260823T120329Z",
     "run_started": "2026-08-23T12:03:29Z",
-    "run_completed": "2026-08-22T22:11:41Z",
-    "note": "Lock acquired 2026-08-23T12:03:29Z; prior run completed cleanly 2026-08-22T22:11:41Z."
+    "run_completed": "2026-08-23T12:15:10Z",
+    "note": "Completed. Found + fixed 2 deleted Cuzzie's (Owners) calendar deadline events (Regus/IWG 8/23, Gusto payroll 8/24) that had gone missing outside the vault. Repaired 1 mechanical vault defect + filed it. Logged a Leafly disconnection-notice escalation. Full 18-channel Slack sweep + capture DM + lite 9-thread email pass clean otherwise. Deferred this run (scope): reports-contradiction-scan (PART T), Pulse render (PART P), canvas access recheck, deep re-verification of the ~44-card older #decisions backlog (2 spot-checked, both fine)."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787436701.000000",
-      "C0BBZJL85RT": "1787436617.912999",
-      "D0BHPKMDNEP": "1787436701.000000",
-      "C0BGLEMH99T": "1787436701.000000",
-      "C0BEQUW5NPP": "1787436701.000000",
-      "C0BBLUA7JLX": "1787436701.000000",
-      "C0BJ37SU1TL": "1787436701.000000",
-      "C0BCCUKEUQ2": "1787436701.000000",
-      "C0BCD7U5X2B": "1787436701.000000",
-      "C0BCH2C3GRM": "1787436701.000000",
-      "C0BDN2KQFD4": "1787436701.000000",
-      "C0BD8LTM1EK": "1787436701.000000",
-      "C0BGYM1UB4Y": "1787436701.000000",
-      "C0BGCAK0ML3": "1787436701.000000",
-      "C0BHXTPST52": "1787436701.000000",
-      "C0BC2A94142": "1787436701.000000",
-      "C0BBZ5J8805": "1787436701.000000",
-      "C0BRZT2V89W": "1787436701.000000"
+      "C0BBXA96FFV": "1787487290.423459",
+      "C0BBZJL85RT": "1787487290.423459",
+      "D0BHPKMDNEP": "1787487290.000000",
+      "C0BGLEMH99T": "1787487290.000000",
+      "C0BEQUW5NPP": "1787487290.000000",
+      "C0BBLUA7JLX": "1787487290.000000",
+      "C0BJ37SU1TL": "1787487290.000000",
+      "C0BCCUKEUQ2": "1787487290.000000",
+      "C0BCD7U5X2B": "1787487290.000000",
+      "C0BCH2C3GRM": "1787487290.000000",
+      "C0BDN2KQFD4": "1787487290.000000",
+      "C0BD8LTM1EK": "1787487290.000000",
+      "C0BGYM1UB4Y": "1787487290.000000",
+      "C0BGCAK0ML3": "1787487290.000000",
+      "C0BHXTPST52": "1787487290.000000",
+      "C0BC2A94142": "1787487290.000000",
+      "C0BBZ5J8805": "1787487290.000000",
+      "C0BRZT2V89W": "1787487290.000000"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
@@ -47,11 +47,11 @@
       "1787231683.266619": "1787234895.613759",
       "1787235032.481949": "1787333215.335379",
       "1787238798.497049": "1787238833.679779",
-      "1787245811.807379": "1787245837.845089",
+      "1787245811.807379": "1787328711.329099",
       "1787256504.479409": "1787260487.561709",
       "1786824337.657789": "1786831565.789469",
       "1786709997.432499": "1786727321.939139",
-      "1787314219.825659": "1787321658.713409",
+      "1787314219.825659": "1787328547.699749",
       "1787314456.900919": "1787321654.863689",
       "1787333131.938499": "1787333167.963579",
       "1787339259.215559": "1787339259.215559",
@@ -61,13 +61,13 @@
       "1787401047.824359": "1787404082.261989",
       "1787408466.876989": "1787414880.127769"
     },
-    "capture_dm": "1787436701.000000",
-    "gmail_after_epoch": 1787436701
+    "capture_dm": "1787487290.000000",
+    "gmail_after_epoch": 1787487250
   },
   "integrity": {
-    "last_full_pass": "2026-08-22T12:04:00Z",
-    "last_scan_sha": "01f1bbc909dd948038ba71e4e01427b3157aeda1",
-    "note": "3 carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave). 4th carried item (ops-admin-lane-and-ariana.md missing created/updated) still tracked via open PR #73, deliberately not merged. This pass's incremental diff since 7a397b61 covered 2 files (reports-contradiction-scanner log, today's journal), both clean; this run's own 2 new commits (a valid new Station reference note + today's journal append) are self-authored with complete/valid frontmatter, no repairs needed. Inbox unchanged: same 2 stuck notes, no new arrivals."
+    "last_full_pass": "2026-08-23T12:06:00Z",
+    "last_scan_sha": "e62bf68b830dec571e8da2ca42ddd9b270a31afa",
+    "note": "Full pass this run: 581 notes, 1 new mechanical repair (stray lines above opener on 2026-08-23-basil-inbox-janitor-run.md, filed to 70-Automation/inbox-janitor/). 4 known/carried defects unchanged: 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md (created/updated absent, domain/status blank, type and source out-of-list), 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md (domain UNRESOLVED), _daily/2026-08-01.md (lossy b64, decided 8/1 to leave), 40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md (missing created/updated, tracked via open PR #73, deliberately not merged)."
   },
   "canvas_access": {
     "last_checked": "2026-08-22T12:11:00Z",
