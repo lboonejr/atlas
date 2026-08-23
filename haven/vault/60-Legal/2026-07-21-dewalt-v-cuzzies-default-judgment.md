@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-08-21T13:00:00-04:00
+updated: 2026-08-23T14:03:00-04:00
 domain: legal
 type: task
 status: active
@@ -599,6 +599,33 @@ represented by Samira. Gmail thread labeled `Samira/seen`.
   engagement letter attached)
 - slack: #decisions ts `1787333131.938499`
 
+## Update 2026-08-23T14:03:00-04:00 — Lemar picked Option 1; reply saved to Gmail Drafts (not sent)
+
+Lemar reacted ✅ on Option 1 of the #decisions card (ts `1787333131.938499`, this
+matter's engagement-letter/excusable-neglect card from the 2026-08-21 update above):
+*"Sign the engagement letter now, ask for a call on the facts."* Per the reaction
+engine, saved the drafted reply to Gmail, threaded onto Diaz's 4:48pm ET reply
+(message `1a0253a019db9fa8`, thread `1a024b065a8e8ff2`) — draft id
+`r7543063188316144938`:
+
+> "Thank you for sending this over, I'll get the engagement letter signed and back
+> to you. On the excusable neglect piece, I think it would go faster if we got on a
+> call and walked through the timeline together rather than me trying to put it all
+> in writing first. Let me know what works on your end."
+
+**Saved to Gmail Drafts only — not sent** (outreach requires Lemar's own send, per
+standing safety floor). Two things remain his alone to do: actually signing and
+returning the engagement letter (a physical/DocuSign act, not an email), and, once
+a call happens, supplying the excusable-neglect facts for the April 22–May 27
+window. Replied "Done ✅" on the #decisions thread. Gmail thread not yet labeled
+`Samira/seen` by this pass (out of scope for this write — a later email-loop pass
+labels it during its own sweep).
+
+### Sources (this update)
+- gmail: thread `1a024b065a8e8ff2`, draft `r7543063188316144938` (reply to message
+  `1a0253a019db9fa8`)
+- slack: #decisions ts `1787333131.938499`, option reply `1787333149.419909`
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
 - gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
@@ -638,4 +665,5 @@ represented by Samira. Gmail thread labeled `Samira/seen`.
 - gmail: thread `1a0013edc74f5864` / `1a015d0c3734eae0` (2026-08-14 through 2026-08-18,
   Kaplan/Kaplin Stewart — routed 8/14, followed up 8/17, declined 8/18)
 - gmail: thread `1a024b065a8e8ff2` (2026-08-21, Douglas Diaz / Archer & Greiner P.C.
-  engaged, engagement letter sent, excusable-neglect facts requested)
+  engaged, engagement letter sent, excusable-neglect facts requested; 2026-08-23,
+  Option 1 reply saved to Gmail Drafts)
