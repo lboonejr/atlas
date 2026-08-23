@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T10:15-04:00
-updated: 2026-08-23T08:08-04:00
+updated: 2026-08-23T13:07-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -195,6 +195,19 @@ ET date is still what this note's `due` field says, so it was recreated as
 update above, the $1,506.05 settlement offer (valid ~through 8/28) is the operative
 deadline now, not this 8/23 date — flagging that the `due` field itself may need updating
 to the settlement window is Lemar's call, not something this sync makes on its own.
+
+## Update 2026-08-23T13:07-04:00 (calendar-sync) — the 08:08 "recreate" was a false positive; duplicate deleted
+
+This run's calendar-sync found event `rdvh4u83qhr0rg26t64fncvpa0` — the one the
+08:08 update above says was "deleted outside the vault" — still live on the Cuzzie's
+(Owners) calendar, alongside the "recreated" `ebc79d4jj3niuos29u9g4jmfjc`. It was never
+actually deleted; the 08:08 pass's list query missed it and recreated a duplicate,
+so Lemar has had two identical 8/23 09:00 ET reminders firing since this morning.
+
+Cancelled the orphaned original (`rdvh4u83qhr0rg26t64fncvpa0`) — it was not referenced
+by this note's `calendar_event_id` (which already pointed at the newer
+`ebc79d4jj3niuos29u9g4jmfjc`), so nothing this note tracks changed. One event remains:
+`ebc79d4jj3niuos29u9g4jmfjc`, 2026-08-23 09:00 ET, popups at 24h + day-of.
 
 ## Related
 - [[regus-iwg]]
