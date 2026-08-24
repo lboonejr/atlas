@@ -1,12 +1,13 @@
 ---
 created: 2026-08-24T09:03:00-04:00
-updated: 2026-08-24T09:03:00-04:00
+updated: 2026-08-24T09:09:22-04:00
 domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation
 type: meeting
 status: active
 tags: [jamil, meeting, reschedule]
 source: slack
 due: 2026-08-25T17:00:00-04:00
+calendar_event_id: s68jjvei67doodjpfsfqu0k74s
 ---
 
 # Meeting with Jamil — rescheduled to 2026-08-25 5pm ET
