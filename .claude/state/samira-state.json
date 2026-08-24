@@ -63,9 +63,9 @@
     "gmail_after_epoch": 1787519783
   },
   "integrity": {
-    "last_full_pass": "2026-08-23T12:06:00Z",
-    "last_scan_sha": "6fd99ef665510a6ddab115238eaa40193785554b",
-    "note": "Incremental pass again this run (not day's first): 4 files under haven/vault/ changed since the prior scan_sha, all already checked (ops-admin-lane-and-ariana carried defect confirmed unchanged; 3 others valid). 4 known/carried defects unchanged (00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md, 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md, _daily/2026-08-01.md lossy b64, camden-dispensary-launch/ops-admin-lane-and-ariana.md). scan_sha advanced to this run's final main HEAD."
+    "last_full_pass": "2026-08-24T12:08:49Z",
+    "last_scan_sha": "530b866548e773ea8f537b3660b91171253128fe",
+    "note": "FULL whole-vault pass (day's first, prior last_full_pass was 2026-08-23): 585 notes' frontmatter blocks checked. 0 mechanical repairs this run. 4 known/carried defects confirmed unchanged (00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md, 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md, _daily/2026-08-01.md lossy b64, camden-dispensary-launch/ops-admin-lane-and-ariana.md missing `created`). NEW this scan (flagged, not repaired): 2-note domain/location mismatch, domain: automation sitting under 40-Projects/samira-skills/ (project-domain folder) - 2026-08-22-decisions-backlog-audit.md and 2026-08-23-calendar-sync-wrong-calendar-bug.md. Inbox sweep: filed 1 (2026-08-23-inbox-janitor-run.md -> 70-Automation/inbox-janitor/), 2 parked (known, unchanged), 0 entity stubs. scan_sha = this run's filing commit 530b866."
   },
   "canvas_access": {
     "last_checked": "2026-08-22T12:11:00Z",
