@@ -1,6 +1,6 @@
---- 
+---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-24T09:15:00-04:00
+updated: 2026-08-24T12:15:00-04:00
 domain: project
 type: log
 status: active
@@ -333,3 +333,40 @@ No conflicting figures, no unresolved self-corrections, no stale claims.
 ### Sources (tenth run)
 - slack: #reports `C0BBZJL85RT`, ts range `1787574422`–`1787575170`
 - haven/vault/20-Cuzzies/2026-08-24-park-business-funding-cold-outreach-not-pipeline.md
+
+## Update 2026-08-24 (eleventh run)
+
+**Scanned:** #reports ts `1787575170`–`1787584208` (2026-08-24 ~8:38am ET through
+~11:03am ET, 4 new messages — the boundary message `1787575170.799389` was the last
+message of the tenth run's scanned range and was used only for grouping context, not
+re-flagged).
+
+**Found: 1.**
+
+1. **Informational only — a non-Samira "Haven Keeper" post claimed `stuck 0` four
+   minutes after Samira's own scan reported `stuck 3`.**
+   - 8/24 9:19am ET (`1787577590`), Samira's own scan: "Haven: filed 0 · stuck 3 (2
+     known unchanged + 1 new: Jamil meeting, domain?)."
+   - 8/24 9:23am ET (`1787577802`), a separate message signed "— Haven Keeper" (posted
+     by Lemar's account `U0BC5UTHYG4` with `app_id A08SF47R6P4` — a live Claude
+     session Lemar ran himself, not one of Samira's automated PARTs, and not the same
+     bot identity `B0BHZJH8GP6` every other #reports line in this log comes from):
+     "Haven — filed 0 · stuck 0 · rang +0/~0/-0 · nothing to file, all quiet."
+   - **Ground truth:** this run's own PART V (vault-keeper) sweep, run before this
+     scan, confirms 3 notes were genuinely stuck in `00-Inbox` at the time (the DIB
+     template-theme note, the Google Voice subscription note, and the Jamil meeting
+     note) — all still stuck now, none newly resolved between 9:19am and 9:23am. The
+     "stuck 0" claim was wrong when posted.
+   - **Not flagged as an actionable contradiction:** this isn't Samira contradicting
+     herself (the failure mode every prior entry in this log has been tracking) — it's
+     a one-off manual session posting an inaccurate summary line under a different
+     signature. Nothing in the automated routine reads that line back as state (Samira
+     runs off the vault + the state file, never off #reports), so it didn't propagate:
+     every digest since (10:11am, 11:03am) correctly reports `stuck 3 (unchanged)`.
+     Logged for the record only — no #decisions card, no DM, no correction needed.
+
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (eleventh run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787575170`–`1787584208`
+- this run's PART V vault-keeper sweep (00-Inbox: 3 notes stuck, unchanged)
