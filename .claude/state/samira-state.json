@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260824T120304Z",
-    "run_started": "2026-08-24T12:03:04Z",
+    "run_id": "run_20260824T130509Z",
+    "run_started": "2026-08-24T13:05:09Z",
     "run_completed": "2026-08-23T21:18:00Z",
-    "note": "Acquiring lock: prior lock (run_20260823T220422Z, started 22:04:22Z) never wrote run_completed and is now ~14h old, well past the 45-min staleness window — prior run died mid-flight. Aging it out per PART 0 and acquiring fresh."
+    "note": "Acquiring lock: prior lock (run_20260824T120304Z, started 12:03:04Z) never wrote run_completed and is now ~62min old, past the 45-min staleness window — prior run died mid-flight. Aging it out per PART 0 and acquiring fresh."
   },
   "watermarks": {
     "slack_channels": {
