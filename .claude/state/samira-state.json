@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260824T130509Z",
     "run_started": "2026-08-24T13:05:09Z",
-    "run_completed": "2026-08-23T21:18:00Z",
-    "note": "Acquiring lock: prior lock (run_20260824T120304Z, started 12:03:04Z) never wrote run_completed and is now ~62min old, past the 45-min staleness window — prior run died mid-flight. Aging it out per PART 0 and acquiring fresh."
+    "run_completed": "2026-08-24T13:20:44Z",
+    "note": "Completed cleanly. Prior lock (run_20260824T120304Z) had actually finished the full 8:38am ET routine (vault sweep through digest, commits e1cd86a..49d378f) but died before writing its own state-file close — this run recovered by re-verifying every surface directly (Slack reads, Gmail query) rather than trusting the stale watermarks below, found genuinely new activity only in the capture DM (1 new capture, developed) and Gmail (5 new junk threads), and confirmed via samira-report-result-style idempotency (own Done✅ replies / stored state) that nothing was double-executed."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787509508.677979",
-      "C0BBZJL85RT": "1787519826.710749",
-      "D0BHPKMDNEP": "1787509463.413119",
-      "C0BGLEMH99T": "1787490758.000000",
-      "C0BEQUW5NPP": "1787490758.000000",
-      "C0BBLUA7JLX": "1787490758.000000",
-      "C0BJ37SU1TL": "1787490758.000000",
-      "C0BCCUKEUQ2": "1787508725.830989",
-      "C0BCD7U5X2B": "1787490758.000000",
-      "C0BCH2C3GRM": "1787490758.000000",
-      "C0BDN2KQFD4": "1787490758.000000",
-      "C0BD8LTM1EK": "1787490758.000000",
-      "C0BGYM1UB4Y": "1787490758.000000",
-      "C0BGCAK0ML3": "1787490758.000000",
-      "C0BHXTPST52": "1787490758.000000",
-      "C0BC2A94142": "1787490758.000000",
-      "C0BBZ5J8805": "1787490758.000000",
-      "C0BRZT2V89W": "1787490758.000000"
+      "C0BBXA96FFV": "1787577568.967589",
+      "C0BBZJL85RT": "1787577590.172459",
+      "D0BHPKMDNEP": "1787576432.899009",
+      "C0BGLEMH99T": "1787577644.000000",
+      "C0BEQUW5NPP": "1787577644.000000",
+      "C0BBLUA7JLX": "1787577644.000000",
+      "C0BJ37SU1TL": "1787577644.000000",
+      "C0BCCUKEUQ2": "1787577644.000000",
+      "C0BCD7U5X2B": "1787577644.000000",
+      "C0BCH2C3GRM": "1787577644.000000",
+      "C0BDN2KQFD4": "1787577644.000000",
+      "C0BD8LTM1EK": "1787577644.000000",
+      "C0BGYM1UB4Y": "1787577644.000000",
+      "C0BGCAK0ML3": "1787577644.000000",
+      "C0BHXTPST52": "1787577644.000000",
+      "C0BC2A94142": "1787577644.000000",
+      "C0BBZ5J8805": "1787577644.000000",
+      "C0BRZT2V89W": "1787577644.000000"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
@@ -57,22 +57,23 @@
       "1787401047.824359": "1787404082.261989",
       "1787408466.876989": "1787414880.127769",
       "1787495798.327079": "1787504854.928079",
-      "1787505030.902159": "1787505030.902159"
+      "1787505030.902159": "1787505030.902159",
+      "1787577568.967589": "1787577568.967589"
     },
-    "capture_dm": "1787509463.413119",
-    "gmail_after_epoch": 1787519783
+    "capture_dm": "1787576432.899009",
+    "gmail_after_epoch": 1787577644
   },
   "integrity": {
     "last_full_pass": "2026-08-24T12:08:49Z",
     "last_scan_sha": "530b866548e773ea8f537b3660b91171253128fe",
-    "note": "FULL whole-vault pass (day's first, prior last_full_pass was 2026-08-23): 585 notes' frontmatter blocks checked. 0 mechanical repairs this run. 4 known/carried defects confirmed unchanged (00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md, 00-Inbox/2026-08-12-google-voice-subscription-cancellation.md, _daily/2026-08-01.md lossy b64, camden-dispensary-launch/ops-admin-lane-and-ariana.md missing `created`). NEW this scan (flagged, not repaired): 2-note domain/location mismatch, domain: automation sitting under 40-Projects/samira-skills/ (project-domain folder) - 2026-08-22-decisions-backlog-audit.md and 2026-08-23-calendar-sync-wrong-calendar-bug.md. Inbox sweep: filed 1 (2026-08-23-inbox-janitor-run.md -> 70-Automation/inbox-janitor/), 2 parked (known, unchanged), 0 entity stubs. scan_sha = this run's filing commit 530b866."
+    "note": "Unchanged this run — no full/incremental vault-keeper sweep invoked (today's full pass already ran at 12:08:49Z; this run's own vault writes — the Jamil capture note and the reports-scan log update — are new since scan_sha and will be picked up by the next PART V incremental diff)."
   },
   "canvas_access": {
-    "last_checked": "2026-08-22T12:11:00Z",
+    "last_checked": "2026-08-24T12:38:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-23T14:20:00-04:00",
+    "pulse_last_rendered": "2026-08-24T09:14:00-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
