@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-24T12:15:00-04:00
+updated: 2026-08-24T14:14:00-04:00
 domain: project
 type: log
 status: active
@@ -370,3 +370,33 @@ re-flagged).
 ### Sources (eleventh run)
 - slack: #reports `C0BBZJL85RT`, ts range `1787575170`–`1787584208`
 - this run's PART V vault-keeper sweep (00-Inbox: 3 notes stuck, unchanged)
+
+## Update 2026-08-24 (twelfth run)
+
+**Found: 1 — same non-actionable pattern as the eleventh run.**
+
+1. **Informational only — another non-Samira "Haven Keeper" post claimed the Inbox is
+   empty and no notes carry a `due`.**
+   - 8/24 1:14pm ET (`1787592040`), a message signed "— Haven Keeper" (posted by
+     Lemar's account `U0BC5UTHYG4` with `app_id A08SF47R6P4` — the same live Claude
+     session identity as the eleventh run's finding, not Samira's bot `B0BHZJH8GP6`
+     and not one of Samira's automated PARTs): "Haven — filed 0 · stuck 0 ·
+     rang +0/~0/-0. Inbox empty, no notes carry a `due`. nothing to file, all quiet."
+   - **Ground truth:** this run's own PART V sweep confirms the same 3 notes remain
+     stuck in `00-Inbox` (unchanged since the eleventh run), and this run's own PART S
+     sweep confirms 44 vault notes carry a `due` (all already correctly synced, zero
+     writes needed) — both claims in the Haven Keeper line are wrong.
+   - **Not flagged as an actionable contradiction**, same reasoning as the eleventh
+     run's identical finding: a one-off manual session under a different signature,
+     never read back as state by the automated routine (Samira runs off the vault +
+     the state file, never off #reports), so it doesn't propagate — every automated
+     digest continues to report the true `stuck 3`. Logged for the record only — no
+     #decisions card, no DM, no correction needed. Worth a glance if this recurs a
+     third time (possible pattern in how that session determines "Inbox empty").
+
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (twelfth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787584208`–`1787592040`
+- this run's PART V vault-keeper sweep (00-Inbox: 3 notes stuck, unchanged) and PART S
+  calendar-sync sweep (44 `due` notes, all already synced)
