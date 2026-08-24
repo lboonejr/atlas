@@ -1,6 +1,6 @@
 ---
 created: 2026-07-29T14:15-04:00
-updated: 2026-08-19T09:35:00-04:00
+updated: 2026-08-24T21:10:00-04:00
 domain: project
 type: log
 status: active
@@ -66,3 +66,18 @@ is already standing there.
 ### Sources (this update)
 - gmail: thread `19fa3ba25917d2cd`, message `1a01980f29775c7b` (Camilo's check-in,
   2026-08-19 06:11 ET)
+
+## Update 2026-08-24T21:10:00-04:00 — third nudge, forwarded + DocuSign question repeated
+
+Camilo emailed again 2026-08-24 ~4:56pm ET (same thread `19fa3ba25917d2cd`, message
+`1a0358f627870ea4`): "Wating on you here. Should I send this to you via docusign for
+execution?" — a forward of his own 7/27 original with the same engagement letter
+attached. Same $10K flat + 10% at sale terms, no new information. Third consecutive
+check-in with no reply on file (7/27 original, 8/19 check-in, now 8/24). No draft
+prepared, no terms represented as decided. Labeled `Samira/seen` (already carried
+`Samira/investor`). Not opening a new #decisions card — the sign/no-sign question is
+already standing there and this is a repeat of the same ask.
+
+### Sources (this update)
+- gmail: thread `19fa3ba25917d2cd`, message `1a0358f627870ea4` (Camilo's third check-in,
+  2026-08-24 4:56pm ET)
