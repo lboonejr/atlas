@@ -3,13 +3,13 @@
   "lock": {
     "run_id": "run_20260824T170244Z",
     "run_started": "2026-08-24T17:02:44Z",
-    "run_completed": "2026-08-24T16:20:00Z",
-    "note": "Completed cleanly. 76-minute scan (last run completed 15:11Z). Two substantive items this run: Capehart Scatchard legal retainer letter ($5,000, matter unknown — call this morning, no other record) captured and raised in #decisions; Huljev Group balance-sheet-checklist note filed to 20-Cuzzies (was already raised in #decisions by the prior run). 13 project channels + capture DM + #investor-pipeline + #stormy: zero new activity. Both Camden Launch PT cards already resolved by earlier scans (proposal sent/closed, intake parked) — nothing to advance. #reports scan: 1 informational-only finding (stray manual 'Haven Keeper' post, never propagated). Pulse re-rendered, DM sent."
+    "run_completed": "2026-08-24T17:12:40Z",
+    "note": "Completed cleanly. ~52-minute scan (last run completed 16:20Z). One substantive item this run: the Capehart Scatchard retainer note (frontmatter already complete from the prior run's capture) filed 00-Inbox → 60-Legal, entity stubbed. 15 swept Slack surfaces (13 project channels + #stormy + #investor-pipeline) + capture DM + #decisions (34 tracked threads, parent+reply reactions checked): zero new activity. Camden Launch PT cards unchanged, no round due. Email: 2 new threads, 1 junk (AutoTempest car-alert, labeled seen), 1 already-handled residue (Capehart, skipped). Money-hub, on-button, reports-scan: quiet/clean. Pulse: quiet-pass skip, no render."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787587974.554669",
-      "C0BBZJL85RT": "1787588335.192679",
+      "C0BBZJL85RT": "1787591554.156199",
       "D0BHPKMDNEP": "1787588314.759489",
       "C0BGLEMH99T": "1787584209.000000",
       "C0BEQUW5NPP": "1787584209.000000",
@@ -65,12 +65,12 @@
       "1787587974.554669": "1787587974.554669"
     },
     "capture_dm": "1787588314.759489",
-    "gmail_after_epoch": 1787587049
+    "gmail_after_epoch": 1787591359
   },
   "integrity": {
     "last_full_pass": "2026-08-24T12:08:49Z",
-    "last_scan_sha": "dad64ffdd321d279485b4c5f0f02e7c2b1d2794b",
-    "note": "Incremental check this run (today's full pass already ran at 12:08:49Z): diffed changed vault files since last_scan_sha, found one new defect (Camden Launch ops-admin-lane-and-ariana.md missing `created`) — flagged only, no repair licensed. All other changed files valid."
+    "last_scan_sha": "313977985296beecfd09f7b282cc5631bf706d53",
+    "note": "Incremental check this run: diffed changed vault files since prior last_scan_sha (dad64ffd), found none (only this session's own capehart-scatchard filing + entity stub, self-reviewed). Known carried defect (ops-admin-lane-and-ariana.md missing `created`) unchanged. last_scan_sha advanced to current main HEAD."
   },
   "canvas_access": {
     "last_checked": "2026-08-24T12:38:00Z",
