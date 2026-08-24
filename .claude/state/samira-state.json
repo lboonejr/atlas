@@ -3,19 +3,19 @@
   "lock": {
     "run_id": "run_20260824T210324Z",
     "run_started": "2026-08-24T21:03:24Z",
-    "run_completed": "2026-08-24T18:10:26Z",
-    "note": "Completed cleanly. ~66-minute scan (prior run completed 17:12:40Z). Entirely quiet run: all 15 swept Slack surfaces + #decisions (34 tracked threads) + capture DM showed zero new activity. Email: 4 new threads, all junk/vendor-menu/marketing (labeled seen). PART V/S: Inbox unchanged (3 known stuck notes), 44 due-notes already synced, zero calendar writes. 3 Camden Launch PT cards carried, no round due. reports-scan (12th run): 1 informational finding logged (a second non-Samira 'Haven Keeper' session post with an inaccurate stuck/due summary — doesn't propagate into Samira's state, no action needed). Pulse quiet-pass skip. Money-hub, on-button: quiet/clean."
+    "run_completed": "2026-08-24T21:16:05Z",
+    "note": "Completed cleanly. ~3h05m gap since prior run completed 18:10:26Z (no 3pm/4pm ET runs recorded — picked up cleanly off stored watermarks, no lock conflict, nothing double-processed). All 15 swept Slack surfaces + #decisions (34 tracked threads) showed zero new activity. Email: 8 new threads — 1 investor handoff (Highgate 3rd nudge, logged as Update, no new card), 1 new #decisions card + Haven capture (Caine & Weiner collections, $1,107.20 re: Progressive commercial policy, domain unresolved), 6 junk (labeled seen). PART V/S: Inbox unchanged (3 known stuck notes), due notes already synced, zero calendar writes. 3 Camden Launch PT cards carried, no round due. reports-scan (13th run): clean. Pulse rendered (gate met by the new card + note) — money section partial, Dawn's brief flagged 3 days stale (last: 8/21)."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787587974.554669",
-      "C0BBZJL85RT": "1787591554.156199",
-      "D0BHPKMDNEP": "1787588314.759489",
+      "C0BBXA96FFV": "1787605678.559389",
+      "C0BBZJL85RT": "1787606078.262789",
+      "D0BHPKMDNEP": "1787606057.821609",
       "C0BGLEMH99T": "1787584209.000000",
       "C0BEQUW5NPP": "1787584209.000000",
       "C0BBLUA7JLX": "1787584209.000000",
       "C0BJ37SU1TL": "1787584209.000000",
-      "C0BCCUKEUQ2": "1787584209.000000",
+      "C0BCCUKEUQ2": "1787605767.001539",
       "C0BCD7U5X2B": "1787584209.000000",
       "C0BCH2C3GRM": "1787584209.000000",
       "C0BDN2KQFD4": "1787584209.000000",
@@ -62,22 +62,23 @@
       "1787577568.967589": "1787577568.967589",
       "1787584125.966579": "1787584125.966579",
       "1787157130.471099": "1787328710.030059",
-      "1787587974.554669": "1787587974.554669"
+      "1787587974.554669": "1787587974.554669",
+      "1787605678.559389": "1787605678.559389"
     },
-    "capture_dm": "1787588314.759489",
-    "gmail_after_epoch": 1787595026
+    "capture_dm": "1787606057.821609",
+    "gmail_after_epoch": 1787606165
   },
   "integrity": {
     "last_full_pass": "2026-08-24T12:08:49Z",
-    "last_scan_sha": "a865976b91f8a55f232d39d8d1571ef36db1a9e2",
-    "note": "Incremental check this run: diffed changed vault files since prior last_scan_sha (313977985), found none — no vault files changed since the last run. Known carried defect (ops-admin-lane-and-ariana.md missing `created`) unchanged. last_scan_sha advanced to current main HEAD."
+    "last_scan_sha": "d24e74d123df0722f3a74b1cb5626bdd9c760a63",
+    "note": "Incremental check this run: no vault files changed beyond this run's own writes (Caine-Weiner capture, Highgate receipt update, reports-scan log, _daily append). Known carried defect (ops-admin-lane-and-ariana.md missing `created`) unchanged. last_scan_sha advanced to current main HEAD."
   },
   "canvas_access": {
     "last_checked": "2026-08-24T12:38:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-24T12:18:00-04:00",
+    "pulse_last_rendered": "2026-08-24T17:15:00-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
