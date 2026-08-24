@@ -1,6 +1,6 @@
 --- 
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-23T17:03:00-04:00
+updated: 2026-08-24T08:30:00-04:00
 domain: project
 type: log
 status: active
@@ -278,3 +278,37 @@ before this run resumed cleanly at run_20260823T210305Z) — an infra/lock issue
 
 ### Sources (eighth run)
 - slack: #reports `C0BBZJL85RT`, ts range `1787509552`–`1787512539`
+
+## Update 2026-08-24 (ninth run)
+
+**Scanned:** #reports ts `1787512539`–`1787574422` (2026-08-23 ~3:03pm ET through
+2026-08-24 ~8:26am ET, 6 new messages — the boundary message `1787512539.905109` was the
+last message of the eighth run's scanned range and was used only for grouping context,
+not re-flagged).
+
+**Found: 0. Clean scan.**
+
+Checked the #decisions "waiting on you" count jump (26 → 30) between the 3:03pm
+(`1787512539`) and 5:16pm (`1787519826`) digests: the 5:16pm digest explicitly accounts
+for it as backlog catch-up from two runs that died mid-flight in between
+(`run_20260823T190312Z`, `run_20260823T200244Z`) — 34 tracked threads individually
+re-verified, 4 confirmed closed and dropped, net 30 — not an unexplained swing. The
+6:11pm digest (`1787523098`) repeats 30 unchanged with a quiet run in between, internally
+consistent. Not flagged.
+
+Checked the two 8/24 8:26am PT-card status messages against their cited Haven notes:
+- `p00-client-intake-system` → "status: awaiting-decision → parked" (`1787574422`)
+  matches `haven/vault/40-Projects/camden-dispensary-launch/p00-client-intake-system.md`
+  (`status: parked`, `updated: 2026-08-24T08:15:00-04:00`). Not stale.
+- `ops-admin-lane-and-ariana` → "PM check answered ... keep, 8/8·6/6 already locked"
+  (`1787574421`) matches `haven/vault/40-Projects/camden-dispensary-launch/
+  ops-admin-lane-and-ariana.md` (`status: active`, `updated: 2026-08-24T08:10:00-04:00`).
+  Not stale.
+
+No conflicting figures, no unresolved self-corrections, no stale claims against any
+cited Haven note. No DM, no #decisions card, per the non-spam rule.
+
+### Sources (ninth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787512539`–`1787574422`
+- haven/vault/40-Projects/camden-dispensary-launch/p00-client-intake-system.md
+- haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md
