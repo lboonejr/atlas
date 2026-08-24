@@ -1,9 +1,9 @@
 ---
 created: 2026-08-19T00:10-04:00
-updated: 2026-08-23T10:14:00-04:00
+updated: 2026-08-24T08:15:00-04:00
 domain: project
 type: brief
-status: awaiting-decision
+status: parked
 tags: [samira-loop, camden-launch, phase-00, intake, jotform]
 source: claude
 ---
@@ -271,6 +271,29 @@ card parks on the next PM check rather than staying open indefinitely.
 pt:p00-client-intake-system · note:haven/vault/40-Projects/camden-dispensary-launch/p00-client-intake-system.md · phase:00 · lane:cloud+browser · lenses:8/8 · gates:6/6 · locked · PM check:2026-08-23 (day 4, first check)
 — Samira
 
+## Update — 2026-08-24T08:15:00-04:00, scan 1, parked (silence through the day-four check)
+
+The 2026-08-23 PM check ("day 4 ... is this still worth doing?") drew zero signal — no
+reply, no reaction — through this scan. That message named its own trigger: "if this stays
+quiet, it parks on the next PM check per the day-four rule." This scan is that next check,
+so per the overlay's closeout rule (8.7) and the loop's two-day rule, it parks now.
+`status` changed from `awaiting-decision` to `parked` above.
+
+Parking is a pause on the active PM chase, not a close and not a rollback. Lens/gate status
+stays on record unchanged: lenses 8/8, gates 6/6, locked. Nothing built this scan was lost —
+the form, the register, and the client sheet are exactly where round 2 left them.
+
+Still open, all of it his, unchanged from the last check:
+- Drive integration wiring (round 1 Q3) — run block already staged in #camden-launch.
+- Move the two new property questions into "The property" section.
+- Thank-you page wording (state the one business day turnaround, Q4/Q5).
+- Welcome email at signing (round 1 Q1) — now Samira's/cloud, overdue since the proposal
+  went out 2026-08-21; needs a Gmail-capable session, separate from this one.
+
+Un-parks the moment any of the above moves, or the moment he answers in-thread.
+
+pt:p00-client-intake-system · note:haven/vault/40-Projects/camden-dispensary-launch/p00-client-intake-system.md · phase:00 · lane:cloud+browser · lenses:8/8 · gates:6/6 · locked · parked:2026-08-24
+
 ## Open questions
 
 None. Round 1 and round 2 are both answered and the pressure test is locked. Four browser
@@ -344,6 +367,16 @@ Add to OPEN ITEMS:
    Owner: Samira, cloud. Due: before the proposal goes out.
    Now overdue: the proposal went out 2026-08-21 (P00 Advisory proposal package card,
    closed) and this was not drafted. Flagged 2026-08-23; needs a Gmail-capable session.
+
+Add to DECISIONS (append, newest on top):
+
+2026-08-24 — P00 Client intake system parked in the pressure-test loop.
+Two PM status checks (folded into the round-2 close on 2026-08-19, then a standalone
+day-four check on 2026-08-23) drew no signal from Lemar. Per the engagement's closeout rule
+the card parks rather than staying open indefinitely; nothing built or decided is reversed.
+It un-parks the moment the Drive integration is wired, the form edits land, or the welcome
+email is picked up in a Gmail-capable session. — Not yet placed in the Working Log Doc;
+this text is drafted here for whoever has Docs access next.
 
 ## Sources
 

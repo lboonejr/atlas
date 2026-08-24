@@ -4,7 +4,7 @@ type: decision
 status: active
 source: claude
 tags: [samira-loop, camden-launch, phase-00]
-updated: 2026-08-23T14:15:00-04:00
+updated: 2026-08-24T08:10:00-04:00
 ---
 
 # Ops ADMIN lane and Ariana
@@ -172,6 +172,27 @@ Per the overlay's two-day rule: if this stays quiet, it parks on ⛔ at the next
 
 pt:ops-admin-lane-and-ariana · note:haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md · phase:00 · lane:mixed · lenses:8/8 · gates:6/6 · locked · PM check:2026-08-23 (day 3, first check)
 — Samira
+
+## Update — 2026-08-24T08:10:00-04:00, scan 1, PM check answered
+
+Lemar answered the 2026-08-23 PM check with a :white_check_mark: reaction on the parent's
+status-check reply — still worth doing, keep it open. No new reply; the reaction is the
+signal, read against that message's own stated fork (keep vs. park) per the loop's standard
+signal engine.
+
+Nothing else changed this scan. Lens/gate status unchanged: lenses 8/8, gates 6/6, locked.
+All three outstanding items are still his and still unstarted:
+
+- GitHub Contents-write grant (round 1 answer 2) — Settings -> GitHub Apps -> this app ->
+  Permissions, on lboonejr/atlas.
+- Ariana's access checklist (Workspace/Slack admin) — not started.
+- Cosmetic cleanup pass on the onboarding packet — waits on the checklist landing first.
+
+No new round posted — nothing left to ask, 8/8 and 6/6 were already closed at round 1. The
+two-day/four-day park clock restarts from today since he answered; this card is not stuck,
+it is just still waiting on actions only he can take.
+
+pt:ops-admin-lane-and-ariana · note:haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md · phase:00 · lane:mixed · lenses:8/8 · gates:6/6 · locked · PM check:2026-08-24 (answered: keep)
 
 ## Handoff
 
