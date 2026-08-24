@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260824T160229Z",
     "run_started": "2026-08-24T16:02:29Z",
-    "run_completed": "2026-08-24T15:11:09Z",
-    "note": "In progress."
+    "run_completed": "2026-08-24T16:20:00Z",
+    "note": "Completed cleanly. 76-minute scan (last run completed 15:11Z). Two substantive items this run: Capehart Scatchard legal retainer letter ($5,000, matter unknown — call this morning, no other record) captured and raised in #decisions; Huljev Group balance-sheet-checklist note filed to 20-Cuzzies (was already raised in #decisions by the prior run). 13 project channels + capture DM + #investor-pipeline + #stormy: zero new activity. Both Camden Launch PT cards already resolved by earlier scans (proposal sent/closed, intake parked) — nothing to advance. #reports scan: 1 informational-only finding (stray manual 'Haven Keeper' post, never propagated). Pulse re-rendered, DM sent."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787584125.966579",
-      "C0BBZJL85RT": "1787584208.655599",
-      "D0BHPKMDNEP": "1787577518.684339",
+      "C0BBXA96FFV": "1787587974.554669",
+      "C0BBZJL85RT": "1787588335.192679",
+      "D0BHPKMDNEP": "1787588314.759489",
       "C0BGLEMH99T": "1787584209.000000",
       "C0BEQUW5NPP": "1787584209.000000",
       "C0BBLUA7JLX": "1787584209.000000",
@@ -38,7 +38,7 @@
       "1787001107.337499": "1787055300.092309",
       "1786990384.507289": "1787055521.111979",
       "1787069259.543559": "1787145016.517439",
-      "1787112734.344369": "1787494618.161649",
+      "1787112734.344369": "1787574415.639709",
       "1787152085.518979": "1787159332.480679",
       "1787159607.185319": "1787162996.829679",
       "1787155581.357669": "1787574411.538869",
@@ -60,22 +60,24 @@
       "1787495798.327079": "1787504854.928079",
       "1787505030.902159": "1787580730.167849",
       "1787577568.967589": "1787577568.967589",
-      "1787584125.966579": "1787584125.966579"
+      "1787584125.966579": "1787584125.966579",
+      "1787157130.471099": "1787328710.030059",
+      "1787587974.554669": "1787587974.554669"
     },
-    "capture_dm": "1787577518.684339",
-    "gmail_after_epoch": 1787583950
+    "capture_dm": "1787588314.759489",
+    "gmail_after_epoch": 1787587049
   },
   "integrity": {
     "last_full_pass": "2026-08-24T12:08:49Z",
-    "last_scan_sha": "530b866548e773ea8f537b3660b91171253128fe",
-    "note": "Unchanged this run — today's full pass already ran at 12:08:49Z; only new vault write this run was the Huljev Inbox note + the _daily journal append, both exempt from vault-keeper's incremental re-scan trigger."
+    "last_scan_sha": "dad64ffdd321d279485b4c5f0f02e7c2b1d2794b",
+    "note": "Incremental check this run (today's full pass already ran at 12:08:49Z): diffed changed vault files since last_scan_sha, found one new defect (Camden Launch ops-admin-lane-and-ariana.md missing `created`) — flagged only, no repair licensed. All other changed files valid."
   },
   "canvas_access": {
     "last_checked": "2026-08-24T12:38:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-24T09:14:00-04:00",
+    "pulse_last_rendered": "2026-08-24T12:18:00-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
