@@ -1,8 +1,8 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260824T160229Z",
-    "run_started": "2026-08-24T16:02:29Z",
+    "run_id": "run_20260824T170244Z",
+    "run_started": "2026-08-24T17:02:44Z",
     "run_completed": "2026-08-24T16:20:00Z",
     "note": "Completed cleanly. 76-minute scan (last run completed 15:11Z). Two substantive items this run: Capehart Scatchard legal retainer letter ($5,000, matter unknown — call this morning, no other record) captured and raised in #decisions; Huljev Group balance-sheet-checklist note filed to 20-Cuzzies (was already raised in #decisions by the prior run). 13 project channels + capture DM + #investor-pipeline + #stormy: zero new activity. Both Camden Launch PT cards already resolved by earlier scans (proposal sent/closed, intake parked) — nothing to advance. #reports scan: 1 informational-only finding (stray manual 'Haven Keeper' post, never propagated). Pulse re-rendered, DM sent."
   },
