@@ -1,8 +1,8 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260824T180406Z",
-    "run_started": "2026-08-24T18:04:06Z",
+    "run_id": "run_20260824T210324Z",
+    "run_started": "2026-08-24T21:03:24Z",
     "run_completed": "2026-08-24T18:10:26Z",
     "note": "Completed cleanly. ~66-minute scan (prior run completed 17:12:40Z). Entirely quiet run: all 15 swept Slack surfaces + #decisions (34 tracked threads) + capture DM showed zero new activity. Email: 4 new threads, all junk/vendor-menu/marketing (labeled seen). PART V/S: Inbox unchanged (3 known stuck notes), 44 due-notes already synced, zero calendar writes. 3 Camden Launch PT cards carried, no round due. reports-scan (12th run): 1 informational finding logged (a second non-Samira 'Haven Keeper' session post with an inaccurate stuck/due summary — doesn't propagate into Samira's state, no action needed). Pulse quiet-pass skip. Money-hub, on-button: quiet/clean."
   },
