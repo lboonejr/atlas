@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260824T140309Z",
     "run_started": "2026-08-24T14:03:09Z",
-    "run_completed": "2026-08-24T13:20:44Z",
-    "note": "Lock acquired for 2026-08-24 ~10:03am ET scan. Prior run (run_20260824T130509Z) completed cleanly at 13:20:44Z."
+    "run_completed": "2026-08-24T14:13:31Z",
+    "note": "Completed cleanly. Genuinely quiet 52-minute scan: all 55 open #decisions-card timestamps checked for reactions — 11 carried a Lemar ✅/⛔/🫡 but all already had a Samira Done/CLOSED reply from an earlier run except one (shopcuzzies.com Search Console, 🫡'd across two prior runs with no closing reply ever posted) — closed that one this run. All 18 swept Slack channels: zero new messages. All 3 Camden Launch PT cards: already current from the 9:19am run, no round due. Gmail: 8 new threads, all vendor-menu/marketing/car-alert junk, labeled seen. Pulse: quiet-pass skip (nothing changed)."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787577568.967589",
-      "C0BBZJL85RT": "1787577590.172459",
-      "D0BHPKMDNEP": "1787576432.899009",
-      "C0BGLEMH99T": "1787577644.000000",
-      "C0BEQUW5NPP": "1787577644.000000",
-      "C0BBLUA7JLX": "1787577644.000000",
-      "C0BJ37SU1TL": "1787577644.000000",
-      "C0BCCUKEUQ2": "1787577644.000000",
-      "C0BCD7U5X2B": "1787577644.000000",
-      "C0BCH2C3GRM": "1787577644.000000",
-      "C0BDN2KQFD4": "1787577644.000000",
-      "C0BD8LTM1EK": "1787577644.000000",
-      "C0BGYM1UB4Y": "1787577644.000000",
-      "C0BGCAK0ML3": "1787577644.000000",
-      "C0BHXTPST52": "1787577644.000000",
-      "C0BC2A94142": "1787577644.000000",
-      "C0BBZ5J8805": "1787577644.000000",
-      "C0BRZT2V89W": "1787577644.000000"
+      "C0BBXA96FFV": "1787580730.167849",
+      "C0BBZJL85RT": "1787580703.371499",
+      "D0BHPKMDNEP": "1787577518.684339",
+      "C0BGLEMH99T": "1787580811.000000",
+      "C0BEQUW5NPP": "1787580811.000000",
+      "C0BBLUA7JLX": "1787580811.000000",
+      "C0BJ37SU1TL": "1787580811.000000",
+      "C0BCCUKEUQ2": "1787580811.000000",
+      "C0BCD7U5X2B": "1787580811.000000",
+      "C0BCH2C3GRM": "1787580811.000000",
+      "C0BDN2KQFD4": "1787580811.000000",
+      "C0BD8LTM1EK": "1787580811.000000",
+      "C0BGYM1UB4Y": "1787580811.000000",
+      "C0BGCAK0ML3": "1787580811.000000",
+      "C0BHXTPST52": "1787580811.000000",
+      "C0BC2A94142": "1787580811.000000",
+      "C0BBZ5J8805": "1787580811.000000",
+      "C0BRZT2V89W": "1787580811.000000"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
@@ -41,7 +41,7 @@
       "1787112734.344369": "1787494618.161649",
       "1787152085.518979": "1787159332.480679",
       "1787159607.185319": "1787162996.829679",
-      "1787155581.357669": "1787509076.997969",
+      "1787155581.357669": "1787574411.538869",
       "1787227722.583919": "1787260488.874049",
       "1787231683.266619": "1787234895.613759",
       "1787235032.481949": "1787333215.335379",
@@ -53,20 +53,21 @@
       "1787333131.938499": "1787509508.677979",
       "1787339259.215559": "1787339259.215559",
       "1787339261.864519": "1787339261.864519",
+      "1787339264.143129": "1787400587.679849",
       "1787400711.689609": "1787400711.689609",
       "1787401047.824359": "1787404082.261989",
       "1787408466.876989": "1787414880.127769",
       "1787495798.327079": "1787504854.928079",
-      "1787505030.902159": "1787505030.902159",
+      "1787505030.902159": "1787580730.167849",
       "1787577568.967589": "1787577568.967589"
     },
-    "capture_dm": "1787576432.899009",
-    "gmail_after_epoch": 1787577644
+    "capture_dm": "1787577518.684339",
+    "gmail_after_epoch": 1787580256
   },
   "integrity": {
     "last_full_pass": "2026-08-24T12:08:49Z",
     "last_scan_sha": "530b866548e773ea8f537b3660b91171253128fe",
-    "note": "Unchanged this run — no full/incremental vault-keeper sweep invoked (today's full pass already ran at 12:08:49Z; this run's own vault writes — the Jamil capture note and the reports-scan log update — are new since scan_sha and will be picked up by the next PART V incremental diff)."
+    "note": "Unchanged this run — today's full pass already ran at 12:08:49Z; no vault notes written this run beyond the _daily journal append (exempt from vault-keeper moves)."
   },
   "canvas_access": {
     "last_checked": "2026-08-24T12:38:00Z",
