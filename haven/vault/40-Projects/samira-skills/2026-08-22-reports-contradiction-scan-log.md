@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-24T18:20:00-04:00
+updated: 2026-08-25T10:35:00-04:00
 domain: project
 type: log
 status: active
@@ -450,4 +450,31 @@ cited Haven note. No DM, no #decisions card, per the non-spam rule.
 
 ### Sources (fourteenth run)
 - slack: #reports `C0BBZJL85RT`, ts range `1787595038`–`1787609371`
+- haven/vault/70-Automation/samira/2026-08-24-third-bot-identity-admin-anomaly.md
+
+## Update 2026-08-25 (fifteenth run)
+
+**Scanned:** #reports ts `1787609371`–`1787667714` (2026-08-24 ~6:16pm ET through
+2026-08-25 ~10:35am ET, 13 new messages).
+
+**Found: 0. Clean scan.**
+
+Two "Haven Keeper" messages (`1787610031`, `1787664252`, "filed 0 · stuck 0 · rang
++0/~0/-0, nothing to file, all quiet") posted under `user: U0BC5UTHYG4` / `app_id:
+A08SF47R6P4` — same signature as the 2026-08-15 incident already resolved as Lemar's
+own desktop Claude session (`haven/vault/70-Automation/samira/2026-08-15-suspicious-
+admin-bot-message-disregarded.md`), where he confirmed it was his own machine and told
+Samira to disregard such posts. Not the third-bot-identity pattern from 8/24 (that one
+was `U0BJQ771LJU` / `A0BHSG2CA7P` — Samira's own bot identity, still open/unreacted on
+its #decisions flag ts `1787609340.269079`). Distinct signature, already-resolved
+disposition — not re-flagged as a new anomaly, and not a #reports contradiction (this
+skill's scope is conflicting figures/status, not identity/security questions).
+
+Rest of the range (Basil's inbox-tidy, the 8:06am email-loop digest, three PT card
+state-change lines, three PART A/D outcome lines from this run) — all internally
+consistent, no conflicting figures against each other or their cited Haven notes.
+
+### Sources (fifteenth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787609371`–`1787667714`
+- haven/vault/70-Automation/samira/2026-08-15-suspicious-admin-bot-message-disregarded.md
 - haven/vault/70-Automation/samira/2026-08-24-third-bot-identity-admin-anomaly.md
