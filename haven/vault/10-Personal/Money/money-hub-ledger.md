@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-25T12:20:00-04:00
+updated: 2026-08-25T12:35:00-04:00
 domain: personal
 type: reference
 status: active
@@ -390,6 +390,38 @@ plans:
       - {seq: 2, amount: 125, due: 2026-08-23, status: pending, calendar_event_id: gt4knt3i2m6lpjhlrjf8n2jqn8}
       - {seq: 3, amount: 125, due: 2026-08-30, status: pending, calendar_event_id: locnmilchabhgq2o0kd8slf7r4}
       - {seq: 4, amount: 125, due: 2026-09-06, status: pending, calendar_event_id: ekpni2dt25f0fe5tjh51sbjj64}
+  - id: hillview-med
+    creditor: "Hillview Farms (Hillview Med)"
+    total: 2532
+    note: "PERSONAL, confirmed by Lemar 2026-08-25 in this session. Origin is a Cuzzie's
+           outstanding balance of $2,532, but Lemar is carrying it personally rather than
+           through the business since Cuzzie's closed — his words in #personal-finance
+           (ts 1787670391.641819): 'handled personally rather than through the business.'
+           That explicit call is why it sits in this ledger and accrues against his own
+           earnings; it is the documented exception to the business boundary, not a
+           guess. Terms as he stated them: $200 every other week, first payment
+           2026-09-07, continuing biweekly until paid in full. $2,532 does not divide
+           evenly by $200, so the schedule is 12 x $200 + a final $132 (13th installment,
+           2027-02-22) — 'until the balance is paid in full' read literally; no figure was
+           adjusted and no date invented. Each installment accrues independently over
+           [2026-08-25..due-1] in parallel with the others, the same pattern the
+           liquidibee plan and the own-car-running goal already use in this ledger.
+           Tracking and reminders only — nothing paid, and Hillview Farms has not been
+           contacted."
+    installments:
+      - {seq: 1, amount: 200, due: 2026-09-07, status: pending, calendar_event_id: j5gh7ccssk7p98n659bpqip7t8}
+      - {seq: 2, amount: 200, due: 2026-09-21, status: pending, calendar_event_id: hicnhi4cpeqe9u5djvmo72j54k}
+      - {seq: 3, amount: 200, due: 2026-10-05, status: pending, calendar_event_id: ne5kkripgd2num0matuhjgatu4}
+      - {seq: 4, amount: 200, due: 2026-10-19, status: pending, calendar_event_id: ivobhm4slilaquve8g30eipn3c}
+      - {seq: 5, amount: 200, due: 2026-11-02, status: pending, calendar_event_id: e55i7ctsailgsclrp6espiqv0s}
+      - {seq: 6, amount: 200, due: 2026-11-16, status: pending, calendar_event_id: j14b2coneqva2vnse878mpgkjc}
+      - {seq: 7, amount: 200, due: 2026-11-30, status: pending, calendar_event_id: 9k2b41cmqu9r5e6dpd3lt084gk}
+      - {seq: 8, amount: 200, due: 2026-12-14, status: pending, calendar_event_id: 7m7f220ptrqsj26u72fg9l8a3k}
+      - {seq: 9, amount: 200, due: 2026-12-28, status: pending, calendar_event_id: 3t6vfehbol8tblvnte1ob2dj5c}
+      - {seq: 10, amount: 200, due: 2027-01-11, status: pending, calendar_event_id: 8eco171sgbbj7qmvbq1n53fchk}
+      - {seq: 11, amount: 200, due: 2027-01-25, status: pending, calendar_event_id: ma5fau7o15b89m7u6ofhgjg5tg}
+      - {seq: 12, amount: 200, due: 2027-02-08, status: pending, calendar_event_id: mb2a3edudkn0lue5854dknnk6k}
+      - {seq: 13, amount: 132, due: 2027-02-22, status: pending, calendar_event_id: ai4vm32gheam46lscrvsvvjc88}
 daily_targets:                       # Revised 2026-08-13 (fourth revision, same
                                      # day): car part didn't come in, 8/14's target
                                      # pushed to 8/15 (possibly Saturday, not
@@ -944,19 +976,33 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-25":
     operating_reserve: 30.00
-    target: 178.76
-    total_claim: 208.76
+    target: 344.67
+    total_claim: 374.67
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 178.76
-    calendar_event_id: null
+    shortfall: 344.67
+    calendar_event_id: qfttlvvn57ab88pctff69k1ols
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
+      - {line_id: hillview-1, amount: 15.39, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
@@ -973,25 +1019,41 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
       - {line_id: patreon, amount: 2.08, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
+      - {line_id: station-travel-weekly, amount: 20.00, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
+      - {line_id: tmobile-split-2, amount: 92.67, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-26":
     operating_reserve: 30.00
-    target: 178.76
-    total_claim: 208.76
+    target: 344.67
+    total_claim: 374.67
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 178.76
-    calendar_event_id: null
+    shortfall: 344.67
+    calendar_event_id: 6547dk37rc3hjdpthnaqqi3gf8
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
+      - {line_id: hillview-1, amount: 15.39, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
@@ -1008,25 +1070,41 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
       - {line_id: patreon, amount: 2.08, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
+      - {line_id: station-travel-weekly, amount: 20.00, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
+      - {line_id: tmobile-split-2, amount: 92.67, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-27":
     operating_reserve: 30.00
-    target: 176.68
-    total_claim: 206.68
+    target: 342.58
+    total_claim: 372.58
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 176.68
-    calendar_event_id: null
+    shortfall: 342.58
+    calendar_event_id: ojoe052rdmk57u9fe7r4jubjgc
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
+      - {line_id: hillview-1, amount: 15.39, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
@@ -1042,25 +1120,41 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
+      - {line_id: station-travel-weekly, amount: 20.00, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
+      - {line_id: tmobile-split-2, amount: 92.66, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-28":
     operating_reserve: 30.00
-    target: 172.84
-    total_claim: 202.84
+    target: 246.08
+    total_claim: 276.08
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 172.84
-    calendar_event_id: null
+    shortfall: 246.08
+    calendar_event_id: vbe25am89iihpll036s2ohm25g
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
+      - {line_id: hillview-1, amount: 15.39, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
@@ -1075,25 +1169,40 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
+      - {line_id: station-travel-weekly, amount: 20.00, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-29":
     operating_reserve: 30.00
-    target: 163.00
-    total_claim: 193.00
+    target: 216.24
+    total_claim: 246.24
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 163.00
-    calendar_event_id: null
+    shortfall: 216.24
+    calendar_event_id: sstpelcggofk499sqem3cpdbk8
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
+      - {line_id: hillview-1, amount: 15.39, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
@@ -1114,19 +1223,33 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-30":
     operating_reserve: 30.00
-    target: 154.67
-    total_claim: 184.67
+    target: 207.91
+    total_claim: 237.91
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 154.67
-    calendar_event_id: null
+    shortfall: 207.91
+    calendar_event_id: a2e7st5ufsf4t0nv43duq49d70
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
+      - {line_id: hillview-1, amount: 15.39, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
@@ -1146,19 +1269,33 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-31":
     operating_reserve: 30.00
-    target: 154.64
-    total_claim: 184.64
+    target: 207.87
+    total_claim: 237.87
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 154.64
-    calendar_event_id: null
+    shortfall: 207.87
+    calendar_event_id: 7ssgeqg8tdc3mrkgtit47jqsqs
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
+      - {line_id: hillview-1, amount: 15.38, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
@@ -1178,19 +1315,33 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-09-01":
     operating_reserve: 30.00
-    target: 154.64
-    total_claim: 184.64
+    target: 207.87
+    total_claim: 237.87
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 154.64
+    shortfall: 207.87
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
+      - {line_id: hillview-1, amount: 15.38, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
@@ -1210,19 +1361,33 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-09-02":
     operating_reserve: 30.00
-    target: 154.62
-    total_claim: 184.62
+    target: 207.85
+    total_claim: 237.85
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 154.62
+    shortfall: 207.85
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
+      - {line_id: hillview-1, amount: 15.38, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
@@ -1242,19 +1407,33 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-03":
     operating_reserve: 30.00
-    target: 154.62
-    total_claim: 184.62
+    target: 207.85
+    total_claim: 237.85
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 154.62
+    shortfall: 207.85
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
+      - {line_id: hillview-1, amount: 15.38, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
@@ -1274,18 +1453,32 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-04":
     operating_reserve: 30.00
-    target: 141.29
-    total_claim: 171.29
+    target: 194.52
+    total_claim: 224.52
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 141.29
+    shortfall: 194.52
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
+      - {line_id: hillview-1, amount: 15.38, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1304,18 +1497,32 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-05":
     operating_reserve: 30.00
-    target: 137.51
-    total_claim: 167.51
+    target: 190.74
+    total_claim: 220.74
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 137.51
+    shortfall: 190.74
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
+      - {line_id: hillview-1, amount: 15.38, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
@@ -1334,18 +1541,32 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-06":
     operating_reserve: 30.00
-    target: 131.83
-    total_claim: 161.83
+    target: 185.06
+    total_claim: 215.06
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 131.83
+    shortfall: 185.06
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
+      - {line_id: hillview-1, amount: 15.38, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1363,17 +1584,30 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-07":
     operating_reserve: 30.00
-    target: 118.78
-    total_claim: 148.78
+    target: 156.63
+    total_claim: 186.63
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 118.78
+    shortfall: 156.63
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1391,17 +1625,30 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-08":
     operating_reserve: 30.00
-    target: 118.77
-    total_claim: 148.77
+    target: 156.62
+    total_claim: 186.62
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 118.77
+    shortfall: 156.62
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1419,17 +1666,30 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-09":
     operating_reserve: 30.00
-    target: 118.77
-    total_claim: 148.77
+    target: 156.62
+    total_claim: 186.62
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 118.77
+    shortfall: 156.62
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1447,17 +1707,30 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-10":
     operating_reserve: 30.00
-    target: 118.20
-    total_claim: 148.20
+    target: 156.05
+    total_claim: 186.05
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 118.20
+    shortfall: 156.05
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1474,17 +1747,30 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-11":
     operating_reserve: 30.00
-    target: 109.87
-    total_claim: 139.87
+    target: 147.72
+    total_claim: 177.72
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 109.87
+    shortfall: 147.72
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
@@ -1500,17 +1786,30 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-12":
     operating_reserve: 30.00
-    target: 109.11
-    total_claim: 139.11
+    target: 146.95
+    total_claim: 176.95
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 109.11
+    shortfall: 146.95
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1526,17 +1825,30 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-13":
     operating_reserve: 30.00
-    target: 109.11
-    total_claim: 139.11
+    target: 146.95
+    total_claim: 176.95
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 109.11
+    shortfall: 146.95
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.41, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1552,17 +1864,30 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-14":
     operating_reserve: 30.00
-    target: 109.10
-    total_claim: 139.10
+    target: 146.92
+    total_claim: 176.92
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 109.10
+    shortfall: 146.92
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.40, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1578,17 +1903,30 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-15":
     operating_reserve: 30.00
-    target: 87.01
-    total_claim: 117.01
+    target: 124.83
+    total_claim: 154.83
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 87.01
+    shortfall: 124.83
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.40, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1602,17 +1940,30 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
   "2026-09-16":
     operating_reserve: 30.00
-    target: 71.39
-    total_claim: 101.39
+    target: 109.21
+    total_claim: 139.21
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 71.39
+    shortfall: 109.21
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.40, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1625,17 +1976,30 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-17":
     operating_reserve: 30.00
-    target: 71.39
-    total_claim: 101.39
+    target: 109.21
+    total_claim: 139.21
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 71.39
+    shortfall: 109.21
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.40, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1648,17 +2012,30 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-18":
     operating_reserve: 30.00
-    target: 63.06
-    total_claim: 93.06
+    target: 100.88
+    total_claim: 130.88
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 63.06
+    shortfall: 100.88
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.40, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
@@ -1670,17 +2047,30 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-19":
     operating_reserve: 30.00
-    target: 64.13
-    total_claim: 94.13
+    target: 101.95
+    total_claim: 131.95
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 64.13
+    shortfall: 101.95
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.40, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1692,17 +2082,30 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-20":
     operating_reserve: 30.00
-    target: 64.13
-    total_claim: 94.13
+    target: 101.95
+    total_claim: 131.95
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 64.13
+    shortfall: 101.95
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-2, amount: 7.40, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1714,17 +2117,29 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-21":
     operating_reserve: 30.00
-    target: 64.12
-    total_claim: 94.12
+    target: 94.54
+    total_claim: 124.54
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 64.12
+    shortfall: 94.54
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1736,17 +2151,29 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-22":
     operating_reserve: 30.00
-    target: 64.12
-    total_claim: 94.12
+    target: 94.54
+    total_claim: 124.54
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 64.12
+    shortfall: 94.54
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1758,17 +2185,29 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-23":
     operating_reserve: 30.00
-    target: 64.12
-    total_claim: 94.12
+    target: 94.54
+    total_claim: 124.54
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 64.12
+    shortfall: 94.54
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1780,17 +2219,29 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-24":
     operating_reserve: 30.00
-    target: 64.12
-    total_claim: 94.12
+    target: 94.54
+    total_claim: 124.54
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 64.12
+    shortfall: 94.54
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1802,17 +2253,29 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-25":
     operating_reserve: 30.00
-    target: 55.79
-    total_claim: 85.79
+    target: 86.21
+    total_claim: 116.21
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 55.79
+    shortfall: 86.21
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
@@ -1823,17 +2286,29 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-26":
     operating_reserve: 30.00
-    target: 58.07
-    total_claim: 88.07
+    target: 88.49
+    total_claim: 118.49
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 58.07
+    shortfall: 88.49
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.88, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1844,17 +2319,29 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-27":
     operating_reserve: 30.00
-    target: 58.07
-    total_claim: 88.07
+    target: 88.48
+    total_claim: 118.48
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 58.07
+    shortfall: 88.48
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.87, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1865,17 +2352,29 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-28":
     operating_reserve: 30.00
-    target: 58.05
-    total_claim: 88.05
+    target: 88.46
+    total_claim: 118.46
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 58.05
+    shortfall: 88.46
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.87, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.64, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.86, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1886,17 +2385,29 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-29":
     operating_reserve: 30.00
-    target: 58.03
-    total_claim: 88.03
+    target: 88.42
+    total_claim: 118.42
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 58.03
+    shortfall: 88.42
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.87, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.86, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
@@ -1907,16 +2418,28 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-30":
     operating_reserve: 30.00
-    target: 25.80
-    total_claim: 55.80
+    target: 56.19
+    total_claim: 86.19
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 25.80
+    shortfall: 56.19
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.87, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
@@ -1925,16 +2448,28 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-01":
     operating_reserve: 30.00
-    target: 25.80
-    total_claim: 55.80
+    target: 56.19
+    total_claim: 86.19
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 25.80
+    shortfall: 56.19
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.87, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
@@ -1943,16 +2478,28 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-02":
     operating_reserve: 30.00
-    target: 25.80
-    total_claim: 55.80
+    target: 56.19
+    total_claim: 86.19
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 25.80
+    shortfall: 56.19
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.87, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
@@ -1961,16 +2508,28 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-03":
     operating_reserve: 30.00
-    target: 20.61
-    total_claim: 50.61
+    target: 51.00
+    total_claim: 81.00
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 20.61
+    shortfall: 51.00
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.87, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
@@ -1978,16 +2537,28 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-04":
     operating_reserve: 30.00
-    target: 20.61
-    total_claim: 50.61
+    target: 51.00
+    total_claim: 81.00
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 20.61
+    shortfall: 51.00
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-3, amount: 4.87, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
@@ -1995,16 +2566,27 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-05":
     operating_reserve: 30.00
-    target: 20.61
-    total_claim: 50.61
+    target: 46.13
+    total_claim: 76.13
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 20.61
+    shortfall: 46.13
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
@@ -2012,16 +2594,27 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-06":
     operating_reserve: 30.00
-    target: 20.61
-    total_claim: 50.61
+    target: 46.13
+    total_claim: 76.13
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 20.61
+    shortfall: 46.13
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
@@ -2029,16 +2622,27 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-07":
     operating_reserve: 30.00
-    target: 20.61
-    total_claim: 50.61
+    target: 46.13
+    total_claim: 76.13
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 20.61
+    shortfall: 46.13
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
@@ -2046,16 +2650,27 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-08":
     operating_reserve: 30.00
-    target: 20.61
-    total_claim: 50.61
+    target: 46.13
+    total_claim: 76.13
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 20.61
+    shortfall: 46.13
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
@@ -2063,16 +2678,27 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-09":
     operating_reserve: 30.00
-    target: 20.61
-    total_claim: 50.61
+    target: 46.13
+    total_claim: 76.13
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 20.61
+    shortfall: 46.13
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
@@ -2080,694 +2706,2275 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-10":
     operating_reserve: 30.00
-    target: 16.07
-    total_claim: 46.07
+    target: 41.59
+    total_claim: 71.59
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.07
+    shortfall: 41.59
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-11":
     operating_reserve: 30.00
-    target: 16.07
-    total_claim: 46.07
+    target: 41.59
+    total_claim: 71.59
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.07
+    shortfall: 41.59
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-12":
     operating_reserve: 30.00
-    target: 16.07
-    total_claim: 46.07
+    target: 41.59
+    total_claim: 71.59
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.07
+    shortfall: 41.59
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-13":
     operating_reserve: 30.00
-    target: 16.07
-    total_claim: 46.07
+    target: 41.59
+    total_claim: 71.59
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.07
+    shortfall: 41.59
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-14":
     operating_reserve: 30.00
-    target: 16.07
-    total_claim: 46.07
+    target: 41.59
+    total_claim: 71.59
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.07
+    shortfall: 41.59
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-15":
     operating_reserve: 30.00
-    target: 16.07
-    total_claim: 46.07
+    target: 41.59
+    total_claim: 71.59
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.07
+    shortfall: 41.59
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-16":
     operating_reserve: 30.00
-    target: 16.07
-    total_claim: 46.07
+    target: 41.59
+    total_claim: 71.59
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.07
+    shortfall: 41.59
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-17":
     operating_reserve: 30.00
-    target: 12.03
-    total_claim: 42.03
+    target: 37.55
+    total_claim: 67.55
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 12.03
+    shortfall: 37.55
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-18":
     operating_reserve: 30.00
-    target: 12.02
-    total_claim: 42.02
+    target: 37.54
+    total_claim: 67.54
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 12.02
+    shortfall: 37.54
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-4, amount: 3.63, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-19":
     operating_reserve: 30.00
-    target: 12.02
-    total_claim: 42.02
+    target: 33.91
+    total_claim: 63.91
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 12.02
+    shortfall: 33.91
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-20":
     operating_reserve: 30.00
-    target: 12.02
-    total_claim: 42.02
+    target: 33.91
+    total_claim: 63.91
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 12.02
+    shortfall: 33.91
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-21":
     operating_reserve: 30.00
-    target: 12.02
-    total_claim: 42.02
+    target: 33.91
+    total_claim: 63.91
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 12.02
+    shortfall: 33.91
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-22":
     operating_reserve: 30.00
-    target: 12.02
-    total_claim: 42.02
+    target: 33.91
+    total_claim: 63.91
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 12.02
+    shortfall: 33.91
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.90, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-23":
     operating_reserve: 30.00
-    target: 12.02
-    total_claim: 42.02
+    target: 33.90
+    total_claim: 63.90
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 12.02
+    shortfall: 33.90
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.89, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-24":
     operating_reserve: 30.00
-    target: 8.39
-    total_claim: 38.39
+    target: 30.27
+    total_claim: 60.27
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 8.39
+    shortfall: 30.27
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.89, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-25":
     operating_reserve: 30.00
-    target: 8.39
-    total_claim: 38.39
+    target: 30.27
+    total_claim: 60.27
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 8.39
+    shortfall: 30.27
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.89, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-26":
     operating_reserve: 30.00
-    target: 8.39
-    total_claim: 38.39
+    target: 30.27
+    total_claim: 60.27
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 8.39
+    shortfall: 30.27
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.89, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-27":
     operating_reserve: 30.00
-    target: 8.39
-    total_claim: 38.39
+    target: 30.27
+    total_claim: 60.27
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 8.39
+    shortfall: 30.27
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.89, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-28":
     operating_reserve: 30.00
-    target: 8.39
-    total_claim: 38.39
+    target: 30.27
+    total_claim: 60.27
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 8.39
+    shortfall: 30.27
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.89, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-29":
     operating_reserve: 30.00
-    target: 8.39
-    total_claim: 38.39
+    target: 30.27
+    total_claim: 60.27
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 8.39
+    shortfall: 30.27
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.89, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-30":
     operating_reserve: 30.00
-    target: 8.39
-    total_claim: 38.39
+    target: 30.27
+    total_claim: 60.27
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 8.39
+    shortfall: 30.27
     calendar_event_id: null
     contributions:
+      - {line_id: am-botte-mechanical-past-due, amount: 6.44, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.89, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-31":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 20.53
+    total_claim: 50.53
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 20.53
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.89, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-01":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 20.53
+    total_claim: 50.53
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 20.53
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-5, amount: 2.89, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-02":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.64
+    total_claim: 47.64
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.64
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-03":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.64
+    total_claim: 47.64
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.64
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-04":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.64
+    total_claim: 47.64
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.64
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-05":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.64
+    total_claim: 47.64
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.64
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-06":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.64
+    total_claim: 47.64
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.64
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-07":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.64
+    total_claim: 47.64
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.64
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-08":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.64
+    total_claim: 47.64
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.64
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-09":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.64
+    total_claim: 47.64
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.64
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-10":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.64
+    total_claim: 47.64
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.64
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-11":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.64
+    total_claim: 47.64
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.64
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-12":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.64
+    total_claim: 47.64
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.64
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.41, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-13":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.63
+    total_claim: 47.63
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.63
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.40, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-14":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.63
+    total_claim: 47.63
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.63
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.40, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-15":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 16.55
+    total_claim: 46.55
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 16.55
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-6, amount: 2.40, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-16":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 14.15
+    total_claim: 44.15
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 14.15
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-17":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 14.15
+    total_claim: 44.15
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 14.15
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-18":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 14.15
+    total_claim: 44.15
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 14.15
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-19":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 14.15
+    total_claim: 44.15
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 14.15
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-20":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 14.15
+    total_claim: 44.15
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 14.15
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-21":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 14.15
+    total_claim: 44.15
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 14.15
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-22":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 14.15
+    total_claim: 44.15
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 14.15
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-23":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 14.15
+    total_claim: 44.15
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 14.15
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-24":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 14.15
+    total_claim: 44.15
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 14.15
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-25":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 14.15
+    total_claim: 44.15
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 14.15
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-26":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 14.15
+    total_claim: 44.15
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 14.15
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-27":
     operating_reserve: 30.00
-    target: 4.00
-    total_claim: 34.00
+    target: 14.14
+    total_claim: 44.14
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.00
+    shortfall: 14.14
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.74, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-28":
     operating_reserve: 30.00
-    target: 4.00
-    total_claim: 34.00
+    target: 14.14
+    total_claim: 44.14
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.00
+    shortfall: 14.14
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.74, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-29":
     operating_reserve: 30.00
-    target: 4.00
-    total_claim: 34.00
+    target: 14.14
+    total_claim: 44.14
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.00
+    shortfall: 14.14
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.74, funded: 0, status: pending}
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+  "2026-11-30":
+    operating_reserve: 30.00
+    target: 8.08
+    total_claim: 38.08
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 8.08
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-01":
+    operating_reserve: 30.00
+    target: 8.08
+    total_claim: 38.08
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 8.08
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-02":
+    operating_reserve: 30.00
+    target: 8.08
+    total_claim: 38.08
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 8.08
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-03":
+    operating_reserve: 30.00
+    target: 8.08
+    total_claim: 38.08
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 8.08
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-04":
+    operating_reserve: 30.00
+    target: 8.08
+    total_claim: 38.08
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 8.08
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-05":
+    operating_reserve: 30.00
+    target: 8.08
+    total_claim: 38.08
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 8.08
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-06":
+    operating_reserve: 30.00
+    target: 8.08
+    total_claim: 38.08
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 8.08
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-07":
+    operating_reserve: 30.00
+    target: 8.08
+    total_claim: 38.08
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 8.08
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-08":
+    operating_reserve: 30.00
+    target: 8.08
+    total_claim: 38.08
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 8.08
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-09":
+    operating_reserve: 30.00
+    target: 8.08
+    total_claim: 38.08
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 8.08
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-10":
+    operating_reserve: 30.00
+    target: 8.08
+    total_claim: 38.08
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 8.08
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-11":
+    operating_reserve: 30.00
+    target: 8.08
+    total_claim: 38.08
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 8.08
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-12":
+    operating_reserve: 30.00
+    target: 8.08
+    total_claim: 38.08
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 8.08
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-13":
+    operating_reserve: 30.00
+    target: 8.07
+    total_claim: 38.07
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 8.07
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-14":
+    operating_reserve: 30.00
+    target: 6.27
+    total_claim: 36.27
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 6.27
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-15":
+    operating_reserve: 30.00
+    target: 6.27
+    total_claim: 36.27
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 6.27
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-16":
+    operating_reserve: 30.00
+    target: 6.27
+    total_claim: 36.27
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 6.27
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-17":
+    operating_reserve: 30.00
+    target: 6.27
+    total_claim: 36.27
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 6.27
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-18":
+    operating_reserve: 30.00
+    target: 6.27
+    total_claim: 36.27
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 6.27
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-19":
+    operating_reserve: 30.00
+    target: 6.27
+    total_claim: 36.27
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 6.27
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-20":
+    operating_reserve: 30.00
+    target: 6.27
+    total_claim: 36.27
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 6.27
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-21":
+    operating_reserve: 30.00
+    target: 6.27
+    total_claim: 36.27
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 6.27
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-22":
+    operating_reserve: 30.00
+    target: 6.27
+    total_claim: 36.27
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 6.27
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-23":
+    operating_reserve: 30.00
+    target: 6.27
+    total_claim: 36.27
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 6.27
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-24":
+    operating_reserve: 30.00
+    target: 6.27
+    total_claim: 36.27
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 6.27
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-25":
+    operating_reserve: 30.00
+    target: 6.27
+    total_claim: 36.27
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 6.27
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-26":
+    operating_reserve: 30.00
+    target: 6.26
+    total_claim: 36.26
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 6.26
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.43, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-27":
+    operating_reserve: 30.00
+    target: 6.26
+    total_claim: 36.26
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 6.26
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.43, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+      - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+  "2026-12-28":
+    operating_reserve: 30.00
+    target: 4.66
+    total_claim: 34.66
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 4.66
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.43, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2026-12-29":
+    operating_reserve: 30.00
+    target: 4.66
+    total_claim: 34.66
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 4.66
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.43, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.20, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2026-12-30":
+    operating_reserve: 30.00
+    target: 4.65
+    total_claim: 34.65
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 4.65
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.43, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2026-12-31":
+    operating_reserve: 30.00
+    target: 4.65
+    total_claim: 34.65
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 4.65
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.43, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-01":
+    operating_reserve: 30.00
+    target: 4.65
+    total_claim: 34.65
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 4.65
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.43, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-02":
+    operating_reserve: 30.00
+    target: 4.65
+    total_claim: 34.65
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 4.65
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.43, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-03":
+    operating_reserve: 30.00
+    target: 4.65
+    total_claim: 34.65
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 4.65
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.43, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-04":
+    operating_reserve: 30.00
+    target: 4.65
+    total_claim: 34.65
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 4.65
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.43, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-05":
+    operating_reserve: 30.00
+    target: 4.65
+    total_claim: 34.65
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 4.65
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.43, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-06":
+    operating_reserve: 30.00
+    target: 4.65
+    total_claim: 34.65
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 4.65
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.43, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-07":
+    operating_reserve: 30.00
+    target: 4.65
+    total_claim: 34.65
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 4.65
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.43, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-08":
+    operating_reserve: 30.00
+    target: 4.65
+    total_claim: 34.65
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 4.65
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.43, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-09":
+    operating_reserve: 30.00
+    target: 4.65
+    total_claim: 34.65
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 4.65
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.43, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-10":
+    operating_reserve: 30.00
+    target: 4.65
+    total_claim: 34.65
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 4.65
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-10, amount: 1.43, funded: 0, status: pending}
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-11":
+    operating_reserve: 30.00
+    target: 3.22
+    total_claim: 33.22
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 3.22
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-12":
+    operating_reserve: 30.00
+    target: 3.22
+    total_claim: 33.22
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 3.22
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-13":
+    operating_reserve: 30.00
+    target: 3.22
+    total_claim: 33.22
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 3.22
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-14":
+    operating_reserve: 30.00
+    target: 3.22
+    total_claim: 33.22
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 3.22
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-15":
+    operating_reserve: 30.00
+    target: 3.22
+    total_claim: 33.22
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 3.22
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-16":
+    operating_reserve: 30.00
+    target: 3.22
+    total_claim: 33.22
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 3.22
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-17":
+    operating_reserve: 30.00
+    target: 3.22
+    total_claim: 33.22
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 3.22
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-18":
+    operating_reserve: 30.00
+    target: 3.22
+    total_claim: 33.22
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 3.22
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-19":
+    operating_reserve: 30.00
+    target: 3.22
+    total_claim: 33.22
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 3.22
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-20":
+    operating_reserve: 30.00
+    target: 3.22
+    total_claim: 33.22
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 3.22
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-21":
+    operating_reserve: 30.00
+    target: 3.22
+    total_claim: 33.22
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 3.22
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-22":
+    operating_reserve: 30.00
+    target: 3.22
+    total_claim: 33.22
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 3.22
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-23":
+    operating_reserve: 30.00
+    target: 3.22
+    total_claim: 33.22
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 3.22
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-24":
+    operating_reserve: 30.00
+    target: 3.22
+    total_claim: 33.22
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 3.22
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-11, amount: 1.30, funded: 0, status: pending}
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-25":
+    operating_reserve: 30.00
+    target: 1.92
+    total_claim: 31.92
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 1.92
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-26":
+    operating_reserve: 30.00
+    target: 1.92
+    total_claim: 31.92
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 1.92
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-27":
+    operating_reserve: 30.00
+    target: 1.92
+    total_claim: 31.92
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 1.92
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-28":
+    operating_reserve: 30.00
+    target: 1.92
+    total_claim: 31.92
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 1.92
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-29":
+    operating_reserve: 30.00
+    target: 1.92
+    total_claim: 31.92
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 1.92
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-30":
+    operating_reserve: 30.00
+    target: 1.92
+    total_claim: 31.92
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 1.92
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-01-31":
+    operating_reserve: 30.00
+    target: 1.92
+    total_claim: 31.92
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 1.92
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-02-01":
+    operating_reserve: 30.00
+    target: 1.92
+    total_claim: 31.92
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 1.92
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-02-02":
+    operating_reserve: 30.00
+    target: 1.92
+    total_claim: 31.92
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 1.92
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-02-03":
+    operating_reserve: 30.00
+    target: 1.92
+    total_claim: 31.92
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 1.92
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-02-04":
+    operating_reserve: 30.00
+    target: 1.92
+    total_claim: 31.92
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 1.92
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-02-05":
+    operating_reserve: 30.00
+    target: 1.92
+    total_claim: 31.92
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 1.92
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-02-06":
+    operating_reserve: 30.00
+    target: 1.92
+    total_claim: 31.92
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 1.92
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-02-07":
+    operating_reserve: 30.00
+    target: 1.92
+    total_claim: 31.92
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 1.92
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-12, amount: 1.19, funded: 0, status: pending}
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-02-08":
+    operating_reserve: 30.00
+    target: 0.73
+    total_claim: 30.73
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 0.73
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-13, amount: 0.73, funded: 0, status: pending}
+  "2027-02-09":
+    operating_reserve: 30.00
+    target: 0.72
+    total_claim: 30.72
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 0.72
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-13, amount: 0.72, funded: 0, status: pending}
+  "2027-02-10":
+    operating_reserve: 30.00
+    target: 0.72
+    total_claim: 30.72
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 0.72
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-13, amount: 0.72, funded: 0, status: pending}
+  "2027-02-11":
+    operating_reserve: 30.00
+    target: 0.72
+    total_claim: 30.72
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 0.72
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-13, amount: 0.72, funded: 0, status: pending}
+  "2027-02-12":
+    operating_reserve: 30.00
+    target: 0.72
+    total_claim: 30.72
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 0.72
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-13, amount: 0.72, funded: 0, status: pending}
+  "2027-02-13":
+    operating_reserve: 30.00
+    target: 0.72
+    total_claim: 30.72
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 0.72
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-13, amount: 0.72, funded: 0, status: pending}
+  "2027-02-14":
+    operating_reserve: 30.00
+    target: 0.72
+    total_claim: 30.72
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 0.72
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-13, amount: 0.72, funded: 0, status: pending}
+  "2027-02-15":
+    operating_reserve: 30.00
+    target: 0.72
+    total_claim: 30.72
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 0.72
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-13, amount: 0.72, funded: 0, status: pending}
+  "2027-02-16":
+    operating_reserve: 30.00
+    target: 0.72
+    total_claim: 30.72
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 0.72
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-13, amount: 0.72, funded: 0, status: pending}
+  "2027-02-17":
+    operating_reserve: 30.00
+    target: 0.72
+    total_claim: 30.72
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 0.72
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-13, amount: 0.72, funded: 0, status: pending}
+  "2027-02-18":
+    operating_reserve: 30.00
+    target: 0.72
+    total_claim: 30.72
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 0.72
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-13, amount: 0.72, funded: 0, status: pending}
+  "2027-02-19":
+    operating_reserve: 30.00
+    target: 0.72
+    total_claim: 30.72
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 0.72
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-13, amount: 0.72, funded: 0, status: pending}
+  "2027-02-20":
+    operating_reserve: 30.00
+    target: 0.72
+    total_claim: 30.72
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 0.72
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-13, amount: 0.72, funded: 0, status: pending}
+  "2027-02-21":
+    operating_reserve: 30.00
+    target: 0.72
+    total_claim: 30.72
+    gas_spent: null
+    swept_to_maintenance: 0
+    funded: 0
+    shortfall: 0.72
+    calendar_event_id: null
+    contributions:
+      - {line_id: hillview-13, amount: 0.72, funded: 0, status: pending}
 goals:                               # a goal is a bill Lemar owes himself: it needs a
                                      # target_date to enter the queue (locked 2026-08-10)
   - id: own-car-running
@@ -2822,6 +5029,7 @@ open_questions:
   - "No balance has been reported for either pocket since the Era connector was retired 2026-08-10 — say 'Spending has $X' / 'Set-Aside has $X' whenever convenient; both currently render 'not reported'"
   - "RESOLVED 2026-08-15 (#personal-finance, unlabeled drop, ~14:31 ET): Lemar reported the round-trip travel rate — 'Round Trip (Saturday & Sunday total): $80 per week.' This week's one-time station-travel line corrected 50->80; a new recurring station-travel-weekly line ($80/wk, Saturdays, starting 2026-08-22) added. daily_targets beyond 2026-08-15 not yet hand-spread for the new recurring line — see the next line."
   - "OPEN: station-travel-weekly ($80/wk, first_due 2026-08-22) is a new dated recurring line whose daily_targets accrual has NOT yet been hand-spread across the ~7 open days between now and 8/22 — deferred to the next dedicated recompute pass per this ledger's established practice (same treatment as tmobile-split-2/moms-car-oil-change/am-botte). The dashboard's queue section will show it as a dated future line; the per-day daily numbers 8/16-8/21 do not yet include its drip."
+  - "OPEN 2026-08-25 — OVERDUE BACKLOG, $968 across 9 items, nothing funded against any of them. Every one of these has a due date that has already passed while `funded: 0`, so per ROLLOVER doctrine each has LEFT the accrual and none of them appear in any daily number from today forward: tmobile-split-1 $265 (due 8/03, 22 days past) · liquidibee-nomas seq1 $125 (due 8/17) · cuzzies-google-voice $38 (due 8/18) · cuzzies-google-workspace $85 (due 8/19) · moms-lump-0821 $110 (due 8/21) · metrc-fee $40 (due 8/21) · station-travel-weekly's first occurrence $80 (due 8/22) · liquidibee-nomas seq2 $125 (due 8/23) · moms-car-oil-change $100 (due 8/23). NOTHING was marked paid and nothing was re-dated — both are Lemar's call and inventing either would be a lie about his money. ROOT CAUSE, same as the calendar outage: ROLLOVER runs only inside PART M, PART M ran only on a money drop, and there were no drops after 2026-08-17 — so no line was ever flagged as it went past due. The window-maintenance fix (Update 2026-08-25) makes the daily calendar unconditional but does NOT by itself make ROLLOVER unconditional; that gap is still open. ASK LEMAR, per item: paid outside the system (mark paid, retire the event) or still owed (give it a new date so it re-enters the queue)?"
   - "Where should the maintenance bucket live? The 2026-08-10 account correction left it in Set-Aside, which is now SoFi Checking (the bill-paying account). SoFi Savings is free and is the obvious home, but Lemar has not said so — not moved."
   - "Gas/maintenance $30/day reserve is a rough cap Lemar named, not a measured figure — refine it once a few weeks of actual fill-ups are reported (it is now the largest single line in the ledger at ~$900/mo)"
   - "Income backlog: Lemar is posting ~2 weeks of DoorDash earnings to #personal-finance (2026-08-10). Until they land, income_target_weekly $500 is a guess and the overload check can't run."
@@ -2831,7 +5039,7 @@ open_questions:
   - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Lemar was unexpectedly charged $119 by Edge Fitness for personal training and is disputing it with SoFi. Already happened (not a future dated line) so nothing was added to `bills` — no due date exists to queue and inventing one would violate the never-invent-a-date rule. #decisions parent raised asking how he wants this reflected once the dispute resolves (refunded → no entry needed; upheld → a dated personal expense/loss line, his call). No income reported today."
   - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Set-Aside (SoFi Checking) balance reported at $13.00 as_of 2026-08-17 — first balance ever reported for this pocket since the Era connector retired 2026-08-10. Very low against the ~$380/day accrual target; flagged on the dashboard, not smoothed or explained away."
   - "OPEN 2026-08-25: Hillview Med — Lemar committed to a $200 biweekly payment plan against a $2,532 Cuzzie's balance, first payment 2026-09-07, and said explicitly it is 'handled personally rather than through the business since Cuzzie's closed' (#personal-finance ts 1787670391.641819, confirmed in the 2026-08-25 run). It was captured to Haven at haven/vault/20-Cuzzies/2026-08-19-hillview-med-outstanding-balance.md but was NEVER added to this ledger — so a dated, recurring, self-declared PERSONAL obligation starting in 13 days is carrying no line, no accrual, and no calendar event. Not added here unilaterally: it is business-ORIGIN debt Lemar is paying personally, which is exactly the ambiguous case the business boundary says to ask about rather than guess. CONFIRM it belongs in the personal ledger and it gets a plan line + accrual + events."
-  - "OPEN 2026-08-25 — STALE ACCRUAL BACKLOG, never cleared. Four dated lines were added with their daily_targets spread explicitly DEFERRED to a 'next dedicated recompute pass' that never ran: station-travel-weekly ($80/wk, first_due 2026-08-22 — see its own bullet above), tmobile-split-2 ($278, due 8/28), moms-car-oil-change ($100, due 8/23), and am-botte (past-due balance). The 2026-08-15 lock ('Recompute is NEVER deferred', SKILL.md ACCRUAL) closed the habit going forward but did not retire the backlog already sitting in the ledger. Consequence: every daily target from 2026-08-16 onward is UNDERSTATED by these lines' drip — the numbers are close but do not carry these corrections. Clearing this needs a recompute pass, not a guess."
+  - "RESOLVED 2026-08-25 (recompute pass, same session) — the stale accrual backlog is cleared. tmobile-split-2 ($278, due 8/28) now accrues $92.67/day over [8/25..8/27]; am-botte-mechanical-past-due ($431.83, due 10/31) accrues ~$6.45/day over [8/25..10/30]; station-travel-weekly accrues its NEXT occurrence only (Sat 8/29, $20.00/day over [8/25..8/28]) — one cycle ahead, matching how claude/patreon/wispr-flow/student-loans are already projected in this ledger, with later Saturdays chaining in subsequent passes rather than being projected out speculatively. moms-car-oil-change was NOT spread: its due date (8/23) has already passed, so per ROLLOVER doctrine it is overdue and leaves the accrual entirely — see the overdue bullet below. Every touched day from 2026-08-25 forward was recomputed; no past day was rewritten."
 ```
 
 ## Update 2026-08-14 (PART M — two new personal bills: fantasy football + Dil's Christmas gift)
@@ -3932,3 +6140,77 @@ personal is not in this ledger at all. Publishing those figures would put number
 calendar that this ledger already knows are understated — the one thing the projection
 layer is never allowed to do. Both gaps are raised as open questions above; the restore
 runs after the recompute, not before it.
+
+## Update 2026-08-25 (2) — Hillview added, accrual backlog cleared, daily calendar restored
+
+Live run at Lemar's request, following the outage Update above. He confirmed the one
+thing that pass was blocked on: **"We can confirm Hillview is personal."**
+
+**1. `hillview-med` plan created.** $2,532 total against the outstanding Cuzzie's
+balance, carried personally per his explicit call — the documented exception to the
+business boundary, not an inference. Terms as he stated them in #personal-finance
+(ts `1787670391.641819`): $200 every other week, first payment 2026-09-07, biweekly
+until paid in full. $2,532 is not a multiple of $200, so the schedule closes as
+**12 x $200 + a final $132** (installment 13, 2027-02-22). No figure was adjusted and
+no date invented; "until the balance is paid in full" is read literally. All 13
+installments carry due-date events on the personal reminder calendar (both popups) with
+ids written back. Nothing paid; Hillview Farms not contacted.
+
+**2. Deferred accrual backlog cleared** (the 2026-08-15 "never deferred" lock finally
+applied to the lines that predated it):
+- `tmobile-split-2` $278 due 8/28 → $92.67/day over [8/25..8/27].
+- `am-botte-mechanical-past-due` $431.83 due 10/31 → ~$6.45/day over [8/25..10/30].
+- `station-travel-weekly` → its NEXT occurrence only (Sat 8/29), $20.00/day over
+  [8/25..8/28]. One cycle ahead, matching how claude/patreon/wispr-flow/student-loans
+  are already projected here; later Saturdays chain in subsequent passes rather than
+  being projected out speculatively.
+- `moms-car-oil-change` was NOT spread — its due date (8/23) has passed, so it is
+  overdue and leaves the accrual entirely. See item 4.
+
+Every installment and bill accrues over `[2026-08-25..due-1]`, even split to the cent
+with the remainder on the earliest days. Totals reconcile exactly: $278.00 + $431.83 +
+$80.00 + $2,532.00 = **$3,321.83**, every cent landed. 97 existing days recomputed, 84
+new days created (horizon extended 2026-11-29 → 2027-02-21 for the later Hillview
+installments; those new days carry only Hillview contributions, since no other line's
+window reaches that far). **No past day was rewritten** — verified against the pre-image:
+the earliest modified day-block is 2026-08-25.
+
+**3. DAILY CALENDAR restored.** The `[today..today+6]` window (8/25–8/31) now has all
+seven aggregate events, ids written back. 2026-09-01 is correctly still `null` — outside
+the window, and the new WINDOW MAINTENANCE rule advances it rather than back-filling.
+Today reads **$344.67** set-aside + $30.00 gas = **$374.67 total claim** (was $178.76
+before this pass; the jump is real, not a correction — $92.67 of it is T-Mobile due in
+three days, $46.79 is the new Hillview drip, $20.00 station travel, $6.45 Am Botte).
+
+**4. OVERDUE BACKLOG — $968 across 9 items, the material finding of this pass.** See the
+open question above for the itemised list. Every one of them passed its due date with
+`funded: 0`, so per ROLLOVER doctrine each has left the accrual and appears in no daily
+number. Nothing was marked paid and nothing re-dated — both are Lemar's call. Same root
+cause as the calendar outage: ROLLOVER also runs only inside PART M, PART M ran only on
+a drop, and there were no drops after 8/17, so no line was flagged as it went past due.
+**The window-maintenance fix does not cover this** — making ROLLOVER unconditional is a
+separate, still-open gap.
+
+**5. OVERLOAD CHECK — fires, hard.** Next 7 days: **$1,910.02** set-aside (+$210.00 gas
+= $2,120.02 total claim). Trailing 4-week logged income: $714.53, an average week of
+**$178.63**. Gap **$1,731.39 — 10.7x**. Written exactly as computed; nothing shrunk,
+delayed, or dropped to make it look achievable. Compounding it: **no income has been
+logged in 10 days** (last entry 2026-08-15), so the average itself is optimistic, and
+the Set-Aside pocket last reported $13.00 (2026-08-17, now stale).
+
+**6. REBALANCE — HARD STOP, no valid proposal.** No line carries `non_negotiable`, so
+nothing was blocked on that. But the three allowed moves cannot close $1,731.39:
+stretching the `own-car-running` goal frees at most $459.68 across the week and
+re-tiering `hillview-med` at most $327.52 — and even zeroing BOTH leaves $1,122.82,
+still 6.3x an average week. Move type 3 (flag a business-origin line for reimbursement)
+yields $0 of relief here: every eligible line (`cuzzies-phone-workspace`,
+`cuzzies-google-voice`, `cuzzies-google-workspace`, `metrc-fee`) is either undated or
+already overdue, so none of them is in the week's accrual to begin with. `hillview-med`
+is the one line that technically qualifies as business-origin-carried-personally, and it
+is deliberately NOT proposed: Lemar made that call explicitly today. Per doctrine the
+skill may propose a stretch but never force one, and never manufactures a proposal that
+doesn't actually work — so it says so plainly instead.
+
+Nothing paid, nothing moved, no creditor contacted. Dashboard snapshot not re-rendered
+in this pass — flagged to Lemar so a stale Doc is not mistaken for a current one.
+
