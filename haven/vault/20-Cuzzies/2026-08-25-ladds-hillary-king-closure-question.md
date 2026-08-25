@@ -28,3 +28,15 @@ call) rather than drafted and saved unilaterally.
   menu drop + connect ask), `1a035cdf24eb7aef` (Lemar's 2026-08-24 10:04pm ET reply),
   `1a039457a6e1e7c4` (Hillary's 2026-08-25 2:13pm ET closure question)
 - slack: #decisions ts `1787667532.037259` (card)
+
+## Update 2026-08-25 (2) — Lemar picks Option A; reply drafted
+
+Lemar reacted ✅ on Option A ("Honest: closed since mid-June, working through next
+steps, will let her know if that changes") on the #decisions card, reply ts
+`1787667535.441409`. Drafted the honest reply in-thread and saved to Gmail Drafts
+(never sent, per Safety) — draft id `r-3654695343031904164`, message id
+`1a039756ed54b918`, same thread `1a033dac94bb1ec5`.
+
+### Sources (this update)
+- slack: #decisions ts `1787667532.037259` (card) / `1787667535.441409` (Option A, ✅'d)
+- gmail: draft `r-3654695343031904164` on thread `1a033dac94bb1ec5`
