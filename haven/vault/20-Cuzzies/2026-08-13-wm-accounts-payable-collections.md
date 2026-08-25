@@ -1,6 +1,6 @@
 ---
 created: 2026-08-13T11:15-04:00
-updated: 2026-08-17T15:04-04:00
+updated: 2026-08-25T16:02-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -131,6 +131,18 @@ Hard-Floor Lint before saving — passed.
   `1786991925.456159` (Lemar's account-transition note) / `1786993750.159969` (this
   closeout reply)
 - gmail: thread `19ffb0c2f0236bf0`, draft `r-2360515012652679759`
+
+## Update 2026-08-25T16:02-04:00 — Lemar sent the lock-service approval himself; Mason confirms install Thursday 8/27
+
+Lemar sent the saved 8/17 draft himself 2026-08-24 ~6:21pm ET (gmail thread
+`19ffb0c2f0236bf0`) — approved the $15.00/month lock service, held off on the bin
+upgrade, flagged the possible change-in-operator to Mason. Mason Wales replied
+2026-08-25 ~3:02pm ET confirming the correction will be completed Thursday 8/27; he'll
+follow up then to confirm it looks right. No decision needed — informational only, no
+reply drafted. Gmail thread labeled `Samira/seen`.
+
+### Sources (this update)
+- gmail: thread `19ffb0c2f0236bf0` (message `1a03a4d61c44a1a0`, 2026-08-25 19:02:17 UTC)
 
 ## Related
 - [[waste-management]] (entity note — none exists yet, needs a stub)
