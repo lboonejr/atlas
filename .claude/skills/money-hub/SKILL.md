@@ -366,6 +366,36 @@ above), say so in that same card rather than staying silent.
 twice in one pass.
 
 ## ROLLOVER — the leftovers drag forward (runs inside PART M, last scan of the day)
+**UNCONDITIONAL, drop or no drop (locked 2026-08-25).** Like DAILY CALENDAR's WINDOW
+MAINTENANCE, this is NOT a side-effect of a money drop landing in #personal-finance. It
+runs on the last scan of every day whether or not the channel said anything, and it runs
+its CATCH-UP pass (below) on any scan that finds unrolled past days. A quiet channel is
+the normal case, not a reason to skip it.
+
+Why this is a rule: rollover used to fire only when a drop happened to arrive, so when
+#personal-finance went quiet after 2026-08-17, **seven consecutive days (8/18–8/24)
+carrying $1,571.30 of shortfall sat at `funded: 0` with every contribution still
+`pending`** — never rolled, never flagged, never compounded onto today. The money simply
+fell out of the model, and nothing noticed until Lemar asked. Same root cause, same shape,
+and the same fix as the calendar outage: make the step unconditional rather than
+drop-triggered.
+
+**CATCH-UP — closing days that were never rolled.** A past day with contributions still
+`pending` and no `resolution` is a day ROLLOVER never processed. On finding one:
+- Process the OLDEST unrolled day first, then forward, one day at a time, so each day's
+  remainder lands on the next day exactly as it would have at the time.
+- **Never silently dump a multi-day backlog onto today.** Roll day by day, and apply the
+  rollover brake per contribution as normal — a line that has rolled 3 days running stops
+  being silently re-rolled and gets named in a #decisions parent.
+- A contribution whose line has since been **paid, parked, re-dated, or expired** does NOT
+  roll: it is closed out in place with the status that now applies and a note saying so.
+  Re-rolling a settled line would resurrect a debt that no longer exists.
+- Stamp each processed day with a `resolution` naming the catch-up, so it is visibly closed
+  history and never processed twice.
+- If the catch-up total is large enough to move today's number materially, **do not apply
+  it silently** — raise ONE #decisions parent with the figure and the day-by-day breakdown
+  and let Lemar decide, the same way OVERLOAD CHECK never quietly reshapes a week.
+
 On Samira's LAST hourly scan of the day (≥5pm ET — same style as the existing PART C
 timing gate, so this never fires mid-morning): for every `daily_targets[today]`
 contribution with `funded < amount`, carry the **unfunded remainder** (`amount − funded`)
@@ -515,11 +545,19 @@ On the LAST hourly scan of the day (≥5pm ET) also run ROLLOVER before re-rende
 Re-render the dashboard once at the end ONLY if something changed. PART M captures,
 accrues, funds, checks, and renders; it never runs the weekly view (mode 6 stays on-demand).
 
-**Unconditional first step (locked 2026-08-25):** run DAILY CALENDAR's WINDOW MAINTENANCE
-*before* scanning for drops, on every sweep. It is the only part of PART M that is not
+**Unconditional first steps (locked 2026-08-25):** before scanning for drops, on every
+sweep, run BOTH (a) DAILY CALENDAR's WINDOW MAINTENANCE and (b) ROLLOVER's CATCH-UP scan
+for past days that were never rolled. These are the parts of PART M that are not
 drop-triggered, so `money —` (no drops this pass) never means "touched nothing" — report
-any events it created. If the window was short when the pass started, say so in the
-digest token: `money — · window repaired <n>d`.
+what they did. Digest token when either fired: `money — · window repaired <n>d · rolled
+<n>d $<amount>`.
+
+The rule behind both: **any step that keeps the model honest over time must not depend on
+Lemar having said something.** A drop-triggered projection silently decays the moment the
+channel goes quiet — that is how the daily calendar died on 8/22 and how seven days of
+rollover went missing between 8/18 and 8/24. Before making any future step drop-triggered,
+ask whether it still needs to happen on a week when he says nothing; if yes, it belongs
+here.
 
 ## SAFETY (applies to the whole skill)
 You MAY: record gas spend and sweep the remainder into the maintenance bucket from a

@@ -295,8 +295,18 @@ no priority tiers, no floor, no waterfall. Two consequences for you:
   Cuzzie's (Owners) calendar and #on-button. Genuinely ambiguous (Lemar personally
   covering a business cost) → leave it out and ask; never guess the side.
 
-**Run the skill's DAILY CALENDAR window maintenance FIRST, every pass, drops or not
-(locked 2026-08-25).** The daily "Set aside today" events live on a rolling
+**Run the skill's two UNCONDITIONAL steps FIRST, every pass, drops or not (locked
+2026-08-25): DAILY CALENDAR window maintenance, and ROLLOVER's catch-up scan for past
+days that were never rolled.** Neither depends on a drop having landed. The rollover
+catch-up processes unrolled past days oldest-first, one day at a time, never dumping a
+multi-day backlog onto today; a line since paid/parked/re-dated/expired is closed out in
+place rather than re-rolled; and if the catch-up total would move today's number
+materially it goes to Lemar as ONE #decisions parent rather than being applied silently.
+This is the fix for the 8/18-8/24 gap, where seven days carrying $1,571.30 of shortfall
+sat unrolled and unflagged because the channel was quiet. Report both in the digest:
+`money — · window repaired <n>d · rolled <n>d $<amount>`.
+
+**Window maintenance, specifically (locked 2026-08-25).** The daily "Set aside today" events live on a rolling
 `[today .. today+6]` window, and advancing that window is NOT a side-effect of a drop
 landing — it is an unconditional step. Any day in the window whose `daily_targets` entry
 has `calendar_event_id: null` and a target > $0 gets its event created and the id written

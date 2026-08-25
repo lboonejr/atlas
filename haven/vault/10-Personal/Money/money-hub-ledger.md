@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-25T13:18:00-04:00
+updated: 2026-08-25T13:26:00-04:00
 domain: personal
 type: reference
 status: active
@@ -120,6 +120,13 @@ pockets:                             # TWO pockets. Account mapping CORRECTED 20
      role: "income lands here (DoorDash payouts); gas and day-to-day spending pay from here"}
   - {id: set-aside, name: "Set-Aside", account: sofi-checking,
      balance: 13.00, balance_as_of: 2026-08-17, status: active,
+     last_transfer_in: {amount: 100, as_of: 2026-08-25,
+       note: "Lemar 2026-08-25: '$100 went into sofi.' A TRANSFER was reported, not a
+              balance — so `balance` deliberately stays at the 2026-08-17 $13.00 figure
+              rather than being computed to $113.00, which would assume nothing else
+              moved in or out across those 8 days. Never adjust a reported balance to
+              match what the ledger expects (field rules). Ask for the current SoFi
+              Checking balance to close the gap."},
      role: "the daily set-aside number moves here; every recurring bill is paid out of
             this account",
      note: "last known $128.78 as of 2026-07-11 came from the retired Era connector and
@@ -991,8 +998,8 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     total_claim: 414.13
     gas_spent: null
     swept_to_maintenance: 0
-    funded: 0
-    shortfall: 384.13
+    funded: 100.00
+    shortfall: 284.13
     calendar_event_id: qfttlvvn57ab88pctff69k1ols
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1022,10 +1029,10 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: metrc-fee, amount: 5.72, funded: 0, status: pending}
       - {line_id: moms-car-oil-change, amount: 10.00, funded: 0, status: pending}
-      - {line_id: moms-weekly, amount: 3.84, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.84, funded: 3.84, status: funded}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 18.18, funded: 1.41, status: partial}
       - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: pending}
       - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
       - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
@@ -1033,11 +1040,11 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: pending}
       - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
-      - {line_id: patreon, amount: 2.08, funded: 0, status: pending}
+      - {line_id: patreon, amount: 2.08, funded: 2.08, status: funded}
       - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
       - {line_id: station-travel-weekly, amount: 20.00, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
-      - {line_id: tmobile-split-2, amount: 92.67, funded: 0, status: pending}
+      - {line_id: tmobile-split-2, amount: 92.67, funded: 92.67, status: funded}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
@@ -5134,7 +5141,9 @@ open_questions:
   - "Water pump $184.79 (now dated 2026-09-15): STILL unreconciled whether it's inside or on top of the car goal's $2,000 repairs figure — dating it didn't resolve the overlap."
   - "RESOLVED 2026-08-13 (recompute session, updated same day): comedy tickets $50.28 confirmed unpaid and briefly folded into the accrual, then CANCELLED later the same day — Lemar isn't going, too many bills were piling up. Parked, out of the queue entirely, not owed. See Update 2026-08-13 (THIRD REVISION)."
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
-  - "OPEN 2026-08-25 — was any of the $260 actually SET ASIDE? Lemar reported earning $230 (Station weekend) + $30 (DoorDash 8/24) and having 'about $120 of that left today'. That is a CASH position, not a transfer: `funded` means money moved to Set-Aside (SoFi Checking), and he never said it did. So no `daily_targets` contribution was marked funded for 8/22-8/24 or today — recording otherwise would assert a transfer that did not happen. If any part of the $120 (or of the ~$140 already spent) did go to Set-Aside, say so and the days get funded properly. Related: Set-Aside's balance still reads $13.00 as of 2026-08-17, eight days stale."
+  - "RESOLVED 2026-08-25 — $100 of the $260 went to Set-Aside. Lemar: '$100 went into sofi.' Applied to 2026-08-25 in DUE-DATE ORDER per INCOME ALLOCATION: patreon $2.08 (due 8/27) funded · moms-weekly $3.84 (8/28) funded · tmobile-split-2 $92.67 (8/28) funded · own-car-running-2 $1.41 of $18.18 (8/29) partial. Today now reads target $384.13, funded $100.00, shortfall $284.13. Applied to TODAY rather than to 8/22-8/24: the money is in Set-Aside now and available to the live queue, and those past days are closed history this ledger does not rewrite. The gas operating reserve was NOT deducted first — that reserve stays in Spending by definition, and this $100 had already moved to the bills pocket."
+  - "OPEN 2026-08-25 — Set-Aside BALANCE still unknown. A transfer was reported ($100 in), not a balance, so `balance` deliberately stays at $13.00 as_of 2026-08-17 rather than being computed to $113.00 — that would assume nothing else moved in or out across eight days, and a reported balance is never adjusted to match what the ledger expects. Say 'SoFi Checking is at $X' whenever convenient and the pocket goes current."
+  - "OPEN 2026-08-25 — ROLLOVER CATCH-UP, $1,298.86, needs Lemar's decision before it is applied. Days 2026-08-18 through 08-24 were never rolled (see Update 6). Raw unrolled shortfall across those seven days is $1,571.30, but $272.44 of that must NOT roll under the new CATCH-UP rules: $217.45 belongs to lines since re-dated and already re-accrued in full from today (cuzzies-google-workspace, metrc-fee, liquidibee-1..4) so re-rolling would double-count, and $54.99 belongs to moms-lump-0821 which is PARKED and closes in place. That leaves $1,298.86 genuinely rollable — biggest pieces own-car-running-1 $145.44, own-car-running-2 $127.26, tow-truck-repay $112.91, student-loans $109.41, car-repair-payment $91.35, fantasy-football-buyin $91.33. Applying it lands today at $1,682.99 (from $384.13), which is exactly the 'materially moves today's number' case the CATCH-UP rule says must go to Lemar as a decision rather than be applied silently. The rollover brake also fires on every one of these — each has rolled 7 days running, well past the 3-day threshold. NOT rolling does not erase the debt: every one of these lines keeps its own due date and its remaining accrual, so it simply arrives short on the day it is due. Lemar decides: roll it forward, or close those seven days out unrolled."
   - "No balance has been reported for either pocket since the Era connector was retired 2026-08-10 — say 'Spending has $X' / 'Set-Aside has $X' whenever convenient; both currently render 'not reported'"
   - "RESOLVED 2026-08-15 (#personal-finance, unlabeled drop, ~14:31 ET): Lemar reported the round-trip travel rate — 'Round Trip (Saturday & Sunday total): $80 per week.' This week's one-time station-travel line corrected 50->80; a new recurring station-travel-weekly line ($80/wk, Saturdays, starting 2026-08-22) added. daily_targets beyond 2026-08-15 not yet hand-spread for the new recurring line — see the next line."
   - "OPEN: station-travel-weekly ($80/wk, first_due 2026-08-22) is a new dated recurring line whose daily_targets accrual has NOT yet been hand-spread across the ~7 open days between now and 8/22 — deferred to the next dedicated recompute pass per this ledger's established practice (same treatment as tmobile-split-2/moms-car-oil-change/am-botte). The dashboard's queue section will show it as a dated future line; the per-day daily numbers 8/16-8/21 do not yet include its drip."
@@ -6523,4 +6532,53 @@ of the gap is on the record.
 
 Nothing paid, nothing moved, no creditor contacted. No calendar change — income funds
 days, it does not alter the accrual, and no day's target moved this pass.
+
+## Update 2026-08-25 (7) — $100 set aside; ROLLOVER made unconditional
+
+Two instructions from Lemar: "fix the rollover gap like you did the calendar" and "$100
+went into sofi."
+
+**1. $100 funded against today.** Allocated in DUE-DATE ORDER per INCOME ALLOCATION —
+patreon $2.08 (8/27), moms-weekly $3.84 (8/28), tmobile-split-2 $92.67 (8/28) all fully
+funded, own-car-running-2 partial at $1.41 of $18.18 (8/29). Today: target $384.13,
+**funded $100.00, shortfall $284.13**. Applied to TODAY, not to 8/22-8/24 — the money sits
+in Set-Aside now and is available to the live queue, and those past days are closed
+history. The gas reserve was NOT taken off the top first: that reserve stays in Spending
+by definition, and this $100 had already moved to the bills pocket.
+
+The Set-Aside **balance is still unknown**. A transfer was reported, not a balance, so it
+stays at $13.00 as_of 2026-08-17 rather than being computed to $113.00 — that would assume
+nothing else moved across eight days. Recorded as `last_transfer_in` on the pocket and
+raised as an open question.
+
+**2. ROLLOVER is now unconditional**, matching the calendar fix. It runs on the last scan
+of every day whether or not the channel said anything, and a new **CATCH-UP** pass handles
+past days that were never rolled: oldest first, one day at a time, never dumping a
+multi-day backlog onto today; the rollover brake applies per contribution as normal; a
+line since **paid, parked, re-dated, or expired closes in place rather than re-rolling**
+(re-rolling a settled line would resurrect a debt that no longer exists); each processed
+day gets a `resolution` so it is never processed twice; and a catch-up large enough to
+move today's number materially goes to Lemar as ONE #decisions parent instead of being
+applied silently. Written into `.claude/skills/money-hub/SKILL.md` (ROLLOVER + PART M) and
+PART M in `.claude/routines/samira-atlas-executor.md`.
+
+The generalised rule now stated in both: **any step that keeps the model honest over time
+must not depend on Lemar having said something.** A drop-triggered projection decays the
+moment the channel goes quiet — that is how the daily calendar died on 8/22 and how seven
+days of rollover went missing. Three symptoms, one defect, now closed in both places.
+
+**3. The catch-up itself was computed but NOT applied** — per the rule just written. Raw
+unrolled shortfall 8/18–8/24 is $1,571.30; **$272.44 of that must not roll** ($217.45 to
+re-dated-and-already-re-accrued lines, which would double-count, and $54.99 to the parked
+moms-lump-0821), leaving **$1,298.86 genuinely rollable**. That would take today from
+$384.13 to **$1,682.99**, which is precisely the case the rule sends to Lemar. Every one of
+those contributions has also rolled seven days running, so the brake fires on all of them.
+Raised as an open question with the full breakdown; nothing applied.
+
+Worth stating plainly because it cuts the other way too: **not rolling does not erase the
+debt.** Each of those lines keeps its own due date and its remaining accrual — it just
+arrives short on the day it comes due.
+
+Nothing paid, nothing moved, no creditor contacted. No calendar change this pass: funding
+alters `funded`/`shortfall`, not `target`, and today's aggregate event shows the target.
 
