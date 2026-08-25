@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T13:10:00-04:00
-updated: 2026-08-19T14:16-04:00
+updated: 2026-08-25T08:06:41-04:00
 domain: cuzzies
 type: task
 status: active
@@ -41,3 +41,14 @@ Lemar picked Option A (disclose the closure, ask for a payment arrangement) via 
 message, to David@hillviewmed.com, cc Beverly@hillviewmed.com) — NOT sent. Thread
 labeled `Samira/drafted`. Awaiting his 🫡 in #decisions to close, or he can edit/send the
 draft himself.
+
+## Update — 2026-08-25T08:06:41-04:00
+David replied 2026-08-25 07:59am ET with a concrete proposal: **$200 every other week**
+until the balance ($2,532.00) is paid in full, and asked Lemar to confirm he can commit
+to that cadence. Reply-worthy — raised as a new #decisions card with draft reply options
+(accept / counter a lower amount or slower cadence / ask for more time). No commitment
+made, no draft saved to Gmail yet — awaiting Lemar's pick.
+
+## Sources (cont.)
+- gmail: thread `1a01aeb6b8dd7c71`, message `1a038c9e80e32002` (David Alston,
+  2026-08-25 11:59 UTC, $200/biweekly proposal)

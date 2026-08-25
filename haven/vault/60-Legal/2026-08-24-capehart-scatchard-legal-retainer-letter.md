@@ -1,6 +1,6 @@
 ---
 created: 2026-08-24T15:57:29Z
-updated: 2026-08-24T17:02:44Z
+updated: 2026-08-25T12:06:41Z
 domain: legal
 type: task
 status: active
@@ -30,6 +30,22 @@ that set this up isn't recorded anywhere Samira can see.
 **Status:** Not signed, not paid, not authorized by Samira — signature and a $5,000
 payment are both outward-facing and stay Lemar's call.
 
+## Update — 2026-08-25T12:06:41Z
+Lemar had already replied (outside a Samira draft — sent 2026-08-24 22:04 ET) flagging
+that his business partner Josh Evans is also individually named as a defendant and would
+need representation too. Laurel replied 2026-08-25 07:23am ET:
+- Raises the retainer to **$10,000** (was $5,000) to cover both of them, same hourly rate.
+- Needs confirmation there's **no conflict** between Lemar's and Josh's defenses/strategy
+  — if their accounts of what happened could point at each other, she can't represent
+  both.
+- Needs **Josh's contact info** (address, email, phone) to send him his own retainer
+  letter.
+None of this is something Samira can answer (conflict-of-interest read, a partner's
+contact info, a $10k payment) — raised as a #decisions card rather than drafted.
+⚠️ counsel on thread.
+
 ## Sources
 - gmail: thread `1a0347e284ea8f6f` ("Legal Retainer Letter", LPeltzman@capehart.com,
   cc CCaruso@capehart.com, 2026-08-24 15:57 UTC)
+- gmail: same thread, message `1a038a9a6b444ff2` (Laurel Peltzman, 2026-08-25 11:23 UTC,
+  $10,000 retainer + conflict check + Josh's info requested)

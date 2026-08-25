@@ -1,6 +1,6 @@
 ---
 created: 2026-08-24T09:03:00-04:00
-updated: 2026-08-24T00:00:00-04:00
+updated: 2026-08-25T08:06:41-04:00
 domain: project
 type: meeting
 status: active
