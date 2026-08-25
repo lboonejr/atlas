@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-25T13:26:00-04:00
+updated: 2026-08-25T15:05:00-04:00
 domain: personal
 type: reference
 status: active
@@ -119,7 +119,7 @@ pockets:                             # TWO pockets. Account mapping CORRECTED 20
      balance: null, balance_as_of: null, status: active,
      role: "income lands here (DoorDash payouts); gas and day-to-day spending pay from here"}
   - {id: set-aside, name: "Set-Aside", account: sofi-checking,
-     balance: 13.00, balance_as_of: 2026-08-17, status: active,
+     balance: 101.17, balance_as_of: 2026-08-25, status: active,
      last_transfer_in: {amount: 100, as_of: 2026-08-25,
        note: "Lemar 2026-08-25: '$100 went into sofi.' A TRANSFER was reported, not a
               balance — so `balance` deliberately stays at the 2026-08-17 $13.00 figure
@@ -751,37 +751,38 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     funded: 0
     shortfall: 277.06
     calendar_event_id: i2k3vo0025kbt3lbseppnf690s
+    resolution: "CLOSED 2026-08-25 by the ROLLOVER CATCH-UP (Lemar: 'Roll it'). This day was never rolled at the time — ROLLOVER only ran on a money drop and the channel was quiet. Nothing was funded. $201.15 of this day's own contributions plus $0.00 carried in from earlier days rolled forward, $201.15 in total. 6 contribution(s) did NOT roll and are marked `expired`, closed in place: cuzzies-google-workspace (superseded); liquidibee-2 (superseded); liquidibee-3 (superseded); liquidibee-4 (superseded); metrc-fee (superseded); moms-lump-0821 (parked). This day's `target` is left at its original historical figure — the cascade is recorded here rather than by inflating a closed day, and the net landing on 2026-08-25 is identical either way."
     contributions:
-      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
-      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
-      - {line_id: claude, amount: 5.00, funded: 0, status: pending}
-      - {line_id: cuzzies-google-workspace, amount: 21.25, funded: 0, status: pending}
-      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: fantasy-football-buyin, amount: 13.05, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 15.63, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 8.34, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.69, funded: 0, status: pending}
-      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
-      - {line_id: metrc-fee, amount: 6.67, funded: 0, status: pending}
-      - {line_id: moms-lump-0821, amount: 18.33, funded: 0, status: pending}
-      - {line_id: moms-weekly, amount: 3.85, funded: 0, status: pending}
-      - {line_id: own-car-running-1, amount: 36.36, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: pending}
-      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: pending}
-      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.28, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
-      - {line_id: patreon, amount: 2.09, funded: 0, status: pending}
-      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
-      - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
-      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
-      - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: rolled}
+      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: rolled}
+      - {line_id: claude, amount: 5.00, funded: 0, status: rolled}
+      - {line_id: cuzzies-google-workspace, amount: 21.25, funded: 0, status: expired}
+      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: rolled}
+      - {line_id: fantasy-football-buyin, amount: 13.05, funded: 0, status: rolled}
+      - {line_id: liquidibee-2, amount: 15.63, funded: 0, status: expired}
+      - {line_id: liquidibee-3, amount: 8.34, funded: 0, status: expired}
+      - {line_id: liquidibee-4, amount: 5.69, funded: 0, status: expired}
+      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: rolled}
+      - {line_id: metrc-fee, amount: 6.67, funded: 0, status: expired}
+      - {line_id: moms-lump-0821, amount: 18.33, funded: 0, status: expired}
+      - {line_id: moms-weekly, amount: 3.85, funded: 0, status: rolled}
+      - {line_id: own-car-running-1, amount: 36.36, funded: 0, status: rolled}
+      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: rolled}
+      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: rolled}
+      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: rolled}
+      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: rolled}
+      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: rolled}
+      - {line_id: own-car-running-5, amount: 7.28, funded: 0, status: rolled}
+      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: rolled}
+      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: rolled}
+      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: rolled}
+      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: rolled}
+      - {line_id: patreon, amount: 2.09, funded: 0, status: rolled}
+      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: rolled}
+      - {line_id: student-loans, amount: 15.63, funded: 0, status: rolled}
+      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: rolled}
+      - {line_id: water-pump, amount: 5.96, funded: 0, status: rolled}
+      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: rolled}
   "2026-08-19":
     operating_reserve: 30.00
     target: 255.77
@@ -791,36 +792,37 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     funded: 0
     shortfall: 255.77
     calendar_event_id: j6imqfltarucop954b1dkdvkq4
+    resolution: "CLOSED 2026-08-25 by the ROLLOVER CATCH-UP (Lemar: 'Roll it'). This day was never rolled at the time — ROLLOVER only ran on a money drop and the channel was quiet. Nothing was funded. $201.14 of this day's own contributions plus $201.15 carried in from earlier days rolled forward, $402.29 in total. 5 contribution(s) did NOT roll and are marked `expired`, closed in place: liquidibee-2 (superseded); liquidibee-3 (superseded); liquidibee-4 (superseded); metrc-fee (superseded); moms-lump-0821 (parked). This day's `target` is left at its original historical figure — the cascade is recorded here rather than by inflating a closed day, and the net landing on 2026-08-25 is identical either way."
     contributions:
-      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
-      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
-      - {line_id: claude, amount: 5.00, funded: 0, status: pending}
-      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: fantasy-football-buyin, amount: 13.05, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 15.62, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 8.34, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
-      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
-      - {line_id: metrc-fee, amount: 6.66, funded: 0, status: pending}
-      - {line_id: moms-lump-0821, amount: 18.33, funded: 0, status: pending}
-      - {line_id: moms-weekly, amount: 3.85, funded: 0, status: pending}
-      - {line_id: own-car-running-1, amount: 36.36, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: pending}
-      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: pending}
-      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.28, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
-      - {line_id: patreon, amount: 2.08, funded: 0, status: pending}
-      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
-      - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
-      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
-      - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: rolled}
+      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: rolled}
+      - {line_id: claude, amount: 5.00, funded: 0, status: rolled}
+      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: rolled}
+      - {line_id: fantasy-football-buyin, amount: 13.05, funded: 0, status: rolled}
+      - {line_id: liquidibee-2, amount: 15.62, funded: 0, status: expired}
+      - {line_id: liquidibee-3, amount: 8.34, funded: 0, status: expired}
+      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: expired}
+      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: rolled}
+      - {line_id: metrc-fee, amount: 6.66, funded: 0, status: expired}
+      - {line_id: moms-lump-0821, amount: 18.33, funded: 0, status: expired}
+      - {line_id: moms-weekly, amount: 3.85, funded: 0, status: rolled}
+      - {line_id: own-car-running-1, amount: 36.36, funded: 0, status: rolled}
+      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: rolled}
+      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: rolled}
+      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: rolled}
+      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: rolled}
+      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: rolled}
+      - {line_id: own-car-running-5, amount: 7.28, funded: 0, status: rolled}
+      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: rolled}
+      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: rolled}
+      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: rolled}
+      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: rolled}
+      - {line_id: patreon, amount: 2.08, funded: 0, status: rolled}
+      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: rolled}
+      - {line_id: student-loans, amount: 15.63, funded: 0, status: rolled}
+      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: rolled}
+      - {line_id: water-pump, amount: 5.96, funded: 0, status: rolled}
+      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: rolled}
   "2026-08-20":
     operating_reserve: 30.00
     target: 255.76
@@ -830,36 +832,37 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     funded: 0
     shortfall: 255.76
     calendar_event_id: 7eg9gi4dqvae72l33nh0smr8c8
+    resolution: "CLOSED 2026-08-25 by the ROLLOVER CATCH-UP (Lemar: 'Roll it'). This day was never rolled at the time — ROLLOVER only ran on a money drop and the channel was quiet. Nothing was funded. $201.14 of this day's own contributions plus $402.29 carried in from earlier days rolled forward, $603.43 in total. 5 contribution(s) did NOT roll and are marked `expired`, closed in place: liquidibee-2 (superseded); liquidibee-3 (superseded); liquidibee-4 (superseded); metrc-fee (superseded); moms-lump-0821 (parked). This day's `target` is left at its original historical figure — the cascade is recorded here rather than by inflating a closed day, and the net landing on 2026-08-25 is identical either way."
     contributions:
-      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
-      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
-      - {line_id: claude, amount: 5.00, funded: 0, status: pending}
-      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: fantasy-football-buyin, amount: 13.05, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 15.62, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
-      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
-      - {line_id: metrc-fee, amount: 6.66, funded: 0, status: pending}
-      - {line_id: moms-lump-0821, amount: 18.33, funded: 0, status: pending}
-      - {line_id: moms-weekly, amount: 3.85, funded: 0, status: pending}
-      - {line_id: own-car-running-1, amount: 36.36, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: pending}
-      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: pending}
-      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.28, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
-      - {line_id: patreon, amount: 2.08, funded: 0, status: pending}
-      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
-      - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
-      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
-      - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: rolled}
+      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: rolled}
+      - {line_id: claude, amount: 5.00, funded: 0, status: rolled}
+      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: rolled}
+      - {line_id: fantasy-football-buyin, amount: 13.05, funded: 0, status: rolled}
+      - {line_id: liquidibee-2, amount: 15.62, funded: 0, status: expired}
+      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: expired}
+      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: expired}
+      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: rolled}
+      - {line_id: metrc-fee, amount: 6.66, funded: 0, status: expired}
+      - {line_id: moms-lump-0821, amount: 18.33, funded: 0, status: expired}
+      - {line_id: moms-weekly, amount: 3.85, funded: 0, status: rolled}
+      - {line_id: own-car-running-1, amount: 36.36, funded: 0, status: rolled}
+      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: rolled}
+      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: rolled}
+      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: rolled}
+      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: rolled}
+      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: rolled}
+      - {line_id: own-car-running-5, amount: 7.28, funded: 0, status: rolled}
+      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: rolled}
+      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: rolled}
+      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: rolled}
+      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: rolled}
+      - {line_id: patreon, amount: 2.08, funded: 0, status: rolled}
+      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: rolled}
+      - {line_id: student-loans, amount: 15.63, funded: 0, status: rolled}
+      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: rolled}
+      - {line_id: water-pump, amount: 5.96, funded: 0, status: rolled}
+      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: rolled}
   "2026-08-21":
     operating_reserve: 30.00
     target: 230.77
@@ -869,34 +872,35 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     funded: 0
     shortfall: 230.77
     calendar_event_id: 6q6rn0gp6umdaus4vil752rn78
+    resolution: "CLOSED 2026-08-25 by the ROLLOVER CATCH-UP (Lemar: 'Roll it'). This day was never rolled at the time — ROLLOVER only ran on a money drop and the channel was quiet. Nothing was funded. $201.14 of this day's own contributions plus $603.43 carried in from earlier days rolled forward, $804.57 in total. 3 contribution(s) did NOT roll and are marked `expired`, closed in place: liquidibee-2 (superseded); liquidibee-3 (superseded); liquidibee-4 (superseded). This day's `target` is left at its original historical figure — the cascade is recorded here rather than by inflating a closed day, and the net landing on 2026-08-25 is identical either way."
     contributions:
-      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
-      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
-      - {line_id: claude, amount: 5.00, funded: 0, status: pending}
-      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: fantasy-football-buyin, amount: 13.05, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 15.62, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
-      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
-      - {line_id: moms-weekly, amount: 3.85, funded: 0, status: pending}
-      - {line_id: own-car-running-1, amount: 36.36, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: pending}
-      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: pending}
-      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.28, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
-      - {line_id: patreon, amount: 2.08, funded: 0, status: pending}
-      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
-      - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
-      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
-      - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: rolled}
+      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: rolled}
+      - {line_id: claude, amount: 5.00, funded: 0, status: rolled}
+      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: rolled}
+      - {line_id: fantasy-football-buyin, amount: 13.05, funded: 0, status: rolled}
+      - {line_id: liquidibee-2, amount: 15.62, funded: 0, status: expired}
+      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: expired}
+      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: expired}
+      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: rolled}
+      - {line_id: moms-weekly, amount: 3.85, funded: 0, status: rolled}
+      - {line_id: own-car-running-1, amount: 36.36, funded: 0, status: rolled}
+      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: rolled}
+      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: rolled}
+      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: rolled}
+      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: rolled}
+      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: rolled}
+      - {line_id: own-car-running-5, amount: 7.28, funded: 0, status: rolled}
+      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: rolled}
+      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: rolled}
+      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: rolled}
+      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: rolled}
+      - {line_id: patreon, amount: 2.08, funded: 0, status: rolled}
+      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: rolled}
+      - {line_id: student-loans, amount: 15.63, funded: 0, status: rolled}
+      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: rolled}
+      - {line_id: water-pump, amount: 5.96, funded: 0, status: rolled}
+      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: rolled}
   "2026-08-22":
     operating_reserve: 30.00
     target: 194.41
@@ -906,33 +910,34 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     funded: 0
     shortfall: 194.41
     calendar_event_id: null
+    resolution: "CLOSED 2026-08-25 by the ROLLOVER CATCH-UP (Lemar: 'Roll it'). This day was never rolled at the time — ROLLOVER only ran on a money drop and the channel was quiet. Nothing was funded. $164.78 of this day's own contributions plus $804.57 carried in from earlier days rolled forward, $969.35 in total. 3 contribution(s) did NOT roll and are marked `expired`, closed in place: liquidibee-2 (superseded); liquidibee-3 (superseded); liquidibee-4 (superseded). This day's `target` is left at its original historical figure — the cascade is recorded here rather than by inflating a closed day, and the net landing on 2026-08-25 is identical either way."
     contributions:
-      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
-      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
-      - {line_id: claude, amount: 5.00, funded: 0, status: pending}
-      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: fantasy-football-buyin, amount: 13.05, funded: 0, status: pending}
-      - {line_id: liquidibee-2, amount: 15.62, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
-      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
-      - {line_id: moms-weekly, amount: 3.85, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: pending}
-      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: pending}
-      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.28, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
-      - {line_id: patreon, amount: 2.08, funded: 0, status: pending}
-      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
-      - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
-      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
-      - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: rolled}
+      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: rolled}
+      - {line_id: claude, amount: 5.00, funded: 0, status: rolled}
+      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: rolled}
+      - {line_id: fantasy-football-buyin, amount: 13.05, funded: 0, status: rolled}
+      - {line_id: liquidibee-2, amount: 15.62, funded: 0, status: expired}
+      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: expired}
+      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: expired}
+      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: rolled}
+      - {line_id: moms-weekly, amount: 3.85, funded: 0, status: rolled}
+      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: rolled}
+      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: rolled}
+      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: rolled}
+      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: rolled}
+      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: rolled}
+      - {line_id: own-car-running-5, amount: 7.28, funded: 0, status: rolled}
+      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: rolled}
+      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: rolled}
+      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: rolled}
+      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: rolled}
+      - {line_id: patreon, amount: 2.08, funded: 0, status: rolled}
+      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: rolled}
+      - {line_id: student-loans, amount: 15.63, funded: 0, status: rolled}
+      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: rolled}
+      - {line_id: water-pump, amount: 5.96, funded: 0, status: rolled}
+      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: rolled}
   "2026-08-23":
     operating_reserve: 30.00
     target: 178.77
@@ -942,32 +947,33 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     funded: 0
     shortfall: 178.77
     calendar_event_id: null
+    resolution: "CLOSED 2026-08-25 by the ROLLOVER CATCH-UP (Lemar: 'Roll it'). This day was never rolled at the time — ROLLOVER only ran on a money drop and the channel was quiet. Nothing was funded. $164.76 of this day's own contributions plus $969.35 carried in from earlier days rolled forward, $1134.11 in total. 2 contribution(s) did NOT roll and are marked `expired`, closed in place: liquidibee-3 (superseded); liquidibee-4 (superseded). This day's `target` is left at its original historical figure — the cascade is recorded here rather than by inflating a closed day, and the net landing on 2026-08-25 is identical either way."
     contributions:
-      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
-      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
-      - {line_id: claude, amount: 5.00, funded: 0, status: pending}
-      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
-      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
-      - {line_id: moms-weekly, amount: 3.84, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: pending}
-      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: pending}
-      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.28, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
-      - {line_id: patreon, amount: 2.08, funded: 0, status: pending}
-      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
-      - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
-      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
-      - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: rolled}
+      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: rolled}
+      - {line_id: claude, amount: 5.00, funded: 0, status: rolled}
+      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: rolled}
+      - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: rolled}
+      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: expired}
+      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: expired}
+      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: rolled}
+      - {line_id: moms-weekly, amount: 3.84, funded: 0, status: rolled}
+      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: rolled}
+      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: rolled}
+      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: rolled}
+      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: rolled}
+      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: rolled}
+      - {line_id: own-car-running-5, amount: 7.28, funded: 0, status: rolled}
+      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: rolled}
+      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: rolled}
+      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: rolled}
+      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: rolled}
+      - {line_id: patreon, amount: 2.08, funded: 0, status: rolled}
+      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: rolled}
+      - {line_id: student-loans, amount: 15.63, funded: 0, status: rolled}
+      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: rolled}
+      - {line_id: water-pump, amount: 5.96, funded: 0, status: rolled}
+      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: rolled}
   "2026-08-24":
     operating_reserve: 30.00
     target: 178.76
@@ -977,40 +983,41 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     funded: 0
     shortfall: 178.76
     calendar_event_id: null
+    resolution: "CLOSED 2026-08-25 by the ROLLOVER CATCH-UP (Lemar: 'Roll it'). This day was never rolled at the time — ROLLOVER only ran on a money drop and the channel was quiet. Nothing was funded. $164.75 of this day's own contributions plus $1134.11 carried in from earlier days rolled forward, $1298.86 in total. 2 contribution(s) did NOT roll and are marked `expired`, closed in place: liquidibee-3 (superseded); liquidibee-4 (superseded). This day's `target` is left at its original historical figure — the cascade is recorded here rather than by inflating a closed day, and the net landing on 2026-08-25 is identical either way."
     contributions:
-      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
-      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
-      - {line_id: claude, amount: 5.00, funded: 0, status: pending}
-      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
-      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
-      - {line_id: moms-weekly, amount: 3.84, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: pending}
-      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: pending}
-      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
-      - {line_id: patreon, amount: 2.08, funded: 0, status: pending}
-      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
-      - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
-      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
-      - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: rolled}
+      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: rolled}
+      - {line_id: claude, amount: 5.00, funded: 0, status: rolled}
+      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: rolled}
+      - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: rolled}
+      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: expired}
+      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: expired}
+      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: rolled}
+      - {line_id: moms-weekly, amount: 3.84, funded: 0, status: rolled}
+      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: rolled}
+      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: rolled}
+      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: rolled}
+      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: rolled}
+      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: rolled}
+      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: rolled}
+      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: rolled}
+      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: rolled}
+      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: rolled}
+      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: rolled}
+      - {line_id: patreon, amount: 2.08, funded: 0, status: rolled}
+      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: rolled}
+      - {line_id: student-loans, amount: 15.63, funded: 0, status: rolled}
+      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: rolled}
+      - {line_id: water-pump, amount: 5.96, funded: 0, status: rolled}
+      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: rolled}
   "2026-08-25":
     operating_reserve: 30.00
-    target: 384.13
-    total_claim: 414.13
+    target: 1682.99
+    total_claim: 1712.99
     gas_spent: null
     swept_to_maintenance: 0
     funded: 100.00
-    shortfall: 284.13
+    shortfall: 1582.99
     calendar_event_id: qfttlvvn57ab88pctff69k1ols
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1059,6 +1066,30 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 91.35, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: cashapp-payback, amount: 12.25, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: claude, amount: 35.00, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: dil-christmas-gift, amount: 7.63, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: fantasy-football-buyin, amount: 91.33, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: mechanic-repair-repay, amount: 76.09, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: moms-weekly, amount: 26.93, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: own-car-running-1, amount: 145.44, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: own-car-running-10, amount: 25.48, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: own-car-running-11, amount: 23.17, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: own-car-running-2, amount: 127.26, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: own-car-running-3, amount: 84.84, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: own-car-running-4, amount: 63.63, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: own-car-running-5, amount: 50.95, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: own-car-running-6, amount: 42.42, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: own-car-running-7, amount: 36.40, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: own-car-running-8, amount: 31.85, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: own-car-running-9, amount: 28.28, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: patreon, amount: 14.57, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: self-account-balance-repay, amount: 15.89, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: student-loans, amount: 109.41, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: tow-truck-repay, amount: 112.91, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: water-pump, amount: 41.72, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
+      - {line_id: wispr-flow, amount: 4.06, funded: 0, status: pending, rolled_from: "2026-08-18..2026-08-24"}
   "2026-08-26":
     operating_reserve: 30.00
     target: 384.13
@@ -5153,14 +5184,15 @@ open_questions:
   - "RESOLVED 2026-08-13 (recompute session, updated same day): comedy tickets $50.28 confirmed unpaid and briefly folded into the accrual, then CANCELLED later the same day — Lemar isn't going, too many bills were piling up. Parked, out of the queue entirely, not owed. See Update 2026-08-13 (THIRD REVISION)."
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
   - "RESOLVED 2026-08-25 — $100 of the $260 went to Set-Aside. Lemar: '$100 went into sofi.' Applied to 2026-08-25 in DUE-DATE ORDER per INCOME ALLOCATION: patreon $2.08 (due 8/27) funded · moms-weekly $3.84 (8/28) funded · tmobile-split-2 $92.67 (8/28) funded · own-car-running-2 $1.41 of $18.18 (8/29) partial. Today now reads target $384.13, funded $100.00, shortfall $284.13. Applied to TODAY rather than to 8/22-8/24: the money is in Set-Aside now and available to the live queue, and those past days are closed history this ledger does not rewrite. The gas operating reserve was NOT deducted first — that reserve stays in Spending by definition, and this $100 had already moved to the bills pocket."
-  - "OPEN 2026-08-25 — Set-Aside BALANCE still unknown. A transfer was reported ($100 in), not a balance, so `balance` deliberately stays at $13.00 as_of 2026-08-17 rather than being computed to $113.00 — that would assume nothing else moved in or out across eight days, and a reported balance is never adjusted to match what the ledger expects. Say 'SoFi Checking is at $X' whenever convenient and the pocket goes current."
-  - "OPEN 2026-08-25 — DUPLICATE HILLVIEW CALENDAR EVENTS, 13 pairs live on the personal reminder calendar, needs Lemar's pick before any are deleted. Samira's hourly PART M run on `main` (commit ce1fec8, events created 16:21Z) and this session (events created 16:32Z) BOTH picked up the same Hillview drop and both created a full set of 13 due-date events — 11 minutes apart, neither aware of the other. Verified live: 2026-09-07 carries both 'Plan: Hillview Med 1/13' (3623o178cin0k8ur1kpn2pdvns, Samira's) and 'Plan: Hillview Farms 1/13' (j5gh7ccssk7p98n659bpqip7t8, this session's). 26 reminders for 13 payments. The two ledger entries have now been merged into ONE (`hillview-med`, which keeps THIS session's event ids), so Samira's 13 are the orphans — but they are NOT deleted yet: main still references them until this PR merges, and deleting 13 live events is not a call to make silently. RECOMMENDATION: retire Samira's 13. ROOT CAUSE, and the more important half: nothing in the model prevents two writers from acting on the same drop at the same time. The dedupe rule (`Dedupe by id`) only works when both writers choose the same id — Samira chose `hillview-med-payment-plan`, this session chose `hillview-med`, so neither saw the other. A branch-vs-main write lock, or a rule that PART M never creates a plan whose creditor already matches an active plan, would close it."
-  - "OPEN 2026-08-25 — ROLLOVER CATCH-UP, $1,298.86, needs Lemar's decision before it is applied. Days 2026-08-18 through 08-24 were never rolled (see Update 6). Raw unrolled shortfall across those seven days is $1,571.30, but $272.44 of that must NOT roll under the new CATCH-UP rules: $217.45 belongs to lines since re-dated and already re-accrued in full from today (cuzzies-google-workspace, metrc-fee, liquidibee-1..4) so re-rolling would double-count, and $54.99 belongs to moms-lump-0821 which is PARKED and closes in place. That leaves $1,298.86 genuinely rollable — biggest pieces own-car-running-1 $145.44, own-car-running-2 $127.26, tow-truck-repay $112.91, student-loans $109.41, car-repair-payment $91.35, fantasy-football-buyin $91.33. Applying it lands today at $1,682.99 (from $384.13), which is exactly the 'materially moves today's number' case the CATCH-UP rule says must go to Lemar as a decision rather than be applied silently. The rollover brake also fires on every one of these — each has rolled 7 days running, well past the 3-day threshold. NOT rolling does not erase the debt: every one of these lines keeps its own due date and its remaining accrual, so it simply arrives short on the day it is due. Lemar decides: roll it forward, or close those seven days out unrolled."
   - "No balance has been reported for either pocket since the Era connector was retired 2026-08-10 — say 'Spending has $X' / 'Set-Aside has $X' whenever convenient; both currently render 'not reported'"
   - "RESOLVED 2026-08-15 (#personal-finance, unlabeled drop, ~14:31 ET): Lemar reported the round-trip travel rate — 'Round Trip (Saturday & Sunday total): $80 per week.' This week's one-time station-travel line corrected 50->80; a new recurring station-travel-weekly line ($80/wk, Saturdays, starting 2026-08-22) added. daily_targets beyond 2026-08-15 not yet hand-spread for the new recurring line — see the next line."
   - "OPEN: station-travel-weekly ($80/wk, first_due 2026-08-22) is a new dated recurring line whose daily_targets accrual has NOT yet been hand-spread across the ~7 open days between now and 8/22 — deferred to the next dedicated recompute pass per this ledger's established practice (same treatment as tmobile-split-2/moms-car-oil-change/am-botte). The dashboard's queue section will show it as a dated future line; the per-day daily numbers 8/16-8/21 do not yet include its drip."
   - "RESOLVED 2026-08-25 (FINAL) — the overdue backlog is fully cleared, all nine items dispositioned by Lemar himself, none inferred. tmobile-split-1 $265 PAID · cuzzies-google-voice $38 PAID ('Voice was paid for') · cuzzies-google-workspace $85 re-dated to 9/1 · metrc-fee $40 re-dated to 9/1 · moms-lump-0821 $110 PARKED (hospital) · moms-car-oil-change $100 re-dated to Fri 9/4 (he confirmed the date explicitly: 'Sept 4th is confirm') · liquidibee-nomas seq1-4 restarted on the plan's original SUNDAY cadence, 9/6 / 9/13 / 9/20 / 9/27 ('lets continue the sunday cadence'). Nothing was marked paid or re-dated that he did not name. NOTHING REMAINS OVERDUE."
   - "RESOLVED 2026-08-25 — the moms-car-oil-change consumption-vs-obligation boundary question is settled by Lemar's own instruction: he re-dated it ('Lets try to shift the oil change to next Friday') rather than dropping it, so it is an OBLIGATION that carries over, not consumption. It stays unflagged, is back in the queue at 2026-09-04, and accrues $10.00/day over [8/25..9/3]."
+  - "RESOLVED 2026-08-25 — ROLLOVER CATCH-UP APPLIED. Lemar: 'Roll it.' The seven never-rolled days 2026-08-18..08-24 were processed oldest-first, one day at a time, per the CATCH-UP rule. $1,298.86 landed on 2026-08-25 as 24 `rolled_from: 2026-08-18..2026-08-24` contributions. $272.44 of the raw $1,571.30 did NOT roll and is marked `expired`, closed in place: $217.45 across 5 lines since re-dated and already re-accrued in full from today (re-rolling would double-count), and $54.99 for the parked moms-lump-0821. Each of the seven days carries a `resolution` so it is never processed twice. Their historical `target` figures were deliberately NOT inflated by the carried-in amounts — the cascade arithmetic is recorded in each day's resolution instead, and the net landing on today is identical either way. Today: target $384.13 -> $1,682.99, funded $100.00, shortfall $1,582.99, total claim $1,712.99. The rollover brake had long since fired on every one of these (7 days running vs the 3-day threshold), which is why this went to Lemar as a decision rather than being applied silently."
+  - "RESOLVED 2026-08-25 — DUPLICATE HILLVIEW EVENTS DELETED. Lemar: 'Delete Samira's 13.' All 13 duplicates created by Samira's main-branch run at 16:21Z were cancelled on the personal reminder calendar; the 13 created by this session at 16:32Z remain and are the ones `hillview-med` references. Verified one-by-one — every delete returned status: cancelled. NOTE: `main` still points at the now-dead ids until this PR merges, so if Samira's next PART M run reads main before the merge it may see orphaned ids on that plan; the merged ledger is correct and supersedes it."
+  - "OPEN 2026-08-25 — TWO WRITERS, ONE DROP: the race that produced the duplicate Hillview events is NOT fixed. Samira's hourly PART M on main and a live session both picked up the same #personal-finance drop 11 minutes apart and each created a full plan + 13 events, because dedupe-by-`id` only works when both writers choose the same id (`hillview-med-payment-plan` vs `hillview-med`). Candidate fixes, none applied: a rule that PART M never creates a plan whose CREDITOR already matches an active plan (id-independent dedupe); or a write lock / single-writer discipline for the ledger. Until then, any drop worked simultaneously by a live session and an hourly run can duplicate again."
+  - "RESOLVED 2026-08-25 — Set-Aside balance reported: $101.17 as_of 2026-08-25 (Lemar). NOTE THE GAP, deliberately not smoothed: $13.00 (as_of 8/17) + the $100.00 transfer he reported today = $113.00 expected, but the account actually reads $101.17 — $11.83 LESS. Something left SoFi Checking in those eight days that this ledger does not know about. The reported figure was written as-is and never adjusted to match the expectation (field rules). This is precisely why the balance was left stale rather than computed to $113.00 when only a transfer had been reported — had it been computed, the ledger would now carry a number $11.83 wrong with no way to notice. Worth identifying the $11.83 if it matters; not chased here."
   - "Where should the maintenance bucket live? The 2026-08-10 account correction left it in Set-Aside, which is now SoFi Checking (the bill-paying account). SoFi Savings is free and is the obvious home, but Lemar has not said so — not moved."
   - "Gas/maintenance $30/day reserve is a rough cap Lemar named, not a measured figure — refine it once a few weeks of actual fill-ups are reported (it is now the largest single line in the ledger at ~$900/mo)"
   - "Income backlog: Lemar is posting ~2 weeks of DoorDash earnings to #personal-finance (2026-08-10). Until they land, income_target_weekly $500 is a guess and the overload check can't run."
@@ -6593,4 +6625,56 @@ arrives short on the day it comes due.
 
 Nothing paid, nothing moved, no creditor contacted. No calendar change this pass: funding
 alters `funded`/`shortfall`, not `target`, and today's aggregate event shows the target.
+
+## Update 2026-08-25 (8) — catch-up rolled, duplicates deleted, SoFi reported
+
+Lemar answered all three open items: "1. Roll it. 2. Delete Samira's 13. 3. $101.17 in
+Sofi Currently."
+
+**1. ROLLOVER CATCH-UP APPLIED — $1,298.86 onto today.** The seven never-rolled days
+2026-08-18..08-24 were processed oldest-first, one day at a time, exactly as the CATCH-UP
+rule written earlier today specifies. The cascade: 8/18 rolled $201.15 forward, and each
+subsequent day added its own unfunded contributions to what it received — $402.29,
+$603.43, $804.57, $969.35, $1,134.11, and finally **$1,298.86** landing on 2026-08-25 as
+24 contributions marked `rolled_from: 2026-08-18..2026-08-24`.
+
+**$272.44 did NOT roll** and is marked `expired`, closed in place: $217.45 across five
+lines since re-dated and already re-accrued in full from today (`cuzzies-google-workspace`,
+`metrc-fee`, `liquidibee-2/3/4` — re-rolling them would double-count a debt already
+rescheduled), and $54.99 for the parked `moms-lump-0821`. Each of the seven days carries a
+`resolution` naming what rolled, what carried in, and which contributions closed and why,
+so no future catch-up processes them twice.
+
+**One deliberate deviation from a literal reading of the rule**, stated plainly: the
+intermediate days' `target` figures were NOT inflated by the amounts carried into them.
+A strict cascade would rewrite 8/19-8/24 to show $500-$1,300 targets. Those days are
+closed history, nobody can act on them now, and inflating them would rewrite the record of
+what was actually asked of each day at the time. The cascade arithmetic is preserved in
+each day's `resolution` instead, and **the net landing on today is identical either way**.
+
+Today: target $384.13 -> **$1,682.99** · funded $100.00 · shortfall **$1,582.99** · total
+claim $1,712.99. Its aggregate calendar event was updated in place with the full
+own-drip / rolled-in split.
+
+**2. THIRTEEN DUPLICATE EVENTS DELETED.** Samira's set (created 16:21Z from her main-branch
+run) is gone; this session's set (16:32Z) remains and is what `hillview-med` references.
+Each delete verified individually — all 13 returned `status: cancelled`. `main` still
+points at the dead ids until this PR merges; the merged ledger supersedes it. **The race
+itself is NOT fixed** and is now its own open question: dedupe-by-`id` cannot catch two
+writers who pick different ids for the same obligation.
+
+**3. SoFi Checking = $101.17 as_of 2026-08-25 — and the gap is the interesting part.**
+$13.00 (8/17) + the $100.00 transfer = **$113.00 expected**; the account reads **$101.17**,
+which is **$11.83 less**. Something left that account in those eight days that this ledger
+does not know about. The reported figure is written as-is and was NOT adjusted to match the
+expectation. This is exactly the scenario that justified refusing to compute $113.00 from a
+reported transfer earlier today — had it been computed, the ledger would now be carrying a
+number $11.83 wrong with no way to notice.
+
+**OVERLOAD, restated on the new figures.** The coming 7 days now total **$3,501.67** against
+a $243.63 average week — **14.4x**, up from 9.0x, because the catch-up is real money that
+was always owed and is now visible rather than hidden. REBALANCE remains hard-stopped: no
+combination of the three allowed moves closes a gap of this size.
+
+Nothing paid, nothing moved, no creditor contacted.
 
