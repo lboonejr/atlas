@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-25T13:10:00-04:00
+updated: 2026-08-25T13:18:00-04:00
 domain: personal
 type: reference
 status: active
@@ -103,11 +103,14 @@ buckets:                             # accumulating balances, physically inside 
             mixed in with money earmarked for bills. Left as-is rather than moved to
             SoFi Savings, because that is Lemar's call. See open_questions."}
 cash_on_hand:
-  amount: 20                        # reported #personal-finance 2026-08-11 ts 1786464148
-                                     # ("Cash on hand today - $20"). Backfilled 2026-08-14
-                                     # PART M — a prior pass (2026-08-13) claimed this was
-                                     # "already logged" but it was never actually written.
-  as_of: 2026-08-11
+  amount: 120                        # "about $120" — Lemar's own word, his figure kept as
+                                     # given, not rounded into a precision he didn't state.
+  as_of: 2026-08-25
+  note: "Reported 2026-08-25: 'I have about $120 of that left today' — 'that' being the $230
+         Station weekend. So of $260 reported earned (230 station + 30 doordash), ~$140 is
+         already spent and $120 remains. NOTHING was recorded as set aside: he reported cash
+         remaining, not a transfer to Set-Aside (SoFi Checking), and `funded` means money
+         moved to that pocket. Set-Aside still reads $13.00 as of 2026-08-17."
 pockets:                             # TWO pockets. Account mapping CORRECTED 2026-08-10
                                      # by Lemar (see the Update below) — the roles are
                                      # unchanged, the accounts behind them swapped.
@@ -5131,6 +5134,7 @@ open_questions:
   - "Water pump $184.79 (now dated 2026-09-15): STILL unreconciled whether it's inside or on top of the car goal's $2,000 repairs figure — dating it didn't resolve the overlap."
   - "RESOLVED 2026-08-13 (recompute session, updated same day): comedy tickets $50.28 confirmed unpaid and briefly folded into the accrual, then CANCELLED later the same day — Lemar isn't going, too many bills were piling up. Parked, out of the queue entirely, not owed. See Update 2026-08-13 (THIRD REVISION)."
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
+  - "OPEN 2026-08-25 — was any of the $260 actually SET ASIDE? Lemar reported earning $230 (Station weekend) + $30 (DoorDash 8/24) and having 'about $120 of that left today'. That is a CASH position, not a transfer: `funded` means money moved to Set-Aside (SoFi Checking), and he never said it did. So no `daily_targets` contribution was marked funded for 8/22-8/24 or today — recording otherwise would assert a transfer that did not happen. If any part of the $120 (or of the ~$140 already spent) did go to Set-Aside, say so and the days get funded properly. Related: Set-Aside's balance still reads $13.00 as of 2026-08-17, eight days stale."
   - "No balance has been reported for either pocket since the Era connector was retired 2026-08-10 — say 'Spending has $X' / 'Set-Aside has $X' whenever convenient; both currently render 'not reported'"
   - "RESOLVED 2026-08-15 (#personal-finance, unlabeled drop, ~14:31 ET): Lemar reported the round-trip travel rate — 'Round Trip (Saturday & Sunday total): $80 per week.' This week's one-time station-travel line corrected 50->80; a new recurring station-travel-weekly line ($80/wk, Saturdays, starting 2026-08-22) added. daily_targets beyond 2026-08-15 not yet hand-spread for the new recurring line — see the next line."
   - "OPEN: station-travel-weekly ($80/wk, first_due 2026-08-22) is a new dated recurring line whose daily_targets accrual has NOT yet been hand-spread across the ~7 open days between now and 8/22 — deferred to the next dedicated recompute pass per this ledger's established practice (same treatment as tmobile-split-2/moms-car-oil-change/am-botte). The dashboard's queue section will show it as a dated future line; the per-day daily numbers 8/16-8/21 do not yet include its drip."
@@ -6473,4 +6477,50 @@ one line technically eligible for the business-reimbursement flag (`hillview-med
 excluded because Lemar chose to carry it personally today.
 
 Nothing paid, nothing moved, no creditor contacted.
+
+## Update 2026-08-25 (6) — earnings + cash reported: $260 in, $120 left, nothing set aside
+
+First income reported since 2026-08-15. Lemar, in one drop: "I earned $230 from the
+station last weekend. I have about $120 of that left today. I made $30 doordashing
+yesterday and I'll be going out again today."
+
+**Logged (income log).**
+- `2026-08-23 · the-station · $230` — his Station shift is Sat+Sun, so this is the WEEKEND
+  TOTAL (8/22 + 8/23). He gave no per-day split and none was invented; recorded as ONE
+  line dated to the Sunday, the day by which all of it had been earned. Same treatment as
+  the 2026-08-15 $144 line.
+- `2026-08-24 · doordash · $30` — "yesterday" resolves unambiguously to 8/24.
+- **Today: nothing.** "I'll be going out again today" is an intention, not a figure. No
+  line written, no amount assumed.
+
+**`cash_on_hand` = $120, as_of 2026-08-25**, replacing a $20 figure that had been stale
+since 2026-08-11. Kept as "about $120" — his word, not rounded into a precision he did
+not state.
+
+**NOTHING WAS MARKED FUNDED, and this is the point of the pass.** $260 reported earned,
+$120 reported remaining — so roughly **$140 is already spent**. `funded` means money moved
+to Set-Aside (SoFi Checking); he reported a cash position, not a transfer. Marking 8/22,
+8/23, 8/24 or today as funded would assert a movement of his money that he never
+described, which is exactly what this skill must never do. Set-Aside still reads $13.00
+as of 2026-08-17. Raised as an open question instead: if any of it did go to Set-Aside,
+he says so and the days get funded properly.
+
+**OVERLOAD improves but does not clear: 12.3x → 9.0x.** The trailing 4-week income average
+rises $178.63 → **$243.63/week** (28-day total $714.53 → $974.53). Against $2,202.81 for
+the coming seven days, the gap is **$1,959.18**. Today alone asks $384.13 to Set-Aside
+plus $30 gas = **$414.13 total claim**; $120 in hand covers neither, and is $264.13 short
+of the set-aside figure by itself. Written as computed — nothing shrunk to make it fit.
+
+**Related evidence for the still-open ROLLOVER gap.** Seven consecutive days, 2026-08-18
+through 2026-08-24, sit at `funded: 0` with every contribution still `pending` and no
+`resolution` — **$1,571.30 of shortfall that never rolled forward** because ROLLOVER, like
+the daily calendar before it, only runs inside PART M and PART M only runs on a drop.
+Those days did not roll, did not flag, and did not compound onto today; the money simply
+fell out of the model. NOT acted on here: rolling $1,571.30 onto today is far too large a
+move to make unilaterally, several of those lines have since been re-dated or paid, and
+the rollover brake would have fired on day three anyway. It is quantified here so the size
+of the gap is on the record.
+
+Nothing paid, nothing moved, no creditor contacted. No calendar change — income funds
+days, it does not alter the accrual, and no day's target moved this pass.
 
