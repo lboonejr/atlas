@@ -3,17 +3,17 @@
   "lock": {
     "run_id": "run_20260825T160401Z",
     "run_started": "2026-08-25T16:04:01Z",
-    "run_completed": "2026-08-25T14:53:00Z",
-    "note": "In flight — prior lock (run_20260825T150325Z, started 15:03:25Z) aged out after 61min with no completion; treating as a died-mid-flight run per PART 0 and starting fresh."
+    "run_completed": "2026-08-25T16:42:30Z",
+    "note": "Completed clean. Prior lock (run_20260825T150325Z, started 15:03:25Z) aged out after 61min with no completion — treated as died-mid-flight per PART 0 and started fresh. This run: closed Station Slack workspace decision + Hillview Med payment plan; added hillview-med plan to money-hub ledger (OVERLOAD flag standing, not new); reports-scan clean (16th run); all 3 open Camden Launch PT cards already locked/parked/closed, no new rounds; Pulse + Money Hub both re-rendered."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787667699.065359",
-      "C0BBZJL85RT": "1787667805.211809",
-      "D0BHPKMDNEP": "1787610041.932929",
-      "C0BGLEMH99T": "1787584209.000000",
+      "C0BBXA96FFV": "1787670575.635129",
+      "C0BBZJL85RT": "1787676085.952779",
+      "D0BHPKMDNEP": "1787671094.816419",
+      "C0BGLEMH99T": "1787670391.641819",
       "C0BEQUW5NPP": "1787584209.000000",
-      "C0BBLUA7JLX": "1787608967.002629",
+      "C0BBLUA7JLX": "1787663689.912339",
       "C0BJ37SU1TL": "1787584209.000000",
       "C0BCCUKEUQ2": "1787605767.001539",
       "C0BCD7U5X2B": "1787584209.000000",
@@ -48,7 +48,7 @@
       "1787238798.497049": "1787238833.679779",
       "1787245811.807379": "1787328711.329099",
       "1787256504.479409": "1787260487.561709",
-      "1787314219.825659": "1787328547.699749",
+      "1787314219.825659": "1787674382.717259",
       "1787314456.900919": "1787321654.863689",
       "1787333131.938499": "1787509508.677979",
       "1787339259.215559": "1787339259.215559",
@@ -67,26 +67,27 @@
       "1787609105.376929": "1787609105.376929",
       "1787609340.269079": "1787609340.269079",
       "1787660120.230219": "1787667581.782429",
-      "1787660141.315579": "1787660148.407599",
+      "1787660141.315579": "1787674381.264359",
       "1787660130.097779": "1787667581.782429",
       "1787660143.192949": "1787660149.989389",
       "1787667532.037259": "1787667537.100239",
-      "1787613164.672029": "1787614371.183619"
+      "1787613164.672029": "1787614371.183619",
+      "1787670575.635129": "1787674284.261919"
     },
-    "capture_dm": "1787610041.932929",
-    "gmail_after_epoch": 1787667613
+    "capture_dm": "1787671094.816419",
+    "gmail_after_epoch": 1787674437
   },
   "integrity": {
     "last_full_pass": "2026-08-25T14:10:00Z",
-    "last_scan_sha": "c31cd8e471311abae8ce415e640afef6c37feb9c",
-    "note": "Full whole-vault pass this run (day's first run to reach PART V): 599 notes. 1 known mechanical defect carried (_daily/2026-08-01.md, lossy base64 span, decided 8/1 — untouched). 1 known value defect carried (ops-admin-lane-and-ariana.md missing `created`). 3 Inbox notes stuck on domain/value gaps (unchanged composition, card current). No new repairs needed."
+    "last_scan_sha": "aa9b6a964d4a62cc794f97ba259aea983475ad89",
+    "note": "Incremental pass this run (full pass already ran today at 14:10): 5 vault files changed since c31cd8e, all mechanically sound, no repairs needed. 3 Inbox notes still stuck on domain/value gaps (unchanged composition, card current, no new ones). Full whole-vault pass remains today's 14:10 599-note pass; next full pass is tomorrow's first run."
   },
   "canvas_access": {
     "last_checked": "2026-08-25T14:20:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-25T10:40:00-04:00",
-    "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
+    "pulse_last_rendered": "2026-08-25T12:16:00-04:00",
+    "money_hub_last_rendered": "2026-08-25T12:24:00-04:00"
   }
 }
