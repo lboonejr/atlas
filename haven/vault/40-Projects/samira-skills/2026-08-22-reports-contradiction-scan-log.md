@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-25T13:12:00-04:00
+updated: 2026-08-25T13:27:00-04:00
 domain: project
 type: log
 status: active
@@ -539,3 +539,47 @@ digest — internally consistent with everything already checked in the sixteent
 
 ### Sources (seventeenth run)
 - slack: #reports `C0BBZJL85RT`, ts range `1787674422`–`1787676085`
+
+## Update 2026-08-25 (eighteenth run)
+
+**Scanned:** #reports ts `1787676085`–`1787678554` (2026-08-25 ~12:40pm ET through
+~1:22pm ET, 2 new messages — the boundary message `1787676085.952779` was the last
+message of the seventeenth run's scanned range and was used only for grouping context,
+not re-flagged).
+
+**Found: 1.**
+
+1. **Informational only — a fourth+ recurrence of the non-Samira "Haven Keeper" claiming
+   an empty Inbox against Samira's own reconciled stuck count.**
+   - 8/25 ~1:20pm ET (`1787678417`), a message signed "— Haven Keeper" (posted by
+     Lemar's account `U0BC5UTHYG4` with `app_id A08SF47R6P4` — the same live Claude
+     session identity as the eleventh/twelfth/fifteenth-run occurrences, not Samira's
+     bot `B0BHZJH8GP6`): "Haven — filed 0 · stuck 0 · rang +0/~0/-0. Inbox empty,
+     nothing to file. No notes carry a `due` — nothing to sync."
+   - 8/25 ~1:22pm ET (`1787678554`), Samira's own digest, ~2 minutes later: "Haven:
+     filed 0 · stuck 3 (unchanged) · rang +0/~0/-0 · notes 3."
+   - **Ground truth:** consistent with every run since the eleventh (00-Inbox has
+     carried the same 3 stuck notes unchanged for several days per this run's digest),
+     the "stuck 0 / Inbox empty" claim is wrong again.
+   - **Not flagged as an actionable contradiction**, same reasoning as the eleventh,
+     twelfth, and fifteenth runs: a one-off manual session under a different signature,
+     never read back as state by the automated routine, so it doesn't propagate — this
+     run's own digest correctly reports `stuck 3`. No #decisions card, no DM
+     (consistent with the eleventh/twelfth/fifteenth-run disposition for this exact
+     pattern).
+   - **Flagging the recurrence itself:** this is now at least the fourth distinct
+     occurrence of this identical claim (eleventh run 8/24 9:23am, twelfth run 8/24
+     1:14pm, fifteenth run — two instances, 8/24 evening + 8/25 10:23am, and now this
+     run 8/25 1:20pm) — well past the "worth a glance if this recurs a third time"
+     threshold the twelfth run's own note set. Still non-propagating and non-material,
+     so not escalated to #decisions or DM this run either, but noting here for whoever
+     next reviews this log: the pattern looks like a standing habit of that manual
+     session/prompt rather than a one-off, and may be worth Lemar's attention directly
+     (outside this scanner's scope, which only tracks #reports contradictions).
+
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (eighteenth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787676085`–`1787678554`
+- haven/vault/70-Automation/samira/2026-08-15-suspicious-admin-bot-message-disregarded.md
+  (established disposition for this signature/pattern)

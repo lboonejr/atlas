@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-08-23T14:03:00-04:00
+updated: 2026-08-25T14:15:00-04:00
 domain: legal
 type: task
 status: active
@@ -626,6 +626,44 @@ labels it during its own sweep).
   `1a0253a019db9fa8`)
 - slack: #decisions ts `1787333131.938499`, option reply `1787333149.419909`
 
+## Update 2026-08-25T14:15:00-04:00 — Diaz asks for the signed letter + retainer to start; Lemar's own reply sent holding the spot; 3 new reply options posted
+
+Two new messages on this thread since the last update:
+
+- **2026-08-25 ~15:22 ET, Lemar (self-sent, not drafted by Samira)** replied to Diaz's
+  8/23 engagement letter: confirmed Cuzzie's wants Archer & Greiner on the matter,
+  said the retainer is being pulled together "still working through it" but wants to
+  hold the spot with the firm, and said he's also pulling together what he can on the
+  excusable-neglect timeline (what was/wasn't received in April/May, dates, who it
+  went to) so nothing holds up the motion once formally engaged. Asked Diaz what's
+  needed to consider the engagement secured (signed letter first, or something else)
+  and offered a call.
+- **2026-08-25 ~17:12 ET, Douglas Diaz replied:** his office will prepare the
+  affidavit/certification on the excusable-neglect piece and file it with the motion
+  to vacate + brief once they have it — "not too heavy of a lift." He needs the
+  **signed engagement letter and the retainer** to actually get started; the retainer
+  can be paid through Archer & Greiner's online payment portal (a link on their
+  website).
+
+**Read:** this is Diaz confirming his firm is ready to move the moment two things
+land — the signed engagement letter and the retainer. Whether Lemar has physically
+signed and returned the letter yet is not established from the thread (his 8/25
+email talks about the retainer being in progress but doesn't confirm the letter is
+signed). Both the signing and the retainer payment are Lemar's alone to do — Samira
+cannot sign a legal document or authorize/send a payment on his behalf. Posted 3
+new voice-matched reply options to #decisions (thread from the 8/21 update, ts
+`1787333131.938499`, this run posts as a fresh reply-worthy thread pass since D2
+picked this thread back up) — none of the options invent a retainer amount or a
+firm date; all use process language ("working on," "getting moving") per the
+voice profile's hard floor on binding dates/dollar amounts. Nothing signed, paid,
+or sent by Samira. Gmail thread now labeled `Samira/seen`.
+
+### Sources (this update)
+- gmail: thread `1a024b065a8e8ff2`, message `1a039e91b5b4d235` (Diaz's 17:12 ET
+  reply asking for the signed letter + retainer) / `1a03983d9f9b5cd1` (Lemar's own
+  15:22 ET reply, self-sent)
+- slack: #decisions `C0BBXA96FFV` (new card posted this pass)
+
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
 - gmail: thread `19f8a3261576b3bb` (Marshall+Sterling auto-reply to the New Claim Notice)
@@ -666,4 +704,5 @@ labels it during its own sweep).
   Kaplan/Kaplin Stewart — routed 8/14, followed up 8/17, declined 8/18)
 - gmail: thread `1a024b065a8e8ff2` (2026-08-21, Douglas Diaz / Archer & Greiner P.C.
   engaged, engagement letter sent, excusable-neglect facts requested; 2026-08-23,
-  Option 1 reply saved to Gmail Drafts)
+  Option 1 reply saved to Gmail Drafts; 2026-08-25, Diaz asks for signed letter +
+  retainer to start, 3 new reply options posted to #decisions)
