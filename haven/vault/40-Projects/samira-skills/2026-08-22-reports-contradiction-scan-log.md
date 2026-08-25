@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-25T12:20:00-04:00
+updated: 2026-08-25T13:12:00-04:00
 domain: project
 type: log
 status: active
@@ -522,3 +522,20 @@ non-spam rule.
 ### Sources (sixteenth run)
 - slack: #reports `C0BBZJL85RT`, ts range `1787667805`–`1787674422`
 - haven/vault/20-Cuzzies/2026-08-19-hillview-med-outstanding-balance.md
+
+## Update 2026-08-25 (seventeenth run)
+
+**Scanned:** #reports ts `1787674422`–`1787676085` (2026-08-25 ~12:13pm ET through
+~12:40pm ET, 1 new message — the boundary message `1787674422.051249` was the last
+message of the sixteenth run's scanned range and was used only for grouping context,
+not re-flagged).
+
+**Found: 0. Clean scan.**
+
+The one new message (`1787676085.952779`, 12:40pm ET) is the prior run's own closing
+digest — internally consistent with everything already checked in the sixteenth run
+(Hillview Med closure, Station Slack closure, reports-scan clean, canvas blocked, pulse
+✅ 9/9). No conflicting figures, no unresolved self-corrections, no stale claims.
+
+### Sources (seventeenth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787674422`–`1787676085`
