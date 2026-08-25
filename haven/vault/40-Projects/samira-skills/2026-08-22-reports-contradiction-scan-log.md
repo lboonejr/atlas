@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-25T10:35:00-04:00
+updated: 2026-08-25T13:12:00-04:00
 domain: project
 type: log
 status: active
@@ -190,10 +190,9 @@ No new messages posted to #reports since the prior digest — nothing to check.
 
 ## Update 2026-08-23 (sixth run)
 
-**Scanned:** #reports ts `1787491189`–`1787506120` (2026-08-23 ~9:20am ET through
-~1:16pm ET, 6 messages — the boundary message `1787491189.919269` was the last message
-of the fifth run's scanned range and was used only for grouping context, not
-re-flagged).
+**Scanned:** #reports ts `1787491189`–`1787506120` (2026-08-23 ~9:20am ET through ~1:16pm
+ET, 6 messages — the boundary message `1787491189.919269` was the last message of the
+fifth run's scanned range and was used only for grouping context, not re-flagged).
 
 **Found: 1.**
 
@@ -478,3 +477,65 @@ consistent, no conflicting figures against each other or their cited Haven notes
 - slack: #reports `C0BBZJL85RT`, ts range `1787609371`–`1787667714`
 - haven/vault/70-Automation/samira/2026-08-15-suspicious-admin-bot-message-disregarded.md
 - haven/vault/70-Automation/samira/2026-08-24-third-bot-identity-admin-anomaly.md
+
+## Update 2026-08-25 (sixteenth run)
+
+**Scanned:** #reports ts `1787667805`–`1787674422` (2026-08-25 ~10:23am ET through
+~12:13pm ET, 6 new messages — the boundary message `1787667714.063639` (PART R PT
+status line) was the last message of the fifteenth run's scanned range and was used
+only for grouping context, not re-flagged).
+
+**Found: 0. Clean scan.**
+
+Grouped by matter and checked:
+
+1. **Hillview Med payment plan** — three entries in range trace one matter across its
+   own natural progression, not a conflict:
+   - 10:30:56am (`1787668256`, digest): "Closed: Hillview Med (Lemar answered
+     directly, $200/biweekly accepted)."
+   - 12:13:42pm (`1787674422`): "Hillview Med payment plan — settled, first payment
+     9/7," citing `haven/vault/20-Cuzzies/2026-08-19-hillview-med-outstanding-balance.md`.
+   - **Ground truth:** the cited note's own timeline matches exactly — 10:22am update
+     records Lemar accepting the $200/biweekly plan and closing the #decisions card;
+     10:50am records David awaiting a first-payment date; 11:09am records Lemar
+     confirming Sept 7. The 10:30am digest and the 12:13pm line each report the state
+     accurate as of their own timestamp — a legitimate status progression, not a
+     restated fact. Not flagged.
+
+2. **reports-scan self-reports** — "reports-scan: clean (fifteenth run)" at 10:23:25am
+   (`1787667805`) and echoed inside the 10:30:56am digest ("reports-scan: clean (15th
+   run)") — same figure, same run, consistent.
+
+3. **PT status lines / LADDS closure / Drive-organizing / Station Slack storage** — one
+   mention each in range, no prior or later entry in range to conflict with, and each
+   checked against its cited Haven note where one exists:
+   - LADDS closure reply drafted (`1787670424`) — the "+1 LADDS closure question"
+     named in the 10:30:56am digest's decisions-count line, consistent, no figure
+     conflict.
+   - Drive-organizing run and Station Slack storage decision — single, self-contained
+     report lines; nothing else in range references either matter.
+
+No conflicting figures/status for the same fact, no unresolved self-correction, no
+stale claim against any cited Haven note. No DM, no #decisions card, per the
+non-spam rule.
+
+### Sources (sixteenth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787667805`–`1787674422`
+- haven/vault/20-Cuzzies/2026-08-19-hillview-med-outstanding-balance.md
+
+## Update 2026-08-25 (seventeenth run)
+
+**Scanned:** #reports ts `1787674422`–`1787676085` (2026-08-25 ~12:13pm ET through
+~12:40pm ET, 1 new message — the boundary message `1787674422.051249` was the last
+message of the sixteenth run's scanned range and was used only for grouping context,
+not re-flagged).
+
+**Found: 0. Clean scan.**
+
+The one new message (`1787676085.952779`, 12:40pm ET) is the prior run's own closing
+digest — internally consistent with everything already checked in the sixteenth run
+(Hillview Med closure, Station Slack closure, reports-scan clean, canvas blocked, pulse
+✅ 9/9). No conflicting figures, no unresolved self-corrections, no stale claims.
+
+### Sources (seventeenth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787674422`–`1787676085`
