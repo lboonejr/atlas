@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-18T12:15:00-04:00
+updated: 2026-08-25T12:20:00-04:00
 domain: personal
 type: reference
 status: active
@@ -2830,6 +2830,8 @@ open_questions:
   - "RESOLVED 2026-08-18 (#decisions ts 1787001107.337499, Lemar reply 1787009888.775939): 'The charge did not clear.' cuzzies-google-workspace $85 (due 8/19) confirmed still unpaid — stays `status: active`, still accruing. Suspension risk (all cuzziesnj.com Workspace services, incl. lemar@cuzziesnj.com email, per the 8/20 deadline) is unchanged; Lemar owns the re-attempt, not logged here as resolved-to-paid."
   - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Lemar was unexpectedly charged $119 by Edge Fitness for personal training and is disputing it with SoFi. Already happened (not a future dated line) so nothing was added to `bills` — no due date exists to queue and inventing one would violate the never-invent-a-date rule. #decisions parent raised asking how he wants this reflected once the dispute resolves (refunded → no entry needed; upheld → a dated personal expense/loss line, his call). No income reported today."
   - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Set-Aside (SoFi Checking) balance reported at $13.00 as_of 2026-08-17 — first balance ever reported for this pocket since the Era connector retired 2026-08-10. Very low against the ~$380/day accrual target; flagged on the dashboard, not smoothed or explained away."
+  - "OPEN 2026-08-25: Hillview Med — Lemar committed to a $200 biweekly payment plan against a $2,532 Cuzzie's balance, first payment 2026-09-07, and said explicitly it is 'handled personally rather than through the business since Cuzzie's closed' (#personal-finance ts 1787670391.641819, confirmed in the 2026-08-25 run). It was captured to Haven at haven/vault/20-Cuzzies/2026-08-19-hillview-med-outstanding-balance.md but was NEVER added to this ledger — so a dated, recurring, self-declared PERSONAL obligation starting in 13 days is carrying no line, no accrual, and no calendar event. Not added here unilaterally: it is business-ORIGIN debt Lemar is paying personally, which is exactly the ambiguous case the business boundary says to ask about rather than guess. CONFIRM it belongs in the personal ledger and it gets a plan line + accrual + events."
+  - "OPEN 2026-08-25 — STALE ACCRUAL BACKLOG, never cleared. Four dated lines were added with their daily_targets spread explicitly DEFERRED to a 'next dedicated recompute pass' that never ran: station-travel-weekly ($80/wk, first_due 2026-08-22 — see its own bullet above), tmobile-split-2 ($278, due 8/28), moms-car-oil-change ($100, due 8/23), and am-botte (past-due balance). The 2026-08-15 lock ('Recompute is NEVER deferred', SKILL.md ACCRUAL) closed the habit going forward but did not retire the backlog already sitting in the ledger. Consequence: every daily target from 2026-08-16 onward is UNDERSTATED by these lines' drip — the numbers are close but do not carry these corrections. Clearing this needs a recompute pass, not a guess."
 ```
 
 ## Update 2026-08-14 (PART M — two new personal bills: fantasy football + Dil's Christmas gift)
@@ -3889,3 +3891,44 @@ payment status + how to record the Edge Fitness dispute outcome) — Lemar decid
 guessed. Nothing paid, nothing contacted. Dashboard re-rendered (new Drive snapshot)
 since the ledger changed (balance + annotations + open questions); reply posted in
 #personal-finance with the new link.
+
+## Update 2026-08-25 — DAILY CALENDAR OUTAGE: the "Set aside today" events stopped on 8/22
+
+**Reported by Lemar:** "I'm no longer seeing the daily totals on my google calendar."
+Confirmed — and the ledger was never the problem.
+
+**What happened.** The daily aggregate "Set aside today" events are maintained on a
+rolling 7-day window. That window was last advanced on 2026-08-15, which wrote it out
+through 2026-08-21 (the live events for 8/18-8/21 still carry `updated: 2026-08-15T12:25Z`).
+It was never advanced again. The last event fired 2026-08-21; from **2026-08-22 onward
+there are no daily events at all** — 100 consecutive `daily_targets` days from 8/22 to
+2026-11-29 hold `calendar_event_id: null`.
+
+**Root cause — a quiet channel, not a failure.** Advancing the window was only ever a
+side-effect of a money drop landing in #personal-finance: PART M swept for drops, and
+only the days touched by a drop's ACCRUAL got their events created or updated. The last
+real drop was 2026-08-17 (~16:41 ET, the Edge Fitness / $13 Set-Aside message); that
+pass changed no dated line, so per its own Update it correctly ran no calendar step. With
+no drops after it, every hourly run from 8/18 on returned `money —` and touched nothing.
+The window simply aged out four days later and no check existed to notice. Nothing
+errored, no run was missed (Samira ran continuously — run locks through 8/25 16:04Z), and
+**this ledger held a correct `target` for every dark day the whole time** ($178.76 for
+8/25, for instance). Only the projection layer stopped.
+
+**Fix (locked 2026-08-25).** Window maintenance is now an UNCONDITIONAL first step of
+PART M, not a side-effect: on every sweep, any day in `[today .. today+6]` with a target
+> $0 and `calendar_event_id: null` gets its event created and the id written back, even
+on a pass with no drops. A day inside the window with a target and no event is now
+defined as a defect. See `.claude/skills/money-hub/SKILL.md` (DAILY CALENDAR → WINDOW
+MAINTENANCE, and PART M's unconditional first step) and PART M in
+`.claude/routines/samira-atlas-executor.md`. Past days are never back-filled — the window
+advances, it does not reach backwards.
+
+**NOT done in this pass, deliberately.** The dark days were not repopulated onto the
+calendar, because the targets they would publish are known-stale: the four deferred
+accrual spreads above (station-travel-weekly, tmobile-split-2, moms-car-oil-change,
+am-botte) were never folded in, and the Hillview $200-biweekly commitment Lemar called
+personal is not in this ledger at all. Publishing those figures would put numbers on his
+calendar that this ledger already knows are understated — the one thing the projection
+layer is never allowed to do. Both gaps are raised as open questions above; the restore
+runs after the recompute, not before it.

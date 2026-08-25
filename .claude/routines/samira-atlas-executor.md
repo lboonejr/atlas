@@ -295,6 +295,17 @@ no priority tiers, no floor, no waterfall. Two consequences for you:
   Cuzzie's (Owners) calendar and #on-button. Genuinely ambiguous (Lemar personally
   covering a business cost) → leave it out and ask; never guess the side.
 
+**Run the skill's DAILY CALENDAR window maintenance FIRST, every pass, drops or not
+(locked 2026-08-25).** The daily "Set aside today" events live on a rolling
+`[today .. today+6]` window, and advancing that window is NOT a side-effect of a drop
+landing — it is an unconditional step. Any day in the window whose `daily_targets` entry
+has `calendar_event_id: null` and a target > $0 gets its event created and the id written
+back, even on a pass where the channel is empty. A quiet #personal-finance therefore no
+longer means a quiet calendar: `money —` can still have repaired the window, so say so
+(`money — · window repaired <n>d`). This is the fix for the 2026-08-22 outage, where the
+window was last written on 8/15, expired on 8/21, and stayed dead for four days while
+every hourly run reported `money —` and the ledger held correct targets the whole time.
+
 Anything ambiguous or material stays `null` and raises ONE #decisions parent — never
 guess a number or a date. Never reorder the queue or decide which line slips. The weekly
 view (mode 6, "run my week") is ON DEMAND ONLY — never run it from a sweep.

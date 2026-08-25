@@ -419,6 +419,21 @@ due." Personal reminder calendar only, no attendees, popup reminder (`minutes: 0
   never create a duplicate for a date that already has one (EXISTING).
 - A day whose target reaches $0 (every contribution cleared or moved off it) → cancel its
   event and clear the id (RETIRE) — never leave a stale $0 reminder.
+- **WINDOW MAINTENANCE — every pass, drop or no drop (locked 2026-08-25).** The window is
+  `[today .. today+6]`. Advancing it is NOT a side-effect of a drop: on every PART M
+  sweep, create the aggregate event for any day in that window whose `daily_targets`
+  entry has `calendar_event_id: null` and a `target` > $0, and write the id back. **A day
+  inside the window with a target > $0 and no event is a DEFECT, not a quiet week.** This
+  is the one part of PART M that runs on an empty channel — a pass that returns `money —`
+  can still create events here.
+- **Never back-fill a past day.** Only `[today .. today+6]` is repaired; a day before
+  today that never got an event stays without one (past days are history — see ACCRUAL).
+  The window advances, it does not reach backwards.
+- Why this is a rule and not an implementation detail: the window used to be advanced
+  only when a drop happened to land, so on 2026-08-15 it was written out to 2026-08-21
+  and then — the channel going quiet after 2026-08-17 — simply expired. Lemar had no daily
+  total from 2026-08-22 until he noticed and asked on 2026-08-25, while the ledger held a
+  correct `target` for every one of those days. Nothing errored; the layer just stopped.
 
 ## DASHBOARD — the Money Hub Drive snapshot
 One self-contained HTML page (inline CSS, no external requests, single column
@@ -472,6 +487,12 @@ Earnings drops also run INCOME ALLOCATION against the day they were earned.
 On the LAST hourly scan of the day (≥5pm ET) also run ROLLOVER before re-rendering.
 Re-render the dashboard once at the end ONLY if something changed. PART M captures,
 accrues, funds, checks, and renders; it never runs the weekly view (mode 6 stays on-demand).
+
+**Unconditional first step (locked 2026-08-25):** run DAILY CALENDAR's WINDOW MAINTENANCE
+*before* scanning for drops, on every sweep. It is the only part of PART M that is not
+drop-triggered, so `money —` (no drops this pass) never means "touched nothing" — report
+any events it created. If the window was short when the pass started, say so in the
+digest token: `money — · window repaired <n>d`.
 
 ## SAFETY (applies to the whole skill)
 You MAY: record gas spend and sweep the remainder into the maintenance bucket from a
