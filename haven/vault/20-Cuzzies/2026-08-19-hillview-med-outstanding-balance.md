@@ -1,9 +1,9 @@
 ---
 created: 2026-08-19T13:10:00-04:00
-updated: 2026-08-25T10:22:00-04:00
+updated: 2026-08-25T11:09:43-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [samira, off-button, hillview, collections, accounts-payable]
 source: gmail
 ---
@@ -82,3 +82,18 @@ Not reply-worthy this run (no question requiring an answer right now).
 ### Sources (this update)
 - gmail: thread `1a01aeb6b8dd7c71`, message `1a03966e7b8a8978` (David Alston, 2026-08-25
   14:50 UTC, confirms terms + 2-week delay, awaits first-payment date)
+
+## Update — 2026-08-25T11:09:43-04:00 — settled: first payment date confirmed, matter closed
+
+Lemar replied to David directly (message `1a03978573adf5c5`, 2026-08-25 11:09am ET, sent
+himself, not via a Samira draft): confirmed **September 7th** for the first payment,
+$200 every-other-week from there until the balance ($2,532.00) is paid in full. Terms
+now fully settled on both sides — nothing further pending in this thread. Personal
+commitment, tracked here and via #personal-finance for the recurring $200 biweekly
+outflow starting 9/7.
+
+**Status: done.** No Samira action outstanding.
+
+### Sources (this update)
+- gmail: thread `1a01aeb6b8dd7c71`, message `1a03978573adf5c5` (Lemar's 2026-08-25
+  11:09am ET reply, confirms Sept 7 first payment)
