@@ -228,6 +228,9 @@ exceptions. Consistency is the point: Lemar asked for one format so he can stay 
   RECOMPUTED (sum of that day's contributions), never overwritten.
 - **Undated → no accrual.** Never guess a date to force one. An undated line contributes
   $0/day, which is exactly why it's invisible (see THE MODEL).
+- **`expires_if_missed: true` → a missed occurrence is dropped, not caught up** (see
+  ROLLOVER). The line keeps accruing toward its NEXT date; only the day that already
+  passed evaporates. Never spread a missed consumption occurrence forward.
 - **Recompute triggers:** a new dated line, an amount or date change, a payment, or a
   cycle rolling over. Recompute only the days from today forward — **never rewrite a past
   day**, which is history.
@@ -378,6 +381,30 @@ whose due date passes while still unfunded stops rolling and becomes **overdue**
 leaves the accrual, gets its own flag on the dashboard, and rides in `open_questions`
 until Lemar says whether it was paid. Never keep silently dripping a bill whose date has
 already gone by.
+
+**The consumption exception — `expires_if_missed: true` (locked 2026-08-25, Lemar's
+call).** Not every dated line is a debt. Some are the cost of DOING something on a
+specific day — train fare to a weekend shift, a tank of gas. If the day passes and the
+money was never set aside, the trip didn't happen and **nobody is owed anything**: there
+is no creditor, no balance, nothing to catch up. Chasing it would invent an obligation
+out of a day that simply went by.
+
+A line flagged `expires_if_missed: true` therefore:
+- **never rolls.** At ROLLOVER, an unfunded contribution on such a line is marked
+  `status: expired` and is NOT carried to tomorrow.
+- **never becomes overdue.** It leaves the accrual silently — no dashboard flag, no
+  `open_questions` entry, no ask. Surfacing it as a debt would be wrong, not merely noisy.
+- **still accrues forward normally.** Expiring a missed occurrence says nothing about the
+  next one: a recurring travel line keeps dripping toward its NEXT date. Lemar still has
+  to get to the shift this weekend.
+- is never inferred. Only Lemar sets this flag, the same rule as `non_negotiable`. Do not
+  guess it from a line looking like a running cost — a bill that merely went unpaid is
+  still owed, and treating it as expired would quietly delete a real debt.
+
+The gas/maintenance reserve already behaves this way structurally and needs no flag: it
+is `daily_allowances.gas_maintenance`, never a `bills` row, never accrued into
+`daily_targets`, and an unreported day is assumed spent (see OPERATING RESERVE). The
+flag exists for lines that DO sit in the queue but share gas's nature.
 
 **Rollover brake:** a contribution that has rolled **3 days running** stops rolling
 silently — keep rolling it, but name it in a #decisions parent ("$X for [line] has

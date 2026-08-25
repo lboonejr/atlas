@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-25T12:35:00-04:00
+updated: 2026-08-25T12:48:00-04:00
 domain: personal
 type: reference
 status: active
@@ -31,6 +31,14 @@ Field rules (on-button-plan pattern):
   A reported balance is never adjusted to match what the ledger expected.
 - `track` = `queue` (must carry a date; accrues daily and queues) or `spending` (paid
   as you go from the Spending pocket; no date, no accrual, not a defect). Added 2026-08-10.
+- `expires_if_missed: true` (optional, added 2026-08-25) — Lemar's flag marking a line as
+  a CONSUMPTION cost rather than a debt: the cost of doing something on a given day (train
+  fare, gas), not money owed to anyone. If the day passes unfunded the occurrence simply
+  evaporates — it never rolls, never becomes overdue, never gets an ask, because no
+  creditor is holding it. The line still accrues normally toward its NEXT date. Absent =
+  a real obligation by default, which carries over when missed. Only Lemar sets this flag;
+  never infer it from a line looking like a running cost — a bill that merely went unpaid
+  is still owed.
 - `non_negotiable: true` (optional, added 2026-08-15) — Lemar's explicit flag on a bill,
   plan, or goal line meaning REBALANCE (see SKILL.md) may never propose stretching,
   re-tiering, or otherwise touching it, no matter how tight a week gets. Absent =
@@ -280,7 +288,7 @@ bills:
             event ptacguksk2rsf3md3403gljtes cancelled/cleared."}
   - {id: station-travel-weekly, name: "Travel to The Station — weekly", amount: 80,
      cadence: weekly, weekday: saturday, first_due: 2026-08-22, track: queue,
-     status: active, calendar_event_id: 7ppstt92j8m4ben3u0v8iepink,
+     status: active, expires_if_missed: true, calendar_event_id: 7ppstt92j8m4ben3u0v8iepink,
      note: "Added 2026-08-15: recurring weekly round-trip travel cost for the new
             weekend Station security-desk job (Sat+Sun combined, $80/week total),
             confirmed rate per Lemar in #personal-finance. Starts the Saturday AFTER
@@ -5029,7 +5037,8 @@ open_questions:
   - "No balance has been reported for either pocket since the Era connector was retired 2026-08-10 — say 'Spending has $X' / 'Set-Aside has $X' whenever convenient; both currently render 'not reported'"
   - "RESOLVED 2026-08-15 (#personal-finance, unlabeled drop, ~14:31 ET): Lemar reported the round-trip travel rate — 'Round Trip (Saturday & Sunday total): $80 per week.' This week's one-time station-travel line corrected 50->80; a new recurring station-travel-weekly line ($80/wk, Saturdays, starting 2026-08-22) added. daily_targets beyond 2026-08-15 not yet hand-spread for the new recurring line — see the next line."
   - "OPEN: station-travel-weekly ($80/wk, first_due 2026-08-22) is a new dated recurring line whose daily_targets accrual has NOT yet been hand-spread across the ~7 open days between now and 8/22 — deferred to the next dedicated recompute pass per this ledger's established practice (same treatment as tmobile-split-2/moms-car-oil-change/am-botte). The dashboard's queue section will show it as a dated future line; the per-day daily numbers 8/16-8/21 do not yet include its drip."
-  - "OPEN 2026-08-25 — OVERDUE BACKLOG, $968 across 9 items, nothing funded against any of them. Every one of these has a due date that has already passed while `funded: 0`, so per ROLLOVER doctrine each has LEFT the accrual and none of them appear in any daily number from today forward: tmobile-split-1 $265 (due 8/03, 22 days past) · liquidibee-nomas seq1 $125 (due 8/17) · cuzzies-google-voice $38 (due 8/18) · cuzzies-google-workspace $85 (due 8/19) · moms-lump-0821 $110 (due 8/21) · metrc-fee $40 (due 8/21) · station-travel-weekly's first occurrence $80 (due 8/22) · liquidibee-nomas seq2 $125 (due 8/23) · moms-car-oil-change $100 (due 8/23). NOTHING was marked paid and nothing was re-dated — both are Lemar's call and inventing either would be a lie about his money. ROOT CAUSE, same as the calendar outage: ROLLOVER runs only inside PART M, PART M ran only on a money drop, and there were no drops after 2026-08-17 — so no line was ever flagged as it went past due. The window-maintenance fix (Update 2026-08-25) makes the daily calendar unconditional but does NOT by itself make ROLLOVER unconditional; that gap is still open. ASK LEMAR, per item: paid outside the system (mark paid, retire the event) or still owed (give it a new date so it re-enters the queue)?"
+  - "OPEN 2026-08-25 — OVERDUE BACKLOG, $888 across 8 items, nothing funded against any of them. REVISED the same day: this bullet first read $968 across 9 items and wrongly included station-travel-weekly's missed 2026-08-22 occurrence ($80). Lemar's correction: gas and Station travel are CONSUMPTION, not debt — 'if I missed them, I missed them' — so that occurrence is dropped rather than chased, and the line now carries `expires_if_missed: true`. The remaining 8 are real obligations someone is still holding; each has a due date that passed while `funded: 0`, so per ROLLOVER doctrine each has LEFT the accrual and appears in no daily number: tmobile-split-1 $265 (due 8/03, 22 days past) · liquidibee-nomas seq1 $125 (due 8/17) · cuzzies-google-voice $38 (due 8/18) · cuzzies-google-workspace $85 (due 8/19) · moms-lump-0821 $110 (due 8/21) · metrc-fee $40 (due 8/21) · liquidibee-nomas seq2 $125 (due 8/23) · moms-car-oil-change $100 (due 8/23 — see the boundary question below). NOTHING was marked paid and nothing re-dated — both are Lemar's call and inventing either would be a lie about his money. ROOT CAUSE, same as the calendar outage: ROLLOVER runs only inside PART M, PART M ran only on a money drop, and there were no drops after 2026-08-17 — so no line was ever flagged as it went past due. The window-maintenance fix (Update 2026-08-25) makes the daily calendar unconditional but does NOT by itself make ROLLOVER unconditional; that gap is still open. ASK LEMAR, per item: paid outside the system (mark paid, retire the event) or still owed (give it a new date so it re-enters the queue)?"
+  - "OPEN 2026-08-25 — BOUNDARY CASE, needs Lemar: is moms-car-oil-change ($100, due 8/23) consumption or obligation? It sits exactly on the line his 2026-08-25 rule draws. Unlike the missed train fare, skipping it means nobody is owed $100 — but the car still needs the oil change, so it reads as a deferred NEED rather than a lapsed cost. Left in the overdue list (the conservative side: an obligation wrongly expired silently deletes a real debt, whereas one wrongly kept merely gets asked about) and NOT flagged `expires_if_missed`. Lemar decides: give it a new date, or drop it as consumption."
   - "Where should the maintenance bucket live? The 2026-08-10 account correction left it in Set-Aside, which is now SoFi Checking (the bill-paying account). SoFi Savings is free and is the obvious home, but Lemar has not said so — not moved."
   - "Gas/maintenance $30/day reserve is a rough cap Lemar named, not a measured figure — refine it once a few weeks of actual fill-ups are reported (it is now the largest single line in the ledger at ~$900/mo)"
   - "Income backlog: Lemar is posting ~2 weeks of DoorDash earnings to #personal-finance (2026-08-10). Until they land, income_target_weekly $500 is a guess and the overload check can't run."
@@ -6213,4 +6222,53 @@ doesn't actually work — so it says so plainly instead.
 
 Nothing paid, nothing moved, no creditor contacted. Dashboard snapshot not re-rendered
 in this pass — flagged to Lemar so a stale Doc is not mistaken for a current one.
+
+## Update 2026-08-25 (3) — consumption vs. debt: `expires_if_missed` added, backlog corrected
+
+Lemar's correction on the pass above, and it is a model rule, not a one-off fix:
+
+> "the gas and Station travel costs don't have to be caught up. If I missed them, I
+> missed them, now other goals and bills I missed my daily inputs on, those should
+> carry over"
+
+**The distinction.** Not every dated line is a debt. Some are the cost of DOING something
+on a particular day — train fare to a weekend shift, a tank of gas. If that day passes
+unfunded, the trip didn't happen and **no one is owed anything**: there is no creditor,
+no balance, nothing to catch up. Chasing it invents an obligation out of a day that
+simply went by. A bill is the opposite — someone is still holding it, so it carries over.
+The ledger had been treating both classes identically.
+
+**What actually changed.** Less than the correction implies, because two of the three
+things were already right:
+- **Gas needed no change.** It lives in `daily_allowances.gas_maintenance`, never as a
+  `bills` row and never inside `daily_targets`; all 196 days carry a flat $30.00
+  `operating_reserve` and an unreported day is already assumed spent. It was never
+  accrued, never rolled, never caught up. Verified, not assumed.
+- **The forward station-travel accrual was already correct.** The $20.00/day across
+  [8/25..8/28] funds the NEXT occurrence (Sat 8/29) — Lemar still has to get to that
+  shift. Expiring a missed occurrence says nothing about the next one.
+- **The error was the MISSED 8/22 occurrence**, which the pass above listed in the overdue
+  backlog as an $80 debt. It never accrued anywhere; it existed only as a line in that
+  open question. Now dropped.
+
+**Changes made:**
+1. `station-travel-weekly` carries **`expires_if_missed: true`**.
+2. New field documented in the field rules above. A flagged line never rolls (ROLLOVER
+   marks it `expired` instead of carrying it), never becomes overdue, never raises an ask
+   — and still accrues normally toward its next date. **Default is absent**, i.e. a real
+   obligation that carries over. Only Lemar sets it; it is never inferred, because a bill
+   that merely went unpaid is still owed and expiring it would quietly delete a real debt.
+3. Doctrine written into `.claude/skills/money-hub/SKILL.md` (ROLLOVER → "the consumption
+   exception", plus an ACCRUAL cross-reference).
+4. Overdue backlog corrected: **$968 across 9 items → $888 across 8**.
+
+**No daily number moved and no calendar event changed** — the dropped occurrence was
+never in `daily_targets` to begin with. Today still reads $344.67 set-aside + $30.00 gas.
+
+**One boundary case raised rather than decided:** `moms-car-oil-change` ($100, due 8/23)
+sits exactly on the line this rule draws. Skipping it means nobody is owed $100, which
+looks like consumption — but the car still needs the oil change, which makes it a
+deferred need rather than a lapsed cost. Left in the overdue list and NOT flagged, taking
+the conservative side: an obligation wrongly expired silently deletes a real debt, while
+one wrongly kept merely gets asked about. Lemar decides.
 
