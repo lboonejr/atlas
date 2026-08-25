@@ -3,13 +3,13 @@
   "lock": {
     "run_id": "run_20260825T140517Z",
     "run_started": "2026-08-25T14:05:17Z",
-    "run_completed": "2026-08-24T22:23:20Z",
-    "note": "Prior lock run_20260825T130350Z died mid-flight (~61min stale, past the 45min threshold) with no new commits beyond the lock-acquire itself — nothing to pick up from it. This is at least the 4th consecutive run to die mid-flight since run_20260824T220313Z closed cleanly (~16h ago); flagging in this run's digest as a pattern worth Lemar's attention."
+    "run_completed": "2026-08-25T14:53:00Z",
+    "note": "Completed cleanly — first full completion since run_20260824T220313Z (~16h30m gap, 4 intervening runs died mid-flight at PART 0 lock-acquire, flagged in this run's digest). Full PART V-through-P sweep, nothing deferred."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787609340.269079",
-      "C0BBZJL85RT": "1787610120.637529",
+      "C0BBXA96FFV": "1787667699.065359",
+      "C0BBZJL85RT": "1787667805.211809",
       "D0BHPKMDNEP": "1787610041.932929",
       "C0BGLEMH99T": "1787584209.000000",
       "C0BEQUW5NPP": "1787584209.000000",
@@ -41,7 +41,7 @@
       "1787112734.344369": "1787574415.639709",
       "1787152085.518979": "1787159332.480679",
       "1787159607.185319": "1787162996.829679",
-      "1787155581.357669": "1787574411.538869",
+      "1787155581.357669": "1787667699.065359",
       "1787227722.583919": "1787260488.874049",
       "1787231683.266619": "1787234895.613759",
       "1787235032.481949": "1787333215.335379",
@@ -65,22 +65,28 @@
       "1787587974.554669": "1787587974.554669",
       "1787605678.559389": "1787605678.559389",
       "1787609105.376929": "1787609105.376929",
-      "1787609340.269079": "1787609340.269079"
+      "1787609340.269079": "1787609340.269079",
+      "1787660120.230219": "1787667581.782429",
+      "1787660141.315579": "1787660148.407599",
+      "1787660130.097779": "1787667581.782429",
+      "1787660143.192949": "1787660149.989389",
+      "1787667532.037259": "1787667537.100239",
+      "1787613164.672029": "1787614371.183619"
     },
     "capture_dm": "1787610041.932929",
-    "gmail_after_epoch": 1787610109
+    "gmail_after_epoch": 1787667613
   },
   "integrity": {
-    "last_full_pass": "2026-08-24T12:08:49Z",
-    "last_scan_sha": "0ddf1150d35df66a9e437eac554bde45fb7d27e4",
-    "note": "Incremental check this run: git diff against prior last_scan_sha showed zero haven/vault/ files changed beyond this run's own writes (desktop-cleanup log, third bot-identity anomaly log, Haven Inbox card refresh, _daily append). Known carried defect (ops-admin-lane-and-ariana.md missing `created`) unchanged. last_scan_sha advanced to current main HEAD."
+    "last_full_pass": "2026-08-25T14:10:00Z",
+    "last_scan_sha": "c31cd8e471311abae8ce415e640afef6c37feb9c",
+    "note": "Full whole-vault pass this run (day's first run to reach PART V): 599 notes. 1 known mechanical defect carried (_daily/2026-08-01.md, lossy base64 span, decided 8/1 — untouched). 1 known value defect carried (ops-admin-lane-and-ariana.md missing `created`). 3 Inbox notes stuck on domain/value gaps (unchanged composition, card current). No new repairs needed."
   },
   "canvas_access": {
-    "last_checked": "2026-08-24T12:38:00Z",
+    "last_checked": "2026-08-25T14:20:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-24T18:15:00-04:00",
+    "pulse_last_rendered": "2026-08-25T10:40:00-04:00",
     "money_hub_last_rendered": "2026-08-17T17:14:40-04:00"
   }
 }
