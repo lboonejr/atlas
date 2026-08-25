@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-25T12:48:00-04:00
+updated: 2026-08-25T13:03:00-04:00
 domain: personal
 type: reference
 status: active
@@ -151,7 +151,7 @@ bills:
             accrues here, but its due-date reminder lives on the Cuzzie's (Owners)
             calendar, not the personal one, per the business boundary."}
   - {id: cuzzies-google-workspace, name: "Cuzzie's Google Workspace (direct billing setup)",
-     amount: 85, cadence: once, due: 2026-08-19, track: queue, status: active,
+     amount: 85, cadence: once, due: 2026-09-01, track: queue, status: active,
      business_origin: true, calendar_event_id: u45glcg7992eg9q79nnb6brlco,
      note: "Added 2026-08-13. Same reseller billing lapse as cuzzies-google-voice above —
             all Workspace services for cuzziesnj.com (including lemar@cuzziesnj.com email
@@ -186,8 +186,8 @@ bills:
             moms-weekly below, once Lemar gave concrete figures and dates. Parked, not
             deleted, per field rules."}
   - {id: moms-lump-0821, name: "Mom — one-time", amount: 110, cadence: once,
-     due: 2026-08-21, track: queue, status: active, calendar_event_id: 99shu89b5clms6up7c7ud8hk98,
-     note: "Added 2026-08-13, reported directly by Lemar."}
+     due: 2026-08-21, track: queue, status: parked, calendar_event_id: null,
+     note: "Added 2026-08-13, reported directly by Lemar. PARKED 2026-08-25 at his instruction: 'We can remove the 1 time payment to mom. She's currently in the hospital and doesn't need the money immediately.' Parked rather than deleted, per the never-delete-a-line rule — the obligation is set aside, not settled, and can be reactivated with a date whenever he says. Its due-date event was retired. Note this is the ONE-TIME $110 only; the recurring moms-weekly $50/wk line is untouched and still accruing."}
   - {id: moms-weekly, name: "Mom's expenses — weekly", amount: 50, cadence: weekly,
      weekday: friday, first_due: 2026-08-28, track: queue, status: active,
      calendar_event_id: vf835hks1jb44drqroo9221of0,
@@ -222,9 +222,9 @@ bills:
             so no compounding was invented on top of it; see open_questions for the ask
             to confirm the actual balance or rate closer to the due date."}
   - {id: tmobile-split-1, name: "T-Mobile split payment 1 of 2", amount: 265, cadence: once,
-     due: 2026-08-03, track: queue, status: active,
-     calendar_event_id: pg0a92rgg01l09mg3tatcfb3mk,
-     note: "due date has passed — confirm paid, then flip to paid and retire the event."}
+     due: 2026-08-03, track: queue, status: paid,
+     calendar_event_id: null,
+     note: "PAID — confirmed by Lemar 2026-08-25 in this session ('T-mobile Payment 1 has been paid'). Flipped to paid and its due-date event retired. He did not give a payment date, so none was recorded; the confirmation itself is the record. Payment 2 (tmobile-split-2, $278, due 8/28) is unaffected and still accruing."}
   - {id: tmobile-split-2, name: "T-Mobile split payment 2 of 2", amount: 278, cadence: once,
      due: 2026-08-28, track: queue, status: active, calendar_event_id: vkp5r31n2du2u9ubk0o3vof7go,
      note: "Confirmed 2026-08-14 in #personal-finance: 'majority or at least half' of the
@@ -245,7 +245,7 @@ bills:
             car goal's ≈$2,000 repairs estimate is STILL unreconciled — see
             open_questions; dating this line doesn't resolve whether it's inside or on
             top of that figure."}
-  - {id: metrc-fee, name: METRC, amount: 40, cadence: once, due: 2026-08-21,
+  - {id: metrc-fee, name: METRC, amount: 40, cadence: once, due: 2026-09-01,
      track: queue, status: active, calendar_event_id: q36k3ogoblpe3i5amktigav8ig,
      note: "reported in #personal-finance 2026-08-09. Priority field retired 2026-08-10 —
             its due date is now its whole position in the queue. Due date pushed
@@ -319,7 +319,7 @@ bills:
             DATED 2026-08-15 per Lemar in #personal-finance (ts 1786754410.308129):
             'The mechanic repayment, I want it to be for the end of September.'"}
   - {id: moms-car-oil-change, name: "Mom's car — oil change", amount: 100, cadence: once,
-     due: 2026-08-23, track: queue, status: active, calendar_event_id: 1ia5n73c169uckbr0o8s5bakbk,
+     due: 2026-09-04, track: queue, status: active, calendar_event_id: 1ia5n73c169uckbr0o8s5bakbk,
      note: "Pushed back 7 days 2026-08-14 per Lemar (#personal-finance: car wasn't driven
             for a few days, so lighten the load on the next few days) — was 8/16, now
             8/23. Calendar event moved to match. daily_targets recompute deferred to the
@@ -394,10 +394,10 @@ plans:
            is his. The collector's stated deadline was Aug 15 and this schedule runs to
            Sept 6; that is Lemar's informed call, not an open question."
     installments:
-      - {seq: 1, amount: 125, due: 2026-08-17, status: pending, calendar_event_id: tja7bjk9ri35n0bqb01c52j4es}
-      - {seq: 2, amount: 125, due: 2026-08-23, status: pending, calendar_event_id: gt4knt3i2m6lpjhlrjf8n2jqn8}
-      - {seq: 3, amount: 125, due: 2026-08-30, status: pending, calendar_event_id: locnmilchabhgq2o0kd8slf7r4}
-      - {seq: 4, amount: 125, due: 2026-09-06, status: pending, calendar_event_id: ekpni2dt25f0fe5tjh51sbjj64}
+      - {seq: 1, amount: 125, due: 2026-09-08, status: pending, calendar_event_id: tja7bjk9ri35n0bqb01c52j4es}
+      - {seq: 2, amount: 125, due: 2026-09-15, status: pending, calendar_event_id: gt4knt3i2m6lpjhlrjf8n2jqn8}
+      - {seq: 3, amount: 125, due: 2026-09-22, status: pending, calendar_event_id: locnmilchabhgq2o0kd8slf7r4}
+      - {seq: 4, amount: 125, due: 2026-09-29, status: pending, calendar_event_id: ekpni2dt25f0fe5tjh51sbjj64}
   - id: hillview-med
     creditor: "Hillview Farms (Hillview Med)"
     total: 2532
@@ -984,18 +984,19 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-25":
     operating_reserve: 30.00
-    target: 344.67
-    total_claim: 374.67
+    target: 381.47
+    total_claim: 411.47
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 344.67
+    shortfall: 381.47
     calendar_event_id: qfttlvvn57ab88pctff69k1ols
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
+      - {line_id: cuzzies-google-workspace, amount: 12.15, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
       - {line_id: hillview-1, amount: 15.39, funded: 0, status: pending}
@@ -1011,9 +1012,13 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 8.93, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.96, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.47, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.58, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 5.72, funded: 0, status: pending}
+      - {line_id: moms-car-oil-change, amount: 10.00, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 3.84, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
@@ -1035,18 +1040,19 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-26":
     operating_reserve: 30.00
-    target: 344.67
-    total_claim: 374.67
+    target: 381.47
+    total_claim: 411.47
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 344.67
+    shortfall: 381.47
     calendar_event_id: 6547dk37rc3hjdpthnaqqi3gf8
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
+      - {line_id: cuzzies-google-workspace, amount: 12.15, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
       - {line_id: hillview-1, amount: 15.39, funded: 0, status: pending}
@@ -1062,9 +1068,13 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 8.93, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.96, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.47, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.58, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 5.72, funded: 0, status: pending}
+      - {line_id: moms-car-oil-change, amount: 10.00, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 3.84, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
@@ -1086,18 +1096,19 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-27":
     operating_reserve: 30.00
-    target: 342.58
-    total_claim: 372.58
+    target: 379.37
+    total_claim: 409.37
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 342.58
+    shortfall: 379.37
     calendar_event_id: ojoe052rdmk57u9fe7r4jubjgc
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
+      - {line_id: cuzzies-google-workspace, amount: 12.14, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
       - {line_id: hillview-1, amount: 15.39, funded: 0, status: pending}
@@ -1113,9 +1124,13 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 8.93, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.96, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.47, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.58, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 5.72, funded: 0, status: pending}
+      - {line_id: moms-car-oil-change, amount: 10.00, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 3.84, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
@@ -1136,18 +1151,19 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-28":
     operating_reserve: 30.00
-    target: 246.08
-    total_claim: 276.08
+    target: 282.86
+    total_claim: 312.86
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 246.08
+    shortfall: 282.86
     calendar_event_id: vbe25am89iihpll036s2ohm25g
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
+      - {line_id: cuzzies-google-workspace, amount: 12.14, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
       - {line_id: hillview-1, amount: 15.39, funded: 0, status: pending}
@@ -1163,9 +1179,13 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 8.93, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.96, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.47, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.58, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 5.71, funded: 0, status: pending}
+      - {line_id: moms-car-oil-change, amount: 10.00, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
       - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: pending}
@@ -1184,18 +1204,19 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-29":
     operating_reserve: 30.00
-    target: 216.24
-    total_claim: 246.24
+    target: 253.02
+    total_claim: 283.02
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 216.24
+    shortfall: 253.02
     calendar_event_id: sstpelcggofk499sqem3cpdbk8
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
+      - {line_id: cuzzies-google-workspace, amount: 12.14, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
       - {line_id: hillview-1, amount: 15.39, funded: 0, status: pending}
@@ -1211,9 +1232,13 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 8.93, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.96, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.47, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.58, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 5.71, funded: 0, status: pending}
+      - {line_id: moms-car-oil-change, amount: 10.00, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
@@ -1231,18 +1256,19 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-30":
     operating_reserve: 30.00
-    target: 207.91
-    total_claim: 237.91
+    target: 253.00
+    total_claim: 283.00
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 207.91
+    shortfall: 253.00
     calendar_event_id: a2e7st5ufsf4t0nv43duq49d70
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
+      - {line_id: cuzzies-google-workspace, amount: 12.14, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
       - {line_id: hillview-1, amount: 15.39, funded: 0, status: pending}
@@ -1258,8 +1284,13 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 8.93, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.95, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.47, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 5.71, funded: 0, status: pending}
+      - {line_id: moms-car-oil-change, amount: 10.00, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
@@ -1277,18 +1308,19 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-08-31":
     operating_reserve: 30.00
-    target: 207.87
-    total_claim: 237.87
+    target: 252.96
+    total_claim: 282.96
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 207.87
+    shortfall: 252.96
     calendar_event_id: 7ssgeqg8tdc3mrkgtit47jqsqs
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
+      - {line_id: cuzzies-google-workspace, amount: 12.14, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
       - {line_id: hillview-1, amount: 15.38, funded: 0, status: pending}
@@ -1304,8 +1336,13 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 8.93, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.95, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.47, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 5.71, funded: 0, status: pending}
+      - {line_id: moms-car-oil-change, amount: 10.00, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
@@ -1323,12 +1360,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-09-01":
     operating_reserve: 30.00
-    target: 207.87
-    total_claim: 237.87
+    target: 235.11
+    total_claim: 265.11
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 207.87
+    shortfall: 235.11
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1350,8 +1387,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 8.93, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.95, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.47, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
+      - {line_id: moms-car-oil-change, amount: 10.00, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
@@ -1369,12 +1410,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
   "2026-09-02":
     operating_reserve: 30.00
-    target: 207.85
-    total_claim: 237.85
+    target: 235.09
+    total_claim: 265.09
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 207.85
+    shortfall: 235.09
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1396,8 +1437,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 8.93, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.95, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.47, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
+      - {line_id: moms-car-oil-change, amount: 10.00, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
@@ -1415,12 +1460,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-03":
     operating_reserve: 30.00
-    target: 207.85
-    total_claim: 237.85
+    target: 235.09
+    total_claim: 265.09
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 207.85
+    shortfall: 235.09
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1442,8 +1487,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 8.93, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.95, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.47, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
+      - {line_id: moms-car-oil-change, amount: 10.00, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
@@ -1461,12 +1510,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-04":
     operating_reserve: 30.00
-    target: 194.52
-    total_claim: 224.52
+    target: 211.76
+    total_claim: 241.76
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 194.52
+    shortfall: 211.76
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1487,7 +1536,10 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 8.93, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.95, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.47, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
@@ -1505,12 +1557,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-05":
     operating_reserve: 30.00
-    target: 190.74
-    total_claim: 220.74
+    target: 207.98
+    total_claim: 237.98
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 190.74
+    shortfall: 207.98
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1531,7 +1583,10 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 8.93, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.95, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.47, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1549,12 +1604,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-06":
     operating_reserve: 30.00
-    target: 185.06
-    total_claim: 215.06
+    target: 207.96
+    total_claim: 237.96
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 185.06
+    shortfall: 207.96
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1575,6 +1630,10 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 8.92, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.95, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.46, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1592,12 +1651,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-07":
     operating_reserve: 30.00
-    target: 156.63
-    total_claim: 186.63
+    target: 179.53
+    total_claim: 209.53
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 156.63
+    shortfall: 179.53
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1616,6 +1675,10 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 8.92, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.95, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.46, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1633,12 +1696,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-08":
     operating_reserve: 30.00
-    target: 156.62
-    total_claim: 186.62
+    target: 170.60
+    total_claim: 200.60
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 156.62
+    shortfall: 170.60
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1657,6 +1720,9 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.95, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.46, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1674,12 +1740,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-09":
     operating_reserve: 30.00
-    target: 156.62
-    total_claim: 186.62
+    target: 170.60
+    total_claim: 200.60
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 156.62
+    shortfall: 170.60
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1698,6 +1764,9 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.95, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.46, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1715,12 +1784,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-10":
     operating_reserve: 30.00
-    target: 156.05
-    total_claim: 186.05
+    target: 170.03
+    total_claim: 200.03
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 156.05
+    shortfall: 170.03
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1739,6 +1808,9 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.95, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.46, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1755,12 +1827,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-11":
     operating_reserve: 30.00
-    target: 147.72
-    total_claim: 177.72
+    target: 161.70
+    total_claim: 191.70
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 147.72
+    shortfall: 161.70
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1779,6 +1851,9 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.95, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.46, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
@@ -1794,12 +1869,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-12":
     operating_reserve: 30.00
-    target: 146.95
-    total_claim: 176.95
+    target: 160.93
+    total_claim: 190.93
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 146.95
+    shortfall: 160.93
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1818,6 +1893,9 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.95, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.46, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1833,12 +1911,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-13":
     operating_reserve: 30.00
-    target: 146.95
-    total_claim: 176.95
+    target: 160.93
+    total_claim: 190.93
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 146.95
+    shortfall: 160.93
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1857,6 +1935,9 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.95, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.46, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1872,12 +1953,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-14":
     operating_reserve: 30.00
-    target: 146.92
-    total_claim: 176.92
+    target: 160.90
+    total_claim: 190.90
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 146.92
+    shortfall: 160.90
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1896,6 +1977,9 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-2, amount: 5.95, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.46, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1911,12 +1995,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-15":
     operating_reserve: 30.00
-    target: 124.83
-    total_claim: 154.83
+    target: 132.86
+    total_claim: 162.86
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 124.83
+    shortfall: 132.86
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1935,6 +2019,8 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.46, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1948,12 +2034,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
   "2026-09-16":
     operating_reserve: 30.00
-    target: 109.21
-    total_claim: 139.21
+    target: 117.24
+    total_claim: 147.24
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 109.21
+    shortfall: 117.24
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -1972,6 +2058,8 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.46, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -1984,12 +2072,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-17":
     operating_reserve: 30.00
-    target: 109.21
-    total_claim: 139.21
+    target: 117.24
+    total_claim: 147.24
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 109.21
+    shortfall: 117.24
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -2008,6 +2096,8 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.46, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -2020,12 +2110,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-18":
     operating_reserve: 30.00
-    target: 100.88
-    total_claim: 130.88
+    target: 108.91
+    total_claim: 138.91
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 100.88
+    shortfall: 108.91
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -2044,6 +2134,8 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.46, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
@@ -2055,12 +2147,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-19":
     operating_reserve: 30.00
-    target: 101.95
-    total_claim: 131.95
+    target: 109.98
+    total_claim: 139.98
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 101.95
+    shortfall: 109.98
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -2079,6 +2171,8 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.46, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -2090,12 +2184,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-20":
     operating_reserve: 30.00
-    target: 101.95
-    total_claim: 131.95
+    target: 109.98
+    total_claim: 139.98
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 101.95
+    shortfall: 109.98
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -2114,6 +2208,8 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.46, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -2125,12 +2221,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-21":
     operating_reserve: 30.00
-    target: 94.54
-    total_claim: 124.54
+    target: 102.57
+    total_claim: 132.57
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 94.54
+    shortfall: 102.57
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -2148,6 +2244,8 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 4.46, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -2159,12 +2257,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-22":
     operating_reserve: 30.00
-    target: 94.54
-    total_claim: 124.54
+    target: 98.11
+    total_claim: 128.11
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 94.54
+    shortfall: 98.11
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -2182,6 +2280,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -2193,12 +2292,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-23":
     operating_reserve: 30.00
-    target: 94.54
-    total_claim: 124.54
+    target: 98.11
+    total_claim: 128.11
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 94.54
+    shortfall: 98.11
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -2216,6 +2315,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -2227,12 +2327,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-24":
     operating_reserve: 30.00
-    target: 94.54
-    total_claim: 124.54
+    target: 98.11
+    total_claim: 128.11
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 94.54
+    shortfall: 98.11
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -2250,6 +2350,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -2261,12 +2362,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-25":
     operating_reserve: 30.00
-    target: 86.21
-    total_claim: 116.21
+    target: 89.78
+    total_claim: 119.78
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 86.21
+    shortfall: 89.78
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -2284,6 +2385,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
@@ -2294,12 +2396,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-26":
     operating_reserve: 30.00
-    target: 88.49
-    total_claim: 118.49
+    target: 92.06
+    total_claim: 122.06
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 88.49
+    shortfall: 92.06
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -2317,6 +2419,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -2327,12 +2430,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-27":
     operating_reserve: 30.00
-    target: 88.48
-    total_claim: 118.48
+    target: 92.05
+    total_claim: 122.05
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 88.48
+    shortfall: 92.05
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -2350,6 +2453,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -2360,12 +2464,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-28":
     operating_reserve: 30.00
-    target: 88.46
-    total_claim: 118.46
+    target: 92.03
+    total_claim: 122.03
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 88.46
+    shortfall: 92.03
     calendar_event_id: null
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
@@ -2383,6 +2487,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.06, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.80, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
+      - {line_id: liquidibee-4, amount: 3.57, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.86, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -5037,8 +5142,8 @@ open_questions:
   - "No balance has been reported for either pocket since the Era connector was retired 2026-08-10 — say 'Spending has $X' / 'Set-Aside has $X' whenever convenient; both currently render 'not reported'"
   - "RESOLVED 2026-08-15 (#personal-finance, unlabeled drop, ~14:31 ET): Lemar reported the round-trip travel rate — 'Round Trip (Saturday & Sunday total): $80 per week.' This week's one-time station-travel line corrected 50->80; a new recurring station-travel-weekly line ($80/wk, Saturdays, starting 2026-08-22) added. daily_targets beyond 2026-08-15 not yet hand-spread for the new recurring line — see the next line."
   - "OPEN: station-travel-weekly ($80/wk, first_due 2026-08-22) is a new dated recurring line whose daily_targets accrual has NOT yet been hand-spread across the ~7 open days between now and 8/22 — deferred to the next dedicated recompute pass per this ledger's established practice (same treatment as tmobile-split-2/moms-car-oil-change/am-botte). The dashboard's queue section will show it as a dated future line; the per-day daily numbers 8/16-8/21 do not yet include its drip."
-  - "OPEN 2026-08-25 — OVERDUE BACKLOG, $888 across 8 items, nothing funded against any of them. REVISED the same day: this bullet first read $968 across 9 items and wrongly included station-travel-weekly's missed 2026-08-22 occurrence ($80). Lemar's correction: gas and Station travel are CONSUMPTION, not debt — 'if I missed them, I missed them' — so that occurrence is dropped rather than chased, and the line now carries `expires_if_missed: true`. The remaining 8 are real obligations someone is still holding; each has a due date that passed while `funded: 0`, so per ROLLOVER doctrine each has LEFT the accrual and appears in no daily number: tmobile-split-1 $265 (due 8/03, 22 days past) · liquidibee-nomas seq1 $125 (due 8/17) · cuzzies-google-voice $38 (due 8/18) · cuzzies-google-workspace $85 (due 8/19) · moms-lump-0821 $110 (due 8/21) · metrc-fee $40 (due 8/21) · liquidibee-nomas seq2 $125 (due 8/23) · moms-car-oil-change $100 (due 8/23 — see the boundary question below). NOTHING was marked paid and nothing re-dated — both are Lemar's call and inventing either would be a lie about his money. ROOT CAUSE, same as the calendar outage: ROLLOVER runs only inside PART M, PART M ran only on a money drop, and there were no drops after 2026-08-17 — so no line was ever flagged as it went past due. The window-maintenance fix (Update 2026-08-25) makes the daily calendar unconditional but does NOT by itself make ROLLOVER unconditional; that gap is still open. ASK LEMAR, per item: paid outside the system (mark paid, retire the event) or still owed (give it a new date so it re-enters the queue)?"
-  - "OPEN 2026-08-25 — BOUNDARY CASE, needs Lemar: is moms-car-oil-change ($100, due 8/23) consumption or obligation? It sits exactly on the line his 2026-08-25 rule draws. Unlike the missed train fare, skipping it means nobody is owed $100 — but the car still needs the oil change, so it reads as a deferred NEED rather than a lapsed cost. Left in the overdue list (the conservative side: an obligation wrongly expired silently deletes a real debt, whereas one wrongly kept merely gets asked about) and NOT flagged `expires_if_missed`. Lemar decides: give it a new date, or drop it as consumption."
+  - "RESOLVED 2026-08-25 — the overdue backlog is cleared. Lemar answered all eight items in this session, item by item: tmobile-split-1 $265 PAID (flipped, event retired) · cuzzies-google-workspace $85 re-dated 8/19 -> 9/1 ('lets see if we can stretch until 9/1') · metrc-fee $40 re-dated 8/21 -> 9/1 · moms-lump-0821 $110 PARKED (she is in the hospital and does not need it immediately) · moms-car-oil-change $100 re-dated 8/23 -> Fri 9/4 · liquidibee-nomas seq1-4 timeline RESTARTED weekly from 2026-09-08. Nothing was marked paid or re-dated that he did not name. ONE ITEM REMAINS: cuzzies-google-voice $38 (due 8/18) — he addressed Google Workspace but never mentioned the Voice line, and it is a separate bill from the same reseller billing lapse. NOT assumed to follow Workspace to 9/1; still overdue and still out of the accrual until he says."
+  - "RESOLVED 2026-08-25 — the moms-car-oil-change consumption-vs-obligation boundary question is settled by Lemar's own instruction: he re-dated it ('Lets try to shift the oil change to next Friday') rather than dropping it, so it is an OBLIGATION that carries over, not consumption. It stays unflagged, is back in the queue at 2026-09-04, and accrues $10.00/day over [8/25..9/3]."
   - "Where should the maintenance bucket live? The 2026-08-10 account correction left it in Set-Aside, which is now SoFi Checking (the bill-paying account). SoFi Savings is free and is the obvious home, but Lemar has not said so — not moved."
   - "Gas/maintenance $30/day reserve is a rough cap Lemar named, not a measured figure — refine it once a few weeks of actual fill-ups are reported (it is now the largest single line in the ledger at ~$900/mo)"
   - "Income backlog: Lemar is posting ~2 weeks of DoorDash earnings to #personal-finance (2026-08-10). Until they land, income_target_weekly $500 is a guess and the overload check can't run."
@@ -6271,4 +6376,63 @@ looks like consumption — but the car still needs the oil change, which makes i
 deferred need rather than a lapsed cost. Left in the overdue list and NOT flagged, taking
 the conservative side: an obligation wrongly expired silently deletes a real debt, while
 one wrongly kept merely gets asked about. Lemar decides.
+
+## Update 2026-08-25 (4) — overdue backlog cleared, Lemar's dispositions applied
+
+He answered all eight overdue items in one pass. Applied exactly as instructed; nothing
+inferred beyond the two ambiguities named below.
+
+| item | was | disposition |
+|---|---|---|
+| tmobile-split-1 $265 | due 8/03 | **PAID** — flipped, event retired |
+| cuzzies-google-workspace $85 | due 8/19 | re-dated **9/1**, $12.14/day over [8/25..8/31] |
+| metrc-fee $40 | due 8/21 | re-dated **9/1**, $5.71/day over [8/25..8/31] |
+| moms-lump-0821 $110 | due 8/21 | **PARKED** — event retired |
+| moms-car-oil-change $100 | due 8/23 | re-dated **9/4**, $10.00/day over [8/25..9/3] |
+| liquidibee-nomas seq1-4 | 8/16–9/06 | timeline **RESTARTED** weekly from **9/8** |
+
+**Nomas restart.** "Moved to the restart the installments/timeline in 2 weeks" — all four
+installments re-dated to 9/8, 9/15, 9/22, 9/29 (two weeks from today, then weekly per the
+plan's own stated cadence). Note seq3 and seq4 were NOT overdue; they were mid-accrual
+toward 8/30 and 9/06. Their existing daily contributions were REMOVED (17 contributions
+across the forward days) before all four were re-accrued from scratch, so no day
+double-counts. **Two weeks from today lands on a Tuesday; the original plan ran Sundays**
+— flagged to Lemar rather than silently re-basing to Sunday.
+
+**"Next Friday" resolved to 2026-09-04**, the Friday of next week, not 8/28 — read from
+the direction of every other instruction in the same message (all pushing dates outward
+for breathing room) and from his having already pushed this same bill back once for that
+reason. Flagged to him as an assumption with a one-word correction available.
+
+**`moms-car-oil-change` boundary question settled by his own answer.** He re-dated it
+rather than dropping it, which makes it an obligation that carries over, not consumption.
+Stays unflagged.
+
+**`cuzzies-google-voice` $38 (due 8/18) still overdue and untouched.** He addressed Google
+Workspace but never named the Voice line. It is a separate bill from the same reseller
+lapse, and it was NOT assumed to follow Workspace to 9/1 — inventing that date would be
+exactly the guess this ledger forbids. It remains out of the accrual until he says.
+
+**Recompute.** 181 days recomputed, 0 created, 17 stale contributions removed. Integrity
+verified: every day's `target` equals the sum of its contributions, `total_claim` equals
+target + reserve, `shortfall` equals target − funded. No past day rewritten.
+
+**Calendar — 16 operations, all confirmed.** 2 events retired (T-Mobile 1, Mom's $110) ·
+7 re-dated (Workspace, METRC, oil change, 4x Nomas) · 7 daily aggregates updated in place
+with new totals. Three calls returned a transient "service unavailable" from Google and
+were retried individually until confirmed; the final state was verified against the live
+calendar, not assumed from the first response.
+
+**Numbers moved UP, not down.** Today $344.67 → **$381.47** (+$36.80); the coming 7 days
+$1,910.02 → **$2,184.15** (+$274.13). Three lines that had fallen out of the accrual as
+overdue are now back in the queue — clearing a backlog by re-dating it does not make it
+cheaper, it makes it visible again. OVERLOAD still fires: $2,184.15 against a $178.63
+average week is **12.2x**, worse than the 10.7x before this pass.
+
+**Boundary note, pre-existing and untouched:** `cuzzies-google-workspace` accrues in this
+PERSONAL ledger while its due-date event lives on the **Cuzzie's (Owners)** calendar. That
+split predates this pass and was left as found rather than silently re-homed — but it is
+the one line in the ledger currently sitting on both sides of the business boundary.
+
+Nothing paid, nothing moved, no creditor contacted.
 
