@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T13:10:00-04:00
-updated: 2026-08-25T08:06:41-04:00
+updated: 2026-08-25T10:22:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -52,3 +52,21 @@ made, no draft saved to Gmail yet — awaiting Lemar's pick.
 ## Sources (cont.)
 - gmail: thread `1a01aeb6b8dd7c71`, message `1a038c9e80e32002` (David Alston,
   2026-08-25 11:59 UTC, $200/biweekly proposal)
+
+## Update — 2026-08-25T10:22:00-04:00 — closed: Lemar answered directly, outside the loop
+
+Lemar replied to David Alston himself 2026-08-25 10:10am ET (message `1a039420f6b07ac1`,
+sent, not via a Samira draft) accepting the $200 every-other-week plan, and asked one
+follow-up: since Cuzzie's closed and he's now handling this personally, whether payments
+can start from a personal account rather than the business account. The `#decisions`
+card (ts `1787660130.097779`, opened this run with three options) sat unreacted because
+he'd already answered in Gmail before reacting — same pattern as the 2026-08-07 DIB
+template-theme closeout. Closing the card now rather than leaving a stale ask open.
+
+**Status:** payment plan agreed ($200/biweekly), payment-account question open (his
+follow-up to David, unanswered as of this update) — not a Samira action either way.
+
+### Sources (this update)
+- gmail: thread `1a01aeb6b8dd7c71`, message `1a039420f6b07ac1` (Lemar's 2026-08-25
+  10:10am ET reply, accepts $200/biweekly, asks about personal-account payment)
+- slack: #decisions ts `1787660130.097779` (card, closed this update)
