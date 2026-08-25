@@ -3,13 +3,13 @@
   "lock": {
     "run_id": "run_20260825T200316Z",
     "run_started": "2026-08-25T20:03:16Z",
-    "run_completed": "2026-08-25T19:08:37Z",
-    "note": "In flight."
+    "run_completed": "2026-08-25T20:14:56Z",
+    "note": "Clean quiet run (~1hr after prior run closed). PART V/S no-ops: 0 vault-markdown changes since last scan point, same 3 Inbox notes stuck on unchanged domain gaps, 0 due-note calendar drift. #decisions/capture DM/13 project channels/#investor-pipeline/#stormy/#personal-finance/#reports all quiet since watermark. Ran a full #decisions backlog audit (excl. PT cards, excl. already-🫡'd): 48 open cards — 6 already actioned by Samira, awaiting Lemar's 🫡 close only (verified each thread, no new action taken, nothing re-asked); 42 fully untouched, left alone. D2 Gmail: 2 new threads, both handled — WM dumpster-overflow thread (Mason confirmed lock-service install Thu 8/27, informational, Haven updated, Samira/seen applied, no reply needed) and Caine & Weiner (Angela proposed a call 8/26 2pm CST; Lemar corresponding directly, flagged in-thread + Haven updated, no reply drafted since Lemar's self-handling). PT cards (PART R): all 4 Camden Launch cards still locked/parked/closed, none needed a round. Money hub: no #personal-finance drops, known ledger-vs-calendar gap ($224.15 vs $384.13) still carried unresolved. reports-scan: clean, nothing new since last scan. Canvas still write-blocked, not re-checked (already checked once today at 14:20 ET). Pulse skipped per the quiet-pass gate — nothing this run qualified as a change (no #decisions card opened/closed by Lemar, no money change, no project-pulse flip, no new Haven note — only 2 updates to existing notes)."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787682832.038489",
-      "C0BBZJL85RT": "1787684874.363119",
+      "C0BBZJL85RT": "1787688844.967949",
       "D0BHPKMDNEP": "1787684174.442019",
       "C0BGLEMH99T": "1787670391.641819",
       "C0BEQUW5NPP": "1787584209.000000",
@@ -63,7 +63,7 @@
       "1787584125.966579": "1787584125.966579",
       "1787157130.471099": "1787328710.030059",
       "1787587974.554669": "1787587974.554669",
-      "1787605678.559389": "1787605678.559389",
+      "1787605678.559389": "1787688760.591569",
       "1787609105.376929": "1787609105.376929",
       "1787609340.269079": "1787609340.269079",
       "1787660120.230219": "1787667257.611909",
@@ -76,12 +76,12 @@
       "1787682832.038489": "1787682841.068369"
     },
     "capture_dm": "1787684174.442019",
-    "gmail_after_epoch": 1787684436
+    "gmail_after_epoch": 1787688798
   },
   "integrity": {
     "last_full_pass": "2026-08-25T14:10:00Z",
-    "last_scan_sha": "38c89e9e5b892bf304920a3a6565ed7d022e778b",
-    "note": "Incremental pass this run: 0 vault-markdown files changed since the prior scan point (confirmed via git diff against af51a5e — only .claude/state + _daily journal writes landed, no vault content changes). 3 Inbox notes still stuck on domain/value gaps (unchanged composition, card current). last_scan_sha advanced to this run's starting commit. Full whole-vault pass remains today's 14:10 599-note pass; next full pass is tomorrow's first run."
+    "last_scan_sha": "75194ddf354178521f076dda2c503f63dc73e3a0",
+    "note": "Incremental pass this run: 0 vault-markdown files changed since the prior scan point beyond this run's own 2 Update-section appends (WM dumpster-overflow note, Caine & Weiner note) — both kept valid frontmatter, no new integrity defects. 3 Inbox notes still stuck on domain/value gaps (unchanged composition, card current). last_scan_sha advanced to this run's final commit. Full whole-vault pass remains today's 14:10 599-note pass; next full pass is tomorrow's first run."
   },
   "canvas_access": {
     "last_checked": "2026-08-25T14:20:00Z",
