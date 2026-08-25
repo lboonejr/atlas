@@ -1,6 +1,6 @@
 ---
 created: 2026-08-25T08:06:41-04:00
-updated: 2026-08-25T08:06:41-04:00
+updated: 2026-08-25T10:14:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -29,3 +29,18 @@ this in writing). No commitment made, no reply drafted/sent.
 - gmail: thread `19ffca3c879d0cc9`, messages `19ffca3c879d0cc9` (2026-08-13 demand),
   `1a035d5e37d51d6d` (Lemar's 2026-08-24 22:04 UTC reply), `1a03601d7695e00a` (Mike
   Ganges, 2026-08-24 23:01 UTC, call request for "tomorrow ~2pm")
+
+## Update 2026-08-25 10:14 ET — Option A picked, confirmation drafted
+
+Lemar ✅'d Option A in the `#decisions` card (ts `1787660120.230219`, option ts
+`1787660124.558169`) — take the 2pm call himself, no reply needed. He then asked
+in-thread (ts `1787660575.781589`): "can you still reply confirming 2pm?"
+
+Drafted a short confirmation reply to Mike Ganges in Gmail Drafts (draft id
+`r7619043055670452068`, reply to message `1a03601d7695e00a`) — **not sent**, per the
+never-send-email safety floor. Replied in the `#decisions` thread pointing to the draft.
+
+### Sources (this update)
+- slack: #decisions ts `1787660120.230219` (card) / `1787660575.781589` (Lemar's ask) /
+  `1787667257.611909` (this reply)
+- gmail: draft `r7619043055670452068` (unsent)
