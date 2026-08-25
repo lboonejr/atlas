@@ -1,6 +1,6 @@
 ---
 created: 2026-08-25T08:06:41-04:00
-updated: 2026-08-25T10:14:00-04:00
+updated: 2026-08-25T13:03:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -44,3 +44,16 @@ never-send-email safety floor. Replied in the `#decisions` thread pointing to th
 - slack: #decisions ts `1787660120.230219` (card) / `1787660575.781589` (Lemar's ask) /
   `1787667257.611909` (this reply)
 - gmail: draft `r7619043055670452068` (unsent)
+
+## Update 2026-08-25 13:03 ET — 2pm call confirmed both sides
+
+Lemar sent the confirmation himself directly (2026-08-25 11:12am ET, "Mike, 2pm works
+for me. Talk then.") rather than using the standing draft — the draft above was never
+sent, which is expected and correct (drafts-only floor). Mike Ganges replied "Sounds
+good, talk to you then" (2026-08-25 12:30pm ET). Call is confirmed for 2pm ET today.
+Nothing further needed from Samira; leaving `status: active` until the call happens and
+an outcome is known.
+
+### Sources (this update)
+- gmail: thread `19ffca3c879d0cc9`, messages `1a0397aaf61f408f` (Lemar's confirmation,
+  sent) / `1a039c25fd25a890` (Mike's ack)
