@@ -3,13 +3,13 @@
   "lock": {
     "run_id": "run_20260825T180240Z",
     "run_started": "2026-08-25T18:02:40Z",
-    "run_completed": "2026-08-25T17:23:02Z",
-    "note": "Completed clean. This run: 2 new Haven tasks captured from email (Leafly Eatabit printer return due 9/16, OGeez Labor Day order deadline flagged vs closed-business status), 1 update (Little Leaf Labs/CannaBIZ 2pm call confirmed both sides). #decisions, capture DM, and all project channels quiet — no new Lemar signals since the prior run 20 min earlier. reports-scan 17th run clean. Pulse re-rendered (gate: new Haven notes this run) via background agent, 9/9 sections, dm sent; agent's Respond-section audit re-verified ~16 #decisions threads and found no drift beyond what's already tracked. Pulse also surfaced a ledger-vs-calendar reconciliation gap ($224.15 vs $384.13 on today's set-aside) — flagged in the digest, not corrected (needs a dedicated PART M recompute, no drop this run to trigger one). Canvas still write-blocked, not re-checked (already checked once today)."
+    "run_completed": "2026-08-25T18:58:35Z",
+    "note": "Completed clean. Filed 2 new Haven notes (Leafly Eatabit printer return due 9/16, OGeez Labor Day order deadline) + stubbed 1 entity (ogeez-brands); synced 1 new calendar event (Leafly return, Owners calendar). #decisions/capture DM/13 project channels quiet except PART D, which opened 1 new #decisions card (DeWalt v. Cuzzie's legal reply options, 3 voice-matched drafts) after triaging inbox mail — junk 4, 1 legal thread actioned. Investor pipeline and Stormy idle. All 4 open PT cards (PART R) already locked/parked/closed from prior runs — no new rounds needed. Money hub quiet (no drops); known ledger-vs-calendar reconciliation gap ($224.15 vs $384.13) still unresolved, carried again. reports-scan 18th run: 1 informational-only finding (recurring benign Haven-Keeper vs Samira stuck-count mismatch, never reaches automated state, not escalated). Pulse re-rendered (gate: new notes + new card), 9/9 sections, dm sent; Pulse's own audit found ~88 un-reacted #decisions cards in the last 100-message window (higher than prior runs' ~48-49 estimate) and flagged possible duplicate un-deduped 'Haven Inbox — N notes' cards violating the one-batched-card doctrine — surfaced in the digest, not auto-cleaned. Canvas still write-blocked, not re-checked (already checked once today at 14:20 ET)."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787670575.635129",
-      "C0BBZJL85RT": "1787678554.763949",
+      "C0BBXA96FFV": "1787682832.038489",
+      "C0BBZJL85RT": "1787684228.821429",
       "D0BHPKMDNEP": "1787678474.701569",
       "C0BGLEMH99T": "1787670391.641819",
       "C0BEQUW5NPP": "1787584209.000000",
@@ -66,11 +66,11 @@
       "1787605678.559389": "1787605678.559389",
       "1787609105.376929": "1787609105.376929",
       "1787609340.269079": "1787609340.269079",
-      "1787660120.230219": "1787667581.782429",
+      "1787660120.230219": "1787667257.611909",
       "1787660141.315579": "1787674381.264359",
       "1787660130.097779": "1787667581.782429",
       "1787660143.192949": "1787660149.989389",
-      "1787667532.037259": "1787667537.100239",
+      "1787667532.037259": "1787670421.826669",
       "1787613164.672029": "1787614371.183619",
       "1787670575.635129": "1787674284.261919",
       "1787682832.038489": "1787682841.068369"
@@ -80,15 +80,15 @@
   },
   "integrity": {
     "last_full_pass": "2026-08-25T14:10:00Z",
-    "last_scan_sha": "84ffd980439eb5e175f06ce44da14e2e547b8f12",
-    "note": "Incremental pass this run (full pass already ran today at 14:10): 0 vault files changed since aa9b6a9 (only .claude/state and _daily journal writes). 3 Inbox notes still stuck on domain/value gaps (unchanged composition, card current, no new ones); 2 new file-ready notes captured to 00-Inbox this run (Leafly printer, OGeez order) await next sweep's filing. Full whole-vault pass remains today's 14:10 599-note pass; next full pass is tomorrow's first run."
+    "last_scan_sha": "af51a5ecdd6a7e02ed4c5ddc2a4ae6ef0909fd42",
+    "note": "Incremental pass this run: 0 vault-integrity defects found among files changed since the prior scan point (only .claude/state + _daily journal writes, plus this run's own vault writes checked at write-time). 3 Inbox notes still stuck on domain/value gaps (unchanged composition, card current). last_scan_sha advanced to this run's final commit so the next run's incremental diff starts clean from here. Full whole-vault pass remains today's 14:10 599-note pass; next full pass is tomorrow's first run."
   },
   "canvas_access": {
     "last_checked": "2026-08-25T14:20:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-25T13:16:00-04:00",
+    "pulse_last_rendered": "2026-08-25T14:49:00-04:00",
     "money_hub_last_rendered": "2026-08-25T12:24:00-04:00"
   }
 }
