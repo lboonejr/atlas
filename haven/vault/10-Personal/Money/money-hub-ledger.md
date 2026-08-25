@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-25T15:05:00-04:00
+updated: 2026-08-25T16:12:00-04:00
 domain: personal
 type: reference
 status: active
@@ -5192,7 +5192,7 @@ open_questions:
   - "RESOLVED 2026-08-25 — ROLLOVER CATCH-UP APPLIED. Lemar: 'Roll it.' The seven never-rolled days 2026-08-18..08-24 were processed oldest-first, one day at a time, per the CATCH-UP rule. $1,298.86 landed on 2026-08-25 as 24 `rolled_from: 2026-08-18..2026-08-24` contributions. $272.44 of the raw $1,571.30 did NOT roll and is marked `expired`, closed in place: $217.45 across 5 lines since re-dated and already re-accrued in full from today (re-rolling would double-count), and $54.99 for the parked moms-lump-0821. Each of the seven days carries a `resolution` so it is never processed twice. Their historical `target` figures were deliberately NOT inflated by the carried-in amounts — the cascade arithmetic is recorded in each day's resolution instead, and the net landing on today is identical either way. Today: target $384.13 -> $1,682.99, funded $100.00, shortfall $1,582.99, total claim $1,712.99. The rollover brake had long since fired on every one of these (7 days running vs the 3-day threshold), which is why this went to Lemar as a decision rather than being applied silently."
   - "RESOLVED 2026-08-25 — DUPLICATE HILLVIEW EVENTS DELETED. Lemar: 'Delete Samira's 13.' All 13 duplicates created by Samira's main-branch run at 16:21Z were cancelled on the personal reminder calendar; the 13 created by this session at 16:32Z remain and are the ones `hillview-med` references. Verified one-by-one — every delete returned status: cancelled. NOTE: `main` still points at the now-dead ids until this PR merges, so if Samira's next PART M run reads main before the merge it may see orphaned ids on that plan; the merged ledger is correct and supersedes it."
   - "OPEN 2026-08-25 — TWO WRITERS, ONE DROP: the race that produced the duplicate Hillview events is NOT fixed. Samira's hourly PART M on main and a live session both picked up the same #personal-finance drop 11 minutes apart and each created a full plan + 13 events, because dedupe-by-`id` only works when both writers choose the same id (`hillview-med-payment-plan` vs `hillview-med`). Candidate fixes, none applied: a rule that PART M never creates a plan whose CREDITOR already matches an active plan (id-independent dedupe); or a write lock / single-writer discipline for the ledger. Until then, any drop worked simultaneously by a live session and an hourly run can duplicate again."
-  - "RESOLVED 2026-08-25 — Set-Aside balance reported: $101.17 as_of 2026-08-25 (Lemar). NOTE THE GAP, deliberately not smoothed: $13.00 (as_of 8/17) + the $100.00 transfer he reported today = $113.00 expected, but the account actually reads $101.17 — $11.83 LESS. Something left SoFi Checking in those eight days that this ledger does not know about. The reported figure was written as-is and never adjusted to match the expectation (field rules). This is precisely why the balance was left stale rather than computed to $113.00 when only a transfer had been reported — had it been computed, the ledger would now carry a number $11.83 wrong with no way to notice. Worth identifying the $11.83 if it matters; not chased here."
+  - "RESOLVED 2026-08-25 — Set-Aside balance $101.17 as_of 2026-08-25, and the $11.83 gap is explained: Lemar, asked about it, said 'I think the $11.83 went to food.' Recorded as HIS LIKELY ATTRIBUTION, not as a confirmed transaction — his own words were 'I think', and no receipt or date was given, so nothing was written to `bills` and no figure was adjusted. The balance stands exactly as he reported it. THE POINT IS NOT THE $11.83, IT IS WHICH POCKET IT LEFT: `food` is `track: spending`, paid from the SPENDING pocket (DoorDash Crimson) per its own note — 'Spending-pocket money, not a set-aside line'. SoFi Checking is the SET-ASIDE pocket, whose stated role is 'every recurring bill is paid out of this account'. So a day-to-day cost was paid out of the bill account. At $11.83 that is immaterial; as a pattern it is the mechanism by which a bill arrives short, because Set-Aside has no other job. Worth watching, not worth chasing. No ledger figure changed as a result of this explanation."
   - "Where should the maintenance bucket live? The 2026-08-10 account correction left it in Set-Aside, which is now SoFi Checking (the bill-paying account). SoFi Savings is free and is the obvious home, but Lemar has not said so — not moved."
   - "Gas/maintenance $30/day reserve is a rough cap Lemar named, not a measured figure — refine it once a few weeks of actual fill-ups are reported (it is now the largest single line in the ledger at ~$900/mo)"
   - "Income backlog: Lemar is posting ~2 weeks of DoorDash earnings to #personal-finance (2026-08-10). Until they land, income_target_weekly $500 is a guess and the overload check can't run."
@@ -6677,4 +6677,25 @@ was always owed and is now visible rather than hidden. REBALANCE remains hard-st
 combination of the three allowed moves closes a gap of this size.
 
 Nothing paid, nothing moved, no creditor contacted.
+
+## Update 2026-08-25 (9) — the $11.83 explained: food, out of the wrong pocket
+
+Lemar on the SoFi gap: "I think the $11.83 went to food."
+
+Recorded as his likely attribution, not a confirmed transaction — "I think" is uncertainty,
+and no date or receipt was given, so nothing was written to `bills`, no figure adjusted, and
+the balance stands exactly as he reported it ($101.17). The mystery is closed well enough;
+$11.83 does not warrant chasing further.
+
+**The finding is the pocket, not the amount.** `food` is `track: spending` and its own note
+says plainly: "Spending-pocket money, not a set-aside line." It is paid from **Spending**
+(DoorDash Crimson). SoFi Checking is **Set-Aside**, whose role in this ledger is "every
+recurring bill is paid out of this account." So a day-to-day cost came out of the bill
+account.
+
+At $11.83 that is immaterial and no correction is warranted. As a *pattern* it is precisely
+how a bill ends up short, because Set-Aside has no other job — every dollar that leaves it
+for something else is a dollar not there when a due date arrives. Given today already carries
+a $1,582.99 shortfall, the direction matters more than the size. Flagged for watching; nothing
+changed, nothing chased.
 
