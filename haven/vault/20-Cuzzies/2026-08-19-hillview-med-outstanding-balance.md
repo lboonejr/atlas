@@ -70,3 +70,15 @@ follow-up to David, unanswered as of this update) — not a Samira action either
 - gmail: thread `1a01aeb6b8dd7c71`, message `1a039420f6b07ac1` (Lemar's 2026-08-25
   10:10am ET reply, accepts $200/biweekly, asks about personal-account payment)
 - slack: #decisions ts `1787660130.097779` (card, closed this update)
+
+## Update — 2026-08-25T10:50:35-04:00 — David confirms; awaiting Lemar's first-payment date
+
+David Alston replied (message `1a03966e7b8a8978`, 2026-08-25 10:50am ET): agrees to the
+two extra weeks before the first payment, confirms the $200 every-other-week plan is
+acceptable, and asks Lemar to confirm the first payment date whenever ready. Record only
+— no reply needed from Samira; ball is in Lemar's court to name a date when he's ready.
+Not reply-worthy this run (no question requiring an answer right now).
+
+### Sources (this update)
+- gmail: thread `1a01aeb6b8dd7c71`, message `1a03966e7b8a8978` (David Alston, 2026-08-25
+  14:50 UTC, confirms terms + 2-week delay, awaits first-payment date)
