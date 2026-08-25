@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260825T160401Z",
-    "run_started": "2026-08-25T16:04:01Z",
+    "run_id": "run_20260825T170250Z",
+    "run_started": "2026-08-25T17:02:50Z",
     "run_completed": "2026-08-25T16:42:30Z",
-    "note": "Completed clean. Prior lock (run_20260825T150325Z, started 15:03:25Z) aged out after 61min with no completion — treated as died-mid-flight per PART 0 and started fresh. This run: closed Station Slack workspace decision + Hillview Med payment plan; added hillview-med plan to money-hub ledger (OVERLOAD flag standing, not new); reports-scan clean (16th run); all 3 open Camden Launch PT cards already locked/parked/closed, no new rounds; Pulse + Money Hub both re-rendered."
+    "note": "In flight."
   },
   "watermarks": {
     "slack_channels": {
