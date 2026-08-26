@@ -1,6 +1,6 @@
 ---
 created: 2026-07-29T14:15-04:00
-updated: 2026-08-24T21:10:00-04:00
+updated: 2026-08-26T12:04:00-04:00
 domain: project
 type: log
 status: active
@@ -25,7 +25,7 @@ thread history going back to 2026-06-13 that predates the label loop entirely.
   price at sale**. Lemar had asked to clarify whether the $10K retainer was one-time before
   this was confirmed.
 - **Touch-base call held 2026-07-22** (Camilo Basto organizer, Lemar + Jeffrey Dunetz;
-  Gmail thread `19f8b14d4684685d`, the one carrying `Samira/investor`).
+  Gmail thread `19f8b14d4844685d`, the one carrying `Samira/investor`).
 - **2026-07-27:** Camilo sent a signed **engagement letter** ("10% no retainer",
   thread `19fa3ba25917d2cd`, NOT labeled `Samira/investor`) for Lemar to fill out and
   return. No reply on file as of this scan (2026-07-29).
@@ -81,3 +81,25 @@ already standing there and this is a repeat of the same ask.
 ### Sources (this update)
 - gmail: thread `19fa3ba25917d2cd`, message `1a0358f627870ea4` (Camilo's third check-in,
   2026-08-24 4:56pm ET)
+
+## Update 2026-08-26T12:04:00-04:00 — fourth nudge, now with deadline pressure
+
+Camilo emailed again 2026-08-26 ~11:59am ET (same thread `19fa3ba25917d2cd`, message
+`1a03ecc00088b044`): "Are you still interested in selling the asset? We are going out
+to market soon and can't wait any longer. Let us know if you want us to send you the
+EL via docusign." Fourth consecutive check-in (7/27 original, 8/19, 8/24, now 8/26) —
+this one adds a stated deadline ("going out to market soon") that the prior three did
+not carry, but the fee terms are unchanged ($10K flat + 10% at sale, confirmed 7/7). No
+draft prepared, no terms or deadline represented as decided/confirmed — the sign/no-sign
+call, and whether the stated urgency is real leverage or sales pressure, is Lemar's
+alone to judge. Labeled `Samira/investor` + `Samira/seen` on the message (the earlier
+messages in-thread already carried `Samira/investor`; this one had not yet). Investor
+index row updated (Negotiating, Next step, Last update → 2026-08-26). Flagged in
+#investor-pipeline (ts `1787760609.747259`) rather than a duplicate #decisions card —
+the underlying sign/no-sign question is already standing there since 7/29, unreacted.
+
+### Sources (this update)
+- gmail: thread `19fa3ba25917d2cd`, message `1a03ecc00088b044` (Camilo's fourth
+  check-in, 2026-08-26 11:59am ET, first with a stated deadline)
+- slack: #investor-pipeline `C0BCCUKEUQ2` ts `1787760609.747259` (urgency flag posted
+  2026-08-26)

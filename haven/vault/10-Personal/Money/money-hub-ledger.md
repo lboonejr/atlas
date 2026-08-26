@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-25T16:12:00-04:00
+updated: 2026-08-26T13:05:00-04:00
 domain: personal
 type: reference
 status: active
@@ -119,7 +119,7 @@ pockets:                             # TWO pockets. Account mapping CORRECTED 20
      balance: null, balance_as_of: null, status: active,
      role: "income lands here (DoorDash payouts); gas and day-to-day spending pay from here"}
   - {id: set-aside, name: "Set-Aside", account: sofi-checking,
-     balance: 101.17, balance_as_of: 2026-08-25, status: active,
+     balance: 70, balance_as_of: 2026-08-26, status: active,
      last_transfer_in: {amount: 100, as_of: 2026-08-25,
        note: "Lemar 2026-08-25: '$100 went into sofi.' A TRANSFER was reported, not a
               balance — so `balance` deliberately stays at the 2026-08-17 $13.00 figure
@@ -1096,9 +1096,10 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     total_claim: 414.13
     gas_spent: null
     swept_to_maintenance: 0
-    funded: 0
-    shortfall: 384.13
+    funded: 40.78
+    shortfall: 343.35
     calendar_event_id: 6547dk37rc3hjdpthnaqqi3gf8
+    resolution: "INCOME ALLOCATION 2026-08-26 — $70.78 DoorDash reported by Lemar in #personal-finance (ts 1787751210.248719). $30.00 held as the operating reserve in Spending (no gas spend reported, so nothing swept). Remaining $40.78 poured in due-date order: patreon $2.08 (due 8/27) funded; moms-weekly $3.84 (due 8/28) funded; tmobile-split-2 $34.86 of $92.67 (due 8/28) partial — money ran out there. RECOMPUTED IN THE MERGE: Samira's PART M run on main allocated the same $40.78 against main's STALE ledger and hit patreon, moms-weekly, own-car-running-2, liquidibee-3, claude and own-car-running-3 instead. That ordering was wrong for the true queue — main lacked this branch's cleared accrual backlog, so it had no tmobile-split-2 contribution at all and could not see the $278 bill due 8/28, and it still carried the pre-Sunday liquidibee dates. Her REPORTED FACTS were kept; her DERIVED allocation was discarded and recomputed against the real dates."
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
@@ -1127,7 +1128,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: metrc-fee, amount: 5.72, funded: 0, status: pending}
       - {line_id: moms-car-oil-change, amount: 10.00, funded: 0, status: pending}
-      - {line_id: moms-weekly, amount: 3.84, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.84, funded: 3.84, status: funded}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
       - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: pending}
@@ -1138,11 +1139,11 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: pending}
       - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
-      - {line_id: patreon, amount: 2.08, funded: 0, status: pending}
+      - {line_id: patreon, amount: 2.08, funded: 2.08, status: funded}
       - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
       - {line_id: station-travel-weekly, amount: 20.00, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
-      - {line_id: tmobile-split-2, amount: 92.67, funded: 0, status: pending}
+      - {line_id: tmobile-split-2, amount: 92.67, funded: 34.86, status: partial}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
@@ -5193,6 +5194,8 @@ open_questions:
   - "RESOLVED 2026-08-25 — DUPLICATE HILLVIEW EVENTS DELETED. Lemar: 'Delete Samira's 13.' All 13 duplicates created by Samira's main-branch run at 16:21Z were cancelled on the personal reminder calendar; the 13 created by this session at 16:32Z remain and are the ones `hillview-med` references. Verified one-by-one — every delete returned status: cancelled. NOTE: `main` still points at the now-dead ids until this PR merges, so if Samira's next PART M run reads main before the merge it may see orphaned ids on that plan; the merged ledger is correct and supersedes it."
   - "OPEN 2026-08-25 — TWO WRITERS, ONE DROP: the race that produced the duplicate Hillview events is NOT fixed. Samira's hourly PART M on main and a live session both picked up the same #personal-finance drop 11 minutes apart and each created a full plan + 13 events, because dedupe-by-`id` only works when both writers choose the same id (`hillview-med-payment-plan` vs `hillview-med`). Candidate fixes, none applied: a rule that PART M never creates a plan whose CREDITOR already matches an active plan (id-independent dedupe); or a write lock / single-writer discipline for the ledger. Until then, any drop worked simultaneously by a live session and an hourly run can duplicate again."
   - "RESOLVED 2026-08-25 — Set-Aside balance $101.17 as_of 2026-08-25, and the $11.83 gap is explained: Lemar, asked about it, said 'I think the $11.83 went to food.' Recorded as HIS LIKELY ATTRIBUTION, not as a confirmed transaction — his own words were 'I think', and no receipt or date was given, so nothing was written to `bills` and no figure was adjusted. The balance stands exactly as he reported it. THE POINT IS NOT THE $11.83, IT IS WHICH POCKET IT LEFT: `food` is `track: spending`, paid from the SPENDING pocket (DoorDash Crimson) per its own note — 'Spending-pocket money, not a set-aside line'. SoFi Checking is the SET-ASIDE pocket, whose stated role is 'every recurring bill is paid out of this account'. So a day-to-day cost was paid out of the bill account. At $11.83 that is immaterial; as a pattern it is the mechanism by which a bill arrives short, because Set-Aside has no other job. Worth watching, not worth chasing. No ledger figure changed as a result of this explanation."
+  - "OPEN 2026-08-26 — SoFi DROPPED $31.17 and the ledger cannot explain it. Lemar reported '$70 currently in SoFi' (#personal-finance ts 1787751269.733669). The last reported figure was $101.17 as_of 2026-08-25, so Set-Aside fell by $31.17 overnight with no payment recorded against it — nothing was marked paid in that span. NOTE: Samira's PART M run on main read this same drop as a $13.00 -> $70.00 JUMP of +$57 and flagged an unexplained increase; that reading came from main's stale ledger, which never saw the $100 transfer Lemar reported on 8/25. The true movement is a DECREASE. Balance written as reported and never adjusted. Yesterday the unexplained delta was $11.83 (attributed to food); today it is $31.17 in the same direction, out of the bill account. Two in two days is a pattern worth naming, not yet a conclusion — ASK what left SoFi."
+  - "OPEN 2026-08-26 — 2026-08-25 CLOSED UNFUNDED at $1,582.99 and has NOT been rolled. The day ended with target $1,682.99 against $100.00 funded. Under the CATCH-UP rule added this session that shortfall should roll onto 2026-08-26, but the rule says a catch-up large enough to move today's number materially goes to Lemar rather than being applied silently — $1,582.99 onto a $384.13 day is exactly that case, and his earlier 'Roll it' authorised the specific 8/18-8/24 catch-up, not a standing licence. NOT ROLLED. Also worth stating plainly: Samira could not have rolled it either, because she reads `main` and main still lacks the unconditional ROLLOVER step until this PR merges. Every further day this sits unmerged adds another unrolled day. Lemar decides: roll 8/25 forward, or close it unrolled."
   - "Where should the maintenance bucket live? The 2026-08-10 account correction left it in Set-Aside, which is now SoFi Checking (the bill-paying account). SoFi Savings is free and is the obvious home, but Lemar has not said so — not moved."
   - "Gas/maintenance $30/day reserve is a rough cap Lemar named, not a measured figure — refine it once a few weeks of actual fill-ups are reported (it is now the largest single line in the ledger at ~$900/mo)"
   - "Income backlog: Lemar is posting ~2 weeks of DoorDash earnings to #personal-finance (2026-08-10). Until they land, income_target_weekly $500 is a guess and the overload check can't run."
@@ -6698,4 +6701,50 @@ how a bill ends up short, because Set-Aside has no other job — every dollar th
 for something else is a dollar not there when a due date arrives. Given today already carries
 a $1,582.99 shortfall, the direction matters more than the size. Flagged for watching; nothing
 changed, nothing chased.
+
+## Update 2026-08-26 — merge with main: Samira's PART M facts kept, her allocation recomputed
+
+Samira's hourly PART M ran on `main` at ~10:20 ET (commit e6eb46e) and processed two real
+drops. Merging her work required separating what she OBSERVED from what she COMPUTED,
+because main's ledger is the pre-session version and everything derived from it is wrong
+for the true state.
+
+**KEPT — her reported facts, both real:**
+- `income-log-2026.md`: `{2026-08-26, doordash, 70.78}` — "Got $70.78 from my last DoorDash
+  shift" (ts 1787751210.248719). His phrase "last shift" is recorded but NOT read as
+  quitting DoorDash; no such inference drawn.
+- Set-Aside (SoFi Checking) balance **$70.00 as_of 2026-08-26** — "$70 currently in SoFi"
+  (ts 1787751269.733669). Supersedes the $101.17 as_of 8/25.
+
+**DISCARDED AND RECOMPUTED — her income allocation.** She poured the same $40.78 (after
+the $30.00 gas reserve) in due-date order, but against MAIN's contributions and MAIN's
+dates, funding patreon, moms-weekly, own-car-running-2, liquidibee-3, claude and
+own-car-running-3. Two things made that ordering wrong here:
+- Main never had this branch's cleared accrual backlog, so **2026-08-26 carried no
+  `tmobile-split-2` contribution at all** — her run could not see the **$278 bill due
+  8/28** and put money into lines due weeks later instead.
+- Main still carried the pre-Sunday liquidibee dates (8/30 rather than 9/20).
+
+Recomputed against the real queue: **patreon $2.08 (8/27) funded · moms-weekly $3.84
+(8/28) funded · tmobile-split-2 $34.86 of $92.67 (8/28) partial** — money ran out there.
+2026-08-26: target $384.13, funded **$40.78**, shortfall $343.35. The corrected ordering
+sends nearly all of it at the nearest real obligation instead of scattering it.
+
+**Her discrepancy note was inverted by the stale base and is NOT carried over.** She read
+the balance as $13.00 → $70.00, an unexplained **+$57**, because main never saw the $100
+transfer of 8/25. Against the true ledger the movement is $101.17 → $70.00, a **−$31.17
+DECREASE** with no payment recorded. Raised as its own open question — and it is the
+second unexplained outflow from the bill account in two days, after yesterday's $11.83.
+
+**2026-08-25 remains UNROLLED** at $1,582.99 — see its own open question. Not rolled
+silently; that decision is Lemar's, and Samira could not have rolled it either while main
+lacks the unconditional step.
+
+**OVERLOAD, recomputed on merged figures:** coming 7 days **$2,056.47** against a
+**$261.33** average week — **7.9x**, down from 14.4x because the window has rolled forward
+past 8/25's catch-up day and $70.78 of fresh income lifted the average. Real improvement,
+but the 8/25 shortfall is still outstanding and unrolled, so this number understates what
+is owed until that decision lands.
+
+Nothing paid, nothing moved, no creditor contacted.
 

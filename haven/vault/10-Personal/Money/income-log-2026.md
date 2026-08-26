@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-15T18:03:00-04:00
+updated: 2026-08-26T10:20:00-04:00
 domain: personal
 type: log
 status: active
@@ -32,5 +32,6 @@ entries:
   - {date: 2026-08-15, source: "the-station", amount: 144, note: "reported in #personal-finance"}
   - {date: 2026-08-23, source: "the-station", amount: 230, note: "Reported by Lemar 2026-08-25: 'I earned $230 from the station last weekend.' His Station shift is Sat+Sun, so this is the WEEKEND TOTAL (2026-08-22 + 2026-08-23); he gave no per-day split and none was invented. Dated to the Sunday, the day by which all of it had been earned, and logged as ONE line rather than split — same treatment as the 2026-08-15 $144 line above. NOT marked as funding any day: he reported spending most of it (see cash_on_hand $120 on 2026-08-25), never setting it aside."}
   - {date: 2026-08-24, source: doordash, amount: 30, note: "Reported by Lemar 2026-08-25: 'I made $30 doordashing yesterday.' Yesterday = 2026-08-24. Not marked as funding 2026-08-24 — nothing was reported as set aside."}
+  - {date: 2026-08-26, source: doordash, amount: 70.78, note: "Reported by Lemar 2026-08-26 in #personal-finance (ts 1787751210.248719, ~9:33 ET): 'Got $70.78 from my last DoorDash shift.' Logged by Samira's PART M run on main; carried across in the 2026-08-26 merge. His words 'last shift' are noted but NOT interpreted as ending DoorDash work — no such conclusion was drawn."}
 # - {date: 2026-08-05, source: doordash, amount: 140, note: null}
 ```
