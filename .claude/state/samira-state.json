@@ -3,19 +3,19 @@
   "lock": {
     "run_id": "run_20260826T160254Z",
     "run_started": "2026-08-26T16:02:54Z",
-    "run_completed": "2026-08-26T15:30:31Z",
-    "note": "Fourth scan of 2026-08-26 (~11:05am ET). PART V: 1 note filed (00-Inbox/2026-08-26-huljev-startup-costs-checklist.md → 20-Cuzzies/, all fields valid), 3 stuck notes carried unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections — composition unchanged so the batched card was not refreshed). Integrity: only money-hub-ledger.md/income-log-2026.md/reports-contradiction-scan-log.md/_daily journal changed since last scan sha, all valid, 0 repairs. PART S: 0 due-note drift (no due-bearing file touched). PART A: spot-checked 20/47 open #decisions threads via slack_read_thread (parent+replies) — zero new signal on every one (latest-reply ts matched stored watermark exactly on all 20); 0 new top-level messages in the channel since watermark, so did not exhaustively re-check the remaining 27 (cost/benefit given zero signal density). PART B: 0 new top-level Lemar messages in capture DM (only Samira's own Pulse/reports-scan posts). PART C: swept all 13 non-excluded project channels, all quiet — #personal-finance's only activity was Samira's own automated Money Hub post, not a new drop. PART D: D2 query `in:inbox after:1787753381 -label:Samira/seen` surfaced 8 new threads — 2 substantive: CannaBIZ Collects sent a debt-settlement-agreement PDF post-8/25-call (appended Update to `20-Cuzzies/2026-08-25-little-leaf-labs-cannabiz-call-request.md`, staged #decisions card ts 1787756944.929189 with 3 draft-option replies) and Sun Extractions AR requested a contact-info form-fill (new note `20-Cuzzies/2026-08-26-sun-extractions-ar-contact-update-request.md`, staged #decisions card ts 1787756959.630349); 6 junk (vendor-menu/marketing mail from apextrading.com x2, fastsigns.com, jerseysmooth.com, illicitgardens.com, qccnj.com) labeled Samira/seen. gmail_after_epoch advanced to 1787756963. email: E1/R0/Cl0/T1/O2. PART E investor quiet (channel + Gmail Samira/investor label both empty). PART Q stormy quiet. PART R: both open Camden Launch PT cards (p00-client-intake-system — parked; ops-admin-lane-and-ariana — locked/PM-mode) checked, zero new signal since the prior scan's same-day check — nothing re-posted (max-one-status-check-a-day ceiling already spent today). PART H: no 3rd-recurrence skill candidate this run. PART M: 0 new money drops (only Samira's own prior-run post visible in #personal-finance) — ledger/hub unchanged, no re-render. PART T reports-scan: clean — 0 new #reports entries since the last digest (nothing to scan). Canvas not re-checked (already checked once today, ~12:13 UTC) — still ⛔ write-blocked. Pulse: rendered via background agent (a #decisions card opened this run satisfied the quiet-pass gate) — new Drive snapshot 2026-08-26 1115 ET, 9/9 sections OK, DM sent to capture DM (ts 1787757743.627339). Agent flagged for awareness (not corrected this run, no card needed): live #decisions scrape found ~134 unique unreacted top-level cards vs the ~47 tracked in state watermarks (many appear month-old/stale-but-unreacted); vault-wide open-item scan found 214 qualifying notes vs prior renders' ~37; today's calendar workout event says Week 7/12 vs computed Week 8 — all three carried as known discrepancies for a future full audit, not acted on. Digest posted to #reports + this journal."
+    "run_completed": "2026-08-26T16:22:35Z",
+    "note": "Fifth scan of 2026-08-26 (~12:02pm ET). PART V: 0 filed, 3 stuck notes carried unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections — composition unchanged, card not refreshed). Integrity: incremental — only samira-state.json + the _daily journal changed since last_scan_sha, both valid, 0 repairs. PART S: 0 due-note drift. PART A: 0 new top-level messages in #decisions since watermark; spot-checked 4 recent threads (CannaBIZ, Sun Extractions, Huljev, Capehart retainer) via slack_read_thread — zero new signal on all 4 (latest-reply ts matched stored watermark exactly). PART B: capture DM quiet (only Samira's own prior Pulse post, no new Lemar message). PART C: all 13 non-excluded project channels quiet. PART D: D2 query `in:inbox after:1787756963 -label:Samira/seen` surfaced 3 new threads — 2 junk (Garden Society, Extended Stay America marketing) labeled Samira/seen; 1 investor handoff (Highgate Capital Partners engagement-letter thread, new message from Camilo Basto) labeled Samira/investor + Samira/seen. gmail_after_epoch advanced to 1787761265. PART E: worked the Highgate handoff — Camilo's 4th nudge on the still-unsigned 7/27 'EL — 10% no retainer' adds a stated deadline ('going out to market soon, can't wait any longer'); same $10K flat + 10%-at-sale terms confirmed 7/7, nothing new decided. Investor index row updated (Negotiating, Next step, Last update), receipt note appended (`40-Projects/investor-pipeline/2026-07-29-highgate-capital-partners-gap-backfill.md`), flagged in #investor-pipeline ts 1787760609.747259 — not a duplicate #decisions card since the underlying sign/no-sign ask has stood there unreacted since 7/29. PART Q stormy quiet. PART R: both open Camden Launch PT cards carried, no round advanced — max-one-status-check-a-day ceiling already spent on an earlier scan today. PART H: no 3rd-recurrence skill candidate. PART M: 0 new #personal-finance drops, ledger/hub unchanged. PART T reports-scan: clean, 0 new #reports entries since the last digest. Canvas not re-checked (already checked once today, ~12:13 UTC) — still ⛔ write-blocked. Pulse: rendered via background agent (Haven notes changed + the investor flag posted, so the quiet-pass gate did not apply) — new Drive snapshot 2026-08-26 1211 ET (https://docs.google.com/document/d/1jSoAV-VUx-C4xLTwhZAEPNaIcaMzqFYXxpg_SowC0Z0/edit), 9/9 sections OK, DM sent to capture DM (ts 1787761236.739309). Carried, not re-verified: the ~134-vs-~47 #decisions backlog discrepancy, the vault open-items count discrepancy, and the calendar workout week-number discrepancy flagged by an earlier scan today. Digest posted to #reports + this journal."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787756959.630349",
-      "C0BBZJL85RT": "1787758141.416079",
-      "D0BHPKMDNEP": "1787755043.466999",
+      "C0BBZJL85RT": "1787761277.217629",
+      "D0BHPKMDNEP": "1787761236.739309",
       "C0BGLEMH99T": "1787754260.131419",
       "C0BEQUW5NPP": "1787584209.000000",
       "C0BBLUA7JLX": "1787663689.912339",
       "C0BJ37SU1TL": "1787584209.000000",
-      "C0BCCUKEUQ2": "1787605767.001539",
+      "C0BCCUKEUQ2": "1787760609.747259",
       "C0BCD7U5X2B": "1787584209.000000",
       "C0BCH2C3GRM": "1787584209.000000",
       "C0BDN2KQFD4": "1787584209.000000",
@@ -79,20 +79,20 @@
       "1787756944.929189": "1787756952.106279",
       "1787756959.630349": "1787756959.630349"
     },
-    "capture_dm": "1787755043.466999",
-    "gmail_after_epoch": 1787756963
+    "capture_dm": "1787761236.739309",
+    "gmail_after_epoch": 1787761265
   },
   "integrity": {
     "last_full_pass": "2026-08-26T12:10:00Z",
-    "last_scan_sha": "d4269db6d15841aaa0d7482bc2a4ff66760b37ca",
-    "note": "Day's-first-run FULL whole-vault pass (602 notes): 0 repairs needed. Field-validation flagged haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md missing `created` (not repaired). This scan (~11:05am ET): income-log-2026.md/money-hub-ledger.md/reports-contradiction-scan-log.md/_daily journal + the huljev note (filed this scan) + the cannabiz update + the new sun-extractions note all checked — valid frontmatter, no repair needed."
+    "last_scan_sha": "27d07ae9e9b3fbb20be4e587addae1d619466e5f",
+    "note": "Day's-first-run FULL whole-vault pass (602 notes): 0 repairs needed. Field-validation flagged haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md missing `created` (not repaired, carried). This scan (~12:02pm ET): incremental diff since prior sha touched only samira-state.json + the _daily journal (both non-vault-content or already-valid), plus this run's own writes (investor-pipeline index.md and the Highgate receipt note), which were read/edited directly with frontmatter left valid and `updated` touched correctly — no repair needed."
   },
   "canvas_access": {
     "last_checked": "2026-08-26T12:13:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-26T11:15:00-04:00",
+    "pulse_last_rendered": "2026-08-26T12:11:00-04:00",
     "money_hub_last_rendered": "2026-08-26T10:21:00-04:00"
   }
 }
