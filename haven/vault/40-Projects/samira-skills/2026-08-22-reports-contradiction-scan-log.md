@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-25T13:27:00-04:00
+updated: 2026-08-26T13:35:00-04:00
 domain: project
 type: log
 status: active
@@ -583,3 +583,61 @@ not re-flagged).
 - slack: #reports `C0BBZJL85RT`, ts range `1787676085`–`1787678554`
 - haven/vault/70-Automation/samira/2026-08-15-suspicious-admin-bot-message-disregarded.md
   (established disposition for this signature/pattern)
+
+## Update 2026-08-26 (nineteenth run)
+
+**Scanned:** #reports ts `1787678554`–`1787750541` (2026-08-25 ~1:22pm ET through
+2026-08-26 ~1:16pm ET, 8 new messages — the boundary message `1787678554.763949` was
+the last message of the eighteenth run's scanned range and was used only for grouping
+context, not re-flagged).
+
+**Found: 1.**
+
+1. **Obvious fix — "#decisions waiting-on-you" count crashed to 1 for one digest,
+   sandwiched between much higher counts immediately before and after, with no
+   explanation.**
+   - `1787684228` (in-message label "18:03 UTC / ~2:03pm ET"): "Waiting on you: ~88
+     un-reacted cards visible in #decisions' last 100-message window (per this run's
+     Pulse audit) — some may be duplicate 'Haven Inbox — N notes' cards ... not
+     auto-cleaned this run."
+   - `1787684874` (only ~11 minutes later by ts; in-message label "7:07pm ET"):
+     "Waiting on you: 1 in #decisions (DeWalt engagement letter/retainer, opened last
+     scan, still un-reacted)" — states the full open count as 1, naming only the
+     single newest card.
+   - `1787688844` (in-message label "4:03pm ET"): "Waiting on you: 48 open cards in
+     #decisions (full audit this run: 6 have your ✅/❌ but no 🫡 close yet ...
+     42 untouched)" — the very next digest reconciles back to 48 with an itemized
+     audit, with no acknowledgment that the prior digest had reported 1.
+   - **Ground truth:** `haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md`
+     (spot-checked this run, unchanged since last read) is explicit: "the digest's
+     'waiting on you' figure is the count of tracked threads with no 🫡 and no
+     '✅ CLOSED' resolution, not a fresh eyeball each time." The `1787684874` digest's
+     "1" is a return to exactly the eyeballing failure mode that note diagnosed and
+     retired on 8/22 — the same defect class this log already caught in its first,
+     fifth, and sixth runs, now recurring again. (Side note, not investigated further
+     as it's outside this skill's scope: the in-message clock labels on these three
+     messages are themselves internally out of order by actual post ts — "2:03pm,"
+     then "7:07pm," then "4:03pm" — flagged here for whoever next reviews this log.)
+   - **Fix (not yet posted — stages for a later PART C pass, per doctrine):** no
+     correction needed to any currently-live figure (48 is accurate as of the very
+     next digest); flag on a future digest, as process hygiene, that the
+     `1787684874` "1 in #decisions" reading was a one-off methodology regression, not
+     a real drop in the backlog, so it is never mistaken for 47 cards having been
+     cleared. No #decisions card — the backlog-audit note already resolves the
+     correct count and method.
+
+**Checked, not flagged — recurring "Haven Keeper" empty-inbox claim, 5th+ occurrence.**
+Two more instances in range (`1787696430`, `1787750541`) repeat the same "Haven —
+filed 0 · stuck 0 ... nothing to file, all quiet" claim under the
+`U0BC5UTHYG4`/`A08SF47R6P4` signature already tracked and dispositioned as
+non-actionable across the eleventh, twelfth, and eighteenth runs (a manual desktop
+session, never read back as state by the automated routine — Samira's own digests in
+this same range correctly report `stuck 3` both times). Consistent with the fifteenth
+run's disposition, not re-counted as a new scanner finding.
+
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (nineteenth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787678554`–`1787750541`
+- haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md
+  (spot-checked, unchanged since last read)
