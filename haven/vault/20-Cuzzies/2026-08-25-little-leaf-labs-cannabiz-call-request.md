@@ -1,6 +1,6 @@
 ---
 created: 2026-08-25T08:06:41-04:00
-updated: 2026-08-25T13:03:00-04:00
+updated: 2026-08-26T11:05:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -57,3 +57,24 @@ an outcome is known.
 ### Sources (this update)
 - gmail: thread `19ffca3c879d0cc9`, messages `1a0397aaf61f408f` (Lemar's confirmation,
   sent) / `1a039c25fd25a890` (Mike's ack)
+
+## Update 2026-08-26 11:05 ET — post-call: debt settlement agreement sent for review
+
+Cliff Sanders (Director, CannaBIZ Collects, `cliff@cannabizcollects.com`, (360) 921-5872)
+emailed a new thread — "CannaBIZ Collects Overview and Submission Process" — attaching
+`CannaBIZ Collects Debt Settlement Agreement.pdf`: "Good chatting with you. I have
+attached the debt settlement agreement for your review. When you have time we can
+connect and discuss whether it is a good fit." This is the follow-up to the 2pm ET call
+confirmed 8/25 — a new contact (Cliff, not Mike Ganges or Michelle), so likely a case
+handoff inside CannaBIZ Collects.
+
+Not opened/parsed (no PDF-read tool available this pass) — terms, the specific
+creditor(s) covered, and any settlement figure are UNCONFIRMED. Reviewing and deciding
+whether to sign a debt-settlement agreement is Lemar's call, not something drafted or
+executed here. Raised as a #decisions card (reply-worthy, needs his read) — no reply
+drafted yet pending his direction on posture.
+
+### Sources (this update)
+- gmail: thread `1a03e89d3aa66ded` — "CannaBIZ Collects Overview and Submission
+  Process", received 2026-08-26T14:46:50Z from cliff@cannabizcollects.com, attachment
+  `CannaBIZ Collects Debt Settlement Agreement.pdf`
