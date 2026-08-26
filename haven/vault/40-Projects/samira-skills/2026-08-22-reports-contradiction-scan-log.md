@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-26T13:35:00-04:00
+updated: 2026-08-26T13:02:00-04:00
 domain: project
 type: log
 status: active
@@ -641,3 +641,55 @@ run's disposition, not re-counted as a new scanner finding.
 - slack: #reports `C0BBZJL85RT`, ts range `1787678554`–`1787750541`
 - haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md
   (spot-checked, unchanged since last read)
+
+## Update 2026-08-26 (twentieth run)
+
+**Scanned:** #reports ts `1787750541`–`1787761277` (2026-08-26 ~11:15am ET through
+~12:21pm ET, 4 new messages — the boundary message `1787750541.559949` (a "Haven Keeper"
+line, see below) was the last message of the nineteenth run's scanned range and was used
+only for grouping context, not re-flagged).
+
+**Found: 2.**
+
+1. **Obvious fix — another instance of the "waiting on you" methodology regression,
+   already self-flagged in-band.**
+   - 10:37am ET (`1787755074`): "Waiting on you: 44 in #decisions" — close to the
+     tracked-set reconciled count (state file's `decisions_threads` held 47 entries at
+     the time).
+   - 11:36am ET (`1787758141`): "Waiting on you: ~134 in #decisions (live scrape; see
+     note below)" — the same digest's own body already flags this: "the Pulse render's
+     live #decisions scrape counted ~134 unique unreacted top-level cards vs the ~47
+     tracked in state watermarks... same defect family the reports-contradiction-scanner
+     has caught before... Carried as known gaps... nothing corrected unattended."
+   - 12:21pm ET (`1787761277`): "~134 in #decisions (carried figure, live scrape not
+     re-run this pass)" — carries the unreconciled figure forward rather than the
+     tracked-set count.
+   - **Ground truth:** same as every prior instance of this pattern in this log —
+     `haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md` locks
+     the tracked-set count (no 🫡, no ✅ CLOSED) as the correct methodology. 44 (10:37am)
+     is close to that reconciled baseline; ~134 (11:36am/12:21pm) is the live-scrape
+     overcount this note already diagnosed as counting stale, month-old unreacted cards.
+   - **Not escalated — already surfaced.** Unlike earlier instances, this one was
+     self-flagged by Samira in the 11:36am digest's own body the moment it appeared, so
+     Lemar already saw the discrepancy called out; a separate DM/card would duplicate
+     what he's already been told. Logged here only as another data point on the standing
+     pattern (now recurring across the 1st, 5th, 6th, 19th, and 20th runs of this log).
+     No #decisions card, no DM this run.
+
+2. **Informational only — a sixth+ recurrence of the non-Samira "Haven Keeper" empty-
+   inbox claim.**
+   - `1787750541` (boundary message, ~11:15am ET, `U0BC5UTHYG4`/`A08SF47R6P4` — the same
+     manual desktop-session signature as the 11th/12th/15th/18th-run occurrences):
+     "Haven — filed 0 · stuck 0 · rang +0/~0/-0. nothing to file, all quiet."
+   - **Ground truth:** every automated Samira digest in and around this range (10:37am,
+     11:36am, 12:21pm) correctly reports `stuck 3 (unchanged)`. Same established
+     disposition as every prior occurrence — a one-off manual session under a different
+     signature, never read back as state by the automated routine, non-propagating. No
+     #decisions card, no DM (consistent disposition, now 6+ occurrences).
+
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (twentieth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787750541`–`1787761277`
+- haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md
+- `.claude/state/samira-state.json` (`decisions_threads` — 47 tracked entries at scan time)
