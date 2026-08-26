@@ -84,8 +84,8 @@
   },
   "integrity": {
     "last_full_pass": "2026-08-26T12:10:00Z",
-    "last_scan_sha": "1c6b30db3132cd1a4397b4f3f485ddb1a186746e",
-    "note": "Day's-first-run FULL whole-vault pass (602 notes, 08-26 8:12am): 0 repairs needed. Field-validation flagged haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md missing `created` (not repaired, carried). Prior incremental pass (18:11 scan) touched only the wanda-lincoln capture note, reports-scan log, samira-state.json, and the daily journal — 0 repairs."
+    "last_scan_sha": "4e417505350eaab2be8b4a823f59361aac3670f2",
+    "note": "18-06pm ET incremental pass: notes changed since 1c6b30d were capture notes (wanda-lincoln, Highgate nudge x2), investor-index, and the money-hub ledger/income-log — all touched by their own skills this run-cycle, no frontmatter defects observed. Inbox re-checked: 3 notes, all pre-existing known-stuck (domain? on google-voice-cancellation and caine-weiner-collections; multi-field on dib-template-theme-closeout, missing created/updated/tags + invalid type:outcome-note) — none new, none repaired. Camden ops-admin-lane-and-ariana.md missing `created` still carried, unrepaired."
   },
   "canvas_access": {
     "last_checked": "2026-08-26T12:13:00Z",
