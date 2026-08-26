@@ -3,13 +3,13 @@
   "lock": {
     "run_id": "run_20260826T120552Z",
     "run_started": "2026-08-26T12:05:52Z",
-    "run_completed": "2026-08-25T20:14:56Z",
-    "note": "Clean quiet run (~1hr after prior run closed). PART V/S no-ops: 0 vault-markdown changes since last scan point, same 3 Inbox notes stuck on unchanged domain gaps, 0 due-note calendar drift. #decisions/capture DM/13 project channels/#investor-pipeline/#stormy/#personal-finance/#reports all quiet since watermark. Ran a full #decisions backlog audit (excl. PT cards, excl. already-🫡'd): 48 open cards — 6 already actioned by Samira, awaiting Lemar's 🫡 close only (verified each thread, no new action taken, nothing re-asked); 42 fully untouched, left alone. D2 Gmail: 2 new threads, both handled — WM dumpster-overflow thread (Mason confirmed lock-service install Thu 8/27, informational, Haven updated, Samira/seen applied, no reply needed) and Caine & Weiner (Angela proposed a call 8/26 2pm CST; Lemar corresponding directly, flagged in-thread + Haven updated, no reply drafted since Lemar's self-handling). PT cards (PART R): all 4 Camden Launch cards still locked/parked/closed, none needed a round. Money hub: no #personal-finance drops, known ledger-vs-calendar gap ($224.15 vs $384.13) still carried unresolved. reports-scan: clean, nothing new since last scan. Canvas still write-blocked, not re-checked (already checked once today at 14:20 ET). Pulse skipped per the quiet-pass gate — nothing this run qualified as a change (no #decisions card opened/closed by Lemar, no money change, no project-pulse flip, no new Haven note — only 2 updates to existing notes)."
+    "run_completed": "2026-08-26T12:16:00Z",
+    "note": "Clean quiet run, day's first run of 2026-08-26. PART V: filed 1 (2026-08-26-inbox-janitor-run.md → 70-Automation/inbox-janitor/), stuck 3 (unchanged Inbox domain gaps). Day's-first-run FULL vault integrity pass: 602 notes scanned, 0 repairs, 1 known/accepted defect carried (_daily/2026-08-01.md lossy b64, decided 8/1), 1 NEW defect flagged not fixed (40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md missing `created` entirely). PART S: 0 due-note calendar drift (nothing changed since last confirmed-clean pass, verified via git diff against last_scan_sha — no due-bearing notes touched). PART A: read all 44 open #decisions cards (40 regular + 4 🧪 PT skipped for PART R) via full thread reads — zero new replies, zero new reactions since watermark; nothing actioned. PART B: capture DM quiet. PART C: swept all 13 non-excluded project channels — zero new messages in any. PART D: Gmail D2 canonical query surfaced 12 new inbox threads, all automated/marketing (price-drop alerts, NYT, WM container notices, HR newsletter, Railway.app trial notice, CarGurus, Leaflogix executive summary, promo email) — none reply-worthy or task-worthy, all labeled Samira/seen. PART E: no new Samira/investor mail, #investor-pipeline channel quiet. PART Q: #stormy quiet. PART R: all 4 Camden Launch PT cards carried, no new activity to advance a round. PART M: #personal-finance quiet, no drops; known ledger-vs-calendar gap ($224.15 vs $384.13) still carried unresolved. PART T: reports-scan clean, only 2 routine bot digest lines since watermark, no contradictions. Canvas re-checked (day's first run, per cadence): still ⛔ write-blocked — bot's Slack file access on Open Items canvas confirmed read-only. Pulse skipped per the quiet-pass gate — nothing this run qualified as a change (no #decisions card opened/closed by Lemar, no money change, no project-pulse flip, no genuinely new Haven note)."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787682832.038489",
-      "C0BBZJL85RT": "1787688844.967949",
+      "C0BBZJL85RT": "1787746452.302609",
       "D0BHPKMDNEP": "1787684174.442019",
       "C0BGLEMH99T": "1787670391.641819",
       "C0BEQUW5NPP": "1787584209.000000",
@@ -76,15 +76,15 @@
       "1787682832.038489": "1787682841.068369"
     },
     "capture_dm": "1787684174.442019",
-    "gmail_after_epoch": 1787688798
+    "gmail_after_epoch": 1787746476
   },
   "integrity": {
-    "last_full_pass": "2026-08-25T14:10:00Z",
-    "last_scan_sha": "75194ddf354178521f076dda2c503f63dc73e3a0",
-    "note": "Incremental pass this run: 0 vault-markdown files changed since the prior scan point beyond this run's own 2 Update-section appends (WM dumpster-overflow note, Caine & Weiner note) — both kept valid frontmatter, no new integrity defects. 3 Inbox notes still stuck on domain/value gaps (unchanged composition, card current). last_scan_sha advanced to this run's final commit. Full whole-vault pass remains today's 14:10 599-note pass; next full pass is tomorrow's first run."
+    "last_full_pass": "2026-08-26T12:10:00Z",
+    "last_scan_sha": "a17b965a01ab9bcd1f9447f98beae9907c568978",
+    "note": "Day's-first-run FULL whole-vault pass (602 notes): 0 repairs needed, 0 CRLF/opener/base64 container defects beyond the known-accepted _daily/2026-08-01.md. Field-validation pass (all notes, not just Inbox) found 1 NEW issue: haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md is missing `created` entirely — a filed note with a required field absent. Flagged, not repaired (never invent a missing created); reported in full in this run's digest since it's new. The 3 Inbox notes (domain gaps) are unchanged/already-carded. last_scan_sha advanced to this run's final digest commit. Next full pass is tomorrow's first run; today's later runs check only files changed since this sha."
   },
   "canvas_access": {
-    "last_checked": "2026-08-25T14:20:00Z",
+    "last_checked": "2026-08-26T12:13:00Z",
     "writable": false
   },
   "renders": {
