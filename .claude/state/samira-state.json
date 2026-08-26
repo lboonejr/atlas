@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260826T130300Z",
     "run_started": "2026-08-26T13:03:00Z",
-    "run_completed": "2026-08-26T12:16:00Z",
-    "note": "Run in progress."
+    "run_completed": "2026-08-26T13:13:47Z",
+    "note": "Quiet-ish run, second scan of 2026-08-26. PART V/S: no vault files changed since day's integrity sha — 0 filed, 3 stuck carried unchanged, 0 calendar drift. PART A: re-checked all 45 open #decisions threads (reactions), zero new signal beyond what prior run already carried. PART B capture DM quiet. PART C: all 13 non-excluded project channels quiet. PART D: Gmail D2 surfaced 4 new threads — 3 junk labeled Samira/seen, 1 reply-worthy (Capehart Scatchard counsel signaling she may decline representation over the $10K retainer, cites $50K+ potential litigation cost) posted as a new #decisions card with 3 voice-profile draft options; flagged in-thread as likely superseding the two older open Capehart cards without closing them (that's Lemar's call). PART E investor quiet. PART Q stormy quiet. PART R: 4 Camden Launch PT cards carried, no new activity. PART M #personal-finance quiet; known ledger-vs-calendar gap ($224.15 vs $384.13) still carried. PART T reports-scan: clean. Canvas not re-checked (already checked once today) — still write-blocked. Pulse: rendered (a #decisions card opened this run) — new Drive snapshot + DM sent to capture DM. Digest posted to #reports + this journal."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787682832.038489",
-      "C0BBZJL85RT": "1787746452.302609",
-      "D0BHPKMDNEP": "1787684174.442019",
+      "C0BBXA96FFV": "1787749640.485929",
+      "C0BBZJL85RT": "1787749979.082959",
+      "D0BHPKMDNEP": "1787749965.571119",
       "C0BGLEMH99T": "1787670391.641819",
       "C0BEQUW5NPP": "1787584209.000000",
       "C0BBLUA7JLX": "1787663689.912339",
@@ -73,22 +73,23 @@
       "1787667532.037259": "1787670421.826669",
       "1787613164.672029": "1787614371.183619",
       "1787670575.635129": "1787674284.261919",
-      "1787682832.038489": "1787682841.068369"
+      "1787682832.038489": "1787682841.068369",
+      "1787749640.485929": "1787749839.984179"
     },
-    "capture_dm": "1787684174.442019",
-    "gmail_after_epoch": 1787746476
+    "capture_dm": "1787749965.571119",
+    "gmail_after_epoch": 1787749385
   },
   "integrity": {
     "last_full_pass": "2026-08-26T12:10:00Z",
     "last_scan_sha": "a17b965a01ab9bcd1f9447f98beae9907c568978",
-    "note": "Day's-first-run FULL whole-vault pass (602 notes): 0 repairs needed. Field-validation flagged haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md missing `created` (not repaired). Later runs today check only files changed since this sha."
+    "note": "Day's-first-run FULL whole-vault pass (602 notes): 0 repairs needed. Field-validation flagged haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md missing `created` (not repaired). No vault files changed since this sha as of the 1:03pm ET run — later runs today keep checking only files changed since this sha."
   },
   "canvas_access": {
     "last_checked": "2026-08-26T12:13:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-25T14:49:00-04:00",
+    "pulse_last_rendered": "2026-08-26T13:12:00-04:00",
     "money_hub_last_rendered": "2026-08-25T12:24:00-04:00"
   }
 }
