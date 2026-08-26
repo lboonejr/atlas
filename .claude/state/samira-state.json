@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260826T180238Z",
-    "run_started": "2026-08-26T18:02:38Z",
+    "run_id": "run_20260826T190300Z",
+    "run_started": "2026-08-26T19:03:00Z",
     "run_completed": "2026-08-26T18:12:00Z",
-    "note": "Sixth scan of 2026-08-26 (~2:11pm ET). Prior lock (run_20260826T170243Z) had aged out (>45min, never posted its digest or saved watermarks) — reconstructed its real work from commits/Slack (Wanda/Lincoln capture, 20th reports-scan, a fresh Pulse render) and folded it into this run's digest since it was never reported. PART V: 0 filed, 3 stuck notes carried unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections). Integrity: incremental — only samira-state.json + the wanda-lincoln capture + the reports-scan log changed since last_scan_sha, all valid, 0 repairs. PART S: 0 due-note drift (no vault note content changed that carries a due). PART A: 0 new top-level in #decisions; spot-checked 4 recent threads (Sun Extractions AR, CannaBIZ Collects, Huljev checklist, Capehart retainer) — zero new signal on all 4. PART B: capture DM quiet (only Samira's own Pulse post). PART C: all 12 non-excluded project channels quiet. PART D: D2 query `in:inbox after:1787761265 -label:Samira/seen` surfaced 9 threads in window; 2 newly-seen junk (Tivly, FundCanna) labeled Samira/seen, rest already seen from the orphaned run; 0 new reply-worthy/investor. gmail_after_epoch advanced to 1787767687. PART E: #investor-pipeline quiet, no new Samira/investor mail. PART Q stormy quiet. PART R: 2 open Camden Launch PT cards carried, ceiling already spent today. PART H: no 3rd-recurrence candidate. PART M: 0 new #personal-finance drops. PART T reports-scan 21st run: clean, 1 non-actionable Haven-Keeper recurrence logged (7th+ occurrence, established disposition). Canvas not re-checked (already checked once today) — still ⛔ write-blocked. Pulse: quiet-pass skip — nothing this run qualified as a change, prior cycle's render already current. Digest posted to #reports + daily journal."
+    "note": "Seventh scan of 2026-08-26 (~3:03pm ET). Picking up cleanly — prior run (run_20260826T180238Z) closed normally with digest posted and watermarks saved."
   },
   "watermarks": {
     "slack_channels": {
@@ -85,7 +85,7 @@
   "integrity": {
     "last_full_pass": "2026-08-26T12:10:00Z",
     "last_scan_sha": "1c6b30db3132cd1a4397b4f3f485ddb1a186746e",
-    "note": "Day's-first-run FULL whole-vault pass (602 notes, 08-26 8:12am): 0 repairs needed. Field-validation flagged haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md missing `created` (not repaired, carried). This scan (~2:11pm ET): incremental diff since prior sha touched the wanda-lincoln capture note (valid frontmatter, no repair needed), the reports-scan log (append-only, frontmatter intact), samira-state.json, and the daily journal (non-vault-content) — 0 repairs."
+    "note": "Day's-first-run FULL whole-vault pass (602 notes, 08-26 8:12am): 0 repairs needed. Field-validation flagged haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md missing `created` (not repaired, carried). Prior incremental pass (18:11 scan) touched only the wanda-lincoln capture note, reports-scan log, samira-state.json, and the daily journal — 0 repairs."
   },
   "canvas_access": {
     "last_checked": "2026-08-26T12:13:00Z",
