@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T16:05:00-04:00
-updated: 2026-08-21T08:19-04:00
+updated: 2026-08-26T16:34:26-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -74,6 +74,19 @@ number this note's open question already turns on. The figure is in a PDF attach
 Samira cannot read from the email body; **no new dollar amount is confirmed here.** This
 does not resolve the "already applied vs. additional" question above — it is logged as a
 pointer for whoever reviews the PDF, not as new information.
+
+## Update 2026-08-26T16:34:26-04:00 — Andrew confirms a disbursement is in motion, no figure or timeline yet
+
+Andrew Giampaolo replied on the same thread (`1a020b9cd6bd94c0`) to Lemar's own
+2026-08-20 accounting question: the return premium has to move **carrier → Marshall &
+Sterling → bank → Lemar**, funds are "in the process of being distributed" but the bank
+does not have them yet, and once the bank receives them it will apply what's needed to
+satisfy the financed balance and disburse any remainder back. He could not give a
+timeframe and said he'd follow up when he has one. **No dollar figure confirmed here** —
+this doesn't resolve the "already applied vs. additional" question above, but it does
+describe a live disbursement pipeline with a remainder-back-to-Cuzzie's step, consistent
+with reading 2. No reply required by its own terms (Andrew committed to the follow-up);
+nothing sent, nothing claimed.
 
 ## Sources
 - gmail: thread `1a020b9cd6bd94c0` (SSC-00003261-00, Commercial Property & GL final
