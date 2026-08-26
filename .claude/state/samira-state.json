@@ -3,15 +3,15 @@
   "lock": {
     "run_id": "run_20260826T140346Z",
     "run_started": "2026-08-26T14:03:46Z",
-    "run_completed": "2026-08-26T13:13:47Z",
-    "note": "Quiet-ish run, second scan of 2026-08-26. PART V/S: no vault files changed since day's integrity sha — 0 filed, 3 stuck carried unchanged, 0 calendar drift. PART A: re-checked all 45 open #decisions threads (reactions), zero new signal beyond what prior run already carried. PART B capture DM quiet. PART C: all 13 non-excluded project channels quiet. PART D: Gmail D2 surfaced 4 new threads — 3 junk labeled Samira/seen, 1 reply-worthy (Capehart Scatchard counsel signaling she may decline representation over the $10K retainer, cites $50K+ potential litigation cost) posted as a new #decisions card with 3 voice-profile draft options; flagged in-thread as likely superseding the two older open Capehart cards without closing them (that's Lemar's call). PART E investor quiet. PART Q stormy quiet. PART R: 4 Camden Launch PT cards carried, no new activity. PART M #personal-finance quiet; known ledger-vs-calendar gap ($224.15 vs $384.13) still carried. PART T reports-scan: clean. Canvas not re-checked (already checked once today) — still write-blocked. Pulse: rendered (a #decisions card opened this run) — new Drive snapshot + DM sent to capture DM. Digest posted to #reports + this journal. PART D re-run (later scan same day, run_20260826T140346Z): Capehart retainer card (1787749640.485929) re-checked — no reaction yet, left as-is; two older Capehart cards left untouched per Lemar's call. D2 canonical scan `in:inbox after:1787749385 -label:Samira/seen` surfaced 6 new threads, all labeled seen: 1 substantive task captured+staged (Huljev Group start-up-costs/loan-equity Karbon checklist, #decisions card + Haven note), 5 junk (2x Headset marketing/auto-report, Canopy-USA + AW Holdings vendor menus, Hillary King pure-ack close-out on the LADDS thread) tallied in #reports only. No reply-worthy new mail this scan. email: 0/0/0/1/1."
+    "run_completed": "2026-08-26T14:38:44Z",
+    "note": "Third scan of 2026-08-26 (~10:37am ET). PART V/S: only haven/vault/_daily/2026-08-26.md changed since day's integrity sha — no repair needed (opener/fields intact) — 0 filed, 3 stuck carried unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections — all same domain? gaps as before), 0 calendar drift (due-note diff confirmed no due-bearing file touched since the prior scan). PART A: re-swept all 47 open #decisions threads (parent+thread reactions via slack_read_thread, which embeds reactions) — zero new signal anywhere; every thread's latest-reply ts matched the stored watermark exactly. PART B capture DM: zero new top-level Lemar messages. PART C: swept all 13 non-excluded project channels — only #personal-finance had new activity (2 money drops, routed to PART M, not treated as prompts). PART D (email loop): D2 canonical query `in:inbox after:1787749385 -label:Samira/seen` surfaced 6 new threads — 1 substantive (Huljev Group startup-costs/Karbon-portal checklist, overdue) captured to Haven (`00-Inbox/2026-08-26-huljev-startup-costs-checklist.md`) and staged as a new #decisions card (ts 1787753574.970519); 5 junk labeled Samira/seen (Headset.io marketing + auto-report, Canopy-USA + AW Holdings vendor menus, Hillary King ack close-out). Existing Capehart retainer card (1787749640.485929) re-checked, no reaction yet. gmail_after_epoch advanced to 1787753381. email: 0/0/0/1/1. PART E investor quiet. PART Q stormy quiet. PART R: of the 4 previously-tracked Camden Launch PT cards, 2 had already closed in an earlier scan (p00-advisory-proposal-package 8/21, p00-engagement-walkthrough 8/24); the 2 still open (p00-client-intake-system — parked 8/24 pending Lemar inputs; ops-admin-lane-and-ariana — locked/PM-mode, waiting on Lemar) both checked clean, zero new signal, nothing posted. PART M: 2 drops processed — logged $70.78 DoorDash earnings (income-log-2026.md) and Set-Aside/SoFi Checking balance $70 (flagged vs. ledger expectation, not reconciled); income allocation funded $40.78 of today's $194.15 bill target (gas reserve $30 held separately); OVERLOAD CHECK fired ($1,262.94 due this week vs $196.33/wk trailing avg) and REBALANCE proposed 2 moves (stretch own-car-running goal + re-tier 2 plan installments) as a threaded reply on the existing standing #decisions card 1786832078.131649 — moves cap ~$534/wk relief, gap not closed, said so plainly. New Money Hub Doc rendered + posted to #personal-finance. hub ✅. PART T reports-scan: found 1 (a one-off #decisions-count regression in an earlier digest, already self-corrected two digests later — ground-truthed against the locked backlog-audit methodology; fix staged in the scanner's own log for a later #reports line, no #decisions card needed) — DM'd findings to capture DM. Canvas not re-checked (already checked once today) — still ⛔ write-blocked. Pulse: rendered in full (a #decisions card opened + a money/overload change this run, so the quiet-pass gate did not apply) — new Drive snapshot, all 8 sections built from live sources, DM sent to capture DM. Digest posted to #reports (ts 1787755074.335469) + this journal."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787749640.485929",
-      "C0BBZJL85RT": "1787749979.082959",
+      "C0BBXA96FFV": "1787753574.970519",
+      "C0BBZJL85RT": "1787755074.335469",
       "D0BHPKMDNEP": "1787749965.571119",
-      "C0BGLEMH99T": "1787670391.641819",
+      "C0BGLEMH99T": "1787751269.733669",
       "C0BEQUW5NPP": "1787584209.000000",
       "C0BBLUA7JLX": "1787663689.912339",
       "C0BJ37SU1TL": "1787584209.000000",
@@ -74,7 +74,8 @@
       "1787613164.672029": "1787614371.183619",
       "1787670575.635129": "1787674284.261919",
       "1787682832.038489": "1787682841.068369",
-      "1787749640.485929": "1787749839.984179"
+      "1787749640.485929": "1787749839.984179",
+      "1787753574.970519": "1787753574.970519"
     },
     "capture_dm": "1787749965.571119",
     "gmail_after_epoch": 1787753381
@@ -82,14 +83,14 @@
   "integrity": {
     "last_full_pass": "2026-08-26T12:10:00Z",
     "last_scan_sha": "a17b965a01ab9bcd1f9447f98beae9907c568978",
-    "note": "Day's-first-run FULL whole-vault pass (602 notes): 0 repairs needed. Field-validation flagged haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md missing `created` (not repaired). No vault files changed since this sha as of the 1:03pm ET run — later runs today keep checking only files changed since this sha."
+    "note": "Day's-first-run FULL whole-vault pass (602 notes): 0 repairs needed. Field-validation flagged haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md missing `created` (not repaired). This scan (~10:37am ET): only haven/vault/_daily/2026-08-26.md changed since this sha — checked, frontmatter block intact, no repair needed."
   },
   "canvas_access": {
     "last_checked": "2026-08-26T12:13:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-26T13:12:00-04:00",
-    "money_hub_last_rendered": "2026-08-25T12:24:00-04:00"
+    "pulse_last_rendered": "2026-08-26T10:33:00-04:00",
+    "money_hub_last_rendered": "2026-08-26T10:21:00-04:00"
   }
 }
