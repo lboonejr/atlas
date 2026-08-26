@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260826T180238Z",
     "run_started": "2026-08-26T18:02:38Z",
-    "run_completed": "2026-08-26T16:22:35Z",
-    "note": "Run in flight (started 2026-08-26T18:02:38Z). Prior lock (run_20260826T170243Z, started 17:02:43Z) had aged out (>45min, no matching run_completed bump) so this run proceeds; investigating whether the prior run's digest actually completed despite the stale run_completed timestamp."
+    "run_completed": "2026-08-26T18:12:00Z",
+    "note": "Sixth scan of 2026-08-26 (~2:11pm ET). Prior lock (run_20260826T170243Z) had aged out (>45min, never posted its digest or saved watermarks) — reconstructed its real work from commits/Slack (Wanda/Lincoln capture, 20th reports-scan, a fresh Pulse render) and folded it into this run's digest since it was never reported. PART V: 0 filed, 3 stuck notes carried unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections). Integrity: incremental — only samira-state.json + the wanda-lincoln capture + the reports-scan log changed since last_scan_sha, all valid, 0 repairs. PART S: 0 due-note drift (no vault note content changed that carries a due). PART A: 0 new top-level in #decisions; spot-checked 4 recent threads (Sun Extractions AR, CannaBIZ Collects, Huljev checklist, Capehart retainer) — zero new signal on all 4. PART B: capture DM quiet (only Samira's own Pulse post). PART C: all 12 non-excluded project channels quiet. PART D: D2 query `in:inbox after:1787761265 -label:Samira/seen` surfaced 9 threads in window; 2 newly-seen junk (Tivly, FundCanna) labeled Samira/seen, rest already seen from the orphaned run; 0 new reply-worthy/investor. gmail_after_epoch advanced to 1787767687. PART E: #investor-pipeline quiet, no new Samira/investor mail. PART Q stormy quiet. PART R: 2 open Camden Launch PT cards carried, ceiling already spent today. PART H: no 3rd-recurrence candidate. PART M: 0 new #personal-finance drops. PART T reports-scan 21st run: clean, 1 non-actionable Haven-Keeper recurrence logged (7th+ occurrence, established disposition). Canvas not re-checked (already checked once today) — still ⛔ write-blocked. Pulse: quiet-pass skip — nothing this run qualified as a change, prior cycle's render already current. Digest posted to #reports + daily journal."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787756959.630349",
-      "C0BBZJL85RT": "1787761277.217629",
-      "D0BHPKMDNEP": "1787761236.739309",
+      "C0BBZJL85RT": "1787767906.459969",
+      "D0BHPKMDNEP": "1787764821.842789",
       "C0BGLEMH99T": "1787754260.131419",
       "C0BEQUW5NPP": "1787584209.000000",
       "C0BBLUA7JLX": "1787663689.912339",
@@ -79,20 +79,20 @@
       "1787756944.929189": "1787756952.106279",
       "1787756959.630349": "1787756959.630349"
     },
-    "capture_dm": "1787761236.739309",
-    "gmail_after_epoch": 1787761265
+    "capture_dm": "1787764821.842789",
+    "gmail_after_epoch": 1787767687
   },
   "integrity": {
     "last_full_pass": "2026-08-26T12:10:00Z",
-    "last_scan_sha": "27d07ae9e9b3fbb20be4e587addae1d619466e5f",
-    "note": "Day's-first-run FULL whole-vault pass (602 notes): 0 repairs needed. Field-validation flagged haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md missing `created` (not repaired, carried). This scan (~12:02pm ET): incremental diff since prior sha touched only samira-state.json + the _daily journal (both non-vault-content or already-valid), plus this run's own writes (investor-pipeline index.md and the Highgate receipt note), which were read/edited directly with frontmatter left valid and `updated` touched correctly — no repair needed."
+    "last_scan_sha": "1c6b30db3132cd1a4397b4f3f485ddb1a186746e",
+    "note": "Day's-first-run FULL whole-vault pass (602 notes, 08-26 8:12am): 0 repairs needed. Field-validation flagged haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md missing `created` (not repaired, carried). This scan (~2:11pm ET): incremental diff since prior sha touched the wanda-lincoln capture note (valid frontmatter, no repair needed), the reports-scan log (append-only, frontmatter intact), samira-state.json, and the daily journal (non-vault-content) — 0 repairs."
   },
   "canvas_access": {
     "last_checked": "2026-08-26T12:13:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-26T12:11:00-04:00",
+    "pulse_last_rendered": "2026-08-26T13:20:21-04:00",
     "money_hub_last_rendered": "2026-08-26T10:21:00-04:00"
   }
 }
