@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-25T12:22:00-04:00
+updated: 2026-08-26T10:20:00-04:00
 domain: personal
 type: reference
 status: active
@@ -108,7 +108,7 @@ pockets:                             # TWO pockets. Account mapping CORRECTED 20
      balance: null, balance_as_of: null, status: active,
      role: "income lands here (DoorDash payouts); gas and day-to-day spending pay from here"}
   - {id: set-aside, name: "Set-Aside", account: sofi-checking,
-     balance: 13.00, balance_as_of: 2026-08-17, status: active,
+     balance: 70, balance_as_of: 2026-08-26, status: active,
      role: "the daily set-aside number moves here; every recurring bill is paid out of
             this account",
      note: "last known $128.78 as of 2026-07-11 came from the retired Era connector and
@@ -1017,31 +1017,43 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     total_claim: 224.15
     gas_spent: null
     swept_to_maintenance: 0
-    funded: 0
-    shortfall: 194.15
+    funded: 40.78
+    shortfall: 153.37
     calendar_event_id: null
+    resolution: "INCOME ALLOCATION 2026-08-26 (PART M): $70.78 DoorDash earned today.
+                 $30.00 held as the operating reserve (Spending, for gas — gas_spent
+                 not yet reported today). Remaining $40.78 poured into today's
+                 contributions in due-date order (soonest due first, ties by smallest
+                 amount): patreon (due 8/27) funded in full $2.08; moms-weekly (due
+                 8/28) funded in full $3.84; own-car-running-2 (due 8/29) funded in
+                 full $18.18; liquidibee-3 (due 8/30) funded in full $8.33; claude (due
+                 9/4) funded in full $5.00; own-car-running-3 (due 9/5) partially
+                 funded $3.35 of $12.12 — money ran out here. Every later-due
+                 contribution (liquidibee-4 through wispr-flow) stays pending,
+                 untouched. No surplus — the money landed mid-line on
+                 own-car-running-3."
     contributions:
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
-      - {line_id: claude, amount: 5.00, funded: 0, status: pending}
+      - {line_id: claude, amount: 5.00, funded: 5.00, status: funded}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
       - {line_id: hillview-med-1, amount: 15.39, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 8.33, funded: 8.33, status: funded}
       - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
-      - {line_id: moms-weekly, amount: 3.84, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.84, funded: 3.84, status: funded}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: pending}
-      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 18.18, funded: 18.18, status: funded}
+      - {line_id: own-car-running-3, amount: 12.12, funded: 3.35, status: partial}
       - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
       - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
       - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
       - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: pending}
       - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
-      - {line_id: patreon, amount: 2.08, funded: 0, status: pending}
+      - {line_id: patreon, amount: 2.08, funded: 2.08, status: funded}
       - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
@@ -2876,6 +2888,7 @@ open_questions:
   - "RESOLVED 2026-08-18 (#decisions ts 1787001107.337499, Lemar reply 1787009888.775939): 'The charge did not clear.' cuzzies-google-workspace $85 (due 8/19) confirmed still unpaid — stays `status: active`, still accruing. Suspension risk (all cuzziesnj.com Workspace services, incl. lemar@cuzziesnj.com email, per the 8/20 deadline) is unchanged; Lemar owns the re-attempt, not logged here as resolved-to-paid."
   - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Lemar was unexpectedly charged $119 by Edge Fitness for personal training and is disputing it with SoFi. Already happened (not a future dated line) so nothing was added to `bills` — no due date exists to queue and inventing one would violate the never-invent-a-date rule. #decisions parent raised asking how he wants this reflected once the dispute resolves (refunded → no entry needed; upheld → a dated personal expense/loss line, his call). No income reported today."
   - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Set-Aside (SoFi Checking) balance reported at $13.00 as_of 2026-08-17 — first balance ever reported for this pocket since the Era connector retired 2026-08-10. Very low against the ~$380/day accrual target; flagged on the dashboard, not smoothed or explained away."
+  - "OPEN 2026-08-26 (#personal-finance ts 1787751269.733669): Set-Aside (SoFi Checking) reported at $70.00, up from the $13.00 figure as of 2026-08-17. DISCREPANCY, not reconciled: no daily_targets contribution has actually reached funded/paid status against Set-Aside in that span (every day since 8/17 shows $0 funded until today's 8/26 allocation, and today's allocation only just landed), so the ledger has no tracked explanation for the $57 increase. Reported as-is per field rules — Lemar reconciles, not this skill."
 ```
 
 ## Update 2026-08-14 (PART M — two new personal bills: fantasy football + Dil's Christmas gift)
@@ -4015,3 +4028,80 @@ Slack post made — Samira is folding this into a broader digest herself.
 
 Nothing paid, nothing contacted. Dashboard re-rendered (new Drive snapshot) since the
 ledger changed.
+
+## Update 2026-08-26 — PART M: DoorDash earnings + Set-Aside balance, income allocation, standing OVERLOAD CHECK + first REBALANCE proposal
+
+**Drop 1 (Mode 1 — log earnings):** Lemar in #personal-finance (ts `1787751210.248719`,
+~9:33 ET): "Got $70.78 from my last DoorDash shift." Appended to `income-log-2026.md`:
+`{date: 2026-08-26, source: doordash, amount: 70.78, note: "last DoorDash shift"}`.
+
+**Drop 2 (Mode 2b — pocket balance):** Lemar in #personal-finance (ts
+`1787751269.733669`, ~9:34 ET): "$70 currently in SoFi." Confirmed against the ledger's
+`pockets` block that Set-Aside = SoFi Checking (`account: sofi-checking`) before
+writing. Set `balance: 70`, `balance_as_of: 2026-08-26` (was $13.00 as of 2026-08-17).
+**Discrepancy flagged, not reconciled:** no `daily_targets` contribution reached
+`funded`/`paid` against Set-Aside anywhere in the 8/17→8/25 span (every day shows
+`funded: 0` until today), so the ledger has no tracked explanation for the $13.00 →
+$70.00 jump. Reported as-is per field rules; see `open_questions`.
+
+**INCOME ALLOCATION for 2026-08-26.** Gas/maintenance reserve ($30.00) claimed first,
+held in Spending, not moved — the day's $70.78 covers it (no gas spend reported today,
+so nothing swept to the maintenance bucket this pass). Remaining $40.78 poured into
+today's `daily_targets` contributions in due-date order (soonest due first, ties by
+smallest amount): `patreon` (due 8/27) funded in full $2.08 → `moms-weekly` (due 8/28)
+funded in full $3.84 → `own-car-running-2` (due 8/29) funded in full $18.18 →
+`liquidibee-3` (due 8/30) funded in full $8.33 → `claude` (due 9/4) funded in full
+$5.00 → `own-car-running-3` (due 9/5) partially funded $3.35 of $12.12 — money ran out
+here. Every later-due contribution (`liquidibee-4` through `wispr-flow`, 19 lines)
+stays `pending`, untouched. Day totals: `funded` 0 → 40.78, `shortfall` 194.15 →
+153.37. No surplus to report.
+
+**OVERLOAD CHECK.** Income log holds 7 entries (today's drop is the 8th), so the check
+ran. Trailing 4-week average of logged income (Mon–Sun weeks, most recent 4 including
+this week-to-date): Aug 3-9 $457.40 + Aug 10-16 $257.13 + Aug 17-23 $0.00 (no entries)
++ Aug 24-30 week-to-date $70.78 (today's drop, the only entry so far) = $785.31 ÷ 4 =
+**$196.33/week** — down from the $299.04/week figure used 8/15-8/25 because Aug 17-23
+logged zero income. Coming 7-day set-aside total (`daily_targets` targets, 2026-08-26
+through 2026-09-01): 194.15 + 192.07 + 188.23 + 178.39 + 170.06 + 170.02 + 170.02 =
+**$1,262.94** — roughly 6.4x the average week. **FLAGGED**, same standing condition
+first raised 2026-08-15 in #decisions `C0BBXA96FFV` (parent ts `1786832078.131649`);
+per the skill the accrual is written exactly as computed, nothing shrunk or delayed.
+
+**REBALANCE (first proposal against the standing card).** No prior pass had actually
+posted rebalance moves against this overload — only informational notes. Scanned for
+eligible lines per the fixed 3 move types, restricted to catch-up drip on goal/plan
+installments NOT due inside the current 7-day window (8/26-9/1) — no line here carries
+`non_negotiable: true`:
+- **Move 1 (stretch):** `own-car-running` goal, target_date 2026-10-31. Installments 1
+  (already past its 8/22 due date, off the active accrual) and 2 (due 8/29, inside the
+  window — untouchable) are excluded; installments 3-11 are all outside the window and
+  currently drip $55.28/day combined (own-car-running-3 $12.12 + -4 $9.09 + -5 $7.27 +
+  -6 $6.06 + -7 $5.20 + -8 $4.55 + -9 $4.04 + -10 $3.64 + -11 $3.31) into every day of
+  this window. Pushing the target_date later would re-spread this remaining balance
+  over more weeks and shrink this daily figure — exact new per-day numbers depend on
+  the date Lemar picks, so none were invented here.
+- **Move 2 (re-tier):** `liquidibee-4` (Nomas plan installment 4/4, due 9/6, $5.68/day)
+  and `hillview-med-1` (Hillview plan installment 1/13, due 9/7, $15.39/day) are both
+  still-`pending` installments outside the window, eligible to resize/re-date.
+- **Move 3 (flag for business reimbursement):** no line qualifies — the two
+  business-origin lines already carried personally (`cuzzies-google-voice`,
+  `cuzzies-google-workspace`) are both past their due dates and not currently
+  contributing to this window's accrual, so flagging them would not move this week's
+  number.
+- **Hard stop, stated plainly:** even a maximum Move 1 + Move 2 relief (~$76.35/day,
+  ~$534 across 7 days) does not close the $1,066.61 gap between $1,262.94 and $196.33.
+  The remainder is driven by bill lines (`claude`, `wispr-flow`, `student-loans`,
+  `tow-truck-repay`, `mechanic-repair-repay`, `car-repair-payment`, `cashapp-payback`,
+  `dil-christmas-gift`, `self-account-balance-repay`, `fantasy-football-buyin`,
+  `water-pump`) and the genuinely-due-this-week lines (`patreon`, `moms-weekly`,
+  `own-car-running-2`, `liquidibee-3`) — none of which the fixed 3 move types are
+  allowed to touch. No move was applied; both options posted as a threaded reply on
+  the existing #decisions parent (not a second card) for Lemar to react to.
+
+Nothing paid, nothing moved, nothing contacted, nothing shrunk. Dashboard re-rendered
+(new Drive snapshot) since the ledger changed; reply posted in #personal-finance with
+the new link. No calendar change made for today's aggregate event — today's `target`
+did not change from the income allocation (only `funded`/`shortfall` did), and no
+aggregate event previously existed for 8/26 (`calendar_event_id: null`) to update — a
+pre-existing gap from before this pass, noted here rather than guessed at.
+
