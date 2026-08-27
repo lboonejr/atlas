@@ -177,3 +177,26 @@ named revisit moment.
 **Flags to resolve during the build (from above):** the "source of truth" wording in
 A3 · the payment threshold number in B15 · the credential-sharing mechanics in B16 ·
 the initial trust-grant list in A6.
+
+---
+
+## Amendment 2026-08-27 — platform rework: Teams + Tag
+
+Later the same day, after weighing Claude Tag (first "minus the Tag feature", then
+reconsidering on the what-can-it-do-for-this-project pass), Lemar decided:
+
+> "I think we rework this infrastructure through a Team plan and Tag."
+
+**LOCKED** — the loop's infrastructure is reworked on a **Claude Teams org + Claude
+Tag in Marspace**. This extends Q3 (the Teams account was already decided) and makes
+Tag the live in-Slack layer of the system. The target architecture, standing rules
+(draft-only access bundle, Tag-never-touches-#decisions-cards lane rule, persona
+continuity, spend caps, keep Lemar's existing account alive until every routine is
+rebuilt), the four migration phases, and the five verification gates (seat minimum ·
+GitHub connector for Haven writes · reaction reading · scheduled-task fidelity ·
+private-channel behavior) live in **`teams-tag-architecture.md`**.
+
+What does not change under the rework: Haven as the source of truth, capture-first,
+done = a filed Haven note, the send-gate (B11–B13), the safety floor, and #decisions
+as the one decision surface. Seat plan: Lemar Premium, Arianna Standard, revisit
+after a month of real usage.
