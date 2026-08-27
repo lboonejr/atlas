@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-27T14:35:00-04:00
+updated: 2026-08-27T15:18:00-04:00
 domain: project
 type: log
 status: active
@@ -909,3 +909,25 @@ from the overlap itself, just noted for the record.
 
 ### Sources (twenty-fifth run)
 - slack: #reports `C0BBZJL85RT`, ts range `1787840085`–`1787851214`
+
+## Update 2026-08-27 (twenty-sixth run)
+
+**Range scanned:** #reports `C0BBZJL85RT`, ts `1787851214`–`1787854955` (since the
+twenty-fifth run's bookmark). 2 messages: the recurring "Haven Keeper" bot-identity
+anomaly post (ts `1787851214`, same boundary/non-actionable pattern tracked since
+2026-07-31, now 12th+ occurrence — bare count only, not re-escalated), and the
+twenty-fifth run's own closing digest (ts `1787854955`, "0 closed · 1 new · 0 urgent").
+
+**Found: 0 new contradictions.** The digest's figures (filed 2 · stuck 3 unchanged ·
+reports-scan clean 25th run · pt: ops-admin-lane-and-ariana already PM-checked · money
+carried) are all consistent with this run's own PART V/S/R/M sweeps, which independently
+confirmed the same state (stuck 3 unchanged, no new due-note drift, ops-admin-lane PT
+card already PM-checked today with no new round due, no money drops). No conflicting
+figures, no unresolved self-corrections, no stale claims against any cited Haven note.
+
+**Clean scan.** No DM sent. No new #decisions card. No fix staged.
+
+### Sources (twenty-sixth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787851214`–`1787854955`
+- this run's own PART V/S/R/M sweeps (cross-checked directly, not just read from the
+  digest text)
