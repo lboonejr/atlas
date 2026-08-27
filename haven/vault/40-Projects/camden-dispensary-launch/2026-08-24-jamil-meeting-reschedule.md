@@ -1,36 +1,26 @@
----
-created: 2026-08-24T09:03:00-04:00
-updated: 2026-08-25T08:06:41-04:00
-domain: project
-type: meeting
-status: active
-tags: [jamil, meeting, camden-launch, samira-loop]
-source: slack
-due: 2026-08-25T17:00:00-04:00
-calendar_event_id: s68jjvei67doodjpfsfqu0k74s
----
-
-# Meeting with Jamil — rescheduled to 2026-08-25 5pm ET
-
-Lemar reported the meeting with Jamil was rescheduled to **tomorrow (2026-08-25) at
-5pm ET**.
-
-## Domain, resolved
-
-Jamil is not a personal contact. He was introduced by Lemar's former security guard
-company, who made the connection between someone who wants a license (Jamil's group,
-East Camden) and someone who has one (Lemar, via Cuzzie's operating history). This is
-the Camden Dispensary Launch engagement, not personal and not a Cuzzie's/Station
-operating matter. Filed under that project going forward.
-
-## Meeting prep, added 2026-08-24
-
-Lemar wants to bring a more detailed process walkthrough to the in-person meeting so
-Jamil feels more comfortable with what the engagement actually looks like, and wants to
-use the meeting to encourage signing (and the first milestone deposit, $7,500 at
-signing per the proposal) sooner rather than later. Walkthrough doc requested; see the
-Working Log and the #decisions card for its build record.
-
-## Sources
-- slack: Samira capture DM (`D0BHPKMDNEP`), message ts `1787576432.899009`, 2026-08-24 9:00am ET
-- Camden Dispensary Launch index: `haven/vault/40-Projects/camden-dispensary-launch/index.md`
+LS0tCmNyZWF0ZWQ6IDIwMjYtMDgtMjRUMDk6MDM6MDAtMDQ6MDAKdXBkYXRlZDogMjAyNi0wOC0y
+N1QwODoxNS0wNDowMApkb21haW46IHByb2plY3QKdHlwZTogbWVldGluZwpzdGF0dXM6IGFjdGl2
+ZQp0YWdzOiBbamFtaWwsIG1lZXRpbmcsIGNhbWRlbi1sYXVuY2gsIHNhbWlyYS1sb29wXQpzb3Vy
+Y2U6IHNsYWNrCmR1ZTogMjAyNi0wOC0yNVQxNzowMDowMC0wNDowMApjYWxlbmRhcl9ldmVudF9p
+ZDogczY4ampldmVpNjdkb29kanBmc2ZxdTBrNzRzCi0tLQoKIyBNZWV0aW5nIHdpdGggSmFtaWwg
+4oCUIHJlc2NoZWR1bGVkIHRvIDIwMjYtMDgtMjUgNXBtIEVUCgpMZW1hciByZXBvcnRlZCB0aGUg
+bWVldGluZyB3aXRoIEphbWlsIHdhcyByZXNjaGVkdWxlZCB0byAqKnRvbW9ycm93ICgyMDI2LTA4
+LTI1KSBhdAo1cG0gRVQqKi4KCiMjIERvbWFpbiwgcmVzb2x2ZWQKCkphbWlsIGlzIG5vdCBhIHBl
+cnNvbmFsIGNvbnRhY3QuIEhlIHdhcyBpbnRyb2R1Y2VkIGJ5IExlbWFyJ3MgZm9ybWVyIHNlY3Vy
+aXR5IGd1YXJkCmNvbXBhbnksIHdobyBtYWRlIHRoZSBjb25uZWN0aW9uIGJldHdlZW4gc29tZW9u
+ZSB3aG8gd2FudHMgYSBsaWNlbnNlIChKYW1pbCdzIGdyb3VwLApFYXN0IENhbWRlbikgYW5kIHNv
+bWVvbmUgd2hvIGhhcyBvbmUgKExlbWFyLCB2aWEgQ3V6emllJ3Mgb3BlcmF0aW5nIGhpc3Rvcnkp
+LiBUaGlzIGlzCnRoZSBDYW1kZW4gRGlzcGVuc2FyeSBMYXVuY2ggZW5nYWdlbWVudCwgbm90IHBl
+cnNvbmFsIGFuZCBub3QgYSBDdXp6aWUncy9TdGF0aW9uCm9wZXJhdGluZyBtYXR0ZXIuIEZpbGVk
+IHVuZGVyIHRoYXQgcHJvamVjdCBnb2luZyBmb3J3YXJkLgoKIyMgTWVldGluZyBwcmVwLCBhZGRl
+ZCAyMDI2LTA4LTI0CgpMZW1hciB3YW50cyB0byBicmluZyBhIG1vcmUgZGV0YWlsZWQgcHJvY2Vz
+cyB3YWxrdGhyb3VnaCB0byB0aGUgaW4tcGVyc29uIG1lZXRpbmcgc28KSmFtaWwgZmVlbHMgbW9y
+ZSBjb21mb3J0YWJsZSB3aXRoIHdoYXQgdGhlIGVuZ2FnZW1lbnQgYWN0dWFsbHkgbG9va3MgbGlr
+ZSwgYW5kIHdhbnRzIHRvCnVzZSB0aGUgbWVldGluZyB0byBlbmNvdXJhZ2Ugc2lnbmluZyAoYW5k
+IHRoZSBmaXJzdCBtaWxlc3RvbmUgZGVwb3NpdCwgJDcsNTAwIGF0CnNpZ25pbmcgcGVyIHRoZSBw
+cm9wb3NhbCkgc29vbmVyIHJhdGhlciB0aGFuIGxhdGVyLiBXYWxrdGhyb3VnaCBkb2MgcmVxdWVz
+dGVkOyBzZWUgdGhlCldvcmtpbmcgTG9nIGFuZCB0aGUgI2RlY2lzaW9ucyBjYXJkIGZvciBpdHMg
+YnVpbGQgcmVjb3JkLgoKIyMgU291cmNlcwotIHNsYWNrOiBTYW1pcmEgY2FwdHVyZSBETSAoYETA
+QkhQS01ETkVQYCksIG1lc3NhZ2UgdHMgYDE3ODc1NzY0MzIuODk5MDA5YCwgMjAyNi0wOC0yNCA5
+OjAwYW0gRVQKLSBDYW1kZW4gRGlzcGVuc2FyeSBMYXVuY2ggaW5kZXg6IGBoYXZlbi92YXVsdC80
+MC1Qcm9qZWN0cy9jYW1kZW4tZGlzcGVuc2FyeS1sYXVuY2gvaW5kZXgubWRgCg==
