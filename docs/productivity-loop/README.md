@@ -8,6 +8,8 @@ prompt that can actually be run, plus everything needed to dial it in.
 |---|---|
 | `prompt-v2.md` | The improved prompt, ready to paste into a Claude project (or run through Stormy). Rewritten to name the real system it lands on, carry its constraints, and demand a build plan expressed as diffs to what already runs. |
 | `question-bank.md` | The dial-in questions — every open decision the brainstorm leaves unanswered, grouped by theme, each with why it matters. This is the "ask as many questions as possible" half of the request, pre-asked so a design session starts at round two instead of round zero. |
+| `org-infrastructure-merge.md` | The merge with Lemar's parent-company / rooms model (2026-08-27): layer ownership, ten flaws with fixes, the room template, cost comparison, and the resulting edits queued for `teams-tag-architecture.md`. |
+| `org-infrastructure-map.html` | The visual companion to the merge — the building cross-section, the seat-per-business collision, and the routing law. |
 | This README | The integration map: what the brainstorm asks for that already exists, what is genuinely new, and where it directly conflicts with current doctrine. |
 
 ## Why the original prompt needed the rewrite

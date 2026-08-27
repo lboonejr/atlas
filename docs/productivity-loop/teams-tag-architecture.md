@@ -127,6 +127,19 @@ or kept as personal-only.
 - **V5 — Private-channel boundary** verified in #camden-launch (client-confidential)
   before ambient mode is enabled there.
 
+## 6a. Pending amendment — the parent-company / rooms merge
+
+Lemar's organizational-infrastructure idea (a parent company as a building, each business a
+room) was reconciled against this architecture on 2026-08-27. The finding: the two designs
+answer different questions and do not conflict — seats scale with **humans**, rooms scale with
+**businesses**, and Haven stays under both. The merge record, its ten flaws-and-fixes, the room
+template, and the six calls it needs from Lemar live in **`org-infrastructure-merge.md`**
+(visual: `org-infrastructure-map.html`). Its closing section lists the specific edits queued for
+this file — including the landlord / superintendent split that resolves rule 5, two new standing
+rules (scheduled jobs at the parent layer only; Slack for humans, git for machines), and a sixth
+gate **V6 (restore drill)**. Those edits are held until Lemar makes the calls, so this file stays
+the record of what is decided rather than what is proposed.
+
 ## 7. What this changes in the design package
 
 - `prompt-v2.md` section 4: the target infrastructure is now this file's three
