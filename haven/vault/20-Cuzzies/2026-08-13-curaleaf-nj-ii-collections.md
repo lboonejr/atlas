@@ -1,6 +1,6 @@
 ---
 created: 2026-08-13T11:15-04:00
-updated: 2026-08-20T10:10-04:00
+updated: 2026-08-27T14:20-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -78,12 +78,33 @@ Outcome this pass: nothing paid, disputed, sent, or contacted — all four paths
 payment or outbound-correspondence actions outside what Samira does unattended. The
 holding-reply draft to `mail@agaltd.com` still sits unsent in Gmail Drafts.
 
+## Update 2026-08-27T14:20-04:00 — fourth identical notice; dispute window now ~6 days out
+
+**A.G. Adjustments re-sent the identical demand again on 2026-08-27** (gmail thread
+`1a04324498152d1e`, received 12:14:06Z ET-adjacent / 16:14 UTC). Same File No.
+2532730_AGA, same placed principal $23,274.01, same collection interest $2,327.40, same
+placed total $25,601.41, same $0.00 paid to date. Folded into this canonical note — no
+new #decisions card, no new Haven note (per the 8/20 dedupe fix: match on file number +
+amount, not subject line).
+
+**The clock is now the material fact.** The FDCPA 30-day written-dispute window (running
+from the first notice, 2026-08-03) closes on or about **2026-09-02 — about 6 days from
+today**. Lemar's only signal on this matter remains the single ✅ from 8/13; the specific
+path — pay in full, negotiate a plan, dispute in writing before 9/2, or route to counsel
+on the DeWalt precedent — has now been open and unanswered for 24 days across four
+notices. Posted an in-thread update on the canonical #decisions card flagging the
+narrowing window; nothing paid, disputed, sent, or contacted this pass (all four paths
+are payment/outbound-correspondence actions outside what Samira does unattended). The
+holding-reply draft to `mail@agaltd.com` still sits unsent in Gmail Drafts if Lemar wants
+to buy time again while a real path gets picked.
+
 ## Related
 - [[curaleaf]]
 - [[ag-adjustments]]
 - [[2026-08-03-aga-adjustments-curaleaf-collections]]
 
 ## Sources
-- gmail: thread `19ffb0bb3846886a` · re-send thread `1a01f179798e9ead` (2026-08-20)
+- gmail: thread `19ffb0bb3846886a` · re-send thread `1a01f179798e9ead` (2026-08-20) ·
+  re-send thread `1a04324498152d1e` (2026-08-27)
 - slack: #decisions ts `1786631846.014899` (canonical card) · duplicate card ts
   `1787231683.266619` (2026-08-20)
