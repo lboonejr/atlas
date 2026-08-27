@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-26T13:05:00-04:00
+updated: 2026-08-27T09:45:00-04:00
 domain: personal
 type: reference
 status: active
@@ -1153,9 +1153,10 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     total_claim: 412.03
     gas_spent: null
     swept_to_maintenance: 0
-    funded: 0
-    shortfall: 382.03
+    funded: 20.60
+    shortfall: 361.43
     calendar_event_id: ojoe052rdmk57u9fe7r4jubjgc
+    resolution: "INCOME ALLOCATION 2026-08-27 — $50.60 DoorDash reported by Lemar in #personal-finance (ts 1787786194.689369, ~08:36 ET): 'Made $50.60 just now on doordash.' Verified against the Slack message itself. $30.00 held as the operating reserve in Spending (no gas spend reported today, so nothing swept). Remaining $20.60 poured in due-date order: moms-weekly $3.84 (due 8/28) funded; tmobile-split-2 $16.76 of $92.66 (due 8/28) partial — money ran out there. Ties on 8/28 broken by smallest amount, so moms-weekly cleared before tmobile-split-2. RECOMPUTED IN THE MERGE: Samira's PART M run on main allocated the same $20.60 to moms-weekly and own-car-running-2 (due 8/29). Same first line, wrong second one — main's ledger has no tmobile-split-2 contribution at all, so it could not see the $278 bill due 8/28 standing ahead of the car goal. Worse, that run left main's ledger TRUNCATED: commit 5bd2903 cut the file from 4,107 lines to 1,541 and 63a6561 restored only to 2,227, so main now carries an unclosed YAML fence, a horizon ending mid-entry at 2026-10-14, and zero Update sections. Her REPORTED FACT (the $50.60) was kept and verified; her DERIVED allocation was discarded and recomputed here; her truncated file was not merged."
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
@@ -1184,7 +1185,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: metrc-fee, amount: 5.72, funded: 0, status: pending}
       - {line_id: moms-car-oil-change, amount: 10.00, funded: 0, status: pending}
-      - {line_id: moms-weekly, amount: 3.84, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 3.84, funded: 3.84, status: funded}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
       - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: pending}
@@ -1198,7 +1199,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
       - {line_id: station-travel-weekly, amount: 20.00, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
-      - {line_id: tmobile-split-2, amount: 92.66, funded: 0, status: pending}
+      - {line_id: tmobile-split-2, amount: 92.66, funded: 16.76, status: partial}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
