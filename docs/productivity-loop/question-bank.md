@@ -1,5 +1,9 @@
 # Productivity Loop System — the question bank
 
+> **Status 2026-08-27:** Lemar answered all 52 questions the same day. The answers, the
+> flags they raised, and the resulting build order live in `decisions.md` — read that
+> file for current state; this one stays as the original instrument.
+
 The dial-in questions the design session works through, grouped into the eight themes the
 v2 prompt sequences (A–H). Each question carries why it matters. Forks are offered where
 a recommendation exists; the bank is a floor, not a ceiling — the session should add its
