@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-26T18:04:00-04:00
+updated: 2026-08-27T09:20:00-04:00
 domain: project
 type: log
 status: active
@@ -709,8 +709,8 @@ here.
 1. **Informational only — another "Haven Keeper" empty-inbox claim.**
    - `1787764840` (~1:20pm ET, `U0BC5UTHYG4`/`A08SF47R6P4` — same manual desktop-session
      signature as the eleventh/twelfth/fifteenth/eighteenth/nineteenth/twentieth-run
-     occurrences): "Haven — filed 0 · stuck 0 · rang +0/~0/-0. nothing to file, all
-     quiet."
+     occurrences): "Haven — filed 0 · stuck 0 · rang +0/~0/-0. Inbox is empty, no notes
+     carry a `due` — nothing to file, all quiet."
    - **Ground truth:** this run's own PART V sweep confirms the same 3 notes remain
      stuck in `00-Inbox`, unchanged. Same established disposition — non-propagating,
      never read back as state by the automated routine. No #decisions card, no DM.
@@ -751,3 +751,108 @@ conflicting figures, no unresolved self-corrections.
 ### Sources (twenty-second run)
 - slack: #reports `C0BBZJL85RT`, ts range `1787764840`–`1787782835`
 - this run's PART V vault-keeper sweep (00-Inbox: 3 notes stuck, unchanged)
+
+## Update 2026-08-27 (twenty-third run)
+
+**Scanned:** #reports ts `1787782835`–`1787800365` (2026-08-26 ~5:47pm ET through
+2026-08-27, 2 new messages — the boundary message `1787782835.021179` (a "Haven Keeper"
+empty-inbox claim) was the last message of the twenty-second run's scanned range,
+already logged there as the 9th+ non-actionable recurrence, and was used only for
+grouping context here, not re-flagged).
+
+**Found: 2.** Plus a carried-item verification requested this run, covering all three
+items the 2026-08-26 6:04pm digest (`1787783144`) flagged as "not new, carried": the
+~134-vs-47 #decisions backlog discrepancy, the vault open-items count discrepancy, and
+the calendar workout week-number discrepancy. All three originated in the 2026-08-26
+11:36am ET digest and had never been run through R3 (check ground truth) by this
+scanner until this run — every digest since had only carried them forward as "not
+re-verified this pass." Verified all three now:
+
+1. **~134-vs-47 #decisions backlog discrepancy — no new occurrence, already
+   dispositioned (twentieth run).** Every digest since 2026-08-26 11:36am (including
+   this run's own 6:04pm boundary digest) has reported the reconciled tracked-set
+   figure (47), not the ~134 live-scrape figure. Ground truth
+   (`haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md`)
+   already resolved this class of discrepancy in the twentieth run's entry: tracked-set
+   count is correct, live-scrape overcounts stale unreacted cards. No new instance to
+   flag; not re-escalated. Noting only that the "not new, carried" warning line has now
+   repeated this dispositioned item verbatim across 7+ digests (8/26 11:36am, 12:21pm,
+   1:20/1:22pm-adjacent runs, 3:08pm, 4:09pm, 6:04pm) with no new evidence each time —
+   pure carried boilerplate at this point, not an open item.
+
+2. **Calendar workout week-number discrepancy — CHECKED, resolved: the calendar was
+   correct all along; the "computed Week 8" aside was the error.**
+   - Origin: 2026-08-26 11:36am ET digest: "today's calendar workout event says Week
+     7/12 vs my computed Week 8."
+   - Carried unverified through the 12:21pm, 3:08pm, 4:09pm, and 6:04pm digests (each:
+     "none re-verified this pass").
+   - **Ground truth, checked directly against Google Calendar this run:** the workout
+     events (calendar "Cuzzie's", all created 2026-07-11 for the full 12-week plan) run
+     Week 1 = Mon 2026-07-13 through Fri 2026-07-17, incrementing one week every
+     Mon–Fri block. Week 7 = Mon 2026-08-24 through Fri 2026-08-28; Week 8 begins Mon
+     2026-08-31. Today, 2026-08-27 (Thursday), falls inside the Week 7 block exactly as
+     every event dated 8/24–8/28 states ("Week 7 of 12"). This numbering has been
+     internally consistent since creation — every event's `updated` timestamp matches
+     its `created` timestamp (2026-07-11), none has ever been edited.
+   - Cross-checked against the source note
+     `haven/vault/10-Personal/Health/2026-07-07-basketball-fitness-plan.md`: it names
+     no precise Week-1 calendar-date anchor (says only "roughly now → early October"),
+     so it does not contradict the calendar's Week-1 = 7/13 anchor. (Side note: the
+     `.claude/anchors.md` line describing this plan as "start Mon 2026-07-07" is itself
+     imprecise — 2026-07-07 is a Tuesday, not a Monday — but that's a Pulse link-out
+     annotation, not a #reports claim, so out of this scanner's scope to correct.)
+   - **Conclusion: no contradiction exists in current state.** The calendar's "Week 7
+     of 12" was and remains correct. The 11:36am digest's own "vs my computed Week 8"
+     aside was a miscalculation (most likely assumed Week 1 started 7/7 instead of the
+     calendar's actual 7/13 anchor) — an error in that one digest line, not a stale
+     calendar. **Obvious fix, no #decisions card needed** — nothing needs correcting in
+     the calendar or the vault; only the #reports record needs a plain correction note
+     (staged below, per R6 — not posted inline this scan).
+
+3. **Vault open-items count discrepancy (214 vs ~37) — CHECKED, genuinely unresolved.
+   Open question, escalated per R6.**
+   - Origin: 2026-08-26 11:36am ET digest: "vault-wide open-item scan found 214
+     qualifying notes vs prior renders' ~37."
+   - Carried unverified through the 12:21pm, 3:08pm, 4:09pm, and 6:04pm digests, each
+     "not re-verified this pass."
+   - **Ground truth check:** no Haven note anywhere in the vault documents an
+     "open items" counting methodology or reconciles this figure — unlike the
+     #decisions backlog case, there is no equivalent audit note for vault open-items
+     counting. Checked `haven/vault/40-Projects/samira-skills/` directly: only the
+     backlog-audit note, this log, and the calendar-sync-wrong-calendar-bug note exist
+     there — nothing about open-items methodology.
+   - Per R3, this is exactly the "vault itself is silent, entries disagree, no
+     tiebreaker" case → genuinely open question, not something safe to stage as a fix
+     (would require guessing which count, or which methodology, is correct — forbidden
+     by the safety floor). **Posted to #decisions this run** (see below), mirroring the
+     8/22 backlog-audit precedent (Option 1 there — "run a full audit" — is what
+     actually resolved that case).
+
+**Fix staged (item 2 above) — for a later PART C pass, per doctrine, not posted inline
+this scan:**
+"Correction: the 8/26 11:36am digest's 'calendar workout event says Week 7/12 vs my
+computed Week 8' aside was a miscalculation, not a stale calendar. Checked directly
+against the calendar 8/27: Week 7 of 12 (Mon 8/24–Fri 8/28) is correct and has been
+consistent since the events were created 7/11. No calendar or vault correction needed —
+this closes the discrepancy carried since 8/26 11:36am."
+
+**#decisions card posted this run (item 3 above):** "Vault open-items count — 214 vs
+~37, no reconciling methodology exists" — Option 1: run a full open-items audit
+(mirrors the 8/22 #decisions-backlog audit) · Option 2: treat 214 (current live scan)
+as correct going forward · Option 3: treat ~37 (prior renders) as correct and treat 214
+as a counting bug to find and fix.
+
+### Sources (twenty-third run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787782835`–`1787800365`
+- slack: #reports `C0BBZJL85RT`, ts `1787783144` (2026-08-26 6:04pm digest — origin of
+  the "not new, carried" recap; the 11:36am origin digest itself was scanned by a prior
+  run, not this one)
+- Google Calendar (`Cuzzie's` calendar, workout events, queried directly 2026-08-27):
+  Week 1 events 2026-07-13–07-17, Week 7 events 2026-08-24–08-28, Week 8 event
+  2026-08-31 — all `created`==`updated` 2026-07-11, never edited
+- haven/vault/10-Personal/Health/2026-07-07-basketball-fitness-plan.md (checked — no
+  precise Week-1 date anchor stated, does not conflict)
+- haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md
+  (re-checked — no equivalent audit exists for vault open-items counting)
+- haven/vault/40-Projects/samira-skills/ directory listing (checked — no open-items
+  methodology note exists anywhere in the vault)
