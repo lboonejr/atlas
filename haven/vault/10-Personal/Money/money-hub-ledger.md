@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-26T10:20:00-04:00
+updated: 2026-08-27T18:05:00-04:00
 domain: personal
 type: reference
 status: active
@@ -1068,41 +1068,42 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     funded: 0
     shortfall: 192.07
     calendar_event_id: null
+    resolution: "ROLLOVER 2026-08-27 (PART M, last scan of the day): all 25 contributions unfunded (funded 0 all day, no income logged) -- unfunded remainder (= full amount) carried forward to 2026-08-28 for the same line_id, marked rolled_from: 2026-08-27. This day funded=0/shortfall=192.07 stays as the historical record; contributions flipped pending -> rolled. Checked every line's own due date against today -- none had a due date on or before 2026-08-27, so none went overdue; checked 2026-08-25/2026-08-26 for any line already status rolled -- none were (both days still show pending/funded/partial only), so no rollover-brake case (3 days running) applies this pass."
     contributions:
-      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
-      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
-      - {line_id: claude, amount: 5.00, funded: 0, status: pending}
-      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
-      - {line_id: hillview-med-1, amount: 15.39, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
-      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
-      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
-      - {line_id: moms-weekly, amount: 3.84, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: pending}
-      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: pending}
-      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
-      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
-      - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
-      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
-      - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
-      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: rolled}
+      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: rolled}
+      - {line_id: claude, amount: 5.00, funded: 0, status: rolled}
+      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: rolled}
+      - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: rolled}
+      - {line_id: hillview-med-1, amount: 15.39, funded: 0, status: rolled}
+      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: rolled}
+      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: rolled}
+      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: rolled}
+      - {line_id: moms-weekly, amount: 3.84, funded: 0, status: rolled}
+      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: rolled}
+      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: rolled}
+      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: rolled}
+      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: rolled}
+      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: rolled}
+      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: rolled}
+      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: rolled}
+      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: rolled}
+      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: rolled}
+      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: rolled}
+      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: rolled}
+      - {line_id: student-loans, amount: 15.63, funded: 0, status: rolled}
+      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: rolled}
+      - {line_id: water-pump, amount: 5.96, funded: 0, status: rolled}
+      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: rolled}
   "2026-08-28":
     operating_reserve: 30.00
-    target: 188.23
-    total_claim: 218.23
+    target: 380.30
+    total_claim: 410.30
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 188.23
-    calendar_event_id: null
+    shortfall: 380.30
+    calendar_event_id: 4m109m49k8g5bn2fm8hein1m5s
     contributions:
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
@@ -1128,6 +1129,31 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending}
+      - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: claude, amount: 5.00, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: hillview-med-1, amount: 15.39, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: moms-weekly, amount: 3.84, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: student-loans, amount: 15.63, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: water-pump, amount: 5.96, funded: 0, status: pending, rolled_from: 2026-08-27}
+      - {line_id: wispr-flow, amount: 0.58, funded: 0, status: pending, rolled_from: 2026-08-27}
   "2026-08-29":
     operating_reserve: 30.00
     target: 178.39
@@ -4105,3 +4131,93 @@ did not change from the income allocation (only `funded`/`shortfall` did), and n
 aggregate event previously existed for 8/26 (`calendar_event_id: null`) to update — a
 pre-existing gap from before this pass, noted here rather than guessed at.
 
+
+## Update 2026-08-27 (PART M — ROLLOVER, last hourly scan of the day)
+
+Last scan of the day (~6pm ET / 22:02 UTC), so ROLLOVER ran per the skill. No new drops
+in #personal-finance this pass (confirmed empty by the parent session) — this Update
+covers ROLLOVER only, nothing else.
+
+**What rolled.** All 25 contributions in `daily_targets["2026-08-27"]` were still
+`funded: 0` (no income was logged today), so every one of them carried its full
+unfunded amount forward per the skill's ROLLOVER rule — the unfunded remainder
+(`amount - funded`, which is the whole amount since nothing was funded) into
+`daily_targets["2026-08-28"]` as a new contribution for the same `line_id`, tagged
+`rolled_from: 2026-08-27`. 2026-08-27's own contributions flipped `pending -> rolled`
+(funded stays `0`, the historical record of what the day actually covered — target/
+funded/shortfall on 2026-08-27 itself are UNCHANGED, still `192.07/0/192.07`). Rolled:
+
+| line_id | amount rolled |
+|---|---|
+| car-repair-payment | $13.05 |
+| cashapp-payback | $1.75 |
+| claude | $5.00 |
+| dil-christmas-gift | $1.09 |
+| fantasy-football-buyin | $13.04 |
+| hillview-med-1 | $15.39 |
+| liquidibee-3 | $8.33 |
+| liquidibee-4 | $5.68 |
+| mechanic-repair-repay | $10.87 |
+| moms-weekly | $3.84 |
+| own-car-running-2 | $18.18 |
+| own-car-running-3 | $12.12 |
+| own-car-running-4 | $9.09 |
+| own-car-running-5 | $7.27 |
+| own-car-running-6 | $6.06 |
+| own-car-running-7 | $5.20 |
+| own-car-running-8 | $4.55 |
+| own-car-running-9 | $4.04 |
+| own-car-running-10 | $3.64 |
+| own-car-running-11 | $3.31 |
+| self-account-balance-repay | $2.27 |
+| student-loans | $15.63 |
+| tow-truck-repay | $16.13 |
+| water-pump | $5.96 |
+| wispr-flow | $0.58 |
+| **Total rolled** | **$192.07** |
+
+**Due-date check (overdue branch).** Checked every one of the 25 lines' own `due` date
+(monthly bills against their next cycle date) against today, 2026-08-27 — none has a due
+date on or before today, so none went `overdue`; all 25 were still inside their legitimate
+accrual window and eligible to roll one more day. `own-car-running-1` (seq 1, due 8/22)
+had already dropped out of `daily_targets` before this pass (last appeared 8/22, absent
+from 8/23 onward) — that transition happened on a PAST day this pass does not touch or
+retroactively fix; noted for the record, not acted on.
+
+**Rollover brake check.** Checked 2026-08-25 and 2026-08-26 for any of today's 25 lines
+already carrying `status: rolled` (which would make today the 3rd day running). Neither
+day shows any `rolled` status — both are still `pending`/`funded`/`partial` only (this
+ledger's `daily_targets` has effectively not run a ROLLOVER pass since the 2026-08-15
+recompute baseline reset it — a pre-existing gap, noted, not fixed here). So no line has
+rolled 3 days running; **no #decisions rollover-brake card raised.**
+
+**2026-08-28 totals recomputed.** `target` 188.23 -> **380.30**, `total_claim` 218.23 ->
+**410.30** (`operating_reserve` unchanged $30.00), `shortfall` 188.23 -> **380.30**
+(`funded` still $0 — no income logged for 8/28 yet). The day's normal accrual
+contributions (24 lines, $188.23) are untouched; the 25 rolled contributions were added
+as new, separate list entries for the same `line_id`s, each tagged `rolled_from:
+2026-08-27`, per the skill (a day already holding contributions gets `target` recomputed
+as the sum, never overwritten). `moms-weekly` had no pre-existing 8/28 accrual entry (its
+own cycle-1 window ends exactly on 8/27, due 8/28) — its rolled contribution is the only
+`moms-weekly` line on 8/28.
+
+**Calendar.** 2026-08-27's own aggregate event was never created (`calendar_event_id:
+null`, a pre-existing gap from before this pass) and today's `target` didn't change, so
+nothing to update there. Created 2026-08-28's aggregate "Set aside today" event on the
+personal reminder calendar (all-day, no attendees, one popup reminder `minutes: 0`):
+`Set aside today: $380.30`, id `4m109m49k8g5bn2fm8hein1m5s`, written back to
+`daily_targets["2026-08-28"].calendar_event_id`. Description lists all 24 normal-accrual
+lines plus all 25 rolled lines, each rolled one flagged "(rolled from 2026-08-27)".
+
+**Also noted, not acted on this pass** (safety scope for ROLLOVER is `daily_targets`
+rollover fields + `calendar_event_id` + this bookkeeping only): this ledger's
+`daily_targets` has not actually run a ROLLOVER pass since the 2026-08-15 recompute —
+every day 8/15 through 8/26 still shows `pending`/`funded`/`partial` contributions with
+no `rolled` status anywhere, meaning shortfalls from those closed days were never
+carried forward. That is a structural gap in the daily PART M cadence, not something
+this end-of-day pass can retroactively repair (past days are never rewritten) — worth
+Lemar/Samira knowing distinctly from today's rollover.
+
+Nothing paid, nothing moved, nothing contacted, nothing invented. Dashboard re-rendered
+(new Drive snapshot) since the ledger changed — see the Money Hub Drive folder; link
+posted in #personal-finance.
