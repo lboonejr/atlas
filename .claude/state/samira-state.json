@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260827T190308Z",
-    "run_started": "2026-08-27T19:03:08Z",
+    "run_id": "run_20260827T200253Z",
+    "run_started": "2026-08-27T20:02:53Z",
     "run_completed": "2026-08-27T19:24:00Z",
-    "note": "Seventeenth scan (by run_id sequence), 2026-08-27 ~3:03-3:24pm ET, completed cleanly. Found the local git clone had drifted a week stale against a rewritten origin/main history at the start of this run (git reset --hard origin/main to resync; no uncommitted local work existed, so this was safe). All GitHub writes this run went through the MCP connector's create_or_update_file — a local `git push origin main` attempt returned HTTP 403, confirming (again) this session's local git write access is read-only while the MCP connector has write."
+    "note": "Eighteenth scan (by run_id sequence), 2026-08-27 ~4:02pm ET, starting."
   },
   "watermarks": {
     "slack_channels": {
@@ -88,7 +88,7 @@
   "integrity": {
     "last_full_pass": "2026-08-27T14:06:00-04:00",
     "last_scan_sha": "aff14e4f60d989599d2ea4e7b78630f583507e22",
-    "note": "Day's first full whole-vault pass ran 14:06 ET (616 notes). This run (17th scan) checked only the 6 notes changed since that pass's sha (per the incremental-cadence rule) — all valid, no repairs, no new defects. last_scan_sha advanced to this run's own commit point (aff14e4f) so the next scan's incremental diff starts here. 3 known-stuck Inbox notes unchanged (google-voice domain?, caine-weiner domain?, dib-template-theme multi-field)."
+    "note": "Day's first full whole-vault pass ran 14:06 ET (616 notes). 17th scan checked only notes changed since; all valid. 18th scan continues incremental cadence from last_scan_sha."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
