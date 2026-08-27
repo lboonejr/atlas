@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-27T15:18:00-04:00
+updated: 2026-08-27T18:02:00-04:00
 domain: project
 type: log
 status: active
@@ -931,3 +931,63 @@ figures, no unresolved self-corrections, no stale claims against any cited Haven
 - slack: #reports `C0BBZJL85RT`, ts range `1787851214`–`1787854955`
 - this run's own PART V/S/R/M sweeps (cross-checked directly, not just read from the
   digest text)
+
+## Update 2026-08-27 (twenty-seventh run)
+
+**Range scanned:** #reports `C0BBZJL85RT`, ts `1787854955`–`1787858591` (since the
+twenty-sixth run's bookmark). 1 message: the twenty-sixth run's own closing digest
+(ts `1787858591`, "0 closed · 1 new · 0 urgent").
+
+**Found: 0 new contradictions.** The digest's figures (filed 0 · stuck 3 unchanged ·
+rang +0/~0/-0 · pt: ops-admin-lane-and-ariana already PM-checked, no new round · money
+— no drops · investor +1 new flag Park Business Funding) are all consistent with this
+(twenty-seventh) run's own independent PART V/S/A/B/C/D/E/Q/R/M sweeps this pass: vault
+Inbox unchanged (0 filed, 3 known-stuck, no new notes since the day's integrity pass),
+calendar-sync idempotent (no due-note changes), #decisions/capture DM/project channels
+all quiet since watermark, one new Gmail item correctly bucketed as junk, investor index
+already current and matching the Gmail backlog, Stormy idle, and the Camden Launch PT
+cards unchanged (1 parked, 2 already closed, 1 already PM-checked today with no new
+signal). No conflicting figures, no unresolved self-corrections, no stale claims against
+any cited Haven note.
+
+**Clean scan.** No DM sent. No new #decisions card. No fix staged.
+
+### Sources (twenty-seventh run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787854955`–`1787858591`
+- this run's own PART V/S/A/B/C/D/E/Q/R/M sweeps (cross-checked directly)
+
+## Update 2026-08-27 (twenty-eighth run)
+
+**Range scanned:** #reports `C0BBZJL85RT`, ts `1787858591`–`1787868336` (since the
+twenty-seventh run's bookmark). 2 messages: the twenty-seventh run's own closing digest
+(ts `1787861528`, "0 closed · 0 new · 0 urgent") and a separate skipped-run notice from
+another session (ts `1787864648`, "session scoped to git branch `claude/wizardly-cori-4xl5pa`
+(PR-only) — run skipped rather than risk a write the next scan can't see").
+
+**Found: 0 new contradictions.** The digest's figures (filed 0 · stuck 3 unchanged ·
+rang +0/~0/-0 · reports-scan clean 27th run · pt — Camden Launch unchanged · money — no
+drops) are consistent with this (twenty-eighth) run's own independent PART V/S/A/B/C/D/E/Q/R
+sweeps: vault Inbox unchanged (3 known-stuck notes, no vault file changed since the day's
+integrity pass at 14:06 ET), calendar-sync had nothing to project (no vault change),
+#decisions sampled threads (8 of ~49, including all 4 live Camden Launch PT cards) all
+matched their stored watermarks exactly, capture DM and all swept project channels empty,
+one new Gmail item correctly bucketed as junk (Business HELOC cold-outreach), investor
+loop quiet (no #investor-pipeline activity, no un-drafted Samira/investor Gmail threads),
+Stormy idle. The skipped-run notice is informational, not a figure/status conflict — it
+correctly self-diagnosed a git-write-policy conflict and stood down rather than risking a
+stranded write; this (twenty-eighth) run's own GitHub MCP connector writes directly to
+`main` without issue (state-file lock commit `4b5109c` confirmed on `main`), so the
+constraint that notice describes does not apply here. Also noted: a separate incident
+today (`haven/vault/70-Automation/money-hub/2026-08-27-money-hub-ledger-corruption-incident.md`)
+recorded a background agent corrupting `money-hub-ledger.md` via repeated hand-patch
+commits before being reverted to a known-good commit — not a #reports contradiction
+itself (already fully documented in its own incident note, not restated inconsistently
+anywhere in #reports), so not re-flagged here, but factored into how this run's own
+PART M rollover step was briefed (single clean edit only, stop rather than hand-patch).
+
+**Clean scan.** No DM sent. No new #decisions card. No fix staged.
+
+### Sources (twenty-eighth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787858591`–`1787868336`
+- this run's own PART V/S/A/B/C/D/E/Q/R sweeps (cross-checked directly)
+- haven/vault/70-Automation/money-hub/2026-08-27-money-hub-ledger-corruption-incident.md
