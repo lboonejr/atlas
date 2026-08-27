@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-27T10:25:00-04:00
+updated: 2026-08-27T14:35:00-04:00
 domain: project
 type: log
 status: active
@@ -882,3 +882,30 @@ card. No fix staged.
 
 ### Sources (twenty-fourth run)
 - slack: #reports `C0BBZJL85RT`, ts range `1787800365`–`1787840085`
+
+## Update 2026-08-27 (twenty-fifth run)
+
+**Range scanned:** #reports `C0BBZJL85RT`, ts `1787840085`–`1787851214` (since the
+twenty-fourth run's bookmark). 3 messages: the recurring "Haven Keeper" bot-identity
+anomaly post (now 11th+ occurrence, still consistent with real PART V outcomes — bare
+count only, not re-escalated), the prior (14:03 UTC) run's own full digest, and the
+calendar-workout correction line it posted (staged by the twenty-third run, matches
+this log's own record exactly).
+
+**Found: 0 new contradictions.** The digest restates already-known, already-tracked
+figures (Highgate broker engagement, Capehart retainer, Huljev checklist, the $50.60
+DoorDash earning) — nothing in it conflicts with an earlier #reports entry or its
+cited Haven note.
+
+**Note on today's run overlap:** at least two Samira runs have executed today
+(one starting ~14:03 UTC, this one starting ~18:02 UTC) after earlier locks aged out
+without writing `run_completed` — see `haven/vault/70-Automation/money-hub/2026-08-27-money-hub-ledger-corruption-incident.md`
+for the root incident. This scanner cross-checked the 14:03 UTC run's #reports digest
+against live #decisions/Gmail/vault state directly (rather than trusting the state
+file's stale watermarks) and found its figures accurate as of posting — no contradiction
+from the overlap itself, just noted for the record.
+
+**Clean scan.** No DM sent. No new #decisions card. No fix staged.
+
+### Sources (twenty-fifth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787840085`–`1787851214`
