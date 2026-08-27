@@ -200,3 +200,18 @@ What does not change under the rework: Haven as the source of truth, capture-fir
 done = a filed Haven note, the send-gate (B11–B13), the safety floor, and #decisions
 as the one decision surface. Seat plan: Lemar Premium, Arianna Standard, revisit
 after a month of real usage.
+
+**Amended later the same day (simplify + cost structure):** Lemar then pushed the
+rework further — "remove Samira and just make sure the Haven vault is up to date,"
+and structure for cost: "Tag for collaborative work and Team workspace for individual
+work." **LOCKED** — the end state is the minimal cost-tiered system: **Haven (truth)
++ Teams seats (individual work, flat-rate) + Tag (collaboration only, metered and
+capped) + one daily housekeeping job (vault-keeper, calendar-sync, digest).**
+Samira's hourly machinery, the reaction-emoji engine, and the Vercel bot apps retire
+at end state; her job is absorbed by the seats, Tag, and the housekeeping job. The
+routing law: *build in your seat, coordinate in the channel.* Full architecture,
+standing rules, cost controls, phases, and gates: `teams-tag-architecture.md`
+(rewritten to this version). The keystone gate is V2 — Tag filing Haven notes via
+the GitHub connector — because "the vault stays up to date" is the one hard
+requirement of the simplified system; nothing live shuts off until its replacement
+is proven.
