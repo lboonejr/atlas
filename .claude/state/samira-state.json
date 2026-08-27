@@ -3,15 +3,15 @@
   "lock": {
     "run_id": "run_20260827T180237Z",
     "run_started": "2026-08-27T18:02:37Z",
-    "run_completed": "2026-08-26T21:11:41Z",
-    "note": "Fourteenth scan, 2026-08-27 ~2:02pm ET. Prior lock (run_20260827T170308Z, ~1:03pm ET) was ~59min stale at start of this run (never wrote run_completed) — aged out per PART 0 rule (>45min threshold); proceeding."
+    "run_completed": "2026-08-27T18:23:48Z",
+    "note": "Fifteenth scan (by run_id sequence), 2026-08-27 ~2:02-2:23pm ET, completed cleanly. Two earlier locks today (run_20260827T120501Z ~8:05am ET, run_20260827T140336Z ~10:03am ET) posted real work and #reports digests but never wrote run_completed/final watermarks before dying, and a third (run_20260827T170308Z ~1:03pm ET) aged out with no visible work. This run cross-checked live Slack/Gmail/vault state directly rather than trusting the stale watermarks below (which predate all of today's runs) to avoid duplicating or clobbering that work — see haven/vault/70-Automation/money-hub/2026-08-27-money-hub-ledger-corruption-incident.md."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787756959.630349",
-      "C0BBZJL85RT": "1787778596.786729",
-      "D0BHPKMDNEP": "1787764821.842789",
-      "C0BGLEMH99T": "1787754260.131419",
+      "C0BBXA96FFV": "1787854486.805629",
+      "C0BBZJL85RT": "1787854955.774649",
+      "D0BHPKMDNEP": "1787854891.994639",
+      "C0BGLEMH99T": "1787840465.161289",
       "C0BEQUW5NPP": "1787584209.000000",
       "C0BBLUA7JLX": "1787663689.912339",
       "C0BJ37SU1TL": "1787584209.000000",
@@ -29,10 +29,10 @@
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
-      "1786832078.131649": "1786832078.131649",
+      "1786832078.131649": "1787754270.525189",
       "1786713941.609669": "1786716585.591279",
       "1786986503.368599": "1786986503.368599",
-      "1786631846.014899": "1787234906.491849",
+      "1786631846.014899": "1787854350.481789",
       "1786631841.945579": "1786990332.792009",
       "1786990354.291129": "1786993750.159969",
       "1787001107.337499": "1787055300.092309",
@@ -41,7 +41,7 @@
       "1787112734.344369": "1787574415.639709",
       "1787152085.518979": "1787159332.480679",
       "1787159607.185319": "1787162996.829679",
-      "1787155581.357669": "1787667699.065359",
+      "1787155581.357669": "1787840288.910479",
       "1787227722.583919": "1787260488.874049",
       "1787231683.266619": "1787234895.613759",
       "1787235032.481949": "1787333215.335379",
@@ -74,25 +74,28 @@
       "1787613164.672029": "1787614371.183619",
       "1787670575.635129": "1787674284.261919",
       "1787682832.038489": "1787682841.068369",
-      "1787749640.485929": "1787749839.984179",
-      "1787753574.970519": "1787753574.970519",
-      "1787756944.929189": "1787756952.106279",
-      "1787756959.630349": "1787756959.630349"
+      "1787749640.485929": "1787749640.485929",
+      "1787753574.970519": "1787854427.134229",
+      "1787756944.929189": "1787756944.929189",
+      "1787756959.630349": "1787756959.630349",
+      "1787833175.960449": "1787839939.371519",
+      "1785161637.814709": "1785161637.814709",
+      "1787854465.146219": "1787854486.805629"
     },
-    "capture_dm": "1787764821.842789",
-    "gmail_after_epoch": 1787778579
+    "capture_dm": "1787854891.994639",
+    "gmail_after_epoch": 1787854538
   },
   "integrity": {
-    "last_full_pass": "2026-08-26T12:10:00Z",
-    "last_scan_sha": "6d87024ab4f38f61a7c0c501bb058a0efa2ef861",
-    "note": "5:03pm ET incremental pass: only `_daily/2026-08-26.md` had changed since the prior scan sha (4e41750) — the running journal, append-only, no defects. Inbox re-checked: 3 notes, all pre-existing known-stuck (domain? on google-voice-cancellation and caine-weiner-collections; multi-field on dib-template-theme-closeout). Camden ops-admin-lane-and-ariana.md missing `created` still carried, unrepaired. This run also touched the Marshall & Sterling note (Update append) and this state file + journal — all clean, no defects."
+    "last_full_pass": "2026-08-27T14:06:00-04:00",
+    "last_scan_sha": "ff7d060a037d699f31f9e828d72d1e5cef790c0d",
+    "note": "Day's first full whole-vault pass (2026-08-27): 616 notes scanned. 1 known carried defect (_daily/2026-08-01.md, lossy base64, decided 8/1 — untouched). 2 new domain/location-mismatch findings this scan, not previously flagged: 40-Projects/samira-skills/2026-08-23-calendar-sync-wrong-calendar-bug.md and 2026-08-22-decisions-backlog-audit.md both carry domain: automation while filed under 40-Projects/samira-skills/ (2 of that folder's 4 notes) — flagged, not repaired, a location-vs-frontmatter judgment call for Lemar. Camden ops-admin-lane-and-ariana.md missing `created` still carried, unrepaired (known, unchanged). Inbox 2 file-ready notes filed to 70-Automation/ this run (money-hub, samira); 3 known-stuck notes unchanged (google-voice domain?, caine-weiner domain?, dib-template-theme multi-field)."
   },
   "canvas_access": {
-    "last_checked": "2026-08-26T12:13:00Z",
+    "last_checked": "2026-08-27T10:40:00-04:00",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-26T13:20:21-04:00",
-    "money_hub_last_rendered": "2026-08-26T10:21:00-04:00"
+    "pulse_last_rendered": "2026-08-27T14:21:25-04:00",
+    "money_hub_last_rendered": "2026-08-27T10:21:00-04:00"
   }
 }
