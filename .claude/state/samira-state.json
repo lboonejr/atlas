@@ -3,19 +3,19 @@
   "lock": {
     "run_id": "run_20260827T190308Z",
     "run_started": "2026-08-27T19:03:08Z",
-    "run_completed": "2026-08-27T18:23:48Z",
-    "note": "Sixteenth scan (by run_id sequence), started 2026-08-27 ~3:03pm ET. Prior lock (run_20260827T180237Z) completed cleanly at 18:23:48Z."
+    "run_completed": "2026-08-27T19:24:00Z",
+    "note": "Seventeenth scan (by run_id sequence), 2026-08-27 ~3:03-3:24pm ET, completed cleanly. Found the local git clone had drifted a week stale against a rewritten origin/main history at the start of this run (git reset --hard origin/main to resync; no uncommitted local work existed, so this was safe). All GitHub writes this run went through the MCP connector's create_or_update_file — a local `git push origin main` attempt returned HTTP 403, confirming (again) this session's local git write access is read-only while the MCP connector has write."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1787854486.805629",
-      "C0BBZJL85RT": "1787854955.774649",
-      "D0BHPKMDNEP": "1787854891.994639",
+      "C0BBZJL85RT": "1787858591.524839",
+      "D0BHPKMDNEP": "1787858555.710399",
       "C0BGLEMH99T": "1787840465.161289",
       "C0BEQUW5NPP": "1787584209.000000",
       "C0BBLUA7JLX": "1787663689.912339",
       "C0BJ37SU1TL": "1787584209.000000",
-      "C0BCCUKEUQ2": "1787760609.747259",
+      "C0BCCUKEUQ2": "1787858055.304989",
       "C0BCD7U5X2B": "1787584209.000000",
       "C0BCH2C3GRM": "1787584209.000000",
       "C0BDN2KQFD4": "1787584209.000000",
@@ -74,28 +74,28 @@
       "1787613164.672029": "1787614371.183619",
       "1787670575.635129": "1787674284.261919",
       "1787682832.038489": "1787682841.068369",
-      "1787749640.485929": "1787749640.485929",
+      "1787749640.485929": "1787749839.984179",
       "1787753574.970519": "1787854427.134229",
-      "1787756944.929189": "1787756944.929189",
+      "1787756944.929189": "1787756952.106279",
       "1787756959.630349": "1787756959.630349",
       "1787833175.960449": "1787839939.371519",
-      "1785161637.814709": "1785161637.814709",
+      "1785161637.814709": "1785164750.977449",
       "1787854465.146219": "1787854486.805629"
     },
-    "capture_dm": "1787854891.994639",
-    "gmail_after_epoch": 1787854538
+    "capture_dm": "1787858555.710399",
+    "gmail_after_epoch": 1787857251
   },
   "integrity": {
     "last_full_pass": "2026-08-27T14:06:00-04:00",
-    "last_scan_sha": "ff7d060a037d699f31f9e828d72d1e5cef790c0d",
-    "note": "Day's first full whole-vault pass (2026-08-27): 616 notes scanned. 1 known carried defect (_daily/2026-08-01.md, lossy base64, decided 8/1 — untouched). 2 new domain/location-mismatch findings this scan, not previously flagged: 40-Projects/samira-skills/2026-08-23-calendar-sync-wrong-calendar-bug.md and 2026-08-22-decisions-backlog-audit.md both carry domain: automation while filed under 40-Projects/samira-skills/ (2 of that folder's 4 notes) — flagged, not repaired, a location-vs-frontmatter judgment call for Lemar. Camden ops-admin-lane-and-ariana.md missing `created` still carried, unrepaired (known, unchanged). Inbox 2 file-ready notes filed to 70-Automation/ this run (money-hub, samira); 3 known-stuck notes unchanged (google-voice domain?, caine-weiner domain?, dib-template-theme multi-field)."
+    "last_scan_sha": "aff14e4f60d989599d2ea4e7b78630f583507e22",
+    "note": "Day's first full whole-vault pass ran 14:06 ET (616 notes). This run (17th scan) checked only the 6 notes changed since that pass's sha (per the incremental-cadence rule) — all valid, no repairs, no new defects. last_scan_sha advanced to this run's own commit point (aff14e4f) so the next scan's incremental diff starts here. 3 known-stuck Inbox notes unchanged (google-voice domain?, caine-weiner domain?, dib-template-theme multi-field)."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-27T14:21:25-04:00",
+    "pulse_last_rendered": "2026-08-27T15:22:00-04:00",
     "money_hub_last_rendered": "2026-08-27T10:21:00-04:00"
   }
 }
