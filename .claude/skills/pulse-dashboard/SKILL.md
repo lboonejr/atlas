@@ -101,11 +101,19 @@ fail, and lists those failures.
    link-out to the workout artifact (its checkboxes live in that page's own
    localStorage — never claim to know completion state). After week 12: "plan complete
    🏀".
-7. **Atlas — open items.** Open Haven notes (frontmatter `status: active |
-   awaiting-decision | parked`, excluding `type: entity` and `_daily/`/`_system/`),
-   due-dated and oldest first, 🐢 on anything active/waiting >14 days, overdue in red.
-   Cap at ~12 with a count of the rest. Each item links to its source thread or
-   calendar event when the note records one (law #2).
+7. **Atlas — open items.** **Methodology locked 2026-08-27** (see
+   `haven/vault/70-Automation/vault-open-items-audit/2026-08-27-vault-open-items-audit.md`,
+   which reconciled a 214-vs-~37 discrepancy): an "open item" is a Haven note that
+   carries a **`due`** field AND has `status: active | awaiting-decision | parked`,
+   excluding `type: entity` and `_daily/`/`_system/`/`_templates/`. The `due` field is
+   REQUIRED for inclusion — it is what makes a note a time-bound thing Lemar needs to
+   act on, not just any not-yet-archived note in the vault (most of the vault sits at
+   `status: active` by default and is never meant to appear here; a literal scan
+   ignoring the `due` requirement inflates the count ~6x, which is exactly the bug this
+   audit found and fixed). Sort due-dated oldest first, 🐢 on anything active/waiting
+   >14 days past its own `due`, overdue in red. Cap at ~12 with a count of the rest.
+   Each item links to its source thread or calendar event when the note records one
+   (law #2).
 8. **Project pulses.** One line per project channel from this run's PART G pass
    (#investor-pipeline, #car-search, #on-button, #personal-finance, #cuzzys-brand,
    #comedy-club, #delivery-in-a-box, #pitch-deck-pressure-test, #trading-cards): a
