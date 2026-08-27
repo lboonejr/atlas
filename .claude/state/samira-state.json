@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260827T180237Z",
-    "run_started": "2026-08-27T18:02:37Z",
+    "run_id": "run_20260827T190308Z",
+    "run_started": "2026-08-27T19:03:08Z",
     "run_completed": "2026-08-27T18:23:48Z",
-    "note": "Fifteenth scan (by run_id sequence), 2026-08-27 ~2:02-2:23pm ET, completed cleanly. Two earlier locks today (run_20260827T120501Z ~8:05am ET, run_20260827T140336Z ~10:03am ET) posted real work and #reports digests but never wrote run_completed/final watermarks before dying, and a third (run_20260827T170308Z ~1:03pm ET) aged out with no visible work. This run cross-checked live Slack/Gmail/vault state directly rather than trusting the stale watermarks below (which predate all of today's runs) to avoid duplicating or clobbering that work — see haven/vault/70-Automation/money-hub/2026-08-27-money-hub-ledger-corruption-incident.md."
+    "note": "Sixteenth scan (by run_id sequence), started 2026-08-27 ~3:03pm ET. Prior lock (run_20260827T180237Z) completed cleanly at 18:23:48Z."
   },
   "watermarks": {
     "slack_channels": {
