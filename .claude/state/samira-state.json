@@ -3,13 +3,13 @@
   "lock": {
     "run_id": "run_20260828T210334Z",
     "run_started": "2026-08-28T21:03:34Z",
-    "run_completed": "2026-08-28T18:15:00Z",
-    "note": "Twenty-fifth scan (run_20260828T180432Z) complete. Only new signal: Lemar reported paying T-Mobile $149 today; amount matched neither open T-Mobile line (tmobile-split-1 $265 due 8/3, tmobile-split-2 $278 due today) so nothing was flipped to paid — flagged in the ledger's open_questions and raised a 🔴 #decisions card with 3 options. PART V: filed 1 (prior scan's camden-shop voicemail capture, complete frontmatter, was just unswept) → 20-Cuzzies; parked 3 unchanged; incremental integrity 0 defects. PART S: no due-note deltas. PART A/B/C/E/Q: zero activity across #decisions, capture DM, every project channel, #stormy, #investor-pipeline, #camden-launch. PART D: 3 new Gmail threads, all junk (2 stale car-hunt price-drop alerts, 1 vendor marketing), labeled Samira/seen. PART R: both Camden Launch PT cards carried, no new signal, no round forced (client-facing engagement, nothing new to react to). PART T: clean. Canvas skipped (write-blocked, not today's first run). PART P: deferred this pass (not rendered) — time budget went to the money ambiguity + vault filing; noted honestly rather than claiming a render that didn't happen. Digest posted to #reports and appended to _daily/2026-08-28.md."
+    "run_completed": "2026-08-28T21:09:30Z",
+    "note": "Twenty-sixth scan (run_20260828T210334Z) complete — fully quiet pass. Zero top-level activity and zero reply/reaction drift on every tracked #decisions thread, capture DM, every project channel, #personal-finance, #on-button, #stormy, #investor-pipeline, #camden-launch, #reports since the 2:11pm ET scan. PART V: incremental integrity found only _daily/2026-08-28.md changed (its own prior append, valid) — repaired 0, parked 3 unchanged, card not refreshed (composition unchanged). PART S: no due-note deltas, +0/~0/-0. PART D: 6 new Gmail threads — 4 QuickBooks Sun Extractions AR reminders (already tracked by the open 'Sun Extractions AR' #decisions card), 1 Fiverr marketing, 1 scheduled Headset report — all labeled Samira/seen, no drafts/tasks. PART E investor: quiet. PART Q Stormy: idle. PART R: both Camden Launch PT cards carried, no round forced. PART M: no #personal-finance drops. PART T clean. Canvas skipped (still write-blocked, not today's first run). Pulse: quiet-pass skip. Still open and unresolved, unchanged: the T-Mobile $149 match (🔴, opened prior scan) and the long-carried Regus/IWG settlement-window item. Separately noted (not actioned): a full-history #decisions read surfaced ~47 open parent cards dated 8/17-or-earlier outside the tracked decisions_threads set — a real backlog worth a dedicated cleanup pass, flagged in the _daily journal rather than guessed at. Digest posted to #reports and appended to _daily/2026-08-28.md."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787940478.474579",
-      "C0BBZJL85RT": "1787940681.265719",
+      "C0BBXA96FFV": "1787951278.295819",
+      "C0BBZJL85RT": "1787951278.295819",
       "D0BHPKMDNEP": "1787937989.457309",
       "C0BGLEMH99T": "1787938660.116409",
       "C0BEQUW5NPP": "1787869995.000000",
@@ -77,12 +77,12 @@
       "1787940471.776979": "1787940478.474579"
     },
     "capture_dm": "1787937989.457309",
-    "gmail_after_epoch": 1787940323
+    "gmail_after_epoch": 1787951348
   },
   "integrity": {
     "last_full_pass": "2026-08-28T09:20:00-04:00",
-    "last_scan_sha": "15756e3f1a91ba677dc4092c5f2742063dac6307",
-    "note": "Twenty-fifth scan: 2 vault files changed since prior last_scan_sha (97b58ade) — money-hub-ledger.md (T-Mobile open-question flag, frontmatter still valid) and the filed camden-shop-closed-listing-voicemail.md (moved 00-Inbox → 20-Cuzzies, frontmatter complete and valid, updated touched). 0 repairs needed. Inbox parked 3 unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections). Known/accepted 1: _daily/2026-08-01.md (base64 blob, lossless gate fails, Lemar decided 2026-08-09 to leave it flagged)."
+    "last_scan_sha": "4c98c6400e7f455090e9ffc50d34e1c0b75cae7b",
+    "note": "Twenty-sixth scan: 1 vault file changed since prior last_scan_sha (15756e3f) — _daily/2026-08-28.md (this run's own digest append, frontmatter still valid). 0 repairs needed. Inbox parked 3 unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections). Known/accepted 1: _daily/2026-08-01.md (base64 blob, lossless gate fails, Lemar decided 2026-08-09 to leave it flagged)."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
