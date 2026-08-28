@@ -1,16 +1,16 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260828T140322Z",
-    "run_started": "2026-08-28T14:03:22Z",
-    "run_completed": "2026-08-27T22:34:42Z",
-    "note": "Twenty-first scan. Prior lock (run_20260828T130411Z, started 13:04:11Z) aged out at run start (59 min old, >45 min threshold, no completion commit found on main) — treated as a died-mid-flight run per PART 0 policy, not resumed."
+    "run_id": "run_20260828T160254Z",
+    "run_started": "2026-08-28T16:02:54Z",
+    "run_completed": "2026-08-28T16:07:19Z",
+    "note": "Twenty-third scan (run_20260828T160254Z) completed clean, fully quiet pass. PART V: incremental integrity pass, 0 vault files changed since last_scan_sha (6ceb3aaa), 0 repairs; Inbox unchanged (same 3 stuck notes) so the #decisions card was not re-refreshed. PART S: no due-note deltas (no vault changes to project). PART A: read #decisions since watermark, 0 new messages/reactions. PART B: capture DM had 1 new message but it was Samira's own prior #reports-scan cross-post, not a Lemar drop — no capture to develop. PART C: every swept channel (admin, on-button, personal-finance, stormy, investor-pipeline, camden-launch, and the remaining recorded-for-Pulse project channels) empty since watermark. PART D: 3 new Gmail threads, all vendor marketing on already-known junk domains (Nova Farms, Happy Farmer/Apex Trading, Ares Canna) — labeled Samira/seen, 0 drafts/tasks. PART E: investor loop quiet. PART Q: Stormy idle (#stormy empty). PART R: ops-admin-lane-and-ariana PT card already got today's one PM status check on the prior scan — skipped a second check same day; p00-client-intake-system still parked, no signal; 2 carried. PART M: #personal-finance empty, no money drops. PART T: nothing new posted to #reports since its own last correction line — no re-scan, reports-scan: clean. Canvas skipped (write-blocked, already checked today). Pulse: quiet-pass skip (nothing this run qualifies as a change). Digest posted to #reports and appended to _daily/2026-08-28.md. Still open, unchanged: Regus/IWG $1,506.05 settlement window expires today (8/28), no reply sent yet — flagged again in the digest, not new."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787869995.000000",
-      "C0BBZJL85RT": "1787870020.093959",
-      "D0BHPKMDNEP": "1787869995.000000",
+      "C0BBXA96FFV": "1787930149.017679",
+      "C0BBZJL85RT": "1787933189.506599",
+      "D0BHPKMDNEP": "1787930205.903669",
       "C0BGLEMH99T": "1787869995.000000",
       "C0BEQUW5NPP": "1787869995.000000",
       "C0BBLUA7JLX": "1787923057.552979",
@@ -28,7 +28,6 @@
       "C0BRZT2V89W": "1787869995.000000"
     },
     "decisions_threads": {
-      "1786730750.838049": "1786810205.720709",
       "1786832078.131649": "1787754270.525189",
       "1786713941.609669": "1786716585.591279",
       "1786986503.368599": "1786986503.368599",
@@ -37,11 +36,11 @@
       "1786990354.291129": "1786993750.159969",
       "1787001107.337499": "1787055300.092309",
       "1786990384.507289": "1787055521.111979",
-      "1787069259.543559": "1787145016.517439",
+      "1787069259.543559": "1787924266.754539",
       "1787112734.344369": "1787574415.639709",
       "1787152085.518979": "1787159332.480679",
       "1787159607.185319": "1787162996.829679",
-      "1787155581.357669": "1787840288.910479",
+      "1787155581.357669": "1787930149.017679",
       "1787227722.583919": "1787260488.874049",
       "1787231683.266619": "1787234895.613759",
       "1787235032.481949": "1787333215.335379",
@@ -56,35 +55,32 @@
       "1787401047.824359": "1787404082.261989",
       "1787408466.876989": "1787414880.127769",
       "1787495798.327079": "1787504854.928079",
-      "1787577568.967589": "1787577568.967589",
       "1787584125.966579": "1787584125.966579",
-      "1787157130.471099": "1787328710.030059",
       "1787587974.554669": "1787587974.554669",
       "1787605678.559389": "1787688760.591569",
-      "1787609105.376929": "1787609105.376929",
       "1787609340.269079": "1787609340.269079",
       "1787660120.230219": "1787667257.611909",
       "1787660141.315579": "1787674381.264359",
       "1787660143.192949": "1787660149.989389",
       "1787667532.037259": "1787670421.826669",
-      "1787613164.672029": "1787614371.183619",
       "1787670575.635129": "1787674284.261919",
       "1787682832.038489": "1787682841.068369",
       "1787749640.485929": "1787749839.984179",
-      "1787753574.970519": "1787854427.134229",
+      "1787753574.970519": "1787926156.549339",
       "1787756944.929189": "1787756952.106279",
       "1787756959.630349": "1787756959.630349",
       "1787833175.960449": "1787839939.371519",
       "1785161637.814709": "1785164750.977449",
-      "1787854465.146219": "1787854486.805629"
+      "1787854465.146219": "1787854486.805629",
+      "1787930008.624029": "1787930008.624029"
     },
-    "capture_dm": "1787869995.000000",
-    "gmail_after_epoch": 1787868336
+    "capture_dm": "1787930205.903669",
+    "gmail_after_epoch": 1787933174
   },
   "integrity": {
     "last_full_pass": "2026-08-28T09:20:00-04:00",
-    "last_scan_sha": "c936249b7193db79119e3ce6c6c4757681bbbda5",
-    "note": "Twenty-first scan (14:03 ET), incremental pass since 09:20 ET full pass: 2 vault files changed (glass-meadows statement update, dewalt default-judgment update), both complete/valid, 0 repairs. Filed 1 (2026-08-28-drive-organizing-run.md -> 70-Automation/file-organizing/), parked 3 (unchanged Inbox domain/value gaps: dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections), +0 entities. Composition of the stuck-notes set unchanged from prior scan -- #decisions Inbox card not refreshed. Known/accepted 1: _daily/2026-08-01.md (base64 blob, decode fails the lossless gate; Lemar decided 2026-08-09 to leave it flagged)."
+    "last_scan_sha": "b59a613504249f6b780c0222008a72e76b6f113e",
+    "note": "Twenty-third scan: incremental pass since prior last_scan_sha (6ceb3aaa) — 0 vault files changed (only .claude/state/samira-state.json and the reports-contradiction-scanner's own log/digest commits landed in between), 0 repairs. Inbox parked 3 unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections) — same gaps as last_full_pass (09:20 ET, same day). Known/accepted 1: _daily/2026-08-01.md (base64 blob, lossless gate fails, Lemar decided 2026-08-09 to leave it flagged)."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
