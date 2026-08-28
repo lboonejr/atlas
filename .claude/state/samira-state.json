@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260827T220226Z",
     "run_started": "2026-08-27T22:02:26Z",
-    "run_completed": "2026-08-27T20:12:40Z",
-    "note": "Nineteenth scan, run starting ~6:02pm ET."
+    "run_completed": "2026-08-27T22:34:42Z",
+    "note": "Nineteenth scan, ~6:02-6:34pm ET, completed cleanly. Fully quiet everywhere except money: no earnings logged today, so end-of-day ROLLOVER carried $192.07 across 25 unfunded ledger lines to 8/28 (single clean commit, briefed against this morning's ledger-corruption incident). Pulse re-rendered (money changed). reports-contradiction-scanner 28th run clean."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787854486.805629",
-      "C0BBZJL85RT": "1787861528.815259",
-      "D0BHPKMDNEP": "1787858555.710399",
-      "C0BGLEMH99T": "1787840465.161289",
-      "C0BEQUW5NPP": "1787584209.000000",
-      "C0BBLUA7JLX": "1787663689.912339",
-      "C0BJ37SU1TL": "1787584209.000000",
-      "C0BCCUKEUQ2": "1787858055.304989",
-      "C0BCD7U5X2B": "1787584209.000000",
-      "C0BCH2C3GRM": "1787584209.000000",
-      "C0BDN2KQFD4": "1787584209.000000",
-      "C0BD8LTM1EK": "1787584209.000000",
-      "C0BGYM1UB4Y": "1787584209.000000",
-      "C0BGCAK0ML3": "1787584209.000000",
-      "C0BHXTPST52": "1787584209.000000",
-      "C0BC2A94142": "1787584209.000000",
-      "C0BBZ5J8805": "1787584209.000000",
-      "C0BRZT2V89W": "1787584209.000000"
+      "C0BBXA96FFV": "1787869995.000000",
+      "C0BBZJL85RT": "1787870020.093959",
+      "D0BHPKMDNEP": "1787869995.000000",
+      "C0BGLEMH99T": "1787869995.000000",
+      "C0BEQUW5NPP": "1787869995.000000",
+      "C0BBLUA7JLX": "1787869995.000000",
+      "C0BJ37SU1TL": "1787869995.000000",
+      "C0BCCUKEUQ2": "1787869995.000000",
+      "C0BCD7U5X2B": "1787869995.000000",
+      "C0BCH2C3GRM": "1787869995.000000",
+      "C0BDN2KQFD4": "1787869995.000000",
+      "C0BD8LTM1EK": "1787869995.000000",
+      "C0BGYM1UB4Y": "1787869995.000000",
+      "C0BGCAK0ML3": "1787869995.000000",
+      "C0BHXTPST52": "1787869995.000000",
+      "C0BC2A94142": "1787869995.000000",
+      "C0BBZ5J8805": "1787869995.000000",
+      "C0BRZT2V89W": "1787869995.000000"
     },
     "decisions_threads": {
       "1786730750.838049": "1786810205.720709",
@@ -82,20 +82,20 @@
       "1785161637.814709": "1785164750.977449",
       "1787854465.146219": "1787854486.805629"
     },
-    "capture_dm": "1787858555.710399",
-    "gmail_after_epoch": 1787861176
+    "capture_dm": "1787869995.000000",
+    "gmail_after_epoch": 1787868336
   },
   "integrity": {
     "last_full_pass": "2026-08-27T14:06:00-04:00",
-    "last_scan_sha": "3b200d3fa081ce52f965dee793fee4d5aa8a5641",
-    "note": "Day's first full whole-vault pass ran 14:06 ET (616 notes). Later runs check only notes changed since prior scan point."
+    "last_scan_sha": "0eba6763cba7fa1be75b61e2a4a7ab309377d3a3",
+    "note": "Day's first full whole-vault pass ran 14:06 ET (616 notes). 19th scan checked only notes changed since prior scan point; no vault changes found. last_scan_sha advanced to this run's own final commit point."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-27T15:22:00-04:00",
-    "money_hub_last_rendered": "2026-08-27T10:21:00-04:00"
+    "pulse_last_rendered": "2026-08-27T18:15:00-04:00",
+    "money_hub_last_rendered": "2026-08-27T18:20:00-04:00"
   }
 }
