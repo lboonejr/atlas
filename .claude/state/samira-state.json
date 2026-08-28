@@ -1,10 +1,10 @@
 {
-  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded \u2014 fall back to that PART's legacy cutoff once, then record'.",
+  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260828T150427Z",
-    "run_started": "2026-08-28T15:04:27Z",
+    "run_id": "run_20260828T160254Z",
+    "run_started": "2026-08-28T16:02:54Z",
     "run_completed": "2026-08-28T15:35:00Z",
-    "note": "Twenty-second scan (run_20260828T150427Z) completed clean. PART V: incremental integrity pass (1 vault file changed since last_scan_sha, huljev-startup-costs checklist Update append, valid/0 repairs); Inbox composition changed (Jamil note resolved out via Camden Launch PT card) so the #decisions Haven Inbox card was refreshed (ts 1787930008.624029, 3 notes) and its 2 stale predecessor cards pruned from decisions_threads. PART S: quiet (no due-note deltas in the one file that changed). PART A: read all 47 tracked #decisions threads; found 2 with new bot-only informational replies (no Lemar action needed, watermarks advanced), pruned 3 more stale/closed cards (Camden advisory-proposal CLOSED, Camden Jamil-walkthrough PT card CLOSED). PART B: capture DM empty. PART C: every swept project channel empty, no runnable prompts. PART D: 32 Gmail threads examined, all already-processed or junk, 0 new drafts/tasks. PART E: investor loop quiet. PART Q: Stormy idle. PART R: posted one PM-status check on the ops-admin-lane-and-ariana PT card (day 3, no signal); p00-client-intake-system stays parked, no signal. PART M: #personal-finance empty, no money drops. PART T: found the recurring non-Samira 'Haven Keeper' empty-inbox #reports claim (13th+ occurrence since 7/31) and, for the first time, escalated it directly to Lemar (a #reports correction line + a capture-DM summary) rather than only logging it, per the pattern's own prior recommendation once it kept recurring. Canvas skipped (write-blocked, not the day's first run). Pulse: quiet-pass skip (this run's changes were housekeeping \u2014 a stale-card refresh and a #reports correction on an already-tracked pattern \u2014 not a new decision/money/project-status change)."
+    "note": "In progress — twenty-third scan (run_20260828T160254Z) starting."
   },
   "watermarks": {
     "slack_channels": {
@@ -80,7 +80,7 @@
   "integrity": {
     "last_full_pass": "2026-08-28T09:20:00-04:00",
     "last_scan_sha": "6ceb3aaaf2f267c82a5c4ceac9b0e39d1bc4cbe5",
-    "note": "Twenty-second scan: incremental pass since last_scan_sha (c936249b) \u2014 1 vault file changed (20-Cuzzies/2026-08-26-huljev-startup-costs-checklist.md, PART D Update append, Reminder #4), complete/valid, 0 repairs. Inbox parked 3 unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections) \u2014 same gaps as last_full_pass (09:20 ET, same day). Known/accepted 1: _daily/2026-08-01.md (base64 blob, lossless gate fails, Lemar decided 2026-08-09 to leave it flagged)."
+    "note": "Twenty-second scan: incremental pass since last_scan_sha (c936249b) — 1 vault file changed (20-Cuzzies/2026-08-26-huljev-startup-costs-checklist.md, PART D Update append, Reminder #4), complete/valid, 0 repairs. Inbox parked 3 unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections) — same gaps as last_full_pass (09:20 ET, same day). Known/accepted 1: _daily/2026-08-01.md (base64 blob, lossless gate fails, Lemar decided 2026-08-09 to leave it flagged)."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
