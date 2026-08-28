@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-27T18:05:00-04:00
+updated: 2026-08-28T14:05:00-04:00
 domain: personal
 type: reference
 status: active
@@ -2900,6 +2900,7 @@ open_questions:
   - "Cuzzie's phone + Workspace $550/mo is Lemar's estimate — actual total unconfirmed, and it is the largest line in the ledger."
   - "Confirm the 7/25 $1,000 allocation landed: $500 car payment, $200 tires, $50 mom"
   - "T-Mobile: confirm payment 1 ($265, was due 8/3) went through; payment 2 amount/date already dated (see tmobile-split-2)"
+  - "NEW 2026-08-28 (#personal-finance ts 1787938660.116409): Lemar reported 'I paid the T-Mobile bill today $149.00.' $149 matches neither tmobile-split-1 ($265, due 8/3, still unconfirmed paid) nor tmobile-split-2 ($278, due today 8/28) — could be a partial payment on either split, or a separate/new monthly T-Mobile service line not yet tracked. Nothing flipped to paid and no line added; #decisions parent raised asking which it is. See #decisions."
   - "Water pump $184.79 (now dated 2026-09-15): STILL unreconciled whether it's inside or on top of the car goal's $2,000 repairs figure — dating it didn't resolve the overlap."
   - "RESOLVED 2026-08-13 (recompute session, updated same day): comedy tickets $50.28 confirmed unpaid and briefly folded into the accrual, then CANCELLED later the same day — Lemar isn't going, too many bills were piling up. Parked, out of the queue entirely, not owed. See Update 2026-08-13 (THIRD REVISION)."
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
@@ -4221,3 +4222,17 @@ Lemar/Samira knowing distinctly from today's rollover.
 Nothing paid, nothing moved, nothing contacted, nothing invented. Dashboard re-rendered
 (new Drive snapshot) since the ledger changed — see the Money Hub Drive folder; link
 posted in #personal-finance.
+
+## Update 2026-08-28 (PART M — T-Mobile payment report, amount mismatch, no line touched)
+
+Lemar reported in #personal-finance (ts 1787938660.116409): "I paid the T-Mobile bill
+today $149.00." Checked against the two open T-Mobile lines — `tmobile-split-1` ($265,
+due 8/3, still flagged unconfirmed) and `tmobile-split-2` ($278, due today 8/28) — $149
+matches neither exactly, so it is genuinely ambiguous whether this is a partial payment
+on one of the splits or a separate, untracked monthly T-Mobile service line.
+
+Per the never-guess-a-match rule: nothing was flipped to `paid`, no new line was added,
+no `daily_targets` contribution was touched, no calendar event was retired. Added to
+`open_questions` and raised ONE #decisions parent (🔴 T-Mobile $149 — which line does
+this clear?) with three options. Dashboard NOT re-rendered — nothing in the ledger's
+numbers changed this pass, only the open-questions list.
