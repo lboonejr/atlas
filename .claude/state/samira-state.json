@@ -83,8 +83,8 @@
   },
   "integrity": {
     "last_full_pass": "2026-08-28T09:20:00-04:00",
-    "last_scan_sha": "3615d9e38696ab7ec9eeb13c59193a740389a276",
-    "note": "Day's first full whole-vault pass ran ~09:20 ET (621 md files under haven/vault/, 615 frontmatter blocks checked, 6 exempt: 5 _templates/ + 1 seeded *-example-*). Filed 1 (2026-08-28-inbox-janitor-run.md -> 70-Automation/inbox-janitor/), parked 3 (unchanged Inbox domain-gap notes), repaired 0, +0 entities. Known/accepted 1: _daily/2026-08-01.md (base64 blob, decode fails the lossless gate; Lemar decided 2026-08-09 to leave it flagged). New this scan, flagged only: 40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md (created absent) and 2 domain/location mismatches under 40-Projects/samira-skills/."
+    "last_scan_sha": "c936249b7193db79119e3ce6c6c4757681bbbda5",
+    "note": "Twenty-first scan (14:03 ET), incremental pass since 09:20 ET full pass: 2 vault files changed (glass-meadows statement update, dewalt default-judgment update), both complete/valid, 0 repairs. Filed 1 (2026-08-28-drive-organizing-run.md -> 70-Automation/file-organizing/), parked 3 (unchanged Inbox domain/value gaps: dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections), +0 entities. Composition of the stuck-notes set unchanged from prior scan -- #decisions Inbox card not refreshed. Known/accepted 1: _daily/2026-08-01.md (base64 blob, decode fails the lossless gate; Lemar decided 2026-08-09 to leave it flagged)."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
