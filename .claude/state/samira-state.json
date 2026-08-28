@@ -1,8 +1,8 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260828T170348Z",
-    "run_started": "2026-08-28T17:03:48Z",
+    "run_id": "run_20260828T180432Z",
+    "run_started": "2026-08-28T18:04:32Z",
     "run_completed": "2026-08-28T17:29:26Z",
     "note": "Twenty-fourth scan (run_20260828T170348Z) complete. Only new signal: a Google Voice voicemail (Gmail) asking whether the Camden shop is actually open — captured to Haven, staged as a 🟡 #decisions card (3 options), not a reopen-plan tier item. PART V: parked 3 unchanged, incremental integrity 0 vault files changed at check time. PART S: no due-note deltas. PART A/B/C/E/Q/M: zero activity since watermark. PART D: 2 new Gmail threads (the voicemail + 1 junk marketing), both labeled Samira/seen. PART R: 2 PT cards carried, no new signal (ops-admin-lane-and-ariana lenses 8/8 gates 6/6 waiting on Lemar's 🫡; p00-client-intake-system lenses 4/8). PART T: clean. Canvas skipped (write-blocked, not today's first run). PART P: rendered (card opened this hour) — found + fixed a real defect (Drive HTML→Doc conversion mojibakes astral-plane emoji; caught before notifying, rebuilt with BMP-safe glyphs, documented in the pulse-dashboard skill so it doesn't recur). Digest posted to #reports and appended to _daily/2026-08-28.md."
   },
