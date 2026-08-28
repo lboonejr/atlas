@@ -141,6 +141,14 @@ then create it as a NEW Google Doc via `Google_Drive__create_file`:
   to a native Doc — do not set `disableConversionToGoogleType`).
 - Every render creates a brand-new Doc. Never edit or delete a prior snapshot — the
   folder is the history.
+- **Astral-plane emoji mojibake (found 2026-08-28).** Drive's HTML→Doc conversion
+  corrupts astral-plane emoji (🔴🟡🟢🐢🧪🫡 and similar) into garbled byte sequences
+  (`ð´`/`ð¡`/…) — a defect in that specific transport, not in Slack's rendering of the
+  same characters (Slack is fine). Build the page with BMP-safe glyphs instead: a
+  colored `●`/`○` span (inline `style="color:#..."`) for status dots, plain-text
+  markers (`[PT]`, `*`, `!`) in place of emoji elsewhere. Read the created Doc back
+  before sending the DM — if any glyph came through corrupted, trash that Doc (never
+  seen by Lemar) and rebuild with the BMP-safe substitution before notifying.
 
 ## Notification — DM only when something changed
 

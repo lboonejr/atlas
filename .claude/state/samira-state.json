@@ -1,17 +1,17 @@
 {
-  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
+  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded \u2014 fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260828T160254Z",
-    "run_started": "2026-08-28T16:02:54Z",
-    "run_completed": "2026-08-28T16:07:19Z",
-    "note": "Twenty-third scan (run_20260828T160254Z) completed clean, fully quiet pass. PART V: incremental integrity pass, 0 vault files changed since last_scan_sha (6ceb3aaa), 0 repairs; Inbox unchanged (same 3 stuck notes) so the #decisions card was not re-refreshed. PART S: no due-note deltas (no vault changes to project). PART A: read #decisions since watermark, 0 new messages/reactions. PART B: capture DM had 1 new message but it was Samira's own prior #reports-scan cross-post, not a Lemar drop — no capture to develop. PART C: every swept channel (admin, on-button, personal-finance, stormy, investor-pipeline, camden-launch, and the remaining recorded-for-Pulse project channels) empty since watermark. PART D: 3 new Gmail threads, all vendor marketing on already-known junk domains (Nova Farms, Happy Farmer/Apex Trading, Ares Canna) — labeled Samira/seen, 0 drafts/tasks. PART E: investor loop quiet. PART Q: Stormy idle (#stormy empty). PART R: ops-admin-lane-and-ariana PT card already got today's one PM status check on the prior scan — skipped a second check same day; p00-client-intake-system still parked, no signal; 2 carried. PART M: #personal-finance empty, no money drops. PART T: nothing new posted to #reports since its own last correction line — no re-scan, reports-scan: clean. Canvas skipped (write-blocked, already checked today). Pulse: quiet-pass skip (nothing this run qualifies as a change). Digest posted to #reports and appended to _daily/2026-08-28.md. Still open, unchanged: Regus/IWG $1,506.05 settlement window expires today (8/28), no reply sent yet — flagged again in the digest, not new."
+    "run_id": "run_20260828T180432Z",
+    "run_started": "2026-08-28T18:04:32Z",
+    "run_completed": "2026-08-28T18:15:00Z",
+    "note": "Twenty-fifth scan (run_20260828T180432Z) complete. Only new signal: Lemar reported paying T-Mobile $149 today; amount matched neither open T-Mobile line (tmobile-split-1 $265 due 8/3, tmobile-split-2 $278 due today) so nothing was flipped to paid \u2014 flagged in the ledger's open_questions and raised a \ud83d\udd34 #decisions card with 3 options. PART V: filed 1 (prior scan's camden-shop voicemail capture, complete frontmatter, was just unswept) \u2192 20-Cuzzies; parked 3 unchanged; incremental integrity 0 defects. PART S: no due-note deltas. PART A/B/C/E/Q: zero activity across #decisions, capture DM, every project channel, #stormy, #investor-pipeline, #camden-launch. PART D: 3 new Gmail threads, all junk (2 stale car-hunt price-drop alerts, 1 vendor marketing), labeled Samira/seen. PART R: both Camden Launch PT cards carried, no new signal, no round forced (client-facing engagement, nothing new to react to). PART T: clean. Canvas skipped (write-blocked, not today's first run). PART P: deferred this pass (not rendered) \u2014 time budget went to the money ambiguity + vault filing; noted honestly rather than claiming a render that didn't happen. Digest posted to #reports and appended to _daily/2026-08-28.md."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787930149.017679",
-      "C0BBZJL85RT": "1787933189.506599",
-      "D0BHPKMDNEP": "1787930205.903669",
-      "C0BGLEMH99T": "1787869995.000000",
+      "C0BBXA96FFV": "1787940478.474579",
+      "C0BBZJL85RT": "1787940681.265719",
+      "D0BHPKMDNEP": "1787937989.457309",
+      "C0BGLEMH99T": "1787938660.116409",
       "C0BEQUW5NPP": "1787869995.000000",
       "C0BBLUA7JLX": "1787923057.552979",
       "C0BJ37SU1TL": "1787869995.000000",
@@ -72,22 +72,24 @@
       "1787833175.960449": "1787839939.371519",
       "1785161637.814709": "1785164750.977449",
       "1787854465.146219": "1787854486.805629",
-      "1787930008.624029": "1787930008.624029"
+      "1787930008.624029": "1787930008.624029",
+      "1787936776.561599": "1787936780.871709",
+      "1787940471.776979": "1787940478.474579"
     },
-    "capture_dm": "1787930205.903669",
-    "gmail_after_epoch": 1787933174
+    "capture_dm": "1787937989.457309",
+    "gmail_after_epoch": 1787940323
   },
   "integrity": {
     "last_full_pass": "2026-08-28T09:20:00-04:00",
-    "last_scan_sha": "b59a613504249f6b780c0222008a72e76b6f113e",
-    "note": "Twenty-third scan: incremental pass since prior last_scan_sha (6ceb3aaa) — 0 vault files changed (only .claude/state/samira-state.json and the reports-contradiction-scanner's own log/digest commits landed in between), 0 repairs. Inbox parked 3 unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections) — same gaps as last_full_pass (09:20 ET, same day). Known/accepted 1: _daily/2026-08-01.md (base64 blob, lossless gate fails, Lemar decided 2026-08-09 to leave it flagged)."
+    "last_scan_sha": "15756e3f1a91ba677dc4092c5f2742063dac6307",
+    "note": "Twenty-fifth scan: 2 vault files changed since prior last_scan_sha (97b58ade) \u2014 money-hub-ledger.md (T-Mobile open-question flag, frontmatter still valid) and the filed camden-shop-closed-listing-voicemail.md (moved 00-Inbox \u2192 20-Cuzzies, frontmatter complete and valid, updated touched). 0 repairs needed. Inbox parked 3 unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections). Known/accepted 1: _daily/2026-08-01.md (base64 blob, lossless gate fails, Lemar decided 2026-08-09 to leave it flagged)."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-27T18:15:00-04:00",
+    "pulse_last_rendered": "2026-08-28T13:26:00-04:00",
     "money_hub_last_rendered": "2026-08-27T18:20:00-04:00"
   }
 }
