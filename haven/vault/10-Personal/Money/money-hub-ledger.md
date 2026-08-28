@@ -5182,6 +5182,7 @@ open_questions:
   - "Cuzzie's phone + Workspace $550/mo is Lemar's estimate — actual total unconfirmed, and it is the largest line in the ledger."
   - "Confirm the 7/25 $1,000 allocation landed: $500 car payment, $200 tires, $50 mom"
   - "T-Mobile: confirm payment 1 ($265, was due 8/3) went through; payment 2 amount/date already dated (see tmobile-split-2)"
+  - "NEW 2026-08-28 — Lemar reported in #personal-finance (ts 1787938660.116409, ~14:17 ET): 'I paid the T-Mobile bill today $149.00.' Verified against the Slack message itself. $149 matches NO open line: tmobile-split-1 ($265) is already status paid on his own 8/25 confirmation, and tmobile-split-2 is $278 due today. So on this ledger it is either a PARTIAL on tmobile-split-2 (leaving $129) or a separate, untracked monthly T-Mobile service line. Nothing flipped to paid, no line added, no daily_targets contribution touched, no calendar event retired — the amount was not matched to a line, and a match is never guessed. Needs Lemar. NOTE: Samira raised a #decisions card for this on main, where tmobile-split-1 still reads unconfirmed because main never received his 8/25 payment-1 confirmation — so her card may offer an option his own earlier report already rules out."
   - "Water pump $184.79 (now dated 2026-09-15): STILL unreconciled whether it's inside or on top of the car goal's $2,000 repairs figure — dating it didn't resolve the overlap."
   - "RESOLVED 2026-08-13 (recompute session, updated same day): comedy tickets $50.28 confirmed unpaid and briefly folded into the accrual, then CANCELLED later the same day — Lemar isn't going, too many bills were piling up. Parked, out of the queue entirely, not owed. See Update 2026-08-13 (THIRD REVISION)."
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
@@ -6749,3 +6750,29 @@ is owed until that decision lands.
 
 Nothing paid, nothing moved, no creditor contacted.
 
+## Update 2026-08-28 — T-Mobile $149 reported paid; matched to no line, nothing flipped
+
+Lemar in #personal-finance (ts 1787938660.116409): "I paid the T-Mobile bill today $149.00."
+Verified against the Slack message directly rather than carried on trust from the main-branch
+commit that first logged it.
+
+**$149 matches no open line on this ledger.** `tmobile-split-1` ($265, due 8/3) went
+`status: paid` on 2026-08-25 when Lemar confirmed it in this session, so it is not a
+candidate here. `tmobile-split-2` is $278, due today. That leaves two readings, and the
+ledger does not get to pick:
+
+1. A **partial** on `tmobile-split-2`, leaving $129 outstanding on a bill due today.
+2. A **separate monthly T-Mobile service line** that has never been tracked — plausible,
+   since the two splits are a payment plan on an old balance, not the ongoing service bill.
+
+Nothing was flipped to `paid`, no line was added, no `daily_targets` contribution was
+touched, no calendar event retired. Recorded in `open_questions` and left for Lemar. The
+difference between the two readings is $129 owed today versus a recurring line the model
+has never seen — too far apart to split.
+
+Samira raised a #decisions card for this on `main`. Worth knowing before he answers it:
+main still shows `tmobile-split-1` as unconfirmed, because main never received his 8/25
+confirmation that payment 1 was paid. Her card is consistent with what main can see; it is
+main that is missing a fact he already gave.
+
+Nothing paid, nothing moved, no creditor contacted.
