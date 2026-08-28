@@ -86,9 +86,9 @@
     "gmail_after_epoch": 1787868336
   },
   "integrity": {
-    "last_full_pass": "2026-08-27T14:06:00-04:00",
-    "last_scan_sha": "0eba6763cba7fa1be75b61e2a4a7ab309377d3a3",
-    "note": "Day's first full whole-vault pass ran 14:06 ET (616 notes). 19th scan checked only notes changed since prior scan point; no vault changes found. last_scan_sha advanced to this run's own final commit point."
+    "last_full_pass": "2026-08-28T23:20:00-04:00",
+    "last_scan_sha": "3615d9e38696ab7ec9eeb13c59193a740389a276",
+    "note": "Day's first full whole-vault pass ran 23:20 ET (621 md files under haven/vault/, 615 frontmatter blocks checked, 6 exempt: 5 _templates/ + 1 seeded *-example-*). Filed 1 (2026-08-28-inbox-janitor-run.md -> 70-Automation/inbox-janitor/), parked 3 (unchanged Inbox domain-gap notes), repaired 0, +0 entities. Known/accepted 1: _daily/2026-08-01.md (base64 blob standing in for its frontmatter block, decode fails the lossless gate structurally -- Lemar decided 2026-08-09 to leave it flagged, see 70-Automation/samira/2026-08-09-corrupted-daily-log-2026-08-01-decision.md; unchanged, not relitigated). New this scan, flagged only (never repaired/guessed): 40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md (created absent entirely) and 2 domain/location mismatches under 40-Projects/samira-skills/ (2026-08-22-decisions-backlog-audit.md, 2026-08-23-calendar-sync-wrong-calendar-bug.md -- both domain: automation sitting in a project folder)."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
