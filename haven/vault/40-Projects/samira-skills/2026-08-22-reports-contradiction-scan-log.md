@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-27T18:02:00-04:00
+updated: 2026-08-28T11:10:00-04:00
 domain: project
 type: log
 status: active
@@ -991,3 +991,53 @@ PART M rollover step was briefed (single clean edit only, stop rather than hand-
 - slack: #reports `C0BBZJL85RT`, ts range `1787858591`–`1787868336`
 - this run's own PART V/S/A/B/C/D/E/Q/R sweeps (cross-checked directly)
 - haven/vault/70-Automation/money-hub/2026-08-27-money-hub-ledger-corruption-incident.md
+
+
+## Update 2026-08-28 (twenty-ninth run)
+
+**Range scanned:** #reports `C0BBZJL85RT`, ts `1787868336`–`1787923884` (since the
+twenty-eighth run's bookmark).
+
+**Found: 1 — the recurring "Haven Keeper" empty-inbox claim, now 13th+ occurrence,
+escalated directly for the first time.**
+
+1. ts `1787869264` (2026-08-27 ~10:01pm ET) and ts `1787923351` (2026-08-28 ~9:29am
+   ET): both posted by `U0BC5UTHYG4` (Lemar's own Slack account) via app `A08SF47R6P4`
+   — the same manual desktop/browser Claude-session signature tracked since 2026-07-31
+   across the eleventh, twelfth, fifteenth (x2), eighteenth, nineteenth, twentieth,
+   twenty-first, twenty-second, twenty-fourth, twenty-fifth, and twenty-sixth runs of
+   this log. Both state "Haven — filed 0 · stuck 0 · rang +0/~0/-0," the second
+   explicitly "Inbox was empty, nothing to file."
+   - This (twenty-ninth) run's own PART V directly read `haven/vault/00-Inbox/` fresh
+     from `main` (post this run's own lock commit `56037e5`): 3 notes are stuck, same
+     gaps tracked continuously since 8/24 — `2026-08-07-dib-template-theme-decision-
+     closeout.md` (domain/status blank, type/source out-of-list, created/updated/tags
+     missing), `2026-08-12-google-voice-subscription-cancellation.md` (`domain?`),
+     `2026-08-24-caine-weiner-progressive-collections.md` (`domain?`). All three also
+     match the state file's own last-recorded parked list (`c936249b` commit, twenty-
+     second scan) — three independent readings agree; the two "Haven Keeper" posts are
+     the outlier, exactly as every prior occurrence has been.
+   - **Disposition change from prior runs:** every occurrence since the eleventh run has
+     been logged as non-actionable/non-propagating (bare count only, no #decisions card,
+     no DM), on the grounds that the automated routine never reads #reports back as
+     state and every real Samira digest in the same window has continued to report the
+     true `stuck 3` correctly. That reasoning still holds — nothing here is an open
+     question needing Lemar's decision, so still no #decisions card. But the eighteenth
+     run's own entry flagged this recurrence as "may be worth Lemar's attention directly
+     (outside this scanner's scope)," and it has now recurred at least 13 times over 4
+     weeks without ever being surfaced to him. Given the volume, this run posted a plain
+     #reports correction (ts `1787930199.880939`) naming the discrepancy and the true
+     count, plus a DM to Lemar via the capture DM (ts `1787930205.903669`) — a one-time
+     direct surfacing of the pattern itself, not a new #decisions question (there is
+     nothing for him to decide; the vault is unambiguous). No Haven note needed
+     correcting — the Inbox notes themselves were never wrong; only the "Haven Keeper"
+     #reports lines have repeatedly misreported them.
+
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (twenty-ninth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787868336`–`1787923884`
+- this run's own PART V sweep (direct `haven/vault/00-Inbox/` read via GitHub connector,
+  post-lock-commit `56037e5`)
+- `.claude/state/samira-state.json` `integrity.note` (twenty-second scan's recorded
+  parked list, cross-checked and matching)
