@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-08-25T14:15:00-04:00
+updated: 2026-08-28T09:20:00-04:00
 domain: legal
 type: task
 status: active
@@ -663,6 +663,30 @@ or sent by Samira. Gmail thread now labeled `Samira/seen`.
   reply asking for the signed letter + retainer) / `1a03983d9f9b5cd1` (Lemar's own
   15:22 ET reply, self-sent)
 - slack: #decisions `C0BBXA96FFV` (new card posted this pass)
+
+## Update 2026-08-28T09:20:00-04:00 — Folkman Law Offices declines representation (previously unlogged referral)
+
+A new email landed 2026-08-28 ~9:14am ET (gmail thread `1a04881d5f95d3a8`, "Folkman Law
+Offices, PC/Confirmation of Non-Representation") from Shelley Wint at Folkman Law
+Offices, PC (Cherry Hill/Philadelphia): "Please see attached declination letter...
+best of luck," with a `Confirmation of Non-Representation.pdf` attachment (not
+opened/parsed here). No prior mention of Folkman Law anywhere in this note's history
+(Siciliano, Wall, Brekke, Greenberg, Hagner & Zohlman, Kaplan/Kaplin Stewart, the two
+CCBA asks, and Diaz/Archer & Greiner are the names logged so far) — this reads as a
+stray response to an outreach round not otherwise captured in Haven, arriving after
+counsel was already engaged.
+
+**Read:** likely moot. Douglas Diaz (Archer & Greiner P.C.) was engaged 2026-08-21 and
+as of the 2026-08-25 update is actively moving (preparing the excusable-neglect
+affidavit, waiting on the signed engagement letter + retainer). This decline doesn't
+change that track. Not reply-worthy (a no-reply-shaped confirmation, nothing pending
+from Cuzzie's side), so no draft prepared. Flagging for Lemar's awareness only in case
+this outreach round is one he still cares about closing the loop on. No Samira action
+taken beyond this note and the #decisions flag. Gmail thread labeled `Samira/seen`.
+
+### Sources (this update)
+- gmail: thread `1a04881d5f95d3a8` (Folkman Law Offices, Shelley Wint, declination
+  letter attached, 2026-08-28 ~9:14am ET)
 
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")

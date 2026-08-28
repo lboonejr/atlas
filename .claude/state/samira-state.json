@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260827T220226Z",
-    "run_started": "2026-08-27T22:02:26Z",
+    "run_id": "run_20260828T140322Z",
+    "run_started": "2026-08-28T14:03:22Z",
     "run_completed": "2026-08-27T22:34:42Z",
-    "note": "Nineteenth scan, ~6:02-6:34pm ET, completed cleanly. Fully quiet everywhere except money: no earnings logged today, so end-of-day ROLLOVER carried $192.07 across 25 unfunded ledger lines to 8/28 (single clean commit, briefed against this morning's ledger-corruption incident). Pulse re-rendered (money changed). reports-contradiction-scanner 28th run clean."
+    "note": "Twenty-first scan. Prior lock (run_20260828T130411Z, started 13:04:11Z) aged out at run start (59 min old, >45 min threshold, no completion commit found on main) — treated as a died-mid-flight run per PART 0 policy, not resumed."
   },
   "watermarks": {
     "slack_channels": {
@@ -13,7 +13,7 @@
       "D0BHPKMDNEP": "1787869995.000000",
       "C0BGLEMH99T": "1787869995.000000",
       "C0BEQUW5NPP": "1787869995.000000",
-      "C0BBLUA7JLX": "1787869995.000000",
+      "C0BBLUA7JLX": "1787923057.552979",
       "C0BJ37SU1TL": "1787869995.000000",
       "C0BCCUKEUQ2": "1787869995.000000",
       "C0BCD7U5X2B": "1787869995.000000",
@@ -46,19 +46,16 @@
       "1787231683.266619": "1787234895.613759",
       "1787235032.481949": "1787333215.335379",
       "1787238798.497049": "1787238833.679779",
-      "1787245811.807379": "1787328711.329099",
       "1787256504.479409": "1787260487.561709",
       "1787314219.825659": "1787674382.717259",
       "1787314456.900919": "1787321654.863689",
       "1787333131.938499": "1787509508.677979",
       "1787339259.215559": "1787339259.215559",
       "1787339261.864519": "1787339261.864519",
-      "1787339264.143129": "1787400587.679849",
       "1787400711.689609": "1787400711.689609",
       "1787401047.824359": "1787404082.261989",
       "1787408466.876989": "1787414880.127769",
       "1787495798.327079": "1787504854.928079",
-      "1787505030.902159": "1787580730.167849",
       "1787577568.967589": "1787577568.967589",
       "1787584125.966579": "1787584125.966579",
       "1787157130.471099": "1787328710.030059",
@@ -68,7 +65,6 @@
       "1787609340.269079": "1787609340.269079",
       "1787660120.230219": "1787667257.611909",
       "1787660141.315579": "1787674381.264359",
-      "1787660130.097779": "1787667581.782429",
       "1787660143.192949": "1787660149.989389",
       "1787667532.037259": "1787670421.826669",
       "1787613164.672029": "1787614371.183619",
@@ -86,9 +82,9 @@
     "gmail_after_epoch": 1787868336
   },
   "integrity": {
-    "last_full_pass": "2026-08-27T14:06:00-04:00",
-    "last_scan_sha": "0eba6763cba7fa1be75b61e2a4a7ab309377d3a3",
-    "note": "Day's first full whole-vault pass ran 14:06 ET (616 notes). 19th scan checked only notes changed since prior scan point; no vault changes found. last_scan_sha advanced to this run's own final commit point."
+    "last_full_pass": "2026-08-28T09:20:00-04:00",
+    "last_scan_sha": "c936249b7193db79119e3ce6c6c4757681bbbda5",
+    "note": "Twenty-first scan (14:03 ET), incremental pass since 09:20 ET full pass: 2 vault files changed (glass-meadows statement update, dewalt default-judgment update), both complete/valid, 0 repairs. Filed 1 (2026-08-28-drive-organizing-run.md -> 70-Automation/file-organizing/), parked 3 (unchanged Inbox domain/value gaps: dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections), +0 entities. Composition of the stuck-notes set unchanged from prior scan -- #decisions Inbox card not refreshed. Known/accepted 1: _daily/2026-08-01.md (base64 blob, decode fails the lossless gate; Lemar decided 2026-08-09 to leave it flagged)."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
