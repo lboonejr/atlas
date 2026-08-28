@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260828T170348Z",
     "run_started": "2026-08-28T17:03:48Z",
-    "run_completed": "2026-08-28T16:07:19Z",
-    "note": "Twenty-fourth scan (run_20260828T170348Z) in flight."
+    "run_completed": "2026-08-28T17:29:26Z",
+    "note": "Twenty-fourth scan (run_20260828T170348Z) complete. Only new signal: a Google Voice voicemail (Gmail) asking whether the Camden shop is actually open — captured to Haven, staged as a 🟡 #decisions card (3 options), not a reopen-plan tier item. PART V: parked 3 unchanged, incremental integrity 0 vault files changed at check time. PART S: no due-note deltas. PART A/B/C/E/Q/M: zero activity since watermark. PART D: 2 new Gmail threads (the voicemail + 1 junk marketing), both labeled Samira/seen. PART R: 2 PT cards carried, no new signal (ops-admin-lane-and-ariana lenses 8/8 gates 6/6 waiting on Lemar's 🫡; p00-client-intake-system lenses 4/8). PART T: clean. Canvas skipped (write-blocked, not today's first run). PART P: rendered (card opened this hour) — found + fixed a real defect (Drive HTML→Doc conversion mojibakes astral-plane emoji; caught before notifying, rebuilt with BMP-safe glyphs, documented in the pulse-dashboard skill so it doesn't recur). Digest posted to #reports and appended to _daily/2026-08-28.md."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787930149.017679",
-      "C0BBZJL85RT": "1787933189.506599",
-      "D0BHPKMDNEP": "1787930205.903669",
+      "C0BBXA96FFV": "1787936780.871709",
+      "C0BBZJL85RT": "1787938110.704929",
+      "D0BHPKMDNEP": "1787937989.457309",
       "C0BGLEMH99T": "1787869995.000000",
       "C0BEQUW5NPP": "1787869995.000000",
       "C0BBLUA7JLX": "1787923057.552979",
@@ -72,22 +72,23 @@
       "1787833175.960449": "1787839939.371519",
       "1785161637.814709": "1785164750.977449",
       "1787854465.146219": "1787854486.805629",
-      "1787930008.624029": "1787930008.624029"
+      "1787930008.624029": "1787930008.624029",
+      "1787936776.561599": "1787936780.871709"
     },
-    "capture_dm": "1787930205.903669",
-    "gmail_after_epoch": 1787933174
+    "capture_dm": "1787937989.457309",
+    "gmail_after_epoch": 1787938166
   },
   "integrity": {
     "last_full_pass": "2026-08-28T09:20:00-04:00",
-    "last_scan_sha": "b59a613504249f6b780c0222008a72e76b6f113e",
-    "note": "Twenty-third scan: incremental pass since prior last_scan_sha (6ceb3aaa) — 0 vault files changed (only .claude/state/samira-state.json and the reports-contradiction-scanner's own log/digest commits landed in between), 0 repairs. Inbox parked 3 unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections) — same gaps as last_full_pass (09:20 ET, same day). Known/accepted 1: _daily/2026-08-01.md (base64 blob, lossless gate fails, Lemar decided 2026-08-09 to leave it flagged)."
+    "last_scan_sha": "97b58ade2418ab09a5582710218b4fc6dc176e22",
+    "note": "Twenty-fourth scan: 1 vault file added since prior last_scan_sha (b59a6135) — the new 00-Inbox/2026-08-28-camden-shop-closed-listing-voicemail.md capture itself (complete valid frontmatter, written this same scan, 0 repairs). Inbox parked 3 unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections). Known/accepted 1: _daily/2026-08-01.md (base64 blob, lossless gate fails, Lemar decided 2026-08-09 to leave it flagged)."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-27T18:15:00-04:00",
+    "pulse_last_rendered": "2026-08-28T13:26:00-04:00",
     "money_hub_last_rendered": "2026-08-27T18:20:00-04:00"
   }
 }
