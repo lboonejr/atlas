@@ -231,10 +231,10 @@ bills:
             only — Lemar's own words flag the rate as uncertain ('I think it's like'),
             so no compounding was invented on top of it; see open_questions for the ask
             to confirm the actual balance or rate closer to the due date."}
-  - {id: tmobile-split-1, name: "T-Mobile split payment 1 of 2", amount: 265, cadence: once,
-     due: 2026-08-03, track: queue, status: paid,
+  - {id: tmobile-split-1, name: "T-Mobile split payment 1 of 2", amount: 149, cadence: once,
+     due: 2026-08-03, paid_on: 2026-08-28, track: queue, status: paid,
      calendar_event_id: null,
-     note: "PAID — confirmed by Lemar 2026-08-25 in this session ('T-mobile Payment 1 has been paid'). Flipped to paid and its due-date event retired. He did not give a payment date, so none was recorded; the confirmation itself is the record. Payment 2 (tmobile-split-2, $278, due 8/28) is unaffected and still accruing."}
+     note: "PAID. Two-step record. (1) Lemar confirmed it paid 2026-08-25 in this session ('T-mobile Payment 1 has been paid'); flipped to paid and its due-date event retired then, with no payment date given. (2) AMOUNT CORRECTED 265 -> 149 on 2026-08-29: he reported paying T-Mobile $149 on 8/28 (#personal-finance ts 1787938660.116409), and resolved the match himself by picking Option 1 on the #decisions card (option ts 1787940475.849039, his own white_check_mark reaction verified at the source) — 'This is tmobile-split-1 paid in FULL, but the actual amount was $149 not $265.' So the LINE was wrong, not the payment; $265 was never owed. paid_on 2026-08-28 recorded from that report. No daily_targets effect: this line never accrued (due 8/3 had passed before any accrual window opened on it), so there was no drip to retire and no day's target to recompute. Payment 2 (tmobile-split-2, $278, due 8/28) is untouched — still open, still unpaid."}
   - {id: tmobile-split-2, name: "T-Mobile split payment 2 of 2", amount: 278, cadence: once,
      due: 2026-08-28, track: queue, status: active, calendar_event_id: vkp5r31n2du2u9ubk0o3vof7go,
      note: "Confirmed 2026-08-14 in #personal-finance: 'majority or at least half' of the
@@ -5182,7 +5182,7 @@ open_questions:
   - "Cuzzie's phone + Workspace $550/mo is Lemar's estimate — actual total unconfirmed, and it is the largest line in the ledger."
   - "Confirm the 7/25 $1,000 allocation landed: $500 car payment, $200 tires, $50 mom"
   - "T-Mobile: confirm payment 1 ($265, was due 8/3) went through; payment 2 amount/date already dated (see tmobile-split-2)"
-  - "NEW 2026-08-28 — Lemar reported in #personal-finance (ts 1787938660.116409, ~14:17 ET): 'I paid the T-Mobile bill today $149.00.' Verified against the Slack message itself. $149 matches NO open line: tmobile-split-1 ($265) is already status paid on his own 8/25 confirmation, and tmobile-split-2 is $278 due today. So on this ledger it is either a PARTIAL on tmobile-split-2 (leaving $129) or a separate, untracked monthly T-Mobile service line. Nothing flipped to paid, no line added, no daily_targets contribution touched, no calendar event retired — the amount was not matched to a line, and a match is never guessed. Needs Lemar. NOTE: Samira raised a #decisions card for this on main, where tmobile-split-1 still reads unconfirmed because main never received his 8/25 payment-1 confirmation — so her card may offer an option his own earlier report already rules out."
+  - "RESOLVED 2026-08-29 — the 8/28 $149 T-Mobile payment IS tmobile-split-1. Lemar settled it himself by picking Option 1 on the #decisions card (option ts 1787940475.849039; his white_check_mark verified at the source): the LINE's amount was wrong ($265 recorded, $149 actually owed and paid), not the payment. Line corrected to $149, paid_on 2026-08-28, already status paid from his 8/25 confirmation. Neither of the two readings this ledger had raised — a partial on tmobile-split-2, or a new untracked service line — was right; the answer was a third thing only he could know. tmobile-split-2 ($278, due 8/28) is untouched and still open."
   - "Water pump $184.79 (now dated 2026-09-15): STILL unreconciled whether it's inside or on top of the car goal's $2,000 repairs figure — dating it didn't resolve the overlap."
   - "RESOLVED 2026-08-13 (recompute session, updated same day): comedy tickets $50.28 confirmed unpaid and briefly folded into the accrual, then CANCELLED later the same day — Lemar isn't going, too many bills were piling up. Parked, out of the queue entirely, not owed. See Update 2026-08-13 (THIRD REVISION)."
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
@@ -6774,5 +6774,37 @@ Samira raised a #decisions card for this on `main`. Worth knowing before he answ
 main still shows `tmobile-split-1` as unconfirmed, because main never received his 8/25
 confirmation that payment 1 was paid. Her card is consistent with what main can see; it is
 main that is missing a fact he already gave.
+
+Nothing paid, nothing moved, no creditor contacted.
+
+## Update 2026-08-29 — T-Mobile $149 resolved by Lemar: the line was wrong, not the payment
+
+He answered the #decisions card by reacting on Option 1 (option ts 1787940475.849039).
+The reaction was verified against Slack directly, not taken from the main-branch commit
+that first applied it: **"This is tmobile-split-1 paid in FULL, but the actual amount was
+$149 not $265 — correct the line to $149 and mark paid."**
+
+Worth recording that neither reading this ledger offered was right. It had narrowed the
+$149 to a partial on `tmobile-split-2` or a new untracked service line, because those were
+the only possibilities visible from the inside. The real answer — that `tmobile-split-1`
+had been carrying a wrong amount since it was created — was a fact only Lemar had. This is
+the case for asking rather than picking the likelier of two guesses: the likelier guess
+would have put $129 of phantom debt on a bill due that day.
+
+Applied, and only this:
+
+- `tmobile-split-1.amount` 265 → **149**
+- `paid_on: 2026-08-28` recorded — the payment date his 8/28 report supplies, which the
+  8/25 confirmation had left null
+- `status` was already `paid` and its calendar event already retired, both from his 8/25
+  confirmation, so neither changed
+- **No `daily_targets` effect.** This line never accrued — 8/3 had passed before any
+  accrual window opened on it — so there was no drip to retire and no day's `target`,
+  `shortfall` or `total_claim` to recompute. Verified across all 196 days.
+- `tmobile-split-2` ($278, due 8/28) **untouched** — still open, still unpaid, per the
+  scope of the option he picked.
+
+The $116 difference was never owed. It was a recording error in the line, corrected on his
+word, and it never reached the daily number because the line never dripped.
 
 Nothing paid, nothing moved, no creditor contacted.
