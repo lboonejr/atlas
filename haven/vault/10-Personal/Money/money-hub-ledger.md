@@ -1209,17 +1209,18 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     total_claim: 315.52
     gas_spent: null
     swept_to_maintenance: 0
-    funded: 0
-    shortfall: 285.52
+    funded: 103.99
+    shortfall: 181.53
     calendar_event_id: vbe25am89iihpll036s2ohm25g
+    resolution: "INCOME ALLOCATION 2026-08-28 (applied 2026-08-29 from his itemized breakdown, ts 1788011757.485089). $133.99 earned across four dashes that day — reported only on 8/29, so this is a BACKFILL onto its own day, which ROLLOVER permits because 8/28 has not been rolled. $30.00 held as the operating reserve (no gas spend reported). Remaining $103.99 poured in due-date order, ties by smallest amount: own-car-running-2 $18.18 and station-travel-weekly $20.00 (both due 8/29) funded; metrc-fee $5.71 and cuzzies-google-workspace $12.14 (9/1) funded; claude $5.00 and moms-car-oil-change $10.00 (9/4) funded; own-car-running-3 $12.12 (9/5) funded; liquidibee-1 $10.42 (9/6) funded; fantasy-football-buyin $10.42 of $13.04 (9/7) partial — money ran out there. Shortfall 285.52 -> 181.53. Income only; he has NOT reported moving anything into SoFi."
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
-      - {line_id: claude, amount: 5.00, funded: 0, status: pending}
-      - {line_id: cuzzies-google-workspace, amount: 12.14, funded: 0, status: pending}
+      - {line_id: claude, amount: 5.00, funded: 5.00, status: funded}
+      - {line_id: cuzzies-google-workspace, amount: 12.14, funded: 12.14, status: funded}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
+      - {line_id: fantasy-football-buyin, amount: 13.04, funded: 10.42, status: partial}
       - {line_id: hillview-1, amount: 15.39, funded: 0, status: pending}
       - {line_id: hillview-10, amount: 1.44, funded: 0, status: pending}
       - {line_id: hillview-11, amount: 1.31, funded: 0, status: pending}
@@ -1233,17 +1234,17 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-7, amount: 2.07, funded: 0, status: pending}
       - {line_id: hillview-8, amount: 1.81, funded: 0, status: pending}
       - {line_id: hillview-9, amount: 1.60, funded: 0, status: pending}
-      - {line_id: liquidibee-1, amount: 10.42, funded: 0, status: pending}
+      - {line_id: liquidibee-1, amount: 10.42, funded: 10.42, status: funded}
       - {line_id: liquidibee-2, amount: 6.58, funded: 0, status: pending}
       - {line_id: liquidibee-3, amount: 4.81, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 3.79, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
-      - {line_id: metrc-fee, amount: 5.71, funded: 0, status: pending}
-      - {line_id: moms-car-oil-change, amount: 10.00, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 5.71, funded: 5.71, status: funded}
+      - {line_id: moms-car-oil-change, amount: 10.00, funded: 10.00, status: funded}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-2, amount: 18.18, funded: 0, status: pending}
-      - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 18.18, funded: 18.18, status: funded}
+      - {line_id: own-car-running-3, amount: 12.12, funded: 12.12, status: funded}
       - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
       - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
       - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
@@ -1251,7 +1252,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.27, funded: 0, status: pending}
-      - {line_id: station-travel-weekly, amount: 20.00, funded: 0, status: pending}
+      - {line_id: station-travel-weekly, amount: 20.00, funded: 20.00, status: funded}
       - {line_id: student-loans, amount: 15.63, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
@@ -1262,15 +1263,16 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     total_claim: 285.68
     gas_spent: null
     swept_to_maintenance: 0
-    funded: 0
-    shortfall: 255.68
+    funded: 16.00
+    shortfall: 239.68
     calendar_event_id: sstpelcggofk499sqem3cpdbk8
+    resolution: "INCOME ALLOCATION 2026-08-29. $46.00 DoorDash, the Sat 8/29 row of his breakdown (ts 1788011757.485089). $30.00 held as the operating reserve (no gas spend reported). Remaining $16.00 in due-date order: metrc-fee $5.71 (due 9/1) funded; cuzzies-google-workspace $10.29 of $12.14 (also 9/1, larger so second on the tie-break) partial — money ran out there. Shortfall 255.68 -> 239.68. RECOMPUTED: Samira's run on main put the same $16.00 into liquidibee-3, claude and moms-weekly — wrong queue for this ledger, whose metrc-fee and cuzzies-google-workspace both sit at 9/1 after Lemar re-dated them on 8/25, ahead of everything she picked. Her reported facts kept, her allocation discarded."
     contributions:
       - {line_id: am-botte-mechanical-past-due, amount: 6.45, funded: 0, status: pending}
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: claude, amount: 5.00, funded: 0, status: pending}
-      - {line_id: cuzzies-google-workspace, amount: 12.14, funded: 0, status: pending}
+      - {line_id: cuzzies-google-workspace, amount: 12.14, funded: 10.29, status: partial}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
       - {line_id: hillview-1, amount: 15.39, funded: 0, status: pending}
@@ -1291,7 +1293,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: liquidibee-3, amount: 4.81, funded: 0, status: pending}
       - {line_id: liquidibee-4, amount: 3.79, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
-      - {line_id: metrc-fee, amount: 5.71, funded: 0, status: pending}
+      - {line_id: metrc-fee, amount: 5.71, funded: 5.71, status: funded}
       - {line_id: moms-car-oil-change, amount: 10.00, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
@@ -5184,6 +5186,7 @@ open_questions:
   - "T-Mobile: confirm payment 1 ($265, was due 8/3) went through; payment 2 amount/date already dated (see tmobile-split-2)"
   - "RESOLVED 2026-08-29 — the 8/28 $149 T-Mobile payment IS tmobile-split-1. Lemar settled it himself by picking Option 1 on the #decisions card (option ts 1787940475.849039; his white_check_mark verified at the source): the LINE's amount was wrong ($265 recorded, $149 actually owed and paid), not the payment. Line corrected to $149, paid_on 2026-08-28, already status paid from his 8/25 confirmation. Neither of the two readings this ledger had raised — a partial on tmobile-split-2, or a new untracked service line — was right; the answer was a third thing only he could know. tmobile-split-2 ($278, due 8/28) is untouched and still open."
   - "NEW 2026-08-29 — DoorDash breakdown conflicts with three logged entries. Lemar posted his app's 'Dashes' list in #personal-finance (ts 1788011757.485089): Mon 8/24 $38.80 · Wed 8/26 $53.25 + $50.60 · Thu 8/27 $57.25 + $57.80 · Fri 8/28 $51.39 + $21.95 + $28.10 + $32.55 · Sat 8/29 $46.00. The income log already held 8/24 $30.00, 8/26 $70.78 and 8/27 $50.60 from his earlier verbal reports, and the app figures do not match any of them. APPLIED: only 8/28 ($133.99, four dashes) and 8/29 ($46.00) — those days had no prior entry, so they are unambiguously new money. HELD: the 8/24, 8/26 and 8/27 rows are NOT logged; they keep only their original verbal entries. Logging both sets would double-count about $151 and inflate the trailing 4-week average that OVERLOAD CHECK divides by — a cheerful number, which is the failure mode the brake exists to prevent. Likeliest reading, deliberately not applied: the breakdown is authoritative and the three verbal lines are approximate recollections of dashes already in it ($50.60 sits on Wed 8/26 in the app but he reported it 8/27 as 'just now', consistent with a dash running past midnight). Against it: the screenshot may be scrolled/partial, and $70.78 matches no row or pair. Needs Lemar. No funding recorded for any of it — he reported earnings, not that he set money aside."
+  - "RESOLVED-IN-PART 2026-08-29 — Lemar answered two of the three DoorDash conflicts in #decisions (thread ts 1788011652.830719, both replies verified at the source). (1) ts 1788017291.486109 'You can remove the manual $70.78 entry' — the 8/26 $70.78 line is VOIDED via a $0 reconciliation line, not deleted. (2) ts 1788017130.025569 'Same dash was accidentally logged under 2 dates' — the 8/27 $50.60 and his app's Wed 8/26 $50.60 are ONE dash; this ledger only ever held one of them, so nothing was voided, only annotated. Those two answers freed the previously blocked rows: 8/26 $53.25 and 8/27 $57.25 + $57.80 are now LOGGED, their competing entries having been voided or reassigned. STILL OPEN, the last one: Mon 8/24 $38.80 (app) vs $30.00 (his 8/25 verbal report). He did not address that pair and it was not inferred. Valid entries now total $428.89 for 8/24-8/29 against his breakdown's $437.69 — a gap of exactly $8.80, which is $38.80 - $30.00, so 8/24 is provably the only discrepancy left."
   - "Water pump $184.79 (now dated 2026-09-15): STILL unreconciled whether it's inside or on top of the car goal's $2,000 repairs figure — dating it didn't resolve the overlap."
   - "RESOLVED 2026-08-13 (recompute session, updated same day): comedy tickets $50.28 confirmed unpaid and briefly folded into the accrual, then CANCELLED later the same day — Lemar isn't going, too many bills were piling up. Parked, out of the queue entirely, not owed. See Update 2026-08-13 (THIRD REVISION)."
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
@@ -6848,5 +6851,62 @@ Replace-or-keep is his call, and the two answers differ by about $151 of recorde
 **No funding recorded, no `daily_targets` touched.** He reported earnings, not that he set
 anything aside — the same treatment the 8/23 $230 Station line got. `funded` still means
 money moved to Set-Aside, and he has not said that happened.
+
+Nothing paid, nothing moved, no creditor contacted.
+
+## Update 2026-08-29 (3) — his two answers applied; 8/28 and 8/29 allocated; one row still open
+
+Lemar answered in the #decisions thread (ts 1788011652.830719). Both replies read directly
+from Slack, not taken from the main-branch commit that applied them first:
+
+- ts `1788017291.486109` — **"You can remove the manual $70.78 entry."**
+- ts `1788017130.025569` — **"Same dash was accidentally logged under 2 dates."**
+
+**$70.78 voided** with a $0 reconciliation line. History is append-only, so the original
+entry stays and the note voids it.
+
+**$50.60 clarified, not voided.** His app dates that dash Wed 8/26; he reported it 8/27 as
+"just now", which fits a dash running past midnight. Worth noting this branch never had the
+duplicate — only one $50.60 entry was ever logged here, so unlike `main` there was nothing to
+void. The existing line is that single dash and it stands.
+
+Those two answers unblocked three rows that had been held only because something conflicted
+with them. **Now logged: 8/26 $53.25, 8/27 $57.25, 8/27 $57.80.**
+
+### One row is still open, and it is now provable which
+
+| | |
+|---|---|
+| Valid entries, 8/24–8/29 | **$428.89** |
+| His breakdown total | **$437.69** |
+| Difference | **$8.80** = $38.80 − $30.00 |
+
+Mon 8/24 is the only discrepancy left. His app says $38.80; the log holds $30.00 from his
+8/25 verbal report. He addressed neither in his replies, so it stays unresolved rather than
+inferred — though the likely reading (same dash, $30 was the estimate, $38.80 the app figure)
+would close the two records to the cent.
+
+### Allocations
+
+Both days funded per INCOME ALLOCATION — reserve first, then due-date order, ties by
+smallest amount.
+
+**2026-08-28 — $133.99**, a backfill onto its own day. ROLLOVER permits this because 8/28
+has not been rolled. $30 reserve held; $103.99 funded own-car-running-2, station-travel-weekly,
+metrc-fee, cuzzies-google-workspace, claude, moms-car-oil-change, own-car-running-3 and
+liquidibee-1 in full, then fantasy-football-buyin $10.42 of $13.04 partial.
+**Shortfall $285.52 → $181.53.**
+
+**2026-08-29 — $46.00.** $30 reserve; $16.00 funded metrc-fee $5.71 in full and
+cuzzies-google-workspace $10.29 of $12.14 partial. **Shortfall $255.68 → $239.68.**
+
+Samira's run on `main` put the same $16.00 into liquidibee-3, claude and moms-weekly. Wrong
+queue for this ledger: metrc-fee and cuzzies-google-workspace both sit at **9/1** after Lemar
+re-dated them on 8/25, ahead of everything she picked. Her facts kept, her allocation discarded.
+
+**One thing to flag rather than reconcile.** `funded` now totals $119.99 across 8/28–8/29 from
+earnings, but the last reported SoFi balance is **$70.00 as of 8/26** and he has not said he
+moved any of this into Set-Aside. `funded` here means the model has earmarked the money, not
+that it has left the Spending pocket. Not adjusted, not assumed — just noted.
 
 Nothing paid, nothing moved, no creditor contacted.
