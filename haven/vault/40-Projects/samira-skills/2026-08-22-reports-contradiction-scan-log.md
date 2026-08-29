@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-29T12:15:00-04:00
+updated: 2026-08-29T13:25:00-04:00
 domain: project
 type: log
 status: active
@@ -1195,3 +1195,24 @@ stale claims against any cited Haven note.
   14:03:57Z) — no `130423Z`-authored `run_completed` commit found
 - haven/vault/10-Personal/Money/income-log-2026.md (DoorDash figures cross-checked,
   matched)
+
+## Thirty-second run (2026-08-29 ~1:25pm ET) — obvious fix posted, new scan clean
+
+**Scanned:** #reports ts `1788016663`–`1788023865` (11:17am digest through this pass).
+
+**Fix from the thirty-first run's finding, posted this pass** (buffer clear — a new
+pass since the finding was staged): the `130423Z` digest-mischaracterization correction
+went to #reports (ts `1788023865.637249`) and as a blockquote appended under the
+`~11:17 AM ET` entry in `haven/vault/_daily/2026-08-29.md` (append-only, original line
+untouched).
+
+**New content scanned this pass:** PART E investor confirmation (Peter Abdallah), the
+12:24pm digest, and this run's own posts so far (Desktop cleanup, PT park, money-hub
+reconciliation). All internally consistent with each other and with their cited Haven
+notes — no conflicting figures, no unresolved self-corrections, no stale claims found.
+
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (thirty-second run)
+- slack: #reports `C0BBZJL85RT`, ts range `1788016663`–`1788023865`
+- haven/vault/_daily/2026-08-29.md (correction appended under `~11:17 AM ET`)
