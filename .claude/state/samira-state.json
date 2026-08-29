@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260829T160236Z",
-    "run_started": "2026-08-29T16:02:36Z",
+    "run_id": "run_20260829T170250Z",
+    "run_started": "2026-08-29T17:02:50Z",
     "run_completed": "2026-08-29T16:26:00Z",
-    "note": "Thirtieth scan (run_20260829T160236Z) COMPLETED — quiet pass overall. Ran the full order 0->V->S->A->B->C->D->E->Q->R->M->T->canvas(skipped, blocked)->P->digest. Delta: 1 new stuck Haven Inbox note (Rootwurks, domain unresolved), 1 clarifying #decisions reply (Leafly invoice, no path ever given), investor pipeline moved forward 1 thread (Peter Abdallah/Vantage RES, self-sent by Lemar), reports-contradiction-scanner corrected a mischaracterization in the prior digest (130423Z did post a digest, just never wrote lock completion). See #reports (ts 1788020684.346689) + _daily/2026-08-29.md for the full digest."
+    "note": "Thirty-first scan (run_20260829T170250Z) STARTED — in flight."
   },
   "watermarks": {
     "slack_channels": {
