@@ -1,31 +1,31 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260829T140245Z",
-    "run_started": "2026-08-29T14:02:45Z",
-    "run_completed": "2026-08-28T21:09:30Z",
-    "note": "Twenty-eighth scan (run_20260829T140245Z) in progress. Prior run run_20260829T130423Z died mid-flight after PARTs V/M/T/R (lock aged out past 45min, never wrote run_completed) — this run picks up from PART S."
+    "run_id": "run_20260829T160236Z",
+    "run_started": "2026-08-29T16:02:36Z",
+    "run_completed": "2026-08-29T15:17:10Z",
+    "note": "Thirtieth scan (run_20260829T160236Z) IN PROGRESS."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1787951278.295819",
+      "C0BBXA96FFV": "1788016134.000000",
       "C0BBZJL85RT": "1787951278.295819",
-      "D0BHPKMDNEP": "1787937989.457309",
-      "C0BGLEMH99T": "1787938660.116409",
-      "C0BEQUW5NPP": "1787869995.000000",
-      "C0BBLUA7JLX": "1787923057.552979",
-      "C0BJ37SU1TL": "1787869995.000000",
-      "C0BCCUKEUQ2": "1787869995.000000",
-      "C0BCD7U5X2B": "1787869995.000000",
-      "C0BCH2C3GRM": "1787869995.000000",
-      "C0BDN2KQFD4": "1787869995.000000",
-      "C0BD8LTM1EK": "1787869995.000000",
-      "C0BGYM1UB4Y": "1787869995.000000",
-      "C0BGCAK0ML3": "1787869995.000000",
-      "C0BHXTPST52": "1787869995.000000",
-      "C0BC2A94142": "1787869995.000000",
-      "C0BBZ5J8805": "1787869995.000000",
-      "C0BRZT2V89W": "1787869995.000000"
+      "D0BHPKMDNEP": "1788012976.844109",
+      "C0BGLEMH99T": "1788011757.485089",
+      "C0BEQUW5NPP": "1788016134.000000",
+      "C0BBLUA7JLX": "1788016134.000000",
+      "C0BJ37SU1TL": "1788016134.000000",
+      "C0BCCUKEUQ2": "1788016134.000000",
+      "C0BCD7U5X2B": "1788016134.000000",
+      "C0BCH2C3GRM": "1788016134.000000",
+      "C0BDN2KQFD4": "1788016134.000000",
+      "C0BD8LTM1EK": "1788016134.000000",
+      "C0BGYM1UB4Y": "1788016134.000000",
+      "C0BGCAK0ML3": "1788016134.000000",
+      "C0BHXTPST52": "1788016134.000000",
+      "C0BC2A94142": "1788016134.000000",
+      "C0BBZ5J8805": "1788016134.000000",
+      "C0BRZT2V89W": "1788016134.000000"
     },
     "decisions_threads": {
       "1786832078.131649": "1787754270.525189",
@@ -66,7 +66,7 @@
       "1787670575.635129": "1787674284.261919",
       "1787682832.038489": "1787682841.068369",
       "1787749640.485929": "1787749839.984179",
-      "1787753574.970519": "1787926156.549339",
+      "1787753574.970519": "1788016365.085079",
       "1787756944.929189": "1787756952.106279",
       "1787756959.630349": "1787756959.630349",
       "1787833175.960449": "1787839939.371519",
@@ -74,15 +74,17 @@
       "1787854465.146219": "1787854486.805629",
       "1787930008.624029": "1787930008.624029",
       "1787936776.561599": "1787936780.871709",
-      "1787940471.776979": "1787940478.474579"
+      "1787940471.776979": "1787940478.474579",
+      "1788011652.830719": "1788016546.481719",
+      "1788016294.676159": "1788016294.676159"
     },
-    "capture_dm": "1787937989.457309",
-    "gmail_after_epoch": 1787951348
+    "capture_dm": "1788012976.844109",
+    "gmail_after_epoch": 1788016305
   },
   "integrity": {
-    "last_full_pass": "2026-08-28T09:20:00-04:00",
-    "last_scan_sha": "4c98c6400e7f455090e9ffc50d34e1c0b75cae7b",
-    "note": "Twenty-sixth scan: 1 vault file changed since prior last_scan_sha (15756e3f) — _daily/2026-08-28.md (this run's own digest append, frontmatter still valid). 0 repairs needed. Inbox parked 3 unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections). Known/accepted 1: _daily/2026-08-01.md (base64 blob, lossless gate fails, Lemar decided 2026-08-09 to leave it flagged)."
+    "last_full_pass": "2026-08-29T11:03:12-04:00",
+    "last_scan_sha": "cdfc6503315800c27678b8ffcfafd43ffcecfa2b",
+    "note": "Twenty-ninth scan: full whole-vault pass (621 notes, no successful Samira run had logged one yet today — both earlier runs today died mid-flight). 0 repairs needed. Inbox parked 3 unchanged (dib-template-theme-decision-closeout, google-voice-subscription-cancellation, caine-weiner-progressive-collections), all domain? still blank. Known/accepted 1: _daily/2026-08-01.md (base64 blob, lossless gate fails, Lemar decided 2026-08-09 to leave it flagged). NEW flag: 40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md is missing `created` entirely (has `updated` only) — filed note, required field absent, not repaired (no template to derive it from outside _daily); surfaced on the stuck-notes card for Lemar."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
