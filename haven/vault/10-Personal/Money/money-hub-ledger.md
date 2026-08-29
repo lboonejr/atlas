@@ -5183,6 +5183,7 @@ open_questions:
   - "Confirm the 7/25 $1,000 allocation landed: $500 car payment, $200 tires, $50 mom"
   - "T-Mobile: confirm payment 1 ($265, was due 8/3) went through; payment 2 amount/date already dated (see tmobile-split-2)"
   - "RESOLVED 2026-08-29 — the 8/28 $149 T-Mobile payment IS tmobile-split-1. Lemar settled it himself by picking Option 1 on the #decisions card (option ts 1787940475.849039; his white_check_mark verified at the source): the LINE's amount was wrong ($265 recorded, $149 actually owed and paid), not the payment. Line corrected to $149, paid_on 2026-08-28, already status paid from his 8/25 confirmation. Neither of the two readings this ledger had raised — a partial on tmobile-split-2, or a new untracked service line — was right; the answer was a third thing only he could know. tmobile-split-2 ($278, due 8/28) is untouched and still open."
+  - "NEW 2026-08-29 — DoorDash breakdown conflicts with three logged entries. Lemar posted his app's 'Dashes' list in #personal-finance (ts 1788011757.485089): Mon 8/24 $38.80 · Wed 8/26 $53.25 + $50.60 · Thu 8/27 $57.25 + $57.80 · Fri 8/28 $51.39 + $21.95 + $28.10 + $32.55 · Sat 8/29 $46.00. The income log already held 8/24 $30.00, 8/26 $70.78 and 8/27 $50.60 from his earlier verbal reports, and the app figures do not match any of them. APPLIED: only 8/28 ($133.99, four dashes) and 8/29 ($46.00) — those days had no prior entry, so they are unambiguously new money. HELD: the 8/24, 8/26 and 8/27 rows are NOT logged; they keep only their original verbal entries. Logging both sets would double-count about $151 and inflate the trailing 4-week average that OVERLOAD CHECK divides by — a cheerful number, which is the failure mode the brake exists to prevent. Likeliest reading, deliberately not applied: the breakdown is authoritative and the three verbal lines are approximate recollections of dashes already in it ($50.60 sits on Wed 8/26 in the app but he reported it 8/27 as 'just now', consistent with a dash running past midnight). Against it: the screenshot may be scrolled/partial, and $70.78 matches no row or pair. Needs Lemar. No funding recorded for any of it — he reported earnings, not that he set money aside."
   - "Water pump $184.79 (now dated 2026-09-15): STILL unreconciled whether it's inside or on top of the car goal's $2,000 repairs figure — dating it didn't resolve the overlap."
   - "RESOLVED 2026-08-13 (recompute session, updated same day): comedy tickets $50.28 confirmed unpaid and briefly folded into the accrual, then CANCELLED later the same day — Lemar isn't going, too many bills were piling up. Parked, out of the queue entirely, not owed. See Update 2026-08-13 (THIRD REVISION)."
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
@@ -6806,5 +6807,46 @@ Applied, and only this:
 
 The $116 difference was never owed. It was a recording error in the line, corrected on his
 word, and it never reached the daily number because the line never dripped.
+
+Nothing paid, nothing moved, no creditor contacted.
+
+## Update 2026-08-29 (2) — DoorDash breakdown: the unconflicted days logged, the rest held
+
+Lemar posted his DoorDash "Dashes" list in #personal-finance (ts 1788011757.485089) — a
+screenshot plus his own typed transcription, ten dashes across five days. Verified against
+the Slack message itself.
+
+Five of those days are not equal. Two are clean, three collide with what the log already
+holds:
+
+| Day | App breakdown | Already logged | Status |
+|---|---|---|---|
+| Mon 8/24 | $38.80 | $30.00 | **conflict — held** |
+| Wed 8/26 | $53.25 + $50.60 = $103.85 | $70.78 | **conflict — held** |
+| Thu 8/27 | $57.25 + $57.80 = $115.05 | $50.60 | **conflict — held** |
+| Fri 8/28 | $51.39 + $21.95 + $28.10 + $32.55 = **$133.99** | — | **logged** |
+| Sat 8/29 | **$46.00** | — | **logged** |
+
+**Applied: $179.99** across 8/28 and 8/29. Those days had no prior entry at all, so there is
+nothing to reconcile — it is new money and it goes in.
+
+**Held: 8/24, 8/26, 8/27.** They keep only their original verbal entries. Logging the app
+rows on top would add roughly $151 of income that may not exist, and the income log is what
+OVERLOAD CHECK averages over — inflating it would quietly make the coming week look more
+affordable than it is. That is precisely the failure the brake exists to catch, so the
+conflicting rows do not go in on a guess.
+
+The likeliest reading, recorded and deliberately **not** applied: the app breakdown is the
+authoritative record, and his three verbal reports were approximate recollections of dashes
+already inside it. The $50.60 supports this — it sits on **Wed 8/26** in the app, but he
+reported it on 8/27 as "made $50.60 just now", which fits a dash that ran past midnight.
+Cutting against it: the screenshot may be a scrolled or partial list, and **$70.78 matches
+no row and no pair of rows** on 8/26 or anywhere else.
+
+Replace-or-keep is his call, and the two answers differ by about $151 of recorded income.
+
+**No funding recorded, no `daily_targets` touched.** He reported earnings, not that he set
+anything aside — the same treatment the 8/23 $230 Station line got. `funded` still means
+money moved to Set-Aside, and he has not said that happened.
 
 Nothing paid, nothing moved, no creditor contacted.
