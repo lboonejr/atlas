@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-27T12:00:00-04:00
+updated: 2026-08-29T11:20:00-04:00
 domain: personal
 type: log
 status: active
@@ -32,5 +32,16 @@ entries:
   - {date: 2026-08-15, source: "the-station", amount: 144, note: "reported in #personal-finance"}
   - {date: 2026-08-26, source: doordash, amount: 70.78, note: "last DoorDash shift"}
   - {date: 2026-08-27, source: doordash, amount: 50.60, note: "reported via #personal-finance"}
+  - {date: 2026-08-24, source: doordash, amount: 38.80, note: "from a full 'Dashes' breakdown Lemar posted as text in #personal-finance 2026-08-29 ~11:35am ET (ts 1788011757), per-dash amounts with dates. One of 10 lines in that post; see the other 8 below plus the flagged possible-duplicate note on the 2026-08-26 $50.60 line."}
+  - {date: 2026-08-26, source: doordash, amount: 53.25, note: "from the same 2026-08-29 Dashes breakdown."}
+  - {date: 2026-08-26, source: doordash, amount: 50.60, note: "from the same 2026-08-29 Dashes breakdown. POSSIBLE DUPLICATE of the 2026-08-27 $50.60 line above (identical amount) — that line was logged with no date-range confirmation and may be this same dash misattributed to Aug 27 instead of Aug 26. Logged as its own line rather than silently merged or dropped; raised in #decisions rather than guessed. Do NOT sum both into weekly totals until resolved."}
+  - {date: 2026-08-27, source: doordash, amount: 57.25, note: "from the same 2026-08-29 Dashes breakdown."}
+  - {date: 2026-08-27, source: doordash, amount: 57.80, note: "from the same 2026-08-29 Dashes breakdown."}
+  - {date: 2026-08-28, source: doordash, amount: 51.39, note: "from the same 2026-08-29 Dashes breakdown."}
+  - {date: 2026-08-28, source: doordash, amount: 21.95, note: "from the same 2026-08-29 Dashes breakdown."}
+  - {date: 2026-08-28, source: doordash, amount: 28.10, note: "from the same 2026-08-29 Dashes breakdown."}
+  - {date: 2026-08-28, source: doordash, amount: 32.55, note: "from the same 2026-08-29 Dashes breakdown."}
+  - {date: 2026-08-29, source: doordash, amount: 46.00, note: "from the same 2026-08-29 Dashes breakdown."}
+  - {date: 2026-08-29, source: doordash, amount: 0, note: "OPEN QUESTION, no new money: does the 2026-08-26 $70.78 'last DoorDash shift' line above correspond to ANY dash in the 2026-08-29 breakdown, or is it a separate/estimated figure not reflected there? None of the 10 breakdown amounts match $70.78. Also unresolved: is the 2026-08-27 $50.60 line the same dash as the 2026-08-26 $50.60 line above (see that line's note)? Raised in #decisions 2026-08-29 rather than guessed — do not sum overlapping candidates into any weekly total until Lemar answers."}
 # - {date: 2026-08-05, source: doordash, amount: 140, note: null}
 ```

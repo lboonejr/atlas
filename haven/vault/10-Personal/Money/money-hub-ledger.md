@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-29T09:54:04-04:00
+updated: 2026-08-29T11:20:00-04:00
 domain: personal
 type: reference
 status: active
@@ -2896,6 +2896,13 @@ goals:                               # a goal is a bill Lemar owes himself: it n
             income' framing died with the waterfall on 2026-08-10; under due-date order
             savings is funded by naming an amount and a date like anything else."}
 open_questions:
+  - "OPEN 2026-08-29 (#decisions ts 1788016060, in the screenshot thread): does the new
+     2026-08-26 $50.60 DoorDash dash (from Lemar's 10-line 'Dashes' breakdown posted
+     2026-08-29) duplicate the already-logged 2026-08-27 $50.60 line, or are they two
+     separate dashes? Also: does the already-logged 2026-08-26 $70.78 'last DoorDash
+     shift' line correspond to anything in the new breakdown at all — none of its 10
+     amounts match $70.78. INCOME ALLOCATION / ACCRUAL recompute for this week is
+     deferred until this resolves, to avoid double- or under-counting real income."
   # -- the new #1 class of defect: undated queue lines are invisible --
   - "UNDATED (invisible to the queue — no event, no ramp, will never ring): Tidal $14.92/mo · Cuzzie's phone + Workspace ~$550/mo. Two lines, ~$565/mo, still silently outside the system until each gets a date. RESOLVED THIS PASS (2026-08-15, #personal-finance ts 1786754410.308129): student loans (dated, day 16, see student-loans), Cash App payback (dated 2026-11-30, see cashapp-payback), mechanic repair repayment (dated 2026-09-30, see mechanic-repair-repay), and new water pump (dated 2026-09-15, see water-pump) all now carry dates; personal gym debt was PAID, not dated. T-Mobile payment 2 was already dated 2026-08-14 (see tmobile-split-2, $278 due 8/28) — this bullet just hadn't been updated to drop it until now. Mom's expenses was dropped earlier, 2026-08-13."
   - "Cuzzie's phone + Google Workspace ~$550/mo — Lemar did NOT address this line in his 2026-08-15 message (#personal-finance ts 1786754410.308129), which named every other undated line but this one. Left undated per the business boundary: it's business-origin cost carried personally, ambiguous personal-vs-business, and no date was given — never inferred."
@@ -4263,3 +4270,33 @@ Nothing paid, moved, or contacted by Samira — this is a ledger correction refl
 payment Lemar already made and is now confirming the amount/match for. Dashboard not
 re-rendered this pass (single-line correction, no accrual/queue-visible change); the
 next PART M sweep will pick it up in its normal render.
+
+## Update 2026-08-29T11:20:00-04:00 — DoorDash "Dashes" breakdown logged, recompute deferred (reconciliation open)
+
+Lemar posted a full per-dash earnings breakdown as text in #personal-finance (2026-08-29
+~11:35am ET, ts 1788011757): 10 individual dashes, Mon 8/24 through Sat 8/29, totaling
+$437.69. Also posted a screenshot (`IMG_2119.png`) the same afternoon that couldn't be
+read (`files.slack.com` blocked this session) — asked in #decisions what it was; Lemar
+replied "These are DoorDash earnings," which is most likely this same breakdown (the
+text list may be what the screenshot showed, typed out).
+
+All 10 lines appended to `income-log-2026.md`, verbatim, with provenance notes. **Not
+recomputing `daily_targets` this pass** — two of the ten lines create a genuine
+reconciliation question rather than a clean addition:
+- The new 2026-08-26 $50.60 dash is IDENTICAL in amount to the already-logged
+  2026-08-27 $50.60 line ("reported via #personal-finance", no date-range given at the
+  time). These may be the same dash logged twice under two different dates, or two
+  separate dashes that happen to match — cannot tell without asking.
+- The already-logged 2026-08-26 $70.78 "last DoorDash shift" line has no match anywhere
+  in the new 10-line breakdown at all.
+
+Recomputing the accrual/income-allocation pass now risks double-counting (if the $50.60
+pair is one dash, not two) or under-counting (if the $70.78 line is real and simply
+outside the breakdown's window) — either way a wrong number moving real money between
+Spending and Set-Aside. Raised as ONE #decisions question rather than guessed (ts
+`1788016060` reply in the existing screenshot thread, plus this note). Once Lemar
+answers, the next pass runs INCOME ALLOCATION + ACCRUAL + OVERLOAD CHECK for the
+confirmed total and re-renders. This is a deliberate exception to "never defer the
+recompute" — the blocker is a genuine reconciliation ambiguity, not a bandwidth
+shortcut; the ambiguity itself is the open item, tracked here and in `open_questions`.
+Dashboard not re-rendered this pass.
