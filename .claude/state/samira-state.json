@@ -3,8 +3,8 @@
   "lock": {
     "run_id": "run_20260829T150312Z",
     "run_started": "2026-08-29T15:03:12Z",
-    "run_completed": "2026-08-28T21:09:30Z",
-    "note": "Twenty-ninth scan (run_20260829T150312Z) in progress. Prior run run_20260829T140245Z died mid-flight (lock aged out past 45min, never wrote run_completed) — two consecutive runs have now died mid-flight today (130423Z, 140245Z). This run starts fresh from PART 0."
+    "run_completed": "2026-08-29T15:17:10Z",
+    "note": "Twenty-ninth scan (run_20260829T150312Z) COMPLETED — first run today to reach the digest after two consecutive mid-flight deaths (130423Z, 140245Z). Ran the full order 0->V->S->A->B->C->D->E->Q->R->H->M->T(carried)->canvas(skipped)->P(carried)->digest. See #reports + _daily/2026-08-29.md for the full digest."
   },
   "watermarks": {
     "slack_channels": {
@@ -75,7 +75,7 @@
       "1787930008.624029": "1787930008.624029",
       "1787936776.561599": "1787936780.871709",
       "1787940471.776979": "1787940478.474579",
-      "1788011652.830719": "1788016060.450579",
+      "1788011652.830719": "1788016546.481719",
       "1788016294.676159": "1788016294.676159"
     },
     "capture_dm": "1788012976.844109",
