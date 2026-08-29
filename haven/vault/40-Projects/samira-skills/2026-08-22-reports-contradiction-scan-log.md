@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-29T13:16:00-04:00
+updated: 2026-08-29T12:15:00-04:00
 domain: project
 type: log
 status: active
@@ -1122,3 +1122,76 @@ resolves and doesn't conflict with anything checked above.
   2:11pm ET window, found none
 - haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md
 - haven/vault/00-Inbox/ (directly listed — 3 notes stuck, unchanged)
+
+## Update 2026-08-29 (thirty-first run)
+
+**Range scanned:** #reports `C0BBZJL85RT`, ts `1788011696`–`1788016663` (2026-08-29
+~10:34am ET through ~11:17am ET, since the thirtieth run's bookmark; the boundary
+message `1788011696.804839`, the money-hub T-Mobile-match line, was already checked in
+the thirtieth run's entry and was used only for grouping context here, not re-flagged).
+
+**Found: 1.**
+
+1. **Obvious fix — the 11:17am digest (and the vault's own `_daily/2026-08-29.md`
+   journal entry) mischaracterize run `130423Z` as never having posted a #reports
+   digest, when it plainly did.**
+   - 8/29 ~11:17am ET (`1788016663`, run `150312Z`'s digest): "First run today to reach
+     a digest — two earlier runs (130423Z, 140245Z) died mid-flight without one."
+   - Same claim, verbatim in substance, landed in the vault:
+     `haven/vault/_daily/2026-08-29.md` (`## ~11:17 AM ET` entry): "First run today to
+     reach a digest — two earlier runs (130423Z, 140245Z) died mid-flight without one."
+   - **Ground truth — #reports itself contradicts this for `130423Z`:** ts `1788013142`
+     (8/29 ~10:18am ET) is a full Samira digest, self-identified in its own body as
+     "this scan (run_20260829T130423Z)," explicitly explaining that it "ran long ...
+     crossed the 45-min lock window, so a second scheduled trigger (run_20260829T140245Z)
+     started concurrently believing this one died." That message is a digest, posted to
+     #reports, under `130423Z`'s own name — it cannot be true both that `130423Z`
+     "died ... without [reaching] a digest" and that `130423Z` posted the very digest
+     sitting three messages earlier in the same channel.
+   - **Reconciling the two facts (git log, local clone):** `130423Z`'s commits run
+     `07d1780` (lock start, 13:44:45Z) → `6eeced7` (vault-keeper) → `53aefd6` (money-hub
+     tmobile fix) → `93fb84e` (PART T, this log's own thirtieth-run entry, 13:57:19Z) →
+     `4df8c83` (PART R PM re-ask, 13:58:50Z) — no `130423Z`-authored commit ever writes
+     `lock.run_completed` to `.claude/state/samira-state.json`. `140245Z`'s lock-start
+     commit (`3099c1d`, 14:03:57Z) landed before `130423Z`'s digest posted to Slack
+     (14:18 UTC / 10:18am ET) — so `130423Z` kept running after `140245Z`'s trigger
+     already believed it dead, finished its work, and posted its digest, but never
+     completed the final state-file write (PART 0/Digest step 3). That is exactly why
+     the 11:17am digest found "lock/watermarks stale on `main`" and had to resync them —
+     a real, correctly-diagnosed effect — but its *cause* was mis-stated: `130423Z`
+     reached and posted a digest; it just never finished the run underneath it. No
+     #reports message under `140245Z`'s own name was found anywhere in the scanned
+     range or the thirtieth run's range — that half of the claim (`140245Z` died
+     without a digest) is not contradicted by anything and stands.
+   - **Fix (not yet posted — stages for a later PART C pass, per doctrine):** restate
+     precisely — "`130423Z` did reach and post its own digest (10:18am ET, ts
+     `1788013142`); it died before completing the state-file write (`lock.run_completed`
+     + final watermarks), which is why watermarks were stale on `main` at 11:17am.
+     `140245Z` appears to have died without ever posting a digest." Same correction as
+     an `## Update` on `haven/vault/_daily/2026-08-29.md`'s `~11:17 AM ET` entry (append
+     a line under it — never rewrite the existing line, per that note's own append-only
+     rule) once picked up. No #decisions card — ground truth (the 10:18am digest message
+     itself, plus the git commit history) is unambiguous, nothing for Lemar to decide.
+
+**Checked, not flagged:** the DoorDash "Dashes" breakdown figures cited in the 11:17am
+digest ($437.69 total, 10 line items, $50.60 possible-duplicate flag, $70.78 unmatched)
+match `haven/vault/10-Personal/Money/income-log-2026.md` exactly (10 dated lines
+8/24–8/29, the $50.60 line explicitly marked "POSSIBLE DUPLICATE ... Do NOT sum ... until
+resolved," matching what's asked in #decisions) — consistent, not a contradiction. The
+"backlog ~47 open cards outside tracked set" figure is unchanged between the 10:18am and
+11:17am digests (same number, no drift to explain). The PT re-ask
+(`ops-admin-lane-and-ariana`, ts `1788011953`) matches both digests' "pm-check 8/8"
+lines. No other conflicting figures, no other unresolved self-corrections, no other
+stale claims against any cited Haven note.
+
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (thirty-first run)
+- slack: #reports `C0BBZJL85RT`, ts range `1788011696`–`1788016663` (specifically ts
+  `1788013142`, the `130423Z` digest, and ts `1788016663`, the `150312Z` digest)
+- haven/vault/_daily/2026-08-29.md (`~11:17 AM ET` entry — same mischaracterization)
+- git log (local clone, `main`): `07d1780`, `6eeced7`, `53aefd6`, `93fb84e`, `4df8c83`
+  (all `130423Z`-authored commits, 13:44:45Z–13:58:50Z), `3099c1d` (`140245Z` lock start,
+  14:03:57Z) — no `130423Z`-authored `run_completed` commit found
+- haven/vault/10-Personal/Money/income-log-2026.md (DoorDash figures cross-checked,
+  matched)
