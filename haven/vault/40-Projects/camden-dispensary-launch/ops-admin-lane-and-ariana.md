@@ -1,10 +1,10 @@
 ---
 domain: project
 type: decision
-status: active
+status: parked
 source: claude
 tags: [samira-loop, camden-launch, phase-00]
-updated: 2026-08-29T09:10:00-04:00
+updated: 2026-08-29T13:10:27-04:00
 ---
 
 # Ops ADMIN lane and Ariana
@@ -221,6 +221,25 @@ its sibling card did on 2026-08-24. Parking would be a pause on the chase, not a
 nothing built or decided would be reversed.
 
 pt:ops-admin-lane-and-ariana · note:haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md · phase:00 · lane:mixed · lenses:8/8 · gates:6/6 · locked · PM check:2026-08-29 (re-ask, warned)
+
+## Update — 2026-08-29T13:10:27-04:00, scan 3, parked per the day-4 rule
+
+The re-ask warning posted this morning (previous update, "PM check:2026-08-29 (re-ask,
+warned)") named its own trigger: "if this stays quiet through the next PM check, it
+parks." This scan is that next check, and the thread is still quiet — no reply, no
+reaction since the 2026-08-24 keep. Per the overlay's closeout rule (8.7) and the
+two-day/four-day rule, it parks now. `status` moved to `parked` in the frontmatter.
+
+This is a pause, not a close — nothing built or decided is reversed. Lenses 8/8 and
+gates 6/6 stay on record. Un-parks the moment any of the three outstanding items move,
+or Lemar answers in-thread:
+
+- GitHub Contents-write grant (round 1 answer 2) — Settings -> GitHub Apps -> this app ->
+  Permissions, on lboonejr/atlas.
+- Ariana's access checklist (Workspace/Slack admin) — not started.
+- Cosmetic cleanup pass on the onboarding packet — waits on the checklist landing first.
+
+pt:ops-admin-lane-and-ariana · note:haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md · phase:00 · lane:mixed · lenses:8/8 · gates:6/6 · locked · parked:2026-08-29
 
 ## Handoff
 
