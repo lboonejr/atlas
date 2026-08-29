@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-29T13:25:00-04:00
+updated: 2026-08-29T19:05:00Z
 domain: project
 type: log
 status: active
@@ -1216,3 +1216,40 @@ notes — no conflicting figures, no unresolved self-corrections, no stale claim
 ### Sources (thirty-second run)
 - slack: #reports `C0BBZJL85RT`, ts range `1788016663`–`1788023865`
 - haven/vault/_daily/2026-08-29.md (correction appended under `~11:17 AM ET`)
+
+## Thirty-third run (2026-08-29 ~3:05pm ET) — false status claim from a non-Samira poster
+
+**Scanned:** #reports ts `1788023865`–`1788030548` (this pass).
+
+**Finding:** a message posted to #reports at ts `1788023997.154769`, under Lemar's own
+Slack user id `U0BC5UTHYG4` via app `A08SF47R6P4` (a desktop-side Claude session, not
+this routine — same app id flagged in the still-open #decisions card "Two more messages
+posted under Samira's own bot identity in #admin," ts `1788019853.021289`), signed
+"— Haven Keeper," claimed:
+
+> "Haven — filed 0 · stuck 0 · rang +0/~0/-0. Inbox empty, no notes with `due` anywhere
+> in the vault — nothing to file, all quiet."
+
+**Checked against ground truth** (this run's own PART V/S sweep, direct read of
+`haven/vault/00-Inbox/` and a vault-wide grep for `^due:` on `main` @ `5a91df1`):
+`00-Inbox/` holds 4 notes, unchanged since 8/25 (DIB template closeout, Google Voice,
+Caine & Weiner, Rootwurks — all `domain?`/multi-field gaps, same ones on the standing
+`🟡 Haven Inbox — 4 notes need a label` card). 44 notes across the vault carry a `due`.
+**Both claims in the "Haven Keeper" message are false** — not a rounding or timing
+difference, a flat contradiction of the vault's actual state.
+
+This is not an internal Samira self-correction (a different poster/session made the
+claim), so it's recorded here as a stale/false claim rather than folded into a normal
+digest correction. Posted one line to #reports naming the discrepancy (no #decisions
+card opened — this is the same "stray desktop session posting status under Lemar's own
+identity" pattern already sitting open on the ts `1788019853.021289` card, so a second
+card would fragment the same question rather than add one).
+
+**Open questions posted to #decisions this run: 0** (existing card covers the pattern).
+
+### Sources (thirty-third run)
+- slack: #reports `C0BBZJL85RT`, ts `1788023997.154769` (the false claim)
+- haven/vault/00-Inbox/ (direct listing, 4 files, this run)
+- `git grep -l '^due:' haven/vault/` (44 files, this run)
+- #decisions ts `1788019853.021289` ("Two more messages posted under Samira's own bot
+  identity in #admin" — same app id `A08SF47R6P4` pattern)

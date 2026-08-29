@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260829T170250Z",
-    "run_started": "2026-08-29T17:02:50Z",
+    "run_id": "run_20260829T200300Z",
+    "run_started": "2026-08-29T20:03:00Z",
     "run_completed": "2026-08-29T17:42:00Z",
-    "note": "Thirty-first scan (run_20260829T170250Z) COMPLETE. Ran V/S (quiet — no vault drift since last run, no due-note changes) -> A (DoorDash reconciliation thread answered by Lemar, routed to M) -> B (capture DM quiet) -> C (13 project channels quiet except #admin: Desktop cleanup named-instruction, executed direct, filed to Haven) -> D (1 new thread, AutoTempest alert, junk) -> E (investor quiet) -> Q (Stormy idle) -> R (4 locatable PT cards checked: 2 already closed, 1 already parked, ops-admin-lane-and-ariana parked this pass per its own day-4 trigger) -> M (DoorDash duplicate $50.60 + manual $70.78 voided per Lemar's #decisions reply; today's $46.00 earned funded $16.00/$178.39 in due-date order; dashboard re-rendered) -> T (posted the obvious-fix correction staged last pass; this scan's own sweep came back clean) -> canvas (skipped, not today's first run, still write-blocked) -> P (Pulse re-rendered, DM sent) -> digest. NOTE: this run's own digest/journal posts mislabeled it 'the 32nd scan' — this lock note's own '31st scan' count (matching the pre-run lock note) is correct; flagged for a future reports-contradiction-scanner pass rather than edited after posting."
+    "note": "IN FLIGHT — run_20260829T200300Z (thirty-fourth scan) started. Prior run_20260829T190225Z (thirty-third scan) died mid-flight AFTER finishing its work (digest posted to #reports, appended to haven/vault/_daily/2026-08-29.md, commit 08473d4) but never landed its own PART-0 step-3 completion write — lock aged out past the 45-minute staleness threshold (~61 min old), so this run proceeds as a normal new scan per the runbook's own aging-out rule rather than exiting silently. Relying on each PART's idempotency to no-op any overlap."
   },
   "watermarks": {
     "slack_channels": {
