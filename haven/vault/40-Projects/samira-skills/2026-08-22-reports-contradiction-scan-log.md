@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-28T11:10:00-04:00
+updated: 2026-08-29T13:16:00-04:00
 domain: project
 type: log
 status: active
@@ -1041,3 +1041,84 @@ escalated directly for the first time.**
   post-lock-commit `56037e5`)
 - `.claude/state/samira-state.json` `integrity.note` (twenty-second scan's recorded
   parked list, cross-checked and matching)
+
+## Update 2026-08-29 (thirtieth run)
+
+**Range scanned:** #reports `C0BBZJL85RT`, ts `1787923884`–`1788011696` (2026-08-28
+~11:16am ET through 2026-08-29 ~10:34am ET, since the twenty-ninth run's bookmark; the
+boundary message `1787923884.549749`, the twenty-ninth run's own Drive-organizing log
+line, was used only for grouping context, not re-flagged).
+
+**Found: 1.**
+
+1. **Obvious fix — "#decisions waiting-on-you" count swung from the reconciled ~43-44
+   backlog down to 1, with no reconciliation, then stayed at 1 for two more digests.**
+   - 8/28 12:06pm ET (`1787933189`): "Waiting on you: ~44 in #decisions (tracked-set,
+     carried)."
+   - 8/28 1:28pm ET (`1787938110`): "Waiting on you: 43 in #decisions" — full tallies
+     confirm the same 3 stuck-Inbox notes and no closures; consistent drift of 1 from
+     the prior reading, not itself a contradiction.
+   - 8/28 2:11pm ET (`1787940681`): "Waiting on you: 1 in #decisions (T-Mobile $149 —
+     which line does this clear?)" — the same digest's own body says "Decisions: 1
+     opened — T-Mobile $149..." and "Closed: none," so the "1" plainly refers only to
+     the single newest card, not the tracked backlog, but is presented as the full
+     "waiting on you" figure with no acknowledgment of the drop from 43.
+   - 8/28 5:04pm ET (`1787951278`): "Waiting on you: 1 in #decisions" — "T-Mobile $149 —
+     which line? (#decisions, still open, carried from last scan)" — repeats the "1,"
+     still with no reconciliation.
+   - 8/28 6:06pm ET (`1787954843`): "Waiting on you: unchanged in #decisions" — no
+     number given, but the body reports a near-quiet pass with zero new top-level
+     activity, so this reads as "unchanged from 1," carrying the wrong figure forward
+     rather than correcting it.
+   - **Ground truth:** checked #decisions (`C0BBXA96FFV`) directly for the
+     1:28pm–2:11pm ET window — only two new top-level cards were posted in this whole
+     range (T-Mobile $149 at `1787940471`, Camden shop voicemail at `1787936776`, the
+     latter actually posted just before 1:28pm) and zero were closed. Nothing happened
+     that could have taken the real count from 43 down to 1.
+     `haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md`
+     remains the locked methodology: the figure should be the tracked-set count of
+     threads with no 🫡 and no ✅ CLOSED, not a fresh eyeball of only the newest/most
+     urgent card. This is the same eyeballing regression this log has already caught in
+     its first, fifth, sixth, nineteenth, and twentieth runs — recurring again, this
+     time un-self-flagged (unlike the twentieth run's instance, which Samira called out
+     in the digest body itself).
+   - **Fix posted this run (not deferred — per this run's operating instructions, posted
+     as a plain, un-reacted #reports correction, not just staged in this log):**
+     #reports ts `1788011803.887429` — names the swing, the ground-truth check (no mass
+     closures), and the correct methodology; no vault or #decisions correction needed,
+     since the true tracked-set count was never actually 1.
+
+**Checked, not flagged — recurring "Haven Keeper" empty-inbox claim, continues after
+the 29th run's direct escalation.** Three more occurrences in range (`1787937614`,
+`1787955637`, `1788009648`), same `U0BC5UTHYG4`/`A08SF47R6P4` manual-session signature
+tracked since 2026-07-31, all claiming "stuck 0"/"Inbox empty." This run's own read of
+`haven/vault/00-Inbox/` confirms the same 3 notes are still stuck, unchanged
+(`2026-08-07-dib-template-theme-decision-closeout.md`,
+`2026-08-12-google-voice-subscription-cancellation.md`,
+`2026-08-24-caine-weiner-progressive-collections.md`) — every real Samira digest in
+range continues to report `stuck 3` correctly, so this still doesn't propagate. The
+twenty-ninth run already did the one-time direct surfacing of this pattern to Lemar
+(#reports correction `1787930199`, DM `1787930205`); these are just further recurrences
+of an already-acknowledged issue, not new information, so not re-escalated (no second
+DM, no #decisions card).
+
+Also confirmed, not a contradiction: the 8/29 ~10:14am ET Drive-organizing summary
+(`1788009105`, "4 copies created · 16 dup clusters flagged") is a distinct day's report
+from the twenty-ninth run's 8/28 Drive-organizing log
+(`haven/vault/00-Inbox/2026-08-28-drive-organizing-run.md`, "12 copies filed · 21 dup
+clusters flagged") — different day, different figures, not restating the same fact.
+Basil's 8/29 inbox-tidy report (`1787973168`) is new and self-contained, nothing else
+in range references the same matter. The T-Mobile $149 resolution at the very end of
+range (`1788011696`, after this scanner's own correction post) — `tmobile-split-1`
+corrected $265→$149 and marked paid — is consistent with the #decisions card it
+resolves and doesn't conflict with anything checked above.
+
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (thirtieth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1787923884`–`1788011696`
+- slack: #decisions `C0BBXA96FFV`, ts `1787936776` (Camden shop voicemail card) and
+  `1787940471` (T-Mobile $149 card) — checked directly for closures in the 1:28pm–
+  2:11pm ET window, found none
+- haven/vault/40-Projects/samira-skills/2026-08-22-decisions-backlog-audit.md
+- haven/vault/00-Inbox/ (directly listed — 3 notes stuck, unchanged)
