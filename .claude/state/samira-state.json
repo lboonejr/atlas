@@ -3,17 +3,17 @@
   "lock": {
     "run_id": "run_20260829T170250Z",
     "run_started": "2026-08-29T17:02:50Z",
-    "run_completed": "2026-08-29T16:26:00Z",
-    "note": "Thirty-first scan (run_20260829T170250Z) STARTED — in flight."
+    "run_completed": "2026-08-29T17:42:00Z",
+    "note": "Thirty-first scan (run_20260829T170250Z) COMPLETE. Ran V/S (quiet — no vault drift since last run, no due-note changes) -> A (DoorDash reconciliation thread answered by Lemar, routed to M) -> B (capture DM quiet) -> C (13 project channels quiet except #admin: Desktop cleanup named-instruction, executed direct, filed to Haven) -> D (1 new thread, AutoTempest alert, junk) -> E (investor quiet) -> Q (Stormy idle) -> R (4 locatable PT cards checked: 2 already closed, 1 already parked, ops-admin-lane-and-ariana parked this pass per its own day-4 trigger) -> M (DoorDash duplicate $50.60 + manual $70.78 voided per Lemar's #decisions reply; today's $46.00 earned funded $16.00/$178.39 in due-date order; dashboard re-rendered) -> T (posted the obvious-fix correction staged last pass; this scan's own sweep came back clean) -> canvas (skipped, not today's first run, still write-blocked) -> P (Pulse re-rendered, DM sent) -> digest. NOTE: this run's own digest/journal posts mislabeled it 'the 32nd scan' — this lock note's own '31st scan' count (matching the pre-run lock note) is correct; flagged for a future reports-contradiction-scanner pass rather than edited after posting."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1788019527.456219",
-      "C0BBZJL85RT": "1788020684.346689",
-      "D0BHPKMDNEP": "1788012976.844109",
-      "C0BGLEMH99T": "1788011757.485089",
+      "C0BBZJL85RT": "1788024101.725509",
+      "D0BHPKMDNEP": "1788024030.568909",
+      "C0BGLEMH99T": "1788023827.791289",
       "C0BEQUW5NPP": "1788016134.000000",
-      "C0BBLUA7JLX": "1788016134.000000",
+      "C0BBLUA7JLX": "1788020623.599769",
       "C0BJ37SU1TL": "1788016134.000000",
       "C0BCCUKEUQ2": "1788016134.000000",
       "C0BCD7U5X2B": "1788016134.000000",
@@ -40,7 +40,7 @@
       "1787112734.344369": "1787574415.639709",
       "1787152085.518979": "1787159332.480679",
       "1787159607.185319": "1787162996.829679",
-      "1787155581.357669": "1787930149.017679",
+      "1787155581.357669": "1788023532.452749",
       "1787227722.583919": "1787260488.874049",
       "1787231683.266619": "1787234895.613759",
       "1787235032.481949": "1787333215.335379",
@@ -75,24 +75,24 @@
       "1787930008.624029": "1787930008.624029",
       "1787936776.561599": "1787936780.871709",
       "1787940471.776979": "1787940478.474579",
-      "1788011652.830719": "1788016546.481719",
+      "1788011652.830719": "1788023830.164989",
       "1788016294.676159": "1788016294.676159",
       "1788019527.456219": "1788019527.456219"
     },
-    "capture_dm": "1788012976.844109",
-    "gmail_after_epoch": 1788016305
+    "capture_dm": "1788024030.568909",
+    "gmail_after_epoch": 1788024150
   },
   "integrity": {
     "last_full_pass": "2026-08-29T11:03:12-04:00",
-    "last_scan_sha": "c95320ec64b1627b4f6307b8f8ce47f516ebcd4b",
-    "note": "Thirtieth scan: incremental check only (full pass already ran today at 11:03am ET). Diffed cdfc650..c95320e: 5 vault files changed (Rootwurks Inbox note, income log, money-hub ledger, Huljev checklist, _daily/2026-08-29.md), all frontmatter valid. Inbox now 4 stuck (3 unchanged carryovers + Rootwurks new, domain? blank). Known/accepted 1: _daily/2026-08-01.md (base64 blob, lossless gate fails, decided 2026-08-09). Still-open flag from last full pass: 40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md missing `created` (unrepaired, surfaced on stuck-notes card)."
+    "last_scan_sha": "3628a90d092d2ba41d4120a0a97a1254896fa647",
+    "note": "Thirty-first scan: incremental check only (full pass already ran today at 11:03am ET). Diffed c95320e..3628a90 (this run's own commits): 6 vault files changed by this run itself (ops-admin-lane-and-ariana.md status->parked, income-log-2026.md + money-hub-ledger.md reconciliation/income-allocation, _daily/2026-08-29.md digest+correction appends, reports-contradiction-scan-log.md, new file 2026-08-29-desktop-cleanup-run.md) — all written via this run's own edits, all frontmatter valid, none flagged. Inbox still 4 stuck (unchanged: DIB template closeout, Google Voice, Caine & Weiner, Rootwurks — all domain?/multi-field gaps, composition unchanged so the #decisions card was not refreshed this pass). Known/accepted 1: _daily/2026-08-01.md (base64 blob, lossless gate fails, decided 2026-08-09)."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-29T12:15:00-04:00",
-    "money_hub_last_rendered": "2026-08-27T18:20:00-04:00"
+    "pulse_last_rendered": "2026-08-29T13:35:00-04:00",
+    "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
