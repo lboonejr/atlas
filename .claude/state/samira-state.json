@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260828T210334Z",
-    "run_started": "2026-08-28T21:03:34Z",
+    "run_id": "run_20260829T140245Z",
+    "run_started": "2026-08-29T14:02:45Z",
     "run_completed": "2026-08-28T21:09:30Z",
-    "note": "Twenty-sixth scan (run_20260828T210334Z) complete — fully quiet pass. Zero top-level activity and zero reply/reaction drift on every tracked #decisions thread, capture DM, every project channel, #personal-finance, #on-button, #stormy, #investor-pipeline, #camden-launch, #reports since the 2:11pm ET scan. PART V: incremental integrity found only _daily/2026-08-28.md changed (its own prior append, valid) — repaired 0, parked 3 unchanged, card not refreshed (composition unchanged). PART S: no due-note deltas, +0/~0/-0. PART D: 6 new Gmail threads — 4 QuickBooks Sun Extractions AR reminders (already tracked by the open 'Sun Extractions AR' #decisions card), 1 Fiverr marketing, 1 scheduled Headset report — all labeled Samira/seen, no drafts/tasks. PART E investor: quiet. PART Q Stormy: idle. PART R: both Camden Launch PT cards carried, no round forced. PART M: no #personal-finance drops. PART T clean. Canvas skipped (still write-blocked, not today's first run). Pulse: quiet-pass skip. Still open and unresolved, unchanged: the T-Mobile $149 match (🔴, opened prior scan) and the long-carried Regus/IWG settlement-window item. Separately noted (not actioned): a full-history #decisions read surfaced ~47 open parent cards dated 8/17-or-earlier outside the tracked decisions_threads set — a real backlog worth a dedicated cleanup pass, flagged in the _daily journal rather than guessed at. Digest posted to #reports and appended to _daily/2026-08-28.md."
+    "note": "Twenty-eighth scan (run_20260829T140245Z) in progress. Prior run run_20260829T130423Z died mid-flight after PARTs V/M/T/R (lock aged out past 45min, never wrote run_completed) — this run picks up from PART S."
   },
   "watermarks": {
     "slack_channels": {

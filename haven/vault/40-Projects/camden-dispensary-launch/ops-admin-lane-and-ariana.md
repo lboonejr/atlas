@@ -4,7 +4,7 @@ type: decision
 status: active
 source: claude
 tags: [samira-loop, camden-launch, phase-00]
-updated: 2026-08-24T08:10:00-04:00
+updated: 2026-08-29T09:10:00-04:00
 ---
 
 # Ops ADMIN lane and Ariana
@@ -193,6 +193,34 @@ two-day/four-day park clock restarts from today since he answered; this card is 
 it is just still waiting on actions only he can take.
 
 pt:ops-admin-lane-and-ariana · note:haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md · phase:00 · lane:mixed · lenses:8/8 · gates:6/6 · locked · PM check:2026-08-24 (answered: keep)
+
+## Update — 2026-08-29T09:10:00-04:00, scan 2, PM status check (re-ask due)
+
+Five days since Lemar's last signal on this card (the :white_check_mark: keep reaction,
+logged 2026-08-24). The overlay's two-day rule calls for one honest "still worth doing"
+line whenever a card sits two full days with no signal. The three daily PM pings since the
+keep (2026-08-25, 2026-08-27, 2026-08-28) carried status forward as plain housekeeping —
+"no reply needed unless something moved" — without ever re-issuing that honest line, so the
+window has run well past both the two-day ask and the four-day park mark without either
+actually landing. This scan closes that gap rather than parking on a warning that was never
+given: the sibling card (p00-client-intake-system) parked on 2026-08-24 only after an
+explicit "if this stays quiet, it parks on the next check" had gone unanswered, and this
+card has not yet had that explicit warning, so it gets one now instead of a silent park.
+
+Nothing else changed. Lens/gate status unchanged: lenses 8/8, gates 6/6, locked. All three
+outstanding items are still his, still unstarted, unchanged from the 2026-08-24 update:
+
+- GitHub Contents-write grant (round 1 answer 2) — Settings -> GitHub Apps -> this app ->
+  Permissions, on lboonejr/atlas.
+- Ariana's access checklist (Workspace/Slack admin) — not started.
+- Cosmetic cleanup pass on the onboarding packet — waits on the checklist landing first.
+
+Posted in-thread as the honest line the rule calls for, with the explicit warning: if this
+stays quiet through the next PM check, it parks per the two-day/four-day rule, the same way
+its sibling card did on 2026-08-24. Parking would be a pause on the chase, not a close —
+nothing built or decided would be reversed.
+
+pt:ops-admin-lane-and-ariana · note:haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md · phase:00 · lane:mixed · lenses:8/8 · gates:6/6 · locked · PM check:2026-08-29 (re-ask, warned)
 
 ## Handoff
 
