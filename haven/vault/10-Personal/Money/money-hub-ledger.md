@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-29T11:20:00-04:00
+updated: 2026-08-29T13:20:00-04:00
 domain: personal
 type: reference
 status: active
@@ -1165,20 +1165,20 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
     total_claim: 208.39
     gas_spent: null
     swept_to_maintenance: 0
-    funded: 0
-    shortfall: 178.39
+    funded: 16.00
+    shortfall: 162.39
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.05, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
-      - {line_id: claude, amount: 5.00, funded: 0, status: pending}
+      - {line_id: claude, amount: 5.00, funded: 5.00, status: funded}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: fantasy-football-buyin, amount: 13.04, funded: 0, status: pending}
       - {line_id: hillview-med-1, amount: 15.39, funded: 0, status: pending}
-      - {line_id: liquidibee-3, amount: 8.33, funded: 0, status: pending}
+      - {line_id: liquidibee-3, amount: 8.33, funded: 8.33, status: funded}
       - {line_id: liquidibee-4, amount: 5.68, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
-      - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
+      - {line_id: moms-weekly, amount: 8.34, funded: 2.67, status: partial}
       - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
       - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
       - {line_id: own-car-running-3, amount: 12.12, funded: 0, status: pending}
@@ -2912,6 +2912,7 @@ open_questions:
   - "Cuzzie's phone + Workspace $550/mo is Lemar's estimate — actual total unconfirmed, and it is the largest line in the ledger."
   - "Confirm the 7/25 $1,000 allocation landed: $500 car payment, $200 tires, $50 mom"
   - "RESOLVED 2026-08-29 (#decisions ts 1787940475.849039, Option 1 ✅): the $149.00 T-Mobile payment Lemar reported 8/28 IS tmobile-split-1 — the line's amount was wrong ($265 recorded, $149 actually owed/paid), not the payment. Corrected and flipped to paid; see tmobile-split-1. tmobile-split-2 ($278, due 8/28) is untouched, still open."
+  - "RESOLVED 2026-08-29 (#decisions ts 1788011652, replies 1788017130 + 1788017291): the 2026-08-26/2026-08-27 $50.60 dashes ARE the same dash logged twice ('accidentally logged under 2 dates') — the 2026-08-27 standalone line is voided from weekly totals, the itemized 2026-08-26 breakdown line stands as the record. And the 2026-08-26 $70.78 'last DoorDash shift' line is voided per Lemar's explicit 'you can remove the manual $70.78 entry' — it matched nothing in the itemized breakdown. Both voided via $0 reconciliation lines in income-log-2026.md (append-only, no history edited). Past `daily_targets` days (8/26-8/28) are NOT rewritten per the never-rewrite-a-past-day rule — this only corrects future weekly-sum reporting going forward."
   - "Water pump $184.79 (now dated 2026-09-15): STILL unreconciled whether it's inside or on top of the car goal's $2,000 repairs figure — dating it didn't resolve the overlap."
   - "RESOLVED 2026-08-13 (recompute session, updated same day): comedy tickets $50.28 confirmed unpaid and briefly folded into the accrual, then CANCELLED later the same day — Lemar isn't going, too many bills were piling up. Parked, out of the queue entirely, not owed. See Update 2026-08-13 (THIRD REVISION)."
   - "Claude card declines on the 4th three months running — payment method update is Lemar's own action with Anthropic"
@@ -4299,4 +4300,50 @@ answers, the next pass runs INCOME ALLOCATION + ACCRUAL + OVERLOAD CHECK for the
 confirmed total and re-renders. This is a deliberate exception to "never defer the
 recompute" — the blocker is a genuine reconciliation ambiguity, not a bandwidth
 shortcut; the ambiguity itself is the open item, tracked here and in `open_questions`.
+
+## Update 2026-08-29T13:20:00-04:00 — PART M: reconciliation resolved, INCOME ALLOCATION for 8/29 run
+
+Lemar answered both open reconciliation questions in #decisions (ts `1788011652.830719`,
+replies `1788017130.025569` and `1788017291.486109`): "Same dash was accidentally logged
+under 2 dates" and "You can remove the manual $70.78 entry."
+
+**Resolved, no history edited (append-only):**
+- The 2026-08-27 $50.60 line (standalone report, no date detail) and the 2026-08-26
+  $50.60 line (from the itemized breakdown) are the same dash. Voided the 2026-08-27
+  line from future weekly sums via a $0 reconciliation line in `income-log-2026.md`;
+  the itemized 2026-08-26 line stands as the record.
+- The 2026-08-26 $70.78 "last DoorDash shift" line is voided per Lemar's instruction —
+  matched nothing in the itemized breakdown. Same $0-reconciliation-line pattern.
+- Past `daily_targets` days (8/26–8/28) are UNCHANGED — never rewrite a past day. This
+  correction only affects future weekly-sum reporting (mode 6, "run my week") and the
+  OVERLOAD CHECK average going forward.
+- `open_questions` entry marked RESOLVED (new line appended, original OPEN line left
+  intact per append-only doctrine).
+
+**INCOME ALLOCATION for 2026-08-29.** Only genuinely new, non-disputed income for today:
+the $46.00 dash from the itemized breakdown (`income-log-2026.md`, 2026-08-29 entry).
+Gas/maintenance reserve ($30.00) claimed first, held in Spending, not moved — today's
+$46.00 covers it (no gas spend reported today, nothing swept to maintenance). Remaining
+$16.00 poured into today's `daily_targets["2026-08-29"]` contributions in due-date order
+(soonest due first, ties by smallest amount — resolved against each line's actual `due`
+in the bills/plans/goals blocks): `liquidibee-3` (due 8/30) funded in full $8.33 →
+`claude` (due 9/4) funded in full $5.00 → `moms-weekly` (due 9/4, tie broken by larger
+amount going second) partially funded $2.67 of $8.34 — money ran out here. Every
+later-due contribution (`own-car-running-3` due 9/5 through `self-account-balance-repay`
+due 11/30, 21 lines) stays `pending`, untouched. Day totals: `funded` 0 → **16.00**,
+`shortfall` 178.39 → **162.39**. No surplus to report.
+
+**OVERLOAD CHECK.** Standing FLAGGED condition (first raised 2026-08-15, #decisions
+`C0BBXA96FFV` parent ts `1786832078.131649`, restated 2026-08-26) is unchanged in kind —
+today's $46.00 pour doesn't move the 7-day set-aside total meaningfully against the
+trailing income average. Not recomputing the full 4-week average this pass (the
+reconciliation only removed $121.38 of previously-disputed income from the log, both
+lines were already excluded from any prior average calculation since they were flagged
+`open_questions` rather than summed) — no new #decisions card raised per the
+"never a second card for the same overload event" rule; the standing card already
+carries this.
+
+Dashboard not re-rendered this pass — queued for the next scheduled PART M sweep
+(single-pass correction + one day's partial funding, no bill/accrual-schedule change).
+Nothing paid or moved; this is bookkeeping only, per the skill's floor.
 Dashboard not re-rendered this pass.

@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-29T11:20:00-04:00
+updated: 2026-08-29T13:15:00-04:00
 domain: personal
 type: log
 status: active
@@ -43,5 +43,7 @@ entries:
   - {date: 2026-08-28, source: doordash, amount: 32.55, note: "from the same 2026-08-29 Dashes breakdown."}
   - {date: 2026-08-29, source: doordash, amount: 46.00, note: "from the same 2026-08-29 Dashes breakdown."}
   - {date: 2026-08-29, source: doordash, amount: 0, note: "OPEN QUESTION, no new money: does the 2026-08-26 $70.78 'last DoorDash shift' line above correspond to ANY dash in the 2026-08-29 breakdown, or is it a separate/estimated figure not reflected there? None of the 10 breakdown amounts match $70.78. Also unresolved: is the 2026-08-27 $50.60 line the same dash as the 2026-08-26 $50.60 line above (see that line's note)? Raised in #decisions 2026-08-29 rather than guessed — do not sum overlapping candidates into any weekly total until Lemar answers."}
+  - {date: 2026-08-29, source: doordash, amount: 0, note: "RECONCILIATION, no new money: Lemar confirmed in #decisions (ts 1788011652, reply ts 1788017130) 'Same dash was accidentally logged under 2 dates.' The 2026-08-27 $50.60 line above (reported standalone, no date-range detail) and the 2026-08-26 $50.60 line above (from the itemized 2026-08-29 breakdown, full date+amount provenance) are the same dash. Voiding the less-detailed 2026-08-27 $50.60 line from weekly totals going forward — the 2026-08-26 breakdown line is kept as the record of record. History not edited per append-only doctrine; do not sum both into any weekly total."}
+  - {date: 2026-08-29, source: doordash, amount: 0, note: "RECONCILIATION, no new money: Lemar confirmed in #decisions (ts 1788011652, reply ts 1788017291) 'You can remove the manual $70.78 entry.' VOIDING the 2026-08-26 $70.78 'last DoorDash shift' line above — it does not correspond to any dash in the 2026-08-29 itemized breakdown and Lemar confirmed it should not be counted. History not edited per append-only doctrine (a wrong entry is corrected by a note, never by deletion); do not sum the $70.78 line into any weekly total going forward."}
 # - {date: 2026-08-05, source: doordash, amount: 140, note: null}
 ```
