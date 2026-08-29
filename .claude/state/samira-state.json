@@ -1,31 +1,31 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260829T200300Z",
-    "run_started": "2026-08-29T20:03:00Z",
-    "run_completed": "2026-08-29T17:42:00Z",
-    "note": "IN FLIGHT — run_20260829T200300Z (thirty-fourth scan) started. Prior run_20260829T190225Z (thirty-third scan) died mid-flight AFTER finishing its work (digest posted to #reports, appended to haven/vault/_daily/2026-08-29.md, commit 08473d4) but never landed its own PART-0 step-3 completion write — lock aged out past the 45-minute staleness threshold (~61 min old), so this run proceeds as a normal new scan per the runbook's own aging-out rule rather than exiting silently. Relying on each PART's idempotency to no-op any overlap."
+    "run_id": "run_20260829T210200Z",
+    "run_started": "2026-08-29T21:02:00Z",
+    "run_completed": "2026-08-29T21:16:00Z",
+    "note": "COMPLETE — run_20260829T210200Z (thirty-fifth scan) finished cleanly, full run order V→S→A→B→C→D→E→Q→R→H→M→T→canvas(skipped, blocked)→P(carried, quiet)→digest. Fully quiet pass: 0 decisions handled, 0 captures, 0 project-channel prompts, 2 email junk, 0 investor activity, stormy idle, 0 PT rounds (both Camden Launch cards already parked from 33rd/34th runs), 0 money drops, reports-scan clean, pulse carried. Deviation: local clone's checked-out branch was a harness feature branch (claude/wizardly-cori-xj3av4), not main — git push origin main was rejected (stale local main ref); used git push origin HEAD:main for every write this run, landing straight on main per the git-write policy, no branch/PR."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1788019527.456219",
-      "C0BBZJL85RT": "1788024101.725509",
-      "D0BHPKMDNEP": "1788024030.568909",
-      "C0BGLEMH99T": "1788023827.791289",
-      "C0BEQUW5NPP": "1788016134.000000",
-      "C0BBLUA7JLX": "1788020623.599769",
-      "C0BJ37SU1TL": "1788016134.000000",
-      "C0BCCUKEUQ2": "1788016134.000000",
-      "C0BCD7U5X2B": "1788016134.000000",
-      "C0BCH2C3GRM": "1788016134.000000",
-      "C0BDN2KQFD4": "1788016134.000000",
-      "C0BD8LTM1EK": "1788016134.000000",
-      "C0BGYM1UB4Y": "1788016134.000000",
-      "C0BGCAK0ML3": "1788016134.000000",
-      "C0BHXTPST52": "1788016134.000000",
-      "C0BC2A94142": "1788016134.000000",
-      "C0BBZ5J8805": "1788016134.000000",
-      "C0BRZT2V89W": "1788016134.000000"
+      "C0BBXA96FFV": "1788036505.798219",
+      "C0BBZJL85RT": "1788037836.251159",
+      "D0BHPKMDNEP": "1788036505.798219",
+      "C0BGLEMH99T": "1788036505.798219",
+      "C0BEQUW5NPP": "1788036505.798219",
+      "C0BBLUA7JLX": "1788036505.798219",
+      "C0BJ37SU1TL": "1788036505.798219",
+      "C0BCCUKEUQ2": "1788036505.798219",
+      "C0BCD7U5X2B": "1788036505.798219",
+      "C0BCH2C3GRM": "1788036505.798219",
+      "C0BDN2KQFD4": "1788036505.798219",
+      "C0BD8LTM1EK": "1788036505.798219",
+      "C0BGYM1UB4Y": "1788036505.798219",
+      "C0BGCAK0ML3": "1788036505.798219",
+      "C0BHXTPST52": "1788036505.798219",
+      "C0BC2A94142": "1788036505.798219",
+      "C0BBZ5J8805": "1788036505.798219",
+      "C0BRZT2V89W": "1788036505.798219"
     },
     "decisions_threads": {
       "1786832078.131649": "1787754270.525189",
@@ -74,18 +74,18 @@
       "1787854465.146219": "1787854486.805629",
       "1787930008.624029": "1787930008.624029",
       "1787936776.561599": "1787936780.871709",
-      "1787940471.776979": "1787940478.474579",
+      "1787940471.776979": "1788011700.470339",
       "1788011652.830719": "1788023830.164989",
       "1788016294.676159": "1788016294.676159",
       "1788019527.456219": "1788019527.456219"
     },
-    "capture_dm": "1788024030.568909",
-    "gmail_after_epoch": 1788024150
+    "capture_dm": "1788036505.798219",
+    "gmail_after_epoch": 1788037635
   },
   "integrity": {
     "last_full_pass": "2026-08-29T11:03:12-04:00",
-    "last_scan_sha": "3628a90d092d2ba41d4120a0a97a1254896fa647",
-    "note": "Thirty-first scan: incremental check only (full pass already ran today at 11:03am ET). Diffed c95320e..3628a90 (this run's own commits): 6 vault files changed by this run itself (ops-admin-lane-and-ariana.md status->parked, income-log-2026.md + money-hub-ledger.md reconciliation/income-allocation, _daily/2026-08-29.md digest+correction appends, reports-contradiction-scan-log.md, new file 2026-08-29-desktop-cleanup-run.md) — all written via this run's own edits, all frontmatter valid, none flagged. Inbox still 4 stuck (unchanged: DIB template closeout, Google Voice, Caine & Weiner, Rootwurks — all domain?/multi-field gaps, composition unchanged so the #decisions card was not refreshed this pass). Known/accepted 1: _daily/2026-08-01.md (base64 blob, lossless gate fails, decided 2026-08-09)."
+    "last_scan_sha": "59847bfaace3a95dc476a655eaf12417e7c21632",
+    "note": "Thirty-fifth scan: incremental check only (full pass already ran today at 11:03am ET). Diffed e7feee7..59847bf: 2 vault files changed since last scan (reports-contradiction-scan-log.md append, _daily/2026-08-29.md digest append — both from the 34th run's own work) — all frontmatter valid, none flagged. Inbox still 4 stuck (unchanged: DIB template closeout, Google Voice, Caine & Weiner, Rootwurks — all domain?/multi-field gaps, composition unchanged so the #decisions card was not refreshed this pass). Known/accepted 1: _daily/2026-08-01.md (base64 blob, lossless gate fails, decided 2026-08-09)."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
