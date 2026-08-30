@@ -1,21 +1,21 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260830T120350Z",
-    "run_started": "2026-08-30T12:03:50Z",
-    "run_completed": "2026-08-29T21:16:00Z",
-    "note": "IN PROGRESS — run_20260830T120350Z (thirty-sixth scan, day's first run) started. Prior run (35th) completed cleanly. Local clone's checked-out branch is a harness feature branch (claude/wizardly-cori-lvutke), not main, but its HEAD matches origin/main tip (a81dcf1) — pushing straight to main via git push origin HEAD:main per the git-write policy, no branch/PR."
+    "run_id": "run_20260830T140228Z",
+    "run_started": "2026-08-30T14:02:28Z",
+    "run_completed": "2026-08-30T14:10:17Z",
+    "note": "37th scan today. Picked up after run_20260830T120350Z (36th scan, day's first run) finished all its actual work — digest posted to #reports (ts 1788092025.500939) — but died before its final PART-0 lock/watermark write AND before its _daily/2026-08-30.md journal append landed (same 'died after digest, before state write' pattern as the 33rd run on 8/29). Lock had aged out well past 45 min (started 12:03:50Z, found at 14:02Z), so this run proceeded as normal per the runbook's own rule: backfilled the missing journal entry for the 36th run, corrected the integrity block below (the 36th run's full vault pass — commit 485d952 — never got its last_full_pass/last_scan_sha persisted), then re-swept every surface from the 36th run's last known-good watermark forward. No duplicate cards, captures, or writes found. Local clone's checked-out branch is a harness feature branch, not main, but its HEAD matched origin/main tip (76c42f8) at run start — pushing straight to main via git push origin HEAD:main per the git-write policy, no branch/PR."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1788036505.798219",
-      "C0BBZJL85RT": "1788037836.251159",
-      "D0BHPKMDNEP": "1788036505.798219",
-      "C0BGLEMH99T": "1788036505.798219",
-      "C0BEQUW5NPP": "1788036505.798219",
-      "C0BBLUA7JLX": "1788036505.798219",
-      "C0BJ37SU1TL": "1788036505.798219",
-      "C0BCCUKEUQ2": "1788036505.798219",
+      "C0BBXA96FFV": "1788099036.207949",
+      "C0BBZJL85RT": "1788099036.207949",
+      "D0BHPKMDNEP": "1788099036.207949",
+      "C0BGLEMH99T": "1788099036.207949",
+      "C0BEQUW5NPP": "1788099036.207949",
+      "C0BBLUA7JLX": "1788099036.207949",
+      "C0BJ37SU1TL": "1788099036.207949",
+      "C0BCCUKEUQ2": "1788099036.207949",
       "C0BCD7U5X2B": "1788036505.798219",
       "C0BCH2C3GRM": "1788036505.798219",
       "C0BDN2KQFD4": "1788036505.798219",
@@ -25,7 +25,7 @@
       "C0BHXTPST52": "1788036505.798219",
       "C0BC2A94142": "1788036505.798219",
       "C0BBZ5J8805": "1788036505.798219",
-      "C0BRZT2V89W": "1788036505.798219"
+      "C0BRZT2V89W": "1788099036.207949"
     },
     "decisions_threads": {
       "1786832078.131649": "1787754270.525189",
@@ -79,13 +79,13 @@
       "1788016294.676159": "1788016294.676159",
       "1788019527.456219": "1788019527.456219"
     },
-    "capture_dm": "1788036505.798219",
-    "gmail_after_epoch": 1788037635
+    "capture_dm": "1788099036.207949",
+    "gmail_after_epoch": 1788099036
   },
   "integrity": {
-    "last_full_pass": "2026-08-29T11:03:12-04:00",
-    "last_scan_sha": "59847bfaace3a95dc476a655eaf12417e7c21632",
-    "note": "Thirty-fifth scan: incremental check only (full pass already ran today at 11:03am ET). Diffed e7feee7..59847bf: 2 vault files changed since last scan (reports-contradiction-scan-log.md append, _daily/2026-08-29.md digest append — both from the 34th run's own work) — all frontmatter valid, none flagged. Inbox still 4 stuck (unchanged: DIB template closeout, Google Voice, Caine & Weiner, Rootwurks — all domain?/multi-field gaps, composition unchanged so the #decisions card was not refreshed this pass). Known/accepted 1: _daily/2026-08-01.md (base64 blob, lossless gate fails, decided 2026-08-09)."
+    "last_full_pass": "2026-08-30T08:06:54-04:00",
+    "last_scan_sha": "485d952d3da96a366d2b065dd764b0b768179462",
+    "note": "Full integrity pass ran in 485d952 (vault-keeper sweep): filed 1 note (inbox-janitor run, moved 00-Inbox -> 70-Automation/inbox-janitor), parked 4 unchanged (DIB template closeout, Google Voice, Caine & Weiner, Rootwurks — domain?/multi-field gaps). No frontmatter or format issues flagged."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
