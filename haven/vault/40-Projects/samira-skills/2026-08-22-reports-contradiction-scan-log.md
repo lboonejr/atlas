@@ -1290,4 +1290,35 @@ sweep produced no other new #reports content to check (quiet pass across the boa
 
 ### Sources (thirty-fifth run)
 - slack: #reports `C0BBZJL85RT`, ts range `1788033900`–`1788037635`
+
+## Thirty-sixth run (2026-08-30 ~8:03am ET, day's first run) — clean scan
+
+**Scanned:** #reports ts `1788037635`–`1788091831` (this pass; picks up right after the
+35th run's own scanned range end).
+
+**Content in range:**
+- The 35th run's own digest (`1788037836`) and its own contradiction-scan finding post
+  (`1788037817`) — already logged above, boundary overlap only.
+- Basil's 2026-08-30 inbox-tidy report (`1788059458`, "Archived 2 vendor menus · trashed
+  5 old items") — self-contained, cross-checked against the vault note it cites
+  (`haven/vault/70-Automation/inbox-janitor/2026-08-30-inbox-janitor-run.md`, filed this
+  run by vault-keeper from `00-Inbox`) — matches exactly, no discrepancy.
+- **Checked, not flagged — recurring "Haven Keeper" empty-inbox claim, 14th+
+  occurrence.** `1788042046` ("filed 0 · stuck 0 · rang +0/~0/-0 · nothing to file, all
+  quiet"), posted by `U0BC5UTHYG4` (Lemar's own Slack account) via app `A08SF47R6P4` —
+  the same manual/desktop Claude-session signature tracked since 2026-08-24 (see the
+  eleventh-run finding above and every recurrence logged since). Both claims are false
+  against this run's own ground truth: vault-keeper's PART V this run found 4 stuck
+  Inbox notes (unchanged: DIB closeout, Google Voice, Caine & Weiner, Rootwurks) and 1
+  note filed (the inbox-janitor run note) — not 0/0. Already dispositioned as
+  non-actionable/informational (a different, non-Samira session posting under a
+  "Haven Keeper" persona) with an open tracking card already sitting in #decisions/#admin
+  per the prior occurrences; not re-raised as a new question.
+
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (thirty-sixth run)
+- slack: #reports `C0BBZJL85RT`, ts range `1788037635`–`1788091831`
+- haven/vault/70-Automation/inbox-janitor/2026-08-30-inbox-janitor-run.md
+- haven/vault/00-Inbox/ (4 stuck notes, this run's vault-keeper pass)
 - haven/vault/40-Projects/camden-dispensary-launch/ (4 PT-related notes' frontmatter, this run)
