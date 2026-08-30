@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260830T200223Z",
-    "run_started": "2026-08-30T20:02:23Z",
+    "run_id": "run_20260830T210529Z",
+    "run_started": "2026-08-30T21:05:29Z",
     "run_completed": "2026-08-30T20:15:30Z",
-    "note": "38th scan today, completed cleanly. ~6h gap since the 37th run (14:10Z -> 20:02Z) — cadence gap between scheduled fires, not a stuck lock. Found and acted on one new actionable item: GoDaddy failed billing / shopcuzzies.com deletion-alert emails (2 days runway at scan time) — filed haven/vault/20-Cuzzies/2026-08-30-godaddy-shopcuzzies-billing-failure.md, raised a #decisions card. Everything else (decisions threads sampled, capture DM, project channels, investor/stormy/personal-finance/on-button) was quiet since the 37th run's watermarks. Found two anomalies worth a human look: (1) Gmail label IDs in anchors.md (Label_1/Label_2 = 'Samira'/'Samira/seen') do not exist on this account — real Label_1 is 'Sweep/Review', no Samira labels exist at all, so triaged mail could not be tagged this run or (per the pattern) any prior run; (2) the 16th+ recurrence of the known non-Samira 'Haven Keeper' false-claim pattern in #reports. Pulse re-rendered (gate met); first render hit the known Drive astral-emoji mojibake bug, caught on read-back, trashed, rebuilt clean before notifying."
+    "note": "39th scan today, in flight."
   },
   "watermarks": {
     "slack_channels": {
@@ -86,7 +86,7 @@
   "integrity": {
     "last_full_pass": "2026-08-30T08:06:54-04:00",
     "last_scan_sha": "485d952d3da96a366d2b065dd764b0b768179462",
-    "note": "Full integrity pass ran in 485d952 (vault-keeper sweep): filed 1 note (inbox-janitor run, moved 00-Inbox -> 70-Automation/inbox-janitor), parked 4 unchanged (DIB template closeout, Google Voice, Caine & Weiner, Rootwurks — domain?/multi-field gaps). No frontmatter or format issues flagged. This run (38th) filed one more note out of the Inbox incrementally (godaddy-shopcuzzies-billing-failure, complete frontmatter, moved 00-Inbox -> 20-Cuzzies) but did not re-run a full whole-vault pass (not the day's first run)."
+    "note": "Full integrity pass ran in 485d952 (vault-keeper sweep). This run continues incremental-only (not the day's first run)."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
