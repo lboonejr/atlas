@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260830T140228Z",
-    "run_started": "2026-08-30T14:02:28Z",
+    "run_id": "run_20260830T200223Z",
+    "run_started": "2026-08-30T20:02:23Z",
     "run_completed": "2026-08-30T14:10:17Z",
-    "note": "37th scan today. Picked up after run_20260830T120350Z (36th scan, day's first run) finished all its actual work — digest posted to #reports (ts 1788092025.500939) — but died before its final PART-0 lock/watermark write AND before its _daily/2026-08-30.md journal append landed (same 'died after digest, before state write' pattern as the 33rd run on 8/29). Lock had aged out well past 45 min (started 12:03:50Z, found at 14:02Z), so this run proceeded as normal per the runbook's own rule: backfilled the missing journal entry for the 36th run, corrected the integrity block below (the 36th run's full vault pass — commit 485d952 — never got its last_full_pass/last_scan_sha persisted), then re-swept every surface from the 36th run's last known-good watermark forward. No duplicate cards, captures, or writes found. Local clone's checked-out branch is a harness feature branch, not main, but its HEAD matched origin/main tip (76c42f8) at run start — pushing straight to main via git push origin HEAD:main per the git-write policy, no branch/PR."
+    "note": "38th scan today, picking up after the 37th run (run_20260830T140228Z) completed cleanly at 14:10:17Z. ~6h gap since the last run (14:10Z -> 20:02Z) — cadence gap between scheduled fires, not a stuck lock (run_completed > run_started on read, so no in-flight run to wait out). Sweeping every surface from the 37th run's watermarks forward."
   },
   "watermarks": {
     "slack_channels": {
