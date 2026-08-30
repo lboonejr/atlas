@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-08-29T21:15:00Z
+updated: 2026-08-30T14:02:00Z
 domain: project
 type: log
 status: active
@@ -1322,3 +1322,32 @@ sweep produced no other new #reports content to check (quiet pass across the boa
 - haven/vault/70-Automation/inbox-janitor/2026-08-30-inbox-janitor-run.md
 - haven/vault/00-Inbox/ (4 stuck notes, this run's vault-keeper pass)
 - haven/vault/40-Projects/camden-dispensary-launch/ (4 PT-related notes' frontmatter, this run)
+
+## Thirty-seventh run (2026-08-30 ~10:02am ET) — clean scan
+
+**Note:** the 36th run's own digest posted (`1788092025`, 8:13am ET) but that run's final
+PART 0 lock/watermark write never landed — same "died after digest, before state write"
+pattern as the 33rd run (see the 8/29 ~1:25pm correction above). Lock aged out past 45
+min per the runbook's own rule; this run proceeded as normal. Every surface (`#decisions`,
+capture DM, project channels, Gmail, Slack) was re-swept from the 36th run's last
+persisted watermark and found already caught up through the 36th run's digest — no
+duplicate cards, captures, or writes.
+
+**Scanned:** #reports ts `1788091831`–`1788096006` (picks up right after the 36th run's
+own scanned range end, through this run's own read).
+
+**Content in range:**
+- The 36th run's own digest (`1788092025`) — already logged above, boundary overlap only.
+- **Checked, not flagged — recurring "Haven Keeper" empty-inbox claim, 15th+
+  occurrence.** `1788096006` ("filed 0 · stuck 0 · rang +0/~0/-0 · nothing to file, all
+  quiet"), posted by `U0BC5UTHYG4` (Lemar's own Slack account) via app `A08SF47R6P4` —
+  same signature tracked since 2026-08-24. False against this run's ground truth: the
+  vault Inbox still holds the same 4 stuck notes (DIB closeout, Google Voice, Caine &
+  Weiner, Rootwurks) — not 0. Already dispositioned as non-actionable/informational per
+  every prior occurrence; not re-raised as a new question.
+
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (thirty-seventh run)
+- slack: #reports `C0BBZJL85RT`, ts range `1788091831`–`1788096006`
+- haven/vault/00-Inbox/ (4 stuck notes, re-confirmed this run)
