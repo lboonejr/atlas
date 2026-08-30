@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260829T210200Z",
-    "run_started": "2026-08-29T21:02:00Z",
+    "run_id": "run_20260830T120350Z",
+    "run_started": "2026-08-30T12:03:50Z",
     "run_completed": "2026-08-29T21:16:00Z",
-    "note": "COMPLETE — run_20260829T210200Z (thirty-fifth scan) finished cleanly, full run order V→S→A→B→C→D→E→Q→R→H→M→T→canvas(skipped, blocked)→P(carried, quiet)→digest. Fully quiet pass: 0 decisions handled, 0 captures, 0 project-channel prompts, 2 email junk, 0 investor activity, stormy idle, 0 PT rounds (both Camden Launch cards already parked from 33rd/34th runs), 0 money drops, reports-scan clean, pulse carried. Deviation: local clone's checked-out branch was a harness feature branch (claude/wizardly-cori-xj3av4), not main — git push origin main was rejected (stale local main ref); used git push origin HEAD:main for every write this run, landing straight on main per the git-write policy, no branch/PR."
+    "note": "IN PROGRESS — run_20260830T120350Z (thirty-sixth scan, day's first run) started. Prior run (35th) completed cleanly. Local clone's checked-out branch is a harness feature branch (claude/wizardly-cori-lvutke), not main, but its HEAD matches origin/main tip (a81dcf1) — pushing straight to main via git push origin HEAD:main per the git-write policy, no branch/PR."
   },
   "watermarks": {
     "slack_channels": {
