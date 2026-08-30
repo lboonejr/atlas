@@ -1,12 +1,13 @@
 ---
 created: 2026-08-30T16:04-04:00
-updated: 2026-08-30T16:04-04:00
+updated: 2026-08-30T21:07-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
 tags: [godaddy, website, billing, shopcuzzies, wind-down]
 source: gmail
 due: 2026-09-01T09:00-04:00
+calendar_event_id: jkmdrdp5okobp6u32l18603lt0
 ---
 
 # GoDaddy billing failed — shopcuzzies.com facing deletion 2026-09-01
