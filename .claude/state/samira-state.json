@@ -1,16 +1,16 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260830T140228Z",
-    "run_started": "2026-08-30T14:02:28Z",
-    "run_completed": "2026-08-30T14:10:17Z",
-    "note": "37th scan today. Picked up after run_20260830T120350Z (36th scan, day's first run) finished all its actual work — digest posted to #reports (ts 1788092025.500939) — but died before its final PART-0 lock/watermark write AND before its _daily/2026-08-30.md journal append landed (same 'died after digest, before state write' pattern as the 33rd run on 8/29). Lock had aged out well past 45 min (started 12:03:50Z, found at 14:02Z), so this run proceeded as normal per the runbook's own rule: backfilled the missing journal entry for the 36th run, corrected the integrity block below (the 36th run's full vault pass — commit 485d952 — never got its last_full_pass/last_scan_sha persisted), then re-swept every surface from the 36th run's last known-good watermark forward. No duplicate cards, captures, or writes found. Local clone's checked-out branch is a harness feature branch, not main, but its HEAD matched origin/main tip (76c42f8) at run start — pushing straight to main via git push origin HEAD:main per the git-write policy, no branch/PR."
+    "run_id": "run_20260830T210529Z",
+    "run_started": "2026-08-30T21:05:29Z",
+    "run_completed": "2026-08-30T21:12:00Z",
+    "note": "39th scan today, completed cleanly. ~52min gap since the 38th run. Closed the one calendar-sync gap found across all 46 due-carrying vault notes (godaddy-shopcuzzies note had no calendar_event_id) — created a Cuzzie's (Owners) calendar event and wrote the id back. Everything else (decisions threads sampled 5 most-recent, capture DM, 13 in-scope project channels, investor/stormy/personal-finance, Gmail inbox, #reports) was quiet since the 38th run's watermarks. No new #decisions cards, no PT cards open, no money drops, no email. Pulse skipped (quiet-pass gate not met). Canvas not re-checked (not today's first run)."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1788099036.207949",
-      "C0BBZJL85RT": "1788099036.207949",
-      "D0BHPKMDNEP": "1788099036.207949",
+      "C0BBXA96FFV": "1788120318.734249",
+      "C0BBZJL85RT": "1788124249.046859",
+      "D0BHPKMDNEP": "1788120778.484679",
       "C0BGLEMH99T": "1788099036.207949",
       "C0BEQUW5NPP": "1788099036.207949",
       "C0BBLUA7JLX": "1788099036.207949",
@@ -77,22 +77,23 @@
       "1787940471.776979": "1788011700.470339",
       "1788011652.830719": "1788023830.164989",
       "1788016294.676159": "1788016294.676159",
-      "1788019527.456219": "1788019527.456219"
+      "1788019527.456219": "1788019527.456219",
+      "1788120312.622789": "1788120318.734249"
     },
-    "capture_dm": "1788099036.207949",
-    "gmail_after_epoch": 1788099036
+    "capture_dm": "1788120778.484679",
+    "gmail_after_epoch": 1788124100
   },
   "integrity": {
     "last_full_pass": "2026-08-30T08:06:54-04:00",
     "last_scan_sha": "485d952d3da96a366d2b065dd764b0b768179462",
-    "note": "Full integrity pass ran in 485d952 (vault-keeper sweep): filed 1 note (inbox-janitor run, moved 00-Inbox -> 70-Automation/inbox-janitor), parked 4 unchanged (DIB template closeout, Google Voice, Caine & Weiner, Rootwurks — domain?/multi-field gaps). No frontmatter or format issues flagged."
+    "note": "Full integrity pass ran in 485d952 (vault-keeper sweep). This run (39th) did not re-run a full whole-vault pass (not the day's first run); no Inbox notes to file (4 stuck, unchanged)."
   },
   "canvas_access": {
     "last_checked": "2026-08-27T10:40:00-04:00",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-08-29T13:35:00-04:00",
+    "pulse_last_rendered": "2026-08-30T16:12:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
