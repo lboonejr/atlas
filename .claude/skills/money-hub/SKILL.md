@@ -228,6 +228,9 @@ exceptions. Consistency is the point: Lemar asked for one format so he can stay 
   RECOMPUTED (sum of that day's contributions), never overwritten.
 - **Undated → no accrual.** Never guess a date to force one. An undated line contributes
   $0/day, which is exactly why it's invisible (see THE MODEL).
+- **`expires_if_missed: true` → a missed occurrence is dropped, not caught up** (see
+  ROLLOVER). The line keeps accruing toward its NEXT date; only the day that already
+  passed evaporates. Never spread a missed consumption occurrence forward.
 - **Recompute triggers:** a new dated line, an amount or date change, a payment, or a
   cycle rolling over. Recompute only the days from today forward — **never rewrite a past
   day**, which is history.
@@ -363,6 +366,36 @@ above), say so in that same card rather than staying silent.
 twice in one pass.
 
 ## ROLLOVER — the leftovers drag forward (runs inside PART M, last scan of the day)
+**UNCONDITIONAL, drop or no drop (locked 2026-08-25).** Like DAILY CALENDAR's WINDOW
+MAINTENANCE, this is NOT a side-effect of a money drop landing in #personal-finance. It
+runs on the last scan of every day whether or not the channel said anything, and it runs
+its CATCH-UP pass (below) on any scan that finds unrolled past days. A quiet channel is
+the normal case, not a reason to skip it.
+
+Why this is a rule: rollover used to fire only when a drop happened to arrive, so when
+#personal-finance went quiet after 2026-08-17, **seven consecutive days (8/18–8/24)
+carrying $1,571.30 of shortfall sat at `funded: 0` with every contribution still
+`pending`** — never rolled, never flagged, never compounded onto today. The money simply
+fell out of the model, and nothing noticed until Lemar asked. Same root cause, same shape,
+and the same fix as the calendar outage: make the step unconditional rather than
+drop-triggered.
+
+**CATCH-UP — closing days that were never rolled.** A past day with contributions still
+`pending` and no `resolution` is a day ROLLOVER never processed. On finding one:
+- Process the OLDEST unrolled day first, then forward, one day at a time, so each day's
+  remainder lands on the next day exactly as it would have at the time.
+- **Never silently dump a multi-day backlog onto today.** Roll day by day, and apply the
+  rollover brake per contribution as normal — a line that has rolled 3 days running stops
+  being silently re-rolled and gets named in a #decisions parent.
+- A contribution whose line has since been **paid, parked, re-dated, or expired** does NOT
+  roll: it is closed out in place with the status that now applies and a note saying so.
+  Re-rolling a settled line would resurrect a debt that no longer exists.
+- Stamp each processed day with a `resolution` naming the catch-up, so it is visibly closed
+  history and never processed twice.
+- If the catch-up total is large enough to move today's number materially, **do not apply
+  it silently** — raise ONE #decisions parent with the figure and the day-by-day breakdown
+  and let Lemar decide, the same way OVERLOAD CHECK never quietly reshapes a week.
+
 On Samira's LAST hourly scan of the day (≥5pm ET — same style as the existing PART C
 timing gate, so this never fires mid-morning): for every `daily_targets[today]`
 contribution with `funded < amount`, carry the **unfunded remainder** (`amount − funded`)
@@ -378,6 +411,30 @@ whose due date passes while still unfunded stops rolling and becomes **overdue**
 leaves the accrual, gets its own flag on the dashboard, and rides in `open_questions`
 until Lemar says whether it was paid. Never keep silently dripping a bill whose date has
 already gone by.
+
+**The consumption exception — `expires_if_missed: true` (locked 2026-08-25, Lemar's
+call).** Not every dated line is a debt. Some are the cost of DOING something on a
+specific day — train fare to a weekend shift, a tank of gas. If the day passes and the
+money was never set aside, the trip didn't happen and **nobody is owed anything**: there
+is no creditor, no balance, nothing to catch up. Chasing it would invent an obligation
+out of a day that simply went by.
+
+A line flagged `expires_if_missed: true` therefore:
+- **never rolls.** At ROLLOVER, an unfunded contribution on such a line is marked
+  `status: expired` and is NOT carried to tomorrow.
+- **never becomes overdue.** It leaves the accrual silently — no dashboard flag, no
+  `open_questions` entry, no ask. Surfacing it as a debt would be wrong, not merely noisy.
+- **still accrues forward normally.** Expiring a missed occurrence says nothing about the
+  next one: a recurring travel line keeps dripping toward its NEXT date. Lemar still has
+  to get to the shift this weekend.
+- is never inferred. Only Lemar sets this flag, the same rule as `non_negotiable`. Do not
+  guess it from a line looking like a running cost — a bill that merely went unpaid is
+  still owed, and treating it as expired would quietly delete a real debt.
+
+The gas/maintenance reserve already behaves this way structurally and needs no flag: it
+is `daily_allowances.gas_maintenance`, never a `bills` row, never accrued into
+`daily_targets`, and an unreported day is assumed spent (see OPERATING RESERVE). The
+flag exists for lines that DO sit in the queue but share gas's nature.
 
 **Rollover brake:** a contribution that has rolled **3 days running** stops rolling
 silently — keep rolling it, but name it in a #decisions parent ("$X for [line] has
@@ -419,6 +476,21 @@ due." Personal reminder calendar only, no attendees, popup reminder (`minutes: 0
   never create a duplicate for a date that already has one (EXISTING).
 - A day whose target reaches $0 (every contribution cleared or moved off it) → cancel its
   event and clear the id (RETIRE) — never leave a stale $0 reminder.
+- **WINDOW MAINTENANCE — every pass, drop or no drop (locked 2026-08-25).** The window is
+  `[today .. today+6]`. Advancing it is NOT a side-effect of a drop: on every PART M
+  sweep, create the aggregate event for any day in that window whose `daily_targets`
+  entry has `calendar_event_id: null` and a `target` > $0, and write the id back. **A day
+  inside the window with a target > $0 and no event is a DEFECT, not a quiet week.** This
+  is the one part of PART M that runs on an empty channel — a pass that returns `money —`
+  can still create events here.
+- **Never back-fill a past day.** Only `[today .. today+6]` is repaired; a day before
+  today that never got an event stays without one (past days are history — see ACCRUAL).
+  The window advances, it does not reach backwards.
+- Why this is a rule and not an implementation detail: the window used to be advanced
+  only when a drop happened to land, so on 2026-08-15 it was written out to 2026-08-21
+  and then — the channel going quiet after 2026-08-17 — simply expired. Lemar had no daily
+  total from 2026-08-22 until he noticed and asked on 2026-08-25, while the ledger held a
+  correct `target` for every one of those days. Nothing errored; the layer just stopped.
 
 ## DASHBOARD — the Money Hub Drive snapshot
 One self-contained HTML page (inline CSS, no external requests, single column
@@ -472,6 +544,20 @@ Earnings drops also run INCOME ALLOCATION against the day they were earned.
 On the LAST hourly scan of the day (≥5pm ET) also run ROLLOVER before re-rendering.
 Re-render the dashboard once at the end ONLY if something changed. PART M captures,
 accrues, funds, checks, and renders; it never runs the weekly view (mode 6 stays on-demand).
+
+**Unconditional first steps (locked 2026-08-25):** before scanning for drops, on every
+sweep, run BOTH (a) DAILY CALENDAR's WINDOW MAINTENANCE and (b) ROLLOVER's CATCH-UP scan
+for past days that were never rolled. These are the parts of PART M that are not
+drop-triggered, so `money —` (no drops this pass) never means "touched nothing" — report
+what they did. Digest token when either fired: `money — · window repaired <n>d · rolled
+<n>d $<amount>`.
+
+The rule behind both: **any step that keeps the model honest over time must not depend on
+Lemar having said something.** A drop-triggered projection silently decays the moment the
+channel goes quiet — that is how the daily calendar died on 8/22 and how seven days of
+rollover went missing between 8/18 and 8/24. Before making any future step drop-triggered,
+ask whether it still needs to happen on a week when he says nothing; if yes, it belongs
+here.
 
 ## SAFETY (applies to the whole skill)
 You MAY: record gas spend and sweep the remainder into the maintenance bucket from a
