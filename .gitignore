@@ -1,0 +1,12 @@
+# ESPN fantasy credentials — session cookies, NEVER commit these
+.claude/state/espn-credentials.env
+*.espn-credentials.env
+
+# League snapshots may embed cookies in debug dumps
+apps/espn-fantasy/snapshots/
+apps/espn-fantasy/*.raw.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/

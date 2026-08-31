@@ -4,6 +4,30 @@ The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NO
 History and cutover narratives live here.
 
 
+## 2026-08-30 — Fantasy football lane (PART N)
+Lemar asked whether Claude could run his fantasy league — start/sit, waivers, drops, the
+whole set of calls — and whether Samira could carry it. Built as a lane in her runbook
+rather than a one-off analysis, so it survives the conversation that asked for it.
+- **`apps/espn-fantasy/` (new)** — read-only ESPN v3 client. Pulls settings, teams,
+  rosters, matchups, and the free-agent pool, and normalizes them to the fields a call
+  actually turns on (slot, injury status, weekly projection, roster-percentage momentum).
+  **No write paths, deliberately** — lineups and claims are Lemar's taps in the app, the
+  same posture as the money hub advising but never moving money.
+- **`.claude/skills/fantasy-gm/` (new)** — seven analysis lenses (lineup, injury, waivers,
+  roster rot, matchup, trade leverage, playoff schedule), time-gated to the three moments
+  that decide a fantasy week: Tuesday waivers, Thursday TNF lock, Sunday morning lineup.
+  Silent every other day by design. Runs the standard reaction engine; a genuine either/or
+  lifts to #decisions.
+- **`haven/vault/10-Personal/fantasy-football-league.md` (new)** — source of truth.
+  `domain: personal` with **no `area`** (fantasy is none of money/health/home/family, and
+  §4.1 makes the domain root a valid home), so it files correctly instead of being parked
+  on an invented label. Config stays UNRESOLVED until the first fetch fills it in.
+- **Two live blockers, both recorded in anchors, neither guessed around:** `#fantasy-football`
+  does not exist yet (create + `/invite @Samira`), and the cloud env's network policy
+  returns 403 for `lm-api-reads.fantasy.espn.com`. Until it's allowlisted the skill reasons
+  over screenshots Lemar pastes in-channel and labels the output as such, rather than
+  skipping the week.
+
 ## 2026-08-19 — Samira made aware of the Camden engagement
 The engagement existed in anchors, Drive, and Slack, but Haven had no note for it, and PART R
 had no reason to treat a client card differently from any other. Both fixed:

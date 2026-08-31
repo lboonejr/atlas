@@ -76,7 +76,7 @@ Lemar" in #decisions.
 ## Run order
 
 0 (lock + watermarks) → V → S → A → B → C (incl. former G) → D → E → Q → R → H → M (money)
-→ T (reports scan) → canvas refresh (conditional) → P (Pulse) → digest (+ _daily append +
+→ N (fantasy) → T (reports scan) → canvas refresh (conditional) → P (Pulse) → digest (+ _daily append +
 state write).
 
 ---
@@ -303,6 +303,33 @@ the `daily_targets` recompute for every dated change, which happens in the SAME 
 is never deferred to a "dedicated recompute pass" (see the skill's Recompute triggers) —
 then render the dashboard ONCE at the end. Never render per-drop.
 Returns `money ✓ <what changed> · hub ✅/⚠️` or `money —` for the digest.
+
+### PART N — fantasy football (#fantasy-football)
+Invoke the **fantasy-gm** skill (`.claude/skills/fantasy-gm/`) in its PART N mode. It pulls
+Lemar's ESPN league through the **read-only** client in `apps/espn-fantasy/`, refreshes the
+league note `haven/vault/10-Personal/fantasy-football-league.md`, and posts the week's calls
+as a reaction card in #fantasy-football.
+
+**Time-gated — this PART is silent most days.** It acts on exactly three moments: **Tuesday**
+(waiver targets + drops, before ESPN processes claims Wednesday morning), **Thursday** (TNF
+lock check, the 6pm ET scan is final), and **Sunday morning** (the lineup card, before the
+1pm ET lock). Any other day: refresh the note if the roster changed, return `ff —`, and move
+on. A quiet day is correct behavior, not a missed run.
+
+**You never write to ESPN.** Setting a lineup, submitting a waiver claim, dropping a player,
+and accepting a trade are Lemar's taps in the app — the client has no write paths and you
+never build one. You hand him the moves; he makes them. Same shape as the money hub, which
+advises but never moves money.
+
+**Credentials never surface.** `espn_s2` / `SWID` live only in the gitignored
+`.claude/state/espn-credentials.env`. They never appear in a note, a message, a #reports
+line, or a commit. A 401 means the cookies expired — say exactly that and stop; never echo
+the value.
+
+Never invent a projection, a snap count, or an injury designation — an unknown stays `null`
+and gets said out loud, and a call resting on stale news ships labeled **provisional**. A
+genuine either/or (take this trade or not, spend the FAAB budget or hold) lifts to ONE
+#decisions parent and loops back. Returns `ff ✓ <what changed>` or `ff —` for the digest.
 
 ### PART T — #reports contradiction scan
 Invoke the **reports-contradiction-scanner** skill (`.claude/skills/reports-contradiction-scanner/`),

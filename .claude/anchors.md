@@ -74,6 +74,7 @@ supersedes ALL other style guidance, including guides bundled inside skills.
 | #skills-lab | `C0BBZ5J8805` | Skill-candidate proposals |
 | #on-button | `C0BEQUW5NPP` | Reopening command center — drop past-due bills/screenshots here. The **on-button-plan** skill ingests drops into the ONE source of truth `haven/vault/40-Projects/on-button-reopen/index.md`, then regenerates the interactive page `on-button-reopen.html` (githack: `https://raw.githack.com/lboonejr/atlas/main/on-button-reopen.html`) and the pinned canvas `F0BEN1167GB`. Tracking only, nothing paid/contacted. |
 | #personal-finance | `C0BGLEMH99T` | Personal money hub — Lemar drops earnings, cash, bills (text or photo), payments, and plan terms here; Samira's **PART M** sweeps them via the **money-hub** skill. Source of truth: `haven/vault/10-Personal/Money/money-hub-ledger.md` (+ `income-log-2026.md`). The 2026-07-11 project note that built this is closed (`status: done`, history only). |
+| #fantasy-football | **UNRESOLVED** | Fantasy football lane (fantasy-gm, PART N). Channel not created yet — create it, run `/invite @Samira`, and record the ID here. Source of truth: `haven/vault/10-Personal/fantasy-football-league.md`. Swept only on the three time-gated moments (Tue waivers / Thu TNF / Sun lineup), never in PART C. |
 | #pitch-deck-pressure-test | `C0BCD7U5X2B` | Recapitalization deck ($500K) pressure-test Q&A thread |
 | #cuzzys-brand | `C0BCH2C3GRM` | White-label brand project (recorded 2026-07-12 for Pulse link-outs) |
 | #delivery-in-a-box | `C0BDN2KQFD4` | DIB project channel (recorded 2026-07-12 for Pulse link-outs) |
@@ -326,6 +327,19 @@ snapshots). Its status still rides in Samira's digest every hour regardless:
 | Pulse Drive folder | `1Dj_MZDlqUzHfAyK8TMwwJ57dZhi29omX` (`ATLAS/Dashboards/Pulse`, folder link `https://drive.google.com/drive/folders/1Dj_MZDlqUzHfAyK8TMwwJ57dZhi29omX`). Every render creates a NEW Doc here — filename `YYYY-MM-DD HHMM ET — Pulse` (zero-padded, so name-sort and time-sort agree) — never edited or deleted afterward; history is the point. Primary access is the DM link above; the folder is the archive. |
 | Workout plan artifact URL | `https://claude.ai/code/artifact/a723834f-6310-4575-8897-75ae8e30806e` ("Back to the Court — 12-Week Plan"; source-of-truth note `haven/vault/10-Personal/Health/2026-07-07-basketball-fitness-plan.md`, start Mon 2026-07-07). Pulse links out to it; its check-offs live in that page's own localStorage. |
 | Sections (Lemar's fixed top-to-bottom order, 2026-07-12: big ideas → details → execution) | quick-capture todo strip · Dawn as North Star (direction, NOT tasks) · calendar roadmap · #decisions respond list · money (Haven budget ledger) · today's workout · Atlas open items · project pulses · Samira + routine health. Single column. EVERY item links to its source thread (Slack permalink) or calendar event (htmlLink). |
+
+## Fantasy football (ESPN — read-only, rendered by the fantasy-gm skill)
+
+| What | Value |
+|---|---|
+| Channel | `#fantasy-football` — **UNRESOLVED**, see the Slack table |
+| Platform | ESPN. League id **UNRESOLVED** (from `fantasy.espn.com/football/league?leagueId=XXXXXXX`) |
+| Season | 2026 |
+| Source of truth | `haven/vault/10-Personal/fantasy-football-league.md` (`domain: personal`, **no `area`** — fantasy is none of money/health/home/family, so it files to `10-Personal/` root per schema §4.1; never invent an area to move it) |
+| Skill | `.claude/skills/fantasy-gm/` — PART N, time-gated to Tue / Thu / Sun |
+| Client | `apps/espn-fantasy/` — **read-only, no write paths.** Lineups, claims, drops, and trades are Lemar's taps in the ESPN app. Same posture as the money hub: it advises, he acts. |
+| Credentials | `espn_s2` + `SWID` in `.claude/state/espn-credentials.env` (**gitignored**; template at `.env.example`). Live session cookies — never in a note, message, #reports line, or commit. They expire; a 401 means re-pull them from the browser. |
+| Network | `lm-api-reads.fantasy.espn.com` must be on the cloud env's allowlist. Confirmed **403 (policy denial)** from the agent proxy on 2026-08-30 — until it's allowlisted the skill runs off screenshots Lemar pastes in-channel, labeled as such. |
 
 ## Money Hub (personal financial hub — rendered by the money-hub skill)
 
