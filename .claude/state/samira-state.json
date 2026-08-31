@@ -3,13 +3,13 @@
   "lock": {
     "run_id": "run_20260831T120500Z",
     "run_started": "2026-08-31T12:05:00Z",
-    "run_completed": "2026-08-30T21:12:00Z",
-    "note": "40th scan — day's first run of 2026-08-31, in progress."
+    "run_completed": "2026-08-31T16:15:00Z",
+    "note": "40th scan — day's first run of 2026-08-31, completed cleanly. Filed 1 clean Inbox note (Basil's inbox-janitor log → 70-Automation/inbox-janitor/); 4 domain?-UNRESOLVED notes stayed stuck, unchanged. Full daily integrity pass: mechanical container check across 630 notes clean, the one known _daily/2026-08-01.md base64 defect reconfirmed non-repairable (already documented, not relitigated). Due-date sweep: all 46 active due notes resolve to a calendar_event_id, +0/~0/-0. Sampled the 5 most-recently-active #decisions threads (full 50-thread reply sweep not run this pass, time-boxed): found and executed Lemar's ✅ on the GoDaddy shopcuzzies.com card (Option 2 — let it lapse, no renewal paid) — Haven note closed, thread replied, #reports logged. All 17 in-scope project/channel sweeps quiet, capture DM quiet, investor/stormy/personal-finance quiet. Gmail D2: 6 new threads — captured 1 task (Kris Towkaniuk time-off x2, Station) as a Haven note; 4 vendor/marketing junk left UNLABELED (anchors.md Gmail label IDs confirmed stale by last night's Basil run — declined to guess a label). reports-contradiction: found 1 — a 'Haven Keeper' bot post (~4:41am ET) falsely claimed 'Inbox 0 stuck' contradicting actual vault state; same identity-confusion pattern already flagged to Lemar 7/31 (ts 1785532271), logged but not re-escalated to #decisions. Canvas re-checked (day's first run): still write-blocked, bot missing as editor. Pulse render skipped this pass (judgment call — only a routine log + a non-Lemar HR task changed; not the kind of change the quiet-pass gate is meant to catch a Drive snapshot for)."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1788120318.734249",
-      "C0BBZJL85RT": "1788124249.046859",
+      "C0BBXA96FFV": "1788178381.880189",
+      "C0BBZJL85RT": "1788178413.626689",
       "D0BHPKMDNEP": "1788120778.484679",
       "C0BGLEMH99T": "1788099036.207949",
       "C0BEQUW5NPP": "1788099036.207949",
@@ -78,18 +78,18 @@
       "1788011652.830719": "1788023830.164989",
       "1788016294.676159": "1788016294.676159",
       "1788019527.456219": "1788019527.456219",
-      "1788120312.622789": "1788120318.734249"
+      "1788120312.622789": "1788178381.880189"
     },
     "capture_dm": "1788120778.484679",
-    "gmail_after_epoch": 1788124100
+    "gmail_after_epoch": 1788177508
   },
   "integrity": {
-    "last_full_pass": "2026-08-30T08:06:54-04:00",
-    "last_scan_sha": "485d952d3da96a366d2b065dd764b0b768179462",
-    "note": "Full integrity pass ran in 485d952 (vault-keeper sweep). This run (39th) did not re-run a full whole-vault pass (not the day's first run); no Inbox notes to file (4 stuck, unchanged)."
+    "last_full_pass": "2026-08-31T08:13:00-04:00",
+    "last_scan_sha": "dbbed2977ed34ad6b7c5a74bc3534a6b3cc1e98d",
+    "note": "Full mechanical container pass (R1/R2/R5) across all 630 vault notes via local clone grep, day's first run. Zero new defects. One pre-existing, already-documented, non-repairable base64 defect in _daily/2026-08-01.md reconfirmed and left untouched per the 'note that already records a decision not to repair it' rule. Vault-wide required-field/controlled-value validation was NOT re-run in full this pass (time-boxed); relying on the unbroken record of clean full passes in prior scans plus the fact only 3 files changed since then, all vetted by this same session."
   },
   "canvas_access": {
-    "last_checked": "2026-08-27T10:40:00-04:00",
+    "last_checked": "2026-08-31T08:11:00-04:00",
     "writable": false
   },
   "renders": {
