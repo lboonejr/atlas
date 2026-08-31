@@ -1,0 +1,665 @@
+<title>Seats, Rooms, and the Vault</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700&family=IBM+Plex+Mono:wght@400;600&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+
+<style>
+  :root{
+    --ground:#EDEFEA; --surface:#F8F9F6; --surface-2:#E3E6DF;
+    --ink:#17211D; --ink-2:#4A554F; --ink-3:#5F6A63;
+    --rule:#C9CEC5; --rule-2:#DDE1D9;
+    --brass:#8F6229; --brass-soft:#EFE4D3;
+    --flag:#A2371F; --flag-soft:#F4E2DC;
+    --ok:#2F6244; --ok-soft:#DCE8DF;
+    --measure:68ch;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#111513; --surface:#191F1C; --surface-2:#232A26;
+      --ink:#E8EBE5; --ink-2:#AAB3AC; --ink-3:#8B958D;
+      --rule:#333B36; --rule-2:#262D29;
+      --brass:#D6A366; --brass-soft:#2A2318;
+      --flag:#E88C74; --flag-soft:#2E1C17;
+      --ok:#84B695; --ok-soft:#17241B;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#111513; --surface:#191F1C; --surface-2:#232A26;
+    --ink:#E8EBE5; --ink-2:#AAB3AC; --ink-3:#8B958D;
+    --rule:#333B36; --rule-2:#262D29;
+    --brass:#D6A366; --brass-soft:#2A2318;
+    --flag:#E88C74; --flag-soft:#2E1C17;
+    --ok:#84B695; --ok-soft:#17241B;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--ground); color:var(--ink);
+    font-family:"Public Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:17px; line-height:1.62; margin:0;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:1040px; margin:0 auto; padding:56px 24px 120px;}
+  .col{max-width:var(--measure);}
+
+  h1,h2,h3{font-family:"Big Shoulders Display","Arial Narrow",Arial,sans-serif; text-wrap:balance; margin:0;}
+  h1{font-size:clamp(52px,9vw,92px); line-height:0.94; font-weight:700; letter-spacing:-0.005em;}
+  h2{font-size:clamp(30px,4.4vw,42px); line-height:1.02; font-weight:600;}
+  h3{font-size:23px; line-height:1.12; font-weight:600;}
+  p{margin:0;}
+
+  .eyebrow{
+    font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+    font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--ink-3);
+  }
+  .mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;}
+
+  header.masthead{border-bottom:2px solid var(--ink); padding-bottom:28px;}
+  .masthead .eyebrow{display:block; margin-bottom:18px;}
+  .deck{font-size:20px; line-height:1.5; color:var(--ink-2); margin-top:22px; max-width:60ch;}
+  .sources{
+    display:flex; flex-wrap:wrap; gap:8px 28px; margin-top:26px;
+    font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace; font-size:12px; color:var(--ink-3);
+  }
+  .sources span strong{color:var(--ink-2); font-weight:600;}
+
+  section{margin-top:76px;}
+  section > .eyebrow{display:block; margin-bottom:10px;}
+  section > h2 + p, section > h2 + .col{margin-top:18px;}
+  .stack{display:flex; flex-direction:column; gap:18px;}
+
+  .halves{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; margin-top:28px;}
+  .half{background:var(--surface); border:1px solid var(--rule); padding:24px;}
+  .half h3{margin-bottom:6px;}
+  .half .eyebrow{display:block; margin-bottom:14px;}
+  .half ul{margin:14px 0 0; padding-left:18px; color:var(--ink-2); font-size:15.5px; line-height:1.55;}
+  .half li{margin-bottom:7px;}
+
+  figure{margin:34px 0 0; padding:0;}
+  figure svg{display:block; width:100%; height:auto; color:var(--ink);}
+  .figwrap{background:var(--surface); border:1px solid var(--rule); padding:26px 22px 20px; overflow-x:auto;}
+  figcaption{margin-top:16px; font-size:14.5px; line-height:1.5; color:var(--ink-3); max-width:64ch;}
+
+  table{width:100%; border-collapse:collapse; margin-top:28px; font-size:15.5px;}
+  caption{text-align:left; font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace; font-size:11.5px;
+    letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-3); padding-bottom:12px;}
+  th,td{text-align:left; padding:13px 16px 13px 0; border-bottom:1px solid var(--rule-2); vertical-align:top;}
+  thead th{
+    font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace; font-weight:600; font-size:11.5px;
+    letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-3);
+    border-bottom:1px solid var(--rule); padding-bottom:9px;
+  }
+  td strong{font-weight:700;}
+  .num{font-variant-numeric:tabular-nums; white-space:nowrap;}
+  .tablewrap{overflow-x:auto;}
+
+  .flaw{
+    display:grid; grid-template-columns:56px 1fr; gap:0 20px;
+    padding:26px 0; border-top:1px solid var(--rule);
+  }
+  .flaw:last-of-type{border-bottom:1px solid var(--rule);}
+  .flaw .rank{
+    font-family:"Big Shoulders Display","Arial Narrow",Arial,sans-serif;
+    font-size:40px; font-weight:700; line-height:0.8; color:var(--flag);
+    font-variant-numeric:tabular-nums; padding-top:4px;
+  }
+  .flaw h3{margin-bottom:12px;}
+  .flaw dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:7px 14px; align-items:baseline;}
+  .flaw dt{
+    font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace; font-size:10.5px; letter-spacing:0.1em;
+    text-transform:uppercase; color:var(--ink-3); white-space:nowrap; padding-top:4px;
+  }
+  .flaw dd{margin:0; color:var(--ink-2); font-size:16px; max-width:62ch;}
+  .flaw dd.fix{color:var(--ink); border-left:3px solid var(--ok); padding-left:14px; margin-left:-1px;}
+  .flaw dd.fix b{color:var(--ok); font-weight:700;}
+
+  .keep{background:var(--ok-soft); border:1px solid var(--ok); padding:26px 28px; margin-top:28px;}
+  .keep h3{color:var(--ok); margin-bottom:14px;}
+  .keep ul{margin:0; padding-left:19px; display:flex; flex-direction:column; gap:9px; max-width:62ch;}
+  .keep li{color:var(--ink);}
+
+  ol.calls{margin:28px 0 0; padding:0; list-style:none; counter-reset:call;
+    display:flex; flex-direction:column; gap:2px;}
+  ol.calls li{
+    counter-increment:call; display:grid; grid-template-columns:auto 1fr; gap:18px;
+    padding:18px 0; border-bottom:1px solid var(--rule-2); max-width:80ch;
+  }
+  ol.calls li::before{
+    content:counter(call,upper-alpha);
+    font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace; font-size:12px; font-weight:600;
+    color:var(--brass); border:1px solid var(--brass); width:24px; height:24px;
+    display:grid; place-items:center; margin-top:2px;
+  }
+  ol.calls b{display:block; font-size:17px; margin-bottom:3px;}
+  ol.calls span{color:var(--ink-2); font-size:15.5px;}
+
+  .checklist{margin:26px 0 0; padding:0; list-style:none; display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1px; background:var(--rule);
+    border:1px solid var(--rule);}
+  .checklist li{background:var(--surface); padding:20px; display:flex; flex-direction:column; gap:6px;}
+  .checklist .code{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace; font-size:13px;
+    color:var(--brass); font-weight:600;}
+  .checklist .what{font-size:15.5px; color:var(--ink);}
+  .checklist .why{font-size:14px; color:var(--ink-3); line-height:1.45;}
+
+  .pull{
+    border-left:3px solid var(--brass); padding:4px 0 4px 22px; margin-top:30px;
+    font-family:"Big Shoulders Display","Arial Narrow",Arial,sans-serif;
+    font-size:clamp(26px,3.4vw,34px); line-height:1.08; font-weight:600; max-width:24ch;
+  }
+  .note{font-size:14.5px; color:var(--ink-3); margin-top:16px; max-width:66ch;}
+  [fill="#2F6244"]{fill:var(--ok);}
+  [stroke="#2F6244"]{stroke:var(--ok);}
+  [fill="#8F6229"]{fill:var(--brass);}
+  [stroke="#8F6229"]{stroke:var(--brass);}
+  a{color:var(--brass);}
+  a:focus-visible, li:focus-visible{outline:2px solid var(--brass); outline-offset:3px;}
+  footer{margin-top:90px; padding-top:24px; border-top:2px solid var(--ink); color:var(--ink-3); font-size:14px;}
+</style>
+
+<div class="page">
+
+  <header class="masthead">
+    <span class="eyebrow">Infrastructure reconciliation &middot; 27 Aug 2026</span>
+    <h1>Seats, Rooms,<br>and the Vault</h1>
+    <p class="deck">Your productivity loop and your building analogy do not conflict. They describe different axes, and the plan reads as tangled only because one of those axes got folded into the other. Untangle them and a new business costs you nothing to open.</p>
+    <div class="sources">
+      <span><strong>Half one:</strong> PR #84, docs/productivity-loop/</span>
+      <span><strong>Half two:</strong> the building &amp; rooms description</span>
+      <span><strong>Constant:</strong> haven/vault/</span>
+    </div>
+  </header>
+
+  <section>
+    <span class="eyebrow">Starting position</span>
+    <h2>The two halves</h2>
+    <div class="halves">
+      <div class="half">
+        <span class="eyebrow">Half one &middot; already decided</span>
+        <h3>The productivity loop</h3>
+        <p style="color:var(--ink-2);font-size:15.5px;line-height:1.55;margin-top:10px;">One business, two humans, a cost-tiered split.</p>
+        <ul>
+          <li>Haven is the source of truth. Done means a filed note.</li>
+          <li>Two Team seats carry individual work at a flat rate.</li>
+          <li>Tag carries collaboration only, metered and capped.</li>
+          <li>One daily housekeeping job. Samira's machinery retires.</li>
+          <li>Law: build in your seat, coordinate in the channel.</li>
+        </ul>
+      </div>
+      <div class="half">
+        <span class="eyebrow">Half two &middot; the new idea</span>
+        <h3>The building</h3>
+        <p style="color:var(--ink-2);font-size:15.5px;line-height:1.55;margin-top:10px;">Many businesses, one structure that holds them all.</p>
+        <ul>
+          <li>A parent company is the building. Everything but Cuzzie's lives in it.</li>
+          <li>Each business is a room: shared project, channel, Drive, email, account.</li>
+          <li>Samira is the superintendent: health, uptime, portability.</li>
+          <li>Slack is the comms fabric for people and agents alike.</li>
+          <li>Tag is the meeting room you book when something needs the group.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pull">Half one answers <span style="color:var(--brass)">who works</span>. Half two answers <span style="color:var(--brass)">what the work is for</span>.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">The collision</span>
+    <h2>One axis is doing two jobs</h2>
+    <div class="col stack" style="margin-top:18px;">
+      <p>Your plan assumes a single stack: one business equals one account equals one project equals one channel equals one folder equals one team. Five of those six scale with the business. The account does not. Accounts scale with <em>humans</em>, because a human is the thing that logs in, holds credentials, gets billed, and can be held to an approval.</p>
+      <p>Give a room its own seat and you have invented an employee who does no work, costs a seat, needs a mailbox, needs a password in your manager, needs its connectors re-authorized every time something rotates, and can never be the one who approved a send. Multiply by every side project you have ever opened a channel for.</p>
+    </div>
+
+    <figure>
+      <div class="figwrap">
+        <svg viewBox="0 0 900 400" role="img" aria-label="Two arrangements of the same five entities. As described, both humans and all three businesses each consume a Claude Team seat, giving five billed seats. Reconciled, only the two humans consume seats while the three businesses become free containers, and both arrangements rest on the same Haven vault.">
+          <defs>
+            <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path>
+            </marker>
+            <marker id="ar-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#2F6244"></path>
+            </marker>
+          </defs>
+
+          <line x1="450" y1="16" x2="450" y2="392" stroke="currentColor" stroke-width="1" stroke-dasharray="3 5" opacity="0.35"></line>
+
+          <!-- LEFT -->
+          <text x="20" y="24" font-family="IBM Plex Mono, monospace" font-size="11.5" letter-spacing="1.4" fill="currentColor" opacity="0.6">AS DESCRIBED</text>
+          <g font-family="Public Sans, sans-serif" font-size="12.5" fill="currentColor">
+            <rect x="20" y="52" width="120" height="36" fill="none" stroke="currentColor" stroke-width="1.4"></rect>
+            <text x="80" y="75" text-anchor="middle">Lemar</text>
+            <rect x="156" y="52" width="120" height="36" fill="none" stroke="currentColor" stroke-width="1.4"></rect>
+            <text x="216" y="75" text-anchor="middle">Arianna</text>
+
+            <rect x="20" y="150" width="120" height="36" fill="none" stroke="currentColor" stroke-width="1.4"></rect>
+            <text x="80" y="173" text-anchor="middle">Licensing</text>
+            <rect x="156" y="150" width="120" height="36" fill="none" stroke="currentColor" stroke-width="1.4"></rect>
+            <text x="216" y="173" text-anchor="middle">Comedy club</text>
+            <rect x="292" y="150" width="120" height="36" fill="none" stroke="currentColor" stroke-width="1.4"></rect>
+            <text x="352" y="173" text-anchor="middle">Trading cards</text>
+          </g>
+          <text x="20" y="128" font-family="IBM Plex Mono, monospace" font-size="10.5" letter-spacing="1" fill="currentColor" opacity="0.55">PEOPLE ABOVE &middot; BUSINESSES BELOW</text>
+
+          <g stroke="currentColor" stroke-width="1.3" marker-end="url(#ar)" fill="none">
+            <path d="M 80 88 L 80 118 L 150 118 L 150 244"></path>
+            <path d="M 216 88 L 216 118 L 186 118 L 186 244"></path>
+            <path d="M 80 186 L 80 244"></path>
+            <path d="M 216 186 L 216 244"></path>
+            <path d="M 352 186 L 352 244"></path>
+          </g>
+
+          <rect x="20" y="250" width="392" height="54" fill="none" stroke="currentColor" stroke-width="2"></rect>
+          <text x="216" y="273" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-size="22" font-weight="600" fill="currentColor">5 BILLED SEATS</text>
+          <text x="216" y="292" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" fill="currentColor" opacity="0.7">5 logins &middot; 5 mailboxes &middot; 5 connector sets</text>
+
+          <!-- RIGHT -->
+          <text x="480" y="24" font-family="IBM Plex Mono, monospace" font-size="11.5" letter-spacing="1.4" fill="#2F6244" font-weight="600">RECONCILED</text>
+          <g font-family="Public Sans, sans-serif" font-size="12.5" fill="currentColor">
+            <rect x="480" y="52" width="120" height="36" fill="none" stroke="currentColor" stroke-width="1.4"></rect>
+            <text x="540" y="75" text-anchor="middle">Lemar</text>
+            <rect x="616" y="52" width="120" height="36" fill="none" stroke="currentColor" stroke-width="1.4"></rect>
+            <text x="676" y="75" text-anchor="middle">Arianna</text>
+
+            <rect x="480" y="150" width="120" height="36" fill="none" stroke="currentColor" stroke-width="1.4"></rect>
+            <text x="540" y="173" text-anchor="middle">Licensing</text>
+            <rect x="616" y="150" width="120" height="36" fill="none" stroke="currentColor" stroke-width="1.4"></rect>
+            <text x="676" y="173" text-anchor="middle">Comedy club</text>
+            <rect x="752" y="150" width="120" height="36" fill="none" stroke="currentColor" stroke-width="1.4"></rect>
+            <text x="812" y="173" text-anchor="middle">Trading cards</text>
+          </g>
+
+          <g stroke="currentColor" stroke-width="1.3" marker-end="url(#ar)" fill="none">
+            <path d="M 540 88 L 540 104"></path>
+            <path d="M 676 88 L 676 104"></path>
+          </g>
+          <rect x="480" y="110" width="392" height="30" fill="none" stroke="currentColor" stroke-width="2"></rect>
+          <text x="676" y="130" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-size="19" font-weight="600" fill="currentColor">2 BILLED SEATS &middot; ONE PER HUMAN</text>
+
+          <g stroke="#2F6244" stroke-width="1.3" marker-end="url(#ar-ok)" fill="none">
+            <path d="M 540 186 L 540 244"></path>
+            <path d="M 676 186 L 676 244"></path>
+            <path d="M 812 186 L 812 244"></path>
+          </g>
+          <rect x="480" y="250" width="392" height="54" fill="none" stroke="#2F6244" stroke-width="2"></rect>
+          <text x="676" y="273" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-size="22" font-weight="600" fill="#2F6244">3 ROOMS &middot; $0</text>
+          <text x="676" y="292" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" fill="#2F6244">project + channel + Drive folder + vault folder</text>
+
+          <!-- shared foundation -->
+          <g stroke="currentColor" stroke-width="1.3" marker-end="url(#ar)" fill="none" opacity="0.75">
+            <path d="M 216 304 L 216 336"></path>
+            <path d="M 676 304 L 676 336"></path>
+          </g>
+          <rect x="20" y="342" width="852" height="44" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="0"></rect>
+          <text x="446" y="370" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-size="22" font-weight="600" fill="currentColor">HAVEN &middot; ONE VAULT UNDER BOTH ARRANGEMENTS</text>
+        </svg>
+      </div>
+      <figcaption>The same five entities either way. Only the edges change: in your description every box draws a seat, and the businesses drag mailboxes and logins behind them. Move the business boxes onto containers instead and the seat count stops tracking your ambition.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <span class="eyebrow">The model that holds both halves</span>
+    <h2>Three axes, not one stack</h2>
+    <div class="col stack" style="margin-top:18px;">
+      <p>Read your two ideas as answers to three separate questions and nothing has to be given up. <strong>Who</strong> works is people, and people carry seats. <strong>What</strong> the work belongs to is rooms, and rooms are containers, free to open. <strong>Where truth lives</strong> is one vault for all of it, which is what makes the building possible at all.</p>
+      <p>You have already built this once. <span class="mono">haven/vault/</span> is a building with rooms: <span class="mono">10-Personal</span>, <span class="mono">20-Cuzzies</span>, <span class="mono">30-Station</span>, <span class="mono">40-Projects</span>. The vault's numbering scheme is your floor plan. Copy it upward into Drive, Slack, and Projects and every surface becomes addressable by one room code instead of a lookup in anchors.</p>
+    </div>
+
+    <figure>
+      <div class="figwrap">
+        <svg viewBox="0 0 900 470" role="img" aria-label="Cross-section of the building. A parent layer at the top runs one housekeeping job for the whole structure. Below it sit three rooms, each holding four containers. Beneath them is the Haven vault as the foundation. Two human seats hold keys to every room. Outsiders meet in a lobby annex attached outside the building.">
+          <defs>
+            <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path>
+            </marker>
+            <marker id="ar2b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#8F6229"></path>
+            </marker>
+          </defs>
+
+          <!-- seats row -->
+          <g font-family="Public Sans, sans-serif" font-size="12.5" fill="currentColor">
+            <rect x="30" y="10" width="132" height="32" fill="none" stroke="#8F6229" stroke-width="1.6"></rect>
+            <text x="96" y="31" text-anchor="middle" fill="#8F6229">Lemar &middot; seat</text>
+            <rect x="176" y="10" width="132" height="32" fill="none" stroke="#8F6229" stroke-width="1.6"></rect>
+            <text x="242" y="31" text-anchor="middle" fill="#8F6229">Arianna &middot; seat</text>
+          </g>
+          <path d="M 330 26 L 470 26" stroke="#8F6229" stroke-width="1.3" fill="none" marker-end="url(#ar2b)"></path>
+          <text x="400" y="18" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#8F6229">keys to every room</text>
+          <text x="486" y="30" font-family="Public Sans, sans-serif" font-size="12.5" fill="#8F6229">access, never ownership &mdash; a seat is a person, not a company</text>
+
+          <!-- building -->
+          <rect x="30" y="60" width="610" height="386" fill="none" stroke="currentColor" stroke-width="2.4"></rect>
+
+          <!-- parent band -->
+          <rect x="48" y="78" width="574" height="72" fill="none" stroke="currentColor" stroke-width="1.4"></rect>
+          <text x="62" y="103" font-family="Big Shoulders Display, sans-serif" font-size="21" font-weight="600" fill="currentColor">PARENT LAYER &middot; ONE JANITOR FOR THE WHOLE BUILDING</text>
+          <text x="62" y="124" font-family="Public Sans, sans-serif" font-size="12.5" fill="currentColor" opacity="0.75">files the vault inbox &middot; rings the calendar &middot; checks routine health &middot; proves portability</text>
+          <text x="62" y="141" font-family="IBM Plex Mono, monospace" font-size="10.5" letter-spacing="0.8" fill="currentColor" opacity="0.55">THE ONLY SCHEDULED JOB IN THE SYSTEM. ROOMS GET HABITS, NOT CRON.</text>
+
+          <!-- rooms -->
+          <g font-family="Public Sans, sans-serif" font-size="11.5" fill="currentColor">
+            <rect x="48" y="176" width="182" height="150" fill="none" stroke="currentColor" stroke-width="1.4"></rect>
+            <text x="62" y="200" font-family="IBM Plex Mono, monospace" font-size="11" fill="#8F6229" font-weight="600">41-licensing</text>
+            <text x="62" y="228">Project &middot; shared, org-owned</text>
+            <text x="62" y="248">#41-licensing</text>
+            <text x="62" y="268">Drive folder</text>
+            <text x="62" y="288">40-Projects/licensing</text>
+            <text x="62" y="313" font-family="IBM Plex Mono, monospace" font-size="10" opacity="0.6">4 CONTAINERS &middot; 0 ACCOUNTS</text>
+
+            <rect x="244" y="176" width="182" height="150" fill="none" stroke="currentColor" stroke-width="1.4"></rect>
+            <text x="258" y="200" font-family="IBM Plex Mono, monospace" font-size="11" fill="#8F6229" font-weight="600">42-comedy</text>
+            <text x="258" y="228">Project</text>
+            <text x="258" y="248">#42-comedy</text>
+            <text x="258" y="268">Drive folder</text>
+            <text x="258" y="288">40-Projects/comedy</text>
+            <text x="258" y="313" font-family="IBM Plex Mono, monospace" font-size="10" opacity="0.6">SAME SHAPE, EVERY ROOM</text>
+
+            <rect x="440" y="176" width="182" height="150" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="5 4"></rect>
+            <text x="454" y="200" font-family="IBM Plex Mono, monospace" font-size="11" fill="currentColor" opacity="0.6" font-weight="600">43-vacant</text>
+            <text x="454" y="228" opacity="0.6">opens in ten minutes</text>
+            <text x="454" y="248" opacity="0.6">from the room template</text>
+            <text x="454" y="273" opacity="0.6">closes the same way:</text>
+            <text x="454" y="293" opacity="0.6">dormant &rarr; archive &rarr; tombstone</text>
+          </g>
+
+          <!-- foundation -->
+          <g stroke="currentColor" stroke-width="1.2" fill="none" marker-end="url(#ar2)" opacity="0.8">
+            <path d="M 139 326 L 139 356"></path>
+            <path d="M 335 326 L 335 356"></path>
+            <path d="M 531 326 L 531 356"></path>
+          </g>
+          <rect x="48" y="362" width="574" height="66" fill="none" stroke="currentColor" stroke-width="2.4"></rect>
+          <text x="62" y="390" font-family="Big Shoulders Display, sans-serif" font-size="24" font-weight="700" fill="currentColor">HAVEN &middot; THE FOUNDATION</text>
+          <text x="62" y="412" font-family="Public Sans, sans-serif" font-size="12.5" fill="currentColor" opacity="0.75">one vault, one schema, every room a folder in it. Nothing is done until it lands here.</text>
+
+          <!-- lobby -->
+          <path d="M 640 246 L 690 246" stroke="currentColor" stroke-width="1.3" fill="none" marker-end="url(#ar2)"></path>
+          <path d="M 690 262 L 640 262" stroke="currentColor" stroke-width="1.3" fill="none" marker-end="url(#ar2)"></path>
+          <text x="665" y="238" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="currentColor" opacity="0.7">invite</text>
+          <text x="665" y="284" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="currentColor" opacity="0.7">reply</text>
+          <rect x="700" y="176" width="170" height="150" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="6 4"></rect>
+          <text x="714" y="202" font-family="Big Shoulders Display, sans-serif" font-size="21" font-weight="600" fill="currentColor">THE LOBBY</text>
+          <text x="714" y="228" font-family="Public Sans, sans-serif" font-size="11.5" fill="currentColor" opacity="0.8">clients &middot; partners &middot; vendors</text>
+          <text x="714" y="252" font-family="Public Sans, sans-serif" font-size="11.5" fill="currentColor" opacity="0.8">Slack Connect or a</text>
+          <text x="714" y="270" font-family="Public Sans, sans-serif" font-size="11.5" fill="currentColor" opacity="0.8">shared Drive folder</text>
+          <text x="714" y="298" font-family="IBM Plex Mono, monospace" font-size="10" fill="currentColor" opacity="0.6">OUTSIDERS NEVER</text>
+          <text x="714" y="312" font-family="IBM Plex Mono, monospace" font-size="10" fill="currentColor" opacity="0.6">ENTER THE BUILDING</text>
+        </svg>
+      </div>
+      <figcaption>The building, corrected. Seats sit outside the structure because they belong to people, not floors. Rooms are four containers and no accounts. The parent layer runs exactly one scheduled job for everybody. Outsiders are met in a lobby, because one Slack workspace has one member directory no matter how private the channels are.</figcaption>
+    </figure>
+
+    <div class="tablewrap">
+      <table>
+        <caption>Which half owns each layer</caption>
+        <thead>
+          <tr><th style="width:20%">Layer</th><th style="width:24%">Owned by</th><th>The rule that settles it</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>People</strong></td><td>The loop (half one)</td><td>One seat per human. Two today. This number tracks headcount and nothing else.</td></tr>
+          <tr><td><strong>Businesses</strong></td><td>The building (half two)</td><td>One room per business: a Project, a channel, a Drive folder, a vault folder. Zero accounts.</td></tr>
+          <tr><td><strong>Source of truth</strong></td><td>Neither. It predates both.</td><td>Haven, unchanged. Rooms are folders in it. Drive, Slack and Calendar stay renderings.</td></tr>
+          <tr><td><strong>Surfaces</strong></td><td>The building</td><td>One workspace, one channel per room, one Drive tree per room, one naming convention across all three.</td></tr>
+          <tr><td><strong>Scheduled work</strong></td><td>The loop</td><td>One housekeeping job at the parent layer. A room never gets its own cron.</td></tr>
+          <tr><td><strong>Collaboration</strong></td><td>The loop</td><td>Tag, in the room's channel, convened for a question and closed with a note.</td></tr>
+          <tr><td><strong>Money and legal</strong></td><td>The building</td><td>Parent entity holds the software and the domain. Each room that takes money gets its own books.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Ordered by what it costs you</span>
+    <h2>Where the plan breaks</h2>
+    <p class="col" style="margin-top:18px;">Ten things, heaviest first. The first four are structural and worth fixing before you create anything. The rest are the ones that quietly rot a system six months in.</p>
+
+    <div class="flaw">
+      <div class="rank">01</div>
+      <div>
+        <h3>A business cannot hold a seat</h3>
+        <dl>
+          <dt>You said</dt><dd>Each business gets its own account on the team plan with its own email address.</dd>
+          <dt>Breaks</dt><dd>Seats are licensed to people. A business seat has to be logged into by a human, which means shared credentials, no per-person attribution, and no honest answer to "who approved this send." It also puts your cost on the wrong curve: it grows with your ambition instead of your headcount, and it quietly blows past the two-seat org that gate V1 is built around.</dd>
+          <dt class="mono" style="color:var(--ok)">Fix</dt><dd class="fix"><b>Seats are people. Projects are businesses.</b> A shared Project already gives you the folder, the instructions, the knowledge, and the members. You were about to buy a key to a room you already own.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="flaw">
+      <div class="rank">02</div>
+      <div>
+        <h3>The building is rooted on an account with an end date</h3>
+        <dl>
+          <dt>You said</dt><dd>The parent holds everything except Cuzzie's, and in reality it holds the Cuzzie's team account with Samira as admin.</dd>
+          <dt>Breaks</dt><dd>Cuzzie's is excluded from the building and paying for it at the same time. That is commingling on the one entity that has regulators, a vendor wind-down, an IRS plan, and a license moving to another operator. Worse, <span class="mono">lemar@cuzziesnj.com</span> winds down mid-2026, and your own rule already says nothing new gets built on it. PR #84 got this right by rooting the org on <span class="mono">l.boonejr@gmail.com</span> for exactly this reason.</dd>
+          <dt class="mono" style="color:var(--ok)">Fix</dt><dd class="fix"><b>Root the building on a durable neutral identity</b> today, the personal Gmail, and move it to the holdco domain once the name exists. Cuzzie's is a tenant with its own books or it is outside the building entirely. Never the landlord.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="flaw">
+      <div class="rank">03</div>
+      <div>
+        <h3>Samira cannot be the admin, and PR #84 already retired her</h3>
+        <dl>
+          <dt>You said</dt><dd>Samira is the admin for the building and makes sure the lights stay on.</dd>
+          <dt>Breaks</dt><dd>Two problems stacked. Legally and practically an org owner is a human account with billing, recovery, and seat approval attached, which is why ownership transfer is a support ticket. An agent cannot hold that. Separately, the architecture you locked this same day retires Samira's machinery entirely. Right now you have two live documents pointing opposite directions, and that ambiguity will resurface every time someone asks who runs a thing.</dd>
+          <dt class="mono" style="color:var(--ok)">Fix</dt><dd class="fix"><b>Split the name from the job.</b> You are the landlord and hold the deed. Samira is the superintendent: a name for the housekeeping function, not the fifteen-part hourly runbook, and not an owner. Write that sentence into the architecture file so the two halves stop disagreeing.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="flaw">
+      <div class="rank">04</div>
+      <div>
+        <h3>An address is cheap, an account is expensive</h3>
+        <dl>
+          <dt>You said</dt><dd>Each business will have its own email address.</dd>
+          <dt>Breaks</dt><dd>You are right that a business receiving mail needs an address. You are paying for the wrong thing to get it. A mailbox is a Workspace user with a license, a password, MFA, and a recovery path. Four rooms means four of everything, forever, for inboxes nobody reads daily.</dd>
+          <dt class="mono" style="color:var(--ok)">Fix</dt><dd class="fix"><b>Aliases and groups until a room earns a mailbox.</b> <span class="mono">hello@room.holdco.com</span> routing to a shared inbox costs nothing and looks identical from the outside. Buy a real mailbox the day a room has a customer who writes to it.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="flaw">
+      <div class="rank">05</div>
+      <div>
+        <h3>Agent talking to agent in Slack is your most expensive traffic</h3>
+        <dl>
+          <dt>You said</dt><dd>Users communicate with users, and agents and workflows communicate with each other as well, all in the workspace.</dd>
+          <dt>Breaks</dt><dd>Channel work is metered and seat work is flat. Two agents exchanging state in a channel is marginal-cost spend with no human reading the output, and with ambient mode on it can answer itself into a loop. This is the single line in your plan most likely to eat the cap.</dd>
+          <dt class="mono" style="color:var(--ok)">Fix</dt><dd class="fix"><b>Slack is for humans. Git is for machines.</b> Agents hand off through the vault, a note or a commit, which is free and durable. An agent posts in a channel only when a human needs to see it or act on it.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="flaw">
+      <div class="rank">06</div>
+      <div>
+        <h3>Rooms accumulate and nothing evicts them</h3>
+        <dl>
+          <dt>You said</dt><dd>Each room is its own business.</dd>
+          <dt>Breaks</dt><dd>Your anchors file already lists the symptom: comedy club, trading cards, free books partnership, booking agent, delivery in a box, brand, random ideas. Most are quiet. Under this plan each of those earns a project, a folder, a channel, and under your version an account and a mailbox. A building with no vacancy policy fills with rooms nobody enters.</dd>
+          <dt class="mono" style="color:var(--ok)">Fix</dt><dd class="fix"><b>Three tiers, with a bar to clear between each.</b> An <i>idea</i> is a vault note and nothing else. A <i>room</i> opens when there is a counterparty or a date. A <i>business</i> gets an entity, an address, and books when it takes money. Quiet for a quarter means dormant, then archive, then a tombstone row, which is a pattern you already run.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="flaw">
+      <div class="rank">07</div>
+      <div>
+        <h3>Per-room workflows rebuild the runbook you just retired</h3>
+        <dl>
+          <dt>You said</dt><dd>Each channel has its own users and its own workflows.</dd>
+          <dt>Breaks</dt><dd>If every room gets its own scheduled workflow, the job count grows with rooms and in a year you have reassembled the fifteen-part hourly loop under a different name, with the same watermarks and locks and the same failure modes, spread across more places.</dd>
+          <dt class="mono" style="color:var(--ok)">Fix</dt><dd class="fix"><b>Scheduled jobs live at the parent layer only.</b> Rooms get habits and templates, things a human or Tag does when something happens. One janitor for the whole building, and its own health check is part of its job.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="flaw">
+      <div class="rank">08</div>
+      <div>
+        <h3>Files kept in two places are files kept in no place</h3>
+        <dl>
+          <dt>You said</dt><dd>Drive, Docs and files maintained on the individual accounts and the main account as well.</dd>
+          <dt>Breaks</dt><dd>That is duplication, and you already learned this lesson once. The voice profile has an explicit rule that the repo copy governs if the OneDrive copy differs, which exists only because two copies drifted. Do it per room per person and you will not know which deck is current. It also makes offboarding a recovery operation.</dd>
+          <dt class="mono" style="color:var(--ok)">Fix</dt><dd class="fix"><b>One owner per file, everyone else gets a link.</b> Room folders are owned by the building, on a Shared Drive once the domain exists. People get access, not copies. When someone leaves, nothing has to be rescued from their My Drive.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="flaw">
+      <div class="rank">09</div>
+      <div>
+        <h3>A meeting tool with no convening rule is a second inbox</h3>
+        <dl>
+          <dt>You said</dt><dd>When we need to tackle something together we go into the channel and use Tag to create whatever needs creating.</dd>
+          <dt>Breaks</dt><dd>The instinct is right and the economics are right. What is missing is a rule for when the meeting ends. Without one, Tag becomes the default first move for everything, ambient follow-ups pile onto it, and you have a standing meeting that never adjourns and bills by the minute.</dd>
+          <dt class="mono" style="color:var(--ok)">Fix</dt><dd class="fix"><b>Treat it like a real meeting.</b> It is convened with a stated question, it ends with a decision or an artifact, and the outcome lands as a vault note. No question, no session. Anything that produces a thing moves to a seat.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="flaw">
+      <div class="rank">10</div>
+      <div>
+        <h3>Portability is asserted, never rehearsed</h3>
+        <dl>
+          <dt>You said</dt><dd>Samira makes sure the system can be made portable if Claude goes down or we switch providers.</dd>
+          <dt>Breaks</dt><dd>PORTABILITY.md is genuinely good, better than most companies have. But it describes a restore nobody has performed. An untested backup is a belief. And the real fragility is not the vault, which is plain files in git and will outlive everything. It is the identity layer: connectors, triggers, and bot apps that your own rule six says never migrate and must be rebuilt.</dd>
+          <dt class="mono" style="color:var(--ok)">Fix</dt><dd class="fix"><b>Make the drill part of the janitor's job.</b> Monthly export, and once a quarter actually re-point one anchor and prove the loop still runs. State the doctrine plainly: the vault is portable, the plumbing is disposable and documented. Then a provider outage is an afternoon, not a crisis.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Routing, extended to many rooms</span>
+    <h2>Where a thing goes</h2>
+    <p class="col" style="margin-top:18px;">Your existing law, build in your seat and coordinate in the channel, survives the building intact. It needs one addition, because a multi-business system has traffic a single-business one did not: machines talking to machines.</p>
+
+    <figure>
+      <div class="figwrap">
+        <svg viewBox="0 0 900 330" role="img" aria-label="A single piece of work fans out to four destinations depending on one test each: if a thing exists at the end it goes to a seat at flat rate; if a human must know or decide it goes to the channel with Tag, metered; if only a machine reads it, it goes to git for free; and in every case the durable record lands in Haven.">
+          <defs>
+            <marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path>
+            </marker>
+            <marker id="ar3b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#8F6229"></path>
+            </marker>
+          </defs>
+
+          <rect x="16" y="128" width="156" height="74" fill="none" stroke="currentColor" stroke-width="2"></rect>
+          <text x="94" y="158" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-size="21" font-weight="600" fill="currentColor">A PIECE OF</text>
+          <text x="94" y="178" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-size="21" font-weight="600" fill="currentColor">WORK</text>
+
+          <g stroke="currentColor" stroke-width="1.3" fill="none" marker-end="url(#ar3)">
+            <path d="M 172 150 C 300 150, 300 44, 470 44"></path>
+            <path d="M 172 158 C 300 158, 300 122, 470 122"></path>
+            <path d="M 172 178 C 300 178, 300 200, 470 200"></path>
+          </g>
+          <path d="M 172 190 C 300 190, 300 286, 470 286" stroke="#8F6229" stroke-width="2" fill="none" marker-end="url(#ar3b)"></path>
+
+          <g font-family="Public Sans, sans-serif" font-size="12" fill="currentColor">
+            <text x="318" y="82" text-anchor="middle">a thing exists at the end</text>
+            <text x="318" y="140" text-anchor="middle">a human must know or decide</text>
+            <text x="318" y="222" text-anchor="middle">only a machine will read it</text>
+            <text x="318" y="264" text-anchor="middle" fill="#8F6229" font-weight="600">always, in addition to the above</text>
+          </g>
+
+          <g font-family="Public Sans, sans-serif" font-size="12.5" fill="currentColor">
+            <rect x="476" y="20" width="408" height="48" fill="none" stroke="currentColor" stroke-width="1.6"></rect>
+            <text x="492" y="41" font-family="Big Shoulders Display, sans-serif" font-size="20" font-weight="600">YOUR SEAT</text>
+            <text x="492" y="59" font-size="12" opacity="0.75">flat rate &middot; no marginal cost &middot; when in doubt, here</text>
+
+            <rect x="476" y="98" width="408" height="48" fill="none" stroke="currentColor" stroke-width="1.6"></rect>
+            <text x="492" y="119" font-family="Big Shoulders Display, sans-serif" font-size="20" font-weight="600">THE ROOM'S CHANNEL, VIA TAG</text>
+            <text x="492" y="137" font-size="12" opacity="0.75">metered and capped &middot; convened, then adjourned</text>
+
+            <rect x="476" y="176" width="408" height="48" fill="none" stroke="currentColor" stroke-width="1.6"></rect>
+            <text x="492" y="197" font-family="Big Shoulders Display, sans-serif" font-size="20" font-weight="600">GIT</text>
+            <text x="492" y="215" font-size="12" opacity="0.75">free &middot; durable &middot; where agents hand off to each other</text>
+
+            <rect x="476" y="262" width="408" height="48" fill="none" stroke="#8F6229" stroke-width="2.2"></rect>
+            <text x="492" y="283" font-family="Big Shoulders Display, sans-serif" font-size="20" font-weight="600" fill="#8F6229">HAVEN</text>
+            <text x="492" y="301" font-size="12" fill="#8F6229">the finish line &middot; not done until it lands here</text>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Three destinations chosen by one test each, and a fourth that is never a choice. The brass path is the law you already run: done means a filed note, whichever of the other three did the work.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <span class="eyebrow">The efficiency you were looking for</span>
+    <h2>What opening a room costs</h2>
+    <p class="col" style="margin-top:18px;">This is the whole payoff. Under the corrected model a new business is four containers cut from a template, no accounts, no credentials, no scheduled job, no connector setup. Ten minutes, and the marginal cost is zero.</p>
+    <ul class="checklist">
+      <li><span class="code">41-licensing/</span><span class="what">A vault folder</span><span class="why">Under the numbering scheme you already use. Truth first, same as every capture.</span></li>
+      <li><span class="code">Project: 41 &middot; Licensing</span><span class="what">A shared org Project</span><span class="why">Instructions, knowledge, members. This is the room. Both humans work here.</span></li>
+      <li><span class="code">#41-licensing</span><span class="what">One Slack channel</span><span class="why">Coordination only. Tag invited when the room is live, not before.</span></li>
+      <li><span class="code">41 Licensing</span><span class="what">One Drive folder</span><span class="why">Owned by the building, not by a person. Binaries only, linked from notes.</span></li>
+      <li><span class="code">anchors.md</span><span class="what">One row</span><span class="why">Four ids in the one place ids are allowed to live. The room is now addressable.</span></li>
+      <li><span class="code">&mdash;</span><span class="what">Nothing else</span><span class="why">No seat. No mailbox until a customer writes. No cron. No connector. No bot.</span></li>
+    </ul>
+    <p class="note">One room code, four surfaces, the same string in all of them. Convention does the work that a lookup table does today, which also means anchors stops growing every time you have an idea.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Rough order of magnitude</span>
+    <h2>What each version costs</h2>
+    <div class="tablewrap">
+      <table>
+        <caption>Monthly, at four rooms, using PR #84's own ranges</caption>
+        <thead>
+          <tr><th style="width:34%">Line</th><th style="width:22%" class="num">As you described it</th><th style="width:22%" class="num">Reconciled</th><th>Note</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Human seats (2)</td><td class="num">$120 &ndash; 150</td><td class="num">$120 &ndash; 150</td><td>Premium plus Standard. Unchanged either way.</td></tr>
+          <tr><td>Business seats (4)</td><td class="num">$80 &ndash; 100</td><td class="num">$0</td><td>Rooms are containers. Containers do not log in.</td></tr>
+          <tr><td>Mailboxes</td><td class="num">$50 &ndash; 90</td><td class="num">$15 &ndash; 30</td><td>One Workspace and aliases, versus a licensed user per room.</td></tr>
+          <tr><td>Tag, capped</td><td class="num">$50+</td><td class="num">$50</td><td>The cap only holds if agents stop chatting in channels.</td></tr>
+          <tr><td><strong>Total</strong></td><td class="num"><strong>$300 &ndash; 390</strong></td><td class="num"><strong>$185 &ndash; 230</strong></td><td>And the left column keeps climbing per room.</td></tr>
+          <tr><td>Cost of room five</td><td class="num">$27 &ndash; 47/mo</td><td class="num">$0</td><td>Plus a login, a password, and a connector set to maintain.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Estimates, not quotes. Seat pricing carries the same uncertainty as gate V1, which is still unverified: confirm the seat minimum on a two-seat org before paying for anything. The point of the table is not the totals, it is the last row.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Do not over-correct</span>
+    <h2>What you got right</h2>
+    <div class="keep">
+      <h3>Keep these exactly as they are</h3>
+      <ul>
+        <li><strong>The building metaphor for containers.</strong> Room maps cleanly onto project, channel, and folder. It only fails at identity, because rooms do not carry ID.</li>
+        <li><strong>One comms fabric.</strong> A single workspace matches your existing law that exactly one surface pings you. Splitting per business would break it.</li>
+        <li><strong>A parent layer that owns health and portability.</strong> Almost nobody builds this and it is the reason your system survives an outage. It just needs a human landlord above it.</li>
+        <li><strong>One vault under everything.</strong> This is what makes multiple businesses possible at all. The vault is already a building with rooms, which is why the analogy fit so well when you reached for it.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Blocking, in order</span>
+    <h2>Calls only you can make</h2>
+    <ol class="calls">
+      <li><b>The holdco name, and a realization about it</b><span>It already blocks the domain, email, website and socials. Under the building model it now also blocks every room's address scheme, which makes it the head of a longer critical path. The unlock: a holdco name does not need to be good. Nobody markets a holdco. Pick a neutral one this week and let each room carry the brand name that actually sells.</span></li>
+      <li><b>Cuzzie's: tenant or outside the building</b><span>It cannot be both excluded and paying. Decide, then move the billing identity off the account that winds down mid-2026.</span></li>
+      <li><b>The room numbering scheme</b><span>The vault uses 10, 20, 30, 40 for domains and 50, 60, 70 for Reference, Legal and Automation. New businesses collide with that range. Either nest rooms under 40-Projects or renumber deliberately, once, before there are rooms to migrate.</span></li>
+      <li><b>What earns a room</b><span>Write the bar down. A counterparty, a date, or money. Without a written bar every idea becomes infrastructure, and your channel list already shows the pattern.</span></li>
+      <li><b>Where outsiders meet you</b><span>Per room: Slack Connect into the room's channel, or a shared Drive folder only. Private channels hide content, not the member directory.</span></li>
+      <li><b>Which document wins</b><span>The architecture file and the building idea currently disagree about Samira. Amend the file with the landlord and superintendent split so the next session does not relitigate it.</span></li>
+    </ol>
+  </section>
+
+  <footer>
+    Reconciles <span class="mono">docs/productivity-loop/</span> (PR #84) with the parent-and-rooms model &middot; Haven remains the source of truth
+  </footer>
+</div>
