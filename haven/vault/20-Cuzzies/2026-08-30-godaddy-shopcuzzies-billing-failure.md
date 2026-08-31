@@ -1,9 +1,9 @@
 ---
 created: 2026-08-30T16:04-04:00
-updated: 2026-08-30T21:07-04:00
+updated: 2026-08-31T12:20:00-04:00
 domain: cuzzies
 type: task
-status: awaiting-decision
+status: done
 tags: [godaddy, website, billing, shopcuzzies, wind-down]
 source: gmail
 due: 2026-09-01T09:00-04:00
@@ -32,7 +32,16 @@ renew the GoDaddy product to keep `shopcuzzies.com` alive, or let it lapse since
 site may no longer be needed. Samira does not pay, renew, or contact GoDaddy — this is
 tracking/flagging only. A #decisions card was raised the same scan this note was filed.
 
+## Update — 2026-08-31
+
+Lemar picked **Option 2 — let it lapse** (✅ on the #decisions card, thread
+`1788120312.622789`, reacted before this scan). No renewal paid, no GoDaddy contact
+made — consistent with Cuzzie's (Camden) winding down. `shopcuzzies.com` is expected to
+be deleted on/after 2026-09-01 per GoDaddy's notice; no further action needed from
+Samira. Closing this task.
+
 ## Sources
 - gmail: thread `1a053a8bdc20544c` (Product Failed Billing Notification)
 - gmail: thread `1a0538c0feaf89de` (Cancellation Alert — shopcuzzies.com deletion 9/1/2026)
 - gmail: thread `1a0541d60a6217d7` (Google security alert, same account, same day — informational only)
+- slack: #decisions thread `1788120312.622789` (Lemar's ✅ on Option 2)
