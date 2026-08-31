@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260831T150430Z",
     "run_started": "2026-08-31T15:04:30Z",
-    "run_completed": "2026-08-31T14:12:00Z",
-    "note": "43rd scan — in flight."
+    "run_completed": "2026-08-31T15:17:30Z",
+    "note": "43rd scan — quiet pass, no new closes/decisions/captures. Every swept Slack surface (all 17 project/decisions/channel watermarks, capture DM, #stormy, #investor-pipeline, #personal-finance) returned zero new top-level messages or thread replies since the prior run. Vault Inbox unchanged: same 4 stuck notes, no filing action; no due-bearing note changed, so calendar-sync was a no-op (+0/~0/-0). Gmail D2 (after:1788184013): 1 new thread, vendor-menu marketing (Fernway) — junk, applied Samira/seen. Anomaly re-check: read #reports since watermark 1788185406.051519 — zero new posts; the two suspicious bot-identity posts flagged last run (fake 'Haven Keeper' stuck-0 digest + 'Claude Cowork' unauthorized-Drive-pass/insurance-lapse claim) are still the most recent thing there and were already surfaced to Lemar via the capture DM last run — not re-flagged this scan. Fixed a real defect flagged (but not corrected) on the two prior scans: the Gmail label registry in anchors.md no longer matched the connected account at all (no Samira/Samira-seen/drafted/sent/investor labels existed; its Label_1 is an unrelated pre-existing label 'Sweep/Review'). Created the 5 missing labels via create_label and corrected anchors.md with the real long-form ids (also corrected the pre-existing Vendor Menus id, which was already right in practice but wrong in the doc). Two labels in live use with no recorded owner ('Action Needed', 'Finance Bills') left alone and flagged in anchors.md for Lemar. Camden Launch PT cards not re-checked this scan (no #decisions activity since the prior scan's check found all 4 already closed/parked with no new signal). Money hub, Pulse, canvas, integrity: no triggering activity, all carried/skipped per their own quiet-pass gates."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1788178381.880189",
-      "C0BBZJL85RT": "1788185406.051519",
-      "D0BHPKMDNEP": "1788120778.484679",
+      "C0BBZJL85RT": "1788189377.386219",
+      "D0BHPKMDNEP": "1788185392.320499",
       "C0BGLEMH99T": "1788099036.207949",
       "C0BEQUW5NPP": "1788099036.207949",
       "C0BBLUA7JLX": "1788099036.207949",
@@ -82,13 +82,13 @@
       "1787157130.471099": "1787328710.030059",
       "1787613164.672029": "1787614371.183619"
     },
-    "capture_dm": "1788120778.484679",
-    "gmail_after_epoch": 1788184013
+    "capture_dm": "1788185392.320499",
+    "gmail_after_epoch": 1788189293
   },
   "integrity": {
     "last_full_pass": "2026-08-31T08:13:00-04:00",
     "last_scan_sha": "dbbed2977ed34ad6b7c5a74bc3534a6b3cc1e98d",
-    "note": "Full mechanical container pass (R1/R2/R5) across all 630 vault notes via local clone grep, day's first run. Zero new defects. One pre-existing, already-documented, non-repairable base64 defect in _daily/2026-08-01.md reconfirmed and left untouched per the 'note that already records a decision not to repair it' rule. Not re-run this scan (43rd) — only haven/vault/_daily/2026-08-31.md changed since last_scan_sha (this run's own append), no other vault files changed."
+    "note": "Full mechanical container pass (R1/R2/R5) across all 630 vault notes via local clone grep, day's first run. Zero new defects. One pre-existing, already-documented, non-repairable base64 defect in _daily/2026-08-01.md reconfirmed and left untouched per the 'note that already records a decision not to repair it' rule. Not re-run this scan (43rd) — only haven/vault/_daily/2026-08-31.md changed since last_scan_sha (this run's own append) plus this run's own state/anchors commits (non-vault), no other vault files changed."
   },
   "canvas_access": {
     "last_checked": "2026-08-31T08:11:00-04:00",
