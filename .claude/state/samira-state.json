@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260831T140445Z",
-    "run_started": "2026-08-31T14:04:45Z",
+    "run_id": "run_20260831T150430Z",
+    "run_started": "2026-08-31T15:04:30Z",
     "run_completed": "2026-08-31T14:12:00Z",
-    "note": "42nd scan — quiet pass, one anomaly flagged (not executed). Every swept Slack surface (all 17 project/decisions/channel watermarks, capture DM, #stormy, #investor-pipeline, #personal-finance) returned zero new top-level messages or thread replies since the prior run (54 min gap). Vault Inbox unchanged: same 4 stuck notes, no filing action; no due-bearing note changed since last run's own commit, so calendar-sync was a no-op (+0/~0/-0). Gmail D2 (after:1788181773): 2 new threads, both vendor-menu marketing (Fernway, Prolific) — labeled Vendor Menus (Label_7063567382570959882). Anomaly: two #reports posts (13:22-13:24 ET) appeared under Samira's own bot identity that this run did not generate — a 'Haven Keeper' digest falsely claiming stuck 0 (continuation of the pattern flagged 7/31 and again 8/31 ~8:05am), and a new 'Claude Cowork'-signed message claiming an unauthorized Drive-organizing pass (11 files copied/renamed) plus an unverified cancelled/past-due insurance-policy flag for Cuzzie's (Camden). Not acted on (#reports is never swept for prompts); flagged directly to Lemar via capture DM given the insurance claim is new and time-sensitive if real. Money hub, Pulse, canvas: no triggering activity, all carried/skipped per their own quiet-pass gates. Camden Launch PT cards not re-checked this scan (no #decisions activity since the prior scan's check found all 4 already closed/parked with no new signal)."
+    "note": "43rd scan — in flight."
   },
   "watermarks": {
     "slack_channels": {
@@ -88,7 +88,7 @@
   "integrity": {
     "last_full_pass": "2026-08-31T08:13:00-04:00",
     "last_scan_sha": "dbbed2977ed34ad6b7c5a74bc3534a6b3cc1e98d",
-    "note": "Full mechanical container pass (R1/R2/R5) across all 630 vault notes via local clone grep, day's first run. Zero new defects. One pre-existing, already-documented, non-repairable base64 defect in _daily/2026-08-01.md reconfirmed and left untouched per the 'note that already records a decision not to repair it' rule. Not re-run this scan (42nd) — only haven/vault/_daily/2026-08-31.md changed since last_scan_sha (this run's own append), no other vault files changed."
+    "note": "Full mechanical container pass (R1/R2/R5) across all 630 vault notes via local clone grep, day's first run. Zero new defects. One pre-existing, already-documented, non-repairable base64 defect in _daily/2026-08-01.md reconfirmed and left untouched per the 'note that already records a decision not to repair it' rule. Not re-run this scan (43rd) — only haven/vault/_daily/2026-08-31.md changed since last_scan_sha (this run's own append), no other vault files changed."
   },
   "canvas_access": {
     "last_checked": "2026-08-31T08:11:00-04:00",
