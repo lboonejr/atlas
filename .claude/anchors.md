@@ -8,7 +8,24 @@ When a workspace, board, account, or channel changes, edit THIS file and nothing
 > doing work is fine; maintaining a second list is not). The memory file
 > `shortlist_anchors.md` on Lemar's machine is a pointer to this file, not a copy.
 
-Last verified: 2026-08-15 (routine-efficiency review: added the run state file row, closed the Monday gate, codified the Pulse quiet-pass skip — see CHANGELOG) · 2026-07-16 (added the Voice profile section — canonical profile moved into the repo) · 2026-07-16 (Dawn rerouted off #daily-brief → now posts to Lemar's DM, bot IM `D0BJ0JPQD8C`; #daily-brief being archived) · 2026-07-16 (Atlas capture inbox moved off #atlas → Lemar's DM with Samira's bot, `D0BHPKMDNEP`; #atlas being archived) · 2026-07-17 (added Stormy the idea-baking engine, REFOLDED into Samira's run as PART Q per Lemar — no separate trigger/bot/DM; posts via Samira's existing bot to the private #stormy channel `C0BJ37SU1TL`, created + Samira bot confirmed in-channel 2026-07-17) · 2026-08-13 (Pulse / Money Hub / Morning Brief / Meeting Prep artifact-URL rows replaced with Drive folder ids — Artifact tool retired for all four, see CHANGELOG).
+Last verified: 2026-08-31 (PART D found the Gmail label table below stale — the connected
+Gmail account had NO `Samira`/`Samira/seen`/`Samira/drafted`/`Samira/sent`/`Samira/investor`
+labels at all; `Label_1` in that account is actually a pre-existing unrelated label
+"Sweep/Review", not "Samira". Created the five missing labels this run per the
+samira-email-loop skill's own "One-time setup" step and recorded their real (long-form)
+IDs below. Also discovered two labels in active use by some other routine that were never
+recorded here: "Action Needed" and "Finance Bills" — left unrecorded pending Lemar
+confirming which routine owns them; do not assume and do not repurpose.) · 2026-08-15
+(routine-efficiency review: added the run state file row, closed the Monday gate, codified
+the Pulse quiet-pass skip — see CHANGELOG) · 2026-07-16 (added the Voice profile section —
+canonical profile moved into the repo) · 2026-07-16 (Dawn rerouted off #daily-brief → now
+posts to Lemar's DM, bot IM `D0BJ0JPQD8C`; #daily-brief being archived) · 2026-07-16 (Atlas
+capture inbox moved off #atlas → Lemar's DM with Samira's bot, `D0BHPKMDNEP`; #atlas being
+archived) · 2026-07-17 (added Stormy the idea-baking engine, REFOLDED into Samira's run as
+PART Q per Lemar — no separate trigger/bot/DM; posts via Samira's existing bot to the
+private #stormy channel `C0BJ37SU1TL`, created + Samira bot confirmed in-channel
+2026-07-17) · 2026-08-13 (Pulse / Money Hub / Morning Brief / Meeting Prep artifact-URL rows
+replaced with Drive folder ids — Artifact tool retired for all four, see CHANGELOG).
 
 ## Repo / vault
 
@@ -89,17 +106,32 @@ live tooling, not part of the retired mirror.)
 
 ## Gmail labels (use IDs, never display names)
 
+**2026-08-31 correction:** the table below was wrong — the connected Gmail account had
+no `Samira`/`Samira/seen`/`Samira/drafted`/`Samira/sent`/`Samira/investor` labels at all
+(its `Label_1` is a pre-existing, unrelated label named "Sweep/Review", not "Samira").
+Created the five missing labels this run via `create_label` (real Gmail-assigned IDs
+below, which do NOT match the old short placeholder-style IDs this table used to show).
+`Car-Hunt`/`Car-Hunt/seen` also don't exist in the account — left uncreated since the
+car-search loop (PART F) is retired and nothing needs them. `Samira/investor-sent` also
+doesn't exist — create on demand if/when the investor loop needs to mark a sent outreach.
+Two labels are in live use in this account that were never recorded here — **"Action
+Needed"** (`Label_374039230306167562`, 71 msgs) and **"Finance Bills"**
+(`Label_4897882779882705846`, 16 msgs) — origin unknown (not applied by any part of this
+routine); do not assume ownership or repurpose them without asking Lemar.
+
 | Label | ID |
 |---|---|
-| Samira | `Label_1` |
-| Samira/seen | `Label_2` |
-| Samira/drafted | `Label_3` |
-| Samira/sent | `Label_4` |
-| Car-Hunt | `Label_5` |
-| Car-Hunt/seen | `Label_6` |
-| Samira/investor | `Label_7` |
-| Samira/investor-sent | `Label_9` — created in an earlier investor-loop run; recorded here 2026-07-10 (was previously marked NOT YET CREATED even though the label already existed in Gmail) |
-| Vendor Menus | `Label_8` (created 2026-07-08 for the Inbox Janitor routine) |
+| Samira (parent) | `Label_2` |
+| Samira/seen | `Label_3` |
+| Samira/drafted | `Label_4` |
+| Samira/sent | `Label_5` |
+| Samira/investor | `Label_6` |
+| Samira/investor-sent | NOT YET CREATED — create on demand |
+| Car-Hunt | NOT YET CREATED — car-search loop retired, unneeded |
+| Car-Hunt/seen | NOT YET CREATED — car-search loop retired, unneeded |
+| Vendor Menus | `Label_7063567382570959882` (pre-existing, created 2026-07-08 for the Inbox Janitor routine; real Gmail-assigned ID, not the old short placeholder) |
+| Action Needed (unrecorded, unowned) | `Label_374039230306167562` |
+| Finance Bills (unrecorded, unowned) | `Label_4897882779882705846` |
 
 ## Google Calendar
 
@@ -159,7 +191,7 @@ in the runbook until Lemar vets one preview run, then flip to false.
 | Runbook (live behavior) | `.claude/routines/inbox-janitor.md` — editing on `main` changes the next run |
 | Reports to | #reports `C0BBZJL85RT` (reuse; no new channel) |
 | Gmail account acted on | `lemar@cuzziesnj.com` (business — confirmed as the connected Gmail account 2026-07-08; winds down mid-2026) |
-| Vendor Menus label | `Label_8` |
+| Vendor Menus label | `Label_7063567382570959882` (see the corrected Gmail labels table above) |
 | Persona | lead `🧹`, sign "— Basil" (placeholder name, rename-able like "Dawn") |
 
 **Trash sweep categories** (PART B): `category:promotions OR category:social OR category:forums`,
