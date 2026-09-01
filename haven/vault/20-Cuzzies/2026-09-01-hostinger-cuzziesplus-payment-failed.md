@@ -1,9 +1,9 @@
 ---
 created: 2026-09-01T20:10:12Z
-updated: 2026-09-01T21:04:30Z
+updated: 2026-09-01T22:15:00Z
 domain: cuzzies
-type: task
-status: awaiting-decision
+type: decision
+status: done
 tags: [hostinger, domain, cuzziesplus, billing, wind-down]
 source: gmail
 ---
@@ -19,5 +19,11 @@ lapse given Cuzzie's Camden winding down) — not assuming the same call here. S
 not pay or update billing. Raised to Lemar in #decisions: renew, or let `cuzziesplus.com`
 lapse.
 
+## Update — 2026-09-01 (47th scan)
+
+Lemar decided in #decisions: ✅ Option 2 — let it lapse, no renewal. Same call as the
+shopcuzzies.com/GoDaddy precedent. No payment made, no billing touched. Closing.
+
 ## Sources
 - gmail: thread `1a05ab6cb833bfef` (Hostinger — Unsuccessful payment for domain cuzziesplus.com)
+- Slack: #decisions `C0BBXA96FFV`, thread `1788293473.160559`

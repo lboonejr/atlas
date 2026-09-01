@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-09-01T20:03:35Z
+updated: 2026-09-01T22:10:00Z
 domain: project
 type: log
 status: active
@@ -1387,3 +1387,23 @@ last recorded range end, through this run's own posts).
 - slack: #reports `C0BBZJL85RT`, ts range `1788096006`–`1788293467`
 - haven/vault/00-Inbox/ (4 known stuck notes, re-confirmed this run) + 4 new notes this
   run (not yet swept by vault-keeper — filed under this run's date, not stuck)
+
+## Update — 2026-09-01 (47th scan, run_20260901T220358Z)
+
+**Scanned:** #reports ts `1788293467`–`1788297230` (the 45th and 46th runs' own digest
+posts, both landing after the prior scan's range boundary).
+
+**Content in range:** two Samira digests (45th scan 4:18pm ET, 46th scan 5:14pm ET).
+Figures progress consistently scan-to-scan (decisions queue ~30, +4 then +0; reports-scan
+clean both times). One surface-level wording difference noted, not flagged as a
+contradiction: the 46th digest's headline says "Haven: filed 4" while that run's own
+PART V narrative (state file lock note) says vault-keeper filed 1 Inbox note — the
+digest's "filed" figure bundles the 4 already-filed notices PART D wrote directly to
+their domain folders that scan, not just Inbox-clearing count. Different measurement
+scopes describing the same run, not two conflicting claims about the same fact — no
+#decisions card raised.
+
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (forty-seventh run)
+- slack: #reports `C0BBZJL85RT`, ts range `1788293467`–`1788297230`
