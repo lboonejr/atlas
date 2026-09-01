@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260831T180259Z",
-    "run_started": "2026-08-31T18:02:59Z",
+    "run_id": "run_20260901T200335Z",
+    "run_started": "2026-09-01T20:03:35Z",
     "run_completed": "2026-08-31T18:08:59Z",
-    "note": "44th scan. One new item: #admin carried a Desktop-cleanup handoff (samira-work-summary, posted via Samira's own bot) reporting 1,322 duplicate files/folders (1.4GB) moved to _Duplicates_Review and a duplicate Sicillano/ folder consolidated, asking whether to permanently delete _Duplicates_Review. Destructive/irreversible, so filed to Haven (haven/vault/00-Inbox/2026-08-31-desktop-cleanup-automated-pass.md) and lifted as a new #decisions card (parent ts 1788199618.856899, two options) rather than decided. All other swept surfaces (#decisions itself, capture DM, #stormy, #investor-pipeline, #personal-finance, all other project channels) silent since the prior run. Gmail D2 (after:1788189293): 5 new threads, all vendor-menu/marketing junk (Hamilton Farms, TerrAscend, North Lake, McAfee renewal spam, Amazon business promo) — labeled Samira/seen (Label_3). Anomaly re-check: one more fake 'Haven Keeper' stuck-0 digest appeared in #reports (ts 1788196804.092309) under the same unresolved external-identity pattern already flagged to Lemar on earlier scans today (app_id A08SF47R6P4, posted as Lemar's own user U0BC5UTHYG4) — unchanged content, not re-escalating. Pulse skipped this scan (⚠️) despite the 'something changed' gate tripping (new #decisions card + new Haven note) — judgment call to close the run within scope; queued for next pass. Vault Inbox unchanged: same 4 stuck notes. Integrity not re-run (today's full pass already done, only this run's own commits + the _daily append since). Canvas not re-checked (already checked today, still write-blocked). Digest posted to #reports ts 1788199679.843849."
+    "note": "45th scan in progress."
   },
   "watermarks": {
     "slack_channels": {
