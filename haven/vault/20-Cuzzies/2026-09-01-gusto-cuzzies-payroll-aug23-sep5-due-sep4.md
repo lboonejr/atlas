@@ -7,6 +7,7 @@ status: awaiting-decision
 tags: [gusto, payroll, cuzzies]
 source: gmail
 due: 2026-09-04T09:00:00-04:00
+calendar_event_id: t9e1vobl4nk950jkq5oip0hrd8
 ---
 
 # Gusto payroll — Cuzzie's, Aug 23-Sep 5, moved up to Sep 4 (Labor Day)

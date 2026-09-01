@@ -7,6 +7,7 @@ status: awaiting-decision
 tags: [gusto, payroll, the-station]
 source: gmail
 due: 2026-09-02T19:00:00-04:00
+calendar_event_id: 5fe6rl6cu29ah88k0r03tid74k
 ---
 
 # Gusto payroll — The Station, Aug 13-26, due Sep 2 7pm ET
