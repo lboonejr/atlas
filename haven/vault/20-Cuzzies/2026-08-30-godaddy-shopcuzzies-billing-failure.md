@@ -1,6 +1,6 @@
 ---
 created: 2026-08-30T16:04-04:00
-updated: 2026-09-01T20:03:35Z
+updated: 2026-09-01T20:10:12Z
 domain: cuzzies
 type: task
 status: done
@@ -44,8 +44,15 @@ Samira. Closing this task.
 calendar-sync: reminder event retired (status: done) — event cancelled on the Cuzzie's
 (Owners) calendar, `calendar_event_id` cleared.
 
+GoDaddy confirmed the removal: automated notice received 2026-09-01 ("A product's been
+removed from your account that you canceled") names the removed product as "Websites +
+Marketing Commerce (associated with: shopcuzzies.com)". This is GoDaddy executing the
+lapse Lemar already chose — informational only, no new decision needed, nothing paid or
+contacted.
+
 ## Sources
 - gmail: thread `1a053a8bdc20544c` (Product Failed Billing Notification)
 - gmail: thread `1a0538c0feaf89de` (Cancellation Alert — shopcuzzies.com deletion 9/1/2026)
 - gmail: thread `1a0541d60a6217d7` (Google security alert, same account, same day — informational only)
+- gmail: thread `1a05e1a9039f1b58` (GoDaddy confirms product removed, 2026-09-01)
 - slack: #decisions thread `1788120312.622789` (Lemar's ✅ on Option 2)
