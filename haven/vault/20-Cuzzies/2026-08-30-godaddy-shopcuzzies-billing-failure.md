@@ -1,13 +1,12 @@
 ---
 created: 2026-08-30T16:04-04:00
-updated: 2026-08-31T12:20:00-04:00
+updated: 2026-09-01T20:03:35Z
 domain: cuzzies
 type: task
 status: done
 tags: [godaddy, website, billing, shopcuzzies, wind-down]
 source: gmail
 due: 2026-09-01T09:00-04:00
-calendar_event_id: jkmdrdp5okobp6u32l18603lt0
 ---
 
 # GoDaddy billing failed — shopcuzzies.com facing deletion 2026-09-01
@@ -39,6 +38,11 @@ Lemar picked **Option 2 — let it lapse** (✅ on the #decisions card, thread
 made — consistent with Cuzzie's (Camden) winding down. `shopcuzzies.com` is expected to
 be deleted on/after 2026-09-01 per GoDaddy's notice; no further action needed from
 Samira. Closing this task.
+
+## Update — 2026-09-01
+
+calendar-sync: reminder event retired (status: done) — event cancelled on the Cuzzie's
+(Owners) calendar, `calendar_event_id` cleared.
 
 ## Sources
 - gmail: thread `1a053a8bdc20544c` (Product Failed Billing Notification)
