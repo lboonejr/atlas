@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260902T150447Z",
-    "run_started": "2026-09-02T15:04:47Z",
+    "run_id": "run_20260902T180452Z",
+    "run_started": "2026-09-02T18:04:52Z",
     "run_completed": "2026-09-02T15:09:22Z",
-    "note": "50th scan complete -- lighter-touch pass (same tradeoff as the 49th). Full #decisions channel-watermark sweep plus the 6 most-recently-active threads read directly for new replies/reactions: all six unchanged since their stored watermarks -- no new Lemar signal anywhere, including on the Gusto Station payroll card, which is now completely unactioned with the 7pm ET same-day deadline ~4 hours out. Capture DM + every project/admin channel swept from their watermarks: all quiet, zero new top-level messages. Inbox listing confirmed at 6 notes (.gitkeep aside) -- the 4 known UNRESOLVED-domain stuck notes plus today's 2 new captures (daily-drive-organizing-run, veriscan-idscan-security-incident), neither yet run through a vault-keeper filing pass this scan. Pushed a phone notification to Lemar on the payroll deadline given three prior surfacings (this run's card, the 48th/49th digests) drew no reaction and the window is closing. NOT run this scan: PART V full vault-keeper pass, PART S calendar-sync, PART D/E email+investor loops, PART M money hub, PART Q Stormy, PART R pressure-test round on the 4 carried/1 parked Camden Launch PT cards, PART T contradiction scan, PART P Pulse render -- several of these are now three scans carried and should get a dedicated full pass next run rather than deferring again."
+    "note": "51st scan in flight -- taking a full pass this run per the prior lock note's own flag (V/S/D/E/M/Q/R/T/P carried 3 scans). Gusto Station payroll card (#decisions C0BBXA96FFV) is priority #1 this scan: 7pm ET deadline closing, unactioned across last 3+ scans, one phone notification already pushed last run."
   },
   "watermarks": {
     "slack_channels": {
