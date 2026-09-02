@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T09:15-04:00
-updated: 2026-08-19T09:30:00-04:00
+updated: 2026-09-02T08:35:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -181,3 +181,15 @@ already logged 2026-08-13 (which superseded this vendor-accounting cadence with 
 harder collections-agency clock). Not re-drafting or opening a new #decisions card —
 the 8/13 collections-referral card already covers this matter and nothing here changes
 its facts. Logging only. Labeled `Samira/seen` on the new thread.
+
+## Update 2026-09-02 (email loop — Reminder 14, same figures, still "URGENT")
+
+Dhruvi sent a new "Reminder 14" (gmail thread `1a0613d968fbefc1`, 2026-09-02 08:30 ET,
+cc Bronnie@littleleaflabs.net) — same two invoices (INV-0000762 $3,175 remaining,
+INV-0000889 $5,156), same **$8,331.00** total, same collections/state-notification
+threat. No new figure, no new deadline — same templated-cadence read as Reminders 9-13.
+The CannaBIZ Collects debt-settlement track (see
+`haven/vault/20-Cuzzies/2026-08-25-little-leaf-labs-cannabiz-call-request.md`, last
+update 2026-08-26: settlement agreement sent for Lemar's review, unopened/undecided)
+already covers this matter at the collections-agency level — not re-opening a new
+#decisions card here. Logging only. Labeled `Samira/seen` on the new thread.
