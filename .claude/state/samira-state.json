@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260902T120500Z",
-    "run_started": "2026-09-02T12:05:00Z",
+    "run_id": "run_20260902T140514Z",
+    "run_started": "2026-09-02T14:05:14Z",
     "run_completed": "2026-09-02T12:13:00Z",
-    "note": "48th scan complete. Dropped-write pattern from the prior two runs did NOT recur -- this run_completed write landed fine. Scope note for the next scan: PART R carried 4 open Camden Launch PT cards without a fresh pressure-test round (all round 1, oldest from 2026-08-19/25 with reply history through 2026-08-31 -- worth a dedicated pass rather than a rushed partial one); PART T (contradiction scan) and PART P (Pulse render) also carried without running this scan, even though Pulse's 'something changed' gate was met (a new #decisions card opened). None of these are blocked, just deferred -- pick them up next scan."
+    "note": "49th scan starting. Picking up deferred items flagged by the 48th run: PART R had 4 open Camden Launch PT cards carried without a fresh round; PART T and PART P also carried without running last scan despite Pulse's change-gate being met."
   },
   "watermarks": {
     "slack_channels": {
@@ -94,7 +94,7 @@
   "integrity": {
     "last_full_pass": "2026-09-01T20:03:35Z",
     "last_scan_sha": "9da450de806a080ee85d8a86d7397d02029df363",
-    "note": "Day's-first-run FULL pass was due (last full pass was 2026-09-01) but not run this scan -- ran an INCREMENTAL pass instead (git diff since the prior last_scan_sha, 12 changed vault files excl. Inbox, all clean: required fields present, controlled values in-list). last_scan_sha advanced to reflect this incremental check; last_full_pass intentionally left at 2026-09-01 since the full 632-note pass did not actually run -- it's overdue and should run on the next scan that has room for it. Still-open flags unchanged: the 4 known stuck Inbox notes (domain UNRESOLVED) plus haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md (missing `created`)."
+    "note": "Day's-first-run FULL pass was due (last full pass was 2026-09-01) but not run last scan -- an INCREMENTAL pass ran instead. last_full_pass intentionally left at 2026-09-01. Still-open flags unchanged: the 4 known stuck Inbox notes (domain UNRESOLVED) plus haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md (missing `created`)."
   },
   "canvas_access": {
     "last_checked": "2026-09-02T12:11:00Z",
