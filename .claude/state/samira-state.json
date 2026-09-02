@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260902T120500Z",
     "run_started": "2026-09-02T12:05:00Z",
-    "run_completed": "2026-09-01T20:18:34Z",
-    "note": "48th scan starting (first run of 2026-09-02). Prior lock (run_20260901T220358Z, started 22:03:58Z) is now well over 45min old (>14h) -- aged out, proceeding. Prior run's own note flagged that its run_completed write may have been dropped again (still reading 20:18:34Z from two runs back); this run will write run_completed properly at its own PART 0 close-out and carry the dropped-write pattern forward for Lemar's awareness if it recurs a third time."
+    "run_completed": "2026-09-02T12:13:00Z",
+    "note": "48th scan complete. Dropped-write pattern from the prior two runs did NOT recur -- this run_completed write landed fine. Scope note for the next scan: PART R carried 4 open Camden Launch PT cards without a fresh pressure-test round (all round 1, oldest from 2026-08-19/25 with reply history through 2026-08-31 -- worth a dedicated pass rather than a rushed partial one); PART T (contradiction scan) and PART P (Pulse render) also carried without running this scan, even though Pulse's 'something changed' gate was met (a new #decisions card opened). None of these are blocked, just deferred -- pick them up next scan."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1788293476.980009",
-      "C0BBZJL85RT": "1788293896.667959",
-      "D0BHPKMDNEP": "1788293868.690599",
+      "C0BBXA96FFV": "1788351135.454039",
+      "C0BBZJL85RT": "1788351135.454039",
+      "D0BHPKMDNEP": "1788301190.258059",
       "C0BGLEMH99T": "1788199665.000000",
       "C0BEQUW5NPP": "1788199665.000000",
       "C0BBLUA7JLX": "1788192955.157419",
@@ -85,18 +85,19 @@
       "1788293467.431029": "1788293467.431029",
       "1788293469.090089": "1788293469.090089",
       "1788293471.299699": "1788293471.299699",
-      "1788293473.160559": "1788293476.980009"
+      "1788293473.160559": "1788293476.980009",
+      "1788351021.360259": "1788351025.768309"
     },
-    "capture_dm": "1788293868.690599",
-    "gmail_after_epoch": 1788291261
+    "capture_dm": "1788301190.258059",
+    "gmail_after_epoch": 1788337800
   },
   "integrity": {
     "last_full_pass": "2026-09-01T20:03:35Z",
-    "last_scan_sha": "99dc4636f6d404df09c7dc40e7cc439908af0fa6",
-    "note": "Full mechanical + value-validation pass across all 632 vault notes (day's first run of 2026-09-01), via a local export of the origin/main tree. Mechanical (opener/CRLF/closer): only the known lossy-base64 defect in _daily/2026-08-01.md, unchanged, left untouched per the 'already-decided' rule. Value validation (required fields + controlled-value lists, every note not just Inbox): 1 NEW flag - haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md is missing the required `created` field entirely (has domain/type/status/source/tags/updated, no created) - flagged only, never invented. Otherwise only the 4 already-known stuck Inbox notes (now 5 total field-validation issues incl. the new one)."
+    "last_scan_sha": "9da450de806a080ee85d8a86d7397d02029df363",
+    "note": "Day's-first-run FULL pass was due (last full pass was 2026-09-01) but not run this scan -- ran an INCREMENTAL pass instead (git diff since the prior last_scan_sha, 12 changed vault files excl. Inbox, all clean: required fields present, controlled values in-list). last_scan_sha advanced to reflect this incremental check; last_full_pass intentionally left at 2026-09-01 since the full 632-note pass did not actually run -- it's overdue and should run on the next scan that has room for it. Still-open flags unchanged: the 4 known stuck Inbox notes (domain UNRESOLVED) plus haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md (missing `created`)."
   },
   "canvas_access": {
-    "last_checked": "2026-09-01T20:15:00Z",
+    "last_checked": "2026-09-02T12:11:00Z",
     "writable": false
   },
   "renders": {
