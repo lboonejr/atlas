@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-09-01T22:10:00Z
+updated: 2026-09-02T14:25:00-04:00
 domain: project
 type: log
 status: active
@@ -1407,3 +1407,68 @@ scopes describing the same run, not two conflicting claims about the same fact �
 
 ### Sources (forty-seventh run)
 - slack: #reports `C0BBZJL85RT`, ts range `1788293467`–`1788297230`
+
+
+## Update — 2026-09-02 (48th/49th scans, 51st scan performing this check)
+
+**Scanned:** #reports ts `1788297230`–`1788369586` (2026-09-01 ~5:14pm ET through
+2026-09-02 ~1:19pm ET, 6 new messages excluding the recurring "Haven Keeper"
+empty-inbox lines).
+
+**Found: 2.**
+
+1. **Obvious fix — a Samira digest mislabeled its own post time by 4 hours (UTC hour
+   digits stamped under an "ET" label).**
+   - `1788358199` (actual post time, converted: 2026-09-02 14:09:59 UTC = **10:09:59
+     AM ET**) — the digest's own headline reads "Samira · 2026-09-02 **14:1x ET** —
+     0 closed · 0 new · 3 urgent." 14:1x is the UTC hour, not the ET hour; true ET at
+     post time was ~10:1x AM.
+   - Confirms as a labeling bug, not a real gap: the next digest (`1788361720`,
+     actual 2026-09-02 15:08:40 UTC = 11:08:40 AM ET) correctly labels itself "Sep 2
+     **11:05am ET**" — same run family, correct arithmetic one digest later.
+   - **Not escalated** — cosmetic only, doesn't affect any figure or decision;
+     process hygiene note for whoever writes the next digest's headline.
+
+2. **Obvious fix — the same 10:09:59am ET digest (`1788358199`) reported `stuck 0`
+   two minutes after Samira's own prior post (`1788358139`) logged a brand-new note
+   straight to `00-Inbox/2026-09-02-daily-drive-organizing-run.md`.**
+   - `1788358139` (~10:08:59am ET): "logged the daily Drive-organizing run... Haven:
+     `haven/vault/00-Inbox/2026-09-02-daily-drive-organizing-run.md`" — a note that,
+     by definition, was sitting in the Inbox at that moment.
+   - `1788358199` (~10:09:59am ET, one minute later): "Haven: filed 0 · stuck 0 ·
+     rang +0/~0/-0 · notes 1" — `stuck 0` contradicts the note it had just placed in
+     the Inbox 60 seconds earlier (plus the 4 already-known UNRESOLVED-domain stuck
+     notes, unchanged at the time).
+   - **Ground truth:** the very next digest in range, `1788361720` (~11:08am ET),
+     self-corrects to "stuck ~6 (4 known UNRESOLVED-domain + 2 pending from today:
+     daily-drive-organizing-run, veriscan-idscan-security-incident)" — confirming
+     `1788358199`'s `stuck 0` was wrong when posted, not a real state change and back.
+     This is the same light-touch-pass undercount failure mode this log has tracked
+     for `#decisions` "waiting on you" counts (1st/5th/6th/19th/20th runs) now showing
+     up in the Haven `stuck` figure instead, and — unlike the many "Haven Keeper"
+     manual-session occurrences also in this range — this one is under Samira's own
+     bot signature (`B0BHZJH8GP6`), so it's a real light-touch-run miscount, not a
+     different session.
+   - **Not escalated to #decisions** — self-corrected one digest later, matches this
+     run's (51st scan) own full PART V pass (`filed 1 · stuck 5`, VeriScan note
+     accounted for, daily-drive-organizing-run filed out to `70-Automation/
+     file-organizing/`). Flagging here as it's the same undercount defect class,
+     now confirmed to also affect the `stuck` figure, not just the `#decisions`
+     count — worth a glance if this recurs during future light-touch scans.
+
+**Checked, not flagged — recurring "Haven Keeper" empty-inbox claim, continuing
+pattern (20+ occurrences: `1788301214`, `1788355478`, `1788369586` in this range).**
+Same established `U0BC5UTHYG4`/`A08SF47R6P4` signature, same disposition
+(non-propagating manual-session artifact) as every prior occurrence since the
+eleventh run.
+
+**Also checked:** the 47th-scan digest (`1788301250`) and the 46th-scan digest
+(`1788297230`, boundary) — both internally consistent with each other and with the
+Hostinger closure (`1788300875`) they report. No conflicting figures.
+
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (this update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788297230`–`1788369586`
+- this run's (51st scan) own PART V full vault-keeper pass (filed 1, stuck 5,
+  confirms `1788361720`'s reconciled figure, not `1788358199`'s `stuck 0`)
