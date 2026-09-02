@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-09-02T14:25:00-04:00
+updated: 2026-09-02T16:07:00-04:00
 domain: project
 type: log
 status: active
@@ -1472,3 +1472,54 @@ Hostinger closure (`1788300875`) they report. No conflicting figures.
 - slack: #reports `C0BBZJL85RT`, ts range `1788297230`–`1788369586`
 - this run's (51st scan) own PART V full vault-keeper pass (filed 1, stuck 5,
   confirms `1788361720`'s reconciled figure, not `1788358199`'s `stuck 0`)
+
+## Update — 2026-09-02 ~4:07pm ET (53rd scan)
+
+Range scanned: ts `1788369586`–`1788379635` (2 messages: the 51st-scan full-pass digest
+`1788373559` and the 52nd-scan lightweight digest `1788375959`; the `1788369586` Haven
+Keeper line was the prior bookmark boundary, already logged last update).
+
+**Found: 1 — same recurring "waiting on you" undercount pattern as the 8/28→8/29 run
+(this log, "43/~44 → 1") and others.**
+1. **Obvious fix — the 52nd scan's digest understates the #decisions backlog.** The 51st
+   scan (`1788373559`, 2:25pm ET) named a tracked backlog of "Gusto Station payroll ·
+   Gusto Cuzzie's payroll · Comcast Business · VeriScan/IDScan.net · Camden Launch PT
+   ops-admin-lane-and-ariana · Haven Inbox 5 notes · +~25 more" (~30 tracked items). 36
+   minutes later the 52nd scan (`1788375959`, 3:24pm ET) reads "Waiting on you: 1 in
+   #decisions." Checked #decisions directly this run (53rd scan): zero reactions, zero
+   closures, zero new cards landed in that 36-minute window — the true backlog did not
+   shrink. The "1" in the 52nd-scan digest counts only the newly-escalated
+   urgent item (Gusto Station payroll), not the tracked set. Same failure mode as every
+   prior occurrence of this pattern (this log, 1st/5th/6th/19th/20th runs, and the
+   8/28→8/29 "43/~44 → 1" swing) — a lightweight/quiet-pass digest silently narrows
+   "waiting on you" to only what it actively worked that scan instead of restating the
+   full tracked backlog. **Not escalated** — no #decisions card, matches the disposition
+   already applied to every prior instance of this exact pattern (obvious fix, no vault
+   correction needed, restate the tracked-set count next full digest).
+   - Also checked while verifying this: the 51st scan's own "Waiting on you" line
+     included "Camden Launch PT ops-admin-lane-and-ariana parked" — but a *parked* item
+     is explicitly routed off the decision queue (routing table: "parked → Open Items
+     canvas"), so it arguably shouldn't appear under "waiting on you" at all. Minor,
+     same process-hygiene bucket as the rest of this note; not escalated on its own.
+
+**Checked, not flagged — recurring "Haven Keeper" pattern continues** (no new
+occurrences in this narrow range beyond the already-logged `1788369586` boundary line).
+
+**Also checked:** PART R's Camden Launch PT-card review this scan (see 53rd-scan
+#reports digest) confirmed the 51st scan's "2 already closed (advisory proposal,
+engagement walkthrough) · 2 parked (client intake, ops-admin-lane-and-ariana)" claim
+against the four Haven notes directly — all four frontmatter `status` fields
+(`done`/`done`/`parked`/`parked`) match what the 51st-scan digest said. **Not a
+contradiction** — the digest was right; the only gap is cosmetic (the #decisions parent
+messages for the two closed items were never edited to a "✅ CLOSED" prefix, left for a
+later light-touch pass to tidy, non-material).
+
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (this update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788369586`–`1788379635`
+- slack: #decisions `C0BBXA96FFV`, direct read this run (zero new messages/reactions
+  since the 51st-scan watermark `1788372582.289019`)
+- vault: `haven/vault/40-Projects/camden-dispensary-launch/{p00-client-intake-system.md,
+  ops-admin-lane-and-ariana.md, 2026-08-19-p00-advisory-proposal-package.md,
+  2026-08-24-p00-engagement-walkthrough.md}`
