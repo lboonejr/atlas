@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260901T220358Z",
-    "run_started": "2026-09-01T22:03:58Z",
+    "run_id": "run_20260902T120500Z",
+    "run_started": "2026-09-02T12:05:00Z",
     "run_completed": "2026-09-01T20:18:34Z",
-    "note": "47th scan starting. Prior lock (run_20260901T210430Z, started 21:04:30Z) had aged out (>45min, now 22:03:58Z) with run_completed stuck at an earlier stale value (20:18:34Z) despite the 46th scan's note describing a full completed run through digest+_daily append -- looks like the final run_completed write was dropped at the end of the 46th run. Proceeding per the aging-out rule rather than treating it as still in flight; this run will overwrite run_completed properly at its own PART 0 close-out."
+    "note": "48th scan starting (first run of 2026-09-02). Prior lock (run_20260901T220358Z, started 22:03:58Z) is now well over 45min old (>14h) -- aged out, proceeding. Prior run's own note flagged that its run_completed write may have been dropped again (still reading 20:18:34Z from two runs back); this run will write run_completed properly at its own PART 0 close-out and carry the dropped-write pattern forward for Lemar's awareness if it recurs a third time."
   },
   "watermarks": {
     "slack_channels": {
