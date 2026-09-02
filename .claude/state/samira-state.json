@@ -3,13 +3,13 @@
   "lock": {
     "run_id": "run_20260902T150447Z",
     "run_started": "2026-09-02T15:04:47Z",
-    "run_completed": "2026-09-02T14:10:21Z",
-    "note": "49th scan complete -- lighter-touch pass. #decisions/capture DM/Gmail/personal-finance/on-button/investor/stormy/camden-launch/every project channel swept and found quiet (no new top-level activity, no new replies on the 5 most-recent #decisions threads). One #admin auto-handoff (daily Drive-organizing run) logged to Haven, reacted, reported. A separate 'Haven Keeper' run had already confirmed the vault Inbox empty/no due notes this cycle, so PART V/S needed no further work. NOT run this scan: PART Q (Stormy), PART R (pressure-test round on the 4 carried Camden Launch PT cards -- still carried, now stale since 8/19-8/25), PART D/E deep mail+investor triage beyond the watermark query, PART M (no money drops so nothing to apply -- correctly skipped), PART T (contradiction scan), PART P (Pulse -- its change-gate was technically met by the new Haven note but the render did not run). Flagged directly to Lemar: Gusto Station payroll (7 timesheets) due TODAY 9/2 7pm ET, still unactioned in #decisions alongside Gusto Cuzzie's (moved to 9/4), Comcast Business past due $511.48, and the VeriScan breach notice. PART R's carried cards and PART T/P deferrals are now two scans deep -- worth a dedicated pass next run rather than deferring a third time."
+    "run_completed": "2026-09-02T15:09:22Z",
+    "note": "50th scan complete -- lighter-touch pass (same tradeoff as the 49th). Full #decisions channel-watermark sweep plus the 6 most-recently-active threads read directly for new replies/reactions: all six unchanged since their stored watermarks -- no new Lemar signal anywhere, including on the Gusto Station payroll card, which is now completely unactioned with the 7pm ET same-day deadline ~4 hours out. Capture DM + every project/admin channel swept from their watermarks: all quiet, zero new top-level messages. Inbox listing confirmed at 6 notes (.gitkeep aside) -- the 4 known UNRESOLVED-domain stuck notes plus today's 2 new captures (daily-drive-organizing-run, veriscan-idscan-security-incident), neither yet run through a vault-keeper filing pass this scan. Pushed a phone notification to Lemar on the payroll deadline given three prior surfacings (this run's card, the 48th/49th digests) drew no reaction and the window is closing. NOT run this scan: PART V full vault-keeper pass, PART S calendar-sync, PART D/E email+investor loops, PART M money hub, PART Q Stormy, PART R pressure-test round on the 4 carried/1 parked Camden Launch PT cards, PART T contradiction scan, PART P Pulse render -- several of these are now three scans carried and should get a dedicated full pass next run rather than deferring again."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1788351135.454039",
-      "C0BBZJL85RT": "1788358199.905319",
+      "C0BBXA96FFV": "1788351021.360259",
+      "C0BBZJL85RT": "1788361720.791029",
       "D0BHPKMDNEP": "1788301190.258059",
       "C0BGLEMH99T": "1788358183",
       "C0BEQUW5NPP": "1788358183",
@@ -81,7 +81,7 @@
       "1788120312.622789": "1788178381.880189",
       "1787157130.471099": "1787328710.030059",
       "1787613164.672029": "1787614371.183619",
-      "1788199618.856899": "1788199623.165309",
+      "1788199618.856899": "1788300853.201089",
       "1788293467.431029": "1788293467.431029",
       "1788293469.090089": "1788293469.090089",
       "1788293471.299699": "1788293471.299699",
@@ -94,7 +94,7 @@
   "integrity": {
     "last_full_pass": "2026-09-01T20:03:35Z",
     "last_scan_sha": "9da450de806a080ee85d8a86d7397d02029df363",
-    "note": "Unchanged this scan -- PART V's own full/incremental integrity pass did not run (a separate 'Haven Keeper' run already confirmed the Inbox empty and no due notes this cycle). Day's-first-run FULL pass is now overdue two scans running; should run next scan that has room. Still-open flags unchanged: the 4 known stuck Inbox notes (domain UNRESOLVED) plus haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md (missing `created`)."
+    "note": "Unchanged this scan (three scans running now) -- PART V's full/incremental integrity pass did not run. Day's-first-run FULL pass is now overdue three scans running; should run next scan that has room. Still-open flags unchanged: the 4 known stuck Inbox notes (domain UNRESOLVED) plus haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md (missing `created`). Two new Inbox notes as of today (daily-drive-organizing-run, veriscan-idscan-security-incident) not yet run through a filing pass."
   },
   "canvas_access": {
     "last_checked": "2026-09-02T12:11:00Z",
