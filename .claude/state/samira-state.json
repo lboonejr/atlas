@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260902T140514Z",
     "run_started": "2026-09-02T14:05:14Z",
-    "run_completed": "2026-09-02T12:13:00Z",
-    "note": "49th scan starting. Picking up deferred items flagged by the 48th run: PART R had 4 open Camden Launch PT cards carried without a fresh round; PART T and PART P also carried without running last scan despite Pulse's change-gate being met."
+    "run_completed": "2026-09-02T14:10:21Z",
+    "note": "49th scan complete -- lighter-touch pass. #decisions/capture DM/Gmail/personal-finance/on-button/investor/stormy/camden-launch/every project channel swept and found quiet (no new top-level activity, no new replies on the 5 most-recent #decisions threads). One #admin auto-handoff (daily Drive-organizing run) logged to Haven, reacted, reported. A separate 'Haven Keeper' run had already confirmed the vault Inbox empty/no due notes this cycle, so PART V/S needed no further work. NOT run this scan: PART Q (Stormy), PART R (pressure-test round on the 4 carried Camden Launch PT cards -- still carried, now stale since 8/19-8/25), PART D/E deep mail+investor triage beyond the watermark query, PART M (no money drops so nothing to apply -- correctly skipped), PART T (contradiction scan), PART P (Pulse -- its change-gate was technically met by the new Haven note but the render did not run). Flagged directly to Lemar: Gusto Station payroll (7 timesheets) due TODAY 9/2 7pm ET, still unactioned in #decisions alongside Gusto Cuzzie's (moved to 9/4), Comcast Business past due $511.48, and the VeriScan breach notice. PART R's carried cards and PART T/P deferrals are now two scans deep -- worth a dedicated pass next run rather than deferring a third time."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1788351135.454039",
-      "C0BBZJL85RT": "1788351135.454039",
+      "C0BBZJL85RT": "1788358199.905319",
       "D0BHPKMDNEP": "1788301190.258059",
-      "C0BGLEMH99T": "1788199665.000000",
-      "C0BEQUW5NPP": "1788199665.000000",
-      "C0BBLUA7JLX": "1788192955.157419",
-      "C0BJ37SU1TL": "1788199665.000000",
-      "C0BCCUKEUQ2": "1788199665.000000",
-      "C0BCD7U5X2B": "1788199665.000000",
-      "C0BCH2C3GRM": "1788199665.000000",
-      "C0BDN2KQFD4": "1788199665.000000",
-      "C0BD8LTM1EK": "1788199665.000000",
-      "C0BGYM1UB4Y": "1788199665.000000",
-      "C0BGCAK0ML3": "1788199665.000000",
-      "C0BHXTPST52": "1788199665.000000",
-      "C0BC2A94142": "1788199665.000000",
-      "C0BBZ5J8805": "1788199665.000000",
-      "C0BRZT2V89W": "1788199665.000000"
+      "C0BGLEMH99T": "1788358183",
+      "C0BEQUW5NPP": "1788358183",
+      "C0BBLUA7JLX": "1788355028.159289",
+      "C0BJ37SU1TL": "1788358183",
+      "C0BCCUKEUQ2": "1788358183",
+      "C0BCD7U5X2B": "1788358183",
+      "C0BCH2C3GRM": "1788358183",
+      "C0BDN2KQFD4": "1788358183",
+      "C0BD8LTM1EK": "1788358183",
+      "C0BGYM1UB4Y": "1788358183",
+      "C0BGCAK0ML3": "1788358183",
+      "C0BHXTPST52": "1788358183",
+      "C0BC2A94142": "1788358183",
+      "C0BBZ5J8805": "1788358183",
+      "C0BRZT2V89W": "1788358183"
     },
     "decisions_threads": {
       "1786832078.131649": "1787754270.525189",
@@ -85,16 +85,16 @@
       "1788293467.431029": "1788293467.431029",
       "1788293469.090089": "1788293469.090089",
       "1788293471.299699": "1788293471.299699",
-      "1788293473.160559": "1788293476.980009",
+      "1788293473.160559": "1788300870.651279",
       "1788351021.360259": "1788351025.768309"
     },
     "capture_dm": "1788301190.258059",
-    "gmail_after_epoch": 1788337800
+    "gmail_after_epoch": 1788358183
   },
   "integrity": {
     "last_full_pass": "2026-09-01T20:03:35Z",
     "last_scan_sha": "9da450de806a080ee85d8a86d7397d02029df363",
-    "note": "Day's-first-run FULL pass was due (last full pass was 2026-09-01) but not run last scan -- an INCREMENTAL pass ran instead. last_full_pass intentionally left at 2026-09-01. Still-open flags unchanged: the 4 known stuck Inbox notes (domain UNRESOLVED) plus haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md (missing `created`)."
+    "note": "Unchanged this scan -- PART V's own full/incremental integrity pass did not run (a separate 'Haven Keeper' run already confirmed the Inbox empty and no due notes this cycle). Day's-first-run FULL pass is now overdue two scans running; should run next scan that has room. Still-open flags unchanged: the 4 known stuck Inbox notes (domain UNRESOLVED) plus haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md (missing `created`)."
   },
   "canvas_access": {
     "last_checked": "2026-09-02T12:11:00Z",
