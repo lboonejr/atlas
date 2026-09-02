@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260902T190304Z",
-    "run_started": "2026-09-02T19:03:04Z",
-    "run_completed": "2026-09-02T19:24:40Z",
-    "note": "52nd scan -- lightweight scan (~36 min after the prior full-pass scan completed 18:27 UTC). Confirmed via direct checks that every Slack surface (#decisions, capture DM, #reports, and all 15 swept project/admin channels) is silent since the prior scan's watermarks -- zero new messages, zero new reactions anywhere, capture DM quiet. PRIORITY (unchanged, now escalated outside Slack): Gusto -- The Station payroll card (#decisions C0BBXA96FFV, ts 1788293469.090089) confirmed via slack_get_reactions to still have ZERO reactions with the 7pm ET same-day deadline ~4hrs out at scan time (19:03 UTC / 3:03pm ET) -- this has now sat unactioned across multiple consecutive hourly scans with a same-day deadline, so this run pushed a phone/email notification to Lemar directly (outside Samira's normal Slack-only channels) flagging it, since he may not be watching Slack. Given the prior scan completed a full pass (V/S/D/E/M/Q/R/T/P) only 36 minutes earlier and this scan found zero new Slack signal to react to, the heavy per-part passes (vault integrity, calendar sync, email/investor loops, Stormy, build loop, money hub, contradiction scan, Pulse render) were NOT re-run this scan to avoid redundant work against an unchanged picture -- next scan should run them fresh per normal cadence. Standing gaps carried, not new: Open Items canvas write-block; the Gusto payroll deadline itself, which is Lemar's action to take in Gusto, not Samira's."
+    "run_id": "run_20260902T200327Z",
+    "run_started": "2026-09-02T20:03:27Z",
+    "run_completed": null,
+    "note": "53rd scan starting -- prior scan (52nd) completed cleanly at 19:24:40Z, no overlap. Full pass due per normal cadence (prior scan was lightweight)."
   },
   "watermarks": {
     "slack_channels": {
