@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260903T140445Z",
-    "run_started": "2026-09-03T14:04:45Z",
+    "run_id": "run_20260903T150427Z",
+    "run_started": "2026-09-03T15:04:27Z",
     "run_completed": "2026-09-03T14:24:00Z",
-    "note": "54th scan, day's first run. Prior lock (run_20260902T200327Z) never completed -- aged out per PART 0's 45-minute rule, treated as dead, not a live overlap. Full whole-vault integrity pass ran (658 notes, 0 repairs, 2 known carried defects). This run resolved a feature-branch/main-push tension by writing to main via the GitHub MCP connector for most writes, and via a detached local-git commit pushed straight to refs/heads/main for one large file (the contradiction-scan log) -- this session's own designated branch was never committed to or touched."
+    "note": "55th scan. Prior run (run_20260903T140445Z) completed cleanly at 14:24:00Z -- no overlap, lock acquired normally."
   },
   "watermarks": {
     "slack_channels": {
@@ -95,7 +95,7 @@
   "integrity": {
     "last_full_pass": "2026-09-03T14:06:00Z",
     "last_scan_sha": "be0f2962cbb773b985c81276c70c4497269da9a0",
-    "note": "Full whole-vault pass ran this scan (day's first run 2026-09-03): 658 notes checked, 0 repairs, 2 known carried defects (_daily/2026-08-01.md lossy-b64 span decided 8/1; ops-admin-lane-and-ariana.md missing created, tracked since 8/20). Neither new."
+    "note": "Full whole-vault pass ran this morning (day's first run 2026-09-03): 658 notes checked, 0 repairs, 2 known carried defects (_daily/2026-08-01.md lossy-b64 span decided 8/1; ops-admin-lane-and-ariana.md missing created, tracked since 8/20). This run (55th scan) does incremental-only per PART V cadence."
   },
   "canvas_access": {
     "last_checked": "2026-09-03T14:23:00Z",
