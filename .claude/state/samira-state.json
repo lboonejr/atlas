@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260902T200327Z",
-    "run_started": "2026-09-02T20:03:27Z",
+    "run_id": "run_20260903T140445Z",
+    "run_started": "2026-09-03T14:04:45Z",
     "run_completed": null,
-    "note": "53rd scan starting -- prior scan (52nd) completed cleanly at 19:24:40Z, no overlap. Full pass due per normal cadence (prior scan was lightweight)."
+    "note": "54th scan starting -- prior lock (run_20260902T200327Z, started 2026-09-02T20:03:27Z) was never marked completed and is now >17h old, well past the 45-minute staleness window -- treating as a dead/crashed run per PART 0's age-out rule, not a live overlap. No watermarks from that run appear to have advanced beyond what's recorded here, so proceeding as a fresh full scan."
   },
   "watermarks": {
     "slack_channels": {
@@ -95,7 +95,7 @@
   "integrity": {
     "last_full_pass": "2026-09-02T18:20:00Z",
     "last_scan_sha": "cb4ade54b94ca107eb355fcb0809da45ac6a04b3",
-    "note": "Full whole-vault pass completed the prior scan (day's first). Not re-run this scan (day's first already ran, and no new commits landed between scans to diff against)."
+    "note": "Full whole-vault pass completed 2026-09-02. Not yet re-run this scan; PART V will diff since last_scan_sha if today's first-run full pass hasn't happened yet."
   },
   "canvas_access": {
     "last_checked": "2026-09-02T12:11:00Z",
