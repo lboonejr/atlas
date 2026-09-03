@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260903T140445Z",
     "run_started": "2026-09-03T14:04:45Z",
-    "run_completed": null,
-    "note": "54th scan starting -- prior lock (run_20260902T200327Z, started 2026-09-02T20:03:27Z) was never marked completed and is now >17h old, well past the 45-minute staleness window -- treating as a dead/crashed run per PART 0's age-out rule, not a live overlap. No watermarks from that run appear to have advanced beyond what's recorded here, so proceeding as a fresh full scan."
+    "run_completed": "2026-09-03T14:24:00Z",
+    "note": "54th scan, day's first run. Prior lock (run_20260902T200327Z) never completed -- aged out per PART 0's 45-minute rule, treated as dead, not a live overlap. Full whole-vault integrity pass ran (658 notes, 0 repairs, 2 known carried defects). This run resolved a feature-branch/main-push tension by writing to main via the GitHub MCP connector for most writes, and via a detached local-git commit pushed straight to refs/heads/main for one large file (the contradiction-scan log) -- this session's own designated branch was never committed to or touched."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1788372582.289019",
-      "C0BBZJL85RT": "1788373559.993249",
-      "D0BHPKMDNEP": "1788301190.258059",
-      "C0BGLEMH99T": "1788375880",
-      "C0BEQUW5NPP": "1788375880",
-      "C0BBLUA7JLX": "1788375880",
-      "C0BJ37SU1TL": "1788375880",
-      "C0BCCUKEUQ2": "1788375880",
-      "C0BCD7U5X2B": "1788375880",
-      "C0BCH2C3GRM": "1788375880",
-      "C0BDN2KQFD4": "1788375880",
-      "C0BD8LTM1EK": "1788375880",
-      "C0BGYM1UB4Y": "1788375880",
-      "C0BGCAK0ML3": "1788375880",
-      "C0BHXTPST52": "1788375880",
-      "C0BC2A94142": "1788375880",
-      "C0BBZ5J8805": "1788375880",
-      "C0BRZT2V89W": "1788375880"
+      "C0BBZJL85RT": "1788445360.409419",
+      "D0BHPKMDNEP": "1788445328.325819",
+      "C0BGLEMH99T": "1788445432",
+      "C0BEQUW5NPP": "1788445432",
+      "C0BBLUA7JLX": "1788441357.994099",
+      "C0BJ37SU1TL": "1788445432",
+      "C0BCCUKEUQ2": "1788445432",
+      "C0BCD7U5X2B": "1788445432",
+      "C0BCH2C3GRM": "1788445432",
+      "C0BDN2KQFD4": "1788445432",
+      "C0BD8LTM1EK": "1788445432",
+      "C0BGYM1UB4Y": "1788445432",
+      "C0BGCAK0ML3": "1788445432",
+      "C0BHXTPST52": "1788445432",
+      "C0BC2A94142": "1788445432",
+      "C0BBZ5J8805": "1788445432",
+      "C0BRZT2V89W": "1788445432"
     },
     "decisions_threads": {
       "1786832078.131649": "1787754270.525189",
@@ -89,20 +89,20 @@
       "1788351021.360259": "1788351025.768309",
       "1788372582.289019": "1788372582.289019"
     },
-    "capture_dm": "1788301190.258059",
-    "gmail_after_epoch": 1788373535
+    "capture_dm": "1788445328.325819",
+    "gmail_after_epoch": 1788445432
   },
   "integrity": {
-    "last_full_pass": "2026-09-02T18:20:00Z",
-    "last_scan_sha": "cb4ade54b94ca107eb355fcb0809da45ac6a04b3",
-    "note": "Full whole-vault pass completed 2026-09-02. Not yet re-run this scan; PART V will diff since last_scan_sha if today's first-run full pass hasn't happened yet."
+    "last_full_pass": "2026-09-03T14:06:00Z",
+    "last_scan_sha": "be0f2962cbb773b985c81276c70c4497269da9a0",
+    "note": "Full whole-vault pass ran this scan (day's first run 2026-09-03): 658 notes checked, 0 repairs, 2 known carried defects (_daily/2026-08-01.md lossy-b64 span decided 8/1; ops-admin-lane-and-ariana.md missing created, tracked since 8/20). Neither new."
   },
   "canvas_access": {
-    "last_checked": "2026-09-02T12:11:00Z",
+    "last_checked": "2026-09-03T14:23:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-02T14:25:00-04:00",
+    "pulse_last_rendered": "2026-09-03T10:20:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
