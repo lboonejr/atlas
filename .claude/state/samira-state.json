@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260903T170704Z",
-    "run_started": "2026-09-03T17:07:04Z",
+    "run_id": "run_20260903T180304Z",
+    "run_started": "2026-09-03T18:03:04Z",
     "run_completed": null,
-    "note": "57th scan, in progress. This run also caught PART 0's own execution transport mistake mid-flight: the local git working copy was checked out on a designated feature branch (claude/wizardly-cori-0nmbzw per this session's harness), and the initial lock-acquisition commit was pushed there via local git instead of to main via the GitHub MCP connector (per anchors.md's stated transport for cloud sessions, and the same resolution the 54th-scan session already logged in the reports-contradiction-scan-log note). Corrected by re-writing this lock straight to main via create_or_update_file. The stray commit db9c769 on claude/wizardly-cori-0nmbzw is harmless and can be ignored/cleaned up later; nothing durable was lost since this file is the only thing changed there so far."
+    "note": "58th scan. Prior lock (run_20260903T170704Z, started 17:07:04Z) had run_completed still null at this run's start and was 56 minutes old (>45 min threshold) — treated as a dead run per PART 0 and aged out. No cleanup of that prior run's partial work was attempted beyond this lock rewrite; proceeding fresh from the watermarks it left."
   },
   "watermarks": {
     "slack_channels": {
