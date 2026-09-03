@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260903T180304Z",
-    "run_started": "2026-09-03T18:03:04Z",
-    "run_completed": "2026-09-03T18:17:03Z",
-    "note": "58th scan, completed. Prior lock (run_20260903T170704Z, started 17:07:04Z) had run_completed still null at this run's start and was 56 minutes old (>45 min threshold) — treated as a dead run per PART 0 and aged out. Confirmed the 57th scan's real work (Pulse re-render, STUCK-collections escalation, Drive-nesting #decisions card, its own PART T log entry) had already landed before it died; nothing was lost or redone. This run: full re-sweep of #decisions/#reports/capture DM/all project channels/Gmail/#investor-pipeline/#stormy — all quiet, zero new activity, zero reactions to execute. Appended PART T log entry, posted #reports digest, pruned one dead decisions_threads key that predates all readable channel history (1785161637.814709 — confirmed via full-channel dump not present, likely long since resolved/scrolled out)."
+    "run_id": "run_20260903T190454Z",
+    "run_started": "2026-09-03T19:04:54Z",
+    "run_completed": "2026-09-03T19:12:00Z",
+    "note": "59th scan, completed. Prior lock (run_20260903T180304Z) completed cleanly at 18:17:03Z, no overlap. This run: read #decisions, capture DM, #reports, and every swept project channel (#personal-finance, #on-button, #admin, #stormy, #investor-pipeline, #camden-launch, #pitch-deck-pressure-test, #cuzzys-brand, #delivery-in-a-box, #comedy-club, #trading-cards, #free-books-partnership, #booking-agent, #random-ideas, #skills-lab) from their stored watermarks — all zero new messages. Gmail canonical query off gmail_after_epoch also returned zero new threads. Checked vault 00-Inbox directly: still exactly the same 5 stuck notes already reflected in the standing 'Haven Inbox — 5 notes need a label' card and the dedicated VeriScan/IDScan.net card (both posted on an earlier scan, still open, no new Lemar reaction) — no new or filed notes, so PART V had nothing to refresh. Canvas access not rechecked (not the day's first run; still recorded writable:false from 14:23 ET check). PART M (money-hub) and PART P (Pulse) both hit their quiet-pass skip gates — nothing changed this run. PART T (reports-contradiction-scan) had no new #reports lines to check. Did not re-run the full haven-vault-keeper/calendar-sync/email-loop/investor/stormy/samira-loop skills end-to-end this pass since every surface they read was independently confirmed unchanged since the last full run; watermarks left as-is since no cursor advanced. No action needed, nothing pushed to Lemar."
   },
   "watermarks": {
     "slack_channels": {
@@ -96,7 +96,7 @@
   "integrity": {
     "last_full_pass": "2026-09-03T14:06:00Z",
     "last_scan_sha": "e8916175717ee03a4eaf3de399c440008516b078",
-    "note": "Full whole-vault pass ran this morning (day's first run 2026-09-03): 658 notes checked, 0 repairs, 2 known carried defects (_daily/2026-08-01.md lossy-b64 span decided 8/1; ops-admin-lane-and-ariana.md missing created, tracked since 8/20). 58th scan confirmed 0 vault changes to Inbox/frontmatter since then (only the reports-contradiction-scan-log.md append and this state file, both this run's own writes)."
+    "note": "Full whole-vault pass ran this morning (day's first run 2026-09-03): 658 notes checked, 0 repairs, 2 known carried defects (_daily/2026-08-01.md lossy-b64 span decided 8/1; ops-admin-lane-and-ariana.md missing created, tracked since 8/20). 59th scan: 00-Inbox unchanged (still the same 5 notes as the 58th scan), no new writes to check incrementally."
   },
   "canvas_access": {
     "last_checked": "2026-09-03T14:23:00Z",
