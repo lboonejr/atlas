@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260903T180304Z",
     "run_started": "2026-09-03T18:03:04Z",
-    "run_completed": null,
-    "note": "58th scan. Prior lock (run_20260903T170704Z, started 17:07:04Z) had run_completed still null at this run's start and was 56 minutes old (>45 min threshold) — treated as a dead run per PART 0 and aged out. No cleanup of that prior run's partial work was attempted beyond this lock rewrite; proceeding fresh from the watermarks it left."
+    "run_completed": "2026-09-03T18:17:03Z",
+    "note": "58th scan, completed. Prior lock (run_20260903T170704Z, started 17:07:04Z) had run_completed still null at this run's start and was 56 minutes old (>45 min threshold) — treated as a dead run per PART 0 and aged out. Confirmed the 57th scan's real work (Pulse re-render, STUCK-collections escalation, Drive-nesting #decisions card, its own PART T log entry) had already landed before it died; nothing was lost or redone. This run: full re-sweep of #decisions/#reports/capture DM/all project channels/Gmail/#investor-pipeline/#stormy — all quiet, zero new activity, zero reactions to execute. Appended PART T log entry, posted #reports digest, pruned one dead decisions_threads key that predates all readable channel history (1785161637.814709 — confirmed via full-channel dump not present, likely long since resolved/scrolled out)."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1788372582.289019",
-      "C0BBZJL85RT": "1788451759.713659",
-      "D0BHPKMDNEP": "1788445328.325819",
+      "C0BBXA96FFV": "1788459423.085039",
+      "C0BBZJL85RT": "1788459423.085039",
+      "D0BHPKMDNEP": "1788456675.680889",
       "C0BGLEMH99T": "1788445432",
       "C0BEQUW5NPP": "1788445432",
       "C0BBLUA7JLX": "1788441357.994099",
@@ -70,7 +70,6 @@
       "1787756944.929189": "1787756952.106279",
       "1787756959.630349": "1787756959.630349",
       "1787833175.960449": "1787839939.371519",
-      "1785161637.814709": "1785164750.977449",
       "1787854465.146219": "1787854486.805629",
       "1787930008.624029": "1787930008.624029",
       "1787936776.561599": "1787936780.871709",
@@ -87,22 +86,24 @@
       "1788293471.299699": "1788293471.299699",
       "1788293473.160559": "1788300870.651279",
       "1788351021.360259": "1788351025.768309",
-      "1788372582.289019": "1788372582.289019"
+      "1788372582.289019": "1788372582.289019",
+      "1788456098.266619": "1788456098.266619",
+      "1788456271.151919": "1788456271.151919"
     },
-    "capture_dm": "1788445328.325819",
-    "gmail_after_epoch": 1788451745
+    "capture_dm": "1788456675.680889",
+    "gmail_after_epoch": 1788459403
   },
   "integrity": {
     "last_full_pass": "2026-09-03T14:06:00Z",
     "last_scan_sha": "e8916175717ee03a4eaf3de399c440008516b078",
-    "note": "Full whole-vault pass ran this morning (day's first run 2026-09-03): 658 notes checked, 0 repairs, 2 known carried defects (_daily/2026-08-01.md lossy-b64 span decided 8/1; ops-admin-lane-and-ariana.md missing created, tracked since 8/20). 57th scan confirmed 0 vault changes since then (only _daily/2026-09-03.md touched, append-only)."
+    "note": "Full whole-vault pass ran this morning (day's first run 2026-09-03): 658 notes checked, 0 repairs, 2 known carried defects (_daily/2026-08-01.md lossy-b64 span decided 8/1; ops-admin-lane-and-ariana.md missing created, tracked since 8/20). 58th scan confirmed 0 vault changes to Inbox/frontmatter since then (only the reports-contradiction-scan-log.md append and this state file, both this run's own writes)."
   },
   "canvas_access": {
     "last_checked": "2026-09-03T14:23:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-03T10:20:00-04:00",
+    "pulse_last_rendered": "2026-09-03T13:24:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
