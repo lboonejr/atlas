@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260903T160437Z",
-    "run_started": "2026-09-03T16:04:37Z",
-    "run_completed": "2026-09-03T16:10:15Z",
-    "note": "56th scan, third run of the day. Fully quiet scan across all parts (A/B/C/D/E/M/Q/R/T) — zero new activity on any Slack surface or Gmail since watermarks. PART R: p00-engagement-walkthrough PT card confirmed already CLOSED; both parked Camden Launch cards carry no new signal. Canvas skipped (blocked, not first run today). PART P quiet-pass skip (nothing qualified)."
+    "run_id": "run_20260903T170704Z",
+    "run_started": "2026-09-03T17:07:04Z",
+    "run_completed": null,
+    "note": "57th scan, in progress. This run also caught PART 0's own execution transport mistake mid-flight: the local git working copy was checked out on a designated feature branch (claude/wizardly-cori-0nmbzw per this session's harness), and the initial lock-acquisition commit was pushed there via local git instead of to main via the GitHub MCP connector (per anchors.md's stated transport for cloud sessions, and the same resolution the 54th-scan session already logged in the reports-contradiction-scan-log note). Corrected by re-writing this lock straight to main via create_or_update_file. The stray commit db9c769 on claude/wizardly-cori-0nmbzw is harmless and can be ignored/cleaned up later; nothing durable was lost since this file is the only thing changed there so far."
   },
   "watermarks": {
     "slack_channels": {
@@ -95,7 +95,7 @@
   "integrity": {
     "last_full_pass": "2026-09-03T14:06:00Z",
     "last_scan_sha": "e8916175717ee03a4eaf3de399c440008516b078",
-    "note": "Full whole-vault pass ran this morning (day's first run 2026-09-03): 658 notes checked, 0 repairs, 2 known carried defects (_daily/2026-08-01.md lossy-b64 span decided 8/1; ops-admin-lane-and-ariana.md missing created, tracked since 8/20). This run (56th scan) confirmed 0 vault changes since then (empty diff)."
+    "note": "Full whole-vault pass ran this morning (day's first run 2026-09-03): 658 notes checked, 0 repairs, 2 known carried defects (_daily/2026-08-01.md lossy-b64 span decided 8/1; ops-admin-lane-and-ariana.md missing created, tracked since 8/20). 57th scan confirmed 0 vault changes since then (only _daily/2026-09-03.md touched, append-only)."
   },
   "canvas_access": {
     "last_checked": "2026-09-03T14:23:00Z",
