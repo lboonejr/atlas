@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260904T190302Z",
-    "run_started": "2026-09-04T19:03:02Z",
+    "run_id": "run_20260904T200242Z",
+    "run_started": "2026-09-04T20:02:42Z",
     "run_completed": "2026-09-04T19:08:54Z",
-    "note": "66th scan, completed. Prior lock (run_20260904T170353Z, started 17:03:53Z) had died mid-flight but had already executed its one queued task (the #admin Desktop-audit prompt, ts 1788538379.451289 — haven-capture write + Pulse re-render, both confirmed via the bot's own ✅ and the resulting note already present in 00-Inbox) before dying without writing state; nothing was re-run. This scan filed that resulting note out of Inbox (domain automation, routine slug file-organizing) — the only Haven write this scan. #decisions, capture DM, and all 17 other swept project/loop channels: zero new since watermark. STUCK Curaleaf/Waste Management/Leafly collections card (ts 1788456271.151919) spot-checked directly: still zero reply from Lemar, FDCPA window still elapsed; not re-pushed to phone since nothing changed since the prior scan's escalation. 4 Camden Launch 🧪 PT cards found in #decisions history, none reacted/locked — PART R not exhaustively worked this pass (same scope note as recent scans). Gmail (inbox canonical query + Samira/investor label): zero new mail, junk 0. #personal-finance, #investor-pipeline, #stormy, #reports: zero new. Canvas not re-checked (still ⛔ blocked, not today's first run). Pulse skipped (quiet-pass gate — last rendered by the dead run at 12:17pm ET, nothing material changed since). Digest posted to #reports (ts 1788548858.251869) and appended to _daily/2026-09-04.md."
+    "note": "67th scan, in flight. Prior scan (run_20260904T190302Z) completed cleanly at 19:08:54Z."
   },
   "watermarks": {
     "slack_channels": {
