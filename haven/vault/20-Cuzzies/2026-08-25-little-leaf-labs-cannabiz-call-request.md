@@ -1,6 +1,6 @@
 ---
 created: 2026-08-25T08:06:41-04:00
-updated: 2026-08-26T11:05:00-04:00
+updated: 2026-09-04T17:44:55-04:00
 domain: cuzzies
 type: task
 status: active
@@ -78,3 +78,27 @@ drafted yet pending his direction on posture.
 - gmail: thread `1a03e89d3aa66ded` — "CannaBIZ Collects Overview and Submission
   Process", received 2026-08-26T14:46:50Z from cliff@cannabizcollects.com, attachment
   `CannaBIZ Collects Debt Settlement Agreement.pdf`
+
+## Update 2026-09-04 17:44 ET — escalation: formal demand letter, settlement offer still unanswered
+
+New thread "Document from CannaBIZ Collects" (Gmail thread `1a06e61c9633b1e2`), received
+2026-09-04 21:44:55Z from `mike@cannabizcollects.com` — back to Mike (not Cliff) — with a
+`CannaBIZ Collects Demand Letter.pdf` attachment. This is a materially different tone
+from the 8/26 settlement-agreement email: it is addressed to five Cuzzie's addresses at
+once (`admin@`, `info@`, `jenn@`, `joshua@`, `lemar@` — the widest distribution seen on
+this matter so far, not just Lemar directly) and reads as a formal demand ("seeks an
+immediate response... take prompt action to settle the debt within the specified
+timeframe to avoid further consequences"). The 8/26 debt settlement agreement (#decisions
+ts `1787756944.929189`) has sat unreacted for 9 days — this looks like the likely
+consequence of that silence, not a new/unrelated matter.
+
+Not opened/parsed (no PDF-read tool available this pass) — the letter's specific demand
+amount and deadline are UNCONFIRMED. Raised fresh in #decisions (red, tied to the still-open
+8/26 card) rather than folding silently into the old one, since the posture has changed
+from "review a proposal" to "a formal demand landed while it sat." Nothing sent, nothing
+signed, nothing paid.
+
+### Sources (this update)
+- gmail: thread `1a06e61c9633b1e2` — "Document from CannaBIZ Collects", received
+  2026-09-04T21:44:55Z from mike@cannabizcollects.com, attachment
+  `CannaBIZ Collects Demand Letter.pdf`; addressed to admin@/info@/jenn@/joshua@/lemar@cuzziesnj.com
