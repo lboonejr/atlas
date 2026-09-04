@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260904T220351Z",
     "run_started": "2026-09-04T22:03:51Z",
-    "run_completed": "2026-09-04T19:08:54Z",
-    "note": "69th scan, in flight. Prior lock (run_20260904T210411Z, 68th scan) aged out unclosed: run_started 21:04:11Z with no matching run_completed write, but it did land real work on main before dying -- commits 594c909 (vault-keeper repair, 21:05:55Z), 6734011 (PART D append, 21:09:54Z), and 2387efe (PART T clean scan, 21:11:08Z) -- then nothing further for ~52 minutes, past the 45-min aging window (now 22:03:51Z). Treating it as complete-but-unclosed rather than re-running its already-landed work; picking up fresh from PART A onward this scan. Flagging for the digest/journal -- this is the second run in a row to die after real work but before the final PART 0 write (67th scan did the same, see prior note), matching the recurring overlapping-trigger-fire pattern noted since 2026-07-29."
+    "run_completed": "2026-09-04T22:20:10Z",
+    "note": "69th scan complete. Recovered the 68th scan's lock (aged out unclosed, but its work had landed cleanly per its #reports digest ts 1788557038 -- reconstructed into the journal this run). This run's own finding: CannaBIZ Collects (Little Leaf Labs, $8,331) escalated from a friendly 8/26 settlement-agreement email to a formal demand letter today, sent to 5 Cuzzie's addresses at once -- appended to the Haven note, raised as a fresh #decisions card (ts 1788559936.495679), Pulse re-rendered and DM'd. Third scan in a row (66th, 67th, 68th) to finish real work but die before this closing write landed -- worth a direct look at why."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1788538202",
-      "C0BBZJL85RT": "1788548858.251869",
-      "D0BHPKMDNEP": "1788542266.517679",
-      "C0BGLEMH99T": "1788538202",
-      "C0BEQUW5NPP": "1788538202",
-      "C0BBLUA7JLX": "1788542266.517679",
-      "C0BJ37SU1TL": "1788538202",
-      "C0BCCUKEUQ2": "1788538202",
-      "C0BCD7U5X2B": "1788538202",
-      "C0BCH2C3GRM": "1788538202",
-      "C0BDN2KQFD4": "1788538202",
-      "C0BD8LTM1EK": "1788538202",
-      "C0BGYM1UB4Y": "1788538202",
-      "C0BGCAK0ML3": "1788538202",
-      "C0BHXTPST52": "1788538202",
-      "C0BC2A94142": "1788538202",
-      "C0BBZ5J8805": "1788538202",
-      "C0BRZT2V89W": "1788538202"
+      "C0BBXA96FFV": "1788559936.495679",
+      "C0BBZJL85RT": "1788560286.868919",
+      "D0BHPKMDNEP": "1788560241.666909",
+      "C0BGLEMH99T": "1788560266",
+      "C0BEQUW5NPP": "1788560266",
+      "C0BBLUA7JLX": "1788560266",
+      "C0BJ37SU1TL": "1788560266",
+      "C0BCCUKEUQ2": "1788560266",
+      "C0BCD7U5X2B": "1788560266",
+      "C0BCH2C3GRM": "1788560266",
+      "C0BDN2KQFD4": "1788560266",
+      "C0BD8LTM1EK": "1788560266",
+      "C0BGYM1UB4Y": "1788560266",
+      "C0BGCAK0ML3": "1788560266",
+      "C0BHXTPST52": "1788560266",
+      "C0BC2A94142": "1788560266",
+      "C0BBZ5J8805": "1788560266",
+      "C0BRZT2V89W": "1788560266"
     },
     "decisions_threads": {
       "1786832078.131649": "1787754270.525189",
@@ -88,22 +88,23 @@
       "1788351021.360259": "1788351025.768309",
       "1788372582.289019": "1788372582.289019",
       "1788456098.266619": "1788456102.003929",
-      "1788456271.151919": "1788456271.151919"
+      "1788456271.151919": "1788456271.151919",
+      "1788559936.495679": "1788559936.495679"
     },
-    "capture_dm": "1788542266.517679",
-    "gmail_after_epoch": 1788538202
+    "capture_dm": "1788560241.666909",
+    "gmail_after_epoch": 1788560266
   },
   "integrity": {
     "last_full_pass": "2026-09-04T12:07:00Z",
-    "last_scan_sha": "6403fe6a250f072cdd2ff3de27b4504ccd24e660",
-    "note": "Full whole-vault pass ran 2026-09-04 (day's first run): 663 notes checked, 0 repairs needed, same 2 known carried defects (_daily/2026-08-01.md lossy-b64 span decided 8/1; ops-admin-lane-and-ariana.md missing created, tracked since 8/20). Since then only incremental filing/journal/repair writes landed (no incremental integrity re-check needed yet)."
+    "last_scan_sha": "d7535e796bc766683db37701cac4f0dfc79102dc",
+    "note": "Full whole-vault pass ran 2026-09-04 (day's first run): 663 notes checked, 0 repairs needed, same 2 known carried defects (_daily/2026-08-01.md lossy-b64 span decided 8/1; ops-admin-lane-and-ariana.md missing created, tracked since 8/20). Since then only incremental filing/journal/repair/update writes landed (the 69th scan's own CannaBIZ note update and journal appends included) -- no incremental integrity re-check needed beyond confirming those files' frontmatter, which was done this scan."
   },
   "canvas_access": {
     "last_checked": "2026-09-04T12:07:00Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-04T12:17:00-04:00",
+    "pulse_last_rendered": "2026-09-04T17:52:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
