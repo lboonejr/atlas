@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-09-04T16:02:42-04:00
+updated: 2026-09-04T17:07:00-04:00
 domain: project
 type: log
 status: active
@@ -1710,3 +1710,37 @@ re-escalated since nothing changed from the prior scan's push.
 - gmail: `in:inbox after:1788538202 -label:Samira/seen` — 0 results
 - vault: `haven/vault/00-Inbox/` (5 notes confirmed stuck, PART V, unchanged)
 - vault: `.claude/state/samira-state.json` (run lock `run_20260904T200242Z`, "67th scan")
+
+## Update — 2026-09-04 (68th scan, run_20260904T210411Z)
+
+**#reports scanned:** ts range `1788548858.251869`–`1788552476.879189` (one new
+message — the 67th scan's own closing digest, 4:07pm ET). **Found: 0. Clean scan.**
+
+That digest reports `stuck 5 (unchanged)`, `pt: 4 Camden Launch cards carried at round
+1`, `money —`, `reports-scan: clean` — all consistent with this run's own PART V
+(00-Inbox: same 5 stuck notes, unchanged) and PART A sweep (61 tracked #decisions
+threads individually re-checked against stored watermarks this run — zero new replies
+or reactions anywhere, confirmed directly rather than inferred from channel top-level
+history alone). No conflicting figures, no unresolved self-corrections, no stale claims
+against any cited Haven note.
+
+**Also noted (process, not a #reports contradiction):** the 67th scan's own run lock
+never closed out in `.claude/state/samira-state.json` — `lock.run_started` for
+`run_20260904T200242Z` had no matching `run_completed` write, even though its actual
+work (this digest, the PART T log entry, the daily journal append) landed cleanly on
+`main`. This run's PART 0 found the lock aged past the 45-minute threshold and treated
+it as complete-but-unclosed rather than re-running the 67th scan's work — flagged here
+for the record, not a #reports contradiction (no conflicting figures were posted), and
+out of this scanner's scope to fix.
+
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (this update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788548858.251869`–`1788552476.879189`
+- this run's PART V vault-keeper sweep (00-Inbox: 5 notes stuck, unchanged; 1 integrity
+  repair — missing frontmatter opener, `2026-08-22-reports-contradiction-scan-log.md`
+  itself)
+- this run's PART A sweep (61 `decisions_threads` entries individually re-checked via
+  slack_read_thread — 0 with activity since their stored watermark, 4 skipped as 🧪 PT)
+- `.claude/state/samira-state.json` (run lock `run_20260904T210411Z`, "68th scan"; prior
+  lock `run_20260904T200242Z` aged out unclosed, see note above)
