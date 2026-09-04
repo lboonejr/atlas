@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-09-03T18:03:04Z
+updated: 2026-09-04T13:04:37-04:00
 domain: project
 type: log
 status: active
@@ -1660,3 +1660,30 @@ independently via this run's own PART V read of `00-Inbox/`.
 - vault: `haven/vault/00-Inbox/` (5 notes confirmed stuck, PART V, unchanged)
 - vault: `.claude/state/samira-state.json` (run lock `run_20260903T180304Z`, "58th scan";
   prior lock `run_20260903T170704Z` aged out, see note above)
+
+## Update — 2026-09-04 (66th scan, run_20260904T170353Z)
+
+**#reports scanned:** ts range `1788458890`–`1788541870` (2026-09-03 ~1:48pm ET through
+2026-09-04 ~1:04pm ET — covers scans 58 through 66, none of which had appended an Update
+to this log in the interim; digest tokens across that span consistently reported
+`reports-scan: clean`).
+
+**0 new contradictions.** Reviewed every #reports entry in range, including the
+recurring "Haven Keeper" (app `A08SF47R6P4`, posted as Lemar's own user id) lines
+reporting `stuck 0` against Samira's own vault-keeper consistently reporting `stuck 5` —
+this gap was already caught and logged as non-material in the 2026-09-04 08:09 ET digest
+(same root cause each time: Haven Keeper appears to scan a different/narrower target
+than the 5 known-stuck Inbox notes); re-confirmed unchanged, not re-escalated per the
+"escalate only what's new" rule. The "Waiting on you: N in #decisions" counts vary
+digest to digest (1/5/6/6+) because each digest surfaces a different subset (all open
+cards vs. only unreacted-since-last-check vs. only urgent) rather than reporting a
+shifting total — not a contradiction, just different framings of the same standing list.
+No conflicting dollar figures, no unresolved self-corrections, no stale claims against
+the vault found in range.
+
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (this update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788458890`–`1788541870`
+- vault: `haven/vault/00-Inbox/` (5 notes confirmed stuck this run, PART V)
+- vault: `.claude/state/samira-state.json` (run lock `run_20260904T170353Z`, "66th scan")
