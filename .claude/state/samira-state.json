@@ -1,15 +1,15 @@
 {
-  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
+  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded \u2014 fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
     "run_id": "run_20260905T160327Z",
     "run_started": "2026-09-05T16:03:27Z",
-    "run_completed": "2026-09-05T15:08:00Z",
-    "note": "73rd scan in progress."
+    "run_completed": "2026-09-05T16:12:00Z",
+    "note": "73rd scan complete. Fully quiet pass: 0 new decisions/reactions across all 62 open #decisions cards (bulk metadata compare against latest_reply + reactions), 0 new captures, 0 project-channel activity, 0 investor activity, stormy idle, both Camden Launch PT cards remain parked (no signal), 2 other PT cards already closed, no money drops, canvas re-check skipped (already checked today, still write-blocked), Pulse quiet-pass skip (no Doc, no DM). One vendor marketing email triaged as junk. PART T caught a 2nd recurrence of the Haven Keeper false-empty claim -- corrected in #reports, DM sent to Lemar. Vault writes this run: scan-log update + this daily entry."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1788614074.520929",
-      "C0BBZJL85RT": "1788620834.557539",
+      "C0BBZJL85RT": "1788624700.940759",
       "D0BHPKMDNEP": "1788614055.297529",
       "C0BGLEMH99T": 1788620818,
       "C0BEQUW5NPP": 1788620818,
@@ -93,12 +93,12 @@
       "1788613746.453729": "1788613746.453729"
     },
     "capture_dm": "1788614055.297529",
-    "gmail_after_epoch": 1788620818
+    "gmail_after_epoch": 1788621048
   },
   "integrity": {
     "last_full_pass": "2026-09-05T13:03:51Z",
-    "last_scan_sha": "6d2d4de5a65688b07036d9250586a8ea3b453b6c",
-    "note": "Full whole-vault pass ran 2026-09-05 (day's first run); this run is a same-day incremental pass per PART V cadence."
+    "last_scan_sha": "12b789aaf53797bd8ae673a93d7a030bae649532",
+    "note": "Incremental pass (73rd scan): 2 files changed since prior scan_sha, neither a mechanical defect. Full whole-vault pass already ran today (13:03:51Z, 70th scan)."
   },
   "canvas_access": {
     "last_checked": "2026-09-05T13:03:51Z",
