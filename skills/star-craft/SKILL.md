@@ -57,8 +57,8 @@ For each thread, scan the full message history (not just the starred message) an
 - **High-level tasks and things to remember → `shortlist` skill.**
   Anything that's the user's own to think about, decide, or keep in mind — not concretely delegate-able. Strategic follow-ups, decisions pending, people to circle back with, reminders, longer-horizon items. Invoke `shortlist` with a short description and a link/reference back to the thread.
 
-- **Financial commitments → `chase` skill.**
-  Any dollar amount the user has promised, agreed to, or referenced as expected (payments owed, payments due, transfers, reimbursements, recurring charges discussed, invoices acknowledged). Invoke `chase` with the amount, the counterparty, the date or window, and ask it to **verify** the commitment against current records and **update** if needed. Pass through whatever `chase` reports back so it can appear in the final report.
+- **Financial commitments → `chase-commitments` skill.**
+  Any dollar amount the user has promised, agreed to, or referenced as expected (payments owed, payments due, transfers, reimbursements, recurring charges discussed, invoices acknowledged). Invoke `chase-commitments` with the amount, the counterparty, the date or window, and ask it to **verify** the commitment against current records and **update** if needed. Pass through whatever `chase-commitments` reports back so it can appear in the final report.
 
 If a single item plausibly belongs in two buckets (e.g. "I'll wire $5k to the vendor next Tuesday" — both an action item and a financial commitment), route it to **both** skills. Do not try to deduplicate across skills; each one owns its own view.
 
@@ -80,7 +80,7 @@ After processing all threads, summarize for the user:
 
 - How many threads were scanned
 - For each: a one-line summary, what the starred message needed, what you did (drafted reply / flagged for user / skipped because no action needed), and what was routed where (admin tasks, shortlist items, chase verifications)
-- For any financial commitments sent to `chase`, surface what `chase` reported back — verified / updated / discrepancy found
+- For any financial commitments sent to `chase-commitments`, surface what `chase-commitments` reported back — verified / updated / discrepancy found
 - Anything you couldn't resolve and why, including failed handoffs
 
 ## Guardrails

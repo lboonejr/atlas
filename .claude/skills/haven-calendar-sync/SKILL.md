@@ -3,9 +3,10 @@ name: haven-calendar-sync
 description: >
   The vault's alarm clock — standing job #2 in Samira's hourly loop, run right after
   vault-keeper. Google Calendar is the only thing that fires timed alerts, so this skill
-  projects every Haven note that carries a `due` onto the reminder calendar as an event,
-  then writes the resulting `calendar_event_id` back into the note so it is never
-  double-booked. The calendar is a one-way RENDERING of the vault: the vault is truth,
+  projects every Haven note that carries a `due` onto the right calendar as an event —
+  routed per-note by `domain` (locked 2026-08-10): the reminder calendar by default, or
+  the Cuzzie's (Owners) business calendar for `cuzzies`/`station` domains — then writes
+  the resulting `calendar_event_id` back into the note so it is never double-booked. The calendar is a one-way RENDERING of the vault: the vault is truth,
   the calendar mirrors it. When a note's due changes, the event moves; when the note is
   done or archived, the event is cancelled. Use it on Samira's scan or on demand ("sync
   the calendar", "ring my due Haven notes"). It creates/updates/cancels reminder events

@@ -93,6 +93,7 @@ actual result + files/links · `source` and (if unambiguous) `domain` · for fai
 error + attempt number · for the digest: the run counts.
 
 ## Note on handoffs
-A fuller handoff record is still produced by **handoff-builder**, pointed at Haven: the
-handoff lands as a Haven note that this skill links; the two-line #reports ping still
-points at the note.
+The handoff record is the `## Update` section Atlas writes on the project's Haven note
+(via haven-capture, per the atlas SKILL.md Gear 2) — **handoff-builder is no longer used
+by Atlas** (its Monday flow retired with Monday mirroring, 2026-08-15). The two-line
+#reports ping still points at the note.
