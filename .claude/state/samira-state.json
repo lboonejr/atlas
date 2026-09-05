@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260905T190255Z",
     "run_started": "2026-09-05T19:02:55Z",
-    "run_completed": "2026-09-05T17:28:34Z",
-    "note": "75th scan in progress."
+    "run_completed": "2026-09-05T19:19:00Z",
+    "note": "75th scan complete. Not fully quiet: PART D2 turned up a new Adobe (Photoshop) PayPal payment-failure notice on Cuzzie's account ($36.77/mo) -- captured to Haven and raised in #decisions (payment-method fix is Lemar's call). PART T caught a 3rd recurrence of the 'Haven Keeper' false-empty-inbox claim (70th/73rd/75th scans) -- posted the usual obvious-fix correction to #reports, and since it's now recurred 3 times also escalated to #decisions asking what 'Haven Keeper' is and whether to disable it. PART V filed 1 note (desktop-cleanup handoff -> 70-Automation/file-organizing/), 5 known/unchanged stuck Inbox notes, integrity incremental pass clean (2 vault files changed since last scan_sha, both valid). PART H flagged the reports-contradiction-scanner's ~1900-line log note to #skills-lab for rotation -- this run's finding was recorded in #reports/#decisions/_daily instead of appending to that oversized note. PART A/B/E/M/Q/R/S all quiet (0 new signals/drops/contradictions/replies across the 30 most recently active tracked #decisions threads). Canvas re-check skipped (already checked today, still write-blocked). Pulse rendered (gate met on the new #decisions cards + Haven notes) and DMed to Lemar."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1788614074.520929",
-      "C0BBZJL85RT": "1788624700.940759",
-      "D0BHPKMDNEP": "1788624631.282219",
-      "C0BGLEMH99T": 1788627790,
-      "C0BEQUW5NPP": 1788628505,
-      "C0BBLUA7JLX": 1788628505,
+      "C0BBXA96FFV": "1788635416.951679",
+      "C0BBZJL85RT": "1788635867.401979",
+      "D0BHPKMDNEP": "1788635792.795399",
+      "C0BGLEMH99T": 1788635845,
+      "C0BEQUW5NPP": 1788635845,
+      "C0BBLUA7JLX": 1788635845,
       "C0BJ37SU1TL": "1788628235.420089",
-      "C0BCCUKEUQ2": 1788627790,
-      "C0BCD7U5X2B": 1788628505,
-      "C0BCH2C3GRM": 1788628505,
-      "C0BDN2KQFD4": 1788628505,
-      "C0BD8LTM1EK": 1788628505,
-      "C0BGYM1UB4Y": 1788628505,
-      "C0BGCAK0ML3": 1788628505,
-      "C0BHXTPST52": 1788628505,
-      "C0BC2A94142": 1788628505,
-      "C0BBZ5J8805": 1788628505,
-      "C0BRZT2V89W": 1788628505
+      "C0BCCUKEUQ2": 1788635845,
+      "C0BCD7U5X2B": 1788635845,
+      "C0BCH2C3GRM": 1788635845,
+      "C0BDN2KQFD4": 1788635845,
+      "C0BD8LTM1EK": 1788635845,
+      "C0BGYM1UB4Y": 1788635845,
+      "C0BGCAK0ML3": 1788635845,
+      "C0BHXTPST52": 1788635845,
+      "C0BC2A94142": 1788635845,
+      "C0BBZ5J8805": "1788635812.278939",
+      "C0BRZT2V89W": 1788635845
     },
     "decisions_threads": {
       "1786832078.131649": "1787754270.525189",
@@ -90,22 +90,24 @@
       "1788456098.266619": "1788456102.003929",
       "1788456271.151919": "1788456271.151919",
       "1788559936.495679": "1788559936.495679",
-      "1788613746.453729": "1788613746.453729"
+      "1788613746.453729": "1788613746.453729",
+      "1788635325.842539": "1788635325.842539",
+      "1788635412.011499": "1788635416.951679"
     },
-    "capture_dm": "1788624631.282219",
-    "gmail_after_epoch": 1788625210
+    "capture_dm": "1788629225.244119",
+    "gmail_after_epoch": 1788629261
   },
   "integrity": {
     "last_full_pass": "2026-09-05T13:03:51Z",
-    "last_scan_sha": "5d5a37d28d82eca44794da4222bf285f2f32ed33",
-    "note": "Incremental pass (74th scan): 0 vault files changed since prior scan_sha -- clean. Full whole-vault pass already ran today (13:03:51Z, 70th scan)."
+    "last_scan_sha": "1021aa08c09a63f55abf7afc72ca5ab3583214d0",
+    "note": "Incremental pass (75th scan): 2 vault files changed since prior scan_sha (5d5a37d28d82eca44794da4222bf285f2f32ed33) -- the desktop-cleanup handoff capture (moved to 70-Automation/file-organizing/ this run) and the Adobe payment-failure capture (new, still in 00-Inbox) -- both valid, no mechanical defects. Full whole-vault pass already ran today (13:03:51Z, 70th scan)."
   },
   "canvas_access": {
     "last_checked": "2026-09-05T13:03:51Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-05T13:20:00-04:00",
+    "pulse_last_rendered": "2026-09-05T15:16:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
