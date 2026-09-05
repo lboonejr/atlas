@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260905T150247Z",
     "run_started": "2026-09-05T15:02:47Z",
-    "run_completed": "2026-09-05T14:15:11Z",
-    "note": "72nd scan in progress."
+    "run_completed": "2026-09-05T15:08:00Z",
+    "note": "72nd scan complete. Fully quiet pass: 0 new decisions/reactions across all 62 open #decisions cards (individual reaction check on every card), 0 new captures, 0 project-channel activity, 0 new mail, 0 investor activity, stormy idle, both Camden Launch PT cards carried (no signal), no money drops, reports-scan clean, canvas re-check skipped (already checked today, still write-blocked), Pulse quiet-pass skip (no Doc, no DM). Only vault writes this run: this daily entry + the #reports digest."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1788614074.520929",
-      "C0BBZJL85RT": "1788617694.225929",
+      "C0BBZJL85RT": "1788620834.557539",
       "D0BHPKMDNEP": "1788614055.297529",
-      "C0BGLEMH99T": 1788613555,
-      "C0BEQUW5NPP": 1788613555,
-      "C0BBLUA7JLX": 1788613555,
-      "C0BJ37SU1TL": 1788613555,
-      "C0BCCUKEUQ2": 1788613555,
-      "C0BCD7U5X2B": 1788613555,
-      "C0BCH2C3GRM": 1788613555,
-      "C0BDN2KQFD4": 1788613555,
-      "C0BD8LTM1EK": 1788613555,
-      "C0BGYM1UB4Y": 1788613555,
-      "C0BGCAK0ML3": 1788613555,
-      "C0BHXTPST52": 1788613555,
-      "C0BC2A94142": 1788613555,
-      "C0BBZ5J8805": 1788613555,
-      "C0BRZT2V89W": 1788613555
+      "C0BGLEMH99T": 1788620818,
+      "C0BEQUW5NPP": 1788620818,
+      "C0BBLUA7JLX": 1788620818,
+      "C0BJ37SU1TL": 1788620818,
+      "C0BCCUKEUQ2": 1788620818,
+      "C0BCD7U5X2B": 1788620818,
+      "C0BCH2C3GRM": 1788620818,
+      "C0BDN2KQFD4": 1788620818,
+      "C0BD8LTM1EK": 1788620818,
+      "C0BGYM1UB4Y": 1788620818,
+      "C0BGCAK0ML3": 1788620818,
+      "C0BHXTPST52": 1788620818,
+      "C0BC2A94142": 1788620818,
+      "C0BBZ5J8805": 1788620818,
+      "C0BRZT2V89W": 1788620818
     },
     "decisions_threads": {
       "1786832078.131649": "1787754270.525189",
@@ -93,7 +93,7 @@
       "1788613746.453729": "1788613746.453729"
     },
     "capture_dm": "1788614055.297529",
-    "gmail_after_epoch": 1788617729
+    "gmail_after_epoch": 1788620818
   },
   "integrity": {
     "last_full_pass": "2026-09-05T13:03:51Z",
