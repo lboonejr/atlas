@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260905T200256Z",
     "run_started": "2026-09-05T20:02:56Z",
-    "run_completed": "2026-09-05T19:19:00Z",
-    "note": "76th scan in flight."
+    "run_completed": "2026-09-05T20:08:00Z",
+    "note": "76th scan complete. Fully quiet pass. Reaction/reply-checked the 10 most recently active #decisions threads (no drift), swept every project channel + capture DM + #reports since their watermarks (all empty), Gmail D2 query and Samira/investor label search both empty. Vault Inbox unchanged (5 known stuck notes, no new arrivals). Integrity incremental: only this run's own trusted _daily digest-append commit touched haven/vault/ since the last scan_sha -- no defects. No due-note drift found, no calendar writes. Canvas re-check skipped (already checked today, still write-blocked). Pulse quiet-pass skip (nothing changed this run)."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1788635416.951679",
-      "C0BBZJL85RT": "1788635867.401979",
+      "C0BBZJL85RT": "1788638806.792809",
       "D0BHPKMDNEP": "1788635792.795399",
-      "C0BGLEMH99T": 1788635845,
-      "C0BEQUW5NPP": 1788635845,
-      "C0BBLUA7JLX": 1788635845,
+      "C0BGLEMH99T": 1788638945,
+      "C0BEQUW5NPP": 1788638945,
+      "C0BBLUA7JLX": 1788638945,
       "C0BJ37SU1TL": "1788628235.420089",
-      "C0BCCUKEUQ2": 1788635845,
-      "C0BCD7U5X2B": 1788635845,
-      "C0BCH2C3GRM": 1788635845,
-      "C0BDN2KQFD4": 1788635845,
-      "C0BD8LTM1EK": 1788635845,
-      "C0BGYM1UB4Y": 1788635845,
-      "C0BGCAK0ML3": 1788635845,
-      "C0BHXTPST52": 1788635845,
-      "C0BC2A94142": 1788635845,
+      "C0BCCUKEUQ2": 1788638945,
+      "C0BCD7U5X2B": 1788638945,
+      "C0BCH2C3GRM": 1788638945,
+      "C0BDN2KQFD4": 1788638945,
+      "C0BD8LTM1EK": 1788638945,
+      "C0BGYM1UB4Y": 1788638945,
+      "C0BGCAK0ML3": 1788638945,
+      "C0BHXTPST52": 1788638945,
+      "C0BC2A94142": 1788638945,
       "C0BBZ5J8805": "1788635812.278939",
-      "C0BRZT2V89W": 1788635845
+      "C0BRZT2V89W": 1788638945
     },
     "decisions_threads": {
       "1786832078.131649": "1787754270.525189",
@@ -94,13 +94,13 @@
       "1788635325.842539": "1788635325.842539",
       "1788635412.011499": "1788635416.951679"
     },
-    "capture_dm": "1788629225.244119",
-    "gmail_after_epoch": 1788629261
+    "capture_dm": "1788635792.795399",
+    "gmail_after_epoch": 1788638945
   },
   "integrity": {
     "last_full_pass": "2026-09-05T13:03:51Z",
-    "last_scan_sha": "1021aa08c09a63f55abf7afc72ca5ab3583214d0",
-    "note": "Incremental pass (75th scan): 2 vault files changed since prior scan_sha (5d5a37d28d82eca44794da4222bf285f2f32ed33) -- the desktop-cleanup handoff capture (moved to 70-Automation/file-organizing/ this run) and the Adobe payment-failure capture (new, still in 00-Inbox) -- both valid, no mechanical defects. Full whole-vault pass already ran today (13:03:51Z, 70th scan)."
+    "last_scan_sha": "a9dbafd3dbb86641c7a4c1ee640feac6099044a1",
+    "note": "76th scan incremental: 1 vault file changed since prior scan_sha (1021aa08c09a63f55abf7afc72ca5ab3583214d0) -- this run's own _daily/2026-09-05.md digest append (trusted, append-only, valid). Full whole-vault pass already ran today (13:03:51Z, 70th scan)."
   },
   "canvas_access": {
     "last_checked": "2026-09-05T13:03:51Z",
