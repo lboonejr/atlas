@@ -1,6 +1,6 @@
 ---
 created: 2026-09-02T04:55:01-04:00
-updated: 2026-09-04T16:49:51-04:00
+updated: 2026-09-05T12:20:00-04:00
 domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation (ID-scanning vendor used for compliance/age verification — could touch Cuzzie's, Station, or both; not stated which account(s) this notice covers)
 type: task
 status: awaiting-decision
@@ -67,8 +67,22 @@ settings requires someone with actual VeriScan account access; flagging as time-
 sensitive security recommendations for Lemar/whoever holds that access, not something
 draftable or safe to act on unattended.
 
+## Update 2026-09-05 12:20pm ET
+
+Another notice landed today (gmail thread `1a0725ecf496eeda`, same subject line as the
+9/4 update, from `hello@idscan.net` to `admin@cuzziesnj.com`) — content is essentially
+identical to the 2026-09-04 update above (same 4/18/2026-9/1/2026 exposure window, same
+"no customer PII/biometric/location data" claim, same four recommendations: rotate
+VeriScan device passwords, change cloud portal logins, review roles/permissions, review
+data retention). Reads as a resend/duplicate under a new thread id, not new information.
+Not reply-worthy (no-reply vendor notice). No new action taken — the open #decisions
+card (ts `1788351021.360259`, "VeriScan (IDScan.net) — potential security incident")
+and this note's `awaiting-decision` status already cover it; domain stays UNRESOLVED.
+
 ## Sources
 - gmail: thread `1a05f9cd34527932` ("Important security information for VeriScan
   users", hello@idscan.net, 2026-09-02 04:55 ET)
 - gmail: thread `1a06e2f5866b0cc9` ("Update specific to Cuzzie's Dispensary & Delivery
   regarding the 9/1 security incident", hello@idscan.net, 2026-09-04 20:49 UTC / 4:49pm ET)
+- gmail: thread `1a0725ecf496eeda` (same subject, resend/duplicate, hello@idscan.net,
+  2026-09-05 16:20 UTC / 12:20pm ET)
