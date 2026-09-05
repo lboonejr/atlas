@@ -109,8 +109,8 @@ reaction is LEMAR'S: ✅ choose/execute · 👀 seen · ⛔ park · 🫡 close; 
 🔴/🟡/🟢/⏳ are set by the poster for scanning.
 
 ### Slack message rules
-- Start every message with 🌐. Link the Haven note path (and the board item URL during
-  the gate window) whenever information moves between platforms.
+- Start every message with 🌐. Link the Haven note path whenever information moves
+  between platforms.
 - Fence every embedded prompt so it runs as-is:
   ```
   ===ATLAS PROMPT START | task:[project-id] | run:admin-3x===

@@ -41,7 +41,7 @@ Whenever you log a send or schedule a test drive, call **haven-capture** for ONE
   is Lemar's personal hunt; it is not a guess). `area: money` if obvious, else omit.
 - `tags`: `[samira, car-search, <make-model>]`.
 - Body: which listing, what was sent or scheduled, current pipeline status, the date.
-  Listing URL + board item link in `## Sources`. Date-led filename.
+  Listing URL in `## Sources`. Date-led filename.
 haven-capture appends an `## Update` to the car's existing receipt note when one is
 active (schema §7) — one car, one thread-note. Return the receipt count.
 
