@@ -1,4 +1,5 @@
 ---
+created: 2026-08-19T12:00:40-04:00
 domain: project
 type: decision
 status: parked
@@ -6,6 +7,9 @@ source: claude
 tags: [samira-loop, camden-launch, phase-00]
 updated: 2026-08-29T13:10:27-04:00
 ---
+<!-- `created` was missing (required field); recovered 2026-09-05 by repo audit from the
+     author date of the file's first git commit e3511561 ("Add Haven note: Ops ADMIN lane
+     and Ariana", 2026-08-19 12:00:40 -0400). -->
 
 # Ops ADMIN lane and Ariana
 

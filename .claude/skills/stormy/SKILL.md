@@ -62,8 +62,8 @@ a run, never keep a local copy. Constants for this skill:
   `haven/vault/_system/schema.md`. Stormy projects file to `40-Projects/<project>/`.
 - **All vault writes go through the `haven-capture` skill.** You never hand-write a note or
   its frontmatter. If haven-capture cannot commit on this surface, STOP and say so.
-- Registry: Atlas Skills & Accounts Registry board `18419004984` (skills roster). The old
-  Claude System Reference board `18411355989` is RETIRED — never read it.
+- Skills roster: `.claude/skills/` in this repo. (Monday boards retired 2026-08-15 —
+  the old registry and reference boards are read-only history; never read them.)
 
 ---
 
@@ -129,8 +129,8 @@ If Yes, scoped pull only, not the whole world:
 - **The vault** — search `40-Projects/` and the Inbox for a related or duplicate project.
   Surface anything similar that has been baked, shipped, parked, or killed before. This is
   the highest-value pull; a killed project from four months ago is worth more than any board.
-- **The skills roster** — registry board `18419004984`, and `.claude/skills/` in this repo,
-  so Phase 4 knows what already exists before speccing something new.
+- **The skills roster** — `.claude/skills/` in this repo, so Phase 4 knows what already
+  exists before speccing something new.
 - **His own systems** — `70-Automation/` and the routines in `.claude/routines/`, so you know
   what already runs before he builds something that overlaps it. The store domains
   (`20-Cuzzies/`, `30-Station/`) only if the idea actually reaches into a business.

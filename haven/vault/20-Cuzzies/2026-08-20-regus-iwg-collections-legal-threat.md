@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T10:15-04:00
-updated: 2026-08-23T10:30:00-04:00
+updated: 2026-09-05T00:00-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -223,3 +223,8 @@ by this note's `calendar_event_id` (which already pointed at the newer
   (7/22) — earlier collection notices on the same account
 - haven: `_daily/brief-2026-08-19.md` (where the 8/23 deadline was first written down)
 - slack: #decisions ts `1787235032.481949`
+
+## Update 2026-09-05 — prior history linked (repo audit)
+Earlier history of this same matter (the 7/31 original notice through the 8/18
+itemization) lives in [[2026-07-31-regus-iwg-past-due-collections]], now closed as
+`done` per schema §7 (one matter, one note). This note remains the operative record.

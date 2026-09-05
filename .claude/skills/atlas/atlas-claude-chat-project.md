@@ -1,3 +1,14 @@
+> **⚠️ DEPRECATED — STALE SNAPSHOT (as of 2026-09-05). Do NOT paste this into a live
+> claude.ai Project.** This file is an old copy of the Atlas instructions and no longer
+> matches doctrine. If a claude.ai Skill/Project copy is needed, regenerate it from the
+> current `SKILL.md` in this directory. It is specifically WRONG about:
+> - the branch/PR workflow (superseded);
+> - **#atlas as the capture inbox** — retired 2026-07-16; captures go to the Samira
+>   capture DM (`D0BHPKMDNEP`);
+> - **the Monday mirror / cutover** — Monday mirroring retired 2026-08-15; the Haven
+>   note is the record;
+> - **PART F (car-search loop)** — retired 2026-07-21.
+
 # Atlas — Claude.ai version (Skill or Project; phone / web, no computer needed)
 
 One self-contained brain that captures, develops, AND executes — Shortlist folded into Atlas.

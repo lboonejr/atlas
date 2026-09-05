@@ -29,7 +29,7 @@ executes.** This loop is the right-now lane — same-day pressure test, then a r
 An item that turns out to have no date on it gets handed to #stormy and dropped here.
 
 ## Where it sits
-Run order: `… → D → E → Q → **R** → H → M → canvas → P → digest`. It runs after Stormy so
+Run order: `… → D → E → Q → **R** → H → M → T → canvas → P → digest`. It runs after Stormy so
 an idea misfiled into the wrong lane can be moved in the same pass, and before PART M so a
 money-shaped outcome still reaches the ledger this run.
 

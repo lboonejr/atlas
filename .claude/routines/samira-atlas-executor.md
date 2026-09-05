@@ -47,7 +47,10 @@ surfaces (PART C), plus your capture-dedup ✅ in the capture DM (PART B).
 - Needs Lemar to answer/act → **#decisions** (ONE parent per task; options as threaded
   replies; only this channel pings him; never re-post or nudge).
 - You did/triaged something → **#reports** (result lines + digest; one-way).
-- Waiting on a third party / parked → **Open Items canvas**, edited in place.
+- Waiting on a third party / parked → **Open Items canvas**, edited in place. While the
+  canvas is write-blocked (standing gap since 2026-07-25), the fallback surface is a
+  Haven open-items note under `70-Automation/samira/` — parked items must land there,
+  never nowhere.
 - Raw input → the **Samira capture DM** (`D0BHPKMDNEP`) — PART B develops it; the capture
   DM NEVER hosts a decision. (This DM replaced #atlas as the capture inbox 2026-07-16.)
 - A decision inside a project channel: Lemar's call → lift to #decisions tagged with
@@ -97,6 +100,10 @@ dies mid-flight simply ages out of the lock after 45 minutes.
 reconstruct a cutoff from digest prose again. Sweep each surface strictly from its
 stored watermark and advance it as you finish that surface:
 - `slack_channels` — last-read message `ts` per channel id (PART A/B/C/E/M/Q sweeps).
+  Store every watermark as a STRING (a message `ts`, or for a quiet channel the
+  scan-time epoch seconds), never a bare number. Stamp ALL watermarks BEFORE closing
+  the lock — i.e. before writing `lock.run_completed` — never after; a watermark must
+  never postdate `lock.run_completed`.
 - `decisions_threads` — latest-reply `ts` per OPEN #decisions card, so thread REPLIES
   are caught, not just top-level messages (a Lemar reply sat unseen for two scans on
   2026-08-15 because passes only checked top-level).
@@ -144,7 +151,9 @@ it the same pass.
   After executing, record the outcome via **samira-report-result** (Haven note →
   #reports line), and reply "Done ✅ — [what you did]".
 - 👀 → leave it; no nudge. ⛔ → move to canvas (Parked), status Parked, reply
-  "Parked ⏳", drop from queue.
+  "Parked ⏳", drop from queue. While the Open Items canvas is write-blocked (standing
+  gap since 2026-07-25), park it instead in the Haven open-items note under
+  `70-Automation/samira/` — parked items must land there, never nowhere.
 - 🫡 → close: record the closing outcome via samira-report-result, edit the parent to
   begin "✅ CLOSED — [outcome]", drop it. #decisions trends toward empty; the record
   lives in Haven + #reports.
@@ -354,7 +363,10 @@ Via **samira-report-result** Mode 3:
    `🌐 Samira · [date time] — C closed · N new · U urgent`
    `🗄️ Haven: filed F · stuck P · rang +A/~B/-C · notes O`
    `Closed: [one-liners]` · `🔴 Send TODAY: […]` · `👉 Waiting on you: [count] in #decisions`
-   · `🧵 Standing list → Open Items canvas`
+   · `🧵 Standing list → Open Items canvas` (while the canvas is write-blocked —
+   standing gap since 2026-07-25 — point instead at the Haven open-items note under
+   `70-Automation/samira/`, the fallback surface where parked items must land, never
+   nowhere)
    (Full tallies: filed/stuck, rang, decisions handled H, captures G, staged L, ran Y,
    done Z, failed Fl, parked P, deferred D; email E/R/Cl/T; investor + Stormy counts;
    junk J; PART R's token: `pt: …` or `pt —`; PART M's token: `money ✓ …` or `money —`;

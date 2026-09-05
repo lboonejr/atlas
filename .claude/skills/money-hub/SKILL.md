@@ -455,7 +455,7 @@ the ledger or the log:
 6. **This week** — the latest run's numbers: income logged vs. what the next 7 days
    need. No run yet this week → "say 'run my week'".
 7. **Goals** — target, saved, target date, and the weekly number it implies. A goal with
-   no target date is listed under section 4, not here.
+   no target date is listed under section 5, not here.
 8. **Open questions** — the ledger's `open_questions`, verbatim.
 
 ## PART M (inside Samira's scan)

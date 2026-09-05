@@ -11,11 +11,12 @@ working system on new tools in about a day, using only this repo.
 |---|---|---|
 | Truth + records | `haven/vault/` (Markdown + YAML, this repo) | Self-describing: `_system/schema.md` is the complete rulebook |
 | Behavior | `.claude/skills/*/SKILL.md` + `.claude/routines/samira-atlas-executor.md` | Plain-English procedures — they are prompts, readable by any model |
-| Platform IDs | `.claude/anchors.md` — the ONLY place IDs live | One file to re-point |
+| Platform IDs | `.claude/anchors.md` — the canonical place; some skills carry cached copies (on-button-plan canvas F0BEN1167GB and githack URL; money-hub, morning-brief, reports-contradiction-scanner channel/canvas IDs) | One file to re-point (plus those cached copies) |
 | Scheduling | claude.ai RemoteTrigger (hourly 8a–6p ET) | Replaceable by any scheduler (see below) |
 | Decision surface | Slack #decisions, reactions | An abstract 4-signal protocol (see below) |
 | Alarms | Google Calendar (one-way projection) | Rebuilt from notes' `due` fields at any time |
 | Binary files | Google Drive folders | Linked from notes' `## Sources`; IDs in anchors.md |
+| Dashboards/briefs | Pulse, morning-brief, meeting-prep, and money-hub renderings are timestamped Google Doc snapshots in Drive (since 2026-08-13) | Re-renderable from the vault at any time |
 
 ## The loop, platform-neutral (what any replacement must do hourly)
 
@@ -64,7 +65,7 @@ human's signals.
   equivalent seen/drafted/sent state store). The system NEVER needs send scope.
 - **Google Calendar → any calendar**: needs create/update/delete events + an id the
   vault can store in `calendar_event_id`.
-- **Monday**: being retired 2026-07-11 — nothing to port.
+- **Monday**: retired 2026-08-15 (gate closed; boards are read-only history).
 - **GitHub → any git host**: `git remote set-url`. The vault is the repo; nothing else
   moves. If git itself must go, the vault is just files — any synced folder works, at
   the cost of history.

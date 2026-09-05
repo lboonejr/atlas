@@ -63,12 +63,12 @@ supersedes ALL other style guidance, including guides bundled inside skills.
 | #decisions | `C0BBXA96FFV` | THE decision surface — only channel that pings Lemar (renamed #action-items, same ID) |
 | #reports | `C0BBZJL85RT` | Silent one-way result log; never swept for prompts |
 | Samira capture DM (Lemar) | `D0BHPKMDNEP` | **Atlas capture inbox since 2026-07-16** — Lemar↔Samira bot IM. Lemar drops brain-dumps here; Samira sweeps them in PART B (im:write/im:history/reactions all confirmed via smoke test 2026-07-16) and reacts ✅ for her sweep-dedup. Replaced #atlas. Excepted from PART C (capture surface, not a prompt source) |
-| #atlas (RETIRED) | `C0BBWHCJUV9` | Former raw capture inbox — **retired 2026-07-16**, replaced by the Samira capture DM (above). Being archived; during the transition Samira still glances here in PART B for stray top-level captures, but never posts here |
+| #atlas (RETIRED) | `C0BBWHCJUV9` | Former raw capture inbox — **retired 2026-07-16**, replaced by the Samira capture DM (above). Being archived; never swept, never posted to (the transition-period PART B glance was removed from the runbook 2026-08-15) |
 | #admin | `C0BBLUA7JLX` | Staged run:admin-3x prompts |
 | Dawn DM (Lemar) | `D0BJ0JPQD8C` | **Dawn's output surface since 2026-07-16** — the Dawn bot's direct message with Lemar (`U0BC5UTHYG4`). The bot posts by sending to Lemar's user id, which auto-opens this IM (bot has `im:write`). Dawn's ONLY Slack surface; Samira never posts here. Replaced #daily-brief |
 | #stormy | `C0BJ37SU1TL` | **Stormy's ONLY surface — a PRIVATE channel** (created 2026-07-17). Lemar drops raw no-deadline ideas here; Samira's bot bakes each through the adaptive pressure test in **PART Q**, posting signed `🌩️ … — Stormy` (shared bot, own persona line — the Basil pattern). **Excluded from the PART C prompt-sweep.** It is a channel, not a DM, because a shared bot can hold only one DM per user (that's the Samira capture DM). Samira bot confirmed in-channel 2026-07-17 (members: Lemar `U0BC5UTHYG4` + bot `U0BJQ771LJU`); keep it invited (`/invite @Samira`). See "Idea-baking loop — Stormy" below |
 | #daily-brief (RETIRED) | `C0BF73FF56H` | Dawn's former once-a-day surface — **retired 2026-07-16**, Dawn now DMs Lemar (see "Dawn DM" above). Being archived; read-only record, never posted to |
-| #car-search | `C0BEC2RFC00` | Car loop (samira-car-search); never swept in PART C |
+| #car-search | `C0BEC2RFC00` | Car loop (samira-car-search) **(LOOP RETIRED 2026-07-21 — on-demand only)**; never swept in PART C |
 | #investor-pipeline | `C0BCCUKEUQ2` | Investor loop (samira-investor) |
 | #camden-launch | `C0BRZT2V89W` | **PRIVATE** — the Camden Dispensary Launch engagement's project channel (created 2026-08-18). Work surface only: staged `run:admin-3x` prompts, artifacts, and outcomes loop back here. The engagement's QUESTIONS still live in #decisions (titled "Camden Launch"), same as every other project channel — see the overlay `.claude/projects/camden-dispensary-launch-project-instructions.md`. Samira's bot confirmed in-channel 2026-08-19 (members: Lemar `U0BC5UTHYG4` + bot `U0BJQ771LJU`); keep it invited. Swept in PART C going forward. |
 | #skills-lab | `C0BBZ5J8805` | Skill-candidate proposals |
@@ -106,18 +106,19 @@ live tooling, not part of the retired mirror.)
 
 ## Gmail labels (use IDs, never display names)
 
-**2026-08-31 correction:** the table below was wrong — the connected Gmail account had
-no `Samira`/`Samira/seen`/`Samira/drafted`/`Samira/sent`/`Samira/investor` labels at all
-(its `Label_1` is a pre-existing, unrelated label named "Sweep/Review", not "Samira").
-Created the five missing labels this run via `create_label` (real Gmail-assigned IDs
-below, which do NOT match the old short placeholder-style IDs this table used to show).
-`Car-Hunt`/`Car-Hunt/seen` also don't exist in the account — left uncreated since the
-car-search loop (PART F) is retired and nothing needs them. `Samira/investor-sent` also
-doesn't exist — create on demand if/when the investor loop needs to mark a sent outreach.
-Two labels are in live use in this account that were never recorded here — **"Action
-Needed"** (`Label_374039230306167562`, 71 msgs) and **"Finance Bills"**
-(`Label_4897882779882705846`, 16 msgs) — origin unknown (not applied by any part of this
-routine); do not assume ownership or repurpose them without asking Lemar.
+**2026-08-31 note (amended 2026-09-05):** `Label_1` is a pre-existing label of Lemar's
+own named "Sweep/Review" (8 threads) — it is NOT "Samira" and is a genuine protective
+filing label. The Samira automation labels exist with the short IDs the table shows —
+`Samira` = `Label_2` through `Samira/investor` = `Label_6` — **verified live 2026-09-05**
+via the Gmail API (the 2026-08-31 claim that these short IDs were stale placeholders was
+wrong; the table is correct). `Car-Hunt`/`Car-Hunt/seen` were never created — left
+uncreated since the car-search loop (PART F) is retired and nothing needs them.
+`Samira/investor-sent` also doesn't exist — create on demand if/when the investor loop
+needs to mark a sent outreach. Two labels are in live use in this account that were
+never recorded here before — **"Action Needed"** (`Label_374039230306167562`, 71 msgs)
+and **"Finance Bills"** (`Label_4897882779882705846`, 16 msgs) — origin unknown (not
+applied by any part of this routine); do not assume ownership or repurpose them without
+asking Lemar.
 
 | Label | ID |
 |---|---|

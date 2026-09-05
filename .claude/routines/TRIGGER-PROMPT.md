@@ -8,7 +8,8 @@ authenticated session, or paste it into /schedule. After the swap, editing
 live behavior — no more redeploys for logic changes.
 
 Do the swap and the GitHub default-branch flip (→ `main`) together, then watch one
-supervised run (see runbook §Pre-flight).
+supervised run (see `.claude/CHANGELOG.md` for the cutover history — the runbook's
+former §Pre-flight was removed 2026-08-15).
 
 ---
 
