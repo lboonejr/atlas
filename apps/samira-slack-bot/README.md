@@ -48,10 +48,16 @@ would make Samira's hourly check-ins fail.
 2. Name it something like "Slack (Samira bot)".
 3. URL: your Vercel address with `/mcp` on the end, e.g.
    `https://samira-slack-bot.vercel.app/mcp`
-4. In the connector's authentication settings, add a custom header:
-   `Authorization: Bearer <your MCP_AUTH_TOKEN value>` — the exact same secret you set
-   in Vercel's `MCP_AUTH_TOKEN` environment variable. Without it the server returns
-   401 and the connector won't work.
+4. Give it the auth token — either way works, the server accepts both:
+   - **Header (preferred when the connector UI has an auth field):**
+     `Authorization: Bearer <your MCP_AUTH_TOKEN value>`.
+   - **URL key (when the connector UI has no auth field):** put the token in the
+     URL itself instead — `https://samira-slack-bot.vercel.app/mcp?key=<your MCP_AUTH_TOKEN value>`.
+     Same secret, same strictness. Caveat: a token in a URL can show up in hosting
+     request logs, so treat the full URL as a secret and rotate the token if it leaks.
+
+   Either way it must be the exact same secret you set in Vercel's `MCP_AUTH_TOKEN`
+   environment variable. Without it the server returns 401 and the connector won't work.
 5. Save, and confirm claude.ai can connect to it (it should list several `slack_*`
    actions).
 

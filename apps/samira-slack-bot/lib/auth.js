@@ -12,11 +12,15 @@ export function requireAuth(req, res) {
     return false;
   }
   const header = req.headers["authorization"] || "";
-  const provided = header.startsWith("Bearer ") ? header.slice("Bearer ".length) : "";
+  // The token can arrive as a Bearer header or, for clients whose connector
+  // config has no auth-header field (e.g. claude.ai custom connectors), as a
+  // `key` query parameter on the endpoint URL.
+  const queryKey = new URL(req.url || "/", "http://localhost").searchParams.get("key") || "";
+  const provided = header.startsWith("Bearer ") ? header.slice("Bearer ".length) : queryKey;
   const expectedBuf = Buffer.from(expected);
   const providedBuf = Buffer.from(provided);
   if (providedBuf.length !== expectedBuf.length || !timingSafeEqual(providedBuf, expectedBuf)) {
-    res.status(401).json({ error: "Unauthorized. Send 'Authorization: Bearer <MCP_AUTH_TOKEN>'." });
+    res.status(401).json({ error: "Unauthorized. Send 'Authorization: Bearer <MCP_AUTH_TOKEN>' or append '?key=<MCP_AUTH_TOKEN>' to the endpoint URL." });
     return false;
   }
   return true;
