@@ -1,12 +1,15 @@
 ---
 created: 2026-07-31T14:00-04:00
-updated: 2026-08-18T11:03-04:00
+updated: 2026-09-05T00:00-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [regus, iwg, collections, past-due, office-agreement]
 source: gmail
 ---
+<!-- status set to done 2026-09-05 by repo audit: schema §7 one-matter-one-note merge —
+     this matter continues in [[2026-08-20-regus-iwg-collections-legal-threat]]; no
+     amounts or history here were altered. -->
 
 # Regus / IWG — past-due office agreement, collections escalation threat
 
@@ -108,3 +111,10 @@ card is no longer just aging, there's now a concrete date IWG says it acts by.
 - gmail: thread 19ffded7294640c4 (NOTICE OF LEGAL ACTION, $1,048.60 claim amount, 8/14)
 - gmail: thread 1a0042cf50472d94 + 1a0042cf3b190690 (payment declined notice, 8/15, duplicate sends)
 - gmail: thread 1a0155edacd0c56d (5-day deadline notice, itemized balance, 8/18)
+
+## Update 2026-09-05 — superseded (repo audit merge)
+This note and [[2026-08-20-regus-iwg-collections-legal-threat]] were both open on the
+same matter (Regus/IWG account 16605480, $2,607.61) — a schema §7 one-matter-one-note
+violation. The 08-20 note is the operative record (it carries the settlement
+negotiation, the calendar event, and the current deadline); this note is closed as
+prior history and its status set to `done`. Nothing above was altered.
