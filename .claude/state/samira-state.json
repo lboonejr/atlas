@@ -1,5 +1,5 @@
 {
-  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
+  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'. Every slack_channels watermark MUST be a JSON string: the last-read message ts for that channel (e.g. '1788459423.085039'), or, for a channel that was quiet this scan, the scan-time epoch seconds as a string (e.g. '1788445432' — a bare epoch, NOT padded to '.000000' ts form). Never store a bare JSON number. Watermarks must never postdate lock.run_completed — they are stamped before the lock closes (PART 0).",
   "lock": {
     "run_id": "run_20260905T200256Z",
     "run_started": "2026-09-05T20:02:56Z",

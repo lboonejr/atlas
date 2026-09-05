@@ -55,11 +55,13 @@ it and note it in the digest.
 
 **Never-trash is a hard floor.** A thread is off-limits to PART B if it is `is:starred`, or
 `is:important`, or the sender domain is on the NEVER-TOUCH allowlist in anchors, or it carries
-a **genuine filing label** — a user label Lemar applied deliberately. IMPORTANT: the automation
-labels `Samira`, `Samira/*`, `Car-Hunt`, `Car-Hunt/*` (label IDs `Label_1`–`Label_7` in anchors)
-are stamped by Samira/other routines, NOT by Lemar, so they do **not** count as protective —
-ignore them when deciding whether a thread has a "real" filing label. When unsure whether
-something is disposable, do not trash it.
+a **genuine filing label** — a user label Lemar applied deliberately. IMPORTANT: the ONLY
+non-protective labels are the Samira automation labels, BY NAME: `Samira`, `Samira/seen`,
+`Samira/drafted`, `Samira/sent`, `Samira/investor` (`Label_2`–`Label_6` in anchors, verified
+live 2026-09-05). Those are stamped by Samira's routines, NOT by Lemar, so they do not count
+as protective. Explicitly PROTECTIVE: **"Sweep/Review"** (`Label_1` — Lemar's own filing
+label), **"Action Needed"**, and **"Finance Bills"** — every other user label is protective
+too. When unsure whether something is disposable, do not trash it.
 
 **Per-run cap: trash at most 200 threads.** If more qualify, trash the oldest 200 and report the
 remainder as a count in the digest. This is a runaway backstop.
@@ -98,7 +100,7 @@ Then, for each candidate, trash it **only if ALL of these hold**:
 - it is `older_than:1y` (12-month cutoff), AND
 - it is in `category:promotions`, `category:social`, or `category:forums`, AND
 - it is NOT `is:starred`, NOT `is:important`, and has no *genuine* filing label (the
-  Samira/Car-Hunt automation labels do NOT protect — see the Safety floor), AND
+  Samira automation labels do NOT protect — see the Safety floor), AND
 - its sender domain is NOT on the NEVER-TOUCH allowlist (anchors).
 
 Vendor-menu / vendor-marketing domains are **trashable** here once >12 months old — they are
