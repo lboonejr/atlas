@@ -1,15 +1,15 @@
 {
-  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
+  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded \u2014 fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
     "run_id": "run_20260905T140559Z",
     "run_started": "2026-09-05T14:05:59Z",
-    "run_completed": "2026-09-05T13:20:00Z",
-    "note": "71st scan starting."
+    "run_completed": "2026-09-05T14:15:11Z",
+    "note": "71st scan complete. Fully quiet pass: 0 new decisions/reactions across all 62 open #decisions cards (full thread read on 19, reaction check on remaining 43), 0 new captures, 0 project-channel activity, 0 new mail, 0 investor activity, stormy idle, both Camden Launch PT cards remain parked (no signal), no money drops, reports-scan clean, Pulse quiet-pass skip (no Doc, no DM). Only vault write this run: reports-contradiction-scanner clean-scan log update + this daily entry."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1788614074.520929",
-      "C0BBZJL85RT": "1788614074.520929",
+      "C0BBZJL85RT": "1788617694.225929",
       "D0BHPKMDNEP": "1788614055.297529",
       "C0BGLEMH99T": 1788613555,
       "C0BEQUW5NPP": 1788613555,
@@ -93,11 +93,11 @@
       "1788613746.453729": "1788613746.453729"
     },
     "capture_dm": "1788614055.297529",
-    "gmail_after_epoch": 1788613555
+    "gmail_after_epoch": 1788617729
   },
   "integrity": {
     "last_full_pass": "2026-09-05T13:03:51Z",
-    "last_scan_sha": "7fed219f76f5202fac12a7bfc1f16528ee816c07",
+    "last_scan_sha": "6d2d4de5a65688b07036d9250586a8ea3b453b6c",
     "note": "Full whole-vault pass ran 2026-09-05 (day's first run); this run is a same-day incremental pass per PART V cadence."
   },
   "canvas_access": {
