@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-09-05T14:06:00Z
+updated: 2026-09-05T16:20:00Z
 domain: project
 type: log
 status: active
@@ -1794,3 +1794,43 @@ nothing new to group or compare. Clean scan by default (no entries to contradict
 **found: 0 · open: 0 · fixed-noted: 0.** No DM sent (nothing found, same non-spam rule
 as a quiet Pulse render). Bookmark carries forward to this run's #reports watermark
 (`1788614074.520929`, unchanged — no #reports activity this pass to advance it).
+
+
+## Update 2026-09-05 (73rd scan, run_20260905T160327Z)
+Scanned #reports since the 71st-scan bookmark (ts `1788614074.520929`) through this
+run's PART T pass — 4 messages in range: Samira's own 71st- and 72nd-scan digests
+(routine, no contradiction), a `samira-work-summary` auto-handoff Drive-organization
+report (ts `1788614917.643789`, factual, no conflicting figures against anything else
+in #reports), and a second "Haven Keeper" false-empty claim (ts `1788614423.019989`,
+app `A08SF47R6P4`): *"Haven — filed 0 · stuck 0 · rang +0/~0/-0 · Inbox empty, no notes
+with `due` in the vault — nothing to file, all quiet."*
+
+**Found: 1 — same contradiction as the 70th-scan entry, recurring.** Ground truth (this
+run's own PART V incremental integrity check + PART S calendar sweep): `00-Inbox/` still
+holds the same 5 stuck notes (unchanged since at least 2026-09-03, all genuine
+UNRESOLVED `domain` gaps), and the vault carries 47 notes with a `due` field, all
+idempotently synced. The "Haven Keeper" process has now posted this identical
+false-empty claim twice (first: ts `1788560404.257429`, corrected in the 70th-scan
+entry above) — this is not a one-off stale run, it's a repeating pattern worth Lemar's
+attention even though the fix itself is obvious each time.
+
+**Fix:** Samira's own figures (`stuck 5`, `47 due`) are correct; the "Haven Keeper"
+message is wrong, same as last time. No #decisions card — the vault resolves this
+unambiguously. Correction posted to #reports (new message, ts `1788624549.557949`,
+prior lines never edited).
+
+**DM sent** to the Samira capture DM (findings summary, per R5 — something was found,
+and flagged as recurring since this is the 2nd occurrence).
+**Open questions posted to #decisions this run: 0** (obvious fix, not an open question —
+though the *recurrence* itself may warrant Lemar's attention to what "Haven Keeper" is
+and why it keeps running against stale/wrong state; noted in the DM, not staged as a
+card since nothing here needs an executable decision).
+
+### Sources (this update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788614423.019989`–`1788620834.557539`
+- this run's PART V vault-keeper sweep (incremental integrity check since
+  `last_scan_sha 6d2d4de5a65688b07036d9250586a8ea3b453b6c`: 2 files changed, neither
+  a mechanical defect; Inbox unchanged at 5 stuck notes)
+- this run's PART S calendar-sync sweep (47 notes carry `due`, all idempotently synced,
+  0 new/updated/retired)
+- `.claude/state/samira-state.json` (run lock `run_20260905T160327Z`, "73rd scan")
