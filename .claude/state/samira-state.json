@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260905T170310Z",
-    "run_started": "2026-09-05T17:03:10Z",
+    "run_id": "run_20260905T190255Z",
+    "run_started": "2026-09-05T19:02:55Z",
     "run_completed": "2026-09-05T17:28:34Z",
-    "note": "74th scan complete. Not fully quiet: PART C ran the Desktop & Downloads cleanup handoff (Haven note filed, #reports posted), PART Q/Stormy resumed the stale 8/26 ai-onboarding-intake-form reply and migrated it to the 8-dimension instrument (3 new crux questions posted in #stormy). PART Q had a transient self-corrected incident: one create_or_update_file call briefly overwrote that Haven note with placeholder content; caught and fully restored (with the real update appended) by an immediate follow-up commit before any other pass read it -- flagged to Lemar as a process near-miss, no data lost. PART A/B/D/E/M/R/S/T all quiet (0 new signals/drops/contradictions). PART V: 0 filed, 5 known/unchanged stuck Inbox notes (Haven Inbox card composition unchanged, no refresh needed), integrity incremental pass clean (0 vault files changed). Canvas re-check skipped (already checked today, still write-blocked). Pulse rendered (gate met on the Haven-note changes) and DMed to Lemar."
+    "note": "75th scan in progress."
   },
   "watermarks": {
     "slack_channels": {
