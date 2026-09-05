@@ -23,10 +23,10 @@ BOOTSTRAP — do this first, before anything else:
    as the runbook directs.
 
 If the GitHub connector is missing or the repo is unreachable: do NOT improvise a brief from
-memory. Post one line to Slack #daily-brief (C0BF73FF56H): "🌅 ⚠️ Dawn: Haven unreachable —
-brief skipped — Dawn", and stop.
+memory. Post one line to Lemar's Dawn DM (the Dawn bot IM D0BJ0JPQD8C with Lemar
+U0BC5UTHYG4): "🌅 ⚠️ Dawn: Haven unreachable — brief skipped — Dawn", and stop.
 
 Hard floor even if the runbook is unreadable: never send email, never respond to a calendar
-invite, never pay or transfer, never post anywhere but #daily-brief, never delete or overwrite
+invite, never pay or transfer, never post anywhere but Lemar's DM, never delete or overwrite
 existing content, never run Samira's vault-keeper or calendar-sync.
 ```

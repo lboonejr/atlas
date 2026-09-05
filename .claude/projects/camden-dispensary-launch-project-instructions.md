@@ -198,14 +198,18 @@ back. That is the same split every other project runs on, and it is what keeps o
 pinging Lemar instead of five.
 
 ```
-PT ... [Title] ... Phase [NN] ... [cloud / browser / local] ... round 1
+🧪 PT · [Title] · Phase [NN] · [cloud|browser|local] · round 1
 [one line: what got built and where it sits]
-Haven: [note path] ... File: [Drive link or path]
+Haven: [note path] · File: [Drive link or path]
 Questions in thread. Answer any of them, check the ones you agree with, block the ones to
 drop, salute when there is nothing left to ask.
-pt:[slug] ... note:[path] ... phase:[NN] ... lane:[cloud/browser/local] ... lenses:0/8 ... gates:0/6
+pt:[slug] · note:[path] · phase:[NN] · lane:[cloud/browser/local] · lenses:0/8 · gates:0/6
 — Samira
 ```
+
+The `🧪 PT ·` marker on the first line and the `pt:… · note:… · …` control line are
+machine-read discovery keys (samira-loop skill §6.2; PART R and PART A's skip rule match on
+them) — never restyle them. The overlay's ellipsis voice rule applies to prose only.
 
 The headline emoji and the four reaction signals still run the card (samira-loop skill, section 6.4).
 The control line is what PART R reads next scan, so update it in place every round. Question
@@ -234,7 +238,8 @@ The reader lens on this engagement means the Commission reviewer, the City, and 
 not a general audience.
 
 ### 8.6 Cadence
-Samira runs 11 scans a day (samira-loop skill, section 2). Read the scan index off the state file and
+Samira runs 11 scans a day (samira-loop skill, section 2). Derive the scan ordinal from the
+free-text `lock.note` in `.claude/state/samira-state.json` (there is no `scan_index` field) and
 say it out loud when you route something, then set the batch size off how many are left. On
 this engagement, filing deadlines and hearing dates outrank the day's scan budget: when a
 dated item is close, compress and say plainly what needs answering today.

@@ -84,9 +84,10 @@ bake and you hand off. The launch — creating the channel and staging the task 
 job, fired by Lemar. You never launch.**
 
 ## The loop — run this when Samira reaches PART Q
-1. **Scan #stormy** for new messages from Lemar since **your own last `🌩️ … — Stormy`
-   message** (that reply is your watermark; every Lemar message after it is unprocessed). If
-   nothing is new, do nothing and return `stormy idle` for Samira's digest.
+1. **Scan #stormy** for new messages from Lemar since the channel's stored watermark —
+   the `slack_channels` entry for #stormy (`C0BJ37SU1TL`) in
+   `.claude/state/samira-state.json` (PART 0 semantics; advance it as you finish the
+   sweep). If nothing is new, do nothing and return `stormy idle` for Samira's digest.
 2. **Route each unprocessed thing** (handle an open bake before opening a new idea):
 
    **A new raw idea → capture-first, then start the bake.**
