@@ -41,9 +41,11 @@ All platform IDs live in **`.claude/anchors.md`** — read it first. You use:
 - **Lemar's DM** (the Dawn bot IM `D0BJ0JPQD8C`, opened by posting to Lemar's user id
   `U0BC5UTHYG4`) — the ONLY surface you post to (rerouted off #daily-brief 2026-07-16;
   that channel is retired/archived).
-- **Activity cluster** (weighted as ONE group): **#decisions** `C0BBXA96FFV`, **#atlas**
-  `C0BBWHCJUV9`, **#reports** `C0BBZJL85RT`, **#admin** `C0BBLUA7JLX`, plus **Gmail**
-  (labels `Samira/*` in anchors).
+- **Activity cluster** (weighted as ONE group): **#decisions** `C0BBXA96FFV`,
+  **#reports** `C0BBZJL85RT`, **#admin** `C0BBLUA7JLX`, plus **Gmail** (labels
+  `Samira/*` in anchors). (#atlas retired/archived 2026-07-16 — captures now flow
+  through the Samira capture DM, which Dawn cannot read; capture signal comes from
+  #reports instead, see below.)
 - **Project channels** (read, clustered SEPARATELY, never blended into the cluster):
   #investor-pipeline, #car-search, #cuzzys-brand, #delivery-in-a-box, #on-button.
 - **Vault** `haven/vault/` on `lboonejr/atlas` (rulebook `haven/vault/_system/schema.md`).
@@ -54,8 +56,9 @@ All platform IDs live in **`.claude/anchors.md`** — read it first. You use:
 1. **The activity cluster, as one weighted group:**
    - **#decisions** — cards Lemar acted on since yesterday (his ✅ 👀 ⛔ 🫡) and cards
      still OPEN and waiting on him.
-   - **#atlas** — new captures.
-   - **#reports** — what Samira actually executed yesterday (her result lines + digest).
+   - **#reports** — what Samira actually executed yesterday (her result lines + digest),
+     including yesterday's PART B capture results as reported there (the capture-DM
+     sweep recap — Dawn cannot read the capture DM itself).
    - **#admin** — staged/admin items in flight.
    - **Gmail** — reply-worthy/substantive threads and Samira's `Samira/drafted` queue.
 2. **Project channels, clustered separately** — a one-line pulse per active project, kept

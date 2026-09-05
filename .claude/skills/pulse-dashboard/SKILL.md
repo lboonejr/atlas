@@ -61,9 +61,11 @@ fail, and lists those failures.
 
 1. **Quick capture → Atlas** (top of page, always in reach). A textarea pre-labeled
    "Atlas, shortlist this: " with a **Copy** button (Clipboard API, fall back to
-   select-the-text) and an **Open #atlas** link. Lemar pastes in #atlas; the next scan's
-   PART B captures it into Haven. Say exactly that in the helper text so the mechanism
-   is honest. Keep this strip compact — one row, not a card the size of a section.
+   select-the-text) and an **Open Samira DM** link (the Samira capture DM,
+   `D0BHPKMDNEP`). Lemar pastes it as a top-level message in that DM; the next scan's
+   PART B DM sweep captures it into Haven. Say exactly that in the helper text so the
+   mechanism is honest. Keep this strip compact — one row, not a card the size of a
+   section.
 2. **Dawn — the North Star.** Direction, NOT tasks. Since 2026-07-12 Dawn's own brief
    note (`haven/vault/_daily/brief-YYYY-MM-DD.md`) carries the **North Star line** and
    **2–4 directional themes** as first-class sections — lift them verbatim (distill
@@ -102,7 +104,7 @@ fail, and lists those failures.
    localStorage — never claim to know completion state). After week 12: "plan complete
    🏀".
 7. **Atlas — open items.** **Methodology locked 2026-08-27** (see
-   `haven/vault/70-Automation/vault-open-items-audit/2026-08-27-vault-open-items-audit.md`,
+   `haven/vault/70-Automation/samira/2026-08-27-vault-open-items-audit.md`,
    which reconciled a 214-vs-~37 discrepancy): an "open item" is a Haven note that
    carries a **`due`** field AND has `status: active | awaiting-decision | parked`,
    excluding `type: entity` and `_daily/`/`_system/`/`_templates/`. The `due` field is

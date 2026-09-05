@@ -1,18 +1,26 @@
 ---
 name: samira-car-search
 description: >
-  Samira's car-search correspondence loop (PART F of the routine). Run this whenever
-  Samira works Lemar's used-car hunt in #car-search: suggest voice-matched replies to
-  sellers in a private-buyer voice, log sends, and coordinate test drives against Google
-  Calendar. Use it every scan: "run the car-search loop", "draft seller replies", "check
-  #car-search", "schedule the test drive". It runs on the SAME reaction engine as
-  #decisions — Lemar's reactions decide, Samira reads them and sets only the headline
-  emoji. This skill NEVER sends outreach, never posts outside #car-search, never pings
-  anyone, and never emails a seller; it suggests and logs only. It returns counts for
-  the run digest.
+  RETIRED FROM THE ROUTINE (PART F sunset 2026-07-21) — on-demand only. Samira's
+  car-search correspondence loop, formerly PART F of the hourly routine. Run it ONLY
+  when Lemar explicitly asks to work the used-car hunt in #car-search: suggest
+  voice-matched replies to sellers in a private-buyer voice, log sends, and coordinate
+  test drives against Google Calendar ("run the car-search loop", "draft seller
+  replies", "check #car-search", "schedule the test drive"). It runs on the SAME
+  reaction engine as #decisions — Lemar's reactions decide, Samira reads them and sets
+  only the headline emoji. This skill NEVER sends outreach, never posts outside
+  #car-search, never pings anyone, and never emails a seller; it suggests and logs
+  only. It returns counts for the run digest.
 ---
 
 # Samira Car-Search Loop (#car-search)
+
+> **⛔ RETIRED FROM THE ROUTINE — 2026-07-21.** PART F was sunset by Lemar's explicit ✅
+> on the #decisions card "Sunset the car-search loop (PART F)?" (see the runbook's PART F
+> tombstone and `.claude/anchors.md`). #car-search is NOT worked by any part of the
+> hourly scan. This skill is **on-demand only**: invoke it solely when Lemar explicitly
+> asks. Monday mirroring is also retired (gate closed 2026-08-15) — all Monday boards
+> are read-only history.
 
 A personal-errand lane: Lemar is shopping for a used car as a **private buyer**. Each
 scan: suggest voice-matched seller replies, keep the pipeline state current, and help
@@ -20,15 +28,12 @@ schedule test drives — all inside **#car-search**. You NEVER send outreach: yo
 Lemar copies and sends, then signals you. Every Safety rule in the runbook applies.
 
 ## ANCHORS
-All platform IDs live in **`.claude/anchors.md`** — the #car-search channel, the Car
-Search board + its columns, the voice-profile item, and the **Monday gate (2026-07-11)**
-are all there. Vault writes go through **haven-capture**.
+All platform IDs live in **`.claude/anchors.md`** — the #car-search channel and the
+voice-profile item are there. Vault writes go through **haven-capture**.
 
-**Pipeline state during the gate window:** the Monday Car Search board stays the working
-surface until the gate passes (run `get_board_info` first to confirm live columns;
-status flow New Listing → Contacted → Test Drive Scheduled). **After the gate, the board
-goes read-only and the Haven receipts + thread headlines ARE the pipeline record** — the
-receipt note carries the status line, and dedup shifts to in-thread reply + receipt note.
+**Pipeline state:** the Haven receipts + thread headlines ARE the pipeline record — the
+receipt note carries the status line, and dedup runs on in-thread reply + receipt note.
+(Monday mirroring retired 2026-08-15; the old Car Search board is read-only history.)
 
 ## Haven receipt (write one each time you act)
 Whenever you log a send or schedule a test drive, call **haven-capture** for ONE note:
@@ -47,15 +52,14 @@ passed, or dead). Dedup off **in-thread reply + stored state**, never reactions 
 
 ## F1 — pick up in-flight threads
 For each open suggestion thread touched since last run:
-- **✅** → log the send (board Update + status advance during the gate window; always the
-  Haven receipt), reply "Logged ✅", headline 🟢.
+- **✅** → log the send (the Haven receipt carries the status advance), reply
+  "Logged ✅", headline 🟢.
 - **👀 / none** → leave. **⛔** → canvas, stop driving. **🫡** → close the lead (final
   status + receipt), stop touching the thread.
 
 ## F2 — scan #car-search for items needing a reply
 - **New listing** Lemar dropped (link or paste) with no pipeline entry → create the entry
-  (board item during the gate window; receipt note either way) and draft an opening
-  buyer inquiry.
+  (a Haven receipt note) and draft an opening buyer inquiry.
 - **A seller's reply** pasted into an existing thread → draft his next buyer reply.
 
 ## F3 — draft the suggested reply (private-buyer voice)

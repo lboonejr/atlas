@@ -104,7 +104,8 @@ Post there, top-level, un-reacted, 🌐-led (Atlas's Slack message rules):
 Haven note: <path>
 ```
 CONTINUE mode with a concrete next step → append the fenced prompt so Samira's PART C
-sweep (which reads every channel except #reports/#decisions/#stormy/the capture DM) picks
+sweep (which reads every channel except #reports/#decisions/#stormy/the capture DM,
+#car-search, and the archived channels — see the runbook's PART C exclusion list) picks
 it up on her next scan:
 ```
 ===ATLAS PROMPT START | task:[slug] | run:admin-3x===

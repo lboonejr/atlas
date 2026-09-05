@@ -1,3 +1,8 @@
+> **⚠️ SUPERSEDED (2026-08-15): Monday mirroring is retired — the notice below is itself
+> out of date.** Handoffs are now written as `## Update` sections on the project's Haven
+> note (via haven-capture), per the atlas `SKILL.md` Gear 2. Do not post handoff Updates
+> to Monday; all Monday boards are read-only history.
+
 # Handoff Builder — DEPRECATED (handoffs now live as Monday item Updates)
 
 As of 2026-06-21, Atlas storage moved off Google Drive to a personal **Monday** board, and
