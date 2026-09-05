@@ -1,8 +1,8 @@
 {
-  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'.",
+  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded \u2014 fall back to that PART's legacy cutoff once, then record'.",
   "lock": {
-    "run_id": "run_20260904T220351Z",
-    "run_started": "2026-09-04T22:03:51Z",
+    "run_id": "run_20260905T130351Z",
+    "run_started": "2026-09-05T13:03:51Z",
     "run_completed": "2026-09-04T22:20:10Z",
     "note": "69th scan complete. Recovered the 68th scan's lock (aged out unclosed, but its work had landed cleanly per its #reports digest ts 1788557038 -- reconstructed into the journal this run). This run's own finding: CannaBIZ Collects (Little Leaf Labs, $8,331) escalated from a friendly 8/26 settlement-agreement email to a formal demand letter today, sent to 5 Cuzzie's addresses at once -- appended to the Haven note, raised as a fresh #decisions card (ts 1788559936.495679), Pulse re-rendered and DM'd. Third scan in a row (66th, 67th, 68th) to finish real work but die before this closing write landed -- worth a direct look at why."
   },
