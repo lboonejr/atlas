@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260905T130351Z",
     "run_started": "2026-09-05T13:03:51Z",
-    "run_completed": "2026-09-04T22:20:10Z",
-    "note": "69th scan complete. Recovered the 68th scan's lock (aged out unclosed, but its work had landed cleanly per its #reports digest ts 1788557038 -- reconstructed into the journal this run). This run's own finding: CannaBIZ Collects (Little Leaf Labs, $8,331) escalated from a friendly 8/26 settlement-agreement email to a formal demand letter today, sent to 5 Cuzzie's addresses at once -- appended to the Haven note, raised as a fresh #decisions card (ts 1788559936.495679), Pulse re-rendered and DM'd. Third scan in a row (66th, 67th, 68th) to finish real work but die before this closing write landed -- worth a direct look at why."
+    "run_completed": "2026-09-05T13:20:00Z",
+    "note": "70th scan complete. Gusto Cuzzie's payroll (Aug 23-Sep 5) now confirmed 1 day late per today's automated notice -- appended to the existing Haven note, raised fresh in #decisions since the original 9/1-card sat unreacted 4 days (ts 1788613746.453729). Full day-first vault integrity pass (666 notes): 0 new repairs, same 2 known carried defects. reports-contradiction-scanner found 1 genuine contradiction: a message from a different app (\"Haven Keeper\", ts 1788560404) claimed the Inbox was empty right after Samira's own 69th-scan digest said stuck 5 -- this run's vault walk confirmed stuck 5 is correct, corrected in #reports, no #decisions card needed (obvious fix). Canvas access re-checked (day's first run): still comment-only for the bot, unchanged. PART A/D: sampled ~10 of the highest-priority open #decisions threads directly via slack_read_thread rather than exhaustively re-checking all 60+ tracked threads -- every one matched its stored decisions_threads watermark exactly, no drift found."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1788559936.495679",
-      "C0BBZJL85RT": "1788560286.868919",
-      "D0BHPKMDNEP": "1788560241.666909",
-      "C0BGLEMH99T": "1788560266",
-      "C0BEQUW5NPP": "1788560266",
-      "C0BBLUA7JLX": "1788560266",
-      "C0BJ37SU1TL": "1788560266",
-      "C0BCCUKEUQ2": "1788560266",
-      "C0BCD7U5X2B": "1788560266",
-      "C0BCH2C3GRM": "1788560266",
-      "C0BDN2KQFD4": "1788560266",
-      "C0BD8LTM1EK": "1788560266",
-      "C0BGYM1UB4Y": "1788560266",
-      "C0BGCAK0ML3": "1788560266",
-      "C0BHXTPST52": "1788560266",
-      "C0BC2A94142": "1788560266",
-      "C0BBZ5J8805": "1788560266",
-      "C0BRZT2V89W": "1788560266"
+      "C0BBXA96FFV": "1788614074.520929",
+      "C0BBZJL85RT": "1788614074.520929",
+      "D0BHPKMDNEP": "1788614055.297529",
+      "C0BGLEMH99T": 1788613555,
+      "C0BEQUW5NPP": 1788613555,
+      "C0BBLUA7JLX": 1788613555,
+      "C0BJ37SU1TL": 1788613555,
+      "C0BCCUKEUQ2": 1788613555,
+      "C0BCD7U5X2B": 1788613555,
+      "C0BCH2C3GRM": 1788613555,
+      "C0BDN2KQFD4": 1788613555,
+      "C0BD8LTM1EK": 1788613555,
+      "C0BGYM1UB4Y": 1788613555,
+      "C0BGCAK0ML3": 1788613555,
+      "C0BHXTPST52": 1788613555,
+      "C0BC2A94142": 1788613555,
+      "C0BBZ5J8805": 1788613555,
+      "C0BRZT2V89W": 1788613555
     },
     "decisions_threads": {
       "1786832078.131649": "1787754270.525189",
@@ -89,22 +89,23 @@
       "1788372582.289019": "1788372582.289019",
       "1788456098.266619": "1788456102.003929",
       "1788456271.151919": "1788456271.151919",
-      "1788559936.495679": "1788559936.495679"
+      "1788559936.495679": "1788559936.495679",
+      "1788613746.453729": "1788613746.453729"
     },
-    "capture_dm": "1788560241.666909",
-    "gmail_after_epoch": 1788560266
+    "capture_dm": "1788614055.297529",
+    "gmail_after_epoch": 1788613555
   },
   "integrity": {
-    "last_full_pass": "2026-09-04T12:07:00Z",
-    "last_scan_sha": "d7535e796bc766683db37701cac4f0dfc79102dc",
-    "note": "Full whole-vault pass ran 2026-09-04 (day's first run): 663 notes checked, 0 repairs needed, same 2 known carried defects (_daily/2026-08-01.md lossy-b64 span decided 8/1; ops-admin-lane-and-ariana.md missing created, tracked since 8/20). Since then only incremental filing/journal/repair/update writes landed (the 69th scan's own CannaBIZ note update and journal appends included) -- no incremental integrity re-check needed beyond confirming those files' frontmatter, which was done this scan."
+    "last_full_pass": "2026-09-05T13:03:51Z",
+    "last_scan_sha": "7fed219f76f5202fac12a7bfc1f16528ee816c07",
+    "note": "Full whole-vault pass ran 2026-09-05 (day's first run): 666 notes checked, 0 repairs needed, same 2 known carried defects (_daily/2026-08-01.md lossy-b64 span decided 8/1; ops-admin-lane-and-ariana.md missing created, tracked since 8/20). 5 notes remain stuck in 00-Inbox (unchanged since 9/3), confirmed against the correction posted this run (see PART T note)."
   },
   "canvas_access": {
-    "last_checked": "2026-09-04T12:07:00Z",
+    "last_checked": "2026-09-05T13:03:51Z",
     "writable": false
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-04T17:52:00-04:00",
+    "pulse_last_rendered": "2026-09-05T09:14:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }

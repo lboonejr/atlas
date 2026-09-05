@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-09-04T17:07:00-04:00
+updated: 2026-09-05T13:03:51Z
 domain: project
 type: log
 status: active
@@ -1744,3 +1744,43 @@ out of this scanner's scope to fix.
   slack_read_thread — 0 with activity since their stored watermark, 4 skipped as 🧪 PT)
 - `.claude/state/samira-state.json` (run lock `run_20260904T210411Z`, "68th scan"; prior
   lock `run_20260904T200242Z` aged out unclosed, see note above)
+
+## Update — 2026-09-05 (70th scan, run_20260905T130351Z)
+
+**#reports scanned:** ts range `1788552476.879189`–`1788560404.257429` (the 69th scan's
+own closing digest, plus one message from a different app posted 2 minutes later).
+**Found: 1. A genuine conflicting-figures contradiction, resolved by ground truth —
+obvious fix, no #decisions card needed.**
+
+1. **Haven Inbox count, same moment, two different numbers.**
+   - Samira's 69th-scan digest (`ts 1788560286.868919`, 2026-09-04 18:17 ET): *"Haven:
+     filed 0 · stuck 5 (unchanged)"*.
+   - A second message posted 2 minutes later (`ts 1788560404.257429`, app `A08SF47R6P4`,
+     signed "— Haven Keeper"): *"Haven — filed 0 · stuck 0 · rang +0/~0/-0 · Inbox empty,
+     no notes with `due` in the vault — nothing to file, all quiet."*
+   - **Ground truth (this run's own PART V full-vault scan, 666 notes):** `00-Inbox/`
+     holds exactly 5 unfiled notes (`2026-08-07-dib-template-theme-decision-closeout.md`,
+     `2026-08-12-google-voice-subscription-cancellation.md`,
+     `2026-08-24-caine-weiner-progressive-collections.md`,
+     `2026-08-29-rootwurks-assignment-log-legal-sensitivity.md`,
+     `2026-09-02-veriscan-idscan-security-incident.md`), all missing a controlled field
+     (mostly `domain`) — unchanged since at least 2026-09-03. The vault also holds 46
+     notes with a `due` field (idempotently synced, per this run's PART S). The "Haven
+     Keeper" message's claims ("stuck 0," "no notes with due in the vault") do not match
+     the vault at all — it reads as either a stale/cached run or a run against an empty or
+     wrong checkout, not a corrected recount.
+   - **Fix:** Samira's 69th-scan figure (`stuck 5`) is correct; the "Haven Keeper" message
+     is the one in error. No #decisions card — the vault itself resolves this
+     unambiguously. Correction posted to #reports (new message, the prior lines are never
+     edited) and noted in this run's own digest.
+
+**DM sent** to the Samira capture DM (findings summary, per R5 — something was found).
+**Open questions posted to #decisions this run: 0** (obvious fix, not an open question).
+
+### Sources (this update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788552476.879189`–`1788560404.257429`
+- this run's PART V vault-keeper sweep (00-Inbox: 5 notes stuck, confirmed against a
+  full 666-note walk; 46 notes carry `due`)
+- this run's PART S calendar-sync sweep (all 46 `due` notes already idempotently synced,
+  0 new/updated/retired)
+- `.claude/state/samira-state.json` (run lock `run_20260905T130351Z`, "70th scan")
