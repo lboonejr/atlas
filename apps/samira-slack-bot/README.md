@@ -22,11 +22,16 @@ this gets fixed directly in the code, no local setup needed on your end.
    it and type: `apps/samira-slack-bot`
    (This tells Vercel the code lives in a subfolder, not at the top of the repo.)
 5. Leave the Build/Output settings on their defaults — nothing to change there.
-6. Open **Environment Variables** and add one:
+6. Open **Environment Variables** and add two:
    - Name: `SLACK_BOT_TOKEN`
    - Value: the **Bot User OAuth Token** from your Slack app (starts with `xoxb-`),
      found on the app's **OAuth & Permissions** page.
-   This stays inside Vercel's settings only — never paste it into chat.
+   - Name: `MCP_AUTH_TOKEN`
+   - Value: a long random secret you make up (e.g. run `openssl rand -hex 32`, or use
+     a password generator). Every request to the `/mcp` endpoint must present this as
+     a bearer token — without it the server refuses all requests (fail closed), so
+     nobody who stumbles on the URL can drive your Slack bot.
+   Both stay inside Vercel's settings only — never paste them into chat.
 7. Click **Deploy**. This takes under a minute.
 8. When it's done, Vercel shows you a web address, something like
    `https://samira-slack-bot.vercel.app`. That's the app's home.
@@ -43,14 +48,18 @@ would make Samira's hourly check-ins fail.
 2. Name it something like "Slack (Samira bot)".
 3. URL: your Vercel address with `/mcp` on the end, e.g.
    `https://samira-slack-bot.vercel.app/mcp`
-4. No extra login needed here — the server already holds the Slack bot token itself.
+4. In the connector's authentication settings, add a custom header:
+   `Authorization: Bearer <your MCP_AUTH_TOKEN value>` — the exact same secret you set
+   in Vercel's `MCP_AUTH_TOKEN` environment variable. Without it the server returns
+   401 and the connector won't work.
 5. Save, and confirm claude.ai can connect to it (it should list several `slack_*`
    actions).
 
 ## Slack app requirements (should already be done)
 
 - Bot Token Scopes: `chat:write`, `reactions:write`, `reactions:read`, `channels:read`,
-  `channels:history`, `groups:read`, `groups:history`, `im:history`, `users:read`.
+  `channels:history`, `groups:read`, `groups:history`, `im:history`, `users:read`,
+  `files:read` (needed by `slack_read_canvas`'s `files.info` call).
   (Add `canvases:write` / `canvases:read` too if you want the canvas-editing actions to
   work — add these if those specific actions error out.)
 - The bot must be invited into every channel it needs to read or post in — in Slack,
@@ -67,8 +76,8 @@ Daily Brief and Inbox Janitor routines are untouched.
 
 If you'd rather use a traditional always-on host instead of Vercel (Render, Railway,
 Fly.io), this folder also has a `server.js` you can run instead — same logic, just
-listens on a port the way those hosts expect (`npm start`, with `PORT` and
-`SLACK_BOT_TOKEN` set in the host's environment settings). Most of those charge a small
+listens on a port the way those hosts expect (`npm start`, with `PORT`,
+`SLACK_BOT_TOKEN`, and `MCP_AUTH_TOKEN` set in the host's environment settings). Most of those charge a small
 monthly fee for a plan that doesn't sleep between uses, which is the tradeoff against
 Vercel's free tier.
 
