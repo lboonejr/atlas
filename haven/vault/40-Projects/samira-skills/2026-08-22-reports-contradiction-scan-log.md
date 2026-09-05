@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-09-05T16:20:00Z
+updated: 2026-09-05T17:10:00Z
 domain: project
 type: log
 status: active
@@ -1834,3 +1834,41 @@ card since nothing here needs an executable decision).
 - this run's PART S calendar-sync sweep (47 notes carry `due`, all idempotently synced,
   0 new/updated/retired)
 - `.claude/state/samira-state.json` (run lock `run_20260905T160327Z`, "73rd scan")
+
+## Update 2026-09-05 (74th scan, run_20260905T170310Z)
+
+**Scanned:** #reports since the 73rd-scan bookmark (ts `1788624700.940759`, the 73rd
+scan's own closing digest — confirmed as the current `slack_channels.C0BBZJL85RT`
+watermark in `.claude/state/samira-state.json`) through this run's PART T pass — **zero
+new #reports messages posted since then** (re-read the channel with `oldest` set one
+tick past that ts; empty result). Nothing new to group or compare.
+
+**Found: 0. Clean scan by default.**
+
+**Follow-up requested for this run — did the 73rd-scan correction land cleanly, and has
+the "Haven Keeper" false-empty-inbox claim recurred a 3rd time? Checked both:**
+- **Correction landed cleanly.** The 73rd scan's fix (ts `1788624549.557949`, "reports-
+  contradiction-scanner — 'Haven Keeper' posted a wrong vault state again...") was posted
+  as a brand-new message, never edited a prior line, and correctly quoted both the exact
+  conflicting claim (ts `1788614423.019989`) and the ground truth (this run's own PART
+  V/S read: 5 stuck notes, 47 `due` notes) — matches this skill's R6 "obvious fix" format
+  exactly. No defect in how the correction itself was posted.
+- **No 3rd recurrence — not yet.** No "Haven Keeper"-signed message (app `A08SF47R6P4`)
+  appears anywhere in the empty post-73rd-scan window. This run's own PART V sweep
+  independently confirms the same 5 stuck notes, unchanged since 2026-09-03 — so even if
+  a 3rd Haven Keeper post had landed, the ground truth to check it against hasn't moved.
+  The pattern (now 2 confirmed occurrences: 70th scan ts `1788560404.257429`, 73rd scan
+  ts `1788614423.019989`) remains flagged as worth Lemar's attention per the 73rd scan's
+  own DM, but there is nothing new to re-flag this run.
+
+**No DM sent** (nothing found this pass — same non-spam rule as a quiet Pulse render).
+**Open questions posted to #decisions this run: 0.**
+
+### Sources (this update)
+- slack: #reports `C0BBZJL85RT`, re-read from ts `1788624700.940759` forward — 0 new
+  messages
+- this run's PART V vault-keeper sweep (00-Inbox: 5 notes stuck, unchanged since
+  2026-09-03)
+- this run's PART S calendar-sync sweep (47 notes carry `due`, all idempotently synced)
+- `.claude/state/samira-state.json` (run lock `run_20260905T170310Z`, "74th scan";
+  `slack_channels.C0BBZJL85RT` watermark `1788624700.940759` confirms the bookmark used)
