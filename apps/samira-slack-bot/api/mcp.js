@@ -1,7 +1,11 @@
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { buildServer } from "../lib/buildServer.js";
+import { requireAuth } from "../lib/auth.js";
 
 export default async function handler(req, res) {
+  if (!requireAuth(req, res)) {
+    return;
+  }
   if (req.method !== "POST") {
     res.status(405).json({
       error: "Method not allowed. This endpoint only accepts POST (used by MCP clients).",

@@ -2,17 +2,16 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 import { WebClient } from "@slack/web-api";
 
-const token = process.env.SLACK_BOT_TOKEN;
-if (!token) {
-  console.error("Missing SLACK_BOT_TOKEN env var — set it in your host's environment settings.");
-}
-const slack = new WebClient(token);
-
 export function jsonResult(value) {
   return { content: [{ type: "text", text: JSON.stringify(value) }] };
 }
 
 export function buildServer() {
+  const token = process.env.SLACK_BOT_TOKEN;
+  if (!token) {
+    throw new Error("Missing SLACK_BOT_TOKEN env var — set it in your host's environment settings.");
+  }
+  const slack = new WebClient(token);
   const server = new McpServer({ name: "samira-slack-bot", version: "1.0.0" });
 
   server.tool(
@@ -115,11 +114,23 @@ export function buildServer() {
 
   server.tool(
     "slack_search_channels",
-    "List channels the bot is a member of, optionally filtered by a name substring. Bot tokens cannot full-text search across the workspace the way a user token can — this only lists/filters known channels.",
+    "Search/list public channels in the workspace, optionally filtered by a name substring. Bot tokens cannot full-text search message content the way a user token can — this only lists/filters channel names.",
     { query: z.string().optional() },
     async ({ query }) => {
-      const res = await slack.conversations.list({ types: "public_channel,private_channel", limit: 200 });
-      let channels = res.channels || [];
+      const maxChannels = 1000;
+      let channels = [];
+      let cursor;
+      do {
+        const res = await slack.conversations.list({
+          types: "public_channel",
+          exclude_archived: true,
+          limit: 200,
+          cursor,
+        });
+        channels = channels.concat(res.channels || []);
+        cursor = res.response_metadata?.next_cursor || "";
+      } while (cursor && channels.length < maxChannels);
+      channels = channels.slice(0, maxChannels);
       if (query) {
         const q = query.toLowerCase();
         channels = channels.filter((c) => (c.name || "").toLowerCase().includes(q));

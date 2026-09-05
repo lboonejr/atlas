@@ -1,11 +1,19 @@
 import express from "express";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { buildServer } from "./lib/buildServer.js";
+import { requireAuth } from "./lib/auth.js";
+
+if (!process.env.SLACK_BOT_TOKEN) {
+  throw new Error("Missing SLACK_BOT_TOKEN environment variable — set it in the host's environment settings.");
+}
 
 const app = express();
 app.use(express.json());
 
 app.post("/mcp", async (req, res) => {
+  if (!requireAuth(req, res)) {
+    return;
+  }
   try {
     const server = buildServer();
     const transport = new StreamableHTTPServerTransport({ sessionIdGenerator: undefined });
@@ -27,7 +35,8 @@ app.post("/mcp", async (req, res) => {
   }
 });
 
-app.get("/", (_req, res) => {
+// Health check stays open — no auth token needed to see the server is alive.
+app.get(["/", "/health"], (_req, res) => {
   res.send("Samira Slack MCP bot server is running.");
 });
 
