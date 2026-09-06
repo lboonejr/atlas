@@ -1,6 +1,6 @@
 ---
 created: 2026-09-06T13:13-04:00
-updated: 2026-09-06T15:25-04:00
+updated: 2026-09-06T15:42-04:00
 domain: personal
 type: task
 status: done
@@ -35,5 +35,17 @@ know what tools/equipment to use, tomorrow.
 Answered directly in the Convo 1 card — no research needed, common household fix.
 Marked `status: done` since this is a complete answer with nothing pending.
 
+## Update 2026-09-06T15:42-04:00 — calendar event set
+
+Lemar asked for this on his calendar tomorrow, whenever there's free time, with the
+equipment checklist and steps in the event notes. Only one thing already on his
+calendar tomorrow (a 6:00-6:45am workout block), so set for **2026-09-07, 2:00-2:30pm
+ET**, description carries the equipment list + steps above. Popups at 60 min and at
+start.
+
+- Event: "Mom's carpet — vomit cleanup", id `hf3b627itrnruod705vhljjgbg`
+- https://www.google.com/calendar/event?eid=aGYzYjYyN2l0cm5ydW9kNzA1dmhsampnYmcgbGVtYXJAY3V6emllc25qLmNvbQ
+
 ## Sources
 - slack: Convo 2 (self-DM) drop, ts `1788714808.261809`, 2026-09-06 13:13 ET
+- slack: Convo 1 card ts `1788719325.608319`, reply ts `1788720168.724669` (calendar ask)
