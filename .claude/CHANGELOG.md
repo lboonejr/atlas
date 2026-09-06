@@ -4,6 +4,50 @@ The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NO
 History and cutover narratives live here.
 
 
+## 2026-09-06 — The three-conversation restructure
+Lemar's redesign of how he and Samira work together: she is no longer a per-channel
+workflow engine but a coworker he trades work off to. The whole relationship now runs
+through three conversations; every project channel became an append-only timeline.
+
+- **Convo 1 — "What we're working on now"** (Samira's DM `D0BHPKMDNEP`): the working
+  meeting. Every task is ONE threaded card — Headline (~5 words) · Context (ELI-13
+  rundown 600–900 chars + sources of truth) · Decisions (one option per reply, as many
+  rounds as needed) · Follow Up (receipts, nudges, close-out). Card format codified
+  ONCE in the new **`.claude/doctrine/card-format.md`** — the doctrine twin of anchors.
+- **Convo 2 — "What I need to work on"** (Lemar's self-DM `D0BBVV54L5R`): his intake
+  notepad — brain-dumps, deep dives, quick updates, money drops, skill thoughts. A bot
+  cannot enter a self-DM, so this surface rides the personal Slack connector, and
+  Samira's posts there carry a load-bearing 🌐 prefix (🌐🌩️ in deep-dive mode). The
+  trigger must carry BOTH Slack connectors — re-attaching the personal one is the
+  cutover's one manual infrastructure step.
+- **Convo 3 — #fixes** (`C0BV5BRNH5Z`, private, created this day): the single home for
+  anything wrong with Samira herself — previously scattered across `70-Automation/`
+  notes, STUCK cards, scanner DMs, and journal lines. Fix cards get decision rounds and
+  a follow-up that VERIFIES the fix held on a later run.
+- **Signals evolved**: the 4-emoji engine survives unchanged, and a plain reply from
+  Lemar is now a first-class signal read every pass; on conflict the reply wins.
+- **The sweep era ended**: PART C's fenced-prompt/project-channel sweep is retired —
+  staging a `run:admin-3x` fence became posting a Convo 1 card. `run:manual` fences
+  survive as the hand-off format for Lemar's own machine. Timelines are posted to
+  (PART 7, one entry per touched project per run) and never read.
+- **Lettered PARTs → numbered**: V→1 · S→2 · A→3 · B→4 · C→4/7 · D→6a · E→6b · Q→4
+  (Stormy is Convo 2's deep-dive mode; #stormy retired) · R→3 (PT rounds are Convo 1
+  decision rounds) · H→4 · M→4 (money drops arrive in Convo 2; #personal-finance is a
+  timeline) · T→6c (findings → #fixes) · P→8. Canvas refresh retired outright (blocked
+  since 07-25 — the restructure closes the gap instead of carrying it). The full
+  mapping table lives at the end of the runbook.
+- **Migration**: `.claude/routines/migration-2026-09-three-convos.md` — a self-retiring
+  sub-runbook PART 0 invokes each run until done: one final legacy sweep, then ~15
+  open #decisions cards triaged per run into Convo 1 (or closed to Haven), timeline
+  announcements, and a final "ready to archive #decisions and #stormy" card that Lemar
+  executes by hand. `decisions_threads` in the state file is frozen as the worklist;
+  `card_threads` replaces it going forward.
+- **Process note**: this restructure was developed on branch
+  `claude/samira-workflow-restructure-2k3gx5` and merged by PR — a sanctioned one-time
+  exception to the straight-to-`main` git policy, because the merge IS the cutover
+  (the trigger bootstraps off `main`).
+
+
 ## 2026-08-19 — Samira made aware of the Camden engagement
 The engagement existed in anchors, Drive, and Slack, but Haven had no note for it, and PART R
 had no reason to treat a client card differently from any other. Both fixed:
