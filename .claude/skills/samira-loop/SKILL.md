@@ -262,8 +262,10 @@ pt:<slug> · note:<path> · lane:<cloud|browser|local> · lenses:0/8
 — Samira
 ```
 
-That last control line is load-bearing: it is how PART R finds the card again next scan and
-knows how far the bake got. Update it in place each round.
+That last control line is load-bearing: it is how PART 3 finds the card again next scan and
+knows how far the bake got. Update it in place each round. (Open PT threads ride the state
+file's `card_threads` map, keyed `"<channel_id>:<parent_ts>"` — the retired
+`decisions_threads` map is gone with #decisions.)
 
 Each question is its own numbered reply, one line of why it matters, ending in a fork:
 
@@ -337,7 +339,7 @@ write the outcome note, post the #reports line, and close the card.
 honest line — *"this has been open two days, still worth doing? ✅ keep · ⛔ park"* — and
 parks on ⛔ or on silence by day four. Most loop items should close inside a day or two. An
 item that keeps growing past that is not a loop item, it is a project: hand it to Atlas
-Gear 2 (or to Stormy in #stormy if it has no date on it).
+Gear 2 (or to Stormy — Convo 2's deep-dive mode since 2026-09-06 — if it has no date on it).
 
 ---
 
@@ -356,7 +358,7 @@ States: `opened` · `round N (lenses k/8)` · `locked` · `staged` · `built` ·
 
 **One correction to keep the mental model honest:** #reports is a log, not an inbox. Samira
 never reads it back for instructions, and nothing posted there drives her next scan. What
-actually keeps her current across scans is the **Haven note** plus the **#decisions card**
+actually keeps her current across scans is the **Haven note** plus the **Convo 1 card**
 plus the **state file**. So: post to #reports because that is the record Lemar reads, and
 keep the note correct because that is what Samira runs on. Never let a #reports line be the
 only place a fact exists.
@@ -373,9 +375,9 @@ a card, a file) · never edit a note's `created` · never guess a controlled fro
 number in any message · never claim a handoff landed unless the vault write actually
 succeeded.
 
-Anything that needs one of those: draft what you safely can, post **one** #decisions card
-asking, mark the source ⏳, and move on. On a third consecutive failure of the same task,
-stop retrying and raise `STUCK — needs Lemar` in #decisions.
+Anything that needs one of those: draft what you safely can, ask as **one** Convo 1 card
+decision round, mark the source ⏳, and move on. On a third consecutive failure of the same
+task, stop retrying and raise a `STUCK — needs Lemar` card in #fixes (Convo 3).
 
 ---
 

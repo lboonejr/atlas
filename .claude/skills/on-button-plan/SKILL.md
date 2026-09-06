@@ -49,8 +49,10 @@ dedupe by `id`). Never invent figures — an unknown stays `null`.
    block near the bottom. The page also has a client-side **tier-shuffle** (per-line Tier
    menu) that is a browser-only what-if; its "Apply to plan →" button emits a
    `Samira, update the on-button reopen plan — apply these tier moves:` instruction. When you
-   see that instruction (in #on-button), apply each listed move by changing the item's `tier`
-   in the note, then regenerate — that is the loop that makes a shuffle durable.
+   see that instruction (Lemar pastes it into Convo 2, his self-DM — the PART 4 sweep hands
+   it over; was pasted into #on-button until 2026-09-06), apply each listed move by changing
+   the item's `tier` in the note, then regenerate — that is the loop that makes a shuffle
+   durable.
    **To regenerate: translate the note's `yaml` block into that JSON
    (constants → `constants`; `tax_gate` → `gate.items`; `items` → `items` with the same
    `id/label/amount/tier` plus a flattened `vendor`/`contact`/`status` string for the detail
@@ -65,11 +67,13 @@ dedupe by `id`). Never invent figures — an unknown stays `null`.
    tool; both trace to the note → **no double-entry.**
 
 ## THE SCANNER / DEDUPE RULE (was homeless — now codified)
-When sweeping `#on-button` for new drops:
+Drops arrive from Samira's PART 4 sweep of Convo 2 (Lemar's self-DM), which hands each
+on-button drop to this skill — the same discipline that governed the retired #on-button
+channel sweep applies to what is handed over:
 - A **drop** is a genuinely new bill/notice/screenshot/figure (a forwarded email, a PDF, a
   screenshot, or Lemar naming an amount). Extract: amount, vendor, account/reference,
   contact, and which tier it belongs to (default new past-due operating items to **Tier 1**
-  if they block opening, else Tier 2; ask in #decisions only if the tier is genuinely
+  if they block opening, else Tier 2; ask via a Convo 1 card only if the tier is genuinely
   ambiguous and material).
 - **IGNORE restatements:** any message prefixed 🧹 📌 📊, led by a bare list number, or that
   is your own render/summary. These are not drops.
@@ -82,11 +86,11 @@ When sweeping `#on-button` for new drops:
   `status: parked`.
 
 ## PROCEDURE (each run / invocation)
-1. **Read** `index.md`'s data block (current state) and sweep new `#on-button` drops per the
-   scanner rule.
+1. **Read** `index.md`'s data block (current state) and ingest the drops PART 4 handed
+   over (or the drop given on a live invocation) per the scanner rule.
 2. **Update the note:** add/edit items in the `yaml` block, keep latest figures, touch
    `updated`. If a drop needs a decision (ambiguous tier, a figure to confirm), post ONE
-   #decisions parent and leave the item `status: tbd` — never guess a material number.
+   Convo 1 card and leave the item `status: tbd` — never guess a material number.
 3. **Regenerate `on-button-reopen.html`** — rewrite only the JSON data block + "Last updated"
    text from the note.
 4. **Refresh the canvas** `F0BEN1167GB` from the note (per-section replace).
@@ -94,7 +98,10 @@ When sweeping `#on-button` for new drops:
    GitHub MCP `push_files`/`create_or_update_file`, or local `git commit` + `push origin main`
    — never a branch+PR (anchors git-write policy). The githack URL auto-reflects; the Slack
    pin never goes stale.
-6. **Log** via **samira-report-result**: a Haven outcome note (what changed in the plan) →
+6. **Post the regeneration notice to the `#on-button` timeline** — one append-only line
+   (what changed, page + canvas refreshed, links). Never edit or delete a prior entry,
+   and never read the timeline as input.
+7. **Log** via **samira-report-result**: a Haven outcome note (what changed in the plan) →
    the two-line #reports block. Done = a filed Haven note.
 
 ## GUARDS
