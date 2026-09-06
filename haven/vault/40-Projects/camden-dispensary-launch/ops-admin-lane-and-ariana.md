@@ -2,10 +2,10 @@
 created: 2026-08-19T12:00:40-04:00
 domain: project
 type: decision
-status: parked
+status: archived
 source: claude
 tags: [samira-loop, camden-launch, phase-00]
-updated: 2026-08-29T13:10:27-04:00
+updated: 2026-09-06T15:20:00Z
 ---
 <!-- `created` was missing (required field); recovered 2026-09-05 by repo audit from the
      author date of the file's first git commit e3511561 ("Add Haven note: Ops ADMIN lane
@@ -271,3 +271,17 @@ P00 client intake system, project doc, 2026-08-19, for the GitHub connector cons
 Four decisions recorded in the 2026-08-19 Cowork thread with Lemar: Ariana as day to day
 contact, ADMIN as a new fourth lane, the business build parked with harvest as we go, and
 the deliverable set as the operating model plus the onboarding packet.
+
+## Update 2026-09-06 (Lemar's decision — kill it)
+
+Lemar answered the "4 open PT cards, stalled 2+ weeks" flag card directly (#decisions,
+ts `1788705175.902499`): **kill the ADMIN lane and the Ariana role entirely.** `status`
+moved to `archived`. The two built docs (Ops_ADMIN lane operating model_20260819,
+Ops_Ariana onboarding packet_20260819) stay in Drive 02 Internal as history only — not
+to be acted on. The three outstanding items listed above (GitHub Contents-write grant,
+Ariana's access checklist, the onboarding-packet cleanup pass) are dropped along with
+the lane; none of them get done.
+
+### Sources
+- slack: #decisions `C0BBXA96FFV` ts `1788705175.902499` (Lemar's decision, in-thread on
+  ts `1788697019.074209`)

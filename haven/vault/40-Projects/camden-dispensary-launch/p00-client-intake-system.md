@@ -1,9 +1,9 @@
 ---
 created: 2026-08-19T00:10-04:00
-updated: 2026-08-24T08:15:00-04:00
+updated: 2026-09-06T15:20:00Z
 domain: project
 type: brief
-status: parked
+status: active
 tags: [samira-loop, camden-launch, phase-00, intake, jotform]
 source: claude
 ---
@@ -385,3 +385,23 @@ this text is drafted here for whoever has Docs access next.
 - drive: Intake — Documents from the Group, folder 17tQP09hT1cRcFzZASa32H23yI8Hv2Mc4
 - repo: .claude/projects/camden-dispensary-launch-project-instructions.md (the overlay)
 - repo: .claude/skills/samira-loop/SKILL.md (the mechanics)
+
+## Update 2026-09-06 (Lemar's decision — still needed, get it done)
+
+Lemar answered the "4 open PT cards, stalled 2+ weeks" flag card directly (#decisions,
+ts `1788705175.902499`): **still needed, get it done.** `status` moved back to `active`.
+Outstanding, unchanged from the 2026-08-24 park:
+
+- Wire the intake form's Google Drive integration (round 1 Q3; run block staged in
+  #camden-launch; browser lane, Lemar + Claude in Chrome).
+- Move the two new property questions into "The property" section (same Chrome session).
+- The welcome email at signing (round 1 Q1) — cloud/Gmail lane, still mine, still
+  overdue (proposal sent 2026-08-21). Not drafted this scan: no recipient email address
+  for Jamil Tyson is recorded anywhere in this note, the Working Log, or the vault —
+  drafting one would mean guessing an address for a live client, so this stays flagged
+  rather than guessed. Needs Lemar to supply Jamil's email (or confirm it's already on
+  file somewhere this session hasn't checked) before a draft can be built.
+
+### Sources
+- slack: #decisions `C0BBXA96FFV` ts `1788705175.902499` (Lemar's decision, in-thread on
+  ts `1788697019.074209`)
