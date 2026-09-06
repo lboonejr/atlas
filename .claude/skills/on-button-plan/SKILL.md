@@ -1,22 +1,27 @@
 ---
 name: on-button-plan
 description: >
-  The reopening-plan builder for #on-button. Maintains the ONE structured source of truth
-  — the Haven note haven/vault/40-Projects/on-button-reopen/index.md — and regenerates the
-  two surfaces rendered from it: the interactive page on-button-reopen.html (repo root,
-  served via githack) and the pinned Slack canvas F0BEN1167GB. Use it whenever a new
-  past-due bill / figure / screenshot lands in #on-button, when Lemar edits a tier or an
-  amount, or on demand ("run on-button-plan", "update the reopen plan", "rebuild the
-  on-button page", "add this to the reopening plan"). It codifies the scanner/dedupe rule
-  and the index → page → canvas regeneration. This skill NEVER pays or contacts anyone,
-  never sends email or outreach, and never posts outside #on-button + #reports; it updates
-  the vault, regenerates the page/canvas, commits to main, and logs. Returns counts for the
-  digest.
+  The reopening-plan builder for the on-button project. Maintains the ONE structured
+  source of truth — the Haven note haven/vault/40-Projects/on-button-reopen/index.md —
+  and regenerates the two surfaces rendered from it: the interactive page
+  on-button-reopen.html (repo root, served via githack) and the pinned Slack canvas
+  F0BEN1167GB. Use it whenever a new past-due bill / figure / screenshot arrives via
+  Convo 2 (Samira's PART 4 sweep of Lemar's self-DM hands the drop over — the #on-button
+  channel sweep retired 2026-09-06; #on-button is now the TIMELINE where regeneration
+  notices post), when Lemar edits a tier or an amount, or on demand ("run
+  on-button-plan", "update the reopen plan", "rebuild the on-button page", "add this to
+  the reopening plan"). It codifies the scanner/dedupe rule and the index → page →
+  canvas regeneration. This skill NEVER pays or contacts anyone, never sends email or
+  outreach, and never posts outside the #on-button timeline + #reports + a Convo 1 card
+  when a decision is needed; it updates the vault, regenerates the page/canvas, commits
+  to main, and logs. Returns counts for the digest.
 ---
 
-# On-Button Reopen-Plan Builder (#on-button)
+# On-Button Reopen-Plan Builder
 
-`#on-button` is Cuzzie's reopening command center. The plan is tiered so any investment
+The on-button plan is Cuzzie's reopening command center; `#on-button` is its append-only
+TIMELINE (since 2026-09-06) — regeneration notices post there, drops arrive via Convo 2.
+The plan is tiered so any investment
 amount maps to a concrete reopening path (Tier 1 bare-bones → Tier 2 nice-to-have →
 Tier 3 edge), with the ~$110K sales/local tax held out as a separate **gate** and the
 ~$31.2K/mo **carry** as the runway denominator. This skill keeps that plan current and
@@ -24,9 +29,10 @@ regenerates what everyone looks at. Every Safety rule in the runbook applies; ad
 guards below. **Tracking & planning only — nothing paid or contacted.**
 
 ## ANCHORS
-All IDs live in **`.claude/anchors.md`**: channel `#on-button` `C0BEQUW5NPP`, its pinned
-canvas `F0BEN1167GB`, and the git-write policy (commit straight to `main`). Vault writes go
-through **haven-capture**; results are logged through **samira-report-result**.
+All IDs live in **`.claude/anchors.md`**: the `#on-button` timeline `C0BEQUW5NPP`, its
+pinned canvas `F0BEN1167GB`, **Convo 1** `D0BHPKMDNEP` (decision cards), and the
+git-write policy (commit straight to `main`). Vault writes go through **haven-capture**;
+results are logged through **samira-report-result**.
 
 ## THE SOURCE OF TRUTH — one Haven note, one data block
 **`haven/vault/40-Projects/on-button-reopen/index.md`** holds the plan in a single fenced

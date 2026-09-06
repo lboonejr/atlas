@@ -204,18 +204,15 @@ questions` · `## Locked` (added at lock) · `## Handoff` · `## Sources`.
 ## 5. Build it — the three lanes
 
 ### CLOUD — hand it to Samira
-Post to the matched channel, top-level, un-reacted, 🌐-led, with a fenced prompt her PART C
-sweep picks up on a **later** scan (the buffer rule: nothing staged in a scan runs in that
-same scan):
-
-```
-===ATLAS PROMPT START | task:<slug> | run:admin-3x===
-<self-contained: the skill or tool to use, the exact paths and IDs, the ONE concrete
-outcome, and the acceptance test that proves it worked>
-===ATLAS PROMPT END===
-```
-
-Never pre-react your own post — the ✅ is Samira's done-key once she runs it.
+The `run:admin-3x` staging lane is RETIRED (2026-09-06 — the sweep that ran those
+fences ended with the restructure). The build now rides the PT card itself: write the
+build spec into the card thread (and the note's `## Handoff`) — self-contained: the
+skill or tool to use, the exact paths and IDs, the ONE concrete outcome, and the
+acceptance test that proves it worked. At lock, **Samira executes it directly when it
+is small and safe** (inside the safety floor, in the same or next scan), or **carries
+the build on the card** across scans — one slice per scan, progress replied in-thread
+— until the acceptance test passes. The buffer rule survives in card form: a card
+opened in one pass is first worked on a later scan.
 
 ### BROWSER — hand it to Claude in Chrome
 Chrome runs in Lemar's own logged-in browser, as him. So it reads, navigates, fills, and
@@ -248,9 +245,11 @@ the PM (section 7), not the builder.
 ## 6. The pressure test — the point of the whole thing
 
 ### 6.1 Where
-**One parent card in #decisions per item.** It is the only channel that pings him.
-Questions are threaded replies under that parent. Never open a second card for the same
-item, never re-post it, never nudge.
+**One parent card in Convo 1 per item** (the Samira DM — the only surface that pings
+him for work decisions; PT cards moved off #decisions 2026-09-06). PT rounds are
+decision rounds under the doctrine (`.claude/doctrine/card-format.md`): questions are
+threaded replies under that parent. Never open a second card for the same item, never
+re-post it, never nudge.
 
 ### 6.2 The card
 
@@ -297,8 +296,9 @@ Reactions are **his** signals. Read them; never set them.
 - ⛔ — drop that line of questioning
 - 🫡 on the parent — no more questions, lock it and build
 
-A plain reply in the thread counts as an answer with no reaction attached — read the
-thread, not just the reactions.
+A plain reply in the thread is a first-class signal, equal to any reaction — it can
+answer with no emoji attached, add nuance, or override an option. When a reply and a
+reaction conflict, the reply wins (doctrine); read the thread, not just the reactions.
 
 You set only the far-left headline emoji on cards you posted: 🟡 baking · 🔴 answers needed
 today to close today (use it on the last two scans, and only when the item is genuinely
@@ -316,9 +316,11 @@ so plainly and propose locking.
 At lock: update the note (`## Locked` with the final version, `status: active`), then run
 the lane.
 
-**CLOUD** → Samira builds it: stage the fenced prompt, or execute directly when it is small
-and safe. Outcome note plus the two-line #reports block through **samira-report-result**,
-then edit the parent to begin `✅ CLOSED — [outcome]`.
+**CLOUD** → Samira builds it: execute directly when it is small and safe, or carry the
+build on the card across scans until the acceptance test passes (the retired
+`run:admin-3x` staging is replaced by these two paths). Outcome note plus the two-line
+#reports block through **samira-report-result**, then edit the parent to begin
+`✅ CLOSED — [outcome]`.
 
 **BROWSER** → Samira hands him the `CHROME RUN` block from section 5, then runs PM on it the
 same way as local: card open on ⏳, one status check a day at most, outcome note and #reports
