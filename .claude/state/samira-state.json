@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260906T220358Z",
     "run_started": "2026-09-06T22:03:58Z",
-    "run_completed": "2026-09-06T21:58:00Z",
-    "note": "88th scan starting."
+    "run_completed": "2026-09-06T22:10:58Z",
+    "note": "88th scan complete (short scan — prior run had completed only ~6 min earlier, so all three swept surfaces (Convo 1, Convo 2, #fixes) were quiet). vault-keeper: filed 1 (dill-book-club-hub.md, valid domain:project frontmatter, filed to new 40-Projects/book-club-hub/ — was left in Inbox by the run that created it), stuck 5 (all previously known, no new; confirmed each still genuinely stuck on the same gap by re-reading frontmatter). Integrity: informal check only (re-read the 6 known Inbox notes, confirmed the standing dib-template-theme defect unchanged); did not run a fresh whole-repo git-diff incremental pass this scan — next scan should run one against sha 521566e. calendar-sync: not independently re-verified this scan (no new due-bearing notes were filed; carried the prior scan's +0/~0/-0 clean result rather than re-checking all 48 — flagging this as a carry, not a re-verified clean). Convo 1/#fixes/Convo 2 passes: all three quiet from their watermarks — nothing to work. PART 6a (email loop): D1 nothing to pick up (Convo 1 quiet); D2 triaged 8 new inbox threads (in:inbox after:1788720101 -label:Samira/seen) — 6 junk/no-action (NYT opinion, TBT Barter marketing, Neon welcome email, GitHub OAuth notice, StubHub events, NYT breaking news, Headset scheduled report — reads as 7 actually, see #reports line), 1 substantive (Google Workspace invoice 5673531116 due 9/30 — appended Update to the existing google-voice-subscription-cancellation.md note, same matter/domain-still-UNRESOLVED, no new card opened since an open Convo 1 card already tracks this Workspace-billing saga). All 8 threads labeled Samira/seen (Label_2, corrected id — see below). No reply-worthy mail this scan, so no drafts. PART 6b (investor): quiet, no investor-tagged mail or Convo 2 drops. PART 6c (reports-contradiction-scan): NOT run this scan (time budget went to the label-table finding below instead) — carrying to next run. PART 7: 0 timeline entries (nothing crossed a project-timeline threshold this scan). PART 8 (Pulse): quiet-pass skip — nothing this scan qualified for the something-changed gate (no card opened/closed, no money-hub change, no project-pulse flip). MIGRATION: not run this scan (still 37 decisions_threads remaining, unchanged) — carrying. NOTABLE FIX FILED: `list_labels` during PART 6a returned a Gmail label mapping for Samira/Car-Hunt/Vendor-Menus/etc. that conflicted (again) with anchors.md, which had already been corrected twice (2026-08-31, 2026-09-05) and was wrong both times. Corrected anchors.md to this scan's live read (commit 521566e, pushed direct to main from the local clone) and opened a #fixes card (C0BV5BRNH5Z ts 1788732629.871619) flagging the 3-in-5-weeks pattern itself as worth investigating, with 3 options (trust it / Lemar hand-verifies in Gmail settings / investigate root cause) — awaiting his signal."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1788711588",
       "C0BBZJL85RT": "1788715586.453489",
-      "D0BHPKMDNEP": "1788731820.780649",
+      "D0BHPKMDNEP": "1788732658",
       "C0BGLEMH99T": "1788720386.926129",
       "C0BEQUW5NPP": "1788711588",
       "C0BBLUA7JLX": "1788711588",
@@ -26,8 +26,8 @@
       "C0BC2A94142": "1788711588",
       "C0BBZ5J8805": "1788724006.560749",
       "C0BRZT2V89W": "1788724013.761999",
-      "D0BBVV54L5R": "1788725720.541579",
-      "C0BV5BRNH5Z": "1788731741.908079"
+      "D0BBVV54L5R": "1788732658",
+      "C0BV5BRNH5Z": "1788732635.947949"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788731820.780649",
@@ -61,7 +61,8 @@
       "D0BHPKMDNEP:1788719413.067149": "1788731728.578389",
       "D0BHPKMDNEP:1788719447.897129": "1788719457.974569",
       "D0BHPKMDNEP:1788719477.901399": "1788729326.130379",
-      "C0BV5BRNH5Z:1788731741.908079": "1788731741.908079"
+      "C0BV5BRNH5Z:1788731741.908079": "1788731741.908079",
+      "C0BV5BRNH5Z:1788732629.871619": "1788732635.947949"
     },
     "migration": {
       "decisions_migration_complete": false,
@@ -109,12 +110,12 @@
       "1787660130.097779": "1787667581.782429"
     },
     "capture_dm": "1788711588",
-    "gmail_after_epoch": 1788720101
+    "gmail_after_epoch": 1788732658
   },
   "integrity": {
     "last_full_pass": "2026-09-06T12:06:45Z",
     "last_scan_sha": "f1c664b",
-    "note": "87th scan: incremental integrity check (git diff against 245e9f2) covered only haven/vault/_daily/2026-09-06.md (a valid _daily append) — clean, no repair needed. Known standing defect unchanged: dib-template-theme-decision-closeout.md (00-Inbox, missing/invalid frontmatter, standing since prior scans). Files this scan authored/appended after the check (Betty correction, FruntDesk update, new Station UEZ note, money-hub ledger, Curaleaf/M&S notes) were all written by this session with valid frontmatter — will be covered by next scan's incremental diff."
+    "note": "88th scan: did not run a fresh git-diff incremental integrity pass (short scan, time went to filing + the Gmail label-table fix instead) — this is a gap, not a clean result; next scan should diff against 521566e (this scan's last commit) or 245e9f2 (last actual check, 87th scan) to cover what's accumulated. Manually re-read the 6 known Inbox notes this scan: dill-book-club-hub.md was valid and got filed; the other 5 (dib-template-theme-decision-closeout.md — missing/invalid frontmatter, standing — plus 4 UNRESOLVED-domain notes) confirmed unchanged, still genuinely stuck."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
