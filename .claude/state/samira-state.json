@@ -98,9 +98,9 @@
     "gmail_after_epoch": 1788638945
   },
   "integrity": {
-    "last_full_pass": "2026-09-05T13:03:51Z",
-    "last_scan_sha": "6779bd99bddfbb1ce357c879d2ae33cf99eaf3fc",
-    "note": "77th scan incremental: files changed since prior scan_sha (a9dbafd3) were this run's own commits -- state-lock update (not vault), haven/vault/20-Cuzzies/2026-09-05-adobe-cuzzies-paypal-payment-failed.md (new, filed from Inbox, complete valid frontmatter), haven/vault/00-Inbox/... deletion (moved, not a defect), haven/vault/50-Reference/Entities/adobe.md (new stub, valid), haven/vault/_daily/2026-09-05.md (digest append, trusted). No defects. Full whole-vault pass already ran today (13:03:51Z, 70th scan)."
+    "last_full_pass": "2026-09-06T12:06:45Z",
+    "last_scan_sha": "d352a24e5dfb0cab2f34bde3fae45cfabd1b7b30",
+    "note": "79th scan: day's first run, ran the FULL whole-vault pass (674 files, 6 skipped as templates/examples, 668 checked). Zero mechanical defects (no bad openers, no base64, no CRLF). Value issues: the same 5 known Inbox notes already on the open 'Haven Inbox -- 5 notes need a label' card (ts 1788372582.289019) -- composition unchanged since that card was posted, so it was NOT refreshed. No new stuck notes, no repairs, no entity stubs this scan."
   },
   "canvas_access": {
     "last_checked": "2026-09-05T13:03:51Z",
