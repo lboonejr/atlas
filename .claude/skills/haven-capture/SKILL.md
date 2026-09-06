@@ -108,11 +108,12 @@ Lemar. That stuck note is the system working, not failing.
 ### How sure is "sure" per field
 
 - **source** — almost always known: it is *where this capture came from*. Atlas from a
-  chat = `claude`. From the capture DM or any Slack message = `slack`. From the email
-  loop = `gmail`. A voice note = `voice`. A human typing directly = `manual`. Stamp it.
+  chat = `claude`. From the self-DM (Convo 2) or any Slack message = `slack`. From the
+  email loop = `gmail`. A voice note = `voice`. A human typing directly = `manual`.
+  Stamp it.
 - **status** — default `active`. Use `done` only if the captured thing is already
-  finished, `parked` if explicitly on hold, `awaiting-decision` when it sits on a
-  #decisions card. Rarely unresolved.
+  finished, `parked` if explicitly on hold, `awaiting-decision` when it sits on an
+  open card (Convo 1 or #fixes). Rarely unresolved.
 - **type** — infer from shape, and stamp when the shape is unambiguous. **The decision
   rule (schema §3): anything recording a choice Lemar made — an option picked, an
   approval given — is `type: decision`, never `log`.** Otherwise: `meeting` (notes from
