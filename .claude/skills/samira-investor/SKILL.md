@@ -1,28 +1,39 @@
 ---
 name: samira-investor
 description: >
-  Samira's investor-pipeline correspondence + data-room loop. Run this whenever Samira
-  works investor / lender / capital relationships in #investor-pipeline: build a
-  tailored per-company Google Drive data room, suggest voice-matched replies and
-  outreach in Lemar's business voice, keep the investor index note in Haven current,
-  coordinate meetings against Google Calendar, and drive each deal forward. It works
-  BOTH sources — investor mail handed off from the email loop (Gmail label
-  Samira/investor) AND items Lemar drops in the channel — and runs on the SAME reaction
-  engine as #decisions. This skill NEVER sends email or outreach, never makes financial
-  commitments or representations on Lemar's behalf, and never posts outside
-  #investor-pipeline; it drafts, builds folders, and logs only. Returns counts for the digest.
+  Samira's investor correspondence + data-room loop (PART 6b of the routine). Run this
+  whenever Samira works investor / lender / capital relationships: build a tailored
+  per-company Google Drive data room, suggest voice-matched replies and outreach in
+  Lemar's business voice, keep the investor index note in Haven current, coordinate
+  meetings against Google Calendar, and drive each deal forward. Decision/approval
+  cards live in Convo 1 (titled with the company); #investor-pipeline is an append-only
+  TIMELINE Samira posts movements to but never sweeps. It works BOTH sources — investor
+  mail handed off from the email loop (Gmail label Samira/investor) AND items Lemar
+  drops in Convo 2 (handed over by PART 4) — and runs on the SAME card engine as every
+  Convo 1 card. This skill NEVER sends email or outreach, never makes financial
+  commitments or representations on Lemar's behalf, and never posts outside Convo 1 +
+  the #investor-pipeline timeline; it drafts, builds folders, and logs only. Returns
+  counts for the digest.
 ---
 
-# Samira Investor Loop (#investor-pipeline)
+# Samira Investor Loop (Convo 1 cards + the #investor-pipeline timeline)
 
 Each scan: stand up (or update) a tailored per-company data room, suggest voice-matched
 replies and outreach, keep the **investor index note** current, drive each deal forward,
-and help schedule meetings — all inside **#investor-pipeline**. You NEVER send: you
-draft, build folders, and log; Lemar sends, then signals you. Every Safety rule in the
-runbook applies, plus the investor guards below.
+and help schedule meetings. Each deal is ONE **Convo 1 card titled with the company**
+(doctrine format, `.claude/doctrine/card-format.md`); **#investor-pipeline**
+(`C0BCCUKEUQ2`) is an append-only TIMELINE — you post data-room/index/movement entries
+there, you NEVER sweep it for input. You NEVER send: you draft, build folders, and log;
+Lemar sends, then signals you. Every Safety rule in the runbook applies, plus the
+investor guards below.
+
+(Until 2026-09-06 the whole loop lived inside #investor-pipeline and the channel was
+swept for Lemar's drops; the per-channel workflow era ended — cards moved to Convo 1
+and investor drops now arrive via Convo 2.)
 
 ## ANCHORS
-All platform IDs live in **`.claude/anchors.md`** — the channel, the Drive folders
+All platform IDs live in **`.claude/anchors.md`** — Convo 1, the timeline channel, the
+Drive folders
 (Master Templates · Data Rooms parent · pinned lender package), and the Gmail label IDs
 (`Samira/investor`; create `Samira/investor-sent` on first run and record its ID there).
 Vault writes go through **haven-capture**. There is NO pitch-tracker board and NO index
@@ -58,42 +69,50 @@ tailored to them and the ask. The outreach points them to THEIR folder link.
 - **Copy master + tailor.** Copy from Master Templates, then tailor the exec summary +
   deck: target's name, entity, the specific ask/use-of-funds, headline numbers. Static
   files (license, bank statements) copy as-is. Never leave a master un-tailored where it
-  should be personalized; never fabricate a master that doesn't exist — flag the gap to
-  #decisions (this is what blocked BizFundsHub on 2026-07-04).
+  should be personalized; never fabricate a master that doesn't exist — flag the gap as
+  a decision round on the deal's Convo 1 card (this is what blocked BizFundsHub on
+  2026-07-04).
 - **Owner/guarantor personal docs are NEVER copied in** — "available on request"; route
-  any such request to #decisions.
+  any such request to a decision round on the deal's Convo 1 card.
 
 ## Sources — both, deduped by label + index status + in-thread reply
 1. **Email handoff:** threads labeled `Samira/investor` without `Samira/investor-sent`
    that you have not yet drafted.
-2. **Dropped in channel:** Lemar posts who he reached out to + the ask, or a forwarded
-   intro/update, with no room yet.
+2. **Dropped in Convo 2:** Lemar drops who he reached out to + the ask, or a forwarded
+   intro/update, in his self-DM; PART 4 hands it here. (The #investor-pipeline timeline
+   is never swept for drops.)
 
-## The reaction engine (Lemar's signals — you READ, never SET)
+## The card engine (Lemar's signals — you READ, never SET)
 Headline emoji only (🔴/🟡/🟢/⏳). Map: **✅ sent** · **👀 seen** · **⛔ park** (→ Status
-Parked) · **🫡 close** (→ Committed / Passed).
+Parked) · **🫡 close** (→ Committed / Passed). AND: a plain REPLY from Lemar on the card
+is an equal, first-class signal — read it every pass; on conflict with a reaction, the
+reply wins (doctrine).
 
 ## Investor guards
 - **Never commit or represent**: no terms, valuations, numbers, or timelines stated as
   Lemar's decision; draft language defers substance ("Lemar will confirm specifics");
-  route real decisions to #decisions.
+  route real decisions to a Convo 1 card decision round.
 - **Sensitive-thread advisory** when a term sheet, LOI, counsel, regulator, or mid-deal
   lender is on the thread: add "⚠️ legal/financial terms on thread — Lemar to review
   closely."
 - **No financial actions, ever.**
 
-## I1 — in-flight threads
+## I1 — in-flight cards (Convo 1)
+Read each deal's open Convo 1 card — reactions AND replies:
 - **✅** → update the index row (Status → Sent or as fits, Next step, Last update), apply
   `Samira/investor-sent` for email-sourced items, write the receipt, headline 🟢.
 - **👀/none** → leave. **⛔** → Status Parked. **🫡** → Status Committed/Passed + outcome
   in Next step; the close receipt records a decision → `type: decision` (schema §3).
 
 ## I2 — new target → build the data room
-Add the index row (Status: Working) → create `[Investor] — [Entity] — Data Room` under
-the parent → copy + tailor masters → folder link into the row → receipt.
+Open ONE Convo 1 card titled with the company (doctrine format) if the deal has none →
+add the index row (Status: Working) → create `[Investor] — [Entity] — Data Room` under
+the parent → copy + tailor masters → folder link into the row → receipt → movement
+entry to the #investor-pipeline timeline.
 
 ## I3 — first outreach (Lemar's business voice)
-1–2 drafts threaded under the item (🌐, "— Samira", headline ⏳), business voice per the
+1–2 drafts as decision-round replies on the company's Convo 1 card (🌐, "— Samira",
+headline ⏳), business voice per the
 canonical profile at `.claude/voice/voice-profile-lemar-boone-jr.md` (the single source
 of truth — it supersedes the email-responder guide and every other style reference),
 pointing to THEIR folder. Read that profile and run its Hard-Floor Lint against this
@@ -115,6 +134,7 @@ Propose 2–3 open windows from his calendar in the draft; once confirmed, creat
 event on HIS calendar (no external invitees), record it in Next step + the receipt.
 
 ## What to return
-**Threads picked up · rooms built · drafts posted · docs built/copied · sends logged ·
+**Cards picked up · rooms built · drafts posted · docs built/copied · sends logged ·
 meetings scheduled · Haven receipts O.** Each send, doc, and meeting also gets a
-one-line #reports note.
+one-line #reports note, and each deal this run moved gets ONE movement entry on the
+#investor-pipeline timeline (append-only, PART 7 rules — never edit a prior entry).

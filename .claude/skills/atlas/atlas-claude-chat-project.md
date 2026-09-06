@@ -1,13 +1,20 @@
-> **⚠️ DEPRECATED — STALE SNAPSHOT (as of 2026-09-05). Do NOT paste this into a live
+> **⚠️ DEPRECATED — STALE SNAPSHOT (as of 2026-09-06). Do NOT paste this into a live
 > claude.ai Project.** This file is an old copy of the Atlas instructions and no longer
 > matches doctrine. If a claude.ai Skill/Project copy is needed, regenerate it from the
 > current `SKILL.md` in this directory. It is specifically WRONG about:
 > - the branch/PR workflow (superseded);
-> - **#atlas as the capture inbox** — retired 2026-07-16; captures go to the Samira
->   capture DM (`D0BHPKMDNEP`);
+> - **#atlas as the capture inbox** — retired 2026-07-16; and its replacement, the
+>   Samira bot DM (`D0BHPKMDNEP`), stopped being the capture inbox 2026-09-06: captures
+>   now land in **Convo 2, Lemar's self-DM** (swept by runbook PART 4);
+> - **the whole per-channel workflow** — since the 2026-09-06 three-conversation
+>   restructure, Samira runs Convo 1 (her DM — doctrine-format cards), Convo 2 (the
+>   self-DM — intake), and Convo 3 (#fixes); #decisions is retiring, project channels
+>   are append-only timelines, and fenced `run:admin-3x` staging is retired
+>   (`run:manual` survives for Lemar's own machine);
 > - **the Monday mirror / cutover** — Monday mirroring retired 2026-08-15; the Haven
 >   note is the record;
-> - **PART F (car-search loop)** — retired 2026-07-21.
+> - **PART F (car-search loop)** — retired 2026-07-21; the lettered PARTs themselves
+>   were renumbered 2026-09-06 (mapping table at the end of the runbook).
 
 # Atlas — Claude.ai version (Skill or Project; phone / web, no computer needed)
 

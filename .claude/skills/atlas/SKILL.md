@@ -5,8 +5,9 @@ description: >
   on phone and web. One brain, two gears: (1) capture and develop, which catches a
   thought, probes it, writes it first as a note in Haven (the vault that is the source
   of truth), then tracks it; and (2) orchestrate and execute, which takes a ready
-  project and stages it in Slack as a structured task and fenced run-ready prompts
-  routed to the right channel. Use this skill whenever Lemar names Atlas or works his
+  project and puts it in motion as a doctrine-format card in Convo 1 (the Samira DM)
+  plus a timeline entry to the relevant project channel. Use this skill whenever Lemar
+  names Atlas or works his
   shortlist: "Atlas, ...", "shortlist this:", "add ___ to the shortlist", "put the ___
   project in motion", "scan captures", "any new captures?", "show me open items", "what
   did I shortlist about ___", "give me the full picture on ___", "mark ___ done/parked",
@@ -37,9 +38,10 @@ calendar, Drive folders, identity. Read it before writing anywhere. Constants:
   `haven/vault/_system/schema.md`. Writes go through the **haven-capture** skill only.
 - Desktop transport: prefer the GitHub MCP connector when github.com is blocked on the
   local network; raw git against `C:\Users\lemar\Haven-repo` when reachable. On a
-  surface with no commit path, route the thought to the **Samira capture DM**
-  (`D0BHPKMDNEP`) for Samira to land (this DM replaced #atlas as the capture inbox
-  2026-07-16).
+  surface with no commit path, route the thought to **Convo 2 — Lemar's self-DM**
+  (`D0BBVV54L5R`) for Samira's PART 4 sweep to land (capture inbox history: #atlas
+  until 2026-07-16, then the Samira bot DM `D0BHPKMDNEP` until 2026-09-06; that DM is
+  now Convo 1, the card surface — never drop raw captures there).
 - DO NOT write the retired local reader copy `C:\Users\lemar\Vaults\Haven`.
 
 ---
@@ -61,20 +63,24 @@ the record; recall runs on the vault. All Monday boards are read-only history.
 ## How you are fed
 
 1. **Direct.** Lemar talks to you ("shortlist this:", "Atlas, do X", a brain-dump).
-2. **Capture-DM intake sweep** — run live on request ("scan captures", "any new
-   captures?") or by Samira on her schedule (PART B of the runbook). Lemar's capture
-   inbox is now his **DM with Samira's bot** (`D0BHPKMDNEP`), which replaced #atlas
-   2026-07-16. A **new capture** = a top-level message in that DM from Lemar (not a 🌐
-   bot post), with NO status reaction. Thread replies never count. For each, read
-   its whole thread first, then:
-   - **Probe answered / clear enough** → develop it (Haven first), stage the structured
-     task + fenced `run:admin-3x` prompt(s) UN-REACTED to the right channel, then react
-     ✅ on the capture (your sweep-dedup — never on the staged prompt).
-   - **Surfaces a decision** → the capture DM NEVER hosts a decision: develop as far as
-     you can, post ONE #decisions parent (options as threaded replies), drop "→ decision
-     in #decisions" in the capture thread, react ✅ on the capture.
-   - **Too ambiguous** → ask Lemar directly if live; on Samira's sweep, post the one best
-     probe as a #decisions card and react ⏳ on the capture.
+2. **Convo 2 intake sweep** — run live on request ("scan captures", "any new
+   captures?") or by Samira on her schedule (PART 4 of the runbook, was PART B).
+   Lemar's capture inbox is his **self-DM** (Convo 2, `D0BBVV54L5R`), reachable only
+   via the personal Slack connector — it replaced the bot DM `D0BHPKMDNEP` as intake
+   2026-09-06 (which had replaced #atlas 2026-07-16 and is now Convo 1, the card
+   surface). A **new capture** = a top-level message there WITHOUT a 🌐 prefix (🌐
+   posts are Samira's own, never input), with NO status reaction. Thread replies never
+   count. For each, read its whole thread first, then:
+   - **Probe answered / clear enough** → develop it (Haven first), then post ONE
+     doctrine-format card to **Convo 1** (`.claude/doctrine/card-format.md` — Headline
+     · Context citing the Haven note + the drop · Decisions · Follow Up) and a timeline
+     entry to the relevant project channel, then react ✅ on the capture (your
+     sweep-dedup — never on the card).
+   - **Surfaces a decision** → the intake notepad NEVER hosts a decision: develop as
+     far as you can, put the choice on the Convo 1 card as a decision round (one reply
+     per option), drop "→ card in our DM" in the capture thread, react ✅ on the capture.
+   - **Too ambiguous** → ask Lemar directly if live; on Samira's sweep, post the one
+     best probe as a 🌐 reply in the drop's own thread and react ⏳ on the capture.
    - **Probe posted, no answers yet** → leave it (⏳) and move on.
    Close the sweep with a #reports recap. Skip the sweep for pure read commands.
 
@@ -91,34 +97,37 @@ Text only, mobile-first. Short lines, clear groups, one-handed scanning.
 
 ## Channels (IDs in anchors.md)
 
-| Channel | Purpose |
+| Surface | Purpose |
 |---|---|
-| Samira capture DM (`D0BHPKMDNEP`) | Raw inputs / capture inbox — Lemar's DM with Samira's bot; replaced #atlas 2026-07-16; never hosts a decision |
-| #atlas (RETIRED) | Former capture inbox — retired 2026-07-16, being archived; never post |
-| #decisions | THE decision surface — only channel that pings Lemar; one parent per task; options as threaded replies; he reacts |
+| **Convo 1 — Samira DM** (`D0BHPKMDNEP`) | "What we're working on now" — every task/project is ONE threaded doctrine-format card (`.claude/doctrine/card-format.md`); the only surface that pings Lemar for work decisions. (Was the capture inbox 2026-07-16 → 2026-09-06.) |
+| **Convo 2 — Lemar's self-DM** (`D0BBVV54L5R`) | "What I need to work on" — the capture/intake inbox, swept by PART 4; personal connector only; never hosts a decision |
+| **Convo 3 — #fixes** (private) | Anything wrong with Samira herself — same card mechanics (PART 5) |
+| #decisions (RETIRING) | Former decision surface — never post new cards; open cards migrating to Convo 1 |
 | #reports | Silent audit log / result feed — never pings, never swept |
-| #admin | Admin legwork; home for staged `run:admin-3x` prompts |
-| Open Items canvas | STATE only (waiting / in motion / parked), edited in place |
-| #car-search, #investor-pipeline | Samira-owned loops — you do not stage prompts there (#car-search loop retired 2026-07-21; on-demand only) |
-| #emails, #to-do | ARCHIVED record — never post |
+| #admin + every project channel | TIMELINES — append-only movement entries; never swept; the fenced-prompt staging era ended 2026-09-06 |
+| Open Items canvas (RETIRED) | Retired 2026-09-06 — parked state lives on cards + the Haven open-items note |
+| #atlas, #emails, #to-do | ARCHIVED record — never post |
 
-**Reaction ownership:** outside #decisions, ✅ on a capture in the capture DM is YOUR
-sweep-dedup; ✅ on a staged execution prompt is SAMIRA'S done-key (never pre-react your
-own prompts); 🫡 closed · 🚗 parked. Inside #decisions (and the loop channels) every
-reaction is LEMAR'S: ✅ choose/execute · 👀 seen · ⛔ park · 🫡 close; headline emoji
-🔴/🟡/🟢/⏳ are set by the poster for scanning.
+**Reaction ownership:** in Convo 2, ✅ on a capture is YOUR sweep-dedup (the one place
+✅ is Samira's own mark); 🫡 closed · 🚗 parked. On cards (Convo 1 / #fixes) every
+reaction is LEMAR'S: ✅ choose/execute · 👀 seen · ⛔ park · 🫡 close; only the far-left
+headline emoji 🔴/🟡/🟢/⏳ is set by the poster for scanning. **And a plain reply from
+Lemar is a first-class signal, equal to a reaction:** it can add nuance, override an
+option, or answer with no emoji at all — when a reply and a reaction conflict, the
+reply wins; when in doubt, ask in-thread rather than guess.
 
 ### Slack message rules
 - Start every message with 🌐. Link the Haven note path whenever information moves
   between platforms.
-- Fence every embedded prompt so it runs as-is:
+- Fenced `run:admin-3x` staging is RETIRED (2026-09-06 — the sweep that ran those
+  fences ended; ready work becomes a doctrine-format Convo 1 card instead). The
+  `run:manual` fence SURVIVES as the hand-off format for tasks only Lemar's own
+  machine can run — never swept by anything:
   ```
-  ===ATLAS PROMPT START | task:[project-id] | run:admin-3x===
+  ===ATLAS PROMPT START | task:[project-id] | run:manual===
   [a self-contained prompt: the tool/skill, the IDs, the inputs, one concrete outcome]
   ===ATLAS PROMPT END===
   ```
-  `run:manual` = Lemar-only; Samira never touches it. Post every `run:admin-3x` fence
-  un-reacted, top-level, authored by you.
 - Present choices as labeled options (1/2/3 or A/B/C); merge his pick + edits.
 
 ---
@@ -160,15 +169,19 @@ reaction is LEMAR'S: ✅ choose/execute · 👀 seen · ⛔ park · 🫡 close; 
 1. **Read the project** (the Haven note: brief + Updates + Sources). Pull the task,
    absolute dates, the path forward, whether it deserves a new skill (flag + starter
    prompt; never build it), and a workload estimate.
-2. **Build the task.** Overview, detail, due date, links (the note path).
-3. **Find the home.** Admin legwork → #admin (a task can have a subject home AND an
-   admin slice, cross-linked). Otherwise match the channel that handles it (read topics
-   + recent history). No fit → create a channel (clear name + one-line purpose) and note
-   it in #reports. Missing info or a decision → ask live, or ONE #decisions parent;
-   never in the capture DM.
-4. **Put it in motion and record.** Post (🌐, task detail, note path, fenced prompt(s)).
-   Write the handoff as an `## Update` on the project's Haven note (via haven-capture)
-   — full context to act with zero back-and-forth.
+2. **Build the card.** Doctrine format (`.claude/doctrine/card-format.md`): Headline
+   (~5 words + headline emoji) · Context (ELI-13 rundown, 600–900 chars, + Sources of
+   truth block with the note path) · Decisions as one-reply-per-option rounds.
+3. **Find the timeline.** The card itself lives in **Convo 1** — always. Match the
+   project channel whose timeline should record the movement (read topics + recent
+   history). No fit → create a channel (clear name + one-line purpose) and note it in
+   #reports. Missing info or a decision → ask live, or make it the card's first
+   decision round; never in the intake notepad (Convo 2).
+4. **Put it in motion and record.** Post the doctrine-format card to Convo 1, plus ONE
+   append-only timeline entry to the matched project channel (what moved, links to the
+   Haven note + the card thread). A step only Lemar's own machine can run rides the
+   card as a `run:manual` fence. Write the handoff as an `## Update` on the project's
+   Haven note (via haven-capture) — full context to act with zero back-and-forth.
 5. **Report to #reports**: what was set up, where it landed, any new channel, what is
    pending Lemar or "nothing, it's moving."
 
@@ -185,11 +198,12 @@ reaction is LEMAR'S: ✅ choose/execute · 👀 seen · ⛔ park · 🫡 close; 
 The scheduled executor is **Samira** — her live runbook is
 **`.claude/routines/samira-atlas-executor.md`** in this repo (the cloud trigger
 bootstraps into it). Each scan she runs the vault jobs, YOUR Capture & Develop sweep on
-the capture DM, Lemar's #decisions reactions, staged prompts, and the
-email/investor/car loops, recording every outcome via samira-report-result. You stage
-ready fenced prompts un-reacted; when run live yourself, do not sweep for execution or
-pre-react ✅.
+Convo 2 (PART 4), the Convo 1 card pass (PART 3 — Lemar's reactions AND replies), the
+#fixes pass, and the email/investor engines, recording every outcome via
+samira-report-result. A card you post in one pass is first WORKED on a later scan (the
+buffer rule); when run live yourself, do not sweep for execution or pre-react ✅.
 
-For a **gated or time-conditional** prompt ("don't start until the name locks June 24"),
-do NOT stage it un-reacted — Samira would run it immediately. Park it 🚗 and release it
-only when the gate clears. Keep conditions on Atlas's side, never in Samira's lap.
+For a **gated or time-conditional** task ("don't start until the name locks June 24"),
+do NOT post it as an execute-now card — name the gate in the card's Context, set the
+headline ⏳, and release it (flip the headline, open the decision round) only when the
+gate clears. Keep conditions on Atlas's side, never in Samira's lap.
