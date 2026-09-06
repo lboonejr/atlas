@@ -26,6 +26,8 @@ connector required.
   it replaced the bot DM as the capture inbox). The primary target — never invent a
   different one. Reachable only from Lemar's own account (a bot cannot enter a
   self-DM), which is the identity this surface already uses.
+- **Convo 3 — #fixes**: `C0BV5BRNH5Z` (private; where anything wrong with Samira herself
+  gets worked, since 2026-09-06). The target when the thread's subject IS her.
 - **Convo 1 — the Samira bot DM**: `D0BHPKMDNEP` (the card surface). Used here ONLY as
   the courtesy fallback if, unusually, this session posts through a bot identity
   instead of Lemar's own account.
@@ -33,16 +35,39 @@ connector required.
 ## Step 1 — Summarize the thread
 Same as the full skill: what this thread is, state (done / in progress / blocked),
 decisions Lemar actually made, open questions, and — if the work isn't finished — one
-concrete recommended next step. Decide the mode:
+concrete recommended next step.
+
+Then the same two calls, in the same order. **First the SUBJECT** — whose problem is this?
+- **FIX** — the subject is *Samira herself*: a routine that misfired, a stale or
+  self-contradicting skill, a connector/access gap, a wrong or duplicated output she
+  produced. → #fixes, and the mode below doesn't apply.
+- **WORK** — everything else, i.e. Lemar's own projects and tasks. → the self-DM, and the
+  mode decides how the drop reads.
+
+**Then, for WORK threads, the MODE:**
 - **CONTINUE** — unfinished, with a concrete next step Samira could execute.
 - **ARCHIVE** — finished, or nothing actionable left; this is purely a record.
 
-## Step 2 — Drop it in the self-DM (this IS the whole delivery mechanism)
+Never split one thread across two surfaces — route on what the handoff is actually asking
+for: if what still needs doing is hers, it's FIX; if it's the project's, it's WORK.
+
+## Step 2 — Drop it where it gets swept (this IS the whole delivery mechanism)
 
 Since the 2026-09-06 restructure there is no channel-staging branch: project channels
 are append-only timelines nobody sweeps, so a fenced prompt or a "Samira, do X"
-instruction posted to one would sit forever unread. Everything goes through the ONE
-surface Samira sweeps for new work — **Lemar's self-DM** (`D0BBVV54L5R`).
+instruction posted to one would sit forever unread. **Never post to a project channel** —
+not even as a record. Everything goes through a surface Samira actually sweeps: **Lemar's
+self-DM** (`D0BBVV54L5R`) for WORK, **#fixes** (`C0BV5BRNH5Z`) for FIX.
+
+### FIX → a plain drop in #fixes
+Post the summary top-level in #fixes, un-reacted, no globe emoji, in the same plain
+first-person register as below — Lemar's own report of what's broken. PART 5 treats his
+drops there as intake and opens the fix card. Include what's broken in one line, what this
+thread found (cause, files involved), and **what "fixed" would look like** — PART 5's
+follow-up round verifies the fix held on a later run, so give it something concrete to
+check. If the thread already produced the fix, say so and say whether it's committed.
+
+### WORK → a plain drop in the self-DM
 
 Post the Step 1 summary there, top-level, un-reacted, written **exactly as Lemar would
 type a raw brain-dump**: no globe emoji (a 🌐 prefix marks a message as Samira's own
@@ -60,7 +85,7 @@ note, graduate real work into a Convo 1 card — on her own next scan.
 - **ARCHIVE mode** — say plainly that it's finished and just needs filing ("done,
   nothing left to do — just for the record: …", with a type hint: decision if it
   recorded a choice Lemar made, else a plain log). PART 4's routing files it and
-  posts the project channel's timeline entry.
+  posts the project channel's timeline entry — which is exactly why you don't.
 
 ### Fallback — only a bot identity is reachable
 If this session can't post as Lemar's own account (so the self-DM is unreachable),
@@ -68,24 +93,30 @@ post a 🌐-signed courtesy record to **Convo 1** (`D0BHPKMDNEP`) via the bot in
 explicitly flagged in the message as not auto-swept — a 🌐 bot post in Convo 1 is
 never card input — and tell Lemar it needs him or a live Samira turn to be noticed.
 
+For a FIX item, try #fixes first — it's a real channel, so a bot may reach it even when
+the self-DM is out of reach; post there 🌐-signed with the same not-auto-swept flag. If
+the bot isn't in the channel either, fall back to Convo 1 and tag the message 🔧.
+
 ## Step 3 — Tell Lemar where it went
-One or two lines: the mode, and where it went — "dropped it in your self-DM, Samira
-will develop it and land the Haven record on her next hourly pass" (or, in the
-fallback case, "posted a courtesy record in your Samira DM — flag it to her live if
-you want it acted on"). **Never say it's "saved to Haven" or "filed"** — this version
-can't confirm that write happened, only that it handed Samira the material to do it.
-Samira's cadence is hourly, roughly 8am–6pm ET — so say "next scan," not "now."
+One or two lines: the route, and where it went — "dropped it in your self-DM, Samira will
+develop it and land the Haven record on her next hourly pass", or "dropped it in #fixes,
+she'll open a fix card next scan" (or, in the fallback case, "posted a courtesy record in
+your Samira DM — flag it to her live if you want it acted on"). **Never say it's "saved to
+Haven" or "filed"** — this version can't confirm that write happened, only that it handed
+Samira the material to do it. Samira's cadence is hourly, roughly 8am–6pm ET — so say
+"next scan," not "now."
 
 ## Hard floor
 Never send email or any outward-facing action, never pay or transfer anything, never
-post outside the self-DM (or the Convo 1 courtesy fallback), never create a new Slack
+post outside the self-DM, #fixes, or the Convo 1 courtesy fallback, never post a project
+channel's timeline entry (PART 4 and PART 7 own those), never create a new Slack
 channel, never claim a Haven write happened that this surface didn't (and can't)
 perform itself.
 
 ## On drift
-This file hardcodes the self-DM and Convo 1 ids because it has no repo access to read
-`.claude/anchors.md` live. If either ID (or the workspace) ever changes, this file goes
-stale until someone updates it by hand — unlike the main skill, which always reads
+This file hardcodes the self-DM, #fixes, and Convo 1 ids because it has no repo access to
+read `.claude/anchors.md` live. If any of them (or the workspace) ever changes, this file
+goes stale until someone updates it by hand — unlike the main skill, which always reads
 anchors.md fresh. (It already went stale once: until 2026-09-06 it pointed at the bot
 DM `D0BHPKMDNEP` as the capture inbox and staged fenced prompts to project channels.)
 Prefer the main skill whenever GitHub access is available; treat this file as the
