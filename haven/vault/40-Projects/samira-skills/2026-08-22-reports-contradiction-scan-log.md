@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-09-06T13:04:00Z
+updated: 2026-09-06T14:10:00Z
 domain: project
 type: log
 status: active
@@ -1931,3 +1931,16 @@ ground truth.
 
 ### Sources (80th-scan update)
 - slack: #reports `C0BBZJL85RT`, ts range `1788646810.843199`–`1788697608.452459`
+
+## Update — 81st scan (2026-09-06, ~10:10am ET)
+
+Scanned `#reports` range `1788697608.452459`–`1788703792.478559` (2 messages: the 80th
+scan's digest, and this scan's PART C line reporting the Drive-organizing capture filed
+to Haven). A single new entry with no counterpart to conflict with — nothing in this
+window contradicts anything else or the vault ground truth it cites
+(`haven/vault/00-Inbox/2026-09-06-drive-file-organizing-run.md`, confirmed filed).
+
+**Found: 0. Open questions posted to #decisions: 0.**
+
+### Sources (81st-scan update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788697608.452459`–`1788703792.478559`
