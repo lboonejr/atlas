@@ -370,8 +370,8 @@ rather than staying silent.
 4-week income average OVERLOAD CHECK already computed — reuse it, never recompute it
 twice in one pass.
 
-## ROLLOVER — the leftovers drag forward (runs inside PART M, last scan of the day)
-On Samira's LAST hourly scan of the day (≥5pm ET — same style as the existing PART C
+## ROLLOVER — the leftovers drag forward (runs inside PART 4, last scan of the day)
+On Samira's LAST hourly scan of the day (≥5pm ET — same style as the retired PART C's
 timing gate, so this never fires mid-morning): for every `daily_targets[today]`
 contribution with `funded < amount`, carry the **unfunded remainder** (`amount − funded`)
 into `daily_targets[tomorrow]` as a contribution for that same `line_id`, marked
@@ -388,7 +388,7 @@ until Lemar says whether it was paid. Never keep silently dripping a bill whose 
 already gone by.
 
 **Rollover brake:** a contribution that has rolled **3 days running** stops rolling
-silently — keep rolling it, but name it in a #decisions parent ("$X for [line] has
+silently — keep rolling it, but name it in a Convo 1 card ("$X for [line] has
 rolled 3 days; it is not getting set aside"). Three days of rollover means the plan is
 wrong, not that Lemar needs a fourth reminder.
 
@@ -440,11 +440,11 @@ folder id (anchors, "Money Hub" section), `title` = `"YYYY-MM-DD HHMM ET — Mon
 (ET, zero-padded), `textContent` = the HTML, `contentMimeType: "text/html"`. Every
 render creates a brand-new Doc — never edit or delete a prior snapshot (2026-08-13:
 replaces the retired Artifact re-deploy, which kept prompting for tool approval on
-Lemar's phone). When running inside Samira (PART M) and the render actually changed
-something, reply in **#personal-finance** with the new Doc's link — same channel the
-triggering drop landed in; no separate DM (Samira's shared bot has only one DM slot,
-already used for capture). On a live/on-demand run ("show me the money hub"), just hand
-back the link directly in your reply. Sections, top to bottom, every number traceable to
+Lemar's phone). When running inside Samira (PART 4) and the render actually changed
+something, post the new Doc's link to the **#personal-finance timeline** — standing
+permission kept even though the triggering drop now arrives via Convo 2 (the timeline
+is where Lemar looks back at money movements); no separate DM. On a live/on-demand run
+("show me the money hub"), just hand back the link directly in your reply. Sections, top to bottom, every number traceable to
 the ledger or the log:
 1. **Today** — `total_claim` as the biggest number on the page, split immediately into
    its two parts: `operating_reserve` (keep in Spending, for gas) and `target` (move to
@@ -466,19 +466,21 @@ the ledger or the log:
    no target date is listed under section 5, not here.
 8. **Open questions** — the ledger's `open_questions`, verbatim.
 
-## PART M (inside Samira's scan)
-Sweep #personal-finance since the last run. A money drop is Lemar reporting earnings,
-cash, a bill (text or photo), a payment, or plan terms — the same scanner discipline as
-on-button-plan: ignore restatements, your own 🌐 posts, and reacted messages. Run the
-matching mode per drop; anything ambiguous or material (a figure to confirm, a missing
-date, a business-vs-personal call) → leave it `null`/flagged and raise ONE #decisions
-parent — never guess. Every new/updated line with a date gets its ACCRUAL computed and
-its DAILY CALENDAR event(s) created/updated in the same pass, then the OVERLOAD CHECK,
-then REBALANCE if OVERLOAD CHECK flagged (attach its proposed moves, if any, to the same
-#decisions parent — never a second card).
+## PART 4 money-drop mode (inside Samira's scan; was PART M until 2026-09-06)
+Drops arrive from the PART 4 sweep of Lemar's self-DM (Convo 2) — Samira classifies a
+message as a money drop and hands it to this skill (this replaces the retired
+#personal-finance sweep; #personal-finance is a timeline you post to, never read). A
+money drop is Lemar reporting earnings, cash, a bill (text or photo), a payment, or plan
+terms — the same scanner discipline as on-button-plan: ignore restatements, 🌐-prefixed
+posts, and reacted messages. Run the matching mode per drop; anything ambiguous or
+material (a figure to confirm, a missing date, a business-vs-personal call) → leave it
+`null`/flagged and raise ONE Convo 1 card — never guess. Every new/updated line with a
+date gets its ACCRUAL computed and its DAILY CALENDAR event(s) created/updated in the
+same pass, then the OVERLOAD CHECK, then REBALANCE if OVERLOAD CHECK flagged (attach its
+proposed moves, if any, to the same Convo 1 card — never a second card).
 Earnings drops also run INCOME ALLOCATION against the day they were earned.
 On the LAST hourly scan of the day (≥5pm ET) also run ROLLOVER before re-rendering.
-Re-render the dashboard once at the end ONLY if something changed. PART M captures,
+Re-render the dashboard once at the end ONLY if something changed. This mode captures,
 accrues, funds, checks, and renders; it never runs the weekly view (mode 6 stays on-demand).
 
 ## SAFETY (applies to the whole skill)
