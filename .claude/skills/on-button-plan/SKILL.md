@@ -107,7 +107,7 @@ channel sweep applies to what is handed over:
 ## GUARDS
 - **No payments, no contact, ever** — this is a planning tracker. Do not email, call, or
   message any vendor/lender named here.
-- **Never fabricate a figure.** Unknown = `null` (renders TBD) + a #decisions ask if it's
+- **Never fabricate a figure.** Unknown = `null` (renders TBD) + a Convo 1 card ask if it's
   material to opening.
 - **The tax gate is never funded by the allocator** — it stays in `tax_gate`, shown as a
   separate license-risk condition.
@@ -118,4 +118,5 @@ channel sweep applies to what is handed over:
 
 ## What to return
 **New drops ingested · items updated · page regenerated (y/n) · canvas refreshed (y/n) ·
-decisions raised · Haven outcome note O.** Each regeneration also gets a one-line #reports note.
+timeline entry posted (y/n) · Convo 1 cards raised · Haven outcome note O.** Each
+regeneration also gets a one-line #reports note.

@@ -189,9 +189,11 @@ If the push fails, STOP and say so — the capture is not real until it is pushe
 
 ### claude.ai phone/web without a commit path
 If your surface cannot commit, you cannot land the capture — say so plainly and route
-the raw thought to the **Samira capture DM** (`D0BHPKMDNEP`) so the hourly routine lands
-it (this DM replaced #atlas as the capture inbox 2026-07-16). Never claim a capture
-succeeded when no note was committed.
+the raw thought to **Convo 2, Lemar's self-DM** (`D0BBVV54L5R`), so the hourly
+routine's PART 4 sweep lands it (the self-DM became the capture inbox 2026-09-06,
+replacing the Samira bot DM `D0BHPKMDNEP`, which had replaced #atlas 2026-07-16 and is
+now Convo 1, the card surface). Never claim a capture succeeded when no note was
+committed.
 
 ### Return value
 Return the note's repo path (and "created" vs "updated") to the caller so it can be

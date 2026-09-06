@@ -39,7 +39,7 @@ vault (schema §4.5). Repairing a container never licenses filling in a value.
 
 ## ANCHORS
 All platform IDs live in **`.claude/anchors.md`** — read it at the start of a run
-(#decisions channel ID for the stuck-notes card lives there). Constants:
+(the Convo 1 DM ID for the stuck-notes card lives there). Constants:
 - Vault: `haven/vault/` on repo `lboonejr/atlas`, default branch. Rulebook:
   `haven/vault/_system/schema.md` — it wins over this file if they ever disagree.
 - Transport: GitHub connector. Pull → move/rename + touch `updated` → commit → push.
@@ -207,7 +207,8 @@ All platform IDs live in **`.claude/anchors.md`** — read it at the start of a 
 ## Surfacing the stuck notes (the human hand-off)
 
 Everything left in the Inbox after a sweep is either brand-new (fine) or **stuck on a
-controlled gap**. Post/refresh **ONE** #decisions card titled
+controlled gap**. Post/refresh **ONE** Convo 1 card (the Samira DM `D0BHPKMDNEP`; was a
+#decisions card until 2026-09-06) titled
 `🟡 Haven Inbox — N notes need a label`, one line per stuck note: the title + the
 exactly-one thing missing (`domain?`, `type?`, `which project?`) + its repo path. Update
 the existing card in place; never one ping per note; never escalate a long-stuck note
