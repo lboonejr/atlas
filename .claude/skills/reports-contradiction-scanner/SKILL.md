@@ -14,6 +14,12 @@ description: >
   Lemar picks it, same as every other Samira task.
 ---
 
+> **2026-09-06 RESTRUCTURE — findings routing changed.** Findings and open questions
+> now hand off to runbook **PART 3 (the FIXES loop)**, which posts them as FIXES cards
+> — replacing this skill's DM summary + #decisions card. The scan itself (bookmark,
+> ground-truthing against Haven, the log note, append-only corrections staged for
+> PART C) is unchanged. See `.claude/anchors.md` §The three conversations.
+
 # Reports Contradiction Scanner (Haven-first, hands off through #decisions)
 
 #reports is a one-way log — nothing there is ever corrected in place, so contradictions

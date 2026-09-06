@@ -20,6 +20,12 @@ description: >
   and gets asked.
 ---
 
+> **2026-09-06 RESTRUCTURE — PART M input surface moved.** Money drops (earnings,
+> cash, bills, payments, plan terms) now arrive via the **MAR conversation**; a drop
+> still landing in #personal-finance is honored and answered with a pointer.
+> #personal-finance keeps its timeline role — snapshot links still post there. Open
+> questions raise **NOW cards** (formerly #decisions). Everything else is unchanged.
+
 # Money Hub — earnings, bills, and the one number a day
 
 You run Lemar's personal budgeting center. One ledger, three renderings: the Haven

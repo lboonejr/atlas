@@ -12,6 +12,12 @@ description: >
   operational detail. All platform IDs live in `.claude/anchors.md`.
 ---
 
+> **2026-09-06 RESTRUCTURE — PART R was absorbed into runbook PART 1 (the NOW loop).**
+> 🧪 PT cards now live as cards in the NOW conversation (the Samira↔Lemar DM), not
+> #decisions. Everything else here — lanes, one round per scan, the 3-card cap,
+> lock/finish, two-day rule, digest token — is unchanged and still live; wherever this
+> file says #decisions, read the NOW conversation (`.claude/anchors.md`, global remap).
+
 # The Samira Loop — build + pressure-test (PART R)
 
 Lemar works in threads. Whatever a thread produces gets landed as a Haven note and opened

@@ -3,6 +3,64 @@
 The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NOW.
 History and cutover narratives live here.
 
+## 2026-09-06 — The three conversations (workflow restructure)
+Lemar's ask: change how he and Samira interact. The info hub is now good enough that he
+works directly in Claude and Samira is the engine developing projects while he's away —
+a coworker he trades off work with, like two people swapping a quick rundown at shift
+change. The core becomes THREE conversations; everything else is a timeline behind them.
+- **Convo 1 — NOW ("what we're working on now"), the Samira↔Lemar DM `D0BHPKMDNEP`.**
+  Every task/project is ONE card with four elements: a ~5-word **Headline** (subheading
+  = first thread reply, merged with the 2026-08-19 `📌` thread-name rule); **Context**
+  (an explain-like-I'm-13 rundown, 600–900 chars, who/what/where/when/why + the sources
+  of truth — files, due dates, contacts, links — blank when unknown); **Decisions**
+  (each its own thread reply; the reaction engine unchanged, PLUS replies are read for
+  nuance; rounds continue until the plan locks — then due dates become calendar events,
+  calls become calendar events with the call script attached, docs/emails get made —
+  Drafts only — and everything made gets linked); **Follow-Up** (after lock or
+  staleness: did it send/move/get signed, nudge open items, read the replies, file
+  everything, confirm Haven updated, close). Runbook **PART 1** (absorbs PART A + PART
+  R — 🧪 PT cards are NOW cards now, same build loop).
+- **Convo 2 — MAR ("what I need to work on"), the former #stormy channel `C0BJ37SU1TL`
+  (rename to #mar pending).** Lemar's writing-down place. Deep-dive items get developed
+  in-thread with the Stormy instrument (context/clarification, pressure test, organize
+  + format), ending as a properly formatted NOW card; quick updates get routed — Samira
+  finds the project's thread + Haven card and updates both; money drops feed PART M;
+  the skills-lab workflow lives here. Runbook **PART 2** (absorbs PART B + PART Q).
+- **Convo 3 — FIXES, a new private #fixes channel (ID TBD in anchors; until then fix
+  cards post to NOW prefixed 🛠️).** Everything wrong with Samira herself — errors,
+  bugs, missed runs, inconsistencies, contradictions — same card format, decision
+  rounds on how to fix, follow-ups to confirm the fix works. Fed by Lemar, by Samira's
+  own run anomalies, and by PART T's findings. Runbook **PART 3** (new).
+- **Why this surface mapping:** a shared bot holds exactly ONE DM per user (the
+  constraint that made #stormy a channel in the first place). The one real DM goes to
+  NOW; MAR and FIXES are private channels behaving as DMs.
+- **Project channels become TIMELINES** — append-only event logs (new runbook **PART
+  TL**): what moved, what changed, fleshed-out updates, each entry linking the NOW
+  thread + Haven note. Never swept for prompts (staging is #admin-only now), never host
+  questions. #decisions retires to read-only history after a one-time migration (PART 0
+  re-posts every open card to NOW and marks the original "→ moved to our DM").
+  #skills-lab retires to history. #personal-finance stays the money timeline; its input
+  role moves to MAR.
+- **Open Items canvas retired** (write-blocked since 7/25 anyway) — replaced by an HTML
+  **to-do list artifact** rendered from the Haven open-items note (the note is truth),
+  per Lemar's explicit ask; this knowingly brings the Artifact tool back for this one
+  surface, with the 2026-08-13 Drive-snapshot fallback on record if the phone
+  approval-prompt problem recurs.
+- **Sync doctrine:** every card links its Haven note + timeline; every timeline entry
+  links back; MAR updates land in vault + timeline + NOW card in the same pass; work
+  done in any live Claude chat reaches MAR via samira-work-summary. Haven and the repo
+  are updated first, always.
+- **State:** new watermark keys `now_threads` / `fixes_threads` / `now_dm` succeed
+  `decisions_threads` / `capture_dm` (old keys left stale, never deleted); one-time
+  migration gated by `migration.three_convos_done`.
+- **Files:** runbook rewritten around PARTs 1/2/3/TL (+ tombstones for A, B, Q, R, the
+  canvas step); anchors gains a "three conversations" section + a GLOBAL SURFACE REMAP
+  (so the ~15 skills that say "#decisions" keep working before their texts are edited);
+  restructure banners added to stormy-ideation, samira-build-loop, and the
+  samira-work-summary / atlas / money-hub / reports-contradiction-scanner / stormy
+  skills. Cutover checklist at the bottom of the runbook: rename #stormy → #mar, create
+  #fixes + `/invite @Samira` + record its ID, merge to `main`, watch the migration run.
+
 
 ## 2026-08-19 — Samira made aware of the Camden engagement
 The engagement existed in anchors, Drive, and Slack, but Haven had no note for it, and PART R

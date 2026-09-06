@@ -19,6 +19,13 @@ description: >
   never claims a handoff landed unless the Haven write actually succeeded.
 ---
 
+> **2026-09-06 RESTRUCTURE — handoff destination changed.** Thread summaries and
+> updates from any live Claude chat now land in the **MAR conversation** (the writing-
+> down place, `.claude/anchors.md` §The three conversations) as a plain drop — Samira's
+> PART 2 develops it, routes updates to the right project timeline + Haven card, and
+> opens a NOW card when work comes out of it. Fenced prompts are no longer staged into
+> project channels (they are timelines now); Haven-first is unchanged.
+
 # Samira Work Summary — thread-to-Samira handoff
 
 Any live Claude thread — a Claude Code session on this repo, or a plain claude.ai chat —

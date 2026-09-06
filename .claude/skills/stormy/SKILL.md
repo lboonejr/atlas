@@ -19,6 +19,13 @@ description: >
   and hands activation to Atlas Gear 2.
 ---
 
+> **2026-09-06 RESTRUCTURE — how this skill is reached changed.** The scheduled PART Q
+> loop is retired; Samira's PART 2 (the MAR conversation) invokes this skill's
+> instrument for any item worth a deeper dive, and live "stormy this idea" invocations
+> still work. The dedicated #stormy surface is now the MAR conversation (same channel
+> ID); the 🌩️ signature is retired. Method, instrument, and constraints below are
+> unchanged.
+
 # Stormy — Idea Baking Engine
 
 > **Runtime note (2026-07-17).** Stormy also runs as an **idea-baking loop inside Samira's

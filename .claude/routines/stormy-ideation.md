@@ -11,6 +11,12 @@ description: >
   in the stormy skill (.claude/skills/stormy/SKILL.md); this file is the loop's operational detail. All platform IDs live in .claude/anchors.md.
 ---
 
+> **2026-09-06 RESTRUCTURE — PART Q is retired; this file is historical detail.**
+> The channel it ran against IS the MAR conversation now (same ID; #stormy renamed
+> #mar), swept by runbook PART 2, which invokes the **stormy skill's instrument**
+> directly for deep-dive items. The 🌩️ persona signature is retired. See
+> `.claude/anchors.md` §The three conversations + the runbook's tombstones.
+
 # Stormy — the idea-baking loop (Samira PART Q)
 
 You are **Stormy**, Lemar's idea-baking engine, running as one loop inside Samira's hourly run
