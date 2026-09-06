@@ -37,58 +37,56 @@ concrete recommended next step. Decide the mode:
 - **CONTINUE** — unfinished, with a concrete next step Samira could execute.
 - **ARCHIVE** — finished, or nothing actionable left; this is purely a record.
 
-## Step 2 — Route it in Slack (this IS the whole delivery mechanism)
+## Step 2 — Drop it in the self-DM (this IS the whole delivery mechanism)
 
-**First, look for a home.** Search Slack for a channel whose name, topic, or recent
-history is a genuine match for the thread's subject (`slack_search_channels`,
-`slack_read_channel`) — never post on a loose name match alone.
+Since the 2026-09-06 restructure there is no channel-staging branch: project channels
+are append-only timelines nobody sweeps, so a fenced prompt or a "Samira, do X"
+instruction posted to one would sit forever unread. Everything goes through the ONE
+surface Samira sweeps for new work — **Lemar's self-DM** (`D0BBVV54L5R`).
 
-### A channel is a clear fit
-Post there, top-level, un-reacted, starting with the globe emoji, **addressed to Samira
-by name so her PART C sweep recognizes it as an instruction to run**, not just chatter:
-- **CONTINUE mode** — either fence the concrete next step:
-  ```
-  ===ATLAS PROMPT START | task:[slug] | run:admin-3x===
-  [self-contained: the skill/tool to use, the IDs/links needed, the one concrete outcome
-  — including "record this in Haven" as part of the outcome, since nothing has written
-  it there yet]
-  ===ATLAS PROMPT END===
-  ```
-  or, if a fence is overkill for something simple, write it as a plain named
-  instruction: "Samira, [do the concrete next step] — see the summary above, and land
-  the record in Haven when you do." Use `run:manual` (or no fence at all, just the
-  summary) instead if this genuinely needs Lemar's own hands, not Samira's.
-- **ARCHIVE mode** — there's no action for Samira to execute, only a record to file, so
-  say that explicitly: "Samira, save this thread summary to Haven as a record — [type
-  hint: decision if it recorded a choice Lemar made, else a plain log]: [the Step 1
-  summary]." That phrasing is what makes it a "named instruction" PART C's sweep will
-  actually run, rather than a status update it skips as chatter.
+Post the Step 1 summary there, top-level, un-reacted, written **exactly as Lemar would
+type a raw brain-dump**: no globe emoji (a 🌐 prefix marks a message as Samira's own
+and excludes it from the sweep), not addressed to Samira by name, plain first-person
+register. Posted from Lemar's own Slack account with no reaction, that's
+indistinguishable from a real capture, so Samira's PART 4 sweep ("a top-level message
+without a 🌐 prefix, with no status reaction") develops it — probe, land the Haven
+note, graduate real work into a Convo 1 card — on her own next scan.
 
-### No clear channel fit
-DM the **Samira capture DM** (`D0BHPKMDNEP`) instead — never create a channel, never
-invent a different DM. Write it **exactly as Lemar would type a raw brain-dump**: no
-globe emoji, not addressed to Samira by name, just the Step 1 summary in plain
-first-person register. Posted from Lemar's own Slack account with no reaction, that's
-indistinguishable from a real top-level capture, so Samira's PART B sweep ("a top-level
-message in that DM from Lemar, not a bot post, with no status reaction") develops it —
-probe, land the Haven note, find the home, stage — on her own next scan.
+- **CONTINUE mode** — include the concrete next step plainly ("next step: …"), written
+  self-contained: the skill/tool to use, the IDs/links needed, the one concrete
+  outcome. PART 4 is capture-first, so the Haven record lands as part of developing
+  it — no need to spell that out. If the next step genuinely needs Lemar's own hands,
+  say so in the drop ("this one's on me: …") so the card carries it as his open item.
+- **ARCHIVE mode** — say plainly that it's finished and just needs filing ("done,
+  nothing left to do — just for the record: …", with a type hint: decision if it
+  recorded a choice Lemar made, else a plain log). PART 4's routing files it and
+  posts the project channel's timeline entry.
+
+### Fallback — only a bot identity is reachable
+If this session can't post as Lemar's own account (so the self-DM is unreachable),
+post a 🌐-signed courtesy record to **Convo 1** (`D0BHPKMDNEP`) via the bot instead,
+explicitly flagged in the message as not auto-swept — a 🌐 bot post in Convo 1 is
+never card input — and tell Lemar it needs him or a live Samira turn to be noticed.
 
 ## Step 3 — Tell Lemar where it went
-One or two lines: the mode, and where it went — "posted to #channel, Samira will run it
-and land the Haven record on her next hourly scan" or "DM'd Samira, she'll develop it and
-land the Haven record on her next hourly pass." **Never say it's "saved to Haven" or
-"filed"** — this version can't confirm that write happened, only that it handed Samira
-the material to do it. Samira's cadence is hourly, roughly 8am–6pm ET — so say "next
-scan," not "now."
+One or two lines: the mode, and where it went — "dropped it in your self-DM, Samira
+will develop it and land the Haven record on her next hourly pass" (or, in the
+fallback case, "posted a courtesy record in your Samira DM — flag it to her live if
+you want it acted on"). **Never say it's "saved to Haven" or "filed"** — this version
+can't confirm that write happened, only that it handed Samira the material to do it.
+Samira's cadence is hourly, roughly 8am–6pm ET — so say "next scan," not "now."
 
 ## Hard floor
 Never send email or any outward-facing action, never pay or transfer anything, never
-post outside the matched channel or the capture DM, never create a new Slack channel,
-never claim a Haven write happened that this surface didn't (and can't) perform itself.
+post outside the self-DM (or the Convo 1 courtesy fallback), never create a new Slack
+channel, never claim a Haven write happened that this surface didn't (and can't)
+perform itself.
 
 ## On drift
-This file hardcodes the capture DM id because it has no repo access to read
-`.claude/anchors.md` live. If that ID (or the workspace) ever changes, this file goes
+This file hardcodes the self-DM and Convo 1 ids because it has no repo access to read
+`.claude/anchors.md` live. If either ID (or the workspace) ever changes, this file goes
 stale until someone updates it by hand — unlike the main skill, which always reads
-anchors.md fresh. Prefer the main skill whenever GitHub access is available; treat this
-file as the fallback for when it genuinely isn't.
+anchors.md fresh. (It already went stale once: until 2026-09-06 it pointed at the bot
+DM `D0BHPKMDNEP` as the capture inbox and staged fenced prompts to project channels.)
+Prefer the main skill whenever GitHub access is available; treat this file as the
+fallback for when it genuinely isn't.
