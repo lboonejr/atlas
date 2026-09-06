@@ -14,7 +14,9 @@ description: >
   "log earnings", "made $X today", "doordash paid me", "I have $X cash", "new bill:", a
   bill photo or payout screenshot, "payment plan:", "run my week", "what's due", "what
   do I set aside", "paid the [bill]", "show me the money hub", "money hub", "rebuild the
-  money hub". Also invoked by Samira's PART M for money drops in #personal-finance. This
+  money hub". Also invoked by Samira's PART 4 for money drops swept from Lemar's self-DM
+  (Convo 2; was PART M sweeping #personal-finance until 2026-09-06 — #personal-finance
+  is now a timeline where snapshot links and movement entries still post). This
   skill NEVER moves money, never pays anyone, never contacts a creditor or biller, never
   sends email or outreach, and never invents a number or a date — an unknown stays null
   and gets asked.
@@ -27,16 +29,19 @@ ledger note is truth; the Money Hub dashboard artifact and the reminder-calendar
 (per-bill due-date events AND the daily "set aside today" aggregate) are projections of
 it. **Every figure in this system is REPORTED by Lemar** — earnings, cash, gas spend,
 bills, payments, and account balances. There is no bank connection and nothing is
-fetched. Runs live ("run my week") or inside Samira's scan (PART M). Every Safety rule
-in the runbook applies; add the guards below.
+fetched. Runs live ("run my week") or inside Samira's scan (PART 4's money-drop mode —
+was PART M until 2026-09-06). Every Safety rule in the runbook applies; add the guards
+below.
 
 ## ANCHORS
 All platform IDs live in **`.claude/anchors.md`** — read it first. You use: the
 **Money Hub Drive folder id** (Money Hub section), the **reminder calendar ID** (personal
 money only), the **Cuzzie's (Owners) calendar ID** (business money only),
-**#personal-finance** `C0BGLEMH99T`, and the git-write policy (commit straight to
-`main`; prefix `money-hub:`). Vault outcome notes go through **samira-report-result**
-when running inside Samira.
+**#personal-finance** `C0BGLEMH99T` (a TIMELINE since 2026-09-06 — you post snapshot
+links and movement entries there under standing permission, never sweep it), **Convo 1**
+`D0BHPKMDNEP` (where decision cards are raised), and the git-write policy (commit
+straight to `main`; prefix `money-hub:`). Vault outcome notes go through
+**samira-report-result** when running inside Samira.
 
 ## THE MODEL — due-date order, two pockets, one number
 Locked 2026-08-10 by Lemar, replacing the Option 3 hybrid floor + waterfall (2026-07-24,
@@ -53,7 +58,7 @@ is not "low priority," it is *not in the system at all*. Under the retired model
 undated bill still landed in the monthly floor sum; under due-date order it silently
 does nothing. So every undated line is a live defect, not a footnote: surface all of
 them in `open_questions`, in the dashboard's "NO DATE — not being tracked" strip, and
-in your PART M return token. Never invent a date to force a line into the queue.
+in your PART 4 return token. Never invent a date to force a line into the queue.
 
 **Two pockets.** Roles are fixed; the ACCOUNTS behind them come from the ledger's
 `pockets` block and were corrected 2026-08-10 — always read them from the ledger, never
@@ -103,10 +108,10 @@ phone lines, vendor invoices, collections against the entity) are NOT personal b
 - They never contribute to `daily_targets` — a business bill must never inflate the one
   number Lemar sets aside from his own earnings.
 - `#on-button` and its own index own the reopening/wind-down obligations; route there.
-When a drop in #personal-finance is business money, say so, route it, and do not write
-it here. When it is genuinely ambiguous (Lemar personally covering a Cuzzie's cost out
-of his own earnings), leave it out and raise ONE #decisions parent — never guess which
-side of the line it sits on.
+When a money drop (from the Convo 2 sweep, or live) is business money, say so, route it,
+and do not write it here. When it is genuinely ambiguous (Lemar personally covering a
+Cuzzie's cost out of his own earnings), leave it out and raise ONE Convo 1 card (decision
+round) — never guess which side of the line it sits on.
 
 ## MODES
 
@@ -174,11 +179,12 @@ never scheduled (Lemar's call, 2026-08-05).
   slips is Lemar's call; your job is to show him the cliff, not to jump for him.
 - **Output:** today's set-aside number, the 14-day queue with dates and running totals,
   income this week, and the one transfer instruction (Spending → Set-Aside). Advisory
-  only; Lemar moves the money. Append as an `## Update` to the ledger, post to
-  #personal-finance (when running with a Slack surface), re-render the dashboard.
+  only; Lemar moves the money. Append as an `## Update` to the ledger, post to the
+  #personal-finance timeline (when running with a Slack surface; standing permission
+  kept), re-render the dashboard.
 
 **7. Mark paid** — "paid the Claude bill", "installment 2 of [plan] paid", or a payment
-confirmation (text or photo) in #personal-finance. Flip the line's `status` to `paid` (a
+confirmation (text or photo) dropped in Convo 2. Flip the line's `status` to `paid` (a
 monthly bill just gets a dated note — it recurs), retire a one-time item's or
 installment's calendar event (see CALENDAR), and when a plan's last installment pays,
 mark the plan done. **Ramp side-effect:** flip that bill's `pending`/`rolled`
@@ -303,9 +309,10 @@ If the coming week's set-aside total exceeds that average, **still write the acc
 exactly as computed** — never quietly shrink, delay, or drop a line to make the number
 look achievable — and additionally:
 - Flag it on the dashboard: "⚠️ this week's set-aside is $X against a $Y average week."
-- Raise ONE #decisions parent naming the gap in dollars and listing the dated lines
-  inside the window, so Lemar decides what moves. You never decide which bill slips.
-- Include `overload $X vs $Y` in your PART M return token.
+- Raise ONE Convo 1 card (decision round) naming the gap in dollars and listing the
+  dated lines inside the window, so Lemar decides what moves. You never decide which
+  bill slips.
+- Include `overload $X vs $Y` in your PART 4 return token.
 
 A number Lemar can't hit is still the true number. The failure mode this guards against
 is a cheerful dashboard, not an ugly one.
@@ -352,18 +359,19 @@ week fit," now extended: the skill may PROPOSE a stretch, it may never force one
 may never manufacture a proposal that doesn't actually work just to have something to
 show.
 
-**Output.** One #decisions parent per overload event (the same card OVERLOAD CHECK
+**Output.** One Convo 1 card per overload event (the same card OVERLOAD CHECK
 already raises — do not raise a second one), with each proposed move as a labeled
-threaded reply option (mirrors the existing #decisions pattern). Lemar reacts to choose;
-nothing is applied until he does. If REBALANCE has nothing valid to propose (hard stop
-above), say so in that same card rather than staying silent.
+threaded reply option (the doctrine's decision-round pattern). Lemar signals to choose —
+reaction or plain reply, reply wins on conflict; nothing is applied until he does. If
+REBALANCE has nothing valid to propose (hard stop above), say so in that same card
+rather than staying silent.
 
 **Data needed:** just the `non_negotiable` flag (field rules, below) and the trailing
 4-week income average OVERLOAD CHECK already computed — reuse it, never recompute it
 twice in one pass.
 
-## ROLLOVER — the leftovers drag forward (runs inside PART M, last scan of the day)
-On Samira's LAST hourly scan of the day (≥5pm ET — same style as the existing PART C
+## ROLLOVER — the leftovers drag forward (runs inside PART 4, last scan of the day)
+On Samira's LAST hourly scan of the day (≥5pm ET — same style as the retired PART C's
 timing gate, so this never fires mid-morning): for every `daily_targets[today]`
 contribution with `funded < amount`, carry the **unfunded remainder** (`amount − funded`)
 into `daily_targets[tomorrow]` as a contribution for that same `line_id`, marked
@@ -380,7 +388,7 @@ until Lemar says whether it was paid. Never keep silently dripping a bill whose 
 already gone by.
 
 **Rollover brake:** a contribution that has rolled **3 days running** stops rolling
-silently — keep rolling it, but name it in a #decisions parent ("$X for [line] has
+silently — keep rolling it, but name it in a Convo 1 card ("$X for [line] has
 rolled 3 days; it is not getting set aside"). Three days of rollover means the plan is
 wrong, not that Lemar needs a fourth reminder.
 
@@ -432,11 +440,11 @@ folder id (anchors, "Money Hub" section), `title` = `"YYYY-MM-DD HHMM ET — Mon
 (ET, zero-padded), `textContent` = the HTML, `contentMimeType: "text/html"`. Every
 render creates a brand-new Doc — never edit or delete a prior snapshot (2026-08-13:
 replaces the retired Artifact re-deploy, which kept prompting for tool approval on
-Lemar's phone). When running inside Samira (PART M) and the render actually changed
-something, reply in **#personal-finance** with the new Doc's link — same channel the
-triggering drop landed in; no separate DM (Samira's shared bot has only one DM slot,
-already used for capture). On a live/on-demand run ("show me the money hub"), just hand
-back the link directly in your reply. Sections, top to bottom, every number traceable to
+Lemar's phone). When running inside Samira (PART 4) and the render actually changed
+something, post the new Doc's link to the **#personal-finance timeline** — standing
+permission kept even though the triggering drop now arrives via Convo 2 (the timeline
+is where Lemar looks back at money movements); no separate DM. On a live/on-demand run
+("show me the money hub"), just hand back the link directly in your reply. Sections, top to bottom, every number traceable to
 the ledger or the log:
 1. **Today** — `total_claim` as the biggest number on the page, split immediately into
    its two parts: `operating_reserve` (keep in Spending, for gas) and `target` (move to
@@ -458,19 +466,21 @@ the ledger or the log:
    no target date is listed under section 5, not here.
 8. **Open questions** — the ledger's `open_questions`, verbatim.
 
-## PART M (inside Samira's scan)
-Sweep #personal-finance since the last run. A money drop is Lemar reporting earnings,
-cash, a bill (text or photo), a payment, or plan terms — the same scanner discipline as
-on-button-plan: ignore restatements, your own 🌐 posts, and reacted messages. Run the
-matching mode per drop; anything ambiguous or material (a figure to confirm, a missing
-date, a business-vs-personal call) → leave it `null`/flagged and raise ONE #decisions
-parent — never guess. Every new/updated line with a date gets its ACCRUAL computed and
-its DAILY CALENDAR event(s) created/updated in the same pass, then the OVERLOAD CHECK,
-then REBALANCE if OVERLOAD CHECK flagged (attach its proposed moves, if any, to the same
-#decisions parent — never a second card).
+## PART 4 money-drop mode (inside Samira's scan; was PART M until 2026-09-06)
+Drops arrive from the PART 4 sweep of Lemar's self-DM (Convo 2) — Samira classifies a
+message as a money drop and hands it to this skill (this replaces the retired
+#personal-finance sweep; #personal-finance is a timeline you post to, never read). A
+money drop is Lemar reporting earnings, cash, a bill (text or photo), a payment, or plan
+terms — the same scanner discipline as on-button-plan: ignore restatements, 🌐-prefixed
+posts, and reacted messages. Run the matching mode per drop; anything ambiguous or
+material (a figure to confirm, a missing date, a business-vs-personal call) → leave it
+`null`/flagged and raise ONE Convo 1 card — never guess. Every new/updated line with a
+date gets its ACCRUAL computed and its DAILY CALENDAR event(s) created/updated in the
+same pass, then the OVERLOAD CHECK, then REBALANCE if OVERLOAD CHECK flagged (attach its
+proposed moves, if any, to the same Convo 1 card — never a second card).
 Earnings drops also run INCOME ALLOCATION against the day they were earned.
 On the LAST hourly scan of the day (≥5pm ET) also run ROLLOVER before re-rendering.
-Re-render the dashboard once at the end ONLY if something changed. PART M captures,
+Re-render the dashboard once at the end ONLY if something changed. This mode captures,
 accrues, funds, checks, and renders; it never runs the weekly view (mode 6 stays on-demand).
 
 ## SAFETY (applies to the whole skill)
@@ -480,8 +490,8 @@ the `daily_targets` block); append to the income log; create/update/cancel event
 personal reminder calendar (both per-bill due-date events AND the daily aggregate) and
 on the Cuzzie's (Owners) calendar for business bills, writing ids back;
 create a new Money Hub snapshot Doc in the Money Hub Drive folder (never edit or delete a
-prior snapshot); post money-hub output to #personal-finance and raise #decisions cards
-when running inside Samira; commit to `main`.
+prior snapshot); post money-hub output to the #personal-finance timeline and raise
+Convo 1 cards when running inside Samira; commit to `main`.
 
 You MUST NOT, ever: move money, make a payment or transfer, or tell any surface a
 payment happened that Lemar didn't report; contact any creditor, biller, or lender; send
@@ -495,7 +505,7 @@ attendees to any event; mark a `daily_targets` contribution `paid` except as the
 side-effect of Mode 7 (a rollover only ever sets `rolled`, never `paid`); **REBALANCE
 specifically must never** apply a proposed move itself, touch a `non_negotiable: true`
 line, touch an already-`funded`/`paid` installment, move a flagged business-origin line
-into a business ledger, or raise a second #decisions card when OVERLOAD CHECK already
+into a business ledger, or raise a second Convo 1 card when OVERLOAD CHECK already
 raised one.
 
 ## Returns (to the Samira runbook, for the digest)
@@ -504,8 +514,8 @@ funded $Y · maint +$M · undated N · overload $X vs $Y · rebalance N moves/no
 $Z> · hub ✅/⚠️` — or `money —` when the sweep found nothing.
 
 ## Worked example
-Lemar drops in #personal-finance: "New bill, car insurance $182 a month on the 15th.
-Also made $210 doordashing today." PART M:
+Lemar drops in his self-DM (Convo 2): "New bill, car insurance $182 a month on the
+15th. Also made $210 doordashing today." PART 4 hands it to this skill:
 1. Adds `{id: car-insurance, amount: 182, cadence: monthly, day: 15}` — it has a date,
    so it queues. Creates the recurring event `Bill: Car insurance — $182` on the 15th
    with both popups, stores the id.

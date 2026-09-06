@@ -2,6 +2,14 @@
 
 This is the ENTIRE prompt for the claude.ai RemoteTrigger routine
 (`trig_01VGzAWGSadjRbJbKURxCYvG`, env `env_01Xatmag93x2WA2Gd84D9iHj`).
+
+CONNECTORS (2026-09 restructure): the trigger must carry TWO Slack connectors — the
+Samira bot connector AND the personal Slack connector (Convo 2, Lemar's self-DM, is
+reachable only via the personal one; the bot cannot enter a self-DM). If the personal
+connector is missing from a run, the runbook's PART 4 guard degrades gracefully (one
+#fixes line, skip) — but the restructure is not fully live until the trigger carries
+both. Re-attach via the RemoteTrigger API (partial update, full `job_config`) or by
+editing the Routine's connectors in the claude.ai UI.
 Swap it in via the RemoteTrigger API (partial update, full `job_config`) from an
 authenticated session, or paste it into /schedule. After the swap, editing
 `.claude/routines/samira-atlas-executor.md` on the default branch changes Samira's

@@ -5,24 +5,26 @@ description: >
   and finished. Given an idea, doc, deck, spec, page, or build that a conversation just
   produced, it writes the Haven note FIRST, calls the lane (cloud = Samira builds it
   unattended · browser = Claude in Chrome with Lemar present · local = his own machine),
-  opens ONE 🧪 PT card in #decisions, and runs an eight-lens pressure test across the day's
-  remaining scans until the questions run out and the thing gets built. Samira invokes it at
-  PART R of her hourly run (`.claude/routines/samira-build-loop.md`) to advance open cards;
-  a live thread invokes it the moment it produces something worth keeping. Use it whenever
+  opens ONE 🧪 PT card in Convo 1 (the Samira DM), and runs an eight-lens pressure test as
+  decision rounds across the day's remaining scans until the questions run out and the
+  thing gets built. Samira invokes it in PART 3 of her hourly run — was PART R until
+  2026-09-06 (`.claude/routines/samira-build-loop.md`) — to advance open cards; a live
+  thread invokes it the moment it produces something worth keeping. Use it whenever
   work should outlive the conversation: "run this through the loop", "hand this to Samira",
   "pressure-test this", "what lane is this", "open a PT card", or at the point a thread has
   actually built something. Heavier than samira-work-summary (which only files and hands
-  off) and a different lane from Stormy (who bakes no-deadline ideas in #stormy and never
-  executes). It never sends, never pays, never posts outward, and never claims a handoff
-  landed unless the vault write actually succeeded.
+  off) and a different lane from Stormy (who bakes no-deadline ideas in Convo 2's
+  deep-dive mode and never executes). It never sends, never pays, never posts outward,
+  and never claims a handoff landed unless the vault write actually succeeded.
 ---
 
 # The Samira Loop — build, pressure-test, finish
 
 Two halves run off this one file, so they can never drift apart: a **live thread** invokes it
-when it produces something (sections 3 through 8), and **Samira** invokes it at PART R of her
-hourly run to advance the cards a thread already opened. `.claude/routines/samira-build-loop.md`
-carries her scan-side detail (finding cards, caps, watermarks); everything else is here.
+when it produces something (sections 3 through 8), and **Samira** invokes it inside PART 3 of
+her hourly run (the Convo 1 pass; was PART R until 2026-09-06) to advance the cards a thread
+already opened. `.claude/routines/samira-build-loop.md` carries her scan-side detail (finding
+cards, caps, watermarks); everything else is here.
 
 **The one-line contract.** Nothing built in a thread dies in the thread. Every idea, doc,
 deck, spec, page, or build goes down one of three lanes — Samira builds it in the cloud,
@@ -53,7 +55,7 @@ memory, and do not proceed as if the vault write happened.
 Every thread carries **one name**, and that same name is the Haven note title, the PT card
 title, the `pt:` slug, and the #reports line. One name following the work everywhere is what
 makes a thread findable later: Lemar should be able to glance at his thread list, at
-#decisions, and at the vault and see the same words in all three.
+Convo 1 (the Samira DM), and at the vault and see the same words in all three.
 
 **Set it in your first reply, before doing anything else**, on its own line so it reads on a
 phone:
@@ -118,7 +120,7 @@ left today."* Then set the pace off it:
 | 1–2 | Open the card anyway, ask the single highest-leverage question, say plainly that the bake finishes at tomorrow's scan 1. |
 | 0 | Land the note and the card now, headline ⏳. It starts tomorrow at scan 1. |
 
-Never hold work because the thread is about to close. The Haven note and the #decisions
+Never hold work because the thread is about to close. The Haven note and the Convo 1
 card carry it; the thread does not.
 
 ---
@@ -139,7 +141,7 @@ unless he says to track it.
 
 ### 4.1 Does it have to go out now?
 **Yes** → skip the bake for now. Land the note, then stage it for send under the safety
-floor (section 9): one 🟢 #decisions card pointing at the finished draft where it lives,
+floor (section 9): one 🟢 Convo 1 card pointing at the finished draft where it lives,
 waiting on his ✅. Record `PT deferred — shipped first` on the note. The pressure test
 still runs afterward, against what actually went out; improvements land as v2.
 **No** → continue.
@@ -166,10 +168,12 @@ browser, then local. **Mixed** → split it, name which slice is which, and reco
 the note. Never hand the cloud a half-buildable job and let it stall halfway.
 
 ### 4.3 Where does it live in Slack?
-Match a project channel from the anchors table. Search Marspace only if nothing is
-obvious. No clear home → the work goes to the **Samira capture DM** (`D0BHPKMDNEP`) and
-gets developed in her PART B. **The questions always live in #decisions** either way.
-Never create a channel — that is Atlas Gear 2, and it is Lemar's call.
+**The card IS the home (Convo 1)** — the PT card, its questions, and its decision
+rounds all live there, whatever the item is. Additionally, match a project channel
+from the anchors table (search Marspace only if nothing is obvious) and post an
+append-only **timeline entry** there so the project's channel records the movement;
+no matching channel → no timeline entry, the card carries it alone. Never create a
+channel — that is Atlas Gear 2, and it is Lemar's call.
 
 ### 4.4 Capture-first, always
 Write the Haven note **before** any Slack post, through the **haven-capture** skill — never
@@ -200,18 +204,15 @@ questions` · `## Locked` (added at lock) · `## Handoff` · `## Sources`.
 ## 5. Build it — the three lanes
 
 ### CLOUD — hand it to Samira
-Post to the matched channel, top-level, un-reacted, 🌐-led, with a fenced prompt her PART C
-sweep picks up on a **later** scan (the buffer rule: nothing staged in a scan runs in that
-same scan):
-
-```
-===ATLAS PROMPT START | task:<slug> | run:admin-3x===
-<self-contained: the skill or tool to use, the exact paths and IDs, the ONE concrete
-outcome, and the acceptance test that proves it worked>
-===ATLAS PROMPT END===
-```
-
-Never pre-react your own post — the ✅ is Samira's done-key once she runs it.
+The `run:admin-3x` staging lane is RETIRED (2026-09-06 — the sweep that ran those
+fences ended with the restructure). The build now rides the PT card itself: write the
+build spec into the card thread (and the note's `## Handoff`) — self-contained: the
+skill or tool to use, the exact paths and IDs, the ONE concrete outcome, and the
+acceptance test that proves it worked. At lock, **Samira executes it directly when it
+is small and safe** (inside the safety floor, in the same or next scan), or **carries
+the build on the card** across scans — one slice per scan, progress replied in-thread
+— until the acceptance test passes. The buffer rule survives in card form: a card
+opened in one pass is first worked on a later scan.
 
 ### BROWSER — hand it to Claude in Chrome
 Chrome runs in Lemar's own logged-in browser, as him. So it reads, navigates, fills, and
@@ -244,9 +245,11 @@ the PM (section 7), not the builder.
 ## 6. The pressure test — the point of the whole thing
 
 ### 6.1 Where
-**One parent card in #decisions per item.** It is the only channel that pings him.
-Questions are threaded replies under that parent. Never open a second card for the same
-item, never re-post it, never nudge.
+**One parent card in Convo 1 per item** (the Samira DM — the only surface that pings
+him for work decisions; PT cards moved off #decisions 2026-09-06). PT rounds are
+decision rounds under the doctrine (`.claude/doctrine/card-format.md`): questions are
+threaded replies under that parent. Never open a second card for the same item, never
+re-post it, never nudge.
 
 ### 6.2 The card
 
@@ -259,8 +262,10 @@ pt:<slug> · note:<path> · lane:<cloud|browser|local> · lenses:0/8
 — Samira
 ```
 
-That last control line is load-bearing: it is how PART R finds the card again next scan and
-knows how far the bake got. Update it in place each round.
+That last control line is load-bearing: it is how PART 3 finds the card again next scan and
+knows how far the bake got. Update it in place each round. (Open PT threads ride the state
+file's `card_threads` map, keyed `"<channel_id>:<parent_ts>"` — the retired
+`decisions_threads` map is gone with #decisions.)
 
 Each question is its own numbered reply, one line of why it matters, ending in a fork:
 
@@ -293,8 +298,9 @@ Reactions are **his** signals. Read them; never set them.
 - ⛔ — drop that line of questioning
 - 🫡 on the parent — no more questions, lock it and build
 
-A plain reply in the thread counts as an answer with no reaction attached — read the
-thread, not just the reactions.
+A plain reply in the thread is a first-class signal, equal to any reaction — it can
+answer with no emoji attached, add nuance, or override an option. When a reply and a
+reaction conflict, the reply wins (doctrine); read the thread, not just the reactions.
 
 You set only the far-left headline emoji on cards you posted: 🟡 baking · 🔴 answers needed
 today to close today (use it on the last two scans, and only when the item is genuinely
@@ -312,9 +318,11 @@ so plainly and propose locking.
 At lock: update the note (`## Locked` with the final version, `status: active`), then run
 the lane.
 
-**CLOUD** → Samira builds it: stage the fenced prompt, or execute directly when it is small
-and safe. Outcome note plus the two-line #reports block through **samira-report-result**,
-then edit the parent to begin `✅ CLOSED — [outcome]`.
+**CLOUD** → Samira builds it: execute directly when it is small and safe, or carry the
+build on the card across scans until the acceptance test passes (the retired
+`run:admin-3x` staging is replaced by these two paths). Outcome note plus the two-line
+#reports block through **samira-report-result**, then edit the parent to begin
+`✅ CLOSED — [outcome]`.
 
 **BROWSER** → Samira hands him the `CHROME RUN` block from section 5, then runs PM on it the
 same way as local: card open on ⏳, one status check a day at most, outcome note and #reports
@@ -331,7 +339,7 @@ write the outcome note, post the #reports line, and close the card.
 honest line — *"this has been open two days, still worth doing? ✅ keep · ⛔ park"* — and
 parks on ⛔ or on silence by day four. Most loop items should close inside a day or two. An
 item that keeps growing past that is not a loop item, it is a project: hand it to Atlas
-Gear 2 (or to Stormy in #stormy if it has no date on it).
+Gear 2 (or to Stormy — Convo 2's deep-dive mode since 2026-09-06 — if it has no date on it).
 
 ---
 
@@ -350,7 +358,7 @@ States: `opened` · `round N (lenses k/8)` · `locked` · `staged` · `built` ·
 
 **One correction to keep the mental model honest:** #reports is a log, not an inbox. Samira
 never reads it back for instructions, and nothing posted there drives her next scan. What
-actually keeps her current across scans is the **Haven note** plus the **#decisions card**
+actually keeps her current across scans is the **Haven note** plus the **Convo 1 card**
 plus the **state file**. So: post to #reports because that is the record Lemar reads, and
 keep the note correct because that is what Samira runs on. Never let a #reports line be the
 only place a fact exists.
@@ -367,9 +375,9 @@ a card, a file) · never edit a note's `created` · never guess a controlled fro
 number in any message · never claim a handoff landed unless the vault write actually
 succeeded.
 
-Anything that needs one of those: draft what you safely can, post **one** #decisions card
-asking, mark the source ⏳, and move on. On a third consecutive failure of the same task,
-stop retrying and raise `STUCK — needs Lemar` in #decisions.
+Anything that needs one of those: draft what you safely can, ask as **one** Convo 1 card
+decision round, mark the source ⏳, and move on. On a third consecutive failure of the same
+task, stop retrying and raise a `STUCK — needs Lemar` card in #fixes (Convo 3).
 
 ---
 
