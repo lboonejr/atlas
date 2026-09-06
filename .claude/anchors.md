@@ -118,33 +118,36 @@ live tooling, not part of the retired mirror.)
 
 ## Gmail labels (use IDs, never display names)
 
-**2026-08-31 note (amended 2026-09-05):** `Label_1` is a pre-existing label of Lemar's
-own named "Sweep/Review" (8 threads) — it is NOT "Samira" and is a genuine protective
-filing label. The Samira automation labels exist with the short IDs the table shows —
-`Samira` = `Label_2` through `Samira/investor` = `Label_6` — **verified live 2026-09-05**
-via the Gmail API (the 2026-08-31 claim that these short IDs were stale placeholders was
-wrong; the table is correct). `Car-Hunt`/`Car-Hunt/seen` were never created — left
-uncreated since the car-search loop (PART F) is retired and nothing needs them.
-`Samira/investor-sent` also doesn't exist — create on demand if/when the investor loop
-needs to mark a sent outreach. Two labels are in live use in this account that were
-never recorded here before — **"Action Needed"** (`Label_374039230306167562`, 71 msgs)
-and **"Finance Bills"** (`Label_4897882779882705846`, 16 msgs) — origin unknown (not
-applied by any part of this routine); do not assume ownership or repurpose them without
-asking Lemar.
+**2026-09-06 note (88th scan — supersedes the 2026-08-31/09-05 notes below, which were
+wrong):** a fresh `list_labels` call this run returned a table that does NOT match what
+was recorded here — the THIRD different version of this table in five weeks, which is
+itself a #fixes-worthy pattern (raised there, see the digest). Recording exactly what
+the API returned, live, 2026-09-06: `Samira` (parent) = `Label_1` (NOT a "Sweep/Review"
+label as the 2026-08-31 note claimed — no label named "Sweep/Review" exists in this
+account). `Car-Hunt`, `Car-Hunt/seen`, and `Samira/investor-sent` all EXIST now (with
+real traffic — 6, 61, and 9 messages respectively), contradicting the prior "never
+created" notes. `Vendor Menus` now carries a short-form `Label_8`, not the long-form id
+previously recorded. **Neither "Action Needed" nor "Finance Bills" appears in the label
+list at all** — `list_labels` returns every label in the account, so either they were
+deleted/renamed since 2026-08-31, or the long-form IDs recorded for them were never
+real. Given three consecutive scans have each reported different ground truth for the
+exact same six labels, treat any single scan's read (including this one) as provisional
+until it holds across two consecutive runs — this table has flipped every time someone
+checked.
 
-| Label | ID |
+| Label | ID (live 2026-09-06) |
 |---|---|
-| Samira (parent) | `Label_2` |
-| Samira/seen | `Label_3` |
-| Samira/drafted | `Label_4` |
-| Samira/sent | `Label_5` |
-| Samira/investor | `Label_6` |
-| Samira/investor-sent | NOT YET CREATED — create on demand |
-| Car-Hunt | NOT YET CREATED — car-search loop retired, unneeded |
-| Car-Hunt/seen | NOT YET CREATED — car-search loop retired, unneeded |
-| Vendor Menus | `Label_7063567382570959882` (pre-existing, created 2026-07-08 for the Inbox Janitor routine; real Gmail-assigned ID, not the old short placeholder) |
-| Action Needed (unrecorded, unowned) | `Label_374039230306167562` |
-| Finance Bills (unrecorded, unowned) | `Label_4897882779882705846` |
+| Samira (parent) | `Label_1` |
+| Samira/seen | `Label_2` |
+| Samira/drafted | `Label_3` |
+| Samira/sent | `Label_4` |
+| Car-Hunt | `Label_5` (exists, 6 msgs/6 threads — car-search loop is retired but the label is live) |
+| Car-Hunt/seen | `Label_6` (exists, 61 msgs/59 threads) |
+| Samira/investor | `Label_7` |
+| Vendor Menus | `Label_8` (short-form now, not the long-form id recorded 2026-08-31) |
+| Samira/investor-sent | `Label_9` (exists, 9 msgs/2 threads) |
+| Action Needed | NOT FOUND this scan — absent from the full label list; prior long-form id may be stale or the label may be gone |
+| Finance Bills | NOT FOUND this scan — same caveat |
 
 ## Google Calendar
 
@@ -205,7 +208,7 @@ in the runbook until Lemar vets one preview run, then flip to false.
 | Runbook (live behavior) | `.claude/routines/inbox-janitor.md` — editing on `main` changes the next run |
 | Reports to | #reports `C0BBZJL85RT` (reuse; no new channel) |
 | Gmail account acted on | `lemar@cuzziesnj.com` (business — confirmed as the connected Gmail account 2026-07-08; winds down mid-2026) |
-| Vendor Menus label | `Label_7063567382570959882` (see the corrected Gmail labels table above) |
+| Vendor Menus label | `Label_8` (see the corrected Gmail labels table above — this id has changed twice now, verify live before relying on it) |
 | Persona | lead `🧹`, sign "— Basil" (placeholder name, rename-able like "Dawn") |
 
 **Trash sweep categories** (PART B): `category:promotions OR category:social OR category:forums`,
