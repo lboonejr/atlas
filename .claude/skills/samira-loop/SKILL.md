@@ -141,7 +141,7 @@ unless he says to track it.
 
 ### 4.1 Does it have to go out now?
 **Yes** → skip the bake for now. Land the note, then stage it for send under the safety
-floor (section 9): one 🟢 #decisions card pointing at the finished draft where it lives,
+floor (section 9): one 🟢 Convo 1 card pointing at the finished draft where it lives,
 waiting on his ✅. Record `PT deferred — shipped first` on the note. The pressure test
 still runs afterward, against what actually went out; improvements land as v2.
 **No** → continue.
@@ -168,10 +168,12 @@ browser, then local. **Mixed** → split it, name which slice is which, and reco
 the note. Never hand the cloud a half-buildable job and let it stall halfway.
 
 ### 4.3 Where does it live in Slack?
-Match a project channel from the anchors table. Search Marspace only if nothing is
-obvious. No clear home → the work goes to the **Samira capture DM** (`D0BHPKMDNEP`) and
-gets developed in her PART B. **The questions always live in #decisions** either way.
-Never create a channel — that is Atlas Gear 2, and it is Lemar's call.
+**The card IS the home (Convo 1)** — the PT card, its questions, and its decision
+rounds all live there, whatever the item is. Additionally, match a project channel
+from the anchors table (search Marspace only if nothing is obvious) and post an
+append-only **timeline entry** there so the project's channel records the movement;
+no matching channel → no timeline entry, the card carries it alone. Never create a
+channel — that is Atlas Gear 2, and it is Lemar's call.
 
 ### 4.4 Capture-first, always
 Write the Haven note **before** any Slack post, through the **haven-capture** skill — never

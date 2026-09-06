@@ -162,19 +162,19 @@ then create it as a NEW Google Doc via `Google_Drive__create_file`:
 
 Pulse still writes NO Slack message on a quiet hour. BEFORE building the snapshot,
 compare this run's signals against what you already know from this same scan: did any
-#decisions card open/close, did money change (PART M returned `money ✓ …` not
-`money —`), did a project pulse's status dot flip, or is there a new/updated open Haven
-note since the last render? If NO signal changed this hour, skip the render entirely —
-no Doc, no DM (codified 2026-08-15; a folder of identical snapshots is noise, not
-history) — and return `pulse — carried (quiet pass)` for the digest. If YES to any,
-render, then send ONE line to the **Samira capture DM** (`D0BHPKMDNEP` — the shared
-bot's only DM slot; safe to reuse since PART B only develops messages FROM Lemar, never
-the bot's own posts):
+Convo 1 or #fixes card open/close, did money change (the PART 4 money-drop mode
+returned `money ✓ …` not `money —`), did a project pulse's status dot flip, or is there
+a new/updated open Haven note since the last render? If NO signal changed this hour,
+skip the render entirely — no Doc, no DM (codified 2026-08-15; a folder of identical
+snapshots is noise, not history) — and return `pulse — carried (quiet pass)` for the
+digest. If YES to any, render, then send ONE line to **Convo 1** (`D0BHPKMDNEP` — safe
+to reuse for a notification: a 🌐 bot post there is never card input, since PART 3
+works cards and never reads the bot's own posts):
 `📍 Pulse updated — [1-line summary of what changed]. [Drive doc link] — Samira`
 
 ## SAFETY (applies to the whole skill)
 You MAY: read every connected tool and the vault; create a new Pulse snapshot Doc in the
-Pulse Drive folder; send ONE DM to the Samira capture DM (`D0BHPKMDNEP`), and only when
+Pulse Drive folder; send ONE DM to Convo 1 (`D0BHPKMDNEP`), and only when
 something changed this run.
 You MUST NOT, ever: post to any Slack channel; DM on a quiet hour (nothing changed); send
 email or any outreach; set or change Lemar's reactions; write, move, edit, or file any
