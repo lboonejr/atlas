@@ -1,6 +1,6 @@
 ---
 created: 2026-08-26T10:12-04:00
-updated: 2026-08-29T11:15-04:00
+updated: 2026-09-06T13:37-04:00
 domain: cuzzies
 type: task
 status: active
@@ -51,6 +51,23 @@ substance. The #decisions card (ts `1787753574.970519`) is still open with no re
 posted an in-thread note flagging the fifth reminder. Still Lemar's own records/portal
 login, not something Samira can complete unattended. Gmail thread labeled `Samira/seen`.
 
+## Update 2026-09-06T13:37-04:00 — Lemar dropped it in Convo 2, target Tuesday Sep 8
+
+Lemar dropped this in his self-DM (Convo 2, ts `1788716259.614659`, 13:37 ET): "I know
+I'm late, trying to hand these in on Tuesday. Can you make claude in chrome prompts I
+can use to accomplish these action items?" Same five checklist items, same Karbon
+portal (tenant `3tGL7RHfCGdX`), now ~2.5 weeks overdue against the original Aug 19
+date, with a firm personal target of **Tuesday 2026-09-08**.
+
+Built five `run:manual` Claude-in-Chrome prompt blocks (one per checklist item) and
+posted them as a reply into the existing #decisions thread (ts `1787753574.970519`) —
+not a new card, since this matter already has one open there pending the Convo 1
+migration. Each prompt has Chrome open the Karbon client portal, navigate to that
+item's section, and **stop at the final submit/confirm button** — Chrome never files
+financial/legal information on Lemar's behalf. He still has to supply the actual
+figures/documents/percentages (construction cost total, permitting costs, capex,
+loan docs, partner equity %) and click submit himself.
+
 ## Sources
 - gmail: thread `1a03e67d89c17281` — "Reminder #2 - Please complete these items -
   Documenting Start-Up Costs & Loan/Equity Information - CUZZIES", richard@huljevgroup.com,
@@ -58,3 +75,5 @@ login, not something Samira can complete unattended. Gmail thread labeled `Samir
 - gmail: thread `1a04389711c1366f` — "Reminder #3", 2026-08-27T14:04:33Z
 - gmail: thread `1a048b22b4d9e679` — "Reminder #4", 2026-08-28T14:07:08Z
 - gmail: thread `1a04dd4be46c1cb8` — "Reminder #5", 2026-08-29T14:02:58Z
+- slack: Convo 2 (self-DM) drop, ts `1788716259.614659`, 2026-09-06 13:37 ET
+- slack: #decisions thread ts `1787753574.970519` (existing open card, pre-migration)
