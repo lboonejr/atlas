@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T00:10-04:00
-updated: 2026-09-06T15:20:00Z
+updated: 2026-09-06T14:51:38-04:00
 domain: project
 type: brief
 status: active
@@ -405,3 +405,31 @@ Outstanding, unchanged from the 2026-08-24 park:
 ### Sources
 - slack: #decisions `C0BBXA96FFV` ts `1788705175.902499` (Lemar's decision, in-thread on
   ts `1788697019.074209`)
+
+## Update 2026-09-06T14:51:38-04:00 — Drive integration wired (with a wrinkle); property-violation questions confirmed already placed
+
+Lemar dropped a status report in Convo 2 (self-DM, ts `1788720698.553519`, signed "Sent
+using Claude" — a browser-lane session he ran himself):
+
+- **Google Drive integration: Connected and Enabled.** Progress on the round-1 Q3 open
+  item. Wrinkle: Jotform's Drive integration only accepts a folder *name*, not a
+  folder ID/link, so it created a **new** folder named "02 Internal" at Drive root
+  (`1Y4nK0pRjDS6eIRzXEC7fYys0GES8oO9F`) instead of targeting the existing "02 Internal"
+  folder (`13Xa1IbE4DUrTFT4xb04AFRTW1sfXVoay`). Submissions currently land in the new
+  duplicate, not the real one. Needs cleanup: move the real folder to Drive root, delete
+  the duplicate, or reconfigure via a tool that supports folder-ID targeting
+  (Zapier/Make) — Lemar's call, not actioned here.
+- **Property-violation questions (round-2 Q6 build):** checked directly — "Does the
+  property currently have any open City violations, liens, or code enforcement
+  actions?" and its follow-up were **already correctly placed** at the end of "The
+  property" section, right before "Local approvals." The placement-fix open item from
+  the 2026-08-19/23/24 updates above is resolved; no move was needed after all.
+- Not done this pass: form not published/re-shared, no test submission sent — wiring
+  and verification only.
+
+**Still open** (unchanged): Drive duplicate-folder cleanup (new), thank-you page wording
+(one business day turnaround, Q4/Q5), welcome email at signing (still blocked on Jamil
+Tyson's email address, per the 2026-09-06 update above).
+
+### Sources (this update)
+- slack: Convo 2 (self-DM) drop, ts `1788720698.553519`, 2026-09-06 14:51 ET
