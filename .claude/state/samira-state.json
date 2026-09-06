@@ -4,7 +4,7 @@
     "run_id": "run_20260906T180258Z",
     "run_started": "2026-09-06T18:02:58Z",
     "run_completed": "2026-09-06T19:04:36Z",
-    "note": "85th scan complete: filed 1/stuck 5 vault (newark-facade-grant-research filed to 30-Station/); calendar sync 0 automated changes (2 due-linked reminders set via card follow-through: NJ annual report 9/7, DeWalt judge call 9/8); Convo 1 pass worked 8 open cards (Newark research done, WM AP logged to Off Button board, Curaleaf flagged can't-send-email, Money Hub car-running goal stretched to 12/1, NJ annual report calendar set, Money Hub Workspace/Edge Fitness corrected, Camden Launch Chrome prompt given, card-format feedback options posted) + live signals mid-run on 2 freshly-posted cards (Vercel deploy limit — advisory given, no connector to execute; Vans Knu Skools — set up as an $80 savings goal by 9/30); migration step 1 batch 2 (15 threads: 9 migrated live, 6 closed, decisions_threads 52→37); Convo 2 swept 13 drops (9 new Convo1 cards, 1 reply into an existing pre-migration #decisions thread, 1 Stormy deep-dive reply, 2 needing no action); email/investor loops clean (0 new); reports-scan clean (1 known recurring finding, not re-escalated); Pulse re-rendered (something changed) — https://docs.google.com/document/d/1Uxqp5p84rFkmWWtVcSop8r4ZDTXVRl9bhqHIj0SQEx0/edit ; timeline posts to #personal-finance + #camden-launch. Three subagents self-caught and repaired their own mid-run errors this scan (DeWalt legal note body truncation, contradiction-scanner log overwrite, Pulse Doc placeholder-content) — all verified restored before this write."
+    "note": "85th scan complete: filed 1/stuck 5 vault (newark-facade-grant-research filed to 30-Station/); calendar sync 0 automated changes (2 due-linked reminders set via card follow-through: NJ annual report 9/7, DeWalt judge call 9/8); Convo 1 pass worked 8 open cards (Newark research done, WM AP logged to Off Button board, Curaleaf flagged can't-send-email, Money Hub car-running goal stretched to 12/1, NJ annual report calendar set, Money Hub Workspace/Edge Fitness corrected, Camden Launch Chrome prompt given, card-format feedback options posted) + live signals mid-run on 2 freshly-posted cards (Vercel deploy limit — advisory given, no connector to execute; Vans Knu Skools — set up as an $80 savings goal by 9/30); migration step 1 batch 2 (15 threads: 9 migrated live, 6 closed, decisions_threads 52→37); Convo 2 swept 13 drops (9 new Convo1 cards, 1 reply into an existing pre-migration #decisions thread, 1 Stormy deep-dive reply, 2 needing no action); email/investor loops clean (0 new); reports-scan clean (1 known recurring finding, not re-escalated); Pulse re-rendered (something changed) — https://docs.google.com/document/d/1Uxqp5p84rFkmWWtVcSop8r4ZDTXVRl9bhqHIj0SQEx0/edit ; timeline posts to #personal-finance + #camden-launch. Three subagents self-caught and repaired their own mid-run errors this scan (DeWalt legal note body truncation, contradiction-scanner log overwrite, Pulse Doc placeholder-content) — all verified restored before this write. Opened one #fixes card on the recurring placeholder-overwrite pattern itself (thread 1788721717.687559) with two proposed guards, since catch-and-repair has now covered for it 5 times today."
   },
   "watermarks": {
     "slack_channels": {
@@ -27,7 +27,7 @@
       "C0BBZ5J8805": "1788711588",
       "C0BRZT2V89W": "1788720397.094129",
       "D0BBVV54L5R": "1788718169.456859",
-      "C0BV5BRNH5Z": "1788721476"
+      "C0BV5BRNH5Z": "1788721724.935409"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788718196.479849",
@@ -55,7 +55,8 @@
       "D0BHPKMDNEP:1788719447": "1788719447",
       "D0BHPKMDNEP:1788719477": "1788719477",
       "D0BHPKMDNEP:1788719506.788499": "1788721066.995679",
-      "D0BHPKMDNEP:1788719576.670279": "1788721464.585889"
+      "D0BHPKMDNEP:1788719576.670279": "1788721464.585889",
+      "C0BV5BRNH5Z:1788721717.687559": "1788721724.935409"
     },
     "migration": {
       "decisions_migration_complete": false,
