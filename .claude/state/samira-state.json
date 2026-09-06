@@ -3,31 +3,32 @@
   "lock": {
     "run_id": "run_20260906T120645Z",
     "run_started": "2026-09-06T12:06:45Z",
-    "run_completed": "2026-09-05T21:08:51Z",
-    "note": "79th scan starting. Recovered a stale lock from the 78th scan (run_20260906T000713Z, started 2026-09-06T00:07:13Z) -- that run died mid-flight right after acquiring the lock (only Dawn's and Basil's later commits followed it, no Samira PART V/S/A.. work), and was ~12h old (>>45min), so it aged out per PART 0 and is recovered here rather than treated as a live overlapping run. Separately: this session's local clone had also accumulated 61 commits (scans 68th-78th) that were never pushed to origin/main -- origin/main was stuck at the 61st-scan commit. Pushed the branch to origin and it fast-forwarded main to include all of it before this scan started; nothing was lost, but flagging this to Lemar as a real config gap (see digest / notification)."
+    "run_completed": "2026-09-06T12:26:33Z",
+    "note": "79th scan complete. Recovered a stale lock from the 78th scan (run_20260906T000713Z) that died mid-flight right after acquiring it, plus 61 unpushed local commits (scans 68th-78th) that had never reached origin/main -- both recovered before PART V started, nothing lost. Ran the full routine V/S/A/B/C/D/E/Q/R/M/T/canvas/P/digest; posted 1 new #decisions card (Camden Launch PT cards stalled) and 1 append-only #reports correction (4th Haven Keeper false-claim); rendered Pulse."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1788635416.951679",
-      "C0BBZJL85RT": "1788642476.207289",
-      "D0BHPKMDNEP": "1788635792.795399",
-      "C0BGLEMH99T": 1788638945,
-      "C0BEQUW5NPP": 1788638945,
-      "C0BBLUA7JLX": 1788638945,
-      "C0BJ37SU1TL": "1788628235.420089",
-      "C0BCCUKEUQ2": 1788638945,
-      "C0BCD7U5X2B": 1788638945,
-      "C0BCH2C3GRM": 1788638945,
-      "C0BDN2KQFD4": 1788638945,
-      "C0BD8LTM1EK": 1788638945,
-      "C0BGYM1UB4Y": 1788638945,
-      "C0BGCAK0ML3": 1788638945,
-      "C0BHXTPST52": 1788638945,
-      "C0BC2A94142": 1788638945,
-      "C0BBZ5J8805": "1788635812.278939",
-      "C0BRZT2V89W": 1788638945
+      "C0BBXA96FFV": "1788697025.822929",
+      "C0BBZJL85RT": "1788697608.452459",
+      "D0BHPKMDNEP": "1788697639",
+      "C0BGLEMH99T": "1788697639",
+      "C0BEQUW5NPP": "1788697639",
+      "C0BBLUA7JLX": "1788697639",
+      "C0BJ37SU1TL": "1788697639",
+      "C0BCCUKEUQ2": "1788697639",
+      "C0BCD7U5X2B": "1788697639",
+      "C0BCH2C3GRM": "1788697639",
+      "C0BDN2KQFD4": "1788697639",
+      "C0BD8LTM1EK": "1788697639",
+      "C0BGYM1UB4Y": "1788697639",
+      "C0BGCAK0ML3": "1788697639",
+      "C0BHXTPST52": "1788697639",
+      "C0BC2A94142": "1788697639",
+      "C0BBZ5J8805": "1788697639",
+      "C0BRZT2V89W": "1788697639"
     },
     "decisions_threads": {
+      "1788697019.074209": "1788697025.822929",
       "1786832078.131649": "1787754270.525189",
       "1786713941.609669": "1786716585.591279",
       "1786986503.368599": "1786986503.368599",
@@ -94,8 +95,8 @@
       "1788635325.842539": "1788635325.842539",
       "1788635412.011499": "1788635416.951679"
     },
-    "capture_dm": "1788635792.795399",
-    "gmail_after_epoch": 1788638945
+    "capture_dm": "1788697639",
+    "gmail_after_epoch": 1788697639
   },
   "integrity": {
     "last_full_pass": "2026-09-06T12:06:45Z",
@@ -103,11 +104,12 @@
     "note": "79th scan: day's first run, ran the FULL whole-vault pass (674 files, 6 skipped as templates/examples, 668 checked). Zero mechanical defects (no bad openers, no base64, no CRLF). Value issues: the same 5 known Inbox notes already on the open 'Haven Inbox -- 5 notes need a label' card (ts 1788372582.289019) -- composition unchanged since that card was posted, so it was NOT refreshed. No new stuck notes, no repairs, no entity stubs this scan."
   },
   "canvas_access": {
-    "last_checked": "2026-09-05T13:03:51Z",
-    "writable": false
+    "last_checked": "2026-09-06T12:06:45Z",
+    "writable": false,
+    "note": "79th scan, day's first check today: canvas file info still reports access:\"comment\" for the bot (only U0BC5UTHYG4 listed as an editor) -- same standing gap since 2026-07-25. Did not attempt a write. Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-05T15:16:00-04:00",
+    "pulse_last_rendered": "2026-09-06T12:25:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
