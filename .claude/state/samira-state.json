@@ -3,17 +3,17 @@
   "lock": {
     "run_id": "run_20260906T180258Z",
     "run_started": "2026-09-06T18:02:58Z",
-    "run_completed": "2026-09-06T17:27:48Z",
-    "note": "85th scan in progress."
+    "run_completed": "2026-09-06T19:04:36Z",
+    "note": "85th scan complete: filed 1/stuck 5 vault (newark-facade-grant-research filed to 30-Station/); calendar sync 0 automated changes (2 due-linked reminders set via card follow-through: NJ annual report 9/7, DeWalt judge call 9/8); Convo 1 pass worked 8 open cards (Newark research done, WM AP logged to Off Button board, Curaleaf flagged can't-send-email, Money Hub car-running goal stretched to 12/1, NJ annual report calendar set, Money Hub Workspace/Edge Fitness corrected, Camden Launch Chrome prompt given, card-format feedback options posted) + live signals mid-run on 2 freshly-posted cards (Vercel deploy limit — advisory given, no connector to execute; Vans Knu Skools — set up as an $80 savings goal by 9/30); migration step 1 batch 2 (15 threads: 9 migrated live, 6 closed, decisions_threads 52→37); Convo 2 swept 13 drops (9 new Convo1 cards, 1 reply into an existing pre-migration #decisions thread, 1 Stormy deep-dive reply, 2 needing no action); email/investor loops clean (0 new); reports-scan clean (1 known recurring finding, not re-escalated); Pulse re-rendered (something changed) — https://docs.google.com/document/d/1Uxqp5p84rFkmWWtVcSop8r4ZDTXVRl9bhqHIj0SQEx0/edit ; timeline posts to #personal-finance + #camden-launch. Three subagents self-caught and repaired their own mid-run errors this scan (DeWalt legal note body truncation, contradiction-scanner log overwrite, Pulse Doc placeholder-content) — all verified restored before this write."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1788711588",
       "C0BBZJL85RT": "1788715586.453489",
-      "D0BHPKMDNEP": "1788715559.978229",
-      "C0BGLEMH99T": "1788711588",
+      "D0BHPKMDNEP": "1788721464.585889",
+      "C0BGLEMH99T": "1788720386.926129",
       "C0BEQUW5NPP": "1788711588",
-      "C0BBLUA7JLX": "1788715600",
+      "C0BBLUA7JLX": "1788711588",
       "C0BJ37SU1TL": "1788711588",
       "C0BCCUKEUQ2": "1788711588",
       "C0BCD7U5X2B": "1788711588",
@@ -25,43 +25,46 @@
       "C0BHXTPST52": "1788711588",
       "C0BC2A94142": "1788711588",
       "C0BBZ5J8805": "1788711588",
-      "C0BRZT2V89W": "1788711588",
-      "D0BBVV54L5R": "1788713693.085239",
-      "C0BV5BRNH5Z": "1788715600"
+      "C0BRZT2V89W": "1788720397.094129",
+      "D0BBVV54L5R": "1788718169.456859",
+      "C0BV5BRNH5Z": "1788721476"
     },
     "card_threads": {
-      "D0BHPKMDNEP:1788714592.768199": "1788714604.608049",
-      "D0BHPKMDNEP:1788714812.755469": "1788714857.458569",
-      "D0BHPKMDNEP:1788714813.201089": "1788714864.172049",
-      "D0BHPKMDNEP:1788714813.719449": "1788715103.932439",
-      "D0BHPKMDNEP:1788714814.865959": "1788715164.219689",
-      "D0BHPKMDNEP:1788714815.369119": "1788715324.142429",
-      "D0BHPKMDNEP:1788714815.853539": "1788714877.721329",
-      "D0BHPKMDNEP:1788715547.125429": "1788715559.978229"
+      "D0BHPKMDNEP:1788714592.768199": "1788718196.479849",
+      "D0BHPKMDNEP:1788714812.755469": "1788718292.617709",
+      "D0BHPKMDNEP:1788714813.201089": "1788718298.835849",
+      "D0BHPKMDNEP:1788714813.719449": "1788720346.577239",
+      "D0BHPKMDNEP:1788714814.865959": "1788718152.815049",
+      "D0BHPKMDNEP:1788714815.369119": "1788720347.049359",
+      "D0BHPKMDNEP:1788714815.853539": "1788718435.892139",
+      "D0BHPKMDNEP:1788715547.125429": "1788718444.013359",
+      "D0BHPKMDNEP:1788718699.907999": "1788718699.907999",
+      "D0BHPKMDNEP:1788718700.965879": "1788718700.965879",
+      "D0BHPKMDNEP:1788718701.557769": "1788718701.557769",
+      "D0BHPKMDNEP:1788718702.108269": "1788718702.108269",
+      "D0BHPKMDNEP:1788718702.628059": "1788718702.628059",
+      "D0BHPKMDNEP:1788718703.195849": "1788718703.195849",
+      "D0BHPKMDNEP:1788718703.705709": "1788718703.705709",
+      "D0BHPKMDNEP:1788718704.255849": "1788718704.255849",
+      "D0BHPKMDNEP:1788718704.696339": "1788718704.696339",
+      "D0BHPKMDNEP:1788718849": "1788718849",
+      "D0BHPKMDNEP:1788719291": "1788719291",
+      "D0BHPKMDNEP:1788719325": "1788719325",
+      "D0BHPKMDNEP:1788719364": "1788719364",
+      "D0BHPKMDNEP:1788719413": "1788719413",
+      "D0BHPKMDNEP:1788719447": "1788719447",
+      "D0BHPKMDNEP:1788719477": "1788719477",
+      "D0BHPKMDNEP:1788719506.788499": "1788721066.995679",
+      "D0BHPKMDNEP:1788719576.670279": "1788721464.585889"
     },
     "migration": {
       "decisions_migration_complete": false,
       "legacy_sweep_done": true,
       "announcements_done": true,
-      "cards_remaining": 52
+      "cards_remaining": 37
     },
     "decisions_threads": {
       "1788697019.074209": "1788707739.279069",
-      "1787231683.266619": "1787234895.613759",
-      "1787235032.481949": "1787333215.335379",
-      "1787238798.497049": "1787238833.679779",
-      "1787256504.479409": "1787260487.561709",
-      "1787314219.825659": "1787674382.717259",
-      "1787314456.900919": "1787321654.863689",
-      "1787333131.938499": "1787509508.677979",
-      "1787339259.215559": "1787339259.215559",
-      "1787339261.864519": "1787339261.864519",
-      "1787400711.689609": "1788019853.021289",
-      "1787401047.824359": "1787404082.261989",
-      "1787408466.876989": "1787414880.127769",
-      "1787495798.327079": "1787504854.928079",
-      "1787584125.966579": "1787584125.966579",
-      "1787587974.554669": "1787587974.554669",
       "1787605678.559389": "1787688760.591569",
       "1787609340.269079": "1787609340.269079",
       "1787660120.230219": "1787667257.611909",
@@ -100,20 +103,20 @@
       "1787660130.097779": "1787667581.782429"
     },
     "capture_dm": "1788711588",
-    "gmail_after_epoch": 1788715600
+    "gmail_after_epoch": 1788720101
   },
   "integrity": {
     "last_full_pass": "2026-09-06T12:06:45Z",
-    "last_scan_sha": "07efd5f70da288a6af6b37a66914c9f3f951aa3942",
-    "note": "83rd scan: incremental check only (day's full pass already ran this morning). 6 files changed since the last recorded scan sha, all checked, zero mechanical defects, zero repairs. Inbox unchanged: same 5 known stuck notes (domain UNRESOLVED on 4, missing frontmatter on 1), card composition unchanged since ts 1788372582.289019 -- refresh skipped."
+    "last_scan_sha": "5a986027188017908d82aa01afa22e6e0134d6c7",
+    "note": "85th scan: incremental check only (day's full pass already ran this morning). Inbox: 1 new note this scan (newark-facade-grant-research) was file-ready and filed to 30-Station/; the 5 previously-known stuck notes unchanged (domain UNRESOLVED on 4, missing/invalid frontmatter on 1). No mechanical defects found or repaired this scan."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
     "writable": false,
-    "note": "79th scan, day's first check today: canvas file info still reports access:\"comment\" for the bot (only U0BC5UTHYG4 listed as an editor) -- same standing gap since 2026-07-25. Not re-checked this (83rd) scan, per cadence (only re-check on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
+    "note": "Not re-checked this (85th) scan, per cadence (only re-check on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-06T13:16:00-04:00",
+    "pulse_last_rendered": "2026-09-06T14:50:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
