@@ -2,10 +2,10 @@
 created: 2026-08-19T12:00:40-04:00
 domain: project
 type: decision
-status: parked
+status: archived
 source: claude
 tags: [samira-loop, camden-launch, phase-00]
-updated: 2026-08-29T13:10:27-04:00
+updated: 2026-09-06T14:30:00-04:00
 ---
 <!-- `created` was missing (required field); recovered 2026-09-05 by repo audit from the
      author date of the file's first git commit e3511561 ("Add Haven note: Ops ADMIN lane
@@ -244,6 +244,23 @@ or Lemar answers in-thread:
 - Cosmetic cleanup pass on the onboarding packet — waits on the checklist landing first.
 
 pt:ops-admin-lane-and-ariana · note:haven/vault/40-Projects/camden-dispensary-launch/ops-admin-lane-and-ariana.md · phase:00 · lane:mixed · lenses:8/8 · gates:6/6 · locked · parked:2026-08-29
+
+## Update — 2026-09-06T14:30:00-04:00, ADMIN lane closed, Ariana role abandoned
+
+Samira's scan 79 (recovering from a stale lock left by a crashed scan 78) re-flagged this
+card as stalled in #decisions (thread `1788697019.074209`), even though it had been locked
+since 2026-08-20 and only parked on unstarted admin actions. Lemar's answer: **kill this
+lane entirely.** `status` moves to `archived`.
+
+The three items that had been blocking un-park (GitHub Contents-write grant, Ariana's
+access checklist, the cosmetic Docs cleanup) are dropped — none of them will happen. The
+fourth ADMIN lane and Ariana as the day-to-day human contact are not being stood up for
+this engagement. The two built documents (operating model, onboarding packet) stay in
+Drive 02 Internal as a historical record of the design; they are not to be sent to anyone
+or acted on.
+
+Nothing else on the Camden Dispensary Launch engagement changes — this closes only the
+ADMIN lane and the Ariana role, not the engagement itself.
 
 ## Handoff
 

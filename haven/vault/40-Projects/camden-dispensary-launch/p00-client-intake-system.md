@@ -1,9 +1,9 @@
 ---
 created: 2026-08-19T00:10-04:00
-updated: 2026-08-24T08:15:00-04:00
+updated: 2026-09-06T14:30:00-04:00
 domain: project
 type: brief
-status: parked
+status: active
 tags: [samira-loop, camden-launch, phase-00, intake, jotform]
 source: claude
 ---
@@ -378,6 +378,24 @@ It un-parks the moment the Drive integration is wired, the form edits land, or t
 email is picked up in a Gmail-capable session. — Not yet placed in the Working Log Doc;
 this text is drafted here for whoever has Docs access next.
 
+## Update — 2026-09-06T14:30:00-04:00, unparked on Lemar's answer
+
+Samira's scan 79 (recovering from a stale lock left by a crashed scan 78) re-flagged this
+card as stalled in #decisions (thread `1788697019.074209`). Lemar answered directly: **still
+needed, get it done.** `status` moves from `parked` back to `active`.
+
+The three outstanding items from the 2026-08-24 park stand unchanged and are now live again:
+
+1. Wire the Jotform → Google Drive integration (uploads currently land in Jotform's own
+   account, not the Phase 00 Intake folder) — item 6 in Open Items above.
+2. Move the two property questions and update the thank-you page's turnaround language —
+   item 8 above.
+3. Draft and send the welcome email carrying the form link — item 9 above, overdue since
+   the proposal went out 2026-08-21.
+
+Un-parks per the overlay's rule: any of the outstanding items moving, or Lemar answering in
+thread, restarts the card. This is that restart.
+
 ## Sources
 
 - jotform: https://form.jotform.com/262300294666053 (Camden Dispensary Launch — Client Intake, asset 262300294666053)
@@ -385,3 +403,4 @@ this text is drafted here for whoever has Docs access next.
 - drive: Intake — Documents from the Group, folder 17tQP09hT1cRcFzZASa32H23yI8Hv2Mc4
 - repo: .claude/projects/camden-dispensary-launch-project-instructions.md (the overlay)
 - repo: .claude/skills/samira-loop/SKILL.md (the mechanics)
+- slack: https://newworkspace-zlb6313.slack.com/archives/C0BBXA96FFV/p1788697019074209 (the 4-card check that surfaced this)

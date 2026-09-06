@@ -121,6 +121,18 @@ left today."* Then set the pace off it:
 Never hold work because the thread is about to close. The Haven note and the #decisions
 card carry it; the thread does not.
 
+**Known issue — stale-lock recovery can misreport already-closed cards.** On 2026-09-06,
+scan 78 died mid-run and left the lock held; scan 79's recovery re-flagged 4 Camden
+Dispensary Launch cards as "stalled, zero activity" in one #decisions post. Two of the four
+(`p00-engagement-walkthrough`, `p00-advisory-proposal-package`) were in fact already
+`status: done` in their own Haven note frontmatter, locked and closed days earlier —
+recovery never checked the note's own status before flagging it as stalled, only
+whatever state it could reconstruct from `.claude/state/samira-state.json` and thread
+watermarks. Before a stale-lock recovery names a card as stalled, it should read that
+card's Haven note frontmatter first and skip anything already `status: done` or
+`status: archived`. Not yet fixed in the recovery logic — flagging here so it doesn't
+silently repeat next crash.
+
 ---
 
 ## 3. What trips the loop
