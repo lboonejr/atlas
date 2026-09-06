@@ -4,17 +4,17 @@ description: >
   Scans #reports for internal contradictions — the same fact reported two different
   ways across entries, an unresolved self-correction, or a claim that's gone stale
   against the vault — checks the cited Haven note as ground truth for each one, then
-  DMs Lemar a summary with proposed fixes and posts any genuinely open question as a
-  #decisions card (picked up by the standard reaction engine, same as any other card).
+  posts EVERY finding (proposed fixes AND open questions alike) as a #fixes card
+  (doctrine format, worked by PART 5's standard card engine, same as any other card).
   Use it whenever Lemar asks to "scan #reports for contradictions", "check the reports
   log for conflicting numbers", "did we say two different things about X", "audit the
-  reports channel", or on the skill's own scheduled run. It never rewrites or deletes a
-  prior #reports message (append-only, per doctrine) and it never executes a fix on its
-  own — a confirmed fix is staged as a normal #decisions option and only runs once
-  Lemar picks it, same as every other Samira task.
+  reports channel", or on the skill's own scheduled run (PART 6c). It never rewrites or
+  deletes a prior #reports message (append-only, per doctrine) and it never executes a
+  fix on its own — a confirmed fix is staged as a normal card option and only runs once
+  Lemar ✅s it on the #fixes card, same as every other Samira task.
 ---
 
-# Reports Contradiction Scanner (Haven-first, hands off through #decisions)
+# Reports Contradiction Scanner (Haven-first, hands off through #fixes)
 
 #reports is a one-way log — nothing there is ever corrected in place, so contradictions
 between entries (a figure restated differently, a self-correction that never says what
@@ -33,15 +33,18 @@ mid-run. Lemar picked it up from there and had it built.
 Read `.claude/anchors.md` first for the live IDs. This skill touches:
 - **#reports** (`C0BBZJL85RT`) — read-only source; NEVER post a correction by editing an
   old message, only by adding a new one.
-- **#decisions** (`C0BBXA96FFV`) — where any open question goes, using the standard
-  template and reaction engine (🔴/🟡 headline; ✅ on an option = Lemar's pick; PART A of
-  the runbook already executes whatever a picked option says, so this skill does not
-  need its own execution logic — it only has to word the option so it's directly
-  actionable).
-- **Samira capture DM** (`D0BHPKMDNEP`) — where the findings summary is DM'd to Lemar
-  (same surface pulse-dashboard uses for its snapshot link).
+- **#fixes** (`C0BV5BRNH5Z`, Convo 3) — where EVERY finding goes as a card
+  (`.claude/doctrine/card-format.md`; findings are defects in Samira's own reporting —
+  that is Convo 3's subject). Standard card engine: 🔴/🟡 headline; ✅ on an option =
+  Lemar's pick, and a plain reply is an equal signal (on conflict the reply wins).
+  PART 5 of the runbook already executes whatever a picked option says, so this skill
+  does not need its own execution logic — it only has to word the option so it's
+  directly actionable.
 - Vault writes go through **haven-capture** (never hand-written); do not write the
   retired local reader copy.
+(Until 2026-09-06 the routing was a summary DM'd to the Samira capture DM plus
+#decisions cards for open questions; both surfaces retired for this — the #fixes card
+IS the notification now.)
 
 ## What counts as a contradiction
 Only flag things that are genuinely inconsistent, not just incomplete:
@@ -70,9 +73,9 @@ three shapes above. Quote the exact conflicting lines (with dates) for anything 
 ## R3 — check ground truth
 For each candidate, open the Haven note(s) the entries cite. If a fact and its vault
 note agree, and the "old" #reports line is simply outdated, that's a stale claim with an
-obvious fix (no #decisions card needed — see R6). If the vault itself is silent or the
-entries disagree with each other and the vault doesn't resolve it, that's a genuinely
-open question — this is what goes to #decisions.
+obvious fix (its card proposes the fix directly — see R6). If the vault itself is silent
+or the entries disagree with each other and the vault doesn't resolve it, that's a
+genuinely open question. Either way the finding becomes a #fixes card.
 
 ## R4 — land the running log note (Haven-first)
 Before posting anything, call **haven-capture** to append an `## Update` to this skill's
@@ -80,36 +83,35 @@ log note (create it on the first run: `type: log`, `domain: project`,
 `tags: [samira, reports-contradiction-scanner]`, `status: active` if anything is open,
 `done` if the scan was clean). Body: the range scanned, every contradiction found (quoted
 lines + Haven ground truth), and which ones are open questions vs. obvious fixes. This is
-the durable record — the DM and #decisions card are notifications about it, same as every
-other Samira skill.
+the durable record — the #fixes cards are notifications about it, same as every other
+Samira skill.
 
-## R5 — DM Lemar
-Only DM when something was found — a clean scan is not worth a notification (same
-non-spam rule pulse-dashboard follows on a quiet render). To the Samira capture DM:
-```
-🌐 #reports scan — [range] — N contradiction(s) found
-1. [what conflicts] — [proposed fix, or "open — needs you, see #decisions"]
-   [Haven note path]
-...
-Log: [scanner's own Haven note path] — Samira
-```
+## R5 — post the findings as #fixes cards
+Every finding gets ONE #fixes card (doctrine format: Headline ~5 words · Context with
+the quoted conflicting lines, the Haven ground truth, and the log note path in Sources
+of truth · Decisions per R6). Batch only if there are many from the same scan, same
+pattern as the batched Haven Inbox card. A clean scan posts nothing — no card, no
+notification (same non-spam rule pulse-dashboard follows on a quiet render); the
+2026-09-06 restructure retired the separate capture-DM summary, so the card is the
+whole notification.
 
-## R6 — obvious fixes vs. open questions
-- **Obvious fix** (vault ground truth is clear) → note the proposed correction in the DM
-  and the log note; do NOT post to #decisions for these — there's nothing for Lemar to
-  decide. Stage the correction the same way PART C stages any other un-reacted task: a
-  one-line #reports entry (new message, never an edit) restating the correct fact and
-  pointing back at the two conflicting lines, plus an `## Update` on the relevant Haven
-  note if it needs a current-state correction. This still only runs once picked up by a
-  later scan (buffer applies) — never post it inline as part of this scan.
-- **Open question** (vault silent or entries disagree and there's no tiebreaker) → ONE
-  #decisions parent per contradiction (batch only if there are many from the same scan,
-  same pattern as the batched Haven Inbox card), worded so each option is directly
-  executable — e.g. "Option 1 — Treat [figure A] as correct" / "Option 2 — Treat [figure
-  B] as correct" / "Option 3 — Neither, here's what actually happened: ___". Link the
-  quoted lines and the Haven note path. Once Lemar reacts ✅, PART A already executes it
-  (posts the #reports correction line, updates the Haven note) and records the outcome
-  via samira-report-result — this skill does not need a separate handoff mechanism.
+## R6 — obvious fixes vs. open questions (both are #fixes cards)
+- **Obvious fix** (vault ground truth is clear) → the card's decision round proposes the
+  correction directly — there's only one sensible option, so word it as a single-action
+  parent or a one-option round. The correction itself is still staged as an un-reacted
+  append: a one-line #reports entry (new message, never an edit) restating the correct
+  fact and pointing back at the two conflicting lines, plus an `## Update` on the
+  relevant Haven note if it needs a current-state correction. It EXECUTES from Lemar's
+  ✅ on the #fixes card — the PART C sweep that used to pick up un-reacted staged
+  corrections ended 2026-09-06 — never inline as part of this scan.
+- **Open question** (vault silent or entries disagree and there's no tiebreaker) → the
+  card's decision round offers directly executable options — e.g. "Option 1 — Treat
+  [figure A] as correct" / "Option 2 — Treat [figure B] as correct" / "Option 3 —
+  Neither, here's what actually happened: ___", one reply per option. Link the quoted
+  lines and the Haven note path. Once Lemar reacts ✅ (or replies — an equal signal;
+  on conflict the reply wins), PART 5 already executes it (posts the #reports
+  correction line, updates the Haven note) and records the outcome via
+  samira-report-result — this skill does not need a separate handoff mechanism.
 
 ## Inputs this skill expects
 A time range or "since last run" (default). Nothing else — it reads #reports and the

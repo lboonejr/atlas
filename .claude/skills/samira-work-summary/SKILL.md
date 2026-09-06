@@ -4,19 +4,21 @@ description: >
   Lemar's thread-to-Samira handoff — usable from ANY live Claude session, Claude Code or
   chat. Summarizes what he's been working on in the current thread (state, decisions
   made, files/code touched, open questions, recommended next step), lands it in Haven
-  FIRST as the durable record (via haven-capture), then finds the thread's home in the
-  Marspace Slack workspace: an existing project channel gets a fenced ready-to-run
-  prompt that Samira's hourly sweep (PART C) picks up and continues automatically; no
-  clear home falls back to a plain top-level drop in Lemar's capture DM with Samira's
-  bot, written exactly the way Lemar himself would drop a brain-dump, so her PART B
-  sweep develops it the same as anything else he types there. Use whenever Lemar wants
-  the state of a thread handed off to Samira — "give Samira a summary of this", "loop
-  Samira in", "hand this off to Samira", "let Samira continue this", "keep Samira
-  posted on this thread", "save this thread to Haven", "Samira, pick this up", "brief
-  Samira on where I left off", or at the natural end or pause of a work session he
-  wants tracked instead of lost when the thread closes. It never sends outward-facing
-  actions, never pays, never posts outside the matched channel or the capture DM, and
-  never claims a handoff landed unless the Haven write actually succeeded.
+  FIRST as the durable record (via haven-capture), then routes it in the Marspace
+  Slack workspace: unfinished work (CONTINUE mode) goes as a plain, un-🌐-prefixed
+  top-level drop in Lemar's SELF-DM (Convo 2, via the personal Slack connector),
+  written exactly the way Lemar himself would drop a brain-dump, so Samira's hourly
+  PART 4 sweep develops it the same as anything else he types there; finished work
+  (ARCHIVE mode) is the Haven note plus ONE append-only timeline entry in the matching
+  project channel. Use whenever Lemar wants the state of a thread handed off to Samira
+  — "give Samira a summary of this", "loop Samira in", "hand this off to Samira", "let
+  Samira continue this", "keep Samira posted on this thread", "save this thread to
+  Haven", "Samira, pick this up", "brief Samira on where I left off", or at the
+  natural end or pause of a work session he wants tracked instead of lost when the
+  thread closes. It never sends outward-facing actions, never pays, never posts
+  outside the self-DM, the matched timeline channel, or the Convo 1 courtesy
+  fallback, and never claims a handoff landed unless the Haven write actually
+  succeeded.
 ---
 
 # Samira Work Summary — thread-to-Samira handoff

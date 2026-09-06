@@ -14,7 +14,9 @@ description: >
   "log earnings", "made $X today", "doordash paid me", "I have $X cash", "new bill:", a
   bill photo or payout screenshot, "payment plan:", "run my week", "what's due", "what
   do I set aside", "paid the [bill]", "show me the money hub", "money hub", "rebuild the
-  money hub". Also invoked by Samira's PART M for money drops in #personal-finance. This
+  money hub". Also invoked by Samira's PART 4 for money drops swept from Lemar's self-DM
+  (Convo 2; was PART M sweeping #personal-finance until 2026-09-06 — #personal-finance
+  is now a timeline where snapshot links and movement entries still post). This
   skill NEVER moves money, never pays anyone, never contacts a creditor or biller, never
   sends email or outreach, and never invents a number or a date — an unknown stays null
   and gets asked.
@@ -27,8 +29,9 @@ ledger note is truth; the Money Hub dashboard artifact and the reminder-calendar
 (per-bill due-date events AND the daily "set aside today" aggregate) are projections of
 it. **Every figure in this system is REPORTED by Lemar** — earnings, cash, gas spend,
 bills, payments, and account balances. There is no bank connection and nothing is
-fetched. Runs live ("run my week") or inside Samira's scan (PART M). Every Safety rule
-in the runbook applies; add the guards below.
+fetched. Runs live ("run my week") or inside Samira's scan (PART 4's money-drop mode —
+was PART M until 2026-09-06). Every Safety rule in the runbook applies; add the guards
+below.
 
 ## ANCHORS
 All platform IDs live in **`.claude/anchors.md`** — read it first. You use: the
