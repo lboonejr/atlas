@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-09-06T15:11:00Z
+updated: 2026-09-06T13:15-04:00
 domain: project
 type: log
 status: active
@@ -1985,3 +1985,18 @@ conflicts with anything else or with vault ground truth.
 
 ### Sources (83rd-scan update)
 - slack: #reports `C0BBZJL85RT`, ts range `1788704367.588789`–`1788708546.790779`
+
+## Update — 84th scan (2026-09-06, ~1:15pm ET)
+
+Scanned `#reports` range `1788708546.790779`–`1788711519.139219` (1 message: the 83rd
+scan's own digest). It describes that same run's own actions and states consistently
+with itself; its "Send TODAY" and "Waiting on you: 89" lines restate figures unchanged
+since the last several scans, and the vault has had zero commits touching `haven/vault/`
+since the last integrity pass (confirmed in this run's PART 1), so there is nothing new
+to cross-check those figures against. Nothing in this window conflicts with anything
+else or with vault ground truth.
+
+**Found: 0. Open questions posted to #fixes: 0.**
+
+### Sources (84th-scan update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788708546.790779`–`1788711519.139219`
