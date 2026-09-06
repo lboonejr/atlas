@@ -3,29 +3,29 @@
   "lock": {
     "run_id": "run_20260906T160326Z",
     "run_started": "2026-09-06T16:03:26Z",
-    "run_completed": "2026-09-06T15:27:57Z",
-    "note": "83rd scan starting."
+    "run_completed": "2026-09-06T16:19:48Z",
+    "note": "83rd scan complete: extremely quiet pass, 0 closed/0 new/0 urgent. Self-caught and fixed one mid-run error (PART T accidentally overwrote the reports-contradiction-scanner log note with a placeholder string; restored byte-for-byte before continuing, see haven/vault/40-Projects/samira-skills/2026-08-22-reports-contradiction-scan-log.md commit f4f860c)."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1788707754.111949",
-      "C0BBZJL85RT": "1788707770.043009",
-      "D0BHPKMDNEP": "1788707895",
-      "C0BGLEMH99T": "1788707895",
-      "C0BEQUW5NPP": "1788707895",
-      "C0BBLUA7JLX": "1788707895",
-      "C0BJ37SU1TL": "1788707895",
-      "C0BCCUKEUQ2": "1788707895",
-      "C0BCD7U5X2B": "1788707895",
-      "C0BCH2C3GRM": "1788707895",
-      "C0BDN2KQFD4": "1788707895",
-      "C0BD8LTM1EK": "1788707895",
-      "C0BGYM1UB4Y": "1788707895",
-      "C0BGCAK0ML3": "1788707895",
-      "C0BHXTPST52": "1788707895",
-      "C0BC2A94142": "1788707895",
-      "C0BBZ5J8805": "1788707895",
-      "C0BRZT2V89W": "1788707895"
+      "C0BBXA96FFV": "1788711588",
+      "C0BBZJL85RT": "1788711519.139219",
+      "D0BHPKMDNEP": "1788711588",
+      "C0BGLEMH99T": "1788711588",
+      "C0BEQUW5NPP": "1788711588",
+      "C0BBLUA7JLX": "1788711588",
+      "C0BJ37SU1TL": "1788711588",
+      "C0BCCUKEUQ2": "1788711588",
+      "C0BCD7U5X2B": "1788711588",
+      "C0BCH2C3GRM": "1788711588",
+      "C0BDN2KQFD4": "1788711588",
+      "C0BD8LTM1EK": "1788711588",
+      "C0BGYM1UB4Y": "1788711588",
+      "C0BGCAK0ML3": "1788711588",
+      "C0BHXTPST52": "1788711588",
+      "C0BC2A94142": "1788711588",
+      "C0BBZ5J8805": "1788711588",
+      "C0BRZT2V89W": "1788711588"
     },
     "decisions_threads": {
       "1788697019.074209": "1788707739.279069",
@@ -96,18 +96,18 @@
       "1788635412.011499": "1788635416.951679",
       "1787660130.097779": "1787667581.782429"
     },
-    "capture_dm": "1788707895",
-    "gmail_after_epoch": 1788707895
+    "capture_dm": "1788711588",
+    "gmail_after_epoch": 1788711588
   },
   "integrity": {
     "last_full_pass": "2026-09-06T12:06:45Z",
-    "last_scan_sha": "d352a24e5dfb0cab2f34bde3fae45cfabd1b7b30",
-    "note": "79th scan: day's first run, ran the FULL whole-vault pass (674 files, 6 skipped as templates/examples, 668 checked). Zero mechanical defects (no bad openers, no base64, no CRLF). Value issues: the same 5 known Inbox notes already on the open 'Haven Inbox -- 5 notes need a label' card (ts 1788372582.289019) -- composition unchanged since that card was posted, so it was NOT refreshed. No new stuck notes, no repairs, no entity stubs this scan."
+    "last_scan_sha": "07efd5f70da288a6af6b37a66914c3f951aa9342",
+    "note": "83rd scan: incremental check only (day's full pass already ran this morning). 6 files changed since the last recorded scan sha, all checked, zero mechanical defects, zero repairs. Inbox unchanged: same 5 known stuck notes (domain UNRESOLVED on 4, missing frontmatter on 1), card composition unchanged since ts 1788372582.289019 -- refresh skipped."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
     "writable": false,
-    "note": "79th scan, day's first check today: canvas file info still reports access:\"comment\" for the bot (only U0BC5UTHYG4 listed as an editor) -- same standing gap since 2026-07-25. Did not attempt a write. Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
+    "note": "79th scan, day's first check today: canvas file info still reports access:\"comment\" for the bot (only U0BC5UTHYG4 listed as an editor) -- same standing gap since 2026-07-25. Not re-checked this (83rd) scan, per cadence (only re-check on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
     "pulse_last_rendered": "2026-09-06T12:45:00-04:00",
