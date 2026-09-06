@@ -160,7 +160,21 @@ bills:
             (already excluded from daily_targets, its due date having passed before
             today) and rides in open_questions until Lemar says what happened to it.
             Stays `status: active`/unpaid; Lemar carries the actual re-attempt
-            himself, Samira cannot retry billing."}
+            himself, Samira cannot retry billing.
+            UPDATE 2026-09-06 (later same day, Convo 1 reply): Lemar says the $57.44
+            figure is NOT the full past-due total — it's a per-day-prorated charge
+            covering only Sep 1-6 (~$9.57/day implied), and the account has been unpaid
+            since the original 8/19 due date, so the real amount owed needs to be
+            backtracked across the whole unpaid window (8/19 through today), not just
+            the latest 6-day slice. Samira is NOT computing that backtracked total
+            herself — the daily rate implied here (~$9.57/day) doesn't match the
+            $12.14/day estimate already on the calendar event for this same bill, so the
+            two data points disagree and guessing between them would invent a number.
+            OPEN QUESTION (carried in open_questions): what does the Google Admin
+            console → Billing page actually show as the current total balance right
+            now? Once Lemar reports that figure, this line's `amount` gets corrected to
+            match and a real due date can be set instead of carrying it undated in the
+            open-questions bucket."}
   - {id: edge-fitness-training-dispute, name: "Edge Fitness — personal training charge dispute",
      amount: 119, cadence: once, due: 2026-09-06, track: queue, status: paid,
      calendar_event_id: null,
@@ -3331,6 +3345,13 @@ open_questions:
   - "Cuzzie's phone + Google Workspace ~$550/mo — Lemar did NOT address this line in his 2026-08-15 message (#personal-finance ts 1786754410.308129), which named every other undated line but this one. Left undated per the business boundary: it's business-origin cost carried personally, ambiguous personal-vs-business, and no date was given — never inferred."
   - "Cash App payback $187.22 (due 2026-11-30): Lemar's own words were 'I think it's like 2% each day or something like that' about accruing interest — uncertain, not confirmed. Accruing against the stated $187.22 only; no compounding was invented. CONFIRM the actual current balance (or the real rate) closer to the due date so the accrual can be corrected before it's due."
   - "RESOLVED 2026-08-15 (#personal-finance ts 1786754410.308129): car goal target_date set to 2026-10-31 ('will have to be a goal to hit by the end of October'), name updated to 'Get the car running (Lexus LS400)'. 11 weekly installments generated, see own-car-running."
+  - "NEW 2026-09-06 (Convo 1 reply on the Money Hub card): cuzzies-google-workspace's
+     $57.44 is only the Sep 1-6 slice of a per-day-prorated charge, not the full past-due
+     total — Lemar says it needs to be backtracked across the whole unpaid window since
+     the 8/19 due date. The implied ~$9.57/day rate doesn't match the ~$12.14/day
+     estimate already on the calendar event for the same bill, so Samira is not
+     computing a total from either rate. Need the actual current balance from Google
+     Admin console → Billing before this line's amount/due date can be corrected."
   - "Savings goal: how much, by when? Both fields are null."
   - "Cuzzie's phone + Workspace $550/mo is Lemar's estimate — actual total unconfirmed, and it is the largest line in the ledger."
   - "Confirm the 7/25 $1,000 allocation landed: $500 car payment, $200 tires, $50 mom"

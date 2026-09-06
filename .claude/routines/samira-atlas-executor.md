@@ -163,8 +163,10 @@ Read Convo 1 from its watermark: every OPEN card (no 🫡, no "✅ CLOSED" paren
 its full thread, reactions on the parent AND option replies, and — via `card_threads` —
 any reply newer than the stored latest-reply `ts`. Work each open card per the doctrine:
 
-- **Signals.** ✅ on an option reply → execute that option (Safety applies). ✅ on a
-  single-action parent → execute the staged action. A plain reply is an equal signal —
+- **Signals.** ✅ on an option reply → execute that option (Safety applies). Every card
+  gets a real option reply, including single-action cards (locked 2026-09-06) — bare
+  ✅-on-the-parent is never read as "execute," since the parent headline emoji is
+  reserved for status. A plain reply is an equal signal —
   read it for nuance, answer it the same pass, and let it refine or override the
   reaction reading. Before executing, check for your own prior "Done ✅" reply + stored
   state — if already executed, skip (it awaits his 🫡). After executing, record the
