@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-09-06T14:25:00-04:00
+updated: 2026-09-06T15:05:00-04:00
 domain: personal
 type: reference
 status: active
@@ -1439,12 +1439,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-06":
     operating_reserve: 30.00
-    target: 207.56
-    total_claim: 237.56
+    target: 214.56
+    total_claim: 244.56
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 207.56
+    shortfall: 214.56
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1469,16 +1469,19 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-1, amount: 3.81, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.91, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.28, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-07":
     operating_reserve: 30.00
-    target: 179.13
-    total_claim: 209.13
+    target: 186.12
+    total_claim: 216.12
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 179.13
+    shortfall: 186.12
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1501,16 +1504,19 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-1, amount: 3.81, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.91, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-08":
     operating_reserve: 30.00
-    target: 179.10
-    total_claim: 209.10
+    target: 186.09
+    total_claim: 216.09
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 179.10
+    shortfall: 186.09
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1533,16 +1539,19 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-1, amount: 3.81, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.91, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-09":
     operating_reserve: 30.00
-    target: 179.10
-    total_claim: 209.10
+    target: 186.09
+    total_claim: 216.09
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 179.10
+    shortfall: 186.09
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1565,16 +1574,19 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-1, amount: 3.81, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.91, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-10":
     operating_reserve: 30.00
-    target: 178.53
-    total_claim: 208.53
+    target: 185.52
+    total_claim: 215.52
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 178.53
+    shortfall: 185.52
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1597,15 +1609,18 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-1, amount: 3.81, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.91, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-11":
     operating_reserve: 30.00
-    target: 170.20
-    total_claim: 200.20
+    target: 177.19
+    total_claim: 207.19
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 170.20
+    shortfall: 177.19
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1627,15 +1642,18 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-1, amount: 3.81, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.91, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-12":
     operating_reserve: 30.00
-    target: 178.53
-    total_claim: 208.53
+    target: 185.50
+    total_claim: 215.50
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 178.53
+    shortfall: 185.50
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1658,15 +1676,18 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.12, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-1, amount: 3.80, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.90, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-13":
     operating_reserve: 30.00
-    target: 145.20
-    total_claim: 175.20
+    target: 148.37
+    total_claim: 178.37
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 145.20
+    shortfall: 148.37
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1688,15 +1709,17 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.12, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.90, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-14":
     operating_reserve: 30.00
-    target: 145.19
-    total_claim: 175.19
+    target: 148.36
+    total_claim: 178.36
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 145.19
+    shortfall: 148.36
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1718,15 +1741,17 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.12, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.90, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-15":
     operating_reserve: 30.00
-    target: 123.08
-    total_claim: 153.08
+    target: 126.25
+    total_claim: 156.25
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 123.08
+    shortfall: 126.25
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1747,14 +1772,16 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.90, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-16":
     operating_reserve: 30.00
-    target: 107.46
-    total_claim: 137.46
+    target: 110.63
+    total_claim: 140.63
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 107.46
+    shortfall: 110.63
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1774,14 +1801,16 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.90, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-17":
     operating_reserve: 30.00
-    target: 107.46
-    total_claim: 137.46
+    target: 110.63
+    total_claim: 140.63
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 107.46
+    shortfall: 110.63
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1801,14 +1830,16 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.90, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-18":
     operating_reserve: 30.00
-    target: 99.13
-    total_claim: 129.13
+    target: 102.30
+    total_claim: 132.30
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 99.13
+    shortfall: 102.30
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1827,14 +1858,16 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.90, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-19":
     operating_reserve: 30.00
-    target: 107.47
-    total_claim: 137.47
+    target: 110.64
+    total_claim: 140.64
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 107.47
+    shortfall: 110.64
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1854,14 +1887,16 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.90, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-20":
     operating_reserve: 30.00
-    target: 90.81
-    total_claim: 120.81
+    target: 92.08
+    total_claim: 122.08
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 90.81
+    shortfall: 92.08
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1880,14 +1915,15 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-21":
     operating_reserve: 30.00
-    target: 90.80
-    total_claim: 120.80
+    target: 92.07
+    total_claim: 122.07
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 90.80
+    shortfall: 92.07
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1906,14 +1942,15 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-22":
     operating_reserve: 30.00
-    target: 90.80
-    total_claim: 120.80
+    target: 92.07
+    total_claim: 122.07
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 90.80
+    shortfall: 92.07
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1932,14 +1969,15 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-23":
     operating_reserve: 30.00
-    target: 90.80
-    total_claim: 120.80
+    target: 92.07
+    total_claim: 122.07
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 90.80
+    shortfall: 92.07
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1958,14 +1996,15 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-24":
     operating_reserve: 30.00
-    target: 90.80
-    total_claim: 120.80
+    target: 92.07
+    total_claim: 122.07
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 90.80
+    shortfall: 92.07
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1984,14 +2023,15 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-25":
     operating_reserve: 30.00
-    target: 82.47
-    total_claim: 112.47
+    target: 83.74
+    total_claim: 113.74
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 82.47
+    shortfall: 83.74
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -2009,14 +2049,15 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-26":
     operating_reserve: 30.00
-    target: 90.81
-    total_claim: 120.81
+    target: 92.08
+    total_claim: 122.08
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 90.81
+    shortfall: 92.08
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -2035,6 +2076,7 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
       - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-27":
     operating_reserve: 30.00
     target: 79.70
@@ -3232,6 +3274,50 @@ goals:                               # a goal is a bill Lemar owes himself: it n
      note: "UNRESOLVED — target and target_date both needed. The retired model's '30% of
             income' framing died with the waterfall on 2026-08-10; under due-date order
             savings is funded by naming an amount and a date like anything else."}
+  - id: vans-knu-skools
+    name: "Vans Knu Skools"
+    pocket: set-aside
+    target: 80
+    saved: 0
+    target_date: 2026-09-30
+    note: "ADDED 2026-09-06, Mode 5. Lemar's original ask (#personal-finance / Convo 1
+           card 'Vans Knu Skools — need price/date'): 'add to personal finance payment
+           plans a pair of new Vans Knu Skools by the end of the month.' Lemar's reply on
+           that card: 'This should be a savings goal and I think they're $80.' target =
+           $80, pocket = set-aside, target_date = 2026-09-30 (end of this month).
+           Today (2026-09-06, a Sunday) to 2026-09-30 is 24 days — not an exact multiple
+           of 7. Per Mode 5 ('installments across the WEEKS between today and
+           target_date'), used the 3 full weeks that fit (21 of the 24 days) rather than
+           inventing a 4th short/uneven installment for the leftover 3 days — the goal
+           is fully funded by 2026-09-26, four days ahead of the 9/30 date Lemar named.
+           $80 ÷ 3 = $26.6666.., even split in cents (2666/2666/2668 cents), remainder
+           (2 cents) on the LAST installment per Mode 5. Each installment accrues
+           independently over its own [2026-09-06..due-1] window, in parallel with the
+           others (same pattern as own-car-running), contributing to daily_targets under
+           line_id vans-knu-skools-<seq>:
+           - Installment 1 ($26.66, due 9/13): 7-day window 9/06-9/12. 2666¢ ÷ 7 = 380¢
+             base, remainder 6¢ → the 6 EARLIEST days (9/06-9/11) get $3.81, the last day
+             (9/12) gets $3.80. Sum: 6×3.81 + 3.80 = 26.66.
+           - Installment 2 ($26.66, due 9/20): 14-day window 9/06-9/19. 2666¢ ÷ 14 =
+             190¢ base, remainder 6¢ → the 6 EARLIEST days (9/06-9/11) get $1.91, the
+             remaining 8 days (9/12-9/19) get $1.90. Sum: 6×1.91 + 8×1.90 = 26.66.
+           - Installment 3 ($26.68, due 9/27): 21-day window 9/06-9/26. 2668¢ ÷ 21 =
+             127¢ base, remainder 1¢ → the 1 EARLIEST day (9/06) gets $1.28, the
+             remaining 20 days (9/07-9/26) get $1.27. Sum: 1.28 + 20×1.27 = 26.68.
+           All three windows overlap (each independent, per Mode 5/ACCRUAL) and land on
+           top of every other line already accruing on those days. daily_targets for
+           every day 2026-09-06 through 2026-09-26 (21 days — the full extent of this
+           goal's combined windows) had the applicable vans-knu-skools-<seq>
+           contribution(s) added and that day's `target`/`total_claim`/`shortfall`
+           recomputed as the new sum (funded was $0 on every touched day beforehand, so
+           shortfall = target). 2026-09-27 onward is untouched (installment 3's window
+           ends 9/26). No day before today (2026-09-06) was rewritten. OVERLOAD CHECK
+           rerun with these numbers included (see Update 2026-09-06 below) — still
+           flagged, same standing condition; no new Convo 1 card raised per instruction."
+    installments:
+      - {seq: 1, amount: 26.66, due: 2026-09-13, status: pending, calendar_event_id: bvjp8goodjms0m1tm6go0jorn8}
+      - {seq: 2, amount: 26.66, due: 2026-09-20, status: pending, calendar_event_id: 6ium3uqbta40akqik0mp29qvtk}
+      - {seq: 3, amount: 26.68, due: 2026-09-27, status: pending, calendar_event_id: mhglk8vovcqhh5v46juuplmjpc}
 open_questions:
   - "OPEN 2026-08-29 (#decisions ts 1788016060, in the screenshot thread): does the new
      2026-08-26 $50.60 DoorDash dash (from Lemar's 10-line 'Dashes' breakdown posted
@@ -4759,3 +4845,34 @@ about), and no `daily_targets` accrual. The matching `open_questions` entry (ope
 Nothing paid or moved except as Lemar himself reported (the Edge Fitness charge and
 the Workspace figure are his own reports, not actions taken here). Nothing contacted.
 Dashboard not re-rendered this pass per this session's scope (ledger + calendar only).
+
+**4. Mode 5 — new goal `vans-knu-skools`, $80 by 9/30.** Lemar replied on the "Vans Knu
+Skools — need price/date" Convo 1 card: "This should be a savings goal and I think
+they're $80" (combined with his original ask, "add ... a pair of new Vans Knu Skools by
+the end of the month"). New goal added: `target: 80`, `pocket: set-aside`,
+`target_date: 2026-09-30`. Today (2026-09-06) to 9/30 is 24 days — not an exact 7-day
+multiple — so, same as `own-car-running` above, used the **3 full weeks that fit** (21
+of the 24 days) rather than an uneven 4th installment for the leftover 3 days: fully
+funded by 2026-09-26, four days ahead of the 9/30 date. $80 ÷ 3 = $26.6666.., even split
+in cents, remainder (2 cents) on the LAST installment — 2 installments of **$26.66**, 1
+(seq 3) of **$26.68**, due every Sunday 9/13, 9/20, 9/27. Each installment accrues
+independently over its own `[2026-09-06..due-1]` window under line_id
+`vans-knu-skools-<seq>` (full per-cent math in the goal's `note`). `daily_targets` for
+every day 2026-09-06 through 2026-09-26 (21 days) had the applicable contribution(s)
+added and that day's `target`/`total_claim`/`shortfall` recomputed; funded was $0 on
+every touched day beforehand, so shortfall = target. No day before today rewritten.
+Three due-date calendar events created on the personal reminder calendar (both popups,
+7-day + day-of): `bvjp8goodjms0m1tm6go0jorn8` (1/3, 9/13, $26.66),
+`6ium3uqbta40akqik0mp29qvtk` (2/3, 9/20, $26.66), `mhglk8vovcqhh5v46juuplmjpc` (3/3,
+9/27, $26.68).
+
+**OVERLOAD CHECK, rerun again with vans-knu-skools included.** Reusing the same
+trailing 4-week income average computed above ($173.71/week — unchanged, no new income
+logged this pass). Coming 7-day set-aside total (`daily_targets` targets, 2026-09-06
+through 2026-09-12) is now 214.56 + 186.12 + 186.09 + 186.09 + 185.52 + 177.19 + 185.50
+= **$1,321.07** (up from $1,272.15 before this goal) — roughly **7.6x** the trailing
+average, still FLAGGED, same standing overload condition first raised 2026-08-15 and
+already covered by the standing Money Hub card. Per the skill the accrual is written
+exactly as computed, nothing shrunk or delayed. No new Convo 1 card raised — Lemar's own
+instruction on this task. Nothing paid or moved. Dashboard not re-rendered this pass per
+this session's scope (ledger + calendar only).
