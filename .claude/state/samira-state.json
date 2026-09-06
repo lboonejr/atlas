@@ -1,10 +1,10 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'. Every slack_channels watermark MUST be a JSON string: the last-read message ts for that channel (e.g. '1788459423.085039'), or, for a channel that was quiet this scan, the scan-time epoch seconds as a string (e.g. '1788445432' — a bare epoch, NOT padded to '.000000' ts form). Never store a bare JSON number. Watermarks must never postdate lock.run_completed — they are stamped before the lock closes (PART 0).",
   "lock": {
-    "run_id": "run_20260906T000713Z",
-    "run_started": "2026-09-06T00:07:13Z",
+    "run_id": "run_20260906T120645Z",
+    "run_started": "2026-09-06T12:06:45Z",
     "run_completed": "2026-09-05T21:08:51Z",
-    "note": "78th scan starting. Previous (77th) scan closed cleanly -- no lock recovery needed."
+    "note": "79th scan starting. Recovered a stale lock from the 78th scan (run_20260906T000713Z, started 2026-09-06T00:07:13Z) -- that run died mid-flight right after acquiring the lock (only Dawn's and Basil's later commits followed it, no Samira PART V/S/A.. work), and was ~12h old (>>45min), so it aged out per PART 0 and is recovered here rather than treated as a live overlapping run. Separately: this session's local clone had also accumulated 61 commits (scans 68th-78th) that were never pushed to origin/main -- origin/main was stuck at the 61st-scan commit. Pushed the branch to origin and it fast-forwarded main to include all of it before this scan started; nothing was lost, but flagging this to Lemar as a real config gap (see digest / notification)."
   },
   "watermarks": {
     "slack_channels": {
