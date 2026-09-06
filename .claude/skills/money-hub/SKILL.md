@@ -58,7 +58,7 @@ is not "low priority," it is *not in the system at all*. Under the retired model
 undated bill still landed in the monthly floor sum; under due-date order it silently
 does nothing. So every undated line is a live defect, not a footnote: surface all of
 them in `open_questions`, in the dashboard's "NO DATE — not being tracked" strip, and
-in your PART M return token. Never invent a date to force a line into the queue.
+in your PART 4 return token. Never invent a date to force a line into the queue.
 
 **Two pockets.** Roles are fixed; the ACCOUNTS behind them come from the ledger's
 `pockets` block and were corrected 2026-08-10 — always read them from the ledger, never
@@ -490,8 +490,8 @@ the `daily_targets` block); append to the income log; create/update/cancel event
 personal reminder calendar (both per-bill due-date events AND the daily aggregate) and
 on the Cuzzie's (Owners) calendar for business bills, writing ids back;
 create a new Money Hub snapshot Doc in the Money Hub Drive folder (never edit or delete a
-prior snapshot); post money-hub output to #personal-finance and raise #decisions cards
-when running inside Samira; commit to `main`.
+prior snapshot); post money-hub output to the #personal-finance timeline and raise
+Convo 1 cards when running inside Samira; commit to `main`.
 
 You MUST NOT, ever: move money, make a payment or transfer, or tell any surface a
 payment happened that Lemar didn't report; contact any creditor, biller, or lender; send
@@ -505,7 +505,7 @@ attendees to any event; mark a `daily_targets` contribution `paid` except as the
 side-effect of Mode 7 (a rollover only ever sets `rolled`, never `paid`); **REBALANCE
 specifically must never** apply a proposed move itself, touch a `non_negotiable: true`
 line, touch an already-`funded`/`paid` installment, move a flagged business-origin line
-into a business ledger, or raise a second #decisions card when OVERLOAD CHECK already
+into a business ledger, or raise a second Convo 1 card when OVERLOAD CHECK already
 raised one.
 
 ## Returns (to the Samira runbook, for the digest)
@@ -514,8 +514,8 @@ funded $Y · maint +$M · undated N · overload $X vs $Y · rebalance N moves/no
 $Z> · hub ✅/⚠️` — or `money —` when the sweep found nothing.
 
 ## Worked example
-Lemar drops in #personal-finance: "New bill, car insurance $182 a month on the 15th.
-Also made $210 doordashing today." PART M:
+Lemar drops in his self-DM (Convo 2): "New bill, car insurance $182 a month on the
+15th. Also made $210 doordashing today." PART 4 hands it to this skill:
 1. Adds `{id: car-insurance, amount: 182, cadence: monthly, day: 15}` — it has a date,
    so it queues. Creates the recurring event `Bill: Car insurance — $182` on the 15th
    with both popups, stores the id.

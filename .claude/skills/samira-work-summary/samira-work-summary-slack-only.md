@@ -17,13 +17,18 @@ whenever it's available.
 ## What you need
 Only the **Slack connector**, connected to the "Marspace" workspace, using Lemar's own
 account (the standard personal connector — not a dedicated bot identity, which this
-surface won't have wired up anyway). No GitHub, no other connector required.
+surface won't have wired up anyway). That identity is exactly what the primary route
+needs: only Lemar's own account can post into his self-DM. No GitHub, no other
+connector required.
 
 ## Known hardcoded values (duplicated here on purpose — see "On drift" below)
-- **Samira capture DM**: `D0BHPKMDNEP` (Lemar's DM with Samira's bot). The only DM
-  target — never invent a different one.
-- There is no live channel table to consult here (that lives in `.claude/anchors.md`,
-  repo-only) — find the right channel by searching Slack directly (see Step 2).
+- **Convo 2 — Lemar's SELF-DM**: `D0BBVV54L5R` (the intake notepad since 2026-09-06;
+  it replaced the bot DM as the capture inbox). The primary target — never invent a
+  different one. Reachable only from Lemar's own account (a bot cannot enter a
+  self-DM), which is the identity this surface already uses.
+- **Convo 1 — the Samira bot DM**: `D0BHPKMDNEP` (the card surface). Used here ONLY as
+  the courtesy fallback if, unusually, this session posts through a bot identity
+  instead of Lemar's own account.
 
 ## Step 1 — Summarize the thread
 Same as the full skill: what this thread is, state (done / in progress / blocked),
