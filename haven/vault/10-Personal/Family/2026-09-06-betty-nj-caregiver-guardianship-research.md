@@ -42,12 +42,32 @@ should go through an elder-law attorney.
   and the county Surrogate's office (whichever county Betty resides in) are the
   practical starting points; an elder-law attorney should handle the actual filing.
 
+## Correction 2026-09-06T20:57-04:00 — this is a physical-care ask, not (only) legal
+
+Lemar clarified in-thread (reply ts `1788725070.797359`): grandpa's need for Betty is
+on the **physical care side**, same shape as the Ella track above — not (or not only)
+legal guardianship/POA. He also confirmed **Betty is on Medicaid** (as is Ella).
+
+Given that, the same NJ paid-family-caregiver route researched for Ella likely applies
+directly to Betty: the **Personal Preference Program (PPP)** — since Betty is the
+Medicaid/NJ FamilyCare beneficiary herself, if she has a personal-care need
+determination she'd get a monthly self-directed budget and could hire grandpa
+(a relative) as her paid caregiver. This is the more direct fit than JACC, which is
+for people NOT on Medicaid. The legal/guardianship research above (POA vs. Surrogate's
+Court guardianship) stays relevant as a separate, later question if Betty's financial
+affairs need someone with legal authority — but it is not the thing to chase first.
+
+**Open questions before going further:** does Betty already have a personal-care
+need determination under her NJ FamilyCare/Medicaid plan (the PPP prerequisite)? What
+county does she live in? Not applying for anything here — orientation only, same as
+the Ella note.
+
 ## Plan
 
-Next concrete step is identifying Betty's county of residence (for the correct
-Surrogate's office) and whether she currently has capacity (decides POA vs.
-guardianship track). Offered to draft a short attorney-consult question list, or hold
-until those two are confirmed — awaiting Lemar's pick.
+Next concrete step is identifying Betty's county of residence and her personal-care
+need determination status (decides whether PPP can be pursued now). The legal
+POA-vs-guardianship question (Betty's county of residence + current capacity) stays
+parked behind the PPP question unless Lemar says otherwise.
 
 ## Sources
 - slack: Convo 2 (self-DM) drop, ts `1788716036.912749`, 2026-09-06 13:33 ET
