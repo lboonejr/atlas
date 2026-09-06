@@ -73,18 +73,18 @@ fail, and lists those failures.
    note (`haven/vault/_daily/brief-YYYY-MM-DD.md`) carries the **North Star line** and
    **2–4 directional themes** as first-class sections — lift them verbatim (distill
    yourself only if reading an older five-goals-format note). Never render a task list
-   here — execution lives further down in #decisions. Loop tally as a small chip. Link
+   here — execution lives further down in the Convo 1 cards. Loop tally as a small chip. Link
    out to the Morning Brief Drive folder (anchors, "Daily Brief routine" section) so
    Lemar can open today's full snapshot. If today's note is missing (Dawn failed or
    pre-1am), use yesterday's and flag it stale.
 3. **Calendar — today's roadmap.** Today as a timeline (primary + reminder calendar,
    ET), then this week (today+6d) as a compact day strip. All-day items render as
    chips. Every event links to its Google Calendar `htmlLink` (law #2).
-4. **Respond — open #decisions.** Execution starts here. From this run's PART A state:
-   the open cards waiting on Lemar, most urgent first (🔴 before 🟡, then by age),
-   capped at ~10 with a "+N more in #decisions" channel link. Each card: severity dot,
-   one-line summary, age ("2d"), and its 💬 thread permalink so one tap opens the exact
-   thread to react/reply.
+4. **Respond — open Convo 1 cards.** Execution starts here. From this run's PART 3
+   state (was the #decisions list until 2026-09-06): the open cards waiting on Lemar,
+   most urgent first (🔴 before 🟡, then by age), capped at ~10 with a "+N more in our
+   DM" link to Convo 1 (`D0BHPKMDNEP`). Each card: severity dot, one-line summary, age
+   ("2d"), and its 💬 thread permalink so one tap opens the exact thread to react/reply.
 5. **Money.** A ~3-line summary + a link-out to the **Money Hub** Drive folder (id in
    anchors' "Money Hub" section — opens to today's newest snapshot), which owns the full
    picture. The three lines, from
@@ -119,15 +119,18 @@ fail, and lists those failures.
    >14 days past its own `due`, overdue in red. Cap at ~12 with a count of the rest.
    Each item links to its source thread or calendar event when the note records one
    (law #2).
-8. **Project pulses.** One line per project channel from this run's PART G pass
-   (#investor-pipeline, #car-search, #on-button, #personal-finance, #cuzzys-brand,
-   #comedy-club, #delivery-in-a-box, #pitch-deck-pressure-test, #trading-cards): a
-   status dot (🟢 moved / ⚪ quiet / 🔴 blocked), the one-line state, and the channel
-   link.
+8. **Project pulses.** One line per project timeline channel, from what this run
+   actually touched (the PART 7 timeline pass; timelines are posted to, never swept —
+   a project nothing touched this run renders ⚪ quiet) — #investor-pipeline,
+   #car-search, #on-button, #personal-finance, #cuzzys-brand, #comedy-club,
+   #delivery-in-a-box, #pitch-deck-pressure-test, #trading-cards: a status dot
+   (🟢 moved / ⚪ quiet / 🔴 blocked), the one-line state, and the channel link.
 9. **Samira & routines** (bottom). Last digest time vs now (>70 min stale inside the
-   8a–6p ET window → "⚠️ missed run"), failure notes (`type: log`, `status: active`
-   with attempt/error), anything tagged **stuck**, STUCK cards in #decisions, standing
-   flags (e.g. Basil awaiting DRY_RUN vetting), each linked to #reports or its thread.
+   8a–6p ET window → "⚠️ missed run"), **#fixes health — the open fix-card count**
+   (from this run's PART 5 state, linked to #fixes `C0BV5BRNH5Z`; 0 open renders as a
+   quiet "fixes: none open" chip), failure notes (`type: log`, `status: active` with
+   attempt/error), anything tagged **stuck**, STUCK cards in #fixes, standing flags
+   (e.g. Basil awaiting DRY_RUN vetting), each linked to #reports or its thread.
    This section also lists any sections of THIS page that errored this run.
 
 ## Output — render and file a new Drive snapshot

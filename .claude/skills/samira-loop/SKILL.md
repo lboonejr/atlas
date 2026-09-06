@@ -5,24 +5,26 @@ description: >
   and finished. Given an idea, doc, deck, spec, page, or build that a conversation just
   produced, it writes the Haven note FIRST, calls the lane (cloud = Samira builds it
   unattended · browser = Claude in Chrome with Lemar present · local = his own machine),
-  opens ONE 🧪 PT card in #decisions, and runs an eight-lens pressure test across the day's
-  remaining scans until the questions run out and the thing gets built. Samira invokes it at
-  PART R of her hourly run (`.claude/routines/samira-build-loop.md`) to advance open cards;
-  a live thread invokes it the moment it produces something worth keeping. Use it whenever
+  opens ONE 🧪 PT card in Convo 1 (the Samira DM), and runs an eight-lens pressure test as
+  decision rounds across the day's remaining scans until the questions run out and the
+  thing gets built. Samira invokes it in PART 3 of her hourly run — was PART R until
+  2026-09-06 (`.claude/routines/samira-build-loop.md`) — to advance open cards; a live
+  thread invokes it the moment it produces something worth keeping. Use it whenever
   work should outlive the conversation: "run this through the loop", "hand this to Samira",
   "pressure-test this", "what lane is this", "open a PT card", or at the point a thread has
   actually built something. Heavier than samira-work-summary (which only files and hands
-  off) and a different lane from Stormy (who bakes no-deadline ideas in #stormy and never
-  executes). It never sends, never pays, never posts outward, and never claims a handoff
-  landed unless the vault write actually succeeded.
+  off) and a different lane from Stormy (who bakes no-deadline ideas in Convo 2's
+  deep-dive mode and never executes). It never sends, never pays, never posts outward,
+  and never claims a handoff landed unless the vault write actually succeeded.
 ---
 
 # The Samira Loop — build, pressure-test, finish
 
 Two halves run off this one file, so they can never drift apart: a **live thread** invokes it
-when it produces something (sections 3 through 8), and **Samira** invokes it at PART R of her
-hourly run to advance the cards a thread already opened. `.claude/routines/samira-build-loop.md`
-carries her scan-side detail (finding cards, caps, watermarks); everything else is here.
+when it produces something (sections 3 through 8), and **Samira** invokes it inside PART 3 of
+her hourly run (the Convo 1 pass; was PART R until 2026-09-06) to advance the cards a thread
+already opened. `.claude/routines/samira-build-loop.md` carries her scan-side detail (finding
+cards, caps, watermarks); everything else is here.
 
 **The one-line contract.** Nothing built in a thread dies in the thread. Every idea, doc,
 deck, spec, page, or build goes down one of three lanes — Samira builds it in the cloud,
@@ -53,7 +55,7 @@ memory, and do not proceed as if the vault write happened.
 Every thread carries **one name**, and that same name is the Haven note title, the PT card
 title, the `pt:` slug, and the #reports line. One name following the work everywhere is what
 makes a thread findable later: Lemar should be able to glance at his thread list, at
-#decisions, and at the vault and see the same words in all three.
+Convo 1 (the Samira DM), and at the vault and see the same words in all three.
 
 **Set it in your first reply, before doing anything else**, on its own line so it reads on a
 phone:
@@ -118,7 +120,7 @@ left today."* Then set the pace off it:
 | 1–2 | Open the card anyway, ask the single highest-leverage question, say plainly that the bake finishes at tomorrow's scan 1. |
 | 0 | Land the note and the card now, headline ⏳. It starts tomorrow at scan 1. |
 
-Never hold work because the thread is about to close. The Haven note and the #decisions
+Never hold work because the thread is about to close. The Haven note and the Convo 1
 card carry it; the thread does not.
 
 ---
