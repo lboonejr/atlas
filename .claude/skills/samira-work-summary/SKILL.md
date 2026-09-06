@@ -30,22 +30,25 @@ when it closes. This skill is that off-ramp. It does three things, in order, eve
 **(1) summarize the thread → (2) land it in Haven → (3) route it in Slack** so Samira
 actually sees it on her own schedule instead of it dying in a closed tab.
 
-This is a lighter, on-demand cousin of Atlas Gear 2 ("find the home," stage a prompt) —
-reuse that logic, don't reinvent it — but it never creates a new Slack channel, and its
-no-home fallback is a DM to Samira instead of standing up a new surface.
+This is a lighter, on-demand cousin of Atlas Gear 2 — reuse its judgment, don't
+reinvent it — but it never creates a new Slack channel, never opens a card itself, and
+its whole delivery mechanism is the intake surface Samira already sweeps.
 
 ## ANCHORS
 All platform IDs live in **`.claude/anchors.md`** — read it before routing anywhere.
 Constants this skill uses:
 - Vault: `haven/vault/` on repo `lboonejr/atlas`, default branch. Writes go through
   **haven-capture** only — never hand-write a note.
-- Slack workspace "Marspace": the channel table in anchors.md, plus the **Samira capture
-  DM** `D0BHPKMDNEP` (Lemar ↔ Samira's bot) — the ONLY DM target, never invent a new one.
+- Slack workspace "Marspace": the channel table in anchors.md, plus **Convo 2 — Lemar's
+  SELF-DM** `D0BBVV54L5R` (the intake notepad, reachable ONLY via the personal Slack
+  connector — a bot cannot enter a self-DM) and **Convo 1 — the Samira bot DM**
+  `D0BHPKMDNEP` (the card surface; used here only as the bot-only courtesy fallback).
+  Never invent a different DM.
 - Two Slack identities, and which one matters here: the **shared personal connector**
-  (posts as Lemar's own Slack account — what a live Atlas/Claude session uses) vs.
-  **Samira's dedicated bot** (`mcp__Samira__*`, posts as a separate bot user, always
-  🌐-signed). Use whichever is reachable in this session; which one you use changes how
-  the message downstream is read (see Step 3).
+  (posts as Lemar's own Slack account — what a live Atlas/Claude session uses, and the
+  ONLY way into the self-DM) vs. **Samira's dedicated bot** (`mcp__Samira__*`, posts as
+  a separate bot user, always 🌐-signed). Which one is reachable decides the route
+  (see Step 3).
 - Git-write policy: commit straight to `main` (no feature branch/PR for Haven or skill
   writes — see anchors.md's "Git write policy" row).
 

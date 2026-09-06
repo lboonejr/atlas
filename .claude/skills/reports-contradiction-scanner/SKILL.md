@@ -118,15 +118,16 @@ A time range or "since last run" (default). Nothing else — it reads #reports a
 vault directly.
 
 ## What to return
-`scanned: [range]` · `found: N` · `open: O` (posted to #decisions) · `fixed-noted: F`
-(obvious fixes staged for a later PART C pass) · the log note path. Zero found →
-`clean scan`, no DM, one line in the run digest.
+`scanned: [range]` · `found: N` · `open: O` (open-question cards posted to #fixes) ·
+`fixed-noted: F` (proposed-fix cards staged, awaiting Lemar's ✅) · the log note path.
+Zero found → `clean scan`, no card, one line in the run digest
+(`reports-scan: clean`).
 
 ## Note on scheduling
 This skill is also invokable on demand ("scan #reports for contradictions") outside its
-scheduled run. It runs unattended as **PART T** of the hourly loop
-(`.claude/routines/samira-atlas-executor.md`), after PART M (money) and before the
-canvas refresh — Lemar's call, made explicitly, the same way Stormy was folded in as
-PART Q. (Originally slotted as PART R; relettered to PART T when an unrelated,
-concurrently-merged change claimed PART R for the separate samira-loop build/
-pressure-test feature.)
+scheduled run. It runs unattended as **PART 6c** of the hourly loop
+(`.claude/routines/samira-atlas-executor.md`), after the 6a email and 6b investor
+engines so it scans the freshest #reports; a scan failure is non-fatal to the run.
+(History: ran as PART T until the 2026-09-06 restructure. Originally slotted as PART R;
+relettered to PART T when an unrelated, concurrently-merged change claimed PART R for
+the separate samira-loop build/pressure-test feature.)

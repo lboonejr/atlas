@@ -37,9 +37,11 @@ below.
 All platform IDs live in **`.claude/anchors.md`** — read it first. You use: the
 **Money Hub Drive folder id** (Money Hub section), the **reminder calendar ID** (personal
 money only), the **Cuzzie's (Owners) calendar ID** (business money only),
-**#personal-finance** `C0BGLEMH99T`, and the git-write policy (commit straight to
-`main`; prefix `money-hub:`). Vault outcome notes go through **samira-report-result**
-when running inside Samira.
+**#personal-finance** `C0BGLEMH99T` (a TIMELINE since 2026-09-06 — you post snapshot
+links and movement entries there under standing permission, never sweep it), **Convo 1**
+`D0BHPKMDNEP` (where decision cards are raised), and the git-write policy (commit
+straight to `main`; prefix `money-hub:`). Vault outcome notes go through
+**samira-report-result** when running inside Samira.
 
 ## THE MODEL — due-date order, two pockets, one number
 Locked 2026-08-10 by Lemar, replacing the Option 3 hybrid floor + waterfall (2026-07-24,
@@ -106,10 +108,10 @@ phone lines, vendor invoices, collections against the entity) are NOT personal b
 - They never contribute to `daily_targets` — a business bill must never inflate the one
   number Lemar sets aside from his own earnings.
 - `#on-button` and its own index own the reopening/wind-down obligations; route there.
-When a drop in #personal-finance is business money, say so, route it, and do not write
-it here. When it is genuinely ambiguous (Lemar personally covering a Cuzzie's cost out
-of his own earnings), leave it out and raise ONE #decisions parent — never guess which
-side of the line it sits on.
+When a money drop (from the Convo 2 sweep, or live) is business money, say so, route it,
+and do not write it here. When it is genuinely ambiguous (Lemar personally covering a
+Cuzzie's cost out of his own earnings), leave it out and raise ONE Convo 1 card (decision
+round) — never guess which side of the line it sits on.
 
 ## MODES
 
@@ -177,11 +179,12 @@ never scheduled (Lemar's call, 2026-08-05).
   slips is Lemar's call; your job is to show him the cliff, not to jump for him.
 - **Output:** today's set-aside number, the 14-day queue with dates and running totals,
   income this week, and the one transfer instruction (Spending → Set-Aside). Advisory
-  only; Lemar moves the money. Append as an `## Update` to the ledger, post to
-  #personal-finance (when running with a Slack surface), re-render the dashboard.
+  only; Lemar moves the money. Append as an `## Update` to the ledger, post to the
+  #personal-finance timeline (when running with a Slack surface; standing permission
+  kept), re-render the dashboard.
 
 **7. Mark paid** — "paid the Claude bill", "installment 2 of [plan] paid", or a payment
-confirmation (text or photo) in #personal-finance. Flip the line's `status` to `paid` (a
+confirmation (text or photo) dropped in Convo 2. Flip the line's `status` to `paid` (a
 monthly bill just gets a dated note — it recurs), retire a one-time item's or
 installment's calendar event (see CALENDAR), and when a plan's last installment pays,
 mark the plan done. **Ramp side-effect:** flip that bill's `pending`/`rolled`
@@ -306,9 +309,10 @@ If the coming week's set-aside total exceeds that average, **still write the acc
 exactly as computed** — never quietly shrink, delay, or drop a line to make the number
 look achievable — and additionally:
 - Flag it on the dashboard: "⚠️ this week's set-aside is $X against a $Y average week."
-- Raise ONE #decisions parent naming the gap in dollars and listing the dated lines
-  inside the window, so Lemar decides what moves. You never decide which bill slips.
-- Include `overload $X vs $Y` in your PART M return token.
+- Raise ONE Convo 1 card (decision round) naming the gap in dollars and listing the
+  dated lines inside the window, so Lemar decides what moves. You never decide which
+  bill slips.
+- Include `overload $X vs $Y` in your PART 4 return token.
 
 A number Lemar can't hit is still the true number. The failure mode this guards against
 is a cheerful dashboard, not an ugly one.
@@ -355,11 +359,12 @@ week fit," now extended: the skill may PROPOSE a stretch, it may never force one
 may never manufacture a proposal that doesn't actually work just to have something to
 show.
 
-**Output.** One #decisions parent per overload event (the same card OVERLOAD CHECK
+**Output.** One Convo 1 card per overload event (the same card OVERLOAD CHECK
 already raises — do not raise a second one), with each proposed move as a labeled
-threaded reply option (mirrors the existing #decisions pattern). Lemar reacts to choose;
-nothing is applied until he does. If REBALANCE has nothing valid to propose (hard stop
-above), say so in that same card rather than staying silent.
+threaded reply option (the doctrine's decision-round pattern). Lemar signals to choose —
+reaction or plain reply, reply wins on conflict; nothing is applied until he does. If
+REBALANCE has nothing valid to propose (hard stop above), say so in that same card
+rather than staying silent.
 
 **Data needed:** just the `non_negotiable` flag (field rules, below) and the trailing
 4-week income average OVERLOAD CHECK already computed — reuse it, never recompute it
