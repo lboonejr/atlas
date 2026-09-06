@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-09-05T17:10:00Z
+updated: 2026-09-06T12:06:45Z
 domain: project
 type: log
 status: active
@@ -1872,3 +1872,48 @@ the "Haven Keeper" false-empty-inbox claim recurred a 3rd time? Checked both:**
 - this run's PART S calendar-sync sweep (47 notes carry `due`, all idempotently synced)
 - `.claude/state/samira-state.json` (run lock `run_20260905T170310Z`, "74th scan";
   `slack_channels.C0BBZJL85RT` watermark `1788624700.940759` confirms the bookmark used)
+
+## Update 2026-09-06 (79th scan)
+
+**Scanned:** #reports ts `1788642476.207289`–now (2026-09-05 ~9:14pm ET through
+2026-09-06 ~8:00am ET, 2 new messages: Basil's inbox-tidy line and another "Haven
+Keeper" empty-vault claim). Note on the gap: the 75th–78th scans left no entries here
+(none apparently found anything new to report, and the 78th scan died mid-flight right
+after acquiring its lock — see `.claude/state/samira-state.json`'s lock note — before it
+reached PART T). This run recovered that stale lock and is the first to run PART T since
+the 74th run logged above.
+
+**Found: 1 — same non-actionable-but-escalated pattern, now 4th+ occurrence.**
+
+1. **"Haven Keeper" (app `A08SF47R6P4`, `U0BC5UTHYG4`) posted another false "Inbox
+   empty / nothing to file / all quiet" claim.**
+   - `1788646810.843199` (2026-09-06 ~2:20am ET): "Haven — filed 0 · stuck 0 ·
+     rang +0/~0/-0. Inbox empty, no notes with `due` in the vault. Nothing to file, all
+     quiet."
+   - **Ground truth, this run's own PART V/S sweeps:** `00-Inbox/` holds the same 5
+     known stuck notes (unchanged since 2026-09-03), and 47 vault notes carry a `due`
+     (spot-checked in full against both the reminder calendar and the Cuzzie's (Owners)
+     calendar — zero drift, all already correctly synced). Both halves of the claim are
+     wrong, same as every prior occurrence in this log (11th run onward).
+   - **Not re-escalated to a new #decisions card** — the existing open card ("Haven
+     Keeper keeps posting a wrong vault state — 3rd occurrence, what is it?", ts
+     `1788635412.011499`, posted by an earlier scan, still open/unreacted as of this
+     run) already covers this exact question; a second card would duplicate it. Posted
+     one #reports correction line instead (ts `1788697059.609149`), append-only, naming
+     this as the 4th occurrence and pointing back at the open card.
+   - **Disposition unchanged:** this manual-session signature has never been read back
+     as state by the automated routine (Samira runs off the vault + the state file,
+     never off #reports), so it still doesn't propagate — this run's own PART V/S
+     figures are correct regardless. Still worth Lemar's direct attention (per the
+     already-open card), not something this scanner can resolve on its own.
+
+**Open questions posted to #decisions this run: 0** (the existing 3rd-occurrence card
+already covers it).
+
+### Sources (79th-scan update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788642476.207289`–`1788646810.843199`
+- slack: #decisions `C0BBXA96FFV`, ts `1788635412.011499` (open "Haven Keeper" card,
+  unreacted)
+- this run's PART V vault-keeper sweep (00-Inbox: 5 notes stuck, unchanged)
+- this run's PART S calendar-sync sweep (47 `due` notes, zero drift, all synced)
+- `.claude/state/samira-state.json` (lock recovery note for the 78th scan's stale lock)
