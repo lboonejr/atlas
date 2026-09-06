@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-09-06T14:10:00Z
+updated: 2026-09-06T15:11:00Z
 domain: project
 type: log
 status: active
@@ -1944,3 +1944,28 @@ window contradicts anything else or the vault ground truth it cites
 
 ### Sources (81st-scan update)
 - slack: #reports `C0BBZJL85RT`, ts range `1788697608.452459`–`1788703792.478559`
+
+## Update — 82nd scan (2026-09-06, ~11:04am ET)
+
+Scanned `#reports` range `1788703792.478559`–`1788704367.588789` (2 messages: the 81st
+scan's own closeout note on its lock-recovery handling, and the 81st scan's digest).
+Both are this same run's own output describing its own actions consistently with each
+other and with the vault (the Drive-organizing note and its filing are both confirmed).
+Nothing in this window conflicts with anything else or with vault ground truth.
+
+Note for the record: the 81st-scan bookmark update above lists only 2 messages for its
+scanned range (`1788697608.452459`–`1788703792.478559`) but a 3rd message actually falls
+inside that range — the recurring "Haven Keeper" false "Inbox empty" claim at ts
+`1788700825.573109`. That message is the same already-tracked recurring issue (11+
+prior occurrences, covered by the still-open "Haven Keeper keeps posting a wrong vault
+state" card, ts `1788635412.011499`) — not a new contradiction, so this is not being
+re-escalated as a fresh finding. Flagging only so the coverage gap itself doesn't repeat:
+this scan's own range starts exactly where the 81st scan's stated range ended, so no
+message is skipped going forward.
+
+**Found: 0. Open questions posted to #decisions: 0.**
+
+### Sources (82nd-scan update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788703792.478559`–`1788704367.588789`
+- slack: #decisions `C0BBXA96FFV`, ts `1788635412.011499` (open "Haven Keeper" card,
+  still unreacted)
