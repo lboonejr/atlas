@@ -1,34 +1,34 @@
 {
-  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record'. Every slack_channels watermark MUST be a JSON string: the last-read message ts for that channel (e.g. '1788459423.085039'), or, for a channel that was quiet this scan, the scan-time epoch seconds as a string (e.g. '1788445432' — a bare epoch, NOT padded to '.000000' ts form). Never store a bare JSON number. Watermarks must never postdate lock.run_completed — they are stamped before the lock closes (PART 0).",
+  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded \u2014 fall back to that PART's legacy cutoff once, then record'. Every slack_channels watermark MUST be a JSON string: the last-read message ts for that channel (e.g. '1788459423.085039'), or, for a channel that was quiet this scan, the scan-time epoch seconds as a string (e.g. '1788445432' \u2014 a bare epoch, NOT padded to '.000000' ts form). Never store a bare JSON number. Watermarks must never postdate lock.run_completed \u2014 they are stamped before the lock closes (PART 0).",
   "lock": {
     "run_id": "run_20260906T150258Z",
     "run_started": "2026-09-06T15:02:58Z",
-    "run_completed": "2026-09-06T12:26:33Z",
-    "note": "82nd scan starting. Prior run (81st, run_20260906T140319Z) never wrote run_completed -- lock aged out (started 14:03:19Z, now 15:02:58Z, >45min) -- treated as died mid-flight per PART 0 and recovered rather than exited silently."
+    "run_completed": "2026-09-06T15:27:57Z",
+    "note": "82nd scan complete. Recovered the 81st scan's aged-out lock (>45min, died mid-flight) at start. This scan: vault-keeper filed 1 note + stubbed 1 entity (LoveGrow); calendar-sync clean (0 due-note drift); no new #decisions drift except Lemar's direct answer on the Camden Launch 4-stalled-PT-cards flag card (ts 1788705175.902499) -- applied: ops-admin-lane-and-ariana archived (killed), p00-client-intake-system unparked to active (welcome email held on missing Jamil Tyson email address); no new captures, mail, investor, or Stormy activity; reports-contradiction-scanner clean; canvas still blocked (not re-checked, already checked today); Pulse rendered (9/9 sections, dm sent)."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1788697025.822929",
-      "C0BBZJL85RT": "1788697608.452459",
-      "D0BHPKMDNEP": "1788697639",
-      "C0BGLEMH99T": "1788697639",
-      "C0BEQUW5NPP": "1788697639",
-      "C0BBLUA7JLX": "1788697639",
-      "C0BJ37SU1TL": "1788697639",
-      "C0BCCUKEUQ2": "1788697639",
-      "C0BCD7U5X2B": "1788697639",
-      "C0BCH2C3GRM": "1788697639",
-      "C0BDN2KQFD4": "1788697639",
-      "C0BD8LTM1EK": "1788697639",
-      "C0BGYM1UB4Y": "1788697639",
-      "C0BGCAK0ML3": "1788697639",
-      "C0BHXTPST52": "1788697639",
-      "C0BC2A94142": "1788697639",
-      "C0BBZ5J8805": "1788697639",
-      "C0BRZT2V89W": "1788697639"
+      "C0BBXA96FFV": "1788707754.111949",
+      "C0BBZJL85RT": "1788707770.043009",
+      "D0BHPKMDNEP": "1788707895",
+      "C0BGLEMH99T": "1788707895",
+      "C0BEQUW5NPP": "1788707895",
+      "C0BBLUA7JLX": "1788707895",
+      "C0BJ37SU1TL": "1788707895",
+      "C0BCCUKEUQ2": "1788707895",
+      "C0BCD7U5X2B": "1788707895",
+      "C0BCH2C3GRM": "1788707895",
+      "C0BDN2KQFD4": "1788707895",
+      "C0BD8LTM1EK": "1788707895",
+      "C0BGYM1UB4Y": "1788707895",
+      "C0BGCAK0ML3": "1788707895",
+      "C0BHXTPST52": "1788707895",
+      "C0BC2A94142": "1788707895",
+      "C0BBZ5J8805": "1788707895",
+      "C0BRZT2V89W": "1788707895"
     },
     "decisions_threads": {
-      "1788697019.074209": "1788697025.822929",
+      "1788697019.074209": "1788707739.279069",
       "1786832078.131649": "1787754270.525189",
       "1786713941.609669": "1786716585.591279",
       "1786986503.368599": "1786986503.368599",
@@ -38,10 +38,10 @@
       "1787001107.337499": "1787055300.092309",
       "1786990384.507289": "1787055521.111979",
       "1787069259.543559": "1787924266.754539",
-      "1787112734.344369": "1787574415.639709",
+      "1787112734.344369": "1788707754.111949",
       "1787152085.518979": "1787159332.480679",
       "1787159607.185319": "1787162996.829679",
-      "1787155581.357669": "1788023532.452749",
+      "1787155581.357669": "1788707751.535349",
       "1787227722.583919": "1787260488.874049",
       "1787231683.266619": "1787234895.613759",
       "1787235032.481949": "1787333215.335379",
@@ -93,10 +93,11 @@
       "1788559936.495679": "1788559936.495679",
       "1788613746.453729": "1788613746.453729",
       "1788635325.842539": "1788635325.842539",
-      "1788635412.011499": "1788635416.951679"
+      "1788635412.011499": "1788635416.951679",
+      "1787660130.097779": "1787667581.782429"
     },
-    "capture_dm": "1788697639",
-    "gmail_after_epoch": 1788697639
+    "capture_dm": "1788707895",
+    "gmail_after_epoch": 1788707895
   },
   "integrity": {
     "last_full_pass": "2026-09-06T12:06:45Z",
@@ -109,7 +110,7 @@
     "note": "79th scan, day's first check today: canvas file info still reports access:\"comment\" for the bot (only U0BC5UTHYG4 listed as an editor) -- same standing gap since 2026-07-25. Did not attempt a write. Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-06T12:25:00-04:00",
+    "pulse_last_rendered": "2026-09-06T12:45:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
