@@ -27,7 +27,7 @@
       "C0BC2A94142": "1788711588",
       "C0BBZ5J8805": "1788784163",
       "C0BRZT2V89W": "1788724013.761999",
-      "D0BBVV54L5R": "1788786283",
+      "D0BBVV54L5R": "1788790610.880449",
       "C0BV5BRNH5Z": "1788791741.828769",
       "_note_D0BHPKMDNEP": "Left unmoved (90th-scan PART 3 confirmed clean as of 1788784357, but PART 6a then opened a new top-level card whose exact ts we don't have on hand) so the next top-level sweep safely re-discovers it rather than risking a skip from a guessed-too-high value. Whichever scan (90th merge or 91st itself) next sweeps Convo 1 top-level should advance this for real."
     },
@@ -39,7 +39,7 @@
       "D0BHPKMDNEP:1788714814.865959": "1788718152.815049",
       "D0BHPKMDNEP:1788714815.369119": "1788786749.020769",
       "D0BHPKMDNEP:1788714815.853539": "1788718435.892139",
-      "D0BHPKMDNEP:1788715547.125429": "1788783813.680999",
+      "D0BHPKMDNEP:1788715547.125429": "1788791942.549169",
       "D0BHPKMDNEP:1788718699.907999": "1788718748.352959",
       "D0BHPKMDNEP:1788718700.965879": "1788783837.883069",
       "D0BHPKMDNEP:1788718701.557769": "1788727679.097669",
