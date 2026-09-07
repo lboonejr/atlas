@@ -1,17 +1,17 @@
 {
-  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record' (for D0BBVV54L5R and C0BV5BRNH5Z the legacy cutoff is the 2026-09-06 wiring-test timestamp). Every slack_channels watermark MUST be a JSON string: the last-read message ts for that surface, or, for a surface quiet this scan, the scan-time epoch seconds as a string. Never store a bare JSON number. Watermarks must never postdate lock.run_completed — they are stamped before the lock closes (PART 0). 2026-09 RESTRUCTURE: swept surfaces are Convo 1 (D0BHPKMDNEP), Convo 2 (D0BBVV54L5R, self-DM), and #fixes (C0BV5BRNH5Z); card_threads (keyed '<channel_id>:<parent_ts>') supersedes decisions_threads, which is FROZEN as the migration worklist — the migration runbook drains it and then deletes it along with the retired timeline-channel watermarks (kept until migration step 0's final legacy sweep). capture_dm is legacy; delete with the same cleanup.",
+  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded \u2014 fall back to that PART's legacy cutoff once, then record' (for D0BBVV54L5R and C0BV5BRNH5Z the legacy cutoff is the 2026-09-06 wiring-test timestamp). Every slack_channels watermark MUST be a JSON string: the last-read message ts for that surface, or, for a surface quiet this scan, the scan-time epoch seconds as a string. Never store a bare JSON number. Watermarks must never postdate lock.run_completed \u2014 they are stamped before the lock closes (PART 0). 2026-09 RESTRUCTURE: swept surfaces are Convo 1 (D0BHPKMDNEP), Convo 2 (D0BBVV54L5R, self-DM), and #fixes (C0BV5BRNH5Z); card_threads (keyed '<channel_id>:<parent_ts>') supersedes decisions_threads, which is FROZEN as the migration worklist \u2014 the migration runbook drains it and then deletes it along with the retired timeline-channel watermarks (kept until migration step 0's final legacy sweep). capture_dm is legacy; delete with the same cleanup.",
   "lock": {
     "run_id": "run_20260907T120435Z",
     "run_started": "2026-09-07T12:04:35Z",
-    "run_completed": "2026-09-06T22:10:58Z",
-    "note": "88th scan complete (short scan — prior run had completed only ~6 min earlier, so all three swept surfaces (Convo 1, Convo 2, #fixes) were quiet). vault-keeper: filed 1 (dill-book-club-hub.md, valid domain:project frontmatter, filed to new 40-Projects/book-club-hub/ — was left in Inbox by the run that created it), stuck 5 (all previously known, no new; confirmed each still genuinely stuck on the same gap by re-reading frontmatter). Integrity: informal check only (re-read the 6 known Inbox notes, confirmed the standing dib-template-theme defect unchanged); did not run a fresh whole-repo git-diff incremental pass this scan — next scan should run one against sha 521566e. calendar-sync: not independently re-verified this scan (no new due-bearing notes were filed; carried the prior scan's +0/~0/-0 clean result rather than re-checking all 48 — flagging this as a carry, not a re-verified clean). Convo 1/#fixes/Convo 2 passes: all three quiet from their watermarks — nothing to work. PART 6a (email loop): D1 nothing to pick up (Convo 1 quiet); D2 triaged 8 new inbox threads (in:inbox after:1788720101 -label:Samira/seen) — 6 junk/no-action (NYT opinion, TBT Barter marketing, Neon welcome email, GitHub OAuth notice, StubHub events, NYT breaking news, Headset scheduled report — reads as 7 actually, see #reports line), 1 substantive (Google Workspace invoice 5673531116 due 9/30 — appended Update to the existing google-voice-subscription-cancellation.md note, same matter/domain-still-UNRESOLVED, no new card opened since an open Convo 1 card already tracks this Workspace-billing saga). All 8 threads labeled Samira/seen (Label_2, corrected id — see below). No reply-worthy mail this scan, so no drafts. PART 6b (investor): quiet, no investor-tagged mail or Convo 2 drops. PART 6c (reports-contradiction-scan): NOT run this scan (time budget went to the label-table finding below instead) — carrying to next run. PART 7: 0 timeline entries (nothing crossed a project-timeline threshold this scan). PART 8 (Pulse): quiet-pass skip — nothing this scan qualified for the something-changed gate (no card opened/closed, no money-hub change, no project-pulse flip). MIGRATION: not run this scan (still 37 decisions_threads remaining, unchanged) — carrying. NOTABLE FIX FILED: `list_labels` during PART 6a returned a Gmail label mapping for Samira/Car-Hunt/Vendor-Menus/etc. that conflicted (again) with anchors.md, which had already been corrected twice (2026-08-31, 2026-09-05) and was wrong both times. Corrected anchors.md to this scan's live read (commit 521566e, pushed direct to main from the local clone) and opened a #fixes card (C0BV5BRNH5Z ts 1788732629.871619) flagging the 3-in-5-weeks pattern itself as worth investigating, with 3 options (trust it / Lemar hand-verifies in Gmail settings / investigate root cause) — awaiting his signal."
+    "run_completed": "2026-09-07T12:34:15Z",
+    "note": "89th scan complete. vault-keeper: filed 1 (2026-09-07-inbox-janitor-run.md -> 70-Automation/inbox-janitor/), stuck 5 (unchanged, all previously-known UNRESOLVED-domain notes, re-confirmed by re-reading frontmatter). Full whole-vault integrity pass ran (day's first run): 687 notes checked (698 total minus templates/examples/inbox), 1 new mechanical defect found -- haven/vault/70-Automation/samira/2026-09-06-decisions-migration-batch2.md has no frontmatter block at all (flagged only, no _daily carve-out applies); opened as a new #fixes card, awaiting Lemar's pick (hand-add frontmatter vs. document as a permanent exception). A handful of domain/path 'mismatches' also surfaced from _system/ meta files (home.md, schema.md, two maps/*.md) -- these are non-issues, structural rulebook files outside the normal filing rules, not flagged further. calendar-sync: spot-checked the near-term window (9/6-9/21) against the live calendar rather than re-verifying all 48 due-notes; every id/date matched, +0/~0/-0 (a verified carry, not a blind one). Convo 1: swept all 29 open card threads. Found 3 replies that had arrived after the prior scan's stored watermark and were still unprocessed (Newark facade grant clarification, Money Hub Google Workspace actual balance -- corrected 57.44 -> 98.08 in the ledger, Grandma Betty caregiver county/determination follow-up) -- all worked and replied in-thread. Also worked 2 approved skill-candidate proposals (built: samira-loop prompt completion-callback, pulse-dashboard 'this run' summary strip -- both committed to .claude/skills/**, both Haven notes marked done, #skills-lab timeline posted) and 1 approved doctrine change (card-format.md topic emoji, per the 'New system' thread). Found and closed a stale loop: the workout-plan restart (Option A) had been approved by Lemar but never got a closing reply -- confirmed via calendar read that it was in fact already executed (fresh Week 1-12 on the calendar since 2026-09-06 evening), logged in Haven, replied Done in-thread. NOTE: initially misdiagnosed why these 3 replies were unprocessed as a 'truncated card_threads key' bug and posted a #fixes card saying so -- this was WRONG (no lookup ever failed; all 7 re-checked threads were read successfully via their normal full-decimal ts). Retracted in both the #fixes thread and #reports once caught; the real explanation is ordinary watermark staleness, no code or state fix was needed. card_threads below is NOT modified by that false diagnosis -- only updated with this scan's actual new latest-reply timestamps. Convo 2: quiet, personal connector reachable. #fixes: opened 1 new card (missing frontmatter, above), posted a retraction on the misdiagnosed card_threads thread, left the Gmail-label-table flip-flop tracked per Lemar's own Option C pick (watch next 2-3 scans, no action this pass), and flagged one existing #fixes thread ('Recurring bug -- placeholder content overwrites real files during edits') that reads as having no Context reply/body at all despite a recorded watermark reply -- not chased further this pass, worth a human look. PART 6a (email): 8 inbox threads triaged (in:inbox after:1788732658 -label:Samira/seen), all junk/no-action (car-hunt alerts x2, NYT x3, Otter.ai, a scheduled Data Studio report, a LeafLogix executive summary), all labeled Samira/seen. No reply-worthy mail, no drafts. PART 6b (investor): quiet. PART 6c (reports-contradiction-scan): NOT run this scan (time went to the card sweep + integrity finding) -- carrying. PART 7: 2 timeline entries (#personal-finance -- Google Workspace balance correction; #skills-lab -- the 2 built skill-candidates). PART 8 (Pulse): rendered, with the new 'this run' summary strip live for the first time -- https://docs.google.com/document/d/1OiYZ4-Hk5GHchAvIwOxcykJO1E8-w_cuZOAEkYl2S2g/edit -- DM'd to Lemar. MIGRATION: not run this scan, still 37 decisions_threads cards remaining -- carrying. Git-write note: this session found the local clone on branch claude/great-johnson-4vhp8b (a harness-assigned working branch distinct from the repo's own git-write policy) but followed the repo's documented direct-to-main policy for all haven/vault/** and .claude/** writes, per anchors.md's explicit root-caused guidance against branch+PR for this automation -- writes went straight to main via a separate detached worktree tracking origin/main, never touching the assigned branch."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1788711588",
-      "C0BBZJL85RT": "1788715586.453489",
-      "D0BHPKMDNEP": "1788732658",
-      "C0BGLEMH99T": "1788720386.926129",
+      "C0BBZJL85RT": "1788784435",
+      "D0BHPKMDNEP": "1788784357",
+      "C0BGLEMH99T": "1788784284",
       "C0BEQUW5NPP": "1788711588",
       "C0BBLUA7JLX": "1788711588",
       "C0BJ37SU1TL": "1788711588",
@@ -24,22 +24,22 @@
       "C0BGCAK0ML3": "1788711588",
       "C0BHXTPST52": "1788711588",
       "C0BC2A94142": "1788711588",
-      "C0BBZ5J8805": "1788724006.560749",
+      "C0BBZ5J8805": "1788784163",
       "C0BRZT2V89W": "1788724013.761999",
-      "D0BBVV54L5R": "1788732658",
-      "C0BV5BRNH5Z": "1788732635.947949"
+      "D0BBVV54L5R": "1788784455",
+      "C0BV5BRNH5Z": "1788784428"
     },
     "card_threads": {
-      "D0BHPKMDNEP:1788714592.768199": "1788731820.780649",
+      "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
       "D0BHPKMDNEP:1788714812.755469": "1788718292.617709",
       "D0BHPKMDNEP:1788714813.201089": "1788727568.055499",
       "D0BHPKMDNEP:1788714813.719449": "1788720346.577239",
       "D0BHPKMDNEP:1788714814.865959": "1788718152.815049",
-      "D0BHPKMDNEP:1788714815.369119": "1788727666.106419",
+      "D0BHPKMDNEP:1788714815.369119": "1788783811.700159",
       "D0BHPKMDNEP:1788714815.853539": "1788718435.892139",
-      "D0BHPKMDNEP:1788715547.125429": "1788731608.020299",
+      "D0BHPKMDNEP:1788715547.125429": "1788783813.680999",
       "D0BHPKMDNEP:1788718699.907999": "1788718748.352959",
-      "D0BHPKMDNEP:1788718700.965879": "1788727571.545889",
+      "D0BHPKMDNEP:1788718700.965879": "1788783837.883069",
       "D0BHPKMDNEP:1788718701.557769": "1788727679.097669",
       "D0BHPKMDNEP:1788718702.108269": "1788723916.981619",
       "D0BHPKMDNEP:1788718702.628059": "1788718758.120299",
@@ -49,20 +49,21 @@
       "D0BHPKMDNEP:1788718704.696339": "1788718768.879299",
       "D0BHPKMDNEP:1788719506.788499": "1788723946.474439",
       "D0BHPKMDNEP:1788719576.670279": "1788721464.585889",
-      "D0BHPKMDNEP:1788723993.447999": "1788724002.443779",
-      "D0BHPKMDNEP:1788723993.866869": "1788724005.089249",
-      "D0BHPKMDNEP:1788724111.408829": "1788726100.161469",
+      "D0BHPKMDNEP:1788723993.447999": "1788784130.715289",
+      "D0BHPKMDNEP:1788723993.866869": "1788784132.333089",
+      "D0BHPKMDNEP:1788724111.408829": "1788784086.645219",
       "C0BV5BRNH5Z:1788721717.687559": "1788721724.935409",
       "C0BV5BRNH5Z:1788723953.608629": "1788727583.886289",
-      "D0BHPKMDNEP:1788718849.424069": "1788731683.086409",
+      "D0BHPKMDNEP:1788718849.424069": "1788783979.881389",
       "D0BHPKMDNEP:1788719291.138899": "1788719306.025269",
       "D0BHPKMDNEP:1788719325.608319": "1788723932.368929",
       "D0BHPKMDNEP:1788719364.475849": "1788723935.176509",
       "D0BHPKMDNEP:1788719413.067149": "1788731728.578389",
       "D0BHPKMDNEP:1788719447.897129": "1788719457.974569",
       "D0BHPKMDNEP:1788719477.901399": "1788729326.130379",
-      "C0BV5BRNH5Z:1788731741.908079": "1788731741.908079",
-      "C0BV5BRNH5Z:1788732629.871619": "1788732635.947949"
+      "C0BV5BRNH5Z:1788731741.908079": "1788784428.634309",
+      "C0BV5BRNH5Z:1788732629.871619": "1788784226.770239",
+      "C0BV5BRNH5Z:1788784231.256459": "1788784231.256459"
     },
     "migration": {
       "decisions_migration_complete": false,
@@ -110,12 +111,12 @@
       "1787660130.097779": "1787667581.782429"
     },
     "capture_dm": "1788711588",
-    "gmail_after_epoch": 1788732658
+    "gmail_after_epoch": 1788784455
   },
   "integrity": {
-    "last_full_pass": "2026-09-06T12:06:45Z",
-    "last_scan_sha": "f1c664b",
-    "note": "88th scan: did not run a fresh git-diff incremental integrity pass (short scan, time went to filing + the Gmail label-table fix instead) — this is a gap, not a clean result; next scan should diff against 521566e (this scan's last commit) or 245e9f2 (last actual check, 87th scan) to cover what's accumulated. Manually re-read the 6 known Inbox notes this scan: dill-book-club-hub.md was valid and got filed; the other 5 (dib-template-theme-decision-closeout.md — missing/invalid frontmatter, standing — plus 4 UNRESOLVED-domain notes) confirmed unchanged, still genuinely stuck."
+    "last_full_pass": "2026-09-07T12:34:15Z",
+    "last_scan_sha": "8938fde",
+    "note": "89th scan: full whole-vault pass run (day's first run of 2026-09-07). 687 notes checked (698 total minus 5 known Inbox notes, templates, examples). 1 new defect: haven/vault/70-Automation/samira/2026-09-06-decisions-migration-batch2.md has no frontmatter block at all -- flagged in a new #fixes card, not repaired (not a _daily note, required fields can't be safely derived). Also noted (not flagged as new issues, structural/expected): 4 _system/ meta files (home.md, schema.md, maps/20-Cuzzies.md, maps/30-Station.md) whose declared domain doesn't match their _system/ path -- these are rulebook/map files outside the normal domain-filing rules, not content notes."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
@@ -123,7 +124,7 @@
     "note": "Not re-checked this (86th) scan (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-06T14:50:00-04:00",
+    "pulse_last_rendered": "2026-09-07T08:32:32-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
