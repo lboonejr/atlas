@@ -122,12 +122,26 @@ historical references legible.)
 
 Read `.claude/state/samira-state.json` from `main`.
 
-**LOCK.** If `lock.run_started` is newer than `lock.run_completed` AND less than 45
+**LOCK.** If `lock.run_started` is newer than `lock.run_completed` AND less than 120
 minutes old, another run is still in flight — **exit silently** (no posts, no digest, no
 journal entry). This is the fix for the overlapping-trigger-fire bug (recurring since at
 least 2026-07-29). Otherwise write `lock.run_started` = now plus a fresh `run_id` and
 commit to `main` (re-pull + retry on rejection, per the git-write policy). A run that
-dies mid-flight simply ages out of the lock after 45 minutes.
+dies mid-flight simply ages out of the lock after 120 minutes.
+
+**Threshold raised from 45 to 120 minutes (2026-09-07, #fixes thread ts
+`1788790402.959139`).** The 45-minute figure assumed a run outliving it is hung, not
+working — false as of the 90th/91st/92nd scans, three consecutive same-day instances
+where the next scan found the prior run's lock still open past 45 minutes while that
+prior run was demonstrably still doing real work (committed watermark advances, Slack
+replies, Drive doc builds). One contributing cause — a missing `.claude/settings.json`
+permission allowlist stalling scans on approval prompts — was fixed the same day, but a
+legitimately thorough pass (28+ open card threads, several Drive/Doc builds, Gmail
+triage) can genuinely run past 45 minutes with no fault. 120 minutes gives that headroom
+while still bounding a truly dead run to at most one skipped hourly trigger.
+Idempotency (prior "Done ✅" replies, per-skill dedupe keys, watermarks) remains the
+real guard against double-acting, not this number — raising it lowers false "orphaned"
+detections without weakening that guard.
 
 **WATERMARKS.** The state file is the ONE source of "since the last run" — never
 reconstruct a cutoff from digest prose. Sweep each surface strictly from its stored
