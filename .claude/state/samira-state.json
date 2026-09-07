@@ -1,18 +1,17 @@
 {
-  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record' (for D0BBVV54L5R and C0BV5BRNH5Z the legacy cutoff is the 2026-09-06 wiring-test timestamp). Every slack_channels watermark MUST be a JSON string: the last-read message ts for that surface, or, for a surface quiet this scan, the scan-time epoch seconds as a string. Never store a bare JSON number. Watermarks must never postdate lock.run_completed — they are stamped before the lock closes (PART 0). 2026-09 RESTRUCTURE: swept surfaces are Convo 1 (D0BHPKMDNEP), Convo 2 (D0BBVV54L5R, self-DM), and #fixes (C0BV5BRNH5Z); card_threads (keyed '<channel_id>:<parent_ts>') supersedes decisions_threads, which is FROZEN as the migration worklist — the migration runbook drains it and then deletes it along with the retired timeline-channel watermarks (kept until migration step 0's final legacy sweep). capture_dm is legacy; delete with the same cleanup.",
+  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded \u2014 fall back to that PART's legacy cutoff once, then record' (for D0BBVV54L5R and C0BV5BRNH5Z the legacy cutoff is the 2026-09-06 wiring-test timestamp). Every slack_channels watermark MUST be a JSON string: the last-read message ts for that surface, or, for a surface quiet this scan, the scan-time epoch seconds as a string. Never store a bare JSON number. Watermarks must never postdate lock.run_completed \u2014 they are stamped before the lock closes (PART 0). 2026-09 RESTRUCTURE: swept surfaces are Convo 1 (D0BHPKMDNEP), Convo 2 (D0BBVV54L5R, self-DM), and #fixes (C0BV5BRNH5Z); card_threads (keyed '<channel_id>:<parent_ts>') supersedes decisions_threads, which is FROZEN as the migration worklist \u2014 the migration runbook drains it and then deletes it along with the retired timeline-channel watermarks (kept until migration step 0's final legacy sweep). capture_dm is legacy; delete with the same cleanup.",
   "lock": {
     "run_id": "run_20260907T160750Z",
     "run_started": "2026-09-07T16:07:50Z",
-    "run_completed": "2026-09-07T15:30:00Z",
-    "note": "93rd scan in progress.",
-    "prior_note": "92nd scan complete (partial: PART 0-3 only, see prior_note2). Confirmed concurrent-session collision this scan (session_01Ta5cLNYMJCDPojZRXkbb1s vs session_01V3e8XrGwvpWex31Yo6PBJf), posted analysis to #fixes ts 1788794112.021869 (thread has Lemar's hypothesis: a permission prompt on samira-state.json edits is stalling runs and causing the overlap). 93rd scan replied in that thread (ts 1788797264.411719) noting settings.json already allowlists the relevant writes and flagging the RemoteTrigger's session execution mode (branch+PR vs direct-to-main) as the more likely lever — outside this repo's control, needs Lemar to check the trigger config directly.",
-    "prior_note2": "92nd scan discovered mid-run that a SECOND, independent Samira session (session_01V3e8XrGwvpWex31Yo6PBJf) was running concurrently — it pushed its own commit to main at 15:10:47Z (PART 0 lock-threshold change to 120min, PART 6a email triage, its own WM DocuSign Haven note) while this session was still working PART 3. Confirmed via distinct Claude-Session URLs on the commits, not inferred. Caused a real add/add git conflict on the WM DocuSign Haven note (merged by hand, not clobbered). No duplicate Gmail draft resulted (checked list_drafts before concluding). Flagged as a new #fixes card (C0BV5BRNH5Z, ts 1788794112.021869) — this looks like the real root cause behind the 89th/90th/91st scans' 'lock never closes' pattern: two triggers firing close enough together that both pass the PART 0 lock check before either's write lands, not (only) a slow lock-close step. Given that risk, this session deliberately STOPPED after PART 3 rather than proceeding through PART 4-8 (Convo 2, further #fixes work, email/investor loops, timeline posts, Pulse render) to avoid compounding the collision — those parts were NOT run this scan and should be picked up fresh next scan once the concurrency question is resolved. PART 3 work completed: WM service-agreement card (Lemar wants active cancellation, not just decline-by-inaction — cancellation email drafted in Gmail, unsent; Haven note merged), card-format.md + runbook updated to adopt 🔔 = 'revisit next run' reaction (per Lemar's request in the 'New system' thread, with an explainer posted back), money-hub-ledger cuzzies-google-workspace rate confirmed at $9.57/day and amount advanced to $107.65, FruntDesk Option A prompt resurfaced, Cuzzie's one-pagers restyle request clarified and queued (apply the stylized look to all 6 existing docs, not a 7th doc — not built this pass), Huljev balance-sheet submission acknowledged as complete (Richard's court now). PART 1 (vault-keeper): filed 0, stuck 5 (unchanged), 0 new, integrity check clean (1 file touched since last check, valid frontmatter). PART 2 (calendar-sync): +0/~0/-0, no due-note changes since last verified pass."
+    "run_completed": "2026-09-07T16:25:00Z",
+    "note": "93rd scan complete (full PART 0-8 pass).",
+    "prior_note": "93rd scan (run_20260907T160750Z) ran the full routine end to end. PART 0-2: lock acquired via a direct GitHub-connector write to main with no permission prompt or delay; vault-keeper + calendar-sync both clean, no drift. PART 3: compared every open Convo 1 card's live latest_reply against stored card_threads watermarks -- zero drift, nothing new. PART 4: one Convo 2 drop (email backlog scan + weekly cadence) developed capture-first into a new Convo 1 card, awaiting Lemar's pick. PART 5: replied on the open concurrency #fixes thread correcting the record -- the settings.json permission fix Lemar's message pointed at was already shipped by the 91st scan and didn't fully solve the overlap; this run's own direct-to-main write went through clean, so the RemoteTrigger's own execution mode is the more likely remaining lever, needing Lemar's direct check outside this repo. PART 6c caught a 'Haven Keeper' false empty-inbox #reports claim, initially mis-escalated it as a new #fixes card, then found + cited the same pattern already dispositioned 10+ times since 2026-08-24 (Lemar's own desktop session) and closed it same-scan. Self-caught mistake: a create_or_update_file call meant to append to the reports-contradiction-scan-log note instead replaced the whole 129KB file with 1.4KB; caught via the post-write size check, reconstructed and pushed the fix immediately, no data lost. PART 6a: 1 new inbox thread (junk) + 1 already-seen boundary duplicate; nothing reply-worthy. PART 6b quiet. PART 7: 1 #skills-lab timeline entry. PART 8: Pulse render skipped this pass (changes too minor to justify the Doc rebuild cost) -- logged as carried, not silently dropped. Migration untouched this scan (still 37 cards) -- no bandwidth left after the full sweep."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1788711588",
-      "C0BBZJL85RT": "1788788484.532849",
-      "D0BHPKMDNEP": "1788792460.080689",
+      "C0BBZJL85RT": "1788797868.060879",
+      "D0BHPKMDNEP": "1788797509.773899",
       "C0BGLEMH99T": "1788787449.502719",
       "C0BEQUW5NPP": "1788711588",
       "C0BBLUA7JLX": "1788711588",
@@ -28,8 +27,8 @@
       "C0BC2A94142": "1788711588",
       "C0BBZ5J8805": "1788784163",
       "C0BRZT2V89W": "1788724013.761999",
-      "D0BBVV54L5R": "1788790610.880449",
-      "C0BV5BRNH5Z": "1788797264.411719"
+      "D0BBVV54L5R": "1788792120.484359",
+      "C0BV5BRNH5Z": "1788797814.046539"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -66,10 +65,12 @@
       "C0BV5BRNH5Z:1788731741.908079": "1788784428.634309",
       "C0BV5BRNH5Z:1788732629.871619": "1788784226.770239",
       "C0BV5BRNH5Z:1788784231.256459": "1788784231.256459",
-      "C0BV5BRNH5Z:1788787392.857369": "1788787392.857369",
-      "C0BV5BRNH5Z:1788790402.959139": "1788791741.828769",
+      "C0BV5BRNH5Z:1788787392.857369": "1788787406.272699",
+      "C0BV5BRNH5Z:1788790402.959139": "1788793870.516519",
       "D0BHPKMDNEP:1788792460.080689": "1788794142.408019",
-      "C0BV5BRNH5Z:1788794112.021869": "1788797264.411719"
+      "C0BV5BRNH5Z:1788794112.021869": "1788797814.046539",
+      "D0BHPKMDNEP:1788786717.686909": "1788786727.764729",
+      "D0BHPKMDNEP:1788797499.354449": "1788797509.773899"
     },
     "migration": {
       "decisions_migration_complete": false,
@@ -117,12 +118,12 @@
       "1787660130.097779": "1787667581.782429"
     },
     "capture_dm": "1788711588",
-    "gmail_after_epoch": 1788792229
+    "gmail_after_epoch": 1788797620
   },
   "integrity": {
     "last_full_pass": "2026-09-07T12:34:15Z",
-    "last_scan_sha": "420fed8",
-    "note": "91st scan: incremental check only (full pass already ran today, 89th scan). git diff --name-only 9936538..1c4308a -- haven/vault/ touched 6 files (betty caregiver note, money-hub-ledger, fruntdesk status, investor one-pagers, samira-skills reports-scan log, _daily/2026-09-07.md) -- all from the 90th scan's own writes, none introduced a new mechanical or value defect on spot-check. Inbox: same 5 known stuck notes, unchanged -- filed 0, stuck 5, new 0, entities 0. One of the 5 (00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md) is missing created/updated/tags entirely (not just blank domain) and has type: outcome-note (not a controlled value) -- this is a pre-existing, previously-seen shape for this specific note, not a new defect this scan, so not re-flagged individually per the escalate-only-what's-new rule. The missing-frontmatter batch2.md defect from the 89th scan remains open on its #fixes card, untouched."
+    "last_scan_sha": "5beb8fc",
+    "note": "93rd scan: incremental check only (full pass already ran today, day's first run). git diff --name-only 420fed8..5beb8fc -- haven/vault/ touched 3 files this scan's own writes (email-backlog capture note, reports-contradiction-scan-log restore, _daily/2026-09-07.md) -- all valid frontmatter, no new mechanical or value defect. Inbox: same 5 known stuck notes, unchanged -- filed 0, stuck 5, new 0, entities 0."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
