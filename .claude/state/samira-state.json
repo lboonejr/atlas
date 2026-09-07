@@ -3,15 +3,15 @@
   "lock": {
     "run_id": "run_20260907T150437Z",
     "run_started": "2026-09-07T15:04:37Z",
-    "run_completed": "2026-09-07T12:34:15Z",
-    "note": "92nd scan in progress.",
-    "prior_note": "91st scan: lock never closed either — found this run (92nd) with lock.run_started (2026-09-07T14:04:34Z) still newer than lock.run_completed (2026-09-07T12:34:15Z, the 89th scan's close-out), gap 60m03s at discovery — past the 45-minute age-out, so per PART 0 this is a dead/orphaned lock, not a live overlapping run. This is now the THIRD consecutive scan (90th, 91st, 92nd) to find the prior run's lock unclosed — this is the recurring pattern already flagged in #fixes by the 90th scan (PART 0 lock-close step silently failing to land). No new #fixes card opened this run for the same root cause; deferred to PART 5 to check that existing card's status and post a follow-up if it is still open and unaddressed. Proceeding this run from the last genuinely recorded watermarks below (same set the 91st scan would have started from), since no evidence exists that the 90th or 91st scan's watermark updates ever landed on main — idempotency guards (prior 'Done ✅' replies, per-skill dedupe keys) are the defense against re-acting on anything already handled by an unclosed run."
+    "run_completed": "2026-09-07T15:30:00Z",
+    "note": "92nd scan complete (partial: PART 0-3 only, see prior_note).",
+    "prior_note": "92nd scan discovered mid-run that a SECOND, independent Samira session (session_01V3e8XrGwvpWex31Yo6PBJf) was running concurrently — it pushed its own commit to main at 15:10:47Z (PART 0 lock-threshold change to 120min, PART 6a email triage, its own WM DocuSign Haven note) while this session was still working PART 3. Confirmed via distinct Claude-Session URLs on the commits, not inferred. Caused a real add/add git conflict on the WM DocuSign Haven note (merged by hand, not clobbered). No duplicate Gmail draft resulted (checked list_drafts before concluding). Flagged as a new #fixes card (C0BV5BRNH5Z, ts 1788794112.021869) — this looks like the real root cause behind the 89th/90th/91st scans' 'lock never closes' pattern: two triggers firing close enough together that both pass the PART 0 lock check before either's write lands, not (only) a slow lock-close step. Given that risk, this session deliberately STOPPED after PART 3 rather than proceeding through PART 4-8 (Convo 2, further #fixes work, email/investor loops, timeline posts, Pulse render) to avoid compounding the collision — those parts were NOT run this scan and should be picked up fresh next scan once the concurrency question is resolved. PART 3 work completed: WM service-agreement card (Lemar wants active cancellation, not just decline-by-inaction — cancellation email drafted in Gmail, unsent; Haven note merged), card-format.md + runbook updated to adopt 🔔 = 'revisit next run' reaction (per Lemar's request in the 'New system' thread, with an explainer posted back), money-hub-ledger cuzzies-google-workspace rate confirmed at $9.57/day and amount advanced to $107.65, FruntDesk Option A prompt resurfaced, Cuzzie's one-pagers restyle request clarified and queued (apply the stylized look to all 6 existing docs, not a 7th doc — not built this pass), Huljev balance-sheet submission acknowledged as complete (Richard's court now). PART 1 (vault-keeper): filed 0, stuck 5 (unchanged), 0 new, integrity check clean (1 file touched since last check, valid frontmatter). PART 2 (calendar-sync): +0/~0/-0, no due-note changes since last verified pass."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1788711588",
       "C0BBZJL85RT": "1788788484.532849",
-      "D0BHPKMDNEP": "1788792472.740359",
+      "D0BHPKMDNEP": "1788792460.080689",
       "C0BGLEMH99T": "1788787449.502719",
       "C0BEQUW5NPP": "1788711588",
       "C0BBLUA7JLX": "1788711588",
@@ -28,8 +28,7 @@
       "C0BBZ5J8805": "1788784163",
       "C0BRZT2V89W": "1788724013.761999",
       "D0BBVV54L5R": "1788790610.880449",
-      "C0BV5BRNH5Z": "1788791741.828769",
-      "_note_D0BHPKMDNEP": "Left unmoved (90th-scan PART 3 confirmed clean as of 1788784357, but PART 6a then opened a new top-level card whose exact ts we don't have on hand) so the next top-level sweep safely re-discovers it rather than risking a skip from a guessed-too-high value. Whichever scan next sweeps Convo 1 top-level should advance this for real."
+      "C0BV5BRNH5Z": "1788791741.828769"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -37,9 +36,9 @@
       "D0BHPKMDNEP:1788714813.201089": "1788727568.055499",
       "D0BHPKMDNEP:1788714813.719449": "1788720346.577239",
       "D0BHPKMDNEP:1788714814.865959": "1788718152.815049",
-      "D0BHPKMDNEP:1788714815.369119": "1788786749.020769",
+      "D0BHPKMDNEP:1788714815.369119": "1788794173.537709",
       "D0BHPKMDNEP:1788714815.853539": "1788718435.892139",
-      "D0BHPKMDNEP:1788715547.125429": "1788791942.549169",
+      "D0BHPKMDNEP:1788715547.125429": "1788794146.141419",
       "D0BHPKMDNEP:1788718699.907999": "1788718748.352959",
       "D0BHPKMDNEP:1788718700.965879": "1788783837.883069",
       "D0BHPKMDNEP:1788718701.557769": "1788727679.097669",
@@ -47,7 +46,7 @@
       "D0BHPKMDNEP:1788718702.628059": "1788718758.120299",
       "D0BHPKMDNEP:1788718703.195849": "1788718760.869949",
       "D0BHPKMDNEP:1788718703.705709": "1788718763.630819",
-      "D0BHPKMDNEP:1788718704.255849": "1788723922.470929",
+      "D0BHPKMDNEP:1788718704.255849": "1788794175.176249",
       "D0BHPKMDNEP:1788718704.696339": "1788718768.879299",
       "D0BHPKMDNEP:1788719506.788499": "1788723946.474439",
       "D0BHPKMDNEP:1788719576.670279": "1788721464.585889",
@@ -59,8 +58,8 @@
       "D0BHPKMDNEP:1788718849.424069": "1788786801.867559",
       "D0BHPKMDNEP:1788719291.138899": "1788719306.025269",
       "D0BHPKMDNEP:1788719325.608319": "1788723932.368929",
-      "D0BHPKMDNEP:1788719364.475849": "1788791046.349059",
-      "D0BHPKMDNEP:1788719413.067149": "1788786838.863459",
+      "D0BHPKMDNEP:1788719364.475849": "1788794151.267749",
+      "D0BHPKMDNEP:1788719413.067149": "1788794149.599119",
       "D0BHPKMDNEP:1788719447.897129": "1788719457.974569",
       "D0BHPKMDNEP:1788719477.901399": "1788729326.130379",
       "C0BV5BRNH5Z:1788731741.908079": "1788784428.634309",
@@ -68,7 +67,8 @@
       "C0BV5BRNH5Z:1788784231.256459": "1788784231.256459",
       "C0BV5BRNH5Z:1788787392.857369": "1788787392.857369",
       "C0BV5BRNH5Z:1788790402.959139": "1788791741.828769",
-      "D0BHPKMDNEP:1788792460.080689": "1788792472.740359"
+      "D0BHPKMDNEP:1788792460.080689": "1788794142.408019",
+      "C0BV5BRNH5Z:1788794112.021869": "1788794128.306109"
     },
     "migration": {
       "decisions_migration_complete": false,
