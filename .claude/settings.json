@@ -1,5 +1,28 @@
 {
   "permissions": {
-    "allow": ["Artifact"]
+    "allow": [
+      "Artifact",
+      "Read",
+      "Edit(.claude/state/samira-state.json)",
+      "Edit(haven/vault/**)",
+      "Edit(.claude/skills/**)",
+      "Edit(.claude/routines/**)",
+      "Edit(.claude/doctrine/**)",
+      "Edit(.claude/anchors.md)",
+      "Write(.claude/state/samira-state.json)",
+      "Write(haven/vault/**)",
+      "Write(.claude/skills/**)",
+      "Write(.claude/routines/**)",
+      "Write(.claude/doctrine/**)",
+      "Bash(git *)",
+      "mcp__github__*",
+      "mcp__Samira__*",
+      "mcp__Slack__*",
+      "mcp__Gmail__*",
+      "mcp__Google-Calendar__*",
+      "mcp__Google-Drive__*",
+      "mcp__monday-com__*",
+      "mcp__Jotform__*"
+    ]
   }
 }
