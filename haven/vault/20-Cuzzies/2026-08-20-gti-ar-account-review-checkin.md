@@ -1,9 +1,9 @@
 ---
 created: 2026-08-20T11:20-04:00
-updated: 2026-08-21T11:00-04:00
+updated: 2026-09-07T13:15-04:00
 domain: cuzzies
 type: task
-status: done
+status: active
 tags: [gti, green-thumb, accounts-receivable, collections, wind-down, camden-sale, off-button]
 source: gmail
 due: 2026-08-21T09:00-04:00
@@ -92,11 +92,43 @@ yesterday, reaching out so I think we can close this." He handled the outreach h
 entirely outside Samira's drafted reply. Nothing sent, drafted, or promised by Samira on
 this closing pass. Closing per his call.
 
+## Update 2026-09-07T13:15-04:00 — reopened: "final attempt," collections threatened, found via the 2-week email backlog scan
+
+Found while running the widened backlog scan Lemar approved this run (Convo 1 card
+`D0BHPKMDNEP` ts `1788797499.354449`), not the normal hourly watermark pass — this sat
+unlogged for six days. Mindy Kramer emailed **2026-09-01 15:07 ET** on the same
+long-running thread (subject now "GTI AR | Collections | Cuzzie's Dispensary & Delivery
+- Camden (NJ)"):
+
+> "I have one final attempt here to reach out regarding your outstanding balance. Our
+> leadership team is pushing for further escalation, and without a resolution or
+> payment by the end of this week, we will need to move forward with collections on
+> the account."
+
+This is materially different from the 8/20/8/21 check-in this note previously closed
+on: that one had no deadline or threat language. This one names a hard deadline —
+"end of this week" from a Tuesday send is Fri 2026-09-05 — which has **already passed**
+as of this scan (Mon 2026-09-07). No reply from Lemar is visible in the thread since his
+8/21 close. Unknown whether he replied outside this system (as he did on 8/21) or this
+one is genuinely sitting unanswered.
+
+Reopening `status: active`. Raised as a fresh Convo 1 card rather than treating this as
+still-closed — the deadline-passed collections threat is a real escalation from the
+prior "routine check-in ahead of a review" framing, and Lemar's own established pattern
+here (per the 6/30–8/20 thread) is to personally reply with a transparent, no-firm-date
+update on the sale conversations each time GTI escalates. Drafted an option in that same
+voice for him to use or edit, without asserting anything new about buyer status. Nothing
+sent — his call, per the established pattern of handling GTI himself.
+
 ## Sources
 
 - gmail: thread `19c8b8e2ede6e226`, latest message `1a01f968728f2549` (2026-08-20 14:32 UTC)
 - gmail: `list_drafts` (2026-08-21 08:30 ET) — 14 drafts on file, none to GTI/Mindy Kramer
 - haven: `_daily/brief-2026-08-21.md` (Dawn's brief, where the gap was first flagged —
   not yet merged to `main`, see PR #75)
+- gmail: thread `1a05d82f92ecf554` — "GTI AR | Collections | Cuzzie's Dispensary &
+  Delivery - Camden (NJ)", Mindy Kramer, 2026-09-01T15:07:22Z, "final attempt" /
+  collections threat, cc kate.juliano@gtigrows.com, joshua@cuzziesnj.com
+- slack: Convo 1 (`D0BHPKMDNEP`) email-backlog-scan card, ts `1788797499.354449`
 - Contact: Mindy Kramer, GTIAR@gtigrows.com, 815-878-9054. Cc on thread:
   kate.juliano@gtigrows.com, joshua@cuzziesnj.com
