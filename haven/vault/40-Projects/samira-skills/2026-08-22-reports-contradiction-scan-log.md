@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-09-06T13:15-04:00
+updated: 2026-09-07T12:40-04:00
 domain: project
 type: log
 status: active
@@ -2035,3 +2035,86 @@ re-escalated. Open questions posted to #fixes: 0.**
 - slack: #reports `C0BBZJL85RT`, ts range `1788711519.139219`–`1788715731.299939`
 - haven: `haven/vault/00-Inbox/` (6 files checked directly), `.claude/state/samira-state.json`
   (`decisions_threads` count cross-checked)
+
+## Update — 90th scan (2026-09-07, PART 6c)
+
+**Scanned:** #reports `C0BBZJL85RT` ts range `1788715731.299939`–`1788784435.799459`
+(2026-09-06 ~2:18pm ET through 2026-09-07 ~12:34pm ET, 8 new messages — the boundary
+message `1788715731.299939` was the last message of the 85th-scan/PART 6c update's
+scanned range and was used only for grouping context, not re-flagged).
+
+**Found: 1.**
+
+1. **Open question — "Waiting on you: N cards in our DM" (Convo 1 backlog count) swung
+   wildly across four consecutive digests with no reconciling arithmetic, and no Haven
+   note documents a counting methodology for the new post-migration Convo 1 card system
+   (unlike the retired #decisions system, which the 2026-08-22 decisions-backlog-audit.md
+   locked down).**
+   - 2026-09-06 (ts `1788721632.891349`, digest "6 closed · 18 new · 8 urgent"):
+     "Waiting on you: 26 cards in our DM."
+   - 2026-09-06 (ts `1788724213.535959`, 86th scan, "0 closed · 4 new (3 Convo 1, 1
+     #fixes) · 2 urgent"): "Worked 13 of 26 open Convo 1 threads..." / "Waiting on you:
+     29 cards in our DM." — arithmetically consistent with the prior digest (26 base +
+     3 new Convo 1 cards = 29, 0 closed). Not flagged.
+   - ts `1788732122.245949` ("0 closed · 1 new (fixes) · 1 urgent"; body: "Full
+     tallies: c1: 10 cards worked, 0 locked, 0 closed"): "Waiting on you: 4 cards in
+     our DM (Money Hub Workspace balance, card-format topic-emoji, Grandma Betty PPP
+     details, FruntDesk 3-way decision)." A drop from 29 to 4 (25 cards) with the same
+     digest explicitly reporting "0 closed" and only "1 new" — no arithmetic path from
+     29 to 4 exists in the digest's own numbers.
+   - ts `1788732751.366289` (88th scan, "0 closed · 1 new · 0 urgent"): "Waiting on
+     you: not recounted this scan (Convo 1 was quiet — nothing new to add to the count
+     since last scan)" — does not resolve which prior figure (29 or 4) is the true
+     baseline.
+   - ts `1788784370.315199` (2026-09-07 12:33 ET, "0 closed · 1 new · 2 urgent"; body:
+     "Full tallies: c1: 29 cards swept, 0 formally closed, several worked/answered"):
+     "Waiting on you: 8 cards in our DM." Another unreconciled figure — "0 formally
+     closed" again, no stated path from the prior baseline (4, or 29) down to 8.
+   - **Ground truth checked:** `.claude/state/samira-state.json`'s
+     `watermarks.card_threads` map currently tracks 34 entries (a raw thread-watermark
+     count, not an open/closed-filtered figure — no field distinguishes reacted-and-
+     closed from still-open). No Haven note anywhere in `haven/vault/70-Automation/samira/`
+     or `haven/vault/40-Projects/samira-skills/` documents a counting methodology for
+     the new Convo 1 "waiting on you" figure (checked both directories directly;
+     `2026-09-06-decisions-migration-log.md` and `2026-09-06-decisions-migration-batch2.md`
+     track migration-drain progress only, a different figure). This is the same defect
+     class this log has documented extensively for the old #decisions "waiting on you"
+     count (1st, 5th, 6th, 19th, 20th runs — resolved there by the 2026-08-22
+     decisions-backlog-audit.md locking a tracked-set methodology) — now recurring in
+     the new post-migration system with no equivalent audit yet. Per R3, vault is
+     silent and the entries disagree with no tiebreaker → genuinely open question.
+   - Checked #fixes (`C0BV5BRNH5Z`) directly for a duplicate open card covering this —
+     none found. The open #fixes items in this window (Gmail label table, vault note
+     with no frontmatter, Gmail connector visibility gap, card_threads truncation
+     retraction, placeholder-overwrite bug) are all distinct matters. Not a duplicate.
+   - **#fixes card posted this run:** "Convo 1 'waiting on you' count swings
+     unexplained" — Option 1: run a full Convo 1 card-backlog audit (mirrors the 8/22
+     #decisions-backlog audit, locks a tracked-set methodology going forward) ·
+     Option 2: treat the most recent figure (8) as correct going forward, no audit ·
+     Option 3: something else — reply with what you'd rather do.
+
+**Checked, not flagged — the "card_threads truncation bug" self-correction (ts
+`1788784370.315199` → `1788784435.799459`).** The 12:33pm ET digest reported "Closed:
+card_threads truncation bug (#fixes)"; 65 seconds later a correction retracted it,
+explaining the original root-cause diagnosis (truncated integer keys causing
+`read_thread` lookup failures) was wrong — the real explanation was ordinary watermark
+staleness, no code or state-file fix was needed. Read the full #fixes thread
+(`1788731741.908079`): Lemar had already ✅'d the original report, Samira's own
+follow-up reply is the retraction, fully self-contained and explained with no
+unresolved gap — not a #reports contradiction requiring escalation (the correction
+confirms exactly what happened to the original claim, per this skill's own bar for
+"unresolved" self-corrections).
+
+**Open questions posted to #fixes this run: 1.**
+
+### Sources (90th-scan / PART 6c update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788715731.299939`–`1788784435.799459`
+- slack: #fixes `C0BV5BRNH5Z`, ts `1788731741.908079` (card_threads truncation thread,
+  checked and read in full — self-resolved, not escalated)
+- `.claude/state/samira-state.json` (`watermarks.card_threads`, 34 entries, no
+  open/closed distinction)
+- haven/vault/70-Automation/samira/2026-09-06-decisions-migration-log.md,
+  2026-09-06-decisions-migration-batch2.md (checked — track migration-drain progress,
+  not the live Convo 1 backlog count)
+- haven/vault/70-Automation/samira/2026-08-22-decisions-backlog-audit.md (precedent
+  methodology for the retired #decisions system)
