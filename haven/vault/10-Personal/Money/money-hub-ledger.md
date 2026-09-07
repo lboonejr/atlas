@@ -143,7 +143,7 @@ bills:
             accrues here, but its due-date reminder lives on the Cuzzie's (Owners)
             calendar, not the personal one, per the business boundary."}
   - {id: cuzzies-google-workspace, name: "Cuzzie's Google Workspace (direct billing setup)",
-     amount: 98.08, cadence: once, due: null, track: queue, status: active,
+     amount: 98.08, cadence: once, due: 2026-09-07, track: queue, status: active,
      business_origin: true, calendar_event_id: u45glcg7992eg9q79nnb6brlco,
      note: "Added 2026-08-13. Same reseller billing lapse as cuzzies-google-voice above —
             all Workspace services for cuzziesnj.com (including lemar@cuzziesnj.com email
@@ -179,7 +179,23 @@ bills:
             long past; still excluded from daily_targets until a real due date is given.
             Still OPEN: what date this needs to be paid by (carried in open_questions),
             and whether the $12.14/day calendar-event estimate should be corrected or
-            removed now that the real balance is known by report rather than by rate."}
+            removed now that the real balance is known by report rather than by rate.
+            UPDATE 2026-09-07 (Convo 1 card reply, thread ts 1788714815.369119): Lemar
+            reread the $98.08 total as growing daily if the $57.44 Sep 1-6 slice is
+            divided across those 6 days, asked for a daily-updating running total, and
+            said 'this is due now technically' while he works on the money to cover it.
+            `due` set to 2026-09-07 on that stated basis (his words, not an invented
+            date). NOT auto-prorating a daily rate — the two candidate rates already on
+            file (~$9.57/day implied by the Sep 1-6 slice vs ~$12.14/day on the
+            calendar-event description) still disagree, per the 2026-09-06 note above,
+            and picking one would invent a number the skill floor forbids. `amount`
+            stays at the last Lemar-reported total ($98.08, as of Sep 6) rather than a
+            computed daily bump. Practical path until a rate is confirmed: keep pulling
+            the live total from Google Admin console → Billing each time and reporting
+            it here, same as 8/17→9/6→9/7 so far; Samira will update `amount` on each
+            report. Calendar event u45glcg7992eg9q79nnb6brlco still carries the stale
+            ~$12.14/day estimate in its description — still not corrected, same
+            open item as before."}
   - {id: edge-fitness-training-dispute, name: "Edge Fitness — personal training charge dispute",
      amount: 119, cadence: once, due: 2026-09-06, track: queue, status: paid,
      calendar_event_id: null,
@@ -3350,6 +3366,15 @@ open_questions:
   - "Cuzzie's phone + Google Workspace ~$550/mo — Lemar did NOT address this line in his 2026-08-15 message (#personal-finance ts 1786754410.308129), which named every other undated line but this one. Left undated per the business boundary: it's business-origin cost carried personally, ambiguous personal-vs-business, and no date was given — never inferred."
   - "Cash App payback $187.22 (due 2026-11-30): Lemar's own words were 'I think it's like 2% each day or something like that' about accruing interest — uncertain, not confirmed. Accruing against the stated $187.22 only; no compounding was invented. CONFIRM the actual current balance (or the real rate) closer to the due date so the accrual can be corrected before it's due."
   - "RESOLVED 2026-08-15 (#personal-finance ts 1786754410.308129): car goal target_date set to 2026-10-31 ('will have to be a goal to hit by the end of October'), name updated to 'Get the car running (Lexus LS400)'. 11 weekly installments generated, see own-car-running."
+  - "STILL OPEN 2026-09-07 (Convo 1 card reply, thread ts 1788714815.369119, same day as
+     the RESOLVED entry below): Lemar wants cuzzies-google-workspace tracked as a
+     daily-growing running total (dividing the $57.44 Sep 1-6 slice across those days)
+     and said 'this is due now technically' — `due` set to 2026-09-07 on that basis.
+     NOT auto-computing a daily rate: the ~$9.57/day implied by the Sep 1-6 slice still
+     disagrees with the ~$12.14/day already on the calendar-event description, and
+     picking between them would invent a number. Until Lemar confirms one rate (or the
+     account is paid off), `amount` stays at the last reported total and gets updated
+     only when he reports a fresh figure from Google Admin console → Billing."
   - "RESOLVED 2026-09-07 (Convo 1 card reply, thread ts 1788714815.369119): Lemar
      reported the actual current cuzzies-google-workspace balance from Google Admin
      console → Billing — '$40.64 from August and $57.44 from Sept 1st - 6th' — total
