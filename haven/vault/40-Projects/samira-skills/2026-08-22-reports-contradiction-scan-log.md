@@ -2154,3 +2154,13 @@ re-escalation of an already-dispositioned pattern, corrected and closed same-sca
 - haven/vault/70-Automation/samira/2026-08-15-suspicious-admin-bot-message-disregarded.md
   (established disposition for this signature/pattern)
 - haven/vault/00-Inbox/ (5 files, confirmed via `git ls-tree` this scan)
+
+## Update 2026-09-07 (94th scan / PART 6c)
+
+Scanned #reports from the prior bookmark (`1788794457.227209`) through this scan's
+read. Only one message in that window: the 93rd scan's own digest (ts
+`1788797868.060879`) -- already known/consistent with this session's own state, not a
+new claim to cross-check. **Found: 0.** Clean pass.
+
+### Sources (94th-scan / PART 6c update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788794457.227209`-`1788797868.060879`
