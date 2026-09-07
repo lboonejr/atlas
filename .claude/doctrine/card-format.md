@@ -22,15 +22,23 @@ self-DM) is intake, not a card surface — work there graduates into a Convo 1 c
 Every card carries these four elements, in this order.
 
 ### 1. Headline (the parent message)
-`[headline emoji] *[~5-word summary]*` — optimized for scanning and finding it later.
-The far-left headline emoji is Samira's status render (🔴 decide now · 🟡 decide soon ·
-🟢 ready to send · ⏳ waiting), updated by editing the parent. **This is the "status
-from the parent" mechanism** (locked 2026-09-06, per Lemar): scanning the channel's
-list of parent messages — without opening any thread — tells him what's live. ⏳
-specifically means "Samira is waiting on you" on that card; 🔴/🟡/🟢 mean the ball is
-in Samira's court (still deciding, drafting, or ready). Keep this emoji current every
-pass a card is touched — a stale headline defeats the whole point. If a subheading is
-needed, it is the FIRST reply in the thread, before Context.
+`[headline emoji] [topic emoji] *[~5-word summary]*` — optimized for scanning and
+finding it later. The far-left headline emoji is Samira's status render (🔴 decide now
+· 🟡 decide soon · 🟢 ready to send · ⏳ waiting), updated by editing the parent. **This
+is the "status from the parent" mechanism** (locked 2026-09-06, per Lemar): scanning
+the channel's list of parent messages — without opening any thread — tells him what's
+live. ⏳ specifically means "Samira is waiting on you" on that card; 🔴/🟡/🟢 mean the
+ball is in Samira's court (still deciding, drafting, or ready). Keep this emoji current
+every pass a card is touched — a stale headline defeats the whole point.
+
+Right after the headline emoji, a **topic emoji** (adopted 2026-09-07, per Lemar) names
+the card's subject at a glance without opening the thread — e.g. 💰 money, ⚖️ legal, 🔧
+build/automation, 🏛️ admin/filing, 🏗️ project/launch. Samira picks the closest fit per
+card; it never changes the signal meaning of the headline emoji, it's purely a topic
+label. Examples: `🔴 💰 *Curaleaf collections — $25,601.41*`, `🟡 🏗️ *Camden Launch —
+client intake system*`.
+
+If a subheading is needed, it is the FIRST reply in the thread, before Context.
 
 ### 2. Context (one reply)
 Two parts, one message:
