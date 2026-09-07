@@ -1,6 +1,6 @@
 ---
 created: 2026-09-06T13:33-04:00
-updated: 2026-09-06T15:50-04:00
+updated: 2026-09-07T13:14-04:00
 domain: personal
 type: task
 status: active
@@ -76,6 +76,29 @@ parked behind the PPP question unless Lemar says otherwise.
 - web: https://www.njcourts.gov/self-help/guardianship
 - web: https://www.njcourts.gov/faq/how-do-i-establish-a-guardianship
 - web: https://vanarellilaw.com/article-guardianship-101-a-practical-guide-to-guardianships-in-nj/
+
+## Update 2026-09-07 — where to check Betty's personal-care need determination
+
+Lemar confirmed Betty lives in **Camden County** and doesn't know her personal-care
+need determination status. Pointed him to two starting points: (1) Camden County
+Board of Social Services (administers her Medicaid) or her NJ FamilyCare managed-care
+plan's member services line — ask if a Personal Care Assistant (PCA) service
+authorization or Personal Preference Program assessment is on file; (2) NJ's Aging &
+Disability Resource Connection (ADRC), 1-877-222-3737, the statewide single point of
+entry that can route to the right Camden County office if unsure where to start.
+Nothing filed or contacted by Samira — informational only, same as the rest of this
+note.
+
+## Update 2026-09-07 — call scheduled
+
+Lemar asked for a calendar event + call script to make this call Wednesday as soon
+as the line opens. Booked on the reminder calendar: "Call NJ ADRC — Betty's PCA /
+Personal Preference Program status," Wed 2026-09-09 8:30-9:00am ET, call script (ADRC
+1-877-222-3737 first, Camden County Board of Social Services as fallback) in the event
+description. Nothing filed or contacted by Samira — the call itself is Lemar's.
+
+Sources: calendar event `4fvsd4cvdbk6rl8qvkie4qkvj0` (reminder calendar) ·
+Convo 1 card ts `1788718849.424069`, reply ts `1788784807.018999`
 
 ## Related
 - [[betty]]

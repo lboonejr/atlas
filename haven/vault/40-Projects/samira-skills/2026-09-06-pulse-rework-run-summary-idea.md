@@ -1,9 +1,9 @@
 ---
 created: 2026-09-06T15:05:32-04:00
-updated: 2026-09-06T15:05:32-04:00
+updated: 2026-09-07T12:08:00-04:00
 domain: project
 type: brief
-status: active
+status: done
 tags: [pulse-dashboard, skills-lab, samira-loop]
 source: slack
 ---
@@ -34,3 +34,10 @@ existing skill's output shape — `.claude/skills/pulse-dashboard/SKILL.md`.
 
 ## Sources
 - slack: Convo 2 (self-DM) drop, ts `1788721532.651329`, 2026-09-06 15:05 ET
+
+## Update 2026-09-07 — built
+Lemar ✅'d on the Convo 1 card (thread ts `1788723993.866869`). Added the "this run"
+delta-summary strip to `.claude/skills/pulse-dashboard/SKILL.md`, directly above
+section 1 (quick capture), sourced from the same digest data already computed for
+#reports. Existing full-picture sections unchanged. Takes effect on the next Pulse
+render.

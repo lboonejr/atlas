@@ -240,17 +240,25 @@ Goal: <the one outcome>
 Steps: <in order, ending at the screen before anything binds>
 Capture: <what to save, and where it goes>
 Stop at: <the exact screen or button that is Lemar's to press>
+Report: when done, reply in this thread with what happened before closing the tab.
 ===CHROME RUN END===
 ```
 
 Hit a credential, a payment, or a signature mid-run → stop there and raise it as one card.
 Never work around a login wall.
 
+**Completion callback (adopted 2026-09-07, per Lemar — skill-candidate card, Convo 1
+thread ts `1788723993.447999`).** Every staged prompt — `CHROME RUN` blocks above and
+`run:manual` blocks below — carries a standing instruction to reply in the card's
+thread with the outcome once run, so a later scan actually sees the signal instead of
+depending on Lemar remembering to mention it. Applies to every future staged prompt.
+
 ### LOCAL — build it here, now
 Build the thing **completely** in the thread, not as a sketch: the doc, the deck, the code,
 the page. Then hand the artifact over — repo path, Drive link, or file — and add a
-`run:manual` fenced block for any step only his machine can do. From that point Samira is
-the PM (section 7), not the builder.
+`run:manual` fenced block for any step only his machine can do, ending with "When done,
+reply in this thread with what happened." From that point Samira is the PM (section 7),
+not the builder.
 
 ---
 

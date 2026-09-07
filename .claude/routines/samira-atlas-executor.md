@@ -90,6 +90,22 @@ requires any of these, draft what you safely can, open ONE card decision round a
 react ⏳ on the source, and move on. On a 3rd consecutive failure of the same task,
 react 🚗 on the source (stop retrying) and open a "STUCK — needs Lemar" card in #fixes.
 
+**Write integrity (locked 2026-09-07, per Lemar's ✅ on both options — #fixes ts
+`1788721717.687559`).** A recurring bug sent placeholder/dummy content instead of real
+content on a write, wiping the target down to a handful of bytes — across GitHub file
+writes, Google Doc creation, and Haven notes alike. Two guards apply together, on every
+write over roughly 200 bytes that REPLACES existing content (a note body, a GitHub file,
+a Google Doc, any file this routine or a skill writes):
+- **Pre-write size guard.** Before committing the write, refuse it if the new content is
+  implausibly smaller than the content it replaces (a rough floor: under 10% of the
+  current size) unless the shrink is explicitly intended (a real delete/truncation) — stop
+  and reconcile the content before it lands, don't let it write through.
+- **Post-write verification.** Immediately after the write, read the target back and
+  compare it (size, or content where practical) against what was intended before
+  considering the write done. On a mismatch, treat it as a failed write: do not move on
+  silently — reconstruct from the last good read and retry, and if it fails a 3rd
+  consecutive time treat it per the STUCK rule above.
+
 ## Run order
 
 P0 (lock + watermarks + migration check) → P1 (vault keeper) → P2 (calendar sync) →

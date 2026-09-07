@@ -1,6 +1,6 @@
 ---
 created: 2026-07-07T09:40:00-04:00
-updated: 2026-09-06T15:56:00-04:00
+updated: 2026-09-07T12:07:00-04:00
 domain: personal
 type: note
 status: active
@@ -65,3 +65,13 @@ approach (full overwrite vs. append after the current schedule) unattended.
 
 ### Sources (this update)
 - slack: Convo 2 (self-DM) drop, ts `1788720850.819399`, 2026-09-06 14:54 ET
+
+## Update 2026-09-07 — restart confirmed executed (Option A, full reset)
+
+Lemar picked **Option A — full reset** on the Convo 1 card (thread ts
+`1788724111.408829`, reply `1788726100.161469`, "*Option A*"). Calendar shows the
+reset already landed same day (events created 2026-09-06T20:51 ET, after his reply):
+Week 9-12 events were cleared and a fresh Week 1-12 cycle was created starting
+2026-09-07, same session pattern as the original plan (Mon/Wed/Fri/Sun rotation,
+6:00-6:45am ET). Confirmed via calendar read — no further action needed; closing the
+loop on the card since it was locked but never got a written "Done" reply.
