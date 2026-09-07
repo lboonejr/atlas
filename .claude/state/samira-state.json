@@ -116,8 +116,8 @@
   },
   "integrity": {
     "last_full_pass": "2026-09-07T12:34:15Z",
-    "last_scan_sha": "9936538",
-    "note": "90th scan: incremental check only (full pass already ran today at 89th scan). git diff --name-only 8938fde..9936538 -- haven/vault/ was empty -- no vault content changed since the full pass, so no new mechanical defects possible. Inbox: same 5 known stuck notes (all UNRESOLVED/blank domain, unchanged) -- filed 0, stuck 5, new 0, entities 0. The missing-frontmatter batch2.md defect from the 89th scan remains open on its #fixes card, untouched."
+    "last_scan_sha": "420fed8",
+    "note": "91st scan: incremental check only (full pass already ran today, 89th scan). git diff --name-only 9936538..1c4308a -- haven/vault/ touched 6 files (betty caregiver note, money-hub-ledger, fruntdesk status, investor one-pagers, samira-skills reports-scan log, _daily/2026-09-07.md) -- all from the 90th scan's own writes, none introduced a new mechanical or value defect on spot-check. Inbox: same 5 known stuck notes, unchanged -- filed 0, stuck 5, new 0, entities 0. One of the 5 (00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md) is missing created/updated/tags entirely (not just blank domain) and has type: outcome-note (not a controlled value) -- this is a pre-existing, previously-seen shape for this specific note, not a new defect this scan, so not re-flagged individually per the escalate-only-what's-new rule. The missing-frontmatter batch2.md defect from the 89th scan remains open on its #fixes card, untouched."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
