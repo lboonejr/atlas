@@ -28,7 +28,7 @@
       "C0BBZ5J8805": "1788784163",
       "C0BRZT2V89W": "1788724013.761999",
       "D0BBVV54L5R": "1788786283",
-      "C0BV5BRNH5Z": "1788790402.959139",
+      "C0BV5BRNH5Z": "1788791741.828769",
       "_note_D0BHPKMDNEP": "Left unmoved (90th-scan PART 3 confirmed clean as of 1788784357, but PART 6a then opened a new top-level card whose exact ts we don't have on hand) so the next top-level sweep safely re-discovers it rather than risking a skip from a guessed-too-high value. Whichever scan (90th merge or 91st itself) next sweeps Convo 1 top-level should advance this for real."
     },
     "card_threads": {
@@ -67,7 +67,7 @@
       "C0BV5BRNH5Z:1788732629.871619": "1788784226.770239",
       "C0BV5BRNH5Z:1788784231.256459": "1788784231.256459",
       "C0BV5BRNH5Z:1788787392.857369": "1788787392.857369",
-      "C0BV5BRNH5Z:1788790402.959139": "1788790402.959139"
+      "C0BV5BRNH5Z:1788790402.959139": "1788791741.828769"
     },
     "migration": {
       "decisions_migration_complete": false,
