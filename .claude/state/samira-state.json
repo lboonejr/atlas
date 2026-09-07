@@ -116,8 +116,8 @@
   },
   "integrity": {
     "last_full_pass": "2026-09-07T12:34:15Z",
-    "last_scan_sha": "8938fde",
-    "note": "89th scan: full whole-vault pass run (day's first run of 2026-09-07). 687 notes checked (698 total minus 5 known Inbox notes, templates, examples). 1 new defect: haven/vault/70-Automation/samira/2026-09-06-decisions-migration-batch2.md has no frontmatter block at all -- flagged in a new #fixes card, not repaired (not a _daily note, required fields can't be safely derived). Also noted (not flagged as new issues, structural/expected): 4 _system/ meta files (home.md, schema.md, maps/20-Cuzzies.md, maps/30-Station.md) whose declared domain doesn't match their _system/ path -- these are rulebook/map files outside the normal domain-filing rules, not content notes."
+    "last_scan_sha": "9936538",
+    "note": "90th scan: incremental check only (full pass already ran today at 89th scan). git diff --name-only 8938fde..9936538 -- haven/vault/ was empty -- no vault content changed since the full pass, so no new mechanical defects possible. Inbox: same 5 known stuck notes (all UNRESOLVED/blank domain, unchanged) -- filed 0, stuck 5, new 0, entities 0. The missing-frontmatter batch2.md defect from the 89th scan remains open on its #fixes card, untouched."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
