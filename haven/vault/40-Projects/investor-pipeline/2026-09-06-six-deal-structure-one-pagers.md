@@ -1,6 +1,6 @@
 ---
 created: 2026-09-06T13:42-04:00
-updated: 2026-09-07T09:16-04:00
+updated: 2026-09-07T10:24-04:00
 domain: project
 type: task
 status: active
@@ -102,3 +102,39 @@ Posted to Convo 1 (card ts `1788719364.475849`) and #investor-pipeline this pass
 - drive: `1WpnSKssAtEt2_B_p4RiJ9bDcqxFHUUVj` (Cuzzies_Camden_Teaser_OnePager.pdf —
   stylistic/narrative template, matches what was sent to Peter Abdallah)
 - slack: Convo 1 card `1788719364.475849`
+
+## Update 2026-09-07T10:24-04:00 — stylized version built (Lemar asked for graphics/colors)
+
+Lemar replied in-thread (Convo 1 card `1788719364.475849`, reply `1788788102.999559`,
+2026-09-07): "Can they be more stylized? Just want them to look like a presentation,
+something easy to read, with graphics and colors and everything."
+
+Built one combined, colored, page-per-structure Google Doc covering all 6 structures —
+dark navy/cherry-red palette, big stat callouts, colored ask banners per structure, boxed
+"open item" callouts for the two known gaps (allocation not itemized below $500K, model
+not re-run below $500K) — same figures as the 6 plain docs, no new numbers invented.
+Filed in the same Drive folder as the originals rather than replacing them.
+
+No live PowerPoint/Google Slides generator is available in this session (pptxgenjs
+produces a valid `.pptx`, but there is no way to move a binary file of that size into
+Google Drive without a prohibitively expensive base64 round-trip through this session's
+context — confirmed, not assumed, before falling back). Used a colorized/tabled HTML
+upload instead, which Drive auto-converts to a native Google Doc — same folder,
+same access pattern as the 6 originals. Flagged this substitution to Lemar in-thread
+in case he specifically needs a `.pptx` file.
+
+**One rendering defect caught and fixed before posting:** the first upload nested a table
+inside another table's cell for the title and closing slides (used to get a dark
+background band around a name row / a 3-column "why" row) — Google's HTML→Doc converter
+does not support nested tables and rendered raw markdown/escape characters in those two
+spots instead of a table. Rebuilt those two sections as sibling (non-nested) tables,
+re-uploaded, and read the new doc back to confirm every table now renders cleanly. The
+first (defective) upload was trashed, not left in the folder.
+
+Doc: https://docs.google.com/document/d/1LdDRPMQaFu0uZRu_ciRCvDMQSIQiAjW1g1QWpEtT-us/edit
+
+### Sources (this update)
+- slack: Convo 1 card `1788719364.475849`, reply `1788788102.999559` (ask) and
+  `1788791046.349059` (Done reply)
+- drive: `1LdDRPMQaFu0uZRu_ciRCvDMQSIQiAjW1g1QWpEtT-us` (stylized doc, in folder
+  `1DPg8-agXRBdzUrllPN68HtyhRyqJWXgU`)
