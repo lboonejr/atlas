@@ -62,6 +62,14 @@ errors renders a compact ⚠️ chip ("source unreachable this run") instead of 
 the page — the page always ships.** The routine-health section renders even when others
 fail, and lists those failures.
 
+**"This run" summary strip (adopted 2026-09-07, per Lemar — skill-candidate card,
+Convo 1 thread ts `1788723993.866869`).** Directly above section 1, a short delta list
+of what THIS run actually changed — cards closed, cards opened, notes filed, money
+moved — pulled from the same digest data already computed for #reports (no separate
+computation). A handful of one-line bullets, not a restatement of the full sections
+below. On a quiet pass (nothing changed and the render itself was skipped per the
+quiet-pass rule below), this strip does not apply — there is no new render to summarize.
+
 1. **Quick capture → Atlas** (top of page, always in reach). A textarea pre-labeled
    "Atlas, shortlist this: " with a **Copy** button (Clipboard API, fall back to
    select-the-text) and an **Open my notepad** link (Lemar's SELF-DM, `D0BBVV54L5R` —
