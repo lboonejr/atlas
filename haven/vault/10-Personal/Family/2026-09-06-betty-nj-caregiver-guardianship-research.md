@@ -1,6 +1,6 @@
 ---
 created: 2026-09-06T13:33-04:00
-updated: 2026-09-06T15:50-04:00
+updated: 2026-09-07T12:06-04:00
 domain: personal
 type: task
 status: active
@@ -76,6 +76,18 @@ parked behind the PPP question unless Lemar says otherwise.
 - web: https://www.njcourts.gov/self-help/guardianship
 - web: https://www.njcourts.gov/faq/how-do-i-establish-a-guardianship
 - web: https://vanarellilaw.com/article-guardianship-101-a-practical-guide-to-guardianships-in-nj/
+
+## Update 2026-09-07 — where to check Betty's personal-care need determination
+
+Lemar confirmed Betty lives in **Camden County** and doesn't know her personal-care
+need determination status. Pointed him to two starting points: (1) Camden County
+Board of Social Services (administers her Medicaid) or her NJ FamilyCare managed-care
+plan's member services line — ask if a Personal Care Assistant (PCA) service
+authorization or Personal Preference Program assessment is on file; (2) NJ's Aging &
+Disability Resource Connection (ADRC), 1-877-222-3737, the statewide single point of
+entry that can route to the right Camden County office if unsure where to start.
+Nothing filed or contacted by Samira — informational only, same as the rest of this
+note.
 
 ## Related
 - [[betty]]
