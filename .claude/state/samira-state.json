@@ -3,15 +3,15 @@
   "lock": {
     "run_id": "run_20260907T220359Z",
     "run_started": "2026-09-07T22:03:59Z",
-    "run_completed": "2026-09-07T21:58:00Z",
-    "note": "95th scan starting.",
+    "run_completed": "2026-09-07T22:12:36Z",
+    "note": "95th scan complete (full PART 0-8 pass, PART 8 skipped per quiet-pass-equivalent judgment call — see digest). Drained 15 of the 37 frozen #decisions migration threads this run (batches of 5): 5 migrated live to Convo 1 (Caine & Weiner/Progressive, Capehart retainer incl. its superseding escalation merged into the same card, DeWalt v. Cuzzie's engagement letter, CannaBIZ Collects debt settlement PDF, Sun Extractions AR contact form), 10 closed as already-resolved/overtaken-by-events/superseded-by-restructure. 22 threads remain for future scans.",
     "prior_note": "94th scan complete (full PART 0-8 pass). A concurrent retry (run_20260907T200327Z) re-locked mid-flight, believing this run aged out past 120 minutes -- it had NOT: this run's own PART 0-8 work was already fully done and posted (Convo 1/#fixes/#reports, all pushed to main) by the time of that re-lock. Root cause found this run, not just symptom-flagged: this session's own `date` reads jumped from 2026-09-07T17:03:57Z (this run's start) to 21:57:43Z across a handful of tool calls with no real long wait in between -- the sandbox clock is not reliably monotonic/consistent with wall time, which is sufficient on its own to make a genuinely-still-running or just-finished session look 'aged out' to a concurrently-scheduled session reading a different clock value. Posted full detail + this evidence to #fixes. Restoring this run's own watermarks below (the 200327Z retry's re-lock commit left them untouched from this run's last push, so nothing was lost) and closing the lock under this run's own id since this is the run that actually did the work -- the 200327Z retry had made no PART 1-8 progress (only its own re-lock commit) as of this write."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1788711588",
+      "C0BBXA96FFV": "1788819126.992689",
       "C0BBZJL85RT": "1788801453.132829",
-      "D0BHPKMDNEP": "1788801330.001989",
+      "D0BHPKMDNEP": "1788819126.249859",
       "C0BGLEMH99T": "1788787449.502719",
       "C0BEQUW5NPP": "1788711588",
       "C0BBLUA7JLX": "1788711588",
@@ -27,8 +27,8 @@
       "C0BC2A94142": "1788711588",
       "C0BBZ5J8805": "1788784163",
       "C0BRZT2V89W": "1788724013.761999",
-      "D0BBVV54L5R": "1788801431",
-      "C0BV5BRNH5Z": "1788800887.126139"
+      "D0BBVV54L5R": "1788818565.139459",
+      "C0BV5BRNH5Z": "1788818933.900879"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -68,32 +68,23 @@
       "C0BV5BRNH5Z:1788787392.857369": "1788787406.272699",
       "C0BV5BRNH5Z:1788790402.959139": "1788793870.516519",
       "D0BHPKMDNEP:1788792460.080689": "1788794142.408019",
-      "C0BV5BRNH5Z:1788794112.021869": "1788797814.046539",
+      "C0BV5BRNH5Z:1788794112.021869": "1788818933.900879",
       "D0BHPKMDNEP:1788786717.686909": "1788786727.764729",
-      "D0BHPKMDNEP:1788797499.354449": "1788801330.001989",
-      "D0BHPKMDNEP:1788801304.731739": "1788801318.870329"
+      "D0BHPKMDNEP:1788797499.354449": "1788818873.550609",
+      "D0BHPKMDNEP:1788801304.731739": "1788801318.870329",
+      "D0BHPKMDNEP:1788819035.833609": "1788819035.833609",
+      "D0BHPKMDNEP:1788819071.876059": "1788819112.812639",
+      "D0BHPKMDNEP:1788819077.891869": "1788819077.891869",
+      "D0BHPKMDNEP:1788819122.125539": "1788819122.125539",
+      "D0BHPKMDNEP:1788819126.249859": "1788819126.249859"
     },
     "migration": {
       "decisions_migration_complete": false,
       "legacy_sweep_done": true,
       "announcements_done": true,
-      "cards_remaining": 37
+      "cards_remaining": 22
     },
     "decisions_threads": {
-      "1788697019.074209": "1788707739.279069",
-      "1787605678.559389": "1787688760.591569",
-      "1787609340.269079": "1787609340.269079",
-      "1787660120.230219": "1787667257.611909",
-      "1787660141.315579": "1787674381.264359",
-      "1787660143.192949": "1787660149.989389",
-      "1787667532.037259": "1787670421.826669",
-      "1787670575.635129": "1787674284.261919",
-      "1787682832.038489": "1787682841.068369",
-      "1787749640.485929": "1787749839.984179",
-      "1787753574.970519": "1788016365.085079",
-      "1787756944.929189": "1787756952.106279",
-      "1787756959.630349": "1787756959.630349",
-      "1787833175.960449": "1787839939.371519",
       "1787854465.146219": "1787854486.805629",
       "1787930008.624029": "1787930008.624029",
       "1787936776.561599": "1787936780.871709",
@@ -102,7 +93,6 @@
       "1788016294.676159": "1788016294.676159",
       "1788019527.456219": "1788019527.456219",
       "1788120312.622789": "1788178381.880189",
-      "1787613164.672029": "1787614371.183619",
       "1788199618.856899": "1788300853.201089",
       "1788293467.431029": "1788293467.431029",
       "1788293469.090089": "1788293469.090089",
@@ -116,20 +106,20 @@
       "1788613746.453729": "1788613746.453729",
       "1788635325.842539": "1788635325.842539",
       "1788635412.011499": "1788635416.951679",
-      "1787660130.097779": "1787667581.782429"
+      "1788697019.074209": "1788707739.279069"
     },
     "capture_dm": "1788711588",
-    "gmail_after_epoch": 1788801431
+    "gmail_after_epoch": 1788818434
   },
   "integrity": {
     "last_full_pass": "2026-09-07T12:34:15Z",
     "last_scan_sha": "0d9025d",
-    "note": "94th scan: incremental check only (full pass already ran earlier today). git diff --name-only 5beb8fc..0d9025d -- haven/vault/ touched this scan's own writes (email-backlog note filed to 70-Automation/samira-email-loop, GTI AR note reopened, new Metrc note, reports-contradiction-scan-log update, _daily/2026-09-07.md) -- all valid frontmatter, no new mechanical or value defect. Inbox: same 5 known stuck notes, unchanged -- filed 1 (the 93rd scan's own backlog note), stuck 5, new 0, entities 0."
+    "note": "95th scan: incremental check only, no vault commits since the last full pass (haven/vault/ HEAD unchanged at 0d9025d) -- 5 known stuck Inbox notes unchanged, no new mechanical or value defects."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
     "writable": false,
-    "note": "Not re-checked this (86th) scan (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
+    "note": "Not re-checked this (95th) scan (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
     "pulse_last_rendered": "2026-09-07T09:25:00-04:00",
