@@ -206,7 +206,10 @@ any reply newer than the stored latest-reply `ts`. Work each open card per the d
 - 👀 → leave it; no nudge. ⛔ → park: status Parked on the note, reply "Parked ⏳",
   record it in the Haven open-items note under `70-Automation/samira/`, drop from the
   queue. 🫡 → close: record the closing outcome via samira-report-result, edit the
-  parent to begin "✅ CLOSED — [outcome]", drop it. Convo 1 trends toward empty; the
+  parent to begin "✅ CLOSED — [outcome]", drop it. 🔔 (added 2026-09-07, per Lemar) →
+  treat like 👀 (no action this pass) but ALSO re-surface the card on next scan's
+  PART 3 sweep instead of letting it go quiet — a standing nudge that stays live until
+  cleared with ✅/⛔/🫡. Convo 1 trends toward empty; the
   record lives in Haven + #reports.
 
 ### PART 4 — Convo 2 pass (the intake notepad; was PARTs B + Q + H + M-input)
