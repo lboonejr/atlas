@@ -1,9 +1,9 @@
 ---
 created: 2026-09-06T14:17:34-04:00
-updated: 2026-09-06T14:17:34-04:00
+updated: 2026-09-07T12:08:00-04:00
 domain: project
 type: task
-status: active
+status: done
 tags: [samira-loop, run-manual, prompt-design, infra]
 source: slack
 ---
@@ -34,3 +34,9 @@ editing `samira-loop`/the project overlays.
 
 ## Sources
 - slack: Convo 2 (self-DM) drop, ts `1788718654.661999`, 2026-09-06 14:17 ET
+
+## Update 2026-09-07 — built
+Lemar ✅'d on the Convo 1 card (thread ts `1788723993.447999`). Added a standing
+completion-callback line to both prompt templates in `.claude/skills/samira-loop/SKILL.md`
+(the CHROME RUN block and the run:manual hand-off). Applies to every new staged
+prompt from here on; not retrofitted onto prompts already posted this scan.
