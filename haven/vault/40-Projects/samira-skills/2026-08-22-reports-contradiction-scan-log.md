@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-09-06T14:10:00Z
+updated: 2026-09-06T13:15-04:00
 domain: project
 type: log
 status: active
@@ -1944,3 +1944,94 @@ window contradicts anything else or the vault ground truth it cites
 
 ### Sources (81st-scan update)
 - slack: #reports `C0BBZJL85RT`, ts range `1788697608.452459`–`1788703792.478559`
+
+## Update — 82nd scan (2026-09-06, ~11:04am ET)
+
+Scanned `#reports` range `1788703792.478559`–`1788704367.588789` (2 messages: the 81st
+scan's own closeout note on its lock-recovery handling, and the 81st scan's digest).
+Both are this same run's own output describing its own actions consistently with each
+other and with the vault (the Drive-organizing note and its filing are both confirmed).
+Nothing in this window conflicts with anything else or with vault ground truth.
+
+Note for the record: the 81st-scan bookmark update above lists only 2 messages for its
+scanned range (`1788697608.452459`–`1788703792.478559`) but a 3rd message actually falls
+inside that range — the recurring "Haven Keeper" false "Inbox empty" claim at ts
+`1788700825.573109`. That message is the same already-tracked recurring issue (11+
+prior occurrences, covered by the still-open "Haven Keeper keeps posting a wrong vault
+state" card, ts `1788635412.011499`) — not a new contradiction, so this is not being
+re-escalated as a fresh finding. Flagging only so the coverage gap itself doesn't repeat:
+this scan's own range starts exactly where the 81st scan's stated range ended, so no
+message is skipped going forward.
+
+**Found: 0. Open questions posted to #decisions: 0.**
+
+### Sources (82nd-scan update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788703792.478559`–`1788704367.588789`
+- slack: #decisions `C0BBXA96FFV`, ts `1788635412.011499` (open "Haven Keeper" card,
+  still unreacted)
+
+## Update — 83rd scan (2026-09-06, ~12:04pm ET)
+
+Scanned `#reports` range `1788704367.588789`–`1788708546.790779` (2 messages: the 82nd
+scan's own Camden Launch closeout note, and the 82nd scan's digest). Both describe the
+same run's own actions consistently with each other and with the vault — the Camden
+Launch closeout (`ops-admin-lane-and-ariana` archived, `p00-client-intake-system`
+unparked to active) matches the digest's "1 closed" tally, and the money line
+("ledger stale since 8/29, #personal-finance quiet") matches the state file's recorded
+`money_hub_last_rendered: 2026-08-29T13:22:00-04:00` — no drift. Nothing in this window
+conflicts with anything else or with vault ground truth.
+
+**Found: 0. Open questions posted to #decisions: 0.**
+
+### Sources (83rd-scan update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788704367.588789`–`1788708546.790779`
+
+## Update — 84th scan (2026-09-06, ~1:15pm ET)
+
+Scanned `#reports` range `1788708546.790779`–`1788711519.139219` (1 message: the 83rd
+scan's own digest). It describes that same run's own actions and states consistently
+with itself; its "Send TODAY" and "Waiting on you: 89" lines restate figures unchanged
+since the last several scans, and the vault has had zero commits touching `haven/vault/`
+since the last integrity pass (confirmed in this run's PART 1), so there is nothing new
+to cross-check those figures against. Nothing in this window conflicts with anything
+else or with vault ground truth.
+
+**Found: 0. Open questions posted to #fixes: 0.**
+
+### Sources (84th-scan update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788708546.790779`–`1788711519.139219`
+
+## Update — PART 6c, 2026-09-06 (~2:18pm ET)
+
+Scanned `#reports` range `1788711519.139219`–`1788715731.299939` (3 messages: a
+"Haven Keeper" false-empty-vault claim, the three-conversation restructure
+announcement, and the 84th-scan digest covering the #decisions migration batch).
+
+- **"Haven Keeper" claim (ts `1788715261.969699`)** — "filed 0 · stuck 0 · rang
+  +0/~0/-0. Inbox empty, no notes with a due... all quiet." Checked against the vault:
+  `00-Inbox/` holds 6 files, but one (`2026-09-06-newark-facade-grant-research.md`) has
+  complete, valid frontmatter and is simply awaiting its next vault-keeper filing pass —
+  not a genuine defect. The other 5 (DIB closeout, Google Voice, Caine & Weiner,
+  Rootwurks, VeriScan) remain UNRESOLVED/incomplete, unchanged for weeks. So the vault's
+  true "stuck" count is 5, matching the 84th-scan digest's "stuck 5 (unchanged)" — Haven
+  Keeper's "stuck 0" is wrong, same recurring false-empty-inbox pattern documented
+  repeatedly above (12th+ occurrence). This is the SAME already-tracked, already-escalated
+  issue (open card asking "what is this app and why does it keep doing this," last seen
+  at #decisions ts `1788635412.011499`, migration status not confirmed this pass) — not a
+  new contradiction requiring a fresh #fixes card. Not re-escalating; noted here only so
+  the recurrence count and coverage stay unbroken.
+- **Restructure announcement + 84th-scan digest** — cross-checked the digest's closed-item
+  list (9 items) against its own "9 closed" headline count (matches exactly), its "8 open"
+  Convo 1 tally against "1 dev'd + 6 migrated + 1 announcement" (matches), and its
+  migration line ("decisions_threads 52 remaining") against the state file's own
+  `decisions_threads` map (52 keys, confirmed). No drift found. The "Camden Ops ADMIN
+  lane/Ariana killed" closed-item line is consistent with (not a duplicate contradiction
+  of) the earlier standalone Camden Launch closeout post at ts `1788707770.043009`.
+
+**Found: 0 new. 1 recurrence of the already-tracked Haven Keeper issue noted, not
+re-escalated. Open questions posted to #fixes: 0.**
+
+### Sources (85th-scan / PART 6c update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788711519.139219`–`1788715731.299939`
+- haven: `haven/vault/00-Inbox/` (6 files checked directly), `.claude/state/samira-state.json`
+  (`decisions_threads` count cross-checked)

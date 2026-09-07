@@ -1,13 +1,13 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-08-28T09:20:00-04:00
+updated: 2026-09-06T13:30:00-04:00
 domain: legal
 type: task
 status: active
 tags: [legal, dewalt, lawsuit, default-judgment, urgent]
 source: gmail
-due: 2026-08-17T10:00:00-04:00
-calendar_event_id: ltcu5dvvp6mh40kt07cpgs9fs4
+due: 2026-09-08T10:00:00-04:00
+calendar_event_id: e0mp54r48u87fv8b2pkbto1evc
 ---
 
 # DeWalt v. Cuzzie's Dispensary & Delivery, et al. — default judgment motion pending
@@ -687,6 +687,29 @@ taken beyond this note and the #decisions flag. Gmail thread labeled `Samira/see
 ### Sources (this update)
 - gmail: thread `1a04881d5f95d3a8` (Folkman Law Offices, Shelley Wint, declination
   letter attached, 2026-08-28 ~9:14am ET)
+
+## Update 2026-09-06T13:30:00-04:00 — Lemar wants to call the judge Tuesday for an adjournment; counsel still not formally locked in
+
+Lemar dropped this in Convo 2 (self-DM, ts `1788715822.273459`, 13:30 ET): "I need to
+call the judge on the DeWalt Case on Tuesday to get an adjournment because we haven't
+locked an attorney down yet." As of the last update (2026-08-28), Douglas Diaz at
+Archer & Greiner P.C. remains the active track but the signed engagement letter and
+retainer (requested by Diaz 2026-08-25) are not confirmed complete — consistent with
+Lemar's own read that counsel isn't formally locked in yet.
+
+Created a calendar event on the Cuzzie's (Owners) business calendar for **Tuesday
+2026-09-08, 10:00-10:30am ET** — "Call judge — DeWalt Case adjournment request" — with
+a call script attached in the event description (identify the case/docket, state the
+adjournment ask, explain outside counsel not yet formally retained, name Archer &
+Greiner/Douglas Diaz as the active track, propose a 2-4 week new timeframe, ask what
+the court needs to process the request). Popups set 24h + day-of. Posted a card to
+Convo 1 with the script + calendar link. Nothing sent/filed by Samira — the call is
+Lemar's to make.
+
+### Sources (this update)
+- slack: Convo 2 (self-DM) drop, ts `1788715822.273459`, 2026-09-06 13:30 ET
+- calendar: event `e0mp54r48u87fv8b2pkbto1evc`, "Call judge — DeWalt Case adjournment
+  request", 2026-09-08 10:00-10:30am ET, Cuzzie's (Owners) calendar
 
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")

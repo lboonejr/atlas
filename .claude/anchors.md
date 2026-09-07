@@ -8,7 +8,17 @@ When a workspace, board, account, or channel changes, edit THIS file and nothing
 > doing work is fine; maintaining a second list is not). The memory file
 > `shortlist_anchors.md` on Lemar's machine is a pointer to this file, not a copy.
 
-Last verified: 2026-08-31 (PART D found the Gmail label table below stale — the connected
+Last verified: 2026-09-06 (**THREE-CONVERSATION RESTRUCTURE** — the per-channel
+workflow era ended; Samira now runs three conversations (Convo 1 = her DM `D0BHPKMDNEP`,
+the working meeting; Convo 2 = Lemar's SELF-DM `D0BBVV54L5R`, his intake notepad,
+reachable only via the personal Slack connector; Convo 3 = private #fixes
+`C0BV5BRNH5Z`) and every project channel became an append-only TIMELINE — never swept
+for input. #decisions is RETIRING (migration underway), #stormy RETIRED, the Open
+Items canvas RETIRED. Card format: `.claude/doctrine/card-format.md`. Lettered PARTs →
+numbered (mapping table at the end of the runbook). This restructure was developed on
+branch `claude/samira-workflow-restructure-2k3gx5` + PR — a sanctioned one-time
+exception to the git-write policy below, because the cutover IS the merge to `main`.)
+· 2026-08-31 (PART D found the Gmail label table below stale — the connected
 Gmail account had NO `Samira`/`Samira/seen`/`Samira/drafted`/`Samira/sent`/`Samira/investor`
 labels at all; `Label_1` in that account is actually a pre-existing unrelated label
 "Sweep/Review", not "Samira". Created the five missing labels this run per the
@@ -60,30 +70,32 @@ supersedes ALL other style guidance, including guides bundled inside skills.
 
 | Channel | ID | Role |
 |---|---|---|
-| #decisions | `C0BBXA96FFV` | THE decision surface — only channel that pings Lemar (renamed #action-items, same ID) |
-| #reports | `C0BBZJL85RT` | Silent one-way result log; never swept for prompts |
-| Samira capture DM (Lemar) | `D0BHPKMDNEP` | **Atlas capture inbox since 2026-07-16** — Lemar↔Samira bot IM. Lemar drops brain-dumps here; Samira sweeps them in PART B (im:write/im:history/reactions all confirmed via smoke test 2026-07-16) and reacts ✅ for her sweep-dedup. Replaced #atlas. Excepted from PART C (capture surface, not a prompt source) |
+| **Convo 1 — Samira DM (Lemar)** | `D0BHPKMDNEP` | **"What we're working on now"** (since 2026-09-06) — the working meeting. Every task/project is ONE threaded card (`.claude/doctrine/card-format.md`); worked in PART 3. The only surface that pings Lemar for work decisions. (History: was the Atlas capture inbox 2026-07-16→2026-09-06; captures moved to Convo 2. im:write/im:history/reactions confirmed 2026-07-16.) |
+| **Convo 2 — Lemar's SELF-DM** | `D0BBVV54L5R` | **"What I need to work on"** (since 2026-09-06) — Lemar's intake notepad: brain-dumps, deep dives (Stormy mode), quick updates, money drops, skill thoughts, on-button drops. Swept in PART 4. **Reachable ONLY via the personal Slack connector `7faf04c0-5bd6-4237-8430-f80040c482e1`** — a bot cannot enter a self-DM, so Samira's bot never touches this surface. Both sides are authored by Lemar's own user (`U0BC5UTHYG4`); Samira's posts carry the 🌐 prefix (🌐🌩️ in deep-dive mode) — the prefix is the ONLY discriminator and is load-bearing. Read+write smoke-tested 2026-09-06. |
+| **Convo 3 — #fixes** | `C0BV5BRNH5Z` | **"Fixes"** (PRIVATE, created 2026-09-06) — anything wrong with Samira herself: bugs, errors, missed runs, inconsistencies, contradictions, STUCK escalations, scanner findings. Card surface, worked in PART 5. Bot membership pending Lemar's `/invite @Samira` (until then, fix items land as 🔧-tagged Convo 1 cards per the migration runbook). |
+| #decisions (RETIRING) | `C0BBXA96FFV` | Former decision surface — **retiring 2026-09** (renamed #action-items, same ID). Open cards migrating to Convo 1 per `.claude/routines/migration-2026-09-three-convos.md`; Lemar archives the channel once migration completes. Never post new cards here. |
+| #reports | `C0BBZJL85RT` | Silent one-way result log + run digest; never swept for prompts. Unchanged by the restructure. |
 | #atlas (RETIRED) | `C0BBWHCJUV9` | Former raw capture inbox — **retired 2026-07-16**, replaced by the Samira capture DM (above). Being archived; never swept, never posted to (the transition-period PART B glance was removed from the runbook 2026-08-15) |
-| #admin | `C0BBLUA7JLX` | Staged run:admin-3x prompts |
+| #admin | `C0BBLUA7JLX` | TIMELINE (2026-09-06) — former staged-prompt channel; the fenced-prompt sweep ended with the restructure. Append-only record only. |
 | Dawn DM (Lemar) | `D0BJ0JPQD8C` | **Dawn's output surface since 2026-07-16** — the Dawn bot's direct message with Lemar (`U0BC5UTHYG4`). The bot posts by sending to Lemar's user id, which auto-opens this IM (bot has `im:write`). Dawn's ONLY Slack surface; Samira never posts here. Replaced #daily-brief |
-| #stormy | `C0BJ37SU1TL` | **Stormy's ONLY surface — a PRIVATE channel** (created 2026-07-17). Lemar drops raw no-deadline ideas here; Samira's bot bakes each through the adaptive pressure test in **PART Q**, posting signed `🌩️ … — Stormy` (shared bot, own persona line — the Basil pattern). **Excluded from the PART C prompt-sweep.** It is a channel, not a DM, because a shared bot can hold only one DM per user (that's the Samira capture DM). Samira bot confirmed in-channel 2026-07-17 (members: Lemar `U0BC5UTHYG4` + bot `U0BJQ771LJU`); keep it invited (`/invite @Samira`). See "Idea-baking loop — Stormy" below |
+| #stormy (RETIRED) | `C0BJ37SU1TL` | **Retired 2026-09-06** — Stormy's workflow moved to Convo 2 (deep-dive mode inside the self-DM, PART 4). Read-only record; Lemar archives it alongside #decisions once migration completes. (History: private channel created 2026-07-17 as PART Q's surface, chosen because the shared bot's one DM slot was taken.) |
 | #daily-brief (RETIRED) | `C0BF73FF56H` | Dawn's former once-a-day surface — **retired 2026-07-16**, Dawn now DMs Lemar (see "Dawn DM" above). Being archived; read-only record, never posted to |
-| #car-search | `C0BEC2RFC00` | Car loop (samira-car-search) **(LOOP RETIRED 2026-07-21 — on-demand only)**; never swept in PART C |
-| #investor-pipeline | `C0BCCUKEUQ2` | Investor loop (samira-investor) |
-| #camden-launch | `C0BRZT2V89W` | **PRIVATE** — the Camden Dispensary Launch engagement's project channel (created 2026-08-18). Work surface only: staged `run:admin-3x` prompts, artifacts, and outcomes loop back here. The engagement's QUESTIONS still live in #decisions (titled "Camden Launch"), same as every other project channel — see the overlay `.claude/projects/camden-dispensary-launch-project-instructions.md`. Samira's bot confirmed in-channel 2026-08-19 (members: Lemar `U0BC5UTHYG4` + bot `U0BJQ771LJU`); keep it invited. Swept in PART C going forward. |
-| #skills-lab | `C0BBZ5J8805` | Skill-candidate proposals |
-| #on-button | `C0BEQUW5NPP` | Reopening command center — drop past-due bills/screenshots here. The **on-button-plan** skill ingests drops into the ONE source of truth `haven/vault/40-Projects/on-button-reopen/index.md`, then regenerates the interactive page `on-button-reopen.html` (githack: `https://raw.githack.com/lboonejr/atlas/main/on-button-reopen.html`) and the pinned canvas `F0BEN1167GB`. Tracking only, nothing paid/contacted. |
-| #personal-finance | `C0BGLEMH99T` | Personal money hub — Lemar drops earnings, cash, bills (text or photo), payments, and plan terms here; Samira's **PART M** sweeps them via the **money-hub** skill. Source of truth: `haven/vault/10-Personal/Money/money-hub-ledger.md` (+ `income-log-2026.md`). The 2026-07-11 project note that built this is closed (`status: done`, history only). |
+| #car-search | `C0BEC2RFC00` | TIMELINE — car loop retired 2026-07-21; on-demand skill only. |
+| #investor-pipeline | `C0BCCUKEUQ2` | TIMELINE (2026-09-06) — investor movements (data rooms, index changes, outreach state) posted by PART 6b; never swept. Investor decision cards live in Convo 1; investor input arrives via the Gmail `Samira/investor` label + Convo 2 drops. |
+| #camden-launch | `C0BRZT2V89W` | **PRIVATE** — TIMELINE (2026-09-06) for the Camden Dispensary Launch engagement: artifacts + outcomes posted here; never swept. Engagement questions are Convo 1 cards titled "Camden Launch" (overlay `.claude/projects/camden-dispensary-launch-project-instructions.md` still outranks loop mechanics). Bot confirmed in-channel 2026-08-19. |
+| #skills-lab | `C0BBZ5J8805` | TIMELINE (2026-09-06) — record lines for skill-candidate proposals; the proposals themselves are Convo 1 cards, and skill thoughts arrive via Convo 2. |
+| #on-button | `C0BEQUW5NPP` | TIMELINE (2026-09-06) — reopening record: page/canvas regeneration notices post here; drops now arrive via Convo 2 (the **on-button-plan** skill's ingest/dedupe rule unchanged; source of truth `haven/vault/40-Projects/on-button-reopen/index.md`, page `on-button-reopen.html`, canvas `F0BEN1167GB`). Tracking only, nothing paid/contacted. |
+| #personal-finance | `C0BGLEMH99T` | TIMELINE (2026-09-06) — Money Hub snapshot links + money movement entries post here (standing permission kept); money DROPS now arrive via Convo 2 and are worked in PART 4 via the **money-hub** skill. Source of truth: `haven/vault/10-Personal/Money/money-hub-ledger.md` (+ `income-log-2026.md`). |
 | #pitch-deck-pressure-test | `C0BCD7U5X2B` | Recapitalization deck ($500K) pressure-test Q&A thread |
 | #cuzzys-brand | `C0BCH2C3GRM` | White-label brand project (recorded 2026-07-12 for Pulse link-outs) |
 | #delivery-in-a-box | `C0BDN2KQFD4` | DIB project channel (recorded 2026-07-12 for Pulse link-outs) |
 | #comedy-club | `C0BD8LTM1EK` | Comedy-club project channel — PRIVATE (recorded 2026-07-12 for Pulse link-outs) |
 | #trading-cards | `C0BGYM1UB4Y` | Sports-cards side hustle (recorded 2026-07-12 for Pulse link-outs) |
-| #free-books-partnership | `C0BGCAK0ML3` | Project channel — discovered via `slack_search_channels` 2026-07-22 (bot already a member, was missing from this table); swept in PART C/G going forward |
-| #booking-agent | `C0BHXTPST52` | Booking-agent scoping project channel — discovered via `slack_search_channels` 2026-07-22 (bot already a member, was missing from this table); swept in PART C/G going forward |
+| #free-books-partnership | `C0BGCAK0ML3` | TIMELINE — project channel (never swept since 2026-09-06) |
+| #booking-agent | `C0BHXTPST52` | TIMELINE — booking-agent scoping project (never swept since 2026-09-06) |
 | #random-ideas | `C0BC2A94142` | Resolved via `slack_search_channels` 2026-07-22 12:xx ET scan. Old/quiet channel (last activity ~June 2026) — one long-form idea from Lemar about restructuring Samira into a skills/employees org, not a runnable prompt (no fence, not addressed as an instruction, and not new this scan). No action taken; recorded for future sweeps. |
 | #general | `C0BC07YTZJA` | **Access gap** — bot returns `not_in_channel` despite appearing in some channel listings; needs `/invite @Samira` or confirmation it's out of scope. Flagged 2026-07-22, unresolved. |
-| Open Items canvas | `F0BDLSHD8JD` | State only: ⏳ Waiting · ⚙️ In motion · ⛔ Parked |
+| Open Items canvas (RETIRED) | `F0BDLSHD8JD` | **Retired 2026-09-06** — write-blocked since 2026-07-25 (3-strike 8/7); parked state now lives on the cards themselves + the Haven open-items note under `70-Automation/samira/`. This closes the standing canvas gap rather than carrying it. |
 | #emails (ARCHIVED) | `C0BC1JSCHQW` | Read-only record; never swept, never posted to |
 | #to-do (ARCHIVED) | `C0BC30U222K` | Read-only record |
 
@@ -106,33 +118,36 @@ live tooling, not part of the retired mirror.)
 
 ## Gmail labels (use IDs, never display names)
 
-**2026-08-31 note (amended 2026-09-05):** `Label_1` is a pre-existing label of Lemar's
-own named "Sweep/Review" (8 threads) — it is NOT "Samira" and is a genuine protective
-filing label. The Samira automation labels exist with the short IDs the table shows —
-`Samira` = `Label_2` through `Samira/investor` = `Label_6` — **verified live 2026-09-05**
-via the Gmail API (the 2026-08-31 claim that these short IDs were stale placeholders was
-wrong; the table is correct). `Car-Hunt`/`Car-Hunt/seen` were never created — left
-uncreated since the car-search loop (PART F) is retired and nothing needs them.
-`Samira/investor-sent` also doesn't exist — create on demand if/when the investor loop
-needs to mark a sent outreach. Two labels are in live use in this account that were
-never recorded here before — **"Action Needed"** (`Label_374039230306167562`, 71 msgs)
-and **"Finance Bills"** (`Label_4897882779882705846`, 16 msgs) — origin unknown (not
-applied by any part of this routine); do not assume ownership or repurpose them without
-asking Lemar.
+**2026-09-06 note (88th scan — supersedes the 2026-08-31/09-05 notes below, which were
+wrong):** a fresh `list_labels` call this run returned a table that does NOT match what
+was recorded here — the THIRD different version of this table in five weeks, which is
+itself a #fixes-worthy pattern (raised there, see the digest). Recording exactly what
+the API returned, live, 2026-09-06: `Samira` (parent) = `Label_1` (NOT a "Sweep/Review"
+label as the 2026-08-31 note claimed — no label named "Sweep/Review" exists in this
+account). `Car-Hunt`, `Car-Hunt/seen`, and `Samira/investor-sent` all EXIST now (with
+real traffic — 6, 61, and 9 messages respectively), contradicting the prior "never
+created" notes. `Vendor Menus` now carries a short-form `Label_8`, not the long-form id
+previously recorded. **Neither "Action Needed" nor "Finance Bills" appears in the label
+list at all** — `list_labels` returns every label in the account, so either they were
+deleted/renamed since 2026-08-31, or the long-form IDs recorded for them were never
+real. Given three consecutive scans have each reported different ground truth for the
+exact same six labels, treat any single scan's read (including this one) as provisional
+until it holds across two consecutive runs — this table has flipped every time someone
+checked.
 
-| Label | ID |
+| Label | ID (live 2026-09-06) |
 |---|---|
-| Samira (parent) | `Label_2` |
-| Samira/seen | `Label_3` |
-| Samira/drafted | `Label_4` |
-| Samira/sent | `Label_5` |
-| Samira/investor | `Label_6` |
-| Samira/investor-sent | NOT YET CREATED — create on demand |
-| Car-Hunt | NOT YET CREATED — car-search loop retired, unneeded |
-| Car-Hunt/seen | NOT YET CREATED — car-search loop retired, unneeded |
-| Vendor Menus | `Label_7063567382570959882` (pre-existing, created 2026-07-08 for the Inbox Janitor routine; real Gmail-assigned ID, not the old short placeholder) |
-| Action Needed (unrecorded, unowned) | `Label_374039230306167562` |
-| Finance Bills (unrecorded, unowned) | `Label_4897882779882705846` |
+| Samira (parent) | `Label_1` |
+| Samira/seen | `Label_2` |
+| Samira/drafted | `Label_3` |
+| Samira/sent | `Label_4` |
+| Car-Hunt | `Label_5` (exists, 6 msgs/6 threads — car-search loop is retired but the label is live) |
+| Car-Hunt/seen | `Label_6` (exists, 61 msgs/59 threads) |
+| Samira/investor | `Label_7` |
+| Vendor Menus | `Label_8` (short-form now, not the long-form id recorded 2026-08-31) |
+| Samira/investor-sent | `Label_9` (exists, 9 msgs/2 threads) |
+| Action Needed | NOT FOUND this scan — absent from the full label list; prior long-form id may be stale or the label may be gone |
+| Finance Bills | NOT FOUND this scan — same caveat |
 
 ## Google Calendar
 
@@ -159,7 +174,8 @@ asking Lemar.
 | Cloud env | `env_01Xatmag93x2WA2Gd84D9iHj` |
 | Cron | `0 12-22 * * *` UTC (hourly 8a–6p ET) |
 | Disabled trigger (folded into v4) | `trig_0145zp6gHsouqBAKa9JkhJRk` |
-| Slack connector (Samira's own bot identity) | connector_uuid `01519dfa-b91a-47eb-beb4-cdc04444144e`, custom connector named "Samira" (bot Slack user id `U0BJQ771LJU`), MCP endpoint `https://samira-two.vercel.app/mcp`. Swapped into this trigger's `mcp_connections` 2026-07-16, replacing the shared personal Slack connector (`7faf04c0-5bd6-4237-8430-f80040c482e1`) for Samira ONLY — Dawn and Basil still use the personal connector. Fixes the reaction-engine identity gap (Samira's posts/self-tag reactions were previously indistinguishable from Lemar's real reactions since both came from his own Slack account). Server code: `apps/samira-slack-bot/` in this repo, deployed free on Vercel; bot token lives only in Vercel's environment settings. Bot must stay invited (`/invite @Samira`) in every channel Samira posts/reads: #decisions, #reports, #atlas (until archived), #admin, #car-search, #investor-pipeline, **#stormy (`C0BJ37SU1TL` — for the PART Q idea-baking loop; confirmed in-channel 2026-07-17)**, plus active project channels. **Captures now arrive in Samira's DM with Lemar (`D0BHPKMDNEP`) — a DM needs no invite; the bot swept it fine in the 2026-07-16 smoke test.** |
+| Slack connector (Samira's own bot identity) | connector_uuid `01519dfa-b91a-47eb-beb4-cdc04444144e`, custom connector named "Samira" (bot Slack user id `U0BJQ771LJU`), MCP endpoint `https://samira-two.vercel.app/mcp`. Swapped into this trigger's `mcp_connections` 2026-07-16, replacing the shared personal Slack connector for bot surfaces (fixes the reaction-engine identity gap). Server code: `apps/samira-slack-bot/` in this repo, deployed free on Vercel; bot token lives only in Vercel's environment settings. Bot must stay invited (`/invite @Samira`) in every channel Samira posts/reads: #reports, **#fixes `C0BV5BRNH5Z` (invite pending 2026-09-06)**, #decisions (until archived), and the timeline channels she posts entries to. Convo 1 (`D0BHPKMDNEP`) is a bot DM — no invite needed. |
+| **Personal Slack connector (Convo 2 only)** | connector_uuid `7faf04c0-5bd6-4237-8430-f80040c482e1` (the shared personal connector, acting as Lemar `U0BC5UTHYG4`). **Re-attach to trigger `trig_01VGzAWGSadjRbJbKURxCYvG` alongside the bot connector (2026-09 restructure)** — it is the ONLY way to reach Lemar's self-DM `D0BBVV54L5R` (a bot cannot enter a self-DM). Used exclusively for the PART 4 sweep + 🌐-prefixed replies there; every other surface stays on the bot connector. Until it rides the trigger, PART 4 degrades gracefully (one #fixes line, skip). |
 
 ## Cloud routine — Daily Brief / "Dawn" (separate from Samira)
 
@@ -192,7 +208,7 @@ in the runbook until Lemar vets one preview run, then flip to false.
 | Runbook (live behavior) | `.claude/routines/inbox-janitor.md` — editing on `main` changes the next run |
 | Reports to | #reports `C0BBZJL85RT` (reuse; no new channel) |
 | Gmail account acted on | `lemar@cuzziesnj.com` (business — confirmed as the connected Gmail account 2026-07-08; winds down mid-2026) |
-| Vendor Menus label | `Label_7063567382570959882` (see the corrected Gmail labels table above) |
+| Vendor Menus label | `Label_8` (see the corrected Gmail labels table above — this id has changed twice now, verify live before relying on it) |
 | Persona | lead `🧹`, sign "— Basil" (placeholder name, rename-able like "Dawn") |
 
 **Trash sweep categories** (PART B): `category:promotions OR category:social OR category:forums`,
@@ -218,7 +234,17 @@ mis-categorized as promotions/updates:
 Plus the rule: never trash the active FundCanna underwriting thread. Anything `is:important` or
 `is:starred` is already protected by the Safety floor regardless of this list.
 
-## Idea-baking loop — Stormy (folded into Samira's run as PART Q — NOT a separate routine)
+## Idea-baking loop — Stormy (Convo 2's deep-dive mode since 2026-09-06)
+
+**RESTRUCTURED 2026-09-06:** Stormy no longer has a channel. She is the deep-dive mode
+of the PART 4 Convo 2 sweep — when a drop in Lemar's self-DM is worth pressure-testing
+before it becomes work, Samira runs the Stormy instrument IN THAT THREAD, posting
+🌐🌩️-signed via the PERSONAL connector, one message per scan. Graduation posts a
+doctrine-format card to Convo 1 (the card's first decision round is the activation
+call). The adaptive instrument (eight dimensions, sized question count, note-is-state)
+is unchanged; #stormy is retired. The table below is kept as history where superseded.
+
+### (History — the PART Q channel era, 2026-07-17 → 2026-09-06)
 
 Stormy is Lemar's idea-baking engine, ported into the repo 2026-07-17 and — per Lemar the same
 day — **folded into Samira's hourly run as PART Q** rather than given her own trigger. Different
@@ -247,7 +273,17 @@ documented in the runbook, the PART Q entry, and the skill's runtime banner.
 | Setup status | **Live-ready 2026-07-17:** #stormy created (`C0BJ37SU1TL`), Samira bot invited + confirmed in-channel. Remaining: one supervised PART Q run per `stormy-ideation.md`'s "First supervised run" (drop a seed idea in #stormy, watch one Samira scan bake it). |
 | Persona | lead `🌩️`, sign "— Stormy" (placeholder name, rename-able like "Dawn"/"Basil") |
 
-## Samira Loop — build + pressure-test (folded into Samira's run as PART R)
+## Samira Loop — build + pressure-test (PT rounds inside PART 3 since 2026-09-06)
+
+**RESTRUCTURED 2026-09-06:** 🧪 PT cards live in **Convo 1** (`D0BHPKMDNEP`), not
+#decisions, and are advanced as decision rounds inside the PART 3 Convo 1 pass (same
+eight lenses, same control line, same 3-cards-per-scan cap, same lanes and closeout).
+Cloud builds are executed by Samira directly or carried on the card — the
+`run:admin-3x` staging lane is retired with the PART C sweep; `run:manual` prompts
+remain the hand-off format for Lemar's own machine. Rows below are kept as history
+where superseded.
+
+### (History — the PART R / #decisions era, 2026-08-19 → 2026-09-06)
 
 Lemar's thread-to-build lane, added 2026-08-19. Anything a Claude thread produces (idea,
 doc, deck, spec, page, code) is landed as a Haven note and opened as a **🧪 PT card** in
@@ -285,8 +321,8 @@ the samira-loop skill wherever the two disagree.
 | Vault index | `haven/vault/40-Projects/camden-dispensary-launch/index.md` — the engagement's note in Haven: the scope line, where everything lives, the six gates, the standing hazards, and what stays unknown. Start here when a Camden item surfaces and you need orientation. |
 | Overlay (the rules) | `.claude/projects/camden-dispensary-launch-project-instructions.md` — pasted into the claude.ai project "Camden Dispensary Launch"; also read by any thread working the engagement. |
 | Mechanics | the **samira-loop** skill (`.claude/skills/samira-loop/SKILL.md`), unchanged. |
-| Questions / decisions | **#decisions `C0BBXA96FFV`**, cards titled "Camden Launch". Never the project channel — same doctrine as every other project. |
-| Project channel (work) | **#camden-launch `C0BRZT2V89W`** (private). Staged prompts, artifacts, outcomes. Bot confirmed in-channel 2026-08-19; swept in PART C. |
+| Questions / decisions | **Convo 1 (`D0BHPKMDNEP`)**, cards titled "Camden Launch" (moved off #decisions 2026-09-06). Never the project channel — same doctrine as every other project. |
+| Project channel (timeline) | **#camden-launch `C0BRZT2V89W`** (private). Artifacts + outcome entries, append-only; never swept since 2026-09-06. Bot confirmed in-channel 2026-08-19. |
 | Drive root | `1oLwp2UkmXX2AgxcxDO6sEfuxWtQUmBs1` — "Camden Dispensary Launch" (My Drive root, created 2026-08-19) |
 | 00 Command Center | `1waKvkdsc9yr2ZAu_BhY8EneONKvtDhcM` — Working Log (read first), project instructions, handoffs, proposal PDF |
 | ↳ Working Log | Doc `12JG69I2RWZ9l3rR7AdFZXhyiuM52FEhmqi-52S3OC9Q`. **The engagement's source of truth** for phase, status, milestones, and the decision record. Read before answering anything about where things stand; append to the decision record, never rewrite. |
@@ -305,17 +341,16 @@ the samira-loop skill wherever the two disagree.
 ## Pulse dashboard (rendered by Samira — no separate trigger)
 
 Lemar's living one-page personal dashboard. Rendered at the END of every hourly Samira
-scan (runbook **PART P**) by the **pulse-dashboard** skill (`.claude/skills/pulse-dashboard/`).
+scan (runbook **PART 8**, formerly PART P) by the **pulse-dashboard** skill (`.claude/skills/pulse-dashboard/`).
 **Rendering target changed 2026-08-13** — the Artifact tool is retired for this skill (it
 kept re-prompting Lemar for tool approval on his phone, the surface he checks Pulse from
 most, and the repo-level permission allow-list couldn't reach that surface). Every render
 now creates a NEW Google Doc snapshot in the Pulse Drive folder below; nothing is
 re-deployed to a stable URL anymore, and no Slack canvas is involved (canvas creation is
 blocked on this workspace's Slack plan). Still writes no vault notes. **Notification
-changed 2026-08-13 too**: Pulse now DMs Lemar the new snapshot's link through the Samira
-capture DM (`D0BHPKMDNEP` — the only DM slot the shared bot has; safe to reuse because
-PART B's capture-sweep only develops messages FROM Lemar, never the bot's own posts) —
-but ONLY when this hour's run actually changed something (any of: a #decisions card
+changed 2026-08-13 too**: Pulse now DMs Lemar the new snapshot's link through Convo 1
+(`D0BHPKMDNEP` — a 🌐 bot post there is never card input) —
+but ONLY when this hour's run actually changed something (any of: a Convo 1 card
 closed/opened, a money change, a project-pulse status flip, a new Haven note). A fully
 quiet hour skips the render entirely — no Doc, no DM (codified 2026-08-15; this matches
 what runs were already doing and stops filling the Drive folder with identical
@@ -334,8 +369,8 @@ Lemar's personal budgeting center. Source of truth: `haven/vault/10-Personal/Mon
 money-hub-ledger.md` (bills, plans, goals, the two pockets, the daily ramp) +
 `income-log-2026.md` (earnings). The dashboard artifact and reminder-calendar events
 are regenerated FROM the ledger by `.claude/skills/money-hub/SKILL.md` — on any live
-interaction ("run my week", "new bill: …") and in Samira's **PART M** sweep of
-#personal-finance. **Every figure is reported by Lemar — there is no bank connection.**
+interaction ("run my week", "new bill: …") and on money drops Samira finds in Convo 2
+(the PART 4 sweep of Lemar's self-DM; replaced the #personal-finance sweep 2026-09-06). **Every figure is reported by Lemar — there is no bank connection.**
 The Era Context connector was retired 2026-08-10 (kept disconnecting, data was a month
 stale, and it covered only 2 accounts, one of them parked).
 
@@ -345,7 +380,7 @@ stale, and it covered only 2 accounts, one of them parked).
 | Pockets | TWO roles, accounts corrected 2026-08-10: **Spending** = DoorDash Crimson (income lands, gas paid from) and **Set-Aside** = SoFi Checking (recurring bills paid from). One instruction a day — move the set-aside number from Spending to Set-Aside. SoFi Savings and both Cash App accounts are parked, not deleted. Read the live mapping from the ledger's `pockets` block, never from memory. |
 | Balances | **Reported, never fetched** (locked 2026-08-10). Each pocket carries `balance` + `balance_as_of`, set only when Lemar states a figure ("Spending has $240"). Unreported renders "not reported", never $0, and is never inferred from the income log. Older than 7 days renders stale with its true date. A reported balance is never adjusted to match what the ledger expected — show both and say so. |
 | The one number | `daily_targets[today].total` — the single figure Lemar acts on, and the top of the dashboard. Everything else explains it. |
-| Undated lines | A `track: queue` line with no date has no queue position, no event, and no ramp — it is INVISIBLE, not low-priority. Undated lines are a tracked defect class, surfaced in `open_questions`, on the dashboard, and in PART M's return token. Never invent a date. |
+| Undated lines | A `track: queue` line with no date has no queue position, no event, and no ramp — it is INVISIBLE, not low-priority. Undated lines are a tracked defect class, surfaced in `open_questions`, on the dashboard, and in the money token of the run digest. Never invent a date. |
 | Money Hub Drive folder | `1GtoHCj6Os2GDkdVd1nQtqxZr0UyVnZo4` (`ATLAS/Dashboards/Money Hub`, folder link `https://drive.google.com/drive/folders/1GtoHCj6Os2GDkdVd1nQtqxZr0UyVnZo4`). **Rendering target changed 2026-08-13** — replaces the retired Artifact re-deploy (same reason as Pulse, see that section). Every render creates a NEW Doc here, filename `YYYY-MM-DD HHMM ET — Money Hub`; never edited or deleted afterward. **Notification**: unlike Pulse, money-hub already has standing permission to post to **#personal-finance** — whenever a render actually changes the dashboard (the existing "only if something changed" gate), reply in that channel with the new snapshot's link, right where the triggering drop landed. No separate DM (Samira's shared bot has only the one DM slot, already used for capture). Folder is the archive. |
 | Weekly view | ON DEMAND ONLY ("run my week", "what's due") — Lemar's call 2026-08-05; no scheduled allocation run. Shows the gap in dollars; never reorders the queue or picks which line slips. |
 | Calendar events | Personal money → the reminder calendar; business money → Cuzzie's (Owners) (both in the Google Calendar section). Event ids live in the ledger rows, adopted from the four pre-hub events (Claude / Wispr Flow / Patreon / T-Mobile). Two popups on every new bill event: 7-day (`10080`) + day-of (`0`), locked 2026-08-09. |
@@ -358,7 +393,7 @@ stale, and it covered only 2 accounts, one of them parked).
 | Lemar business | lemar@cuzziesnj.com (Cuzzie's winds down mid-2026 — do not build on it) |
 | Lemar personal / durable | l.boonejr@gmail.com · 856-602-0820 (car hunt: private buyer, never a Cuzzie's title) |
 | Lemar Slack user id | `U0BC5UTHYG4` (display "Mar" — changed from "Don Frunt" 2026-07-17) |
-| Samira Slack posts | lead with 🌐, sign "— Samira" · posts and reacts through her own dedicated bot connector (see Cloud routine — Samira above; bot user `U0BJQ771LJU`), not Lemar's personal Slack account. Captures reach her via the Samira capture DM `D0BHPKMDNEP` (PART B). Also carries Stormy's PART Q posts (signed "— Stormy") in #stormy. |
+| Samira Slack posts | lead with 🌐, sign "— Samira" · posts and reacts through her own dedicated bot connector (see Cloud routine — Samira above; bot user `U0BJQ771LJU`) on every surface EXCEPT Convo 2: in Lemar's self-DM (`D0BBVV54L5R`) she posts via the personal connector, always 🌐-prefixed (🌐🌩️ in deep-dive/Stormy mode) — the prefix is the only thing marking those messages as hers. Cards reach her in Convo 1 (`D0BHPKMDNEP`) and #fixes; intake in Convo 2. |
 | Dawn (Daily Brief) Slack posts | lead with 🌅, sign "— Dawn" · posts only to Lemar's DM (bot IM `D0BJ0JPQD8C`, user `U0BC5UTHYG4`) — rerouted off #daily-brief 2026-07-16 — through her own dedicated bot connector (see Cloud routine — Daily Brief above), not Lemar's personal Slack account. ("Dawn" is a placeholder persona name — rename freely; it lives only in the two skills + this row.) |
 | Basil (Inbox Janitor) Slack posts | lead with 🧹, sign "— Basil" · posts only to #reports `C0BBZJL85RT`. ("Basil" is a placeholder persona name — rename freely; it lives only in the runbook + this row.) |
-| Stormy (idea baking) Slack posts | lead with 🌩️, sign "— Stormy" · posts and reads ONLY the private #stormy channel `C0BJ37SU1TL`, through **Samira's EXISTING bot connector** (bot user `U0BJQ771LJU`; not her own — see Idea-baking loop — Stormy above). Runs as Samira PART Q. Never reads or sets reactions; never posts to any other channel. ("Stormy" is a placeholder persona name — rename freely; it lives only in the skill, the PART Q behavior file, and this row.) |
+| Stormy (idea baking) Slack posts | lead with 🌐🌩️, sign "— Stormy" · deep-dive mode of the PART 4 Convo 2 sweep since 2026-09-06: posts ONLY in-thread in Lemar's self-DM (`D0BBVV54L5R`), via the PERSONAL connector (the self-DM is bot-unreachable). Never reads or sets reactions; never posts anywhere else. ("Stormy" is a placeholder persona name — rename freely; it lives only in the skill, the deep-dive behavior file, and this row.) |

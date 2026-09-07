@@ -88,6 +88,23 @@ describe a live disbursement pipeline with a remainder-back-to-Cuzzie's step, co
 with reading 2. No reply required by its own terms (Andrew committed to the follow-up);
 nothing sent, nothing claimed.
 
+## Update 2026-09-06T16:40-04:00 — Gmail visibility restored; the FIRST confirmation draft is confirmed sitting ready
+
+Lemar reconnected the Google connector this scan after Samira reported this thread and
+Gmail Drafts invisible (see the linked #fixes card). With it back: the drafted
+confirmation email to Tiffany Coleman at FIRST Insurance Funding
+(`CSR@firstinsurancefunding.com`, draft id `r8492795252661453828`, thread
+`1a01a7a61cf6f576`, subject "Re: Loan #106241219 — return premium from endorsements
+SSC-00003261-00 / SSC-00003260-00") **is confirmed present in Gmail Drafts**, unsent,
+asking her to confirm whether the $9,189.00 is the same $10,907.40 already applied or
+additional, and if additional, how a surplus after the $452.60 balance gets released.
+This is the "ask FIRST" half of the original "ask both sides" plan (8/20) — the "ask
+Marshall & Sterling" half was already answered directly in-thread by Andrew Giampaolo's
+2026-08-26 reply (money moving carrier → M&S → bank → Lemar, no figure/timeline yet,
+consistent with reading 2/"additional"). Nothing sent from this end; the FIRST draft is
+ready in Lemar's Drafts folder for him to review and send whenever he wants — Samira
+cannot send it herself.
+
 ## Sources
 - gmail: thread `1a020b9cd6bd94c0` (SSC-00003261-00, Commercial Property & GL final
   cancellation, $6,524.00 return premium, attachment `PKG Final Cancel Endorsement.PDF`)

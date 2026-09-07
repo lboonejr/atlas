@@ -1,5 +1,5 @@
 {
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- apps/samira-slack-bot/",
   "rewrites": [
     { "source": "/mcp", "destination": "/api/mcp" },
     { "source": "/health", "destination": "/api/health" }

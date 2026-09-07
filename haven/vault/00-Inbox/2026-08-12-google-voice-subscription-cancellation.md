@@ -1,6 +1,6 @@
 ---
 created: 2026-08-12T10:00-04:00
-updated: 2026-08-17T09:09:57-04:00
+updated: 2026-09-06T18:10:00-04:00
 domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation
 type: task
 status: active
@@ -128,3 +128,20 @@ piece specifically.
   workspace-noreply@google.com, 2026-08-17)
 - gmail: thread `1a00fc1783298e16` ("Google Payments: Payment method updated for
   Cuzzie's Dispensary & Delivery", payments-noreply@google.com, 2026-08-17)
+
+## Update 2026-09-06 18:10 ET — first invoice under new direct billing arrived
+
+Automated notice ("Your Google Workspace documents are ready",
+payments-noreply@google.com, 2026-09-06 21:07 UTC / 5:07pm ET): invoice
+**5673531116** attached for Cuzzie's, **payment due September 30, 2026**,
+Payments profile ID `1887-7810-7878` (differs from the `1078-7383-2495` profile ID
+noted in the 2026-08-17 update — worth confirming with Lemar whether these are the
+same account under a renumbered/different profile, or two separate payments
+profiles). Reads as the first invoice landing under the direct-billing arrangement
+Lemar set up (Updates 2026-08-13 (2) / 2026-08-15, $84/month). No-reply notice,
+nothing to correspond on. Not paid or authorized by Samira — flagging the Sept 30
+due date; `domain` stays UNRESOLVED per the standing gap above.
+
+### Sources (this update)
+- gmail: thread `1a0788c76d732d94` ("Your Google Workspace documents are ready",
+  payments-noreply@google.com, 2026-09-06 21:07 UTC)

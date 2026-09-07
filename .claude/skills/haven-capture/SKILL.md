@@ -108,11 +108,12 @@ Lemar. That stuck note is the system working, not failing.
 ### How sure is "sure" per field
 
 - **source** — almost always known: it is *where this capture came from*. Atlas from a
-  chat = `claude`. From the capture DM or any Slack message = `slack`. From the email
-  loop = `gmail`. A voice note = `voice`. A human typing directly = `manual`. Stamp it.
+  chat = `claude`. From the self-DM (Convo 2) or any Slack message = `slack`. From the
+  email loop = `gmail`. A voice note = `voice`. A human typing directly = `manual`.
+  Stamp it.
 - **status** — default `active`. Use `done` only if the captured thing is already
-  finished, `parked` if explicitly on hold, `awaiting-decision` when it sits on a
-  #decisions card. Rarely unresolved.
+  finished, `parked` if explicitly on hold, `awaiting-decision` when it sits on an
+  open card (Convo 1 or #fixes). Rarely unresolved.
 - **type** — infer from shape, and stamp when the shape is unambiguous. **The decision
   rule (schema §3): anything recording a choice Lemar made — an option picked, an
   approval given — is `type: decision`, never `log`.** Otherwise: `meeting` (notes from
@@ -189,9 +190,11 @@ If the push fails, STOP and say so — the capture is not real until it is pushe
 
 ### claude.ai phone/web without a commit path
 If your surface cannot commit, you cannot land the capture — say so plainly and route
-the raw thought to the **Samira capture DM** (`D0BHPKMDNEP`) so the hourly routine lands
-it (this DM replaced #atlas as the capture inbox 2026-07-16). Never claim a capture
-succeeded when no note was committed.
+the raw thought to **Convo 2, Lemar's self-DM** (`D0BBVV54L5R`), so the hourly
+routine's PART 4 sweep lands it (the self-DM became the capture inbox 2026-09-06,
+replacing the Samira bot DM `D0BHPKMDNEP`, which had replaced #atlas 2026-07-16 and is
+now Convo 1, the card surface). Never claim a capture succeeded when no note was
+committed.
 
 ### Return value
 Return the note's repo path (and "created" vs "updated") to the caller so it can be

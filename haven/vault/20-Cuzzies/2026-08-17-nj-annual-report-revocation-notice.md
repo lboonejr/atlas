@@ -1,11 +1,13 @@
 ---
 created: 2026-08-17T13:08:04-04:00
-updated: 2026-08-18T14:02:00-04:00
+updated: 2026-09-06T14:08-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [nj-annual-report, revocation, legal, entity-152-009080]
 source: slack
+due: 2026-09-07T10:00:00-04:00
+calendar_event_id: 6eg353q4naq3r5petkjobofr18
 ---
 
 # NJ annual report — pending revocation notice, Cuzzie's Dispensary & Delivery LLC
@@ -46,9 +48,18 @@ No new decision needed — the standing #decisions card (ts `1786986503.368599`)
 covers the revocation risk and is still awaiting Lemar's own filing/payment. Flagging
 this only as corroborating signal that back filings are actively processing.
 
+## Update — 2026-09-06 (Convo 1 card)
+
+Lemar replied in-thread on the migrated Convo 1 card: "I'll take care of these filings
+tomorrow. Just put it on my Google Calendar so I can make sure to stay on track." Set a
+reminder on the Cuzzie's (Owners) business calendar for tomorrow, 2026-09-07 10:00am ET
+(popups at 24h and day-of), `calendar_event_id: 6eg353q4naq3r5petkjobofr18`. Nothing
+filed or paid by Samira — this is a reminder only; still awaiting Lemar's own filing.
+
 ## Sources
 - slack: #admin ts `1786984241.621679` (auto-handoff via samira-work-summary, posted
   under Lemar's user id by app `A08SF47R6P4`, "Sent using Claude")
-- decisions: card ts `1786986503.368599` in #decisions (posted this run)
+- decisions: card ts `1786986503.368599` in #decisions (posted this run) → migrated to
+  Convo 1 card, thread ts `1788714814.865959`
 - gmail: thread `1a015f8910b164de` ("Return Posted"), thread `1a015f75b6da07ea`
   ("Return Filed") — both 2026-08-18

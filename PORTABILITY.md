@@ -13,7 +13,7 @@ working system on new tools in about a day, using only this repo.
 | Behavior | `.claude/skills/*/SKILL.md` + `.claude/routines/samira-atlas-executor.md` | Plain-English procedures — they are prompts, readable by any model |
 | Platform IDs | `.claude/anchors.md` — the canonical place; some skills carry cached copies (on-button-plan canvas F0BEN1167GB and githack URL; money-hub, morning-brief, reports-contradiction-scanner channel/canvas IDs) | One file to re-point (plus those cached copies) |
 | Scheduling | claude.ai RemoteTrigger (hourly 8a–6p ET) | Replaceable by any scheduler (see below) |
-| Decision surface | Slack #decisions, reactions | An abstract 4-signal protocol (see below) |
+| Decision surface | The three conversations (since 2026-09-06): Convo 1 = Samira's DM (working cards), Convo 2 = the human's self-DM (intake), Convo 3 = #fixes (defects in the system itself); reactions + replies | An abstract 4-signal-plus-replies protocol (see below); card format in `.claude/doctrine/card-format.md` |
 | Alarms | Google Calendar (one-way projection) | Rebuilt from notes' `due` fields at any time |
 | Binary files | Google Drive folders | Linked from notes' `## Sources`; IDs in anchors.md |
 | Dashboards/briefs | Pulse, morning-brief, meeting-prep, and money-hub renderings are timestamped Google Doc snapshots in Drive (since 2026-08-13) | Re-renderable from the vault at any time |
@@ -26,15 +26,21 @@ working system on new tools in about a day, using only this repo.
    Incomplete notes stay; ask the human for the missing label — never guess.
 3. RING: every note with a `due` → ensure exactly one reminder alarm exists
    (write the alarm id back into the note; vault wins on any disagreement).
-4. READ SIGNALS: pick up the human's approve/seen/park/close signals on open items
-   and advance each accordingly.
-5. INGEST: new raw captures (chat drops, email triage) → write vault notes FIRST,
-   then stage any resulting work, unstarted, for the NEXT cycle (the buffer).
-6. EXECUTE: work staged on an EARLIER cycle that is due now. Never outward-facing
-   actions (send/pay/post/delete) without an explicit approval signal.
-7. RECORD: every finished (or failed) task → an outcome note in the vault, THEN a
-   short result ping. Done = a filed note, never just a checkmark.
-8. JOURNAL: append the run digest to _daily/YYYY-MM-DD.md.
+4. WORK THE CARDS (Convo 1): read the human's signals — reactions AND replies — on
+   every open card, run decision rounds, execute locked decisions (alarms, call
+   scripts, drafts, to-do renderings), follow up, close out.
+5. INGEST (Convo 2): sweep the human's intake surface for new drops → write vault
+   notes FIRST, then post each as a card, unworked, for the NEXT cycle (the buffer).
+   Deep dives are pressure-tested in-thread before they become cards.
+6. SELF-REPAIR (Convo 3): work defects in the system itself as cards on their own
+   surface; a fix is closed only after a later cycle verifies it held.
+7. ENGINES: background sources (email triage, counterparty pipelines, log scans)
+   produce cards; they never host decisions themselves. Never outward-facing actions
+   (send/pay/post/delete) without an explicit approval signal.
+8. RECORD: every finished (or failed) task → an outcome note in the vault, THEN a
+   short result ping; append ONE movement entry per touched project to its timeline
+   (append-only; timelines are never read as input).
+9. JOURNAL: append the run digest to _daily/YYYY-MM-DD.md.
 ```
 
 ## The signal protocol (today: Slack emoji — but they are just a rendering)
@@ -46,10 +52,13 @@ working system on new tools in about a day, using only this repo.
 | PARK | ⛔ | stop driving it; hold on the standing list |
 | CLOSE | 🫡 | done — record the outcome and clear the card |
 
-Rules that must survive any port: exactly ONE surface pings the human; the human
-decides by signaling, not typing; the executor never sets the human's signals; the
-executor's own idempotency key is its written confirmation + stored state, never the
-human's signals.
+Rules that must survive any port: exactly ONE surface pings the human for work
+decisions; the human decides by signaling OR replying — a plain reply is a first-class
+signal equal to a reaction, and on conflict the reply wins (added 2026-09-06); the
+executor never sets the human's signals; the executor's own idempotency key is its
+written confirmation + stored state, never the human's signals. One caveat from the
+self-DM surface: where both parties post as the same account, a stable prefix (today
+🌐) is the only author discriminator and must survive any port of that surface.
 
 ## Replacing each platform
 
@@ -79,9 +88,10 @@ additional live copies of the vault.
 
 ## Phone-first operation (already true — keep it true)
 
-- **Decide**: Slack mobile → #decisions, react with the 4 signals.
-- **Capture**: drop a thought in #atlas (Samira lands it in the vault within the hour),
-  or talk to Atlas in the Claude app.
+- **Decide**: Slack mobile → Samira's DM (Convo 1 cards), react with the 4 signals or
+  just reply.
+- **Capture**: message yourself in Slack (the self-DM — Samira develops it within the
+  hour), or talk to Atlas in the Claude app.
 - **Read the brain**: Obsidian mobile on the same repo (via a mobile git client such as
   Working Copy on iOS or GitSync on Android), or GitHub mobile in a pinch.
 - The desktop is never required. Any new surface must preserve this.

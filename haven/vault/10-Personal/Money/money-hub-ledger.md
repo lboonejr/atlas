@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-08-29T13:20:00-04:00
+updated: 2026-09-06T15:05:00-04:00
 domain: personal
 type: reference
 status: active
@@ -143,7 +143,7 @@ bills:
             accrues here, but its due-date reminder lives on the Cuzzie's (Owners)
             calendar, not the personal one, per the business boundary."}
   - {id: cuzzies-google-workspace, name: "Cuzzie's Google Workspace (direct billing setup)",
-     amount: 85, cadence: once, due: 2026-08-19, track: queue, status: active,
+     amount: 57.44, cadence: once, due: 2026-08-19, track: queue, status: active,
      business_origin: true, calendar_event_id: u45glcg7992eg9q79nnb6brlco,
      note: "Added 2026-08-13. Same reseller billing lapse as cuzzies-google-voice above —
             all Workspace services for cuzziesnj.com (including lemar@cuzziesnj.com email
@@ -152,10 +152,41 @@ bills:
             PAYMENT ATTEMPTED 2026-08-17 per Lemar in #personal-finance (ts
             1786999318.129009): 'I paid for google workspace but the transaction didn't
             process yet.' CONFIRMED NOT CLEARED 2026-08-18 (#decisions ts 1787001107.337499,
-            reply 1787009888.775939): 'The charge did not clear.' Stays `status: active`/
-            unpaid, still accruing toward the 8/19 due date and still suspension-risk if
-            not resolved by 8/20 — Lemar carries the actual re-attempt himself, Samira
-            cannot retry billing."}
+            reply 1787009888.775939): 'The charge did not clear.' AMOUNT CORRECTED
+            2026-09-06 per Lemar replying to a Money Hub card: 'Current google
+            workspace amount owed: $57.44.' 85 → 57.44. Due date 8/19 has now passed
+            with no new date given — never invented one; the line is OVERDUE with no
+            future date, so per the skill's ACCRUAL/ROLLOVER rules it stops accruing
+            (already excluded from daily_targets, its due date having passed before
+            today) and rides in open_questions until Lemar says what happened to it.
+            Stays `status: active`/unpaid; Lemar carries the actual re-attempt
+            himself, Samira cannot retry billing.
+            UPDATE 2026-09-06 (later same day, Convo 1 reply): Lemar says the $57.44
+            figure is NOT the full past-due total — it's a per-day-prorated charge
+            covering only Sep 1-6 (~$9.57/day implied), and the account has been unpaid
+            since the original 8/19 due date, so the real amount owed needs to be
+            backtracked across the whole unpaid window (8/19 through today), not just
+            the latest 6-day slice. Samira is NOT computing that backtracked total
+            herself — the daily rate implied here (~$9.57/day) doesn't match the
+            $12.14/day estimate already on the calendar event for this same bill, so the
+            two data points disagree and guessing between them would invent a number.
+            OPEN QUESTION (carried in open_questions): what does the Google Admin
+            console → Billing page actually show as the current total balance right
+            now? Once Lemar reports that figure, this line's `amount` gets corrected to
+            match and a real due date can be set instead of carrying it undated in the
+            open-questions bucket."}
+  - {id: edge-fitness-training-dispute, name: "Edge Fitness — personal training charge dispute",
+     amount: 119, cadence: once, due: 2026-09-06, track: queue, status: paid,
+     calendar_event_id: null,
+     note: "OPENED 2026-08-17 per Lemar in #personal-finance (ts 1786999318.129009):
+            unexpectedly charged $119 by Edge Fitness for personal training, disputing
+            with SoFi. UPHELD, NO REFUND — 2026-09-06 per Lemar replying to a Money Hub
+            card: 'Edge Fitness, was unable to get a refund.' A one-time,
+            already-incurred, unrecoverable personal expense, not a future bill to
+            queue — logged `status: paid` with no calendar event (already happened,
+            nothing to remind about) and no daily_targets accrual. Dated 2026-09-06
+            (today) since Lemar gave no other date for the dispute's resolution —
+            correct if that matters."}
   - {id: student-loans, name: Student loans, amount: 500, cadence: monthly, day: 16,
      track: queue, status: active, calendar_event_id: eo3u9f3dm97hc987tvvkcblaig,
      note: "~$8,000 remaining. DATED 2026-08-15 per Lemar in #personal-finance
@@ -1422,12 +1453,12 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-06":
     operating_reserve: 30.00
-    target: 147.21
-    total_claim: 177.21
+    target: 214.56
+    total_claim: 244.56
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 147.21
+    shortfall: 214.56
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1437,27 +1468,34 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: hillview-med-1, amount: 15.38, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-1, amount: 33.34, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.04, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 16.67, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.12, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.34, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.77, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-1, amount: 3.81, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.91, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.28, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-07":
     operating_reserve: 30.00
-    target: 118.78
-    total_claim: 148.78
+    target: 186.12
+    total_claim: 216.12
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 118.78
+    shortfall: 186.12
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1465,27 +1503,34 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.20, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-1, amount: 33.34, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.04, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 16.67, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.12, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.34, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.77, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-1, amount: 3.81, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.91, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-08":
     operating_reserve: 30.00
-    target: 118.77
-    total_claim: 148.77
+    target: 186.09
+    total_claim: 216.09
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 118.77
+    shortfall: 186.09
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1493,27 +1538,34 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-1, amount: 33.33, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 16.67, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.34, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.77, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-1, amount: 3.81, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.91, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-09":
     operating_reserve: 30.00
-    target: 118.77
-    total_claim: 148.77
+    target: 186.09
+    total_claim: 216.09
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 118.77
+    shortfall: 186.09
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1521,27 +1573,34 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-1, amount: 33.33, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 16.67, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.34, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.77, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-1, amount: 3.81, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.91, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
       - {line_id: wispr-flow, amount: 0.57, funded: 0, status: pending}
   "2026-09-10":
     operating_reserve: 30.00
-    target: 118.20
-    total_claim: 148.20
+    target: 185.52
+    total_claim: 215.52
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 118.20
+    shortfall: 185.52
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1549,52 +1608,66 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-1, amount: 33.33, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 16.67, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.34, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.77, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-1, amount: 3.81, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.91, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-11":
     operating_reserve: 30.00
-    target: 109.87
-    total_claim: 139.87
+    target: 177.19
+    total_claim: 207.19
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 109.87
+    shortfall: 177.19
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-4, amount: 9.09, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-1, amount: 33.33, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 16.67, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.34, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.77, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.13, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-1, amount: 3.81, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.91, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-12":
     operating_reserve: 30.00
-    target: 109.11
-    total_claim: 139.11
+    target: 185.50
+    total_claim: 215.50
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 109.11
+    shortfall: 185.50
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1602,25 +1675,33 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-1, amount: 33.33, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 16.67, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.34, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.77, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.12, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-1, amount: 3.80, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.90, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-13":
     operating_reserve: 30.00
-    target: 109.11
-    total_claim: 139.11
+    target: 148.37
+    total_claim: 178.37
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 109.11
+    shortfall: 148.37
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1628,25 +1709,31 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 16.67, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.34, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.77, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.12, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.90, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-14":
     operating_reserve: 30.00
-    target: 109.10
-    total_claim: 139.10
+    target: 148.36
+    total_claim: 178.36
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 109.10
+    shortfall: 148.36
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1654,25 +1741,31 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.55, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 16.67, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.34, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.77, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
       - {line_id: tow-truck-repay, amount: 16.12, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.90, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
       - {line_id: water-pump, amount: 5.96, funded: 0, status: pending}
   "2026-09-15":
     operating_reserve: 30.00
-    target: 87.01
-    total_claim: 117.01
+    target: 126.25
+    total_claim: 156.25
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 87.01
+    shortfall: 126.25
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1680,23 +1773,29 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 16.66, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
       - {line_id: student-loans, amount: 15.62, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.90, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-16":
     operating_reserve: 30.00
-    target: 71.39
-    total_claim: 101.39
+    target: 110.63
+    total_claim: 140.63
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 71.39
+    shortfall: 110.63
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1704,22 +1803,28 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 16.66, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.90, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-17":
     operating_reserve: 30.00
-    target: 71.39
-    total_claim: 101.39
+    target: 110.63
+    total_claim: 140.63
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 71.39
+    shortfall: 110.63
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1727,44 +1832,56 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 16.66, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.90, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-18":
     operating_reserve: 30.00
-    target: 63.06
-    total_claim: 93.06
+    target: 102.30
+    total_claim: 132.30
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 63.06
+    shortfall: 102.30
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-5, amount: 7.27, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 16.66, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.90, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-19":
     operating_reserve: 30.00
-    target: 64.13
-    total_claim: 94.13
+    target: 110.64
+    total_claim: 140.64
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 64.13
+    shortfall: 110.64
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1772,21 +1889,28 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-2, amount: 16.66, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-2, amount: 1.90, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-20":
     operating_reserve: 30.00
-    target: 64.13
-    total_claim: 94.13
+    target: 92.08
+    total_claim: 122.08
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 64.13
+    shortfall: 92.08
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1794,21 +1918,26 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-21":
     operating_reserve: 30.00
-    target: 64.12
-    total_claim: 94.12
+    target: 92.07
+    total_claim: 122.07
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 64.12
+    shortfall: 92.07
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1816,21 +1945,26 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-22":
     operating_reserve: 30.00
-    target: 64.12
-    total_claim: 94.12
+    target: 92.07
+    total_claim: 122.07
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 64.12
+    shortfall: 92.07
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1838,21 +1972,26 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-23":
     operating_reserve: 30.00
-    target: 64.12
-    total_claim: 94.12
+    target: 92.07
+    total_claim: 122.07
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 64.12
+    shortfall: 92.07
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1860,21 +1999,26 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-24":
     operating_reserve: 30.00
-    target: 64.12
-    total_claim: 94.12
+    target: 92.07
+    total_claim: 122.07
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 64.12
+    shortfall: 92.07
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1882,42 +2026,52 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-25":
     operating_reserve: 30.00
-    target: 55.79
-    total_claim: 85.79
+    target: 83.74
+    total_claim: 113.74
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 55.79
+    shortfall: 83.74
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-6, amount: 6.06, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-26":
     operating_reserve: 30.00
-    target: 58.07
-    total_claim: 88.07
+    target: 92.08
+    total_claim: 122.08
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 58.07
+    shortfall: 92.08
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1925,20 +2079,26 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-3, amount: 11.11, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
+      - {line_id: vans-knu-skools-3, amount: 1.27, funded: 0, status: pending}
   "2026-09-27":
     operating_reserve: 30.00
-    target: 58.07
-    total_claim: 88.07
+    target: 79.70
+    total_claim: 109.70
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 58.07
+    shortfall: 79.70
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1946,20 +2106,24 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.87, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.34, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-28":
     operating_reserve: 30.00
-    target: 58.05
-    total_claim: 88.05
+    target: 79.68
+    total_claim: 109.68
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 58.05
+    shortfall: 79.68
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1967,20 +2131,24 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.86, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.64, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.31, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.34, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.67, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.56, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.71, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-29":
     operating_reserve: 30.00
-    target: 58.03
-    total_claim: 88.03
+    target: 79.64
+    total_claim: 109.64
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 58.03
+    shortfall: 79.64
     calendar_event_id: null
     contributions:
       - {line_id: car-repair-payment, amount: 13.04, funded: 0, status: pending}
@@ -1988,862 +2156,1069 @@ daily_targets:                       # Revised 2026-08-13 (fourth revision, same
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
       - {line_id: mechanic-repair-repay, amount: 10.86, funded: 0, status: pending}
       - {line_id: moms-weekly, amount: 8.33, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.66, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-09-30":
     operating_reserve: 30.00
-    target: 25.80
-    total_claim: 55.80
+    target: 47.41
+    total_claim: 77.41
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 25.80
+    shortfall: 47.41
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.66, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-01":
     operating_reserve: 30.00
-    target: 25.80
-    total_claim: 55.80
+    target: 47.41
+    total_claim: 77.41
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 25.80
+    shortfall: 47.41
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.66, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-02":
     operating_reserve: 30.00
-    target: 25.80
-    total_claim: 55.80
+    target: 47.41
+    total_claim: 77.41
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 25.80
+    shortfall: 47.41
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-7, amount: 5.19, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.66, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-03":
     operating_reserve: 30.00
-    target: 20.61
-    total_claim: 50.61
+    target: 47.41
+    total_claim: 77.41
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 20.61
+    shortfall: 47.41
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-4, amount: 8.33, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.66, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-04":
     operating_reserve: 30.00
-    target: 20.61
-    total_claim: 50.61
+    target: 39.08
+    total_claim: 69.08
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 20.61
+    shortfall: 39.08
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.66, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-05":
     operating_reserve: 30.00
-    target: 20.61
-    total_claim: 50.61
+    target: 39.08
+    total_claim: 69.08
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 20.61
+    shortfall: 39.08
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.66, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-06":
     operating_reserve: 30.00
-    target: 20.61
-    total_claim: 50.61
+    target: 39.08
+    total_claim: 69.08
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 20.61
+    shortfall: 39.08
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.66, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-07":
     operating_reserve: 30.00
-    target: 20.61
-    total_claim: 50.61
+    target: 39.08
+    total_claim: 69.08
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 20.61
+    shortfall: 39.08
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.66, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-08":
     operating_reserve: 30.00
-    target: 20.61
-    total_claim: 50.61
+    target: 39.08
+    total_claim: 69.08
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 20.61
+    shortfall: 39.08
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.66, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-09":
     operating_reserve: 30.00
-    target: 20.61
-    total_claim: 50.61
+    target: 39.08
+    total_claim: 69.08
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 20.61
+    shortfall: 39.08
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-8, amount: 4.54, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.66, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-10":
     operating_reserve: 30.00
-    target: 16.07
-    total_claim: 46.07
+    target: 39.08
+    total_claim: 69.08
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.07
+    shortfall: 39.08
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-5, amount: 6.66, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-11":
     operating_reserve: 30.00
-    target: 16.07
-    total_claim: 46.07
+    target: 32.42
+    total_claim: 62.42
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.07
+    shortfall: 32.42
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-12":
     operating_reserve: 30.00
-    target: 16.07
-    total_claim: 46.07
+    target: 32.42
+    total_claim: 62.42
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.07
+    shortfall: 32.42
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.17, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-13":
     operating_reserve: 30.00
-    target: 16.07
-    total_claim: 46.07
+    target: 32.41
+    total_claim: 62.41
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.07
+    shortfall: 32.41
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-14":
     operating_reserve: 30.00
-    target: 16.07
-    total_claim: 46.07
+    target: 32.41
+    total_claim: 62.41
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.07
+    shortfall: 32.41
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-15":
     operating_reserve: 30.00
-    target: 16.07
-    total_claim: 46.07
+    target: 32.41
+    total_claim: 62.41
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.07
+    shortfall: 32.41
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-16":
     operating_reserve: 30.00
-    target: 16.07
-    total_claim: 46.07
+    target: 32.41
+    total_claim: 62.41
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 16.07
+    shortfall: 32.41
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
-      - {line_id: own-car-running-9, amount: 4.04, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-17":
     operating_reserve: 30.00
-    target: 12.03
-    total_claim: 42.03
+    target: 32.41
+    total_claim: 62.41
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 12.03
+    shortfall: 32.41
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.09, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-6, amount: 5.55, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-18":
     operating_reserve: 30.00
-    target: 12.02
-    total_claim: 42.02
+    target: 26.85
+    total_claim: 56.85
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 12.02
+    shortfall: 26.85
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-19":
     operating_reserve: 30.00
-    target: 12.02
-    total_claim: 42.02
+    target: 26.85
+    total_claim: 56.85
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 12.02
+    shortfall: 26.85
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-20":
     operating_reserve: 30.00
-    target: 12.02
-    total_claim: 42.02
+    target: 26.85
+    total_claim: 56.85
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 12.02
+    shortfall: 26.85
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-21":
     operating_reserve: 30.00
-    target: 12.02
-    total_claim: 42.02
+    target: 26.85
+    total_claim: 56.85
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 12.02
+    shortfall: 26.85
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-22":
     operating_reserve: 30.00
-    target: 12.02
-    total_claim: 42.02
+    target: 26.85
+    total_claim: 56.85
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 12.02
+    shortfall: 26.85
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-23":
     operating_reserve: 30.00
-    target: 12.02
-    total_claim: 42.02
+    target: 26.85
+    total_claim: 56.85
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 12.02
+    shortfall: 26.85
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
-      - {line_id: own-car-running-10, amount: 3.63, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-24":
     operating_reserve: 30.00
-    target: 8.39
-    total_claim: 38.39
+    target: 26.85
+    total_claim: 56.85
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 8.39
+    shortfall: 26.85
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-7, amount: 4.76, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-25":
     operating_reserve: 30.00
-    target: 8.39
-    total_claim: 38.39
+    target: 22.09
+    total_claim: 52.09
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 8.39
+    shortfall: 22.09
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-26":
     operating_reserve: 30.00
-    target: 8.39
-    total_claim: 38.39
+    target: 22.09
+    total_claim: 52.09
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 8.39
+    shortfall: 22.09
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-27":
     operating_reserve: 30.00
-    target: 8.39
-    total_claim: 38.39
+    target: 22.09
+    total_claim: 52.09
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 8.39
+    shortfall: 22.09
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-28":
     operating_reserve: 30.00
-    target: 8.39
-    total_claim: 38.39
+    target: 22.09
+    total_claim: 52.09
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 8.39
+    shortfall: 22.09
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-29":
     operating_reserve: 30.00
-    target: 8.39
-    total_claim: 38.39
+    target: 22.09
+    total_claim: 52.09
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 8.39
+    shortfall: 22.09
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-30":
     operating_reserve: 30.00
-    target: 8.39
-    total_claim: 38.39
+    target: 22.09
+    total_claim: 52.09
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 8.39
+    shortfall: 22.09
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
-      - {line_id: own-car-running-11, amount: 3.30, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-10-31":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 22.09
+    total_claim: 52.09
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 22.09
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-8, amount: 4.16, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-01":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.93
+    total_claim: 47.93
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.93
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-02":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.93
+    total_claim: 47.93
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.93
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-03":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.93
+    total_claim: 47.93
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.93
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-04":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.93
+    total_claim: 47.93
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.93
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-05":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.93
+    total_claim: 47.93
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.93
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-06":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.93
+    total_claim: 47.93
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.93
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-07":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 17.93
+    total_claim: 47.93
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 17.93
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
+      - {line_id: own-car-running-9, amount: 3.70, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-08":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 14.23
+    total_claim: 44.23
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 14.23
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-09":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 14.23
+    total_claim: 44.23
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 14.23
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-10":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 14.23
+    total_claim: 44.23
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 14.23
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-11":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 14.23
+    total_claim: 44.23
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 14.23
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-12":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 14.23
+    total_claim: 44.23
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 14.23
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-13":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 14.23
+    total_claim: 44.23
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 14.23
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.78, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-14":
     operating_reserve: 30.00
-    target: 5.09
-    total_claim: 35.09
+    target: 14.22
+    total_claim: 44.22
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 5.09
+    shortfall: 14.22
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
       - {line_id: dil-christmas-gift, amount: 1.08, funded: 0, status: pending}
+      - {line_id: own-car-running-10, amount: 3.33, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.77, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-15":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 9.81
+    total_claim: 39.81
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 9.81
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.77, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-16":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 9.81
+    total_claim: 39.81
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 9.81
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.77, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-17":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 9.81
+    total_claim: 39.81
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 9.81
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.77, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-18":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 9.81
+    total_claim: 39.81
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 9.81
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.77, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-19":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 9.81
+    total_claim: 39.81
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 9.81
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.77, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-20":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 9.81
+    total_claim: 39.81
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 9.81
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.77, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-21":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 9.81
+    total_claim: 39.81
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 9.81
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: own-car-running-11, amount: 3.03, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.77, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-22":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 6.78
+    total_claim: 36.78
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 6.78
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.77, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-23":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 6.78
+    total_claim: 36.78
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 6.78
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.77, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-24":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 6.78
+    total_claim: 36.78
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 6.78
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.77, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-25":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 6.78
+    total_claim: 36.78
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 6.78
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.77, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-26":
     operating_reserve: 30.00
-    target: 4.01
-    total_claim: 34.01
+    target: 6.78
+    total_claim: 36.78
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.01
+    shortfall: 6.78
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.75, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.77, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-27":
     operating_reserve: 30.00
-    target: 4.00
-    total_claim: 34.00
+    target: 6.77
+    total_claim: 36.77
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.00
+    shortfall: 6.77
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.74, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.77, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-28":
     operating_reserve: 30.00
-    target: 4.00
-    total_claim: 34.00
+    target: 6.77
+    total_claim: 36.77
     gas_spent: null
     swept_to_maintenance: 0
     funded: 0
-    shortfall: 4.00
+    shortfall: 6.77
     calendar_event_id: null
     contributions:
       - {line_id: cashapp-payback, amount: 1.74, funded: 0, status: pending}
+      - {line_id: own-car-running-12, amount: 2.77, funded: 0, status: pending}
       - {line_id: self-account-balance-repay, amount: 2.26, funded: 0, status: pending}
   "2026-11-29":
     operating_reserve: 30.00
@@ -2864,37 +3239,99 @@ goals:                               # a goal is a bill Lemar owes himself: it n
     pocket: set-aside
     target: 2800
     saved: 0
-    target_date: 2026-10-31
-    note: "DATED 2026-08-15 per Lemar in #personal-finance (ts 1786754410.308129):
-           'The get the car running (Lexus LS400) will have to be a goal to hit by
-           the end of October.' ≈ $2,000 repairs + $1,000 taxes/tags/tires − $200
-           tires paid 7/25; car payment $500 also paid 7/25 (both pending Lemar
-           confirming they landed); water-pump overlap still unreconciled (see
-           open_questions). 11 weekly installments generated per Mode 5, today
-           (2026-08-15, a Saturday) to target_date (2026-10-31, also a Saturday) —
-           77 days ÷ 7 = exactly 11 weeks, no partial week. $2,800 ÷ 11 = $254.5454..,
-           even split in cents, remainder (6 cents) on the LAST installment per Mode 5.
-           Each installment accrues independently over [2026-08-15..due-1], in
-           parallel with the others (same pattern as the liquidibee plan
-           installments already in this ledger), contributing to daily_targets under
-           line_id own-car-running-<seq>."
+    target_date: 2026-12-01
+    note: "STRETCHED 2026-09-06 per Lemar replying to the Money Hub overload card:
+           'Yeah I think maybe we just try to have own car running by December 1.'
+           Mode 5 / REBALANCE move type 1 (stretch a goal's target_date). Old
+           target_date was 2026-10-31 (11 weekly installments, $254.54/55 each);
+           FULLY REGENERATED, not layered on top. Remaining = target ($2,800) minus
+           saved ($0) = $2,800.00 unchanged (nothing had actually been funded/paid
+           against any old installment). Today (2026-09-06, a Sunday) to the new
+           target_date (2026-12-01, a Tuesday) is 86 days — not an exact multiple of
+           7, unlike the original 77-day span. Per Mode 5 ('installments across the
+           WEEKS between today and target_date'), used the 12 full weeks that fit (84
+           of the 86 days) rather than inventing a 13th short/uneven installment for
+           the leftover 2 days — the goal is fully funded by 2026-11-29, two days
+           ahead of the 12/1 date Lemar named, satisfying 'by December 1' with room to
+           spare. $2,800 ÷ 12 = $233.3333.., even split in cents, remainder (4 cents)
+           on the LAST installment per Mode 5. Each installment accrues independently
+           over [2026-09-06..due-1], in parallel with the others (same pattern as
+           before), contributing to daily_targets under line_id
+           own-car-running-<seq>. OLD SCHEDULE RETIRED: installments 1-3 (due 8/22,
+           8/29, 9/5) were already past due before today and had already rolled off
+           the active accrual with nothing funded against them — their calendar
+           events already fired and were left alone, nothing to retire going forward.
+           Installments 4-11 (due 9/12 through 10/31) were still future and still
+           accruing — their 8 calendar events were CANCELLED
+           (22j887cqdd0ej7pbti0vi7ian4, oc7oa2p50rnimoh3qngh63nm14,
+           skfs1m9o97ks7ifmej3go327l4, 91nistrcs45m142kiqr8iei5go,
+           2e98jptu5p6r74bic2fu0u3euo, o865je8o2tah4517smktqpbqjs,
+           jhnl5najq9ji371sik1e4kqmtc, 3nrba92bgvr0j6m1dvk1q8pu0g) and their
+           daily_targets contributions superseded by the new 12-installment schedule
+           below, recomputed for every day 2026-09-06 through 2026-11-28 (never
+           rewriting a day before today)."
     installments:
-      - {seq: 1, amount: 254.54, due: 2026-08-22, status: pending, calendar_event_id: a0v7gv3ulrbklsa1t7iemhd260}
-      - {seq: 2, amount: 254.54, due: 2026-08-29, status: pending, calendar_event_id: unt9hhgm2qhnin8mu9rr4m16f0}
-      - {seq: 3, amount: 254.54, due: 2026-09-05, status: pending, calendar_event_id: 4tkp4t8tbhcaudnpftsp4ccu8g}
-      - {seq: 4, amount: 254.54, due: 2026-09-12, status: pending, calendar_event_id: 22j887cqdd0ej7pbti0vi7ian4}
-      - {seq: 5, amount: 254.54, due: 2026-09-19, status: pending, calendar_event_id: oc7oa2p50rnimoh3qngh63nm14}
-      - {seq: 6, amount: 254.55, due: 2026-09-26, status: pending, calendar_event_id: skfs1m9o97ks7ifmej3go327l4}
-      - {seq: 7, amount: 254.55, due: 2026-10-03, status: pending, calendar_event_id: 91nistrcs45m142kiqr8iei5go}
-      - {seq: 8, amount: 254.55, due: 2026-10-10, status: pending, calendar_event_id: 2e98jptu5p6r74bic2fu0u3euo}
-      - {seq: 9, amount: 254.55, due: 2026-10-17, status: pending, calendar_event_id: o865je8o2tah4517smktqpbqjs}
-      - {seq: 10, amount: 254.55, due: 2026-10-24, status: pending, calendar_event_id: jhnl5najq9ji371sik1e4kqmtc}
-      - {seq: 11, amount: 254.55, due: 2026-10-31, status: pending, calendar_event_id: 3nrba92bgvr0j6m1dvk1q8pu0g}
+      - {seq: 1, amount: 233.33, due: 2026-09-13, status: pending, calendar_event_id: vvg6i5163abm527brcthf5as18}
+      - {seq: 2, amount: 233.33, due: 2026-09-20, status: pending, calendar_event_id: 2qn45hom5d37m55l5gcq2qhfq0}
+      - {seq: 3, amount: 233.33, due: 2026-09-27, status: pending, calendar_event_id: fjbqgirl5ntl4tc8kgf0ipbs5c}
+      - {seq: 4, amount: 233.33, due: 2026-10-04, status: pending, calendar_event_id: sel6ap6cdiuaee98j9pv1ogc00}
+      - {seq: 5, amount: 233.33, due: 2026-10-11, status: pending, calendar_event_id: 8qk2663043ucqmi7a4q5qaokd8}
+      - {seq: 6, amount: 233.33, due: 2026-10-18, status: pending, calendar_event_id: 6h4f7hnv0q50dl8uami7nn3850}
+      - {seq: 7, amount: 233.33, due: 2026-10-25, status: pending, calendar_event_id: 22hhit770ud666kqddbup6encc}
+      - {seq: 8, amount: 233.33, due: 2026-11-01, status: pending, calendar_event_id: ul1s5e55maqtk2p553jc1bcid0}
+      - {seq: 9, amount: 233.33, due: 2026-11-08, status: pending, calendar_event_id: tmta8skh1svt43ugta36rpcha8}
+      - {seq: 10, amount: 233.33, due: 2026-11-15, status: pending, calendar_event_id: p213q0ks5anbgc3gfrfbipacm8}
+      - {seq: 11, amount: 233.33, due: 2026-11-22, status: pending, calendar_event_id: rlmus5vr0osqo7t2mickqcn6no}
+      - {seq: 12, amount: 233.37, due: 2026-11-29, status: pending, calendar_event_id: fr0h3319fpqf21kgd5cugccipk}
   - {id: savings, name: "Savings", pocket: set-aside, target: null, saved: 0,
      target_date: null,
      note: "UNRESOLVED — target and target_date both needed. The retired model's '30% of
             income' framing died with the waterfall on 2026-08-10; under due-date order
             savings is funded by naming an amount and a date like anything else."}
+  - id: vans-knu-skools
+    name: "Vans Knu Skools"
+    pocket: set-aside
+    target: 80
+    saved: 0
+    target_date: 2026-09-30
+    note: "ADDED 2026-09-06, Mode 5. Lemar's original ask (#personal-finance / Convo 1
+           card 'Vans Knu Skools — need price/date'): 'add to personal finance payment
+           plans a pair of new Vans Knu Skools by the end of the month.' Lemar's reply on
+           that card: 'This should be a savings goal and I think they're $80.' target =
+           $80, pocket = set-aside, target_date = 2026-09-30 (end of this month).
+           Today (2026-09-06, a Sunday) to 2026-09-30 is 24 days — not an exact multiple
+           of 7. Per Mode 5 ('installments across the WEEKS between today and
+           target_date'), used the 3 full weeks that fit (21 of the 24 days) rather than
+           inventing a 4th short/uneven installment for the leftover 3 days — the goal
+           is fully funded by 2026-09-26, four days ahead of the 9/30 date Lemar named.
+           $80 ÷ 3 = $26.6666.., even split in cents (2666/2666/2668 cents), remainder
+           (2 cents) on the LAST installment per Mode 5. Each installment accrues
+           independently over its own [2026-09-06..due-1] window, in parallel with the
+           others (same pattern as own-car-running), contributing to daily_targets under
+           line_id vans-knu-skools-<seq>:
+           - Installment 1 ($26.66, due 9/13): 7-day window 9/06-9/12. 2666¢ ÷ 7 = 380¢
+             base, remainder 6¢ → the 6 EARLIEST days (9/06-9/11) get $3.81, the last day
+             (9/12) gets $3.80. Sum: 6×3.81 + 3.80 = 26.66.
+           - Installment 2 ($26.66, due 9/20): 14-day window 9/06-9/19. 2666¢ ÷ 14 =
+             190¢ base, remainder 6¢ → the 6 EARLIEST days (9/06-9/11) get $1.91, the
+             remaining 8 days (9/12-9/19) get $1.90. Sum: 6×1.91 + 8×1.90 = 26.66.
+           - Installment 3 ($26.68, due 9/27): 21-day window 9/06-9/26. 2668¢ ÷ 21 =
+             127¢ base, remainder 1¢ → the 1 EARLIEST day (9/06) gets $1.28, the
+             remaining 20 days (9/07-9/26) get $1.27. Sum: 1.28 + 20×1.27 = 26.68.
+           All three windows overlap (each independent, per Mode 5/ACCRUAL) and land on
+           top of every other line already accruing on those days. daily_targets for
+           every day 2026-09-06 through 2026-09-26 (21 days — the full extent of this
+           goal's combined windows) had the applicable vans-knu-skools-<seq>
+           contribution(s) added and that day's `target`/`total_claim`/`shortfall`
+           recomputed as the new sum (funded was $0 on every touched day beforehand, so
+           shortfall = target). 2026-09-27 onward is untouched (installment 3's window
+           ends 9/26). No day before today (2026-09-06) was rewritten. OVERLOAD CHECK
+           rerun with these numbers included (see Update 2026-09-06 below) — still
+           flagged, same standing condition; no new Convo 1 card raised per instruction."
+    installments:
+      - {seq: 1, amount: 26.66, due: 2026-09-13, status: pending, calendar_event_id: bvjp8goodjms0m1tm6go0jorn8}
+      - {seq: 2, amount: 26.66, due: 2026-09-20, status: pending, calendar_event_id: 6ium3uqbta40akqik0mp29qvtk}
+      - {seq: 3, amount: 26.68, due: 2026-09-27, status: pending, calendar_event_id: mhglk8vovcqhh5v46juuplmjpc}
 open_questions:
   - "OPEN 2026-08-29 (#decisions ts 1788016060, in the screenshot thread): does the new
      2026-08-26 $50.60 DoorDash dash (from Lemar's 10-line 'Dashes' breakdown posted
@@ -2908,6 +3345,13 @@ open_questions:
   - "Cuzzie's phone + Google Workspace ~$550/mo — Lemar did NOT address this line in his 2026-08-15 message (#personal-finance ts 1786754410.308129), which named every other undated line but this one. Left undated per the business boundary: it's business-origin cost carried personally, ambiguous personal-vs-business, and no date was given — never inferred."
   - "Cash App payback $187.22 (due 2026-11-30): Lemar's own words were 'I think it's like 2% each day or something like that' about accruing interest — uncertain, not confirmed. Accruing against the stated $187.22 only; no compounding was invented. CONFIRM the actual current balance (or the real rate) closer to the due date so the accrual can be corrected before it's due."
   - "RESOLVED 2026-08-15 (#personal-finance ts 1786754410.308129): car goal target_date set to 2026-10-31 ('will have to be a goal to hit by the end of October'), name updated to 'Get the car running (Lexus LS400)'. 11 weekly installments generated, see own-car-running."
+  - "NEW 2026-09-06 (Convo 1 reply on the Money Hub card): cuzzies-google-workspace's
+     $57.44 is only the Sep 1-6 slice of a per-day-prorated charge, not the full past-due
+     total — Lemar says it needs to be backtracked across the whole unpaid window since
+     the 8/19 due date. The implied ~$9.57/day rate doesn't match the ~$12.14/day
+     estimate already on the calendar event for the same bill, so Samira is not
+     computing a total from either rate. Need the actual current balance from Google
+     Admin console → Billing before this line's amount/due date can be corrected."
   - "Savings goal: how much, by when? Both fields are null."
   - "Cuzzie's phone + Workspace $550/mo is Lemar's estimate — actual total unconfirmed, and it is the largest line in the ledger."
   - "Confirm the 7/25 $1,000 allocation landed: $500 car payment, $200 tires, $50 mom"
@@ -2925,9 +3369,10 @@ open_questions:
   - "RESOLVED 2026-08-14: Lemar confirmed (#decisions ts 1786712349.341559) these ARE two separate $500 obligations from the same breakdown — a friend-funded tow ($500, tow-truck-repay, due 9/15) and a mechanic repair he'll repay 'down the road' with no date yet (mechanic-repair-repay, undated). Both now carry their own line; see the UNDATED bullet above for the second."
   - "NEW 2026-08-14: Lemar confirmed his new Station weekend job (#decisions ts 1786710731.810909) — $12/hour, ~23 hrs/week, security desk. No paycheck/earnings figure reported yet under this job; log actual pay via #personal-finance once it starts landing, same as DoorDash. Not the same thing as the 'Station travel $50/wk' expense line above (that's his travel cost, not this income)."
   - "RESOLVED 2026-08-18 (#decisions ts 1787001107.337499, Lemar reply 1787009888.775939): 'The charge did not clear.' cuzzies-google-workspace $85 (due 8/19) confirmed still unpaid — stays `status: active`, still accruing. Suspension risk (all cuzziesnj.com Workspace services, incl. lemar@cuzziesnj.com email, per the 8/20 deadline) is unchanged; Lemar owns the re-attempt, not logged here as resolved-to-paid."
-  - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Lemar was unexpectedly charged $119 by Edge Fitness for personal training and is disputing it with SoFi. Already happened (not a future dated line) so nothing was added to `bills` — no due date exists to queue and inventing one would violate the never-invent-a-date rule. #decisions parent raised asking how he wants this reflected once the dispute resolves (refunded → no entry needed; upheld → a dated personal expense/loss line, his call). No income reported today."
+  - "RESOLVED 2026-09-06 (Lemar replying to a Money Hub card): 'Edge Fitness, was unable to get a refund.' Dispute UPHELD, no refund. Logged as a one-time, already-incurred, unrecoverable personal expense — `edge-fitness-training-dispute`, $119, dated 2026-09-06 (today, since no other date was given), `status: paid`, no calendar event, out of the accrual."
   - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Set-Aside (SoFi Checking) balance reported at $13.00 as_of 2026-08-17 — first balance ever reported for this pocket since the Era connector retired 2026-08-10. Very low against the ~$380/day accrual target; flagged on the dashboard, not smoothed or explained away."
   - "OPEN 2026-08-26 (#personal-finance ts 1787751269.733669): Set-Aside (SoFi Checking) reported at $70.00, up from the $13.00 figure as of 2026-08-17. DISCREPANCY, not reconciled: no daily_targets contribution has actually reached funded/paid status against Set-Aside in that span (every day since 8/17 shows $0 funded until today's 8/26 allocation, and today's allocation only just landed), so the ledger has no tracked explanation for the $57 increase. Reported as-is per field rules — Lemar reconciles, not this skill."
+  - "OPEN 2026-09-06 (Lemar replying to a Money Hub card): 'Current google workspace amount owed: $57.44.' `cuzzies-google-workspace` corrected 85 → 57.44. Its due date (8/19) has now passed with no new date given — never invented one. This line is now OVERDUE with no future date: per the skill's rules it stops accruing (already excluded from daily_targets since its due date passed) and rides here until Lemar says what happened to it — paid down already, on some new arrangement, or something else."
 ```
 
 ## Update 2026-08-14 (PART M — two new personal bills: fantasy football + Dil's Christmas gift)
@@ -4347,3 +4792,108 @@ Dashboard not re-rendered this pass — queued for the next scheduled PART M swe
 (single-pass correction + one day's partial funding, no bill/accrual-schedule change).
 Nothing paid or moved; this is bookkeeping only, per the skill's floor.
 Dashboard not re-rendered this pass.
+
+## Update 2026-09-06 — Convo 1 card replies: own-car-running stretched to 12/1, Google Workspace corrected, Edge Fitness dispute upheld
+
+**1. Mode 5 / REBALANCE move type 1 — stretch `own-car-running`.** Lemar replied to the
+standing Money Hub overload card: "Yeah I think maybe we just try to have own car
+running by December 1." `target_date` moved 2026-10-31 → **2026-12-01**. Remaining =
+target ($2,800) − saved ($0) = **$2,800.00** unchanged (nothing had actually been
+funded/paid against any old installment). Today (2026-09-06, Sunday) to the new date
+is 86 days — not an exact 7-day multiple like the old 77-day span — so the schedule
+uses the **12 full weeks that fit** (84 of the 86 days) rather than inventing an
+uneven 13th installment for the leftover 2 days: the goal is fully funded by
+2026-11-29, two days ahead of the 12/1 date, which satisfies "by December 1" with
+room to spare. $2,800 ÷ 12 = $233.3333.., even split in cents, remainder (4 cents) on
+the LAST installment — 11 installments of **$233.33**, 1 (seq 12) of **$233.37**, due
+every Sunday 9/13 through 11/29. Each installment accrues independently over
+`[2026-09-06..due-1]`, in parallel with the others, under line_id
+`own-car-running-<seq>` (now 1-12, replacing the old 1-11).
+
+**Old schedule retired.** Installments 1-3 (due 8/22, 8/29, 9/5) were already past
+due before today with nothing funded against them — their calendar events had already
+fired and were left alone. Installments 4-11 (due 9/12 through 10/31) were still
+future and still accruing — their 8 calendar events were **CANCELLED**
+(`22j887cqdd0ej7pbti0vi7ian4`, `oc7oa2p50rnimoh3qngh63nm14`, `skfs1m9o97ks7ifmej3go327l4`,
+`91nistrcs45m142kiqr8iei5go`, `2e98jptu5p6r74bic2fu0u3euo`, `o865je8o2tah4517smktqpbqjs`,
+`jhnl5najq9ji371sik1e4kqmtc`, `3nrba92bgvr0j6m1dvk1q8pu0g`) on the personal reminder
+calendar. **12 new due-date events created** (both popups, 7-day + day-of):
+`vvg6i5163abm527brcthf5as18` (1/12), `2qn45hom5d37m55l5gcq2qhfq0` (2/12),
+`fjbqgirl5ntl4tc8kgf0ipbs5c` (3/12), `sel6ap6cdiuaee98j9pv1ogc00` (4/12),
+`8qk2663043ucqmi7a4q5qaokd8` (5/12), `6h4f7hnv0q50dl8uami7nn3850` (6/12),
+`22hhit770ud666kqddbup6encc` (7/12), `ul1s5e55maqtk2p553jc1bcid0` (8/12),
+`tmta8skh1svt43ugta36rpcha8` (9/12), `p213q0ks5anbgc3gfrfbipacm8` (10/12),
+`rlmus5vr0osqo7t2mickqcn6no` (11/12), `fr0h3319fpqf21kgd5cugccipk` (12/12).
+
+**ACCRUAL, verified cent-exact by script.** All 12 installments' daily splits (cent
+divided across each installment's own `[2026-09-06..due-1]` window, remainder on the
+EARLIEST days) independently re-sum to their stated totals with no rounding drift.
+`daily_targets` from 2026-09-06 through 2026-11-28 (84 days, the full extent of the
+new schedule — already inside the existing horizon set by `cashapp-payback`) had every
+old `own-car-running-*` contribution removed and every new one added, then `target`,
+`total_claim`, and `shortfall` recomputed as the sum of that day's contributions —
+verified exactly consistent on all 84 days. `funded` was $0 on every touched day
+beforehand (no income logged against any of them yet) and is unchanged. 2026-11-29
+onward is untouched (installment 12's window ends 11/28; nothing from this goal
+touches 11/29). No day before today (2026-09-06) was rewritten.
+
+**OVERLOAD CHECK, rerun with the new numbers.** Trailing 4-week income average (Mon–Sun
+weeks, most recent 4 complete weeks as of today, a Sunday): Aug 10-16 $113.13 + Aug
+17-23 $0.00 + Aug 24-30 $437.69 + Aug 31-Sep 6 $0.00 = $550.82 ÷ 4 = **$173.71/week**.
+Coming 7-day set-aside total (`daily_targets` targets, 2026-09-06 through 2026-09-12):
+207.56 + 179.13 + 179.10 + 179.10 + 178.53 + 170.20 + 178.53 = **$1,272.15** — still
+roughly **7.3x** the trailing average, and still FLAGGED, same standing condition first
+raised 2026-08-15. Per the skill the accrual is written exactly as computed, nothing
+shrunk or delayed to make the number look smaller. No new Convo 1 card raised this
+pass — Lemar's own instruction, to be decided separately with these numbers in hand.
+
+**2. Google Workspace amount corrected.** Lemar replied to a separate Money Hub card:
+"Current google workspace amount owed: $57.44." `cuzzies-google-workspace` corrected
+$85 → **$57.44**. Its due date (8/19) has already passed and no new date was given —
+never invented one. The line is now **overdue with no future date**: per the skill's
+rules it stops accruing (it was already excluded from `daily_targets`, its due date
+having passed before today) and now rides in `open_questions` until Lemar says what
+happened to it — paid down already, on a new arrangement, or something else.
+
+**3. Edge Fitness dispute — UPHELD, no refund.** Lemar replied: "Edge Fitness, was
+unable to get a refund." Logged as a one-time, already-incurred, unrecoverable
+personal expense — `edge-fitness-training-dispute`, **$119**, dated **2026-09-06**
+(today, since no other date was given — flagging this assumption for Lemar to correct
+if it matters), `status: paid`, no calendar event (already happened, nothing to remind
+about), and no `daily_targets` accrual. The matching `open_questions` entry (opened
+2026-08-17) is marked RESOLVED, pointing to this line.
+
+Nothing paid or moved except as Lemar himself reported (the Edge Fitness charge and
+the Workspace figure are his own reports, not actions taken here). Nothing contacted.
+Dashboard not re-rendered this pass per this session's scope (ledger + calendar only).
+
+**4. Mode 5 — new goal `vans-knu-skools`, $80 by 9/30.** Lemar replied on the "Vans Knu
+Skools — need price/date" Convo 1 card: "This should be a savings goal and I think
+they're $80" (combined with his original ask, "add ... a pair of new Vans Knu Skools by
+the end of the month"). New goal added: `target: 80`, `pocket: set-aside`,
+`target_date: 2026-09-30`. Today (2026-09-06) to 9/30 is 24 days — not an exact 7-day
+multiple — so, same as `own-car-running` above, used the **3 full weeks that fit** (21
+of the 24 days) rather than an uneven 4th installment for the leftover 3 days: fully
+funded by 2026-09-26, four days ahead of the 9/30 date. $80 ÷ 3 = $26.6666.., even split
+in cents, remainder (2 cents) on the LAST installment — 2 installments of **$26.66**, 1
+(seq 3) of **$26.68**, due every Sunday 9/13, 9/20, 9/27. Each installment accrues
+independently over its own `[2026-09-06..due-1]` window under line_id
+`vans-knu-skools-<seq>` (full per-cent math in the goal's `note`). `daily_targets` for
+every day 2026-09-06 through 2026-09-26 (21 days) had the applicable contribution(s)
+added and that day's `target`/`total_claim`/`shortfall` recomputed; funded was $0 on
+every touched day beforehand, so shortfall = target. No day before today rewritten.
+Three due-date calendar events created on the personal reminder calendar (both popups,
+7-day + day-of): `bvjp8goodjms0m1tm6go0jorn8` (1/3, 9/13, $26.66),
+`6ium3uqbta40akqik0mp29qvtk` (2/3, 9/20, $26.66), `mhglk8vovcqhh5v46juuplmjpc` (3/3,
+9/27, $26.68).
+
+**OVERLOAD CHECK, rerun again with vans-knu-skools included.** Reusing the same
+trailing 4-week income average computed above ($173.71/week — unchanged, no new income
+logged this pass). Coming 7-day set-aside total (`daily_targets` targets, 2026-09-06
+through 2026-09-12) is now 214.56 + 186.12 + 186.09 + 186.09 + 185.52 + 177.19 + 185.50
+= **$1,321.07** (up from $1,272.15 before this goal) — roughly **7.6x** the trailing
+average, still FLAGGED, same standing overload condition first raised 2026-08-15 and
+already covered by the standing Money Hub card. Per the skill the accrual is written
+exactly as computed, nothing shrunk or delayed. No new Convo 1 card raised — Lemar's own
+instruction on this task. Nothing paid or moved. Dashboard not re-rendered this pass per
+this session's scope (ledger + calendar only).

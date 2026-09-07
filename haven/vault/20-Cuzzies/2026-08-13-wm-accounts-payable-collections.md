@@ -1,9 +1,9 @@
 ---
 created: 2026-08-13T11:15-04:00
-updated: 2026-08-25T16:02-04:00
+updated: 2026-09-06T14:20-04:00
 domain: cuzzies
 type: task
-status: awaiting-decision
+status: active
 tags: [waste-management, collections, accounts-payable, off-button]
 source: gmail
 ---
@@ -143,6 +143,22 @@ reply drafted. Gmail thread labeled `Samira/seen`.
 
 ### Sources (this update)
 - gmail: thread `19ffb0c2f0236bf0` (message `1a03a4d61c44a1a0`, 2026-08-25 19:02:17 UTC)
+
+## Update 2026-09-06T14:20-04:00 — AP-collections item logged on the Off Button board (Convo 1 card, Option B)
+
+The AP-collections card migrated to Convo 1 (thread ts `1788714812.755469`); Lemar picked
+Option B — "add to Off Button vendor wind-down tracking" instead of deciding a payment
+now. Logged as a new item on the "Off Button — Vendor Wind-Down & Payoff" Monday board
+(`18424191974`), group "Vendors — New/Unclassified": item id `12985532478`
+(https://lboonejrs-team.monday.com/boards/18424191974/pulses/12985532478). Vendor
+Category: Non-Cannabis Vendor · Correspondence Status: Not Yet Contacted · Resolution
+Status: Negotiating (placeholder — no dollar figure ever stated in WM's notice, so
+nothing to negotiate yet). Nothing paid or contacted by Samira.
+
+### Sources (this update)
+- slack: Convo 1 (D0BHPKMDNEP) ts `1788714812.755469` (card) / `1788714856.586169`
+  (Option B, ✅'d)
+- monday: board `18424191974`, item `12985532478`
 
 ## Related
 - [[waste-management]] (entity note — none exists yet, needs a stub)

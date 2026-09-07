@@ -2,29 +2,31 @@
 name: pulse-dashboard
 description: >
   Pulse — Lemar's living command center, re-rendered by Samira at the end of every
-  hourly scan (PART P of the runbook) and published as a NEW timestamped Google Doc
-  snapshot in the Pulse Drive folder (2026-08-13: replaced the Artifact tool, which kept
-  prompting Lemar for approval on his phone — the surface he checks Pulse from most).
+  hourly scan (PART 8 of the runbook; was PART P until 2026-09-06) and published as a
+  NEW timestamped Google Doc snapshot in the Pulse Drive folder (2026-08-13: replaced
+  the Artifact tool, which kept prompting Lemar for approval on his phone — the surface
+  he checks Pulse from most).
   One page, one column, ordered BIG IDEAS → SMALL DETAILS → EXECUTION: quick todo
   capture on top, then Dawn as the North Star (direction, not tasks), the day's calendar
-  roadmap, then execution — #decisions, money, today's workout, Atlas open items,
-  project pulses, and routine health at the bottom. EVERY item links back to its source
-  (the exact Slack thread or the Google Calendar event). The dashboard is a RENDERING
-  like the Open Items canvas — the vault stays the source of truth and this skill writes
-  NO Haven notes. Use it on Samira's scan or on demand: "refresh the dashboard", "render
-  Pulse", "update my dashboard". It reads everything and writes only the Drive snapshot
-  — it DMs Lemar the new link only when this run actually changed something (see
-  Notification below), never sets reactions, never edits the vault.
+  roadmap, then execution — open Convo 1 cards, money, today's workout, Atlas open
+  items, project pulses, and routine health (including #fixes) at the bottom. EVERY item
+  links back to its source (the exact Slack thread or the Google Calendar event). The
+  dashboard is a RENDERING like the Open Items canvas — the vault stays the source of
+  truth and this skill writes NO Haven notes. Use it on Samira's scan or on demand:
+  "refresh the dashboard", "render Pulse", "update my dashboard". It reads everything
+  and writes only the Drive snapshot — it DMs Lemar the new link (in Convo 1) only when
+  this run actually changed something (see Notification below), never sets reactions,
+  never edits the vault.
 ---
 
 # Pulse — the living command center (rendering only, vault stays truth)
 
 You render **Pulse**, Lemar's one-page command center: "one place where I look at every
 problem, every event, everything I need to check on — and I execute." Samira invokes
-this at the END of her hourly scan, when her context already holds the #decisions state,
-project-channel pulses, and this run's tallies — reuse what is already in context
-instead of re-reading channels. Run unattended: no one approves anything at runtime, so
-every rule is load-bearing.
+this at the END of her hourly scan (PART 8; was PART P), when her context already holds
+the open Convo 1 card state, #fixes health, this run's timeline touches, and the run's
+tallies — reuse what is already in context instead of re-reading channels. Run
+unattended: no one approves anything at runtime, so every rule is load-bearing.
 
 **This skill is a rendering step.** Unlike morning-brief there is NO "durable note first":
 the vault is already the record and the dashboard is a projection of it (same doctrine as
@@ -47,8 +49,9 @@ run digest and move on.
 
 ## ANCHORS
 All platform IDs live in **`.claude/anchors.md`** — read it first. You use the "Pulse
-dashboard" section: the **Pulse Drive folder id** (create target) and the **Samira
-capture DM id** (notification target), plus the **workout artifact URL** and the
+dashboard" section: the **Pulse Drive folder id** (create target) and the **Convo 1
+DM id** `D0BHPKMDNEP` (notification target), plus the **self-DM id** `D0BBVV54L5R`
+(the quick-capture surface), the **workout artifact URL** and the
 **Morning Brief Drive folder** (for the North Star link-out), the Slack channel IDs, the
 reminder calendar ID, and the vault paths you already know from the run.
 
@@ -61,27 +64,27 @@ fail, and lists those failures.
 
 1. **Quick capture → Atlas** (top of page, always in reach). A textarea pre-labeled
    "Atlas, shortlist this: " with a **Copy** button (Clipboard API, fall back to
-   select-the-text) and an **Open Samira DM** link (the Samira capture DM,
-   `D0BHPKMDNEP`). Lemar pastes it as a top-level message in that DM; the next scan's
-   PART B DM sweep captures it into Haven. Say exactly that in the helper text so the
-   mechanism is honest. Keep this strip compact — one row, not a card the size of a
-   section.
+   select-the-text) and an **Open my notepad** link (Lemar's SELF-DM, `D0BBVV54L5R` —
+   Convo 2, the intake surface since 2026-09-06; was the Samira capture DM). Lemar
+   pastes it as a top-level message in his self-DM; the next scan's PART 4 sweep
+   captures it into Haven. Say exactly that in the helper text so the mechanism is
+   honest. Keep this strip compact — one row, not a card the size of a section.
 2. **Dawn — the North Star.** Direction, NOT tasks. Since 2026-07-12 Dawn's own brief
    note (`haven/vault/_daily/brief-YYYY-MM-DD.md`) carries the **North Star line** and
    **2–4 directional themes** as first-class sections — lift them verbatim (distill
    yourself only if reading an older five-goals-format note). Never render a task list
-   here — execution lives further down in #decisions. Loop tally as a small chip. Link
+   here — execution lives further down in the Convo 1 cards. Loop tally as a small chip. Link
    out to the Morning Brief Drive folder (anchors, "Daily Brief routine" section) so
    Lemar can open today's full snapshot. If today's note is missing (Dawn failed or
    pre-1am), use yesterday's and flag it stale.
 3. **Calendar — today's roadmap.** Today as a timeline (primary + reminder calendar,
    ET), then this week (today+6d) as a compact day strip. All-day items render as
    chips. Every event links to its Google Calendar `htmlLink` (law #2).
-4. **Respond — open #decisions.** Execution starts here. From this run's PART A state:
-   the open cards waiting on Lemar, most urgent first (🔴 before 🟡, then by age),
-   capped at ~10 with a "+N more in #decisions" channel link. Each card: severity dot,
-   one-line summary, age ("2d"), and its 💬 thread permalink so one tap opens the exact
-   thread to react/reply.
+4. **Respond — open Convo 1 cards.** Execution starts here. From this run's PART 3
+   state (was the #decisions list until 2026-09-06): the open cards waiting on Lemar,
+   most urgent first (🔴 before 🟡, then by age), capped at ~10 with a "+N more in our
+   DM" link to Convo 1 (`D0BHPKMDNEP`). Each card: severity dot, one-line summary, age
+   ("2d"), and its 💬 thread permalink so one tap opens the exact thread to react/reply.
 5. **Money.** A ~3-line summary + a link-out to the **Money Hub** Drive folder (id in
    anchors' "Money Hub" section — opens to today's newest snapshot), which owns the full
    picture. The three lines, from
@@ -116,15 +119,18 @@ fail, and lists those failures.
    >14 days past its own `due`, overdue in red. Cap at ~12 with a count of the rest.
    Each item links to its source thread or calendar event when the note records one
    (law #2).
-8. **Project pulses.** One line per project channel from this run's PART G pass
-   (#investor-pipeline, #car-search, #on-button, #personal-finance, #cuzzys-brand,
-   #comedy-club, #delivery-in-a-box, #pitch-deck-pressure-test, #trading-cards): a
-   status dot (🟢 moved / ⚪ quiet / 🔴 blocked), the one-line state, and the channel
-   link.
+8. **Project pulses.** One line per project timeline channel, from what this run
+   actually touched (the PART 7 timeline pass; timelines are posted to, never swept —
+   a project nothing touched this run renders ⚪ quiet) — #investor-pipeline,
+   #car-search, #on-button, #personal-finance, #cuzzys-brand, #comedy-club,
+   #delivery-in-a-box, #pitch-deck-pressure-test, #trading-cards: a status dot
+   (🟢 moved / ⚪ quiet / 🔴 blocked), the one-line state, and the channel link.
 9. **Samira & routines** (bottom). Last digest time vs now (>70 min stale inside the
-   8a–6p ET window → "⚠️ missed run"), failure notes (`type: log`, `status: active`
-   with attempt/error), anything tagged **stuck**, STUCK cards in #decisions, standing
-   flags (e.g. Basil awaiting DRY_RUN vetting), each linked to #reports or its thread.
+   8a–6p ET window → "⚠️ missed run"), **#fixes health — the open fix-card count**
+   (from this run's PART 5 state, linked to #fixes `C0BV5BRNH5Z`; 0 open renders as a
+   quiet "fixes: none open" chip), failure notes (`type: log`, `status: active` with
+   attempt/error), anything tagged **stuck**, STUCK cards in #fixes, standing flags
+   (e.g. Basil awaiting DRY_RUN vetting), each linked to #reports or its thread.
    This section also lists any sections of THIS page that errored this run.
 
 ## Output — render and file a new Drive snapshot
@@ -156,19 +162,19 @@ then create it as a NEW Google Doc via `Google_Drive__create_file`:
 
 Pulse still writes NO Slack message on a quiet hour. BEFORE building the snapshot,
 compare this run's signals against what you already know from this same scan: did any
-#decisions card open/close, did money change (PART M returned `money ✓ …` not
-`money —`), did a project pulse's status dot flip, or is there a new/updated open Haven
-note since the last render? If NO signal changed this hour, skip the render entirely —
-no Doc, no DM (codified 2026-08-15; a folder of identical snapshots is noise, not
-history) — and return `pulse — carried (quiet pass)` for the digest. If YES to any,
-render, then send ONE line to the **Samira capture DM** (`D0BHPKMDNEP` — the shared
-bot's only DM slot; safe to reuse since PART B only develops messages FROM Lemar, never
-the bot's own posts):
+Convo 1 or #fixes card open/close, did money change (the PART 4 money-drop mode
+returned `money ✓ …` not `money —`), did a project pulse's status dot flip, or is there
+a new/updated open Haven note since the last render? If NO signal changed this hour,
+skip the render entirely — no Doc, no DM (codified 2026-08-15; a folder of identical
+snapshots is noise, not history) — and return `pulse — carried (quiet pass)` for the
+digest. If YES to any, render, then send ONE line to **Convo 1** (`D0BHPKMDNEP` — safe
+to reuse for a notification: a 🌐 bot post there is never card input, since PART 3
+works cards and never reads the bot's own posts):
 `📍 Pulse updated — [1-line summary of what changed]. [Drive doc link] — Samira`
 
 ## SAFETY (applies to the whole skill)
 You MAY: read every connected tool and the vault; create a new Pulse snapshot Doc in the
-Pulse Drive folder; send ONE DM to the Samira capture DM (`D0BHPKMDNEP`), and only when
+Pulse Drive folder; send ONE DM to Convo 1 (`D0BHPKMDNEP`), and only when
 something changed this run.
 You MUST NOT, ever: post to any Slack channel; DM on a quiet hour (nothing changed); send
 email or any outreach; set or change Lemar's reactions; write, move, edit, or file any

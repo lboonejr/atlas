@@ -8,7 +8,7 @@ description: >
   journal. Use this every time Samira finishes (or fails) a task instead of writing the
   record inline: "land the result", "log the result to reports", "record this and
   report it", "log a failure", "post the run digest". It writes to Haven (via
-  haven-capture) and #reports/#decisions only; it never sends email, pays, posts
+  haven-capture), #reports, and the card's thread (Convo 1 or #fixes) only; it never sends email, pays, posts
   externally, or deletes/overwrites existing content. (Monday mirroring retired
   2026-08-15 — gate closed, see anchors.)
 ---
@@ -24,8 +24,8 @@ Order of operations, every time: **(1) outcome note to Haven → (2) ping #repor
 about it.
 
 ## ANCHORS
-All platform IDs live in **`.claude/anchors.md`** — the #reports/#decisions channel IDs
-are there. Constants:
+All platform IDs live in **`.claude/anchors.md`** — the #reports ID and the card-surface
+IDs (Convo 1, #fixes) are there. Constants:
 - Vault: `haven/vault/` on repo `lboonejr/atlas`, default branch. You never hand-write a
   note — call **haven-capture**, which returns the note path.
 - DO NOT write the retired local reader copy.
@@ -53,9 +53,10 @@ figures / decision / text produced), and file links/IDs in a `## Sources` block
    🌐 ✅ [what ran] — [headline output in a few words]
    [skill, or "direct"] · [Haven note path] — Samira
    ```
-3. **Green-check the source message** — your done-key everywhere EXCEPT the
-   reaction-engine surfaces (#decisions, #investor-pipeline), where every
-   reaction is Lemar's and you set only the headline emoji.
+3. **Green-check the source message** — your done-key everywhere EXCEPT the card
+   surfaces (Convo 1, #fixes), where every reaction is Lemar's, you set only the
+   headline emoji, and your done-key is your own in-thread "Done ✅ …" reply + stored
+   state (doctrine).
    (The Monday mirror step was removed 2026-08-15 — gate closed; the note path stands
    alone.)
 
@@ -68,17 +69,25 @@ figures / decision / text produced), and file links/IDs in a `## Sources` block
    [Haven note path] — Samira (attempt N)
    ```
 3. On the **3rd failure** of the same task: react 🚗 on the source (stop retrying), tag
-   the Haven note stuck, and post "STUCK — needs Lemar" to #decisions (headline ⏳)
+   the Haven note stuck, and open a "STUCK — needs Lemar" card in #fixes (headline ⏳)
    linking the note.
 
 ## Mode 3 — RUN DIGEST (end of run)
 1. Post the delta digest to #reports (🌐, "— Samira"), leading with the Haven counts:
    ```
    🌐 Samira · [date time] — C closed · N new · U urgent
-   🗄️ Haven: filed F · stuck P · rang +A/~B/-C · notes-written O
-   Closed: [one-liners] · 🔴 Send TODAY: […] · 👉 Waiting on you: [n] in #decisions
-   🧵 Standing list → Open Items canvas
+   🗄️ Haven: filed F · stuck P · rang +A/~B/-C · notes O
+   Closed: [one-liners] · 🔴 Send TODAY: […] · 👉 Waiting on you: [count] cards in our
+   DM · 🔧 Fixes open: [count]
    ```
+   Full tallies (runbook Digest section is the source of the token list): filed/stuck;
+   rang; c1: cards worked/locked/closed; c2: drops developed/deep-dives advanced/
+   updates routed; fixes: open/closed; email E/R/Cl/T; investor counts; timelines:
+   N entries; junk J; `reports-scan: …`; `pulse ✅/⚠️/—`; while migration is
+   incomplete: `migration: X cards remaining`. Stuck notes surface ONLY via the
+   batched Convo 1 card, never line-by-line here. (The "Standing list → Open Items
+   canvas" line retired with the canvas; parked state lives on cards + the Haven
+   open-items note.)
 2. **APPEND the same digest block to `haven/vault/_daily/YYYY-MM-DD.md`** (create the
    day's note from `_templates/daily.md` if absent; append under `## Log` with a
    timestamp; never edit prior entries; commit `daily: run digest <time>`). The vault is

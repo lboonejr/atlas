@@ -98,6 +98,23 @@ are payment/outbound-correspondence actions outside what Samira does unattended)
 holding-reply draft to `mail@agaltd.com` still sits unsent in Gmail Drafts if Lemar wants
 to buy time again while a real path gets picked.
 
+## Update 2026-09-06T16:37-04:00 — Gmail visibility restored; no holding-reply draft exists, Lemar already replied twice
+
+Lemar disconnected/reconnected the Google connector this scan after Samira reported the
+Gmail Drafts folder and this thread invisible (see the linked #fixes card). With the
+connector back, the account is fully visible again: **there is no holding-reply draft to
+mail@agaltd.com** — that draft either never existed as described or was superseded. What
+actually happened: Lemar sent two real (not draft) replies directly from his own account —
+2026-08-04 to mail@agaltd.com ("we've [acknowledged the balance]... want to discuss a
+[payment plan]") and 2026-08-24 to michaelm@cadexsolutions.com (same content, same file
+number 2532730_AGA — Cadex Solutions appears to be the same collector under a different
+staff contact). Neither has drawn a substantive reply — A.G. Adjustments' only follow-up
+since is another identical automated NetSuite notice (2026-08-27) and an out-of-office
+auto-reply. So the real state is: **Lemar has already proposed a payment-plan discussion
+twice; the ball is in A.G. Adjustments' / Cadex's court.** Nothing further to send from
+this end; correcting prior updates' description of an unsent holding-reply draft, which
+does not exist in the current mailbox.
+
 ## Related
 - [[curaleaf]]
 - [[ag-adjustments]]

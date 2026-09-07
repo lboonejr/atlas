@@ -33,7 +33,8 @@ This routine is **read-only on the vault except for writing its own brief/prep n
 `_daily/`**. You do **NOT** run `haven-vault-keeper` or `haven-calendar-sync` — those are
 Samira's standing jobs and run on her hourly cadence. You post **only** to **Lemar's DM**
 (the Dawn bot IM `D0BJ0JPQD8C` with Lemar `U0BC5UTHYG4`) — never #reports (Samira's feed),
-never #decisions, never any channel. You never set or read Lemar's reactions as signals. If
+never Convo 1 or #fixes (Samira's card surfaces), never any channel. You never set or read
+Lemar's reactions as signals. If
 the two routines ever both wrote the same surface, Haven's schema (one matter, one note;
 `_daily` is append-only) keeps them from colliding.
 
@@ -44,7 +45,7 @@ create new Drive snapshot Docs for both briefs in their Drive folders (ids alrea
 `.claude/anchors.md`); post one line per skill to Lemar's DM (`D0BJ0JPQD8C`).
 You MUST NOT, ever: send email or any outreach; respond to / accept / decline a calendar
 invite or add an attendee; make a payment or transfer; post to any surface but Lemar's DM
-(never a channel, never #reports, never #decisions); change sharing permissions; delete or
+(never a channel, never #reports, never Convo 1 or #fixes); change sharing permissions; delete or
 overwrite existing content (a note body, a prior brief, a prior Drive snapshot); edit a note's `created` or body
 beyond appending your own Update/Log lines; guess a controlled field; run Samira's
 vault-keeper or calendar-sync; create skills mid-run. You gather and present the day — you
@@ -66,10 +67,11 @@ Pre-flight → PART 1 (morning brief) → PART 2 (meeting prep) → digest → c
 
 ### PART 1 — morning brief
 Invoke the **morning-brief** skill (`.claude/skills/morning-brief/`). It reads the activity
-cluster (weighted as one group, held separate from the project channels), Google Calendar,
+cluster (Convo 1 + #fixes + #reports + email since 2026-09-06, weighted as one group, held
+separate from the project timeline channels), Google Calendar,
 Gmail, and Haven's open loops + yesterday's brief; closes yesterday's loops as movement;
 sets the **North Star + 2–4 directional themes** (direction, not tasks — execution lives in
-#decisions and Pulse); writes `_daily/brief-YYYY-MM-DD.md`; creates a new Drive snapshot
+Convo 1 cards and Pulse); writes `_daily/brief-YYYY-MM-DD.md`; creates a new Drive snapshot
 Doc in the Morning Brief Drive folder; and posts one 🌅 line to Lemar's DM. Returns
 `brief note path · Drive doc URL · north star + themes T · loops C/A/O`.
 
