@@ -1,6 +1,6 @@
 ---
 created: 2026-09-06T13:40-04:00
-updated: 2026-09-06T15:25-04:00
+updated: 2026-09-07T13:15-04:00
 domain: project
 type: task
 status: active
@@ -58,10 +58,42 @@ verification timing), (2) decide whether to trigger the Neon/Railway redeploy no
 pass). Nothing published, redeployed, or submitted for verification by Samira or the
 Chrome session — all still drafts/pending.
 
+## Update 2026-09-07T13:15-04:00 — Lemar answered the three asks; each still needs him
+
+Replied 1/walk-through, 2/go-ahead, 3/surface-the-drafts (reply ts `1788784954.934689`).
+Samira's response, in-thread:
+
+1. **Calendar OAuth scope** — explained why the scope string matters (registering it
+   triggers Google's Data Access verification review) and that this session's GitHub
+   access is scoped to `lboonejr/atlas` only — `lboonejr/FruntDesk` comes back access-
+   denied, same gap the earlier Chrome handoff hit. Gave Lemar two options: a Claude-
+   in-Chrome run block to open the repo himself and search for where the OAuth scope
+   parameter is built, or grant this session repo access for future scans (needs his
+   action, no tool here to request it).
+2. **Neon wake-up + Railway redeploy** — go-ahead noted, but no Neon/Railway connector
+   in this session either, so a Claude-in-Chrome run block was handed over instead
+   (confirm Neon compute awake via a SQL query, then trigger a Railway redeploy of the
+   `fruntdesk` service). Nothing triggered by Samira.
+3. **Drafts surfaced directly** — found via Drive search rather than re-reading the
+   handoff doc's folder reference: Privacy Policy (DRAFT) doc id
+   `1CbWHnp3IKJ4zzwRu4_og9VHqaCxR7k49M5FZ1-9MpKg`, Terms of Service (DRAFT) doc id
+   `11yDfzBxYEahKv7dOvqaCuC1MPu69LpSpoA4sGSoLtM0` (both in the Handoffs Drive folder,
+   parent `13fegxPkF0JwIKMPkEPM2EuX2nZ1BuHUo`). Links posted in-thread. Still open per
+   the docs themselves: payment processor name, analytics tool, real pricing/tier
+   text, attorney pass on ToS §13-16 — none of that decided yet.
+
+Nothing published, redeployed, or submitted for verification. All three items are
+still waiting on Lemar (Chrome runs or a direct answer).
+
 ## Sources
 - slack: Convo 2 (self-DM) drop, ts `1788716400.631049`, 2026-09-06 13:40 ET
-- slack: Convo 1 card ts `1788719413.067149`, Chrome handoff reply ts `1788731478.422759`
+- slack: Convo 1 card ts `1788719413.067149`, Chrome handoff reply ts `1788731478.422759`,
+  Lemar's three-part reply ts `1788784954.934689`, Samira's reply ts `1788786838.863459`
 - gdrive: "Handoff — FruntDesk Privacy Policy, ToS Draft, and Google OAuth
   Verification Status" (doc id `19wI-oFu2zPY4t4D29gRVBQ2Tlt--7fRi6j7jNyOD0ZE`)
+- gdrive: "FruntDesk Privacy Policy (DRAFT) 20260906" (doc id
+  `1CbWHnp3IKJ4zzwRu4_og9VHqaCxR7k49M5FZ1-9MpKg`)
+- gdrive: "FruntDesk Terms of Service (DRAFT) 20260906" (doc id
+  `11yDfzBxYEahKv7dOvqaCuC1MPu69LpSpoA4sGSoLtM0`)
 - vault: haven/vault/40-Projects/booking-agent/2026-08-08-fruntdesk-oauth-verification-kickoff.md
 - vault: haven/vault/40-Projects/booking-agent/2026-08-09-booking-agent-status-update-request.md
