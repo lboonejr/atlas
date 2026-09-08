@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-09-06T15:05:00-04:00
+updated: 2026-09-08T12:16:00-04:00
 domain: personal
 type: reference
 status: active
@@ -143,7 +143,7 @@ bills:
             accrues here, but its due-date reminder lives on the Cuzzie's (Owners)
             calendar, not the personal one, per the business boundary."}
   - {id: cuzzies-google-workspace, name: "Cuzzie's Google Workspace (direct billing setup)",
-     amount: 98.08, cadence: once, due: 2026-09-07, track: queue, status: active,
+     amount: 60.24, cadence: once, due: 2026-09-07, track: queue, status: active,
      business_origin: true, calendar_event_id: u45glcg7992eg9q79nnb6brlco,
      note: "Added 2026-08-13. Same reseller billing lapse as cuzzies-google-voice above —
             all Workspace services for cuzziesnj.com (including lemar@cuzziesnj.com email
@@ -195,7 +195,25 @@ bills:
             it here, same as 8/17→9/6→9/7 so far; Samira will update `amount` on each
             report. Calendar event u45glcg7992eg9q79nnb6brlco still carries the stale
             ~$12.14/day estimate in its description — still not corrected, same
-            open item as before."}
+            open item as before.
+            RATE CONFIRMED 2026-09-07 (Convo 1 card reply, thread ts
+            1788714815.369119, reply ts 1788788011.683299): 'I think we should go
+            with the $9.57 number. Previously I was paying for Google Workspace
+            through Gusto but last month I switched it over to just paying for
+            Google Workspace on the platform itself.' This resolves the two-rate
+            disagreement — $9.57/day is now the confirmed accruing rate (the
+            $12.14/day figure on the calendar event description is stale/superseded,
+            explained by the Gusto-to-direct-billing switch). Per Lemar's own
+            proposed mechanism ('update the total every day with the balance'),
+            amount advanced one day past the last reported baseline: $98.08
+            (as of 2026-09-06) + 1 day x $9.57/day = $107.65 as of 2026-09-07.
+            This is a computed running total from a Lemar-confirmed rate and
+            baseline, not an invented figure — but it will drift from the real
+            balance if a future Google Admin console pull doesn't match; keep
+            reconciling against the actual console balance when reported and
+            correct `amount` to match on any mismatch. Calendar event
+            u45glcg7992eg9q79nnb6brlco still needs its description corrected from
+            ~$12.14/day to $9.57/day — not yet done this scan."}
   - {id: edge-fitness-training-dispute, name: "Edge Fitness — personal training charge dispute",
      amount: 119, cadence: once, due: 2026-09-06, track: queue, status: paid,
      calendar_event_id: null,
@@ -4943,3 +4961,41 @@ overdue/no-future-date rule until Lemar names a real date. `open_questions` upda
 RESOLVED for "what's the actual balance" with a new note that the calendar event's
 description still shows the superseded per-day estimate. Nothing paid or contacted.
 Dashboard not re-rendered this pass (ledger update only, per this session's scope).
+
+## Update 2026-09-07 (92nd scan) — Google Workspace daily rate confirmed at $9.57/day
+
+Lemar picked between the two disagreeing daily-rate candidates that had been sitting
+open since 2026-09-06: "I think we should go with the $9.57 number. Previously I was
+paying for Google Workspace through Gusto but last month I switched it over to just
+paying for Google Workspace on the platform itself. I think that's why the number
+might have changed." (Convo 1, thread ts 1788714815.369119, reply ts
+1788788011.683299.)
+
+`cuzzies-google-workspace` `amount` advanced from the $98.08 baseline (as of 2026-09-06)
+by one day at the now-confirmed $9.57/day rate → **$107.65** as of 2026-09-07, per the
+running-total mechanism Lemar himself proposed the prior day ("update the total every
+day with the balance"). This is a computed figure built from a Lemar-reported baseline
+and a Lemar-confirmed rate, not a guess — but it will only stay accurate between actual
+console pulls if nothing else changes the bill; reconcile against the real Google Admin
+console → Billing balance whenever Lemar reports it again, and correct `amount` to match
+on any mismatch rather than trusting the daily computation indefinitely.
+
+Still open: the calendar event `u45glcg7992eg9q79nnb6brlco` for this bill still carries
+the stale ~$12.14/day estimate in its description — not corrected this pass (ledger
+update only). Nothing paid or contacted.
+
+## Update 2026-09-08 (97th scan) — Google Workspace balance re-reported at $60.24
+
+Lemar reported directly in-thread (Convo 1, thread ts 1788714815.369119, reply ts
+1788867768.720859): "Today's Balance (9/1-9/8) = $60.24." Per the standing rule
+("reconcile against the real Google Admin console → Billing balance whenever Lemar
+reports it again, and correct `amount` to match on any mismatch rather than trusting
+the daily computation indefinitely"), `cuzzies-google-workspace` `amount` corrected
+**107.65 → 60.24** — a direct console read supersedes the prior $9.57/day-advanced
+estimate. Flagging honestly: this reported figure is lower than the prior estimate and
+doesn't cleanly reconcile against the $9.57/day rate confirmed 2026-09-07 (which would
+have implied roughly two more days added to $98.08, not a drop to $60.24) — possibly a
+partial payment posted, a different billing-period slice, or the console resetting to a
+period-to-date figure rather than a running past-due total. Not guessing which; `amount`
+is set to exactly what Lemar reported. `due` unchanged (2026-09-07, already past). Not
+paid or contacted by Samira.

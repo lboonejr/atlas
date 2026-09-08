@@ -1,7 +1,7 @@
 ---
 created: 2026-08-24T21:10:00-04:00
-updated: 2026-08-25T15:59:00-04:00
-domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation
+updated: 2026-09-08T11:44:00-04:00
+domain: cuzzies
 type: task
 status: active
 tags: [collections, insurance, caine-weiner, progressive]
@@ -36,6 +36,17 @@ unchanged gap, not guessed.
 ### Sources (this update)
 - gmail: thread `1a0353b50969eb8c` (message `1a03a81d8d1512dd`, 2026-08-25 19:59:29 UTC)
 - slack: #decisions ts `1787605678.559389`
+
+## Update 2026-09-08T11:44-04:00 — domain resolved: Cuzzie's
+
+Lemar confirmed in the migrated Convo 1 card (ts `1788819035.833609`, reply
+`1788839351.243119`): "This is a Cuzzie's policy." Filing out of the Inbox now that the
+one blocking field is resolved. Still nothing paid, called, or promised — how Lemar
+wants to handle the balance itself (call Angela back, dispute, or otherwise) remains
+open and was left with him in-thread rather than assumed.
+
+### Sources (this update)
+- slack: Convo 1 (D0BHPKMDNEP) ts `1788819035.833609` / reply `1788839351.243119`
 
 ## Sources
 - gmail: thread `1a0353b50969eb8c` ("RE: Account(s) Assigned to Our Office - BALANCE

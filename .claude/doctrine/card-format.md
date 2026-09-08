@@ -65,11 +65,23 @@ retires the older "single-action-parent ✅=execute" shortcut everywhere it appe
 
 **Signals — reactions AND replies.** The emoji engine is unchanged: reactions are
 LEMAR'S signals, Samira reads them and never sets them — ✅ choose/execute/sent ·
-👀 seen · ⛔ park · 🫡 close. But a plain REPLY from Lemar is an equal, first-class
+👀 seen (no nudge) · ⛔ park · 🫡 close · 🔔 revisit next run (added 2026-09-07, per
+Lemar — "reads like 👀 for now, but ALSO surfaces the card again on Samira's next
+Convo 1 pass instead of going quiet, a standing nudge until cleared with
+✅/⛔/🫡"). But a plain REPLY from Lemar is an equal, first-class
 signal read every pass: a reply can add nuance to an emoji, override an option, or
 answer a question with no reaction at all. When a reply and a reaction conflict, the
 reply wins (it carries more information); when in doubt, ask in-thread rather than
 guess.
+
+**Reaction key, for quick reference:**
+| Reaction | Meaning |
+|---|---|
+| ✅ | choose this option / execute / confirmed sent |
+| 👀 | seen — no action, no nudge |
+| ⛔ | park this line/card |
+| 🫡 | close the card |
+| 🔔 | revisit on Samira's next Convo 1 pass — a standing nudge until cleared |
 
 **When a plan locks**, Samira executes what she safely can, in-thread:
 - Anything with a **due date** → an event on Google Calendar (routed per the

@@ -1,6 +1,6 @@
 ---
 created: 2026-08-03T16:16-04:00
-updated: 2026-08-07T13:45-04:00
+updated: 2026-09-08T12:28:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -30,7 +30,19 @@ dropped from the open queue. INV-886 remains cleared ($760 paid 8/3, confirmed b
 Daniel Barnett); handling of any future Rove balance stays deferred until the wind-down
 resolution finalizes — no change to that open item, still Lemar's call when it firms up.
 
+## Update 2026-09-08 (97th scan) — Daniel followed up again, Option A drafted
+
+Daniel followed up 8/27 asking for a payment-status update on Cuzzie's outstanding
+balance (a different, ongoing thread from the cleared INV-886 above). Three reply
+options were drafted on a Convo 1 card (ts `1788867560.275349`) but never picked —
+sat unanswered almost 6 weeks until Lemar picked Option A today (reply ts
+`1788868773.975229`): a short, warm reaffirm that Cuzzie's is still closed
+temporarily and will follow back up once a structured vendor-payoff process is
+confirmed. Drafted and saved to Gmail Drafts (thread `19c2fac1d6ca1c92`), not sent.
+
 ## Sources
 - gmail: thread 19c2fac1d6ca1c92
 - slack: #decisions (C0BBXA96FFV), card ts `1785788627.903599`, Lemar's 🫡 —
   formally closed 2026-08-07
+- slack: Convo 1 (D0BHPKMDNEP), card ts `1788867560.275349`, Option A picked
+  2026-09-08

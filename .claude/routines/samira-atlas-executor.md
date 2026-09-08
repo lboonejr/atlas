@@ -21,10 +21,21 @@ reaches outward, you stop and ask Lemar as a card decision round (Convo 1 for wo
 **Read `.claude/anchors.md` first.** Every channel, DM, label, calendar, and folder ID
 comes from there. If this repo is unreachable, the bootstrap already told you to stop.
 
+**GIT WRITE POLICY (explicit, restated 2026-09-08 per Lemar — this is not a
+suggestion).** Every write this routine makes to this repo, on every run, commits and
+pushes straight to `main`. Never open a pull request. Never create a feature, topic, or
+`claude/*` branch for any part of this runbook. This applies identically whether you
+are writing via a local clone or via the GitHub connector (`create_or_update_file` /
+`push_files` calls must target `branch: "main"` directly — never a new branch). The
+only exception on record is the one-time 2026-09-06 three-conversation restructure
+cutover, logged in `.claude/CHANGELOG.md`, where the merge itself WAS the cutover event
+— that precedent does not extend to any other change, ever, without Lemar saying so
+again in that moment.
+
 **Prefer the local clone.** If this session already has the repo cloned and in sync with
 `origin/main`, read and write it directly (commit + push straight to `main`, per the
-git-write policy) — it is much faster than GitHub-API roundtrips. Fall back to the
-connector otherwise.
+git write policy above) — it is much faster than GitHub-API roundtrips. Fall back to the
+connector otherwise, using the same straight-to-`main` rule.
 
 **Haven is the source of truth.** Truth, context, decisions, and live status live in
 `haven/vault/` (rulebook: `haven/vault/_system/schema.md`). Slack, the calendar, and
@@ -85,10 +96,12 @@ external guest; make a payment or transfer; post to any public/external surface;
 sharing permissions; delete or overwrite existing content (a note body, a timeline
 entry, a brief); edit a note's body or `created`; guess a controlled field to move a
 stuck note; put full SSNs/ID numbers in any message or item; create skills mid-run;
-post a card anywhere but Convo 1 or #fixes; read a timeline channel as input. If a task
-requires any of these, draft what you safely can, open ONE card decision round asking,
-react ⏳ on the source, and move on. On a 3rd consecutive failure of the same task,
-react 🚗 on the source (stop retrying) and open a "STUCK — needs Lemar" card in #fixes.
+post a card anywhere but Convo 1 or #fixes; read a timeline channel as input; open a
+pull request or create a branch on this repo (see GIT WRITE POLICY above — always
+`main`, directly). If a task requires any of these, draft what you safely can, open ONE
+card decision round asking, react ⏳ on the source, and move on. On a 3rd consecutive
+failure of the same task, react 🚗 on the source (stop retrying) and open a "STUCK —
+needs Lemar" card in #fixes.
 
 **Write integrity (locked 2026-09-07, per Lemar's ✅ on both options — #fixes ts
 `1788721717.687559`).** A recurring bug sent placeholder/dummy content instead of real
@@ -122,12 +135,26 @@ historical references legible.)
 
 Read `.claude/state/samira-state.json` from `main`.
 
-**LOCK.** If `lock.run_started` is newer than `lock.run_completed` AND less than 45
+**LOCK.** If `lock.run_started` is newer than `lock.run_completed` AND less than 120
 minutes old, another run is still in flight — **exit silently** (no posts, no digest, no
 journal entry). This is the fix for the overlapping-trigger-fire bug (recurring since at
 least 2026-07-29). Otherwise write `lock.run_started` = now plus a fresh `run_id` and
 commit to `main` (re-pull + retry on rejection, per the git-write policy). A run that
-dies mid-flight simply ages out of the lock after 45 minutes.
+dies mid-flight simply ages out of the lock after 120 minutes.
+
+**Threshold raised from 45 to 120 minutes (2026-09-07, #fixes thread ts
+`1788790402.959139`).** The 45-minute figure assumed a run outliving it is hung, not
+working — false as of the 90th/91st/92nd scans, three consecutive same-day instances
+where the next scan found the prior run's lock still open past 45 minutes while that
+prior run was demonstrably still doing real work (committed watermark advances, Slack
+replies, Drive doc builds). One contributing cause — a missing `.claude/settings.json`
+permission allowlist stalling scans on approval prompts — was fixed the same day, but a
+legitimately thorough pass (28+ open card threads, several Drive/Doc builds, Gmail
+triage) can genuinely run past 45 minutes with no fault. 120 minutes gives that headroom
+while still bounding a truly dead run to at most one skipped hourly trigger.
+Idempotency (prior "Done ✅" replies, per-skill dedupe keys, watermarks) remains the
+real guard against double-acting, not this number — raising it lowers false "orphaned"
+detections without weakening that guard.
 
 **WATERMARKS.** The state file is the ONE source of "since the last run" — never
 reconstruct a cutoff from digest prose. Sweep each surface strictly from its stored
@@ -206,7 +233,10 @@ any reply newer than the stored latest-reply `ts`. Work each open card per the d
 - 👀 → leave it; no nudge. ⛔ → park: status Parked on the note, reply "Parked ⏳",
   record it in the Haven open-items note under `70-Automation/samira/`, drop from the
   queue. 🫡 → close: record the closing outcome via samira-report-result, edit the
-  parent to begin "✅ CLOSED — [outcome]", drop it. Convo 1 trends toward empty; the
+  parent to begin "✅ CLOSED — [outcome]", drop it. 🔔 (added 2026-09-07, per Lemar) →
+  treat like 👀 (no action this pass) but ALSO re-surface the card on next scan's
+  PART 3 sweep instead of letting it go quiet — a standing nudge that stays live until
+  cleared with ✅/⛔/🫡. Convo 1 trends toward empty; the
   record lives in Haven + #reports.
 
 ### PART 4 — Convo 2 pass (the intake notepad; was PARTs B + Q + H + M-input)

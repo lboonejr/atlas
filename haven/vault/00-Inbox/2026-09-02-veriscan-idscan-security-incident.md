@@ -1,6 +1,6 @@
 ---
 created: 2026-09-02T04:55:01-04:00
-updated: 2026-09-05T12:20:00-04:00
+updated: 2026-09-08T12:32:00-04:00
 domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation (ID-scanning vendor used for compliance/age verification — could touch Cuzzie's, Station, or both; not stated which account(s) this notice covers)
 type: task
 status: awaiting-decision
@@ -79,6 +79,17 @@ Not reply-worthy (no-reply vendor notice). No new action taken — the open #dec
 card (ts `1788351021.360259`, "VeriScan (IDScan.net) — potential security incident")
 and this note's `awaiting-decision` status already cover it; domain stays UNRESOLVED.
 
+## Update 2026-09-08 (97th scan) — both entities confirmed, no action wanted
+
+Lemar answered (Convo 1 card ts `1788867564.568929`, reply ts `1788869039.117279`):
+"Both entities use idscan.net. no action needs to be taken here though." Domain
+question resolved factually — both Cuzzie's AND Station use the vendor — but that
+means it still doesn't map to a single controlled `domain` value, so leaving
+`domain` UNRESOLVED (a mismatch call, not a missing-info gap) rather than guessing
+one entity over the other. Lemar explicitly declined any action (Option 2 — watching
+only). No credentials rotated, no portal review done, nothing contacted — his call,
+logged.
+
 ## Sources
 - gmail: thread `1a05f9cd34527932` ("Important security information for VeriScan
   users", hello@idscan.net, 2026-09-02 04:55 ET)
@@ -86,3 +97,4 @@ and this note's `awaiting-decision` status already cover it; domain stays UNRESO
   regarding the 9/1 security incident", hello@idscan.net, 2026-09-04 20:49 UTC / 4:49pm ET)
 - gmail: thread `1a0725ecf496eeda` (same subject, resend/duplicate, hello@idscan.net,
   2026-09-05 16:20 UTC / 12:20pm ET)
+- slack: Convo 1 (D0BHPKMDNEP), card ts `1788867564.568929`, answered 2026-09-08

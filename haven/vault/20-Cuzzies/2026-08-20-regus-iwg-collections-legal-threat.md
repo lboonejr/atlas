@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T10:15-04:00
-updated: 2026-09-05T00:00-04:00
+updated: 2026-09-08T12:20:00-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -228,3 +228,16 @@ by this note's `calendar_event_id` (which already pointed at the newer
 Earlier history of this same matter (the 7/31 original notice through the 8/18
 itemization) lives in [[2026-07-31-regus-iwg-past-due-collections]], now closed as
 `done` per schema §7 (one matter, one note). This note remains the operative record.
+
+## Update 2026-09-08 (97th scan) — Option 2 finally executed, ~2.5 weeks late
+
+Lemar picked Option 2 (push once more for a two-payment split) on 2026-08-21
+(reaction on Convo 1 card ts `1788718699.907999`, reply ts `1788718747.324449`), but
+no email was ever drafted — it sat unexecuted until Lemar asked in-thread today
+("was the email created?"). Drafted a follow-up to Fernanda Romancini
+(AmericasDebtCollection@iwgplc.com) asking IWG to reconsider a two-payment split on
+the $1,506.05 settlement, with a fallback to accept the lump sum if a split isn't
+possible. Saved to Gmail Drafts only, not sent — Samira never sends. The original
+7-day settlement window (through ~8/28) has lapsed, so the draft also implicitly
+tests whether the offer still stands; if IWG comes back saying it doesn't, that's a
+new decision round.

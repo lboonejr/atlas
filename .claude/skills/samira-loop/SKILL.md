@@ -361,6 +361,17 @@ parks on ⛔ or on silence by day four. Most loop items should close inside a da
 item that keeps growing past that is not a loop item, it is a project: hand it to Atlas
 Gear 2 (or to Stormy — Convo 2's deep-dive mode since 2026-09-06 — if it has no date on it).
 
+**Post-build verification (adopted 2026-09-08, per Lemar — #fixes card ts
+`1788867705.557329`, root-caused by the completion-callback line landing in the skill
+file 2026-09-06 but not showing up in prompts staged afterward).** Before reporting a
+build "done" — in a #reports line, a "Done ✅" reply, or an outcome note — check the
+ACTUAL output that Lemar or a downstream reader will see, not just the file/skill that
+defines the behavior. "The skill file has the fix" is not evidence the fix is present
+in what got produced. Concretely: after building or editing a template, prompt, or
+generator, re-read (or re-generate and spot-check) at least one real output it produces
+before claiming the change took effect. A claim that turns out false on the next check
+gets corrected in-thread, not silently carried forward.
+
 ---
 
 ## 8. #reports — the running record, always on

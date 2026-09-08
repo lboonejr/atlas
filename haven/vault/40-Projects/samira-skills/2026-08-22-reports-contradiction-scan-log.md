@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-09-07T12:40-04:00
+updated: 2026-09-08T13:00:00-04:00
 domain: project
 type: log
 status: active
@@ -2118,3 +2118,95 @@ confirms exactly what happened to the original claim, per this skill's own bar f
   not the live Convo 1 backlog count)
 - haven/vault/70-Automation/samira/2026-08-22-decisions-backlog-audit.md (precedent
   methodology for the retired #decisions system)
+
+## Update 2026-09-07 (93rd scan / PART 6c)
+
+Scanned #reports from the prior bookmark (`1788784435.799459`) through this scan's
+read (`1788797620` ish). Two prior-scan digests (91st, 92nd) covering the confirmed
+concurrent-session collision were already known/logged via #fixes -- not re-flagged.
+
+**Found: 1 -- same non-actionable "Haven Keeper" pattern, 10th+ occurrence.**
+
+1. **Informational only -- another "Haven Keeper" empty-inbox claim.**
+   - `1788787424.089139` (~11:23am ET, `U0BC5UTHYG4`/`A08SF47R6P4` -- the same
+     manual-desktop-session signature as every prior occurrence logged in this file
+     since the eleventh run): "Haven -- filed 0 . stuck 0 . rang +0/~0/-0. Inbox
+     empty, no notes with a `due` field -- nothing to file, all quiet."
+   - **Ground truth:** this run's own PART 1 sweep confirms the same 5 notes remain
+     stuck in `00-Inbox` (unchanged), and 49 vault notes carry a `due` field. Both
+     claims in the Haven Keeper line are wrong, same as every prior occurrence.
+   - **Not escalated as new** -- this is the identical, already-dispositioned pattern
+     (see the eleventh run's entry above and
+     `haven/vault/70-Automation/samira/2026-08-15-suspicious-admin-bot-message-disregarded.md`):
+     a one-off manual session under a different signature, never read back as state by
+     the automated routine, so it doesn't propagate. This run initially over-escalated
+     it as a fresh #fixes card (ts `1788797648.363529`) before finding this log's own
+     history on the second look -- corrected in-thread and closed per the standing
+     disposition rather than left open as a new question.
+
+**Open questions posted to #fixes this run: 0** (the one posted was a mistaken
+re-escalation of an already-dispositioned pattern, corrected and closed same-scan).
+
+### Sources (93rd-scan / PART 6c update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788784435.799459`-`1788794457.227209`
+- slack: #fixes `C0BV5BRNH5Z`, ts `1788797648.363529` (mistaken escalation, corrected
+  and closed same-scan)
+- haven/vault/70-Automation/samira/2026-08-15-suspicious-admin-bot-message-disregarded.md
+  (established disposition for this signature/pattern)
+- haven/vault/00-Inbox/ (5 files, confirmed via `git ls-tree` this scan)
+
+## Update 2026-09-07 (94th scan / PART 6c)
+
+Scanned #reports from the prior bookmark (`1788794457.227209`) through this scan's
+read. Only one message in that window: the 93rd scan's own digest (ts
+`1788797868.060879`) -- already known/consistent with this session's own state, not a
+new claim to cross-check. **Found: 0.** Clean pass.
+
+### Sources (94th-scan / PART 6c update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788794457.227209`-`1788797868.060879`
+
+## Update 2026-09-08 (97th scan / PART 6c) — root cause found for the "waiting on you" / "fixes open" count swings
+
+Scanned #reports from the 94th-scan bookmark (`1788797868.060879`) through this scan.
+No new contradictions in #reports itself this window, but this scan also executed the
+Convo 1 card-backlog audit Lemar picked (Option 1) on the open #fixes card
+"Convo 1 'waiting on you' count swings unexplained" (ts `1788787392.857369`) — and it
+surfaced the actual root cause, not just a corrected count.
+
+**Root cause: no Slack tool exists to edit a message.** The card doctrine
+(`.claude/doctrine/card-format.md`) requires closing a card by "editing the parent to
+begin `✅ CLOSED — [outcome]`." Checked every Slack tool available on both the Samira
+bot connector and the personal connector this scan — there is no edit-message
+capability on either. That means the close mechanic the doctrine describes has never
+actually been executable. Consequence, confirmed by a full read of the live Convo 1
+channel (46 card parents from ts `1788712285` through `1788867564`): **zero** parent
+messages currently begin with "✅ CLOSED" — not one, despite ~28 of the 46 carrying a
+🫡 (saluting_face) reaction from Lemar, some for weeks. Every digest that has ever
+reported a "closed" count has been reporting *intent* (a reaction seen once) rather
+than an executed state change, which is exactly why the counts don't reconcile against
+each other pass to pass — there is no durable "closed" state on the card surface
+itself to count.
+
+**Secondary finding, same audit: `slack_read_thread`'s embedded parent-message
+reactions can be stale.** Spot-checked card ts `1788723993.447999` (the
+completion-callback card) three ways: this scan's `slack_read_channel` dump showed
+`saluting_face`; a fresh `slack_read_thread` call on the same message embedded
+`white_check_mark` in the parent's `reactions` field; a direct `slack_get_reactions`
+call confirmed `saluting_face` is actually current. `slack_read_thread`'s embedded
+reactions were wrong. Any pass that trusted `slack_read_thread`'s parent reactions
+instead of `slack_read_channel` or a direct `slack_get_reactions` call would read a
+stale signal — a second, independent contributor to the swinging counts.
+
+**True backlog as of this scan (from `slack_read_channel`, verified reliable):** 46
+live card parents in Convo 1. None formally closed (can't be, per the finding above).
+~28 carry a 🫡 signal Lemar already gave, most of them old — these are the ones a real
+fix should resolve first, since Lemar already told Samira what he wants done and
+nothing durable ever recorded it.
+
+### Sources (97th-scan / PART 6c update)
+- slack: #reports `C0BBZJL85RT`, ts range `1788797868.060879`-current (no new
+  #reports-only contradictions this window)
+- slack: Convo 1 `D0BHPKMDNEP`, full channel read this scan (46 card parents)
+- slack: #fixes `C0BV5BRNH5Z`, ts `1788787392.857369` (the audit this update answers)
+- spot-check: card ts `1788723993.447999` — `slack_read_channel` vs `slack_read_thread`
+  vs `slack_get_reactions` disagreement, confirmed via direct `slack_get_reactions` call
