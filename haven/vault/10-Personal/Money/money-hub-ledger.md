@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-09-06T15:05:00-04:00
+updated: 2026-09-08T12:16:00-04:00
 domain: personal
 type: reference
 status: active
@@ -143,7 +143,7 @@ bills:
             accrues here, but its due-date reminder lives on the Cuzzie's (Owners)
             calendar, not the personal one, per the business boundary."}
   - {id: cuzzies-google-workspace, name: "Cuzzie's Google Workspace (direct billing setup)",
-     amount: 107.65, cadence: once, due: 2026-09-07, track: queue, status: active,
+     amount: 60.24, cadence: once, due: 2026-09-07, track: queue, status: active,
      business_origin: true, calendar_event_id: u45glcg7992eg9q79nnb6brlco,
      note: "Added 2026-08-13. Same reseller billing lapse as cuzzies-google-voice above —
             all Workspace services for cuzziesnj.com (including lemar@cuzziesnj.com email
@@ -4983,3 +4983,19 @@ on any mismatch rather than trusting the daily computation indefinitely.
 Still open: the calendar event `u45glcg7992eg9q79nnb6brlco` for this bill still carries
 the stale ~$12.14/day estimate in its description — not corrected this pass (ledger
 update only). Nothing paid or contacted.
+
+## Update 2026-09-08 (97th scan) — Google Workspace balance re-reported at $60.24
+
+Lemar reported directly in-thread (Convo 1, thread ts 1788714815.369119, reply ts
+1788867768.720859): "Today's Balance (9/1-9/8) = $60.24." Per the standing rule
+("reconcile against the real Google Admin console → Billing balance whenever Lemar
+reports it again, and correct `amount` to match on any mismatch rather than trusting
+the daily computation indefinitely"), `cuzzies-google-workspace` `amount` corrected
+**107.65 → 60.24** — a direct console read supersedes the prior $9.57/day-advanced
+estimate. Flagging honestly: this reported figure is lower than the prior estimate and
+doesn't cleanly reconcile against the $9.57/day rate confirmed 2026-09-07 (which would
+have implied roughly two more days added to $98.08, not a drop to $60.24) — possibly a
+partial payment posted, a different billing-period slice, or the console resetting to a
+period-to-date figure rather than a running past-due total. Not guessing which; `amount`
+is set to exactly what Lemar reported. `due` unchanged (2026-09-07, already past). Not
+paid or contacted by Samira.
