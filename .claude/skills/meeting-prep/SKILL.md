@@ -71,7 +71,11 @@ For each qualifying meeting, in chronological order:
    never rewrite.
 2. **Render a new Drive snapshot.** One combined self-contained HTML doc (inline CSS;
    `artifact-design` for calibration — keep markup simple, since Drive's HTML→Doc
-   conversion drops CSS grid/flexbox), one card/section per meeting, in time order — a
+   conversion drops CSS grid/flexbox. **Never put an `<a href>` inside a `<table><td>`
+   cell** — it renders as dead escaped-bracket text there even though the identical tag
+   converts cleanly outside a table (found 2026-09-08, run `run_20260908T140459Z`,
+   #fixes); use plain `<p>` rows for anything needing a per-row link, or a link column
+   outside the table), one card/section per meeting, in time order — a
    day's-worth of prep on one page. Write the HTML to a working file, then create it as a
    NEW Google Doc via `Google_Drive__create_file`: `parentId` = the Meeting Prep Drive
    folder id (anchors, "Daily Brief routine" section), `title` = `"YYYY-MM-DD HHMM ET —

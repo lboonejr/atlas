@@ -433,7 +433,11 @@ One self-contained HTML page (inline CSS, no external requests, single column
 phone-first; load the `artifact-design` and `dataviz` skills before building — their
 layout/color guidance still applies even though the target is a Doc, not an Artifact;
 keep markup simple — headings, paragraphs, tables, bold/color spans — since Drive's
-HTML→Doc conversion carries those over but drops CSS grid/flexbox). `<title>Money
+HTML→Doc conversion carries those over but drops CSS grid/flexbox. **Never put an
+`<a href>` inside a `<table><td>` cell** — it renders as dead escaped-bracket text there
+even though the identical tag converts cleanly outside a table (found 2026-09-08, run
+`run_20260908T140459Z`, #fixes); use plain `<p>` rows for anything needing a per-row
+link, or a link column outside the table. `<title>Money
 Hub</title>`, "rendered HH:MM ET" stamp. Write the HTML to a working file, then create it
 as a NEW Google Doc via `Google_Drive__create_file`: `parentId` = the Money Hub Drive
 folder id (anchors, "Money Hub" section), `title` = `"YYYY-MM-DD HHMM ET — Money Hub"`

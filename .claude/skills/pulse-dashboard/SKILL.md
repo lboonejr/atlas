@@ -148,7 +148,12 @@ Build ONE self-contained HTML page (inline CSS only, no external requests; load 
 applies even though the target is now a Doc, not an Artifact). Single column,
 phone-first; keep the markup simple (headings, paragraphs, tables, bold/color text
 spans) since Drive's HTML→Doc conversion carries those over but drops CSS grid/flexbox
-layout. `<title>Pulse — Personal Dashboard</title>`. Header: "Pulse" masthead, date,
+layout. **Never put an `<a href>` inside a `<table><td>` cell** — Drive's HTML→Doc
+conversion renders it as dead escaped-bracket text there even though the identical tag
+converts cleanly outside a table (found 2026-09-08, run `run_20260908T140459Z`, #fixes).
+Render any section that needs a per-row link (Calendar, Atlas open items) as plain `<p>`
+rows instead of a table, or keep the table and put the link in a column of its own
+outside the `<td>`. `<title>Pulse — Personal Dashboard</title>`. Header: "Pulse" masthead, date,
 "rendered HH:MM ET · refreshes hourly 8a–6p" line. Write the HTML to a working file,
 then create it as a NEW Google Doc via `Google_Drive__create_file`:
 - `parentId`: the Pulse Drive folder id (anchors, "Pulse dashboard" section).

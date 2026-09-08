@@ -115,7 +115,11 @@ dropped — awareness, not assignments.
 2. **Render a new Drive snapshot.** Build a self-contained HTML page (inline CSS only —
    no external requests; load the `artifact-design` skill for calibration — keep markup
    simple: headings, paragraphs, tables, bold/color spans, since Drive's HTML→Doc
-   conversion carries those over but drops CSS grid/flexbox). Suggested shape: a header
+   conversion carries those over but drops CSS grid/flexbox. **Never put an `<a href>`
+   inside a `<table><td>` cell** — it renders as dead escaped-bracket text there even
+   though the identical tag converts cleanly outside a table (found 2026-09-08, run
+   `run_20260908T140459Z`, #fixes); use plain `<p>` rows for anything needing a per-row
+   link, or a link column outside the table). Suggested shape: a header
    with the date, **the North Star line set large (it IS the brief)**, the directional
    theme cards, a closed-loops delta strip written as movement, today's calendar
    timeline, key emails, and the activity-cluster-vs-projects split rendered as two
