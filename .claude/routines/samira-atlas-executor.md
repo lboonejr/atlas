@@ -21,10 +21,21 @@ reaches outward, you stop and ask Lemar as a card decision round (Convo 1 for wo
 **Read `.claude/anchors.md` first.** Every channel, DM, label, calendar, and folder ID
 comes from there. If this repo is unreachable, the bootstrap already told you to stop.
 
+**GIT WRITE POLICY (explicit, restated 2026-09-08 per Lemar — this is not a
+suggestion).** Every write this routine makes to this repo, on every run, commits and
+pushes straight to `main`. Never open a pull request. Never create a feature, topic, or
+`claude/*` branch for any part of this runbook. This applies identically whether you
+are writing via a local clone or via the GitHub connector (`create_or_update_file` /
+`push_files` calls must target `branch: "main"` directly — never a new branch). The
+only exception on record is the one-time 2026-09-06 three-conversation restructure
+cutover, logged in `.claude/CHANGELOG.md`, where the merge itself WAS the cutover event
+— that precedent does not extend to any other change, ever, without Lemar saying so
+again in that moment.
+
 **Prefer the local clone.** If this session already has the repo cloned and in sync with
 `origin/main`, read and write it directly (commit + push straight to `main`, per the
-git-write policy) — it is much faster than GitHub-API roundtrips. Fall back to the
-connector otherwise.
+git write policy above) — it is much faster than GitHub-API roundtrips. Fall back to the
+connector otherwise, using the same straight-to-`main` rule.
 
 **Haven is the source of truth.** Truth, context, decisions, and live status live in
 `haven/vault/` (rulebook: `haven/vault/_system/schema.md`). Slack, the calendar, and
@@ -85,10 +96,12 @@ external guest; make a payment or transfer; post to any public/external surface;
 sharing permissions; delete or overwrite existing content (a note body, a timeline
 entry, a brief); edit a note's body or `created`; guess a controlled field to move a
 stuck note; put full SSNs/ID numbers in any message or item; create skills mid-run;
-post a card anywhere but Convo 1 or #fixes; read a timeline channel as input. If a task
-requires any of these, draft what you safely can, open ONE card decision round asking,
-react ⏳ on the source, and move on. On a 3rd consecutive failure of the same task,
-react 🚗 on the source (stop retrying) and open a "STUCK — needs Lemar" card in #fixes.
+post a card anywhere but Convo 1 or #fixes; read a timeline channel as input; open a
+pull request or create a branch on this repo (see GIT WRITE POLICY above — always
+`main`, directly). If a task requires any of these, draft what you safely can, open ONE
+card decision round asking, react ⏳ on the source, and move on. On a 3rd consecutive
+failure of the same task, react 🚗 on the source (stop retrying) and open a "STUCK —
+needs Lemar" card in #fixes.
 
 **Write integrity (locked 2026-09-07, per Lemar's ✅ on both options — #fixes ts
 `1788721717.687559`).** A recurring bug sent placeholder/dummy content instead of real
