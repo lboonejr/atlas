@@ -1,11 +1,11 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record' (for D0BBVV54L5R and C0BV5BRNH5Z the legacy cutoff is the 2026-09-06 wiring-test timestamp). Every slack_channels watermark MUST be a JSON string: the last-read message ts for that surface, or, for a surface quiet this scan, the scan-time epoch seconds as a string. Never store a bare JSON number. Watermarks must never postdate lock.run_completed — they are stamped before the lock closes (PART 0). 2026-09 RESTRUCTURE: swept surfaces are Convo 1 (D0BHPKMDNEP), Convo 2 (D0BBVV54L5R, self-DM), and #fixes (C0BV5BRNH5Z); card_threads (keyed '<channel_id>:<parent_ts>') supersedes decisions_threads, which is FROZEN as the migration worklist — the migration runbook drains it and then deletes it along with the retired timeline-channel watermarks (kept until migration step 0's final legacy sweep). capture_dm is legacy; delete with the same cleanup.",
   "lock": {
-    "run_id": "run_20260908T170304Z",
-    "run_started": "2026-09-08T17:03:04Z",
+    "run_id": "run_20260908T200421Z",
+    "run_started": "2026-09-08T20:04:21Z",
     "run_completed": "2026-09-08T17:15:30Z",
-    "note": "99th scan complete. Took over the dead 97th-scan lock (run_20260908T140459Z, started 14:04:59Z, never wrote a completion despite finishing PART 0-8 and posting its own 98th-scan digest at 10:36am ET / 1788878190.721969 — a second confirmed instance of the finish-but-never-close-lock bug, already tracked in #fixes). Checked idempotency markers throughout; nothing re-done. This run's delta: shipped the table-cell-hyperlink #fixes fix (4 skills patched, pushed cb808a3b, replied Done, left open for follow-up verification), triaged 19 Gmail threads (17 newly seen), carded 1 new task (NJ Tax Portal Return Filed/Posted notices), checked the investor backlog + pipeline index (nothing new since 8/26), ran the contradiction scan (1 new #reports message, clean), appended the daily journal, posted the #reports digest (ts 1788887654.676609). Pulse not re-rendered — 10:36am ET render still current, delta deferred to next scan.",
-    "prior_note": "98th scan (run_20260908T140459Z): completed full PART 0-8, posted digest 1788878190.721969, but never wrote lock.run_completed/watermarks — root cause of the takeover above."
+    "note": "100th scan in progress.",
+    "prior_note": "99th scan (run_20260908T170304Z) completed cleanly 17:15:30Z."
   },
   "watermarks": {
     "slack_channels": {
@@ -110,7 +110,7 @@
   "integrity": {
     "last_full_pass": "2026-09-08T14:52:00Z",
     "last_scan_sha": "41b50149",
-    "note": "PART 1 full whole-vault integrity pass (run_20260908T140459Z, unchanged since): 707 notes scanned, repaired 0, same 2 known/carried defects as 2026-09-07 (70-Automation/samira/2026-09-06-decisions-migration-batch2.md missing frontmatter entirely; 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md missing required fields). This run (99th scan) did the incremental check: only haven/vault/_daily/2026-09-08.md changed since e3418af, frontmatter clean, no repair needed. Inbox unchanged: same 4 notes stuck on blank/UNRESOLVED domain. last_scan_sha advanced to this run's own HEAD (41b50149) so the next scan's incremental diff starts from here."
+    "note": "PART 1 full whole-vault integrity pass (run_20260908T140459Z, unchanged since): 707 notes scanned, repaired 0, same 2 known/carried defects as 2026-09-07 (70-Automation/samira/2026-09-06-decisions-migration-batch2.md missing frontmatter entirely; 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md missing required fields). 99th scan did the incremental check: no vault changes since 41b50149, no repair needed."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
