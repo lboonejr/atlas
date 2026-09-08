@@ -3,27 +3,27 @@
   "lock": {
     "run_id": "run_20260908T220401Z",
     "run_started": "2026-09-08T22:04:01Z",
-    "run_completed": "2026-09-08T21:28:26Z",
-    "note": "101st scan complete. Filed the 2 file-ready Inbox notes left by the 100th scan (D'Andrea Law consult -> 60-Legal/, Garden Society AR -> 20-Cuzzies/); same 4 notes still stuck on blank/UNRESOLVED domain. Calendar-sync: +1 new event (D'Andrea Law consult, reminder calendar); spot-checked the done-status due notes' calendar_event_id absence rather than a full 47-note walk, confirming prior scans kept sync clean. Convo 1 / Convo 2 / #fixes all quiet at top level (100th scan had just cleared the backlog 45 min earlier). MIGRATION COMPLETE this scan: triaged the last 8 decisions_threads entries (3 closed as superseded/already-resolved, 6 migrated live as fresh Convo 1 cards -- Curaleaf NJ II $25,601.41 urgent, Drive folder nesting, CannaBIZ/Little Leaf Labs $8,331 urgent, Gusto payroll still-late, Adobe Photoshop billing failure, and the Haven Keeper identity question with new evidence pointing to it being Lemar's own Claude session); posted the final 'ready to archive #decisions + #stormy' card, Lemar's hand from here. decisions_migration_complete set true; decisions_threads + capture_dm keys deleted; watermark entries dropped for every channel that stopped being swept 2026-09-06. Reports-contradiction-scanner ran for the first time (no prior bookmark, default 7-day window): found the Money Hub Google Workspace balance reported at 4 different figures across 48h, checked the ledger, confirmed it's normal correctly-documented figure evolution not a real contradiction -- staged one #fixes card anyway proposing a settling #reports line (obvious-fix category). Gmail: 1 new thread (junk newsletter), labeled seen. Investor loop quiet. No timeline entries (nothing mapped to a listed project channel this pass). Pulse rendered clean, 9/9 sections, DM sent.",
-    "prior_note": "100th scan complete. Found and cleared a real backlog: 19 Convo 1 cards carried a saluting_face-close signal that never actually closed because no Slack tool can edit a message -- closed all 19 via a working '✅ CLOSED' reply substitute, flagged the tooling gap to #fixes. Executed 2 previously chosen-but-never-executed cards (Waste Management, Leafly) and drafted the GTI AR reply. Ran an ad hoc Gmail sweep (17 new threads): flagged a Garden Society AR collections notice as a possible invoice-fraud pattern and logged a new D'Andrea Law consult. PART 1/2 quiet. Scope note: PART 6b/6c, migration, PART 7, and PART 8 were deferred to the next scan."
+    "run_completed": "2026-09-08T22:19:00Z",
+    "note": "102nd scan complete. Quiet pass overall. Vault Inbox unchanged (4 stuck notes, integrity clean). Calendar-sync: no changes. Convo 1: swept all 54 tracked card threads + channel top level, only Garden Society AR had new activity -- Lemar picked 'let it lapse, no payment', closed and logged. Convo 2 and #fixes both fully quiet (no new top-level messages, no new replies across #fixes's 13 tracked threads). Email: 2 new threads, both junk, labeled seen. Investor loop quiet. Reports-contradiction-scanner skipped (no new #reports content since its bookmark). Timelines: 0 entries (Garden Society AR isn't mapped to a listed project channel). Pulse rendered (a card closed this run) -- new Drive Doc, verified clean on read-back, DM sent; surfaced the Atlas open-items backlog at 41 due-dated notes (methodology re-run fresh), oldest from 7/6, carried not actioned. ~15 Convo 1 cards remain open (approximate -- the message-edit-tool gap from the 100th scan's audit is still unresolved, #fixes thread 1788898652.010999 still awaiting Lemar's pick).",
+    "prior_note": "101st scan complete. Filed the 2 file-ready Inbox notes left by the 100th scan (D'Andrea Law consult -> 60-Legal/, Garden Society AR -> 20-Cuzzies/); same 4 notes still stuck on blank/UNRESOLVED domain. Calendar-sync: +1 new event (D'Andrea Law consult, reminder calendar); spot-checked the done-status due notes' calendar_event_id absence rather than a full 47-note walk, confirming prior scans kept sync clean. Convo 1 / Convo 2 / #fixes all quiet at top level (100th scan had just cleared the backlog 45 min earlier). MIGRATION COMPLETE this scan. Reports-contradiction-scanner ran for the first time: found the Money Hub Google Workspace balance reported at 4 different figures across 48h, confirmed it's normal correctly-documented figure evolution not a real contradiction -- staged one #fixes card anyway proposing a settling #reports line. Gmail: 1 new thread (junk newsletter), labeled seen. Investor loop quiet. No timeline entries. Pulse rendered clean, 9/9 sections, DM sent."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1788902812.798459",
-      "D0BHPKMDNEP": "1788901954.052969",
-      "D0BBVV54L5R": "1788902906",
-      "C0BV5BRNH5Z": "1788902073.893579"
+      "C0BBZJL85RT": "1788905813.398019",
+      "D0BHPKMDNEP": "1788905783.385549",
+      "D0BBVV54L5R": "1788905926",
+      "C0BV5BRNH5Z": "1788905926"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
       "D0BHPKMDNEP:1788714812.755469": "1788718292.617709",
       "D0BHPKMDNEP:1788714813.201089": "1788727568.055499",
       "D0BHPKMDNEP:1788714813.719449": "1788720346.577239",
-      "D0BHPKMDNEP:1788714814.865959": "1788718152.815049",
-      "D0BHPKMDNEP:1788714815.369119": "1788794173.537709",
+      "D0BHPKMDNEP:1788714814.865959": "1788877332.643349",
+      "D0BHPKMDNEP:1788714815.369119": "1788869506.403419",
       "D0BHPKMDNEP:1788714815.853539": "1788718435.892139",
       "D0BHPKMDNEP:1788715547.125429": "1788794146.141419",
-      "D0BHPKMDNEP:1788718699.907999": "1788718748.352959",
+      "D0BHPKMDNEP:1788718699.907999": "1788869546.302319",
       "D0BHPKMDNEP:1788718700.965879": "1788783837.883069",
       "D0BHPKMDNEP:1788718701.557769": "1788727679.097669",
       "D0BHPKMDNEP:1788718702.108269": "1788723916.981619",
@@ -46,32 +46,32 @@
       "C0BV5BRNH5Z:1788731741.908079": "1788784428.634309",
       "C0BV5BRNH5Z:1788732629.871619": "1788784226.770239",
       "C0BV5BRNH5Z:1788784231.256459": "1788784231.256459",
-      "C0BV5BRNH5Z:1788787392.857369": "1788787406.272699",
+      "C0BV5BRNH5Z:1788787392.857369": "1788870176.595429",
       "C0BV5BRNH5Z:1788790402.959139": "1788793870.516519",
+      "C0BV5BRNH5Z:1788794112.021869": "1788876681.921369",
       "D0BHPKMDNEP:1788792460.080689": "1788794142.408019",
-      "C0BV5BRNH5Z:1788794112.021869": "1788818933.900879",
       "D0BHPKMDNEP:1788786717.686909": "1788786727.764729",
-      "D0BHPKMDNEP:1788797499.354449": "1788818873.550609",
+      "D0BHPKMDNEP:1788797499.354449": "1788876853.155729",
       "D0BHPKMDNEP:1788801304.731739": "1788898629.170369",
-      "D0BHPKMDNEP:1788819122.125539": "1788867519.004699",
+      "D0BHPKMDNEP:1788819122.125539": "1788876951.923919",
       "D0BHPKMDNEP:1788819126.249859": "1788867454.040709",
-      "D0BHPKMDNEP:1788718849.424069": "1788867658.949379",
+      "D0BHPKMDNEP:1788718849.424069": "1788869548.131289",
       "D0BHPKMDNEP:1788819071.876059": "1788898450.085429",
       "D0BHPKMDNEP:1788819077.891869": "1788867453.540139",
       "D0BHPKMDNEP:1788819035.833609": "1788898449.004049",
       "D0BHPKMDNEP:1788719364.475849": "1788867517.180489",
       "D0BHPKMDNEP:1788723993.447999": "1788898445.157469",
-      "D0BHPKMDNEP:1788867560.275349": "1788867592.664229",
+      "D0BHPKMDNEP:1788867560.275349": "1788869631.298189",
       "D0BHPKMDNEP:1788867560.913029": "1788898451.247179",
       "D0BHPKMDNEP:1788867561.830549": "1788898452.826719",
-      "D0BHPKMDNEP:1788867562.550249": "1788867596.678329",
+      "D0BHPKMDNEP:1788867562.550249": "1788869800.482489",
       "D0BHPKMDNEP:1788867563.070869": "1788898453.874109",
       "D0BHPKMDNEP:1788867563.966489": "1788898482.704359",
       "D0BHPKMDNEP:1788867564.568929": "1788898455.217899",
-      "C0BV5BRNH5Z:1788867705.557329": "1788867705.557329",
+      "C0BV5BRNH5Z:1788867705.557329": "1788876675.691829",
       "C0BV5BRNH5Z:1788878157.342439": "1788887352.211189",
       "D0BHPKMDNEP:1788887534.678329": "1788887534.678329",
-      "D0BHPKMDNEP:1788898737.038929": "1788898744.823649",
+      "D0BHPKMDNEP:1788898737.038929": "1788905399.761749",
       "C0BV5BRNH5Z:1788890716.275749": "1788898685.122129",
       "C0BV5BRNH5Z:1788898652.010999": "1788898652.010999",
       "D0BHPKMDNEP:1788901887.069719": "1788901919.884189",
@@ -89,12 +89,12 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1788901371
+    "gmail_after_epoch": 1788905926
   },
   "integrity": {
     "last_full_pass": "2026-09-08T14:52:00Z",
-    "last_scan_sha": "1540a6c",
-    "note": "101st scan incremental check: 6 files changed since 1540a6c's own parent (the 2 Inbox filings this run's own writes), all accounted for, no repair needed. Same 2 known/carried defects as before (70-Automation/samira/2026-09-06-decisions-migration-batch2.md missing frontmatter; 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md missing required fields). Inbox: same 4 notes stuck on blank/UNRESOLVED domain."
+    "last_scan_sha": "f181e40",
+    "note": "102nd scan incremental check: only haven/vault/_daily/2026-09-08.md changed since 1540a6c (this run's own journal appends), valid frontmatter, no repair needed. Same 2 known/carried defects as before (70-Automation/samira/2026-09-06-decisions-migration-batch2.md missing frontmatter; 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md missing required fields). Inbox: same 4 notes stuck on blank/UNRESOLVED domain."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
@@ -102,7 +102,7 @@
     "note": "Not re-checked (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-08T17:15:00-04:00",
+    "pulse_last_rendered": "2026-09-08T18:16:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
