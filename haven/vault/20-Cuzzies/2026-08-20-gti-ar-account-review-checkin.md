@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T11:20-04:00
-updated: 2026-09-08T10:12-04:00
+updated: 2026-09-08T16:22-04:00
 domain: cuzzies
 type: task
 status: active
@@ -120,6 +120,15 @@ here (per the 6/30–8/20 thread) is to personally reply with a transparent, no-
 update on the sale conversations each time GTI escalates. Drafted an option in that same
 voice for him to use or edit, without asserting anything new about buyer status. Nothing
 sent — his call, per the established pattern of handling GTI himself.
+
+## Update 2026-09-08T16:22-04:00 — reply drafted per Lemar's pick (Option A)
+Lemar picked Option A on the Convo 1 card (ts 1788801304.731739): draft a reply in his
+voice, transparent, no firm date/number, and save it to Gmail Drafts for him to review
+and send. Draft created (Gmail draft id `r-4214824060709976633`, message id
+`1a082a9a37b93240`, on thread `1a05d82f92ecf554`) — same posture as every prior reply
+on this thread (talks are live, nothing signed, no figure asserted), plus an offer to
+get on a call before GTI moves to collections. Not sent — his call. Card left open
+(waiting on him to review/send), not closed.
 
 ## Sources
 
