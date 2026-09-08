@@ -1,6 +1,6 @@
 ---
 created: 2026-08-25T08:06:41-04:00
-updated: 2026-09-04T17:44:55-04:00
+updated: 2026-09-08T14:15:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -102,3 +102,27 @@ signed, nothing paid.
 - gmail: thread `1a06e61c9633b1e2` — "Document from CannaBIZ Collects", received
   2026-09-04T21:44:55Z from mike@cannabizcollects.com, attachment
   `CannaBIZ Collects Demand Letter.pdf`; addressed to admin@/info@/jenn@/joshua@/lemar@cuzziesnj.com
+
+## Update 2026-09-08 14:15 ET — Cliff answered part of the plain-English-summary ask; picking up the next round
+
+The 8/26 debt-settlement-agreement card (migrated to Convo 1, thread_ts `1788819122.125539`)
+sat unpicked for 2 weeks before Lemar ✅'d "ask Cliff for a plain-English summary first" on
+2026-09-08. Samira drafted the ask in Gmail Drafts (draft id `1a080cfeee79bbb7`); Lemar sent
+it himself 2026-09-08T11:52:54Z on Gmail thread `1a03e89d3aa66ded`, asking Cliff to walk
+through the terms in plain English — specifically which creditor(s) the settlement
+agreement covers and the settlement figure.
+
+Cliff Sanders replied 2026-09-08T13:26:34Z (cc mike@cannabizcollects.com): "The terms
+would only apply to any accounts you assign to us." This answers the "which creditor(s)"
+half only — no settlement figure given. Posted a new round of 3 draft reply options on
+the same Convo 1 card (Option A: press for the number in writing before a call · Option
+B: skip more email, go straight to a call · Option C: confirm whether this is Little Leaf
+Labs specifically or more than one account, then schedule). Awaiting Lemar's pick — no
+draft saved to Gmail Drafts yet, nothing sent, nothing signed, nothing paid.
+
+### Sources (this update)
+- gmail: thread `1a03e89d3aa66ded`, messages `1a080dd327601552` (Lemar's sent ask,
+  2026-09-08T11:52:54Z) / `1a08133839e51f11` (Cliff's reply, 2026-09-08T13:26:34Z)
+- gmail: draft `1a080cfeee79bbb7` (sent, no longer a draft)
+- slack: Convo 1 `D0BHPKMDNEP` thread_ts `1788819122.125539` (card, new round posted
+  2026-09-08 ~14:15 ET)
