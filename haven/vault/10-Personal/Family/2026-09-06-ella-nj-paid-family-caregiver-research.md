@@ -1,6 +1,6 @@
 ---
 created: 2026-09-06T15:50-04:00
-updated: 2026-09-06T15:50-04:00
+updated: 2026-09-08T12:22:00-04:00
 domain: personal
 type: task
 status: active
@@ -52,6 +52,22 @@ this is orientation only.
 - web: https://www.payingforseniorcare.com/new-jersey/jacc
 - web: https://www.medicaidplanningassistance.org/nj-familycare-personal-preference-program/
 - web: https://brevy.com/caregiver/new-jersey/overview
+
+## Update 2026-09-08 (97th scan) — Ella lives in GA, moving to NJ in December
+
+Lemar clarified in-thread (Convo 1 card ts `1788718849.424069`, reply ts
+`1788868129.411469`, after Samira caught "Burke County" not being a real NJ county):
+Ella is currently outside NJ, in Georgia, and will be moving up to NJ to live with
+Lemar's mom in December 2026.
+
+**This changes the research track's timing, not the plan itself.** Neither PPP nor
+JACC (both NJ state programs) applies while Ella is out of state — this note's
+research stays informational/on-hold until she's actually a NJ resident. Nothing to
+apply for now. Revisit in December once she's relocated: confirm her new NJ county,
+re-check her NJ FamilyCare/Medicaid enrollment status post-move, and pick up the PPP
+vs. JACC question from there. The Wed 9/9 8:30am ADRC call already booked on the
+calendar is for Betty (Camden County, unaffected by this) — no calendar action taken
+for Ella given the December timeline.
 
 ## Related
 - [[2026-09-06-betty-nj-caregiver-guardianship-research]] — the separate grandpa→Betty legal/guardianship track

@@ -1,6 +1,6 @@
 ---
 created: 2026-08-29T11:12:00-04:00
-updated: 2026-08-29T11:12:00-04:00
+updated: 2026-09-08T12:31:00-04:00
 domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation (this touches both an active Cuzzie's personnel matter and litigation-defense framing — genuinely could be either)
 type: task
 status: awaiting-decision
@@ -33,6 +33,15 @@ sent or acted on.
 ⚠️ Employment/litigation-adjacent — recommend counsel review before this analysis is
 used or shared anywhere.
 
+## Update 2026-09-08 (97th scan) — sit on the file for now
+
+Lemar's call (Convo 1 card ts `1788867561.830549`, reply ts `1788868833.663669`):
+"Let's just sit on the file for now until we're ready to go." Nothing sent to
+counsel, nothing else actioned. `domain` remains UNRESOLVED (this note still
+genuinely straddles `cuzzies` personnel and `legal` litigation-defense framing) —
+that gap is unrelated to this decision and stays parked in the Haven Inbox card.
+
 ## Sources
 - gmail: thread `1a04a58896e78372` — "Rootwurks Assignment Log", Joshua Evans →
   Lemar, 2026-08-28 21:48 ET (includes attached CSV export)
+- slack: Convo 1 (D0BHPKMDNEP), card ts `1788867561.830549`, decided 2026-09-08

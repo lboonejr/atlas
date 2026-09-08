@@ -1,9 +1,9 @@
 ---
 created: 2026-08-28T13:03-04:00
-updated: 2026-08-28T14:11-04:00
+updated: 2026-09-08T12:30:00-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [on-button, customer-inquiry, camden, google-voice]
 source: gmail
 ---
@@ -27,5 +27,12 @@ listing is outward-facing contact):
 
 Nothing called, nothing posted publicly, nothing changed on any listing.
 
+## Update 2026-09-08 (97th scan) — closed, no action
+
+Lemar picked Option 3 (Convo 1 card ts `1788867560.913029`, reply ts
+`1788868793.163349`, "Let's go with option 3") — leaving it, one-off caller. No call
+back, no listing change. Marked `done`.
+
 ## Sources
 - gmail: thread `1a0495337679cb5d` — "New voicemail from (512) 734-1539"
+- slack: Convo 1 (D0BHPKMDNEP), card ts `1788867560.913029`, closed 2026-09-08

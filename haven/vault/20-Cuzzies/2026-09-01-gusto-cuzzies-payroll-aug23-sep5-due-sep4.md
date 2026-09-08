@@ -1,13 +1,11 @@
 ---
 created: 2026-09-01T20:10:12Z
-updated: 2026-09-05T13:03:51Z
+updated: 2026-09-08T12:35:00-04:00
 domain: cuzzies
 type: task
-status: awaiting-decision
+status: done
 tags: [gusto, payroll, cuzzies]
 source: gmail
-due: 2026-09-04T09:00:00-04:00
-calendar_event_id: t9e1vobl4nk950jkq5oip0hrd8
 ---
 
 # Gusto payroll — Cuzzie's, Aug 23-Sep 5, moved up to Sep 4 (Labor Day)
@@ -33,3 +31,12 @@ Sep 4 deadline from the 9/1 notice is the one that passed. No reply-to address (
 still not something Samira executes. The original card (#decisions, posted 2026-09-01)
 is still unreacted 4 days later — raised again below as a fresh, more urgent card rather
 than a silent nudge, since payroll is now actually late, not just moved up.
+
+## Update 2026-09-08 (97th scan) — Cuzzie's stopping payroll entirely
+
+Lemar's call (Convo 1 card ts `1788867563.966489`, reply ts `1788868991.225909`):
+"We're going to stop running payrolls for Cuzzie's." This resolves this specific
+deadline AND is a standing policy — Cuzzie's Gusto payroll is stopping, not just this
+pay period. Calendar reminder `t9e1vobl4nk950jkq5oip0hrd8` cancelled. Marked `done`.
+Standing policy recorded in `haven/vault/50-Reference/2026-09-08-gusto-payroll-wind-down-policy.md`
+so future automated Gusto notices for Cuzzie's don't keep spawning new cards.
