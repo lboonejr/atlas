@@ -1,6 +1,6 @@
 ---
 created: 2026-07-29T14:15-04:00
-updated: 2026-08-26T12:04:00-04:00
+updated: 2026-09-08T08:40:00-04:00
 domain: project
 type: log
 status: active
@@ -103,3 +103,38 @@ the underlying sign/no-sign question is already standing there since 7/29, unrea
   check-in, 2026-08-26 11:59am ET, first with a stated deadline)
 - slack: #investor-pipeline `C0BCCUKEUQ2` ts `1787760609.747259` (urgency flag posted
   2026-08-26)
+
+## Update 2026-09-08T09:20:00-04:00 — Lemar closes the loop: decline drafted
+
+Lemar asked (Convo 1 card ts `1788797499.354449`, reply ts `1788868583.997969`, ~8:56am
+ET) to close the loop with Camilo after the same-thread email-backlog scan flagged the
+8/26 push still unanswered. Drafted a decline reply to camilo@highgatecapitalpartners.com
+cc jeffrey@highgatecapitalpartners.com (Gmail draft `r-6018623840069383987`, "Re:
+Engagement letter - 10% no retainer"): Cuzzie's is in active wind-down, not a
+going-concern sale, and the same exclusivity concern from 7/7 stands — passing on the
+engagement letter, go to market without us. Saved to Gmail Drafts, not sent. Investor
+index row updated to **Declined**. Posted to Convo 1 (ts `1788869602.028629`), waiting
+on Lemar's review.
+
+### Sources (this update)
+- gmail: draft `r-6018623840069383987`, thread `1a080ef646737683` ("Re: Engagement
+  letter - 10% no retainer")
+- slack: Convo 1 `D0BHPKMDNEP` ts `1788797499.354449` (card), reply `1788868583.997969`
+  (Lemar's ask), `1788869602.028629` (Samira's decline draft posted)
+
+## Update 2026-09-08T08:40:00-04:00 — Lemar asks for softer framing; draft revised
+
+Same card thread, ~15 minutes after the decline draft posted above: Lemar asked for a
+different tone (reply ts `1788871213.125119`) — apologize for the delayed reaction, say
+Cuzzie's has moved forward with another company at this time, and that we'll circle back
+if things change. Updated the same Gmail draft (`r-6018623840069383987`) to that
+language rather than opening a second draft — still addressed to
+camilo@highgatecapitalpartners.com cc jeffrey@highgatecapitalpartners.com, same subject,
+still in Gmail Drafts, **not sent**. Posted to Convo 1 (ts `1788876853.155729`) for
+review. Investor index Next step updated to describe the revised draft awaiting
+Lemar's send.
+
+### Sources (this update)
+- gmail: draft `r-6018623840069383987` (revised body, updated 2026-09-08 ~14:14 UTC)
+- slack: Convo 1 `D0BHPKMDNEP` ts `1788797499.354449` (card), reply `1788871213.125119`
+  (Lemar's ask for softer framing), `1788876853.155729` (Samira's revised-draft note)
