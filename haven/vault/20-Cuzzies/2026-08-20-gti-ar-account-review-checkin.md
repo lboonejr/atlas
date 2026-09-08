@@ -1,12 +1,13 @@
 ---
 created: 2026-08-20T11:20-04:00
-updated: 2026-09-07T13:15-04:00
+updated: 2026-09-08T10:12-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [gti, green-thumb, accounts-receivable, collections, wind-down, camden-sale, off-button]
 source: gmail
 due: 2026-08-21T09:00-04:00
+calendar_event_id: nus6hpb4jks5826igi5dglunqo
 ---
 
 # GTI AR (Mindy Kramer) — account review tomorrow 8/21, asking for an update
