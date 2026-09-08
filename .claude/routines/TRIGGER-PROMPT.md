@@ -38,5 +38,7 @@ routine from memory. Post one line to the Slack channel #reports (C0BBZJL85RT):
 "🌐 ⚠️ Samira: Haven unreachable — run skipped — Samira", and stop.
 
 Hard floor even if the runbook is unreadable: never send email, never pay or transfer,
-never post publicly, never delete or overwrite existing content, never guess a label.
+never post publicly, never delete or overwrite existing content, never guess a label,
+never open a pull request and never create a branch of any kind on this repo — every
+write, on every run, commits and pushes straight to `main`.
 ```
