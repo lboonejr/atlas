@@ -106,9 +106,9 @@
     "gmail_after_epoch": 1788867078
   },
   "integrity": {
-    "last_full_pass": "2026-09-07T12:34:15Z",
-    "last_scan_sha": "d4f8d1b",
-    "note": "96th scan: incremental only (diff-based against last full pass). A full whole-vault pass is overdue by one day given the daily cadence rule; flagged for this scan to actually run it rather than defer again."
+    "last_full_pass": "2026-09-08T14:52:00Z",
+    "last_scan_sha": "e3418af",
+    "note": "PART 1 full whole-vault integrity pass (run_20260908T140459Z): 707 notes scanned (every *.md under haven/vault/, frontmatter block only, via a shallow local clone + independent grep cross-check — not just the incremental diff). Repaired 0 — no mechanically-repairable defects existed anywhere (0 stray content above the opener, 0 missing-opener-with-fields-intact, 0 base64, 0 CRLF in any frontmatter block, no unlabeled _daily reconstructions needed). Known/carried defects, both pre-existing and unchanged from 2026-09-07's full pass: (1) 70-Automation/samira/2026-09-06-decisions-migration-batch2.md — no frontmatter block at all, outside the _daily carve-out so unrepairable (values can't be derived from a template) — flag-and-leave, already has an open #fixes card. (2) 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md — missing created/updated/tags entirely, blank domain and status, invalid type:outcome-note and source:samira-part-g. Value validation vault-wide: 0 out-of-list domain/type/status/source values beyond the one file above; 0 domain-vs-location mismatches in any of the 8 domain folders (verified by script and independently by grep); _templates/ (5 files) and the 1 seeded *-example-* note correctly exempted from value checks, containers on all 6 clean. Inbox sweep: 4 notes in 00-Inbox, all 4 still stuck on blank/UNRESOLVED/invalid domain (unchanged) — filed 0, entities-stubbed 0 (nothing filed to trigger a stub check; the two named counterparties in the stuck notes, Rootwurks and IDScan/VeriScan, already have entity notes)."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
