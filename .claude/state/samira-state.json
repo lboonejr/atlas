@@ -3,15 +3,15 @@
   "lock": {
     "run_id": "run_20260908T170304Z",
     "run_started": "2026-09-08T17:03:04Z",
-    "run_completed": "2026-09-08T11:46:00Z",
-    "note": "98th scan: prior run_id run_20260908T140459Z (97th scan) never wrote a completion — its PART 1 full integrity pass finished at 14:52:00Z but no watermark/lock.run_completed advance followed. Lock aged past the 120-minute threshold (started 14:04:59Z, now 17:03:04Z, ~179 min) with no further evidence of in-flight activity, so treated as a dead/crashed run per PART 0 and taken over. In progress.",
-    "prior_note": "97th scan (run_20260908T140459Z): took over a dead 96th-scan lock. Ran PART 1's full whole-vault integrity pass (707 notes scanned, 0 repaired, same 2 known/carried defects as 2026-09-07). Died before completing further PARTs or writing lock.run_completed."
+    "run_completed": "2026-09-08T17:15:30Z",
+    "note": "99th scan complete. Took over the dead 97th-scan lock (run_20260908T140459Z, started 14:04:59Z, never wrote a completion despite finishing PART 0-8 and posting its own 98th-scan digest at 10:36am ET / 1788878190.721969 — a second confirmed instance of the finish-but-never-close-lock bug, already tracked in #fixes). Checked idempotency markers throughout; nothing re-done. This run's delta: shipped the table-cell-hyperlink #fixes fix (4 skills patched, pushed cb808a3b, replied Done, left open for follow-up verification), triaged 19 Gmail threads (17 newly seen), carded 1 new task (NJ Tax Portal Return Filed/Posted notices), checked the investor backlog + pipeline index (nothing new since 8/26), ran the contradiction scan (1 new #reports message, clean), appended the daily journal, posted the #reports digest (ts 1788887654.676609). Pulse not re-rendered — 10:36am ET render still current, delta deferred to next scan.",
+    "prior_note": "98th scan (run_20260908T140459Z): completed full PART 0-8, posted digest 1788878190.721969, but never wrote lock.run_completed/watermarks — root cause of the takeover above."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBXA96FFV": "1788867623.110629",
-      "C0BBZJL85RT": "1788867790.504979",
-      "D0BHPKMDNEP": "1788867701.177439",
+      "C0BBZJL85RT": "1788887654.676609",
+      "D0BHPKMDNEP": "1788887534.678329",
       "C0BGLEMH99T": "1788787449.502719",
       "C0BEQUW5NPP": "1788711588",
       "C0BBLUA7JLX": "1788711588",
@@ -27,8 +27,8 @@
       "C0BC2A94142": "1788711588",
       "C0BBZ5J8805": "1788784163",
       "C0BRZT2V89W": "1788724013.761999",
-      "D0BBVV54L5R": "1788867290.557819",
-      "C0BV5BRNH5Z": "1788867705.557329"
+      "D0BBVV54L5R": "1788869907.894089",
+      "C0BV5BRNH5Z": "1788887352.211189"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -84,7 +84,9 @@
       "D0BHPKMDNEP:1788867563.070869": "1788867598.220139",
       "D0BHPKMDNEP:1788867563.966489": "1788867600.254249",
       "D0BHPKMDNEP:1788867564.568929": "1788867601.280959",
-      "C0BV5BRNH5Z:1788867705.557329": "1788867705.557329"
+      "C0BV5BRNH5Z:1788867705.557329": "1788867705.557329",
+      "C0BV5BRNH5Z:1788878157.342439": "1788887352.211189",
+      "D0BHPKMDNEP:1788887534.678329": "1788887534.678329"
     },
     "migration": {
       "decisions_migration_complete": false,
@@ -103,12 +105,12 @@
       "1788697019.074209": "1788707739.279069"
     },
     "capture_dm": "1788711588",
-    "gmail_after_epoch": 1788867078
+    "gmail_after_epoch": 1788887708
   },
   "integrity": {
     "last_full_pass": "2026-09-08T14:52:00Z",
-    "last_scan_sha": "e3418af",
-    "note": "PART 1 full whole-vault integrity pass (run_20260908T140459Z): 707 notes scanned (every *.md under haven/vault/, frontmatter block only, via a shallow local clone + independent grep cross-check — not just the incremental diff). Repaired 0 — no mechanically-repairable defects existed anywhere (0 stray content above the opener, 0 missing-opener-with-fields-intact, 0 base64, 0 CRLF in any frontmatter block, no unlabeled _daily reconstructions needed). Known/carried defects, both pre-existing and unchanged from 2026-09-07's full pass: (1) 70-Automation/samira/2026-09-06-decisions-migration-batch2.md — no frontmatter block at all, outside the _daily carve-out so unrepairable (values can't be derived from a template) — flag-and-leave, already has an open #fixes card. (2) 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md — missing created/updated/tags entirely, blank domain and status, invalid type:outcome-note and source:samira-part-g. Value validation vault-wide: 0 out-of-list domain/type/status/source values beyond the one file above; 0 domain-vs-location mismatches in any of the 8 domain folders (verified by script and independently by grep); _templates/ (5 files) and the 1 seeded *-example-* note correctly exempted from value checks, containers on all 6 clean. Inbox sweep: 4 notes in 00-Inbox, all 4 still stuck on blank/UNRESOLVED/invalid domain (unchanged) — filed 0, entities-stubbed 0 (nothing filed to trigger a stub check; the two named counterparties in the stuck notes, Rootwurks and IDScan/VeriScan, already have entity notes)."
+    "last_scan_sha": "41b50149",
+    "note": "PART 1 full whole-vault integrity pass (run_20260908T140459Z, unchanged since): 707 notes scanned, repaired 0, same 2 known/carried defects as 2026-09-07 (70-Automation/samira/2026-09-06-decisions-migration-batch2.md missing frontmatter entirely; 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md missing required fields). This run (99th scan) did the incremental check: only haven/vault/_daily/2026-09-08.md changed since e3418af, frontmatter clean, no repair needed. Inbox unchanged: same 4 notes stuck on blank/UNRESOLVED domain. last_scan_sha advanced to this run's own HEAD (41b50149) so the next scan's incremental diff starts from here."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
@@ -116,7 +118,7 @@
     "note": "Not re-checked (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-07T09:25:00-04:00",
+    "pulse_last_rendered": "2026-09-08T10:36:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
