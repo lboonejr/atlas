@@ -1,6 +1,6 @@
 ---
 created: 2026-08-22T08:04:00-04:00
-updated: 2026-09-08T09:25:00-04:00
+updated: 2026-09-08T17:30:00-04:00
 domain: project
 type: log
 status: active
@@ -2255,3 +2255,20 @@ silent). No new #fixes card posted this run.
 - slack: #reports `C0BBZJL85RT`, ts range `1788797868.060879`–`1788873774.499639`
 - haven/vault/70-Automation/samira/2026-08-15-suspicious-admin-bot-message-disregarded.md
   (established disposition, Haven Keeper signature)
+
+## Update (run_20260908T170304Z — the run that took over the dead 97th-scan lock)
+One new #reports message since the last bookmark: the 98th-scan digest itself
+(`1788878190.721969`, 10:36am ET), which turned out to have been posted by that same
+97th-scan run (`run_20260908T140459Z`) shortly before it died without closing its lock —
+this run picked up after it (see the state-file lock note and this run's own #reports
+digest for the full account). Read the 98th-scan digest against its own Sources and the
+#fixes/Convo 1 threads it cites (the table-cell-hyperlink #fixes card, the Highgate
+draft update, the DeWalt/Diaz and NJ-annual-report cards): every figure in it checks
+out against those threads — no conflicting numbers, no unflagged self-correction, no
+stale claim. Clean.
+
+### Sources (this update)
+- slack: #reports `C0BBZJL85RT`, ts `1788878190.721969` (the one new message since the
+  last bookmark)
+- slack: #fixes `C0BV5BRNH5Z` ts `1788878157.342439` (cited card, checked)
+- vault: `.claude/state/samira-state.json` (lock note, cross-checked run history)
