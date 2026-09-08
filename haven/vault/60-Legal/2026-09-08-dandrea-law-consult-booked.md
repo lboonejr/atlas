@@ -1,12 +1,13 @@
 ---
 created: 2026-09-08T15:11:00-04:00
-updated: 2026-09-08T17:05:00-04:00
+updated: 2026-09-08T17:06:00-04:00
 domain: legal
 type: note
 status: active
 tags: [dandrea-law, consult, legal]
 source: gmail
 due: 2026-09-09T15:30:00-04:00
+calendar_event_id: rube1e3nu6tt5al79e9n9e53as
 ---
 
 # D'Andrea Law PLLC consult — Wed 9/9 3:30-4pm ET
