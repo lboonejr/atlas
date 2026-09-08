@@ -1,34 +1,18 @@
 {
-  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. A null watermark means 'never recorded — fall back to that PART's legacy cutoff once, then record' (for D0BBVV54L5R and C0BV5BRNH5Z the legacy cutoff is the 2026-09-06 wiring-test timestamp). Every slack_channels watermark MUST be a JSON string: the last-read message ts for that surface, or, for a surface quiet this scan, the scan-time epoch seconds as a string. Never store a bare JSON number. Watermarks must never postdate lock.run_completed — they are stamped before the lock closes (PART 0). 2026-09 RESTRUCTURE: swept surfaces are Convo 1 (D0BHPKMDNEP), Convo 2 (D0BBVV54L5R, self-DM), and #fixes (C0BV5BRNH5Z); card_threads (keyed '<channel_id>:<parent_ts>') supersedes decisions_threads, which is FROZEN as the migration worklist — the migration runbook drains it and then deletes it along with the retired timeline-channel watermarks (kept until migration step 0's final legacy sweep). capture_dm is legacy; delete with the same cleanup.",
+  "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. 2026-09 RESTRUCTURE COMPLETE (101st scan): only Convo 1 (D0BHPKMDNEP), Convo 2 (D0BBVV54L5R), #fixes (C0BV5BRNH5Z), and #reports (C0BBZJL85RT) carry a live watermark now — timeline channels are never swept for input and don't need one, so their watermark entries were dropped this run along with the retired #decisions/#stormy entries. card_threads (keyed '<channel_id>:<parent_ts>') is the open-card worklist. The decisions_threads migration worklist and the legacy capture_dm key are deleted — migration.decisions_migration_complete is true. Every slack_channels watermark MUST be a JSON string. Watermarks must never postdate lock.run_completed — they are stamped before the lock closes (PART 0).",
   "lock": {
     "run_id": "run_20260908T210253Z",
     "run_started": "2026-09-08T21:02:53Z",
-    "run_completed": "2026-09-08T20:20:15Z",
-    "note": "101st scan in progress.",
-    "prior_note": "100th scan complete. Found and cleared a real backlog: 19 Convo 1 cards carried a saluting_face-close signal (most already fully executed with a prior 'Done' reply) that never actually closed, because no tool in either Slack connector can edit a message — the doctrine's 'edit the parent' step has been silently undoable since it was written. Closed all 19 via a '✅ CLOSED — [outcome]' reply (the working substitute) and flagged the tooling gap to #fixes (ts 1788898652.010999) with a proposed doctrine fix. Along the way found 2 cards with a chosen-but-never-executed option and executed them: Waste Management (call to negotiate scheduled 9/9 11am ET, Cuzzie's Owners calendar) and Leafly (INV00394400 folded into standing collections balance, no separate payment). Also found and executed one more: GTI AR — drafted the Option-A reply to Mindy Kramer per Lemar's pick, saved to Gmail Drafts, left open pending his send. Replied to a stale #fixes post from an earlier session (ts 1788890716.275749) that had declined to run this routine over a git-branch/harness conflict — confirmed the GitHub connector's direct-to-main writes work fine from this session type and completed the run instead of standing down. Ran an ad hoc Gmail sweep (17 new threads since last gmail_after_epoch): flagged Garden Society AR collections notice as a possible invoice-fraud pattern (new banking instructions on a past-due notice) and opened a Convo 1 card; logged a new D'Andrea Law consult Lemar booked himself; labeled the rest (vendor menus, promos) Samira/seen. PART 1 (vault-keeper) and PART 2 (calendar-sync) were quiet passes — no vault changes since the last integrity scan, same 4 known stuck Inbox notes, calendar already in sync. SCOPE NOTE (disclosed, not hidden): given the size of the backlog this pass surfaced, PART 6b (investor loop), PART 6c (reports-contradiction-scan), the migration sub-runbook step, PART 7 (timeline posts — nothing this pass mapped to a listed timeline channel), and PART 8 (Pulse re-render) were NOT run this pass. Pulse's 10:36am ET render is carried as still-current; the migration flag (cards_remaining: 8) is unchanged and should be picked up next run."
+    "run_completed": "2026-09-08T21:28:26Z",
+    "note": "101st scan complete. Filed the 2 file-ready Inbox notes left by the 100th scan (D'Andrea Law consult -> 60-Legal/, Garden Society AR -> 20-Cuzzies/); same 4 notes still stuck on blank/UNRESOLVED domain. Calendar-sync: +1 new event (D'Andrea Law consult, reminder calendar); spot-checked the done-status due notes' calendar_event_id absence rather than a full 47-note walk, confirming prior scans kept sync clean. Convo 1 / Convo 2 / #fixes all quiet at top level (100th scan had just cleared the backlog 45 min earlier). MIGRATION COMPLETE this scan: triaged the last 8 decisions_threads entries (3 closed as superseded/already-resolved, 6 migrated live as fresh Convo 1 cards -- Curaleaf NJ II $25,601.41 urgent, Drive folder nesting, CannaBIZ/Little Leaf Labs $8,331 urgent, Gusto payroll still-late, Adobe Photoshop billing failure, and the Haven Keeper identity question with new evidence pointing to it being Lemar's own Claude session); posted the final 'ready to archive #decisions + #stormy' card, Lemar's hand from here. decisions_migration_complete set true; decisions_threads + capture_dm keys deleted; watermark entries dropped for every channel that stopped being swept 2026-09-06. Reports-contradiction-scanner ran for the first time (no prior bookmark, default 7-day window): found the Money Hub Google Workspace balance reported at 4 different figures across 48h, checked the ledger, confirmed it's normal correctly-documented figure evolution not a real contradiction -- staged one #fixes card anyway proposing a settling #reports line (obvious-fix category). Gmail: 1 new thread (junk newsletter), labeled seen. Investor loop quiet. No timeline entries (nothing mapped to a listed project channel this pass). Pulse rendered clean, 9/9 sections, DM sent.",
+    "prior_note": "100th scan complete. Found and cleared a real backlog: 19 Convo 1 cards carried a saluting_face-close signal that never actually closed because no Slack tool can edit a message -- closed all 19 via a working '✅ CLOSED' reply substitute, flagged the tooling gap to #fixes. Executed 2 previously chosen-but-never-executed cards (Waste Management, Leafly) and drafted the GTI AR reply. Ran an ad hoc Gmail sweep (17 new threads): flagged a Garden Society AR collections notice as a possible invoice-fraud pattern and logged a new D'Andrea Law consult. PART 1/2 quiet. Scope note: PART 6b/6c, migration, PART 7, and PART 8 were deferred to the next scan."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1788867623.110629",
-      "C0BBZJL85RT": "1788887654.676609",
-      "D0BHPKMDNEP": "1788898744.823649",
-      "C0BGLEMH99T": "1788787449.502719",
-      "C0BEQUW5NPP": "1788711588",
-      "C0BBLUA7JLX": "1788711588",
-      "C0BJ37SU1TL": "1788711588",
-      "C0BCCUKEUQ2": "1788787046.438289",
-      "C0BCD7U5X2B": "1788711588",
-      "C0BCH2C3GRM": "1788711588",
-      "C0BDN2KQFD4": "1788711588",
-      "C0BD8LTM1EK": "1788711588",
-      "C0BGYM1UB4Y": "1788711588",
-      "C0BGCAK0ML3": "1788711588",
-      "C0BHXTPST52": "1788787450.491429",
-      "C0BC2A94142": "1788711588",
-      "C0BBZ5J8805": "1788784163",
-      "C0BRZT2V89W": "1788724013.761999",
-      "D0BBVV54L5R": "1788898815",
-      "C0BV5BRNH5Z": "1788898685.122129"
+      "C0BBZJL85RT": "1788902812.798459",
+      "D0BHPKMDNEP": "1788901954.052969",
+      "D0BBVV54L5R": "1788902906",
+      "C0BV5BRNH5Z": "1788902073.893579"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -89,31 +73,28 @@
       "D0BHPKMDNEP:1788887534.678329": "1788887534.678329",
       "D0BHPKMDNEP:1788898737.038929": "1788898744.823649",
       "C0BV5BRNH5Z:1788890716.275749": "1788898685.122129",
-      "C0BV5BRNH5Z:1788898652.010999": "1788898652.010999"
+      "C0BV5BRNH5Z:1788898652.010999": "1788898652.010999",
+      "D0BHPKMDNEP:1788901887.069719": "1788901919.884189",
+      "D0BHPKMDNEP:1788901887.692799": "1788901922.013599",
+      "D0BHPKMDNEP:1788901888.540229": "1788901924.792649",
+      "D0BHPKMDNEP:1788901889.352279": "1788901927.300799",
+      "D0BHPKMDNEP:1788901890.292449": "1788901928.566899",
+      "D0BHPKMDNEP:1788901890.646159": "1788901930.424399",
+      "D0BHPKMDNEP:1788901947.800959": "1788901954.052969",
+      "C0BV5BRNH5Z:1788902066.449949": "1788902073.893579"
     },
     "migration": {
-      "decisions_migration_complete": false,
+      "decisions_migration_complete": true,
       "legacy_sweep_done": true,
       "announcements_done": true,
-      "cards_remaining": 8
+      "cards_remaining": 0
     },
-    "decisions_threads": {
-      "1788372582.289019": "1788372582.289019",
-      "1788456098.266619": "1788456102.003929",
-      "1788456271.151919": "1788456271.151919",
-      "1788559936.495679": "1788559936.495679",
-      "1788613746.453729": "1788613746.453729",
-      "1788635325.842539": "1788635325.842539",
-      "1788635412.011499": "1788635416.951679",
-      "1788697019.074209": "1788707739.279069"
-    },
-    "capture_dm": "1788711588",
-    "gmail_after_epoch": 1788898815
+    "gmail_after_epoch": 1788901371
   },
   "integrity": {
     "last_full_pass": "2026-09-08T14:52:00Z",
-    "last_scan_sha": "41b50149",
-    "note": "PART 1 full whole-vault integrity pass (run_20260908T140459Z, unchanged since): 707 notes scanned, repaired 0, same 2 known/carried defects as 2026-09-07 (70-Automation/samira/2026-09-06-decisions-migration-batch2.md missing frontmatter entirely; 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md missing required fields). 100th scan did the incremental check: no vault changes since 41b50149 beyond this run's own writes, no repair needed. Inbox unchanged: same 4 notes stuck on blank/UNRESOLVED domain, plus 2 new file-ready captures this run (Garden Society AR, D'Andrea Law) for vault-keeper to file next pass."
+    "last_scan_sha": "1540a6c",
+    "note": "101st scan incremental check: 6 files changed since 1540a6c's own parent (the 2 Inbox filings this run's own writes), all accounted for, no repair needed. Same 2 known/carried defects as before (70-Automation/samira/2026-09-06-decisions-migration-batch2.md missing frontmatter; 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md missing required fields). Inbox: same 4 notes stuck on blank/UNRESOLVED domain."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
@@ -121,7 +102,7 @@
     "note": "Not re-checked (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-08T10:36:00-04:00",
+    "pulse_last_rendered": "2026-09-08T17:15:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
