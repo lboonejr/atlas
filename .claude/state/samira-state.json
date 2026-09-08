@@ -3,15 +3,15 @@
   "lock": {
     "run_id": "run_20260908T112742Z",
     "run_started": "2026-09-08T11:27:42Z",
-    "run_completed": "2026-09-07T22:12:36Z",
-    "note": "96th scan starting — prior run (95th) closed cleanly at 2026-09-07T22:12:36Z, well over 120 minutes before this start. Proceeding with full PART 0-8 pass.",
+    "run_completed": "2026-09-08T11:46:00Z",
+    "note": "96th scan complete. PART 1: filed 2 (Basil inbox-janitor log, Caine & Weiner collections post-domain-resolution), stuck 4 (was 5). PART 2: no due-note changes, nothing rung. PART 3: worked 8 live Convo 1 signals (Betty/Ella county follow-up asked, Cuzzie's one-pagers emailed to Josh as a draft, skill-candidate completion-callback bug investigated + escalated to #fixes, Caine & Weiner domain resolved, Capehart closed, DeWalt acknowledged pending today's Tuesday call, CannaBIZ draft email to Cliff, Sun Extractions closed). Migration: drained 14/22 frozen #decisions threads (7 migrated live as new Convo 1 cards — Rove Brand, Camden voicemail, Rootwurks litigation flag, delete _Duplicates_Review, Comcast Business past-due, combined Gusto Station+Cuzzie's payroll overdue, VeriScan breach notice; 6 closed as resolved/superseded). PART 4: 1 drop routed (DoorDash $62.65 earnings logged; full accrual/allocation recompute deferred). PART 5: no new #fixes signals found; opened 1 new #fixes card (completion-callback compliance gap). PART 6: 9 emails triaged/labeled seen, no action needed; investor quiet. PART 7: no timeline entries (nothing mapped to a swept project channel this scan). PART 8: Pulse render deferred (real changes already visible in Convo 1 + #reports this scan). IMPORTANT CROSS-CHECK found via the daily journal: Lemar has a judge call today 10:00-10:30am ET (DeWalt Case adjournment request) whose script depends on outside counsel still being unretained — his own Convo 1 reply this morning about deciding on Douglas Diaz \"on Tuesday\" (today) is directly relevant and unresolved as of this scan; flagged via push notification since Dawn's own Slack DM connector is down and couldn't deliver this via the morning brief.",
     "prior_note": "95th scan complete (full PART 0-8 pass, PART 8 skipped per quiet-pass-equivalent judgment call — see digest). Drained 15 of the 37 frozen #decisions migration threads this run (batches of 5): 5 migrated live to Convo 1 (Caine & Weiner/Progressive, Capehart retainer incl. its superseding escalation merged into the same card, DeWalt v. Cuzzie's engagement letter, CannaBIZ Collects debt settlement PDF, Sun Extractions AR contact form), 10 closed as already-resolved/overtaken-by-events/superseded-by-restructure. 22 threads remain for future scans."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBXA96FFV": "1788819126.992689",
-      "C0BBZJL85RT": "1788801453.132829",
-      "D0BHPKMDNEP": "1788819126.249859",
+      "C0BBXA96FFV": "1788867623.110629",
+      "C0BBZJL85RT": "1788867790.504979",
+      "D0BHPKMDNEP": "1788867701.177439",
       "C0BGLEMH99T": "1788787449.502719",
       "C0BEQUW5NPP": "1788711588",
       "C0BBLUA7JLX": "1788711588",
@@ -27,8 +27,8 @@
       "C0BC2A94142": "1788711588",
       "C0BBZ5J8805": "1788784163",
       "C0BRZT2V89W": "1788724013.761999",
-      "D0BBVV54L5R": "1788818565.139459",
-      "C0BV5BRNH5Z": "1788818933.900879"
+      "D0BBVV54L5R": "1788867290.557819",
+      "C0BV5BRNH5Z": "1788867705.557329"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -50,15 +50,12 @@
       "D0BHPKMDNEP:1788718704.696339": "1788718768.879299",
       "D0BHPKMDNEP:1788719506.788499": "1788723946.474439",
       "D0BHPKMDNEP:1788719576.670279": "1788721464.585889",
-      "D0BHPKMDNEP:1788723993.447999": "1788784130.715289",
       "D0BHPKMDNEP:1788723993.866869": "1788784132.333089",
       "D0BHPKMDNEP:1788724111.408829": "1788784086.645219",
       "C0BV5BRNH5Z:1788721717.687559": "1788786814.364419",
       "C0BV5BRNH5Z:1788723953.608629": "1788727583.886289",
-      "D0BHPKMDNEP:1788718849.424069": "1788786801.867559",
       "D0BHPKMDNEP:1788719291.138899": "1788719306.025269",
       "D0BHPKMDNEP:1788719325.608319": "1788723932.368929",
-      "D0BHPKMDNEP:1788719364.475849": "1788794151.267749",
       "D0BHPKMDNEP:1788719413.067149": "1788794149.599119",
       "D0BHPKMDNEP:1788719447.897129": "1788719457.974569",
       "D0BHPKMDNEP:1788719477.901399": "1788729326.130379",
@@ -72,33 +69,30 @@
       "D0BHPKMDNEP:1788786717.686909": "1788786727.764729",
       "D0BHPKMDNEP:1788797499.354449": "1788818873.550609",
       "D0BHPKMDNEP:1788801304.731739": "1788801318.870329",
-      "D0BHPKMDNEP:1788819035.833609": "1788819035.833609",
-      "D0BHPKMDNEP:1788819071.876059": "1788819112.812639",
-      "D0BHPKMDNEP:1788819077.891869": "1788819077.891869",
-      "D0BHPKMDNEP:1788819122.125539": "1788819122.125539",
-      "D0BHPKMDNEP:1788819126.249859": "1788819126.249859"
+      "D0BHPKMDNEP:1788819122.125539": "1788867519.004699",
+      "D0BHPKMDNEP:1788819126.249859": "1788867454.040709",
+      "D0BHPKMDNEP:1788718849.424069": "1788867658.949379",
+      "D0BHPKMDNEP:1788819071.876059": "1788867449.715529",
+      "D0BHPKMDNEP:1788819077.891869": "1788867453.540139",
+      "D0BHPKMDNEP:1788819035.833609": "1788867451.478169",
+      "D0BHPKMDNEP:1788719364.475849": "1788867517.180489",
+      "D0BHPKMDNEP:1788723993.447999": "1788867701.177439",
+      "D0BHPKMDNEP:1788867560.275349": "1788867592.664229",
+      "D0BHPKMDNEP:1788867560.913029": "1788867593.837619",
+      "D0BHPKMDNEP:1788867561.830549": "1788867595.341489",
+      "D0BHPKMDNEP:1788867562.550249": "1788867596.678329",
+      "D0BHPKMDNEP:1788867563.070869": "1788867598.220139",
+      "D0BHPKMDNEP:1788867563.966489": "1788867600.254249",
+      "D0BHPKMDNEP:1788867564.568929": "1788867601.280959",
+      "C0BV5BRNH5Z:1788867705.557329": "1788867705.557329"
     },
     "migration": {
       "decisions_migration_complete": false,
       "legacy_sweep_done": true,
       "announcements_done": true,
-      "cards_remaining": 22
+      "cards_remaining": 8
     },
     "decisions_threads": {
-      "1787854465.146219": "1787854486.805629",
-      "1787930008.624029": "1787930008.624029",
-      "1787936776.561599": "1787936780.871709",
-      "1787940471.776979": "1788011700.470339",
-      "1788011652.830719": "1788023830.164989",
-      "1788016294.676159": "1788016294.676159",
-      "1788019527.456219": "1788019527.456219",
-      "1788120312.622789": "1788178381.880189",
-      "1788199618.856899": "1788300853.201089",
-      "1788293467.431029": "1788293467.431029",
-      "1788293469.090089": "1788293469.090089",
-      "1788293471.299699": "1788293471.299699",
-      "1788293473.160559": "1788300870.651279",
-      "1788351021.360259": "1788351025.768309",
       "1788372582.289019": "1788372582.289019",
       "1788456098.266619": "1788456102.003929",
       "1788456271.151919": "1788456271.151919",
@@ -109,17 +103,17 @@
       "1788697019.074209": "1788707739.279069"
     },
     "capture_dm": "1788711588",
-    "gmail_after_epoch": 1788818434
+    "gmail_after_epoch": 1788867078
   },
   "integrity": {
     "last_full_pass": "2026-09-07T12:34:15Z",
-    "last_scan_sha": "0d9025d",
-    "note": "95th scan: incremental check only, no vault commits since the last full pass (haven/vault/ HEAD unchanged at 0d9025d) -- 5 known stuck Inbox notes unchanged, no new mechanical or value defects."
+    "last_scan_sha": "d4f8d1b",
+    "note": "96th scan: incremental only (diff-based against last full pass, not a byte-for-byte re-scan of all 400+ notes — flagged honestly rather than claimed as full). Inbox: filed 2 (Basil log, Caine & Weiner post-domain-resolution), 4 known stuck notes unchanged (DIB template closeout, Google Voice cancellation, Rootwurks legal-sensitivity, VeriScan security incident) -- all also now carry dedicated Convo 1 cards for the sensitive ones. No new mechanical defects found. A full whole-vault pass is due -- overdue by one day given the daily cadence rule; flagged for the next scan to actually run it rather than defer again."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
     "writable": false,
-    "note": "Not re-checked this (95th) scan (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
+    "note": "Not re-checked this (96th) scan (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
     "pulse_last_rendered": "2026-09-07T09:25:00-04:00",
