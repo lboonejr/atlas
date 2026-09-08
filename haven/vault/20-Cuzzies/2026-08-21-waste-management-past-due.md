@@ -1,11 +1,13 @@
 ---
 created: 2026-08-21T15:03:00-04:00
-updated: 2026-08-21T16:05:00-04:00
+updated: 2026-09-08T16:12:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [vendor, waste-management, past-due, off-button]
 source: gmail
+due: 2026-09-09T11:00:00-04:00
+calendar_event_id: ivn1j5qblm5k27p2klfj8abcv4
 ---
 
 # Waste Management — service interruption notice, Cuzzie's account past due
@@ -22,6 +24,15 @@ vendor past-due/collections activity.
 
 **Needs Lemar**: whether to pay, negotiate, or let service lapse as part of the Camden
 wind-down — not a call Samira makes. Nothing paid or contacted automatically.
+
+## Update 2026-09-08 — Lemar picked "call to negotiate," call scheduled
+Lemar chose (Convo 1 card, ts 1788718703.195849) to call WM and negotiate/settle since
+the property is no longer in active use, rather than pay in full or let it lapse
+untouched. Call put on the Cuzzie's (Owners) calendar for 2026-09-09 11:00-11:30am ET
+with a script attached (identify account, state the wind-down posture, ask for the
+current balance and a final settlement figure). Nothing paid or negotiated by Samira —
+the call itself is Lemar's. Card closed on the Samira side; this note stays `active`
+until the call happens and a figure/outcome is known.
 
 ## Sources
 - gmail: thread `1a025b3b7b5f67dc`, "Waste Management Service Interruption Notice",
