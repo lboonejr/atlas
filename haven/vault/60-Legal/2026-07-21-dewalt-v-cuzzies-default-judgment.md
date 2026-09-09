@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-09-06T13:30:00-04:00
+updated: 2026-09-09T12:06:00-04:00
 domain: legal
 type: task
 status: active
@@ -710,6 +710,20 @@ Lemar's to make.
 - slack: Convo 2 (self-DM) drop, ts `1788715822.273459`, 2026-09-06 13:30 ET
 - calendar: event `e0mp54r48u87fv8b2pkbto1evc`, "Call judge — DeWalt Case adjournment
   request", 2026-09-08 10:00-10:30am ET, Cuzzie's (Owners) calendar
+
+## Update 2026-09-09T12:06:00-04:00 — Lemar flags "follow up with judge" in a Convo 2 todo; outcome of the Sept 8 adjournment call unconfirmed
+Lemar dropped a 3-line todo in Convo 2 09-09 including "follow up with judge,"
+routed to this matter via the Convo 1 card (`D0BHPKMDNEP` ts `1788966952.066259`,
+✅ confirmed). The 2026-09-06 update above booked a call — Tues 2026-09-08
+10:00-10:30am ET, "Call judge — DeWalt Case adjournment request" — but nothing in
+this note since confirms the call happened or what the judge said, and the Sept 14
+proof hearing is now 5 days out. **Open question for Lemar** (asked in-thread, not
+guessed): did the Sept 8 judge call happen, and if so what was the outcome
+(adjournment granted/denied, new date)? Nothing filed or contacted by Samira.
+
+### Sources (this update)
+- slack: Convo 2 (self-DM) drop, ts `1788957957.366929`, 2026-09-09; Convo 1 card
+  `D0BHPKMDNEP` ts `1788966952.066259`
 
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")

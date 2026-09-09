@@ -36,5 +36,20 @@ thread each line belongs to. Plausible (unconfirmed) links found in the vault:
   from Lemar as guarantor) — the PFS is explicitly Lemar's own paperwork to prepare,
   which fits "prep ... paperwork" well, but not confirmed.
 
+## Update 2026-09-09T12:06:09-04:00 — routing confirmed via Convo 1 card
+Lemar answered all three routing questions in the Convo 1 card (`D0BHPKMDNEP`, ts
+`1788966952.066259`): ✅ on "Judge" = the DeWalt v. Cuzzie's default-judgment case,
+✅ + a plain reply "Betty" on "whose Medicaid app," and ✅ on "420 Solutions" =
+the Suite 420 Solutions lender PFS. Cross-linked into each note:
+[[2026-07-21-dewalt-v-cuzzies-default-judgment]] (judge follow-up — see that note's
+open question on whether the Sept 8 adjournment call happened),
+[[2026-09-06-betty-nj-caregiver-guardianship-research]] (Medicaid app confirmed as
+Betty's, but which specific application is still unconfirmed), and
+[[2026-07-03-suite420-solutions-lender-docs-needed]] (PFS still outstanding since
+8/18, no due date set). All three remain open, Lemar's own to complete. Replied
+"Done ✅" on the Convo 1 thread with two follow-up questions (judge-call outcome,
+which Medicaid application).
+
 ## Sources
 - slack: Convo 2 (self-DM `D0BBVV54L5R`) drop, ts `1788957957.366929`, 2026-09-09 08:45 ET
+- slack: Convo 1 card `D0BHPKMDNEP`, ts `1788966952.066259`, routing confirmed 2026-09-09

@@ -1,6 +1,6 @@
 ---
 created: 2026-07-03T17:12-04:00
-updated: 2026-08-18T12:16-04:00
+updated: 2026-09-09T12:06:00-04:00
 domain: cuzzies
 type: log
 status: active
@@ -65,6 +65,19 @@ receiving those documents. ⚠️ financial terms on thread — Lemar to review 
 Samira drafted nothing and represented no terms as decided; posted to
 #investor-pipeline (ts 1787069861.387379) and updated the index row to Negotiating,
 flagging for Lemar's pursue/negotiate/decline call.
+
+## Update 2026-09-09T12:06:00-04:00 — Lemar flags "prep 420 Solutions paperwork" in a Convo 2 todo
+Lemar dropped a 3-line todo in Convo 2 09-09 including "prep 420 Solutions
+paperwork," routed here via the Convo 1 card (`D0BHPKMDNEP` ts `1788966952.066259`,
+✅ confirmed) as the Personal Financial Statement (PFS) for the Guarantor — still
+outstanding since the 2026-08-18 update, no confirmation any of the three items
+(2025 YE / 2026 YTD financials, PFS) have been delivered to Dave Miesner. No due
+date set on this note; not inventing one. Nothing drafted by Samira (PFS is
+personal/PII, Lemar's alone to prepare).
+
+### Sources (this update)
+- slack: Convo 2 (self-DM) drop, ts `1788957957.366929`, 2026-09-09; Convo 1 card
+  `D0BHPKMDNEP` ts `1788966952.066259`
 
 ## Sources
 - gmail: thread `19f29b5e55c3f621` ("Fwd: Cuzzie's Dispensary & Delivery Lender Package")

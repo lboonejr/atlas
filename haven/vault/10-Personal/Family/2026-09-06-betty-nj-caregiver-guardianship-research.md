@@ -113,6 +113,21 @@ the same-week ADRC/PCA call track above, but unconfirmed). Logging the event onl
 Sources: gmail thread `1a0836bf0ae0b9f0` ("Your fax to Ashia Robinson-James has
 succeeded")
 
+## Update 2026-09-09T12:06:00-04:00 — "submitted Medicaid app" confirmed as Betty's; which application still unclear
+Lemar dropped a 3-line todo in Convo 2 09-09 including "follow up on submitted
+Medicaid app." Routed via the Convo 1 card (`D0BHPKMDNEP` ts `1788966952.066259`):
+✅ + a plain reply "Betty" confirms this is her application, not Ella's. This is a
+genuine gap, not a restatement of the already-known PPP/PCA track above — Betty was
+already confirmed on regular Medicaid (2026-09-06 correction), so a "submitted
+application" implies something separate (the PPP self-directed-budget application?
+a different program?) that this note doesn't yet record. **Open question for
+Lemar:** which application specifically, and where/when was it submitted? Nothing
+filed or contacted by Samira.
+
+### Sources (this update)
+- slack: Convo 2 (self-DM) drop, ts `1788957957.366929`, 2026-09-09; Convo 1 card
+  `D0BHPKMDNEP` ts `1788966952.066259`, reply ts `1788969756.430369`
+
 ## Related
 - [[betty]]
 - [[2026-09-06-ella-nj-paid-family-caregiver-research]] — the separate mom→Ella physical-caretaking track
