@@ -1,6 +1,6 @@
 ---
 created: 2026-09-06T13:33-04:00
-updated: 2026-09-07T13:14-04:00
+updated: 2026-09-09T12:35-04:00
 domain: personal
 type: task
 status: active
@@ -99,6 +99,19 @@ description. Nothing filed or contacted by Samira — the call itself is Lemar's
 
 Sources: calendar event `4fvsd4cvdbk6rl8qvkie4qkvj0` (reminder calendar) ·
 Convo 1 card ts `1788718849.424069`, reply ts `1788784807.018999`
+
+## Update 2026-09-09 — fax sent to Ashia Robinson-James (content unknown)
+
+FaxZero confirmed (email, 2026-09-08 7:48pm ET) a fax Lemar sent himself — outside
+Samira, not something this loop drafted or sent — addressed "for Betty Wimley" to a
+recipient named **Ashia Robinson-James** (fax number 856-225-8917), delivered
+successfully. This is the first record anywhere in Haven of Betty's surname
+("Wimley") or of this recipient; not guessing what the fax contained or who Ashia
+Robinson-James is (a caseworker, attorney, or county office are all plausible given
+the same-week ADRC/PCA call track above, but unconfirmed). Logging the event only.
+
+Sources: gmail thread `1a0836bf0ae0b9f0` ("Your fax to Ashia Robinson-James has
+succeeded")
 
 ## Related
 - [[betty]]
