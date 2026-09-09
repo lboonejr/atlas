@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-09-08T12:16:00-04:00
+updated: 2026-09-09T12:30:00-04:00
 domain: personal
 type: reference
 status: active
@@ -143,7 +143,7 @@ bills:
             accrues here, but its due-date reminder lives on the Cuzzie's (Owners)
             calendar, not the personal one, per the business boundary."}
   - {id: cuzzies-google-workspace, name: "Cuzzie's Google Workspace (direct billing setup)",
-     amount: 60.24, cadence: once, due: 2026-09-07, track: queue, status: active,
+     amount: 158.32, cadence: once, due: 2026-09-07, track: queue, status: active,
      business_origin: true, calendar_event_id: u45glcg7992eg9q79nnb6brlco,
      note: "Added 2026-08-13. Same reseller billing lapse as cuzzies-google-voice above —
             all Workspace services for cuzziesnj.com (including lemar@cuzziesnj.com email
@@ -213,7 +213,28 @@ bills:
             reconciling against the actual console balance when reported and
             correct `amount` to match on any mismatch. Calendar event
             u45glcg7992eg9q79nnb6brlco still needs its description corrected from
-            ~$12.14/day to $9.57/day — not yet done this scan."}
+            ~$12.14/day to $9.57/day — not yet done this scan.
+            UPDATE 2026-09-08 (#fixes card reply, thread ts 1788902066.449949): Lemar
+            reported 'Today's Balance (9/1-9/8) = $60.24' — logged as a direct console
+            read replacing the prior $107.65 computed estimate (did not cleanly
+            reconcile against the $9.57/day rate, flagged as possibly a partial
+            payment or a different billing slice — not guessed).
+            AMOUNT CORRECTED 2026-09-09 (#fixes card reply, thread ts
+            1788902066.449949, reply ts 1788907184.989649): Lemar clarified the
+            $60.24 was NOT the full total — it's only the Sep 1-8 current-cycle
+            slice. The real total owed is TWO components: $98.08 (last month's
+            charges — Lemar's word 'constant', i.e. a fixed prior-period balance,
+            not accruing) + $60.24 (this billing cycle, Sep 1 through today) =
+            $158.32. `amount` corrected 60.24 -> 158.32 (98.08 + 60.24, both
+            components Lemar-reported, not computed by Samira). Lemar also said
+            directly he still doesn't understand the rate he's charged each day —
+            that stays an OPEN QUESTION (carried in open_questions), not guessed or
+            resolved here. The daily accrual/rate reconciliation from the 9/7 note
+            above (the $9.57/day vs $12.14/day disagreement) is superseded by this
+            two-component total; do not keep computing a daily-drift bump on top of
+            $158.32 until Lemar gives a real rate. Calendar event
+            u45glcg7992eg9q79nnb6brlco still needs its stale rate description fixed —
+            same open item as before, still not done."}
   - {id: edge-fitness-training-dispute, name: "Edge Fitness — personal training charge dispute",
      amount: 119, cadence: once, due: 2026-09-06, track: queue, status: paid,
      calendar_event_id: null,
@@ -3423,6 +3444,7 @@ open_questions:
   - "OPEN 2026-08-17 (#personal-finance ts 1786999318.129009): Set-Aside (SoFi Checking) balance reported at $13.00 as_of 2026-08-17 — first balance ever reported for this pocket since the Era connector retired 2026-08-10. Very low against the ~$380/day accrual target; flagged on the dashboard, not smoothed or explained away."
   - "OPEN 2026-08-26 (#personal-finance ts 1787751269.733669): Set-Aside (SoFi Checking) reported at $70.00, up from the $13.00 figure as of 2026-08-17. DISCREPANCY, not reconciled: no daily_targets contribution has actually reached funded/paid status against Set-Aside in that span (every day since 8/17 shows $0 funded until today's 8/26 allocation, and today's allocation only just landed), so the ledger has no tracked explanation for the $57 increase. Reported as-is per field rules — Lemar reconciles, not this skill."
   - "OPEN 2026-09-06 (Lemar replying to a Money Hub card): 'Current google workspace amount owed: $57.44.' `cuzzies-google-workspace` corrected 85 → 57.44. Its due date (8/19) has now passed with no new date given — never invented one. This line is now OVERDUE with no future date: per the skill's rules it stops accruing (already excluded from daily_targets since its due date passed) and rides here until Lemar says what happened to it — paid down already, on some new arrangement, or something else."
+  - "RESOLVED 2026-09-09 (#fixes card reply, thread ts 1788902066.449949, reply ts 1788907184.989649): the reports-contradiction-scanner flagged four different cuzzies-google-workspace figures across 48h ($57.44/$98.08/$107.65/$60.24) as needing a settling line. Lemar clarified it's actually TWO components, not one drifting number: $98.08 = last month's charges (his word: 'constant', a fixed prior-period balance) + $60.24 = this cycle (Sep 1 through today). Real total = $158.32. `amount` corrected 60.24 -> 158.32. STILL OPEN, Lemar's own words: 'This total seems to change everyday but I haven't been able to understand the rate in which I'm charged each day' — the daily accrual rate is genuinely unconfirmed by him, not by Samira's guess; do not compute or invent a per-day rate on top of $158.32 until he reports one. Also still open: the calendar event's stale rate description (u45glcg7992eg9q79nnb6brlco) and no due date beyond the already-passed 8/19/9/7 dates."
 ```
 
 ## Update 2026-08-14 (PART M — two new personal bills: fantasy football + Dil's Christmas gift)
