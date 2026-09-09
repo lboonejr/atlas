@@ -1,6 +1,6 @@
 ---
 created: 2026-08-25T08:06:41-04:00
-updated: 2026-09-08T14:15:00-04:00
+updated: 2026-09-09T11:15:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -126,3 +126,17 @@ draft saved to Gmail Drafts yet, nothing sent, nothing signed, nothing paid.
 - gmail: draft `1a080cfeee79bbb7` (sent, no longer a draft)
 - slack: Convo 1 `D0BHPKMDNEP` thread_ts `1788819122.125539` (card, new round posted
   2026-09-08 ~14:15 ET)
+
+## Update 2026-09-09 11:15 ET — Reminder 15 (urgent) landed, still unpicked
+
+New email (Gmail thread `1a086af281310428`, received 2026-09-09T15:00:00Z from
+`Accounting@littleleaflabs.net`, cc `Bronnie@littleleaflabs.net`, to `lemar@` +
+`admin@cuzziesnj.com`) — subject "Fw: Cuzzies Dispensary- Accounts Receivable-
+Outstanding Payments- Reminder 15," marked URGENT. This is Reminder 15 (was Reminder 8
+at this note's creation 8/25) — escalating cadence on the same still-open matter. The
+9/8 Convo 1 card round (3 draft-reply options) has sat unpicked since then; nudged
+in-thread rather than opening a new card. Nothing drafted or sent this update.
+
+### Sources (this update)
+- gmail: thread `1a086af281310428` ("Fw: Cuzzies Dispensary- Accounts Receivable-
+  Outstanding Payments- Reminder 15", 2026-09-09T15:00:00Z)

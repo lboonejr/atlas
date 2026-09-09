@@ -1,6 +1,6 @@
 ---
 created: 2026-09-07T10:43-04:00
-updated: 2026-09-07T15:00-04:00
+updated: 2026-09-09T11:15-04:00
 domain: cuzzies
 type: task
 status: active
@@ -54,3 +54,18 @@ Cancel service on account 498-92001, not merely decline-by-inaction.
 - Slack: Convo 1 card `D0BHPKMDNEP:1788792460.080689` — also references the earlier
   "Waste Management past due — pay or lapse?" card, thread
   `D0BHPKMDNEP:1788718703.195849` (Option 3 chosen: let lapse)
+
+## Update 2026-09-09 11:15 ET — renewal DocuSign envelope voided by WM
+
+New email (Gmail thread `1a086a0c5bfb817c`, received 2026-09-09T14:44:37Z from
+`dse@docusign.net`): Elijah Rosario voided the "Waste Management Contract Renewal
+498-92001 CUZZIES" DocuSign envelope himself. Consistent with the decision above (not
+signing, cancelling instead) — reads as a positive/expected development, not a new
+problem. Doesn't confirm whether the separately-drafted cancellation email
+(`1a07c6c5fdd4d5d0`) was ever reviewed/sent by Lemar or whether WM has processed an
+actual cancellation of the underlying service — status stays `active` pending that
+confirmation, not guessing further.
+
+### Sources (this update)
+- gmail: thread `1a086a0c5bfb817c` ("Voided: Waste Management Contract Renewal
+  498-92001 CUZZIES", 2026-09-09T14:44:37Z, dse@docusign.net)
