@@ -1,11 +1,11 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. 2026-09 RESTRUCTURE COMPLETE (101st scan): only Convo 1 (D0BHPKMDNEP), Convo 2 (D0BBVV54L5R), #fixes (C0BV5BRNH5Z), and #reports (C0BBZJL85RT) carry a live watermark now — timeline channels are never swept for input and don't need one, so their watermark entries were dropped this run along with the retired #decisions/#stormy entries. card_threads (keyed '<channel_id>:<parent_ts>') is the open-card worklist. The decisions_threads migration worklist and the legacy capture_dm key are deleted — migration.decisions_migration_complete is true. Every slack_channels watermark MUST be a JSON string. Watermarks must never postdate lock.run_completed — they are stamped before the lock closes (PART 0).",
   "lock": {
-    "run_id": "run_20260909T160327Z",
-    "run_started": "2026-09-09T16:03:27Z",
+    "run_id": "run_20260909T190306Z",
+    "run_started": "2026-09-09T19:03:06Z",
     "run_completed": "2026-09-09T15:24:34Z",
-    "note": "104th scan starting. Prior run (103rd, reconciliation) completed cleanly at 15:24:34Z.",
-    "prior_note": "103rd scan complete (reconciliation run). PART 0 anomaly: the true prior run (run_20260909T120509Z, started 08:06 ET) had already completed a full PART 0-8 pass and posted its own #reports digest at 12:20:51Z -- but never wrote lock.run_completed/final watermarks, so this run inherited a state file still showing the 102nd scan as last-complete. Verified via git history + fresh Slack/Gmail reads rather than blindly re-sweeping from the stale 102nd-scan watermarks. Filed the missed Inbox note; treated today's whole-vault integrity full pass as already done; captured + carded a new Convo 2 drop; swept new mail since the dead run's watermark; Pulse re-rendered."
+    "note": "105th scan starting.",
+    "prior_note": "104th scan (run_20260909T160327Z, started 16:03:27Z) died mid-flight -- never wrote lock.run_completed or final watermarks. Its run_started aged past the 120-minute threshold (started 16:03:27Z, this scan starting 19:03:06Z, ~180 min gap) so it is treated as dead per the PART 0 age-out rule, not as a still-in-flight run. Proceeding to re-sweep from the 103rd scan's last-recorded watermarks (visible in this file below) since the 104th never advanced them."
   },
   "watermarks": {
     "slack_channels": {
