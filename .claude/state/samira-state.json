@@ -3,13 +3,13 @@
   "lock": {
     "run_id": "run_20260909T220357Z",
     "run_started": "2026-09-09T22:03:57Z",
-    "run_completed": "2026-09-09T20:09:00Z",
-    "note": "106th scan complete. Quiet-ish incremental pass: Inbox's 4 known-stuck notes re-verified unchanged; 1 new Convo 2 drop (Sage Dispensary visit) developed into a Haven note (domain genuinely UNRESOLVED) + Convo 1 card; swept 8 new Gmail threads -- 3 actionable (First Insurance Funding $477.60 collections risk, Caine & Weiner Progressive collections $1,107.20, Waste Management AP contact request) captured to 20-Cuzzies and carded, 5 junk/newsletter labeled Samira/seen. Sampled the 10 most-recently-touched open card_threads for missed replies past their stored watermark -- found and corrected one state-hygiene gap (C0BV5BRNH5Z:1788902066.449949's stored watermark predated Samira's own already-posted closing reply; no card action needed, just corrected the stamp). Investor loop and reports-contradiction-scanner not run this pass (deferred for time, non-fatal). Pulse Drive-Doc render deferred a 2nd consecutive scan (change-gate qualified; noted in digest as worth watching for a 3rd).",
-    "prior_note": "105th scan (run_20260909T190306Z) completed cleanly at 19:13:00Z. Quiet incremental pass: Inbox unchanged (4 known-stuck notes), 3 new Cuzzies notes carded in Convo 1, 11 junk/vendor Gmail threads labeled seen, one recurring false-empty-inbox #reports post disregarded per standing disposition, Pulse re-render deferred."
+    "run_completed": "2026-09-09T22:08:57Z",
+    "note": "107th scan complete. Fully quiet incremental pass -- no new Convo 1 top-level messages or thread replies (sampled the 4 newest cards from the 106th scan directly: Waste Management, Caine & Weiner, First Insurance Funding, Sage Dispensary -- all still only carrying Samira's own posted options, no Lemar reply), Convo 2 self-DM reachable via the personal connector with 0 new drops, #fixes quiet since watermark, 0 new Gmail threads since the 106th scan's watermark. Integrity: incremental check since the day's full pass (sha a9d3405) found only the 5 files the 106th scan itself wrote, all already correctly filed/parked -- 0 repairs. Inbox unchanged at 5 stuck notes (4 long-standing UNRESOLVED-domain notes + Sage Dispensary, all already individually carded). Investor loop and reports-contradiction-scanner not run this pass (no signal, deferred). Pulse render skipped -- quiet-pass gate not qualified (no new cards/notes/money-change/status-flip this scan).",
+    "prior_note": "106th scan complete. Quiet-ish incremental pass: Inbox's 4 known-stuck notes re-verified unchanged; 1 new Convo 2 drop (Sage Dispensary visit) developed into a Haven note (domain genuinely UNRESOLVED) + Convo 1 card; swept 8 new Gmail threads -- 3 actionable (First Insurance Funding $477.60 collections risk, Caine & Weiner Progressive collections $1,107.20, Waste Management AP contact request) captured to 20-Cuzzies and carded, 5 junk/newsletter labeled Samira/seen. Sampled the 10 most-recently-touched open card_threads for missed replies past their stored watermark -- found and corrected one state-hygiene gap (C0BV5BRNH5Z:1788902066.449949's stored watermark predated Samira's own already-posted closing reply; no card action needed, just corrected the stamp). Investor loop and reports-contradiction-scanner not run this pass (deferred for time, non-fatal). Pulse Drive-Doc render deferred a 2nd consecutive scan (change-gate qualified; noted in digest as worth watching for a 3rd)."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1788988084.137409",
+      "C0BBZJL85RT": "1788991689.180539",
       "D0BHPKMDNEP": "1788988042.399219",
       "D0BBVV54L5R": "1788971449.736049",
       "C0BV5BRNH5Z": "1788974401.386389"
@@ -87,8 +87,8 @@
       "D0BHPKMDNEP:1788980988.376489": "1788980996.980759",
       "D0BHPKMDNEP:1788981000.572229": "1788981031.204649",
       "D0BHPKMDNEP:1788987937.710089": "1788987942.912829",
-      "D0BHPKMDNEP:1788988026.767499": "1788988037.863099",
-      "D0BHPKMDNEP:1788988027.549069": "1788988041.664609",
+      "D0BHPKMDNEP:1788988026.767499": "1788988034.271199",
+      "D0BHPKMDNEP:1788988027.549069": "1788988038.764059",
       "D0BHPKMDNEP:1788988028.299219": "1788988042.399219"
     },
     "migration": {
@@ -97,12 +97,12 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1788987777
+    "gmail_after_epoch": 1788991678
   },
   "integrity": {
     "last_full_pass": "2026-09-09T08:20:00-04:00",
     "last_scan_sha": "a9d3405",
-    "note": "Full whole-vault pass ran 2026-09-09 morning (715 notes, clean, 0 repairs, 1 known/carried defect). Still today's date; this scan's incremental check (git log since a9d3405) found only this run's own state/journal/note commits -- no vault content needing a fresh integrity read."
+    "note": "Full whole-vault pass ran 2026-09-09 morning (715 notes, clean, 0 repairs, 1 known/carried defect). 107th scan's incremental check (git diff since a9d3405) found only the 5 files the 106th scan itself wrote -- all already correctly filed or correctly parked, 0 repairs needed."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
