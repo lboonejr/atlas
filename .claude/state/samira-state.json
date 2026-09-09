@@ -3,16 +3,16 @@
   "lock": {
     "run_id": "run_20260909T190306Z",
     "run_started": "2026-09-09T19:03:06Z",
-    "run_completed": "2026-09-09T15:24:34Z",
-    "note": "105th scan starting.",
-    "prior_note": "104th scan (run_20260909T160327Z, started 16:03:27Z) died mid-flight -- never wrote lock.run_completed or final watermarks. Its run_started aged past the 120-minute threshold (started 16:03:27Z, this scan starting 19:03:06Z, ~180 min gap) so it is treated as dead per the PART 0 age-out rule, not as a still-in-flight run. Proceeding to re-sweep from the 103rd scan's last-recorded watermarks (visible in this file below) since the 104th never advanced them."
+    "run_completed": "2026-09-09T19:13:00Z",
+    "note": "105th scan complete. Quiet incremental pass (~3h since the 104th scan's real-but-unrecorded completion): Inbox unchanged (4 known-stuck notes), no due-date changes, no new Convo 1/Convo 2/#fixes top-level activity of its own. Swept 14 new Gmail threads since the 104th scan's watermark -- 3 actionable (Dime Industries/CannaBIZ Collects $8,869.99, Northlake Supply invoice #1803 224 days late, Leafly Eatabit printer return due 9/16), each captured straight to haven/vault/20-Cuzzies/ (confident domain/type, not routed through the Inbox) and carded in Convo 1 with decision options; 11 junk/vendor-marketing labeled Samira/seen. One recurring 'Haven Keeper' false-empty-inbox post (ts 1788974401, Lemar's own desktop Claude session) recurred in #reports -- matches the standing 2026-08-15 disposition (haven/vault/70-Automation/samira/2026-08-15-suspicious-admin-bot-message-disregarded.md), disregarded, no new #fixes card. Pulse re-render deferred to next scan (change-gate qualified by the 3 new cards, but full Drive-Doc build skipped this pass) -- non-fatal, no data lost.",
+    "prior_note": "104th scan (run_20260909T160327Z, started 16:03:27Z) died mid-flight -- never wrote lock.run_completed or final watermarks. Its run_started aged past the 120-minute threshold (started 16:03:27Z, this scan starting 19:03:06Z, ~180 min gap) so it was treated as dead per the PART 0 age-out rule. Its own watermarks were already current (its digest and commits had genuinely landed), so no re-sweep from stale data was needed -- this scan swept forward from them normally."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1788967428.988269",
-      "D0BHPKMDNEP": "1788967405.263949",
+      "C0BBZJL85RT": "1788981091.037969",
+      "D0BHPKMDNEP": "1788981031.204649",
       "D0BBVV54L5R": "1788967474",
-      "C0BV5BRNH5Z": "1788966903.421769"
+      "C0BV5BRNH5Z": "1788974401.386389"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -82,7 +82,10 @@
       "D0BHPKMDNEP:1788901890.646159": "1788901930.424399",
       "D0BHPKMDNEP:1788901947.800959": "1788901954.052969",
       "C0BV5BRNH5Z:1788902066.449949": "1788902073.893579",
-      "D0BHPKMDNEP:1788966952.066259": "1788966963.266189"
+      "D0BHPKMDNEP:1788966952.066259": "1788966963.266189",
+      "D0BHPKMDNEP:1788980976.011509": "1788980985.299929",
+      "D0BHPKMDNEP:1788980988.376489": "1788980996.980759",
+      "D0BHPKMDNEP:1788981000.572229": "1788981031.204649"
     },
     "migration": {
       "decisions_migration_complete": true,
@@ -90,12 +93,12 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1788966170
+    "gmail_after_epoch": 1788980500
   },
   "integrity": {
     "last_full_pass": "2026-09-09T08:20:00-04:00",
-    "last_scan_sha": "7bf91b4",
-    "note": "Full whole-vault pass ran 2026-09-09 morning (715 notes, clean, 0 repairs, 1 known/carried defect). This is still today's date, so PART 1 runs an incremental check only (git diff since last_scan_sha)."
+    "last_scan_sha": "a9d3405",
+    "note": "Full whole-vault pass ran 2026-09-09 morning (715 notes, clean, 0 repairs, 1 known/carried defect). Still today's date, so this scan ran an incremental check only (git diff since prior scan_sha 7bf91b4) -- confirmed no vault changes besides this run's own 3 new Cuzzies notes and this file/journal."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
