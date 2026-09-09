@@ -3,16 +3,16 @@
   "lock": {
     "run_id": "run_20260909T150445Z",
     "run_started": "2026-09-09T15:04:45Z",
-    "run_completed": "2026-09-08T22:19:00Z",
-    "note": "102nd scan complete. Quiet pass overall. Vault Inbox unchanged (4 stuck notes, integrity clean). Calendar-sync: no changes. Convo 1: swept all 54 tracked card threads + channel top level, only Garden Society AR had new activity -- Lemar picked 'let it lapse, no payment', closed and logged. Convo 2 and #fixes both fully quiet (no new top-level messages, no new replies across #fixes's 13 tracked threads). Email: 2 new threads, both junk, labeled seen. Investor loop quiet. Reports-contradiction-scanner skipped (no new #reports content since its bookmark). Timelines: 0 entries (Garden Society AR isn't mapped to a listed project channel). Pulse rendered (a card closed this run) -- new Drive Doc, verified clean on read-back, DM sent; surfaced the Atlas open-items backlog at 41 due-dated notes (methodology re-run fresh), oldest from 7/6, carried not actioned. ~15 Convo 1 cards remain open (approximate -- the message-edit-tool gap from the 100th scan's audit is still unresolved, #fixes thread 1788898652.010999 still awaiting Lemar's pick).",
-    "prior_note": "101st scan complete. Filed the 2 file-ready Inbox notes left by the 100th scan (D'Andrea Law consult -> 60-Legal/, Garden Society AR -> 20-Cuzzies/); same 4 notes still stuck on blank/UNRESOLVED domain. Calendar-sync: +1 new event (D'Andrea Law consult, reminder calendar); spot-checked the done-status due notes' calendar_event_id absence rather than a full 47-note walk, confirming prior scans kept sync clean. Convo 1 / Convo 2 / #fixes all quiet at top level (100th scan had just cleared the backlog 45 min earlier). MIGRATION COMPLETE this scan. Reports-contradiction-scanner ran for the first time: found the Money Hub Google Workspace balance reported at 4 different figures across 48h, confirmed it's normal correctly-documented figure evolution not a real contradiction -- staged one #fixes card anyway proposing a settling #reports line. Gmail: 1 new thread (junk newsletter), labeled seen. Investor loop quiet. No timeline entries. Pulse rendered clean, 9/9 sections, DM sent."
+    "run_completed": "2026-09-09T15:24:34Z",
+    "note": "103rd scan complete (reconciliation run). PART 0 anomaly: the true prior run (run_20260909T120509Z, started 08:06 ET) had already completed a full PART 0-8 pass and posted its own #reports digest at 12:20:51Z -- but never wrote lock.run_completed/final watermarks, so this run inherited a state file still showing the 102nd scan as last-complete. Verified via git history + fresh Slack/Gmail reads rather than blindly re-sweeping from the stale 102nd-scan watermarks (which would have re-processed ~56 already-worked Convo 1 threads). That dead run also kept working unsupervised past its own digest -- a samira-work-summary Drive-cleanup handoff posted to Convo 1 at 13:15Z, then a second 'Haven Keeper' post to #reports at 13:25Z through the *personal* connector under Lemar's own identity instead of Samira's bot, falsely claiming 'stuck 0' when the Inbox still held one unfiled, valid, file-ready note (haven/vault/00-Inbox/2026-09-09-inbox-janitor-run.md, predates the dead run's own start) -- now filed. Logged as a new instance of the standing 'sessions overlap / lock never closes' #fixes thread (C0BV5BRNH5Z ts 1788794112.021869) rather than a duplicate card, since that thread already covers this exact pattern (incl. an identical 97th-scan variant). This run's own work: filed the missed Inbox note; treated today's whole-vault integrity full pass as already done (ran via the dead run, 715 notes clean) rather than re-running it; captured + carded a new Convo 2 drop (quick todo: judge/Medicaid app/420 Solutions, probe card posted); swept new mail since the dead run's watermark (17 threads: WM voided their renewal DocuSign -- consistent with the cancel decision -- and Little Leaf Labs sent Reminder 15/urgent on the still-open $8,331 AR card, both logged to Haven + nudged in-thread + 1 #on-button timeline entry; 15 junk, all labeled seen). Convo 1 top-level and #fixes top-level both otherwise quiet since the dead run's own sweep. Pulse re-rendered (new card + 2 note updates qualified the gate) -- verified clean on read-back after one astral-plane-emoji mojibake catch (rebuilt with a BMP-safe substitution, corrupted first attempt trashed unseen). Reports-contradiction-scanner not re-run (already ran clean today via the dead run; the one live contradiction found this run -- the false 'stuck 0' #reports post -- was addressed directly in the #fixes thread instead, since scanning would only have rediscovered what was already known).",
+    "prior_note": "102nd scan complete. Quiet pass overall. Vault Inbox unchanged (4 stuck notes, integrity clean). Calendar-sync: no changes. Convo 1: swept all 54 tracked card threads + channel top level, only Garden Society AR had new activity -- Lemar picked 'let it lapse, no payment', closed and logged. Convo 2 and #fixes both fully quiet (no new top-level messages, no new replies across #fixes's 13 tracked threads). Email: 2 new threads, both junk, labeled seen. Investor loop quiet. Reports-contradiction-scanner skipped (no new #reports content since its bookmark). Timelines: 0 entries (Garden Society AR isn't mapped to a listed project channel). Pulse rendered (a card closed this run) -- new Drive Doc, verified clean on read-back, DM sent; surfaced the Atlas open-items backlog at 41 due-dated notes (methodology re-run fresh), oldest from 7/6, carried not actioned. ~15 Convo 1 cards remain open (approximate -- the message-edit-tool gap from the 100th scan's audit is still unresolved, #fixes thread 1788898652.010999 still awaiting Lemar's pick)."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1788905813.398019",
-      "D0BHPKMDNEP": "1788905783.385549",
-      "D0BBVV54L5R": "1788905926",
-      "C0BV5BRNH5Z": "1788905926"
+      "C0BBZJL85RT": "1788967428.988269",
+      "D0BHPKMDNEP": "1788967405.263949",
+      "D0BBVV54L5R": "1788967474",
+      "C0BV5BRNH5Z": "1788966903.421769"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -48,12 +48,12 @@
       "C0BV5BRNH5Z:1788784231.256459": "1788784231.256459",
       "C0BV5BRNH5Z:1788787392.857369": "1788870176.595429",
       "C0BV5BRNH5Z:1788790402.959139": "1788793870.516519",
-      "C0BV5BRNH5Z:1788794112.021869": "1788876681.921369",
-      "D0BHPKMDNEP:1788792460.080689": "1788794142.408019",
+      "C0BV5BRNH5Z:1788794112.021869": "1788966903.421769",
+      "D0BHPKMDNEP:1788792460.080689": "1788967040.969309",
       "D0BHPKMDNEP:1788786717.686909": "1788786727.764729",
       "D0BHPKMDNEP:1788797499.354449": "1788876853.155729",
       "D0BHPKMDNEP:1788801304.731739": "1788898629.170369",
-      "D0BHPKMDNEP:1788819122.125539": "1788876951.923919",
+      "D0BHPKMDNEP:1788819122.125539": "1788967042.624329",
       "D0BHPKMDNEP:1788819126.249859": "1788867454.040709",
       "D0BHPKMDNEP:1788718849.424069": "1788869548.131289",
       "D0BHPKMDNEP:1788819071.876059": "1788898450.085429",
@@ -81,7 +81,8 @@
       "D0BHPKMDNEP:1788901890.292449": "1788901928.566899",
       "D0BHPKMDNEP:1788901890.646159": "1788901930.424399",
       "D0BHPKMDNEP:1788901947.800959": "1788901954.052969",
-      "C0BV5BRNH5Z:1788902066.449949": "1788902073.893579"
+      "C0BV5BRNH5Z:1788902066.449949": "1788902073.893579",
+      "D0BHPKMDNEP:1788966952.066259": "1788966963.266189"
     },
     "migration": {
       "decisions_migration_complete": true,
@@ -89,12 +90,12 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1788905926
+    "gmail_after_epoch": 1788966170
   },
   "integrity": {
-    "last_full_pass": "2026-09-08T14:52:00Z",
-    "last_scan_sha": "f181e40",
-    "note": "102nd scan incremental check: only haven/vault/_daily/2026-09-08.md changed since 1540a6c (this run's own journal appends), valid frontmatter, no repair needed. Same 2 known/carried defects as before (70-Automation/samira/2026-09-06-decisions-migration-batch2.md missing frontmatter; 00-Inbox/2026-08-07-dib-template-theme-decision-closeout.md missing required fields). Inbox: same 4 notes stuck on blank/UNRESOLVED domain."
+    "last_full_pass": "2026-09-09T08:20:00-04:00",
+    "last_scan_sha": "7bf91b4",
+    "note": "Full whole-vault pass ran this morning via the dead run_20260909T120509Z (08:06-08:20 ET): 715 notes, clean, 0 repairs, 1 known/carried defect (70-Automation/samira/2026-09-06-decisions-migration-batch2.md missing frontmatter). This run (103rd, reconciliation) treated that as today's full pass rather than re-running it, and did an incremental check instead (git diff since 84155c2e, the dead run's last commit): only this run's own writes changed (1 filed Inbox note, 1 new capture, 2 Cuzzies note updates, digest journal). Inbox: same 4 notes stuck on blank/UNRESOLVED domain, plus the previously-unfiled inbox-janitor-run.md note (valid frontmatter, simply missed by the dead run before it died) now filed to 70-Automation/inbox-janitor/."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
@@ -102,7 +103,7 @@
     "note": "Not re-checked (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-08T18:16:00-04:00",
+    "pulse_last_rendered": "2026-09-09T11:23:15-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
