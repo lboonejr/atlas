@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-09-09T12:06:00-04:00
+updated: 2026-09-10T14:15:00-04:00
 domain: legal
 type: task
 status: active
@@ -724,6 +724,41 @@ guessed): did the Sept 8 judge call happen, and if so what was the outcome
 ### Sources (this update)
 - slack: Convo 2 (self-DM) drop, ts `1788957957.366929`, 2026-09-09; Convo 1 card
   `D0BHPKMDNEP` ts `1788966952.066259`
+
+## Update 2026-09-10T14:15:00-04:00 — Diaz (Archer & Greiner) DECLINES representation over payment concerns; Lemar pushes back same-day, offering full retainer today — proof hearing is in 4 days with no counsel of record
+
+Two new messages on the Diaz thread (`1a024b065a8e8ff2`) today, both after a gap: on
+2026-09-09 ~10:17am ET Lemar himself (self-sent, not drafted by Samira) followed up on
+Diaz's 8/26 note that the motion needed filing that day to guarantee a pre-hearing
+ruling — acknowledging he'd gone silent, offering $2,500 now and the balance by
+"Monday, the 14th" (the same date as the proof hearing), and asking if a short
+adjournment from Di Stefano's side was still possible.
+
+- **2026-09-10 ~17:49 ET, Douglas Diaz replied declining representation**: *"I
+  unfortunately think we will have to decline the representation. We are frankly
+  concerned about the inability to pay or difficulty in paying the retainer and the
+  passage of time, and the case will be expensive if it does go forward and does not
+  settle promptly. I can see if some of my contacts at another firm may want to handle
+  the representation."*
+- **2026-09-10 ~17:55 ET, Lemar replied directly (self-sent, not drafted by Samira)**
+  pushing back the same evening: the funding issue "resolved... as of yesterday," and
+  Cuzzie's can send the full retainer today, right now, if the door is still open.
+  Offered a call as an alternative to more email.
+
+**Read: this is the most acute point this matter has hit since the 7/17 default
+judgment.** The Sept 14 proof hearing is now **4 days out**, the only attorney who had
+actually engaged with case documents (Diaz, since 8/21) just declined over exactly the
+payment concern Lemar is now saying is resolved, and there is still no counsel of
+record. No confirmation yet whether Diaz accepts the same-day full-retainer offer or
+follows through on referring "contacts at another firm." Nothing further for Samira to
+draft — Lemar is handling this exchange directly and in real time. Flagged to Convo 1
+as an urgent status update given the timeline, not a new decision (nothing here is
+Samira's to decide or draft).
+
+### Sources (this update)
+- gmail: thread `1a024b065a8e8ff2`, messages `1a0868725a012d53` (Lemar, 9/9 10:17am ET),
+  `1a08c70feb2ab1cd` (Diaz's decline, 9/10 5:49pm ET), `1a08c7616c3fd6ef` (Lemar's
+  same-day pushback, 9/10 5:55pm ET)
 
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")
