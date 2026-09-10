@@ -1,6 +1,6 @@
 ---
 created: 2026-08-13T11:15-04:00
-updated: 2026-08-27T14:20-04:00
+updated: 2026-09-10T11:05-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -115,6 +115,29 @@ twice; the ball is in A.G. Adjustments' / Cadex's court.** Nothing further to se
 this end; correcting prior updates' description of an unsent holding-reply draft, which
 does not exist in the current mailbox.
 
+## Update 2026-09-10T11:05-04:04 — fifth notice, now branded "Cadex Receivables Control Corporation"
+
+**A new notice arrived 2026-09-10 12:17 ET** (gmail thread `1a08b40851de2b5b`, from
+info@cadexrcc.com) — same underlying debt: **CNJ2-000241 / File No. 2532730_AGA**, same
+placed principal $23,274.01, same collection interest $2,327.40, same total due
+$25,601.41, same $0.00 paid to date, same collection agent contact Michael Mintz
+(631-719-8016, now signing as michaelm@cadexsolutions.com under "Cadex Receivables
+Control Corporation" letterhead rather than "A.G. Adjustments"). Confirms Cadex
+Receivables Control Corp and A.G. Adjustments are the same collection operation under
+different branding on different notices — not a new creditor or a new debt. New payment
+channel named: `https://pay.agaltd.com/` (credit card/ACH), or a check made payable to
+"Cadex Receivables Control Corporation" (memo: file # 2532730_AGA) faxed to
+(631) 425-8861 or photographed and emailed to pay@cadexrcc.com — explicitly instructs not
+to mail the check. Standard FDCPA 30-day dispute notice repeated (dispute window already
+closed per the 9/6 update above — over five weeks past the original 8/3 notice).
+
+No new Convo 1 card opened — this is folded into the existing canonical card (ts
+`1788901887.069719`, migrated from #decisions) as an in-thread update. Lemar's most
+recent signal on that card is a ✅ on **Option 3 — Dispute in writing** (reaction present
+on that option's reply); as of this pass no drafted dispute letter has been produced or
+sent from that pick yet — flagging for the email-loop's next D1 pass rather than acting
+on it here. Nothing paid, disputed, sent, or contacted this pass.
+
 ## Related
 - [[curaleaf]]
 - [[ag-adjustments]]
@@ -122,6 +145,8 @@ does not exist in the current mailbox.
 
 ## Sources
 - gmail: thread `19ffb0bb3846886a` · re-send thread `1a01f179798e9ead` (2026-08-20) ·
-  re-send thread `1a04324498152d1e` (2026-08-27)
-- slack: #decisions ts `1786631846.014899` (canonical card) · duplicate card ts
-  `1787231683.266619` (2026-08-20)
+  re-send thread `1a04324498152d1e` (2026-08-27) · re-send thread `1a08b40851de2b5b`
+  (2026-09-10, Cadex Receivables Control Corp letterhead)
+- slack: #decisions ts `1786631846.014899` (canonical card, retired) · duplicate card ts
+  `1787231683.266619` (2026-08-20) · Convo 1 canonical card ts `1788901887.069719`
+  (current, post-migration; Lemar's ✅ on Option 3 — Dispute in writing)
