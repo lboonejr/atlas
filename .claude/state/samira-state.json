@@ -3,17 +3,17 @@
   "lock": {
     "run_id": "run_20260910T210309Z",
     "run_started": "2026-09-10T21:03:09Z",
-    "run_completed": "2026-09-10T12:11:49Z",
-    "note": "108th scan complete. Convo 1: sampled the 4 newest card threads directly + 8 older spot-checks; found real Lemar signal on all 4 newest (thread replies don't surface via a channel-level watermark read, only via per-thread reads) -- First Insurance Funding (payment-plan ask drafted to Gmail, unsent), Caine & Weiner (call-time reply drafted, unsent), Waste Management (ack'd tracking-only), Sage Dispensary (closed, Haven status: done, domain still unresolved so it stays on the stuck-notes card). The 8 spot-checked older threads showed nothing past their stored watermark. Convo 2 and #fixes both quiet (0 new). Vault: filed Basil's 2026-09-10 inbox-janitor log to 70-Automation/inbox-janitor/ (the only new Inbox note this scan); stuck count unchanged at 5. Calendar-sync: 0 writes, nothing with a due changed since the last full pass. Gmail: triaged 13 new threads since watermark, all non-actionable (newsletters/car-hunt alerts/marketing), labeled and watermark advanced to 2026-09-10T12:02:30Z. Investor loop and reports-contradiction-scanner deferred (no signal, non-fatal). Pulse change-gate qualified (a card closed + a Haven note filed) but render deferred this pass for time -- do next scan. 0 timeline entries (nothing touched a project-timeline channel).",
-    "prior_note": "107th scan complete. Fully quiet incremental pass -- no new Convo 1 top-level messages or thread replies (sampled the 4 newest cards from the 106th scan directly: Waste Management, Caine & Weiner, First Insurance Funding, Sage Dispensary -- all still only carrying Samira's own posted options, no Lemar reply), Convo 2 self-DM reachable via the personal connector with 0 new drops, #fixes quiet since watermark, 0 new Gmail threads since the 106th scan's watermark. Integrity: incremental check since the day's full pass (sha a9d3405) found only the 5 files the 106th scan itself wrote, all already correctly filed/parked -- 0 repairs. Inbox unchanged at 5 stuck notes (4 long-standing UNRESOLVED-domain notes + Sage Dispensary, all already individually carded). Investor loop and reports-contradiction-scanner not run this pass (no signal, deferred). Pulse render skipped -- quiet-pass gate not qualified (no new cards/notes/money-change/status-flip this scan).",
-    "orphan_note": "110th scan (this run) found run_started (2026-09-10T18:03:28Z, run_20260910T180328Z) 180 minutes old with run_completed still at 12:11:49Z -- a THIRD consecutive instance of a run dying mid-flight without closing its lock (108th and 109th both show the same pattern in this file's history). Past the 120-minute threshold, so this run claimed the lock and proceeded per PART 0 rather than exiting silently. Flagging the recurring pattern (not just this one instance) as a #fixes card this scan."
+    "run_completed": "2026-09-10T21:18:00Z",
+    "note": "110th scan complete. Found the 109th scan's lock re-claimed and orphaned a second time (18:03:28Z run, 180 min old, never closed) -- a THIRD consecutive occurrence of a run doing real work and dying before closing its lock. Claimed the lock per the 120-min rule and worked all 6 cards left by the unclosed prior run(s): DeWalt (tracked, replied), Metrc (Lemar's plain-reply override -- payment plan due 2026-09-18, calendar event set on Cuzzie's Owners business calendar, declined to route through #personal-finance per the locked business/personal split and said so in-thread), Camden Launch (Working Log pulled, found stale since 8/24, checklist posted, asked Lemar to confirm 8/25's outcome before drafting the full roadmap), Cuzzie's CRC renewal (surfaced a live, still-open NJ revocation risk already in Haven as the real answer to 'confirm good standing'), Station weekend (pointed at the existing MBE checklist, left tax problem open as instructed), Cuzzie's capital-raise folder for Josh (Drive folder built and populated with the 9/7 six-deal-structure set + 3 other current decks/one-pagers; bank statements/debt schedules not found). Convo 2: 0 new drops (the weekend-visit thread was already fully developed by the unclosed prior run); the bare-phone-number probe is still open. Vault: 0 new file-ready notes, 5 stuck unchanged. Integrity: incremental check since a9d3405 (23 files) spot-checked, 0 repairs, 1 minor data-quality note (inbox-janitor log has an implausible future `created`, flagged not touched); last_scan_sha advanced. Email: 8 genuinely new threads (of 22 matched), all junk, labeled seen; 0 reply-worthy/tasks. Calendar-sync: +1 (Metrc, via card execution) ~0 -0. Investor loop and reports-contradiction-scanner deferred (no signal / time). Timelines: 1 entry (#camden-launch). Pulse: rendered and DM'd (change-gate qualified -- 6 cards worked, a Drive folder built, a calendar event set). #fixes: 2 open, 1 updated with the third-orphan evidence, 0 closed.",
+    "prior_note": "108th scan complete. Convo 1: sampled the 4 newest card threads directly + 8 older spot-checks; found real Lemar signal on all 4 newest (thread replies don't surface via a channel-level watermark read, only via per-thread reads) -- First Insurance Funding (payment-plan ask drafted to Gmail, unsent), Caine & Weiner (call-time reply drafted, unsent), Waste Management (ack'd tracking-only), Sage Dispensary (closed, Haven status: done, domain still unresolved so it stays on the stuck-notes card). The 8 spot-checked older threads showed nothing past their stored watermark. Convo 2 and #fixes both quiet (0 new). Vault: filed Basil's 2026-09-10 inbox-janitor log to 70-Automation/inbox-janitor/ (the only new Inbox note this scan); stuck count unchanged at 5. Calendar-sync: 0 writes, nothing with a due changed since the last full pass. Gmail: triaged 13 new threads since watermark, all non-actionable (newsletters/car-hunt alerts/marketing), labeled and watermark advanced to 2026-09-10T12:02:30Z. Investor loop and reports-contradiction-scanner deferred (no signal, non-fatal). Pulse change-gate qualified (a card closed + a Haven note filed) but render deferred this pass for time -- do next scan. 0 timeline entries (nothing touched a project-timeline channel).",
+    "orphan_note": "110th scan (this run) found run_started (2026-09-10T18:03:28Z, run_20260910T180328Z) 180 minutes old with run_completed still at 12:11:49Z -- a THIRD consecutive instance of a run dying mid-flight without closing its lock (108th and 109th both show the same pattern in this file's history). Past the 120-minute threshold, so this run claimed the lock and proceeded per PART 0 rather than exiting silently. Flagged the recurring pattern (not just this one instance) as an update to the existing #fixes card this scan -- see lock.note above for what this run did with it."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789042290.438909",
-      "D0BHPKMDNEP": "1789042171.234789",
-      "D0BBVV54L5R": "1788971449.736049",
-      "C0BV5BRNH5Z": "1788974401.386389"
+      "C0BBZJL85RT": "1789075026.073549",
+      "D0BHPKMDNEP": "1789075004.324369",
+      "D0BBVV54L5R": "1789063884.227389",
+      "C0BV5BRNH5Z": "1789074692.432689"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -89,7 +89,15 @@
       "D0BHPKMDNEP:1788981000.572229": "1788981031.204649",
       "D0BHPKMDNEP:1788988026.767499": "1789042168.216099",
       "D0BHPKMDNEP:1788988027.549069": "1789042169.992979",
-      "D0BHPKMDNEP:1788988028.299219": "1789042171.234789"
+      "D0BHPKMDNEP:1788988028.299219": "1789042171.234789",
+      "D0BHPKMDNEP:1789053129.150039": "1789074474.077689",
+      "D0BHPKMDNEP:1789063831.351469": "1789074524.594669",
+      "D0BHPKMDNEP:1789063831.996959": "1789074640.558729",
+      "D0BHPKMDNEP:1789063832.775699": "1789074520.335479",
+      "D0BHPKMDNEP:1789063833.434589": "1789074571.618489",
+      "D0BHPKMDNEP:1789064040.504999": "1789074475.604269",
+      "C0BV5BRNH5Z:1789063894.596139": "1789074692.432689",
+      "C0BV5BRNH5Z:1789063894.923759": "1789063916.795149"
     },
     "migration": {
       "decisions_migration_complete": true,
@@ -97,12 +105,12 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1789052362
+    "gmail_after_epoch": 1789072821
   },
   "integrity": {
     "last_full_pass": "2026-09-09T08:20:00-04:00",
-    "last_scan_sha": "a9d3405",
-    "note": "Full whole-vault pass ran 2026-09-09 morning (715 notes, clean, 0 repairs, 1 known/carried defect). 108th scan's incremental check (git diff since a9d3405) found only the files the 106th/107th/108th scans themselves wrote (including this scan's own commits through d8a5853) -- all already correctly filed or correctly parked, 0 repairs needed."
+    "last_scan_sha": "d6d698b",
+    "note": "Full whole-vault pass ran 2026-09-09 morning (715 notes, clean, 0 repairs, 1 known/carried defect) and again 2026-09-10 morning (721 notes, 0 repairs, 1 new defect found -- 70-Automation/samira/2026-09-06-decisions-migration-batch2.md, no frontmatter block, flagged in #fixes). 110th scan's incremental check (git diff a9d3405..d6d698b, 23 files) found only files this run and its immediate predecessors wrote -- all correctly filed, 0 repairs needed."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
@@ -110,7 +118,7 @@
     "note": "Not re-checked (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-09T11:23:15-04:00",
+    "pulse_last_rendered": "2026-09-10T17:16:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
