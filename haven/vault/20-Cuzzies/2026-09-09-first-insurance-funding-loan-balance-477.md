@@ -1,6 +1,6 @@
 ---
 created: 2026-09-09T16:13:24-04:00
-updated: 2026-09-09T16:13:24-04:00
+updated: 2026-09-10T08:07:00-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -25,7 +25,14 @@ reinstatement terms for an active legal matter where coverage may be at issue).
 Nothing paid, no reply sent. Needs Lemar's call: pay the $477.60 now to close it out,
 or push back/ask a follow-up question first.
 
+## Update — 2026-09-10
+Lemar asked Samira to reply asking whether the $477.60 can go on a payment plan instead
+of a lump sum. Drafted a reply to Abraham Borjon (cc Jordan Mulero) in Gmail Drafts —
+NOT sent. Card thread reply posted in Convo 1. Awaiting Lemar to send the draft or give
+further direction.
+
 ## Sources
 - gmail: thread `1a087cdd997a3f2b` — "RE: Loan #106241219 — return premium from
   endorsements SSC-00003261-00 / SSC-00003260-00 (2LLCJ2Q38)", Abraham Borjon
   (abraham.borjon@firstinsurancefunding.com), 2026-09-09T20:13:24Z
+- gmail draft: `1a08b387ed50fda5` (thread `1a087cdd997a3f2b`) — payment-plan ask, unsent
