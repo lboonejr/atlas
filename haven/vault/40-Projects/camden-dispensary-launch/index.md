@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T00:28-04:00
-updated: 2026-08-19T00:28-04:00
+updated: 2026-09-10T14:10:00-04:00
 domain: project
 type: reference
 status: active
@@ -84,6 +84,16 @@ The first two of those are Phase 00 deliverables, so they resolve as the Positio
 Phase 00, Position Audit. Infrastructure stood up 2026-08-19: Drive tree, Slack channel with
 the bot in it, the overlay, and the ids recorded in anchors. No client work has run through
 the loop yet. The Working Log carries the live checklist and dates.
+
+## Update 2026-09-10T14:10-04:00 — kickoff date set, roadmap needs finalizing
+
+Lemar drop, Convo 2 self-DM (thread ts `1789061736.927349`, reply `1789062477.908009`),
+2026-09-10: "Finalize the Camden group licensing roadmap. Start lining everything up. Be
+ready to hit the ground running on September 16th, when we will be getting started."
+First concrete start date attached to this engagement since infrastructure stood up
+2026-08-19 — it has sat at Phase 00 with no client work run through the loop yet (see
+State above). Nothing finalized yet; the roadmap itself, and what "lining everything up"
+requires, still needs to be worked as a Camden Launch card per the overlay before 9/16.
 
 ## Sources
 - repo: `.claude/projects/camden-dispensary-launch-project-instructions.md` (PRs #68, #70, #71)

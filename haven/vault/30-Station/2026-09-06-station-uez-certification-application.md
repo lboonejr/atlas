@@ -1,6 +1,6 @@
 ---
 created: 2026-09-06T20:59-04:00
-updated: 2026-09-06T20:59-04:00
+updated: 2026-09-10T14:10:00-04:00
 domain: station
 type: task
 status: active
@@ -28,6 +28,15 @@ session Lemar ran directly (not through Samira's hourly scan).
   can proceed.
 
 Nothing submitted; still waiting on Markony's PBS credentials.
+
+## Update 2026-09-10T14:10-04:00 — Lemar pushing this while on-site
+
+Lemar drop, Convo 2 self-DM (thread ts `1789061736.927349`, reply `1789061846.484979`),
+2026-09-10: while at The Station 9/11–9/14, wants this application actually applied for
+(not just status-checked) — find out the holdups/bottlenecks and try to get it
+submitted this weekend. This is the same 9/10 follow-up window the calendar reminder
+above was already set for (Markony's PBS credentials). Still nothing submitted as of
+this update; the blocker is unchanged (Markony's PBS login).
 
 ## Sources
 - slack: Convo 2 (self-DM) updates, ts `1788724945.543779` and `1788725720.541579`,
