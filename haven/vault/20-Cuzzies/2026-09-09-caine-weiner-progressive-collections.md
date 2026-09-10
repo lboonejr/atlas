@@ -1,6 +1,6 @@
 ---
 created: 2026-09-09T15:10:57-04:00
-updated: 2026-09-09T15:10:57-04:00
+updated: 2026-09-10T08:07:00-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -26,7 +26,13 @@ Nothing paid, no reply sent, no call made. This is a repeat, unanswered collecti
 outreach on a Cuzzie's-linked Progressive policy — needs Lemar's call on whether to pay,
 dispute, or have Samira draft a reply/schedule the call before a third notice lands.
 
+## Update — 2026-09-10
+Lemar ✅'d "draft a reply proposing a call time" on the card. Drafted a reply to Angela
+Hall in Gmail Drafts (NOT sent) proposing two call windows. Card thread reply posted in
+Convo 1. Awaiting Lemar to send the draft or adjust the times.
+
 ## Sources
 - gmail: thread `1a063fec57c6d2fd` — "RE: Account(s) Assigned to Our Office - BALANCE
   $1,107.20 - REF FILE 26085261", Angela Hall (angela.hall@caine-weiner.com),
   2026-09-02T21:20:11Z and 2026-09-09T19:10:57Z
+- gmail draft: `1a08b38878c0fd94` (thread `1a063fec57c6d2fd`) — proposed call times, unsent
