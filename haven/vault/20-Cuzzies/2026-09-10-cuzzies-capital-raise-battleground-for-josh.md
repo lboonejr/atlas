@@ -1,6 +1,6 @@
 ---
 created: 2026-09-10T14:10:00-04:00
-updated: 2026-09-10T14:10:00-04:00
+updated: 2026-09-10T17:10:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -26,9 +26,27 @@ Needs, in one place:
 Distinct from the investor-pipeline project ([[../40-Projects/investor-pipeline/index]]),
 which tracks specific investor relationships and outreach state — this is a
 document-consolidation deliverable so Josh can operate independently across whichever
-lender/buyer/partner conversation comes up. Nothing built yet; the source documents
-(decks, one-pagers, bank statements, debt schedules, recap plans) still need to be
-located and gathered before the folder can be assembled.
+lender/buyer/partner conversation comes up.
+
+## Update 2026-09-10T17:10:00-04:00 — folder created, existing decks/one-pagers gathered
+
+Lemar picked Option 1 on the Convo 1 card (ts `1789063831.996959`, reply
+`1789063859.925779`): start now with what already exists. Created a Drive folder,
+**"Cuzzie's Capital Raise — Josh"** (`1R_g1z92jElUTyVsO-bY-9XEHsjCWDAqn`), and copied in
+the most current pitch/one-pager material found in Drive:
+- "Six Deal Structures" (stylized presentation) + all 6 individual deal-structure
+  one-pagers ($250K/$350K/$500K × outright/50% equity) — newest set, 2026-09-07
+- Cuzzies_Camden_Pitch_Updated (deck, 2026-08-20)
+- Cuzzies_Camden_Teaser_OnePager.pdf (2026-08-26)
+- CapitalRaise_CuzziesRecapitalizationBrief500K (2026-06-29)
+
+**Not found, still needed:** bank statements and debt schedules — nothing matching
+those turned up in a Drive search, and Samira doesn't have another source for them.
+Older recap-deck drafts (June/July, several $325K/$500K/$750K variants) exist in Drive
+too but were left out as likely superseded by the 9/7 six-deal-structure set — say the
+word if any of those should go in instead/also.
 
 ## Sources
-- slack: Convo 2 `D0BBVV54L5R` thread `1789061736.927349`, reply `1789062162.348089`
+- slack: Convo 2 `D0BBVV54L5R` thread `1789061736.927349`, reply `1789062162.348089` ·
+  Convo 1 card ts `1789063831.996959`
+- drive: folder `1R_g1z92jElUTyVsO-bY-9XEHsjCWDAqn`
