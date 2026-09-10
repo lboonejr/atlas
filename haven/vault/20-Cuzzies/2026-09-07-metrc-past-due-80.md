@@ -1,14 +1,14 @@
 ---
 created: 2026-09-07T13:16-04:00
-updated: 2026-09-07T13:16-04:00
+updated: 2026-09-10T11:00-04:00
 domain: cuzzies
 type: task
-status: active
+status: awaiting-decision
 tags: [metrc, past-due, collections, vendor-payment]
 source: gmail
 ---
 
-# Metrc — account past due $80.00, 1st collections attempt
+# Metrc — account past due $80.00, 2nd collections attempt
 
 Found via the 2-week email backlog scan (Convo 1 card `D0BHPKMDNEP` ts
 `1788797499.354449`). Metrc emailed 2026-09-02 17:57 ET (thread `1a0634531787e426`,
@@ -22,6 +22,26 @@ collections is a different risk class than a marketing vendor — worth a quick 
 even though the number is trivial. No reply sent, nothing paid. Not something Samira
 pays or negotiates.
 
+## Update 2026-09-10T11:00-04:00 — 2nd collections attempt notice arrived
+
+Metrc sent a follow-up 2026-09-10 10:02 ET (gmail thread `1a08b697b4118c7b`, same cc list
+joshua@cuzziesnj.com + kenneth@cuzziesnj.com), same Account "Cuzzie's" / Facility Number
+**RE000069**, same **$80.00** outstanding — now labeled **"2nd Collections attempt,"
+case #02444271**. New detail this notice adds: **once the account balance reaches $120,
+the Metrc account will be LOCKED** until the Industry Support Fee balance is paid. Metrc
+is the state's mandated seed-to-sale tracking system — a locked account is an
+operational/compliance risk (can't log required transactions), not just an unpaid
+vendor bill, even though $80 itself is trivial. No #decisions/Convo 1 decision card
+existed yet for this matter (the 9/7 note above was logged for the record only, inside
+a different card about the email-backlog scan) — opening one now given the lock
+threshold. Payment method: log into the Metrc account → Financial tab → add a credit
+card → check the RE000069 license → pay Industry Support Fees (can also set up
+auto-pay going forward). Nothing paid yet — this is a payment action outside what
+Samira does unattended.
+
 ## Sources
-- gmail: thread `1a0634531787e426`, 2026-09-02T21:57:38Z, from
-  metrcsupportemailtocase-8hwvkhejd4u3zqhc@metrc.com
+- gmail: thread `1a0634531787e426` (1st notice, 2026-09-02) · thread `1a08b697b4118c7b`
+  (2nd notice / 2nd collections attempt, 2026-09-10, case #02444271)
+- slack: Convo 1 card ts `1788797499.354449` (backlog-scan card that first logged this,
+  no dedicated decision card) · new dedicated card ts TBD (posted same pass as this
+  update)
