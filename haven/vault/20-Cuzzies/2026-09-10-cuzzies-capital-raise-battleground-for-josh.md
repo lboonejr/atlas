@@ -1,6 +1,6 @@
 ---
 created: 2026-09-10T14:10:00-04:00
-updated: 2026-09-11T10:35:00-04:00
+updated: 2026-09-11T12:00:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -63,7 +63,30 @@ Josh may put in front of a lender. Not built this pass; flagged back on the Conv
 card asking Lemar to point at or drop in the real bank statements/debt schedule (or
 confirm the current revenue run-rate) so the model reflects the actual business.
 
+## Update 2026-09-11T12:00:00-04:00 — real bank statements DO exist, just not in the Josh folder yet
+Lemar replied with a Drive link, calling it "probably the best place to start" despite
+inconsistencies: `1w2Uo4dpxpY5y4FCjROL4_WZpQ-Yf-Ho6` (the Investor Master Templates
+folder, per anchors.md). Checked its contents directly — it corrects the 2026-09-10
+"not found" finding above. This folder actually holds:
+- **Cuzzie's Parke Bank statements**, monthly, 2025-07 through 2026-05 (11 months)
+- **The Station Parke Bank statements**, monthly, 2025-06 through 2026-04 (duplicated
+  copies of several months)
+- A signed promissory note + note amendment, a Liquidibee MCA agreement, two Experian
+  credit reports (Josh's + one other), Cuzzie's cannabis license PDF, and two
+  financial-snapshot Docs (FY2025, 2026 YTD)
+- No standalone debt schedule as its own document, but the promissory note + MCA
+  agreement + amendment together are the raw material for one.
+
+This walks back the "nothing exists" read from the 2026-09-10 update — the earlier
+search only covered the newly-created Josh folder, not this older one. A real,
+non-fabricated model (debt service coverage, runway, breakeven per structure) is now
+buildable from these bank statements rather than assumed numbers. Not built yet this
+pass — proposed as the next step on the Convo 1 card rather than launched
+unconfirmed, given the size of the extraction (11+ months × 2 entities).
+
 ## Sources
 - slack: Convo 2 `D0BBVV54L5R` thread `1789061736.927349`, reply `1789062162.348089` ·
-  Convo 1 card ts `1789063831.996959`
-- drive: folder `1R_g1z92jElUTyVsO-bY-9XEHsjCWDAqn`
+  Convo 1 card ts `1789063831.996959`, reply `1789136694.448499`
+- drive: folder `1R_g1z92jElUTyVsO-bY-9XEHsjCWDAqn` (Josh folder) · folder
+  `1w2Uo4dpxpY5y4FCjROL4_WZpQ-Yf-Ho6` (Investor Master Templates — has the real
+  statements)

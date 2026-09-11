@@ -1,12 +1,12 @@
 ---
 created: 2026-08-17T13:08:04-04:00
-updated: 2026-09-10T11:11-04:00
+updated: 2026-09-11T12:00:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [nj-annual-report, revocation, legal, entity-152-009080]
 source: slack
-due: 2026-09-07T10:00:00-04:00
+due: 2026-09-15T10:00:00-04:00
 calendar_event_id: 6eg353q4naq3r5petkjobofr18
 ---
 
@@ -63,3 +63,15 @@ filed or paid by Samira — this is a reminder only; still awaiting Lemar's own 
   Convo 1 card, thread ts `1788714814.865959`
 - gmail: thread `1a015f8910b164de` ("Return Posted"), thread `1a015f75b6da07ea`
   ("Return Filed") — both 2026-08-18
+
+## Update 2026-09-11T12:00:00-04:00 — still not filed; new target Tue 9/15, tied to CRC renewal game plan
+Asked in the CRC renewal card (Convo 1, thread ts `1789063832.775699`) whether the 9/7
+filing target had landed — Lemar confirmed it hadn't: "I didn't file it. I really want
+to complete all the filings this Tuesday, 9/15." This note's revocation deadline is
+now the lead blocker on that renewal game plan
+([[2026-09-10-cuzzies-crc-renewal-game-plan]]). `due` moved from 2026-09-07 to
+2026-09-15 to match his stated target — calendar-sync will move the reminder event
+next pass. Still outside Samira's authority to file or pay; nothing filed by Samira.
+
+### Sources (this update)
+- slack: Convo 1 `D0BHPKMDNEP` thread `1789063832.775699`, reply `1789136831.358239`

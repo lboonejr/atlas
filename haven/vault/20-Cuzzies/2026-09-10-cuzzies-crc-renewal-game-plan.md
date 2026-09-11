@@ -1,6 +1,6 @@
 ---
 created: 2026-09-10T14:10:00-04:00
-updated: 2026-09-10T14:10:00-04:00
+updated: 2026-09-11T12:00:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -23,5 +23,25 @@ tax problem) — different entity, but worth checking whether they share a root 
 Nothing on the entity/standing/tax side has been checked yet; this note tracks the plan
 as it's built, not a completed audit.
 
+## Update 2026-09-11T12:00:00-04:00 — filing still open, new target Tue 9/15; moving to municipal standing
+Lemar confirmed the 9/7 annual-report filing target passed without being filed, and
+set a new target: "complete all the filings this Tuesday, 9/15" (moved the `due` on
+[[2026-08-17-nj-annual-report-revocation-notice]] to match). He also said to move on
+to the municipal-standing step in parallel rather than wait on the filing.
+
+Checked what's available on the municipal/state-standing question: NJ's public
+Business Name/Entity Search (DORES, njportal.com/dor/businessnamesearch) is an
+interactive portal search, not something fetchable without a session — no free API
+or scrapable result for entity `#152-009080`'s current status. Same for Camden's
+municipal tax/license standing — not a source Samira can reach without either
+(a) Lemar/Samira checking the njportal.com search directly, or (b) Lemar reporting
+what he sees. Not guessing a status either way. Genuinely open:
+- Cuzzie's current standing on njportal.com's Business Name Search (would also show
+  whether the revocation notice is still just "pending" or has moved to actually
+  revoked).
+- Camden municipal tax/license account status — no public lookup identified.
+
 ## Sources
 - slack: Convo 2 `D0BBVV54L5R` thread `1789061736.927349`, reply `1789062261.411799`
+- slack: Convo 1 `D0BHPKMDNEP` thread `1789063832.775699`, replies `1789136831.358239`
+  / `1789136845.522919`

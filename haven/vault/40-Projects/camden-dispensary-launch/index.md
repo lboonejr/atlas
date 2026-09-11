@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T00:28-04:00
-updated: 2026-09-11T10:30:00-04:00
+updated: 2026-09-11T12:00:00-04:00
 domain: project
 type: reference
 status: active
@@ -125,6 +125,16 @@ signature question back on the Convo 1 card rather than drafting the full roadma
 against an unconfirmed engagement — a licensing roadmap promising a timeline to a
 client who hasn't signed is a scope/outcome-language risk under the overlay's six
 gates.
+
+## Update 2026-09-11T12:00:00-04:00 — roadmap drafting started (internal draft)
+
+Lemar confirmed the backup question (Drive doubles as backup, periodic desktop
+export later — no new tooling needed) and said to start drafting the roadmap and
+checklist now, plus a second one for "legitimizing the business, getting the EIN,
+things of that nature." Drafted both as one internal (02) working-draft note —
+[[2026-09-11-phase00-licensing-and-entity-roadmap]] — kept internal since there's
+still no signed engagement letter (overlay's outcome-language gate). Will adapt into
+a 01 client-facing version once the letter is back.
 
 ## Sources
 - repo: `.claude/projects/camden-dispensary-launch-project-instructions.md` (PRs #68, #70, #71)
