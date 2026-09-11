@@ -1,6 +1,6 @@
 ---
 created: 2026-08-19T00:28-04:00
-updated: 2026-09-10T14:10:00-04:00
+updated: 2026-09-11T10:30:00-04:00
 domain: project
 type: reference
 status: active
@@ -95,8 +95,39 @@ First concrete start date attached to this engagement since infrastructure stood
 State above). Nothing finalized yet; the roadmap itself, and what "lining everything up"
 requires, still needs to be worked as a Camden Launch card per the overlay before 9/16.
 
+## Update 2026-09-11T10:30-04:00 — 8/25 confirmed, real target is 9/21 not 9/16
+
+Convo 1 card (thread ts `1789063833.434589`), Lemar's reply: the 8/25 Jamil meeting did
+happen but the engagement letter was **not signed**. On 9/5 the group pushed again —
+"ready to go after the 15th," letter going to them 9/16 (not the 5th as Lemar first
+expected). Lemar now targets **launch with the Camden Group on 9/21**, wants to be ready
+earlier if they move sooner, and named four concrete infrastructure asks: a well-defined
+file system, a backup location/system, a roadmap/blueprint of the licensing + entity-
+formation process, a way to track progress, and doing the whole engagement inside
+Samira's Loop.
+
+Three of the four are already standing infrastructure, not new builds — flagging the
+gap rather than re-building what exists:
+- **File system**: the Drive tree (00 Command Center / 01 Client-Facing / 02 Internal,
+  phase subfolders 00-05) already exists, stood up 2026-08-19 — see "Where everything
+  lives" above.
+- **Progress tracking**: the Working Log Doc already serves this, plus this Convo 1
+  card thread.
+- **Work entirely within Samira's Loop**: already the mechanism — #camden-launch +
+  Convo 1 cards + the loop's eight lenses is how every prior Camden item has run.
+
+Genuinely not yet built: a **backup** location distinct from Drive's own version
+history (Drive folder is the only copy right now), and the actual **content** of the
+roadmap/blueprint — Phase 00-05 exist as folder structure, not as a drafted checklist
+a client-facing person could follow. Still no signed engagement letter and still no
+first milestone in the Working Log since 8/24. Flagged both gaps and the open
+signature question back on the Convo 1 card rather than drafting the full roadmap
+against an unconfirmed engagement — a licensing roadmap promising a timeline to a
+client who hasn't signed is a scope/outcome-language risk under the overlay's six
+gates.
+
 ## Sources
 - repo: `.claude/projects/camden-dispensary-launch-project-instructions.md` (PRs #68, #70, #71)
 - repo: `.claude/anchors.md`, section "Camden Dispensary Launch"
 - drive: 00 Command Center `1waKvkdsc9yr2ZAu_BhY8EneONKvtDhcM` (Working Log, proposal, handoffs)
-- slack: #camden-launch `C0BRZT2V89W`
+- slack: #camden-launch `C0BRZT2V89W` · Convo 1 card ts `1789063833.434589`
