@@ -3,17 +3,17 @@
   "lock": {
     "run_id": "run_20260911T200325Z",
     "run_started": "2026-09-11T20:03:25Z",
-    "run_completed": "2026-09-11T19:11:36Z",
-    "note": "Closed cleanly, ~61 min after the prior clean close. PART 1/2 clean no-ops (vault unchanged besides the append-only daily journal). PART 3: Convo 1's channel-level watermark was quiet, but a spot-check of the ~10 most-recently-active open card threads (thread replies don't show up in a channel-watermark sweep) caught one genuine new signal a pure watermark check would have missed: Lemar's plain reply on the Cuzzie's capital-raise-for-Josh card giving the go-ahead on the compiled debt/AR schedule offered last pass. Built it -- 11 items sourced entirely from Haven, known-open total $38,777.69 across 6 confirmed figures, flagged the promissory note/note amendment/Liquidibee MCA as the biggest unresolved gap (all three sit unopened in the Investor Master Templates Drive folder) -- landed as a Haven Update + a card reply. Everything else spot-checked was unchanged since its own last-recorded state. PART 4/6b: quiet. PART 5: no new #fixes activity beyond the spot-check (prior pass's 'Haven Keeper' false-claim card still awaits Lemar's pick). PART 6a: 2 new emails (1 automated report, 1 promo), both labeled seen. PART 6c: clean, nothing new to scan. PART 7: no applicable timeline channel for the capital-raise item. PART 8: Pulse render dispatched as a background task this pass -- completed after this lock closed: Doc https://docs.google.com/document/d/1bImU6b9bXO3LfBLQ0Az1HGEeSAymn-kw8pDIzJdsxdo/edit (2026-09-11 1520 ET), read back clean (no mojibake, no dead table links), DM'd to Convo 1 ts `1789154163.096989`. Sections 4/7/8/9 ran abbreviated (light sweeps, not exhaustive) per the render's own time budget -- flagged in the Doc's own section 9, non-fatal per skill design.",
-    "prior_note": "Prior run (run_20260911T180314Z) closed cleanly at 18:10:25Z -- PART 0-8 pass, vault-keeper/calendar-sync clean no-ops, Convo 1/Convo 2/#fixes quiet at watermark level, 1 new #fixes card opened (Haven Keeper false-claim finding, ts 1789150150.917399, still open). See main history.",
+    "run_completed": "2026-09-11T20:16:00Z",
+    "note": "Closed cleanly, ~65 min after the prior clean close. PART 1/2 clean no-ops (vault unchanged besides notes this pass itself wrote). PART 3: Convo 1's channel watermark was quiet aside from Samira's own prior post; a spot-check of the 4 most-recently-active open card threads caught one genuine new signal -- the M/WBE & SBE certification card picked up a Claude-in-Chrome progress update (Station MBE packet nearly complete) plus Lemar's own reply (minority category Hispanic, Markony's ID uploaded, notarization pending Monday). Logged to Haven, replied on the card. PART 4: 2 Convo 2 drops -- Lemar named a workflow 'disconnect' (local Claude sessions not reliably reaching Samira via the self-DM handoff) that turned out to be the same-scan recurrence #2 of the already-open samira-work-summary routing #fixes card, so that card was reopened with a new option rather than treated as new; and an unlabeled photo (Markony's NJ driver's license) matched to the M/WBE card's already-noted 'ID uploaded' item -- acknowledged, deliberately kept out of Haven/#reports. PART 5: reopened 1 #fixes card (routing recurrence); spot-checked 2 others (fixes-open-count question, Haven Keeper false-claim), both unchanged, still awaiting Lemar's pick. PART 6a: 3 new emails -- 1 promo (seen), 1 GitHub/Vercel notice (PR #95 blocked on dawn/samira/atlas by the free-tier daily deploy cap, logged to #fixes as informational, auto-resets ~24h), and 1 genuine find -- a Leafly collections notice for The Station ($448 past-due, case #00180295, distinct from Cuzzie's known printer-return fee) -- captured to Haven and carded to Convo 1 with 3 draft-reply options, flagged Send Today. PART 6b: no new investor signal. PART 6c reports-scan: clean over the 14:10-15:10 ET digest window (no real contradiction, both digests' ET math checks out). PART 7: no project timeline channel applies to anything touched this pass. PART 8: Pulse render dispatched as a background task this pass (Leafly card + M/WBE update + #fixes reopen qualify the change-gate); will land and DM Convo 1 separately, and may need to retry this state-file write on a SHA conflict per the git-write policy.",
+    "prior_note": "Prior run (run_20260911T190256Z) closed cleanly at 19:11:36Z -- PART 1/2 clean no-ops, PART 3 built the capital-raise compiled debt/AR schedule off Lemar's go-ahead ($38,777.69 known-open across 6 confirmed figures), PART 4/6b quiet, PART 5 no new activity beyond spot-check, PART 6a 2 emails seen, PART 6c clean, PART 7 no applicable timeline, PART 8 Pulse dispatched async and completed after that lock closed (Doc read back clean, DM'd to Convo 1). See main history.",
     "orphan_note": "6 consecutive/overlapping instances now of a run doing real, committed work and not writing lock.run_completed on the expected timeline -- the first five were genuine crashes/interruptions (idempotency caught each cleanly, nothing lost); the 6th (logged on the #fixes thread ~16:48 ET this same day) was a materially different case: a session that stayed alive and correct but took ~4h45m wall-clock for what should be a 10-15 min pass, and chose not to write stale state backward over three newer runs that had already self-healed past it. Root cause still open; recommend Lemar pick between Option 1 (no fix needed, the 120-min rule is working as designed) and Option 2 (make the lock more resilient -- incremental writes and/or a genuine heartbeat/mutex rather than pure time-aging) on the #fixes card, ts `1789063894.596139`. Still his call, still open."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789153817.010779",
-      "D0BHPKMDNEP": "1789153886",
-      "D0BBVV54L5R": "1789153886",
-      "C0BV5BRNH5Z": "1789153886"
+      "C0BBZJL85RT": "1789157719.410979",
+      "D0BHPKMDNEP": "1789157543.418209",
+      "D0BBVV54L5R": "1789157033.996539",
+      "C0BV5BRNH5Z": "1789157555.949599"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -101,11 +101,13 @@
       "D0BHPKMDNEP:1788987937.710089": "1789042166.517989",
       "C0BV5BRNH5Z:1788797648.363529": "1788797814.046539",
       "C0BV5BRNH5Z:1789136462.053309": "1789139902.583979",
-      "D0BHPKMDNEP:1789140035.331339": "1789140053.595309",
-      "C0BV5BRNH5Z:1789140064.220449": "1789140064.220449",
+      "D0BHPKMDNEP:1789140035.331339": "1789157238.388959",
+      "C0BV5BRNH5Z:1789140064.220449": "1789157382.518519",
       "C0BV5BRNH5Z:1789140445.088159": "1789142882.100609",
       "C0BV5BRNH5Z:1789140448.808809": "1789142850.486519",
-      "C0BV5BRNH5Z:1789150150.917399": "1789150150.917399"
+      "C0BV5BRNH5Z:1789150150.917399": "1789150150.917399",
+      "D0BHPKMDNEP:1789157533.372279": "1789157543.418209",
+      "C0BV5BRNH5Z:1789157548.336469": "1789157555.949599"
     },
     "migration": {
       "decisions_migration_complete": true,
@@ -113,12 +115,12 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1789153886
+    "gmail_after_epoch": 1789157704
   },
   "integrity": {
     "last_full_pass": "2026-09-11T08:33:22-04:00",
-    "last_scan_sha": "6ddce69",
-    "note": "Full whole-vault pass ran 2026-09-11 morning (729 notes, 0 new repairs, 0 new value defects). This pass's incremental check found only the append-only daily journal changed in the vault since the last scan sha, plus one non-Inbox content update to an existing filed note (20-Cuzzies/2026-09-10-cuzzies-capital-raise-battleground-for-josh.md, an Update section appended per schema §7 exception) -- neither requires vault-keeper filing/repair logic. Inbox unchanged (same 5 known stuck notes). Advances last_scan_sha to 6ddce69 (this pass's own daily-journal commit). Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved)."
+    "last_scan_sha": "378bb99",
+    "note": "Full whole-vault pass ran 2026-09-11 morning (729 notes, 0 new repairs, 0 new value defects); not re-run this pass (same day). This pass's own writes (M/WBE checklist update, a new automation log note, a new Station task note, the reports-contradiction-scanner log update, the daily journal) all landed directly to their filed locations, not via 00-Inbox, so none required vault-keeper filing/repair logic. Inbox unchanged (same 5 known stuck notes). Advances last_scan_sha to 378bb99 (this pass's own daily-journal commit). Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved)."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
