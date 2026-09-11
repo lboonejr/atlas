@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-09-11T15:20:00-04:00
+updated: 2026-09-11T16:15:00-04:00
 domain: project
 type: reference
 status: active
@@ -225,6 +225,20 @@ items:
     contact: "256-488-4697"
     status: collections
     note: "Escalated to collections 7/14 (Case #00155715, $653.30 — unconfirmed if accumulated balance or separate invoice vs. the $279 logged 7/10). Lemar's call 7/14: let the collections referral proceed under the existing 7/5 hold-until-reopen stance; tracked here per his request, nothing paid/contacted."
+  - id: northlake-supply
+    label: "Northlake Supply — Invoice #1803"
+    amount: 2232.09
+    tier: 2
+    vendor: "Northlake Supply"
+    account: "Invoice #1803 (North_-1803), originally due 1/28/2026, now 224 days late"
+    contact: "Dan Saita (co-founder) · dan@northlake.supply · (973) 298-4027"
+    status: past-due
+    note: "Added 2026-09-11 per Lemar's ask (Convo 1, thread ts 1788980988.376489) to keep
+           the on-button board current. Lemar told Dan 5/27 this would be paid in full by
+           6/1 once the funding event closed — that payment never landed anywhere in the
+           vault. Dan followed up again 9/9, offered a call, wants to close it out.
+           Nothing paid or contacted by Samira. Haven:
+           haven/vault/20-Cuzzies/2026-09-09-northlake-invoice-1803-overdue.md"
 
 # ---- Cannabis vendor arrears — from 7/11 Gmail sweep digest (#on-button ts 1783801467.428439) ----
   - id: cannabist-company
@@ -322,11 +336,19 @@ items:
     note: "Past due, full payment demanded 6/22 — amount not stated."
   - id: dime-industries
     label: "Dime Industries"
-    amount: null
+    amount: 8869.99
     tier: 2
     vendor: "Dime Industries"
-    status: tbd
-    note: "Open invoices listed in a 5/11 email — amount TBD."
+    account: "Acct #2026-2289"
+    contact: "CannaBIZ Collects (Mike Ganges) · mike@cannabizcollects.com · (312) 536-6845"
+    status: collections
+    note: "Resolved from TBD 2026-09-11: CannaBIZ Collects (same agency chasing Little Leaf
+           Labs) sent a new collections notice 9/9 for a different creditor — Dime
+           Industries LLC, $8,869.99. Offering payment plan, settlement, asset
+           liquidation, product return, or an offset against Cuzzie's own uncollected
+           receivables; warns of 'expedited legal review' if ignored. Nothing paid, no
+           reply sent, no call made — awaiting Lemar's read on how to engage. Haven:
+           haven/vault/20-Cuzzies/2026-09-09-dime-industries-cannabiz-collections.md"
   - id: hamilton-farms
     label: "Hamilton Farms"
     amount: null
@@ -423,15 +445,28 @@ items:
     account: "Policy #997268390 (cancelled 7/3/26)"
     contact: "progressivecommercial.com"
     status: lapsed
-    note: "Moved Tier 1 → Tier 3 (2026-08-01): Lemar decided 2026-07-27 in #decisions to let this lapse rather than pay — same 7/2 #decisions call that paired this with epli-reinstate above (ts 1783026740.943679). Balance reconciled to $1,107.20, the actual cancellation-confirmation amount owed; supersedes the old $2,117.80 pre-cancellation reinstatement-quote figure, which no longer applies since the policy is confirmed cancelled effective 7/3. Escalated to a collections-threat 'final notice' 7/27, repeated 7/30 — no dispute sent, no payment made, tracking only. Restore/reinstate coverage only if decided later; not a reopen blocker. A repeat automated notice landed again 8/9, cross-referenced 8/14 to this same tracked line — no change, no new action."
+    note: "Moved Tier 1 → Tier 3 (2026-08-01): Lemar decided 2026-07-27 in #decisions to let this lapse rather than pay — same 7/2 #decisions call that paired this with epli-reinstate above (ts 1783026740.943679). Balance reconciled to $1,107.20, the actual cancellation-confirmation amount owed; supersedes the old $2,117.80 pre-cancellation reinstatement-quote figure, which no longer applies since the policy is confirmed cancelled effective 7/3. Escalated to a collections-threat 'final notice' 7/27, repeated 7/30 — no dispute sent, no payment made, tracking only. Restore/reinstate coverage only if decided later; not a reopen blocker. A repeat automated notice landed again 8/9, cross-referenced 8/14 to this same tracked line — no change, no new action.
+           2026-09-11: the collections agency chasing this balance (Caine & Weiner, on behalf of Progressive) has emailed twice (9/2, 9/9) asking for a callback — same $1,107.20, ref file 26085261. Samira drafted a reply proposing a call time (Gmail Drafts, unsent). Lemar's 9/9 in-thread reply: told them Cuzzie's is being sold and the debt would be paid by the new owners; plans to stall further, then likely put it on a payment plan. No figure change, no payment made — tracked here, not acted on beyond the draft."
   - id: first-insurance-funding-notice
     label: "First Insurance Funding — loan #106241219 (separate policy from epli-reinstate)"
-    amount: 4699.76
+    amount: 477.60
     tier: 3
     vendor: "First Insurance Funding"
-    account: "Loan #106241219 · past due $3,040.95 + current installment $1,658.81"
+    account: "Loan #106241219 · final balance after return-premium credits applied"
+    contact: "Abraham Borjon, Collections Rep · abraham.borjon@firstinsurancefunding.com"
     status: past-due
-    note: "From #on-button drop 7/9 (Notices.pdf, F0BG52EUSKD, no message text). Lemar confirmed 7/12 (#decisions, Option B) this is a SEPARATE insurance line financed through the same lender as epli-reinstate (#105889646) — not the same policy, not a duplicate. Tracked as its own Tier 3 line, added to snapshot math."
+    note: "Confirmed separate policy from epli-reinstate 7/12, included in totals at $4,699.76
+           (past due $3,040.95 + installment $1,658.81) at the time. RESOLVED lower
+           2026-09-11: Abraham Borjon confirmed the return-premium credits for the
+           cancelled Palomar policies (property + GL, cancelled 6/5) matched the
+           cancellation invoices — that closes out the bulk of the old $4,699.76 figure,
+           leaving a final uncovered remainder of $477.60 on this same loan. No further
+           premium is coming; if unpaid it goes to 3rd-party collections (+25% fee).
+           Lemar asked (9/10) whether it can go on a payment plan instead of a lump sum —
+           Samira drafted that ask to Abraham (cc Jordan Mulero), sitting unsent in Gmail
+           Drafts. `amount` updated 4699.76 → 477.60 to reflect the current, final
+           balance on this loan (not a duplicate/new line). Nothing paid.
+           Haven: haven/vault/20-Cuzzies/2026-09-09-first-insurance-funding-loan-balance-477.md"
   - id: marketing-relaunch
     label: "Reopening marketing relaunch (promo budget)"
     amount: null
@@ -488,15 +523,50 @@ carry:
 - **Tier 2 (nice-to-have):** ≈ **$115,411.45** priced (Leafly escalated to collections 7/14,
   $653.30 — was $279; Fresh Grow priced 7/15 at $3,262.06 — was TBD; Primo Brands/Ready
   Refresh $129.94 added 7/15; AIQ $2,481.51 added 7/17; 9 cannabis-vendor lines still TBD,
-  incl. new Loud Labs added 8/9).
+  incl. new Loud Labs added 8/9). **Stale — see 9/11 updates below**, several TBD lines have
+  since priced and Northlake Supply was added; use the 9/11 updates for current totals.
 - **Tier 3 (edge):** ≈ **$18,188.96** priced (Little Leaf Labs $8,331 + EPLI $4,051.12 +
   First Insurance Funding loan #106241219 $4,699.76, confirmed 7/12 as a separate policy,
   not a duplicate + Progressive Commercial $1,107.20, moved in 8/1; strategic lines TBD).
+  **Stale — see 9/11 update below**, First Insurance Funding loan #106241219 has since
+  been resolved down to $477.60.
 - **Tax gate (separate):** ≈ **$109,900**.
 - **Monthly carry:** ≈ **$31,200/mo** → runway = (investment − one-time) ÷ 31,200.
 - Reality check: opening (~$104.4K) + a 3-month cushion (~$93.6K carry) ≈ **$198K** before
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
+
+## Update — 2026-09-11 (Dime Industries priced, Northlake Supply added, First Insurance Funding loan reconciled down)
+Lemar asked twice in Convo 1 (thread ts `1788988028.299219` "Waste Management — AP trying
+to reach you" and thread ts `1788980976.011509` "Dime Industries collections —
+$8,869.99") to make sure this board carries current past-due numbers. Three changes:
+1. **Dime Industries** (`dime-industries`) resolved from TBD: CannaBIZ Collects sent a new
+   collections notice 9/9 for a different creditor than Little Leaf Labs — acct
+   #2026-2289, **$8,869.99**. `amount` null → 8869.99, `status` tbd → collections. Tier 2
+   TBD count drops by one. Haven:
+   `haven/vault/20-Cuzzies/2026-09-09-dime-industries-cannabiz-collections.md`
+2. **Northlake Supply** (`northlake-supply`) added as a new Tier 2 line: Invoice #1803,
+   **$2,232.09**, now 224 days late — Lemar had promised Dan Saita full payment by 6/1
+   once the funding event closed, which never happened; Dan followed up again 9/9. Haven:
+   `haven/vault/20-Cuzzies/2026-09-09-northlake-invoice-1803-overdue.md`
+3. **First Insurance Funding loan #106241219** (`first-insurance-funding-notice`)
+   resolved LOWER, not duplicated: Abraham Borjon confirmed 9/9 the return-premium
+   credits for the cancelled Palomar policies matched the cancellation invoices, leaving
+   a final uncovered remainder of **$477.60** on this same loan (was $4,699.76,
+   confirmed 7/12). `amount` 4699.76 → 477.60. Nothing paid — Lemar has asked about a
+   payment-plan option, drafted, unsent. Haven:
+   `haven/vault/20-Cuzzies/2026-09-09-first-insurance-funding-loan-balance-477.md`
+4. Checked but **no change made**: Waste Management (new AP-contact-request notice
+   carries no dollar figure — left the existing $320.56/mo carry line as-is, did not
+   invent a past-due figure; `haven/vault/20-Cuzzies/2026-09-09-waste-management-ap-contact-request.md`)
+   and the Progressive/Caine & Weiner collections thread (same already-tracked $1,107.20
+   `progressive` line — note appended there with the 9/11 collections-agency contact and
+   Lemar's "selling the business, new owners pay it" stance, no figure change).
+
+Net effect: Tier 2 priced total +$11,102.08 (Dime Industries $8,869.99 newly priced +
+Northlake Supply $2,232.09 new line); Tier 3 priced total −$4,222.16 (First Insurance
+Funding loan reconciled down). Page (`on-button-reopen.html`) and canvas (`F0BEN1167GB`)
+regenerated from this note in the same pass. Nothing paid or contacted by Samira.
 
 ## Update — 2026-09-11 (full reconciliation pass — page was missing 18 cannabis-vendor arrears items)
 Lemar picked Option 1 on the #fixes card raised earlier this pass (`C0BV5BRNH5Z:1789136462.053309`,
