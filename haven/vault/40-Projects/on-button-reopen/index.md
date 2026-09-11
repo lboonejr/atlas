@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-09-11T10:55:00-04:00
+updated: 2026-09-11T15:20:00-04:00
 domain: project
 type: reference
 status: active
@@ -497,6 +497,27 @@ carry:
 - Reality check: opening (~$104.4K) + a 3-month cushion (~$93.6K carry) ≈ **$198K** before
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
+
+## Update — 2026-09-11 (full reconciliation pass — page was missing 18 cannabis-vendor arrears items)
+Lemar picked Option 1 on the #fixes card raised earlier this pass (`C0BV5BRNH5Z:1789136462.053309`,
+reply "Let's go with option one"): full reconciliation of `on-button-reopen.html`'s
+`reopen-data` tier-items block against this index. The drift was much larger than the
+single `glass-meadows-vendor` line flagged below — the entire "Cannabis vendor arrears"
+batch (18 items: `cannabist-company`, `verano`, `sun-extractions`, `green-lightning`,
+`prolific-growhouse`, `happy-farmer`, `cookies-harrison`, `hillview-med`,
+`garden-society`, `curaleaf-vendor`, `glass-meadows-vendor`, `chew-and-chill`,
+`dime-industries`, `hamilton-farms`, `ganja-manja`, `lovegrow-vendor`, `niche-llc`,
+`fresh-grow`) was present here but absent from the page's `reopen-data` block — it had
+never been added when that batch first landed 2026-07-11. Added all 18 to the page,
+verified item-for-item (id set now matches exactly, 47/47). `meta.updated` set to
+"September 11, 2026 (full reconciliation — 18 cannabis-vendor arrears lines added)".
+**Left alone per Lemar's pick (did not choose Option 2):** the page's separate
+`repay.vendors` JSON block (net/profit/margin/units/brands per vendor) — a different,
+undocumented data structure this skill does not own; still unexplained who maintains it.
+Canvas `F0BEN1167GB` not refreshed — `canvas_access.writable` is still `false` per the
+last check (2026-09-06) and today's first-run recheck already happened this morning;
+carrying the known gap rather than re-attempting a write already established as blocked.
+Nothing paid or contacted.
 
 ## Update — 2026-09-11 (Glass Meadows priced)
 Email-loop drop (Gmail, QuickBooks statement #7442 from Glass Meadows, 2026-09-11
