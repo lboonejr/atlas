@@ -4,6 +4,15 @@ The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NO
 History and cutover narratives live here.
 
 
+## 2026-09-11 — Pulse gets its own channel
+Lemar asked to move the Pulse notification into its own channel rather than have it
+only ever land in Convo 1. Created `#pulse` (`C0C1A8PS3GS`, public, Samira bot invited
+at creation). The "📍 Pulse updated" line the `pulse-dashboard` skill sends on a run
+that actually changed something now posts to BOTH Convo 1 (`D0BHPKMDNEP`) and `#pulse`
+— additive, per Lemar, not a replacement; the DM keeps flowing. Still no post at all on
+a quiet hour. See `.claude/anchors.md` ("Pulse dashboard" + Slack table) and
+`.claude/skills/pulse-dashboard/SKILL.md` (Notification + SAFETY sections).
+
 ## 2026-09-06 — The three-conversation restructure
 Lemar's redesign of how he and Samira work together: she is no longer a per-channel
 workflow engine but a coworker he trades work off to. The whole relationship now runs

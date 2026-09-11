@@ -98,6 +98,7 @@ supersedes ALL other style guidance, including guides bundled inside skills.
 | Open Items canvas (RETIRED) | `F0BDLSHD8JD` | **Retired 2026-09-06** — write-blocked since 2026-07-25 (3-strike 8/7); parked state now lives on the cards themselves + the Haven open-items note under `70-Automation/samira/`. This closes the standing canvas gap rather than carrying it. |
 | #emails (ARCHIVED) | `C0BC1JSCHQW` | Read-only record; never swept, never posted to |
 | #to-do (ARCHIVED) | `C0BC30U222K` | Read-only record |
+| #pulse | `C0C1A8PS3GS` | **Pulse's own channel** (created 2026-09-11, per Lemar). Samira posts the "📍 Pulse updated" notification here in ADDITION to the existing Convo 1 DM ping — same line, both places, only on a run that actually changed something (quiet hours still post nowhere). Samira bot `U0BJQ771LJU` confirmed in-channel at creation. |
 
 ## Monday.com (account l.boonejr@gmail.com, workspace "Main workspace" 16125924)
 
@@ -355,11 +356,15 @@ closed/opened, a money change, a project-pulse status flip, a new Haven note). A
 quiet hour skips the render entirely — no Doc, no DM (codified 2026-08-15; this matches
 what runs were already doing and stops filling the Drive folder with identical
 snapshots). Its status still rides in Samira's digest every hour regardless:
-`pulse ✅/⚠️` or `pulse — carried (quiet pass)`.
+`pulse ✅/⚠️` or `pulse — carried (quiet pass)`. **Notification widened 2026-09-11**:
+the same "📍 Pulse updated" line now ALSO posts to Pulse's own channel `#pulse`
+(`C0C1A8PS3GS`, see the Slack table) — Convo 1 keeps getting it too, this is additive,
+not a move. Both posts skip together on a quiet hour.
 
 | What | Value |
 |---|---|
 | Pulse Drive folder | `1Dj_MZDlqUzHfAyK8TMwwJ57dZhi29omX` (`ATLAS/Dashboards/Pulse`, folder link `https://drive.google.com/drive/folders/1Dj_MZDlqUzHfAyK8TMwwJ57dZhi29omX`). Every render creates a NEW Doc here — filename `YYYY-MM-DD HHMM ET — Pulse` (zero-padded, so name-sort and time-sort agree) — never edited or deleted afterward; history is the point. Primary access is the DM link above; the folder is the archive. |
+| #pulse channel | `C0C1A8PS3GS` — created 2026-09-11 as Pulse's own notification surface, additive to the Convo 1 DM (not a replacement). Samira bot confirmed in-channel at creation. |
 | Workout plan artifact URL | `https://claude.ai/code/artifact/a723834f-6310-4575-8897-75ae8e30806e` ("Back to the Court — 12-Week Plan"; source-of-truth note `haven/vault/10-Personal/Health/2026-07-07-basketball-fitness-plan.md`, start Mon 2026-07-07). Pulse links out to it; its check-offs live in that page's own localStorage. |
 | Sections (Lemar's fixed top-to-bottom order, 2026-07-12: big ideas → details → execution) | quick-capture todo strip · Dawn as North Star (direction, NOT tasks) · calendar roadmap · #decisions respond list · money (Haven budget ledger) · today's workout · Atlas open items · project pulses · Samira + routine health. Single column. EVERY item links to its source thread (Slack permalink) or calendar event (htmlLink). |
 

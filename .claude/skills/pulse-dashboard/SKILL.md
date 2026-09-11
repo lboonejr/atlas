@@ -6,6 +6,8 @@ description: >
   NEW timestamped Google Doc snapshot in the Pulse Drive folder (2026-08-13: replaced
   the Artifact tool, which kept prompting Lemar for approval on his phone — the surface
   he checks Pulse from most).
+  Notification widened 2026-09-11: the "📍 Pulse updated" line now posts to BOTH Convo 1
+  and Pulse's own `#pulse` channel — additive, not a replacement.
   One page, one column, ordered BIG IDEAS → SMALL DETAILS → EXECUTION: quick todo
   capture on top, then Dawn as the North Star (direction, not tasks), the day's calendar
   roadmap, then execution — open Convo 1 cards, money, today's workout, Atlas open
@@ -14,9 +16,9 @@ description: >
   dashboard is a RENDERING like the Open Items canvas — the vault stays the source of
   truth and this skill writes NO Haven notes. Use it on Samira's scan or on demand:
   "refresh the dashboard", "render Pulse", "update my dashboard". It reads everything
-  and writes only the Drive snapshot — it DMs Lemar the new link (in Convo 1) only when
-  this run actually changed something (see Notification below), never sets reactions,
-  never edits the vault.
+  and writes only the Drive snapshot — it sends the new link (to Convo 1 AND `#pulse`)
+  only when this run actually changed something (see Notification below), never sets
+  reactions, never edits the vault.
 ---
 
 # Pulse — the living command center (rendering only, vault stays truth)
@@ -49,9 +51,10 @@ run digest and move on.
 
 ## ANCHORS
 All platform IDs live in **`.claude/anchors.md`** — read it first. You use the "Pulse
-dashboard" section: the **Pulse Drive folder id** (create target) and the **Convo 1
-DM id** `D0BHPKMDNEP` (notification target), plus the **self-DM id** `D0BBVV54L5R`
-(the quick-capture surface), the **workout artifact URL** and the
+dashboard" section: the **Pulse Drive folder id** (create target), the **Convo 1
+DM id** `D0BHPKMDNEP` and the **`#pulse` channel id** `C0C1A8PS3GS` (both notification
+targets — the notification goes to both, never one or the other), plus the **self-DM id**
+`D0BBVV54L5R` (the quick-capture surface), the **workout artifact URL** and the
 **Morning Brief Drive folder** (for the North Star link-out), the Slack channel IDs, the
 reminder calendar ID, and the vault paths you already know from the run.
 
@@ -171,30 +174,34 @@ then create it as a NEW Google Doc via `Google_Drive__create_file`:
   before sending the DM — if any glyph came through corrupted, trash that Doc (never
   seen by Lemar) and rebuild with the BMP-safe substitution before notifying.
 
-## Notification — DM only when something changed
+## Notification — post to both surfaces only when something changed
 
 Pulse still writes NO Slack message on a quiet hour. BEFORE building the snapshot,
 compare this run's signals against what you already know from this same scan: did any
 Convo 1 or #fixes card open/close, did money change (the PART 4 money-drop mode
 returned `money ✓ …` not `money —`), did a project pulse's status dot flip, or is there
 a new/updated open Haven note since the last render? If NO signal changed this hour,
-skip the render entirely — no Doc, no DM (codified 2026-08-15; a folder of identical
-snapshots is noise, not history) — and return `pulse — carried (quiet pass)` for the
-digest. If YES to any, render, then send ONE line to **Convo 1** (`D0BHPKMDNEP` — safe
-to reuse for a notification: a 🌐 bot post there is never card input, since PART 3
-works cards and never reads the bot's own posts):
+skip the render entirely — no Doc, no DM, no channel post (codified 2026-08-15; a folder
+of identical snapshots is noise, not history) — and return `pulse — carried (quiet
+pass)` for the digest. If YES to any, render, then send the SAME line to BOTH surfaces
+(anchors, "Pulse dashboard" section) — **Convo 1** (`D0BHPKMDNEP` — safe to reuse for a
+notification: a 🌐 bot post there is never card input, since PART 3 works cards and
+never reads the bot's own posts) AND **`#pulse`** (`C0C1A8PS3GS`, its own dedicated
+channel, added 2026-09-11 — additive to Convo 1, not a replacement):
 `📍 Pulse updated — [1-line summary of what changed]. [Drive doc link] — Samira`
+If one post succeeds and the other fails, note the failed surface in the digest rather
+than retrying in a loop — the render itself already succeeded and is not lost.
 
 ## SAFETY (applies to the whole skill)
 You MAY: read every connected tool and the vault; create a new Pulse snapshot Doc in the
-Pulse Drive folder; send ONE DM to Convo 1 (`D0BHPKMDNEP`), and only when
-something changed this run.
-You MUST NOT, ever: post to any Slack channel; DM on a quiet hour (nothing changed); send
-email or any outreach; set or change Lemar's reactions; write, move, edit, or file any
-vault note; touch the calendar; advise on, move, or commit money; run vault-keeper or
-calendar-sync; edit or delete a prior Drive snapshot. A render failure must never abort
-or degrade the rest of Samira's run.
+Pulse Drive folder; send ONE line to Convo 1 (`D0BHPKMDNEP`) AND ONE line to `#pulse`
+(`C0C1A8PS3GS`), and only when something changed this run.
+You MUST NOT, ever: post to any Slack channel other than `#pulse`; post/DM on a quiet
+hour (nothing changed); send email or any outreach; set or change Lemar's reactions;
+write, move, edit, or file any vault note; touch the calendar; advise on, move, or
+commit money; run vault-keeper or calendar-sync; edit or delete a prior Drive snapshot.
+A render failure must never abort or degrade the rest of Samira's run.
 
 ## Returns (to the Samira runbook, for the digest)
-`pulse ✅ <Drive doc URL> · sections OK K/9 · dm sent/skipped · <list any errored sections>`
+`pulse ✅ <Drive doc URL> · sections OK K/9 · notify sent/skipped (Convo 1 + #pulse) · <list any errored sections>`
 — or `pulse ⚠️ render failed: <one-line reason>`.
