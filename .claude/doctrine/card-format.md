@@ -99,8 +99,14 @@ Once decisions are locked — or when a card has sat with no decision for a whil
 the call made? was the document signed? She nudges the open items that are Lemar's,
 reads his replies for anything she can continue working, files what needs filing,
 verifies the Haven note is fully updated, and then closes out: record the outcome via
-samira-report-result, edit the parent to begin `✅ CLOSED — [outcome]`. Both card
-surfaces trend toward empty; the durable record lives in Haven + #reports.
+samira-report-result, then post a `✅ CLOSED — [outcome]` reply as the thread's last
+message (locked 2026-09-11, per Lemar — no tool in either Slack connector can edit a
+message, so "edit the parent" was never actually achievable; every prior close attempt
+landed only as an unmarked thread reply, which a headline-only scan can't see, so
+closed cards kept re-surfacing as open for weeks). **A card counts as closed when its
+thread's last message is a `✅ CLOSED — [outcome]` reply** — check the thread's latest
+message when scanning, not the parent text. Both card surfaces trend toward empty; the
+durable record lives in Haven + #reports.
 
 ## Identity per surface
 

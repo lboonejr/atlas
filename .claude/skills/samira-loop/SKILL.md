@@ -340,8 +340,10 @@ the lane.
 **CLOUD** → Samira builds it: execute directly when it is small and safe, or carry the
 build on the card across scans until the acceptance test passes (the retired
 `run:admin-3x` staging is replaced by these two paths). Outcome note plus the two-line
-#reports block through **samira-report-result**, then edit the parent to begin
-`✅ CLOSED — [outcome]`.
+#reports block through **samira-report-result**, then post a `✅ CLOSED — [outcome]`
+reply as the thread's last message (per the 2026-09-11 card-format.md fix — no tool
+can edit the parent message, so closing is a thread reply, checked as the thread's
+latest message).
 
 **BROWSER** → Samira hands him the `CHROME RUN` block from section 5, then runs PM on it the
 same way as local: card open on ⏳, one status check a day at most, outcome note and #reports
