@@ -1,6 +1,6 @@
 ---
 created: 2026-08-13T11:15-04:00
-updated: 2026-09-10T11:05-04:00
+updated: 2026-09-11T08:50:00-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -137,6 +137,29 @@ recent signal on that card is a ✅ on **Option 3 — Dispute in writing** (reac
 on that option's reply); as of this pass no drafted dispute letter has been produced or
 sent from that pick yet — flagging for the email-loop's next D1 pass rather than acting
 on it here. Nothing paid, disputed, sent, or contacted this pass.
+
+## Update 2026-09-11T08:50-04:00 — flagging a discrepancy instead of drafting a letter
+
+Picked this back up per the card's own flag ("no dispute letter has gone out from
+[Option 3] yet"). Checked Gmail Drafts for the promised holding-reply draft: it does
+not exist (consistent with the 2026-09-06 update above, which already corrected an
+earlier scan's mistaken belief that one did). Two things don't line up, and rather than
+guess past them, surfacing both:
+
+1. **The ✅ is on Option 3 (dispute in writing), but Lemar's own actions are Option 2**
+   (negotiate a payment plan) — he personally emailed A.G. Adjustments/Cadex twice
+   (8/4, 8/24) proposing a payment-plan discussion, not a dispute of the debt's
+   validity.
+2. **The FDCPA 30-day written-dispute window closed on/about 2026-09-02** (30 days
+   from the first notice, 8/3) — over a week ago. A dispute-in-writing letter drafted
+   today would assert a right that has already lapsed, and would also contradict what
+   Lemar already told the collector directly.
+
+Given both, drafting a "dispute in writing" letter now would likely do more harm than
+good — not drafted this pass. Posted an in-thread question on the Convo 1 card instead
+of guessing which path he actually wants going forward (a fresh payment-plan follow-up
+to Cadex, given his two proposals have gone unanswered across five identical notices;
+or something else). Nothing paid, disputed, sent, or contacted this pass.
 
 ## Related
 - [[curaleaf]]
