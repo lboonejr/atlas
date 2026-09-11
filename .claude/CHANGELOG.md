@@ -4,6 +4,28 @@ The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NO
 History and cutover narratives live here.
 
 
+## 2026-09-11 — Basil tuning (inbox-janitor runbook + anchors)
+Five effectiveness upgrades to the nightly Gmail cleanup, driven by run-log review
+(runs had plateaued at ~3 archived / ~6 trashed while re-scanning identical skips and
+leaving ~200 old `category:updates` threads untouched):
+- **PART B2 — updates graylist**: old `updates` mail is now trashable per-sender only,
+  from a Lemar-vetted graylist in anchors (empty at launch; Basil bootstraps a one-time
+  triage inventory note of every old-updates sender domain for Lemar to mark keep/toss).
+  Category-level `updates` sweeping stays forbidden; NEVER-TOUCH always wins.
+- **Query pre-filter**: the NEVER-TOUCH allowlist is compiled into the PART B search as
+  `-from:` exclusions (efficiency only — the per-thread gate remains the safety floor),
+  ending the nightly re-skip of the same ~19 gov/Parke Bank threads.
+- **Known permanent skips**: a descriptor list in anchors (Dutchie survey, Hamilton
+  Farms order thread, ICCC mini-MBA) collapses forever-protected candidates to one
+  digest count; new 3-consecutive-skip threads get proposed for the list.
+- **Handoff of surfaced business items** (PART C step 1b): a real find (past-due bill,
+  bank/legal notice) now gets its OWN haven-capture note in the item's domain, tagged
+  `basil-find`, for Samira's loop to card up — no longer a footnote in the run log.
+- **Self-tuning + hygiene**: seed-list additions proposed after 3 qualifying runs;
+  fixed run-note title/filename pattern and a created/updated frontmatter template;
+  cron seasonal-flip reminder (EDT→EST on 2026-11-01) recorded in anchors plus a
+  dated Haven note with a `due` so the calendar rings it.
+
 ## 2026-09-06 — The three-conversation restructure
 Lemar's redesign of how he and Samira work together: she is no longer a per-channel
 workflow engine but a coworker he trades work off to. The whole relationship now runs
