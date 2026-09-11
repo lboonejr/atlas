@@ -1,6 +1,6 @@
 ---
 created: 2026-08-16T13:20:00-04:00
-updated: 2026-09-11T15:25:00-04:00
+updated: 2026-09-11T20:10:00-04:00
 domain: cuzzies
 type: reference
 status: active
@@ -129,6 +129,33 @@ All five steps require Lemar's own logged-in NJ portal session — Samira has no
 njportal.com/DOR credentials and this is exactly the kind of gated government-portal
 action the card-format doctrine routes to the browser lane (Claude in Chrome, Lemar
 present, reads/fills/reports, never submits on its own unless he says otherwise).
+
+## Update — 2026-09-11 (The Station MBE application — packet nearly complete)
+Progress from the browser-lane Claude-in-Chrome session, reported via a Claude Code
+handoff on the Convo 1 card thread (`D0BHPKMDNEP:1789140035.331339`, ts
+`1789155010.218329`, posted under Lemar's identity by app `A08SF47R6P4` — same routing
+note as above, not re-flagged again) plus Lemar's own direct reply answering the open
+items (ts `1789157105.306789`).
+
+**The Station MBE application:** reached the real Certificate Selection screen in the
+NJ portal (checklist + upload boxes confirmed working); paused there pending Markony
+Monteiro. Supporting documents staged and ready to upload, all in one Drive folder —
+[Station MBE Application - Ready to Upload](https://drive.google.com/drive/folders/1L7pJBqTevB0jcipwxwB-7JO06z0AvyVL):
+Certificate of Formation, LLC Operating Agreement, Ownership Structure Summary, and a
+freshly-built Organizational Chart (single-member LLC, no board/officers/stock to
+report).
+
+**Open items closed out by Lemar's reply:**
+- Minority category for the affidavit: **Hispanic**.
+- Markony's ID: **uploaded**.
+
+**Still open, blocking submission:**
+- Fresh notarization on the affidavit — the prior notary's commission expired 1/19/26.
+  Lemar is checking whether Markony can get it notarized Monday (9/14).
+
+Cuzzie's side (SBE re-apply, MBE non-compliant call to DORES, The Station SBE
+consideration, the PBS-login question) remains untouched — still gated behind Lemar's
+own portal session per the Update above.
 
 ## Sources
 - [New Jersey MBE, WBE & Minority Business Certification Guide 2026](https://www.supplierdiversity.com/state/NJ/)
