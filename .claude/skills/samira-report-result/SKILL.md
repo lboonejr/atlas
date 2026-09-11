@@ -73,6 +73,12 @@ figures / decision / text produced), and file links/IDs in a `## Sources` block
    linking the note.
 
 ## Mode 3 — RUN DIGEST (end of run)
+**Timestamp lint (added 2026-09-11, #fixes `C0BV5BRNH5Z:1789140448.808809`, 2nd recorded
+instance of this bug class).** `[date time] ET` in the headline below MUST be computed
+by converting this post's own message `ts` (Unix seconds, UTC) to America/New_York —
+never by copying the UTC hour and just relabeling it "ET." Before posting, sanity-check:
+ET is UTC-4 (EDT) or UTC-5 (EST); if the printed hour equals the UTC hour, the
+conversion was skipped — fix it before sending.
 1. Post the delta digest to #reports (🌐, "— Samira"), leading with the Haven counts:
    ```
    🌐 Samira · [date time] — C closed · N new · U urgent
