@@ -3,17 +3,17 @@
   "lock": {
     "run_id": "run_20260911T160113Z",
     "run_started": "2026-09-11T16:01:13Z",
-    "run_completed": "2026-09-11T15:40:00Z",
-    "note": "Scan starting. This session was dormant since it acquired/completed a run on 2026-09-09 (its 104th-scan work landed cleanly on main, confirmed via git ancestor check) -- the production trigger continued running independently the whole time (through the 11x-th scans). Picking up fresh from the current watermarks, 21 min after the last clean close.",
+    "run_completed": "2026-09-11T16:10:34Z",
+    "note": "Closed cleanly. Full PART 0-8 pass, 21 min after the prior clean close: advanced 3 Convo 1 cards with real deliverables (CRC renewal municipal-standing gap, Camden Launch Phase 00 + entity/EIN roadmap, capital-raise folder correction -- real bank statements found where 'not found' was previously reported), closed 1 #fixes card (added a UTC/ET timestamp lint to samira-report-result rather than hunting for nonexistent digest-generation code), flagged one ambiguous top-level reply back to Lemar instead of guessing which of 2 cards it answered, swept email (4 new: 3 junk + 1 informational GitHub PR notification), posted 2 timeline entries. Pulse skipped this pass (resource-scoped, last real render only ~40 min prior).",
     "prior_note": "Prior run (run_20260911T150000Z) closed cleanly at 15:40:00Z -- full PART 0-8 pass, see main history.",
     "orphan_note": "5th consecutive instance of a run doing real, committed work and dying before writing lock.run_completed. No evidence of double-acting or lost work -- idempotency (prior 'Done ✅' replies, per-skill dedupe keys, watermarks) caught it cleanly again. Root cause still open on the #fixes card; recommend Lemar pick Option 2 (make lock-close resilient to a mid-run interruption, e.g. write run_completed incrementally) given five data points now, but it remains his call."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789140924.695349",
+      "C0BBZJL85RT": "1789142998.410029",
       "D0BHPKMDNEP": "1789140854.312659",
       "D0BBVV54L5R": "1789140900",
-      "C0BV5BRNH5Z": "1789140885.106469"
+      "C0BV5BRNH5Z": "1789140888.626549"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -83,7 +83,7 @@
       "D0BHPKMDNEP:1788901890.646159": "1788901930.424399",
       "D0BHPKMDNEP:1788901947.800959": "1788901954.052969",
       "C0BV5BRNH5Z:1788902066.449949": "1788955934.601319",
-      "D0BHPKMDNEP:1788966952.066259": "1788966963.266189",
+      "D0BHPKMDNEP:1788966952.066259": "1788970262.827979",
       "D0BHPKMDNEP:1788980976.011509": "1788980985.299929",
       "D0BHPKMDNEP:1788980988.376489": "1788980996.980759",
       "D0BHPKMDNEP:1788981000.572229": "1788981031.204649",
@@ -92,9 +92,9 @@
       "D0BHPKMDNEP:1788988028.299219": "1789042171.234789",
       "D0BHPKMDNEP:1789053129.150039": "1789074474.077689",
       "D0BHPKMDNEP:1789063831.351469": "1789136026.956879",
-      "D0BHPKMDNEP:1789063831.996959": "1789135971.188549",
-      "D0BHPKMDNEP:1789063832.775699": "1789135939.474569",
-      "D0BHPKMDNEP:1789063833.434589": "1789135931.077849",
+      "D0BHPKMDNEP:1789063831.996959": "1789142777.198029",
+      "D0BHPKMDNEP:1789063832.775699": "1789142768.991229",
+      "D0BHPKMDNEP:1789063833.434589": "1789142772.472889",
       "D0BHPKMDNEP:1789064040.504999": "1789074475.604269",
       "C0BV5BRNH5Z:1789063894.596139": "1789135665.378009",
       "C0BV5BRNH5Z:1789063894.923759": "1789063916.795149",
@@ -103,8 +103,8 @@
       "C0BV5BRNH5Z:1789136462.053309": "1789139902.583979",
       "D0BHPKMDNEP:1789140035.331339": "1789140053.595309",
       "C0BV5BRNH5Z:1789140064.220449": "1789140064.220449",
-      "C0BV5BRNH5Z:1789140445.088159": "1789140885.106469",
-      "C0BV5BRNH5Z:1789140448.808809": "1789140448.808809"
+      "C0BV5BRNH5Z:1789140445.088159": "1789142882.100609",
+      "C0BV5BRNH5Z:1789140448.808809": "1789142850.486519"
     },
     "migration": {
       "decisions_migration_complete": true,
@@ -112,12 +112,12 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1789137666
+    "gmail_after_epoch": 1789143034
   },
   "integrity": {
     "last_full_pass": "2026-09-11T08:33:22-04:00",
-    "last_scan_sha": "82f41e16786525081cbe79468d741c2603d71622",
-    "note": "Full whole-vault pass ran 2026-09-11 morning (729 notes, 0 new repairs, 0 new value defects). This pass's partial check (8 files changed since the prior scan sha) found all valid; last_scan_sha advanced to this pass's final commit since every vault write this pass was authored with verified valid frontmatter. Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved)."
+    "last_scan_sha": "abcdffc",
+    "note": "Full whole-vault pass ran 2026-09-11 morning (729 notes, 0 new repairs, 0 new value defects). This pass's incremental check (diff since 82f41e1) found no filed-note changes outside Inbox/_daily; this pass's own writes (6 notes touched, all with verified valid frontmatter) advance last_scan_sha to abcdffc. Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved)."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
