@@ -1,6 +1,6 @@
 ---
 created: 2026-09-10T14:10:00-04:00
-updated: 2026-09-11T12:00:00-04:00
+updated: 2026-09-11T17:07:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -41,7 +41,17 @@ what he sees. Not guessing a status either way. Genuinely open:
   revoked).
 - Camden municipal tax/license account status — no public lookup identified.
 
+## Update 2026-09-11T17:07:00-04:00 — filing target confirmed Tue 9/15; Chrome prompt drafted for njportal.com lookup
+Lemar confirmed on the Convo 1 card he hasn't filed the annual report yet, wants all
+filings done Tuesday 9/15, and to proceed with the municipal-standing step in
+parallel. He asked for a Claude in Chrome prompt to run the njportal.com DORES
+Business Name/Entity Search for entity #152-009080 himself (read-only lookup for
+current status + whether the annual-report delinquency still shows) — drafted and
+posted on the card. Camden municipal tax/license standing still has no known public
+lookup; asked Lemar for the right portal URL if he knows one, otherwise this likely
+needs a direct call to Camden's tax collector/clerk's office.
+
 ## Sources
 - slack: Convo 2 `D0BBVV54L5R` thread `1789061736.927349`, reply `1789062261.411799`
 - slack: Convo 1 `D0BHPKMDNEP` thread `1789063832.775699`, replies `1789136831.358239`
-  / `1789136845.522919`
+  / `1789136845.522919` / `1789146437.777129`
