@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-08-14T10:20:00-04:00
+updated: 2026-09-11T10:55:00-04:00
 domain: project
 type: reference
 status: active
@@ -306,12 +306,13 @@ items:
     note: "Balance is on a PDF attachment, not stated in the email body — amount TBD until read."
   - id: glass-meadows-vendor
     label: "Glass Meadows — vendor account"
-    amount: null
+    amount: 4617.92
     tier: 2
     vendor: "Glass Meadows"
-    account: "Weekly QuickBooks statements (latest 7/10); incl. INV 2425"
-    status: tbd
-    note: "See also haven/vault/20-Cuzzies/2026-07-10-glass-meadows-statement-5791.md — amount TBD here pending consolidation."
+    account: "Invoice #2425, due 5/24/2026, now 90+ days — QuickBooks statement #7442, 9/11"
+    contact: "900 Haddon Ave Ste 100, Collingswood NJ · (609) 417-5553"
+    status: past-due
+    note: "Resolved from TBD 2026-09-11: statement #7442 (9/11 email) confirms $4,617.92, invoice #2425, aged into the 90+ days bucket. See also haven/vault/20-Cuzzies/2026-07-10-glass-meadows-statement-5791.md (same underlying invoice, prior statement number)."
   - id: chew-and-chill
     label: "Chew & Chill / PanCann"
     amount: null
@@ -496,6 +497,25 @@ carry:
 - Reality check: opening (~$104.4K) + a 3-month cushion (~$93.6K carry) ≈ **$198K** before
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
+
+## Update — 2026-09-11 (Glass Meadows priced)
+Email-loop drop (Gmail, QuickBooks statement #7442 from Glass Meadows, 2026-09-11
+14:02 ET): Cuzzie's invoice #2425 (originally due 5/24/2026) is **$4,617.92**,
+now aged into the 90+ days bucket. Resolves the `glass-meadows-vendor` line from
+TBD — dedupe-checked against the existing 7/10/7/17 Glass Meadows notes first
+(same underlying invoice/vendor, no duplicate created). `amount` null → 4617.92,
+`status` tbd → past-due. Tier 2 TBD cannabis/vendor-arrears count drops by one.
+
+**Not regenerated this pass:** `on-button-reopen.html`'s separate vendor-analysis
+JSON block (a different data structure than the `reopen-data` tier-items block
+this skill owns — net/profit/margin per vendor) already carries its own
+`glass-meadows` entry with `amount: null`, and a check found the `reopen-data`
+block itself has no `glass-meadows-vendor` entry at all — the page has been out
+of sync with this index on several TBD lines for longer than this one update.
+Flagging as a known drift rather than partially patching one line while the
+broader reconciliation is still open; full page regeneration deferred to a
+dedicated pass. Canvas not refreshed for the same reason. Nothing paid or
+contacted — tracking only.
 
 ## Update — 2026-08-14 (accounting/bookkeeping staffing note — narrative only)
 New #on-button drop, ts `1786714257.383289` (after the 6-item batch logged in the entry
