@@ -3,17 +3,17 @@
   "lock": {
     "run_id": "run_20260911T150000Z",
     "run_started": "2026-09-11T15:00:00Z",
-    "run_completed": "2026-09-11T14:25:11Z",
-    "note": "Picking up from the prior clean close (run_20260911T140447Z, completed 14:25:11Z). This run starts a fresh pass per the hourly cron.",
+    "run_completed": "2026-09-11T15:40:00Z",
+    "note": "Closed cleanly. Full PART 0-8 pass: worked the on-button #fixes reply (full reconciliation, not the one-line patch), opened + worked one new Convo 1 card (M/WBE/SBE certification), ran the reports-contradiction-scanner for the first time in ~2 days (bookmark had gone stale) and found 2 new findings, rendered Pulse. Pulse's careful open-card recount surfaced that the digest's 'cards open' / 'fixes open' figures have likely been undercounts for a while (30 Convo1 / 16 #fixes actually open vs. low single digits reported recently) -- flagged to #fixes, not yet corrected at the source.",
     "prior_note": "110th/111th scan history (container-restart casualty, 4th orphan instance) -- see prior commits on main and the #fixes thread C0BV5BRNH5Z:1789063894.596139 for full detail; trimmed here to keep this file from growing unbounded across occurrences of the same tracked bug.",
     "orphan_note": "5th consecutive instance of a run doing real, committed work and dying before writing lock.run_completed. No evidence of double-acting or lost work -- idempotency (prior 'Done ✅' replies, per-skill dedupe keys, watermarks) caught it cleanly again. Root cause still open on the #fixes card; recommend Lemar pick Option 2 (make lock-close resilient to a mid-run interruption, e.g. write run_completed incrementally) given five data points now, but it remains his call."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789136670.648909",
-      "D0BHPKMDNEP": "1789136655.045399",
-      "D0BBVV54L5R": "1789136138.171449",
-      "C0BV5BRNH5Z": "1789136462.053309"
+      "C0BBZJL85RT": "1789140924.695349",
+      "D0BHPKMDNEP": "1789140854.312659",
+      "D0BBVV54L5R": "1789140900",
+      "C0BV5BRNH5Z": "1789140885.106469"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -100,7 +100,11 @@
       "C0BV5BRNH5Z:1789063894.923759": "1789063916.795149",
       "D0BHPKMDNEP:1788987937.710089": "1789042166.517989",
       "C0BV5BRNH5Z:1788797648.363529": "1788797814.046539",
-      "C0BV5BRNH5Z:1789136462.053309": "1789136462.053309"
+      "C0BV5BRNH5Z:1789136462.053309": "1789139902.583979",
+      "D0BHPKMDNEP:1789140035.331339": "1789140053.595309",
+      "C0BV5BRNH5Z:1789140064.220449": "1789140064.220449",
+      "C0BV5BRNH5Z:1789140445.088159": "1789140885.106469",
+      "C0BV5BRNH5Z:1789140448.808809": "1789140448.808809"
     },
     "migration": {
       "decisions_migration_complete": true,
@@ -108,20 +112,20 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1789135961
+    "gmail_after_epoch": 1789137666
   },
   "integrity": {
     "last_full_pass": "2026-09-11T08:33:22-04:00",
-    "last_scan_sha": "98d29d3100b65b72b09a9565a60db335fc24d1b5",
-    "note": "Full whole-vault pass ran 2026-09-11 morning (729 notes, 0 new repairs, 0 new value defects) via the run that died mid-flight at 12:40 -- already on main, not re-run this pass. Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved)."
+    "last_scan_sha": "82f41e16786525081cbe79468d741c2603d71622",
+    "note": "Full whole-vault pass ran 2026-09-11 morning (729 notes, 0 new repairs, 0 new value defects). This pass's partial check (8 files changed since the prior scan sha) found all valid; last_scan_sha advanced to this pass's final commit since every vault write this pass was authored with verified valid frontmatter. Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved)."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
     "writable": false,
-    "note": "Not re-checked (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
+    "note": "Not re-checked (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect. Confirmed still blocked implicitly this pass (on-button-plan skipped a canvas refresh for exactly this reason)."
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-11T10:24:05-04:00",
+    "pulse_last_rendered": "2026-09-11T11:32:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
