@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260911T170318Z",
     "run_started": "2026-09-11T17:03:18Z",
-    "run_completed": "2026-09-11T16:10:34Z",
-    "note": "Closed cleanly. Full PART 0-8 pass, 21 min after the prior clean close: advanced 3 Convo 1 cards with real deliverables (CRC renewal municipal-standing gap, Camden Launch Phase 00 + entity/EIN roadmap, capital-raise folder correction -- real bank statements found where 'not found' was previously reported), closed 1 #fixes card (added a UTC/ET timestamp lint to samira-report-result rather than hunting for nonexistent digest-generation code), flagged one ambiguous top-level reply back to Lemar instead of guessing which of 2 cards it answered, swept email (4 new: 3 junk + 1 informational GitHub PR notification), posted 2 timeline entries. Pulse skipped this pass (resource-scoped, last real render only ~40 min prior).",
+    "run_completed": "2026-09-11T17:13:04Z",
+    "note": "Closed cleanly. Full PART 0-8 pass, ~10 min after the prior clean close: incremental vault-keeper check (only the daily journal had changed, frontmatter intact), calendar-sync no-op, worked 2 Convo 1 cards with new plain-reply questions from Lemar (capital-raise folder -- listed concrete next-document asks + offered to compile a debt/AR schedule from Haven; CRC renewal -- confirmed 9/15 filing target, drafted a read-only Claude-in-Chrome prompt for the njportal.com lookup he asked for), both Haven notes updated. #fixes run-lock thread picked up a 6th data point from the prior slow (not crashed) session -- read, nothing new to add, still awaiting Lemar's Option 1/Option 2 pick. Email: 3 new, all promotional, labeled seen. No investor signal, no timeline entries this pass (nothing opened/closed/moved). Pulse skipped (quiet pass -- last real render only ~24 min prior at 12:47 ET, tracked as stale in this file until now).",
     "prior_note": "Prior run (run_20260911T160113Z) closed cleanly at 16:10:34Z -- full PART 0-8 pass, see main history.",
-    "orphan_note": "5th consecutive instance of a run doing real, committed work and dying before writing lock.run_completed. No evidence of double-acting or lost work -- idempotency (prior 'Done ✅' replies, per-skill dedupe keys, watermarks) caught it cleanly again. Root cause still open on the #fixes card; recommend Lemar pick Option 2 (make lock-close resilient to a mid-run interruption, e.g. write run_completed incrementally) given five data points now, but it remains his call."
+    "orphan_note": "6 consecutive/overlapping instances now of a run doing real, committed work and not writing lock.run_completed on the expected timeline -- the first five were genuine crashes/interruptions (idempotency caught each cleanly, nothing lost); the 6th (logged on the #fixes thread ~16:48 ET this same day) was a materially different case: a session that stayed alive and correct but took ~4h45m wall-clock for what should be a 10-15 min pass, and chose not to write stale state backward over three newer runs that had already self-healed past it. Root cause still open; recommend Lemar pick between Option 1 (no fix needed, the 120-min rule is working as designed) and Option 2 (make the lock more resilient -- incremental writes and/or a genuine heartbeat/mutex rather than pure time-aging) on the #fixes card, ts `1789063894.596139`. Still his call."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789142998.410029",
+      "C0BBZJL85RT": "1789146694.294899",
       "D0BHPKMDNEP": "1789140854.312659",
       "D0BBVV54L5R": "1789140900",
       "C0BV5BRNH5Z": "1789140888.626549"
@@ -92,11 +92,11 @@
       "D0BHPKMDNEP:1788988028.299219": "1789042171.234789",
       "D0BHPKMDNEP:1789053129.150039": "1789074474.077689",
       "D0BHPKMDNEP:1789063831.351469": "1789136026.956879",
-      "D0BHPKMDNEP:1789063831.996959": "1789142777.198029",
-      "D0BHPKMDNEP:1789063832.775699": "1789142768.991229",
+      "D0BHPKMDNEP:1789063831.996959": "1789146434.496139",
+      "D0BHPKMDNEP:1789063832.775699": "1789146437.777129",
       "D0BHPKMDNEP:1789063833.434589": "1789142772.472889",
       "D0BHPKMDNEP:1789064040.504999": "1789074475.604269",
-      "C0BV5BRNH5Z:1789063894.596139": "1789135665.378009",
+      "C0BV5BRNH5Z:1789063894.596139": "1789145364.316889",
       "C0BV5BRNH5Z:1789063894.923759": "1789063916.795149",
       "D0BHPKMDNEP:1788987937.710089": "1789042166.517989",
       "C0BV5BRNH5Z:1788797648.363529": "1788797814.046539",
@@ -112,20 +112,20 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1789143034
+    "gmail_after_epoch": 1789146784
   },
   "integrity": {
     "last_full_pass": "2026-09-11T08:33:22-04:00",
-    "last_scan_sha": "abcdffc",
-    "note": "Full whole-vault pass ran 2026-09-11 morning (729 notes, 0 new repairs, 0 new value defects). This pass's incremental check (diff since 82f41e1) found no filed-note changes outside Inbox/_daily; this pass's own writes (6 notes touched, all with verified valid frontmatter) advance last_scan_sha to abcdffc. Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved)."
+    "last_scan_sha": "e5bd2b4",
+    "note": "Full whole-vault pass ran 2026-09-11 morning (729 notes, 0 new repairs, 0 new value defects). This pass's incremental check (diff since abcdffc) found only the append-only daily journal changed outside this pass's own writes; frontmatter intact. This pass touched 3 notes (2 Cuzzies updates, the daily journal), all with verified valid frontmatter -- advances last_scan_sha to e5bd2b4. Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved)."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
     "writable": false,
-    "note": "Not re-checked (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect. Confirmed still blocked implicitly this pass (on-button-plan skipped a canvas refresh for exactly this reason)."
+    "note": "Not re-checked (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-11T11:32:00-04:00",
+    "pulse_last_rendered": "2026-09-11T12:47:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
