@@ -1,9 +1,9 @@
 ---
 created: 2026-09-11T20:20:00-04:00
-updated: 2026-09-11T20:20:00-04:00
+updated: 2026-09-11T21:33:00-04:00
 domain: station
 type: task
-status: active
+status: parked
 tags: [leafly, collections, station, past-due]
 source: gmail
 ---
@@ -24,3 +24,12 @@ draft options rather than replied to directly (never sends email, drafts only).
 ## Sources
 - gmail: thread `1a091f4026d64f8c` ("Your Account Is Being Transferred To Collections -
   Pay Today! - The Station Dispensary", help@leafly.com, 2026-09-11 19:31 UTC)
+- Convo 1 card: `D0BHPKMDNEP` ts `1789157533.372279`
+
+## Update — 2026-09-11 21:33 ET
+
+Lemar replied in-thread on the Convo 1 card (no option picked): "We'll let the Station
+handle this actually. We can shelf this." Read as a park signal, not a pick of Option
+A/B/C — Samira is not drafting a reply on this one; The Station's own people will
+handle it directly. No draft made, nothing sent. Card headline set to parked/waiting;
+Samira replied "Parked" in-thread. Leaving `status: parked` here as the record.
