@@ -3,17 +3,17 @@
   "lock": {
     "run_id": "run_20260911T140447Z",
     "run_started": "2026-09-11T14:04:47Z",
-    "run_completed": "2026-09-11T04:02:54Z",
-    "note": "Claimed as a continuation/close-out of the run_20260911T120406Z lock. That run acquired the lock at 12:31:00Z and did real work -- PART 1 vault-keeper (12:33:22Z: filed 1, parked 5), the card-close-mechanic doctrine fix Lemar approved on the #fixes backlog card (12:39:25Z, thread C0BV5BRNH5Z:1788898652.010999), a Haven log of that fix (12:39:52Z), and a Curaleaf collections discrepancy flag (12:40:18Z) -- all committed to main (943...->947356d range). It then went silent: no further commits, no PART 0 close, no digest, run_completed never written. Found at this scan's start 120.7 minutes old (past the 120-min threshold) with the last real-work commit 84 minutes stale -- clearly dead, not in flight. This is the 5th consecutive occurrence of the same never-closed-lock pattern already tracked on the open #fixes card 'Run lock never closed' (thread C0BV5BRNH5Z:1789063894.596139, still awaiting Lemar's Option 1/Option 2 pick) -- posted a 5th-data-point update there rather than opening a duplicate. Treating this as continuation: PART 1 is NOT re-run (already done and current); this scan starts fresh at PART 2.",
+    "run_completed": "2026-09-11T14:25:11Z",
+    "note": "Closed cleanly. Continuation/close-out of the orphaned run_20260911T120406Z lock (5th consecutive never-closed-lock instance -- see #fixes thread C0BV5BRNH5Z:1789063894.596139, updated this run with the 5th data point, still awaiting Lemar's Option 1/Option 2 pick). PART 1 (vault-keeper) and part of PART 3 (card-close-mechanic doctrine fix, Curaleaf flag) were already done by the dead run before this pass started; this run picked up from PART 2 through the digest. Full account in haven/vault/_daily/2026-09-11.md, 10:27am ET entry.",
     "prior_note": "110th/111th scan history (container-restart casualty, 4th orphan instance) -- see prior commits on main and the #fixes thread C0BV5BRNH5Z:1789063894.596139 for full detail; trimmed here to keep this file from growing unbounded across occurrences of the same tracked bug.",
     "orphan_note": "5th consecutive instance of a run doing real, committed work and dying before writing lock.run_completed. No evidence of double-acting or lost work -- idempotency (prior 'Done ✅' replies, per-skill dedupe keys, watermarks) caught it cleanly again. Root cause still open on the #fixes card; recommend Lemar pick Option 2 (make lock-close resilient to a mid-run interruption, e.g. write run_completed incrementally) given five data points now, but it remains his call."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789099448.838769",
-      "D0BHPKMDNEP": "1789075004.324369",
-      "D0BBVV54L5R": "1789063884.227389",
-      "C0BV5BRNH5Z": "1789099364.285909"
+      "C0BBZJL85RT": "1789136670.648909",
+      "D0BHPKMDNEP": "1789136655.045399",
+      "D0BBVV54L5R": "1789136138.171449",
+      "C0BV5BRNH5Z": "1789136462.053309"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -48,7 +48,7 @@
       "C0BV5BRNH5Z:1788732629.871619": "1788784226.770239",
       "C0BV5BRNH5Z:1788784231.256459": "1788784231.256459",
       "C0BV5BRNH5Z:1788787392.857369": "1788870176.595429",
-      "C0BV5BRNH5Z:1788790402.959139": "1788793870.516519",
+      "C0BV5BRNH5Z:1788790402.959139": "1789136194.620359",
       "C0BV5BRNH5Z:1788794112.021869": "1788966903.421769",
       "D0BHPKMDNEP:1788792460.080689": "1788967040.969309",
       "D0BHPKMDNEP:1788786717.686909": "1788786727.764729",
@@ -74,8 +74,8 @@
       "D0BHPKMDNEP:1788887534.678329": "1788887534.678329",
       "D0BHPKMDNEP:1788898737.038929": "1788905399.761749",
       "C0BV5BRNH5Z:1788890716.275749": "1788898685.122129",
-      "C0BV5BRNH5Z:1788898652.010999": "1789130400.821769",
-      "D0BHPKMDNEP:1788901887.069719": "1788901919.884189",
+      "C0BV5BRNH5Z:1788898652.010999": "1789136049.641479",
+      "D0BHPKMDNEP:1788901887.069719": "1789130426.939489",
       "D0BHPKMDNEP:1788901887.692799": "1788901922.013599",
       "D0BHPKMDNEP:1788901888.540229": "1788901924.792649",
       "D0BHPKMDNEP:1788901889.352279": "1788901927.300799",
@@ -91,13 +91,16 @@
       "D0BHPKMDNEP:1788988027.549069": "1789042169.992979",
       "D0BHPKMDNEP:1788988028.299219": "1789042171.234789",
       "D0BHPKMDNEP:1789053129.150039": "1789074474.077689",
-      "D0BHPKMDNEP:1789063831.351469": "1789074524.594669",
-      "D0BHPKMDNEP:1789063831.996959": "1789074640.558729",
-      "D0BHPKMDNEP:1789063832.775699": "1789074520.335479",
-      "D0BHPKMDNEP:1789063833.434589": "1789074571.618489",
+      "D0BHPKMDNEP:1789063831.351469": "1789136026.956879",
+      "D0BHPKMDNEP:1789063831.996959": "1789135971.188549",
+      "D0BHPKMDNEP:1789063832.775699": "1789135939.474569",
+      "D0BHPKMDNEP:1789063833.434589": "1789135931.077849",
       "D0BHPKMDNEP:1789064040.504999": "1789074475.604269",
-      "C0BV5BRNH5Z:1789063894.596139": "1789099364.285909",
-      "C0BV5BRNH5Z:1789063894.923759": "1789063916.795149"
+      "C0BV5BRNH5Z:1789063894.596139": "1789135665.378009",
+      "C0BV5BRNH5Z:1789063894.923759": "1789063916.795149",
+      "D0BHPKMDNEP:1788987937.710089": "1789042166.517989",
+      "C0BV5BRNH5Z:1788797648.363529": "1788797814.046539",
+      "C0BV5BRNH5Z:1789136462.053309": "1789136462.053309"
     },
     "migration": {
       "decisions_migration_complete": true,
@@ -105,12 +108,12 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1789072821
+    "gmail_after_epoch": 1789135961
   },
   "integrity": {
     "last_full_pass": "2026-09-11T08:33:22-04:00",
     "last_scan_sha": "98d29d3100b65b72b09a9565a60db335fc24d1b5",
-    "note": "Full whole-vault pass ran 2026-09-11 morning (729 notes, 0 new repairs, 0 new value defects) via the run that died mid-flight at 12:40 -- already on main, not re-run. Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved)."
+    "note": "Full whole-vault pass ran 2026-09-11 morning (729 notes, 0 new repairs, 0 new value defects) via the run that died mid-flight at 12:40 -- already on main, not re-run this pass. Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved)."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
@@ -118,7 +121,7 @@
     "note": "Not re-checked (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-10T17:16:00-04:00",
+    "pulse_last_rendered": "2026-09-11T10:24:05-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
