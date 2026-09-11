@@ -1,6 +1,6 @@
 ---
 created: 2026-09-10T14:10:00-04:00
-updated: 2026-09-11T12:00:00-04:00
+updated: 2026-09-11T17:07:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -84,9 +84,20 @@ buildable from these bank statements rather than assumed numbers. Not built yet 
 pass — proposed as the next step on the Convo 1 card rather than launched
 unconfirmed, given the size of the extraction (11+ months × 2 entities).
 
+## Update 2026-09-11T17:07:00-04:00 — Lemar asked what else would make the model more robust
+Answered on the Convo 1 card: Dutchie POS/Metrc sales exports (bank deposits alone mix
+revenue with other inflows), a compiled debt/AR schedule (offered to build a first
+draft now from what's already logged in Haven — Curaleaf NJ II $25,601.41, GTI AR,
+Garden Society AR, Dime Industries, CannaBIZ Collects settlement, Comcast Business
+$511.48 past-due, Progressive commercial auto overdue, Regus/IWG collections, Metrc
+$80 past-due, plus the promissory note/amendment/Liquidibee MCA already in the
+Investor Master Templates folder), Gusto payroll reports, lease/rent obligations,
+the most recent tax return, and an AP aging summary if GreenBooks CPA has one.
+Waiting on Lemar's steer on whether to start the compiled schedule now.
+
 ## Sources
 - slack: Convo 2 `D0BBVV54L5R` thread `1789061736.927349`, reply `1789062162.348089` ·
-  Convo 1 card ts `1789063831.996959`, reply `1789136694.448499`
+  Convo 1 card ts `1789063831.996959`, replies `1789136694.448499` / `1789146434.496139`
 - drive: folder `1R_g1z92jElUTyVsO-bY-9XEHsjCWDAqn` (Josh folder) · folder
   `1w2Uo4dpxpY5y4FCjROL4_WZpQ-Yf-Ho6` (Investor Master Templates — has the real
   statements)
