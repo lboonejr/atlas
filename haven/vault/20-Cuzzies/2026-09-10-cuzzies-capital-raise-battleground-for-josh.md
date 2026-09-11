@@ -1,6 +1,6 @@
 ---
 created: 2026-09-10T14:10:00-04:00
-updated: 2026-09-11T17:07:00-04:00
+updated: 2026-09-11T19:15:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -95,9 +95,59 @@ Investor Master Templates folder), Gusto payroll reports, lease/rent obligations
 the most recent tax return, and an AP aging summary if GreenBooks CPA has one.
 Waiting on Lemar's steer on whether to start the compiled schedule now.
 
+## Update 2026-09-11T19:15:00-04:00 — compiled debt/AR schedule, first draft (Lemar's go-ahead, reply ts `1789152558.051119`)
+
+Lemar's reply on the Convo 1 card ("You can begin gathering that info from haven...")
+read as the go-ahead on option #2 (the compiled debt/AR schedule) from the prior
+update's list. He also flagged: Dutchie POS reports added to the Drive folder himself;
+this schedule is "one of the weakest pieces" since the underlying debt is scattered
+across many channels — he'll keep hunting for where else it's hiding; he's pulling
+Gusto payroll reports locally himself (drop that from Samira's queue); several filings
+are delinquent and he'll get current status and work backwards; GreenBooks doesn't
+have an AP aging file worth using, so that would have to be built separately.
+
+First draft below, sourced entirely from what's already logged in Haven — no new
+documents opened. Every figure is quoted exactly as written in its source note; **not
+verified against the underlying documents in the Investor Master Templates Drive
+folder**, which have not been opened/parsed (the promissory note, note amendment, and
+Liquidibee MCA agreement all still show "not found" for their own principal/terms —
+see the two rows below). Several other rows carry no current confirmed figure at all
+— marked accordingly rather than guessed.
+
+| # | Creditor | Amount | Paid to date | Status | Note |
+|---|---|---|---|---|---|
+| 1 | Curaleaf NJ II (A.G. Adjustments / Cadex Receivables) | $25,601.41 (principal $23,274.01 + interest $2,327.40) | $0 | Open — collector unanswered across 5 identical notices (8/3–9/10); FDCPA dispute window closed ~9/2, contradicting the open "dispute in writing" pick | `20-Cuzzies/2026-08-13-curaleaf-nj-ii-collections.md` |
+| 2 | GTI AR (Mindy Kramer) | ~$20,225.00 — **stale/unconfirmed**, last restated figure is from a June 2026 statement | ~$5,400 (Mar 2026) | Open — "final attempt" deadline (9/5) passed, collections threatened, no reply sent | `20-Cuzzies/2026-08-20-gti-ar-account-review-checkin.md` |
+| 3 | Garden Society AR | **No figure ever stated in any email** — invoice PDFs attached but never opened | $0 | Closed — Lemar chose to let it lapse (9/8); fraud-caution flag on "new banking instructions" pattern, never verified | `20-Cuzzies/2026-09-08-garden-society-ar-collections-new-banking-instructions.md` |
+| 4 | Dime Industries (→ CannaBIZ Collects) | $8,869.99 (DI-NJ-SO-290 $3,745.69 + DI-NJ-SO-385 $5,124.30) | $0 | Open — now in 3rd-party collections (CannaBIZ, Acct #2026-2289, 9/9); unanswered | `20-Cuzzies/2026-09-09-dime-industries-cannabiz-collections.md` |
+| 5 | CannaBIZ Collects — Little Leaf Labs LLC | $8,331.00 demanded; **settlement-agreement figure not confirmed** (PDF sent 8/26, never opened) | $0 | Open — 15th overdue reminder as of 9/9, 3 draft-reply options unpicked | `20-Cuzzies/2026-08-25-little-leaf-labs-cannabiz-call-request.md` |
+| 5b | CannaBIZ Collects — second, separate demand letter | **Unconfirmed** — creditor/amount never parsed | $0 | Open, unresolved | `20-Cuzzies/2026-08-13-cannabiz-collects-demand-letter.md` |
+| 6 | Comcast Business | $511.48 | $0 | Closed — Lemar chose to let it lapse (9/8); tracked on Off Button Monday board item `12995061784` | `20-Cuzzies/2026-09-01-comcast-business-past-due-511.md` |
+| 7 | Progressive commercial auto (→ Caine & Weiner) | $1,107.20 | $0 | Open — Lemar ✅'d a reply proposing a call time, drafted to Gmail Drafts (`1a08b38878c0fd94`), not yet sent | `20-Cuzzies/2026-09-09-caine-weiner-progressive-collections.md` |
+| 8 | Regus/IWG (Mount Laurel) | Full amount due $2,607.61; settlement offered $1,506.05 (7-day window, likely lapsed) | $0 | Open — Lemar picked "push for a 2-payment split," IWG declined a formal plan; late draft sent to Gmail Drafts only, not sent | `20-Cuzzies/2026-08-20-regus-iwg-collections-legal-threat.md` |
+| 9 | Metrc (Facility RE000069) | $80.00 | $0 | Open — 2nd collections notice 9/10, locks at $120; Lemar set a pay-by-9/18 target (calendar event `39c670smrmtss6lhje4neard8c`), not yet paid | `20-Cuzzies/2026-09-07-metrc-past-due-80.md` |
+| 10 | Signed promissory note + note amendment (Parke Bank) | **NOT FOUND in Haven** — document exists in Drive (`1w2Uo4dpxpY5y4FCjROL4_WZpQ-Yf-Ho6`), never opened/parsed for principal, rate, or terms | — | Unopened | — |
+| 11 | Liquidibee MCA agreement | **NOT FOUND in Haven** — only the $500 good-faith forbearance payment is quantified anywhere; the MCA principal/balance itself is unopened in the same Drive folder. Active litigation: *Liquidibee 1 LLC v. Cuzzie's Dispensary & Delivery LLC* (Nomas Recovery, opposing counsel requested 3 months of bank statements) | $500 (good-faith, re-spread 4×$125 weekly) | Open, in litigation/forbearance | `60-Legal/2026-07-20-liquidibee-lawsuit-bank-statements.md` |
+
+**Known-open total (rows with a confirmed current figure, 1–4 + 6–9):** $25,601.41 +
+$8,869.99 + $511.48 + $1,107.20 + $2,607.61 (full) + $80.00 = **$38,777.69** — excludes
+GTI AR (stale), both CannaBIZ Little Leaf figures (unconfirmed settlement), and the two
+Drive-only documents (10–11), so this floor understates the real total once those are
+opened and once GTI AR is reconfirmed.
+
+**Gaps this draft cannot close without opening the source documents:** the promissory
+note principal/rate, the note amendment's terms, and the Liquidibee MCA balance — all
+three sit unopened in the Investor Master Templates Drive folder. These are likely the
+single biggest missing pieces of the real debt total; recommend those three PDFs get
+opened/parsed next, ahead of the other five inputs Lemar and Samira already listed
+(Dutchie exports now added, Gusto in progress locally, tax-filing status, AP aging).
+
+Posted as a reply on the Convo 1 card (ts `1789063831.996959`) rather than a new one.
+
 ## Sources
 - slack: Convo 2 `D0BBVV54L5R` thread `1789061736.927349`, reply `1789062162.348089` ·
   Convo 1 card ts `1789063831.996959`, replies `1789136694.448499` / `1789146434.496139`
+  / `1789152558.051119`
 - drive: folder `1R_g1z92jElUTyVsO-bY-9XEHsjCWDAqn` (Josh folder) · folder
   `1w2Uo4dpxpY5y4FCjROL4_WZpQ-Yf-Ho6` (Investor Master Templates — has the real
-  statements)
+  statements, promissory note, note amendment, and MCA agreement, not yet opened)
