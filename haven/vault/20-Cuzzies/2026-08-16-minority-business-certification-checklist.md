@@ -1,6 +1,6 @@
 ---
 created: 2026-08-16T13:20:00-04:00
-updated: 2026-08-16T10:04:00-04:00
+updated: 2026-09-11T15:25:00-04:00
 domain: cuzzies
 type: reference
 status: active
@@ -86,6 +86,49 @@ for a NJ cannabis business the state one is what counts:
    that actually feeds CRC priority status).
 3. NMSDC (Path 2) only worth pursuing separately if a specific
    corporate-buyer/vendor relationship requires it.
+
+## Update — 2026-09-11 (live status pulled for both entities; decision to renew/reapply)
+Two auto-handoff drops landed in Convo 1 (`D0BHPKMDNEP`, ts `1789138310.082549` and
+`1789138989.098109` — via `samira-work-summary`, posted under Lemar's own Slack identity
+by app `A08SF47R6P4`; note this landed in Convo 1 rather than Convo 2/the self-DM, which
+is where that skill's CONTINUE-mode handoffs are supposed to post — flagged to #fixes as
+a routing inconsistency, not re-litigated here). Matched to this note (capture-first
+dedupe) rather than opening a duplicate.
+
+**What happened:** Lemar got into the NJ Division of Revenue's Uniform Certification
+Service (njportal.com/DOR/SBERegistry — this is Path 1 above, SBE + M/WBE handled
+together) under his own myNewJersey/PBS login. The earlier "already linked to another
+account" message was a non-issue, not a lockout.
+
+**Live findings:**
+- **Cuzzie's Dispensary & Delivery LLC:** SBE — **Revoked** (missed the required Annual
+  Verification; a "Re-Apply" button is available). MBE — **Non-Compliant** (no
+  self-service path; needs direct contact with DORES to find out what's outstanding).
+  No WBE record on file.
+- **The Station Dispensary (Station 973 LLC):** MBE — **Expired (Provisional)** (a
+  renewal was never submitted before it lapsed; portal says eligible to apply for
+  another certification for free). No SBE record exists at all — never applied.
+- **Net: nothing is currently certified/active for either entity.**
+
+**Decision made (Lemar):** proceed to renew/reapply for M/WBE and SBE for both entities
+— supersedes the "confirm whether it's still worth pursuing given the wind-down" framing
+in "Next steps" item 1 above; he wants to move forward regardless.
+
+**Next steps (not yet taken by Samira — no portal access):**
+1. Submit the SBE re-application for Cuzzie's via the portal's Re-Apply flow.
+2. Contact DORES ((609) 292-2146 / dorinfo@treas.state.nj.us) to resolve Cuzzie's MBE
+   Non-Compliant status before re-applying.
+3. Submit a fresh MBE application for The Station (free, eligible now).
+4. Consider an SBE application for The Station too, since no record exists.
+5. Still worth identifying who (if anyone) holds any other pre-existing PBS/SBE Registry
+   login tied to either business — candidates raised: Julio Padilla, GreenBooks CPA
+   (Richard Wyse/Zak Hasanin), Josh Evans, Markony Monteiro, former GM Jenn DeWalt — not
+   blocking, since Lemar's own login got him in fine.
+
+All five steps require Lemar's own logged-in NJ portal session — Samira has no
+njportal.com/DOR credentials and this is exactly the kind of gated government-portal
+action the card-format doctrine routes to the browser lane (Claude in Chrome, Lemar
+present, reads/fills/reports, never submits on its own unless he says otherwise).
 
 ## Sources
 - [New Jersey MBE, WBE & Minority Business Certification Guide 2026](https://www.supplierdiversity.com/state/NJ/)
