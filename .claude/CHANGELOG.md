@@ -4,6 +4,22 @@ The runbook (`.claude/routines/samira-atlas-executor.md`) describes what runs NO
 History and cutover narratives live here.
 
 
+## 2026-09-11 — Pulse becomes a stable board page
+Per Lemar ("hard to keep track of everything, scrolling threads across channels"):
+Pulse's render target moved from per-run Google Doc snapshots (2026-08-13 era) to the
+STABLE page **`pulse-board.html`** at the repo root, committed to `main` each changed
+run and served at `https://raw.githack.com/lboonejr/atlas/main/pulse-board.html` —
+the same mechanism and visual system as `on-button-reopen.html`. One bookmarkable URL;
+git history is the archive; the Pulse Drive folder is retired as a target and kept as
+the pre-board archive. The "Respond" section became a four-column board (Needs you /
+In motion / Blocked / Done this week), read-only by design — the board is for SEEING,
+deciding stays on Slack reactions. Section order, quiet-pass skip, and
+DM-only-on-change rules carry over unchanged. The Doc-transport workarounds (BMP-safe
+glyphs, no links in table cells, no flex/grid) no longer bind Pulse. This came out of
+a conversation weighing monday.com (free and paid) — rejected: paid unlocks
+automations but monday could only ever be a second rendering of Haven, the exact
+sync tax that retired Monday mirroring on 2026-08-15.
+
 ## 2026-09-06 — The three-conversation restructure
 Lemar's redesign of how he and Samira work together: she is no longer a per-channel
 workflow engine but a coworker he trades work off to. The whole relationship now runs

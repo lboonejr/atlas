@@ -342,7 +342,16 @@ the samira-loop skill wherever the two disagree.
 
 Lemar's living one-page personal dashboard. Rendered at the END of every hourly Samira
 scan (runbook **PART 8**, formerly PART P) by the **pulse-dashboard** skill (`.claude/skills/pulse-dashboard/`).
-**Rendering target changed 2026-08-13** — the Artifact tool is retired for this skill (it
+**Rendering target changed again 2026-09-11** — per Lemar ("hard to keep track,
+scrolling threads across channels"), Pulse now renders the STABLE board page
+**`pulse-board.html`** at the repo root, committed to `main` each changed run (same
+mechanism and visual system as `on-button-reopen.html`) and served at
+`https://raw.githack.com/lboonejr/atlas/main/pulse-board.html` — one bookmarkable URL,
+git history is the archive. The "Respond" section is now a four-column board (Needs
+you / In motion / Blocked / Done this week); section order otherwise unchanged. The
+per-run Google Doc snapshots below are RETIRED as a target; the Drive folder stays as
+the pre-board archive. Quiet-pass and DM-only-on-change rules carry over unchanged.
+**Prior era (2026-08-13 → 2026-09-11):** the Artifact tool was retired for this skill (it
 kept re-prompting Lemar for tool approval on his phone, the surface he checks Pulse from
 most, and the repo-level permission allow-list couldn't reach that surface). Every render
 now creates a NEW Google Doc snapshot in the Pulse Drive folder below; nothing is
@@ -359,7 +368,8 @@ snapshots). Its status still rides in Samira's digest every hour regardless:
 
 | What | Value |
 |---|---|
-| Pulse Drive folder | `1Dj_MZDlqUzHfAyK8TMwwJ57dZhi29omX` (`ATLAS/Dashboards/Pulse`, folder link `https://drive.google.com/drive/folders/1Dj_MZDlqUzHfAyK8TMwwJ57dZhi29omX`). Every render creates a NEW Doc here — filename `YYYY-MM-DD HHMM ET — Pulse` (zero-padded, so name-sort and time-sort agree) — never edited or deleted afterward; history is the point. Primary access is the DM link above; the folder is the archive. |
+| Pulse board URL (stable, primary since 2026-09-11) | `https://raw.githack.com/lboonejr/atlas/main/pulse-board.html` — rendered from `pulse-board.html` at the repo root, one commit to `main` per changed run (`pulse: render YYYY-MM-DD HH:MM ET`). Bookmark this; the DM is only a nudge. |
+| Pulse Drive folder (RETIRED as target 2026-09-11 — archive only) | `1Dj_MZDlqUzHfAyK8TMwwJ57dZhi29omX` (`ATLAS/Dashboards/Pulse`, folder link `https://drive.google.com/drive/folders/1Dj_MZDlqUzHfAyK8TMwwJ57dZhi29omX`). Holds the 2026-08-13 → 2026-09-11 Doc snapshots — never edited or deleted; no new Docs created here. |
 | Workout plan artifact URL | `https://claude.ai/code/artifact/a723834f-6310-4575-8897-75ae8e30806e` ("Back to the Court — 12-Week Plan"; source-of-truth note `haven/vault/10-Personal/Health/2026-07-07-basketball-fitness-plan.md`, start Mon 2026-07-07). Pulse links out to it; its check-offs live in that page's own localStorage. |
 | Sections (Lemar's fixed top-to-bottom order, 2026-07-12: big ideas → details → execution) | quick-capture todo strip · Dawn as North Star (direction, NOT tasks) · calendar roadmap · #decisions respond list · money (Haven budget ledger) · today's workout · Atlas open items · project pulses · Samira + routine health. Single column. EVERY item links to its source thread (Slack permalink) or calendar event (htmlLink). |
 
