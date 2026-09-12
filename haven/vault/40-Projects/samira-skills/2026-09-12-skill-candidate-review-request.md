@@ -1,9 +1,9 @@
 ---
 created: 2026-09-12T14:30:00-04:00
-updated: 2026-09-12T14:30:00-04:00
+updated: 2026-09-12T15:11:00-04:00
 domain: project
 type: task
-status: awaiting-decision
+status: active
 tags: [samira, skills-lab, candidate-review]
 source: slack
 ---
@@ -52,6 +52,17 @@ new evidence of recurrence since.
 One Convo 1 card (headline card) presenting the 5 candidates above for Lemar to pick
 from — building any of them is his call, not something to start unattended. Record
 line posted to #skills-lab.
+
+## Update 2026-09-12T15:11:00-04:00 — Lemar greenlit #5 (plain-language layer)
+
+Lemar picked candidate 5 on the Convo 1 card (ts `1789222678.470519`, reply
+`1789222764.894589`): "Let's go with number 5" — the "Explain Samira's technical
+output simply" skill. Greenlit to build, but per the safety floor Samira never builds
+a skill mid-run — queuing this for the next samira-loop build pass rather than
+starting it here. Record line posted to #skills-lab.
+
+### Sources (this update)
+- slack: Convo 1 `D0BHPKMDNEP` thread `1789222678.470519`, reply `1789222764.894589`
 
 ## Sources
 - slack: Convo 2 `D0BBVV54L5R` ts `1789220959.088329`
