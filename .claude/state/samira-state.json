@@ -1,19 +1,19 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. 2026-09 RESTRUCTURE COMPLETE (101st scan): only Convo 1 (D0BHPKMDNEP), Convo 2 (D0BBVV54L5R), #fixes (C0BV5BRNH5Z), and #reports (C0BBZJL85RT) carry a live watermark now -- timeline channels are never swept for input and don't need one, so their watermark entries were dropped this run along with the retired #decisions/#stormy entries. card_threads (keyed '<channel_id>:<parent_ts>') is the open-card worklist. The decisions_threads migration worklist and the legacy capture_dm key are deleted -- migration.decisions_migration_complete is true. Every slack_channels watermark MUST be a JSON string. Watermarks must never postdate lock.run_completed -- they are stamped before the lock closes (PART 0).",
   "lock": {
-    "run_id": "run_20260912T150303Z",
-    "run_started": "2026-09-12T15:03:03Z",
-    "run_completed": "2026-09-12T15:24:38Z",
-    "note": "Closed cleanly -- NOT a quiet pass. 14 Convo 1 card threads had new replies since the 10:45 ET run closed (~37min gap) -- worked all 14. Resequenced the CRC renewal plan (annual-report filing -> Wed 9/16, tax-collector call -> Thu 9/17, added a $150 fee reminder on the business calendar). Opened the capital-raise folder's three source PDFs directly via Drive tools -- found the 'promissory note' is actually two separate instruments ($20K Ellen Suon note + $500K Eden Estates convertible note) plus the Liquidibee MCA's real $29,980 figure. Recorded the DeWalt Sept 8 adjournment-call denial (still no counsel of record, hearing Monday 9/14) and Betty's Medicaid reconfirmation. Found and fixed two stale/false 'drafted to Gmail' claims from prior runs (WM cancellation email, Rove Brand reaffirm -- the latter turned out moot, Lemar had sent it himself 9/8) -- opened a #fixes card on the pattern. Convo 2 held 1 drop (become-a-notary) -- captured, carded, reacted. Flipped Garden Society to Letting Lapse on the Off Button Monday board. Rendered a full Pulse snapshot. Digest posted to #reports and the daily journal.",
-    "prior_note": "Prior run (run_20260912T140251Z) closed cleanly at 14:45:47Z -- see main history.",
+    "run_id": "run_20260912T160339Z",
+    "run_started": "2026-09-12T16:03:39Z",
+    "run_completed": "2026-09-12T16:06:12Z",
+    "note": "Closed cleanly -- quiet pass. Convo 1, #fixes, and #reports all confirmed live-quiet since the 15:22 ET digest closed (no new top-level messages, no new thread replies -- 40min gap). Convo 2 held 1 drop: Lemar asked whether current runs use the anthropic-skills:email-responder skill + his voice profile for email drafts. Answered directly in-thread from anchors.md (email-responder is retired from the send path; samira-email-loop owns drafting and reads the canonical voice profile + Hard-Floor Lint before saving to Gmail Drafts) -- informational, no new work, so no Haven note/card, reacted white_check_mark. Vault: no content commits since the 08:11 ET full integrity pass (only the daily journal itself advanced between runs), so PART 1 filing and PART 2 calendar-sync were both no-ops -- the 5 known stuck Inbox notes are unchanged. Email: 1 new thread since the last watermark (nyt@e.nytimes.com anniversary-sale marketing), labeled Samira/seen, no card. Investor: no signal (Samira/investor label, no new mail). reports-scan: nothing new in #reports since the 15:22 ET digest, skipped (no new content = no contradiction risk). Timelines: 0 entries (nothing moved this run). Pulse: carried (quiet pass, no change-gate trigger).",
+    "prior_note": "Prior run (run_20260912T150303Z) closed cleanly at 15:24:38Z -- worked 14 Convo 1 threads with new replies, resequenced the CRC renewal plan, opened the capital-raise source PDFs and found the real note/MCA figures, fixed two stale drafted-to-Gmail claims, captured+carded 1 Convo 2 drop (become-a-notary), flipped Garden Society on the Off Button board, rendered a full Pulse snapshot -- see main history for full text.",
     "orphan_note": "6 consecutive/overlapping instances now of a run doing real, committed work and not writing lock.run_completed on the expected timeline -- the first five were genuine crashes/interruptions (idempotency caught each cleanly, nothing lost); the 6th (logged on the #fixes thread ~16:48 ET this same day) was a materially different case: a session that stayed alive and correct but took ~4h45m wall-clock for what should be a 10-15 min pass, and chose not to write stale state backward over three newer runs that had already self-healed past it. Root cause still open; recommend Lemar pick between Option 1 (no fix needed, the 120-min rule is working as designed) and Option 2 (make the lock more resilient -- incremental writes and/or a genuine heartbeat/mutex rather than pure time-aging) on the #fixes card, ts `1789063894.596139`. Still his call, still open."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789226579.599429",
-      "D0BHPKMDNEP": "1789226579.599429",
-      "D0BBVV54L5R": "1789225994.355429",
-      "C0BV5BRNH5Z": "1789226200.966659"
+      "C0BBZJL85RT": "1789229172",
+      "D0BHPKMDNEP": "1789229172",
+      "D0BBVV54L5R": "1789229098.278199",
+      "C0BV5BRNH5Z": "1789229172"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -120,12 +120,12 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1789226558
+    "gmail_after_epoch": 1789229172
   },
   "integrity": {
     "last_full_pass": "2026-09-12T08:11:33-04:00",
-    "last_scan_sha": "b405025",
-    "note": "Full whole-vault pass ran 2026-09-12 morning (745 notes, 0 repairs, 0 new value defects). Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved). This run's incremental check (files changed since 80629d5) found 0 new value defects; last_scan_sha advanced to reflect it."
+    "last_scan_sha": "8425c4e",
+    "note": "Full whole-vault pass ran 2026-09-12 morning (745 notes, 0 repairs, 0 new value defects). Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved). This run's incremental check (files changed since b405025) found only haven/vault/_daily/2026-09-12.md itself had changed (the journal's own prior append) -- 0 new value defects, 0 Inbox notes touched; last_scan_sha advanced to reflect it."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
