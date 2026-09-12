@@ -1,6 +1,6 @@
 ---
 created: 2026-09-11T20:20:00-04:00
-updated: 2026-09-11T21:33:00-04:00
+updated: 2026-09-12T08:10:00-04:00
 domain: station
 type: task
 status: parked
@@ -33,3 +33,13 @@ handle this actually. We can shelf this." Read as a park signal, not a pick of O
 A/B/C — Samira is not drafting a reply on this one; The Station's own people will
 handle it directly. No draft made, nothing sent. Card headline set to parked/waiting;
 Samira replied "Parked" in-thread. Leaving `status: parked` here as the record.
+
+## Update — 2026-09-12 08:10 ET
+
+New message in the same Gmail thread, 2026-09-11 23:21 ET: Markony (`markony@thestationnewarknj.com`)
+replied directly to Leafly Support himself — "Hey i just got back into the country can
+we talk about this before pulling the plug" — cc'ing `admin@thestationnewarknj.com` and
+Lemar. This confirms Lemar's park decision is playing out as intended: The Station's own
+person is handling the collections matter directly, no Samira draft or Convo 1 action
+needed. Thread labeled `Samira/seen`; `status: parked` unchanged — watching for a
+resolution (payment made, or Leafly standing down) to close this out.
