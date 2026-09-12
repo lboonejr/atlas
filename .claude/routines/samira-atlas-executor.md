@@ -37,6 +37,20 @@ again in that moment.
 git write policy above) — it is much faster than GitHub-API roundtrips. Fall back to the
 connector otherwise, using the same straight-to-`main` rule.
 
+**"In sync" is a check, not an assumption (added 2026-09-12, per a #fixes finding — a
+false "Inbox empty, no due notes" #reports post from a different live session that same
+day).** Before trusting a local clone for ANY vault read (Inbox sweep, integrity pass,
+due-note scan) or write, run `git fetch origin main` then `git diff --stat HEAD
+origin/main`. A non-empty diff means the checkout is stale or has diverged (possible even
+right after a fresh container clone, if the clone came from a cached/mirrored ref) — do
+NOT read the vault from it as if it were current. Fix it first: `git branch -f main
+origin/main && git checkout main && git reset --hard origin/main` (safe — this discards
+only the stale local ref, never a real edit, since any genuine uncommitted work would
+show in `git status` first and should be stashed/handled per the standard git-safety
+protocol before a reset). Only report a vault state (empty inbox, no due notes, etc.)
+after confirming zero diff against `origin/main`. This applies to every session touching
+this vault, not just Samira's own hourly run.
+
 **Haven is the source of truth.** Truth, context, decisions, and live status live in
 `haven/vault/` (rulebook: `haven/vault/_system/schema.md`). Slack, the calendar, and
 Drive are renderings or side-stores. **Done = a filed Haven note**: no task result may
