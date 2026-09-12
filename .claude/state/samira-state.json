@@ -3,15 +3,15 @@
   "lock": {
     "run_id": "run_20260912T140251Z",
     "run_started": "2026-09-12T14:02:51Z",
-    "run_completed": null,
-    "note": "In flight.",
+    "run_completed": "2026-09-12T14:45:47Z",
+    "note": "Closed cleanly -- NOT a quiet pass. 22 Convo 1 card threads had picked up new replies since the 09:06 ET run (Lemar was actively working the backlog live) -- worked all 22, verified several statuses directly against Gmail (Regus follow-up never sent, M&S Tuesday email did send), moved Metrc's deadline, logged a $77k MCA total, booked a Camden tax-collector call, created a Dec-1 reminder, gave several Chrome prompts. Convo 2 held 1 drop (skill-candidate review) -- captured to Haven, carded to Convo 1, logged to #skills-lab. #fixes: gave Dawn-reconnect steps and opened a new card for a #reports contradiction (a separate 'Haven Keeper' session falsely claimed an empty Inbox / no due notes). Rendered a full Pulse snapshot (change-gate triggered). PART 1/2 were no-ops (no vault changes since the prior full pass). Digest posted to #reports and the daily journal.",
     "prior_note": "Prior run (run_20260912T130308Z) closed cleanly at 13:08:00Z -- see main history.",
     "orphan_note": "6 consecutive/overlapping instances now of a run doing real, committed work and not writing lock.run_completed on the expected timeline -- the first five were genuine crashes/interruptions (idempotency caught each cleanly, nothing lost); the 6th (logged on the #fixes thread ~16:48 ET this same day) was a materially different case: a session that stayed alive and correct but took ~4h45m wall-clock for what should be a 10-15 min pass, and chose not to write stale state backward over three newer runs that had already self-healed past it. Root cause still open; recommend Lemar pick between Option 1 (no fix needed, the 120-min rule is working as designed) and Option 2 (make the lock more resilient -- incremental writes and/or a genuine heartbeat/mutex rather than pure time-aging) on the #fixes card, ts `1789063894.596139`. Still his call, still open."
   },
   "watermarks": {
     "slack_channels": {
       "C0BBZJL85RT": "1789219244.229999",
-      "D0BHPKMDNEP": "1789222567.529719",
+      "D0BHPKMDNEP": "1789224192.596499",
       "D0BBVV54L5R": "1789220959.088329",
       "C0BV5BRNH5Z": "1789223758.059279"
     },
@@ -109,7 +109,8 @@
       "D0BHPKMDNEP:1789157533.372279": "1789162489.078049",
       "C0BV5BRNH5Z:1789157548.336469": "1789162347.247339",
       "C0BV5BRNH5Z:1789215131.431589": "1789223758.059279",
-      "C0BV5BRNH5Z:1789223860.933709": "1789223860.933709"
+      "C0BV5BRNH5Z:1789223860.933709": "1789223860.933709",
+      "D0BHPKMDNEP:1789222678.470519": "1789222678.470519"
     },
     "migration": {
       "decisions_migration_complete": true,
@@ -130,7 +131,7 @@
     "note": "Not re-checked (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-11T16:35:00-04:00",
+    "pulse_last_rendered": "2026-09-12T10:41:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
