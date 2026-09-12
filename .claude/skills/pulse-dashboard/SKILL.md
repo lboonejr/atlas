@@ -2,10 +2,12 @@
 name: pulse-dashboard
 description: >
   Pulse — Lemar's living command center, re-rendered by Samira at the end of every
-  hourly scan (PART 8 of the runbook; was PART P until 2026-09-06) and published as a
-  NEW timestamped Google Doc snapshot in the Pulse Drive folder (2026-08-13: replaced
-  the Artifact tool, which kept prompting Lemar for approval on his phone — the surface
-  he checks Pulse from most).
+  hourly scan (PART 8 of the runbook; was PART P until 2026-09-06) and published as the
+  STABLE board page `pulse-board.html` at the repo root, committed to `main` and served
+  via githack at one permanent URL (2026-09-11: replaced the per-run Google Doc
+  snapshots — Lemar asked for a board he can bookmark instead of scroll-hunting Slack;
+  git history is now the archive. The Doc era itself replaced the Artifact tool
+  2026-08-13, which kept prompting for approval on his phone).
   One page, one column, ordered BIG IDEAS → SMALL DETAILS → EXECUTION: quick todo
   capture on top, then Dawn as the North Star (direction, not tasks), the day's calendar
   roadmap, then execution — open Convo 1 cards, money, today's workout, Atlas open
@@ -14,9 +16,9 @@ description: >
   dashboard is a RENDERING like the Open Items canvas — the vault stays the source of
   truth and this skill writes NO Haven notes. Use it on Samira's scan or on demand:
   "refresh the dashboard", "render Pulse", "update my dashboard". It reads everything
-  and writes only the Drive snapshot — it DMs Lemar the new link (in Convo 1) only when
-  this run actually changed something (see Notification below), never sets reactions,
-  never edits the vault.
+  and writes only `pulse-board.html` (one commit to main) — it DMs Lemar (in Convo 1)
+  only when this run actually changed something (see Notification below), never sets
+  reactions, never edits the vault.
 ---
 
 # Pulse — the living command center (rendering only, vault stays truth)
@@ -88,11 +90,25 @@ quiet-pass rule below), this strip does not apply — there is no new render to 
 3. **Calendar — today's roadmap.** Today as a timeline (primary + reminder calendar,
    ET), then this week (today+6d) as a compact day strip. All-day items render as
    chips. Every event links to its Google Calendar `htmlLink` (law #2).
-4. **Respond — open Convo 1 cards.** Execution starts here. From this run's PART 3
-   state (was the #decisions list until 2026-09-06): the open cards waiting on Lemar,
-   most urgent first (🔴 before 🟡, then by age), capped at ~10 with a "+N more in our
-   DM" link to Convo 1 (`D0BHPKMDNEP`). Each card: severity dot, one-line summary, age
-   ("2d"), and its 💬 thread permalink so one tap opens the exact thread to react/reply.
+4. **Respond — the board** (adopted 2026-09-11, per Lemar: the fix for "I have to
+   scroll through threads across channels to know where everything stands"). Execution
+   starts here, rendered as a kanban board with four columns, in this order:
+   - **Needs you** — open Convo 1 cards waiting on a reaction/reply (this run's PART 3
+     state; was the #decisions list until 2026-09-06) plus open #fixes cards awaiting
+     his ✅. Most urgent first (🔴 before 🟡, then by age). This column is the whole
+     point of the board — it is visually loudest (accent border, first position).
+   - **In motion** — cards Lemar has ✅'d that Samira is actively working (in-flight
+     PT rounds, staged tasks awaiting their next scan step).
+   - **Blocked / stuck** — anything tagged stuck, STUCK cards in #fixes, cards waiting
+     on an external party.
+   - **Done this week** — cards closed in the last 7 days (from #reports landings),
+     newest first, capped at ~8. Quiet proof of motion, not a ledger.
+   Each card: severity dot, one-line summary, age ("2d"), project chip when it maps to
+   a timeline channel, and its 💬 thread permalink so one tap opens the exact thread to
+   react/reply (law #2 — the board is for SEEING; deciding stays in Slack). Desktop:
+   four columns in a grid. Phone: columns stack in the same order, each with a count
+   badge. Cap each column at ~10 with a "+N more" link to Convo 1 (`D0BHPKMDNEP`) or
+   #fixes as appropriate.
 5. **Money.** A ~3-line summary + a link-out to the **Money Hub** Drive folder (id in
    anchors' "Money Hub" section — opens to today's newest snapshot), which owns the full
    picture. The three lines, from
@@ -141,35 +157,32 @@ quiet-pass rule below), this strip does not apply — there is no new render to 
    (e.g. Basil awaiting DRY_RUN vetting), each linked to #reports or its thread.
    This section also lists any sections of THIS page that errored this run.
 
-## Output — render and file a new Drive snapshot
+## Output — regenerate the stable board page (adopted 2026-09-11)
 
 Build ONE self-contained HTML page (inline CSS only, no external requests; load the
-`artifact-design` skill for calibration — its guidance on layout/typography/color still
-applies even though the target is now a Doc, not an Artifact). Single column,
-phone-first; keep the markup simple (headings, paragraphs, tables, bold/color text
-spans) since Drive's HTML→Doc conversion carries those over but drops CSS grid/flexbox
-layout. **Never put an `<a href>` inside a `<table><td>` cell** — Drive's HTML→Doc
-conversion renders it as dead escaped-bracket text there even though the identical tag
-converts cleanly outside a table (found 2026-09-08, run `run_20260908T140459Z`, #fixes).
-Render any section that needs a per-row link (Calendar, Atlas open items) as plain `<p>`
-rows instead of a table, or keep the table and put the link in a column of its own
-outside the `<td>`. `<title>Pulse — Personal Dashboard</title>`. Header: "Pulse" masthead, date,
-"rendered HH:MM ET · refreshes hourly 8a–6p" line. Write the HTML to a working file,
-then create it as a NEW Google Doc via `Google_Drive__create_file`:
-- `parentId`: the Pulse Drive folder id (anchors, "Pulse dashboard" section).
-- `title`: `"YYYY-MM-DD HHMM ET — Pulse"` (ET, zero-padded).
-- `textContent`: the HTML you built; `contentMimeType: "text/html"` (Drive converts it
-  to a native Doc — do not set `disableConversionToGoogleType`).
-- Every render creates a brand-new Doc. Never edit or delete a prior snapshot — the
-  folder is the history.
-- **Astral-plane emoji mojibake (found 2026-08-28).** Drive's HTML→Doc conversion
-  corrupts astral-plane emoji (🔴🟡🟢🐢🧪🫡 and similar) into garbled byte sequences
-  (`ð´`/`ð¡`/…) — a defect in that specific transport, not in Slack's rendering of the
-  same characters (Slack is fine). Build the page with BMP-safe glyphs instead: a
-  colored `●`/`○` span (inline `style="color:#..."`) for status dots, plain-text
-  markers (`[PT]`, `*`, `!`) in place of emoji elsewhere. Read the created Doc back
-  before sending the DM — if any glyph came through corrupted, trash that Doc (never
-  seen by Lemar) and rebuild with the BMP-safe substitution before notifying.
+`artifact-design` skill for calibration) and write it to **`pulse-board.html` at the
+repo root** — the same mechanism as `on-button-reopen.html`. The page lives at ONE
+stable URL: `https://raw.githack.com/lboonejr/atlas/main/pulse-board.html`. Lemar
+bookmarks it; a render updates it in place, no new link ever.
+
+- The target is a real browser now, not Drive's HTML→Doc conversion, so the Doc-era
+  workarounds do NOT apply here: CSS grid/flexbox are fine (the board needs them),
+  links inside table cells are fine, and astral-plane emoji render correctly.
+  (Those constraints remain true of the Drive transport — keep them wherever a skill
+  still creates Docs — they just no longer bind Pulse.)
+- Phone-first: the board's columns stack on narrow screens; everything else stays one
+  column, max-width ~820px on desktop. Match the visual system of
+  `on-button-reopen.html` (its `:root` token palette, light/dark via
+  `prefers-color-scheme`) so the two pages read as one product.
+- `<title>Pulse — Command Center</title>`. Header: "Pulse" masthead, date,
+  "rendered HH:MM ET · refreshes hourly 8a–6p" line.
+- **Commit to `main`** in one commit (`pulse: render YYYY-MM-DD HH:MM ET`) via the
+  GitHub MCP `create_or_update_file`, or local `git commit` + `push origin main` —
+  never a branch+PR (anchors git-write policy; same as on-button-plan). Touch ONLY
+  `pulse-board.html` in this commit. Git history is the render archive — never
+  rewrite or delete prior commits.
+- The Pulse Drive folder (anchors) is retired as a render target as of 2026-09-11 —
+  it stays untouched as the pre-board archive. Do not create new Docs there.
 
 ## Notification — DM only when something changed
 
@@ -178,23 +191,26 @@ compare this run's signals against what you already know from this same scan: di
 Convo 1 or #fixes card open/close, did money change (the PART 4 money-drop mode
 returned `money ✓ …` not `money —`), did a project pulse's status dot flip, or is there
 a new/updated open Haven note since the last render? If NO signal changed this hour,
-skip the render entirely — no Doc, no DM (codified 2026-08-15; a folder of identical
-snapshots is noise, not history) — and return `pulse — carried (quiet pass)` for the
-digest. If YES to any, render, then send ONE line to **Convo 1** (`D0BHPKMDNEP` — safe
-to reuse for a notification: a 🌐 bot post there is never card input, since PART 3
-works cards and never reads the bot's own posts):
-`📍 Pulse updated — [1-line summary of what changed]. [Drive doc link] — Samira`
+skip the render entirely — no commit, no DM (codified 2026-08-15; identical renders
+are noise, not history) — and return `pulse — carried (quiet pass)` for the digest.
+If YES to any, render + commit, then send ONE line to **Convo 1** (`D0BHPKMDNEP` —
+safe to reuse for a notification: a 🌐 bot post there is never card input, since
+PART 3 works cards and never reads the bot's own posts):
+`📍 Pulse updated — [1-line summary of what changed]. https://raw.githack.com/lboonejr/atlas/main/pulse-board.html — Samira`
+The URL never changes, so the DM is a nudge, not a delivery — on a changed run where
+the DM itself would repeat within the same day, the summary line is what matters.
 
 ## SAFETY (applies to the whole skill)
-You MAY: read every connected tool and the vault; create a new Pulse snapshot Doc in the
-Pulse Drive folder; send ONE DM to Convo 1 (`D0BHPKMDNEP`), and only when
-something changed this run.
+You MAY: read every connected tool and the vault; overwrite `pulse-board.html` at the
+repo root and commit that ONE file to `main`; send ONE DM to Convo 1 (`D0BHPKMDNEP`),
+and only when something changed this run.
 You MUST NOT, ever: post to any Slack channel; DM on a quiet hour (nothing changed); send
 email or any outreach; set or change Lemar's reactions; write, move, edit, or file any
 vault note; touch the calendar; advise on, move, or commit money; run vault-keeper or
-calendar-sync; edit or delete a prior Drive snapshot. A render failure must never abort
-or degrade the rest of Samira's run.
+calendar-sync; commit any file other than `pulse-board.html`; rewrite git history;
+create new Docs in the retired Pulse Drive folder or edit/delete its archive. A render
+failure must never abort or degrade the rest of Samira's run.
 
 ## Returns (to the Samira runbook, for the digest)
-`pulse ✅ <Drive doc URL> · sections OK K/9 · dm sent/skipped · <list any errored sections>`
+`pulse ✅ board committed <sha short> · sections OK K/9 · dm sent/skipped · <list any errored sections>`
 — or `pulse ⚠️ render failed: <one-line reason>`.
