@@ -204,7 +204,7 @@ in the runbook until Lemar vets one preview run, then flip to false.
 |---|---|
 | RemoteTrigger | `trig_01JE6TpvqAnawkETpx64vvX9` (created 2026-07-08 via RemoteTrigger API; enabled; first run 2026-07-09 03:07 UTC = 11:07pm ET) |
 | Cloud env | `env_01Xatmag93x2WA2Gd84D9iHj` (shared with Samira + Dawn — Gmail + Slack MCP + git access) |
-| Cron | `7 3 * * *` UTC (11:07pm EDT) — switch to `7 4 * * *` UTC during EST. Working branch `claude/inbox-janitor`; durable writes go to `main` per git-write policy. |
+| Cron | `7 3 * * *` UTC (11:07pm EDT) — switch to `7 4 * * *` UTC during EST. **Next flip: on/after Sun 2026-11-01 (DST ends)** — a Haven reminder note with a `due` rings the calendar for it. Working branch `claude/inbox-janitor`; durable writes go to `main` per git-write policy. |
 | Runbook (live behavior) | `.claude/routines/inbox-janitor.md` — editing on `main` changes the next run |
 | Reports to | #reports `C0BBZJL85RT` (reuse; no new channel) |
 | Gmail account acted on | `lemar@cuzziesnj.com` (business — confirmed as the connected Gmail account 2026-07-08; winds down mid-2026) |
@@ -212,8 +212,11 @@ in the runbook until Lemar vets one preview run, then flip to false.
 | Persona | lead `🧹`, sign "— Basil" (placeholder name, rename-able like "Dawn") |
 
 **Trash sweep categories** (PART B): `category:promotions OR category:social OR category:forums`,
-`older_than:1y`. `category:updates` is **report-only, never auto-trashed** (it holds invoices,
-bank, payroll, insurance/legal receipts mixed with ads — see the runbook).
+`older_than:1y`, with the NEVER-TOUCH allowlist compiled into the query as `-from:` exclusions
+(efficiency only — the per-thread gate remains the safety mechanism). `category:updates` is
+**report-only, never swept by category** (it holds invoices, bank, payroll, insurance/legal
+receipts mixed with ads — see the runbook); the ONLY path into old `updates` is the per-sender
+graylist below (PART B2).
 
 **Vendor-domain seed list** (PART A archives their *recent* menus out of the inbox; these are NOT
 on the allowlist, so their >12-month marketing IS trashable in PART B). Expand as new menu
@@ -233,6 +236,22 @@ mis-categorized as promotions/updates:
 `no-reply@accounts.google.com` (security alerts) · `headset.io` · `stellaconnect.net` (Metrc).
 Plus the rule: never trash the active FundCanna underwriting thread. Anything `is:important` or
 `is:starred` is already protected by the Safety floor regardless of this list.
+
+**Basil updates graylist** (PART B2 — the ONLY senders whose >12-month `category:updates` mail
+Basil may trash; per-sender, Lemar-vetted, edited ONLY by Lemar on `main`, never by Basil at
+runtime). Rules: a NEVER-TOUCH domain can never appear here (NEVER-TOUCH wins on conflict);
+billing/financial/legal senders are never eligible. Currently EMPTY — Basil's bootstrap builds
+the one-time triage inventory note (`70-Automation/inbox-janitor/updates-triage.md`, every old
+`updates` sender domain with counts); mark domains toss there and move them into this list:
+*(empty — populate from the triage note)*
+
+**Basil known permanent skips** (PART B — threads older than the cutoff that surface every
+night but are permanently protected, usually by an `IMPORTANT` label on one message; counted
+as one digest line instead of re-described nightly. Basil proposes additions after 3
+consecutive skips; Lemar commits them):
+- Dutchie implementation-survey thread (`dutchie.com`)
+- Hamilton Farms weekly menu / Go2 8ths order thread (real payment-terms correspondence)
+- ICCC mini-MBA program thread
 
 ## Idea-baking loop — Stormy (Convo 2's deep-dive mode since 2026-09-06)
 
