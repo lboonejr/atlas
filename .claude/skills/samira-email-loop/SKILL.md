@@ -65,8 +65,15 @@ plain reply is an equal signal; on conflict it wins):
   final reply in his voice. Read `.claude/voice/voice-profile-lemar-boone-jr.md` and run
   its Hard-Floor Lint against this draft; revise until it passes before saving. Then SAVE
   to Gmail Drafts (`create_draft`, threaded onto the original mail — never a new thread).
-  Write the saved-draft Haven note. Reply "Saved to your Gmail Drafts — ready to send ·
-  filed to Haven." Apply `Samira/drafted`. Headline 🟢.
+  **Verify before claiming it (added 2026-09-12, per a #fixes finding — two prior "Done
+  ✅ — drafted X" claims turned out false, the draft was never actually in Gmail Drafts
+  when later checked):** immediately call `list_drafts` (or `get_draft` on the returned
+  id) and confirm the draft actually exists with the expected recipient/thread before
+  writing the Haven note or replying "Done." If it's not there, retry the `create_draft`
+  once; if it still fails, treat it as a failed write per the write-integrity rule (do
+  not claim success) and surface it instead. Write the saved-draft Haven note. Reply
+  "Saved to your Gmail Drafts — ready to send · filed to Haven." Apply `Samira/drafted`.
+  Headline 🟢.
 - **👀 / none** → leave it. **⛔** → park per the doctrine (reply "Parked ⏳", record in
   the Haven open-items note).
 - **🫡** → close: apply `Samira/sent`, write the closed-thread Haven note, one #reports

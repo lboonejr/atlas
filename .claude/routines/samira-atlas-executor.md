@@ -123,6 +123,15 @@ content on a write, wiping the target down to a handful of bytes — across GitH
 writes, Google Doc creation, and Haven notes alike. Two guards apply together, on every
 write over roughly 200 bytes that REPLACES existing content (a note body, a GitHub file,
 a Google Doc, any file this routine or a skill writes):
+
+**Post-write verification is not limited to REPLACE writes (amended 2026-09-12, per a
+#fixes finding — see `haven-vault-keeper`'s Option 1 write-integrity guard above).** A
+Gmail `create_draft` call is a fresh-create, not a replace, but has the same failure
+shape: a tool call that reports success without the draft actually landing. Any create
+(not just replace) that a card or Haven note will later claim as "Done ✅ — saved/created
+X" must be verified by reading the created object back (`list_drafts`/`get_draft` for
+Gmail drafts; the equivalent existence check for anything else this pattern could hit)
+before the claim is made. samira-email-loop's D1 step now does this explicitly.
 - **Pre-write size guard.** Before committing the write, refuse it if the new content is
   implausibly smaller than the content it replaces (a rough floor: under 10% of the
   current size) unless the shrink is explicitly intended (a real delete/truncation) — stop
