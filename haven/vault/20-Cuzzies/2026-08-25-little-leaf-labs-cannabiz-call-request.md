@@ -1,6 +1,6 @@
 ---
 created: 2026-08-25T08:06:41-04:00
-updated: 2026-09-09T11:15:00-04:00
+updated: 2026-09-12T14:04:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -140,3 +140,20 @@ in-thread rather than opening a new card. Nothing drafted or sent this update.
 ### Sources (this update)
 - gmail: thread `1a086af281310428` ("Fw: Cuzzies Dispensary- Accounts Receivable-
   Outstanding Payments- Reminder 15", 2026-09-09T15:00:00Z)
+
+## Update 2026-09-12T14:04-04:00 — Lemar picks: schedule the call (Option B)
+
+Lemar replied on the Convo 1 card (ts `1788819122.125539`, reply `1789226705.123009`):
+"I think we schedule the call just one more time for a greater understanding of the
+process." Reading this as Option B from the 9/8 round. Drafted a reply to Cliff on the
+same thread pointing him to his own Calendly link ("Schedule a Call" in his signature)
+so Lemar can just grab a time directly, with the alternative that Cliff can send times
+himself. Saved to Gmail Drafts (id `r653061193166465597`, verified present via
+`list_drafts`) — not sent, his call to send and then actually book the slot. Still open:
+the settlement figure and per-account scope are unanswered regardless of which time gets
+picked.
+
+### Sources (this update)
+- slack: Convo 1 `D0BHPKMDNEP` thread `1788819122.125539`, reply `1789226705.123009`
+- gmail: thread `1a03e89d3aa66ded`, draft `r653061193166465597` (reply to message
+  `1a08133839e51f11`)

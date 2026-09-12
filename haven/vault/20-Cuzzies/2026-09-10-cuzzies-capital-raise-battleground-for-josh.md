@@ -1,6 +1,6 @@
 ---
 created: 2026-09-10T14:10:00-04:00
-updated: 2026-09-12T15:11:00-04:00
+updated: 2026-09-12T14:04:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -205,6 +205,27 @@ useful.
   `1b8pN92QOUdmFvlUL5tXGvAzB-GXV6N0Y` (Eden Estates $500K convertible note amendment) ·
   `1vbkBM_1myOQktLQDfnw7aw1mDWbo12NK` (Liquidibee MCA agreement, 04/07/2026)
 - slack: Convo 1 `D0BHPKMDNEP` thread `1789063831.996959`, reply `1789223643.220689`
+
+## Update 2026-09-12T14:04-04:00 — 3 person-facing summaries drafted, saved to the Josh folder
+
+Lemar approved (Convo 1 card ts `1789063831.996959`, reply `1789226868.973649`): "Yes
+let's draft these three summaries." Drafted and saved as Google Docs in the Josh Drive
+folder (content verified via read-back after creation — the write-integrity checks this
+run has been enforcing all pass):
+- Ellen Suon Promissory Note ($20,000) — `118AsVnnetaVE6SKblQMho18z4MmDrZDYCImdE9i0hew`
+- Eden Estates $500K Convertible Note + Amendment —
+  `1M9CZKWZwkMLUNWOhfEALv-MTG06q2RgNblzWW5wuECE`
+- Liquidibee MCA — `1WhibrRA1yQNjPpv6ChAGY3m1Fi1WSNfHln4lysDgyxo`
+
+Each is plain-English, sourced back to the signed PDF, and flags the biggest open
+question on that instrument (Eden Estates' CRC-approval-contingent conversion; the
+Liquidibee figure being one of three MCAs behind the $77K total, not additive). Source
+PDFs kept as-is per the prior update's recommendation — summaries sit alongside them,
+not replacing them.
+
+### Sources (this update)
+- slack: Convo 1 `D0BHPKMDNEP` thread `1789063831.996959`, reply `1789226868.973649`
+- drive: folder `1R_g1z92jElUTyVsO-bY-9XEHsjCWDAqn` (Josh folder, 3 new summary docs)
 
 ## Sources
 - slack: Convo 2 `D0BBVV54L5R` thread `1789061736.927349`, reply `1789062162.348089` ·
