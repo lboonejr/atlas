@@ -1,6 +1,6 @@
 ---
 created: 2026-09-10T14:10:00-04:00
-updated: 2026-09-11T17:07:00-04:00
+updated: 2026-09-12T14:22:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -51,7 +51,25 @@ posted on the card. Camden municipal tax/license standing still has no known pub
 lookup; asked Lemar for the right portal URL if he knows one, otherwise this likely
 needs a direct call to Camden's tax collector/clerk's office.
 
+## Update 2026-09-12T14:22:00-04:00 — call booked with Camden's tax collector for Tuesday 9/15
+
+Lemar replied on the Convo 1 card (ts `1789157543.167029`): "okay, lets set up a call
+with the tax collector on Tuesday." Found the City of Camden Bureau of Revenue
+Collections (520 Market St, Room 117; (856) 757-7017) via a web search — no phone
+number for this office existed anywhere in Haven yet. Booked a reminder on the
+**Cuzzie's (Owners)** calendar, Tue 2026-09-15 9:00-9:30am ET, with a call script in
+the event description (confirm municipal property-tax/licensing standing, any
+outstanding balance or lien, and whether the pending NJ annual-report revocation
+affects municipal standing). Nothing called yet — the call itself is Lemar's.
+Also still open: the njportal.com DORES entity-status lookup (Chrome prompt already
+posted on the card) and the Tuesday 9/15 annual-report filing target — both unchanged
+from the prior update.
+
 ## Sources
 - slack: Convo 2 `D0BBVV54L5R` thread `1789061736.927349`, reply `1789062261.411799`
 - slack: Convo 1 `D0BHPKMDNEP` thread `1789063832.775699`, replies `1789136831.358239`
-  / `1789136845.522919` / `1789146437.777129`
+  / `1789136845.522919` / `1789146437.777129` / `1789157543.167029`
+- web: https://www.camdennj.gov/revenue-collections/
+- calendar: event `br9gc1t7kchaht4v9sl6g2h3n4`, "Call Camden City tax collector —
+  Cuzzie's municipal standing (CRC renewal)", 2026-09-15 9:00-9:30am ET, Cuzzie's
+  (Owners) calendar

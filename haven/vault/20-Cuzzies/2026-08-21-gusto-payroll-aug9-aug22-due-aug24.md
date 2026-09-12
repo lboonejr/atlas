@@ -1,6 +1,6 @@
 ---
 created: 2026-08-21T08:17-04:00
-updated: 2026-09-10T11:11-04:00
+updated: 2026-09-12T14:25:00-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -90,12 +90,71 @@ by this note's `calendar_event_id` (which already pointed at the newer
 `v5kjoasoqugfg34n10glv8834c`), so nothing this note tracks changed. One event remains:
 `v5kjoasoqugfg34n10glv8834c`, 2026-08-24 7:00 PM ET, popups at 24h + day-of.
 
+## Update 2026-09-12T14:25:00-04:00 — final-audit Chrome prompt, deletion moved to Thursday, restore question
+
+Lemar asked (Convo 1 card ts `1789219701.620429`): for a Chrome prompt to do a final
+audit of Gusto + double-check the 8/27 archive task, plus scour the rest of the account
+for anything else worth saving, move the final deletion to Thursday, and whether a
+deleted Gusto account can be restored.
+
+**Archive check — done without Chrome, since Drive is a website these tools can
+already read** (correcting an earlier answer in this thread that conflated "your
+computer" with "the web," and that Chrome-in-your-browser reads live sites, not your
+local machine, either): the "Cuzzie's Gusto Archive — 2026-09-06" Drive folder
+(`1JC9VV9c3iVshwhpiaHpXMSk5ypjkK5Q6`) IS populated — W-2s/1099s (8 PDFs), Tax Filings
+(9 federal/NJ PDFs + the NJ sales tax return added since), Payroll History (2 CSVs,
+2025 + 2026 summaries). **Timesheets is empty** — consistent with no Gusto time
+tracking having been used; worth a quick look in Gusto itself to confirm nothing's
+missing there before archiving is called done.
+
+Chrome-in-your-browser prompt for the final audit + wider scour (it can read
+app.gusto.com's pages, not your local disk):
+
+```
+===CHROME RUN | task:gusto-final-audit | phase:pre-termination===
+Site: app.gusto.com (Cuzzie's Dispensary & Delivery LLC)
+Goal: final check before terminating the account.
+Steps:
+1. Taxes & compliance → Tax documents: confirm every W-2/1099 listed there is already
+   in the "W-2s and 1099s" Drive folder (compare by employee name). Note anything not
+   yet archived.
+2. Taxes & compliance → Filings: same check against the "Tax Filings" Drive folder.
+3. Reports → Payroll journal: confirm the exported CSVs cover the full active period.
+4. Time tracking / Timesheets: check whether anything exists — the Drive archive's
+   Timesheets folder is currently empty. If there's real data, export and note it here
+   (don't upload it yourself — read only).
+5. Scour company Documents / Files (if Gusto has a general document library beyond the
+   four categories above) for anything else worth keeping — insurance certs, state
+   registration numbers, benefits paperwork, anything not already covered.
+6. Do NOT cancel, terminate, or change anything. Read-only.
+Report: a plain list of what's confirmed archived, what's missing, and anything found
+in step 5 that should be saved before termination.
+===CHROME RUN END===
+```
+
+**Deletion moved to Thursday 9/17** — created a reminder on the Cuzzie's (Owners)
+calendar for that morning to run the audit above, then terminate at Settings →
+company/account termination.
+
+**Restorability — genuinely don't know a specific number, so not asserting one.**
+Gusto's own help content describes account cancellation as generally reversible for
+some window after cancellation by contacting their support directly, but the exact
+retention period isn't something this session has a reliable source for and it may
+depend on your plan/contract. Recommend confirming directly with Gusto support (in-app
+chat or their support line) before Thursday, so the decision to delete is made with the
+real window in hand rather than an assumed one.
+
 ## Sources
 - gmail: thread `1a024238c4662406` ("Time to run payroll for Cuzzie's Dispensary &
   Delivery LLC," automated@gusto.com, 2026-08-21 07:45 ET)
 - gmail: thread `1a0250d7b7efbc78` ("Review payroll funding" task, gustonoreply@gusto.com,
   2026-08-21 12:00 ET — cash balance may not cover payroll 8/28)
 - slack: #decisions ts `1787314219.825659` (card) / `1787315320.109899` (Lemar's reply)
+  · Convo 1 card ts `1788718701.557769`, reply `1789219701.620429`
 - haven: [[2026-07-30-gusto-final-payroll-closeout]] (the 7/31 "final payroll" run that
   did not stop these notices), [[2026-08-11-gusto-payroll-late]], the
   `gusto-*-payroll-funding-shortfall` string back through July
+- drive: folder `1JC9VV9c3iVshwhpiaHpXMSk5ypjkK5Q6` ("Cuzzie's Gusto Archive —
+  2026-09-06") — populated, Timesheets subfolder empty
+- calendar: event `pe9u568iv0bv4uu0t5hivjc9bc`, "Terminate Gusto account (Cuzzie's) —
+  after final audit", 2026-09-17 9:00-9:30am ET, Cuzzie's (Owners) calendar

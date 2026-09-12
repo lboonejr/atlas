@@ -1,12 +1,12 @@
 ---
 created: 2026-09-07T13:16-04:00
-updated: 2026-09-10T17:07:00-04:00
+updated: 2026-09-12T14:20:00-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
 tags: [metrc, past-due, collections, vendor-payment]
 source: gmail
-due: 2026-09-18T12:00:00-04:00
+due: 2026-09-25T12:00:00-04:00
 calendar_event_id: 39c670smrmtss6lhje4neard8c
 ---
 
@@ -66,4 +66,11 @@ itself remains outside what Samira does unattended.
 - slack: Convo 1 card ts `1788797499.354449` (backlog-scan card that first logged this,
   no dedicated decision card) · dedicated card ts `1789053129.150039` (payment-plan
   reply ts `1789065755.489989`)
-- calendar: event `39c670smrmtss6lhje4neard8c` on Cuzzie's (Owners), due 2026-09-18
+- calendar: event `39c670smrmtss6lhje4neard8c` on Cuzzie's (Owners), due 2026-09-25
+
+## Update 2026-09-12T14:20:00-04:00 — target date pushed to Friday 9/25
+
+Lemar replied on the Convo 1 card (ts `1789157994.203159`): "Actually can we move this
+to Friday 9/25?" Moved `due` 2026-09-18 → 2026-09-25 and updated the same calendar
+event (`39c670smrmtss6lhje4neard8c`) rather than creating a new one. Still unpaid,
+account still at $80/collections-attempt-2, still $40 under the $120 lock threshold.

@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-09-10T14:15:00-04:00
+updated: 2026-09-12T14:27:00-04:00
 domain: legal
 type: task
 status: active
@@ -759,6 +759,17 @@ Samira's to decide or draft).
 - gmail: thread `1a024b065a8e8ff2`, messages `1a0868725a012d53` (Lemar, 9/9 10:17am ET),
   `1a08c70feb2ab1cd` (Diaz's decline, 9/10 5:49pm ET), `1a08c7616c3fd6ef` (Lemar's
   same-day pushback, 9/10 5:55pm ET)
+
+## Update 2026-09-12T14:27:00-04:00 — Diaz out for the 9/14 hearing; Lemar considering him for a later appeal
+
+Lemar replied on the Convo 1 card (ts `1789157185.525409`): "Looks like we're not going
+to be able to work with Diaz for the 14th, but I'm thinking we try to consider him for
+the Appeals process once we get to that point." Reading this as confirmation that
+Diaz's 9/10 decline stands for Monday's proof hearing — as of this update there is
+still no counsel of record for the Sept 14 hearing, now 2 days out, and Lemar is
+handling the hearing itself or via another track not yet reported here. Noted as a
+possible future re-engagement (post-hearing, appeals stage only) rather than a live
+outreach — nothing drafted or sent, Diaz not re-contacted. No Samira action taken.
 
 ## Sources
 - gmail: thread `19ead93c9e01dbea` ("DeWalt v. Cuzzie's Dispensary & Delivery, et al.")

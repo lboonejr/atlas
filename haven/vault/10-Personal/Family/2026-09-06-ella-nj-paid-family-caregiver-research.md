@@ -1,6 +1,6 @@
 ---
 created: 2026-09-06T15:50-04:00
-updated: 2026-09-08T12:22:00-04:00
+updated: 2026-09-12T14:26:00-04:00
 domain: personal
 type: task
 status: active
@@ -68,6 +68,14 @@ re-check her NJ FamilyCare/Medicaid enrollment status post-move, and pick up the
 vs. JACC question from there. The Wed 9/9 8:30am ADRC call already booked on the
 calendar is for Betty (Camden County, unaffected by this) — no calendar action taken
 for Ella given the December timeline.
+
+## Update 2026-09-12T14:26:00-04:00 — Dec 1 revisit reminder booked
+
+Lemar asked (Convo 1 card ts `1789220135.262429`) for a Google Calendar reminder to
+revisit this once Ella has relocated. Created on the reminder calendar: **Dec 1, 2026,
+9:00am ET**, "Haven: Grandma Betty — revisit Ella NJ paid-caregiver research
+(post-move)" (event `nolfc5dmngds7jdamjn7pp6gbc`), popups 1 day out + day-of, linking
+back to this note. No other change — still on hold until she's an NJ resident.
 
 ## Related
 - [[2026-09-06-betty-nj-caregiver-guardianship-research]] — the separate grandpa→Betty legal/guardianship track

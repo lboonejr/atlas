@@ -143,7 +143,7 @@ bills:
             accrues here, but its due-date reminder lives on the Cuzzie's (Owners)
             calendar, not the personal one, per the business boundary."}
   - {id: cuzzies-google-workspace, name: "Cuzzie's Google Workspace (direct billing setup)",
-     amount: 158.32, cadence: once, due: 2026-09-07, track: queue, status: active,
+     amount: 114.88, cadence: once, due: 2026-09-07, track: queue, status: active,
      business_origin: true, calendar_event_id: u45glcg7992eg9q79nnb6brlco,
      note: "Added 2026-08-13. Same reseller billing lapse as cuzzies-google-voice above —
             all Workspace services for cuzziesnj.com (including lemar@cuzziesnj.com email
@@ -234,7 +234,20 @@ bills:
             two-component total; do not keep computing a daily-drift bump on top of
             $158.32 until Lemar gives a real rate. Calendar event
             u45glcg7992eg9q79nnb6brlco still needs its stale rate description fixed —
-            same open item as before, still not done."}
+            same open item as before, still not done.
+            UPDATE 2026-09-12 (Convo 1 card reply, thread ts 1788714815.369119, reply ts
+            1789219182.433939): Lemar reported '$74.24+ $40.64 is owed as of today.'
+            `amount` corrected 158.32 -> 114.88 (74.24 + 40.64, both components exactly
+            as reported, nothing computed by Samira). Flagging honestly: this does not
+            cleanly reconcile against the prior 9/9 breakdown ($98.08 'last month'
+            + $60.24 'this cycle' = $158.32) — $40.64 matches the original 9/7-reported
+            August component exactly, but $74.24 doesn't match any prior component, and
+            the total is LOWER than the prior $158.32 read, which could mean a partial
+            payment landed, a cycle reset, or Lemar reporting a different slice than last
+            time. Not guessing which — `amount` is set to exactly what was reported.
+            Still no due date given; stays out of daily_targets per the overdue/no-future-
+            date rule until Lemar names one. Calendar event u45glcg7992eg9q79nnb6brlco
+            still needs its stale rate description fixed — same open item as before."}
   - {id: edge-fitness-training-dispute, name: "Edge Fitness — personal training charge dispute",
      amount: 119, cadence: once, due: 2026-09-06, track: queue, status: paid,
      calendar_event_id: null,

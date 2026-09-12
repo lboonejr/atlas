@@ -1,6 +1,6 @@
 ---
 created: 2026-09-10T14:10:00-04:00
-updated: 2026-09-11T19:15:00-04:00
+updated: 2026-09-12T14:15:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -127,13 +127,13 @@ see the two rows below). Several other rows carry no current confirmed figure at
 | 8 | Regus/IWG (Mount Laurel) | Full amount due $2,607.61; settlement offered $1,506.05 (7-day window, likely lapsed) | $0 | Open — Lemar picked "push for a 2-payment split," IWG declined a formal plan; late draft sent to Gmail Drafts only, not sent | `20-Cuzzies/2026-08-20-regus-iwg-collections-legal-threat.md` |
 | 9 | Metrc (Facility RE000069) | $80.00 | $0 | Open — 2nd collections notice 9/10, locks at $120; Lemar set a pay-by-9/18 target (calendar event `39c670smrmtss6lhje4neard8c`), not yet paid | `20-Cuzzies/2026-09-07-metrc-past-due-80.md` |
 | 10 | Signed promissory note + note amendment (Parke Bank) | **NOT FOUND in Haven** — document exists in Drive (`1w2Uo4dpxpY5y4FCjROL4_WZpQ-Yf-Ho6`), never opened/parsed for principal, rate, or terms | — | Unopened | — |
-| 11 | Liquidibee MCA agreement | **NOT FOUND in Haven** — only the $500 good-faith forbearance payment is quantified anywhere; the MCA principal/balance itself is unopened in the same Drive folder. Active litigation: *Liquidibee 1 LLC v. Cuzzie's Dispensary & Delivery LLC* (Nomas Recovery, opposing counsel requested 3 months of bank statements) | $500 (good-faith, re-spread 4×$125 weekly) | Open, in litigation/forbearance | `60-Legal/2026-07-20-liquidibee-lawsuit-bank-statements.md` |
+| 11 | MCA agreements (3 total, incl. Liquidibee) | **$77,000 combined** — Lemar-reported 2026-09-12 ("We don't have the exact individual MCA balances so I'll just provide the total of all 3, $77k"); individual per-lender balances still unknown, and the Liquidibee agreement itself remains unopened in the Investor Master Templates Drive folder. Active litigation on the Liquidibee piece: *Liquidibee 1 LLC v. Cuzzie's Dispensary & Delivery LLC* (Nomas Recovery, opposing counsel requested 3 months of bank statements) | $500 (good-faith, re-spread 4×$125 weekly, Liquidibee only) | Open, in litigation/forbearance (Liquidibee) + 2 other unopened MCAs | `60-Legal/2026-07-20-liquidibee-lawsuit-bank-statements.md` |
 
-**Known-open total (rows with a confirmed current figure, 1–4 + 6–9):** $25,601.41 +
-$8,869.99 + $511.48 + $1,107.20 + $2,607.61 (full) + $80.00 = **$38,777.69** — excludes
-GTI AR (stale), both CannaBIZ Little Leaf figures (unconfirmed settlement), and the two
-Drive-only documents (10–11), so this floor understates the real total once those are
-opened and once GTI AR is reconfirmed.
+**Known-open total (rows with a confirmed current figure, 1–4 + 6–9 + 11):** $25,601.41 +
+$8,869.99 + $511.48 + $1,107.20 + $2,607.61 (full) + $80.00 + $77,000.00 = **$115,777.69**
+— excludes GTI AR (stale), both CannaBIZ Little Leaf figures (unconfirmed settlement), and
+the promissory note + note amendment (row 10, still unopened), so this floor still
+understates the real total once those are opened and once GTI AR is reconfirmed.
 
 **Gaps this draft cannot close without opening the source documents:** the promissory
 note principal/rate, the note amendment's terms, and the Liquidibee MCA balance — all
@@ -143,6 +143,17 @@ opened/parsed next, ahead of the other five inputs Lemar and Samira already list
 (Dutchie exports now added, Gusto in progress locally, tax-filing status, AP aging).
 
 Posted as a reply on the Convo 1 card (ts `1789063831.996959`) rather than a new one.
+
+## Update 2026-09-12T14:15:00-04:00 — MCA combined total reported ($77k)
+
+Lemar replied on the Convo 1 card (ts `1789158097.920819`): "We don't have the exact
+individual MCA balances so I'll just provide the total of all 3, $77k." Row 11 above
+updated from "not found" to a combined $77,000 across all three MCA agreements
+(Liquidibee plus two others not previously tracked here individually) — reported as one
+lump figure, not broken out per lender. Known-open total revised to **$115,777.69**.
+Still open: the promissory note + amendment (row 10) remain unopened in the Investor
+Master Templates Drive folder, and per-MCA balances are still unknown if Josh or a
+lender ever needs the breakdown rather than the total.
 
 ## Sources
 - slack: Convo 2 `D0BBVV54L5R` thread `1789061736.927349`, reply `1789062162.348089` ·
