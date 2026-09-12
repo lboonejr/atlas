@@ -193,6 +193,8 @@ watermark and advance it as you finish that surface:
   top-level). Supersedes the retired `decisions_threads` map.
 - `gmail_after_epoch` — Unix seconds; PART 6a queries `after:` this, never overlapping
   `newer_than:` windows.
+- `email_weekly_scan.last_date` — ISO date (YYYY-MM-DD, ET) of the last widened
+  full-inbox backlog re-sweep (see PART 6a's weekly widened sweep). `null` on first run.
 - `integrity` / `renders` — see PART 1 and PART 8.
 A `null` watermark (first run after this file lands) → fall back to that PART's legacy
 cutoff once (for the self-DM and #fixes: the surface's wiring-test timestamp), then
@@ -329,6 +331,21 @@ canonical query from the state file's Gmail watermark
 (`in:inbox after:<gmail_after_epoch> -label:Samira/seen`), draft 2–3 voice-matched
 options as card decision rounds, save approved drafts to Gmail Drafts (NEVER send),
 detect tasks capture-first. Returns E · R · Cl · T · O for the digest.
+
+**Weekly widened backlog sweep (added 2026-09-12, per Lemar's "option two" pick on the
+Convo 1 card ts `1788797499.354449`; sits alongside 6a, never replacing it).** Once a
+week, on the first run where `email_weekly_scan.last_date` (state file) is more than 7
+days old (or null — fall back to "today" the first time this lands), widen 6a's normal
+watermark pass into a full inbox re-sweep: read every thread in the inbox regardless of
+`Samira/seen`, same triage logic as 6a's D2, surfacing anything not already tracked
+anywhere in Haven/Convo 1/#fixes (the 9/7 one-time run's shape — see
+`haven/vault/70-Automation/samira-email-loop/2026-09-07-email-backlog-scan-weekly-cadence.md`
+for the worked example). **Silent unless it finds something new** — if the wider sweep
+surfaces nothing beyond what 6a's normal pass already has, do not post a card or a
+digest line about it; just advance `email_weekly_scan.last_date` to today. If it does
+find something new, card it exactly like any other 6a finding. This does not run on
+every scan — only the day's qualifying run — so it costs nothing on the other ~10
+scans/day.
 
 **6b — investor loop (was PART E).** Invoke the **samira-investor** skill: work the
 Gmail `Samira/investor` handoffs + investor items Lemar dropped in Convo 2; build/tailor

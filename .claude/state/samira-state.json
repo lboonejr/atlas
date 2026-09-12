@@ -120,7 +120,10 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1789229172
+    "gmail_after_epoch": 1789229172,
+    "email_weekly_scan": {
+      "last_date": "2026-09-12"
+    }
   },
   "integrity": {
     "last_full_pass": "2026-09-12T08:11:33-04:00",
