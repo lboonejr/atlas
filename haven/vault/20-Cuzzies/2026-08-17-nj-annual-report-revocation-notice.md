@@ -1,12 +1,12 @@
 ---
 created: 2026-08-17T13:08:04-04:00
-updated: 2026-09-11T12:00:00-04:00
+updated: 2026-09-12T15:11:00-04:00
 domain: cuzzies
 type: task
 status: active
 tags: [nj-annual-report, revocation, legal, entity-152-009080]
 source: slack
-due: 2026-09-15T10:00:00-04:00
+due: 2026-09-16T10:00:00-04:00
 calendar_event_id: 6eg353q4naq3r5petkjobofr18
 ---
 
@@ -75,3 +75,24 @@ next pass. Still outside Samira's authority to file or pay; nothing filed by Sam
 
 ### Sources (this update)
 - slack: Convo 1 `D0BHPKMDNEP` thread `1789063832.775699`, reply `1789136831.358239`
+
+## Update 2026-09-12T15:11:00-04:00 — split to Wed 9/16 (filing) / Thu 9/17 (tax-collector call); $150 fee tracked
+Lemar reordered the CRC renewal sequence (Convo 1 card ts `1789063832.775699`, reply
+`1789223572.778029`): file the annual report Wednesday 9/16, then call the Camden tax
+collector Thursday 9/17 (assuming the filing is done by then), rather than both on
+Tuesday 9/15. `due` moved 2026-09-15 → 2026-09-16 to match; the reminder event
+(`calendar_event_id` above) moved to match. The tax-collector call event (on the CRC
+renewal note) moved separately to Thu 9/17 9:00am ET.
+
+Lemar also flagged a **$150 filing fee due the same day (Wed 9/16)** and asked for a
+calendar reminder — created `Pay NJ annual report fee — $150` on the Cuzzie's (Owners)
+calendar, Wed 9/16 9:00am ET (event `tu0vr2147g0k9eb09vq7f59hfs`). Kept on the business
+calendar rather than the personal Money Hub ledger — this is a Cuzzie's entity fee, not
+personal money, per the locked 2026-08-10 business/personal split (same treatment as
+the Metrc business fee). Still nothing filed or paid by Samira.
+
+### Sources (this update)
+- slack: Convo 1 `D0BHPKMDNEP` thread `1789063832.775699`, reply `1789223572.778029`
+- calendar: `6eg353q4naq3r5petkjobofr18` (filing reminder, moved to 9/16) ·
+  `tu0vr2147g0k9eb09vq7f59hfs` ($150 fee reminder, new) · `br9gc1t7kchaht4v9sl6g2h3n4`
+  (tax-collector call, moved to 9/17 — see the CRC renewal game plan note)

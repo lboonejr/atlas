@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-09-12T14:27:00-04:00
+updated: 2026-09-12T15:11:00-04:00
 domain: legal
 type: task
 status: active
@@ -813,3 +813,17 @@ outreach — nothing drafted or sent, Diaz not re-contacted. No Samira action ta
   engaged, engagement letter sent, excusable-neglect facts requested; 2026-08-23,
   Option 1 reply saved to Gmail Drafts; 2026-08-25, Diaz asks for signed letter +
   retainer to start, 3 new reply options posted to #decisions)
+
+## Update 2026-09-12T15:11:00-04:00 — Sept 8 judge call happened: adjournment request denied
+
+Answering the open question from the 2026-09-09 update above, Lemar confirmed (Convo 1
+card ts `1788966952.066259`, reply `1789222029.824109`): "the 9/8 call happened (to no
+avail, request denied)." The Tuesday 2026-09-08 call to request an adjournment of the
+Sept 14 proof hearing did not succeed — the hearing stands as scheduled for Monday
+9/14. Combined with the 9/10 Diaz decline and the 9/12 update above (Diaz out for the
+14th, being considered for a later appeal instead), there is still no counsel of
+record and the hearing is now 2 days out with the adjournment request having failed.
+No Samira action taken — this is a status confirmation, not a new decision point.
+
+### Sources (this update)
+- slack: Convo 1 `D0BHPKMDNEP` thread `1788966952.066259`, reply `1789222029.824109`

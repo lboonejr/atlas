@@ -1,6 +1,6 @@
 ---
 created: 2026-09-10T14:10:00-04:00
-updated: 2026-09-12T14:22:00-04:00
+updated: 2026-09-12T15:11:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -65,11 +65,35 @@ Also still open: the njportal.com DORES entity-status lookup (Chrome prompt alre
 posted on the card) and the Tuesday 9/15 annual-report filing target — both unchanged
 from the prior update.
 
+## Update 2026-09-12T15:11:00-04:00 — resequenced: filing Wed 9/16, tax-collector call Thu 9/17; $150 fee tracked
+
+Lemar reordered the plan (reply `1789223572.778029`): file the annual report Wednesday
+9/16 first, then call the tax collector Thursday 9/17 — so the call happens once the
+revocation notice is actually resolved, not before. Moved both calendar events to
+match (filing reminder → Wed 9/16 10:00am, tax-collector call → Thu 9/17 9:00am, both
+Cuzzie's Owners calendar) and updated `due` on
+[[2026-08-17-nj-annual-report-revocation-notice]] to 2026-09-16 to match.
+
+Call script for Thursday, written assuming the filing already happened (per Lemar's
+ask — see the calendar event description for the full script): open by naming the LLC
+and entity #152-009080, ask (1) current municipal property-tax/licensing standing and
+any outstanding balance or lien, (2) confirm the NJ annual-report revocation notice is
+resolved now that it's been filed, (3) anything else municipal that could affect a
+state license renewal.
+
+Also logged a **$150 annual-report filing fee due Wed 9/16** per Lemar's ask — tracked
+as a calendar reminder on the Cuzzie's (Owners) business calendar (event
+`tu0vr2147g0k9eb09vq7f59hfs`), not routed through the personal Money Hub ledger/
+#personal-finance, since this is a Cuzzie's business obligation, not personal money
+(locked 2026-08-10 split — same call made on the Metrc fee). Nothing filed or paid by
+Samira.
+
 ## Sources
 - slack: Convo 2 `D0BBVV54L5R` thread `1789061736.927349`, reply `1789062261.411799`
 - slack: Convo 1 `D0BHPKMDNEP` thread `1789063832.775699`, replies `1789136831.358239`
-  / `1789136845.522919` / `1789146437.777129` / `1789157543.167029`
+  / `1789136845.522919` / `1789146437.777129` / `1789157543.167029` / `1789223572.778029`
 - web: https://www.camdennj.gov/revenue-collections/
 - calendar: event `br9gc1t7kchaht4v9sl6g2h3n4`, "Call Camden City tax collector —
-  Cuzzie's municipal standing (CRC renewal)", 2026-09-15 9:00-9:30am ET, Cuzzie's
-  (Owners) calendar
+  Cuzzie's municipal standing (CRC renewal)", now 2026-09-17 9:00-9:30am ET · event
+  `tu0vr2147g0k9eb09vq7f59hfs`, "$150 annual report fee", 2026-09-16 9:00am ET, both
+  Cuzzie's (Owners) calendar

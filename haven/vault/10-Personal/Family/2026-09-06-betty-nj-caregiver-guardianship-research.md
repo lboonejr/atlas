@@ -1,6 +1,6 @@
 ---
 created: 2026-09-06T13:33-04:00
-updated: 2026-09-09T12:35-04:00
+updated: 2026-09-12T15:11:00-04:00
 domain: personal
 type: task
 status: active
@@ -127,6 +127,18 @@ filed or contacted by Samira.
 ### Sources (this update)
 - slack: Convo 2 (self-DM) drop, ts `1788957957.366929`, 2026-09-09; Convo 1 card
   `D0BHPKMDNEP` ts `1788966952.066259`, reply ts `1788969756.430369`
+
+## Update 2026-09-12T15:11:00-04:00 — reconfirmed Betty's; specific application name still open
+
+Lemar reconfirmed on the Convo 1 card (ts `1788966952.066259`, reply `1789222029.824109`,
+answering the same standing question restated 2026-09-09): "2. Betty's." This is the
+second confirmation it's Betty's application, not a new fact — the open question from
+the 2026-09-09 update above (which specific application — the PPP self-directed budget,
+or something else — and where/when submitted) is still unanswered. Nothing filed or
+contacted by Samira.
+
+### Sources (this update)
+- slack: Convo 1 `D0BHPKMDNEP` thread `1788966952.066259`, reply `1789222029.824109`
 
 ## Related
 - [[betty]]
