@@ -1,6 +1,6 @@
 ---
 created: 2026-09-10T14:10:00-04:00
-updated: 2026-09-12T14:15:00-04:00
+updated: 2026-09-12T15:11:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -155,10 +155,62 @@ Still open: the promissory note + amendment (row 10) remain unopened in the Inve
 Master Templates Drive folder, and per-MCA balances are still unknown if Josh or a
 lender ever needs the breakdown rather than the total.
 
+## Update 2026-09-12T15:11:00-04:00 — opened the three "unopened" PDFs; the debt picture changes
+
+Lemar asked what "unopened" meant and whether he should convert the Drive files to
+Markdown — clarifying: "unopened" meant these PDFs sat in Drive without Samira having
+read their contents yet, not that Lemar needed to retype them by hand. Since the
+connected Drive tools can read PDF content directly, opened all three this pass
+instead of asking him to transcribe them:
+
+- **"Promissory Note - signed.pdf" is actually a $20,000 note, not the big one** —
+  Cuzzie's Dispensary & Delivery LLC to **Ellen Suon** (individual lender), issued
+  2024-12-23, $2,000/month for 25 months starting 6 months after issuance (i.e.
+  ~2025-06-23 through ~2027-07), $500 fee per missed month. Signed via Adobe Sign.
+- **"amendment to note.pdf" belongs to a DIFFERENT, much larger note** — a
+  **$500,000 convertible promissory note** between **Cuzzie's LLC and Eden Estates
+  LLC / Corey Peters**, issued 2024-02-12, 2% annual interest, 190-day maturity,
+  convertible into 20% equity contingent on NJ CRC approval. The amendment
+  (executed 2024-03-24/25) only changes the prepayment clause (removes a
+  no-prepayment restriction) at the CRC's request — principal/rate/maturity terms
+  are unchanged from the original $500K note. **This is not the Ellen Suon note's
+  amendment — two separate instruments were sitting in the same folder.**
+- **Liquidibee MCA agreement (04/07/2026)**: Purchase Price $20,000, Receivables
+  Purchased Amount **$29,980.00** (10% specified percentage), daily collection
+  ~$333.12. This is the total obligation for just this one of the three MCAs behind
+  the $77K combined figure already logged.
+
+**Net effect on the known-open total ($115,777.69 as of the last update):** that
+figure already excluded the promissory notes and MCA detail entirely, so nothing
+there needs correcting — but the real debt picture is now sharper: at minimum
+$20,000 (Ellen Suon) + $500,000 (Eden Estates convertible, contingent/convertible
+terms apply) + $29,980 (one of three MCAs, exact figure) sit alongside the
+$115,777.69 vendor/collections total and the $77K MCA lump sum (which likely already
+includes the $29,980 above as one of its three components — not additive). Not
+reconciling the MCA overlap without more detail from Lemar on which three
+agreements make up the $77K.
+
+**On the Markdown-conversion question:** recommend against converting the source
+documents themselves (the signed note, the amendment, the MCA agreement) — these are
+executed legal instruments with signature blocks and Adobe Sign audit trails;
+converting to Markdown would strip that evidentiary form for no real gain, since
+Samira can already read the PDFs directly. Better fit: keep the originals as-is and
+add a short person-facing Markdown (or Doc) summary alongside them in the Josh
+folder — one page per instrument, plain-language principal/rate/maturity terms,
+linking back to the source PDF. Offered to draft those three summary pages next if
+useful.
+
+### Sources (this update)
+- drive: `1Et6JqJaC5PRTcNdNkojlIDw0TE8HyBo5` (Ellen Suon $20K note, signed) ·
+  `1b8pN92QOUdmFvlUL5tXGvAzB-GXV6N0Y` (Eden Estates $500K convertible note amendment) ·
+  `1vbkBM_1myOQktLQDfnw7aw1mDWbo12NK` (Liquidibee MCA agreement, 04/07/2026)
+- slack: Convo 1 `D0BHPKMDNEP` thread `1789063831.996959`, reply `1789223643.220689`
+
 ## Sources
 - slack: Convo 2 `D0BBVV54L5R` thread `1789061736.927349`, reply `1789062162.348089` ·
   Convo 1 card ts `1789063831.996959`, replies `1789136694.448499` / `1789146434.496139`
   / `1789152558.051119`
 - drive: folder `1R_g1z92jElUTyVsO-bY-9XEHsjCWDAqn` (Josh folder) · folder
   `1w2Uo4dpxpY5y4FCjROL4_WZpQ-Yf-Ho6` (Investor Master Templates — has the real
-  statements, promissory note, note amendment, and MCA agreement, not yet opened)
+  statements, promissory note, note amendment, and MCA agreement — opened 9/12, see
+  update above)
