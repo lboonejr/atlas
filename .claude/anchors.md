@@ -98,6 +98,7 @@ supersedes ALL other style guidance, including guides bundled inside skills.
 | Open Items canvas (RETIRED) | `F0BDLSHD8JD` | **Retired 2026-09-06** — write-blocked since 2026-07-25 (3-strike 8/7); parked state now lives on the cards themselves + the Haven open-items note under `70-Automation/samira/`. This closes the standing canvas gap rather than carrying it. |
 | #emails (ARCHIVED) | `C0BC1JSCHQW` | Read-only record; never swept, never posted to |
 | #to-do (ARCHIVED) | `C0BC30U222K` | Read-only record |
+| #pulse | `C0C1A8PS3GS` | **Pulse's own channel** (created 2026-09-11, per Lemar). Samira posts the "📍 Pulse updated" notification here EXCLUSIVELY (moved off the Convo 1 DM the same day, per Lemar) — only on a run that actually changed something (quiet hours still post nowhere). Samira bot `U0BJQ771LJU` confirmed in-channel at creation. |
 
 ## Monday.com (account l.boonejr@gmail.com, workspace "Main workspace" 16125924)
 
@@ -348,18 +349,22 @@ most, and the repo-level permission allow-list couldn't reach that surface). Eve
 now creates a NEW Google Doc snapshot in the Pulse Drive folder below; nothing is
 re-deployed to a stable URL anymore, and no Slack canvas is involved (canvas creation is
 blocked on this workspace's Slack plan). Still writes no vault notes. **Notification
-changed 2026-08-13 too**: Pulse now DMs Lemar the new snapshot's link through Convo 1
-(`D0BHPKMDNEP` — a 🌐 bot post there is never card input) —
-but ONLY when this hour's run actually changed something (any of: a Convo 1 card
-closed/opened, a money change, a project-pulse status flip, a new Haven note). A fully
-quiet hour skips the render entirely — no Doc, no DM (codified 2026-08-15; this matches
-what runs were already doing and stops filling the Drive folder with identical
-snapshots). Its status still rides in Samira's digest every hour regardless:
-`pulse ✅/⚠️` or `pulse — carried (quiet pass)`.
+changed 2026-08-13**: Pulse DMed Lemar the new snapshot's link through Convo 1
+(`D0BHPKMDNEP`) but ONLY when that hour's run actually changed something (any of: a
+Convo 1 card closed/opened, a money change, a project-pulse status flip, a new Haven
+note). A fully quiet hour skips the render entirely — no Doc, no post (codified
+2026-08-15; this matches what runs were already doing and stops filling the Drive
+folder with identical snapshots). Its status still rides in Samira's digest every hour
+regardless: `pulse ✅/⚠️` or `pulse — carried (quiet pass)`. **Notification moved
+2026-09-11** (first widened to post to both surfaces same-day, then narrowed again per
+Lemar): the "📍 Pulse updated" line now posts EXCLUSIVELY to Pulse's own channel
+`#pulse` (`C0C1A8PS3GS`, see the Slack table) — Convo 1 no longer receives it. The
+quiet-hour skip is unchanged.
 
 | What | Value |
 |---|---|
-| Pulse Drive folder | `1Dj_MZDlqUzHfAyK8TMwwJ57dZhi29omX` (`ATLAS/Dashboards/Pulse`, folder link `https://drive.google.com/drive/folders/1Dj_MZDlqUzHfAyK8TMwwJ57dZhi29omX`). Every render creates a NEW Doc here — filename `YYYY-MM-DD HHMM ET — Pulse` (zero-padded, so name-sort and time-sort agree) — never edited or deleted afterward; history is the point. Primary access is the DM link above; the folder is the archive. |
+| Pulse Drive folder | `1Dj_MZDlqUzHfAyK8TMwwJ57dZhi29omX` (`ATLAS/Dashboards/Pulse`, folder link `https://drive.google.com/drive/folders/1Dj_MZDlqUzHfAyK8TMwwJ57dZhi29omX`). Every render creates a NEW Doc here — filename `YYYY-MM-DD HHMM ET — Pulse` (zero-padded, so name-sort and time-sort agree) — never edited or deleted afterward; history is the point. Primary access is the notification link above; the folder is the archive. |
+| #pulse channel | `C0C1A8PS3GS` — created 2026-09-11 as Pulse's own notification surface; the "📍 Pulse updated" link posts here EXCLUSIVELY (the Convo 1 DM ping was retired the same day, per Lemar). Samira bot confirmed in-channel at creation. |
 | Workout plan artifact URL | `https://claude.ai/code/artifact/a723834f-6310-4575-8897-75ae8e30806e` ("Back to the Court — 12-Week Plan"; source-of-truth note `haven/vault/10-Personal/Health/2026-07-07-basketball-fitness-plan.md`, start Mon 2026-07-07). Pulse links out to it; its check-offs live in that page's own localStorage. |
 | Sections (Lemar's fixed top-to-bottom order, 2026-07-12: big ideas → details → execution) | quick-capture todo strip · Dawn as North Star (direction, NOT tasks) · calendar roadmap · #decisions respond list · money (Haven budget ledger) · today's workout · Atlas open items · project pulses · Samira + routine health. Single column. EVERY item links to its source thread (Slack permalink) or calendar event (htmlLink). |
 
