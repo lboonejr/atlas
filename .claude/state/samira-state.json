@@ -10,7 +10,7 @@
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789218414.158389",
+      "C0BBZJL85RT": "1789219244.229999",
       "D0BHPKMDNEP": "1789222567.529719",
       "D0BBVV54L5R": "1789220959.088329",
       "C0BV5BRNH5Z": "1789223758.059279"
@@ -108,7 +108,8 @@
       "C0BV5BRNH5Z:1789150150.917399": "1789150150.917399",
       "D0BHPKMDNEP:1789157533.372279": "1789162489.078049",
       "C0BV5BRNH5Z:1789157548.336469": "1789162347.247339",
-      "C0BV5BRNH5Z:1789215131.431589": "1789223758.059279"
+      "C0BV5BRNH5Z:1789215131.431589": "1789223758.059279",
+      "C0BV5BRNH5Z:1789223860.933709": "1789223860.933709"
     },
     "migration": {
       "decisions_migration_complete": true,
@@ -116,7 +117,7 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1789218362
+    "gmail_after_epoch": 1789222848
   },
   "integrity": {
     "last_full_pass": "2026-09-12T08:11:33-04:00",
