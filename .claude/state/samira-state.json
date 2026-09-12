@@ -3,17 +3,17 @@
   "lock": {
     "run_id": "run_20260912T120252Z",
     "run_started": "2026-09-12T12:02:52Z",
-    "run_completed": "2026-09-11T22:07:11Z",
-    "note": "In flight -- lock taken 2026-09-12T12:02:52Z, prior run closed cleanly 2026-09-11T22:07:11Z (well over 120 min ago, no overlap).",
+    "run_completed": "2026-09-12T12:12:38Z",
+    "note": "Closed cleanly -- first run of the day (14h gap since prior run closed 2026-09-11T22:07:11Z, expected: overnight, cron floor 8am ET). Full whole-vault integrity pass: 745 notes, 0 repairs, 0 new value defects, 1 known defect carried. Filed 1 Inbox note (Basil's inbox-janitor run, valid frontmatter) to 70-Automation/inbox-janitor/. PART 2 calendar-sync: no due-field changes anywhere in the vault-wide due-note set, no-op. PART 3/4/5: Convo 1, Convo 2, #fixes all read live and confirmed quiet since their prior watermarks -- no new top-level messages or thread replies overnight. PART 6a email: 10 threads checked, 9 junk/automated-report labeled seen, 1 (Leafly/Station collections) logged as a Haven Update (Markony handling directly per Lemar's prior park decision), no card needed. PART 6b investor: no signal. PART 6c reports-scan: clean through Basil's inbox-tidy line. PART 7: no project timeline touched. PART 8 pulse: carried (quiet pass, no change-gate trigger). Also opened one new #fixes card: Dawn's 1am daily-brief run skipped (bot connector needs_reconnect + Slack/Drive unavailable for that trigger) -- Dawn couldn't reach any Slack surface to self-report, so Samira surfaced it this run.",
     "prior_note": "Prior run (run_20260911T220253Z) closed cleanly at 22:07:11Z -- see main history.",
     "orphan_note": "6 consecutive/overlapping instances now of a run doing real, committed work and not writing lock.run_completed on the expected timeline -- the first five were genuine crashes/interruptions (idempotency caught each cleanly, nothing lost); the 6th (logged on the #fixes thread ~16:48 ET this same day) was a materially different case: a session that stayed alive and correct but took ~4h45m wall-clock for what should be a 10-15 min pass, and chose not to write stale state backward over three newer runs that had already self-healed past it. Root cause still open; recommend Lemar pick between Option 1 (no fix needed, the 120-min rule is working as designed) and Option 2 (make the lock more resilient -- incremental writes and/or a genuine heartbeat/mutex rather than pure time-aging) on the #fixes card, ts `1789063894.596139`. Still his call, still open."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789164350.981639",
+      "C0BBZJL85RT": "1789215108.080309",
       "D0BHPKMDNEP": "1789163753.843399",
       "D0BBVV54L5R": "1789157033.996539",
-      "C0BV5BRNH5Z": "1789162347.247339"
+      "C0BV5BRNH5Z": "1789215131.431589"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -107,7 +107,8 @@
       "C0BV5BRNH5Z:1789140448.808809": "1789142850.486519",
       "C0BV5BRNH5Z:1789150150.917399": "1789150150.917399",
       "D0BHPKMDNEP:1789157533.372279": "1789162489.078049",
-      "C0BV5BRNH5Z:1789157548.336469": "1789162347.247339"
+      "C0BV5BRNH5Z:1789157548.336469": "1789162347.247339",
+      "C0BV5BRNH5Z:1789215131.431589": "1789215131.431589"
     },
     "migration": {
       "decisions_migration_complete": true,
@@ -115,12 +116,12 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1789164400
+    "gmail_after_epoch": 1789214971
   },
   "integrity": {
-    "last_full_pass": "2026-09-11T08:33:22-04:00",
-    "last_scan_sha": "378bb99",
-    "note": "Full whole-vault pass ran 2026-09-11 morning (729 notes, 0 new repairs, 0 new value defects); not re-run this pass (same day, no vault changes since 378bb99). This run's incremental check confirmed zero Inbox changes. Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved)."
+    "last_full_pass": "2026-09-12T08:11:33-04:00",
+    "last_scan_sha": "5b1a27f",
+    "note": "Full whole-vault pass ran 2026-09-12 morning (745 notes, 0 repairs, 0 new value defects). Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved)."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
