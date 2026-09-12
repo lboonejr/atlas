@@ -1,13 +1,11 @@
 ---
 created: 2026-08-20T11:20-04:00
-updated: 2026-09-08T16:22-04:00
+updated: 2026-09-12T14:04-04:00
 domain: cuzzies
 type: task
-status: active
+status: done
 tags: [gti, green-thumb, accounts-receivable, collections, wind-down, camden-sale, off-button]
 source: gmail
-due: 2026-08-21T09:00-04:00
-calendar_event_id: nus6hpb4jks5826igi5dglunqo
 ---
 
 # GTI AR (Mindy Kramer) — account review tomorrow 8/21, asking for an update
@@ -129,6 +127,11 @@ and send. Draft created (Gmail draft id `r-4214824060709976633`, message id
 on this thread (talks are live, nothing signed, no figure asserted), plus an offer to
 get on a call before GTI moves to collections. Not sent — his call. Card left open
 (waiting on him to review/send), not closed.
+
+## Update 2026-09-12T14:04-04:00 — closed: Lemar sent the reply
+
+Lemar confirmed on the Convo 1 card (ts `1788801304.731739`): "okay i sent it." He sent
+the drafted reply to Mindy himself. No further open items on this thread — closing.
 
 ## Sources
 

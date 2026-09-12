@@ -1,6 +1,6 @@
 ---
 created: 2026-09-06T13:33-04:00
-updated: 2026-09-12T15:11:00-04:00
+updated: 2026-09-12T14:04:00-04:00
 domain: personal
 type: task
 status: active
@@ -139,6 +139,17 @@ contacted by Samira.
 
 ### Sources (this update)
 - slack: Convo 1 `D0BHPKMDNEP` thread `1788966952.066259`, reply `1789222029.824109`
+
+## Update 2026-09-12T14:04-04:00 — application type narrowed: nurse/at-home assistance
+
+Lemar answered the standing "which application" question (Convo 1 card ts
+`1788966952.066259`, reply `1789226485.342499`): "Betty's application was for nurse
+assistance or something like at-home assistance." Reads as consistent with the PPP/PCA
+track already being pursued above, not a separate program — still not a formal program
+name or confirmed submission date. Nothing filed or contacted by Samira.
+
+### Sources (this update)
+- slack: Convo 1 `D0BHPKMDNEP` thread `1788966952.066259`, reply `1789226485.342499`
 
 ## Related
 - [[betty]]

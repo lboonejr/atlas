@@ -4,7 +4,7 @@ updated: 2026-09-12T14:04:00-04:00
 domain: personal
 type: task
 status: active
-tags: [notary, nj, career, licensing]
+tags: [notary, nj, career, licensing, business-benefit]
 source: slack
 ---
 
@@ -33,6 +33,19 @@ given yet — no stated reason (personal or business use), no timeline.
 identify the right sponsor), and whether this is for personal use or tied to Cuzzie's/
 Station business needs (could affect priority/urgency). Nothing filed or contacted by
 Samira — orientation only.
+
+## Update 2026-09-12T14:04-04:00 — dual purpose confirmed: personal + Cuzzie's/Station benefit
+
+Lemar answered the open reason question (Convo 1 card ts `1789226265.669199`, reply
+`1789227177.052929`): "this is both for personal reasons (i could start a notary
+business) and for Cuzzie's/The Station's benefit." Keeping `domain: personal` — it's
+Lemar personally becoming commissioned, even though the commission would also serve
+the businesses; no controlled-field change needed. Still open: which NJ legislative
+district he's in (decides who to ask for sponsorship) — not guessed here, needs his
+address or district number directly.
+
+### Sources (this update)
+- slack: Convo 1 `D0BHPKMDNEP` thread `1789226265.669199`, reply `1789227177.052929`
 
 ## Sources
 - slack: Convo 2 (self-DM) drop, ts `1789225994.355429`, 2026-09-12 11:13 ET
