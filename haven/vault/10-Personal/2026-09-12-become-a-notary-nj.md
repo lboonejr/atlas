@@ -1,6 +1,6 @@
 ---
 created: 2026-09-12T15:11:00-04:00
-updated: 2026-09-12T18:37:00-04:00
+updated: 2026-09-13T08:20:00-04:00
 domain: personal
 type: task
 status: active
@@ -97,6 +97,43 @@ the calendar reminders already set.
 ### Sources (this update)
 - slack: Convo 1 `D0BHPKMDNEP` thread `1789226265.669199`, replies `1789238250.863069`,
   `1789238667.416219`, `1789240848.155259`, `1789243132.542969`, `1789247218.040179`
+
+## Update 2026-09-13T08:20-04:00 — Lemar wants infrastructure accelerated to end-of-month
+
+Lemar (Convo 1 card ts `1789226265.669199`, reply `1789251463.837579`): "I was
+actually going to try to see if we can accelerate this to get the infrastructure set
+up by the end of the month, Instead of by the end of the year."
+
+Split the ask honestly rather than compressing the whole plan uniformly, since
+"infrastructure" (Phase 1 — the separate LLC, EIN, business bank account) and "the
+commission" (bootcamp → exam → registration → endorsement → oath) are on different
+critical paths:
+
+- **Phase 1 (LLC/EIN/banking) does not require the commission to exist first** — it
+  can run in parallel with the bootcamp/exam. If Lemar gives an LLC name and
+  registered-agent decision now, filing the Certificate of Formation (~8.5 business
+  hours per the portal), getting the EIN (free/instant), and opening the business
+  checking account are all realistically closeable by end of September. That is the
+  one piece of "infrastructure" genuinely accelerable to the new target.
+- **The commission itself has a floor Samira can't compress**: bootcamp already runs
+  through 9/20, exam week of 9/21 at the earliest, registration filing needs 2-3 days
+  after that, and the one unconfirmed variable — legislative-endorsement processing
+  time — was only ever sourced from a county clerk's general description ("~1-2
+  weeks"), not the state directly. Best case that chain lands the actual sworn
+  commission right around 9/29–10/6 — plausible for end-of-month, not guaranteed,
+  and it still hasn't started: **the hard blocker is unchanged** — DOB, phone, and
+  home address are still needed before the Commissioning Application's page 1 can be
+  filled at all, which is also what decides the endorsing legislative district.
+- Not proposing a compressed multi-phase plan (LLC name, registered agent, mobile
+  vs. RON scope) until the commission-chain blocker clears — sequencing those before
+  they're actionable would be guessing at decisions that are his to make.
+
+Replied in-thread with this split and re-asked for the three blocking pieces (DOB,
+phone, home address) plus an LLC name/registered-agent call if he wants Phase 1
+moving in parallel starting today.
+
+### Sources (this update)
+- slack: Convo 1 `D0BHPKMDNEP` thread `1789226265.669199`, reply `1789251463.837579`
 
 ## Sources
 - slack: Convo 2 (self-DM) drop, ts `1789225994.355429`, 2026-09-12 11:13 ET
