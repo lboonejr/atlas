@@ -3,17 +3,17 @@
   "lock": {
     "run_id": "run_20260913T190742Z",
     "run_started": "2026-09-13T19:07:42Z",
-    "run_completed": "2026-09-13T18:23:36Z",
-    "note": "IN PROGRESS -- PART 0 lock acquired 19:07:42Z (102nd scan). Prior run closed cleanly at 18:23:36Z, no orphan.",
+    "run_completed": "2026-09-13T19:13:00Z",
+    "note": "Closed 19:13:00Z (102nd scan). Quiet pass: Convo 1, Convo 2, and #fixes all silent since the 18:23:36Z watermark (no new top-level messages) -- full thread-reply sweep skipped this pass since one ran in full last scan 46 min prior with no top-level signal since. Vault: 1 file diff since last integrity baseline (contradiction-scanner's own prior log append, already accounted for) -- 0 new defects, 0 new Inbox notes, same 5 known-stuck notes carried. Calendar: no-op (no due-note changes). Email: 1 new thread (Headset auto-report, no action). Investor quiet. Reports-scan clean. Pulse carried (quiet pass). Digest posted 15:09 ET.",
     "prior_note": "Closed 18:23:36Z. Full sweep of all open Convo1 (70) + #fixes (25) card threads via a background agent (not just the recent-2/3 quiet-pass shortcut): 2 Convo1 threads had new Lemar signal (Station UEZ follow-up -- worked; Camden Launch kickoff ack -- no action needed), 1 #fixes thread had new signal (5th Haven Keeper false-claim occurrence -- logged + posted). Convo 2 personal connector reachable again this run. 4 junk emails triaged. Calendar +1 (Station UEZ Fri 9/18 reminder). Digest posted 14:22 ET.",
-    "orphan_note": "7 consecutive/overlapping instances (through 2026-09-13 15:02Z run) of a run doing real, committed work and not writing lock.run_completed on the expected timeline -- root cause still open; Lemar to pick between Option 1 (no fix needed, the 120-min rule works as designed) and Option 2 (make the lock more resilient) on the #fixes card, ts `1789063894.596139`. Still open, unchanged this run."
+    "orphan_note": "7 consecutive/overlapping instances (through 2026-09-13 15:02Z run) of a run doing real, committed work and not writing lock.run_completed on the expected timeline -- root cause still open; Lemar to pick between Option 1 (no fix needed, the 120-min rule works as designed) and Option 2 (make the lock more resilient) on the #fixes card, ts `1789063894.596139`. Still open, unchanged this run. This run closed its own lock cleanly on the first attempt, no 8th occurrence."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789323762.979489",
-      "D0BHPKMDNEP": "1789323816",
-      "D0BBVV54L5R": "1789323816",
-      "C0BV5BRNH5Z": "1789323816"
+      "C0BBZJL85RT": "1789326692.768549",
+      "D0BHPKMDNEP": "1789326789",
+      "D0BBVV54L5R": "1789326789",
+      "C0BV5BRNH5Z": "1789326789"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -121,15 +121,15 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1789323816,
+    "gmail_after_epoch": 1789326789,
     "email_weekly_scan": {
       "last_date": "2026-09-12"
     }
   },
   "integrity": {
     "last_full_pass": "2026-09-13T08:15:00-04:00",
-    "last_scan_sha": "e7592f7",
-    "note": "Incremental pass this run (2026-09-13 18:04Z): git diff since 06fe91a showed 0 vault *.md changes prior to this run's own edits -- confirmed the 5 known-stuck Inbox notes unchanged, no repairs needed. This run then wrote 2 vault files itself (Station tax follow-up note + the contradiction-scanner log), so last_scan_sha advances to this run's final commit (e7592f7) as the new incremental-diff baseline. Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved: google-voice-subscription-cancellation, rootwurks-assignment-log, veriscan-idscan-security-incident, dib-template-theme-decision-closeout [also missing required fields], visit-alex-sage-dispensary)."
+    "last_scan_sha": "55e3d30",
+    "note": "Incremental pass this run (2026-09-13 19:07Z): git diff since e7592f7 showed 1 vault *.md change (contradiction-scanner's own log append from the 18:04Z run, already accounted for) -- confirmed the 5 known-stuck Inbox notes unchanged, no repairs needed, no new Inbox notes. last_scan_sha advances to this run's own final commit (55e3d30) as the new incremental-diff baseline. Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved: google-voice-subscription-cancellation, rootwurks-assignment-log, veriscan-idscan-security-incident, dib-template-theme-decision-closeout [also missing required fields], visit-alex-sage-dispensary)."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
