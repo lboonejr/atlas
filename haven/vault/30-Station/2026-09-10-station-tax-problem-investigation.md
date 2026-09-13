@@ -1,11 +1,13 @@
 ---
 created: 2026-09-10T14:10:00-04:00
-updated: 2026-09-11T10:45:00-04:00
+updated: 2026-09-13T14:04:55-04:00
 domain: station
 type: task
 status: active
 tags: [station, tax, weekend-visit]
 source: slack
+due: 2026-09-18T10:00:00-04:00
+calendar_event_id: 0atf1u9io57nruul4h9take858
 ---
 
 # The Station — dig into what the tax problem might be
@@ -45,6 +47,18 @@ checking for an open clearance issue. That login is the same PBS credential bloc
 already tracked on the UEZ note (waiting on Markony). A ready-to-run Claude-in-Chrome
 prompt for this check was drafted on the Convo 1 card — Lemar to run it himself with
 his own logged-in session.
+
+## Update 2026-09-13T14:04:55-04:00 — zero-returns filed, follow-up set for Friday
+
+Convo 1 card (thread ts `1789063831.351469`), Lemar pasted Julio's email response:
+the outstanding NJ Sales/Use Tax (Regular) zero-returns for Q1/Q2 2025 have been
+filed. NJ's guidance is to wait a few days for the state system to process before
+retrying the UEZ application. Lemar: "let's make sure we follow up by the end of
+week to see if this cleared."
+
+Calendar reminder created on the Cuzzie's (Owners) business calendar for Fri
+2026-09-18 10:00 AM ET (`calendar_event_id` above) to check whether the UEZ
+application can now go through.
 
 ## Sources
 - slack: Convo 2 `D0BBVV54L5R` thread `1789061736.927349`, reply `1789062366.201209` ·
