@@ -1,6 +1,6 @@
 ---
 created: 2026-09-12T14:04:00-04:00
-updated: 2026-09-12T14:04:00-04:00
+updated: 2026-09-13T08:25:00-04:00
 domain: automation
 type: log
 status: done
@@ -55,9 +55,23 @@ gap for anyone who does read it; it can't close the gap for one that doesn't. No
 further action recommended beyond the runbook edit — flagging this residual limit for
 awareness rather than proposing unattended enforcement Samira has no way to add.
 
+## Update 2026-09-13T08:25:00-04:00 — fix verified holding on a later run, #fixes card closed
+
+This run (2026-09-13) independently hit the same freshness-check step in PART 1 before
+any vault read: `git fetch origin main` + `git diff --stat HEAD origin/main` against
+this session's own local clone found a small, expected diff (this run's own earlier
+PART 0 lock-write commits, not yet reflected in the clone) and the reset step
+(`git branch -f main origin/main && git checkout main && git reset --hard origin/main`)
+reconciled it cleanly before any vault content was read or reported on. That is the fix
+holding on a genuinely later run, not the same run that landed it — the bar the
+Follow Up rule in the runbook (PART 3/5) sets before a fix card can close.
+
+Closed the #fixes card (`C0BV5BRNH5Z` ts `1789223860.933709`) with a ✅ reaction and an
+in-thread verification reply, ts `1789301524.275569`.
+
 ## Sources
 - slack: #fixes `C0BV5BRNH5Z` ts `1789223860.933709` (finding + Option 2 pick, reply
-  `1789230719.385119`)
+  `1789230719.385119`; verification + closure reply `1789301524.275569`)
 - slack: #reports `C0BBZJL85RT` ts `1789219244.229999` (the false claim)
 - git: this run's own clone, `HEAD` vs `origin/main` before reset — 76 files / 52 vs 50
   diverged commits, confirmed via `git diff --stat` and `git merge-base --is-ancestor`
