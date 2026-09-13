@@ -1,6 +1,6 @@
 ---
 created: 2026-09-10T14:10:00-04:00
-updated: 2026-09-12T15:11:00-04:00
+updated: 2026-09-13T17:02:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -88,10 +88,18 @@ as a calendar reminder on the Cuzzie's (Owners) business calendar (event
 (locked 2026-08-10 split — same call made on the Metrc fee). Nothing filed or paid by
 Samira.
 
+## Update 2026-09-13T17:02:00-04:00 — check-in only
+Lemar's in-thread reply (ts `1789240373.336699`): "I'm just using this message as a
+memory point that I'm still trying to tidy up the entity" — a status note, not a new
+ask or decision. No plan change. Still waiting on Wed 9/16 (annual-report filing +
+$150 fee) and Thu 9/17 (tax-collector call), both already on the Cuzzie's (Owners)
+calendar.
+
 ## Sources
 - slack: Convo 2 `D0BBVV54L5R` thread `1789061736.927349`, reply `1789062261.411799`
 - slack: Convo 1 `D0BHPKMDNEP` thread `1789063832.775699`, replies `1789136831.358239`
   / `1789136845.522919` / `1789146437.777129` / `1789157543.167029` / `1789223572.778029`
+  / `1789240373.336699`
 - web: https://www.camdennj.gov/revenue-collections/
 - calendar: event `br9gc1t7kchaht4v9sl6g2h3n4`, "Call Camden City tax collector —
   Cuzzie's municipal standing (CRC renewal)", now 2026-09-17 9:00-9:30am ET · event
