@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260913T200317Z",
     "run_started": "2026-09-13T20:03:17Z",
-    "run_completed": "2026-09-13T19:13:00Z",
-    "note": "Closed 19:13:00Z (102nd scan). Quiet pass: Convo 1, Convo 2, and #fixes all silent since the 18:23:36Z watermark (no new top-level messages) -- full thread-reply sweep skipped this pass since one ran in full last scan 46 min prior with no top-level signal since. Vault: 1 file diff since last integrity baseline (contradiction-scanner's own prior log append, already accounted for) -- 0 new defects, 0 new Inbox notes, same 5 known-stuck notes carried. Calendar: no-op (no due-note changes). Email: 1 new thread (Headset auto-report, no action). Investor quiet. Reports-scan clean. Pulse carried (quiet pass). Digest posted 15:09 ET.",
-    "prior_note": "Closed 18:23:36Z. Full sweep of all open Convo1 (70) + #fixes (25) card threads via a background agent (not just the recent-2/3 quiet-pass shortcut): 2 Convo1 threads had new Lemar signal (Station UEZ follow-up -- worked; Camden Launch kickoff ack -- no action needed), 1 #fixes thread had new signal (5th Haven Keeper false-claim occurrence -- logged + posted). Convo 2 personal connector reachable again this run. 4 junk emails triaged. Calendar +1 (Station UEZ Fri 9/18 reminder). Digest posted 14:22 ET.",
-    "orphan_note": "7 consecutive/overlapping instances (through 2026-09-13 15:02Z run) of a run doing real, committed work and not writing lock.run_completed on the expected timeline -- root cause still open; Lemar to pick between Option 1 (no fix needed, the 120-min rule works as designed) and Option 2 (make the lock more resilient) on the #fixes card, ts `1789063894.596139`. Still open, unchanged this run. This run closed its own lock cleanly on the first attempt, no 8th occurrence."
+    "run_completed": "2026-09-13T20:11:06Z",
+    "note": "Closed 20:11:06Z (103rd scan). C1/C2/#fixes quiet on top-level since the 15:09 ET watermark -- 2nd consecutive quiet pass since the last full thread-reply sweep (14:22 ET), so that full sweep was not re-run this pass. Email: 3 new threads off gmail watermark -- 2 junk/promo labeled seen, 1 reply-worthy (Prolific Growhouse vendor asking to schedule a pricing/terms call) carded to Convo 1 (D0BHPKMDNEP parent ts 1789330127.583259) with 3 voice-matched draft options, awaiting Lemar's pick. Vault: 0 diff since this morning's integrity baseline, 5 known-stuck Inbox notes unchanged, 0 new. Calendar: no-op. Investor: no signal. Reports-scan: clean. Pulse: render deferred this run (session budget) -- carried from the 08:19 ET snapshot; only change this hour (the new card) is already visible in Convo 1 directly. Digest posted 16:10 ET.",
+    "prior_note": "Closed 19:13:00Z (102nd scan). Quiet pass: Convo 1, Convo 2, and #fixes all silent since the 18:23:36Z watermark (no new top-level messages) -- full thread-reply sweep skipped this pass since one ran in full last scan 46 min prior with no top-level signal since. Vault: 1 file diff since last integrity baseline (contradiction-scanner's own prior log append, already accounted for) -- 0 new defects, 0 new Inbox notes, same 5 known-stuck notes carried. Calendar: no-op (no due-note changes). Email: 1 new thread (Headset auto-report, no action). Investor quiet. Reports-scan clean. Pulse carried (quiet pass). Digest posted 15:09 ET.",
+    "orphan_note": "7 consecutive/overlapping instances (through 2026-09-13 15:02Z run) of a run doing real, committed work and not writing lock.run_completed on the expected timeline -- root cause still open; Lemar to pick between Option 1 (no fix needed, the 120-min rule works as designed) and Option 2 (make the lock more resilient) on the #fixes card, ts `1789063894.596139`. This run closed its own lock cleanly on the first attempt, no 8th occurrence."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789326692.768549",
+      "C0BBZJL85RT": "1789330224.528169",
       "D0BHPKMDNEP": "1789326789",
       "D0BBVV54L5R": "1789326789",
       "C0BV5BRNH5Z": "1789326789"
@@ -113,7 +113,8 @@
       "D0BHPKMDNEP:1789222678.470519": "1789226176.592079",
       "D0BHPKMDNEP:1789226265.669199": "1789301470.495209",
       "C0BV5BRNH5Z:1789226200.966659": "1789238098.401569",
-      "C0BV5BRNH5Z:1789301748.713179": "1789323643.617659"
+      "C0BV5BRNH5Z:1789301748.713179": "1789323643.617659",
+      "D0BHPKMDNEP:1789330127.583259": "1789330139.024459"
     },
     "migration": {
       "decisions_migration_complete": true,
@@ -121,15 +122,15 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1789326789,
+    "gmail_after_epoch": 1789329600,
     "email_weekly_scan": {
       "last_date": "2026-09-12"
     }
   },
   "integrity": {
     "last_full_pass": "2026-09-13T08:15:00-04:00",
-    "last_scan_sha": "55e3d30",
-    "note": "Incremental pass this run (2026-09-13 19:07Z): git diff since e7592f7 showed 1 vault *.md change (contradiction-scanner's own log append from the 18:04Z run, already accounted for) -- confirmed the 5 known-stuck Inbox notes unchanged, no repairs needed, no new Inbox notes. last_scan_sha advances to this run's own final commit (55e3d30) as the new incremental-diff baseline. Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved: google-voice-subscription-cancellation, rootwurks-assignment-log, veriscan-idscan-security-incident, dib-template-theme-decision-closeout [also missing required fields], visit-alex-sage-dispensary)."
+    "last_scan_sha": "10940326f71ea7a43231d08aba400543d94f7230",
+    "note": "Incremental pass this run (2026-09-13 20:03Z): git diff since 55e3d30 showed 0 vault *.md changes -- confirmed the 5 known-stuck Inbox notes unchanged, no repairs needed, no new Inbox notes. last_scan_sha advances to this run's own final commit as the new incremental-diff baseline. Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved: google-voice-subscription-cancellation, rootwurks-assignment-log, veriscan-idscan-security-incident, dib-template-theme-decision-closeout [also missing required fields], visit-alex-sage-dispensary)."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
