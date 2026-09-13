@@ -1,12 +1,12 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. 2026-09 RESTRUCTURE COMPLETE (101st scan): only Convo 1 (D0BHPKMDNEP), Convo 2 (D0BBVV54L5R), #fixes (C0BV5BRNH5Z), and #reports (C0BBZJL85RT) carry a live watermark now -- timeline channels are never swept for input and don't need one, so their watermark entries were dropped this run along with the retired #decisions/#stormy entries. card_threads (keyed '<channel_id>:<parent_ts>') is the open-card worklist. The decisions_threads migration worklist and the legacy capture_dm key are deleted -- migration.decisions_migration_complete is true. Every slack_channels watermark MUST be a JSON string. Watermarks must never postdate lock.run_completed -- they are stamped before the lock closes (PART 0).",
   "lock": {
-    "run_id": "run_20260913T150247Z",
-    "run_started": "2026-09-13T15:02:47Z",
+    "run_id": "run_20260913T180455Z",
+    "run_started": "2026-09-13T18:04:55Z",
     "run_completed": "2026-09-13T13:10:00Z",
-    "note": "In progress -- lock taken 15:02:47Z, working PARTs 1-8 top to bottom.",
-    "prior_note": "Prior run (run_20260913T130311Z) closed at 13:10:00Z -- quiet pass, 0 vault diff since scan_sha f516f6c. All PARTs no-op/clean. See main history for full text.",
-    "orphan_note": "6 consecutive/overlapping instances (through 2026-09-12) of a run doing real, committed work and not writing lock.run_completed on the expected timeline -- root cause still open; Lemar to pick between Option 1 (no fix needed, the 120-min rule works as designed) and Option 2 (make the lock more resilient) on the #fixes card, ts `1789063894.596139`. Still open, unchanged this run."
+    "note": "In progress -- lock taken 18:04:55Z, working PARTs 1-8 top to bottom.",
+    "prior_note": "Prior run (run_20260913T150247Z) aged out without ever writing lock.run_completed, but git history proves it finished real work: digest commit cd2501c at 15:10:15Z ('quiet pass, Convo2 unreachable, 5 junk emails triaged, Haven-Keeper pattern 4th occurrence logged'). This run's own PART 0 found the lock still open at 18:04:55Z (3h02m after run_started, past the 120-min age-out), so it proceeded per the age-out rule. This is the 7th occurrence of the same orphan-lock pattern -- flagged again on the #fixes card, ts `1789063894.596139`.",
+    "orphan_note": "7 consecutive/overlapping instances (through 2026-09-13 15:02Z run) of a run doing real, committed work and not writing lock.run_completed on the expected timeline -- root cause still open; Lemar to pick between Option 1 (no fix needed, the 120-min rule works as designed) and Option 2 (make the lock more resilient) on the #fixes card, ts `1789063894.596139`. Still open, unchanged this run."
   },
   "watermarks": {
     "slack_channels": {
