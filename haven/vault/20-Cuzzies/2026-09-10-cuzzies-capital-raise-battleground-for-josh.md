@@ -1,6 +1,6 @@
 ---
 created: 2026-09-10T14:10:00-04:00
-updated: 2026-09-12T14:04:00-04:00
+updated: 2026-09-13T08:15:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -117,7 +117,7 @@ see the two rows below). Several other rows carry no current confirmed figure at
 | # | Creditor | Amount | Paid to date | Status | Note |
 |---|---|---|---|---|---|
 | 1 | Curaleaf NJ II (A.G. Adjustments / Cadex Receivables) | $25,601.41 (principal $23,274.01 + interest $2,327.40) | $0 | Open — collector unanswered across 5 identical notices (8/3–9/10); FDCPA dispute window closed ~9/2, contradicting the open "dispute in writing" pick | `20-Cuzzies/2026-08-13-curaleaf-nj-ii-collections.md` |
-| 2 | GTI AR (Mindy Kramer) | ~$20,225.00 — **stale/unconfirmed**, last restated figure is from a June 2026 statement | ~$5,400 (Mar 2026) | Open — "final attempt" deadline (9/5) passed, collections threatened, no reply sent | `20-Cuzzies/2026-08-20-gti-ar-account-review-checkin.md` |
+| 2 | GTI AR (Mindy Kramer) | $20,225.00 — Lemar confirmed 2026-09-13 "I believe this number is accurate" (was flagged stale from a June 2026 statement; now treated as current) | ~$5,400 (Mar 2026) | Open — "final attempt" deadline (9/5) passed, collections threatened, no reply sent | `20-Cuzzies/2026-08-20-gti-ar-account-review-checkin.md` |
 | 3 | Garden Society AR | **No figure ever stated in any email** — invoice PDFs attached but never opened | $0 | Closed — Lemar chose to let it lapse (9/8); fraud-caution flag on "new banking instructions" pattern, never verified | `20-Cuzzies/2026-09-08-garden-society-ar-collections-new-banking-instructions.md` |
 | 4 | Dime Industries (→ CannaBIZ Collects) | $8,869.99 (DI-NJ-SO-290 $3,745.69 + DI-NJ-SO-385 $5,124.30) | $0 | Open — now in 3rd-party collections (CannaBIZ, Acct #2026-2289, 9/9); unanswered | `20-Cuzzies/2026-09-09-dime-industries-cannabiz-collections.md` |
 | 5 | CannaBIZ Collects — Little Leaf Labs LLC | $8,331.00 demanded; **settlement-agreement figure not confirmed** (PDF sent 8/26, never opened) | $0 | Open — 15th overdue reminder as of 9/9, 3 draft-reply options unpicked | `20-Cuzzies/2026-08-25-little-leaf-labs-cannabiz-call-request.md` |
@@ -126,14 +126,18 @@ see the two rows below). Several other rows carry no current confirmed figure at
 | 7 | Progressive commercial auto (→ Caine & Weiner) | $1,107.20 | $0 | Open — Lemar ✅'d a reply proposing a call time, drafted to Gmail Drafts (`1a08b38878c0fd94`), not yet sent | `20-Cuzzies/2026-09-09-caine-weiner-progressive-collections.md` |
 | 8 | Regus/IWG (Mount Laurel) | Full amount due $2,607.61; settlement offered $1,506.05 (7-day window, likely lapsed) | $0 | Open — Lemar picked "push for a 2-payment split," IWG declined a formal plan; late draft sent to Gmail Drafts only, not sent | `20-Cuzzies/2026-08-20-regus-iwg-collections-legal-threat.md` |
 | 9 | Metrc (Facility RE000069) | $80.00 | $0 | Open — 2nd collections notice 9/10, locks at $120; Lemar set a pay-by-9/18 target (calendar event `39c670smrmtss6lhje4neard8c`), not yet paid | `20-Cuzzies/2026-09-07-metrc-past-due-80.md` |
-| 10 | Signed promissory note + note amendment (Parke Bank) | **NOT FOUND in Haven** — document exists in Drive (`1w2Uo4dpxpY5y4FCjROL4_WZpQ-Yf-Ho6`), never opened/parsed for principal, rate, or terms | — | Unopened | — |
-| 11 | MCA agreements (3 total, incl. Liquidibee) | **$77,000 combined** — Lemar-reported 2026-09-12 ("We don't have the exact individual MCA balances so I'll just provide the total of all 3, $77k"); individual per-lender balances still unknown, and the Liquidibee agreement itself remains unopened in the Investor Master Templates Drive folder. Active litigation on the Liquidibee piece: *Liquidibee 1 LLC v. Cuzzie's Dispensary & Delivery LLC* (Nomas Recovery, opposing counsel requested 3 months of bank statements) | $500 (good-faith, re-spread 4×$125 weekly, Liquidibee only) | Open, in litigation/forbearance (Liquidibee) + 2 other unopened MCAs | `60-Legal/2026-07-20-liquidibee-lawsuit-bank-statements.md` |
+| 10 | Signed promissory notes (Parke Bank folder) | Two separate instruments, both opened 9/12: Ellen Suon $20,000 note + Eden Estates $500,000 convertible note (amendment only touches prepayment clause) | — | Opened — see 2026-09-12 update below | — |
+| 11 | MCA agreements (3 total, incl. Liquidibee) | **$77,000 combined** — Lemar-reported 2026-09-12; individual per-lender balances still unknown (Lemar, 2026-09-13: "I'll try to figure this one out"). Liquidibee piece confirmed at $29,980 (one of the three). Active litigation on the Liquidibee piece: *Liquidibee 1 LLC v. Cuzzie's Dispensary & Delivery LLC* (Nomas Recovery, opposing counsel requested 3 months of bank statements) | $500 (good-faith, re-spread 4×$125 weekly, Liquidibee only) | Open, in litigation/forbearance (Liquidibee) + 2 other MCAs | `60-Legal/2026-07-20-liquidibee-lawsuit-bank-statements.md` |
 
 **Known-open total (rows with a confirmed current figure, 1–4 + 6–9 + 11):** $25,601.41 +
 $8,869.99 + $511.48 + $1,107.20 + $2,607.61 (full) + $80.00 + $77,000.00 = **$115,777.69**
-— excludes GTI AR (stale), both CannaBIZ Little Leaf figures (unconfirmed settlement), and
-the promissory note + note amendment (row 10, still unopened), so this floor still
-understates the real total once those are opened and once GTI AR is reconfirmed.
+— excludes both CannaBIZ Little Leaf figures (unconfirmed settlement) and the two
+promissory notes (row 10, now opened — see 2026-09-12 update — but not yet folded into
+this floor as additive debt), so this figure still understates the real total. GTI AR
+(row 2) is now treated as current per Lemar's 2026-09-13 confirmation but was not
+already inside the $115,777.69 sum (that sum only ran rows 1, 3-4, 6-9, 11 — GTI AR was
+excluded as stale at the time), so it remains a separate, additional $20,225 not yet
+folded into the headline total.
 
 **Gaps this draft cannot close without opening the source documents:** the promissory
 note principal/rate, the note amendment's terms, and the Liquidibee MCA balance — all
@@ -226,6 +230,45 @@ not replacing them.
 ### Sources (this update)
 - slack: Convo 1 `D0BHPKMDNEP` thread `1789063831.996959`, reply `1789226868.973649`
 - drive: folder `1R_g1z92jElUTyVsO-bY-9XEHsjCWDAqn` (Josh folder, 3 new summary docs)
+
+## Update 2026-09-13T08:15:00-04:00 — status check answered; lease added; model still on hold
+
+Lemar answered the 2026-09-12 "what's still missing" status list on the Convo 1 card
+(ts `1789063831.996959`, reply `1789251960.587479`), item by item:
+
+1. **Gusto payroll reports** — asked Samira to pull copies into the Josh folder.
+   Checked the folder directly: 7 Gusto Payroll Journal PDFs (2026-04-02 through
+   2026-07-24) are already there, added 2026-09-11 — this request appears to already
+   be satisfied; no new copy made.
+2. **Lease/rent obligations** — Cuzzie's only, explicitly not Station ("We don't need
+   anything Station-related for these capital raise docs"), and flagged as now
+   terminated. Found the fully-executed Cuzzie's lease (2750 Mount Ephraim Ave,
+   Camden) in Drive and copied it into the Josh folder as **"Lease — Cuzzie's, 2750
+   Mount Ephraim Ave, Camden (Fully Executed, TERMINATED)"**
+   (`1YBH88VriDTyZniH9UQk-gvxDxpPNOXHB`) — labeled terminated per his note so nobody
+   downstream mistakes it for a live obligation.
+3. **Tax return** — Lemar is filing these himself ("I'm working on filing these
+   actually"). No Samira action; carried as open until he has a filed return to
+   share.
+4. **AP aging summary** — confirmed it has to be built from scratch (no GreenBooks
+   source exists). Not started — no go-ahead given yet.
+5. **Per-MCA breakdown of the $77K** — Lemar: "I'll try to figure this one out."
+   No Samira action; carried open.
+6. **GTI AR reconfirmation** — Lemar: "I believe this number is accurate." Row 2 in
+   the schedule above updated from stale/unconfirmed to confirmed-current at
+   $20,225.00.
+
+**On the financial model itself:** Lemar's explicit call — "We can go on the
+financial model but let's keep gathering information here, we're going to need it
+before fully building this out." Reads as: do not start the model yet; continue
+document-gathering first. Not built this pass. Replied in-thread confirming this
+reading and the four actions above (Gusto already present, lease added, GTI AR
+logged as confirmed, model deferred) rather than assuming go-ahead on the model.
+
+### Sources (this update)
+- slack: Convo 1 `D0BHPKMDNEP` thread `1789063831.996959`, reply `1789251960.587479`
+- drive: folder `1R_g1z92jElUTyVsO-bY-9XEHsjCWDAqn` (Josh folder — confirmed 7 Gusto
+  PDFs already present; added lease copy `1YBH88VriDTyZniH9UQk-gvxDxpPNOXHB`)
 
 ## Sources
 - slack: Convo 2 `D0BBVV54L5R` thread `1789061736.927349`, reply `1789062162.348089` ·
