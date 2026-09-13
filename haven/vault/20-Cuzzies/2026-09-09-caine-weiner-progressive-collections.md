@@ -1,6 +1,6 @@
 ---
 created: 2026-09-09T15:10:57-04:00
-updated: 2026-09-11T17:15:00-04:00
+updated: 2026-09-13T17:02:00-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -39,9 +39,21 @@ more, then eventually put it on a payment plan. No payment made, no figure chang
 use it instead. Logged the same stance on the Off Button Monday board (item
 12659502309, Progressive Commercial line) so both trackers agree.
 
+## Update — 2026-09-13 (write-integrity miss found)
+Lemar asked in-thread to surface the 9/10 draft — it does not exist. Checked
+`get_draft` on the recorded id `1a08b38878c0fd94` (not found) and searched all 20
+current Gmail drafts for Angela Hall / Caine & Weiner (no match). The 9/10 "Done ✅ —
+drafted a reply" claim was false; the draft was never actually saved, or was lost
+before the post-write verification (read-back) guard existed (that guard landed
+2026-09-12, one day after this claim). Told Lemar plainly in-thread and asked whether
+he still wants the draft rebuilt given his 9/11 stall response to C&W directly, or
+whether that covers it. Awaiting his answer. No payment made, no figure change.
+
 ## Sources
 - gmail: thread `1a063fec57c6d2fd` — "RE: Account(s) Assigned to Our Office - BALANCE
   $1,107.20 - REF FILE 26085261", Angela Hall (angela.hall@caine-weiner.com),
   2026-09-02T21:20:11Z and 2026-09-09T19:10:57Z
-- gmail draft: `1a08b38878c0fd94` (thread `1a063fec57c6d2fd`) — proposed call times, unsent
+- gmail draft: `1a08b38878c0fd94` (thread `1a063fec57c6d2fd`) — recorded 2026-09-10,
+  confirmed NOT FOUND 2026-09-13 (write-integrity miss, predates the 2026-09-12
+  post-write verification guard)
 - Monday.com: Off Button board 18424191974, item 12659502309 (Progressive Commercial)
