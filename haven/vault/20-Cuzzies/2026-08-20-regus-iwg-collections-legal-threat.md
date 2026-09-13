@@ -1,6 +1,6 @@
 ---
 created: 2026-08-20T10:15-04:00
-updated: 2026-09-10T11:11-04:00
+updated: 2026-09-13T08:30-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -241,3 +241,22 @@ possible. Saved to Gmail Drafts only, not sent — Samira never sends. The origi
 7-day settlement window (through ~8/28) has lapsed, so the draft also implicitly
 tests whether the offer still stands; if IWG comes back saying it doesn't, that's a
 new decision round.
+
+## Update 2026-09-13T08:30-04:00 — 3 "URGENT — payment declined" auto-dunning notices, no new figure
+
+Three near-identical automated `donotreply@regus.com` notices landed within the same
+minute (2026-09-13 09:00 ET, threads `1a099ff15bd23be4`, `1a099ff12cb6ba46`,
+`1a099ff0e8091aa3`), each: "your credit or debit card payment has been declined... your
+invoice has now become overdue," pointing to the myregus.com portal, account
+`16605480`. No dollar figure or new terms stated in the notice body itself — reads as
+IWG's routine automated dunning cycle re-firing (possibly a stored card on file being
+retried and failing), not a new escalation with new information. No reply possible
+(no-reply sender) and nothing for Samira to act on — payment stays Lemar's call, same
+as every update above. Labeled `Samira/seen`; no new card opened since the open
+Convo 1/#fixes items already covering this account (the unresent 2-payment-split
+follow-up from 9/8) remain the live decision point.
+
+### Sources (this update)
+- gmail: threads `1a099ff15bd23be4`, `1a099ff12cb6ba46`, `1a099ff0e8091aa3`
+  (donotreply@regus.com, "URGENT COMMUNICATION - Your Payment Was Declined",
+  2026-09-13 09:00 ET)
