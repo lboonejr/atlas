@@ -3,17 +3,17 @@
   "lock": {
     "run_id": "run_20260913T120357Z",
     "run_started": "2026-09-13T12:03:57Z",
-    "run_completed": "2026-09-12T22:11:12Z",
-    "note": "Time-boxed pass. PART 1 (vault-keeper): incremental check only (day's full pass already ran this morning) -- 0 new value defects, Inbox unchanged (5 known stuck notes, 0 new/filed). PART 2 (calendar-sync): no-op -- every outstanding due note already has a calendar_event_id, the 5 without one are already status:done. PART 3: audited the 25 Convo 1 card threads touched in roughly the last 24h (not the full ~97-entry card_threads map, given time budget) -- 23 already quiet, 2 had genuinely new Lemar replies: answered the Josh capital-raise folder's 'what documents are still missing' question (Gusto payroll, lease obligations, tax return, AP aging, per-MCA breakdown, and -- the real gap -- the financial model itself still isn't built), and posted a paced end-of-2026 timeline for the notary process, then logged both the plan and a separate live session's corrections (exam required after all, two-portal split, $30 fee, 5yr term, 90-day oath) to the Haven note, which had never captured them. PART 4: 1 informational Convo 2 drop acknowledged (pin-to-prioritize workflow), no card. PART 5: #fixes live-quiet. PART 6a: swept 3 new email threads off watermark (marketing noise, 0 cards); weekly widened scan already ran earlier today, skipped. PART 6b: no investor signal. PART 6c: not run this pass (time-boxed) -- flagged honestly rather than claiming a scan that didn't happen. PART 7: 0 timeline entries -- nothing this run mapped to a tracked project channel. PART 8: Pulse deferred (not a quiet-pass skip -- time-boxed; will render next scan). Full audit of the remaining ~72 older/quiet card_threads entries was NOT done this pass -- a known scope gap, not a hidden one.",
-    "prior_note": "Prior run (run_20260912T180438Z) closed cleanly at 20:27:01Z -- busy pass, 11 threads with new replies worked via a card-thread audit, 2 closed, 2 #fixes items root-caused, 1 approved fix landed. See main history for full text.",
-    "orphan_note": "6 consecutive/overlapping instances now of a run doing real, committed work and not writing lock.run_completed on the expected timeline -- the first five were genuine crashes/interruptions (idempotency caught each cleanly, nothing lost); the 6th (logged on the #fixes thread ~16:48 ET this same day) was a materially different case: a session that stayed alive and correct but took ~4h45m wall-clock for what should be a 10-15 min pass, and chose not to write stale state backward over three newer runs that had already self-healed past it. Root cause still open; recommend Lemar pick between Option 1 (no fix needed, the 120-min rule is working as designed) and Option 2 (make the lock more resilient -- incremental writes and/or a genuine heartbeat/mutex rather than pure time-aging) on the #fixes card, ts `1789063894.596139`. Still his call, still open."
+    "run_completed": "2026-09-13T12:19:58Z",
+    "note": "PART 1 (vault-keeper): filed 1 (Basil's 2026-09-13 inbox-janitor log -> 70-Automation/inbox-janitor/), 5 known stuck notes unchanged, 0 entities stubbed. Ran a FULL whole-vault integrity pass this run (746 notes checked via local clone after a freshness-check reset -- 0 new mechanical/value defects, 1 known carried defect unchanged: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md). PART 2 (calendar-sync): no-op -- every active/awaiting-decision due note already carries a calendar_event_id. PART 3: channel-level watermark showed 0 new top-level Convo 1 messages; audited the 2 most-recently-active card threads by stored reply-ts and both had genuine new unanswered Lemar replies -- worked both in full (notary process: split infra-vs-commission acceleration timeline, still blocked on DOB/phone/home address; Josh capital-raise folder: answered a 6-point status check, added the Cuzzie's lease to the Drive folder, confirmed GTI AR at $20,225, held the financial model per Lemar's explicit 'keep gathering info first'). Did NOT re-audit the full ~97-entry card_threads map -- a known scope gap, not hidden. PART 4: Convo 2 quiet, 0 new drops. PART 5: #fixes channel-level watermark showed 0 new top-level messages; audited the 3 most-recently-active threads -- 1 had a genuine new unanswered question (Dawn OAuth error, answered ELI13-style, left open), 1 was eligible for follow-up verification and got closed (clone-freshness check confirmed holding on this later run), 1 was already fully answered. PART 6a: 9 new email threads off watermark, all triaged (3x Regus auto-dunning logged to the existing Haven note, 6 marketing/routine no-action), 0 new cards; weekly widened scan already ran 2026-09-12, not due again. PART 6b: no investor signal. PART 6c: ran the reports-contradiction-scanner -- found a 3rd recurrence of the 'Haven Keeper' false 'all quiet' claim (this time AFTER the 9/12 runbook fix had already landed), escalated as a #fixes card flagging the recurring PATTERN rather than just the instance. PART 7: 0 timeline entries -- nothing this run mapped to a tracked project channel (capital-raise/notary are personal/business notes without dedicated timeline channels). PART 8: Pulse rendered (new Drive Doc, content verified via read-back after a misleading fileSize:1 metadata field), #pulse notified.",
+    "prior_note": "Prior run (run_20260913T120357Z's predecessor, run_20260912T210356Z) closed at 22:11:12Z -- time-boxed pass, 2 Convo 1 cards worked, reports-scan skipped for time. See main history for full text.",
+    "orphan_note": "6 consecutive/overlapping instances (through 2026-09-12) of a run doing real, committed work and not writing lock.run_completed on the expected timeline -- root cause still open; Lemar to pick between Option 1 (no fix needed, the 120-min rule works as designed) and Option 2 (make the lock more resilient) on the #fixes card, ts `1789063894.596139`. Still open, unchanged this run."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789244794.322469",
-      "D0BHPKMDNEP": "1789238134.613369",
-      "D0BBVV54L5R": "1789241381.726709",
-      "C0BV5BRNH5Z": "1789238171.751499"
+      "C0BBZJL85RT": "1789301968.264419",
+      "D0BHPKMDNEP": "1789301998",
+      "D0BBVV54L5R": "1789301998",
+      "C0BV5BRNH5Z": "1789301968.264419"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -92,7 +92,7 @@
       "D0BHPKMDNEP:1788988028.299219": "1789162053.901999",
       "D0BHPKMDNEP:1789053129.150039": "1789222554.037489",
       "D0BHPKMDNEP:1789063831.351469": "1789136026.956879",
-      "D0BHPKMDNEP:1789063831.996959": "1789247196.608159",
+      "D0BHPKMDNEP:1789063831.996959": "1789301427.228519",
       "D0BHPKMDNEP:1789063832.775699": "1789226023.659439",
       "D0BHPKMDNEP:1789063833.434589": "1789238092.125709",
       "D0BHPKMDNEP:1789064040.504999": "1789222565.125269",
@@ -108,11 +108,12 @@
       "C0BV5BRNH5Z:1789150150.917399": "1789150150.917399",
       "D0BHPKMDNEP:1789157533.372279": "1789162489.078049",
       "C0BV5BRNH5Z:1789157548.336469": "1789162347.247339",
-      "C0BV5BRNH5Z:1789215131.431589": "1789238171.751499",
-      "C0BV5BRNH5Z:1789223860.933709": "1789238124.714829",
+      "C0BV5BRNH5Z:1789215131.431589": "1789301512.165459",
+      "C0BV5BRNH5Z:1789223860.933709": "1789301524.275569",
       "D0BHPKMDNEP:1789222678.470519": "1789226176.592079",
-      "D0BHPKMDNEP:1789226265.669199": "1789247218.040179",
-      "C0BV5BRNH5Z:1789226200.966659": "1789238098.401569"
+      "D0BHPKMDNEP:1789226265.669199": "1789301470.495209",
+      "C0BV5BRNH5Z:1789226200.966659": "1789238098.401569",
+      "C0BV5BRNH5Z:1789301748.713179": "1789301748.713179"
     },
     "migration": {
       "decisions_migration_complete": true,
@@ -120,15 +121,15 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1789250998,
+    "gmail_after_epoch": 1789301998,
     "email_weekly_scan": {
       "last_date": "2026-09-12"
     }
   },
   "integrity": {
-    "last_full_pass": "2026-09-12T08:11:33-04:00",
-    "last_scan_sha": "d3ebfa7",
-    "note": "Full whole-vault pass ran 2026-09-12 morning (745 notes, 0 repairs, 0 new value defects). Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved). This run's incremental check (files changed since 8425c4e) found only 1 file-ready Inbox note (become-a-notary-nj, filed to 10-Personal/) and the daily journal itself -- 0 new value defects, 0 new stuck notes; last_scan_sha advanced to reflect the filing + this run's other vault commits. Also: this run's OWN local git clone started diverged from origin/main (52 vs 50 commits, 76 files) despite a supposedly-fresh container -- reset before doing any vault work, and this is now the root-caused fix behind the 2026-09-12 #fixes false-vault-empty-claim finding (see haven/vault/40-Projects/samira-skills/2026-09-12-reports-false-vault-empty-claim-stale-checkout.md). Runbook now requires a fetch+diff freshness check before any local-clone vault read."
+    "last_full_pass": "2026-09-13T08:15:00-04:00",
+    "last_scan_sha": "06fe91a",
+    "note": "Full whole-vault pass ran 2026-09-13 (746 notes, 0 repairs, 0 new value defects, via local clone after a fetch+diff freshness reset). Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes). 5 stuck notes unchanged (domain unresolved: google-voice-subscription-cancellation, rootwurks-assignment-log, veriscan-idscan-security-incident, dib-template-theme-decision-closeout [also missing required fields], visit-alex-sage-dispensary). last_scan_sha advanced to this run's final commit."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
@@ -136,7 +137,7 @@
     "note": "Not re-checked (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-12T15:22:00-04:00",
+    "pulse_last_rendered": "2026-09-13T08:19:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
