@@ -1,10 +1,11 @@
 ---
 created: 2026-09-09T16:13:24-04:00
-updated: 2026-09-14T12:00:00-04:00
+updated: 2026-09-14T17:05:54-04:00
 domain: cuzzies
 type: task
 status: active
 due: 2026-09-18T09:00:00-04:00
+calendar_event_id: aiem0lpqck1mlo1cu8k44dbcoo
 tags: [first-insurance-funding, loan-106241219, collections, accounts-payable]
 source: gmail
 ---
