@@ -1,6 +1,6 @@
 ---
 created: 2026-09-08T16:25:00-04:00
-updated: 2026-09-08T22:10:00-04:00
+updated: 2026-09-14T11:04:00-04:00
 domain: cuzzies
 type: task
 status: done
@@ -40,6 +40,17 @@ let it lapse, no payment." No banking instructions were ever verified or used; n
 paid, called, or replied. Consistent with how other Cuzzie's wind-down vendors have
 been handled (Waste Management, Leafly, Rove Brand, Comcast Business).
 
+## Update 2026-09-14 11:04 ET — another dunning follow-up, no change
+
+Mary followed up again (thread `1a02597722684b28`, message `1a0a06f59b3fb97e`,
+2026-09-14 11:00 ET): "It has been six weeks since our last communication... please let
+us know when we can expect payment, or if you would like to discuss setting up a
+payment plan." No new figure, no new banking claim beyond the standing (still
+unverified) instructions from earlier messages. This is the expected shape of the
+"let it lapse" posture Lemar already picked 2026-09-08 — nothing new to decide, so no
+new Convo 1 card. Nothing paid, replied to, or authorized; email labeled Samira/seen.
+
 ## Sources
-- gmail: thread `1a058dac33463a26` (2026-08-31 and 2026-09-08 messages)
+- gmail: thread `1a058dac33463a26` (2026-08-31 and 2026-09-08 messages); thread
+  `1a02597722684b28` (2026-08-21 and 2026-09-14 follow-up messages)
 - slack: Convo 1 (D0BHPKMDNEP), card ts `1788898737.038929`, decided 2026-09-08 ts `1788901264.924229`
