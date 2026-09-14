@@ -1,6 +1,6 @@
 ---
 created: 2026-08-09T14:05:00-04:00
-updated: 2026-08-15T10:13:00-04:00
+updated: 2026-09-14T15:12:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -64,3 +64,17 @@ underlying question is already open and unreacted.
 ### Sources (this update)
 - gmail: message `1a005c54f62e1873` — "Action Required: Your ADT Bill is Due",
   received 2026-08-15T14:13:30Z from adt@t.adt.com to lemar@cuzziesnj.com
+
+## Update 2026-09-14 — "Final Notice" escalation, same $3,493.42, now 150 days past due
+
+A further automated notice ("Final Notice: Last Chance to Pay ADT Bill!") landed
+2026-09-14T16:56:45Z — escalated urgency language, same account #405075455, **same
+$3,493.42 balance**, now reported 150 days past due (up from 120 at the 8/9 note).
+No new figure, no new information — the account continuing to age under the same
+do-not-reply marketing/collections sender. The pay-vs-lapse decision noted above is
+still open and unresolved; not raising a fresh card since that question already stands
+open (on-button Tier-1 tracking) and this notice adds nothing new to decide.
+
+### Sources (this update)
+- gmail: thread `1a0a0d98dd7f68ef` — "Final Notice: Last Chance to Pay ADT Bill!",
+  received 2026-09-14T16:56:45Z from adt@t.adt.com to lemar@cuzziesnj.com
