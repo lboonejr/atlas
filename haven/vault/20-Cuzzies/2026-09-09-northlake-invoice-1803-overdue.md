@@ -3,7 +3,7 @@ created: 2026-09-09T13:55:25-04:00
 updated: 2026-09-14T15:06:00-04:00
 domain: cuzzies
 type: task
-status: scheduled
+status: active
 tags: [northlake-supply, accounts-payable, invoice, overdue]
 source: gmail
 ---
