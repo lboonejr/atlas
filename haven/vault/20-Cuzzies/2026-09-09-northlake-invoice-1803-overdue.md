@@ -1,9 +1,9 @@
 ---
 created: 2026-09-09T13:55:25-04:00
-updated: 2026-09-14T11:23:32-04:00
+updated: 2026-09-14T15:06:00-04:00
 domain: cuzzies
 type: task
-status: awaiting-decision
+status: scheduled
 tags: [northlake-supply, accounts-payable, invoice, overdue]
 source: gmail
 ---
@@ -40,6 +40,14 @@ replied same day (2026-09-14 11:09am ET, message `1a0a077b6d29f6fa`): **"How abo
 Wednesday at 10AM?"** Nothing confirmed yet — needs Lemar's call on the time (accept
 Wednesday 9/16 10AM, or propose another). Card posted in Convo 1 with a draft reply
 option confirming the time + a calendar hold. Nothing paid, no call scheduled yet.
+
+## Update — 2026-09-14 (call confirmed)
+Lemar picked Option A on the Convo 1 card (✅ on ts `1789402031.212339`): confirmed
+Wednesday 9/16 10AM with Dan. Drafted the confirmation reply to Gmail Drafts — message
+`1a0a14f7f9d69c28` (thread `19e6a6dcba569461`), NOT sent — "Dan, Wednesday 10AM works —
+talk then. Thanks for your patience on this." Held the slot on the Cuzzie's (Owners)
+calendar: 2026-09-16 10:00–10:30 AM ET, event `q1konh70o5emj7ff9l9g68fr4k`, no external
+attendees. Nothing paid, nothing sent — draft awaits Lemar's send.
 
 ## Sources
 - gmail: thread `19e6a6dcba569461` — "Cuzzie's Dispensary — Invoice #1803 Paid in Full
