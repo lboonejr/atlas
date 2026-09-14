@@ -1,9 +1,10 @@
 ---
 created: 2026-09-09T16:13:24-04:00
-updated: 2026-09-11T17:10:00-04:00
+updated: 2026-09-14T12:00:00-04:00
 domain: cuzzies
 type: task
-status: awaiting-decision
+status: active
+due: 2026-09-18T09:00:00-04:00
 tags: [first-insurance-funding, loan-106241219, collections, accounts-payable]
 source: gmail
 ---
@@ -42,9 +43,27 @@ message `1a0925cc6e9892da`, NOT sent. Nothing paid. Still open: Lemar needs to s
 draft, then actually make the two payments on 9/18 and 10/18 — worth a calendar reminder
 once he confirms sending.
 
+## Update — 2026-09-14
+
+The agree-to-2-payment-plan draft was sent (2026-09-14 12:00pm ET, message
+`1a09fc9d655d04ae`). Abraham confirmed the same afternoon (2026-09-14 3:50pm ET, message
+`1a0a09cd4f15a0b1`): "as long as the payments are made on the provided dates, the file
+will not be placed in collections." Payment method: call Abraham at 847-572-4919.
+Nothing paid yet — the two obligations are now firm and dated:
+
+- **$238.80 due 2026-09-18** (this note's `due` field, so calendar-sync rings it on the
+  Cuzzie's Owners business calendar — this is business money, not personal, so it never
+  enters the money-hub ledger)
+- **$238.80 due 2026-10-18** (not yet its own `due` — once the 9/18 payment posts, flip
+  `due` to 2026-10-18 and note the first payment made here)
+
+No reply needed from Lemar; this is a payment to make, not a decision. Flagged for the
+digest as a real dated obligation to not let slip.
+
 ## Sources
 - gmail: thread `1a087cdd997a3f2b` — "RE: Loan #106241219 — return premium from
   endorsements SSC-00003261-00 / SSC-00003260-00 (2LLCJ2Q38)", Abraham Borjon
   (abraham.borjon@firstinsurancefunding.com), 2026-09-09T20:13:24Z
 - gmail draft (payment-plan ask, sent 9/10): `1a08b387ed50fda5` → sent as message `1a08b754a4ee6670`
-- gmail draft (agree to 2-payment plan, unsent): `1a0925cc6e9892da` (thread `1a087cdd997a3f2b`)
+- gmail draft (agree to 2-payment plan, sent 9/14): `1a0925cc6e9892da` → sent as message `1a09fc9d655d04ae`
+- gmail: Abraham's collections-safe confirmation, message `1a0a09cd4f15a0b1`, 2026-09-14T19:50:23Z

@@ -1,6 +1,6 @@
 ---
 created: 2026-09-09T13:55:25-04:00
-updated: 2026-09-11T17:20:00-04:00
+updated: 2026-09-14T11:23:32-04:00
 domain: cuzzies
 type: task
 status: awaiting-decision
@@ -32,10 +32,20 @@ added this line to `on-button-reopen.html`'s reopening-tiers page (Tier 2, new) 
 confirmed it's already tracked on the Off Button Monday board (item 12762456074) at the
 same $2,232.09 figure. Nothing paid, no call made yet.
 
+## Update — 2026-09-14
+
+The draft proposing a call was sent (2026-09-14 8:01am ET, message `1a09fc9d777c2a8b`) —
+apologized for missing the 6/1 commitment, asked to grab a call early next week. Dan
+replied same day (2026-09-14 11:09am ET, message `1a0a077b6d29f6fa`): **"How about next
+Wednesday at 10AM?"** Nothing confirmed yet — needs Lemar's call on the time (accept
+Wednesday 9/16 10AM, or propose another). Card posted in Convo 1 with a draft reply
+option confirming the time + a calendar hold. Nothing paid, no call scheduled yet.
+
 ## Sources
 - gmail: thread `19e6a6dcba569461` — "Cuzzie's Dispensary — Invoice #1803 Paid in Full
   6/1" (Lemar's original 2026-05-27 promise, Dan's 2026-05-27 acknowledgment, Dan's
   2026-09-09T17:55:25Z follow-up)
-- gmail draft (proposing a call, unsent): `1a0925e08f4973b6`
+- gmail draft (proposing a call, sent 9/14): `1a0925e08f4973b6` → sent as message `1a09fc9d777c2a8b`
+- gmail: Dan's Wednesday-10AM proposal, message `1a0a077b6d29f6fa`, 2026-09-14T15:09:54Z
 - Monday.com: Off Button board 18424191974, item 12762456074 (Northlake Supply)
 - Haven index: haven/vault/40-Projects/on-button-reopen/index.md (northlake-supply item)
