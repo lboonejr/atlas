@@ -1,6 +1,6 @@
 ---
 created: 2026-09-15T08:19:00-04:00
-updated: 2026-09-15T15:20:00-04:00
+updated: 2026-09-15T11:20:00-04:00
 domain: personal
 type: task
 status: done
@@ -39,7 +39,7 @@ threads and should be split out / cross-linked once domain is resolved:
 - Item 11 (paid by the 18th) — belongs in the money-hub ledger, not here.
 - Items 1, 2, 8, 9, 10 look like standalone personal tasks with no existing note found.
 
-## Update 2026-09-15T15:20-04:00 — split per Lemar's routing call
+## Update 2026-09-15T11:20-04:00 — split per Lemar's routing call
 
 Lemar picked "Split it" (Convo 1, `D0BHPKMDNEP`, ts `1789477692.630749`): Camden group +
 CRC Cure → Camden Launch engagement, investor docs → investor pipeline, "paid by the

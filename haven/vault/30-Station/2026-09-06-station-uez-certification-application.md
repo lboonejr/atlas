@@ -1,6 +1,6 @@
 ---
 created: 2026-09-06T20:59-04:00
-updated: 2026-09-15T15:16:00-04:00
+updated: 2026-09-15T11:16:00-04:00
 domain: station
 type: task
 status: active
@@ -38,7 +38,7 @@ submitted this weekend. This is the same 9/10 follow-up window the calendar remi
 above was already set for (Markony's PBS credentials). Still nothing submitted as of
 this update; the blocker is unchanged (Markony's PBS login).
 
-## Update 2026-09-15T15:16-04:00 — flagged on today's to-do list
+## Update 2026-09-15T11:16-04:00 — flagged on today's to-do list
 
 Lemar's daily to-do drop ([[haven/vault/10-Personal/2026-09-15-short-to-do-list-today.md]])
 named "see if you can complete UEZ app," split out to this note per his routing call
