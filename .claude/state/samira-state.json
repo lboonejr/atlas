@@ -3,15 +3,15 @@
   "lock": {
     "run_id": "run_20260915T150402Z",
     "run_started": "2026-09-15T15:04:02Z",
-    "run_completed": "2026-09-15T14:16:00Z",
-    "note": "Closed 14:16:00Z (117th scan, ~10:14 ET, 2026-09-15). Filed the notary reference-cards note out of the Inbox to 50-Reference/; the new 'Short to-do list' note (domain/status UNRESOLVED) joins the 5 known-stuck notes, net stuck 6. Integrity: incremental only, only the daily journal had changed since last_scan_sha, 0 new defects. calendar-sync no-op. Convo 1/Convo 2/#fixes top-level quiet at scan start; a stray informational auto-handoff (samira-work-summary, today's Drive-organizing run) landed in Convo 1 -- logged to Haven (70-Automation/file-organizing/2026-09-15-drive-file-organizing-run.md), no card needed. Discovered the 'Haven Inbox' stuck-notes card never migrated from #decisions to Convo 1 during the 9/6 restructure -- posted it fresh (6 notes). Email: 5 new threads, all junk (car-hunt alerts + vendor marketing blasts), labeled seen, gmail_after_epoch -> 1789480916. Investor: no signal. Reports-scan: 10th occurrence of the recurring Haven Keeper false all-quiet #reports claim (posted ~09:20 ET, claimed Inbox empty when it held 7 notes) -- posted as an update to the open #fixes card, still unpicked >1wk. Timelines: 0 entries. Pulse: rendered (a note filed + a new Convo 1 card opened satisfy the gate) -> https://docs.google.com/document/d/1nmvPGADtXwXm-nXexRVhOOm0WdaiO9kHogX9DWo-2x0/edit, notified #pulse; verified the Doc's content read back intact (no astral-emoji mojibake -- page used only BMP-safe glyphs). Digest posted 10:14 ET to #reports (ts 1789481665.331609) + appended to _daily/2026-09-15.md.",
-    "prior_note": "Closed 13:17:21Z (116th scan, ~09:17 ET, 2026-09-15). Convo 1/#fixes quiet at scan start (no new top-level messages or reactions on the 5 most-recent cards since the 115th scan close). Convo 2: 2 new top-level drops (no 0x1f310 prefix) -- 'Short to-do list for today' (11 items, mixed personal/Camden Launch/investor-pipeline/Station/money-hub, domain left UNRESOLVED) and a notary reference-cards request (8 definitions captured verbatim; the Six Notarial Acts themselves were never listed, stays open). Both captured to Haven 00-Inbox first, then carded to Convo 1 with a decision round each, reacted checkmark on both drops. Email: 3 new threads off watermark -- Hamilton Farms (genuine vendor re-engagement, carded with 3 draft reply options) + APEX menu blast and an NYT newsletter (junk, skipped). Investor: no signal. Reports-scan: clean, no new #reports entries this window (the Haven Keeper finding from the 115th scan remains open, unpicked, >1wk). Timelines: 0 entries. Vault integrity: incremental only (full pass already ran today) -- 2 files changed since last scan (a scan-log append and today's own journal), both benign, 0 new defects; Inbox unchanged, 5 known-stuck, 0 new, 0 filed. calendar-sync: true no-op, neither changed file carried a due field. Pulse: rendered (something changed) -> https://docs.google.com/document/d/1VjscKa-usT34vq-2pYSKmJiL6PbOTHVsjh-86nKp6TM/edit, notified #pulse; caught and fixed the known astral-emoji Drive mojibake bug on the turtle glyph before notifying (rebuilt with a plain-text [OVERDUE] marker). Atlas open-items audit surfaced during the Pulse render: 43 due-dated notes still open, most of it aged July/August Cuzzie's payroll and admin debt that reads as probably-resolved-but-never-marked-done -- flagged for a vault hygiene pass, not acted on this scan. Digest posted 09:17 ET to #reports (ts 1789478217.879299) + appended to _daily/2026-09-15.md.",
+    "run_completed": "2026-09-15T15:16:30Z",
+    "note": "Closed 15:16:30Z (118th scan, ~11:16 ET, 2026-09-15). Worked 3 live cards from Lemar's signals since the 117th scan: Hamilton Farms (plain reply -> Gmail draft declining, closed), notary reference cards (he supplied the Six Notarial Acts in-thread, added to the 50-Reference/ note, closed), today's to-do split (his checkmark on 'Split it' executed -> 8 new/updated notes across Camden Launch, investor pipeline, Station, Money Hub, and 4 standalone personal notes; original note resolved domain:personal/status:done and filed out of the Inbox, stuck 6->5). Email: 7 new threads -- 6 junk, 1 new investor handoff (Fresh Start Business Solutions, cold UCC-lien-citing debt pitch) -> index row + receipt + new Convo 1 card + #investor-pipeline timeline entry. #camden-launch also got a timeline entry for the to-do routing. Reports-scan clean (10th Haven Keeper occurrence already caught by the 117th scan itself). Pulse rendered (3 closed + 1 opened) -> https://docs.google.com/document/d/1IyUOyAI3iizmaAGV-j8boQbLxZZTsMTC5p-DtyvqP94/edit, notified #pulse. Self-caught defect: several vault writes and the first Pulse render initially mislabeled ET timestamps (UTC hour paired with a -04:00 offset, ~4h fast) -- caught before the digest, corrected across all 15 touched files in one commit, bad first Pulse Doc (never seen by Lemar) trashed and rebuilt correctly; no externally-visible Slack text was affected. Digest posted 11:16 ET to #reports (ts 1789485378.153689) + appended to _daily/2026-09-15.md.",
+    "prior_note": "Closed 14:16:00Z (117th scan, ~10:14 ET, 2026-09-15). Filed the notary reference-cards note out of the Inbox to 50-Reference/; the new 'Short to-do list' note (domain/status UNRESOLVED) joins the 5 known-stuck notes, net stuck 6. Integrity: incremental only, only the daily journal had changed since last_scan_sha, 0 new defects. calendar-sync no-op. Convo 1/Convo 2/#fixes top-level quiet at scan start; a stray informational auto-handoff (samira-work-summary, today's Drive-organizing run) landed in Convo 1 -- logged to Haven (70-Automation/file-organizing/2026-09-15-drive-file-organizing-run.md), no card needed. Discovered the 'Haven Inbox' stuck-notes card never migrated from #decisions to Convo 1 during the 9/6 restructure -- posted it fresh (6 notes). Email: 5 new threads, all junk (car-hunt alerts + vendor marketing blasts), labeled seen, gmail_after_epoch -> 1789480916. Investor: no signal. Reports-scan: 10th occurrence of the recurring Haven Keeper false all-quiet #reports claim (posted ~09:20 ET, claimed Inbox empty when it held 7 notes) -- posted as an update to the open #fixes card, still unpicked >1wk. Timelines: 0 entries. Pulse: rendered (a note filed + a new Convo 1 card opened satisfy the gate) -> https://docs.google.com/document/d/1nmvPGADtXwXm-nXexRVhOOm0WdaiO9kHogX9DWo-2x0/edit, notified #pulse; verified the Doc's content read back intact (no astral-emoji mojibake -- page used only BMP-safe glyphs). Digest posted 10:14 ET to #reports (ts 1789481665.331609) + appended to _daily/2026-09-15.md.",
     "orphan_note": "8th instance (111th scan's pickup of 110th scan's dead lock). Root cause still open; Lemar to pick between Option 1 (no fix needed) and Option 2 (make lock more resilient) on the #fixes card, ts `1789063894.596139`."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789481665.331609",
-      "D0BHPKMDNEP": "1789481364.345479",
+      "C0BBZJL85RT": "1789485378.153689",
+      "D0BHPKMDNEP": "1789485052.608869",
       "D0BBVV54L5R": "1789476190.277099",
       "C0BV5BRNH5Z": "1789481453.207079"
     },
@@ -118,11 +118,12 @@
       "C0BV5BRNH5Z:1789333747.809089": "1789333747.809089",
       "D0BHPKMDNEP:1789402024.978189": "1789412758.623459",
       "D0BHPKMDNEP:1789412930.951649": "1789412938.532929",
-      "D0BHPKMDNEP:1789477678.735079": "1789477693.808359",
-      "D0BHPKMDNEP:1789477679.577859": "1789477703.904329",
-      "D0BHPKMDNEP:1789477782.348399": "1789477794.477189",
+      "D0BHPKMDNEP:1789477678.735079": "1789484973.611069",
+      "D0BHPKMDNEP:1789477679.577859": "1789484842.479389",
+      "D0BHPKMDNEP:1789477782.348399": "1789484819.882369",
       "C0BV5BRNH5Z:1789301748.713179": "1789481453.207079",
-      "D0BHPKMDNEP:1789481364.345479": "1789481364.345479"
+      "D0BHPKMDNEP:1789481364.345479": "1789481364.345479",
+      "D0BHPKMDNEP:1789485052.608869": "1789485052.608869"
     },
     "migration": {
       "decisions_migration_complete": true,
@@ -130,7 +131,7 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1789480916,
+    "gmail_after_epoch": 1789484967,
     "email_weekly_scan": {
       "last_date": "2026-09-12"
     }
@@ -138,7 +139,7 @@
   "integrity": {
     "last_full_pass": "2026-09-15T08:05:00-04:00",
     "last_scan_sha": "65f85ce",
-    "note": "Incremental check only this scan (117th) -- full pass already ran today (115th, see last_full_pass). git diff --name-only against the anchor scan_sha showed only _daily/2026-09-15.md changed (this scan's own journal append, plus the 116th's), 0 new defects. Inbox: 1 filed this scan (notary reference cards -> 50-Reference/), 1 new-and-stuck (short-to-do-list-today, domain/status UNRESOLVED); the 5 known value gaps (domain unresolved: google-voice-subscription-cancellation, rootwurks-assignment-log, veriscan-idscan-security-incident, dib-template-theme-decision-closeout, visit-alex-sage-dispensary) unchanged. Known mis-filed note (haven/vault/40-Projects/samira-skills/2026-09-12-reports-false-vault-empty-claim-stale-checkout.md, domain:automation under 40-Projects/) still flagged, not moved."
+    "note": "Incremental check only this scan (118th) -- full pass already ran today (115th, see last_full_pass). This scan resolved 1 stuck note (short-to-do-list-today -> domain:personal/status:done, filed to 10-Personal/) via Lemar's own card decision, not a guess; the 5 known value gaps (domain unresolved: google-voice-subscription-cancellation, rootwurks-assignment-log, veriscan-idscan-security-incident, dib-template-theme-decision-closeout, visit-alex-sage-dispensary) unchanged, stuck 6->5. Known mis-filed note (haven/vault/40-Projects/samira-skills/2026-09-12-reports-false-vault-empty-claim-stale-checkout.md, domain:automation under 40-Projects/) still flagged, not moved."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
@@ -146,7 +147,7 @@
     "note": "Not re-checked (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-15T10:13:00-04:00",
+    "pulse_last_rendered": "2026-09-15T11:15:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }
