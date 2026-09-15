@@ -1,6 +1,6 @@
 ---
 created: 2026-09-15T08:43:00-04:00
-updated: 2026-09-15T11:12:00-04:00
+updated: 2026-09-15T12:07:00-04:00
 domain: reference
 type: reference
 status: active
@@ -53,11 +53,11 @@ Provided by Lemar in-thread (Convo 1, `D0BHPKMDNEP`, ts `1789477941.923909`):
 | Certifying or attesting a copy or deposition | Presenting a record so you can certify a copy is full, true and accurate |
 | Noting a protest of a negotiable instrument | Having dishonor of a negotiable instrument formally noted |
 
-## Open question
-What format should the "reference note cards" take beyond this Haven reference note —
-a rendered study-card artifact (e.g. an HTML flashcard page)? Defaulting to this plain
-Haven note for now since no format was specified; ask if a rendered flashcard page is
-wanted instead.
+## Rendered flashcards
+Lemar asked in-thread (Convo 1, ts `1789485019.186429`) for rendered flash cards.
+Built as a tap-to-flip study page (6 act cards + 8 definition cards):
+https://claude.ai/artifact/MLb5kX14Pu4mynq7ngHjzg
 
 ## Sources
 - slack: Convo 2 self-DM (D0BBVV54L5R), ts 1789476190.277099, 2026-09-15 08:43:10 EDT
+- slack: Convo 1 (D0BHPKMDNEP), ts 1789485019.186429, flashcard-page request
