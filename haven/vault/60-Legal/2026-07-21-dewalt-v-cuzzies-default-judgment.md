@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-09-12T15:11:00-04:00
+updated: 2026-09-15T16:30-04:00
 domain: legal
 type: task
 status: active
@@ -827,3 +827,104 @@ No Samira action taken — this is a status confirmation, not a new decision poi
 
 ### Sources (this update)
 - slack: Convo 1 `D0BHPKMDNEP` thread `1788966952.066259`, reply `1789222029.824109`
+
+## Update 2026-09-15T16:30:00-04:00 — settlement track reopens with a sharply more aggressive posture; personal fraudulent-transfer exposure raised by name against Lemar; Sept 14 proof-hearing OUTCOME still not confirmed here
+
+Donte Bronaugh forwarded a new chain to Lemar directly (gmail thread `1a0a651541ba7bff`,
+2026-09-15 ~18:25 ET) — the most substantive new development since the 9/12 update,
+and the sharpest posture shift on this matter to date.
+
+**Newest message in the chain — Monica Madin, Esq. (madinlaw.com), 2026-09-15 1:09pm
+ET**, to Donte and Marco Di Stefano, cc Jennifer DeWalt (the plaintiff herself) and
+Madin Law's assistant: *"Please contact me or have your attorney contact me to discuss
+a possible resolution. We do not have a phone number for you."* Short, but it reopens
+settlement contact — unclear from this alone whether Madin is now co-counsel for
+DeWalt alongside Di Stefano, or writing in some other capacity; not established, not
+guessing.
+
+**The chain underneath it (Aug 7 – Aug 25, previously not captured in this note)
+recasts the whole matter more seriously than anything logged here so far:**
+
+- **Aug 7, Donte (on Cuzzie's side):** disclosed to Marco Di Stefano that the planned
+  sale of Cuzzie's fell through entirely — no lease, no sale, no proceeds, so the
+  bulk-sale notice question is moot. Gave a full financial picture: two equity
+  holders (Lemar and "Mr. Evans" — Josh Evans, the co-defendant named throughout this
+  note), funded by unpaid friends-and-family loans, never profitable, wound down
+  ~May 2026, nominal cash left (spent keeping the lights on), tax obligations
+  unresolved, one other secured creditor. **On Lemar personally:** pre-venture income
+  ~$45,000/year, no real property, no investment accounts, savings gone into the
+  business. Said no creditor — including friends and family — has been paid anything
+  since wind-down.
+- **Aug 11, Marco Di Stefano's reply is the one that matters most.** He:
+  1. **Withdrew the $150,000 settlement figure entirely** (it was conditioned on a
+     sale-proceeds closing that no longer exists) and said it is not a ceiling for
+     any further negotiation — the full claim (damages, interest, costs, fees) goes
+     to the proof hearing instead.
+  2. **Confirmed default judgment stands and liability is not reopening.**
+  3. **Explained the mechanics of the personal exposure in detail, by name:** a NJ
+     judgment is docketed as a lien on real property (N.J.S.A. 2A:16-1), enforceable
+     20 years and revivable after (N.J.S.A. 2A:14-5), attaches to property acquired
+     at *any point* across that period, accrues post-judgment interest, and supports
+     wage execution against an individual's earned income (R. 4:59-1, N.J.S.A.
+     2A:17-50 et seq.) — naming Lemar specifically as the earner in question.
+  4. **Raised a fraudulent-transfer theory by name, citing the statute:** flagged
+     Donte's own disclosures (insolvency, wind-down, unpaid insider/friends-and-family
+     loans, personally-guaranteed obligations) and stated that (a) payments to
+     "Mr. Boone, Mr. Evans, their relatives, or any other insider on account of
+     antecedent debt" made while insolvent are voidable under **N.J.S.A. 25:2-27(b)**
+     (NJ's Uniform Voidable Transactions Act), and (b) any company payment that
+     discharged a personally-guaranteed obligation is examinable the same way.
+  5. **Demanded, as the price of any real settlement conversation:** 2024-2026 tax
+     returns, complete company bank statements Jan 2025 through closure, the general
+     ledger/check register, a schedule of every payment/transfer to any person in the
+     12 months before wind-down (payee, date, amount, obligation satisfied), the full
+     creditor schedule, friends-and-family loan documentation, the lease/termination
+     documents, and **certified personal financial statements from Lemar and Josh
+     Evans**.
+  6. Asked Donte to confirm whether Madin Law/Marco is entering an appearance and
+     whether they represent the entity alone or Lemar and Evans individually too.
+- **A quoted Aug 25 line from Donte (to Marco, cc Monica):** "Lemar will put you in
+  contact with counsel he is retaining to handle this matter" — consistent with the
+  Diaz/Archer & Greiner track already logged in the 8/21-9/12 updates above, which
+  this note already shows collapsed (Diaz declined 9/10, confirmed out for the 9/14
+  hearing 9/12). **No record in this note of anyone ever producing the eight
+  categories of financial documents Di Stefano demanded on Aug 11**, and no record of
+  Lemar or Cuzzie's ever confirming whether Madin/Marco represent Lemar individually.
+- A quoted Aug 25 line from Marco: "The proof hearing is September 14th!" — a
+  reminder sent inside this same chain, underscoring the hearing was imminent as of
+  three weeks ago.
+
+**What this note still cannot confirm — genuinely open, not guessed:**
+1. **Did the Sept 14 proof hearing (yesterday) actually happen, and if so what
+   damages figure did the court enter?** Nothing in this thread or any update above
+   confirms an outcome. The 9/12 update left this note with "no counsel of record,
+   2 days out" — whether Lemar appeared himself, requested/received a further
+   adjournment, or the hearing went forward undefended is unknown here.
+2. **Has any of the eight-category document demand been produced**, in whole or in
+   part, to Di Stefano or Madin?
+3. **Whether Madin Law now represents Lemar individually** as well as the entity, or
+   is writing only for the entity/Donte's negotiation track — Marco's own Aug 11
+   question on this point appears never to have been answered on this thread.
+4. **Whether any of the payments Di Stefano is asking to examine (insider payments,
+   personally-guaranteed-debt payoffs in the 12 months before the ~May 2026
+   wind-down) in fact occurred** — this note has no visibility into Cuzzie's
+   accounting and is not speculating either way.
+
+**Why this update is flagged urgent rather than filed quietly:** this is the first
+point in the matter's history where opposing counsel has named Lemar personally and
+by name in a fraudulent-transfer theory, demanded his personal financial statement,
+and detailed exactly how a judgment would attach to his future earnings and property
+for up to 20 years. Nothing here requires or invites a Samira-drafted response —
+this needs Lemar's own read and, if Madin/Di Stefano's "have your attorney contact
+me" line is to be answered at all, an actual attorney of record, which this note
+still shows as unresolved as of today. Flagged to the existing Convo 1 thread
+(`D0BHPKMDNEP` ts `1788966952.066259`) rather than opening a new card, per routing.
+No draft prepared, nothing sent, nothing forwarded by Samira. Gmail thread not yet
+labeled — left unlabeled pending Lemar's own read given the sensitivity, rather than
+auto-marking `Samira/seen` on a first pass through content this consequential.
+
+### Sources (this update)
+- gmail: thread `1a0a651541ba7bff` ("Fwd: Cuzzie's: Settlement Proposal in Connection
+  with Pending Sale"), forwarded by Donte Bronaugh 2026-09-15 ~18:25 ET; contains the
+  full Jul 24 – Sep 15 chain between Donte Bronaugh, Marco Di Stefano Esq., and Monica
+  Madin Esq.
