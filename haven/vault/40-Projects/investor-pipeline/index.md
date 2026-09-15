@@ -1,6 +1,6 @@
 ---
 created: 2026-07-04T13:30-04:00
-updated: 2026-09-08T10:15:00-04:00
+updated: 2026-09-15T15:30:00-04:00
 domain: project
 type: reference
 status: active
@@ -45,6 +45,8 @@ Parked — rows are never deleted.
 | Donte Bronaugh (HR Investor Package) | Cuzzie's | Donte Z. Bronaugh · dontebronaugh@gmail.com | Unstated — Lemar emailed Donte "HR Investor Package" 8/19 9:06pm ET; Donte replied he's updating 5-year projections, deck, and deal sheet. **New 2026-08-21:** separate same-evening thread "Cuzzie's Funding Mechanics" — Donte tells Lemar "$250k it's all yours," reading as a personal commitment to fund that piece himself rather than route it through "Alex"/the other party; full deal structure (is there still a separate $200K ask, is Alex still involved) not spelled out | none built — entirely self-managed by Lemar, not a Samira-built room | Working | New pickup 2026-08-20 PART D/E — unclear if this is the same diligence package Donte referenced 8/12 (the one Lemar declined to forward to Jason Klein 8/14) or a separate capital-raise package; not guessing the connection. Lemar corresponding directly — nothing for Samira to draft. See [[2026-08-20-donte-bronaugh-hr-investor-package]], [[2026-08-21-donte-bronaugh-250k-personal-commitment]] | 2026-08-21 |
 | Strike Partners (David Kram) | Cuzzie's | David Kram · david@strike.partners — M&A/dealflow broker; relayed via Joshua Evans (joshua@cuzziesnj.com), not addressed to Lemar directly | Unstated — generic "if you're actively acquiring or liquidating assets" broker prospecting email listing off-market cannabis deals (OH/MO/TX/NJ/IL/KY) plus an open-ended sell-side offer ("if you're the one thinking about getting out... happy to talk it through"); no ask specific to Cuzzie's | none built — flagged before building, same guard as the other cold broker pitches on this board | Working | New pickup 2026-08-18 PART D/E — Joshua fwd'd David's 8/13 + 8/18 follow-up emails to Lemar with no comment; reads as broker relationship-maintenance, not a live offer, but the sell-side line is timely given the ongoing wind-down/reopening decisions. Labeled `Samira/investor`; nothing sent, no data shared; flagged for Lemar's pursue/ignore call | 2026-08-18 |
 
+| Fresh Start Business Solutions (Matthew Bailiff) | Cuzzie's | Matthew J. Bailiff · matt@practicaldebthelp.com — "Pres., Fresh Start Business Solutions LLC," Overland Park, KS | Unsolicited MCA-debt-restructuring pitch — cites a UCC financing lien on Cuzzie's as the reason for outreach, claims 50-70% term reductions; same cold-broker pattern as Ritalia Funding/Prompt Working Capital/Park Capital-Business Funding on this board | none built — flagged before building, same guard as the other cold pitches on this board | Working | New pickup 2026-09-15 (thread received today, `Samira/investor` label applied this pass) — reads as a cold debt-relief solicitation off a public UCC filing; nothing sent, no financials shared; flagged for Lemar's pursue/ignore call | 2026-09-15 |
+
 ## Sources
 - drive: Data Rooms parent + Master Templates folder (IDs in repo `.claude/anchors.md`)
 - slack: #investor-pipeline (thread links live on each deal's receipt note)
@@ -79,3 +81,4 @@ Parked — rows are never deleted.
 - gmail: thread 1a0222e25a7d4439 ("Dear Ray..." investment pitch, theateamre@gmail.com, 2026-08-21 2:37am ET, picked up off `Samira/investor` same pass)
 - gmail: thread 1a020d75ffcd638a (Park Business Funding / Victor Vaughn cold "Open approval 08/26" pitch, received 2026-08-20, follow-up 2026-08-24, picked up off `Samira/investor` 2026-08-27)
 - gmail: threads 1a02228bb4247f00 and 1a0222e25a7d4439 (Lemar's 2026-08-21 13:18 ET direct replies to Peter Abdallah confirming the "Dear Ray" $500K/50% one-pager terms — picked up 2026-08-29 PART E; see [[2026-08-21-peter-abdallah-updated-one-pager-dear-ray]] Update)
+- gmail: thread 1a0a583f63f4c7fc (Fresh Start Business Solutions / Matthew Bailiff cold UCC-lien-citing debt-restructuring pitch, received 2026-09-15 ~10:41am ET, picked up off `Samira/investor` same pass)
