@@ -1,6 +1,6 @@
 ---
 created: 2026-09-15T08:43:00-04:00
-updated: 2026-09-15T12:07:00-04:00
+updated: 2026-09-15T14:10:00-04:00
 domain: reference
 type: reference
 status: active
@@ -58,6 +58,25 @@ Lemar asked in-thread (Convo 1, ts `1789485019.186429`) for rendered flash cards
 Built as a tap-to-flip study page (6 act cards + 8 definition cards):
 https://claude.ai/artifact/MLb5kX14Pu4mynq7ngHjzg
 
+## Update — 2026-09-15, 121st scan
+Lemar asked in-thread (Convo 1, ts `1789488802.856819`, 2026-09-15 12:00 EDT): "Actually
+can you make flash cards on all of the 'Commit these to memory' sections of the 7 day
+cirriculum (found in my google calendar) I feel like we're going to need them to study
+before the test."
+
+Found the 7-day curriculum via the Notary Day 1–7 Google Calendar events, each linking to
+the "Jersey Notary Bootcamp" study artifact (`0f239afe-1f5e-4ef5-8bd4-a36944b08ada`).
+Extracted the full "Commit these to memory" list from every day (63 facts total) and
+built a new tap-to-flip deck, organized by day with a day picker, shuffle, and a
+"known"/"review unknowns" tracker (saved locally in the browser, not synced):
+
+https://claude.ai/artifact/HVNsDfeYsnVmNqfDZUcxMD
+
+This is separate from the 6-acts/8-definitions deck above (that one stays as the
+narrower six-acts reference); this new deck covers all seven curriculum days end to end.
+
 ## Sources
 - slack: Convo 2 self-DM (D0BBVV54L5R), ts 1789476190.277099, 2026-09-15 08:43:10 EDT
 - slack: Convo 1 (D0BHPKMDNEP), ts 1789485019.186429, flashcard-page request
+- slack: Convo 1 (D0BHPKMDNEP), ts 1789488802.856819, 7-day curriculum flashcard request
+- Google Calendar: Notary Day 1–7 events (`gi4afngmj63t7qnnt28pfkffq8` through `b1g59e7qtq09lf58alnopl0g44`), each linking to artifact `0f239afe-1f5e-4ef5-8bd4-a36944b08ada`
