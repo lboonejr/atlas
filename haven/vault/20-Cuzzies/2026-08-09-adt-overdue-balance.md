@@ -1,6 +1,6 @@
 ---
 created: 2026-08-09T14:05:00-04:00
-updated: 2026-09-14T15:12:00-04:00
+updated: 2026-09-15T12:10:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -78,3 +78,18 @@ open (on-button Tier-1 tracking) and this notice adds nothing new to decide.
 ### Sources (this update)
 - gmail: thread `1a0a0d98dd7f68ef` — "Final Notice: Last Chance to Pay ADT Bill!",
   received 2026-09-14T16:56:45Z from adt@t.adt.com to lemar@cuzziesnj.com
+
+## Update 2026-09-15 — new bill cycle, balance now $4,149.55, due 10/5/2026
+
+Another routine billing-reminder notice ("Action Required: Your ADT Bill is Due")
+landed 2026-09-15T15:53:40Z: **balance due $4,149.55, due 10/5/2026** — up ~$656 from
+the 9/14 figure ($3,493.42). Same do-not-reply marketing sender, no new information
+beyond the balance. Not reply-worthy; no payment made or authorized. The pay-vs-lapse
+decision on the on-button #fixes/Convo-1 tracking is still open and unresolved — not
+raising a fresh card since that question already stands open; refreshed the Tier-1
+`adt` line in `haven/vault/40-Projects/on-button-reopen/index.md` and the reopening
+page to the current figure.
+
+### Sources (this update)
+- gmail: thread `1a0a5c62981d351e` — "Action Required: Your ADT Bill is Due",
+  received 2026-09-15T15:53:40Z from adt@t.adt.com to lemar@cuzziesnj.com

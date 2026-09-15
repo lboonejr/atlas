@@ -1,6 +1,6 @@
 ---
 created: 2026-07-10T18:45-04:00
-updated: 2026-09-11T16:15:00-04:00
+updated: 2026-09-15T12:12:00-04:00
 domain: project
 type: reference
 status: active
@@ -84,13 +84,13 @@ items:
     status: past-due
   - id: adt
     label: "ADT Security"
-    amount: 2842.83
+    amount: 4149.55
     tier: 1
     vendor: "ADT"
-    account: "405075455 · due 8/4/2026 (supersedes prior $1,637.84 90-days-past-due statement)"
+    account: "405075455 · due 10/5/2026 (aged from $2,842.83 on 7/15 -> $3,493.42 on 8/15 -> $4,149.55 on 9/15, same account continuing to age, not a new incident)"
     contact: "(833) 320-1859"
     status: past-due
-    note: "Lemar confirmed 7/15 (#decisions, ts 1784128401.635159) this $2,842.83 statement is the current balance on the same account — tracked line updated."
+    note: "Lemar confirmed 7/15 (#decisions, ts 1784128401.635159) the $2,842.83 statement was the current balance; balance refreshed 9/15 to $4,149.55 per haven/vault/20-Cuzzies/2026-08-09-adt-overdue-balance.md. Pay-vs-lapse decision still open."
   - id: nst
     label: "National Secure Transport — cash pickup"
     amount: 868.60
@@ -535,6 +535,14 @@ carry:
 - Reality check: opening (~$104.4K) + a 3-month cushion (~$93.6K carry) ≈ **$198K** before
   Tier 2/3 and before tax. Tier 2 fully funding now runs materially higher (~$109.2K+) once
   the cannabis-vendor arrears are included.
+
+## Update — 2026-09-15 (ADT balance refreshed to $4,149.55)
+Routine ADT billing-reminder notice landed 2026-09-15 (gmail thread `1a0a5c62981d351e`):
+balance now **$4,149.55, due 10/5/2026**, up from $3,493.42 (8/15/9/14 notices) — same
+account #405075455 continuing to age, not a new incident. Tracked `adt` line above
+updated; page (`on-button-reopen.html`) refreshed to match. Full history in
+`haven/vault/20-Cuzzies/2026-08-09-adt-overdue-balance.md`. Pay-vs-lapse decision still
+open, no fresh card raised (question already stands open).
 
 ## Update — 2026-09-11 (Dime Industries priced, Northlake Supply added, First Insurance Funding loan reconciled down)
 Lemar asked twice in Convo 1 (thread ts `1788988028.299219` "Waste Management — AP trying
