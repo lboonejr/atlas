@@ -1,6 +1,6 @@
 ---
 created: 2026-09-06T20:59-04:00
-updated: 2026-09-10T14:10:00-04:00
+updated: 2026-09-15T15:16:00-04:00
 domain: station
 type: task
 status: active
@@ -38,11 +38,20 @@ submitted this weekend. This is the same 9/10 follow-up window the calendar remi
 above was already set for (Markony's PBS credentials). Still nothing submitted as of
 this update; the blocker is unchanged (Markony's PBS login).
 
+## Update 2026-09-15T15:16-04:00 — flagged on today's to-do list
+
+Lemar's daily to-do drop ([[haven/vault/10-Personal/2026-09-15-short-to-do-list-today.md]])
+named "see if you can complete UEZ app," split out to this note per his routing call
+(Convo 1, `D0BHPKMDNEP`, ts `1789477692.630749`). Status unchanged from the 9/10 update
+— still blocked on Markony's PBS login; Samira can't log into PBS herself, this needs
+another live Chrome session or confirmation the credentials arrived.
+
 ## Sources
 - slack: Convo 2 (self-DM) updates, ts `1788724945.543779` and `1788725720.541579`,
   2026-09-06 16:02/16:15 ET ("Sent using Claude" — a live Chrome session, not Samira)
 - calendar: event `ibfukh957or4ot1tlp8h7e3qok`, "Follow Up — Markony (Station EIN &
   Legal Name for UEZ App)", 2026-09-10
+- slack: Convo 2 self-DM, ts 1789474761.308829, 2026-09-15 (today's to-do drop)
 
 ## Related
 - [[2026-09-06-newark-facade-grant-research]] — separate Newark UEZ program (façade

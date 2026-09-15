@@ -1,9 +1,9 @@
 ---
 created: 2026-09-15T08:19:00-04:00
-updated: 2026-09-15T08:19:00-04:00
-domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation (mixed batch — personal errands + Camden Launch + investor-pipeline + Station items)
+updated: 2026-09-15T15:20:00-04:00
+domain: personal
 type: task
-status:    # UNRESOLVED — set one of: active | parked | done | awaiting-decision
+status: done
 tags: [daily-todo, notary, diaz, crc, camden-launch, investor-pipeline, station-uez, betty-medicaid, anchor-program-grandpa, carlos-car, money-hub]
 source: slack
 ---
@@ -38,6 +38,27 @@ threads and should be split out / cross-linked once domain is resolved:
 - Item 7 — a new Station (Newark) task: UEZ application.
 - Item 11 (paid by the 18th) — belongs in the money-hub ledger, not here.
 - Items 1, 2, 8, 9, 10 look like standalone personal tasks with no existing note found.
+
+## Update 2026-09-15T15:20-04:00 — split per Lemar's routing call
+
+Lemar picked "Split it" (Convo 1, `D0BHPKMDNEP`, ts `1789477692.630749`): Camden group +
+CRC Cure → Camden Launch engagement, investor docs → investor pipeline, "paid by the
+18th" → Money Hub, UEZ → its own Station task, the rest → standalone personal notes.
+Filed as `domain: personal` / `status: done` — this note is now the historical record of
+the original drop; the live items live in the notes below.
+
+1. Notary course Days 1-2 → [[haven/vault/10-Personal/2026-09-15-notary-course-days-1-2.md]]
+2. Reach out to Diaz → [[haven/vault/10-Personal/2026-09-15-reach-out-to-diaz.md]]
+3. CRC Cure → [[haven/vault/40-Projects/camden-dispensary-launch/2026-09-15-crc-cure-and-camden-group-followup-todo.md]]
+4. Follow up with Camden group → same note as #3
+5. Investor docs → [[haven/vault/40-Projects/investor-pipeline/2026-09-15-continue-investor-docs-todo.md]]
+6. Close out open Samira threads → ongoing, worked every scan in Convo 1 (PART 3); no
+   separate note
+7. Station UEZ app → Update appended to [[haven/vault/30-Station/2026-09-06-station-uez-certification-application.md]]
+8. Betty Medicaid follow-up → [[haven/vault/10-Personal/2026-09-15-betty-medicaid-app-followup.md]]
+9. Grandpa's anchor program → [[haven/vault/10-Personal/2026-09-15-grandpa-anchor-program.md]]
+10. Carlos car final $500 → [[haven/vault/10-Personal/2026-09-15-carlos-car-final-payment.md]]
+11. What's due by the 18th → [[haven/vault/10-Personal/Money/2026-09-15-figure-out-whats-due-by-18th.md]]
 
 ## Sources
 - slack: Convo 2 self-DM (D0BBVV54L5R), ts 1789474761.308829, 2026-09-15 08:19:21 EDT

@@ -1,6 +1,6 @@
 ---
 created: 2026-09-15T08:43:00-04:00
-updated: 2026-09-15T10:04:03-04:00
+updated: 2026-09-15T15:12:00-04:00
 domain: reference
 type: reference
 status: active
@@ -42,14 +42,22 @@ notary-course study/reference cards, captured verbatim below. Relates to
 
 ## Six Notarial Acts
 
-Lemar named "the Six Notarial acts" but did not list them out in this drop — the six
-acts themselves (as distinct from the definitions above) still need to be enumerated
-before "note cards" can be built. Flagging as open rather than guessing the list.
+Provided by Lemar in-thread (Convo 1, `D0BHPKMDNEP`, ts `1789477941.923909`):
+
+| Act | What the signer is doing |
+|---|---|
+| Taking an acknowledgment | Declaring that they signed the record for the purpose stated in it (and, if applicable, with proper authority) |
+| Administering an oath or affirmation | Swearing or affirming, spoken before you |
+| Taking a verification on oath or affirmation | Declaring on oath or affirmation that a statement in a record is true |
+| Witnessing or attesting a signature | Signing in your presence so you can attest to the signing |
+| Certifying or attesting a copy or deposition | Presenting a record so you can certify a copy is full, true and accurate |
+| Noting a protest of a negotiable instrument | Having dishonor of a negotiable instrument formally noted |
 
 ## Open question
-What format should the "reference note cards" take — a Haven reference note per act/
-definition (Obsidian-style), or a rendered study-card artifact (e.g. an HTML flashcard
-page)? Ask Lemar rather than assume.
+What format should the "reference note cards" take beyond this Haven reference note —
+a rendered study-card artifact (e.g. an HTML flashcard page)? Defaulting to this plain
+Haven note for now since no format was specified; ask if a rendered flashcard page is
+wanted instead.
 
 ## Sources
 - slack: Convo 2 self-DM (D0BBVV54L5R), ts 1789476190.277099, 2026-09-15 08:43:10 EDT
