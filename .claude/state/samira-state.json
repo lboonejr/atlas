@@ -3,14 +3,14 @@
   "lock": {
     "run_id": "run_20260915T170236Z",
     "run_started": "2026-09-15T17:02:36Z",
-    "run_completed": "2026-09-15T16:18:29Z",
-    "note": "Closed 16:18:29Z (119th scan, ~12:17 ET, 2026-09-15). Convo 1: Lemar's plain reply on the closed notary-cards thread ('can I have rendered flash cards?') was a new signal past the stored watermark -- built a tap-to-flip flashcard page (6 acts + 8 definitions, https://claude.ai/artifact/MLb5kX14Pu4mynq7ngHjzg), linked back into the reference note, replied Done, closing that follow-up. Fresh Start Business Solutions card (opened last scan) and the Haven Inbox card (6 stuck) both unchanged, still awaiting Lemar. Convo 2 and #fixes quiet, no new top-level messages or thread replies past their watermarks. Email: 8 new threads -- 7 junk (labeled seen), 1 real bill (ADT security, Cuzzie's/on-button Tier 1) aged $3,493.42 -> $4,149.55 due 10/5/2026, same continuing account per the established pattern -- appended an Update to the existing ADT note, refreshed the tracked `adt` line + the reopening page, posted a #on-button timeline entry; pay-vs-lapse decision stays open, no fresh card. Investor: no new signal. Reports-scan: clean, nothing new since the 118th scan's digest. Calendar-sync: no-op (no `due` field changed on anything touched this run). Pulse rendered (a card closed + a Haven note updated qualify the gate) -> https://docs.google.com/document/d/1HeB1p9KYfItJwue1tJG9kfrg2PL8b_jJRbUg46SQxhE/edit, notified #pulse; content read back intact, no mojibake. Digest posted 12:17 ET to #reports (ts 1789489070.519569) + appended to _daily/2026-09-15.md.",
-    "prior_note": "Closed 15:16:30Z (118th scan, ~11:16 ET, 2026-09-15). Worked 3 live cards from Lemar's signals since the 117th scan: Hamilton Farms (plain reply -> Gmail draft declining, closed), notary reference cards (he supplied the Six Notarial Acts in-thread, added to the 50-Reference/ note, closed), today's to-do split (his checkmark on 'Split it' executed -> 8 new/updated notes across Camden Launch, investor pipeline, Station, Money Hub, and 4 standalone personal notes; original note resolved domain:personal/status:done and filed out of the Inbox, stuck 6->5). Email: 7 new threads -- 6 junk, 1 new investor handoff (Fresh Start Business Solutions, cold UCC-lien-citing debt pitch) -> index row + receipt + new Convo 1 card + #investor-pipeline timeline entry. #camden-launch also got a timeline entry for the to-do routing. Reports-scan clean (10th Haven Keeper occurrence already caught by the 117th scan itself). Pulse rendered (3 closed + 1 opened) -> https://docs.google.com/document/d/1IyUOyAI3iizmaAGV-j8boQbLxZZTsMTC5p-DtyvqP94/edit, notified #pulse. Self-caught defect: several vault writes and the first Pulse render initially mislabeled ET timestamps (UTC hour paired with a -04:00 offset, ~4h fast) -- caught before the digest, corrected across all 15 touched files in one commit, bad first Pulse Doc (never seen by Lemar) trashed and rebuilt correctly; no externally-visible Slack text was affected. Digest posted 11:16 ET to #reports (ts 1789485378.153689) + appended to _daily/2026-09-15.md.",
+    "run_completed": "2026-09-15T17:16:18Z",
+    "note": "Closed 17:16:18Z (120th scan, ~13:15 ET, 2026-09-15). Fully quiet pass on Convo 1, Convo 2, and #fixes -- no new top-level messages and no new reactions/replies on any open thread since the 119th scan's watermarks. The two open Convo 1 cards (Fresh Start Business Solutions, Haven Inbox) sit unchanged awaiting Lemar. Haven Inbox card's stuck count corrected from a stale 6 back to 5 (the short to-do list item it was still counting had already been split and filed out back in the 118th scan) -- thread reply on the card, no new card. Vault integrity: spot-check only (6 recently-touched files, all clean), no whole-vault pass this scan. Email: 6 new threads, all junk, labeled seen, 0 cards/drafts. Investor: no new signal. Calendar-sync: no-op. Reports-scan: found 1 -- the 118th->119th digest silently under-reported the #fixes-open count (2->1) with neither underlying card actually closed in #fixes itself; posted as a new #fixes card (ts 1789492444.626769), decision pending. That #fixes sweep also surfaced ~24 open card-format threads in the channel with no new signal this scan -- standing backlog, carried as-is, not newly investigated this run. Timelines: 0 entries. Pulse: carried (quiet pass -- no card closed/opened, no money change, no project-pulse flip, no new Haven note qualified the gate; the only vault write was an internal log append). Digest posted 13:15 ET to #reports (ts 1789492531.429429) + appended to _daily/2026-09-15.md.",
+    "prior_note": "Closed 16:18:29Z (119th scan, ~12:17 ET, 2026-09-15). Convo 1: Lemar's plain reply on the closed notary-cards thread ('can I have rendered flash cards?') was a new signal past the stored watermark -- built a tap-to-flip flashcard page (6 acts + 8 definitions, https://claude.ai/artifact/MLb5kX14Pu4mynq7ngHjzg), linked back into the reference note, replied Done, closing that follow-up. Fresh Start Business Solutions card (opened last scan) and the Haven Inbox card (6 stuck) both unchanged, still awaiting Lemar. Convo 2 and #fixes quiet, no new top-level messages or thread replies past their watermarks. Email: 8 new threads -- 7 junk (labeled seen), 1 real bill (ADT security, Cuzzie's/on-button Tier 1) aged $3,493.42 -> $4,149.55 due 10/5/2026, same continuing account per the established pattern -- appended an Update to the existing ADT note, refreshed the tracked `adt` line + the reopening page, posted a #on-button timeline entry; pay-vs-lapse decision stays open, no fresh card. Investor: no new signal. Reports-scan: clean, nothing new since the 118th scan's digest. Calendar-sync: no-op (no `due` field changed on anything touched this run). Pulse rendered (a card closed + a Haven note updated qualify the gate) -> https://docs.google.com/document/d/1HeB1p9KYfItJwue1tJG9kfrg2PL8b_jJRbUg46SQxhE/edit, notified #pulse; content read back intact, no mojibake. Digest posted 12:17 ET to #reports (ts 1789489070.519569) + appended to _daily/2026-09-15.md.",
     "orphan_note": "8th instance (111th scan's pickup of 110th scan's dead lock). Root cause still open; Lemar to pick between Option 1 (no fix needed) and Option 2 (make lock more resilient) on the #fixes card, ts `1789063894.596139`."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789489070.519569",
+      "C0BBZJL85RT": "1789492531.429429",
       "D0BHPKMDNEP": "1789488582.563309",
       "D0BBVV54L5R": "1789489109",
       "C0BV5BRNH5Z": "1789489109"
@@ -121,8 +121,9 @@
       "D0BHPKMDNEP:1789477678.735079": "1789484973.611069",
       "D0BHPKMDNEP:1789477679.577859": "1789488582.563309",
       "D0BHPKMDNEP:1789477782.348399": "1789484819.882369",
-      "D0BHPKMDNEP:1789481364.345479": "1789481364.345479",
-      "D0BHPKMDNEP:1789485052.608869": "1789485052.608869"
+      "D0BHPKMDNEP:1789481364.345479": "1789492054.087009",
+      "D0BHPKMDNEP:1789485052.608869": "1789485052.608869",
+      "C0BV5BRNH5Z:1789492444.626769": "1789492444.626769"
     },
     "migration": {
       "decisions_migration_complete": true,
@@ -130,7 +131,7 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1789488226,
+    "gmail_after_epoch": 1789492146,
     "email_weekly_scan": {
       "last_date": "2026-09-12"
     }
@@ -138,7 +139,7 @@
   "integrity": {
     "last_full_pass": "2026-09-15T08:05:00-04:00",
     "last_scan_sha": "64f4d7f",
-    "note": "Incremental check only this scan (119th) -- full pass already ran today (115th, see last_full_pass). Spot-checked all files changed since 65f85ce (the 118th scan's incremental base): all clean frontmatter openers, no CRLF, no new mechanical defects. The 5 known value gaps (domain unresolved: google-voice-subscription-cancellation, rootwurks-assignment-log, veriscan-idscan-security-incident, dib-template-theme-decision-closeout, visit-alex-sage-dispensary) unchanged, stuck 5. Known mis-filed note (haven/vault/40-Projects/samira-skills/2026-09-12-reports-false-vault-empty-claim-stale-checkout.md, domain:automation under 40-Projects/) still flagged, not moved."
+    "note": "Incremental spot-check only this scan (120th) -- full pass already ran today (115th, see last_full_pass). Spot-checked 6 recently-touched files (all from the 118th scan's writes), all clean frontmatter, no mechanical breakage. The 5 known value gaps (domain unresolved: google-voice-subscription-cancellation, rootwurks-assignment-log, veriscan-idscan-security-incident, dib-template-theme-decision-closeout, visit-alex-sage-dispensary) unchanged, stuck 5. Known mis-filed note (haven/vault/40-Projects/samira-skills/2026-09-12-reports-false-vault-empty-claim-stale-checkout.md, domain:automation under 40-Projects/) still flagged, not moved. Not re-verified this scan (carried, per escalate-only-what's-new)."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
