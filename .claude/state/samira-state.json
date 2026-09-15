@@ -131,9 +131,9 @@
     }
   },
   "integrity": {
-    "last_full_pass": "2026-09-14T08:07:00-04:00",
-    "last_scan_sha": "48952d6",
-    "note": "No new integrity pass this run (2026-09-14 22:06Z, 114th scan): confirmed via git diff --stat against the 48952d6 baseline that only the state file + daily journal changed -- no vault content changed since the 113th scan's own close, so last_scan_sha stays 48952d6 (unchanged). 5 stuck notes unchanged (domain unresolved: google-voice-subscription-cancellation, rootwurks-assignment-log, veriscan-idscan-security-incident, dib-template-theme-decision-closeout [also missing created/updated/status/tags], visit-alex-sage-dispensary). Known/carried: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, flagged in #fixes, decision stands, not repaired)."
+    "last_full_pass": "2026-09-15T08:05:00-04:00",
+    "last_scan_sha": "2aa8924",
+    "note": "Full whole-vault pass (115th scan, day's first run 2026-09-15): 754 notes scanned. 0 new mechanical defects -- known: 70-Automation/samira/2026-09-06-decisions-migration-batch2.md (no frontmatter, decision stands). 5 known value gaps unchanged in 00-Inbox (domain unresolved: google-voice-subscription-cancellation, rootwurks-assignment-log, veriscan-idscan-security-incident, dib-template-theme-decision-closeout [also missing created/updated/tags], visit-alex-sage-dispensary). NEW finding: haven/vault/40-Projects/samira-skills/2026-09-12-reports-false-vault-empty-claim-stale-checkout.md has domain: automation but sits under 40-Projects/ (expected 70-Automation/) -- flagged, not moved (location-vs-frontmatter mismatch is Lemar's call). Filed 1 ready Inbox note (basil-inbox-janitor-run -> 70-Automation/inbox-janitor/)."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
