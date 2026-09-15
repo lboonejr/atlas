@@ -1,8 +1,8 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. 2026-09 RESTRUCTURE COMPLETE (101st scan): only Convo 1 (D0BHPKMDNEP), Convo 2 (D0BBVV54L5R), #fixes (C0BV5BRNH5Z), and #reports (C0BBZJL85RT) carry a live watermark now -- timeline channels are never swept for input and don't need one, so their watermark entries were dropped this run along with the retired #decisions/#stormy entries. card_threads (keyed '<channel_id>:<parent_ts>') is the open-card worklist. The decisions_threads migration worklist and the legacy capture_dm key are deleted -- migration.decisions_migration_complete is true. Every slack_channels watermark MUST be a JSON string. Watermarks must never postdate lock.run_completed -- they are stamped before the lock closes (PART 0).",
   "lock": {
-    "run_id": "run_20260915T150402Z",
-    "run_started": "2026-09-15T15:04:02Z",
+    "run_id": "run_20260915T160354Z",
+    "run_started": "2026-09-15T16:03:54Z",
     "run_completed": "2026-09-15T15:16:30Z",
     "note": "Closed 15:16:30Z (118th scan, ~11:16 ET, 2026-09-15). Worked 3 live cards from Lemar's signals since the 117th scan: Hamilton Farms (plain reply -> Gmail draft declining, closed), notary reference cards (he supplied the Six Notarial Acts in-thread, added to the 50-Reference/ note, closed), today's to-do split (his checkmark on 'Split it' executed -> 8 new/updated notes across Camden Launch, investor pipeline, Station, Money Hub, and 4 standalone personal notes; original note resolved domain:personal/status:done and filed out of the Inbox, stuck 6->5). Email: 7 new threads -- 6 junk, 1 new investor handoff (Fresh Start Business Solutions, cold UCC-lien-citing debt pitch) -> index row + receipt + new Convo 1 card + #investor-pipeline timeline entry. #camden-launch also got a timeline entry for the to-do routing. Reports-scan clean (10th Haven Keeper occurrence already caught by the 117th scan itself). Pulse rendered (3 closed + 1 opened) -> https://docs.google.com/document/d/1IyUOyAI3iizmaAGV-j8boQbLxZZTsMTC5p-DtyvqP94/edit, notified #pulse. Self-caught defect: several vault writes and the first Pulse render initially mislabeled ET timestamps (UTC hour paired with a -04:00 offset, ~4h fast) -- caught before the digest, corrected across all 15 touched files in one commit, bad first Pulse Doc (never seen by Lemar) trashed and rebuilt correctly; no externally-visible Slack text was affected. Digest posted 11:16 ET to #reports (ts 1789485378.153689) + appended to _daily/2026-09-15.md.",
     "prior_note": "Closed 14:16:00Z (117th scan, ~10:14 ET, 2026-09-15). Filed the notary reference-cards note out of the Inbox to 50-Reference/; the new 'Short to-do list' note (domain/status UNRESOLVED) joins the 5 known-stuck notes, net stuck 6. Integrity: incremental only, only the daily journal had changed since last_scan_sha, 0 new defects. calendar-sync no-op. Convo 1/Convo 2/#fixes top-level quiet at scan start; a stray informational auto-handoff (samira-work-summary, today's Drive-organizing run) landed in Convo 1 -- logged to Haven (70-Automation/file-organizing/2026-09-15-drive-file-organizing-run.md), no card needed. Discovered the 'Haven Inbox' stuck-notes card never migrated from #decisions to Convo 1 during the 9/6 restructure -- posted it fresh (6 notes). Email: 5 new threads, all junk (car-hunt alerts + vendor marketing blasts), labeled seen, gmail_after_epoch -> 1789480916. Investor: no signal. Reports-scan: 10th occurrence of the recurring Haven Keeper false all-quiet #reports claim (posted ~09:20 ET, claimed Inbox empty when it held 7 notes) -- posted as an update to the open #fixes card, still unpicked >1wk. Timelines: 0 entries. Pulse: rendered (a note filed + a new Convo 1 card opened satisfy the gate) -> https://docs.google.com/document/d/1nmvPGADtXwXm-nXexRVhOOm0WdaiO9kHogX9DWo-2x0/edit, notified #pulse; verified the Doc's content read back intact (no astral-emoji mojibake -- page used only BMP-safe glyphs). Digest posted 10:14 ET to #reports (ts 1789481665.331609) + appended to _daily/2026-09-15.md.",
@@ -113,7 +113,7 @@
       "D0BHPKMDNEP:1789222678.470519": "1789226176.592079",
       "D0BHPKMDNEP:1789226265.669199": "1789301470.495209",
       "C0BV5BRNH5Z:1789226200.966659": "1789238098.401569",
-      "C0BV5BRNH5Z:1789301748.713179": "1789474513.845399",
+      "C0BV5BRNH5Z:1789301748.713179": "1789481453.207079",
       "D0BHPKMDNEP:1789330127.583259": "1789330139.024459",
       "C0BV5BRNH5Z:1789333747.809089": "1789333747.809089",
       "D0BHPKMDNEP:1789402024.978189": "1789412758.623459",
@@ -121,7 +121,6 @@
       "D0BHPKMDNEP:1789477678.735079": "1789484973.611069",
       "D0BHPKMDNEP:1789477679.577859": "1789484842.479389",
       "D0BHPKMDNEP:1789477782.348399": "1789484819.882369",
-      "C0BV5BRNH5Z:1789301748.713179": "1789481453.207079",
       "D0BHPKMDNEP:1789481364.345479": "1789481364.345479",
       "D0BHPKMDNEP:1789485052.608869": "1789485052.608869"
     },
