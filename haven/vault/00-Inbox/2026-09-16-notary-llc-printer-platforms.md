@@ -1,6 +1,6 @@
 ---
 created: 2026-09-16T18:10-04:00
-updated: 2026-09-16T18:10-04:00
+updated: 2026-09-16T18:35-04:00
 domain: project
 type: decision
 status: active
@@ -18,7 +18,8 @@ already on the calendar.
 
 # 1. THE LLC NAME — Given Word LLC
 
-**Lemar's choice: `Given Word LLC`.** Recorded as his call.
+**Lemar's choice: `Given Word LLC`.** Recorded as his call. — **SUPERSEDED 2026-09-16T18:35, see
+the LOCKED section at the end of this note: the decision is `Given Word Notary LLC`.**
 
 ## Is it available?
 
@@ -231,3 +232,66 @@ platforms?" to "Snapdocs first, then direct registrations, once the packet is bu
   and the 2026-09-16 name clearance doc `1K0tlM_wFvClarXfzRZukM4wvi70C6PFCu-E6aT6aems`.
 - Not legal or tax advice. The county-versus-state filing point should be confirmed with the
   Camden County Clerk before the counter trip is cancelled.
+
+---
+
+## LOCKED 2026-09-16T18:35-04:00 — `Given Word Notary LLC`, and Snapdocs first
+
+Lemar reversed the earlier pick after seeing the alternate-name cost. **Option A is the
+decision.** The entity is **`Given Word Notary LLC`** and the brand is the same string.
+
+### What this settles
+
+- **No alternate name filing.** $50 saved, and a five-year renewal removed from the list of
+  things that can be forgotten.
+- **Nothing to keep in sync.** The entity name, the trade name, the Google Business Profile, the
+  W-9, the invoices and the bank account all carry one name. The Business Profile name-match
+  requirement is satisfied by the LLC formation itself.
+- **The W-9 reads `Given Word Notary LLC`**, which tells a signing service exactly what it is
+  looking at.
+- **Availability is still likely and still unconfirmed until filing.** The 2026-09-16 state
+  search was clear for "Given Word"; adding "Notary" narrows rather than widens the risk. A NJ
+  entity name also needs a designator, and "LLC" is one.
+
+**The accepted trade-off:** "Notary" is permanently in the legal name. If the business later adds
+apostille, fingerprinting, or courier work, the name reads narrower than the business. That is a
+rename or an alternate name *then*, not a problem now — and this is a notary business.
+
+### Revised filing sequence
+
+| Step | Where | Cost |
+|---|---|---|
+| Form `Given Word Notary LLC` | DORES, online | ~$125 |
+| EIN | IRS, online | free |
+| Annual report | DORES, yearly | $75/yr |
+| ~~Alternate name~~ | — | **not needed** |
+| ~~Trade Name Certificate~~ | ~~Camden County Clerk~~ | ~~$57~~ — not for an LLC, confirm with the clerk first |
+
+**Total to stand the entity up: ~$125 and an EIN.** Still confirm the county point by phone
+before the counter trip is cancelled.
+
+### Platform decision: Snapdocs first
+
+Confirmed. **Snapdocs is the first and only registration until it is working**, rather than
+signing up everywhere at once. Direct registrations with Amrock, ServiceLink, Coast2Coast,
+Signature Closers, Mortgage Connect and Rocket Close come after, once the packet has been through
+one real verification.
+
+**The practical path, in order:**
+
+1. Form the LLC and get the EIN — **the W-9 cannot be filled out before this**, and every
+   platform wants the W-9.
+2. Pass the exam, get the commission, swear the oath, get the seal.
+3. Certification and the background screening, started during the wait.
+4. Buy E&O.
+5. Assemble the packet: W-9, E&O certificate, **the full background check report PDF**,
+   certification certificate, commission certificate, seal impression, LLC formation certificate.
+6. Create the NNA profile and the Snapdocs profile with **the name, email and phone matching
+   exactly** across both.
+7. Upload for **Snapdocs Verified**: commission, bond if applicable, full background report, E&O
+   policy, verified ID.
+
+**One name everywhere from here on: `Given Word Notary LLC`.** Anywhere a business name is typed —
+the bank account, Stripe, the Business Profile, the W-9, the NNA profile, Snapdocs — it is that
+string, spelled that way. Mismatches are a known cause of Snapdocs verification stalling, and they
+are trivially avoidable if the name is decided first, which it now is.

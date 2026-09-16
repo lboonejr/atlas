@@ -1,6 +1,6 @@
 ---
 created: 2026-09-16T11:56-04:00
-updated: 2026-09-16T18:10-04:00
+updated: 2026-09-16T18:35-04:00
 domain: project
 type: task
 status: active
@@ -295,3 +295,31 @@ directly often pay **$125–$200+**. Net-30 is the normal term.
 ### What is left open
 Nothing on this list. The remaining open items are unchanged: the four DORES questions, the three
 BlueNotary questions, E&O, and the exam itself.
+
+## Update 2026-09-16T18:35-04:00 — entity name LOCKED: `Given Word Notary LLC`
+
+Lemar reversed the `Given Word LLC` + alternate name plan from the update above. **The entity and
+the brand are now one name: `Given Word Notary LLC`.** Full reasoning in
+[[2026-09-16-notary-llc-printer-platforms]].
+
+**What drops off this checkpoint:**
+- The **$50 alternate name filing** — not needed, entity name and trade name are the same string
+- Its five-year renewal
+- The risk of the Business Profile name not matching the registered name
+
+**What stands up the entity: ~$125 and a free EIN.** Get the EIN — it keeps Lemar's Social
+Security number off a dozen signing service W-9s.
+
+**The county trade name trip is still to be confirmed, not yet cancelled.** A NJ county clerk
+registers trade names for individuals and partnerships; LLCs register with DORES. Call the clerk
+([[2026-09-16-camden-county-clerk-call-script]]) before dropping a step that is already planned.
+
+**Platform decision: Snapdocs first, and only Snapdocs until it is working.** Direct registrations
+come after one real verification has been through.
+
+**One name everywhere from here on.** Bank account, Stripe, Google Business Profile, W-9, NNA
+profile, Snapdocs: `Given Word Notary LLC`, spelled the same way each time. Name mismatches are a
+known cause of Snapdocs verification stalling.
+
+**The W-9 cannot be filled out until the LLC and EIN exist**, and every platform wants the W-9 —
+so the entity filing is now the first domino on the whole B2B side.
