@@ -3,13 +3,15 @@ name: notary-journal-mirror
 description: >
   Keeps Lemar's notary business record honest against his legal record. Pulls completed
   notarial acts from the journal of record (BlueNotary), mirrors the non-PII business
-  facts into Haven, posts the money-hub notary stream line with an automatic 30% tax
-  set-aside, issues the two-line Stripe invoice, hands unpaid invoices to
-  chase-commitments, raises the three alarms the moment the two records disagree, and
-  exports the journal monthly against NJ's ten-year retention duty. Runs inside
-  Samira's hourly scan or on demand. Trigger on: "run the journal mirror", "reconcile
-  the notary journal", "did every signing get logged", "notary money", "export the
-  notary journal", "what did I make notarizing", "notary reconciliation", or a
+  facts into Haven, posts the money-hub notary stream line with an automatic two-rate tax
+  set-aside (fees for notarial acts are exempt from self-employment tax, travel fees are
+  not), issues the two-line Stripe invoice, hands unpaid invoices to chase-commitments,
+  logs declined notarizations that never reach the journal, raises the three alarms the
+  moment the two records disagree, and exports the journal monthly against NJ's ten-year
+  retention duty. Runs inside Samira's hourly scan or on demand. Trigger on: "run the
+  journal mirror", "reconcile the notary journal", "did every signing get logged",
+  "notary money", "export the notary journal", "what did I make notarizing", "notary
+  reconciliation", "had to turn one down", "I refused a notarization", or a
   completed notary calendar event. This skill READS the journal of record and NEVER
   writes to it — BlueNotary is the legal record and only Lemar amends it, through the
   journal's own amendment mechanism. It never decides whether an act may be performed,
@@ -71,6 +73,8 @@ ledger line and the set-aside. Then run the alarms.
 **Mode 4 — reconciliation on demand.** "Did every signing get logged" — walk a date range
 in both records and report every mismatch in both directions without changing anything.
 
+**Mode 5 — refusal log.** Lemar declined to notarize. Record it. Detailed below.
+
 ## THE MIRROR ENTRY
 
 Written through `haven-capture`, filed to the notary-services project folder. It carries:
@@ -97,9 +101,34 @@ notarization cannot be undone and a chargeback on a performed act has no clean r
 **The ledger line.** Post to the money-hub notary stream through the `money-hub` skill.
 Notary income is a stream inside the existing personal ledger, not a second money system.
 
-**The set-aside.** 30% of net notary income goes to the money-hub Set-Aside pocket at log
-time, automatically. Doing it at log time rather than at quarter-end is the entire value:
-the money is reserved before it feels like spendable income.
+**The set-aside — two rates, because the two lines are taxed differently.** Reserve into the
+money-hub Set-Aside pocket at log time, automatically. Doing it at log time rather than at
+quarter-end is the entire value: the money is reserved before it feels like spendable income.
+
+| Invoice line | Reserve | Why |
+|---|---|---|
+| Statutory notarial fee | **20%** | Income tax only |
+| Non-notarial fee (travel, after-hours, facility, RON technology) | **35%** | Income tax **plus** self-employment tax |
+
+Fees for performing notarial acts are **exempt from self-employment tax** under IRC
+§1402(c)(1) and Reg. §1.1402(c)-2(b). Fees for travel, printing, document handling,
+administrative work and loan-signing services are **not** — those carry the full 15.3% on top
+of income tax. So the two-line invoice is not only a fee-cap rule and a journal-accuracy rule,
+it is also the substantiation the exclusion requires. A single blended rate either
+over-reserves the exempt line or under-reserves the taxable one.
+
+**Treat the RON technology fee as non-notarial** and reserve it at 35%. It is a convenience
+charge for the platform, not a fee for performing the act, so it sits with travel rather than
+with the statutory fee. Revisit only if a tax professional says otherwise.
+
+**Track the annual split.** Carry a running exempt-versus-non-exempt total for the tax year.
+The exemption is claimed by writing "Exempt—Notary" and the amount on Schedule SE, so that
+figure has to be producible on demand rather than reconstructed from a year of invoices.
+
+These two rates are a **reserve policy, not a tax calculation.** The right income-tax
+percentage depends on Lemar's total household income and his marginal bracket, which this
+skill does not know. Flag for a CPA to confirm before the first filing, and never present the
+reserve as the amount owed.
 
 Deposits land in the dedicated SoFi checking account, kept distinct from the Set-Aside
 pocket so reconciliation stays legible.
@@ -113,6 +142,12 @@ passed and no journal entry matches it. Two hours is tight on purpose: the fix i
 opening BlueNotary and entering the act while he still remembers the appointment. At two
 weeks he is reconstructing, and a reconstructed journal entry is a worse entry.
 
+**A logged refusal suppresses this alarm.** A declined notarization produces no journal
+entry, because no act happened — so without the refusal log this alarm would cry wolf every
+single time Lemar correctly turned a job away. Check Mode 5's refusal record before firing.
+An alarm that punishes him for doing the right thing is an alarm he learns to ignore, and
+then it is useless for the case it exists to catch.
+
 **2. Invoice unpaid — fires at 1 week.** Hand to `chase-commitments` and card Lemar.
 
 **3. Act logged, no payment recorded.** The journal says the work happened and no money
@@ -120,6 +155,43 @@ came in. Card it.
 
 Alarms surface as Convo 1 cards. An alarm never fixes anything itself, because every fix
 lives in a record this skill is not allowed to write.
+
+## THE REFUSAL LOG (Mode 5)
+
+A notary is sometimes obliged to say no: the signer cannot be satisfactorily identified,
+appears coerced or does not understand what they are signing, is not present, the document is
+incomplete or has blank spaces, or the act would be something the commission does not cover.
+Declining correctly is the job working, not the job failing.
+
+**A refusal is not a notarial act, so it never enters the journal of record** — which means
+that without this log it leaves no trace anywhere. That is the gap this closes. Recording
+date, time and reason is the standard protection everywhere in the profession: it is the
+evidence of reasonable care if a complaint, a commission inquiry, or a lawsuit ever arrives,
+and the moment it is most needed is years later, when memory is worthless.
+
+**How it arrives.** Lemar drops it in Convo 2 the way he drops a money note: *"had to turn one
+down today, lady in Bellmawr, her ID expired last month."* PART 4 hands it here.
+
+**What gets recorded**, through `haven-capture`, filed to the notary-services project folder
+as `type: log`:
+- date and time
+- how the job arrived (job record link where one exists)
+- act that was requested
+- **the reason, in Lemar's own words** — do not summarize it into a category, because the
+  specific fact is what has evidentiary value later
+- whether a travel fee was still charged, and what was invoiced if so
+
+**No signer PII beyond a first name**, exactly as everywhere else in this skill. "Her ID was
+expired" is the record; her name and licence number are not.
+
+**Never characterize the signer's intent.** Record what was observed and what Lemar decided,
+not a conclusion about fraud or capacity. "Signer could not produce unexpired ID" is a fact.
+"Signer was attempting fraud" is an accusation sitting in a file that may one day be read by
+the person it names.
+
+**A travel fee is still earned on a refusal** when he made the trip. Invoice it as a
+non-notarial line, reserve it at 35%, and note it on the refusal record — there is no
+statutory fee line, because no act was performed.
 
 ## THE UNMATCHED JOURNAL ENTRY
 
@@ -152,7 +224,8 @@ to be met, and this folder is what meets it.
 ## SAFETY
 
 You MAY: read the journal of record; write mirror entries through `haven-capture`; issue
-and send a two-line Stripe invoice; post money-hub ledger lines and the 30% set-aside;
+and send a two-line Stripe invoice; post money-hub ledger lines and the two-rate set-aside;
+record refusals through `haven-capture`;
 hand unpaid invoices to `chase-commitments`; raise Convo 1 cards; write timestamped
 exports to the exports folder; commit to `main`.
 
@@ -162,13 +235,16 @@ act may be performed, advise on a certificate, or explain document content; open
 retroactive job record for an unmatched journal entry; write signer names, addresses, or
 credential details into the vault; link the exports folder anywhere; overwrite or delete a
 prior export; move money, or contact a customer about payment beyond the invoice and its
-chase; collapse the two fee lines into one; invent a fee, a date, an act count, or a
-payment (unknown stays `null` plus an ask); fabricate a run when no source is configured.
+chase; collapse the two fee lines into one; apply a single blended set-aside rate across both
+lines; characterize a signer's intent, capacity or honesty in a refusal record, or name a
+signer in one beyond a first name; present a reserve figure as tax owed; invent a fee, a
+date, an act count, or a payment (unknown stays `null` plus an ask); fabricate a run when no
+source is configured.
 
 ## Returns (to the Samira runbook, for the digest)
 
-`notary-mirror ✓ <acts N · invoiced $X · set-aside $Y · alarms N · unmatched N · export
-✓/—>` — or `notary-mirror —` when the sweep found nothing.
+`notary-mirror ✓ <acts N · invoiced $X · set-aside $Y (exempt $E / taxable $T) · refusals N ·
+alarms N · unmatched N · export ✓/—>` — or `notary-mirror —` when the sweep found nothing.
 
 ## Worked example
 
@@ -181,7 +257,10 @@ in-person, journal entry id `BN-4471`, fees recorded $5.00 and $65.00.
    `BN-4471`. No name, no address, no ID details.
 3. Issue the Stripe invoice, two lines: statutory notarial fee $5.00, travel and
    after-hours fee $65.00.
-4. Post $70.00 to the money-hub notary stream and reserve $21.00 to the Set-Aside pocket.
+4. Post $70.00 to the money-hub notary stream and reserve **two rates, not one**: $1.00 on
+   the $5.00 statutory line (20%, income tax only) and $22.75 on the $65.00 travel line (35%,
+   income tax plus self-employment tax). $23.75 total to Set-Aside. Add $5.00 to the year's
+   exempt running total and $65.00 to the non-exempt total.
 5. Alarms: the event has a matching entry, so alarm 1 is clear. The invoice is minutes
    old, so alarm 2 is not due. Payment is pending, not missing, so alarm 3 is clear.
 6. Flip the job record to `done`.
