@@ -1,9 +1,9 @@
 ---
 created: 2026-09-15T16:09-04:00
-updated: 2026-09-16T08:49-04:00
+updated: 2026-09-16T09:30-04:00
 domain: project
 type: brief
-status: awaiting-decision
+status: active
 tags: [stormy, notary, recordkeeping, money]
 source: slack
 ---
@@ -408,3 +408,161 @@ Status stays `awaiting-decision`.
 
 ### Sources (this update)
 - claude: Claude Code session, 2026-09-16, web research on NJ e-journal and RON platforms
+
+## Update 2026-09-16T09:30-04:00 — PLAN LOCKED. Platform decided, last asks closed, status → active
+
+### Closing answers
+- **20 Platform** — BlueNotary checks out, so per Lemar's standing instruction the call is
+  **Option 2: BlueNotary as both RON platform and journal of record.**
+- **23 Bank** — **SoFi checking**, not savings. Resolves the ACH-to-savings risk and keeps the
+  notary deposit clear of the money-hub Set-Aside pocket.
+- **26 NJ remote fee cap** — see finding below.
+- **27 Google Voice** — yes. A Google Voice number forwards to his cell and is what goes public.
+
+### Why BlueNotary passes the one-journal test
+It carries all three act types in a single journal:
+- **RON** sessions, journaled automatically with the mandatory AV recording.
+- **IPEN** (in-person electronic notarization), a first-class product on the platform for
+  in-person signers using electronic documents and an electronic seal.
+- **Manual Session** entries for ordinary in-person wet-ink acts, enterable in the journal and
+  bulk-importable by CSV, including from a Notary Gadget export.
+
+Plus journal export, audit trails, and an API, which is what lets Samira maintain the business
+mirror without Lemar keying anything twice.
+
+**Verification limit, stated honestly:** BlueNotary's helpdesk and API reference pages could not
+be fetched directly from this environment (egress-blocked), so the field-level confirmation that
+a Manual Session entry captures all six N.J.A.C. 17:50-1.11 fields comes from secondary sources.
+**Lemar must confirm the six fields in a live trial entry before the first real act.** If a field
+is missing, fall back to Option 1 (NotaryCentral) before any journal entry exists, not after.
+
+### Finding on 26 — NJ sets no separate RON fee cap
+No published separate maximum for a remote act could be found in N.J.A.C. 17:50-1.18 or in NNA's
+2026 state fee data. The defensible reading: **17:50-1.18 caps the notarial act itself regardless
+of medium, so $2.50 applies to a remote act too**, and anything charged above it must be a
+separate, disclosed, non-notarial technology and convenience fee. That is structurally identical
+to the travel fee and it drops straight into the two-line invoice already approved at ask 8.
+This is a reading, not a confirmed published cap. Confirm with DORES before publishing a RON
+price.
+
+---
+
+# LOCKED PLAN — NJ mobile notary business
+
+## Mission
+Stand up a one-person NJ notary business that serves consumer mobile and remote clients, whose
+legal record is correct to the letter of N.J.A.C. 17:50, and whose entire operational loop
+(intake, scheduling, invoicing, payment, reconciliation, reporting) runs through Samira so that
+Lemar's only manual work is the notarial act itself. Day one means both: a complete journal
+producible on request, and net notary income visible at a glance.
+
+## Success criteria
+- **Metric:** jobs per month, and net notary income visible in money-hub without a manual step.
+- **Minimum viable win:** 15 jobs a month, every one of them with a compliant journal entry and
+  a reconciled payment, and zero acts keyed by hand into two places.
+- **Target:** 30 jobs a month by month six.
+- **Pull the plug:** under 6 a month by month four, with a verified Google Business Profile live
+  the whole time.
+
+## Timing & preconditions
+No deadline; this is a Stormy project and carries no `due`. Hard sequence: nothing customer-facing
+goes live before the commission exists. The DORES platform notification must be filed **before**
+the first electronic or remote act, and re-filed on any platform change, so the platform choice
+is effectively one-way once filed.
+
+## Phases
+
+**Phase 1 — Get commissioned.** Owner: `lemar`. Finish the bootcamp, pass the NJ exam, file the
+Commissioning Application and the Notary Public Registration Application, swear the oath at the
+County Clerk within 90 days, obtain the seal. Output: an active five-year commission. Depends on:
+nothing. Everything else depends on this.
+
+**Phase 2 — Stand up the rails.** Owner: `lemar`, with `samira` on setup capture. Open the
+BlueNotary account and run the six-field Manual Session trial entry (the Option 1 fallback gate).
+File the DORES platform notification naming BlueNotary. Open Stripe under his SSN as a sole prop.
+Open the SoFi checking account and confirm Stripe pays out to it. Provision the Google Voice
+number forwarding to his cell. Create and verify the Google Business Profile. Output: every
+external account live and linked. Depends on: Phase 1.
+
+**Phase 3 — Build the automation.** Owner: a new skill (see below), with `samira` running it.
+One intake form as the single entry point, with a documented manual backup path for phone calls.
+The Haven business mirror (no PII). The money-hub notary stream with the automatic tax set-aside
+at log time. The two-line invoice template. The three alarms. Output: the loop runs unattended.
+Depends on: Phase 2, because the mirror pulls from BlueNotary's export or API.
+
+**Phase 4 — Soft launch.** Owner: `lemar`. First ten jobs at the published prices. Every one gets
+walked end to end by hand to verify the chain: intake to calendar to act to journal to invoice to
+payment to mirror to ledger. Output: a proven loop and a corrected one. Depends on: Phase 3.
+
+**Phase 5 — Scale the front end.** Owner: `samira`. Booking site, directory listings, RON
+promotion once the fee question is settled with DORES. Output: demand that fills the calendar.
+Depends on: Phase 4.
+
+## Risks
+- **The journal is wrong and nobody notices for months.** Mitigation: the Phase 2 six-field trial
+  entry, and the alarm for a completed calendar event with no journal entry.
+- **Two journals by accident**, if a second tool ever starts keeping its own record. Mitigation:
+  BlueNotary is the single journal by policy, written into the skill, and no second journal
+  product gets adopted without re-checking 17:50-1.11.
+- **Platform lock-in.** Switching means a new DORES notification and a journal migration.
+  Mitigation: verify the six fields before the first act; export the journal on a schedule so
+  the data is never only in the vendor.
+- **Chargebacks on performed acts**, which cannot be undone. Mitigation: charge at the table on
+  completion, not after; keep the two-line invoice so the disputed portion is identifiable.
+- **Unauthorized practice of law**, the classic way a NJ notary loses a commission. Mitigation:
+  the hard boundary below, written into the skill as a refusal, not a guideline.
+
+## Blast radius
+Real, and outside his control in three places: customer money moves through Stripe, signer PII
+sits with a vendor under a 10-year retention duty, and a public brand carries his name and number.
+The undo is uneven. A bad invoice is refundable. A bad journal entry is correctable only by the
+journal's own amendment mechanism, never by editing history. A published profile and a filed DORES
+notification are slow to unwind. Not a `reggie-compliance` gate: Reggie is Cuzzie's and Station
+cannabis compliance, not NJ notary law.
+
+## Automation map
+
+**Runs unattended (Samira):** intake triage, calendar booking and confirmations within one
+business day, quote generation at the published rates, two-line invoice issuance, Stripe payment
+reconciliation, AR chasing via `chase-commitments`, the Haven business mirror, the money-hub
+notary stream line, the automatic tax set-aside at log time, mileage capture from the intake
+address, and all three alarms (completed event with no journal entry within N hours, invoice
+unpaid past N days, job logged with no payment recorded).
+
+**Needs Lemar, always:** the notarial act, the journal entry in the record, and any judgment about
+whether an act may be performed.
+
+**Hard boundary, written as a refusal:** Samira never decides whether a notarial act may be
+performed, never advises which certificate a document needs, and never explains or drafts document
+content. That is unauthorized practice of law.
+
+**Sources of truth:** BlueNotary is the journal of record. Haven is the business record and holds
+no signer PII. money-hub-ledger.md is the money record. Nothing gets a fourth.
+
+## Ownership & upkeep
+`samira` owns the loop after launch, running it on her existing hourly cadence, so there is no new
+routine to maintain. Standing costs: BlueNotary (roughly $5 per session plus about $4 per signer,
+or $297/year on Notary Pro), Stripe processing, and the five-year commission renewal with its
+continuing-education course. Drift shows up through the three alarms; a silent stop shows up as a
+month with journal entries and no ledger lines, which the monthly reconciliation catches.
+
+## Skills to spec (Stormy Phase 4, not yet run)
+- **`notary-intake`** — one intake point to calendar, quote, and job record.
+- **`notary-journal-mirror`** — pulls BlueNotary's export or API into the Haven business mirror,
+  posts the money-hub line and the tax set-aside, and raises the three alarms.
+
+Both are net-new and both touch money and an outside party, so each earns the full six-question
+spec when Phase 4 runs.
+
+## Assumptions carried into this plan
+- `Assumed:` no deadline, no `due`, launch gated on the commission (dimension 5).
+- `Assumed:` money-hub remains the money home with notary as a new stream (his ask 4).
+- `Assumed:` Haven remains the only source of truth for the business record, no new database.
+- `Assumed:` BlueNotary's Manual Session captures all six NJ fields, pending the Phase 2 trial.
+
+**Status → `active`. Next: Lemar confirms or revises this plan, then Stormy Phase 4 specs the two
+skills, then the Phase 5 activation call (A / B / C / D).**
+
+### Sources (this update)
+- claude: Claude Code session, 2026-09-16, web research on BlueNotary IPEN and journal features
+  and on NJ remote act fees
