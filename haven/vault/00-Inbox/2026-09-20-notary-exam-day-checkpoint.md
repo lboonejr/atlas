@@ -1,6 +1,6 @@
 ---
 created: 2026-09-16T11:56-04:00
-updated: 2026-09-16T18:35-04:00
+updated: 2026-09-16T21:30-04:00
 domain: project
 type: task
 status: active
@@ -323,3 +323,52 @@ known cause of Snapdocs verification stalling.
 
 **The W-9 cannot be filled out until the LLC and EIN exist**, and every platform wants the W-9 —
 so the entity filing is now the first domino on the whole B2B side.
+
+## Update 2026-09-16T21:30-04:00 — Lemar is moving the exam up to TODAY
+
+Stated intent, not yet done. This note's `due` and its calendar event stay on 2026-09-20 until
+the exam is actually passed — then they move.
+
+### The exam was never on a schedule
+
+**The NJ notary exam is online and on-demand**, taken through the state portal
+(`njportal.com/DOR/NotaryExam`) as part of a **New Commissioning Application**. There is no
+sitting, no seat to book, no proctor to schedule. Sunday 2026-09-20 was a date chosen here, not
+one the State set — so it can move to today with nothing to reschedule.
+
+**This is the right call.** Every queue in the plan starts from the commission, and the commission
+starts from the application. Pulling the exam up by four days pulls DORES processing, the oath
+window, and everything behind them up by four days.
+
+### What the exam sitting actually involves
+
+| Item | Detail |
+|---|---|
+| Where | The state portal, inside a New Commissioning Application |
+| Prerequisite | A **six-hour approved course of study** for new non-attorney applicants — the Notary Public Manual and the full training-video series |
+| Basis | The exam is drawn from the **Notary Public Manual**. Read it, do not skim it |
+| Exam fee | Up to **$15** per test |
+| Application fee | **$25** |
+| Endorsement | The application is forwarded to a **State Legislator for endorsement** — a step in the chain nobody controls |
+| After passing | Commission forms arrive by mail in roughly **two weeks** |
+| Then | **Three months to appear before the county clerk and swear the oath.** Miss it and the Treasurer cancels the commission |
+
+**The six-hour course is a requirement, not a suggestion.** If the bootcamp curriculum is not
+finished, finish it before sitting — this is not an exam to walk into cold on a decision made the
+same afternoon. A failed attempt costs the retake fee and the days it takes to go again, which
+is the exact thing moving the date early is trying to save.
+
+### What to do the same day, and why
+
+**File the LLC today too.** `Given Word Notary LLC` does not depend on the exam, the commission,
+or anything else, and it is now the first domino on the entire B2B side: **no LLC means no EIN,
+no EIN means no W-9, and no W-9 means no signing service registration.** It runs in parallel with
+DORES processing for free. Same for the **Google Business Profile**, which needs the registered
+name and then sits in the longest queue in the plan.
+
+If the exam moves up four days and the LLC does not, nothing downstream actually moves.
+
+### What does NOT change
+
+The oath still has to be sworn **in person at the county clerk**, and the commission still has to
+arrive first. The critical path is shorter, not shortened past the parts the State controls.
