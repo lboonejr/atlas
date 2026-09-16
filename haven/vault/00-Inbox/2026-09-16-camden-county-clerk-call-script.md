@@ -1,6 +1,6 @@
 ---
 created: 2026-09-16T14:05-04:00
-updated: 2026-09-16T14:05-04:00
+updated: 2026-09-16T14:30-04:00
 domain: project
 type: reference
 status: active
@@ -110,3 +110,53 @@ side, moves one step closer to entering its verification queue.
 ## Sources
 - claude: Claude Code session, 2026-09-16 — numbers, $57 fee and the in-person signing
   requirement from the earlier Camden County clearance research
+
+## Update 2026-09-16T14:30-04:00 — call made, answers back
+
+Lemar called. What came back:
+
+- **Bring $57 and photo ID.** That is the whole list.
+- **The name can only be checked at the counter.** No phone search, no online search — availability
+  is determined when he is standing there.
+
+### What that second answer actually changes
+
+It moves the risk to the trip. If "Given Word Notary" turns out to be taken in Camden County, he
+finds out at the window with the money in his hand, and a wasted trip is the cost.
+
+**So the fix is to walk in with a backup name already chosen**, not to think of one at the counter
+under pressure. The backup should stay in the same family so the brand work already done still
+holds:
+
+1. **Given Word Mobile Notary** — first choice. Keeps the name intact, and "Mobile" is an honest
+   descriptor of the service rather than keyword stuffing, so it stays inside Google's Business
+   Profile naming rules.
+2. **Given Word Notary Services** — second.
+3. **The Given Word Notary** — third.
+
+Whatever gets filed is what the Google Business Profile must be named, exactly. So the decision at
+the counter is a branding decision, not a paperwork one, and it is worth having made in advance.
+
+### The question that did not get a clear answer
+
+The script led on whether the certificate must be notarized before arrival or whether the office
+notarizes on site. "Just bring $57 and ID" implies it is handled there or not required — but it
+**implies** rather than states it, and that is not good enough to plan a trip on.
+
+**Practical hedge: fill the form out beforehand but do not sign it until at the counter.** If a
+signature has to be witnessed, signing early voids it and costs the trip. Signing at the window
+costs nothing either way.
+
+### Still open, to ask at the counter
+
+- **Payment method.** Never confirmed. County offices are frequently cash-or-check.
+  **Bring cash** — it is accepted everywhere and removes the question.
+- **Hours**, still not posted publicly. Call the day of before travelling.
+- **The multi-county question** — whether a Camden filing covers work in Gloucester and Burlington,
+  or whether each county needs its own $57 certificate. This one is a real cost question for a
+  mobile notary and it is worth asking at the window.
+
+### What to bring
+
+Cash for $57 · photo ID · the completed but **unsigned** trade name form · the backup name list
+above · a pen.
