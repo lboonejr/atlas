@@ -313,3 +313,98 @@ Asks answered: 19. New asks: 6 (1 crux). Status stays `awaiting-decision`.
 ### Sources (this update)
 - claude: Claude Code session, 2026-09-16, with web research on N.J.A.C. 17:50-1.11, 1.14,
   1.16 and 1.18 and NJ RON law (A4250, effective 2021-10-22)
+
+## Update 2026-09-16T10:25-04:00 — platform research, pricing revised down, asks 21-25 answered
+
+### Answers
+- **21** Three-layer design confirmed; the Excel plan is dead.
+- **22** Public number is his personal cell.
+- **23** Deposit account is his **SoFi savings account**.
+- **24** Stripe under his SSN as a sole prop, 1099-K to him personally, confirmed.
+- **25** Confirmed: no stored ID images, no thumbprints. Credential type, issuing state and
+  expiry only, per N.J.A.C. 17:50-1.11's "brief description of the method of identification
+  and the identification credential presented."
+- **3** Travel pricing to come down slightly to promote volume (revised below).
+- **20** Platform decision deferred pending this research.
+
+### Platform research (2026-09-16) — the one-journal rule is the deciding constraint
+
+NJ allows only one journal at a time covering tangible and electronic records both. That makes
+"which platform" a single decision, not two. It is compounded by the DORES rule that the notary
+must notify the State Treasurer of the communication technology platform **before** the first
+electronic or remote act **and again whenever the platform changes** — so switching later costs
+paperwork. Pick once.
+
+**Option 1 — NotaryCentral (Business Suite + Digital e-Journal).** Its e-Journal is documented
+as covering both RON and in-person acts, and entries are hash-locked on save so later alteration
+breaks the hash, which is a direct answer to "permanent, tamper-evident." Listed at $119.95 +
+$19.95 billed annually ($139.90), plus roughly $1.50 ID verification and biometrics and $1.50
+notarization in per-session credits. Cleanest fit to the one-journal rule. API surface unverified.
+
+**Option 2 — BlueNotary as both RON platform and journal.** Roughly $5 platform fee per session
+covering KBA, ID check and video storage, about $4 per signer, Notary Pro at $297/year. It keeps
+a journal with bulk export, and advertises audit trails and API access. Best automation surface
+of the three, which is what lets Samira pull the mirror instead of Lemar retyping. Open question:
+whether its journal accepts manually entered in-person acts carrying all six NJ fields.
+
+**Option 3 — NotaryAct as journal of record plus a separate RON platform.** Cheapest journal at
+$49.99/year under 60 acts a year, $9.99/month above that, with ID scanning and journal printing.
+But pairing it with a RON platform that keeps its own journal raises the two-journal question
+under 17:50-1.11. Only viable if RON acts are also entered in NotaryAct and the platform's record
+is treated purely as the supporting AV recording, and that reading should be confirmed with DORES
+before relying on it.
+
+**Ruled out for this use case:** Proof at roughly $50 for comparable multi-signer work and
+OneNotary at $25 per session with business plans from $65/month are priced for volume or
+enterprise, not a solo notary bringing his own clients. Secured Signing is noted publicly as a
+DORES-trusted RON and IPEN provider and is worth a look if Options 1 and 2 both fail the
+in-person-entry test.
+
+**Recommendation: Option 2 if BlueNotary's journal accepts manual in-person entries with all six
+NJ fields; otherwise Option 1.** The API and export are the difference between Samira maintaining
+the business mirror automatically and Lemar keying every act twice, which is the entire
+efficiency thesis of this project.
+
+All prices are vendor or secondary sources as of 2026-09-16 and must be confirmed at signup.
+
+### Revised pricing (his answer 3: slightly cheaper for volume)
+
+Statutory fees are unchanged and not discountable: $2.50 per act for oaths, affidavits, proofs of
+deed and acknowledgments; $15.00 for grantors in a real estate transfer; $25.00 for mortgagors in
+a real estate financing, each regardless of the number of services in the transaction.
+
+Travel fee, revised down roughly 13 percent from the first proposal:
+
+| Tier | Was | Now |
+|---|---|---|
+| Within 10 miles of Camden | $35 | **$30** |
+| To 20 miles | $50 | **$45** |
+| To 35 miles | $75 | **$65** |
+| After 7pm, weekends, holidays | +$25 | **+$20** |
+| Hospital, jail, nursing home | +$25 | **+$20** |
+
+RON: $25 per act technology and convenience fee remains the proposal, still gated on confirming
+whether NJ caps remote act fees separately. Do not publish a RON price before that check.
+
+**Volume targets revised for the lower prices** (average job now roughly $38 to $50):
+floor 15 jobs a month, target 30 by month six, pull the plug under 6 a month by month four with
+a verified Google Business Profile live throughout.
+
+### Two flags on his answers, not blockers
+- **Cell on a public profile (22).** Once it is on a Google Business Profile it is permanent and
+  public, and it attracts lead-gen spam. A Google Voice number forwarding to the same cell gives
+  the same reachability, a number he can hand to Samira for logging, and one he can cut off.
+- **SoFi savings as the Stripe payout account (23).** Some banks reject ACH credits to savings
+  accounts, and a savings account already doing set-aside duty muddies the two-pocket model.
+  Confirm Stripe will pay out to it before launch, and keep the notary deposit target distinct
+  from the money-hub Set-Aside pocket.
+
+### Still open
+20. The platform call, pending the BlueNotary in-person-entry check.
+26. Whether NJ caps the fee for a remote act separately.
+27. Whether to put a Google Voice number in front of the cell.
+
+Status stays `awaiting-decision`.
+
+### Sources (this update)
+- claude: Claude Code session, 2026-09-16, web research on NJ e-journal and RON platforms
