@@ -112,11 +112,22 @@ Body carries: job type, act types and count, distance tier, quoted statutory fee
 non-notarial fee, scheduled time, calendar event id, and a first name plus one contact
 handle.
 
-**What never goes in it:** the signer's full name, address, date of birth, or any
-credential detail. Those live in the journal of record and nowhere else. The business
-mirror is deliberately PII-poor so that a vault leak is a scheduling embarrassment and
-not a data-breach notification. If a form field collects something that belongs only in
-the journal, drop it here rather than copying it across.
+**What never goes in it:** the signer's full name, street address, date of birth, or any
+credential detail. The business mirror is deliberately PII-poor so that a vault leak is a
+scheduling embarrassment and not a data-breach notification. If a form field collects
+something that belongs elsewhere, route it there rather than copying it across.
+
+**Where the street address goes: the calendar event, not the job record.** Lemar plainly
+needs an address to drive to, so the intake form collects one. It belongs on the Google
+Calendar event as the event location, which is access-controlled, is where he will
+actually look for it on the day, and travels with the appointment. From that address you
+derive the **distance tier** — and only the tier is written into the job record, because
+the tier is all the pricing, reporting, and mileage math ever needs. So one address, three
+different fates: full text on the calendar event, tier only in the vault, and nothing at
+all carried forward into the business mirror after the job closes.
+
+Identity and credential details are a separate matter again: they belong in the journal of
+record and nowhere else, and this skill never collects or handles them.
 
 ## BOOKING
 
@@ -128,8 +139,10 @@ cancelled event.
 Check for a conflict before booking. Overlapping a job already on the calendar is the one
 thing that turns speed into a real cost, so a conflict raises a card instead of booking.
 
-Route the event per `haven-calendar-sync`'s domain rules. Store the event id in the job
-record so a reschedule moves the event rather than creating a second one.
+Route the event per `haven-calendar-sync`'s domain rules. Set the event **location to the
+full street address** from intake — that is the address's home, per the job record section
+above. Store the event id in the job record so a reschedule moves the event rather than
+creating a second one.
 
 ## THE CONFIRMATION
 
@@ -182,10 +195,11 @@ Dana, mobile number given.
    inside 20 miles, so **$45 travel**, plus **$20** because 7:30pm is after hours.
    Quote reads: statutory notarial fee $5.00, travel and after-hours fee $65.00. Two
    lines, never one.
-2. Check Thursday 7:30pm. Clear, so book it on the business calendar and store the id.
+2. Check Thursday 7:30pm. Clear, so book it on the business calendar with her full Cherry
+   Hill street address as the event location, and store the event id.
 3. Write the job record: in-person, 2 acknowledgments, tier 2 plus after-hours, $5.00 and
-   $65.00, Thursday 19:30 ET, event id, "Dana" and her number. No address beyond the
-   distance tier, no ID details, nothing else.
+   $65.00, Thursday 19:30 ET, event id, "Dana" and her number. The tier, not the street
+   address — that stays on the calendar event. No ID details, nothing else.
 4. Confirmation in Lemar's voice: time, place, both fee lines, bring the unsigned
    document and a valid photo ID.
 5. Dana replies asking whether she needs an acknowledgment or a jurat. That is the

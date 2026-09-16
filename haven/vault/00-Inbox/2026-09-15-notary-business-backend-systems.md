@@ -1,6 +1,6 @@
 ---
 created: 2026-09-15T16:09-04:00
-updated: 2026-09-16T10:51-04:00
+updated: 2026-09-16T11:12-04:00
 domain: project
 type: brief
 status: active
@@ -779,6 +779,57 @@ plan locked, activation called. Stormy's role on this project ends here. Executi
 `skill-creator`, then Atlas Gear 2, then Samira.
 
 Status stays `active`.
+
+### Sources (this update)
+- claude: Claude Code session, 2026-09-16
+
+## Update 2026-09-16T11:12-04:00 — spec amendment: where the street address lives; Jotform built; optimizer inconclusive
+
+### Amendment to `notary-intake` — the address had no home
+Building the intake form surfaced a real gap in the spec. It said the job record carries the
+distance tier and no address, and it said identity details belong in the journal of record.
+Neither statement covered the **street address Lemar needs in order to drive to the
+appointment**. An unwritten rule is one the skill eventually breaks, so it is now written.
+
+**One address, three fates:**
+- **Full street address → the Google Calendar event location.** Access-controlled, where he
+  actually looks for it on the day, and it travels with the appointment through a reschedule.
+- **Distance tier → the Haven job record.** The tier is all the pricing, reporting, and
+  mileage math ever needs, so it is all the vault gets.
+- **Nothing** carried into the business mirror after the job closes.
+
+Identity and credential details remain a separate matter: journal of record only, never
+collected or handled by intake. `.claude/skills/notary-intake/SKILL.md` amended in the job
+record section, the booking section, and the worked example.
+
+### Jotform booking form built
+Live and editable at jotform.com/build/262584643522056, not yet published or linked anywhere.
+Collects: first name, phone, optional email, in-person vs remote, address (conditional on
+in-person), preferred date and time, document count, signer count, **whether it is a property
+transfer or a mortgage** (which is what selects the $15 or $25 statutory fee rather than
+$2.50 per act), facility flag, and free-text notes. Three required acknowledgements before
+submit: bring valid photo ID, do not sign beforehand, a notary cannot give legal advice.
+The published fee card is reproduced on the form.
+
+It collects **no** ID number, date of birth, SSN, or document contents, and no document
+upload — all of that belongs in the journal at the appointment, so a form submission can
+never become a breach problem.
+
+### Description optimizer — ran, inconclusive, nothing applied
+Five iterations per skill against 20 hand-written trigger queries each (10 positive, 10
+near-miss negative), 3 runs per query, 60/40 train/test split. Both skills returned identical
+scores: 6/12 train, 4/8 test, best description unchanged from the original.
+
+**Those numbers are exactly the negative counts.** Every should-not-trigger query passed and
+**every should-trigger query failed**, on both skills, across all five iterations. Positive
+trigger rates topped out at 0.33 and never once reached 0.67. Two independently written
+descriptions failing identically on every positive, with no candidate out of ten improving
+anything, reads as a harness artifact rather than a language problem: the eval sessions have
+no Jotform, no BlueNotary, no Haven and no calendar, so a model given "book it" has nothing to
+consult a skill for and answers directly.
+
+**No change applied; both skill files are untouched.** Re-run at Phase 2 against live
+fixtures, alongside the skill-creator eval loop that was deferred for the same reason.
 
 ### Sources (this update)
 - claude: Claude Code session, 2026-09-16
