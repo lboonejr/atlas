@@ -1,6 +1,6 @@
 ---
 created: 2026-09-15T16:09-04:00
-updated: 2026-09-16T11:12-04:00
+updated: 2026-09-16T11:22-04:00
 domain: project
 type: brief
 status: active
@@ -833,3 +833,179 @@ fixtures, alongside the skill-creator eval loop that was deferred for the same r
 
 ### Sources (this update)
 - claude: Claude Code session, 2026-09-16
+
+## Update 2026-09-16T11:15-04:00 — gap review against notary best practice: ten things the backend does not cover
+
+Lemar asked what other backend elements the business is missing. Researched 2026-09-16.
+Ranked by what actually bites. Nothing below is built yet.
+
+### Tier 1 — money or the commission is at stake
+
+**1. The 30% set-aside is over-reserving, and the fix is already half-built.**
+Fees for performing notarial acts are **exempt from self-employment tax** under IRC
+§1402(c)(1) and Reg. §1.1402(c)-2(b). Fees for **travel, printing, document handling,
+administrative work and loan-signing services are not** — those carry the full 15.3% SE tax
+on top of income tax.
+
+So the two lines on the invoice do not just have different caps, they have **different tax
+treatments**. On a typical $70 consumer job, roughly $5 is the exempt statutory fee and
+$65 is fully SE-taxable travel. A flat 30% across both over-reserves on the statutory
+portion.
+
+The good news: the two-line invoice Lemar already approved at ask 8 is precisely the
+substantiation the IRS wants for claiming the exclusion. The recordkeeping is right; only
+the set-aside rate is wrong. **`notary-journal-mirror` should apply two rates, not one
+flat 30%**, and the mirror should carry an annual exempt-vs-non-exempt total for Schedule C
+and Schedule SE.
+
+**2. No E&O insurance.** NJ requires no surety bond for notaries. That is not a saving, it is
+an exposure: a bond would protect the customer, and nothing currently protects Lemar.
+Running as a sole proprietor with no LLC, his personal assets are the backstop for an honest
+mistake. E&O insurance is the thing that covers him, typically $25k–$100k of coverage for
+roughly $50–$200 a year.
+
+**3. No trade name certificate.** If the Google Business Profile carries anything other than
+his own legal name, NJ sole proprietors must file a **Trade Name Certificate with the county
+clerk in every county where the business operates**. The plan calls for a public brand and a
+verified profile, so this is a live requirement, not a formality. (The certificate itself
+must be notarized, which he cannot do for himself.)
+
+### Tier 2 — systems the backend should own but does not
+
+**4. Commission renewal and continuing education are untracked.** The commission runs five
+years, and renewal requires a 3-hour continuing-education course plus an updated exam. A
+lapse stops the entire business dead, including every automation built around it. This wants
+a Haven note carrying a `due` about 90 days before expiry so `haven-calendar-sync` rings
+it, plus a second for the CE course.
+
+**5. No refusal log.** When a notary declines — the signer cannot be identified, seems
+coerced or does not understand what they are signing, the document is incomplete — the
+standard practice everywhere is to record date, time and reason. That record is the evidence
+of reasonable care if a complaint or a lawsuit ever arrives. The journal of record holds
+performed acts; **a refusal is not an act, so it currently has nowhere to go at all.**
+Cheapest fix in this list and arguably the highest protection per minute spent.
+
+**6. No lost or stolen seal and journal playbook.** The duty is to notify the commissioning
+authority promptly, notify police where theft is suspected, and **stop notarizing until a
+replacement seal is in hand** — continuing to use a reported seal creates liability. This is
+the incident that happens at the worst possible moment, so a written five-step card beats
+improvising. (General practice; NJ's specific reporting mechanics were not verified.)
+
+**7. No procedure for a journal copy request or subpoena.** Ten-year retention guarantees
+someone eventually asks — a title company, a lawyer, a court. Needs: who may lawfully
+request, what gets handed over versus withheld, what may be charged, and a log of the
+request itself. Already flagged as unresearched at the G confirmation; still open.
+
+### Tier 3 — smaller, mostly free
+
+**8. Entity notes for repeat counterparties.** Title companies, law firms, senior facilities.
+`haven-vault-keeper` already stubs an entity note for any recurring counterparty, so this
+comes almost free once volume exists.
+
+**9. DORES address and name change notification.** A move or a name change has to be reported.
+
+**10. Supplies.** Spare journal, spare seal, ink, reliable pens. A dead pen at a hospital
+bedside is a wasted trip and a lost fee.
+
+### Recommended sequencing
+Items 1, 5 and 6 are cheap and belong in the build now — 1 is a rate change in a skill spec,
+5 and 6 are short written procedures. Items 2, 3 and 4 are Phase 2, gated on the commission
+and the brand name. Items 7–10 ride along as volume appears.
+
+**Not yet decided, needs Lemar:** whether to carry E&O and at what coverage; whether the
+business trades under his own name or a brand (which decides item 3); and whether to
+re-rate the set-aside now or leave the flat 30% until the first tax year.
+
+### Sources (this update)
+- claude: Claude Code session, 2026-09-16 — IRS Taxpayer Advocate on notarial fees and
+  self-employment tax; NJ E&O and bond position; NJ county trade name certificate rules;
+  national practice on refusal logs and lost seal reporting
+
+## Update 2026-09-16T11:22-04:00 — gap decisions: set-aside re-rated, refusal log and loss playbook built
+
+### Lemar's calls on the gap review
+1. **Re-rate the set-aside now.** Done, below.
+2. **Brand, name undecided.** He wants to trade under a brand rather than his own name but
+   does not have the name yet. The county Trade Name Certificate is therefore **blocked on the
+   name**, and so is the Google Business Profile, since the profile name and the registered
+   trade name should match. Naming is now on the critical path to the front end.
+3. **E&O yes, at an affordable price.** Research below; purchase is his.
+4. Build the refusal log and the lost-seal playbook. Both done.
+
+### Set-aside re-rated — two rates, not one
+`notary-journal-mirror` amended. The flat 30% is retired.
+
+| Invoice line | Reserve | Why |
+|---|---|---|
+| Statutory notarial fee | **20%** | Income tax only |
+| Non-notarial fee (travel, after-hours, facility, RON technology) | **35%** | Income tax plus self-employment tax |
+
+Fees for performing notarial acts are exempt from SE tax under IRC §1402(c)(1); travel and
+administrative fees are not. The **RON technology fee is treated as non-notarial** and reserved
+at 35%, since it pays for a platform rather than for performing the act.
+
+The skill now also carries a **running annual exempt-versus-non-exempt total**, because the
+exemption is claimed by writing "Exempt—Notary" and the amount on Schedule SE and that figure
+has to be producible rather than reconstructed from a year of invoices.
+
+Written into the skill as a **reserve policy, not a tax calculation** — the correct income-tax
+percentage depends on his total household income and marginal bracket, which the skill does not
+know, so it is flagged for a CPA to confirm before the first filing and must never be presented
+as tax owed.
+
+### Refusal log built — Mode 5 of `notary-journal-mirror`
+A refusal is not a notarial act, so it never enters the journal of record, so without this it
+left no trace anywhere. Arrives as a Convo 2 drop, lands through `haven-capture` as a
+`type: log` note in the notary-services folder, carrying date and time, the job record link,
+the act requested, **the reason in Lemar's own words** (not summarized into a category, because
+the specific fact is what has evidentiary value later), and whether a travel fee was still
+charged.
+
+Two guards written in: **no signer PII beyond a first name**, and **never characterize the
+signer's intent or capacity** — record what was observed and what Lemar decided, never a
+conclusion about fraud, since that accusation would sit in a file that may one day be read by
+the person it names.
+
+**The important interaction:** a logged refusal now **suppresses alarm 1**. A declined job
+produces no journal entry, so the two-hour alarm would otherwise fire every time Lemar
+correctly turned work away. An alarm that punishes him for doing the right thing is one he
+learns to ignore, which destroys it for the case it exists to catch.
+
+A travel fee is still earned on a refusal where he made the trip: invoiced as a non-notarial
+line, reserved at 35%, no statutory line.
+
+### Lost seal or journal playbook built
+New note `00-Inbox/2026-09-16-notary-seal-journal-loss-playbook.md`. Six steps: stop
+notarizing, search once properly, report to DORES in writing with the last date of possession,
+report to police if theft is suspected, order the replacement, write it up. Covers the journal
+case separately, where the loss is potentially a **data breach** as well as a compliance event
+and where the monthly Drive export is what caps the damage at one month.
+
+Also specifies what Samira may do (reschedule, draft the letter, write the incident note) and
+may not (decide the commission is safe to use, send the report, resume automations), and
+**suspends the two-hour alarm for the duration** of an incident.
+
+**Verification status stated in the note:** the six-step shape and the stop-notarizing rule are
+standard US notary practice; **NJ's specific reporting mechanics are unverified** — exact form,
+office, deadline, and whether a replacement changes the commission number. Confirm with DORES
+before relying on it.
+
+### E&O research — cheaper than expected
+Notary E&O is inexpensive because claims are rare and small. Bar-association group plans run
+roughly **$18.75/year for $25,000 of coverage up to $75/year for $100,000** (about $94 and
+$375 respectively on a five-year premium). Commercial carriers average around $41/month or
+$495/year, which is the wrong end of the market for a one-person operation. Signing-agent work,
+if he adds it later, typically expects $25,000–$100,000 minimum per occurrence.
+
+**Recommendation: $100,000 through a group or association plan**, which lands near the price of
+the commercial $25,000 tier. Purchase is Lemar's; nothing bought or applied for here.
+
+### Still open
+- The brand name, which gates the trade name certificate and the Google Business Profile.
+- E&O purchase.
+- NJ's lost-seal reporting mechanics, and the RON fee cap, both for DORES.
+- Commission renewal and CE tracking; journal copy request procedure; entity notes; DORES
+  address change; supplies. All unbuilt.
+
+### Sources (this update)
+- claude: Claude Code session, 2026-09-16 — notary E&O pricing research
