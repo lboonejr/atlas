@@ -1,6 +1,6 @@
 ---
 created: 2026-09-15T16:09-04:00
-updated: 2026-09-16T09:30-04:00
+updated: 2026-09-16T09:37-04:00
 domain: project
 type: brief
 status: active
@@ -566,3 +566,114 @@ skills, then the Phase 5 activation call (A / B / C / D).**
 ### Sources (this update)
 - claude: Claude Code session, 2026-09-16, web research on BlueNotary IPEN and journal features
   and on NJ remote act fees
+
+## Update 2026-09-16T09:37-04:00 — plan confirmed, Stormy Phase 4 skill specs
+
+Lemar: "The plan stands for now" and spec both skills now. Noted that he overrode the
+suggestion to hold `notary-journal-mirror` until after the Phase 2 platform trial; the spec
+below absorbs that by making the data source pluggable rather than assuming one.
+
+Roster checked (`.claude/skills/`): neither skill exists, and nothing on the roster covers this.
+No duplicate risk.
+
+---
+
+## Skill spec — `notary-intake`
+
+**1. What it does**
+One intake point for every notary job. Takes a request, produces a priced, scheduled, recorded
+job: a calendar event, a quote at the published rates, and a job record in Haven that every
+later step reads from. Nothing about a job is ever keyed twice.
+
+**2. Trigger and inputs**
+- *Primary:* a submission on the public intake form.
+- *Backup:* a plain drop in Convo 2 when a job arrives by phone, developed by Samira's PART 4
+  sweep exactly like a money drop. (`Inherited` from ask 13's manual backup and ask 5's
+  drop-it-in pattern.)
+- Reads: the form or drop, Google Calendar for availability, the published rate card, and the
+  Haven business record for a repeat client.
+
+**3. Output and chaining**
+- A Google Calendar event on the business calendar, routed per the `haven-calendar-sync`
+  domain rules.
+- A `type: task` job record written through `haven-capture`, carrying job type (in-person,
+  IPEN, RON), act count, distance tier, quoted statutory fee, quoted travel or technology fee,
+  and scheduled time. **No signer PII beyond a first name and contact handle.**
+- A confirmation to the customer in Lemar's voice via `my-writing-style`.
+- Hands off to `notary-journal-mirror` after the job, which matches the journal entry back to
+  this record.
+
+**4. Gates and owner**
+- Owner: `samira`, on her existing hourly run. No new routine.
+- Runs unattended: triage, availability check, quoting at published rates, booking, and the
+  confirmation, all within one business day. (`Inherited` from asks 16 and 17.)
+- Never: decides whether a notarial act may be performed, advises which certificate a document
+  needs, or explains document content. Written as a refusal, not a guideline.
+- Never: quotes off the rate card. An out-of-area or unusual request goes to Lemar as a card.
+
+**Open asks for this skill**
+A. Which form tool is the intake point: **Jotform** (already connected, so Samira can read
+   submissions directly), a Google Form, or wait and build it into the Phase 5 booking site?
+B. Deposit policy: payment at completion is the plan's chargeback mitigation, but a no-show on
+   a 35-mile job costs the whole trip. Take a deposit on the top distance tier, or absorb it?
+C. May Samira book an unfamiliar customer straight onto the calendar, or hold the slot and put
+   a one-line card to Lemar first?
+
+---
+
+## Skill spec — `notary-journal-mirror`
+
+**1. What it does**
+Keeps the business record honest against the legal record. Pulls completed notarial acts from
+BlueNotary, mirrors the non-PII business facts into Haven, posts the money to money-hub with
+its tax set-aside, and raises an alarm the moment the two records disagree.
+
+**2. Trigger and inputs**
+- Runs on Samira's hourly scan.
+- **Source is pluggable, decided at Phase 2, not now:** BlueNotary's API if the account exposes
+  it, otherwise its journal CSV export. The skill reads through one adapter so the choice is a
+  config line and not a rewrite. This is the direct consequence of the unverified-at-spec-time
+  platform detail.
+- Also reads: the `notary-intake` job records, Google Calendar completed events, and Stripe
+  payment status.
+
+**3. Output and chaining**
+- The Haven business mirror: date, act type, act count, fee split, travel or technology fee,
+  payment status, mileage. **Never a signer name, address, or credential detail.**
+- A money-hub notary stream line through the `money-hub` skill, plus the automatic tax
+  set-aside into the Set-Aside pocket at log time.
+- A two-line invoice through Stripe, statutory fee and non-notarial fee itemized separately,
+  as required to keep the journal's itemized fee entry accurate.
+- Unpaid invoices handed to `chase-commitments`.
+- Results landed through `samira-report-result`.
+- **Three alarms**, per ask 18: a completed calendar event with no journal entry after N hours;
+  an invoice unpaid past N days; a job logged with no payment recorded.
+- A periodic journal export to durable storage, so the ten-year retention duty never depends
+  on the vendor staying in business.
+
+**4. Gates and owner**
+- Owner: `samira`, on her existing hourly run.
+- Runs unattended: the mirror, the ledger line, the set-aside, the invoice, the reconciliation,
+  the chase, the alarms, the export.
+- Never writes to the journal of record. BlueNotary is the legal record; this skill reads it and
+  never edits it. A discrepancy raises an alarm for Lemar to correct in the journal himself,
+  using the journal's own amendment mechanism.
+- Never invents a number or a date. An unknown stays null and gets asked.
+
+**Open asks for this skill**
+D. Tax set-aside percentage. Ask 11 said yes to automatic, but never set the number.
+E. Alarm thresholds: how many hours after a completed event before the missing-journal-entry
+   alarm fires, and how many days before the unpaid-invoice alarm fires?
+F. Reconciliation direction when a journal entry has no matching job record, which is what a
+   true walk-up looks like: open a retroactive job record automatically, or raise it as a card?
+G. Where the periodic journal export lands: Google Drive in an access-controlled folder, or
+   somewhere else? It is the one artifact that carries signer PII outside the vendor.
+
+---
+
+Seven open asks across the two specs, all of them things the locked plan genuinely did not
+settle. Everything else above is inherited from the plan or assumed and marked as such.
+Next after these close: the Phase 5 activation call, A / B / C / D.
+
+### Sources (this update)
+- claude: Claude Code session, 2026-09-16
