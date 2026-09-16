@@ -1293,3 +1293,31 @@ Blocked on the brand name and the profile, like everything else on the front end
 ### Sources (this update)
 - claude: Claude Code session, 2026-09-16 — 2026 local search ranking factor research; earlier
   RON platform economics research
+
+## Update 2026-09-16T13:40-04:00 — name confirmed, front end unblocked
+
+Lemar confirmed **Given Word Notary** as the name. The earlier naming update recorded the choice;
+this records that it is final and that the front end is no longer name-blocked.
+
+Everything downstream is now sequenced behind one phone call rather than a decision:
+
+| Step | Blocked on | Cost |
+|---|---|---|
+| Camden County Clerk availability call | nothing — do it now | free |
+| Trade Name Certificate, filed in person | the call | $57 |
+| Google Business Profile created + submitted for verification | the certificate (name must match) | free |
+| Business cards, QR to the profile | the certificate | ~$20–40 |
+| Domain `givenwordnj.com` | nothing; not a gate | ~$12/yr |
+
+The Google Business Profile verification queue is the long pole on the demand side — nominally up
+to five business days, commonly weeks, and the verification method has not been selectable since
+2025. It is entered weeks before the commission exists. **Submit for verification, do not publish.**
+Publishing a booking path for acts that cannot yet be legally performed is the one thing worse than
+having no front end.
+
+Anchors to register once the profile exists: the **Business Profile review short link**, which is
+what unblocks Mode 6 of `notary-journal-mirror`. Until that anchor exists the review automation
+correctly refuses to send.
+
+### Sources (this update)
+- claude: Claude Code session, 2026-09-16
