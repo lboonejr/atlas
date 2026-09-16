@@ -1321,3 +1321,82 @@ correctly refuses to send.
 
 ### Sources (this update)
 - claude: Claude Code session, 2026-09-16
+
+## Update 2026-09-16T15:10-04:00 — SCOPE CHANGE: loan signings (NSA) added as a second path from day one
+
+Lemar talked to people in the field who told him loan document signings are where the money is.
+Decision: **pursue consumer mobile notary and notary signing agent (NSA) work as two paths from
+day one**, rather than consumer-first with signing work as a later expansion. This supersedes the
+"signing work as a later expansion" framing in the locked plan.
+
+### What already built handles it — more than expected
+
+**The two-line invoice is the load-bearing piece, and it was already right.** NJ caps the notarial
+act, not the signing agent fee; they are legally separate charges and the separation must be
+visible. On a refinance the statutory line is **$25 for the entire transaction** under
+N.J.A.C. 17:50-1.18 (mortgagors in real estate financing, any number of services — not $2.50 ×
+twelve signatures), and the signing fee of **$75–200** rides on line 2 as non-notarial.
+
+Also unchanged and now more valuable:
+- **The two-rate tax set-aside.** On a $125 signing, $25 reserves at 20% and $100 at 35%.
+- **The journal of record and the three alarms.** More entries per job, identical mechanism.
+- **The UPL boundary in `notary-intake`.** More load-bearing, not less — "what does this page
+  mean?" over a 150-page loan package is the most common way signing agents lose a commission.
+
+### What genuinely changes
+
+1. **The LLC decision moves to now.** The recorded recommendation was "LLC when signing-agent work
+   starts." That is day one under this plan — signing services and title companies contract B2B.
+2. **The demand side splits in two, and the Business Profile only serves one half.** NSA work comes
+   from signing services, the NNA directory and direct title relationships, never from Google. The
+   entire customer acquisition plan in this brief covers **consumer only**. A second acquisition
+   track is unspecced: platform registrations plus a reusable vendor onboarding packet (W-9, E&O
+   certificate, background screening result, certification certificate).
+3. **The business acquires a cost of goods it does not currently model.** Dual-tray laser printer
+   **$200–500** (Brother HL-L6210DWT ≈ $330), toner, and both letter and legal paper. A package
+   printed twice — borrower copy — is a real per-job materials cost. The rate card and the ledger
+   treat the travel fee as pure margin with no COGS concept anywhere. Unmodelled, the set-aside
+   math quietly overstates what is actually earned.
+4. **Certification and an annual background screening become a recurring queue.** NNA packages from
+   **$199**, a 45-question exam at 80% to pass, screening repeated annually. Not legally required,
+   effectively mandatory. Another approval queue, like Business Profile verification, so it starts
+   early rather than on commission day.
+5. **The unpaid-invoice alarm breaks.** Signing services pay **net-30 to net-45**; the alarm fires
+   at one week. It would fire on every single NSA job. Payment terms must become **per-channel**,
+   not global.
+6. **A new lifecycle step appears: scan-backs.** Scan and upload the executed package within hours
+   of the signing. Consumer work has no equivalent, and missing it is how a notary gets dropped by
+   a service.
+7. **E&O sizing was already correct.** $100,000 covers the typical $25,000–$100,000 requirement.
+   That purchase does not change.
+
+### Recommendation recorded
+
+**Do both. It costs nothing on the timeline.** The critical path is unchanged — exam, commission,
+oath, seal. Every NSA-specific item is either a parallel queue or a purchase, so both paths can be
+set up during the wait already underway.
+
+**But sequence the attention, not the setup.** Run the first ten *consumer* jobs by hand as planned.
+A botched acknowledgment costs a redo; a botched loan package costs a funding delay and a title
+company that never calls again. Prove the chain where mistakes are cheap.
+
+**Caution recorded against "that's where the real money is."** True on gross per job, incomplete on
+net. Off a $125 signing, subtract printing, drive time and 1.5–2 hours at the table, then wait 30–45
+days to be paid. Loan signing volume also tracks interest rates, and a rate spike dries up refi work.
+That is the strongest argument *for* running both: the consumer side keeps earning when the loan
+side goes quiet. **Doing both is the hedge, not the greed.**
+
+### Scope delta the next thread has to carry
+
+| # | Item | Kind |
+|---|---|---|
+| 1 | `notary-intake` — NSA job type, scan-back step, platform-sourced jobs | skill amendment |
+| 2 | `notary-journal-mirror` — per-channel payment terms, COGS line | skill amendment |
+| 3 | LLC, and the printer purchase | decisions promoted to now |
+| 4 | Signing services and title relationships | acquisition track, unspecced |
+| 5 | Background screening and platform approvals | new queue, start early |
+
+### Sources (this update)
+- claude: Claude Code session, 2026-09-16 — NNA certification and screening, signing agent E&O
+  requirements, dual-tray printer pricing, and the NJ notarial-fee-versus-signing-fee distinction,
+  from web research in that session
