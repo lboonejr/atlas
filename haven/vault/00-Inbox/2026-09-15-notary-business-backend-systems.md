@@ -1,6 +1,6 @@
 ---
 created: 2026-09-15T16:09-04:00
-updated: 2026-09-16T11:48-04:00
+updated: 2026-09-16T12:12-04:00
 domain: project
 type: brief
 status: active
@@ -1069,3 +1069,80 @@ Nothing further is buildable from here without one of the above. The backend is 
 
 ### Sources (this update)
 - claude: Claude Code session, 2026-09-16
+
+## Update 2026-09-16T12:12-04:00 — BRAND NAME DECIDED: Given Word Notary
+
+Lemar picked **Given Word Notary**. This closes the blocker that was holding the Trade Name
+Certificate and the Google Business Profile, and therefore the entire front end.
+
+### How it was chosen
+Two forks settled it: **distinctive word plus "Notary"** rather than a descriptive geographic
+name, and **statewide New Jersey reach** rather than Camden County alone.
+
+Those forks were driven by two findings:
+- **Google requires the profile name to match the real-world registered business name.**
+  Keyword stuffing a city or a service into it risks a suspension that takes 30+ days to
+  appeal, during which the business is invisible on Search and Maps. The corollary is the
+  useful part: whatever trade name is legally filed **is** the compliant Google name, so the
+  naming decision and the filing are one decision.
+- **A NJ trade name is only effective in the county where it is filed** — statewide protection
+  means filing in all 21 counties. That argues against putting a city in the name at all.
+
+Geography is therefore handled by the Business Profile's **service area** setting, which is the
+correct tool, rather than by the name.
+
+### Why this name
+Lemar's brief: *"I'm here with you, as your advocate, while you speak your truth."* He asked for
+hip hop resonance, landed in the **"word is bond"** room — Nation of Gods and Earths by way of
+Rakim, itself a compression of "my word is my bond" — then asked for the same meaning without
+the direct quotation.
+
+**Given Word** carries two real roots at once:
+- A *given word* is a promise given, which is the customer's side of the act.
+- **Given** is the notary's own verb, from the formula *given under my hand and seal*.
+
+Same idea as the idiom, none of the costume.
+
+**Rejected: "WIB Notary."** Initialisms are earned, not chosen — they compress recognition a
+new sole proprietor does not yet have. It deletes the surface meaning that was the name's whole
+value, does not survive being said on the phone, and contributes nothing to search. Abbreviating
+a phrase because it feels too loud does not make it quieter, it makes it mute, and leaves the
+reference as a private joke with none of its power.
+
+### Also considered and set aside
+- **Word & Seal Notary** — the runner-up and the stronger pure brand; the ampersand structurally
+  encodes the two-party nature of the act. Lost on warmth.
+- **Hand & Seal Notary** — earlier front-runner, same legal-formula root, no "word" thread.
+- **Your Word · Kept Word · Affirm · Testify · Standing Witness** — all clear in search, all
+  weaker on one axis.
+- **Co-Sign** — culturally exact for vouching, legally unusable: a co-signer is a loan guarantor.
+- **Sworn & Sealed** — killed on crowding. "Signed & Sealed" variants exist in Chicago, Toledo
+  and elsewhere; permanent confusability, no ownable search position.
+- **Meridian Notary** — multiple existing notary businesses already use Meridian.
+- **Camden Mobile Notary / South Jersey Mobile Notary** — best raw discovery, capped at a county
+  line, undefendable.
+- **Riverline / Whitman / Cooper** — place-rooted, ruled out by the statewide decision.
+
+### Clearance status — NOT a legal clearance
+Web searches found **no existing notary business using "Given Word Notary."** That is absence of
+evidence, not availability. **Three checks before filing, all Lemar's:**
+1. NJ business name search at `njportal.com/DOR/BusinessNameSearch`.
+2. Camden County Clerk's own records — the clerk requires a search before filing, and a trade
+   name is only effective in the county filed.
+3. USPTO for a light trademark look.
+
+### Practical form
+- **Legal trade name to file:** Given Word Notary
+- **Google Business Profile name:** Given Word Notary, matching exactly
+- **Domain:** `givenwordnotary.com`
+- No ampersand to break in URLs and forms, which the runner-up would have carried.
+
+### What this unblocks
+The Trade Name Certificate filing (Camden County to start), and behind it the Google Business
+Profile. Both were listed as blocked on the name in the exam-day checkpoint note; they are now
+live items in the "while you wait for the decision" list.
+
+### Sources (this update)
+- claude: Claude Code session, 2026-09-16 — Google Business Profile naming guidelines and
+  suspension risk; NJ per-county trade name effectiveness; "word is bond" lineage; clearance
+  searches on all shortlisted names
