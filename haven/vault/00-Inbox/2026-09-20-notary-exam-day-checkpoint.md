@@ -1,6 +1,6 @@
 ---
 created: 2026-09-16T11:56-04:00
-updated: 2026-09-16T17:05-04:00
+updated: 2026-09-16T18:10-04:00
 domain: project
 type: task
 status: active
@@ -238,3 +238,60 @@ than rate**, and a new company's first job is a credit decision rather than a sc
 Run the first ten **consumer** jobs by hand. A botched acknowledgment costs a redo; a botched loan
 package costs a funding delay and a title company that never calls again. Prove the chain where
 the mistakes are cheap.
+
+## Update 2026-09-16T18:10-04:00 — LLC name picked, printer picked, platform order set. The county trip may be off.
+
+Full reasoning in [[2026-09-16-notary-llc-printer-platforms]]. Three of the open decisions are
+now answered.
+
+### 1. The LLC: `Given Word LLC` — Lemar's call, recorded
+Very likely available: the 2026-09-16 clearance searched the state business name database for
+"Given Word" and got nothing, and that is the same database an LLC name is checked against.
+Confirmed only at filing.
+
+**This changes section 2 of this checkpoint.** A NJ county clerk registers trade names for
+**individuals and partnerships only** — LLCs and corporations register with DORES in Trenton.
+So forming the LLC **replaces** the $57 Camden County counter trip rather than adding to it.
+
+**Do not cancel the county trip until the clerk confirms it.** It is a five-minute call against
+a step that was already researched, scheduled, and has a call script written for it
+([[2026-09-16-camden-county-clerk-call-script]]).
+
+Because the brand ("Given Word Notary") differs from the entity ("Given Word LLC"), the LLC also
+files a **Registration of Alternate Name**, $50, valid five years. Using the trade name before
+registering it costs $50 plus a $50 penalty per year of use. **The Google Business Profile name
+must match the registered name**, so the alternate name is a front-end dependency too.
+
+Revised filing sequence: **LLC ~$125 → alternate name $50 → EIN (free, and it keeps Lemar's SSN
+off a dozen W-9s) → annual report $75/yr.**
+
+### 2. The printer: `Brother HL-L5210DWT`, ~$300–350
+The working default for signing agents. Two trays, letter and legal both loaded, so a 150-page
+package prints in one pass. The HL-L6210DWT is the same thing a size up, worth buying if the
+volume arrives, not before.
+
+Three things that matter: **two trays**, **laser not inkjet** (county recorders can refuse to
+record inkjet), and **high-yield toner from day one**. Confirm the tray capacities on the exact
+listing — Brother's model numbers in this family differ by a letter.
+
+Add a **sheet-feed scanner** if the printer is not an all-in-one. Scan-backs are due within
+hours, and a flatbed will not do 150 pages.
+
+### 3. Platforms: Snapdocs first, then direct registrations
+Highest order volume in most markets, free, and many signing services schedule through it.
+
+**"Snapdocs Verified" is the status that gets work, and it needs exactly the vendor packet:**
+commission, bond if applicable, **the full background check report** (not the NNA certificate),
+E&O policy, verified ID. Building the packet *is* the registration.
+
+Two gotchas: they want the **actual report PDF**, and the **name, email and phone on the NNA
+profile must match the Snapdocs profile exactly**.
+
+Then register directly with the signing services — Amrock, ServiceLink, Coast2Coast, Signature
+Closers, Mortgage Connect, Rocket Close — several of which also source through Snapdocs, so it
+overlaps rather than replaces. Most Snapdocs work lands **$75–$150**; title companies posting
+directly often pay **$125–$200+**. Net-30 is the normal term.
+
+### What is left open
+Nothing on this list. The remaining open items are unchanged: the four DORES questions, the three
+BlueNotary questions, E&O, and the exam itself.
