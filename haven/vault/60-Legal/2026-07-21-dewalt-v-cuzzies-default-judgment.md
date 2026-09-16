@@ -1,12 +1,12 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-09-15T16:30-04:00
+updated: 2026-09-16T12:03:00-04:00
 domain: legal
 type: task
 status: active
 tags: [legal, dewalt, lawsuit, default-judgment, urgent]
-source: gmail
-due: 2026-09-08T10:00:00-04:00
+source: slack
+due: 2026-10-13T09:00:00-04:00
 calendar_event_id: e0mp54r48u87fv8b2pkbto1evc
 ---
 
@@ -928,3 +928,37 @@ auto-marking `Samira/seen` on a first pass through content this consequential.
   with Pending Sale"), forwarded by Donte Bronaugh 2026-09-15 ~18:25 ET; contains the
   full Jul 24 – Sep 15 chain between Donte Bronaugh, Marco Di Stefano Esq., and Monica
   Madin Esq.
+
+## Update 2026-09-16T12:03:00-04:00 — Sept 14 proof hearing OUTCOME: adjourned to Oct 13; still no counsel of record
+
+Answering the open question that has stood since the 2026-09-15 update above, Lemar
+confirmed directly on the Convo 1 card (`D0BHPKMDNEP` ts `1788966952.066259`, reply
+`1789506788.592939`): *"What ended up happening. Me and Josh showed up for the
+hearing, jenn did not. The hearing was adjourned until October 13th."*
+
+**Read:** the Sept 14 proof hearing did go forward as a hearing date, but did not
+result in a damages figure being entered — Lemar and Josh Evans appeared personally
+(pro se, per this note's standing gap that an LLC cannot appear pro se, though the
+individual defendants can); Jennifer DeWalt (the plaintiff) did not appear. The court
+adjourned to a new proof hearing date of **2026-10-13**. This resolves open question 1
+from the 2026-09-15 update ("did the hearing happen, what was entered") — no damages
+figure has been entered as of this update. Open questions 2–4 from that update (the
+eight-category document demand, whether Madin/Di Stefano represent Lemar individually,
+whether any examined payments occurred) remain unanswered and are not addressed here.
+
+**Still standing:** no counsel of record for either Lemar or Cuzzie's on this matter
+(Diaz/Archer & Greiner declined 9/10 and is only being considered for a later appeal
+per the 9/12 update); Monica Madin's 9/15 "have your attorney contact me" ask is still
+unanswered; the fraudulent-transfer document demand (tax returns, bank statements,
+ledger, certified personal financial statements from Lemar and Josh) is still
+outstanding. Set `due` on this note to 2026-10-13T09:00:00-04:00 (next proof hearing
+date) so calendar-sync moves the existing reminder event
+(`e0mp54r48u87fv8b2pkbto1evc`) to the new date on its next pass — not done in this
+same write, per the vault-is-truth / calendar-renders-it split. Nothing drafted, sent,
+or represented by Samira this update — this is a status log only.
+
+### Sources (this update)
+- slack: Convo 1 `D0BHPKMDNEP` thread `1788966952.066259`, reply `1789506788.592939`
+  (2026-09-15 ~19:53 ET, Lemar's own message, logged here on the 2026-09-16 ~12:03 ET
+  scan after being held pending resolution of the #fixes git-write-policy conflict,
+  `C0BV5BRNH5Z` ts `1789499060.544979`)
