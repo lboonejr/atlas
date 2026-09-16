@@ -1,6 +1,6 @@
 ---
 created: 2026-09-16T11:56-04:00
-updated: 2026-09-16T13:40-04:00
+updated: 2026-09-16T17:05-04:00
 domain: project
 type: task
 status: active
@@ -182,3 +182,59 @@ The other three open items stand: E&O, the four DORES questions, the three BlueN
 signing-agent work starts, because NJ holds the individual notary personally liable for notarial
 misconduct regardless of entity and the E&O policy is what actually covers that. Filing the trade
 name does not foreclose the LLC later.
+
+## Update 2026-09-16T17:05-04:00 — two more queues for the wait list, and two decisions that moved to now
+
+The business now runs three channels, not one: consumer, signing service (loan signings), and
+real estate agents. See [[2026-09-15-notary-business-backend-systems]] (Updates of
+2026-09-16T15:10 and 17:05) and [[2026-09-16-notary-b2b-acquisition-tracks]].
+
+**The critical path does not change.** Exam, commission, oath, seal — identical. Everything
+below is either a queue that runs in parallel with the wait already happening, or a purchase.
+That is the whole reason both new channels could be added without moving the launch date.
+
+### What section 2 gains — three things to start during the wait
+
+8. **Study for and take the signing agent certification exam.** NNA packages from $199, 45
+   questions, 80% to pass. Not legally required in NJ, effectively mandatory in practice — the
+   signing services' own contracts require screened, certified notaries. Doable now, with no
+   commission.
+9. **Order the annual background screening** (~$60–100/yr). A turnaround nobody controls, so it
+   is a waiting line like the Google verification, entered early rather than on commission day.
+10. **Have the first conversations with agents Lemar already knows.** One honest line — "I'm
+    becoming a notary; if you ever have a seller who can't make closing or a client out of
+    state, call me" — costs nothing and starts the slowest-building channel first.
+
+**The limit on item 10, and it matters:** telling an agent to call when they need a notary is
+honest. **Taking the booking is not**, until the commission exists. Same rule as the unpublished
+booking form.
+
+### The vendor packet — build it once during the wait
+
+Every signing service asks for the same four things: **W-9, E&O certificate, background screening
+result, certification certificate.** Assemble them in one Drive folder alongside the commission
+certificate, a seal impression photo, and the entity filing.
+
+**This folder may be linked and shared freely** — business credentials, no signer PII. It is the
+opposite of the journal exports folder rule, and keeping the two apart is deliberate.
+
+### Two decisions promoted from "later" to "now"
+
+- **LLC vs. trade name.** No longer theoretical. **The name on the W-9 must match the registered
+  entity**, and that W-9 goes to every signing service. Deciding after registering at a dozen
+  platforms means correcting it at a dozen platforms.
+- **Which printer.** A loan package is 100–200 pages on both letter and legal, usually printed
+  twice. A dual-tray laser (Brother HL-L6210DWT ≈ $330) is the reference point; single-tray means
+  swapping paper mid-package.
+
+### One new open question, replacing nothing
+
+**Which signing service platforms to register with has not been researched at all.** No platform
+evaluated, no title company relationship exists. It is the largest unknown left on the plan and
+the next real piece of work. Registration is normally free; **payment reliability matters more
+than rate**, and a new company's first job is a credit decision rather than a scheduling one.
+
+### The standing sequencing advice is unchanged
+Run the first ten **consumer** jobs by hand. A botched acknowledgment costs a redo; a botched loan
+package costs a funding delay and a title company that never calls again. Prove the chain where
+the mistakes are cheap.
