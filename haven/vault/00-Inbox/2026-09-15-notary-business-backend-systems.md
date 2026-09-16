@@ -206,3 +206,110 @@ notarial act; the exact journal fields and retention period NJ requires; whether
 fully electronic journal for in-person acts and whether the signer must sign it; NJ RON
 registration requirements; whether E&O insurance or a bond is required or merely expected by
 title companies.
+
+## Update 2026-09-16T09:40-04:00 — batch 2 answered, NJ law researched, journal architecture corrected
+
+### Lemar's answers (batch 2)
+1. **Customer** — consumer mobile notary first, grow into signing work later.
+2. **RON** — in scope now.
+3. Pricing — asked for suggestions.
+4. **Journal** — wants electronic; asked whether the signer's wet signature is required.
+5. **PII** — proposed an Excel sheet.
+6. **ID capture** — wants ID images or thumbprints captured.
+7. **Retention** — base it on the notary laws.
+8. **Two-line invoice** — yes.
+9. **Processor** — Stripe.
+10. **Banking** — personal, but a dedicated account for the business.
+11. **Tax set-aside** — yes, automatic at log time.
+12. AR chasing — wire into Samira's responsibilities.
+13. **Intake** — one intake point, with a manual backup flow for phone-call walk-ups.
+14. **Front end** — profile and phone first, booking site later.
+15. Directories — asked for a rephrase.
+16. **Response time** — within one business day.
+17. **Samira's authority** — she can do all of it if the parameters are set properly: letter of
+    the law, his voice, NJ-compliant notary best practices.
+18. **Alarms** — all three.
+19. Volume — asked for a suggestion.
+
+### NJ law research (2026-09-16) — N.J.A.C. 17:50-1.11, 1.14, 1.16, 1.18
+
+**Journal (N.J.A.C. 17:50-1.11).** Required entries per notarial act: date and time; type of
+act; name and address of each person the act is performed for; if identity rests on personal
+knowledge, a statement to that effect; if on satisfactory evidence, a brief description of the
+method of identification and the credential presented; and an itemized list of all fees charged.
+
+- **The signer's signature is NOT among the required entries in NJ.** (Unlike CA, FL and others.)
+  This is the finding that unblocks a fully electronic journal with no paper book.
+- Journal may be tangible or electronic. Tangible means a permanent bound register with
+  consecutively numbered lines and pages. **Electronic means a "permanent, tamper-evident
+  electronic format."**
+- **Only ONE journal at a time**, covering both tangible and electronic records.
+- **Retention: 10 years after the last notarial act.**
+
+**Fees (N.J.A.C. 17:50-1.18).** $2.50 per act for oaths, affidavits, proofs of deed and
+acknowledgments. $15.00 for grantors in a real estate transfer regardless of the number of
+services in the transaction. $25.00 for mortgagors in a real estate financing regardless of
+number. Travel and other non-notarial fees are not set by the State; the notary sets them and
+they must be separate and disclosed.
+
+**RON.** Permanently authorized in NJ since 2021-10-22. Notify the State Treasurer through the
+DORES notary portal identifying the communication technology platform before the first remote
+or electronic act, and again whenever the platform changes. Identity proofing requires at least
+two of credential analysis, knowledge-based authentication, or biometric verification, run by
+the platform. The full session including identity verification must be audio-video recorded.
+**AV recordings retained 10 years.**
+
+**Not confirmed, do not rely on until verified against the manual or the reg text:** whether NJ
+sets a separate maximum fee for a remote act; whether and how the journal is subject to
+inspection or copy requests; whether NJ restricts recording a credential's full ID number.
+
+### Architecture correction — the journal of record is NOT Haven and NOT Excel
+
+His answer 5 (Excel) and the working assumption that Haven holds the record both fail the
+regulation. "Permanent, tamper-evident electronic format" is a product property. An .xlsx file
+is freely editable with no audit trail. A markdown note in a git repo is rewritable by a force
+push and is not a recognized tamper-evident journal. He asked for the legal journal satisfied
+**to a T**, so this cannot be fudged.
+
+**Corrected design, three layers:**
+1. **Journal of record** — a commercial tamper-evident electronic journal, or the RON
+   platform's built-in journal, holding the six required fields. Because NJ allows only one
+   journal at a time, the same product must carry in-person acts and remote acts both. This is
+   the single biggest platform decision in the project and it now gates the build.
+2. **Business mirror** — Haven holds the non-PII operational record: date, act type, act count,
+   fee split, travel fee, payment status, mileage. Drives reporting and money-hub. No signer
+   names, addresses, or credential details.
+3. **PII overflow, if any** — access-controlled Google Drive, never the git repo, never a
+   spreadsheet synced to a personal machine. Preference is to hold no PII outside the journal
+   of record at all.
+
+**ID images and thumbprints (his answer 6):** NJ requires only a brief description of the method
+and the credential presented, not an image and not a thumbprint. Capturing and storing
+government ID images creates real breach exposure under NJ's breach-notification law for zero
+statutory benefit on consumer work. Recommendation: record credential type, issuing state and
+expiry, not a stored image and not the full credential number. For RON the platform holds the
+credential analysis inside the mandatory AV recording, which is where it belongs. Recommend
+against thumbprints for consumer work; revisit only if signing services demand it later.
+
+**Samira's hard boundary (his answer 17):** she may run intake, scheduling, confirmations,
+invoicing, payment reconciliation, AR chasing, mirror entries and reporting. She may **never**
+decide whether a notarial act may be performed, never advise on which certificate a document
+needs, and never explain or draft document content. That is unauthorized practice of law and it
+is the fastest way a NJ notary loses a commission. The notarial judgment and the journal entry
+in the record stay with Lemar at the table.
+
+### New asks opened by this round
+20. CRUX — Which single platform is the journal of record, given NJ's one-journal rule and that
+    it must cover both in-person and RON acts?
+21. Confirm the corrected three-layer design replaces the Excel plan.
+22. Public phone number: his personal cell, or a separate business line, given it goes on a
+    public Google Business Profile?
+23. Which dedicated account is "the specific account" for answer 10?
+24. Stripe under his SSN as a sole prop: confirm, and confirm the 1099-K lands where he expects.
+25. Confirm the recommendation to skip stored ID images and thumbprints, or override it.
+
+Asks answered: 19. New asks: 6 (1 crux). Status stays `awaiting-decision`.
+
+### Sources (this update)
+- claude: Claude Code session, 2026-09-16, with web research on N.J.A.C. 17:50-1.11, 1.14,
+  1.16 and 1.18 and NJ RON law (A4250, effective 2021-10-22)
