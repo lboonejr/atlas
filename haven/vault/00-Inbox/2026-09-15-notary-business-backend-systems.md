@@ -1,6 +1,6 @@
 ---
 created: 2026-09-15T16:09-04:00
-updated: 2026-09-16T12:12-04:00
+updated: 2026-09-16T12:38-04:00
 domain: project
 type: brief
 status: active
@@ -1146,3 +1146,75 @@ live items in the "while you wait for the decision" list.
 - claude: Claude Code session, 2026-09-16 — Google Business Profile naming guidelines and
   suspension risk; NJ per-county trade name effectiveness; "word is bond" lineage; clearance
   searches on all shortlisted names
+
+## Update 2026-09-16T12:38-04:00 — name clearance results: three CLEAR, one phone call, domain taken
+
+Clearance searches run in a browser session and handed back as a Drive doc
+(`1K0tlM_wFvClarXfzRZukM4wvi70C6PFCu-E6aT6aems`). Search only — nothing filed, submitted or
+paid for.
+
+### Results
+
+| Check | Result |
+|---|---|
+| NJ business name search (njportal DOR) | **CLEAR** — "Given Word" and "GivenWord" both returned no results |
+| USPTO trademark search | **CLEAR** — no live or dead marks for "Given Word", "Given Word Notary" or "GivenWord" |
+| Existing notary businesses (Google, Maps) | **CLEAR** — nothing anywhere using the name |
+| Camden County Clerk trade name records | **CANNOT DETERMINE ONLINE** — no public search tool exists |
+
+**The name survives every check that could be completed.** The legal position is as clean as a
+search can make it.
+
+### The one remaining check is a phone call
+Camden County publishes a Trade Name Registration page but **no online search**. Availability at
+the county level is unconfirmable from a browser.
+
+- Camden Courthouse **(856) 225-5300** · County Store **(856) 566-2920**
+- No hours posted, so call before travelling
+- Filing fee **$57** ($25 to dissolve later)
+- **All registrants must appear in person to sign** — this is not a mail-in filing
+
+Form: `camdencounty.com/wp-content/uploads/2016/04/Business-trade-name.pdf`
+
+### Domain: `givenwordnotary.com` is taken
+Registered by a third party and parked on Sedo's marketplace with a make-an-offer page. Not an
+active notary business, so **no trademark or trade name conflict** — but the exact-match .com is
+unavailable without buying it.
+
+**This does not change the name.** For a local service business the Google Business Profile does
+the discovery work; most customers find a mobile notary on Maps and call from the listing without
+ever opening a website. A domain is a nice-to-have here, not a blocker, and paying a parking
+service to unlock one is poor value at this stage.
+
+Alternatives to check, in preference order: `givenwordnj.com` · `thegivenword.com` ·
+`givenwordnotaryservices.com` · `givenwordnotary.co`. Recommendation is `givenwordnj.com` —
+short, keeps the name intact, and the state tag is honest since the commission is NJ-only.
+
+### New open decision: trade name vs. LLC
+Raised in the same session and not yet decided.
+
+The load-bearing fact: **NJ holds the individual notary personally liable for notarial
+misconduct regardless of entity.** An LLC does not shield the core risk of this business. What
+covers that risk is the E&O policy already decided on.
+
+- **Trade name:** ~$57, no annual report, no liability shield beyond what E&O provides.
+- **LLC:** ~$125 to file plus **$75/year** annual report. Protects against general business and
+  contract liability, not notarial misconduct. Reads as more professional to title companies and
+  signing services, some of which prefer to contract with an LLC.
+
+**Recommendation: trade name now, LLC when signing-agent work starts.** That matches the locked
+plan, which is consumer-first with signing work as a later expansion. The LLC's real benefit is
+B2B credibility with title companies, and there are no title companies yet. Converting later is
+routine, and the $75/year starts when it buys something.
+
+Not legal or tax advice. Worth a short call with an attorney or CPA before the LLC step if the
+signing-agent path accelerates.
+
+### Status
+Brand name **Given Word Notary** stands. Trade Name Certificate is unblocked pending the county
+phone call. Google Business Profile is unblocked once the certificate is filed, since the profile
+name must match the registered name.
+
+### Sources (this update)
+- drive: `1K0tlM_wFvClarXfzRZukM4wvi70C6PFCu-E6aT6aems` — Given Word Notary name clearance handoff
+- claude: Claude Code session, 2026-09-16
