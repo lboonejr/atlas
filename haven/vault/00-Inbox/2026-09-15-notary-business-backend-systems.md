@@ -1126,7 +1126,7 @@ reference as a private joke with none of its power.
 ### Clearance status — NOT a legal clearance
 Web searches found **no existing notary business using "Given Word Notary."** That is absence of
 evidence, not availability. **Three checks before filing, all Lemar's:**
-1. NJ business name search at .
+1. NJ business name search at `njportal.com/DOR/BusinessNameSearch`.
 2. Camden County Clerk's own records — the clerk requires a search before filing, and a trade
    name is only effective in the county filed.
 3. USPTO for a light trademark look.
