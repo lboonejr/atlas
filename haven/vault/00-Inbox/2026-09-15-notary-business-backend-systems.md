@@ -1,6 +1,6 @@
 ---
 created: 2026-09-15T16:09-04:00
-updated: 2026-09-16T11:12-04:00
+updated: 2026-09-16T11:15-04:00
 domain: project
 type: brief
 status: active
@@ -833,3 +833,90 @@ fixtures, alongside the skill-creator eval loop that was deferred for the same r
 
 ### Sources (this update)
 - claude: Claude Code session, 2026-09-16
+
+## Update 2026-09-16T11:15-04:00 — gap review against notary best practice: ten things the backend does not cover
+
+Lemar asked what other backend elements the business is missing. Researched 2026-09-16.
+Ranked by what actually bites. Nothing below is built yet.
+
+### Tier 1 — money or the commission is at stake
+
+**1. The 30% set-aside is over-reserving, and the fix is already half-built.**
+Fees for performing notarial acts are **exempt from self-employment tax** under IRC
+§1402(c)(1) and Reg. §1.1402(c)-2(b). Fees for **travel, printing, document handling,
+administrative work and loan-signing services are not** — those carry the full 15.3% SE tax
+on top of income tax.
+
+So the two lines on the invoice do not just have different caps, they have **different tax
+treatments**. On a typical $70 consumer job, roughly $5 is the exempt statutory fee and
+$65 is fully SE-taxable travel. A flat 30% across both over-reserves on the statutory
+portion.
+
+The good news: the two-line invoice Lemar already approved at ask 8 is precisely the
+substantiation the IRS wants for claiming the exclusion. The recordkeeping is right; only
+the set-aside rate is wrong. **`notary-journal-mirror` should apply two rates, not one
+flat 30%**, and the mirror should carry an annual exempt-vs-non-exempt total for Schedule C
+and Schedule SE.
+
+**2. No E&O insurance.** NJ requires no surety bond for notaries. That is not a saving, it is
+an exposure: a bond would protect the customer, and nothing currently protects Lemar.
+Running as a sole proprietor with no LLC, his personal assets are the backstop for an honest
+mistake. E&O insurance is the thing that covers him, typically $25k–$100k of coverage for
+roughly $50–$200 a year.
+
+**3. No trade name certificate.** If the Google Business Profile carries anything other than
+his own legal name, NJ sole proprietors must file a **Trade Name Certificate with the county
+clerk in every county where the business operates**. The plan calls for a public brand and a
+verified profile, so this is a live requirement, not a formality. (The certificate itself
+must be notarized, which he cannot do for himself.)
+
+### Tier 2 — systems the backend should own but does not
+
+**4. Commission renewal and continuing education are untracked.** The commission runs five
+years, and renewal requires a 3-hour continuing-education course plus an updated exam. A
+lapse stops the entire business dead, including every automation built around it. This wants
+a Haven note carrying a `due` about 90 days before expiry so `haven-calendar-sync` rings
+it, plus a second for the CE course.
+
+**5. No refusal log.** When a notary declines — the signer cannot be identified, seems
+coerced or does not understand what they are signing, the document is incomplete — the
+standard practice everywhere is to record date, time and reason. That record is the evidence
+of reasonable care if a complaint or a lawsuit ever arrives. The journal of record holds
+performed acts; **a refusal is not an act, so it currently has nowhere to go at all.**
+Cheapest fix in this list and arguably the highest protection per minute spent.
+
+**6. No lost or stolen seal and journal playbook.** The duty is to notify the commissioning
+authority promptly, notify police where theft is suspected, and **stop notarizing until a
+replacement seal is in hand** — continuing to use a reported seal creates liability. This is
+the incident that happens at the worst possible moment, so a written five-step card beats
+improvising. (General practice; NJ's specific reporting mechanics were not verified.)
+
+**7. No procedure for a journal copy request or subpoena.** Ten-year retention guarantees
+someone eventually asks — a title company, a lawyer, a court. Needs: who may lawfully
+request, what gets handed over versus withheld, what may be charged, and a log of the
+request itself. Already flagged as unresearched at the G confirmation; still open.
+
+### Tier 3 — smaller, mostly free
+
+**8. Entity notes for repeat counterparties.** Title companies, law firms, senior facilities.
+`haven-vault-keeper` already stubs an entity note for any recurring counterparty, so this
+comes almost free once volume exists.
+
+**9. DORES address and name change notification.** A move or a name change has to be reported.
+
+**10. Supplies.** Spare journal, spare seal, ink, reliable pens. A dead pen at a hospital
+bedside is a wasted trip and a lost fee.
+
+### Recommended sequencing
+Items 1, 5 and 6 are cheap and belong in the build now — 1 is a rate change in a skill spec,
+5 and 6 are short written procedures. Items 2, 3 and 4 are Phase 2, gated on the commission
+and the brand name. Items 7–10 ride along as volume appears.
+
+**Not yet decided, needs Lemar:** whether to carry E&O and at what coverage; whether the
+business trades under his own name or a brand (which decides item 3); and whether to
+re-rate the set-aside now or leave the flat 30% until the first tax year.
+
+### Sources (this update)
+- claude: Claude Code session, 2026-09-16 — IRS Taxpayer Advocate on notarial fees and
+  self-employment tax; NJ E&O and bond position; NJ county trade name certificate rules;
+  national practice on refusal logs and lost seal reporting
