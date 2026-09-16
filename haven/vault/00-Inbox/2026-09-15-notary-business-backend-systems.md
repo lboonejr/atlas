@@ -1,6 +1,6 @@
 ---
 created: 2026-09-15T16:09-04:00
-updated: 2026-09-16T12:38-04:00
+updated: 2026-09-16T12:50-04:00
 domain: project
 type: brief
 status: active
@@ -1217,4 +1217,107 @@ name must match the registered name.
 
 ### Sources (this update)
 - drive: `1K0tlM_wFvClarXfzRZukM4wvi70C6PFCu-E6aT6aems` — Given Word Notary name clearance handoff
+- claude: Claude Code session, 2026-09-16
+
+## Update 2026-09-16T12:50-04:00 — review automation specced, response window tightened, RON channel decided
+
+### Review request automation — built as Mode 6 of `notary-journal-mirror`
+Reviews are roughly a fifth of Google's local ranking weight and **recency counts more than
+volume**, so a steady per-job trickle beats a launch-day burst. Automating the ask per job is
+what produces that trickle.
+
+**Design:** same day, a few hours after payment clears, to the single contact handle already on
+the job record, texted where a phone handle exists. Two or three sentences in Lemar's voice via
+`my-writing-style`, carrying the Google review short link and nothing else.
+
+**Gated on a clean close** — act in the journal, invoice paid, no alarm fired on the job.
+
+**Never-clauses, which are compliance rather than taste:**
+- Never offer anything for a review. Incentivised reviews breach Google's policies and the
+  FTC's endorsement rules, and the penalty lands on the profile the business depends on.
+- Never gate or filter — no "how did it go?" screen routing only happy answers to Google.
+  Review gating is explicitly prohibited and grounds for removal.
+- Never ask twice for one job, and never the same person more than once a quarter.
+- Never ask after a refusal, or when the invoice is unpaid.
+- Never mention a rating or suggest what to say. Ask for the review, not the verdict.
+- Never chase it. One ask, then silence.
+
+**Blocked until the Business Profile exists**, since the ask needs the review short link. Until
+that anchor is registered the mode reports no link configured and sends nothing, rather than
+improvising one.
+
+### Response window tightened: one business day → **2 hours**
+`notary-intake` amended. New commitment: **within 2 hours between 8am and 8pm ET, overnight
+requests answered by 9am.**
+
+One business day was too slow to win urgent work — someone who needs a notary today calls three
+and takes whoever answers first. Two hours is achievable because Samira sweeps hourly, and the
+skill now treats the window as a promise: if the hourly run is stuck and submissions sit past
+it, that raises a card rather than passing silently.
+
+### RON channel decided: platform work, and **no ads**
+Lemar's read is that RON is where he takes platform work. Recorded, with a caution on the ads
+idea attached to it.
+
+**Platform RON economics are thin.** From the earlier platform research: BlueNotary leaves the
+notary roughly $15 of a $25 session; OneNotary about $10 of $25, falling toward $6 after 100
+jobs. That is fill-in income for otherwise idle time, not a business line.
+
+**Recommendation: do not run ads for RON.** RON has no geography, so advertising it means
+competing nationally against venture-funded platforms and thousands of notaries on price. It is
+the worst possible first advertising dollar.
+
+**The better RON channel costs nothing:** RON as an upsell to demand the Business Profile
+already produces. A caller who cannot meet in person, or is out of state, becomes a remote
+session at Lemar's own rate with no platform cut. Same for the B2B relationships — an estate
+attorney with an out-of-state client is a natural RON referral.
+
+So: take platform work as filler if volume is wanted while the local side builds, and let local
+demand feed bring-your-own-client RON at full margin. If advertising is ever wanted, the first
+dollar belongs on local Google Ads for "mobile notary [town]", which feeds the same funnel the
+profile feeds.
+
+### Business cards — added to the to-do
+For a mobile notary the card has a specific job: it gets left behind at facilities, attorneys'
+offices, and with customers who refer. What belongs on it:
+
+- Name, and **Notary Public, State of New Jersey**
+- The **Google Voice number**, never the cell
+- **A QR code to the Google Business Profile** — not the booking form. The profile carries the
+  call button, the reviews and the booking link, and every scan that ends in a review compounds.
+- Service area, and **Mobile · Remote (RON)**
+- **Not** the commission number, and nothing resembling ID data
+
+Blocked on the brand name and the profile, like everything else on the front end.
+
+### Sources (this update)
+- claude: Claude Code session, 2026-09-16 — 2026 local search ranking factor research; earlier
+  RON platform economics research
+
+## Update 2026-09-16T13:40-04:00 — name confirmed, front end unblocked
+
+Lemar confirmed **Given Word Notary** as the name. The earlier naming update recorded the choice;
+this records that it is final and that the front end is no longer name-blocked.
+
+Everything downstream is now sequenced behind one phone call rather than a decision:
+
+| Step | Blocked on | Cost |
+|---|---|---|
+| Camden County Clerk availability call | nothing — do it now | free |
+| Trade Name Certificate, filed in person | the call | $57 |
+| Google Business Profile created + submitted for verification | the certificate (name must match) | free |
+| Business cards, QR to the profile | the certificate | ~$20–40 |
+| Domain `givenwordnj.com` | nothing; not a gate | ~$12/yr |
+
+The Google Business Profile verification queue is the long pole on the demand side — nominally up
+to five business days, commonly weeks, and the verification method has not been selectable since
+2025. It is entered weeks before the commission exists. **Submit for verification, do not publish.**
+Publishing a booking path for acts that cannot yet be legally performed is the one thing worse than
+having no front end.
+
+Anchors to register once the profile exists: the **Business Profile review short link**, which is
+what unblocks Mode 6 of `notary-journal-mirror`. Until that anchor exists the review automation
+correctly refuses to send.
+
+### Sources (this update)
 - claude: Claude Code session, 2026-09-16

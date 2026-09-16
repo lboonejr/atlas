@@ -6,9 +6,9 @@ description: >
   facts into Haven, posts the money-hub notary stream line with an automatic two-rate tax
   set-aside (fees for notarial acts are exempt from self-employment tax, travel fees are
   not), issues the two-line Stripe invoice, hands unpaid invoices to chase-commitments,
-  logs declined notarizations that never reach the journal, raises the three alarms the
-  moment the two records disagree, and exports the journal monthly against NJ's ten-year
-  retention duty. Runs inside Samira's hourly scan or on demand. Trigger on: "run the
+  logs declined notarizations that never reach the journal, asks for a Google review once a
+  job closes cleanly and is paid, raises the three alarms the moment the two records
+  disagree, and exports the journal monthly against NJ's ten-year retention duty. Runs inside Samira's hourly scan or on demand. Trigger on: "run the
   journal mirror", "reconcile the notary journal", "did every signing get logged",
   "notary money", "export the notary journal", "what did I make notarizing", "notary
   reconciliation", "had to turn one down", "I refused a notarization", or a
@@ -74,6 +74,9 @@ ledger line and the set-aside. Then run the alarms.
 in both records and report every mismatch in both directions without changing anything.
 
 **Mode 5 — refusal log.** Lemar declined to notarize. Record it. Detailed below.
+
+**Mode 6 — review request.** A paid job closed cleanly. Ask for the Google review. Detailed
+below.
 
 ## THE MIRROR ENTRY
 
@@ -193,6 +196,49 @@ the person it names.
 non-notarial line, reserve it at 35%, and note it on the refusal record — there is no
 statutory fee line, because no act was performed.
 
+## THE REVIEW REQUEST (Mode 6)
+
+Reviews are the compounding asset of a local service business. They are roughly a fifth of
+Google's local ranking weight, and **recency counts for more than volume** — three reviews
+this month beat twelve from two years ago. A steady per-job trickle is therefore worth more
+than a launch-day burst, which is exactly what asking automatically produces.
+
+**When.** Same day as the act, a few hours after payment clears, while the relief is fresh
+and before the day blurs. Not at the table — Lemar is packing up and it is an awkward ask in
+person. Not a week later, when they have forgotten who he was.
+
+**Where.** To the single contact handle already on the job record. A text lands far better
+than an email for this, so prefer the phone handle when intake captured one.
+
+**What.** Two or three sentences through `my-writing-style`, in Lemar's voice, with the
+Google review short link and nothing else. No attachments, no second ask, no marketing.
+
+**Gate it on a clean close.** Send only when the act is in the journal, the invoice is paid,
+and no alarm fired on the job. Asking someone to praise you while you are still chasing their
+invoice is the fastest way to earn the review you deserve rather than the one you want.
+
+### The never-clauses, and these are compliance, not taste
+
+- **Never offer anything for a review.** No discount, no credit, no free act. Incentivised
+  reviews violate Google's policies and the FTC's rules on endorsements, and the penalty
+  lands on the profile the whole business depends on.
+- **Never gate or filter.** Do not ask "how did it go?" and route only the happy answers to
+  Google. Review gating is explicitly prohibited and is grounds for removal.
+- **Never ask twice for the same job**, and never ask the same person more than once a
+  quarter even across different jobs. A repeat customer who keeps getting asked stops being
+  a repeat customer.
+- **Never ask after a refusal.** He turned them away; that is not a review invitation.
+- **Never ask when the invoice is unpaid or the payment failed.**
+- **Never mention a rating, a star count, or what to say.** Ask for the review, not the
+  verdict.
+- **Never chase it.** One ask, then silence. `chase-commitments` handles invoices, never
+  reviews.
+
+**Blocked until the Business Profile exists.** The ask needs the Google review short link,
+which does not exist until the profile is live and verified — which is itself gated on the
+Trade Name Certificate. Until that anchor is registered, this mode reports that it has no
+review link configured and sends nothing. It never improvises a link.
+
 ## THE UNMATCHED JOURNAL ENTRY
 
 A journal entry with no matching job record is what a genuine walk-up looks like: someone
@@ -225,7 +271,7 @@ to be met, and this folder is what meets it.
 
 You MAY: read the journal of record; write mirror entries through `haven-capture`; issue
 and send a two-line Stripe invoice; post money-hub ledger lines and the two-rate set-aside;
-record refusals through `haven-capture`;
+record refusals through `haven-capture`; send one review request per cleanly closed job;
 hand unpaid invoices to `chase-commitments`; raise Convo 1 cards; write timestamped
 exports to the exports folder; commit to `main`.
 
@@ -237,14 +283,15 @@ credential details into the vault; link the exports folder anywhere; overwrite o
 prior export; move money, or contact a customer about payment beyond the invoice and its
 chase; collapse the two fee lines into one; apply a single blended set-aside rate across both
 lines; characterize a signer's intent, capacity or honesty in a refusal record, or name a
-signer in one beyond a first name; present a reserve figure as tax owed; invent a fee, a
+signer in one beyond a first name; offer anything of value for a review, filter or gate who
+gets asked, ask twice for one job, ask at all on a refused or unpaid job, or chase a review; present a reserve figure as tax owed; invent a fee, a
 date, an act count, or a payment (unknown stays `null` plus an ask); fabricate a run when no
 source is configured.
 
 ## Returns (to the Samira runbook, for the digest)
 
 `notary-mirror ✓ <acts N · invoiced $X · set-aside $Y (exempt $E / taxable $T) · refusals N ·
-alarms N · unmatched N · export ✓/—>` — or `notary-mirror —` when the sweep found nothing.
+reviews asked N · alarms N · unmatched N · export ✓/—>` — or `notary-mirror —` when the sweep found nothing.
 
 ## Worked example
 

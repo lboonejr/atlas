@@ -78,8 +78,8 @@ Convo 1 card with the request and stop.
 ## MODES
 
 **Mode 1 — Jotform submission (primary).** A new submission arrives. Read it, price it,
-check the calendar, book it, write the job record, send the confirmation. Within one
-business day, unattended.
+check the calendar, book it, write the job record, send the confirmation. **Within 2 hours
+between 8am and 8pm ET; overnight requests answered by 9am.** Unattended.
 
 **Mode 2 — Convo 2 drop (the phone-call backup).** Lemar drops a job in his self-DM the
 way he drops a money note: *"notary job, Tuesday 6pm, Pennsauken, two acknowledgments,
@@ -132,9 +132,15 @@ record and nowhere else, and this skill never collects or handles them.
 ## BOOKING
 
 Samira books straight to the calendar, including for a customer she has never seen. Lemar
-chose that deliberately over a hold-and-confirm step, because a notary who answers in a
-day and books on the spot beats one who plays phone tag, and a bad booking costs one
+chose that deliberately over a hold-and-confirm step, because a notary who answers in two
+hours and books on the spot beats one who plays phone tag, and a bad booking costs one
 cancelled event.
+
+**Speed is the competitive advantage here, so treat the window as a promise.** Someone who
+needs a notary today calls three and takes whoever answers first. The 2-hour window is
+achievable because Samira sweeps hourly; it is not achievable if a scan is stuck. If the
+hourly run has not completed and submissions are sitting unanswered past the window, that
+is worth a card rather than a silent miss.
 
 Check for a conflict before booking. Overlapping a job already on the calendar is the one
 thing that turns speed into a real cost, so a conflict raises a card instead of booking.
