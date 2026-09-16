@@ -1,6 +1,6 @@
 ---
 created: 2026-09-15T16:09-04:00
-updated: 2026-09-16T10:48-04:00
+updated: 2026-09-16T10:51-04:00
 domain: project
 type: brief
 status: active
@@ -737,6 +737,48 @@ destination per G once Lemar confirms.
 Both specs now cover all four skill-creator points with no open questions except G's confirmation.
 
 **Next: the Phase 5 activation call — A build-first, B parallel, C execute-now, or D park.**
+
+### Sources (this update)
+- claude: Claude Code session, 2026-09-16
+
+## Update 2026-09-16T10:51-04:00 — ACTIVATION: A (BUILD FIRST). Bake complete.
+
+### G confirmed
+Journal exports land in a dedicated Google Drive folder, `Notary — Journal Exports`, owned by
+Lemar, sharing restricted to him alone, link sharing off. Monthly cadence, one timestamped file
+per export, never overwritten. **Never linked** from Pulse, Slack, or any dashboard — the
+deliberate exception to the link-to-source rule everywhere else in his system, because a link is
+the leak path. Ten-year rolling retention to match the journal duty. No encryption layer.
+
+Carried open, not blocking launch: NJ's rules on journal disposition at resignation, revocation,
+or expiry. Confirm with DORES before the first renewal.
+
+### Activation choice: **A — BUILD FIRST**
+Both skill specs route to `skill-creator` now. The customer-facing launch waits until the skills
+are ready.
+
+**One clarification on what A gates here.** This project's Phase 1 is Lemar getting commissioned —
+exam, applications, oath, seal. That is a precondition for the entire venture, not a dependent
+phase, so it runs on its own track regardless of skill-build status. A gates the customer-facing
+launch (Phase 4 soft launch), not his exam prep. Nothing about choosing A means slowing down the
+commissioning work.
+
+### Handoffs
+- **`skill-creator`** — both spec sections, `notary-intake` and `notary-journal-mirror`, handed
+  off for build.
+- **Atlas Gear 2** — not yet. Phase 1 orchestration hands off once the skills exist, per A.
+- **`reggie-compliance`** — NOT engaged. Reggie covers Cuzzie's and Station cannabis compliance,
+  not NJ notary law. Confirmed at the blast-radius dimension and again here.
+- **`chase-commitments`** — NOT engaged as a Stormy gate. No money promise to an external party
+  was captured in this bake. It appears inside the mirror spec as a chaining target for unpaid
+  invoices, which is a different thing.
+
+### Bake complete
+Eight dimensions covered, forty-four asks across three batches, two skill specs handoff-ready,
+plan locked, activation called. Stormy's role on this project ends here. Execution belongs to
+`skill-creator`, then Atlas Gear 2, then Samira.
+
+Status stays `active`.
 
 ### Sources (this update)
 - claude: Claude Code session, 2026-09-16
