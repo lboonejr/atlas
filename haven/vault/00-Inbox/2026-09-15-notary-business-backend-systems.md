@@ -1,6 +1,6 @@
 ---
 created: 2026-09-15T16:09-04:00
-updated: 2026-09-16T11:22-04:00
+updated: 2026-09-16T11:48-04:00
 domain: project
 type: brief
 status: active
@@ -1009,3 +1009,63 @@ the commercial $25,000 tier. Purchase is Lemar's; nothing bought or applied for 
 
 ### Sources (this update)
 - claude: Claude Code session, 2026-09-16 — notary E&O pricing research
+
+## Update 2026-09-16T11:48-04:00 — remaining gap items built; two closed without building anything
+
+### Built
+**Commission lifecycle** — `00-Inbox/2026-09-16-notary-commission-lifecycle.md`. Covers
+renewal (five-year term, 3-hour CE course, updated exam, application, county clerk oath),
+DORES address and name change notification, the trade name certificate and its per-county
+filing rule, E&O renewal once a policy exists, and the supplies list.
+
+**It deliberately carries no `due`.** There is no commission and therefore no expiry to count
+back from, and inventing a date would put a fiction on a real calendar. The note opens with an
+ACTIVATE ON DAY ONE block: on swearing-in, record the commission number and expiry, set `due`
+to **expiry minus 90 days**, and create a second note for the CE course at **expiry minus 120
+days**. Ninety days because renewal is a four-link chain with a government office in it.
+
+**Journal copy request and subpoena procedure** —
+`00-Inbox/2026-09-16-notary-journal-request-procedure.md`. The governing distinction is that
+**a request is not a subpoena**: a request has no deadline and may be declined, a subpoena
+compels and has consequences. Sorting an incoming ask into the right bucket is the first move.
+Covers narrowest-disclosure (a journal is a chronological record of other people's business, so
+a whole page exposes unrelated signers), logging every request as its own record, and getting a
+lawyer before answering anything compelled.
+
+Two things worth flagging from it. **The vendor holds the journal, not a drawer** — a subpoena
+may go to BlueNotary rather than to Lemar, so their notify-the-notary policy is a Phase 2
+signup question. And if the vendor account ever lapses, **the monthly Drive export is the only
+copy that can answer a request**, which is a second independent reason that export never slips.
+
+### The legal gap, stated plainly
+**Who may compel a copy of a NJ notary journal, and on what terms, could not be established
+from public sources.** N.J.A.C. 17:50-1.11 sets contents and ten-year retention; it does not,
+in anything findable, address inspection, redaction, or fees. That is a gap in what is
+published rather than in the search. The playbook therefore covers the operational response,
+which is sound either way, and stops at the legal question. **Ask DORES before the first
+request arrives** and the warning comes out of the note.
+
+### Closed without building
+**Entity notes for repeat counterparties — already covered, nothing built.** Verified against
+`haven-vault-keeper` step 4: while filing, any note naming a recurring counterparty that lacks
+an entity note gets a stub created in `50-Reference/Entities/` automatically. Title companies,
+law firms and senior facilities will therefore stub themselves once notary job records start
+naming them. Building anything here would have duplicated an existing mechanism.
+
+**Supplies — folded into the commission lifecycle note** rather than given its own note. A spare
+seal, a spare journal, ink and two working pens is a checklist item, not a system, and it now
+gets checked whenever the renewal reminder fires.
+
+### What remains, and it is all external
+- The brand name (blocks trade name certificate and Google Business Profile).
+- E&O purchase.
+- DORES questions: lost-seal reporting mechanics, journal inspection rules, the RON fee cap,
+  and journal disposition at resignation or expiry.
+- BlueNotary signup questions: the six-field trial, API versus export, and the subpoena
+  notification policy.
+- The commission itself, which gates everything.
+
+Nothing further is buildable from here without one of the above. The backend is done.
+
+### Sources (this update)
+- claude: Claude Code session, 2026-09-16
