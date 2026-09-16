@@ -1,6 +1,6 @@
 ---
 created: 2026-09-16T11:56-04:00
-updated: 2026-09-16T11:56-04:00
+updated: 2026-09-16T13:10-04:00
 domain: project
 type: task
 status: active
@@ -93,3 +93,55 @@ until the anchors exist, which is the point at which the business starts running
 
 ## Sources
 - claude: Claude Code session, 2026-09-16
+
+## Update 2026-09-16 — the critical path, if the plan is "pass and get to market fast"
+
+Speed is the right instinct. The thing that actually decides the launch date is not the work —
+it is the **queues**, and they are only partly on the list above.
+
+### The four queues
+
+1. **DORES processing the commissioning application.** Unavoidable, not compressible, starts the
+   moment the application goes in after the exam. Nothing here shortens it.
+2. **The 90-day county clerk oath.** Not a wait — a deadline. Same-week, not same-quarter.
+3. **Google Business Profile verification. This is the hidden one.** It gates the entire demand
+   side and it is not on the list above. Google's nominal timeline is up to 5 business days
+   (video verification 3–5, postcard 5–14), but real-world waits of several weeks are common, and
+   **as of 2025 the notary cannot choose the verification method** — Google assigns it. So GBP
+   verification can outlast the commission wait, and it is the one queue that can be entered
+   early: the profile can be created and submitted for verification as soon as the **name** is
+   settled, without publishing it. Verify first, publish later.
+4. **The second DORES filing — the electronic and remote notification.** Separate from the
+   commission, required before the first electronic or remote act. RON does not go live when the
+   commission does; it goes live when this clears. Budget for it as its own wait.
+
+### What this reorders
+
+**Pick the name this week.** It is the single upstream blocker: trade name certificate, GBP
+listing, GBP verification queue, business cards, domain — all of it is downstream of one decision
+that costs nothing but a phone call to the county clerk.
+
+**Start the GBP verification the day the name clears**, ahead of the commission. An unverified,
+unpublished profile does nothing wrong; a profile that starts verifying on commission day wastes
+the wait.
+
+**Check whether E&O needs a commission number before ordering.** If it does, it cannot parallelize
+and it moves behind the decision. If it does not, buy it during the wait. One phone call answers it.
+
+### The reframe: the first ten customers already exist
+
+"Get to market" reads as building demand from zero. It is not. Cuzzie's and The Station between
+them have staff who need employment paperwork, I-9s and titles notarized, vendors who need
+affidavits, and a network around both that needs POAs and transfers. That is the soft-launch ten
+jobs from **After the decision** item 7 — no ads, no SEO, no wait on Google. GBP and the booking
+form are how job eleven onward finds him; the first ten are a text message.
+
+So the honest launch sequence is: commission → oath → seal → tell the two networks → run those ten
+by hand → and let the GBP verification, which started weeks earlier, land whenever it lands.
+
+### The one corner not to cut
+
+**The BlueNotary six-field trial, before any real journal entry exists.** Everything else on this
+list is reversible in an afternoon. A journal entry made on the wrong platform is wrong for ten
+years, and switching after the first entry means a journal migration plus a fresh DORES
+notification. Moving fast everywhere else is fine. Skipping this to save a day is not.
