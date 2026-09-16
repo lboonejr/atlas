@@ -1,6 +1,6 @@
 ---
 created: 2026-09-15T16:09-04:00
-updated: 2026-09-16T09:37-04:00
+updated: 2026-09-16T10:48-04:00
 domain: project
 type: brief
 status: active
@@ -674,6 +674,69 @@ G. Where the periodic journal export lands: Google Drive in an access-controlled
 Seven open asks across the two specs, all of them things the locked plan genuinely did not
 settle. Everything else above is inherited from the plan or assumed and marked as such.
 Next after these close: the Phase 5 activation call, A / B / C / D.
+
+### Sources (this update)
+- claude: Claude Code session, 2026-09-16
+
+## Update 2026-09-16T10:48-04:00 — all seven spec asks closed; both specs are handoff-ready
+
+### Answers
+- **A Form tool** — **Jotform.** Already a connected surface, so Samira reads submissions directly
+  with no scraping or polling layer to build.
+- **B Deposit** — **none at first.** Lemar absorbs the no-show risk on the far tier. Revisit only
+  if no-shows actually show up in the numbers.
+- **C Booking autonomy** — **Samira books straight to the calendar**, including an unfamiliar
+  customer. No hold-and-card step.
+- **D Tax set-aside** — **30%**, applied automatically at log time into the money-hub Set-Aside
+  pocket.
+- **E Alarm thresholds** — missing journal entry fires **2 hours** after a completed calendar
+  event. Unpaid invoice fires **1 week** out.
+- **F Walk-up reconciliation** — a journal entry with no matching job record **cards Lemar**,
+  never opens a retroactive record on its own.
+- **G Journal export destination** — recommendation below, pending his call.
+
+### Recommendation on G — where the journal export lands
+
+This is the one artifact in the whole system that carries signer PII outside the vendor, so it
+gets designed deliberately rather than dropped wherever is convenient.
+
+**Recommendation:** a dedicated Google Drive folder, `Notary — Journal Exports`, owned by Lemar's
+account, **sharing restricted to him alone, link sharing off**. It matches the pattern the rest of
+his system already uses (timestamped snapshots in a purpose-built Drive folder, as with Money Hub,
+Pulse, and Meeting Prep) so there is nothing new to learn or maintain.
+
+Four rules that come with it:
+
+1. **Monthly cadence**, aligned to the monthly reconciliation already in the plan. One timestamped
+   file per export, never overwritten, in whatever format BlueNotary emits.
+2. **This folder is never linked.** Every other surface in Lemar's system links back to its source
+   — Pulse does it by design, #reports does it, the dashboards do it. This folder is the
+   deliberate exception, because a link in a Slack message or a rendered dashboard is exactly the
+   leak path. The skill writes the file and says nothing more than "export completed."
+3. **Ten-year retention**, matching the journal duty under N.J.A.C. 17:50-1.11. Exports age out on
+   a rolling ten-year basis, never sooner, and the folder is what makes the duty survivable if the
+   vendor ever disappears.
+4. **No encryption layer.** A zipped, password-protected archive sounds safer and is worse in
+   practice: it defeats search, and a password he loses in year seven turns a compliance asset
+   into a dead file. Drive access control restricted to one account is the right level here.
+
+**Not researched, flag only:** NJ likely has rules on what happens to a journal if a commission is
+resigned, revoked, or allowed to expire mid-term. That folder is the artifact those rules would
+govern, and possibly the artifact an estate would need. Worth confirming with DORES before the
+first renewal, not before launch.
+
+### Spec amendments from these answers
+
+`notary-intake`: trigger is a **Jotform submission**, Convo 2 drop remains the manual backup. No
+deposit logic in v1. Samira books to the calendar unattended, within one business day.
+
+`notary-journal-mirror`: **30% set-aside** at log time. Alarm thresholds **2 hours** and **1 week**.
+An unmatched journal entry raises a card, and the skill never opens a retroactive job record. Export
+destination per G once Lemar confirms.
+
+Both specs now cover all four skill-creator points with no open questions except G's confirmation.
+
+**Next: the Phase 5 activation call — A build-first, B parallel, C execute-now, or D park.**
 
 ### Sources (this update)
 - claude: Claude Code session, 2026-09-16
