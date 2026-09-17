@@ -1,6 +1,6 @@
 ---
 created: 2026-07-25T13:16-04:00
-updated: 2026-07-25T13:16-04:00
+updated: 2026-09-17T18:05:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -30,6 +30,27 @@ Posted to #decisions with three draft options; none save to Gmail Drafts yet —
 waiting on Lemar's pick. None of the options name a Station contact since Samira
 has no name on file for that; Lemar will need to add one on whichever draft he
 picks.
+
+## Update — 2026-09-17
+Terrence has followed up three more times on this same thread since the entry above,
+still with zero reply from Lemar: 2026-08-06 ("please keep us in the loop... let us
+know where things stand with getting the outstanding balance settled"), 2026-09-03
+("checking in to see if there are any updates regarding the cash flow issues... and
+whether you have an update on when we can expect payment"), and 2026-09-17 ~5:21pm ET
+("checking to see if we have any updates here on if / when we can expect payment").
+That is five follow-ups now (7/1, 7/24, 8/6, 9/3, 9/17) with no reply on record.
+
+**Vault contradiction found this scan, flagged rather than silently resolved:** the
+entity note `haven/vault/50-Reference/Entities/canopy-usa.md` (updated 2026-08-06)
+states "Cuzzie's-3109 balance resolved May 2026 via a two-installment payment plan
+($840.10 x2)" — but Terrence's own follow-ups on 8/6, 9/3, and 9/17 (all *after* that
+entity note's own `updated` date) keep describing the Cuzzie's-3109 balance as
+outstanding, unpaid, and unresolved. Either the entity note's "resolved" claim is
+wrong/stale, or the $840.10 x2 plan was agreed but never actually paid, or Terrence's
+team lost track of a real resolution on their end — this note cannot tell which from
+the email text alone (no dollar figure or dates in his messages), and guessing which
+is wrong is not Samira's call. See the matching #fixes finding and the Convo 1 card
+opened this scan for Lemar's read.
 
 ## Sources
 - gmail: thread `19db6a92eb2a3d89` ("Cuzzie's Dispensary - 3109")
