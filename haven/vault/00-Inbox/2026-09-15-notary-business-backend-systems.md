@@ -1,6 +1,6 @@
 ---
 created: 2026-09-15T16:09-04:00
-updated: 2026-09-16T12:50-04:00
+updated: 2026-09-16T17:05-04:00
 domain: project
 type: brief
 status: active
@@ -1400,3 +1400,113 @@ side goes quiet. **Doing both is the hedge, not the greed.**
 - claude: Claude Code session, 2026-09-16 — NNA certification and screening, signing agent E&O
   requirements, dual-tray printer pricing, and the NJ notarial-fee-versus-signing-fee distinction,
   from web research in that session
+
+## Update 2026-09-16T17:05-04:00 — THIRD CHANNEL: real estate agents, and the skill amendments the scope change asked for
+
+Lemar asked for a pathway to service real estate agents, on top of the loan signing scope
+change recorded two hours ago. Both are now built into the skills, and the customer
+acquisition work for both lives in a new note:
+[[2026-09-16-notary-b2b-acquisition-tracks]].
+
+### The model: every job belongs to exactly one channel
+
+The old design had one kind of job. There are now three, and the channel — not the amount,
+not the document — decides the price, who pays, how long payment takes, and what happens
+after the appointment.
+
+| Channel | Who pays | Terms | After the job |
+|---|---|---|---|
+| **Consumer** | the signer, at the table | due at completion | review request |
+| **Signing service** | the signing or title company | net-30 to net-45 | **scan-back within hours**, no review request |
+| **Agent — referral (3a)** | the signer, at the table | due at completion | review request to the client, never the agent |
+| **Agent — retained (3b)** | the brokerage | net-15 | review only if Lemar asks, never automatic |
+
+**Why the channel and not the fee.** A $125 line could be a loan signing or a long consumer
+job. Everything downstream hangs off the channel, so inferring it from the number would be
+wrong roughly whenever it mattered.
+
+### What real estate agents actually bring
+
+Not the closing — the title company handles that. What they bring is everything around the
+closing that needs notarizing and nobody planned for: a seller who cannot attend, an
+out-of-state buyer (the natural RON case, at Lemar's own rate with no platform cut), cash
+and investor deals with no title company doing the legwork, estate and family sales,
+property managers with monthly leases, and the brokerage's own paperwork.
+
+The pattern: **an agent has a deal about to close and one signature in the way.** They are
+not price-shopping, they need someone who answers. That is the same thing that wins urgent
+consumer work, so the 2-hour response promise now serves two channels at once.
+
+**Why the channel is worth having:** a consumer needs a notary twice in their life, so every
+consumer job starts from zero. An agent who trusts Lemar sends clients for years. The first
+job is hard and the twentieth is automatic.
+
+### THE RULE THAT GOVERNS IT — RESPA Section 8, and it is criminal
+
+Under 12 U.S.C. §2607, giving or accepting **anything of value** for referring business
+connected to a federally related mortgage loan is a federal crime. Notarizing a deed or a
+mortgage document is a settlement service, so an agent referring that work is exactly the
+arrangement the statute is about.
+
+**Lemar can never pay an agent for a referral.** Not a fee, a percentage, a gift card, dinner
+traded for referrals, or a discount their clients get and nobody else does. Up to $10,000 and
+a year per violation, plus treble damages, **and it binds both sides** — an agent proposing it
+is proposing a crime for both of them. Agents sometimes float it casually, so it will likely
+come up.
+
+What is allowed is enough to win the channel anyway: answering the phone, evening and weekend
+availability, business cards and a rate sheet, RON for the out-of-state seller nobody else can
+help with, and doing the first job well.
+
+This is written into `notary-intake` as a hard never, in the skill's frontmatter, in a
+dedicated boundary section, and in the Safety block. **Samira never negotiates such a
+proposal and never drafts a reply accepting one — it gets carded, verbatim, with RESPA
+named.**
+
+Separately and just as absolute: never notarize in a transaction Lemar has an interest in.
+
+### Skills amended (handoff items 1 and 2, done)
+
+**`notary-intake`:**
+- THE THREE CHANNELS section; channel decided at the door and written to the job record
+- Loan signing pricing: the flat signing fee ($75–200) on line 2 with **no travel tier on top**
+  — the drive is already inside it — a **$75 floor** below which it is Lemar's call, and line 1
+  at **$25 for the whole mortgagor transaction**, not $2.50 a signature
+- Printing recorded per job from the page count
+- Mode 5, a signing service job offer; Mode 6, an agent job in both shapes
+- New job record fields: `payer`, `payment_terms`, `signing_company`, `package_pages`,
+  `scanback_due`, `referring_agent`, `brokerage`
+- SCAN-BACKS: a **second calendar event** on every loan signing, defaulting to 4 hours after
+  the appointment
+- THE REFERRAL BOUNDARY (RESPA), above
+
+**`notary-journal-mirror`:**
+- The invoice goes to the payer the channel names. **Never the borrower on a signing-service
+  job** — they are not the customer and do not owe him anything
+- **Cost of goods**, the gap the scope change flagged: printing estimated at `pages × 2 ×
+  $0.055`, marked `estimated` until a receipt replaces it. Set-aside still computed on **gross**
+  (over-reserving is the safe error), with net reported beside it. The printer itself gets
+  recorded as a dated business asset when bought
+- **Alarm 2 now fires on the job's own terms** — 7 days, net-15, net-30, net-45 — instead of one
+  global week that would have fired on every single loan signing. Missing terms default to
+  net-30 **and get carded**, never skipped. Companies that repeatedly pay past their own terms
+  get named in the card, because that is the only early warning before one stops paying
+- **Alarm 4, new: scan-back overdue.** Cards immediately, not on the next quiet sweep. Slow
+  scan-backs are the fastest way to get dropped by a service, and nobody tells you why
+- Reviews restricted to consumer and agent-referral clients. **Never a signing-service
+  borrower** — a stranger mid-refinance did not hire him — and never the referring agent
+
+### Still open, and these are Lemar's calls
+
+1. **LLC vs. trade name.** Now genuinely blocking rather than theoretical: the **W-9 name has to
+   match the registered entity**, and that W-9 goes to every signing service. Changing it later
+   means correcting it at a dozen platforms. Recommendation stands — the LLC's value is B2B
+   credibility, and B2B work is now day one.
+2. **Which printer.** Brother HL-L6210DWT ≈ $330 dual-tray is the reference point. Needs legal
+   and letter trays at once; a single-tray printer means swapping paper mid-package.
+3. **Which signing service platforms.** Still unevaluated — the next real research task, and it
+   is now the biggest unknown on the plan.
+
+### Sources (this update)
+- claude: Claude Code session, 2026-09-16 — RESPA §8 referral rules for settlement services,
+  signing service payment terms and scan-back practice, NJ statutory fee caps per transaction

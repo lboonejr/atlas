@@ -1,6 +1,6 @@
 ---
 created: 2026-09-16T11:56-04:00
-updated: 2026-09-16T13:40-04:00
+updated: 2026-09-16T21:30-04:00
 domain: project
 type: task
 status: active
@@ -182,3 +182,193 @@ The other three open items stand: E&O, the four DORES questions, the three BlueN
 signing-agent work starts, because NJ holds the individual notary personally liable for notarial
 misconduct regardless of entity and the E&O policy is what actually covers that. Filing the trade
 name does not foreclose the LLC later.
+
+## Update 2026-09-16T17:05-04:00 — two more queues for the wait list, and two decisions that moved to now
+
+The business now runs three channels, not one: consumer, signing service (loan signings), and
+real estate agents. See [[2026-09-15-notary-business-backend-systems]] (Updates of
+2026-09-16T15:10 and 17:05) and [[2026-09-16-notary-b2b-acquisition-tracks]].
+
+**The critical path does not change.** Exam, commission, oath, seal — identical. Everything
+below is either a queue that runs in parallel with the wait already happening, or a purchase.
+That is the whole reason both new channels could be added without moving the launch date.
+
+### What section 2 gains — three things to start during the wait
+
+8. **Study for and take the signing agent certification exam.** NNA packages from $199, 45
+   questions, 80% to pass. Not legally required in NJ, effectively mandatory in practice — the
+   signing services' own contracts require screened, certified notaries. Doable now, with no
+   commission.
+9. **Order the annual background screening** (~$60–100/yr). A turnaround nobody controls, so it
+   is a waiting line like the Google verification, entered early rather than on commission day.
+10. **Have the first conversations with agents Lemar already knows.** One honest line — "I'm
+    becoming a notary; if you ever have a seller who can't make closing or a client out of
+    state, call me" — costs nothing and starts the slowest-building channel first.
+
+**The limit on item 10, and it matters:** telling an agent to call when they need a notary is
+honest. **Taking the booking is not**, until the commission exists. Same rule as the unpublished
+booking form.
+
+### The vendor packet — build it once during the wait
+
+Every signing service asks for the same four things: **W-9, E&O certificate, background screening
+result, certification certificate.** Assemble them in one Drive folder alongside the commission
+certificate, a seal impression photo, and the entity filing.
+
+**This folder may be linked and shared freely** — business credentials, no signer PII. It is the
+opposite of the journal exports folder rule, and keeping the two apart is deliberate.
+
+### Two decisions promoted from "later" to "now"
+
+- **LLC vs. trade name.** No longer theoretical. **The name on the W-9 must match the registered
+  entity**, and that W-9 goes to every signing service. Deciding after registering at a dozen
+  platforms means correcting it at a dozen platforms.
+- **Which printer.** A loan package is 100–200 pages on both letter and legal, usually printed
+  twice. A dual-tray laser (Brother HL-L6210DWT ≈ $330) is the reference point; single-tray means
+  swapping paper mid-package.
+
+### One new open question, replacing nothing
+
+**Which signing service platforms to register with has not been researched at all.** No platform
+evaluated, no title company relationship exists. It is the largest unknown left on the plan and
+the next real piece of work. Registration is normally free; **payment reliability matters more
+than rate**, and a new company's first job is a credit decision rather than a scheduling one.
+
+### The standing sequencing advice is unchanged
+Run the first ten **consumer** jobs by hand. A botched acknowledgment costs a redo; a botched loan
+package costs a funding delay and a title company that never calls again. Prove the chain where
+the mistakes are cheap.
+
+## Update 2026-09-16T18:10-04:00 — LLC name picked, printer picked, platform order set. The county trip may be off.
+
+Full reasoning in [[2026-09-16-notary-llc-printer-platforms]]. Three of the open decisions are
+now answered.
+
+### 1. The LLC: `Given Word LLC` — Lemar's call, recorded
+Very likely available: the 2026-09-16 clearance searched the state business name database for
+"Given Word" and got nothing, and that is the same database an LLC name is checked against.
+Confirmed only at filing.
+
+**This changes section 2 of this checkpoint.** A NJ county clerk registers trade names for
+**individuals and partnerships only** — LLCs and corporations register with DORES in Trenton.
+So forming the LLC **replaces** the $57 Camden County counter trip rather than adding to it.
+
+**Do not cancel the county trip until the clerk confirms it.** It is a five-minute call against
+a step that was already researched, scheduled, and has a call script written for it
+([[2026-09-16-camden-county-clerk-call-script]]).
+
+Because the brand ("Given Word Notary") differs from the entity ("Given Word LLC"), the LLC also
+files a **Registration of Alternate Name**, $50, valid five years. Using the trade name before
+registering it costs $50 plus a $50 penalty per year of use. **The Google Business Profile name
+must match the registered name**, so the alternate name is a front-end dependency too.
+
+Revised filing sequence: **LLC ~$125 → alternate name $50 → EIN (free, and it keeps Lemar's SSN
+off a dozen W-9s) → annual report $75/yr.**
+
+### 2. The printer: `Brother HL-L5210DWT`, ~$300–350
+The working default for signing agents. Two trays, letter and legal both loaded, so a 150-page
+package prints in one pass. The HL-L6210DWT is the same thing a size up, worth buying if the
+volume arrives, not before.
+
+Three things that matter: **two trays**, **laser not inkjet** (county recorders can refuse to
+record inkjet), and **high-yield toner from day one**. Confirm the tray capacities on the exact
+listing — Brother's model numbers in this family differ by a letter.
+
+Add a **sheet-feed scanner** if the printer is not an all-in-one. Scan-backs are due within
+hours, and a flatbed will not do 150 pages.
+
+### 3. Platforms: Snapdocs first, then direct registrations
+Highest order volume in most markets, free, and many signing services schedule through it.
+
+**"Snapdocs Verified" is the status that gets work, and it needs exactly the vendor packet:**
+commission, bond if applicable, **the full background check report** (not the NNA certificate),
+E&O policy, verified ID. Building the packet *is* the registration.
+
+Two gotchas: they want the **actual report PDF**, and the **name, email and phone on the NNA
+profile must match the Snapdocs profile exactly**.
+
+Then register directly with the signing services — Amrock, ServiceLink, Coast2Coast, Signature
+Closers, Mortgage Connect, Rocket Close — several of which also source through Snapdocs, so it
+overlaps rather than replaces. Most Snapdocs work lands **$75–$150**; title companies posting
+directly often pay **$125–$200+**. Net-30 is the normal term.
+
+### What is left open
+Nothing on this list. The remaining open items are unchanged: the four DORES questions, the three
+BlueNotary questions, E&O, and the exam itself.
+
+## Update 2026-09-16T18:35-04:00 — entity name LOCKED: `Given Word Notary LLC`
+
+Lemar reversed the `Given Word LLC` + alternate name plan from the update above. **The entity and
+the brand are now one name: `Given Word Notary LLC`.** Full reasoning in
+[[2026-09-16-notary-llc-printer-platforms]].
+
+**What drops off this checkpoint:**
+- The **$50 alternate name filing** — not needed, entity name and trade name are the same string
+- Its five-year renewal
+- The risk of the Business Profile name not matching the registered name
+
+**What stands up the entity: ~$125 and a free EIN.** Get the EIN — it keeps Lemar's Social
+Security number off a dozen signing service W-9s.
+
+**The county trade name trip is still to be confirmed, not yet cancelled.** A NJ county clerk
+registers trade names for individuals and partnerships; LLCs register with DORES. Call the clerk
+([[2026-09-16-camden-county-clerk-call-script]]) before dropping a step that is already planned.
+
+**Platform decision: Snapdocs first, and only Snapdocs until it is working.** Direct registrations
+come after one real verification has been through.
+
+**One name everywhere from here on.** Bank account, Stripe, Google Business Profile, W-9, NNA
+profile, Snapdocs: `Given Word Notary LLC`, spelled the same way each time. Name mismatches are a
+known cause of Snapdocs verification stalling.
+
+**The W-9 cannot be filled out until the LLC and EIN exist**, and every platform wants the W-9 —
+so the entity filing is now the first domino on the whole B2B side.
+
+## Update 2026-09-16T21:30-04:00 — Lemar is moving the exam up to TODAY
+
+Stated intent, not yet done. This note's `due` and its calendar event stay on 2026-09-20 until
+the exam is actually passed — then they move.
+
+### The exam was never on a schedule
+
+**The NJ notary exam is online and on-demand**, taken through the state portal
+(`njportal.com/DOR/NotaryExam`) as part of a **New Commissioning Application**. There is no
+sitting, no seat to book, no proctor to schedule. Sunday 2026-09-20 was a date chosen here, not
+one the State set — so it can move to today with nothing to reschedule.
+
+**This is the right call.** Every queue in the plan starts from the commission, and the commission
+starts from the application. Pulling the exam up by four days pulls DORES processing, the oath
+window, and everything behind them up by four days.
+
+### What the exam sitting actually involves
+
+| Item | Detail |
+|---|---|
+| Where | The state portal, inside a New Commissioning Application |
+| Prerequisite | A **six-hour approved course of study** for new non-attorney applicants — the Notary Public Manual and the full training-video series |
+| Basis | The exam is drawn from the **Notary Public Manual**. Read it, do not skim it |
+| Exam fee | Up to **$15** per test |
+| Application fee | **$25** |
+| Endorsement | The application is forwarded to a **State Legislator for endorsement** — a step in the chain nobody controls |
+| After passing | Commission forms arrive by mail in roughly **two weeks** |
+| Then | **Three months to appear before the county clerk and swear the oath.** Miss it and the Treasurer cancels the commission |
+
+**The six-hour course is a requirement, not a suggestion.** If the bootcamp curriculum is not
+finished, finish it before sitting — this is not an exam to walk into cold on a decision made the
+same afternoon. A failed attempt costs the retake fee and the days it takes to go again, which
+is the exact thing moving the date early is trying to save.
+
+### What to do the same day, and why
+
+**File the LLC today too.** `Given Word Notary LLC` does not depend on the exam, the commission,
+or anything else, and it is now the first domino on the entire B2B side: **no LLC means no EIN,
+no EIN means no W-9, and no W-9 means no signing service registration.** It runs in parallel with
+DORES processing for free. Same for the **Google Business Profile**, which needs the registered
+name and then sits in the longest queue in the plan.
+
+If the exam moves up four days and the LLC does not, nothing downstream actually moves.
+
+### What does NOT change
+
+The oath still has to be sworn **in person at the county clerk**, and the commission still has to
+arrive first. The critical path is shorter, not shortened past the parts the State controls.
