@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-09-16T12:03:00-04:00
+updated: 2026-09-17T18:15:00-04:00
 domain: legal
 type: task
 status: active
@@ -962,3 +962,37 @@ or represented by Samira this update — this is a status log only.
   (2026-09-15 ~19:53 ET, Lemar's own message, logged here on the 2026-09-16 ~12:03 ET
   scan after being held pending resolution of the #fixes git-write-policy conflict,
   `C0BV5BRNH5Z` ts `1789499060.544979`)
+
+## Update 2026-09-17T18:15:00-04:00 — Donte redirects Madin's settlement ask straight to Lemar/Josh + counsel; still unread, Madin's 9/15 ask still unanswered
+
+A new message landed on the same thread (`1a0a651541ba7bff`) today, 2026-09-17 ~9:00am
+ET — still marked UNREAD as of this scan. Donte Bronaugh replied to Monica Madin's
+9/15 "please contact me or have your attorney contact me" ask, cc'ing Marco Di Stefano,
+Jennifer DeWalt, Madin Law's assistant, **and, for the first time on this exact
+message, both Lemar and Josh directly**:
+
+> "All settlement talks and negotiations need to go through the business principals,
+> Lemar and Josh, copied here, and their litigation counsel, to the extent they have
+> been able to retain one."
+
+**Read:** Donte is stepping back from being the settlement intermediary and pointing
+Madin/Di Stefano straight at Lemar and Josh personally — with an explicit, correct
+caveat that counsel may not exist yet ("to the extent they have been able to
+retain one"), which matches this note's standing fact: no counsel of record after
+nine declined/unconverted tracks (Siciliano, Wall, Brekke, Greenberg, Hagner &
+Zohlman, Kaplan/Kaplin Stewart, two CCBA asks, Folkman, and Diaz — declined 9/10).
+This means Madin or Di Stefano may now contact Lemar/Josh directly rather than
+through Donte, with no attorney standing between them.
+
+Monica Madin's 9/15 "have your attorney contact me" ask remains unanswered on this
+thread. The Aug 11 eight-category financial-document demand (tax returns, bank
+statements, ledger, certified personal financial statements from Lemar and Josh)
+remains outstanding and unproduced as far as this note shows. Nothing drafted or
+sent by Samira — this needs Lemar's own read, and ideally counsel of record before
+either Madin or Di Stefano writes to him or Josh directly. Flagged in Convo 1
+(existing thread `D0BHPKMDNEP` ts `1788966952.066259`) and left the Gmail message
+unlabeled pending Lemar's own read, same as the 9/15 update.
+
+### Sources (this update)
+- gmail: thread `1a0a651541ba7bff`, message `1a0af753cee01ca8` (Donte's reply,
+  2026-09-17 ~9:00am ET, cc Lemar + Josh + Madin Law + Di Stefano)
