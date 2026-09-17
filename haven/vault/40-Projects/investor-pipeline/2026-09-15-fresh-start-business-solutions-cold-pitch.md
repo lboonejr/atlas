@@ -1,6 +1,6 @@
 ---
 created: 2026-09-15T11:31:00-04:00
-updated: 2026-09-15T11:31:00-04:00
+updated: 2026-09-17T13:04:00-04:00
 domain: cuzzies
 type: log
 status: done
@@ -18,6 +18,13 @@ cold broker template referencing a public filing, no prior relationship.
 
 **Action taken:** flagged, not built — added to the investor pipeline index (Working),
 labeled `Samira/investor`. No data room, no draft. Awaiting Lemar's pursue/ignore call.
+
+## Update — 2026-09-17
+Lemar picked Option A on the Convo 1 card (✅ reaction + plain reply "Option A",
+2026-09-15 ~16:11 ET): ignore, it's a cold template, no action. Closing out — no reply
+sent, no data room built. Write deferred from the original scan by the branch/PR-vs-
+direct-to-main conflict (see `.claude/state/samira-state.json` lock notes,
+2026-09-15 → 2026-09-17); logged now that repo writes are unblocked this run.
 
 ## Sources
 - gmail: thread `1a0a583f63f4c7fc`, received 2026-09-15 ~10:41am ET
