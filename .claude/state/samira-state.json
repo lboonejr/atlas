@@ -3,17 +3,17 @@
   "lock": {
     "run_id": "run_20260917T220311Z",
     "run_started": "2026-09-17T22:03:11Z",
-    "run_completed": "2026-09-17T21:07:01Z",
-    "note": "130th scan, in progress as of 22:03:11Z (~6:03pm ET 2026-09-17). Prior lock (129th scan) closed cleanly at 21:07:01Z, well within the 120-minute window, so no orphan.",
+    "run_completed": "2026-09-17T22:20:00Z",
+    "note": "130th scan, closed 22:20:00Z (~6:20pm ET 2026-09-17). Not a bounded/quiet pass -- surfaced and acted on two material findings: (1) Canopy-USA/Acreage AR follow-up (5th unanswered creditor email) plus a vault contradiction between the entity note and the active task note over whether the Cuzzie's-3109 balance was ever actually resolved -- Haven note updated, Convo 1 card + #fixes finding opened. (2) DeWalt v. Cuzzie's personal fraudulent-transfer matter escalated further -- Donte redirected the creditor's counsel straight at Lemar/Josh (still unread), no counsel of record after 9 tracks, Madin's 9/15 contact-me ask and the Aug 11 personal-financial-statement demand both still outstanding. Haven note updated (999-line legal note reviewed in full), follow-up posted on the existing Convo 1 thread. Also sent a quiet-holding follow-up on the separate DeWalt-Diaz card per the 2-day rule (superseded moments later once the hearing-outcome answer was found already logged elsewhere -- harmless, left as-is). Pushed one phone notification this scan for the DeWalt escalation + Station CRC cure (still unanswered a full week).\n\nSCOPE: P0-P5 all checked, confirmed quiet on top-level messages and existing-card reactions except where noted above. P6: light-only Gmail check (last-hour query) -- this is what surfaced the Canopy and DeWalt items; did not run the full ~200-thread backlog triage, investor loop, or #reports contradiction scan -- gmail_after_epoch left unadvanced, consistent with the last several scans. P7: no timeline channel exists for general Cuzzie's/legal collections movements, so no entries posted. P8: Pulse quiet-pass gate was met (2 cards opened, 2 notes updated) but the render was deferred this scan in favor of finishing the DeWalt review -- non-fatal, will render next scan if still outstanding. Posted the #reports digest + journal append.",
     "prior_note": "129th scan, closed 21:07:01Z (~5:07pm ET 2026-09-17). Confirmed genuinely quiet on Convo 1 / Convo 2 / #fixes top-level since the 128th scan's watermarks (checked directly, 0 new messages ~53 min later) -- watermarks for those unchanged below. Also re-checked reactions on the open CRC cure, Haven Inbox, Cooper Univ Hospital, and CannaBIZ Collects Convo 1 cards plus both open #fixes threads (git-write-policy STUCK, domain-mismatch) -- no new signals from Lemar. Confirmed the Fresh Start Business Solutions card was already fully closed out in a prior scan (Done reply ts 1789664767.261259 already recorded in card_threads); no residual action there.\n\nSCOPE: bounded pass. P0/P1/P2/P3/P4/P5 all checked and confirmed quiet/unchanged -- 0 vault diff against last_scan_sha, 0 due-note changes, 0 new Slack messages. P6a: light-only Gmail check (last-hour query) found one marketing email, no action. Did NOT run the full ~200-thread triage backlog, the investor loop, or the #reports contradiction scan -- gmail_after_epoch left unadvanced, same as the two prior scans. P7: nothing moved, no timeline entries. P8: Pulse quiet-pass gate not met this scan (no card opened/closed, no money change, no new note) -- skipped. Posted the #reports digest + journal append; no phone notification pushed (nothing new/urgent this scan).",
     "orphan_note": "8th instance (111th scan's pickup of 110th scan's dead lock). Root cause still open; Lemar to pick between Option 1 (no fix needed) and Option 2 (make lock more resilient) on the #fixes card, ts `1789063894.596139`."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789679209.547929",
-      "D0BHPKMDNEP": "1789675700.567949",
+      "C0BBZJL85RT": "1789683441.381649",
+      "D0BHPKMDNEP": "1789683415.683789",
       "D0BBVV54L5R": "1789562539.094449",
-      "C0BV5BRNH5Z": "1789671935.926749"
+      "C0BV5BRNH5Z": "1789682955.205049"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -83,7 +83,7 @@
       "D0BHPKMDNEP:1788901890.646159": "1788901930.424399",
       "D0BHPKMDNEP:1788901947.800959": "1788901954.052969",
       "C0BV5BRNH5Z:1788902066.449949": "1788955934.601319",
-      "D0BHPKMDNEP:1788966952.066259": "1789503426.509509",
+      "D0BHPKMDNEP:1788966952.066259": "1789683415.683789",
       "D0BHPKMDNEP:1788980976.011509": "1789161910.872649",
       "D0BHPKMDNEP:1788980988.376489": "1789162053.901999",
       "D0BHPKMDNEP:1788981000.572229": "1788981031.204649",
@@ -95,7 +95,7 @@
       "D0BHPKMDNEP:1789063831.996959": "1789301427.228519",
       "D0BHPKMDNEP:1789063832.775699": "1789333775.365499",
       "D0BHPKMDNEP:1789063833.434589": "1789239296.882359",
-      "D0BHPKMDNEP:1789064040.504999": "1789222565.125269",
+      "D0BHPKMDNEP:1789064040.504999": "1789683027.407919",
       "C0BV5BRNH5Z:1789063894.596139": "1789145364.316889",
       "C0BV5BRNH5Z:1789063894.923759": "1789063916.795149",
       "D0BHPKMDNEP:1788987937.710089": "1789042166.517989",
@@ -128,7 +128,9 @@
       "D0BHPKMDNEP:1789664799.596209": "1789664799.596209",
       "C0BV5BRNH5Z:1789669104.409949": "1789669104.409949",
       "C0BV5BRNH5Z:1789671935.926749": "1789671935.926749",
-      "D0BHPKMDNEP:1789675700.567949": "1789675710.832919"
+      "D0BHPKMDNEP:1789675700.567949": "1789675710.832919",
+      "D0BHPKMDNEP:1789682963.505679": "1789682963.505679",
+      "C0BV5BRNH5Z:1789682955.205049": "1789682955.205049"
     },
     "migration": {
       "decisions_migration_complete": true,
@@ -143,8 +145,8 @@
   },
   "integrity": {
     "last_full_pass": "2026-09-15T08:05:00-04:00",
-    "last_scan_sha": "5779f30",
-    "note": "Not a full-vault pass (already ran multiple times today). Checked haven/vault diff between last_scan_sha and origin/main HEAD this scan -- empty, 0 files changed. Repaired 0. No new value defects. Known gaps unchanged: 5 stuck (domain unresolved: google-voice-subscription-cancellation, rootwurks-assignment-log, veriscan-idscan-security-incident, dib-template-theme-decision-closeout, visit-alex-sage-dispensary) plus 1 (apply-cooper-university-hospital-jobs.md, out-of-list status/source, carried). Known mis-filed note (haven/vault/40-Projects/samira-skills/2026-09-12-reports-false-vault-empty-claim-stale-checkout.md, domain:automation under 40-Projects/) still flagged, not moved. Known domain-mismatch defect (2026-09-15-fresh-start-business-solutions-cold-pitch.md) still awaiting Lemar's ✅ on the proposed fix, per #fixes."
+    "last_scan_sha": "c47323c",
+    "note": "Not a full-vault pass (already ran multiple times today). Checked haven/vault diff since last_scan_sha this scan -- only the CannaBIZ Collects append (128th scan) plus this scan's own writes (Canopy-USA task note, DeWalt legal note, this daily journal). Repaired 0. No new value defects. Known gaps unchanged: 5 stuck (domain unresolved: google-voice-subscription-cancellation, rootwurks-assignment-log, veriscan-idscan-security-incident, dib-template-theme-decision-closeout, visit-alex-sage-dispensary) plus 1 (apply-cooper-university-hospital-jobs.md, out-of-list status/source, carried). Known mis-filed note (haven/vault/40-Projects/samira-skills/2026-09-12-reports-false-vault-empty-claim-stale-checkout.md, domain:automation under 40-Projects/) still flagged, not moved. Known domain-mismatch defect (2026-09-15-fresh-start-business-solutions-cold-pitch.md) still awaiting Lemar's ✅ on the proposed fix, per #fixes. NEW this scan: canopy-usa.md entity note vs. the 2026-07-25 task note contradiction -- see #fixes ts 1789682955.205049."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
