@@ -16,12 +16,30 @@ The decision record, and the rule about which surface is the source of truth, is
 |---|---|---|
 | `jobs/<id>` | one job: channel, date, fees, pages, payer, terms, paid date, journal entry id | the page's Jobs tab, or `notary-intake` |
 | `tasks/<id>` | an open item — a task Lemar owes, or a question out with DORES / BlueNotary / the county clerk | the page's Open items tab |
-| `launch/<id>` | one runway step: phase, title, detail, cost label, `deadline`/`queue`/`gate` tag, done | seeded from the Given Word Runway tracker |
+| `launch/<id>` | one runway step: phase, title, detail, cost label, `deadline`/`queue`/`gate` tag, `status`, optional `due`, `updates[]`, done | seeded from the Given Word Runway tracker; `status`/`due`/`updates` written by the step dialog |
 | `channels/<id>` | one way work can reach the business: key, name, status, what is blocking it, spend | the page's Marketing tab |
 | `activity/<YYYY-MM-DD>` | one document per day holding that day's log entries (capped at 60) | the page, and anything reporting a completed job |
-| `meta/config` | `phase` (`prelaunch` or `operating`), entity name | set once |
+| `meta/config` | `phase` (`prelaunch` or `operating`), entity name, and the three dates the State counts from: `commissionDate`, `commissionExpiry`, `llcFiledOn` | the Calendar tab |
 
 A job's `source` must match a channel's `key` for the marketing scoreboard to count it.
+
+An `updates[]` entry is `{date, text, status}`, appended by the Launch step dialog and capped at 40
+per step. Arrays replace wholesale on an `update` write, so read the current array, append, and
+write the whole thing — never patch an index.
+
+## The calendar's four computed deadlines
+
+Nothing about them is stored. They are derived at render time from `meta/config`, so a blank date
+means the deadline simply does not appear:
+
+| Deadline | Derived from |
+|---|---|
+| Last day to swear the oath | `commissionDate` + 90 days |
+| Start the continuing education course | expiry − 120 days |
+| Start the commission renewal | expiry − 90 days |
+| NJ annual report ($75) | the anniversary of `llcFiledOn`, this year and next |
+
+Expiry is `commissionExpiry` when it is recorded, otherwise `commissionDate` + 5 years.
 
 The **Rules** tab holds no data — the rules are constants in `index.html` (`STOP_PATH` and
 `RULES`), so changing one is a page edit and a republish. That is deliberate: a legal reference

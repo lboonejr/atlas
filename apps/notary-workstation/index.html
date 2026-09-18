@@ -69,6 +69,7 @@
   .hero .k{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.72);position:relative}
   .hero .v{font-size:clamp(36px,6.6vw,50px);font-weight:800;letter-spacing:-.04em;line-height:1.02;position:relative}
   .hero .v small{font-size:16px;font-weight:600;opacity:.75;letter-spacing:-.01em}
+  .hero.text .v{font-size:clamp(21px,3.4vw,29px);line-height:1.2;letter-spacing:-.03em}
   .hero .sub{font-size:13px;color:rgba(255,255,255,.82);line-height:1.4;position:relative;max-width:46ch}
   .hero .meter{background:rgba(255,255,255,.22)}
   .hero .meter i{background:#fff}
@@ -193,6 +194,43 @@
   .rule.stop{box-shadow:inset 3px 0 0 var(--crit)}
   .rule.unconfirmed{box-shadow:inset 3px 0 0 var(--warn)}
 
+  /* ---------- dialog ---------- */
+  dialog{border:0;padding:0;background:var(--surface);color:var(--ink);border-radius:26px;max-width:560px;width:calc(100% - 28px);box-shadow:0 40px 90px -30px rgba(0,0,0,.95)}
+  dialog::backdrop{background:rgba(4,3,9,.74)}
+  .dlg-head{padding:22px 22px 0}
+  .dlg-head h3{font-size:19px;font-weight:700;letter-spacing:-.025em;line-height:1.25;margin-top:6px}
+  .dlg-body{padding:16px 22px 0;display:flex;flex-direction:column;gap:14px}
+  .dlg-body .detail{font-size:13.5px;color:var(--ink-2);line-height:1.55;margin:0}
+  .dlg-body label{display:flex;flex-direction:column;gap:6px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+  .dlg-body input,.dlg-body select,.dlg-body textarea{font:inherit;font-size:14px;font-weight:500;padding:12px 14px;border:1px solid transparent;border-radius:14px;background:var(--surface-2);color:var(--ink);width:100%}
+  .dlg-body textarea{min-height:92px;resize:vertical;line-height:1.5}
+  .dlg-body input:focus,.dlg-body select:focus,.dlg-body textarea:focus{border-color:var(--accent);outline:none}
+  .dlg-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media (max-width:440px){ .dlg-row{grid-template-columns:1fr} }
+  .dlg-foot{padding:18px 22px 22px;display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+  .updates{display:flex;flex-direction:column;gap:9px;max-height:230px;overflow-y:auto}
+  .update{background:var(--surface-2);border-radius:14px;padding:11px 13px;font-size:13px;line-height:1.5;color:var(--ink-2)}
+  .update .when{font-size:11px;color:var(--ink-3);font-weight:600;display:flex;gap:8px;align-items:center;margin-bottom:4px}
+
+  /* ---------- calendar ---------- */
+  .calhead{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 18px 12px}
+  .calhead h3{font-size:17px;font-weight:700;letter-spacing:-.02em}
+  .calnav{display:flex;gap:6px}
+  .calnav button{width:36px;height:36px;border:0;border-radius:12px;background:var(--surface-2);color:var(--ink-2);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .calnav button:hover{background:var(--surface-3);color:var(--ink)}
+  .calgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;padding:0 12px 14px}
+  .dow{text-align:center;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:700;padding-bottom:6px}
+  .day{height:clamp(44px,7vw,56px);border:0;background:none;border-radius:13px;color:var(--ink-2);font-size:13.5px;font-weight:600;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0;position:relative;font-variant-numeric:tabular-nums}
+  .day:hover{background:var(--surface-2)}
+  .day.out{color:var(--ink-3);opacity:.38}
+  .day.today{box-shadow:inset 0 0 0 1.5px var(--accent-hi);color:var(--ink)}
+  .day.sel{background:var(--accent);color:#fff}
+  .day.sel .dots i{background:#fff!important}
+  .dots{display:flex;gap:3px;height:5px;align-items:center}
+  .dots i{width:5px;height:5px;border-radius:50%;display:block}
+  .daykey{display:flex;gap:14px;flex-wrap:wrap;padding:0 18px 18px;font-size:11.5px;color:var(--ink-3)}
+  .daykey i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;vertical-align:0}
+
   .foot{margin-top:38px;padding:18px;border-radius:var(--r);background:var(--surface);font-size:12.5px;color:var(--ink-3);line-height:1.65}
   .foot b{color:var(--ink-2);font-weight:700}
   @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
@@ -243,13 +281,22 @@ var PAGE_COST = 0.055;               // paper + toner, blended letter and legal
 var RESERVE = {statutory:0.20, nonNotarial:0.35};
 var TABS = [
   {id:"today",     label:"Today"},
+  {id:"calendar",  label:"Calendar"},
   {id:"rules",     label:"Rules"},
   {id:"jobs",      label:"Jobs"},
+  {id:"launch",    label:"Launch"},
   {id:"money",     label:"Money"},
   {id:"marketing", label:"Marketing"},
-  {id:"launch",    label:"Launch"},
   {id:"open",      label:"Open items"}
 ];
+var LAUNCH_STATUS = [
+  ["todo","Not started"],
+  ["doing","In progress"],
+  ["waiting","Waiting on someone else"],
+  ["blocked","Blocked"],
+  ["done","Done"]
+];
+var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
 /* ============================ state ============================ */
 var db = null, canWrite = null, busy = false, booted = false;
@@ -381,6 +428,164 @@ function logActivity(text, kind){
   }).catch(function(){});
 }
 
+/* ============================ the dialog ============================ */
+/* One <dialog> reused by every step. Opened from a row, it is where the story of
+   that step gets written — the checkbox says whether it is done, this says what happened. */
+function openStepDialog(item){
+  var old = document.getElementById("stepDlg");
+  if(old) old.remove();
+  var d = document.createElement("dialog");
+  d.id = "stepDlg";
+
+  var head = el("div","dlg-head");
+  head.appendChild(el("div","eyebrow", item.phase || "Launch step"));
+  head.appendChild(el("h3", null, item.title));
+  d.appendChild(head);
+
+  var body = el("div","dlg-body");
+  if(item.detail) body.appendChild(el("p","detail", item.detail));
+
+  var row = el("div","dlg-row");
+  var lStatus = el("label"); lStatus.appendChild(el("span",null,"Where it stands"));
+  var sel = el("select"); sel.id = "dlgStatus";
+  LAUNCH_STATUS.forEach(function(o){
+    var op = el("option",null,o[1]); op.value=o[0];
+    if(o[0] === (item.status || (item.done ? "done" : "todo"))) op.selected = true;
+    sel.appendChild(op);
+  });
+  lStatus.appendChild(sel); row.appendChild(lStatus);
+
+  var lDue = el("label"); lDue.appendChild(el("span",null,"Date, if it has one"));
+  var due = el("input"); due.type="date"; due.id="dlgDue"; due.value = item.due || "";
+  lDue.appendChild(due); row.appendChild(lDue);
+  body.appendChild(row);
+
+  var lNote = el("label"); lNote.appendChild(el("span",null,"What happened"));
+  var ta = el("textarea"); ta.id="dlgNote";
+  ta.placeholder = "Called DORES, they said to use the portal form \u00b7 paid the $100, entity id is \u2026 \u00b7 waiting on the clerk to call back";
+  lNote.appendChild(ta); body.appendChild(lNote);
+
+  var ups = (item.updates || []).slice().reverse();
+  if(ups.length){
+    var wrap = el("div");
+    wrap.appendChild(el("div","eyebrow","What has happened so far"));
+    var list = el("div","updates"); list.style.marginTop = "8px";
+    ups.forEach(function(u){
+      var b = el("div","update");
+      var w = el("div","when");
+      w.appendChild(el("span",null, fmtDate(u.date)));
+      if(u.status) w.appendChild(el("span","chip", labelFor(u.status)));
+      b.appendChild(w);
+      b.appendChild(el("div",null,u.text));
+      list.appendChild(b);
+    });
+    wrap.appendChild(list); body.appendChild(wrap);
+  }
+  d.appendChild(body);
+
+  var foot = el("div","dlg-foot");
+  var cancel = el("button","btn","Close"); cancel.type="button";
+  cancel.addEventListener("click", function(){ d.close(); });
+  foot.appendChild(cancel);
+  var save = el("button","btn primary","Save update"); save.type="button";
+  if(canWrite === false || !db){ save.disabled = true; }
+  save.addEventListener("click", function(){
+    var status = sel.value, text = ta.value.trim(), dueVal = due.value;
+    var patch = {status:status, done: status === "done", due: dueVal || ""};
+    if(text){
+      var list2 = (item.updates || []).slice();
+      list2.push({date: todayISO(), text: text, status: status});
+      if(list2.length > 40) list2 = list2.slice(list2.length - 40);
+      patch.updates = list2;
+    }
+    save.disabled = true; save.textContent = "Saving\u2026";
+    db.doc("launch/" + item.id).update(patch).then(function(){
+      return logActivity(text ? (item.title + " \u2014 " + text) : (item.title + " \u2014 " + labelFor(status).toLowerCase()),
+                         status === "done" ? "done" : "note");
+    }).then(function(){
+      d.close(); render();
+    }).catch(function(err){
+      save.disabled = false; save.textContent = "Save update";
+      alert("That did not save" + (err && err.message ? ": " + err.message : ".") + " Nothing was changed.");
+    });
+  });
+  foot.appendChild(save);
+  d.appendChild(foot);
+
+  document.body.appendChild(d);
+  d.addEventListener("close", function(){ d.remove(); });
+  d.showModal();
+  ta.focus();
+}
+function labelFor(code){
+  for(var i=0;i<LAUNCH_STATUS.length;i++) if(LAUNCH_STATUS[i][0]===code) return LAUNCH_STATUS[i][1];
+  return code || "Not started";
+}
+function statusTone(code){
+  return code==="done" ? "good" : code==="blocked" ? "crit" : code==="waiting" ? "warn" : "";
+}
+
+/* ============================ the calendar model ============================ */
+/* Everything with a date on it, from five different places, in one list.
+   The four deadlines that can end the business are COMPUTED from two dates in
+   config — enter the commission date and the oath, renewal and course dates appear. */
+function computedDeadlines(){
+  var c = state.config || {}, out = [];
+  if(c.commissionDate){
+    out.push({date: addDays(c.commissionDate, 90), kind:"deadline", title:"Last day to swear the oath",
+      note:"In person at the county clerk. Miss this and the Treasurer cancels the commission and the whole process restarts."});
+  }
+  var expiry = c.commissionExpiry;
+  if(!expiry && c.commissionDate){
+    var d = dayStart(c.commissionDate);
+    if(d){ d.setFullYear(d.getFullYear() + 5); expiry = d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()); }
+  }
+  if(expiry){
+    out.push({date: addDays(expiry, -120), kind:"deadline", title:"Start the continuing education course",
+      note:"3 hours for a renewal. Finish it before the renewal window, not during it."});
+    out.push({date: addDays(expiry, -90), kind:"deadline", title:"Start the commission renewal",
+      note:"Course, exam, application, county clerk again. Ninety days is the runway that chain needs."});
+    out.push({date: expiry, kind:"deadline", title:"Commission expires", note:"Five years from the day it was issued."});
+  }
+  if(c.llcFiledOn){
+    var f = dayStart(c.llcFiledOn);
+    if(f){
+      var now = new Date(), yr = now.getFullYear();
+      for(var i=0;i<2;i++){
+        var y = yr + i;
+        var iso = y+"-"+pad(f.getMonth()+1)+"-"+pad(f.getDate());
+        if(daysFromToday(iso) >= -31) out.push({date: iso, kind:"deadline", title:"NJ annual report due ($75)",
+          note:"Due every year in the anniversary month of formation. Miss it long enough and the state revokes the LLC."});
+      }
+    }
+  }
+  return out.filter(function(x){ return x.date; });
+}
+
+function calendarItems(){
+  var out = [];
+  state.jobs.forEach(function(j){
+    if(!j.date) return;
+    out.push({date:String(j.date).slice(0,10), kind:"job", title:(j.client||"Job") + " \u2014 " + (j.jobType||"notarization"),
+      note:[j.location, j.signingCompany ? "via "+j.signingCompany : "", chanOf(j).label].filter(Boolean).join(" \u00b7 "),
+      color:"var("+chanOf(j).varname+")", obj:j, done:j.status==="done"});
+  });
+  state.tasks.forEach(function(t){
+    if(!t.due || t.status==="done") return;
+    out.push({date:String(t.due).slice(0,10), kind:"task", title:t.title,
+      note:t.who ? ("With " + t.who) : (t.detail||""), color:"var(--accent-hi)"});
+  });
+  state.launch.forEach(function(i){
+    if(!i.due || i.done) return;
+    out.push({date:String(i.due).slice(0,10), kind:"launch", title:i.title, note:i.phase||"", color:"var(--s-consumer)"});
+  });
+  computedDeadlines().forEach(function(d){
+    out.push({date:d.date, kind:"deadline", title:d.title, note:d.note, color:"var(--crit)"});
+  });
+  return out.sort(function(a,b){ return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; });
+}
+function itemsOn(list, iso){ return list.filter(function(x){ return x.date === iso; }); }
+
 /* ============================ render: chrome ============================ */
 function render(){
   renderPhase(); renderNotices(); renderStats(); renderTabs(); renderView();
@@ -508,7 +713,7 @@ function emptyCard(title, body){
 
 function renderView(){
   var v = $("#view"); v.textContent = "";
-  ({today:viewToday, rules:viewRules, jobs:viewJobs, money:viewMoney, marketing:viewMarketing, launch:viewLaunch, open:viewOpen}[ui.tab] || viewToday)(v);
+  ({today:viewToday, calendar:viewCalendar, rules:viewRules, jobs:viewJobs, money:viewMoney, marketing:viewMarketing, launch:viewLaunch, open:viewOpen}[ui.tab] || viewToday)(v);
 }
 
 /* ============================ view: today ============================ */
@@ -1156,46 +1361,271 @@ function viewMarketing(v){
 }
 
 /* ============================ view: launch ============================ */
+function nextLaunchStep(){
+  var all = state.launch.slice().sort(cmp("id"));
+  for(var i=0;i<all.length;i++){ if(!all[i].done) return all[i]; }
+  return null;
+}
+
 function viewLaunch(v){
-  var lp = launchProgress();
-  var p = panel("The runway", "The path from here to a business that can take a paid job. Tick an item and it stays ticked for everyone who opens this page.");
-  var c0 = el("div","card"); var pad0 = el("div","card-pad");
-  pad0.appendChild(el("div","eyebrow","Overall"));
-  var big = el("div"); big.style.cssText="font-family:var(--mono);font-size:24px;margin:4px 0 8px";
-  big.textContent = lp.done + " of " + lp.total + " done";
-  pad0.appendChild(big);
-  var m = el("div","meter"); var i = el("i"); i.style.width = (lp.total? lp.done/lp.total*100 : 0)+"%"; m.appendChild(i); pad0.appendChild(m);
-  c0.appendChild(pad0); p.appendChild(c0);
+  var lp = launchProgress(), nx = nextLaunchStep();
+  var pct = lp.total ? Math.round(lp.done/lp.total*100) : 0;
+
+  /* the page opens on the one step that is actually next */
+  var p = panel("The runway", "Every step between here and a business that can take a paid job. Tick one off, then open it and say what happened — that note is how the plan stays true.");
+  var top = el("div","stats");
+  var hero = el("div","hero text");
+  hero.appendChild(el("div","k", nx ? "Next step" : "Runway complete"));
+  hero.appendChild(el("div","v", nx ? nx.title : "Every step is ticked"));
+  if(nx && nx.detail) hero.appendChild(el("div","sub", nx.detail));
+  var hm = el("div","meter"); var hi = el("i"); hi.style.width = pct + "%"; hm.appendChild(hi); hero.appendChild(hm);
+  hero.appendChild(el("div","sub", lp.done + " of " + lp.total + " done · " + pct + "%"));
+  top.appendChild(hero);
+
+  var counts = {doing:0, waiting:0, blocked:0};
+  state.launch.forEach(function(i){ if(!i.done && counts[i.status]!=null) counts[i.status]++; });
+  var dated = state.launch.filter(function(i){ return i.due && !i.done; }).length;
+  var noted = state.launch.filter(function(i){ return (i.updates||[]).length; }).length;
+  top.appendChild(statTile("In progress", '<span class="num">'+counts.doing+'</span>',
+    counts.waiting + " waiting on someone else"));
+  top.appendChild(statTile("Blocked", '<span class="num">'+counts.blocked+'</span>',
+    counts.blocked ? "Open each one and say what is in the way" : "Nothing is stuck", counts.blocked?"crit":"good"));
+  top.appendChild(statTile("Written up", '<span class="num">'+noted+'</span>',
+    dated + (dated===1 ? " step has a date on it" : " steps have a date on them")));
+  p.appendChild(top);
   v.appendChild(p);
 
   launchByPhase().forEach(function(ph){
     var d = ph.items.filter(function(i){ return i.done; }).length;
     var sec = panel(ph.name, ph.note);
-    var head = sec.querySelector(".panel-head");
-    head.appendChild(el("span","chip " + (d===ph.items.length ? "good" : ""), d + " / " + ph.items.length));
+    sec.querySelector(".panel-head").appendChild(
+      el("span","chip " + (d===ph.items.length ? "good" : ""), d + " / " + ph.items.length));
     var card = el("div","card");
-    ph.items.forEach(function(it){
-      var r = el("div","rowitem" + (it.done?" done":""));
-      var cb = el("input"); cb.type="checkbox"; cb.checked=!!it.done; cb.id = "lx_"+it.id;
-      cb.disabled = canWrite === false || !db;
-      cb.addEventListener("change", function(){
-        writeDoc("launch/"+it.id, {done:cb.checked}, (cb.checked?"Done: ":"Reopened: ") + it.title);
-      });
-      r.appendChild(cb);
-      var g = el("div","grow");
-      var lab = el("label","ttl", it.title); lab.setAttribute("for", cb.id); lab.style.cursor="pointer";
-      g.appendChild(lab);
-      var mt = el("div","meta");
-      if(it.tag) mt.appendChild(el("span","chip " + (it.tag==="deadline"?"crit":it.tag==="queue"?"warn":""), it.tag));
-      if(it.cost) mt.appendChild(el("span","chip", it.cost));
-      if(it.detail) mt.appendChild(el("span",null,it.detail));
-      if(mt.childNodes.length) g.appendChild(mt);
-      r.appendChild(g);
-      card.appendChild(r);
-    });
+    ph.items.forEach(function(it){ card.appendChild(launchRow(it)); });
     sec.appendChild(card);
     v.appendChild(sec);
   });
+}
+
+function launchRow(it){
+  var r = el("div","rowitem" + (it.done?" done":""));
+  var cb = el("input"); cb.type="checkbox"; cb.checked=!!it.done; cb.id = "lx_"+it.id;
+  cb.disabled = canWrite === false || !db;
+  cb.addEventListener("change", function(){
+    writeDoc("launch/"+it.id, {done:cb.checked, status: cb.checked ? "done" : "doing"},
+             (cb.checked?"Done: ":"Reopened: ") + it.title);
+  });
+  r.appendChild(cb);
+
+  var g = el("div","grow");
+  var lab = el("label","ttl", it.title); lab.setAttribute("for", cb.id); lab.style.cursor="pointer";
+  g.appendChild(lab);
+
+  var mt = el("div","meta");
+  if(!it.done && it.status && it.status!=="todo") mt.appendChild(el("span","chip "+statusTone(it.status), labelFor(it.status)));
+  if(it.tag) mt.appendChild(el("span","chip " + (it.tag==="deadline"?"crit":it.tag==="queue"?"warn":""), it.tag));
+  if(it.cost) mt.appendChild(el("span","chip", it.cost));
+  if(it.due){ var dd = daysFromToday(it.due); mt.appendChild(el("span","chip "+(dd<0?"crit":dd<=3?"warn":""), fmtDate(it.due)+" · "+relDays(dd))); }
+  if(it.detail) mt.appendChild(el("span",null,it.detail));
+  if(mt.childNodes.length) g.appendChild(mt);
+
+  var ups = it.updates || [];
+  if(ups.length){
+    var last = ups[ups.length-1];
+    var line = el("div","meta");
+    line.style.color = "var(--ink-2)";
+    line.appendChild(el("span","chip", fmtDate(last.date)));
+    line.appendChild(el("span",null, last.text));
+    if(ups.length > 1) line.appendChild(el("span","chip", ups.length + " updates"));
+    g.appendChild(line);
+  }
+  r.appendChild(g);
+
+  var open = el("button","btn ghost", ups.length ? "Update · " + ups.length : "Add note");
+  open.type = "button";
+  open.addEventListener("click", function(){ openStepDialog(it); });
+  r.appendChild(open);
+  return r;
+}
+
+/* ============================ view: calendar ============================ */
+function viewCalendar(v){
+  var items = calendarItems();
+  var today = todayISO();
+  if(!ui.calMonth) ui.calMonth = today.slice(0,7);
+  if(!ui.calDay) ui.calDay = today;
+
+  /* what is coming, before the grid — the question is usually "what's next", not "what's on the 14th" */
+  var soon = items.filter(function(x){ var d=daysFromToday(x.date); return d!==null && d>=0 && d<=30 && !x.done; });
+  var overdue = items.filter(function(x){ var d=daysFromToday(x.date); return d!==null && d<0 && !x.done && x.kind!=="job"; });
+  var nextJob = items.filter(function(x){ return x.kind==="job" && !x.done && daysFromToday(x.date)>=0; })[0];
+  var nextDead = items.filter(function(x){ return x.kind==="deadline" && daysFromToday(x.date)>=0; })[0];
+
+  var p = panel("Calendar");
+  var top = el("div","stats");
+  var hero = el("div","hero text");
+  if(nextJob){
+    hero.appendChild(el("div","k","Next appointment"));
+    hero.appendChild(el("div","v", nextJob.title.split(" — ")[0]));
+    hero.appendChild(el("div","sub", fmtDate(nextJob.date) + " · " + relDays(daysFromToday(nextJob.date)) +
+      (nextJob.note ? " · " + nextJob.note : "")));
+  } else {
+    hero.appendChild(el("div","k","Next appointment"));
+    hero.appendChild(el("div","v","Nothing booked"));
+    hero.appendChild(el("div","sub","Jobs land here the moment one is added on the Jobs tab — who you are seeing, where you are driving, and what it pays."));
+  }
+  top.appendChild(hero);
+  top.appendChild(statTile("Next 30 days", '<span class="num">'+soon.length+'</span>',
+    soon.length ? "Listed below the month" : "Nothing dated in the next month"));
+  top.appendChild(statTile("Overdue", '<span class="num">'+overdue.length+'</span>',
+    overdue.length ? "Past its date and still open" : "Nothing has slipped", overdue.length?"crit":"good"));
+  top.appendChild(statTile("Next hard deadline",
+    nextDead ? '<span class="num">'+daysFromToday(nextDead.date)+'</span> <small>days</small>' : '<span class="num">—</span>',
+    nextDead ? nextDead.title : "Set the commission date below and the four State deadlines appear here",
+    nextDead && daysFromToday(nextDead.date) <= 14 ? "crit" : null));
+  p.appendChild(top);
+  v.appendChild(p);
+
+  /* the month grid */
+  var mp = el("section","panel");
+  var card = el("div","card");
+  var parts = ui.calMonth.split("-"), year = +parts[0], mon = +parts[1]-1;
+
+  var head = el("div","calhead");
+  head.appendChild(el("h3", null, MONTHS[mon] + " " + year));
+  var nav = el("div","calnav");
+  var prev = el("button",null,"‹"); prev.type="button"; prev.setAttribute("aria-label","Previous month");
+  prev.addEventListener("click", function(){ shiftMonth(-1); });
+  var todayBtn = el("button","btn","Today"); todayBtn.type="button"; todayBtn.style.width="auto"; todayBtn.style.padding="0 14px"; todayBtn.style.height="36px";
+  todayBtn.addEventListener("click", function(){ ui.calMonth = todayISO().slice(0,7); ui.calDay = todayISO(); render(); });
+  var next = el("button",null,"›"); next.type="button"; next.setAttribute("aria-label","Next month");
+  next.addEventListener("click", function(){ shiftMonth(1); });
+  nav.appendChild(prev); nav.appendChild(todayBtn); nav.appendChild(next);
+  head.appendChild(nav);
+  card.appendChild(head);
+
+  var grid = el("div","calgrid");
+  ["S","M","T","W","T","F","S"].forEach(function(d,i){ var c = el("div","dow", d); c.id = "dow"+i; grid.appendChild(c); });
+
+  var first = new Date(year, mon, 1);
+  var start = new Date(year, mon, 1 - first.getDay());
+  for(var i=0;i<42;i++){
+    var dt = new Date(start.getFullYear(), start.getMonth(), start.getDate()+i);
+    var iso = dt.getFullYear()+"-"+pad(dt.getMonth()+1)+"-"+pad(dt.getDate());
+    var on = itemsOn(items, iso);
+    var b = el("button","day" + (dt.getMonth()!==mon ? " out" : "") + (iso===today ? " today" : "") + (iso===ui.calDay ? " sel" : ""));
+    b.type = "button";
+    b.appendChild(el("span",null,String(dt.getDate())));
+    var dots = el("div","dots");
+    var seen = {};
+    on.slice(0,4).forEach(function(x){
+      if(seen[x.color]) return; seen[x.color] = 1;
+      var dot = el("i"); dot.style.background = x.color; dots.appendChild(dot);
+    });
+    b.appendChild(dots);
+    b.setAttribute("aria-label", iso + (on.length ? " — " + on.length + " item" + (on.length===1?"":"s") : ""));
+    (function(key){ b.addEventListener("click", function(){ ui.calDay = key; ui.calMonth = key.slice(0,7); render(); }); })(iso);
+    grid.appendChild(b);
+  }
+  card.appendChild(grid);
+  var key = el("div","daykey");
+  [["var(--s-consumer)","Launch step"],["var(--accent-hi)","Open item"],["var(--crit)","Hard deadline"],["var(--s-signing)","Job"]].forEach(function(k){
+    var sp = el("span"); var i2 = el("i"); i2.style.background = k[0]; sp.appendChild(i2);
+    sp.appendChild(document.createTextNode(k[1])); key.appendChild(sp);
+  });
+  card.appendChild(key);
+  mp.appendChild(card);
+  v.appendChild(mp);
+
+  /* the selected day */
+  var dayItems = itemsOn(items, ui.calDay);
+  var dsec = panel(prettyDay(ui.calDay), dayItems.length ? null : "Nothing on this day.");
+  var dcard = el("div","card");
+  if(!dayItems.length){
+    dcard.appendChild(makeEmpty("Clear", "Pick another day above, or add a job, an open item or a launch date and it appears here."));
+  }
+  dayItems.forEach(function(x){ dcard.appendChild(calRow(x)); });
+  dsec.appendChild(dcard);
+  v.appendChild(dsec);
+
+  /* the run of the next month */
+  var up = panel("What is coming", "The next thirty days, and anything already past its date.");
+  var ucard = el("div","card");
+  var listed = overdue.concat(soon);
+  if(!listed.length){
+    ucard.appendChild(makeEmpty("Nothing dated in the next month",
+      "Appointments appear here as jobs are booked. The State deadlines appear once the commission date is recorded below."));
+  }
+  listed.forEach(function(x){ ucard.appendChild(calRow(x, true)); });
+  up.appendChild(ucard);
+  v.appendChild(up);
+
+  /* the two dates that generate the four deadlines */
+  var cfg = state.config || {};
+  var dp = panel("The dates the State counts from",
+    "Enter these two and the page works out the four deadlines that can end the business — the 90-day oath, the continuing education course, the renewal window, and the annual report.");
+  var ccard = el("div","card");
+  var rows = [
+    ["Commission issued", cfg.commissionDate, "The date on the commission packet. The oath is due 90 days after it."],
+    ["Commission expires", cfg.commissionExpiry, "On the packet too. Left blank, five years from the issue date is assumed."],
+    ["LLC formed", cfg.llcFiledOn, "The annual report is due every year in this anniversary month."]
+  ];
+  rows.forEach(function(r0){
+    var r = el("div","rowitem");
+    r.appendChild(tile(r0[1] ? "✓" : "—", r0[1] ? "var(--good)" : null));
+    var g = el("div","grow");
+    g.appendChild(el("div","ttl", r0[0]));
+    g.appendChild(el("div","meta")).appendChild(el("span",null, r0[2]));
+    r.appendChild(g);
+    r.appendChild(el("div","money", r0[1] ? fmtDate(r0[1]) + ", " + String(r0[1]).slice(0,4) : "not set"));
+    ccard.appendChild(r);
+  });
+  ccard.appendChild(addForm("dates", [
+    {name:"commissionDate", label:"Commission issued", type:"date"},
+    {name:"commissionExpiry", label:"Commission expires", type:"date"},
+    {name:"llcFiledOn", label:"LLC formed", type:"date"}
+  ], "Save dates", function(vals){
+    var patch = {};
+    ["commissionDate","commissionExpiry","llcFiledOn"].forEach(function(k){ if(vals[k]) patch[k] = vals[k]; });
+    if(!Object.keys(patch).length) return Promise.resolve();
+    return db.doc("meta/config").set(Object.assign({}, state.config, patch)).then(function(){
+      return logActivity("Recorded " + Object.keys(patch).length + " commission date(s) — the State deadlines are now on the calendar", "filing");
+    });
+  }, "Leave a field blank to keep what is already there."));
+  ccard.lastChild.querySelector(".actions").insertBefore(
+    el("span","hint","Nothing here is guessed. A blank date means the deadline simply does not appear yet."),
+    null);
+  dp.appendChild(ccard);
+  v.appendChild(dp);
+}
+
+function shiftMonth(n){
+  var pr = ui.calMonth.split("-"), d = new Date(+pr[0], +pr[1]-1+n, 1);
+  ui.calMonth = d.getFullYear()+"-"+pad(d.getMonth()+1);
+  render();
+}
+function prettyDay(iso){
+  var d = dayStart(iso);
+  if(!d) return "That day";
+  return d.toLocaleDateString("en-US",{weekday:"long", month:"long", day:"numeric"});
+}
+function calRow(x, withDate){
+  var glyph = {job:"↗", task:"?", launch:"○", deadline:"!"}[x.kind] || "•";
+  var r = el("div","rowitem");
+  r.appendChild(tile(glyph, x.color));
+  var g = el("div","grow");
+  g.appendChild(el("div","ttl", x.title));
+  var mt = el("div","meta");
+  if(withDate){
+    var dd = daysFromToday(x.date);
+    mt.appendChild(el("span","chip " + (dd<0?"crit":dd<=3?"warn":""), fmtDate(x.date) + " · " + relDays(dd)));
+  }
+  if(x.kind==="deadline") mt.appendChild(el("span","chip crit","hard deadline"));
+  if(x.note) mt.appendChild(el("span",null,x.note));
+  g.appendChild(mt);
+  r.appendChild(g);
+  if(x.kind==="job" && x.obj) r.appendChild(el("div","money", money(jobFees(x.obj).gross)));
+  return r;
 }
 
 /* ============================ view: open items ============================ */

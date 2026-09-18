@@ -158,3 +158,60 @@ never reused as a series.
 One layout bug was caught by rendering the page and looking at it: the stat row was ragged because
 the track count floated. The row is now pinned to hero-plus-three, stacking to two and then one
 on narrow screens.
+
+## Update 2026-09-18T12:30-04:00 — the Launch page, the step dialog, and a calendar
+
+Three asks, all built into the same artifact rather than a second one. Lemar's standing
+requirement is that the whole notary business lives on one surface, so "its own page" was read as
+a dedicated full page inside the workstation, not a separate link. If he wants it split out later
+that is a small change; splitting it now would split the data too.
+
+### The Launch page
+
+It no longer opens on a flat checklist. It opens on the ONE step that is actually next, on the
+violet hero card, with the overall progress bar underneath — the best thing the old Runway
+tracker did, brought across. Three tiles beside it: how many steps are in progress, how many are
+blocked, how many have been written up.
+
+### The step dialog — the real ask
+
+Every step now opens a dialog. It carries four things:
+
+1. **Where it stands** — not started, in progress, waiting on someone else, blocked, done. A step
+   can now be honestly "waiting on the county clerk to call back" rather than a box that is either
+   ticked or not.
+2. **A date**, optional. A dated step appears on the calendar.
+3. **What happened** — free text. This is the point of the whole feature.
+4. **Every prior update**, newest first, each stamped with its date and the status at the time.
+
+Saving appends the note to the step's `updates[]`, sets the status, and drops a line in the Today
+log. So the plan updates itself as it is worked: the row on the Launch page now shows the latest
+update underneath the step, and the full story is one tap away.
+
+The checkbox still means done. The dialog is where the story goes. Those are deliberately
+separate — ticking something is one gesture, explaining it is another, and requiring the second to
+do the first would mean steps quietly stop getting ticked.
+
+### The calendar
+
+A month grid with a coloured dot per item, a day view under it, and a thirty-day run-up list.
+Four sources land on it, colour-coded: **jobs** (violet — who, where, what it pays), **open
+items**, **dated launch steps**, and **hard deadlines** in red.
+
+**The four State deadlines are computed, never stored.** Enter the commission issue date and the
+LLC formation date on that tab and the page works out: the 90-day oath deadline, the continuing
+education course at expiry minus 120, the renewal window at expiry minus 90, and the annual report
+in the anniversary month. Expiry is taken from the packet when recorded, otherwise five years from
+issue. A blank date means the deadline does not appear — nothing is guessed, which is the same
+rule the commission lifecycle note already states.
+
+That closes the single largest risk in the plan in the place Lemar will actually look. The 90-day
+oath deadline cancels the commission if missed, and until now it lived only in a note that cannot
+ring until someone types a date into it.
+
+### One date was added to the plan
+
+`File Given Word Notary LLC` is now dated **2026-09-20**, with the reason recorded on the step
+itself. That is the vault's own recommendation — file it before Monday, independently of the exam,
+because no LLC means no EIN, no EIN means no W-9, and no W-9 means no signing service registration.
+Encoding an existing recommendation as a date is not the same as inventing one.
