@@ -23,6 +23,12 @@ The decision record, and the rule about which surface is the source of truth, is
 
 A job's `source` must match a channel's `key` for the marketing scoreboard to count it.
 
+The **Rules** tab holds no data — the rules are constants in `index.html` (`STOP_PATH` and
+`RULES`), so changing one is a page edit and a republish. That is deliberate: a legal reference
+that any viewer could edit in place is worse than no reference. Every rule carries its citation,
+and four of them sit in a "not confirmed" group that says so on its face; when DORES answers one,
+move it out of that group and update the matching item in `tasks`.
+
 ## Republishing
 
 Edit `index.html`, then publish it with the `url` above. Do not pass `capabilities` unless you

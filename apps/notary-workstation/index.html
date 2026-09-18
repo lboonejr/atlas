@@ -154,6 +154,26 @@
   table.rate td:last-child{text-align:right;font-family:var(--mono);white-space:nowrap}
   .tablewrap{overflow-x:auto}
 
+  /* ---------- rules ---------- */
+  .stopcard{background:var(--crit-soft);border:1px solid color-mix(in srgb,var(--crit) 32%,transparent);border-radius:var(--r);padding:16px 18px}
+  .stopcard h3{font-family:var(--display);font-size:18px;color:var(--crit);margin-bottom:8px}
+  .steps{list-style:none;margin:0;padding:0;counter-reset:step}
+  .steps li{counter-increment:step;display:grid;grid-template-columns:26px 1fr;gap:10px;padding:8px 0;border-top:1px solid color-mix(in srgb,var(--crit) 18%,transparent);font-size:14px;line-height:1.5}
+  .steps li:first-child{border-top:0}
+  .steps li::before{content:counter(step);font-family:var(--mono);font-size:12px;font-weight:500;color:var(--crit);border:1px solid color-mix(in srgb,var(--crit) 35%,transparent);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .steps b{display:block;color:var(--ink)}
+  .steps span{color:var(--ink-2)}
+  .search{display:flex;gap:8px;align-items:center;margin:20px 0 4px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 42px);z-index:15;background:var(--ground);padding-block:8px}
+  .search input{flex:1;font:inherit;font-size:14px;padding:9px 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--ink);min-width:0}
+  .rule{border-top:1px solid var(--line-soft);padding:14px 16px}
+  .rule:first-child{border-top:0}
+  .rule h4{font-size:14.5px;font-weight:600;margin:0 0 5px;display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+  .rule p{margin:0 0 7px;font-size:13.5px;color:var(--ink-2);line-height:1.55;max-width:70ch}
+  .rule p:last-child{margin-bottom:0}
+  .rule p b{color:var(--ink)}
+  .rule .cite{font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:.02em}
+  .rule.stop{border-left:3px solid var(--crit)}
+  .rule.unconfirmed{border-left:3px solid var(--warn)}
   .foot{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-3);line-height:1.6}
   .foot b{color:var(--ink-2)}
   @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
@@ -204,6 +224,7 @@ var PAGE_COST = 0.055;               // paper + toner, blended letter and legal
 var RESERVE = {statutory:0.20, nonNotarial:0.35};
 var TABS = [
   {id:"today",     label:"Today"},
+  {id:"rules",     label:"Rules"},
   {id:"jobs",      label:"Jobs"},
   {id:"money",     label:"Money"},
   {id:"marketing", label:"Marketing"},
@@ -452,7 +473,7 @@ function emptyCard(title, body){
 
 function renderView(){
   var v = $("#view"); v.textContent = "";
-  ({today:viewToday, jobs:viewJobs, money:viewMoney, marketing:viewMarketing, launch:viewLaunch, open:viewOpen}[ui.tab] || viewToday)(v);
+  ({today:viewToday, rules:viewRules, jobs:viewJobs, money:viewMoney, marketing:viewMarketing, launch:viewLaunch, open:viewOpen}[ui.tab] || viewToday)(v);
 }
 
 /* ============================ view: today ============================ */
@@ -548,6 +569,248 @@ function chipFor(j){
   var sw = el("span","sw"); sw.style.background = "var("+c.varname+")"; s.appendChild(sw);
   s.appendChild(document.createTextNode(c.label));
   return s;
+}
+
+/* ============================ view: rules ============================ */
+var STOP_PATH = [
+  ["Can I be sure who this is?","An unexpired government photo ID, or someone credible who knows them and whom you know. If you cannot get there, you stop."],
+  ["Is the signer actually in front of me?","Physically present, or live in the remote session. “She signed it this morning, just stamp it” is not a thing you can do."],
+  ["Do they seem willing, and do they seem to know what they are signing?","Not your judgement on whether it is a good idea — just whether they are acting freely and are aware. If someone else is answering for them, stop."],
+  ["Is the document complete?","No blank spaces. A blank you leave behind can be filled in by anyone afterwards, and your seal is on it."],
+  ["Am I being asked to explain it, or to pick the right certificate?","Then you stop. Whoever drew up the document, their attorney, or their loan officer answers that. You can say plainly: “I’m not allowed to tell you what this means or which one you need.”"],
+  ["Do I have a stake in this deal?","If you are a party to it, or you get paid on how it turns out, you cannot notarize it. That conflict voids the act."],
+  ["Still unsure?","Do not do it. Say you will confirm and come back. Nobody has ever lost a commission for taking an extra day; the redo costs you one trip, and getting it wrong can cost the commission."]
+];
+
+var RULES = [
+  {g:"The lines you do not cross", tone:"stop", t:"Never explain what a document says, or choose the certificate",
+   c:"Unauthorized practice of law · NJ",
+   b:["A notary is a witness, not an adviser. You cannot say what a clause means, whether the form is the right one, or whether they need an acknowledgment or a jurat — <b>even when you know the answer</b>.",
+      "In New Jersey that is practising law without a licence. Over a 150-page loan package it is the single most common way a signing agent loses a commission.",
+      "The line that works: <b>“I can’t tell you what this means or which one you need — your loan officer, or whoever drew this up, can.”</b>"]},
+  {g:"The lines you do not cross", tone:"stop", t:"Never notarize where you have an interest",
+   c:"Conflict of interest",
+   b:["If you are a party to the deal, or you get paid based on how it turns out, you cannot notarize it. That conflict voids the act — so the document is no good and the trip was wasted."]},
+  {g:"The lines you do not cross", tone:"stop", t:"Never notarize for someone who is not there",
+   c:"Personal appearance",
+   b:["The signer has to be in front of you, or live in the remote session. Not their spouse, not a photo of the signed page, not “he signed it this morning”.",
+      "This is the request you will get most often from people who are not trying to do anything wrong. It is still a no."]},
+  {g:"The lines you do not cross", tone:"stop", t:"Never notarize a document with blank spaces",
+   c:"Incomplete document",
+   b:["Blanks get filled in after you leave, and your seal is already on the page. Have them completed or struck through before you notarize, or decline."]},
+  {g:"The lines you do not cross", tone:"stop", t:"Never give a real estate agent anything for sending you a client",
+   c:"RESPA Section 8 · 12 U.S.C. 2607",
+   b:["No fee, no percentage, no gift card, no discount their clients get and nobody else does.",
+      "Notarizing a deed or a mortgage document is a settlement service, so this is federal criminal law: <b>up to $10,000 and a year in prison per violation, plus treble damages — and it binds the agent too.</b> If an agent proposes it, do not negotiate and do not soft-yes it. Say no and write down what was asked.",
+      "What is allowed wins the channel anyway: answering the phone, evenings and weekends, a rate sheet and a card, and remote signings for the out-of-state seller nobody else can help."]},
+  {g:"The lines you do not cross", tone:"stop", t:"Never print a recordable document on an inkjet",
+   c:"County recording",
+   b:["County recorders can refuse inkjet, because the ink runs. Laser only. On a loan package that mistake costs the whole package and the relationship."]},
+
+  {g:"Saying no, and how to record it", tone:"", t:"Turning a job away is the job working",
+   c:"",
+   b:["You are sometimes obliged to say no: the signer cannot be satisfactorily identified, is not present, appears coerced or does not understand what they are signing, the document is incomplete, or the act is something a notary commission does not cover.",
+      "Declining correctly is not a failed job. It is the part of the job you are actually commissioned for."]},
+  {g:"Saying no, and how to record it", tone:"", t:"Log every refusal the same day — nothing else will",
+   c:"",
+   b:["A refusal is not a notarial act, so it never enters the journal. Without a separate note it leaves no trace anywhere.",
+      "Record the date and time, what was asked for, and <b>the reason in your own words</b> — do not flatten it into a category, because the specific fact is what carries weight later. It is your evidence of reasonable care if a complaint or a lawsuit arrives, and that is usually years later when memory is worthless.",
+      "First name only. “Her ID was expired” is the record; her name and licence number are not."]},
+  {g:"Saying no, and how to record it", tone:"", t:"Write down what you saw, never what you think they were up to",
+   c:"",
+   b:["<b>“Signer could not produce unexpired ID”</b> is a fact. <b>“Signer was attempting fraud”</b> is an accusation sitting in a file that may one day be read by the person it names."]},
+  {g:"Saying no, and how to record it", tone:"", t:"You still earned the travel fee",
+   c:"",
+   b:["If you made the trip, invoice the travel as a non-notarial line and set aside 35% of it. There is no statutory line, because no act was performed."]},
+
+  {g:"The journal", tone:"", t:"Six things every entry must carry",
+   c:"N.J.A.C. 17:50-1.11",
+   b:["Date and time · type of act · name and address of each person the act was performed for · if you knew them personally, a statement saying so · if not, a brief description of how you identified them and the credential they showed · an itemized list of every fee charged.",
+      "That last one is why the invoice is always two lines. A single blended number makes the legal record wrong."]},
+  {g:"The journal", tone:"", t:"New Jersey does not require the signer's signature",
+   c:"N.J.A.C. 17:50-1.11",
+   b:["Unlike California, Florida and others. That is the finding that lets you run a fully electronic journal with no paper book to carry and no book to lose."]},
+  {g:"The journal", tone:"", t:"One journal at a time, covering in-person and remote both",
+   c:"N.J.A.C. 17:50-1.11",
+   b:["You cannot keep one book for walk-ups and a platform journal for remote work. It is a single decision, and switching later means a fresh DORES filing on top of a migration."]},
+  {g:"The journal", tone:"", t:"Electronic means permanent and tamper-evident — a spreadsheet is not",
+   c:"N.J.A.C. 17:50-1.11",
+   b:["A tamper-evident format is a property of the product: a file anyone can quietly edit does not qualify, and neither does a note in a git repo.",
+      "On paper the equivalent is a permanently bound register with consecutively numbered lines and pages — not a ring binder."]},
+  {g:"The journal", tone:"", t:"Keep it for ten years after the last act",
+   c:"N.J.A.C. 17:50-1.11",
+   b:["Which is the entire reason for the monthly export. Losing the journal without one means losing the record; losing it with one means losing at most a month."]},
+  {g:"The journal", tone:"", t:"Do not store ID photos or thumbprints",
+   c:"N.J.A.C. 17:50-1.11",
+   b:["NJ asks for a <i>brief description</i> of how you identified them and what they showed. So record credential type, issuing state and expiry — not an image, and not the full number.",
+      "Holding government ID images creates real exposure under NJ’s data-breach law for zero legal benefit on consumer work. For a remote act the platform holds the credential check inside the required recording, which is where it belongs."]},
+
+  {g:"What you may charge", tone:"", t:"$2.50 per act",
+   c:"N.J.A.C. 17:50-1.18",
+   b:["Oaths, affidavits, proofs of deed and acknowledgments. Per act — two acknowledgments is $5.00."]},
+  {g:"What you may charge", tone:"", t:"$15.00 for a grantor in a real estate transfer",
+   c:"N.J.A.C. 17:50-1.18",
+   b:["For the whole transaction, however many services it takes. Not $2.50 a signature."]},
+  {g:"What you may charge", tone:"", t:"$25.00 for a mortgagor in real estate financing",
+   c:"N.J.A.C. 17:50-1.18",
+   b:["Again the whole transaction, however many signatures. <b>A refinance with twelve notarized signatures is $25, not $30.</b>",
+      "Charging over a statutory cap is the kind of mistake that ends a commission, so this one is worth knowing cold."]},
+  {g:"What you may charge", tone:"", t:"Travel and technology fees are yours, but they go on their own line",
+   c:"N.J.A.C. 17:50-1.18",
+   b:["The State does not set them. It does require them to be separate and disclosed — and they are taxed differently from the notarial fee, which is what makes the 20% / 35% set-aside possible.",
+      "On a loan signing the flat signing fee <i>is</i> the non-notarial line. Never add a travel tier on top; the drive is already inside it."]},
+
+  {g:"Remote and electronic acts", tone:"", t:"Remote notarization is permanently legal in NJ",
+   c:"Effective 22 October 2021",
+   b:["It is not a pandemic rule that expired. It is settled law."]},
+  {g:"Remote and electronic acts", tone:"stop", t:"Tell the State which platform before your first remote or electronic act",
+   c:"DORES notary portal",
+   b:["A notification to the State Treasurer naming the communication technology platform, filed <b>before</b> the first remote or electronic act — and filed again every time you change platform.",
+      "This is separate from the commission. Remote work does not go live when the commission does; it goes live when this clears."]},
+  {g:"Remote and electronic acts", tone:"", t:"Identity proofing takes two of three",
+   c:"",
+   b:["At least two of: credential analysis, knowledge-based authentication, biometric verification — run by the platform, not by you."]},
+  {g:"Remote and electronic acts", tone:"", t:"Record the whole session, and keep it ten years",
+   c:"",
+   b:["Audio and video, including the identity verification, not just the signing. The recording is retained on the same ten-year clock as the journal."]},
+
+  {g:"The commission itself", tone:"stop", t:"Swear the oath within 90 days or start over",
+   c:"",
+   b:["In person, at the clerk of your county of residence. No mail, no online.",
+      "Miss the 90 days and the Treasurer cancels the commission and the entire process restarts — course, exam, application, endorsement, all of it. Put it on the calendar the day the packet arrives rather than trusting yourself to remember."]},
+  {g:"The commission itself", tone:"", t:"Five years, and it does not renew itself",
+   c:"",
+   b:["Renewal is the same chain as the first time: a 3-hour continuing education course (the first commission needs 6 hours), an updated exam, the DORES application, and the oath again at the county clerk.",
+      "Start 90 days out. Thirty is not enough runway for a chain with four links and a government office in it."]},
+  {g:"The commission itself", tone:"", t:"Report a move or a name change to DORES",
+   c:"",
+   b:["Easy to forget in the middle of moving, which is exactly when it happens."]},
+
+  {g:"If the seal or journal goes missing", tone:"stop", t:"Stop notarizing, immediately",
+   c:"Read this one before the other five",
+   b:["From the moment it is out of your possession until a replacement is physically in your hand, every notarization stops — in person and remote.",
+      "Using a seal that may be in someone else’s hands is what turns an inconvenience into a commission problem."]},
+  {g:"If the seal or journal goes missing", tone:"", t:"Then, in order: search once, report, police, replace, write it up",
+   c:"",
+   b:["<b>Search properly once</b> — car, bag, last appointment, home office. One thorough pass, not a day of hoping; the reporting clock is what matters.",
+      "<b>Report to DORES</b>, through the notary portal or in writing: your full name, commission number, commission expiry, and the last date you know you had it. Keep a copy and the date it went.",
+      "<b>Report to police if you suspect theft</b>, and keep the report number. A stolen seal is a fraud instrument in someone else’s hands, and the report is what separates a victim from a participant if it is later misused.",
+      "<b>Order the replacement</b>, and resume only when it arrives. Then <b>write it up</b> — what was lost, when you last had it, what you reported, to whom, on what date, and when you started again."]},
+  {g:"If the seal or journal goes missing", tone:"", t:"A lost journal is also possibly a data breach",
+   c:"",
+   b:["The journal carries signer names, addresses and identification details under a ten-year duty. So on top of the reporting above, consider whether NJ’s breach-notification obligations are triggered by what was in it.",
+      "Store the seal locked and separate from the journal, so one loss is never both."]},
+
+  {g:"Asking for reviews", tone:"", t:"Never offer anything for a review, and never filter them",
+   c:"FTC endorsement rules · Google policy",
+   b:["No discount, no credit, no free act. And never ask “how did it go?” first and send only the happy ones to Google — review gating is explicitly prohibited and is grounds for removal.",
+      "The penalty lands on the Business Profile the whole consumer side depends on, which makes this the most expensive corner you could cut."]},
+  {g:"Asking for reviews", tone:"", t:"Never ask a borrower on a signing-service job",
+   c:"",
+   b:["They did not hire you, did not pay you, and often did not choose you. Asking a stranger mid-refinance to review the notary who showed up at their house is at best odd and at worst a complaint to the company that sends you work.",
+      "Consumer jobs and agent referrals: ask the person who signed and paid, once, after it closes clean."]},
+
+  {g:"Not confirmed — do not rely on these yet", tone:"unconfirmed", t:"Whether NJ caps the fee for a remote act separately",
+   c:"Question out with DORES",
+   b:["No separate maximum for a remote act could be found. Until DORES answers, <b>do not quote a RON technology fee.</b> Quote the statutory fee and say the technology fee is still being confirmed."]},
+  {g:"Not confirmed — do not rely on these yet", tone:"unconfirmed", t:"Whether the journal can be inspected or copied, and on what terms",
+   c:"Question out with DORES",
+   b:["17:50-1.11 sets what the journal must contain and how long it is kept. It does not clearly say who else may see it. Until that is answered, hand nothing over without checking."]},
+  {g:"Not confirmed — do not rely on these yet", tone:"unconfirmed", t:"Whether NJ restricts recording a credential’s full ID number",
+   c:"Question out with DORES",
+   b:["The working practice — type, issuing state and expiry only, never the full number — is the safe side of an unanswered question, not a confirmed rule."]},
+  {g:"Not confirmed — do not rely on these yet", tone:"unconfirmed", t:"The exact NJ mechanics for reporting a lost seal",
+   c:"Question out with DORES",
+   b:["The stop-first sequence above is standard practice across US notary jurisdictions and is sound. What is <i>not</i> verified is NJ’s specific paperwork: the exact form, the office, the deadline, and whether a replacement comes with a new commission number.",
+      "Confirm with DORES and record the answer before this is ever relied on."]}
+];
+
+function viewRules(v){
+  var p = panel("When you are not sure, work down this list",
+    "Written for the moment it is needed — at somebody’s kitchen table, on your phone, with a person waiting on you.");
+  var stop = el("div","stopcard");
+  stop.appendChild(el("h3",null,"Stop, and answer these in order"));
+  var ol = el("ol","steps");
+  STOP_PATH.forEach(function(x){
+    var li = el("li"); var d = el("div");
+    d.appendChild(el("b",null,x[0])); d.appendChild(el("span",null,x[1]));
+    li.appendChild(d); ol.appendChild(li);
+  });
+  stop.appendChild(ol);
+  p.appendChild(stop);
+  v.appendChild(p);
+
+  var sp = panel("New Jersey notary rules", "Everything below is a summary of the rules this business runs on, with the citation on each. Search it.");
+  var sbox = el("div","search");
+  var inp = el("input"); inp.type="search"; inp.id="ruleSearch";
+  inp.placeholder = "Search — fee, journal, blank, RON, seal, RESPA…";
+  inp.value = ui.ruleQuery || "";
+  sbox.appendChild(inp);
+  var count = el("span","hint"); sbox.appendChild(count);
+  sp.appendChild(sbox);
+  var results = el("div"); sp.appendChild(results);
+  v.appendChild(sp);
+
+  function draw(){
+    var q = (ui.ruleQuery||"").toLowerCase().trim();
+    results.textContent = "";
+    var shown = 0, groups = [], byGroup = {};
+    RULES.forEach(function(r){
+      var hay = (r.t + " " + r.g + " " + r.c + " " + r.b.join(" ")).toLowerCase().replace(/<[^>]+>/g,"");
+      if(q && hay.indexOf(q) === -1) return;
+      if(!byGroup[r.g]){ byGroup[r.g] = []; groups.push(r.g); }
+      byGroup[r.g].push(r); shown++;
+    });
+    count.textContent = q ? (shown + (shown===1?" rule":" rules")) : (RULES.length + " rules");
+    if(!shown){
+      results.appendChild(emptyCard("Nothing matches “" + (ui.ruleQuery||"") + "”",
+        "Try a plainer word — fee, journal, ID, blank, remote, seal, review, agent."));
+      return;
+    }
+    groups.forEach(function(g){
+      var sec = el("div"); sec.style.marginTop = "16px";
+      sec.appendChild(el("div","eyebrow", g));
+      var card = el("div","card"); card.style.marginTop = "6px";
+      byGroup[g].forEach(function(r){
+        var box = el("div","rule" + (r.tone ? " " + r.tone : ""));
+        var h = el("h4");
+        h.appendChild(document.createTextNode(r.t));
+        if(r.c) h.appendChild(el("span","cite", r.c));
+        box.appendChild(h);
+        r.b.forEach(function(para){ var pp = el("p"); pp.innerHTML = para; box.appendChild(pp); });
+        card.appendChild(box);
+      });
+      sec.appendChild(card);
+      results.appendChild(sec);
+    });
+  }
+  var timer = null;
+  inp.addEventListener("input", function(){
+    ui.ruleQuery = inp.value;
+    clearTimeout(timer); timer = setTimeout(draw, 120);
+  });
+  draw();
+
+  var p3 = panel("Who to call when this page does not answer it");
+  var c3 = el("div","card");
+  [["DORES Notary Unit","(609) 292-9292","The commissioning authority. Every unconfirmed item above is a question for them."],
+   ["Camden County Clerk · Courthouse","(856) 225-5300","The oath, and county filings."],
+   ["Camden County Store","(856) 566-2920","The other counter for the same county."]].forEach(function(x){
+    var r = el("div","rowitem"); var g = el("div","grow");
+    g.appendChild(el("div","ttl", x[0]));
+    g.appendChild(el("div","meta")).appendChild(el("span",null,x[2]));
+    r.appendChild(g);
+    r.appendChild(el("div","money", x[1]));
+    c3.appendChild(r);
+  });
+  var note = el("div","rule unconfirmed");
+  note.appendChild(el("h4",null,"What this page is, and is not"));
+  var np = el("p");
+  np.innerHTML = "This is a working summary, written from the project vault’s research. <b>The New Jersey Notary Public Manual and DORES are the authority</b> — when this page and the manual disagree, the manual is right and this page needs fixing. It is not legal advice.";
+  note.appendChild(np);
+  c3.appendChild(note);
+  p3.appendChild(c3);
+  v.appendChild(p3);
 }
 
 /* ============================ view: jobs ============================ */

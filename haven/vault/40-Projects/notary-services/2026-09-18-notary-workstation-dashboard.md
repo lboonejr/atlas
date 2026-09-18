@@ -1,6 +1,6 @@
 ---
 created: 2026-09-18T09:40:00-04:00
-updated: 2026-09-18T09:40:00-04:00
+updated: 2026-09-18T11:05:00-04:00
 domain: project
 type: decision
 status: active
@@ -28,8 +28,8 @@ honest `$0` for money. The moment the first job is entered it flips to **operati
 the same four tiles become jobs on the book, alarms, money owed to Lemar, and what he keeps.
 Nothing is faked to fill space in the meantime.
 
-Six tabs: **Today** (what's going on, the next seven days, and a running log of what got done)
-· **Jobs** · **Money** · **Marketing** · **Launch** · **Open items**.
+Seven tabs: **Today** (what's going on, the next seven days, and a running log of what got done)
+· **Rules** · **Jobs** · **Money** · **Marketing** · **Launch** · **Open items**.
 
 ## Three decisions, recorded
 
@@ -88,3 +88,40 @@ each with what is blocking it · 0 jobs, which is correct until the commission e
 
 ## Sources
 - claude: Claude Code session, 2026-09-18
+
+## Update 2026-09-18T11:05-04:00 — the Rules tab
+
+Lemar asked for the NJ notarial rules to live here too, as the thing he pulls up when he is
+standing at a kitchen table and is not sure what he is allowed to do. It is the second tab, not
+the last, so it is reachable with a thumb without scrolling the tab strip.
+
+**It opens with a decision path, not a rule list.** Seven questions in order — can I be sure who
+this is, is the signer actually here, do they seem willing and aware, is the document complete,
+am I being asked to explain it, do I have a stake in this, and still unsure? The last one
+answers itself: do not do it, say you will confirm and come back.
+
+Below that, 33 rules in eight groups, each carrying its citation, searchable by plain words
+(fee, journal, blank, remote, seal, RESPA). The groups: the lines you do not cross · saying no
+and how to record it · the journal · what you may charge · remote and electronic acts · the
+commission itself · if the seal or journal goes missing · asking for reviews.
+
+**The eighth group is the one that matters most for honesty: four things that are not
+confirmed** — whether NJ caps a remote act's fee separately, whether the journal is open to
+inspection, whether the full credential number may be recorded, and the exact NJ mechanics for
+reporting a lost seal. They are marked in amber and they say plainly not to rely on them. They
+are the same four questions sitting in the Open items tab with DORES. When an answer comes back,
+it moves out of that group and into a real one.
+
+The page states its own authority: the NJ Notary Public Manual and DORES are the authority, and
+when the page and the manual disagree the manual is right and the page needs fixing. The DORES
+and county clerk phone numbers sit at the bottom of the tab, where you would look for them.
+
+**Sources for the rules**, all already in this vault: the NJ law research in
+[[2026-09-15-notary-business-backend-systems]] (N.J.A.C. 17:50-1.11 journal contents, one-journal
+rule, ten-year retention, 17:50-1.18 fee caps, RON since 2021-10-22 and its notification and
+recording duties), [[2026-09-16-notary-seal-journal-loss-playbook]] (the six steps),
+[[2026-09-16-notary-commission-lifecycle]] (the five-year term, the 90-day oath, renewal), and
+the UPL, RESPA, refusal-log and review never-clauses from the `notary-intake` and
+`notary-journal-mirror` skills.
+
+Nothing here was written from memory. If a rule is not in the vault, it is not on the page.
