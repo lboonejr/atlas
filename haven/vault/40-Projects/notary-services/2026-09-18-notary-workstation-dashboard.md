@@ -125,3 +125,36 @@ the UPL, RESPA, refusal-log and review never-clauses from the `notary-intake` an
 `notary-journal-mirror` skills.
 
 Nothing here was written from memory. If a rule is not in the vault, it is not on the page.
+
+## Update 2026-09-18T11:50-04:00 — restyled to the QuickPay reference
+
+Lemar sent a fintech app UI as the direction and asked for the workstation to look like it. His
+words win on visual direction, so the page was restyled to match rather than argued with.
+
+**What changed.** Near-black ground (`#08070C`) with a soft violet glow behind the masthead ·
+electric violet accent (`#7C4DFF`) · big soft-cornered cards (24px) · Plus Jakarta Sans
+throughout, tight and heavy, replacing the Newsreader serif, which did not belong in this world ·
+pill-shaped tab strip with the active tab filled violet, replacing the underline tabs ·
+rounded-square icon tiles on every list row, the way the reference marks each line of recent
+activity · money coloured green coming in and coral going out · rounded checkboxes and pill
+inputs.
+
+**The one structural change: the hero card.** The headline number now sits on a full-width violet
+gradient card, the way the balance card sits at the top of the reference. Pre-commission that is
+the next deadline; operating it is what Lemar actually keeps after costs and the set-aside. The
+other three figures are dark tiles underneath. One number worth seeing from across the room, three
+supporting it.
+
+**It is now single-theme by design.** The earlier build carried a full light palette and a dark
+one. A fintech surface like this is a committed look, so the light theme was dropped and every
+colour is painted explicitly, which is the documented way to do that. Anyone opening the page in
+a light system theme still gets the dark page, which is the intent.
+
+**The three channel colours survived the change** — teal, violet, ochre — re-validated against the
+new near-black card surface: all three pass the lightness band, the chroma floor, colour-blind
+separation and contrast. The status colours (green, amber, coral) stay reserved for state and are
+never reused as a series.
+
+One layout bug was caught by rendering the page and looking at it: the stat row was ragged because
+the track count floated. The row is now pinned to hero-plus-three, stacking to two and then one
+on narrow screens.
