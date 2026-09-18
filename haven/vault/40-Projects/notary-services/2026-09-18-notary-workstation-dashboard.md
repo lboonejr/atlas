@@ -1,6 +1,6 @@
 ---
 created: 2026-09-18T09:40:00-04:00
-updated: 2026-09-18T11:05:00-04:00
+updated: 2026-09-18T18:40:00-04:00
 domain: project
 type: decision
 status: active
@@ -215,3 +215,57 @@ ring until someone types a date into it.
 itself. That is the vault's own recommendation — file it before Monday, independently of the exam,
 because no LLC means no EIN, no EIN means no W-9, and no W-9 means no signing service registration.
 Encoding an existing recommendation as a date is not the same as inventing one.
+
+## Update 2026-09-18T18:40-04:00 — the audit, and the tap-first rework
+
+Lemar's ask, in his words: one page to know everything going on in the business, usable in front
+of a customer, short ideas not paragraphs, mostly buttons, and keep it clean. He pointed at the
+handoff doc, which lists four artifacts. The audit came out like this:
+
+**The four artifacts.** The Workstation is the one that stays. The other three are now retired
+with a banner at the top pointing to the Workstation: the Given Word Runway (its 43 steps already
+live on the Launch tab; its own tick state was empty), the Launch Board / open-items page (its
+tasks and questions already live on the Open items tab; its ticks only ever lived in one browser),
+and the Notary Loop explainer (still a fair picture of the loop, but its 30% set-aside and its
+one-week-for-everyone invoice alarm are both out of date against the 20% / 35% split and the
+per-channel terms). Nothing was deleted; each still opens.
+
+**What changed on the Workstation.** Every capture on the page now goes through one of three
+buttons fixed at the bottom of the screen — Job, Refused, Note — and each opens a sheet that is
+chips and steppers, with the price computing on every tap. The only typed field is a first name.
+
+- *Job.* Channel → what (acknowledgment, oath, deed, mortgage; a stepper for how many signatures)
+  → travel tier and the two +$20 extras → when (now, later today, tomorrow, pick a day, with a
+  time) → first name → how they found you → and, when it is happening now, "Done · paid" so the
+  whole job is one sheet. For a signing service the chips change: package, the fee the company
+  named, pages (which sets the printing cost), the company. The quote at the bottom shows both
+  lines and what he keeps after the set-aside.
+- *Refused.* The stop-path questions as reason chips, whether the trip was made (the travel fee is
+  still earned), first name. This is the refusal log the journal-mirror skill requires and the page
+  never had a way to write.
+- *Note.* One line and a kind.
+- *Closing out a job is buttons on the row*, on Today and on Jobs alike: Done · paid, Done, Paid,
+  Journal # (a one-field sheet for the BlueNotary entry number), Scan-back sent.
+- *Jobs now carry a time.* The "appointment passed" alarm fires when the time has passed, not at
+  the start of the day. A signing-service job gets its scan-back deadline set to the appointment
+  plus four hours, which is the intake skill's default.
+- *Today shows what to do next* without leaving the tab: anything overdue, then the single next
+  runway step with its tick and its Update button, then the week's jobs with their buttons.
+- *Copy every job for taxes* on the Money tab puts a CSV on the clipboard — one line per job, both
+  fee lines kept apart. Clipboard rather than a download because the viewer blocks downloads, and
+  it needs no new permission, so the store was never at risk.
+- Open items has a + Item sheet (kind, who, by-when as chips). The launch step dialog's status is
+  chips too. The three big inline forms are gone.
+
+**Not changed, on purpose.** Same URL, same store, same capabilities, same look. The rate card is
+still a page constant, now in one place that both the quote and the Money tab read. Nothing is
+invented: travel starts unselected, a signing fee has to be tapped, and a blank date still means
+no deadline.
+
+**Still open from the handoff.** The Haven sweep-back (a job typed here still exists only here
+until Samira's PART 4 learns to read the store) and the Google Calendar link (a job booked here
+does not ring his phone) are both routine changes, not page changes, and were not touched.
+
+Verified once at phone width with three sample jobs: a $32.50 consumer job nets $21.50 after the
+$11 set-aside; the sheet quotes $2.50 + $65 with $23.25 set aside for two signatures at the
+≤20-mile tier after 7pm. Sample jobs were never written to the live store.

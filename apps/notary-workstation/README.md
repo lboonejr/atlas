@@ -14,11 +14,11 @@ The decision record, and the rule about which surface is the source of truth, is
 
 | Path | Holds | Written by |
 |---|---|---|
-| `jobs/<id>` | one job: channel, date, fees, pages, payer, terms, paid date, journal entry id | the page's Jobs tab, or `notary-intake` |
-| `tasks/<id>` | an open item — a task Lemar owes, or a question out with DORES / BlueNotary / the county clerk | the page's Open items tab |
+| `jobs/<id>` | one job: channel, `date` + `time` (HH:MM, local), fees, `acts`, pages, payer, terms, `paidOn`, `journalEntryId`, `scanbackDue`/`scanbackDone` (signing service), `refused`/`refusalReason` for a logged refusal | the Job and Refused buttons in the dock, or `notary-intake` |
+| `tasks/<id>` | an open item — a task Lemar owes, or a question out with DORES / BlueNotary / the county clerk | the + Item button on the Open items tab |
 | `launch/<id>` | one runway step: phase, title, detail, cost label, `deadline`/`queue`/`gate` tag, `status`, optional `due`, `updates[]`, done | seeded from the Given Word Runway tracker; `status`/`due`/`updates` written by the step dialog |
 | `channels/<id>` | one way work can reach the business: key, name, status, what is blocking it, spend | the page's Marketing tab |
-| `activity/<YYYY-MM-DD>` | one document per day holding that day's log entries (capped at 60) | the page, and anything reporting a completed job |
+| `activity/<YYYY-MM-DD>` | one document per day holding that day's log entries (capped at 60) | every save on the page, the Note button, and anything reporting a completed job |
 | `meta/config` | `phase` (`prelaunch` or `operating`), entity name, and the three dates the State counts from: `commissionDate`, `commissionExpiry`, `llcFiledOn` | the Calendar tab |
 
 A job's `source` must match a channel's `key` for the marketing scoreboard to count it.
@@ -46,6 +46,29 @@ The **Rules** tab holds no data — the rules are constants in `index.html` (`ST
 that any viewer could edit in place is worse than no reference. Every rule carries its citation,
 and four of them sit in a "not confirmed" group that says so on its face; when DORES answers one,
 move it out of that group and update the matching item in `tasks`.
+
+## How things get recorded (2026-09-18 rework)
+
+The page is tap-first. A fixed dock at the bottom carries three buttons — **Job**, **Refused**,
+**Note** — and each opens a sheet (a dialog that slides up on a phone). Anything with a known set
+of answers is a chip; a count is a stepper; the only typed field is a first name (a town is
+optional). The job sheet's quote recomputes on every tap from the same constants the Money tab's
+rate card prints (`ACTS`, `TRAVEL`, `EXTRAS`, `SIGNING_FEES`, `PAGE_PRESETS`), so the two cannot
+disagree. A refusal is written as a job with `refused: true`, a zero statutory line, and the travel
+fee if the trip was made; the "no journal entry" alarm skips it, and the marketing scoreboard does
+not count it.
+
+Closing a job out is buttons on its row, on Today and on Jobs alike: **Done · paid** (one tap for
+at-the-table channels), **Done**, **Paid**, **Journal #** (a one-field sheet for the BlueNotary
+entry number), **Scan-back sent**. A signing-service job gets `scanbackDue` set to the appointment
+plus `SCANBACK_HOURS` (4) at save time, matching the intake skill's default.
+
+Jobs carry a `time`. "Appointment passed" fires when the time has passed, not at the start of the
+day; the calendar's day view and the Today list sort by it.
+
+**Copy every job for taxes** on the Money tab puts one CSV line per job on the clipboard (both fee
+lines kept apart, printing, set-aside, paid date, journal id, refused flag, source). It uses the
+clipboard because the viewer sandbox blocks downloads, and it needs no extra capability.
 
 ## Republishing
 

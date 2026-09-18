@@ -27,7 +27,7 @@
     color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;margin:0;
     -webkit-font-smoothing:antialiased;letter-spacing:-.005em;
   }
-  .wrap{max-width:1120px;margin:0 auto;padding-inline:16px;padding-block:0 72px}
+  .wrap{max-width:1120px;margin:0 auto;padding-inline:16px;padding-block:0 128px}
   h1,h2,h3,h4{margin:0;text-wrap:balance}
   a{color:var(--accent-hi);text-decoration-color:color-mix(in srgb,var(--accent-hi) 45%,transparent)}
   button{font:inherit;color:inherit}
@@ -231,6 +231,53 @@
   .daykey{display:flex;gap:14px;flex-wrap:wrap;padding:0 18px 18px;font-size:11.5px;color:var(--ink-3)}
   .daykey i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;vertical-align:0}
 
+  /* ---------- tap controls: chips, steppers, the live quote ---------- */
+  .chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chips button{border:0;background:var(--surface-2);color:var(--ink-2);font:inherit;font-size:13px;font-weight:600;padding:9px 14px;border-radius:999px;cursor:pointer;min-height:40px;display:inline-flex;align-items:center;gap:6px;transition:background .12s,color .12s}
+  .chips button:hover{background:var(--surface-3);color:var(--ink)}
+  .chips button[aria-pressed="true"]{background:var(--accent);color:#fff}
+  .chips button small{font-size:11.5px;font-weight:600;opacity:.72}
+  .chips button[aria-pressed="true"] small{opacity:.85}
+  .stepper{display:inline-flex;align-items:center;background:var(--surface-2);border-radius:999px;overflow:hidden}
+  .stepper button{width:42px;height:40px;border:0;background:none;color:var(--ink);font-size:20px;font-weight:600;cursor:pointer;line-height:1}
+  .stepper button:hover{background:var(--surface-3)}
+  .stepper span{min-width:30px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+  .sec{display:flex;flex-direction:column;gap:8px}
+  .sec .eyebrow{font-size:10.5px}
+  .quote{display:flex;justify-content:space-between;align-items:baseline;gap:8px 14px;background:var(--accent-soft);border-radius:16px;padding:13px 15px;flex-wrap:wrap}
+  .quote .big{font-size:24px;font-weight:800;color:var(--accent-hi);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+  .quote .hint{flex:1 1 100%}
+  .quote.warn{background:var(--warn-soft)} .quote.warn .big{color:var(--warn)}
+  .field{display:flex;flex-direction:column;gap:6px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+  .field input{font:inherit;font-size:15px;font-weight:500;padding:12px 14px;border:1px solid transparent;border-radius:14px;background:var(--surface-2);color:var(--ink);width:100%;letter-spacing:0;text-transform:none}
+  .field input:focus{border-color:var(--accent);outline:none}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media (max-width:440px){ .two{grid-template-columns:1fr} }
+
+  dialog.sheet{max-width:600px}
+  dialog.sheet .dlg-body{max-height:calc(100dvh - 190px);overflow-y:auto;padding-bottom:6px}
+  @media (max-width:600px){
+    dialog.sheet{position:fixed;inset:auto 0 0 0;margin:0;width:100%;max-width:none;border-radius:26px 26px 0 0;max-height:94dvh}
+    dialog.sheet .dlg-body{max-height:calc(94dvh - 170px)}
+    dialog.sheet .dlg-foot{padding-bottom:calc(18px + env(safe-area-inset-bottom,0px))}
+  }
+
+  /* ---------- row actions ---------- */
+  .acts{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end;align-items:center;flex:0 1 auto}
+  .btn.small{padding:8px 13px;font-size:12.5px;border-radius:11px}
+  @media (max-width:640px){
+    .rowitem.hasacts{flex-wrap:wrap}
+    .rowitem.hasacts .acts{flex-basis:100%;justify-content:flex-start;padding-left:51px}
+  }
+
+  /* ---------- the dock: three buttons, always in reach ---------- */
+  .dock{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:14px 16px calc(12px + env(safe-area-inset-bottom,0px));background:linear-gradient(180deg,rgba(8,7,12,0) 0%,var(--ground) 55%);display:flex;justify-content:center;pointer-events:none}
+  .dock-in{display:flex;gap:6px;background:var(--surface);border-radius:999px;padding:6px;box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 22px 44px -18px rgba(0,0,0,.95);pointer-events:auto}
+  .dock button{border:0;border-radius:999px;padding:12px 20px;font:inherit;font-weight:700;font-size:14px;cursor:pointer;background:none;color:var(--ink-2);display:flex;align-items:center;gap:6px;min-height:46px;white-space:nowrap}
+  .dock button:hover{background:var(--surface-2);color:var(--ink)}
+  .dock button.main{background:var(--accent);color:#fff;box-shadow:0 12px 26px -14px var(--accent)}
+  .dock button.main:hover{background:var(--accent-hi)}
+
   .foot{margin-top:38px;padding:18px;border-radius:var(--r);background:var(--surface);font-size:12.5px;color:var(--ink-3);line-height:1.65}
   .foot b{color:var(--ink-2);font-weight:700}
   @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
@@ -258,8 +305,10 @@
   <main id="view"></main>
 
   <p class="foot">
-    <b>How this page works.</b> The Haven vault stays the record of the business — this is the place you
-    work from, and anything typed here is meant to be swept back into the vault by Samira.
+    <b>How this page works.</b> The three buttons at the bottom are how things get recorded: a job, a refusal,
+    or a line in the log. Almost everything is a tap; the only typing is a first name. The Haven vault stays
+    the record of the business — this is the place you work from, and anything typed here is meant to be swept
+    back into the vault by Samira.
     Money figures are reserve policy, not a tax calculation; the 20% / 35% split is there so the
     money is set aside before it feels spendable. Not legal or tax advice.
   </p>
@@ -279,6 +328,34 @@ var CHANNELS = {
 var TERM_DAYS = {"due-at-completion":7,"net-15":16,"net-30":31,"net-45":46};
 var PAGE_COST = 0.055;               // paper + toner, blended letter and legal
 var RESERVE = {statutory:0.20, nonNotarial:0.35};
+/* The rate card, once. The quote in the job sheet and the table on the Money tab both read from here,
+   so they cannot disagree. Line 1 is the State's (N.J.A.C. 17:50-1.18); line 2 is Lemar's. */
+var ACTS = [
+  {v:"ack",      label:"Acknowledgment",    small:"$2.50 each", fee:2.5, per:true,  type:"Acknowledgment"},
+  {v:"oath",     label:"Oath / affidavit",  small:"$2.50 each", fee:2.5, per:true,  type:"Oath or affidavit"},
+  {v:"deed",     label:"Deed — seller",     small:"$15",   fee:15,  per:false, type:"Deed — grantor"},
+  {v:"mortgage", label:"Mortgage docs",     small:"$25",   fee:25,  per:false, type:"Mortgage — mortgagor"}
+];
+var TRAVEL = [
+  {v:0,  label:"No travel"},
+  {v:30, label:"≤10 mi", small:"$30"},
+  {v:45, label:"≤20 mi", small:"$45"},
+  {v:65, label:"≤35 mi", small:"$65"}
+];
+var EXTRAS = [
+  {v:"late", label:"After 7pm · weekend", small:"+$20", fee:20},
+  {v:"site", label:"Hospital · jail · nursing home", small:"+$20", fee:20}
+];
+var PACKAGES = ["Refinance","Purchase","Seller package","Modification / HELOC","Single document"];
+var SIGNING_FEES = [75,100,125,150,200];
+var SIGNING_FLOOR = 75;
+var PAGE_PRESETS = [100,150,200];
+var SCANBACK_HOURS = 4;                 // the intake skill's default when the company names no deadline
+var REFUSAL_REASONS = [
+  "No valid photo ID", "Signer not present", "Seemed unwilling or unaware",
+  "Blank spaces in the document", "Asked me to explain it", "I have a stake in it", "Other"
+];
+var WHO = ["DORES","BlueNotary","Camden County Clerk"];
 var TABS = [
   {id:"today",     label:"Today"},
   {id:"calendar",  label:"Calendar"},
@@ -334,6 +411,23 @@ function invoiceDue(j){
   return addDays(j.date, TERM_DAYS[terms] != null ? TERM_DAYS[terms] : 31);
 }
 function cmp(field,dir){ return function(a,b){ var x=a[field]||"", y=b[field]||""; return (x<y?-1:x>y?1:0)*(dir==="desc"?-1:1); }; }
+function nowHHMM(){ var d=new Date(); return pad(d.getHours())+":"+pad(d.getMinutes()); }
+function fmtTime(t){
+  if(!t) return ""; var p=String(t).split(":"); var h=+p[0], m=p[1]||"00";
+  if(isNaN(h)) return ""; var ap = h>=12 ? "pm" : "am"; h = h%12 || 12;
+  return h + (m==="00" ? "" : ":"+m) + ap;
+}
+function jobWhen(j){
+  var d = dayStart(j.date); if(!d) return null;
+  if(j.time){ var p=String(j.time).split(":"); d.setHours(+p[0]||0, +p[1]||0, 0, 0); }
+  else d.setHours(23,59,0,0);
+  return d;
+}
+function fmtWhen(j){ return fmtDate(j.date) + (j.time ? " · " + fmtTime(j.time) : ""); }
+function fmtStamp(iso){
+  var d = new Date(iso); if(isNaN(d)) return "—";
+  return d.toLocaleDateString("en-US",{month:"short",day:"numeric"}) + " " + d.toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit"});
+}
 
 /* ============================ derived ============================ */
 function doneJobs(){ return state.jobs.filter(function(j){ return j.status==="done"; }); }
@@ -358,7 +452,7 @@ function alarms(){
   var today = todayISO();
   state.jobs.forEach(function(j){
     var name = (j.client || "Unnamed job") + " · " + fmtDate(j.date);
-    var past = j.date && daysFromToday(j.date) <= 0;
+    var w = jobWhen(j), past = w && w < new Date();
     if(j.status==="done" && !j.journalEntryId && !j.refused)
       out.push({sev:"crit", tag:"No journal entry", text:name + " — the act is logged here but no BlueNotary entry id is recorded. Enter it while you still remember the appointment.", job:j});
     if(past && j.status!=="done" && j.status!=="cancelled")
@@ -369,7 +463,7 @@ function alarms(){
         out.push({sev:"crit", tag:"Invoice overdue", text:name + " — " + money(jobFees(j).gross) + " unpaid, was due " + fmtDate(due) + " on " + (j.paymentTerms||chanOf(j).terms) + " terms.", job:j});
     }
     if(j.channel==="signing-service" && j.scanbackDue && !j.scanbackDone && j.scanbackDue < new Date().toISOString())
-      out.push({sev:"crit", tag:"Scan-back overdue", text:name + " — the scan-back was due " + fmtDate(j.scanbackDue) + " and is not marked sent.", job:j});
+      out.push({sev:"crit", tag:"Scan-back overdue", text:name + " — the scan-back was due " + fmtStamp(j.scanbackDue) + " and is not marked sent.", job:j});
     if(j.status==="done" && j.journalEntryId && jobFees(j).gross === 0)
       out.push({sev:"warn", tag:"Act with no fee", text:name + " — a journal entry exists but no fee is recorded against it.", job:j});
   });
@@ -445,22 +539,16 @@ function openStepDialog(item){
   var body = el("div","dlg-body");
   if(item.detail) body.appendChild(el("p","detail", item.detail));
 
-  var row = el("div","dlg-row");
-  var lStatus = el("label"); lStatus.appendChild(el("span",null,"Where it stands"));
-  var sel = el("select"); sel.id = "dlgStatus";
-  LAUNCH_STATUS.forEach(function(o){
-    var op = el("option",null,o[1]); op.value=o[0];
-    if(o[0] === (item.status || (item.done ? "done" : "todo"))) op.selected = true;
-    sel.appendChild(op);
-  });
-  lStatus.appendChild(sel); row.appendChild(lStatus);
+  var sel = {value: item.status || (item.done ? "done" : "todo")};
+  var st = section(body, "Where it stands");
+  st.appendChild(chipGroup(LAUNCH_STATUS.map(function(o){ return {v:o[0], label:o[1]}; }),
+    function(){ return sel.value; }, function(v){ sel.value = v; }));
 
-  var lDue = el("label"); lDue.appendChild(el("span",null,"Date, if it has one"));
+  var lDue = el("label","field"); lDue.appendChild(el("span",null,"Date, if it has one"));
   var due = el("input"); due.type="date"; due.id="dlgDue"; due.value = item.due || "";
-  lDue.appendChild(due); row.appendChild(lDue);
-  body.appendChild(row);
+  lDue.appendChild(due); body.appendChild(lDue);
 
-  var lNote = el("label"); lNote.appendChild(el("span",null,"What happened"));
+  var lNote = el("label","field"); lNote.appendChild(el("span",null,"What happened — a few words is enough"));
   var ta = el("textarea"); ta.id="dlgNote";
   ta.placeholder = "Called DORES, they said to use the portal form \u00b7 paid the $100, entity id is \u2026 \u00b7 waiting on the clerk to call back";
   lNote.appendChild(ta); body.appendChild(lNote);
@@ -515,7 +603,6 @@ function openStepDialog(item){
   document.body.appendChild(d);
   d.addEventListener("close", function(){ d.remove(); });
   d.showModal();
-  ta.focus();
 }
 function labelFor(code){
   for(var i=0;i<LAUNCH_STATUS.length;i++) if(LAUNCH_STATUS[i][0]===code) return LAUNCH_STATUS[i][1];
@@ -566,7 +653,7 @@ function calendarItems(){
   var out = [];
   state.jobs.forEach(function(j){
     if(!j.date) return;
-    out.push({date:String(j.date).slice(0,10), kind:"job", title:(j.client||"Job") + " \u2014 " + (j.jobType||"notarization"),
+    out.push({date:String(j.date).slice(0,10), time:j.time||"", kind:"job", title:(j.client||"Job") + " \u2014 " + (j.jobType||"notarization"),
       note:[j.location, j.signingCompany ? "via "+j.signingCompany : "", chanOf(j).label].filter(Boolean).join(" \u00b7 "),
       color:"var("+chanOf(j).varname+")", obj:j, done:j.status==="done"});
   });
@@ -582,13 +669,16 @@ function calendarItems(){
   computedDeadlines().forEach(function(d){
     out.push({date:d.date, kind:"deadline", title:d.title, note:d.note, color:"var(--crit)"});
   });
-  return out.sort(function(a,b){ return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; });
+  return out.sort(function(a,b){
+    if(a.date !== b.date) return a.date < b.date ? -1 : 1;
+    var x=a.time||"", y=b.time||""; return x<y?-1:x>y?1:0;
+  });
 }
 function itemsOn(list, iso){ return list.filter(function(x){ return x.date === iso; }); }
 
 /* ============================ render: chrome ============================ */
 function render(){
-  renderPhase(); renderNotices(); renderStats(); renderTabs(); renderView();
+  renderPhase(); renderNotices(); renderStats(); renderTabs(); renderView(); renderDock();
 }
 
 function renderPhase(){
@@ -732,51 +822,43 @@ function headline(){
 function viewToday(v){
   var p = panel("What's going on");
   var c = el("div","card"); var pad = el("div","card-pad");
-  var h = el("p"); h.style.margin="0"; h.style.fontFamily="var(--display)"; h.style.fontSize="17.5px"; h.style.lineHeight="1.5";
+  var h = el("p"); h.style.margin="0"; h.style.fontSize="17.5px"; h.style.lineHeight="1.5";
   h.textContent = headline(); pad.appendChild(h); c.appendChild(pad); p.appendChild(c);
   v.appendChild(p);
 
-  /* next seven days */
-  var p2 = panel("The next seven days", "Appointments and anything with a date on it.");
+  /* do this next: anything overdue, then the one runway step that is actually next */
+  var nx = nextLaunchStep();
+  var late = openTasks().filter(function(t){ var d=daysFromToday(t.due); return d!==null && d<0; });
+  if(nx || late.length){
+    var pn = panel("Do this next", late.length ? "What has slipped, then the next runway step." : "The next runway step. Tick it, or open it and say what happened.");
+    var cn = el("div","card");
+    late.forEach(function(t){ cn.appendChild(taskRow(t)); });
+    if(nx) cn.appendChild(launchRow(nx));
+    pn.appendChild(cn); v.appendChild(pn);
+  }
+
+  /* the next seven days, with the buttons for the job in front of you */
+  var p2 = panel("The next seven days", "Appointments and anything with a date on it. The buttons on a job are the whole close-out.");
   var soon = [];
-  openJobs().forEach(function(j){ var d=daysFromToday(j.date); if(d!==null&&d<=7) soon.push({kind:"job",d:d,obj:j}); });
-  openTasks().forEach(function(t){ var d=daysFromToday(t.due); if(d!==null&&d<=7) soon.push({kind:"task",d:d,obj:t}); });
-  soon.sort(function(a,b){ return a.d-b.d; });
+  openJobs().forEach(function(j){ var d=daysFromToday(j.date); if(d!==null&&d<=7) soon.push({kind:"job",d:d,t:j.time||"",obj:j}); });
+  openTasks().forEach(function(t){ var d=daysFromToday(t.due); if(d!==null&&d>=0&&d<=7) soon.push({kind:"task",d:d,t:"",obj:t}); });
+  soon.sort(function(a,b){ return a.d-b.d || (a.t<b.t?-1:a.t>b.t?1:0); });
   if(!soon.length){
     p2.appendChild(emptyCard("Nothing dated in the next week",
-      "Items only appear here once they carry a date. Add one on the Jobs or Open items tab and it shows up."));
+      phase()==="operating" ? "Tap Job below the moment someone books, and it lands here with its time and what it pays."
+                            : "Items appear here once they carry a date. Jobs come in through the Job button below; open items through the Open items tab."));
   } else {
     var lc = el("div","card");
     soon.forEach(function(s){
-      var r = el("div","rowitem"); var g = el("div","grow");
-      if(s.kind==="job"){
-        r.appendChild(tile("↗", "var(" + chanOf(s.obj).varname + ")"));
-        g.appendChild(el("div","ttl", (s.obj.client||"Job") + " — " + (s.obj.jobType||"notarization")));
-        var mt = el("div","meta");
-        mt.appendChild(chipFor(s.obj));
-        mt.appendChild(el("span",null, fmtDate(s.obj.date) + " · " + relDays(s.d)));
-        if(s.obj.location) mt.appendChild(el("span",null,s.obj.location));
-        g.appendChild(mt);
-        r.appendChild(g);
-        r.appendChild(el("div","money", money(jobFees(s.obj).gross)));
-      } else {
-        r.appendChild(tile(s.obj.kind==="question" ? "?" : "•"));
-        g.appendChild(el("div","ttl", s.obj.title));
-        var mt2 = el("div","meta");
-        mt2.appendChild(el("span",null, fmtDate(s.obj.due) + " · " + relDays(s.d)));
-        if(s.obj.who) mt2.appendChild(el("span","chip", s.obj.who));
-        g.appendChild(mt2);
-        r.appendChild(g);
-      }
-      if(s.d < 0){ r.appendChild(el("span","chip crit","overdue")); }
-      lc.appendChild(r);
+      if(s.kind==="job"){ lc.appendChild(jobRow(s.obj, true)); }
+      else { lc.appendChild(taskRow(s.obj)); }
     });
     p2.appendChild(lc);
   }
   v.appendChild(p2);
 
   /* activity log */
-  var p3 = panel("What's been done", "The running log. Samira writes here after every run, and so can you.");
+  var p3 = panel("What's been done", "The running log. Samira writes here after every run, and so can you — the Note button below.");
   var card = el("div","card");
   var items = activityItems();
   if(!items.length){
@@ -786,23 +868,17 @@ function viewToday(v){
   } else {
     items.slice(0,40).forEach(function(it){
       var r = el("div","rowitem");
-      var glyphs = {done:"✓", money:"$", lead:"+", filing:"§", note:"•"};
-      r.appendChild(tile(glyphs[it.kind] || "•", it.kind==="done" ? "var(--good)" : it.kind==="money" ? "var(--accent-hi)" : null));
+      var glyphs = {done:"✓", money:"$", lead:"+", filing:"§", refused:"✕", note:"•"};
+      r.appendChild(tile(glyphs[it.kind] || "•", it.kind==="done" ? "var(--good)" : it.kind==="money" ? "var(--accent-hi)" : it.kind==="refused" ? "var(--warn)" : null));
       var g = el("div","grow");
       g.appendChild(el("div","ttl", it.text));
       var mt = el("div","meta");
-      mt.appendChild(el("span",null, fmtDate(it.date) + (it.t ? " · " + it.t : "")));
+      mt.appendChild(el("span",null, fmtDate(it.date) + (it.t ? " · " + fmtTime(it.t) : "")));
       if(it.kind && it.kind!=="note") mt.appendChild(el("span","chip", it.kind));
       g.appendChild(mt); r.appendChild(g);
       card.appendChild(r);
     });
   }
-  card.appendChild(addForm("activity", [
-    {name:"text", label:"What happened", type:"text", full:true, placeholder:"Filed the LLC · $100 paid · confirmation emailed", required:true},
-    {name:"kind", label:"Kind", type:"select", options:[["note","note"],["done","done"],["filing","filing"],["lead","new lead"],["money","money"]]}
-  ], "Log it", function(vals){
-    return logActivity(vals.text, vals.kind);
-  }));
   p3.appendChild(card);
   v.appendChild(p3);
 }
@@ -1064,7 +1140,10 @@ function viewJobs(v){
   bar.appendChild(segmented(["open","done","all"], ["On the book","Completed","Everything"], ui.jobFilter, function(x){ ui.jobFilter=x; render(); }));
   p.appendChild(bar);
 
-  var list = state.jobs.slice().sort(cmp("date","desc")).filter(function(j){
+  var list = state.jobs.slice().sort(function(a,b){
+    if((a.date||"") !== (b.date||"")) return (a.date||"") < (b.date||"") ? 1 : -1;
+    var x=a.time||"", y=b.time||""; return x<y?1:x>y?-1:0;
+  }).filter(function(j){
     if(ui.jobFilter==="open") return j.status!=="done" && j.status!=="cancelled";
     if(ui.jobFilter==="done") return j.status==="done";
     return true;
@@ -1076,71 +1155,13 @@ function viewJobs(v){
     e.appendChild(el("b",null, state.jobs.length ? "Nothing in this view" : "No jobs yet, and that is correct"));
     e.appendChild(document.createTextNode(state.jobs.length
       ? "Switch the filter above to see the rest."
-      : "A notarization cannot legally be performed before the commission exists, so the board is empty on purpose. The first ten jobs are meant to be consumer work walked through by hand — the mistakes are cheap there. You can still add one here to see how the money and the alarms behave."));
+      : "A notarization cannot legally be performed before the commission exists, so the board is empty on purpose. The first ten jobs are meant to be consumer work walked through by hand — the mistakes are cheap there. Tap Job below to see how the quote, the money and the alarms behave."));
     card.appendChild(e);
   }
-  list.forEach(function(j){
-    var f = jobFees(j);
-    var r = el("div","rowitem");
-    r.appendChild(tile(chanOf(j).label.charAt(0), "var(" + chanOf(j).varname + ")"));
-    var g = el("div","grow");
-    g.appendChild(el("div","ttl", (j.client||"Unnamed") + " — " + (j.jobType||"notarization")));
-    var mt = el("div","meta");
-    mt.appendChild(chipFor(j));
-    mt.appendChild(el("span",null, fmtDate(j.date)));
-    if(j.location) mt.appendChild(el("span",null, j.location));
-    if(j.signingCompany) mt.appendChild(el("span",null,"via "+j.signingCompany));
-    if(j.referringAgent) mt.appendChild(el("span",null,"referred by "+j.referringAgent));
-    if(j.pages) mt.appendChild(el("span",null, j.pages+" pages · "+money(f.printing)+" to print"+(f.printEstimated?" (est.)":"")));
-    if(j.status==="done"){
-      mt.appendChild(el("span","chip "+(j.paidOn?"good":"warn"), j.paidOn ? "paid "+fmtDate(j.paidOn) : "unpaid · due "+fmtDate(invoiceDue(j))));
-      mt.appendChild(el("span","chip "+(j.journalEntryId?"good":"crit"), j.journalEntryId ? "journal "+j.journalEntryId : "no journal entry"));
-    } else {
-      mt.appendChild(el("span","chip","booked"));
-    }
-    g.appendChild(mt);
-    r.appendChild(g);
-    var right = el("div"); right.style.textAlign="right";
-    right.appendChild(el("div","money", money(f.gross)));
-    right.appendChild(el("div","hint", money(f.statutory)+" + "+money(f.nonNotarial)));
-    r.appendChild(right);
-    if(canWrite !== false){
-      var acts = el("div"); acts.style.display="flex"; acts.style.flexDirection="column"; acts.style.gap="2px";
-      if(j.status!=="done") acts.appendChild(miniBtn("Mark done", function(){ writeDoc("jobs/"+j.id, {status:"done"}, "Completed: "+(j.client||"job")); }));
-      else if(!j.paidOn) acts.appendChild(miniBtn("Mark paid", function(){ writeDoc("jobs/"+j.id, {paidOn:todayISO()}, "Paid: "+(j.client||"job")+" "+money(f.gross)); }));
-      acts.appendChild(miniBtn("Remove", function(){ if(confirm("Remove this job?")) delDoc("jobs/"+j.id); }, true));
-      r.appendChild(acts);
-    }
-    card.appendChild(r);
-  });
-
-  card.appendChild(addForm("job", [
-    {name:"client", label:"Who", type:"text", placeholder:"First name only", required:true},
-    {name:"channel", label:"Channel", type:"select", options:Object.keys(CHANNELS).map(function(k){ return [k, CHANNELS[k].label]; })},
-    {name:"date", label:"When", type:"date", required:true},
-    {name:"jobType", label:"What", type:"text", placeholder:"Acknowledgment · refinance package"},
-    {name:"location", label:"Where", type:"text", placeholder:"Town + distance tier"},
-    {name:"statutoryFee", label:"Notarial fee", type:"number", step:"0.01", placeholder:"2.50 / 15 / 25"},
-    {name:"nonNotarialFee", label:"Travel or signing fee", type:"number", step:"0.01", placeholder:"30 / 45 / 65 / 125"},
-    {name:"pages", label:"Package pages", type:"number", placeholder:"loan signings only"},
-    {name:"signingCompany", label:"Signing company", type:"text"},
-    {name:"referringAgent", label:"Referred by", type:"text", placeholder:"agent name · attribution only"},
-    {name:"source", label:"How they found you", type:"select", options:sourceOptions()}
-  ], "Add job", function(vals){
-    var id = "j" + Date.now();
-    var body = {
-      id:id, client:vals.client, channel:vals.channel||"consumer", date:vals.date,
-      jobType:vals.jobType||"", location:vals.location||"",
-      statutoryFee:num(vals.statutoryFee), nonNotarialFee:num(vals.nonNotarialFee),
-      pages:num(vals.pages), signingCompany:vals.signingCompany||"", referringAgent:vals.referringAgent||"",
-      paymentTerms:(CHANNELS[vals.channel]||CHANNELS.consumer).terms,
-      source:vals.source || (vals.referringAgent ? "agent" : (vals.signingCompany ? "snapdocs" : "direct")),
-      status:"booked", createdAt:new Date().toISOString()
-    };
-    return db.doc("jobs/"+id).set(body).then(function(){
-      return logActivity("Booked " + vals.client + " — " + (CHANNELS[body.channel]||CHANNELS.consumer).label.toLowerCase() + " on " + fmtDate(vals.date), "done");
-    });
-  }, "The signer's full name, address and ID details never go in here — they belong in the BlueNotary journal. First name and a town is all this board needs."));
+  list.forEach(function(j){ card.appendChild(jobRow(j)); });
+  var pii = el("div","empty"); pii.style.paddingTop = "14px"; pii.style.paddingBottom = "16px"; pii.style.borderTop = "1px solid var(--line-soft)";
+  pii.appendChild(el("span","hint","The signer's full name, address and ID details never go in here — they belong in the BlueNotary journal. A first name and a town is all this board needs."));
+  card.appendChild(pii);
   p.appendChild(card);
   v.appendChild(p);
 
@@ -1152,16 +1173,70 @@ function viewJobs(v){
   c2.appendChild(pad); p2.appendChild(c2); v.appendChild(p2);
 }
 
-function sourceOptions(){
-  var opts = state.channels.slice().sort(cmp("id")).map(function(c){ return [c.key, c.name]; });
-  return opts.length ? opts : [["direct","Called or texted directly"]];
+/* One job, one row. The same row serves Today and Jobs, so the buttons are the same in both places. */
+function jobRow(j, withRel){
+  var f = jobFees(j), ch = chanOf(j);
+  var r = el("div","rowitem" + (j.status==="done" ? " done" : ""));
+  r.appendChild(tile(j.refused ? "✕" : ch.label.charAt(0), j.refused ? "var(--warn)" : "var(" + ch.varname + ")"));
+  var g = el("div","grow");
+  g.appendChild(el("div","ttl", (j.client||"Unnamed") + " — " + (j.jobType||"notarization")));
+  var mt = el("div","meta");
+  mt.appendChild(chipFor(j));
+  var w = jobWhen(j), d = daysFromToday(j.date);
+  mt.appendChild(el("span",null, fmtWhen(j) + (withRel && d!==null ? " · " + relDays(d) : "")));
+  if(j.location) mt.appendChild(el("span",null, j.location));
+  if(j.signingCompany) mt.appendChild(el("span",null,"via "+j.signingCompany));
+  if(j.referringAgent) mt.appendChild(el("span",null,"sent by "+j.referringAgent));
+  if(j.pages) mt.appendChild(el("span",null, j.pages+" pages · "+money(f.printing)+" to print"+(f.printEstimated?" (est.)":"")));
+  if(j.refused) mt.appendChild(el("span","chip warn","refused"));
+  if(j.status==="done"){
+    if(f.gross > 0) mt.appendChild(el("span","chip "+(j.paidOn?"good":"warn"), j.paidOn ? "paid "+fmtDate(j.paidOn) : "unpaid · due "+fmtDate(invoiceDue(j))));
+    if(!j.refused) mt.appendChild(el("span","chip "+(j.journalEntryId?"good":"crit"), j.journalEntryId ? "journal "+j.journalEntryId : "no journal entry"));
+  } else {
+    if(w && w < new Date()) mt.appendChild(el("span","chip crit","time has passed"));
+    else mt.appendChild(el("span","chip","booked"));
+  }
+  if(j.channel==="signing-service" && j.scanbackDue){
+    mt.appendChild(el("span","chip "+(j.scanbackDone?"good":(j.scanbackDue < new Date().toISOString() ? "crit" : "warn")),
+      j.scanbackDone ? "scan-back sent" : "scan-back by " + fmtStamp(j.scanbackDue)));
+  }
+  g.appendChild(mt);
+  r.appendChild(g);
+  var right = el("div"); right.style.textAlign="right";
+  right.appendChild(el("div","money", money(f.gross)));
+  if(f.gross > 0) right.appendChild(el("div","hint", money(f.statutory)+" + "+money(f.nonNotarial)));
+  r.appendChild(right);
+  var acts = jobActions(j);
+  if(acts){ r.classList.add("hasacts"); r.appendChild(acts); }
+  return r;
 }
-function num(x){ return x===""||x==null ? 0 : (Number(x)||0); }
-function miniBtn(label, fn, danger){
-  var b = el("button","btn ghost", label); b.type="button";
+
+/* The close-out is buttons, not a form. Consumer and agent work is paid at the table, so "Done · paid" is one tap. */
+function jobActions(j){
+  if(canWrite === false || !db) return null;
+  var acts = el("div","acts");
+  var f = jobFees(j), ch = chanOf(j), name = j.client || "job";
+  var atTable = (j.paymentTerms || ch.terms) === "due-at-completion";
+  if(j.status!=="done"){
+    if(atTable && f.gross > 0)
+      acts.appendChild(miniBtn("Done · paid", function(){ writeDoc("jobs/"+j.id, {status:"done", paidOn:todayISO()}, "Done and paid: "+name+" "+money(f.gross)); }, false, true));
+    acts.appendChild(miniBtn(atTable && f.gross > 0 ? "Done, unpaid" : "Done", function(){ writeDoc("jobs/"+j.id, {status:"done"}, "Completed: "+name); }, false, !(atTable && f.gross > 0)));
+  } else {
+    if(!j.paidOn && f.gross > 0)
+      acts.appendChild(miniBtn("Paid", function(){ writeDoc("jobs/"+j.id, {paidOn:todayISO()}, "Paid: "+name+" "+money(f.gross)); }, false, true));
+    if(!j.journalEntryId && !j.refused)
+      acts.appendChild(miniBtn("Journal #", function(){ openJournalSheet(j); }, false, !!j.paidOn || f.gross===0));
+  }
+  if(j.channel==="signing-service" && j.scanbackDue && !j.scanbackDone)
+    acts.appendChild(miniBtn("Scan-back sent", function(){ writeDoc("jobs/"+j.id, {scanbackDone:new Date().toISOString()}, "Scan-back sent: "+name); }));
+  acts.appendChild(miniBtn("Remove", function(){ if(confirm("Remove this job?")) delDoc("jobs/"+j.id); }, true));
+  return acts;
+}
+
+function miniBtn(label, fn, danger, primary){
+  var b = el("button", primary ? "btn small primary" : (danger ? "btn ghost" : "btn small"), label); b.type="button";
   if(danger) b.style.color="var(--ink-3)";
-  b.style.fontSize="12px";
-  b.addEventListener("click", fn);
+  b.addEventListener("click", function(ev){ ev.stopPropagation(); fn(); });
   return b;
 }
 
@@ -1176,6 +1251,18 @@ function viewMoney(v){
     ["Paper and toner", '<span class="num">−'+esc(money(m.printing))+'</span>', "What printing the packages actually cost you"],
     ["Set aside for tax", '<span class="num">−'+esc(money(m.reserve))+'</span>', "20% of notarial fees, 35% of everything else", "warn"]
   ]));
+  var cb = el("div","bar"); cb.style.marginTop = "10px";
+  var copy = el("button","btn","Copy every job for taxes"); copy.type="button";
+  copy.disabled = !state.jobs.length;
+  copy.addEventListener("click", function(){
+    copy.disabled = true;
+    copyCSV().then(function(){ copy.textContent = "Copied — paste into a sheet"; })
+      .catch(function(){ copy.textContent = "Could not copy on this device"; })
+      .then(function(){ setTimeout(function(){ copy.textContent = "Copy every job for taxes"; copy.disabled = !state.jobs.length; }, 2200); });
+  });
+  cb.appendChild(copy);
+  cb.appendChild(el("span","hint", state.jobs.length ? "One line per job, both fee lines kept apart, as a table you can paste into Google Sheets or hand a CPA." : "Fills in once there is a job to copy."));
+  p.appendChild(cb);
   v.appendChild(p);
 
   /* outstanding */
@@ -1299,9 +1386,9 @@ function viewMarketing(v){
   var p = panel("Where the work comes from", "Four ways a job can reach you. This tells you which ones are actually working, and what each one has cost.");
 
   var jobsBySource = {};
-  state.jobs.forEach(function(j){ var s=j.source||"direct"; jobsBySource[s] = (jobsBySource[s]||0)+1; });
+  state.jobs.forEach(function(j){ if(j.refused) return; var s=j.source||""; jobsBySource[s] = (jobsBySource[s]||0)+1; });
   var revBySource = {};
-  doneJobs().forEach(function(j){ var s=j.source||"direct"; revBySource[s] = (revBySource[s]||0) + jobFees(j).gross; });
+  doneJobs().forEach(function(j){ if(j.refused) return; var s=j.source||""; revBySource[s] = (revBySource[s]||0) + jobFees(j).gross; });
 
   var card = el("div","card");
   if(!state.channels.length){
@@ -1345,7 +1432,7 @@ function viewMarketing(v){
     var bars = el("div","bars");
     keys.sort(function(a,b){ return jobsBySource[b]-jobsBySource[a]; }).forEach(function(k){
       var ch = state.channels.filter(function(c){ return c.key===k; })[0];
-      bars.appendChild(barRow(ch ? ch.name : k, jobsBySource[k], max, "var(--accent)", jobsBySource[k] + (jobsBySource[k]===1?" job":" jobs")));
+      bars.appendChild(barRow(ch ? ch.name : (k || "Not recorded"), jobsBySource[k], max, "var(--accent)", jobsBySource[k] + (jobsBySource[k]===1?" job":" jobs")));
     });
     pad.appendChild(bars);
   }
@@ -1467,7 +1554,7 @@ function viewCalendar(v){
   if(nextJob){
     hero.appendChild(el("div","k","Next appointment"));
     hero.appendChild(el("div","v", nextJob.title.split(" — ")[0]));
-    hero.appendChild(el("div","sub", fmtDate(nextJob.date) + " · " + relDays(daysFromToday(nextJob.date)) +
+    hero.appendChild(el("div","sub", fmtWhen(nextJob.obj) + " · " + relDays(daysFromToday(nextJob.date)) +
       (nextJob.note ? " · " + nextJob.note : "")));
   } else {
     hero.appendChild(el("div","k","Next appointment"));
@@ -1542,7 +1629,7 @@ function viewCalendar(v){
   var dsec = panel(prettyDay(ui.calDay), dayItems.length ? null : "Nothing on this day.");
   var dcard = el("div","card");
   if(!dayItems.length){
-    dcard.appendChild(makeEmpty("Clear", "Pick another day above, or add a job, an open item or a launch date and it appears here."));
+    dcard.appendChild(makeEmpty("Clear", "Pick another day above, or tap Job below and it appears here with its time."));
   }
   dayItems.forEach(function(x){ dcard.appendChild(calRow(x)); });
   dsec.appendChild(dcard);
@@ -1620,6 +1707,7 @@ function calRow(x, withDate){
     var dd = daysFromToday(x.date);
     mt.appendChild(el("span","chip " + (dd<0?"crit":dd<=3?"warn":""), fmtDate(x.date) + " · " + relDays(dd)));
   }
+  if(x.time) mt.appendChild(el("span","chip", fmtTime(x.time)));
   if(x.kind==="deadline") mt.appendChild(el("span","chip crit","hard deadline"));
   if(x.note) mt.appendChild(el("span",null,x.note));
   g.appendChild(mt);
@@ -1633,6 +1721,11 @@ function viewOpen(v){
   var p = panel("Open items", "Tasks you set yourself, and questions sitting with someone else. A question you have asked is not a task you can do.");
   var bar = el("div","bar");
   bar.appendChild(segmented(["open","done","all"], ["Open","Closed","Everything"], ui.taskFilter, function(x){ ui.taskFilter=x; render(); }));
+  if(canWrite !== false && db){
+    var nb = el("button","btn primary","+ Item"); nb.type="button";
+    nb.addEventListener("click", function(){ openTaskSheet(); });
+    bar.appendChild(nb);
+  }
   p.appendChild(bar);
 
   var list = state.tasks.slice().sort(function(a,b){
@@ -1652,52 +1745,403 @@ function viewOpen(v){
   });
 
   if(!list.length){
-    p.appendChild(emptyCard("Nothing here", "Add an item below — a task you owe, or a question you have out with DORES, BlueNotary or the county clerk."));
+    p.appendChild(emptyCard("Nothing here", "Tap + Item — a task you owe, or a question you have out with DORES, BlueNotary or the county clerk."));
   }
   order.forEach(function(k){
     var sec = el("div"); sec.style.marginTop="14px";
     var h = el("div","eyebrow", k + " · " + groups[k].length); sec.appendChild(h);
     var card = el("div","card"); card.style.marginTop="6px";
-    groups[k].forEach(function(t){
-      var r = el("div","rowitem" + (t.status==="done"?" done":""));
-      var cb = el("input"); cb.type="checkbox"; cb.checked = t.status==="done"; cb.id = "tk_"+t.id;
-      cb.disabled = canWrite === false || !db;
-      cb.addEventListener("change", function(){
-        writeDoc("tasks/"+t.id, {status: cb.checked?"done":"open"}, (cb.checked?"Closed: ":"Reopened: ") + t.title);
-      });
-      r.appendChild(cb);
-      var g = el("div","grow");
-      var lab = el("label","ttl", t.title); lab.setAttribute("for", cb.id); lab.style.cursor="pointer";
-      g.appendChild(lab);
-      var mt = el("div","meta");
-      if(t.kind==="question") mt.appendChild(el("span","chip","question out"));
-      if(t.due){ var d=daysFromToday(t.due); mt.appendChild(el("span","chip "+(d<0?"crit":d<=3?"warn":""), fmtDate(t.due)+" · "+relDays(d))); }
-      if(t.detail) mt.appendChild(el("span",null,t.detail));
-      if(mt.childNodes.length) g.appendChild(mt);
-      r.appendChild(g);
-      if(canWrite !== false) r.appendChild(miniBtn("Remove", function(){ if(confirm("Remove this item?")) delDoc("tasks/"+t.id); }, true));
-      card.appendChild(r);
-    });
+    groups[k].forEach(function(t){ card.appendChild(taskRow(t)); });
     sec.appendChild(card);
     p.appendChild(sec);
   });
-
-  var addCard = el("div","card"); addCard.style.marginTop="14px";
-  addCard.appendChild(addForm("task", [
-    {name:"title", label:"What", type:"text", full:true, required:true, placeholder:"Call the Camden County Clerk about the trade name"},
-    {name:"kind", label:"Kind", type:"select", options:[["task","a task I do"],["question","a question I am waiting on"]]},
-    {name:"who", label:"With whom", type:"text", placeholder:"DORES · BlueNotary · County Clerk"},
-    {name:"due", label:"By when", type:"date"},
-    {name:"detail", label:"Note", type:"text", full:true}
-  ], "Add item", function(vals){
-    var id = "t" + Date.now();
-    return db.doc("tasks/"+id).set({
-      id:id, title:vals.title, kind:vals.kind||"task", who:vals.who||"", due:vals.due||"",
-      detail:vals.detail||"", status:"open", createdAt:new Date().toISOString()
-    });
-  }));
-  p.appendChild(addCard);
   v.appendChild(p);
+}
+
+function taskRow(t){
+  var r = el("div","rowitem" + (t.status==="done"?" done":""));
+  var cb = el("input"); cb.type="checkbox"; cb.checked = t.status==="done"; cb.id = "tk_"+t.id;
+  cb.disabled = canWrite === false || !db;
+  cb.addEventListener("change", function(){
+    writeDoc("tasks/"+t.id, {status: cb.checked?"done":"open"}, (cb.checked?"Closed: ":"Reopened: ") + t.title);
+  });
+  r.appendChild(cb);
+  var g = el("div","grow");
+  var lab = el("label","ttl", t.title); lab.setAttribute("for", cb.id); lab.style.cursor="pointer";
+  g.appendChild(lab);
+  var mt = el("div","meta");
+  if(t.kind==="question") mt.appendChild(el("span","chip", t.who ? "with " + t.who : "question out"));
+  if(t.due){ var d=daysFromToday(t.due); mt.appendChild(el("span","chip "+(d<0?"crit":d<=3?"warn":""), fmtDate(t.due)+" · "+relDays(d))); }
+  if(t.detail) mt.appendChild(el("span",null,t.detail));
+  if(mt.childNodes.length) g.appendChild(mt);
+  r.appendChild(g);
+  if(canWrite !== false && db) r.appendChild(miniBtn("Remove", function(){ if(confirm("Remove this item?")) delDoc("tasks/"+t.id); }, true));
+  return r;
+}
+
+/* ============================ sheets: tap first, type last ============================ */
+/* Every capture on the page goes through one of these. A sheet is a dialog that slides up on a
+   phone: chips for anything that has a known set of answers, a stepper for a count, and a text
+   field only where the answer really is a word (a first name). The quote at the bottom recomputes
+   on every tap, off the same rate card the Money tab prints. */
+function sheet(title, eyebrow){
+  var old = document.getElementById("sheetDlg"); if(old) old.remove();
+  var d = document.createElement("dialog"); d.id = "sheetDlg"; d.className = "sheet";
+  var head = el("div","dlg-head");
+  if(eyebrow) head.appendChild(el("div","eyebrow", eyebrow));
+  head.appendChild(el("h3", null, title));
+  d.appendChild(head);
+  var body = el("div","dlg-body"); d.appendChild(body);
+  var foot = el("div","dlg-foot"); d.appendChild(foot);
+  document.body.appendChild(d);
+  d.addEventListener("close", function(){ d.remove(); });
+  return {d:d, body:body, foot:foot};
+}
+function section(parent, label){ var w = el("div","sec"); if(label) w.appendChild(el("div","eyebrow",label)); parent.appendChild(w); return w; }
+function chipGroup(opts, get, set){
+  var g = el("div","chips");
+  opts.forEach(function(o){
+    var b = el("button", null, o.label); b.type = "button";
+    if(o.small) b.appendChild(el("small", null, o.small));
+    b.setAttribute("aria-pressed", get() === o.v ? "true" : "false");
+    b.addEventListener("click", function(){ set(o.v); });
+    g.appendChild(b);
+  });
+  return g;
+}
+function toggleGroup(opts, isOn, flip){
+  var g = el("div","chips");
+  opts.forEach(function(o){
+    var b = el("button", null, o.label); b.type = "button";
+    if(o.small) b.appendChild(el("small", null, o.small));
+    b.setAttribute("aria-pressed", isOn(o.v) ? "true" : "false");
+    b.addEventListener("click", function(){ flip(o.v); });
+    g.appendChild(b);
+  });
+  return g;
+}
+function stepper(get, set, min, max, unit){
+  var s = el("div","stepper");
+  var minus = el("button", null, "−"); minus.type = "button";
+  var val = el("span", null, String(get()));
+  var plus = el("button", null, "+"); plus.type = "button";
+  minus.addEventListener("click", function(){ if(get() > min){ set(get()-1); val.textContent = String(get()); } });
+  plus.addEventListener("click", function(){ if(get() < max){ set(get()+1); val.textContent = String(get()); } });
+  s.appendChild(minus); s.appendChild(val); s.appendChild(plus);
+  if(unit){ var w = el("div"); w.style.display="flex"; w.style.alignItems="center"; w.style.gap="10px"; w.appendChild(s); w.appendChild(el("span","hint",unit)); return w; }
+  return s;
+}
+function textField(parent, label, get, set, placeholder, type){
+  var lab = el("label","field"); lab.appendChild(el("span",null,label));
+  var inp = el("input"); inp.type = type || "text"; inp.value = get() || ""; if(placeholder) inp.placeholder = placeholder;
+  inp.id = "sf_" + label.replace(/\W+/g,"_").toLowerCase();
+  inp.addEventListener("input", function(){ set(inp.value); });
+  lab.appendChild(inp); parent.appendChild(lab); return inp;
+}
+function saveButton(sh, label, onSave){
+  var cancel = el("button","btn","Close"); cancel.type="button";
+  cancel.addEventListener("click", function(){ sh.d.close(); });
+  sh.foot.appendChild(cancel);
+  var save = el("button","btn primary", label); save.type="button";
+  if(canWrite === false || !db) save.disabled = true;
+  save.addEventListener("click", function(){
+    var problem = onSave.check ? onSave.check() : null;
+    if(problem){ alert(problem); return; }
+    save.disabled = true; save.textContent = "Saving…";
+    Promise.resolve(onSave()).then(function(){ sh.d.close(); render(); }).catch(function(err){
+      save.disabled = false; save.textContent = label;
+      if(err && err.code === "invalid_argument"){ canWrite = false; render(); }
+      alert("That did not save" + (err && err.message ? ": " + err.message : ".") + " Nothing was changed.");
+    });
+  });
+  sh.foot.appendChild(save);
+  return save;
+}
+function whenChips(parent, s, redraw){
+  var w = section(parent, "When");
+  w.appendChild(chipGroup([{v:"now",label:"Now"},{v:"today",label:"Later today"},{v:"tomorrow",label:"Tomorrow"},{v:"pick",label:"Pick a day"}],
+    function(){ return s.when; },
+    function(v){
+      s.when = v;
+      if(v==="now"){ s.date = todayISO(); s.time = nowHHMM(); }
+      else if(v==="today"){ s.date = todayISO(); }
+      else if(v==="tomorrow"){ s.date = addDays(todayISO(), 1); }
+      redraw();
+    }));
+  if(s.when !== "now"){
+    var row = el("div","two");
+    if(s.when === "pick") textField(row, "Day", function(){ return s.date; }, function(v){ s.date = v; }, "", "date");
+    textField(row, "Time", function(){ return s.time; }, function(v){ s.time = v; }, "", "time");
+    w.appendChild(row);
+  } else {
+    w.appendChild(el("div","hint", "Right now — " + fmtDate(s.date) + " at " + fmtTime(s.time) + "."));
+  }
+}
+
+function openJobSheet(){
+  var s = {channel:"consumer", act:"ack", acts:1, travel:null, extras:{}, pkg:"", fee:null, feeCustom:"", pages:null,
+           when:"now", date:todayISO(), time:nowHHMM(), client:"", town:"", signingCompany:"", referringAgent:"",
+           source:"", outcome:"booked"};
+  var sh = sheet("New job", "Tap through it — the quote writes itself");
+  var body = sh.body;
+
+  function actDef(){ for(var i=0;i<ACTS.length;i++) if(ACTS[i].v===s.act) return ACTS[i]; return ACTS[0]; }
+  function signing(){ return s.channel === "signing-service"; }
+  function atTable(){ return (CHANNELS[s.channel]||CHANNELS.consumer).terms === "due-at-completion"; }
+  function fees(){
+    var a = actDef();
+    var statutory = signing() ? (s.act==="deed" ? 15 : s.act==="mortgage" ? 25 : 2.5 * s.acts) : a.fee * (a.per ? s.acts : 1);
+    var non = 0;
+    if(signing()){ non = s.fee != null ? s.fee : (Number(s.feeCustom)||0); }
+    else { non = (s.travel||0); EXTRAS.forEach(function(x){ if(s.extras[x.v]) non += x.fee; }); }
+    var pages = signing() ? (s.pages||0) : 0;
+    var printing = pages * 2 * PAGE_COST;
+    var reserve = statutory*RESERVE.statutory + non*RESERVE.nonNotarial;
+    return {statutory:statutory, non:non, gross:statutory+non, printing:printing, reserve:reserve, net:statutory+non-printing-reserve, pages:pages};
+  }
+
+  function draw(){
+    body.textContent = "";
+    var ch = section(body, "Channel — who pays, and when");
+    ch.appendChild(chipGroup(Object.keys(CHANNELS).map(function(k){ return {v:k, label:CHANNELS[k].label, small:CHANNELS[k].terms==="due-at-completion" ? "at the table" : CHANNELS[k].terms}; }),
+      function(){ return s.channel; }, function(v){ s.channel = v; if(v==="signing-service" && s.act==="ack") s.act = "mortgage"; draw(); }));
+
+    if(signing()){
+      var pk = section(body, "Package");
+      pk.appendChild(chipGroup(PACKAGES.map(function(p){ return {v:p, label:p}; }), function(){ return s.pkg; }, function(v){ s.pkg = v; if(v==="Seller package") s.act="deed"; else if(s.act==="deed") s.act="mortgage"; draw(); }));
+      var ln1 = section(body, "Line 1 — the State's fee");
+      ln1.appendChild(chipGroup([{v:"mortgage",label:"Mortgage — borrower",small:"$25 flat"},{v:"deed",label:"Deed — seller",small:"$15 flat"},{v:"ack",label:"Per act",small:"$2.50 each"}],
+        function(){ return s.act; }, function(v){ s.act = v; draw(); }));
+      if(s.act==="ack") ln1.appendChild(stepper(function(){ return s.acts; }, function(v){ s.acts=v; quote(); }, 1, 40, "acts"));
+      var fe = section(body, "Line 2 — the fee the company named");
+      fe.appendChild(chipGroup(SIGNING_FEES.map(function(f){ return {v:f, label:money(f)}; }).concat([{v:-1, label:"Other"}]),
+        function(){ return s.other ? -1 : s.fee; }, function(v){ s.other = (v===-1); s.fee = s.other ? null : v; draw(); }));
+      if(s.other) textField(fe, "Fee", function(){ return s.feeCustom; }, function(v){ s.feeCustom = v; quote(); }, "", "number");
+      var pg = section(body, "Pages in the package — sets the printing cost");
+      pg.appendChild(chipGroup(PAGE_PRESETS.map(function(n){ return {v:n, label:n+" pages", small:money(n*2*PAGE_COST)}; }).concat([{v:0,label:"Not stated"}]),
+        function(){ return s.pages; }, function(v){ s.pages = v; draw(); }));
+      textField(section(body, null), "Signing company", function(){ return s.signingCompany; }, function(v){ s.signingCompany = v; }, "Who sent the package");
+    } else {
+      var ac = section(body, "What — line 1, the State's fee");
+      ac.appendChild(chipGroup(ACTS, function(){ return s.act; }, function(v){ s.act = v; draw(); }));
+      if(actDef().per) ac.appendChild(stepper(function(){ return s.acts; }, function(v){ s.acts=v; quote(); }, 1, 40, "signatures to notarize"));
+      var tr = section(body, "Travel — line 2, yours");
+      tr.appendChild(chipGroup(TRAVEL, function(){ return s.travel; }, function(v){ s.travel = v; draw(); }));
+      tr.appendChild(toggleGroup(EXTRAS, function(v){ return !!s.extras[v]; }, function(v){ s.extras[v] = !s.extras[v]; draw(); }));
+    }
+
+    whenChips(body, s, draw);
+
+    var who = section(body, null);
+    var row = el("div","two");
+    textField(row, "First name", function(){ return s.client; }, function(v){ s.client = v; }, "First name only");
+    textField(row, "Town", function(){ return s.town; }, function(v){ s.town = v; }, "Optional");
+    who.appendChild(row);
+    if(s.channel==="agent") textField(who, "Sent by", function(){ return s.referringAgent; }, function(v){ s.referringAgent = v; }, "Agent's name — attribution only, never a payment");
+    if(s.channel==="brokerage") textField(who, "Brokerage", function(){ return s.referringAgent; }, function(v){ s.referringAgent = v; }, "Who is billed");
+
+    if(s.channel==="consumer" && state.channels.length){
+      var so = section(body, "How they found you");
+      so.appendChild(chipGroup(state.channels.slice().sort(cmp("id")).map(function(c){ return {v:c.key, label:c.name.split(" and ")[0]}; }),
+        function(){ return s.source; }, function(v){ s.source = (s.source===v ? "" : v); draw(); }));
+    }
+
+    if(s.when==="now"){
+      var oc = section(body, "And it is");
+      var opts = [{v:"booked", label:"Booked"}];
+      if(atTable()) opts.push({v:"done-paid", label:"Done · paid", small:"at the table"});
+      opts.push({v:"done", label: atTable() ? "Done, unpaid" : "Done"});
+      oc.appendChild(chipGroup(opts, function(){ return s.outcome; }, function(v){ s.outcome = v; draw(); }));
+    }
+
+    var q = el("div","quote"); q.id = "quoteBox"; body.appendChild(q);
+    quote();
+  }
+
+  function quote(){
+    var q = document.getElementById("quoteBox"); if(!q) return;
+    var f = fees(); q.textContent = "";
+    var under = signing() && f.non > 0 && f.non < SIGNING_FLOOR;
+    q.className = "quote" + (under ? " warn" : "");
+    q.appendChild(el("span","big", money(f.gross)));
+    q.appendChild(el("span","num", money(f.statutory) + " + " + money(f.non)));
+    var keep = f.gross ? ("You keep about " + money(Math.max(0, f.net)) + " after " + money(f.reserve) + " set aside" + (f.printing ? " and " + money(f.printing) + " of printing" : "") + ".") : "Pick what the job is and the price appears.";
+    if(under) keep = "Under your " + money(SIGNING_FLOOR) + " floor — your call, not the page's. " + keep;
+    q.appendChild(el("span","hint", keep));
+  }
+
+  draw();
+  var onSave = function(){
+    var f = fees(), a = actDef(), id = "j" + Date.now();
+    var type = signing() ? (s.pkg || "Loan signing") : (a.type + (a.per && s.acts > 1 ? " ×" + s.acts : ""));
+    var tier = null; TRAVEL.forEach(function(t){ if(t.v===s.travel && t.v) tier = t.label; });
+    var location = [s.town.trim(), signing() ? "" : tier].filter(Boolean).join(" · ");
+    var done = s.when==="now" && s.outcome !== "booked";
+    var body = {
+      id:id, client:s.client.trim(), channel:s.channel, date:s.date, time:s.time || "",
+      jobType:type, location:location, acts: a.per ? s.acts : 1,
+      statutoryFee:f.statutory, nonNotarialFee:f.non, pages:f.pages,
+      signingCompany:s.signingCompany.trim(), referringAgent:s.referringAgent.trim(),
+      paymentTerms:(CHANNELS[s.channel]||CHANNELS.consumer).terms,
+      source:s.source || (s.channel==="agent" || s.channel==="brokerage" ? "agent" : (signing() ? "snapdocs" : "")),
+      status: done ? "done" : "booked", createdAt:new Date().toISOString()
+    };
+    if(done && s.outcome==="done-paid") body.paidOn = todayISO();
+    if(signing()){
+      var w = jobWhen(body); if(w){ w.setHours(w.getHours() + SCANBACK_HOURS); body.scanbackDue = w.toISOString(); body.scanbackHours = SCANBACK_HOURS; }
+    }
+    return db.doc("jobs/"+id).set(body).then(function(){
+      var line = (done ? (s.outcome==="done-paid" ? "Done and paid: " : "Done: ") : "Booked ") + body.client + " — " + type.toLowerCase() + ", " + money(f.gross) + (done ? "" : " on " + fmtWhen(body));
+      return logActivity(line, "done");
+    });
+  };
+  onSave.check = function(){
+    if(!s.client.trim()) return "A first name is the one thing this needs.";
+    if(signing() && fees().non <= 0) return "Tap the fee the company named, or type it under Other.";
+    if(!s.date) return "Pick a day.";
+    return null;
+  };
+  saveButton(sh, "Save job", onSave);
+  sh.d.showModal();
+}
+
+/* A refusal is not a notarial act, so it never enters the journal — which is exactly why it has to be
+   written down here, the same day, in plain words. Reason chips are the six stop-path questions. */
+function openRefusalSheet(){
+  var s = {reason:"", other:"", travel:null, when:"now", date:todayISO(), time:nowHHMM(), client:"", town:""};
+  var sh = sheet("Turned one away", "Log it now — nothing else will");
+  var body = sh.body;
+  function draw(){
+    body.textContent = "";
+    var re = section(body, "Why — what you saw, not what you think they were up to");
+    re.appendChild(chipGroup(REFUSAL_REASONS.map(function(r){ return {v:r, label:r}; }), function(){ return s.reason; }, function(v){ s.reason = v; draw(); }));
+    if(s.reason==="Other") textField(re, "In your own words", function(){ return s.other; }, function(v){ s.other = v; }, "One line");
+    var tr = section(body, "Did you make the trip? The travel fee is still earned");
+    tr.appendChild(chipGroup(TRAVEL, function(){ return s.travel; }, function(v){ s.travel = v; draw(); }));
+    whenChips(body, s, draw);
+    var row = el("div","two");
+    textField(row, "First name", function(){ return s.client; }, function(v){ s.client = v; }, "First name only");
+    textField(row, "Town", function(){ return s.town; }, function(v){ s.town = v; }, "Optional");
+    body.appendChild(row);
+    body.appendChild(el("p","hint","“Signer could not produce unexpired ID” is a record. “Signer was attempting fraud” is an accusation. First name only — never the ID number."));
+  }
+  draw();
+  var onSave = function(){
+    var id = "j" + Date.now();
+    var reason = s.reason==="Other" ? (s.other.trim() || "Other") : s.reason;
+    var travel = s.travel || 0;
+    var body = {
+      id:id, client:s.client.trim() || "Unnamed", channel:"consumer", date:s.date, time:s.time || "",
+      jobType:"Refused — " + reason.toLowerCase(), refused:true, refusalReason:reason,
+      location:s.town.trim(), statutoryFee:0, nonNotarialFee:travel,
+      paymentTerms:"due-at-completion", source:"", status:"done", createdAt:new Date().toISOString()
+    };
+    if(!travel) body.paidOn = todayISO();   /* nothing to collect, so nothing to chase */
+    return db.doc("jobs/"+id).set(body).then(function(){
+      return logActivity("Refused: " + body.client + " — " + reason.toLowerCase() + (travel ? " · travel " + money(travel) + " still owed" : ""), "refused");
+    });
+  };
+  onSave.check = function(){ return s.reason ? null : "Tap the reason. That is the record."; };
+  saveButton(sh, "Log the refusal", onSave);
+  sh.d.showModal();
+}
+
+function openNoteSheet(){
+  var s = {text:"", kind:"note"};
+  var sh = sheet("Log a line", "A few words is the whole entry");
+  var body = sh.body;
+  function draw(){
+    body.textContent = "";
+    textField(body, "What happened", function(){ return s.text; }, function(v){ s.text = v; }, "Paid the $100 · clerk called back · packet arrived");
+    var k = section(body, "Kind");
+    k.appendChild(chipGroup([["note","note"],["done","done"],["filing","filing"],["lead","new lead"],["money","money"]].map(function(o){ return {v:o[0], label:o[1]}; }),
+      function(){ return s.kind; }, function(v){ s.kind = v; draw(); }));
+  }
+  draw();
+  var onSave = function(){ return logActivity(s.text.trim(), s.kind); };
+  onSave.check = function(){ return s.text.trim() ? null : "Type the one line."; };
+  saveButton(sh, "Log it", onSave);
+  sh.d.showModal();
+  var inp = sh.body.querySelector("input"); if(inp) inp.focus();
+}
+
+function openTaskSheet(){
+  var s = {title:"", kind:"task", who:"", whoOther:"", dueMode:"none", due:""};
+  var sh = sheet("Open item", "A task you owe, or a question out with someone");
+  var body = sh.body;
+  function draw(){
+    body.textContent = "";
+    textField(body, "What", function(){ return s.title; }, function(v){ s.title = v; }, "Call the clerk about hours");
+    var kd = section(body, "Kind");
+    kd.appendChild(chipGroup([{v:"task",label:"Something I do"},{v:"question",label:"Waiting on someone"}], function(){ return s.kind; }, function(v){ s.kind = v; draw(); }));
+    if(s.kind==="question"){
+      var w = section(body, "With whom");
+      w.appendChild(chipGroup(WHO.map(function(x){ return {v:x, label:x}; }).concat([{v:"other", label:"Someone else"}]), function(){ return s.who; }, function(v){ s.who = v; draw(); }));
+      if(s.who==="other") textField(w, "Who", function(){ return s.whoOther; }, function(v){ s.whoOther = v; }, "");
+    }
+    var d = section(body, "By when");
+    d.appendChild(chipGroup([{v:"none",label:"No date"},{v:"today",label:"Today"},{v:"tomorrow",label:"Tomorrow"},{v:"week",label:"Next week"},{v:"pick",label:"Pick a day"}],
+      function(){ return s.dueMode; },
+      function(v){ s.dueMode = v; s.due = v==="today" ? todayISO() : v==="tomorrow" ? addDays(todayISO(),1) : v==="week" ? addDays(todayISO(),7) : v==="pick" ? s.due : ""; draw(); }));
+    if(s.dueMode==="pick") textField(d, "Day", function(){ return s.due; }, function(v){ s.due = v; }, "", "date");
+  }
+  draw();
+  var onSave = function(){
+    var id = "t" + Date.now();
+    var who = s.kind==="question" ? (s.who==="other" ? s.whoOther.trim() : s.who) : "";
+    return db.doc("tasks/"+id).set({ id:id, title:s.title.trim(), kind:s.kind, who:who, due:s.due||"", detail:"", status:"open", createdAt:new Date().toISOString() });
+  };
+  onSave.check = function(){ return s.title.trim() ? null : "Say what it is, in a few words."; };
+  saveButton(sh, "Add item", onSave);
+  sh.d.showModal();
+}
+
+function openJournalSheet(j){
+  var s = {id:""};
+  var sh = sheet("Journal entry", (j.client||"This job") + " · " + fmtWhen(j));
+  sh.body.appendChild(el("p","detail","The entry number BlueNotary gave the act. This is what clears the alarm and what the monthly reconciliation matches on."));
+  textField(sh.body, "BlueNotary entry", function(){ return s.id; }, function(v){ s.id = v; }, "Entry number");
+  var onSave = function(){
+    return db.doc("jobs/"+j.id).update({journalEntryId:s.id.trim()}).then(function(){ return logActivity("Journal entry " + s.id.trim() + " recorded for " + (j.client||"job"), "done"); });
+  };
+  onSave.check = function(){ return s.id.trim() ? null : "The entry number is the record."; };
+  saveButton(sh, "Record it", onSave);
+  sh.d.showModal();
+  var inp = sh.body.querySelector("input"); if(inp) inp.focus();
+}
+
+/* ============================ the dock ============================ */
+function renderDock(){
+  var d = document.getElementById("dock");
+  if(!d){ d = el("div","dock"); d.id = "dock"; document.body.appendChild(d); }
+  d.textContent = "";
+  if(canWrite === false || !db){ d.hidden = true; return; }
+  d.hidden = false;
+  var inn = el("div","dock-in");
+  [["＋ Job", openJobSheet, true], ["Refused", openRefusalSheet, false], ["Note", openNoteSheet, false]].forEach(function(x){
+    var b = el("button", x[2] ? "main" : null, x[0]); b.type = "button";
+    b.addEventListener("click", function(){ x[1](); });
+    inn.appendChild(b);
+  });
+  d.appendChild(inn);
+}
+
+/* ============================ export ============================ */
+function copyCSV(){
+  var rows = [["date","time","first name","channel","what","statutory fee","non-notarial fee","printing","set aside","paid on","journal entry","refused","source"]];
+  state.jobs.slice().sort(cmp("date")).forEach(function(j){
+    var f = jobFees(j);
+    rows.push([j.date||"", j.time||"", j.client||"", j.channel||"", j.jobType||"", f.statutory.toFixed(2), f.nonNotarial.toFixed(2),
+               f.printing.toFixed(2), f.reserve.toFixed(2), j.paidOn||"", j.journalEntryId||"", j.refused ? "yes" : "", j.source||""]);
+  });
+  var csv = rows.map(function(r){ return r.map(function(c){ c = String(c==null?"":c); return /[",\n]/.test(c) ? '"' + c.replace(/"/g,'""') + '"' : c; }).join(","); }).join("\n");
+  var viaApi = (navigator.clipboard && navigator.clipboard.writeText) ? navigator.clipboard.writeText(csv) : Promise.reject(new Error("no clipboard"));
+  return viaApi.catch(function(){
+    var ta = document.createElement("textarea"); ta.value = csv; ta.setAttribute("readonly",""); ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    var ok = false; try{ ok = document.execCommand("copy"); }catch(e){}
+    ta.remove(); if(!ok) throw new Error("copy blocked");
+  });
 }
 
 /* ============================ shared controls ============================ */
