@@ -1,10 +1,10 @@
 ---
 created: 2026-09-16T11:56-04:00
-updated: 2026-09-17T14:10:00-04:00
+updated: 2026-09-18T09:00-04:00
 domain: project
 type: task
 status: active
-due: 2026-09-20T08:00-04:00
+due: 2026-09-21T08:00-04:00
 tags: [notary, exam, milestone, checkpoint]
 calendar_event_id: t1rtn54jbd05921udlho63jqjo
 source: claude
@@ -372,3 +372,32 @@ If the exam moves up four days and the LLC does not, nothing downstream actually
 
 The oath still has to be sworn **in person at the county clerk**, and the commission still has to
 arrive first. The critical path is shorter, not shortened past the parts the State controls.
+
+## Update 2026-09-18T09:00-04:00 — exam did not happen Thursday; moved to MONDAY 2026-09-21
+
+Lemar did not sit the exam on the 17th. **New date: Monday 2026-09-21.** This note's `due` moves
+with it, so calendar-sync moves the 8:00 AM event rather than leaving a stale alert behind.
+
+**Nothing is lost by the slip except four days.** The exam is online and on-demand — there was
+never a booked seat — so moving it costs nothing but the days themselves. What those days cost is
+real though: every queue in the plan starts from the commission, and the commission starts from
+the application.
+
+### The thing to do about it: stop bundling the LLC with the exam
+
+The LLC, the EIN, and the Google Business Profile **do not depend on the exam, the commission, or
+each other's timing.** They were grouped with "exam day" as a convenience and that grouping is now
+actively harmful — it means a slipped exam slips the entity too, and the entity is what gates the
+whole B2B side:
+
+> no LLC → no EIN → no W-9 → no Snapdocs registration
+
+**Recommendation: file `Given Word Notary LLC` before Monday, independently of the exam.** $100 and
+about thirty minutes, per [[2026-09-16-given-word-notary-llc-filing-walkthrough]]. If it is done by
+the weekend, then whenever the exam is passed the entity is already waiting, and the Business
+Profile — the longest queue on the plan — can enter Google's queue that same week.
+
+### Unchanged
+Fees (~$47.50 to the State), the 50-question / 80% / 75-minute format, three attempts on the fee,
+the six-hour manual-and-videos prerequisite, and the 90-day in-person oath window once the
+commission lands. All in [[2026-09-16-nj-notary-exam-application-walkthrough]].
