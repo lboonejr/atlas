@@ -292,7 +292,7 @@ var TABS = [
 var LAUNCH_STATUS = [
   ["todo","Not started"],
   ["doing","In progress"],
-  ["waiting","Waiting on someone else"],
+  ["waiting","Waiting"],
   ["blocked","Blocked"],
   ["done","Done"]
 ];
@@ -1387,7 +1387,7 @@ function viewLaunch(v){
   var dated = state.launch.filter(function(i){ return i.due && !i.done; }).length;
   var noted = state.launch.filter(function(i){ return (i.updates||[]).length; }).length;
   top.appendChild(statTile("In progress", '<span class="num">'+counts.doing+'</span>',
-    counts.waiting + " waiting on someone else"));
+    counts.waiting + (counts.waiting===1 ? " step is waiting" : " steps are waiting") + " on money, a date, or someone else"));
   top.appendChild(statTile("Blocked", '<span class="num">'+counts.blocked+'</span>',
     counts.blocked ? "Open each one and say what is in the way" : "Nothing is stuck", counts.blocked?"crit":"good"));
   top.appendChild(statTile("Written up", '<span class="num">'+noted+'</span>',
