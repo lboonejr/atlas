@@ -1,6 +1,6 @@
 ---
 created: 2026-09-16T11:56-04:00
-updated: 2026-09-18T09:00-04:00
+updated: 2026-09-18T12:45:00-04:00
 domain: project
 type: task
 status: active
@@ -401,3 +401,44 @@ Profile — the longest queue on the plan — can enter Google's queue that same
 Fees (~$47.50 to the State), the 50-question / 80% / 75-minute format, three attempts on the fee,
 the six-hour manual-and-videos prerequisite, and the 90-day in-person oath window once the
 commission lands. All in [[2026-09-16-nj-notary-exam-application-walkthrough]].
+
+**SUPERSEDED IN PART, same day at 12:45** — the recommendation below to file before Monday was overtaken by cost: the filing is now dated Friday 2026-09-25. The reasoning for filing the entity independently of the exam stands unchanged. See the next update.
+
+## Update 2026-09-18T12:45-04:00 — the LLC filing moves to Friday 2026-09-25, on cost
+
+Lemar does not have the $100 together this week and asked for room to get it. The filing is now
+dated **Friday 2026-09-25** on the workstation's Launch page, marked `waiting`, with the reason
+recorded on the step itself.
+
+**This is a cash-timing decision, not a change of plan.** The recommendation in the update of
+2026-09-16T21:30 stands exactly as written — file the entity independently of the exam, because it
+is the first domino on the B2B side. What changed is when the money exists, and the date now says
+that rather than pretending otherwise.
+
+### What this does and does not move
+
+**The critical path does not move at all.** The exam is still Monday 2026-09-21. DORES processing
+still starts from the commissioning application, which the exam unlocks and the LLC has nothing to
+do with. The 90-day oath window still runs from the packet. Commission, oath, seal: untouched.
+
+**What slips by five days is the B2B side only**, and it slips as one block because it is a chain:
+
+  LLC (25 Sep) → EIN (same day, free) → W-9 → Snapdocs registration
+
+The vendor packet cannot be completed without the W-9, so the first signing service registration
+moves with it. That is the whole cost of the delay.
+
+**One thing worth watching.** The Google Business Profile needs the registered entity name, and
+GBP verification is the longest queue in the plan — real waits of several weeks, with Google, not
+Lemar, choosing the verification method. So the five days on the LLC are five days added to the
+front of the longest queue on the demand side. It does not change the order of anything; it just
+means the profile enters the queue on 25 September rather than this week.
+
+**Nothing else on the wait list is blocked by this.** The four DORES questions, the three
+BlueNotary questions, the county clerk call, the BlueNotary six-field trial, E&O, and the signing
+agent certification are all free to run during the wait and none of them need the entity.
+
+### The honest framing
+
+Filing a week later costs five days at the back of one queue. Filing without the money together
+costs more than that. The date is right.

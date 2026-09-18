@@ -1,9 +1,9 @@
 ---
 created: 2026-08-12T10:00-04:00
-updated: 2026-09-06T18:10:00-04:00
+updated: 2026-09-18T14:45:00-04:00
 domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation
 type: task
-status: active
+status: archived
 tags: [google-workspace, google-voice, subscription, cuzziesnj-domain]
 source: gmail
 ---
@@ -145,3 +145,10 @@ due date; `domain` stays UNRESOLVED per the standing gap above.
 ### Sources (this update)
 - gmail: thread `1a0788c76d732d94` ("Your Google Workspace documents are ready",
   payments-noreply@google.com, 2026-09-06 21:07 UTC)
+
+## Update — 2026-09-18 (Convo 1 card)
+Lemar, replying on the Haven Inbox card (`D0BHPKMDNEP` ts `1789481364.345479`, reply
+`1789748366.255029`): "Honestly items 1 through 5 are not even needed anymore, to be
+completely honest." Marked `status: archived` per that call. Domain stays UNRESOLVED
+(not guessed) so this note will keep sitting in `00-Inbox/` until a domain is given —
+no longer re-asked on the recurring card, just carried as a known count.

@@ -1,6 +1,6 @@
 ---
 created: 2026-09-10T14:10:00-04:00
-updated: 2026-09-14T15:10:00-04:00
+updated: 2026-09-18T15:03:00-04:00
 domain: station
 type: task
 status: active
@@ -41,6 +41,38 @@ attachment-content tool available this run) — its specifics need a human read.
 9/19, five days out, but that is inferred from a folder name, not confirmed from the
 cure letter itself), and who Markony Monteiro is relative to this filing. Flagged to
 Lemar as an urgent Convo 1 card rather than assumed.
+
+## Update — 2026-09-18 (Markony identified; Lemar already acted by email, not Slack)
+
+**Correction to the "zero reply" framing this note and the Convo 1 card carried for a
+week:** Lemar was not idle on this — he acted by email, a surface this note hadn't
+checked. Found via Gmail search this scan (thread `1a0a693f793d2243`):
+
+- **Markony Monteiro is Owner/CEO of Station 973 LLC** — resolves the previously-open
+  "who is he" question. Not merely a forwarder; he's a principal on the license.
+- **2026-09-15T19:40Z**, Lemar emailed Markony (both addresses on file) the CRC's own
+  "Affidavit of Labor Compliance" template, pre-filled with Markony's name/title,
+  needing only his signature + notarization. Context: Station's labor-peace piece was
+  already addressed via a microbusiness-exemption attestation filed 8/29, but the 9/14
+  cure notice specifically wants the CRC's own affidavit template instead. Lemar flagged
+  internally that the CRC template states Station "has entered into a Labor Peace
+  Agreement" (not technically accurate — they're claiming the microbusiness exemption)
+  and planned a separate cover note to crc.licensing@crc.nj.gov to avoid contradicting
+  the record.
+- **2026-09-17T18:09Z**, Lemar re-forwarded the same request to Markony's business
+  address (`markony@thestationnewarknj.com`) — a chase, since no reply had come by then.
+- **As of this scan (2026-09-18, ~15:xx ET), Markony still has not replied to either
+  email.** The unconfirmed 9/19 cure deadline (from the Drive folder name) is tomorrow.
+
+**Real open item now:** the ball is in Markony's court (sign + notarize + return the
+affidavit), not Lemar's. Still unresolved: whether the separate cover-note-to-CRC step
+Lemar flagged as needed has actually been sent. Not guessing either — will check Gmail
+again next scan.
+
+### Sources (this update)
+- gmail: thread `1a0a693f793d2243` — "Signature needed: LPA Affidavit (CRC's own
+  template) — App ID 76270 cure response" (2026-09-15T19:40:08Z) and its 2026-09-17
+  forward (Lemar → Markony, both addresses)
 
 ## Sources
 - slack: Convo 2 `D0BBVV54L5R` thread `1789061736.927349`, reply `1789061771.187959`

@@ -1,20 +1,20 @@
 {
   "_comment": "Samira run-lock + per-surface watermarks. Semantics live in the runbook, PART 0 (.claude/routines/samira-atlas-executor.md). Committed to main at run start (lock) and run end (watermarks + completion). Slack watermarks are message ts strings; gmail_after_epoch is Unix seconds; times are ISO-8601 with offset. 2026-09 RESTRUCTURE COMPLETE (101st scan): only Convo 1 (D0BHPKMDNEP), Convo 2 (D0BBVV54L5R), #fixes (C0BV5BRNH5Z), and #reports (C0BBZJL85RT) carry a live watermark now -- timeline channels are never swept for input and don't need one, so their watermark entries were dropped this run along with the retired #decisions/#stormy entries. card_threads (keyed '<channel_id>:<parent_ts>') is the open-card worklist. The decisions_threads migration worklist and the legacy capture_dm key are deleted -- migration.decisions_migration_complete is true. Every slack_channels watermark MUST be a JSON string. Watermarks must never postdate lock.run_completed -- they are stamped before the lock closes (PART 0).",
   "lock": {
-    "run_id": "run_20260918T130428Z",
-    "run_started": "2026-09-18T13:04:28Z",
-    "run_completed": "2026-09-18T13:07:00Z",
-    "note": "132nd scan, closed 13:07:00Z (~9:07am ET 2026-09-18). Confirmed local checkout in sync with origin/main before any vault read (fetch + diff, 0 divergence; switched local checkout from the session's assigned branch to main per the repo's explicit git-write policy, which outranks generic branch/PR harness defaults for this specific unattended-routine repo). Genuinely quiet pass, ~1hr after the 131st: P1 Inbox unchanged (6 stuck, same as always; git diff since last full-integrity SHA touched only the _daily journal, so no incremental integrity re-check needed). P2: 0 due-note changes since last scan (verified via git diff against last full-pass SHA) -- skipped a full 52-note calendar re-verification as unnecessary since nothing in the vault changed. P3/P5: Convo 1 + #fixes both returned zero new top-level messages since watermark; spot-checked the 5 most-recently-active #fixes threads' live reply_count/latest_reply against stored card_threads values -- all matched exactly, confirmed quiet (did not re-verify Convo 1's larger open-card set line-by-line this pass). P4: Convo 2 (personal connector) reachable, empty since watermark. P6: light-only Gmail check (last-hour, 2 threads) -- a QuickBooks vendor statement and a Cars.com inventory alert, neither actionable; 6b/6c skipped, no new signal to work. P7: nothing moved, no timeline entries. P8: Pulse quiet-pass gate not met, skipped. Posted #reports digest + journal append. No phone notification -- the run's urgent items (Station CRC cure due 9/19, DeWalt v. Cuzzie's) are unchanged from the 131st scan's own notification minutes earlier; nothing new to surface.",
-    "prior_note_131": "131st scan, closed 12:12:24Z (~8:12am ET 2026-09-18, first run of the day). Confirmed local checkout in sync with origin/main before any vault read (fetch + diff, 0 divergence). Bounded-ish pass: P1 filed 1 clean Inbox note (Basil's run log, complete frontmatter) to 70-Automation/inbox-janitor/, leaving the same 5 long-standing UNRESOLVED-domain notes + 1 out-of-list (Cooper Hospital) stuck -- 6 total, unchanged in substance. Ran a lightweight full-vault structural check (missing/stray frontmatter opener across all 791 notes outside 00-Inbox) since today is the day's first run -- found only the pre-existing, already-known decisions-migration-batch2.md no-frontmatter log (historical artifact, not a new defect; left as-is, consistent with every prior full pass). P2: 0 due-note changes since last scan, nothing to ring. P3/P4/P5: delegated a background sweep of all 9 open Convo 1 cards + 3 open #fixes threads for new reactions/replies since their last-known state -- all 12 came back genuinely quiet, no new Lemar signal. Convo 2 (personal connector) reachable and empty since its watermark. P6: light-only Gmail check (last-day query, ~36 threads) -- surfaced nothing requiring new action: the Canopy-USA/Acreage thread got a 6th unanswered follow-up (already an open finding, not re-carded) and CannaBIZ Collects' 3rd demand letter was already caught by Dawn's 01:15 brief + an existing Convo 1 card (ts 1789675700.567949, checked quiet). A Google Workspace payment-failure notice and Gusto payroll reminder were both checked against the money-hub ledger and are already-tracked, already-open items -- not new. P6c: found and carded the 11th 'Haven Keeper' false all-quiet #reports occurrence (ts 1789683646.021909, 46s after the 130th scan's own digest) -- posted as an update to the standing #fixes card (now 12 days unpicked), Haven log appended. P7: nothing project-specific moved -- no timeline entries. P8: Pulse quiet-pass gate not met (no card opened/closed, no money change, only an existing-note append + a filing move) -- skipped, reported carried. Posted the #reports digest + journal append. Pushed one phone notification this scan: Dawn's Slack bot connector has been dark 6 straight days (no brief has reached Lemar's phone/Slack since 9/12 except via this repo), and today's undelivered brief flags a hard CRC-cure deadline tomorrow (9/19, zero reply on the Convo 1 card for a full week) plus DeWalt's fraudulent-transfer exposure widening to name Josh directly with no counsel of record after 9 tracks -- both need Lemar's own hand today, not Samira's.",
-    "prior_note": "130th scan, closed 22:20:00Z (~6:20pm ET 2026-09-17). Not a bounded/quiet pass -- surfaced and acted on two material findings: (1) Canopy-USA/Acreage AR follow-up (5th unanswered creditor email) plus a vault contradiction between the entity note and the active task note over whether the Cuzzie's-3109 balance was ever actually resolved -- Haven note updated, Convo 1 card + #fixes finding opened. (2) DeWalt v. Cuzzie's personal fraudulent-transfer matter escalated further -- Donte redirected the creditor's counsel straight at Lemar/Josh (still unread), no counsel of record after 9 tracks, Madin's 9/15 contact-me ask and the Aug 11 personal-financial-statement demand both still outstanding. Haven note updated (999-line legal note reviewed in full), follow-up posted on the existing Convo 1 thread. Also sent a quiet-holding follow-up on the separate DeWalt-Diaz card per the 2-day rule (superseded moments later once the hearing-outcome answer was found already logged elsewhere -- harmless, left as-is). Pushed one phone notification this scan for the DeWalt escalation + Station CRC cure (still unanswered a full week).\n\nSCOPE: P0-P5 all checked, confirmed quiet on top-level messages and existing-card reactions except where noted above. P6: light-only Gmail check (last-hour query) -- this is what surfaced the Canopy and DeWalt items; did not run the full ~200-thread backlog triage, investor loop, or #reports contradiction scan -- gmail_after_epoch left unadvanced, consistent with the last several scans. P7: no timeline channel exists for general Cuzzie's/legal collections movements, so no entries posted. P8: Pulse quiet-pass gate was met (2 cards opened, 2 notes updated) but the render was deferred this scan in favor of finishing the DeWalt review -- non-fatal, will render next scan if still outstanding. Posted the #reports digest + journal append.",
+    "run_id": "run_20260918T210347Z",
+    "run_started": "2026-09-18T21:03:47Z",
+    "run_completed": "2026-09-18T21:12:00Z",
+    "note": [
+      "139th scan, closed 21:12:00Z (~5:12pm ET 2026-09-18). Confirmed local checkout in sync with origin/main before any vault read. Top-level sweeps on Convo 1/#fixes came back empty since the 138th scan's watermarks; Convo 2 (personal connector) had one new top-level drop (ts 1789764478.910639, Mar): wants to see 'If I Go Will They Miss Me' in a recliner theater sometime after 9/18, no date set. Captured to haven/vault/00-Inbox/2026-09-18-see-if-i-go-will-they-miss-me.md (domain: personal, type: task), reacted white_check_mark on the drop, opened a low-urgency Convo 1 card (parent ts 1789765536.333869) -- BUFFER rule means it is first WORKED next scan's PART 3. 6c (reports-contradiction-scanner) had been skipped 134th-138th on an assumed 'nothing new'; ran it this scan and found that assumption was wrong -- a 13th Haven Keeper false-all-quiet post (ts 1789752013.456189) landed between the 135th/136th scans and was never caught. Ground truth re-confirmed false (00-Inbox still 6 stuck, 55 vault notes carry a due) and posted as the 13th-occurrence update on the standing #fixes card (ts 1789301748.713179, reply ts 1789765628.692589); logged in the scanner's own Haven log note, bookmark advanced to 1789762041.300419 (the 138th scan's own digest). The standing Option 1/Option 2 decision on this pattern remains unpicked. Light Gmail check (3 new since watermark) found nothing actionable -- NYT breaking news, a FundCanna ReadyPaid marketing email, and a re-hit of the already-reviewed Glass Meadows NECANN promo at the exact watermark boundary (not genuinely new); gmail_after_epoch advanced past all three. 6b: no new Samira/investor mail. Vault integrity: only the daily journal changed since this morning's full pass -- no new defects, last_scan_sha advanced. Haven Inbox unchanged: same 6 known-stuck notes. No project-timeline channel touched this run (personal-domain capture only) -- PART 7 skipped. Pulse gate technically met (1 new card + 1 new Haven note) but render skipped this pass, effort-bounded rather than rushed -- last real render (136th scan, 14:20 ET) still stands. No phone notification this scan -- nothing newly urgent (the 13th Haven Keeper occurrence is a known recurring pattern already surfaced repeatedly, not a fresh signal)."
+    ],
     "orphan_note": "8th instance (111th scan's pickup of 110th scan's dead lock). Root cause still open; Lemar to pick between Option 1 (no fix needed) and Option 2 (make lock more resilient) on the #fixes card, ts `1789063894.596139`."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789736807.127389",
-      "D0BHPKMDNEP": "1789736800",
-      "D0BBVV54L5R": "1789736800",
-      "C0BV5BRNH5Z": "1789736800"
+      "C0BBZJL85RT": "1789765694.313559",
+      "D0BHPKMDNEP": "1789765545.721079",
+      "D0BBVV54L5R": "1789764478.910639",
+      "C0BV5BRNH5Z": "1789765628.692589"
     },
     "card_threads": {
       "D0BHPKMDNEP:1788714592.768199": "1788783808.488779",
@@ -96,7 +96,6 @@
       "D0BHPKMDNEP:1789063831.996959": "1789301427.228519",
       "D0BHPKMDNEP:1789063832.775699": "1789333775.365499",
       "D0BHPKMDNEP:1789063833.434589": "1789239296.882359",
-      "D0BHPKMDNEP:1789064040.504999": "1789683027.407919",
       "C0BV5BRNH5Z:1789063894.596139": "1789145364.316889",
       "C0BV5BRNH5Z:1789063894.923759": "1789063916.795149",
       "D0BHPKMDNEP:1788987937.710089": "1789042166.517989",
@@ -112,26 +111,32 @@
       "C0BV5BRNH5Z:1789215131.431589": "1789301512.165459",
       "C0BV5BRNH5Z:1789223860.933709": "1789301524.275569",
       "D0BHPKMDNEP:1789222678.470519": "1789226176.592079",
-      "D0BHPKMDNEP:1789226265.669199": "1789301470.495209",
+      "D0BHPKMDNEP:1789226265.669199": "1789758374.098929",
       "C0BV5BRNH5Z:1789226200.966659": "1789238098.401569",
-      "C0BV5BRNH5Z:1789301748.713179": "1789733323.857839",
+      "C0BV5BRNH5Z:1789301748.713179": "1789740347.178539",
       "D0BHPKMDNEP:1789330127.583259": "1789330139.024459",
       "C0BV5BRNH5Z:1789333747.809089": "1789333747.809089",
       "D0BHPKMDNEP:1789402024.978189": "1789412758.623459",
-      "D0BHPKMDNEP:1789412930.951649": "1789664783.890089",
+      "D0BHPKMDNEP:1789412930.951649": "1789758441.090689",
       "D0BHPKMDNEP:1789477678.735079": "1789484973.611069",
       "D0BHPKMDNEP:1789477679.577859": "1789495844.717339",
       "D0BHPKMDNEP:1789477782.348399": "1789484819.882369",
-      "D0BHPKMDNEP:1789481364.345479": "1789669095.350459",
       "D0BHPKMDNEP:1789485052.608869": "1789664767.261259",
       "C0BV5BRNH5Z:1789492444.626769": "1789492453.737009",
-      "C0BV5BRNH5Z:1789499060.544979": "1789664751.316849",
-      "D0BHPKMDNEP:1789664799.596209": "1789664799.596209",
+      "C0BV5BRNH5Z:1789499060.544979": "1789755455.367379",
+      "D0BHPKMDNEP:1789664799.596209": "1789755315.946669",
+      "C0BV5BRNH5Z:1789758446.266489": "1789758446.266489",
       "C0BV5BRNH5Z:1789669104.409949": "1789669104.409949",
       "C0BV5BRNH5Z:1789671935.926749": "1789671935.926749",
-      "D0BHPKMDNEP:1789675700.567949": "1789675710.832919",
-      "D0BHPKMDNEP:1789682963.505679": "1789682963.505679",
-      "C0BV5BRNH5Z:1789682955.205049": "1789682955.205049"
+      "D0BHPKMDNEP:1789675700.567949": "1789755314.902929",
+      "D0BHPKMDNEP:1789682963.505679": "1789747952.645799",
+      "C0BV5BRNH5Z:1789682955.205049": "1789740471.287629",
+      "D0BHPKMDNEP:1789747620.391489": "1789755312.819529",
+      "D0BHPKMDNEP:1789747639.453529": "1789755308.411799",
+      "D0BHPKMDNEP:1789064040.504999": "1789755318.042509",
+      "D0BHPKMDNEP:1789481364.345479": "1789755319.972309",
+      "D0BHPKMDNEP:1789765536.333869": "1789765545.721079",
+      "C0BV5BRNH5Z:1789301748.713179": "1789765628.692589"
     },
     "migration": {
       "decisions_migration_complete": true,
@@ -139,15 +144,15 @@
       "announcements_done": true,
       "cards_remaining": 0
     },
-    "gmail_after_epoch": 1789502484,
+    "gmail_after_epoch": 1789763625,
     "email_weekly_scan": {
       "last_date": "2026-09-12"
     }
   },
   "integrity": {
     "last_full_pass": "2026-09-18T08:10:00-04:00",
-    "last_scan_sha": "02311d1",
-    "note": "Full-vault structural check this scan (day's first run): scanned all 791 notes outside 00-Inbox for a missing/stray frontmatter opener. 1 flagged, same as every prior full pass -- haven/vault/70-Automation/samira/2026-09-06-decisions-migration-batch2.md (a pre-2026-09 migration log written without frontmatter by design, not a regression; left as-is per longstanding precedent). No base64/lossless-decode sweep run this pass (time-boxed). Known gaps unchanged: 5 stuck (domain unresolved: google-voice-subscription-cancellation, rootwurks-assignment-log, veriscan-idscan-security-incident, dib-template-theme-decision-closeout, visit-alex-sage-dispensary) plus 1 (apply-cooper-university-hospital-jobs.md, out-of-list status/source, carried). Known mis-filed note (haven/vault/40-Projects/samira-skills/2026-09-12-reports-false-vault-empty-claim-stale-checkout.md, domain:automation under 40-Projects/) still flagged, not moved. Known domain-mismatch defect (2026-09-15-fresh-start-business-solutions-cold-pitch.md) still awaiting Lemar's ✅ on the proposed fix, per #fixes. Canopy-USA entity-note contradiction (#fixes ts 1789682955.205049) unchanged, still open."
+    "last_scan_sha": "7e03b1885857e8a996e765b32a5023a7d62e2da2",
+    "note": "139th scan: incremental check only (day's full pass already ran this morning at fd2d2fb). Since 8edfceab, only the daily journal plus this scan's own two content commits changed (the new movie-note capture, the reports-contradiction-scanner log update) -- both re-read and confirmed complete, valid frontmatter, no defects. Known gaps unchanged: 5 stuck (domain unresolved: google-voice-subscription-cancellation, rootwurks-assignment-log, veriscan-idscan-security-incident, dib-template-theme-decision-closeout, visit-alex-sage-dispensary) plus 1 (apply-cooper-university-hospital-jobs.md, out-of-list status/source, carried). Known mis-filed note (haven/vault/40-Projects/samira-skills/2026-09-12-reports-false-vault-empty-claim-stale-checkout.md, domain:automation under 40-Projects/) still flagged, not moved. Known domain-mismatch defect (2026-09-15-fresh-start-business-solutions-cold-pitch.md) still awaiting Lemar's ✅ on the proposed fix, per #fixes. Canopy-USA entity-note contradiction resolved/closed 133rd scan -- no longer open."
   },
   "canvas_access": {
     "last_checked": "2026-09-06T12:06:45Z",
@@ -155,7 +160,7 @@
     "note": "Not re-checked (only re-checked on the day's first run). Fallback surface (Haven open-items note under 70-Automation/samira/) remains in effect."
   },
   "renders": {
-    "pulse_last_rendered": "2026-09-15T16:35:00-04:00",
+    "pulse_last_rendered": "2026-09-18T14:20:00-04:00",
     "money_hub_last_rendered": "2026-08-29T13:22:00-04:00"
   }
 }

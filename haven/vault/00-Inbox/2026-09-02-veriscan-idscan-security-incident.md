@@ -1,9 +1,9 @@
 ---
 created: 2026-09-02T04:55:01-04:00
-updated: 2026-09-08T12:32:00-04:00
+updated: 2026-09-18T14:45:00-04:00
 domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation (ID-scanning vendor used for compliance/age verification — could touch Cuzzie's, Station, or both; not stated which account(s) this notice covers)
 type: task
-status: awaiting-decision
+status: archived
 tags: [veriscan, idscan, security-incident, data-breach, compliance, id-verification]
 source: gmail
 ---
@@ -98,3 +98,10 @@ logged.
 - gmail: thread `1a0725ecf496eeda` (same subject, resend/duplicate, hello@idscan.net,
   2026-09-05 16:20 UTC / 12:20pm ET)
 - slack: Convo 1 (D0BHPKMDNEP), card ts `1788867564.568929`, answered 2026-09-08
+
+## Update — 2026-09-18 (Convo 1 card)
+Lemar, replying on the Haven Inbox card (`D0BHPKMDNEP` ts `1789481364.345479`, reply
+`1789748366.255029`): "Honestly items 1 through 5 are not even needed anymore, to be
+completely honest." Marked `status: archived` per that call. Domain stays UNRESOLVED
+(not guessed) so this note will keep sitting in `00-Inbox/` until a domain is given —
+no longer re-asked on the recurring card, just carried as a known count.

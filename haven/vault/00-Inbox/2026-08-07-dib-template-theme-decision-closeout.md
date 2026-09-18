@@ -1,7 +1,7 @@
 ---
 domain:
 type: outcome-note
-status:
+status: archived
 source: samira-part-g
 ---
 
@@ -38,3 +38,10 @@ part of this closeout.
   `1784672090.152519` (Samira's in-channel confirmation)
 - haven: `haven/vault/40-Projects/delivery-in-a-box/2026-07-10-folder-merge-blocked.md`
   (existing project note, logged the prompt as posted but pre-dates this pick)
+
+## Update — 2026-09-18 (Convo 1 card)
+Lemar, replying on the Haven Inbox card (`D0BHPKMDNEP` ts `1789481364.345479`, reply
+`1789748366.255029`): "Honestly items 1 through 5 are not even needed anymore, to be
+completely honest." Marked `status: archived` per that call. Domain stays UNRESOLVED
+(not guessed) so this note will keep sitting in `00-Inbox/` until a domain is given —
+no longer re-asked on the recurring card, just carried as a known count.
