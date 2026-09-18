@@ -1,6 +1,6 @@
 ---
 created: 2026-07-25T13:16-04:00
-updated: 2026-09-17T18:05:00-04:00
+updated: 2026-09-18T10:07:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -51,6 +51,32 @@ team lost track of a real resolution on their end — this note cannot tell whic
 the email text alone (no dollar figure or dates in his messages), and guessing which
 is wrong is not Samira's call. See the matching #fixes finding and the Convo 1 card
 opened this scan for Lemar's read.
+
+## Update — 2026-09-18 — Lemar answered (Option B), reply drafted, entity note corrected
+Lemar picked Option B on the Convo 1 card (ts `1789682963.505679`, reply ts
+`1789737440.809109`): the balance is **not** resolved, he can't pay right now given
+other obligations, and he does not want to commit to a specific date in writing (he
+gave a rough internal target of "by February 2027" but was explicit that should not go
+in the message to Terrence). He also asked that vendor repayment schedules like this
+one start getting tracked somewhere he can budget against — flagged as a follow-up
+below rather than acted on unilaterally, since it touches the money-hub's documented
+personal-only boundary (`.claude/anchors.md`, Money Hub section) and the Off Button
+Monday board's existing vendor-payment-plan columns, and it's not clear which of those
+(or a new mechanism) he means.
+
+Drafted a non-committal reply (no dollar figure, no date) and saved it to Gmail
+Drafts — verified by reading the draft back — rather than sending: `draftId`
+`r-3226807557728585631`, `messageId` `1a0b4d7cbd08b7d7`, thread `19db6a92eb2a3d89`.
+Corrected `haven/vault/50-Reference/Entities/canopy-usa.md`'s false "resolved May
+2026" claim — Lemar's own 6/25 email in this thread confirms the $840.10 x2 plan
+was agreed but "did not go through as planned."
+
+**Open follow-up for Lemar:** where should vendor repayment/wind-down schedules like
+this one live so he can budget against them week to week — the existing Off Button
+Monday board (`18424191974`, already has Suggested Payment Plan / Installments
+Remaining columns, but scoped to Camden vendor wind-down) or a new #personal-finance
+line? Posted as a follow-up question on the same Convo 1 card thread rather than
+guessed at.
 
 ## Sources
 - gmail: thread `19db6a92eb2a3d89` ("Cuzzie's Dispensary - 3109")
