@@ -1,6 +1,6 @@
 ---
 created: 2026-07-25T13:16-04:00
-updated: 2026-09-18T10:07:00-04:00
+updated: 2026-09-18T12:10:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -77,6 +77,15 @@ Monday board (`18424191974`, already has Suggested Payment Plan / Installments
 Remaining columns, but scoped to Camden vendor wind-down) or a new #personal-finance
 line? Posted as a follow-up question on the same Convo 1 card thread rather than
 guessed at.
+
+## Update — 2026-09-18 (later same day) — answered, new money-hub line added, card closed
+Lemar answered on the same Convo 1 card thread (reply ts `1789746228.280049`): "I
+think this should be a new line on the personal finance workflow." Added a
+`canopy-usa-acreage-3109-repayment` plan to `haven/vault/10-Personal/Money/
+money-hub-ledger.md` — no confirmed current balance to schedule installments against
+(the $840.10 x2 plan never paid, no replacement figure reported), so it carries no
+total/installments/calendar event yet and rides in the ledger's `open_questions`
+until Lemar reports one. Posted the movement to #personal-finance. Card closed.
 
 ## Sources
 - gmail: thread `19db6a92eb2a3d89` ("Cuzzie's Dispensary - 3109")

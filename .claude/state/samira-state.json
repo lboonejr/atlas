@@ -3,18 +3,19 @@
   "lock": {
     "run_id": "run_20260918T160400Z",
     "run_started": "2026-09-18T16:04:00Z",
-    "run_completed": "2026-09-18T15:04:54Z",
-    "note": "134th scan, closed 15:04:54Z (~11:04am ET 2026-09-18). Confirmed local checkout in sync with origin/main before any vault read (fetch + diff, 0 divergence). Genuinely quiet pass, ~40min after the 133rd: P1 Inbox unchanged (6 stuck, same as always; git diff since last full-integrity SHA touched only the 4 files the 133rd scan itself wrote, nothing new). P2: 0 due-note changes since last scan. P3/P5: top-level watermark sweep on Convo 1 + #fixes both returned zero new messages; per the 133rd scan's own takeaway, spot-checked the most recently active card threads for replies the top-level sweep would miss (Canopy-USA/Acreage card, the standing Haven Keeper #fixes card, the git-write-policy STUCK card, Dawn's connector card, the DeWalt-Diaz card) -- every one's live latest_reply ts matched its stored card_threads watermark exactly, confirmed quiet. P4: Convo 2 (personal connector) reachable, empty since watermark. P6: light-only Gmail check (last-hour, 3 threads) -- an Extended Stay America promo, a RentCafe open-house ad, and an NYT breaking-news alert, nothing actionable; 6b/6c skipped (6c ran last scan, nothing new to work). P7: no timeline entries. P8: Pulse quiet-pass gate not met (nothing changed this scan) -- skipped, reported carried. Posted #reports digest (ts `1789743884.837519`) + journal append. No phone notification -- nothing this scan rose above what's already been surfaced (Station CRC cure past due, DeWalt, the Haven Keeper pattern) in prior notifications.",
+    "run_completed": "2026-09-18T16:20:00Z",
+    "note": [
+      "135th scan, closed 16:20:00Z (~12:12pm ET 2026-09-18). Confirmed local checkout in sync with origin/main before any vault read (0 divergence). Real work this scan: (1) card_threads spot-check caught Lemar's reply closing the Canopy-USA/Acreage card -- added canopy-usa-acreage-3109-repayment to the money-hub ledger (no confirmed balance, no installments/calendar event yet), posted to #personal-finance, closed the card. (2) Convo 2 had 2 real top-level drops: a weekend to-do list (Station lounge app requirements, annual-reports prep [domain UNRESOLVED], notary exam prep, both Monday 9/21 -- plus a repeat mention of the standing Cooper Hospital jobs note, appended not duplicated) and a Bask and Lather starter-kit purchase (Wed 9/23, no price given, WebFetch blocked by egress proxy -- ledger line carries amount:null, not a guess). Both routed to new Haven notes + new Convo 1 cards. (3) Light Gmail check found one real item (Gusto Cuzzie's payroll tasks due Mon 9/21) -- captured + calendar event created. (4) Flagged directly: The Station CRC renewal cure (App 76270) unconfirmed 9/19 deadline is now tomorrow, still zero real reply after a week + several prior pushes -- sent another phone notification this scan. Pulse gate met but skipped (insufficient scope this pass for a real render, not guessed); last render (133rd scan) still stands. #fixes quiet, no new Haven Keeper occurrence since the 12th."
+    ],
     "prior_note_134": "134th scan, closed 15:04:54Z (~11:04am ET 2026-09-18). Confirmed local checkout in sync with origin/main before any vault read (fetch + diff, 0 divergence). Genuinely quiet pass, ~40min after the 133rd: P1 Inbox unchanged (6 stuck, same as always; git diff since last full-integrity SHA touched only the 4 files the 133rd scan itself wrote, nothing new). P2: 0 due-note changes since last scan. P3/P5: top-level watermark sweep on Convo 1 + #fixes both returned zero new messages; per the 133rd scan's own takeaway, spot-checked the most recently active card threads for replies the top-level sweep would miss (Canopy-USA/Acreage card, the standing Haven Keeper #fixes card, the git-write-policy STUCK card, Dawn's connector card, the DeWalt-Diaz card) -- every one's live latest_reply ts matched its stored card_threads watermark exactly, confirmed quiet. P4: Convo 2 (personal connector) reachable, empty since watermark. P6: light-only Gmail check (last-hour, 3 threads) -- an Extended Stay America promo, a RentCafe open-house ad, and an NYT breaking-news alert, nothing actionable; 6b/6c skipped (6c ran last scan, nothing new to work). P7: no timeline entries. P8: Pulse quiet-pass gate not met (nothing changed this scan) -- skipped, reported carried. Posted #reports digest (ts `1789743884.837519`) + journal append. No phone notification -- nothing this scan rose above what's already been surfaced (Station CRC cure past due, DeWalt, the Haven Keeper pattern) in prior notifications.",
-    "prior_note_133_takeaway": "Reminder for future scans: the top-level-only watermark sweep on Convo 1/#fixes can miss a real Lemar signal that arrives as a thread REPLY rather than a new top-level message -- this scan only caught the Canopy-USA reply because of the spot-check step the runbook already calls for (card_threads reply-checking), not the top-level sweep alone. Worth keeping that spot-check real (not skipped) even on runs that look quiet at the top level.",
-    "prior_note_133": "133rd scan, closed 14:21:18Z (~10:21am ET 2026-09-18). P1 Inbox unchanged (6 stuck). P2: 0 due-note changes. P3/P5: top-level sweep quiet, but a spot-check caught a real thread reply -- Lemar picked Option B on the Canopy-USA/Acreage Cuzzie's-3109 card (balance not resolved, no firm date). Corrected the entity note's false 'resolved May 2026' claim, drafted a non-committal reply to Terrence Guthrie (Gmail draft, verified by reading it back, not sent), closed the matching #fixes vault-contradiction card, and posted a follow-up question on where to track vendor repayment schedules. Logged the 12th 'Haven Keeper' false-all-quiet #reports occurrence on its standing #fixes card. P4: Convo 2 empty. P6: light Gmail check, nothing else actionable. P8: Pulse rendered (gate met) -- https://docs.google.com/document/d/1DpjFplWmbyF9A5bjzy6t2ond3OOR9WPFIdQScP2OELU/edit. No phone notification.",
-    "orphan_note": "8th instance (111th scan's pickup of 110th scan's dead lock). Root cause still open; Lemar to pick between Option 1 (no fix needed) and Option 2 (make lock more resilient) on the #fixes card, ts `1789063894.596139`."
+    "orphan_note": "8th instance (111th scan's pickup of 110th scan's dead lock). Root cause still open; Lemar to pick between Option 1 (no fix needed) and Option 2 (make lock more resilient) on the #fixes card, ts `1789063894.596139`.",
+    "prior_note_135_takeaway": "Reminder for future scans: the top-level-only watermark sweep on Convo 1/#fixes can miss a real Lemar signal that arrives as a thread REPLY rather than a new top-level message -- this scan only caught the Canopy-USA reply because of the spot-check step the runbook already calls for (card_threads reply-checking), not the top-level sweep alone. Worth keeping that spot-check real (not skipped) even on runs that look quiet at the top level."
   },
   "watermarks": {
     "slack_channels": {
-      "C0BBZJL85RT": "1789743884.837519",
-      "D0BHPKMDNEP": "1789740467.304649",
-      "D0BBVV54L5R": "1789736800",
+      "C0BBZJL85RT": "1789747976.677739",
+      "D0BHPKMDNEP": "1789747952.645799",
+      "D0BBVV54L5R": "1789747300.010109",
       "C0BV5BRNH5Z": "1789740471.287629"
     },
     "card_threads": {
@@ -131,8 +132,10 @@
       "C0BV5BRNH5Z:1789669104.409949": "1789669104.409949",
       "C0BV5BRNH5Z:1789671935.926749": "1789671935.926749",
       "D0BHPKMDNEP:1789675700.567949": "1789675710.832919",
-      "D0BHPKMDNEP:1789682963.505679": "1789740467.304649",
-      "C0BV5BRNH5Z:1789682955.205049": "1789740471.287629"
+      "D0BHPKMDNEP:1789682963.505679": "1789747952.645799",
+      "C0BV5BRNH5Z:1789682955.205049": "1789740471.287629",
+      "D0BHPKMDNEP:1789747620.391489": "1789747635.839879",
+      "D0BHPKMDNEP:1789747639.453529": "1789747646.128239"
     },
     "migration": {
       "decisions_migration_complete": true,
