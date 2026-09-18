@@ -1,6 +1,6 @@
 ---
 created: 2026-08-13T08:07-04:00
-updated: 2026-09-17T16:04:00-04:00
+updated: 2026-09-18T14:20:00-04:00
 domain: cuzzies
 type: task
 status: active
@@ -47,7 +47,25 @@ it as a Convo 1 card this run (previously held per the "nothing to decide until 
 is known" call) because the recurrence itself is now the decision point: whether to open the
 PDF and respond, or keep waiting. See the Convo 1 card for the two options put to Lemar.
 
+## Update — 2026-09-18 — creditor + amount confirmed by Lemar: Garden Society, $1,720; Lemar considering CannaBIZ's own settlement offer
+Lemar answered directly on the Convo 1 card (`D0BHPKMDNEP` ts `1789675700.567949`, reply
+`1789743001.501639`): "The most recent letter from Mike is from Garden Society for the
+amount of $1,720. Mike is telling me that there's a way that I can get all of these
+paid off for about 30 cents on the dollar if I signed up for his services; so I'm going
+to talk to him soon about that." This confirms the 9/17 (third) letter's underlying
+debt: creditor **Garden Society**, amount **$1,720**. The two earlier letters (8/13,
+8/23) remain unconfirmed as to creditor/amount — not assumed to be the same debt.
+
+Lemar is planning to speak with Mike at CannaBIZ Collects directly about a possible
+~30-cents-on-the-dollar settlement across "all of these" (read as: the multiple
+CannaBIZ-routed collections matters, not just this one letter) — his own conversation,
+not something Samira is drafting or negotiating. No payment made, no reply sent, no
+Samira action taken beyond recording this. Flagging for a Haven update once that
+conversation happens.
+
 ## Sources
+- slack: Convo 1 `D0BHPKMDNEP` thread `1789675700.567949`, reply `1789743001.501639`
+  (2026-09-18, Lemar confirms Garden Society / $1,720 + his own planned call with Mike)
 - gmail: thread `19ff96b7cfbd80e0` — "Document from CannaBIZ Collects", received
   2026-08-13T00:39:58-04:00 from mike@cannabizcollects.com
 - gmail: thread `1a02f2bee8cca5a7` — "Document from CannaBIZ Collects", received

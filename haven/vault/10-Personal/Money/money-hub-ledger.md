@@ -1,6 +1,6 @@
 ---
 created: 2026-08-05T07:47:00-04:00
-updated: 2026-09-18T12:04:00-04:00
+updated: 2026-09-18T14:25:00-04:00
 domain: personal
 type: reference
 status: active
@@ -484,14 +484,17 @@ bills:
             days (8/15-9/1), $2.26/day for the remaining 89 (9/2-11/29),
             cent-exact)."}
   - {id: bask-and-lather-starter-kit, name: "Bask and Lather men's starter kit",
-     amount: null, cadence: once, due: 2026-09-23, track: queue, status: active,
+     amount: 69.99, cadence: once, due: 2026-09-23, track: queue, status: active,
      note: "Reported by Lemar in Convo 2 2026-09-18 12:01 ET (msg ts
             1789747300.010109): wants to buy the men's starter kit from Bask and
             Lather (https://baskandlatherco.com/products/mens-starter-kit) and pay
-            for it Wednesday (2026-09-23). Price not stated; WebFetch on the product
-            URL was blocked by the network egress proxy this run, so the amount was
-            not invented — see open_questions. No accrual/calendar event created
-            until a real amount is known."}
+            for it Wednesday (2026-09-23). Price confirmed by Lemar on the Convo 1
+            card 2026-09-18 (ts 1789747639.453529, reply 1789747772.315399):
+            '$69.99 on the sale' — he flagged the sale may not hold that long, so
+            this figure could drift before 9/23; not re-verified against the
+            product page (WebFetch still blocked by the network egress proxy).
+            Reminder calendar event i432na7c708ijvq72l8kglpiso created 9/18,
+            2026-09-23 9:00am ET."}
 plans:
   - id: canopy-usa-acreage-3109-repayment
     creditor: "Canopy USA / Acreage Holdings (Terrence Guthrie, AR) — Cuzzie's account 3109"
@@ -3469,11 +3472,12 @@ open_questions:
      against, but no current balance has been reported since the original $840.10 x2
      plan fell through. No total, no installments, no calendar event until he gives a
      figure."
-  - "NEW 2026-09-18 (Convo 2 msg ts 1789747300.010109): bask-and-lather-starter-kit —
-     Lemar wants to pay for this Wednesday (2026-09-23) but never gave a price and the
-     product page couldn't be fetched (egress blocked). Asked on a Convo 1 card;
-     amount stays null and the line stays out of daily_targets until he gives a
-     figure."
+  - "RESOLVED 2026-09-18 (Convo 1 card ts 1789747639.453529, reply 1789747772.315399):
+     bask-and-lather-starter-kit — Lemar gave the price, $69.99 (his words: 'on the
+     sale... not sure how long that sale is going to last'). Amount set, due 2026-09-23
+     unchanged, now flows into daily_targets. If the sale price changes before he pays,
+     this line will need a manual correction — not re-verified against the live product
+     page."
   - "Cuzzie's phone + Workspace $550/mo is Lemar's estimate — actual total unconfirmed, and it is the largest line in the ledger."
   - "Confirm the 7/25 $1,000 allocation landed: $500 car payment, $200 tires, $50 mom"
   - "RESOLVED 2026-08-29 (#decisions ts 1787940475.849039, Option 1 ✅): the $149.00 T-Mobile payment Lemar reported 8/28 IS tmobile-split-1 — the line's amount was wrong ($265 recorded, $149 actually owed/paid), not the payment. Corrected and flipped to paid; see tmobile-split-1. tmobile-split-2 ($278, due 8/28) is untouched, still open."

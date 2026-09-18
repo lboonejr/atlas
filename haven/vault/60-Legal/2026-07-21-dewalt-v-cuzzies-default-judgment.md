@@ -1,6 +1,6 @@
 ---
 created: 2026-07-21T15:20:00-04:00
-updated: 2026-09-17T18:15:00-04:00
+updated: 2026-09-18T14:15:00-04:00
 domain: legal
 type: task
 status: active
@@ -996,3 +996,27 @@ unlabeled pending Lemar's own read, same as the 9/15 update.
 ### Sources (this update)
 - gmail: thread `1a0a651541ba7bff`, message `1a0af753cee01ca8` (Donte's reply,
   2026-09-17 ~9:00am ET, cc Lemar + Josh + Madin Law + Di Stefano)
+
+## Update 2026-09-18T14:15:00-04:00 — DeWalt's attorney approached about settlement; Lemar/Josh talking to them Monday; still no counsel of record
+
+Lemar answered directly on the Convo 1 card (`D0BHPKMDNEP` ts `1789064040.504999`,
+reply `1789746274.499269`), closing out the open question from the 2026-09-16 update
+on what happened after the Sept 14 hearing and adding new information: "The hearing
+didn't move forward without an attorney and it was adjourned until October 13. We
+still don't have an attorney and DeWalt's attorney approached us about a possible
+settlement so we should be talking to them on Monday about that."
+
+**Read:** confirms the 2026-09-16 update's Oct 13 adjournment record (`due` on this
+note already carries that date — no change needed there). New this update: opposing
+counsel has approached Lemar/Josh directly about settlement, and a conversation is
+planned for **Monday 2026-09-21** — consistent with Donte's 9/17 message stepping back
+and pointing Madin/Di Stefano at Lemar and Josh personally. Still no counsel of record
+on either side of this matter (nine prior tracks — Siciliano, Wall, Brekke, Greenberg,
+Hagner & Zohlman, Kaplan/Kaplin Stewart, two CCBA asks, Folkman, and Diaz — none
+converted). Monica Madin's 9/15 "have your attorney contact me" ask and the Aug 11
+eight-category financial-document demand both remain outstanding. Nothing drafted or
+sent by Samira — Lemar is handling the settlement conversation directly.
+
+### Sources (this update)
+- slack: Convo 1 `D0BHPKMDNEP` thread `1789064040.504999`, reply `1789746274.499269`
+  (2026-09-18, Lemar confirms Oct 13 adjournment + a Monday 9/21 settlement talk)

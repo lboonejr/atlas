@@ -1,9 +1,9 @@
 ---
 created: 2026-08-29T11:12:00-04:00
-updated: 2026-09-08T12:31:00-04:00
+updated: 2026-09-18T14:45:00-04:00
 domain:    # UNRESOLVED — set one of: personal | cuzzies | station | project | reference | legal | automation (this touches both an active Cuzzie's personnel matter and litigation-defense framing — genuinely could be either)
 type: task
-status: awaiting-decision
+status: archived
 tags: [rootwurks, training-records, store-manager, personnel, potential-litigation, joshua]
 source: gmail
 ---
@@ -45,3 +45,10 @@ that gap is unrelated to this decision and stays parked in the Haven Inbox card.
 - gmail: thread `1a04a58896e78372` — "Rootwurks Assignment Log", Joshua Evans →
   Lemar, 2026-08-28 21:48 ET (includes attached CSV export)
 - slack: Convo 1 (D0BHPKMDNEP), card ts `1788867561.830549`, decided 2026-09-08
+
+## Update — 2026-09-18 (Convo 1 card)
+Lemar, replying on the Haven Inbox card (`D0BHPKMDNEP` ts `1789481364.345479`, reply
+`1789748366.255029`): "Honestly items 1 through 5 are not even needed anymore, to be
+completely honest." Marked `status: archived` per that call. Domain stays UNRESOLVED
+(not guessed) so this note will keep sitting in `00-Inbox/` until a domain is given —
+no longer re-asked on the recurring card, just carried as a known count.
