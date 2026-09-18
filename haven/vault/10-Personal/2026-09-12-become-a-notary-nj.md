@@ -1,6 +1,6 @@
 ---
 created: 2026-09-12T15:11:00-04:00
-updated: 2026-09-13T08:20:00-04:00
+updated: 2026-09-18T15:03:00-04:00
 domain: personal
 type: task
 status: active
@@ -134,6 +134,44 @@ moving in parallel starting today.
 
 ### Sources (this update)
 - slack: Convo 1 `D0BHPKMDNEP` thread `1789226265.669199`, reply `1789251463.837579`
+
+## Update 2026-09-15T09:23-04:00 — curriculum rebuilt against the actual statute (P.L. 2021, c.179), two live errors corrected
+
+Lemar supplied the full statute text and a separate live Claude thread ran it against
+the bootcamp curriculum (Convo 1 card ts `1789226265.669199`, reply `1789478596.630719`).
+Found 12 high-severity gaps and 6 loose/misleading points versus the Notary Public
+Manual (which is only the Division's summary, not the law itself). Two were live errors
+in what this note had already stated:
+
+- **Correction — attorneys are NOT exempt from the legislative endorsement.** The
+  9/12 update above stated they were; that was wrong. §3b (C.52:7-11) requires the
+  endorsement on every application, initial or renewal, with no attorney carve-out.
+  The attorney exemption is narrow: §6a (course of study) and §4b (examination) only.
+- **Correction — remote-ID verification is not a single mandatory path.** The
+  curriculum had taught "ID + one proofing method" as the only route. §19d(1) actually
+  gives three alternative routes: (a) personal knowledge of the individual, (b) oath/
+  affirmation from a credible witness (who may appear in person or by communication
+  technology), or (c) at least **two** different types of identity proofing. Directly
+  relevant to the planned RON business line — worth confirming any RON vendor's
+  proofing workflow actually satisfies §19d(1)(c) before contracting with one.
+
+Other statute-sourced fixes: seal not always required on an acknowledgment/proof
+certificate (§30/R.S.46:14-2.1 d., vs. the manual's blanket "always stamp"); refusal is
+a default right under §26b, not exhaustive grounds; no statutory basis for following
+NNA security procedures (§19n/19p bind only to Treasurer standards, if established);
+journal transmittal is a hard 45-day duty (§27f). Previously-unsourced figures are now
+statute-cited: 5-year term (§3a), $25 fee (§3c), endorsement requirement (§3b). New
+material added covering apostille/Hague Convention, consular authentication, out-of-
+state/tribal/federal acts (§23), certifying tangible copies of electronic records
+(§16c/§24c), and that a commission confers no immunity or official-benefit status
+(§8c). Course expanded 70 → 87 questions; all 7 calendar events updated to match.
+
+No new decision needed from Lemar on this update — it's corrected reference material
+already actioned by the live thread that produced it (curriculum + calendar already
+updated). Acknowledged in-thread this scan.
+
+### Sources (this update)
+- slack: Convo 1 `D0BHPKMDNEP` thread `1789226265.669199`, reply `1789478596.630719`
 
 ## Sources
 - slack: Convo 2 (self-DM) drop, ts `1789225994.355429`, 2026-09-12 11:13 ET
