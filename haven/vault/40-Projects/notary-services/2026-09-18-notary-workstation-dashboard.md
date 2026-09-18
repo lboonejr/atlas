@@ -269,3 +269,14 @@ does not ring his phone) are both routine changes, not page changes, and were no
 Verified once at phone width with three sample jobs: a $32.50 consumer job nets $21.50 after the
 $11 set-aside; the sheet quotes $2.50 + $65 with $23.25 set aside for two signatures at the
 ≤20-mile tier after 7pm. Sample jobs were never written to the live store.
+
+## Update 2026-09-18T19:40-04:00 — two rules corrected from the statute read
+
+The 2026-09-15 statute read (recorded in `10-Personal/2026-09-12-become-a-notary-nj.md`) landed on
+main after the rework above. Two things on the Rules tab followed from it. The remote-signer
+identity rule no longer says "two of three methods" as the only route: §19d(1) gives three routes
+(personal knowledge, a credible witness, or at least two types of identity proofing), and the page
+now says so with the citation. The 45-day journal transmittal duty (§27f) was added to the
+"not confirmed" group beside the open DORES question it belongs to, because the vault records the
+number but not what starts the clock or who receives the journal. Nothing else on the tab was
+touched; the seal-not-always-required point has no matching rule on the page to correct.
