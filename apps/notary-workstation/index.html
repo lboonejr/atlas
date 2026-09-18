@@ -1,0 +1,1822 @@
+<title>Given Word Workstation</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* One committed visual world: near-black ground, electric violet, soft-cornered cards.
+     Single theme by design — every colour is painted explicitly so the page holds on any host ground. */
+  :root{
+    color-scheme:dark;
+    --ground:#08070C; --surface:#15141A; --surface-2:#1E1C26; --surface-3:#282533;
+    --line:#282531; --line-soft:#1F1D26;
+    --ink:#F5F4F8; --ink-2:#A8A4B6; --ink-3:#736F81;
+    --accent:#7C4DFF; --accent-hi:#A084FF; --accent-deep:#5B2FE0; --accent-soft:#1D1630;
+    --good:#3FD68B; --good-soft:#0F2A1E;
+    --warn:#F0A63C; --warn-soft:#2B2014;
+    --crit:#FF6B6B; --crit-soft:#2E1719;
+    --s-consumer:#14A391; --s-signing:#8B6FE0; --s-agent:#C9711F;
+    --r-lg:24px; --r:18px; --r-sm:13px;
+    --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+    --lift:0 1px 0 rgba(255,255,255,.03) inset, 0 18px 40px -28px rgba(0,0,0,.9);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:radial-gradient(1200px 560px at 50% -12%, #1C1033 0%, rgba(28,16,51,0) 62%), var(--ground);
+    background-color:var(--ground);
+    color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;margin:0;
+    -webkit-font-smoothing:antialiased;letter-spacing:-.005em;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding-inline:16px;padding-block:0 72px}
+  h1,h2,h3,h4{margin:0;text-wrap:balance}
+  a{color:var(--accent-hi);text-decoration-color:color-mix(in srgb,var(--accent-hi) 45%,transparent)}
+  button{font:inherit;color:inherit}
+  :focus-visible{outline:2px solid var(--accent-hi);outline-offset:2px;border-radius:8px}
+  .num{font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+
+  /* ---------- masthead ---------- */
+  .mast{background:transparent}
+  .mast-in{max-width:1120px;margin:0 auto;padding:22px 16px 6px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between}
+  .brand{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+  .brand h1{font-size:clamp(23px,4.4vw,30px);font-weight:800;letter-spacing:-.035em;line-height:1.05}
+  .mast-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .phase{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;padding:7px 13px;border-radius:999px;background:var(--surface-2);color:var(--ink-2)}
+  .phase .dot{width:7px;height:7px;border-radius:50%;background:var(--accent-hi);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 25%,transparent)}
+  .asof{font-size:11.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+
+  /* ---------- notices ---------- */
+  .notice{margin-top:12px;border-radius:var(--r);padding:14px 16px;font-size:13.5px;display:flex;gap:10px;align-items:flex-start;line-height:1.5}
+  .notice.warn{background:var(--warn-soft);color:var(--warn)}
+  .notice.crit{background:var(--crit-soft);color:var(--crit)}
+  .notice b{font-weight:700;color:inherit}
+  .notice ul{margin:7px 0 0;padding-left:17px}
+  .notice li{margin-bottom:4px}
+  .notice strong{font-weight:700}
+
+  /* ---------- hero + stat tiles ---------- */
+  /* Always hero + three: pin the track count so the row never leaves a ragged edge. */
+  .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
+  @media (max-width:780px){ .stats{grid-template-columns:repeat(2,minmax(0,1fr))} }
+  @media (max-width:470px){ .stats{grid-template-columns:minmax(0,1fr)} }
+  .hero{
+    grid-column:1/-1;position:relative;overflow:hidden;border-radius:var(--r-lg);
+    background:linear-gradient(152deg, var(--accent-hi) 0%, var(--accent) 42%, var(--accent-deep) 100%);
+    color:#fff;padding:20px 22px 22px;display:flex;flex-direction:column;gap:6px;min-width:0;
+    box-shadow:0 22px 50px -30px var(--accent);
+  }
+  .hero::after{content:"";position:absolute;right:-70px;top:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.14)}
+  .hero .k{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.72);position:relative}
+  .hero .v{font-size:clamp(36px,6.6vw,50px);font-weight:800;letter-spacing:-.04em;line-height:1.02;position:relative}
+  .hero .v small{font-size:16px;font-weight:600;opacity:.75;letter-spacing:-.01em}
+  .hero.text .v{font-size:clamp(21px,3.4vw,29px);line-height:1.2;letter-spacing:-.03em}
+  .hero .sub{font-size:13px;color:rgba(255,255,255,.82);line-height:1.4;position:relative;max-width:46ch}
+  .hero .meter{background:rgba(255,255,255,.22)}
+  .hero .meter i{background:#fff}
+
+  .stat{background:var(--surface);border-radius:var(--r-lg);padding:17px 18px 18px;display:flex;flex-direction:column;gap:5px;min-width:0;box-shadow:var(--lift)}
+  .stat .k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+  .stat .v{font-size:27px;font-weight:700;letter-spacing:-.035em;line-height:1.1}
+  .stat .v small{font-size:14px;color:var(--ink-3);font-weight:500}
+  .stat .sub{font-size:12.5px;color:var(--ink-2);line-height:1.4}
+  .stat.is-crit .v{color:var(--crit)} .stat.is-warn .v{color:var(--warn)} .stat.is-good .v{color:var(--good)}
+  .meter{height:6px;border-radius:99px;background:var(--surface-3);overflow:hidden;margin-top:4px}
+  .meter i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-hi));border-radius:99px}
+
+  /* ---------- tab bar ---------- */
+  nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;margin:16px 0 0;padding:8px 0;background:linear-gradient(180deg,var(--ground) 72%,rgba(8,7,12,0));overflow-x:auto;scrollbar-width:none;display:flex}
+  nav.tabs::-webkit-scrollbar{display:none}
+  .tabstrip{display:inline-flex;gap:4px;background:var(--surface);border-radius:999px;padding:5px}
+  nav.tabs button{background:none;border:0;padding:9px 16px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--ink-3);cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:7px;transition:color .15s,background .15s}
+  nav.tabs button:hover{color:var(--ink-2)}
+  nav.tabs button[aria-selected="true"]{background:var(--accent);color:#fff;box-shadow:0 10px 22px -14px var(--accent)}
+  .tally{font-size:11px;font-weight:700;background:var(--surface-2);color:var(--ink-2);border-radius:999px;padding:1px 7px;min-width:20px;text-align:center;font-variant-numeric:tabular-nums}
+  nav.tabs button[aria-selected="true"] .tally{background:rgba(255,255,255,.22);color:#fff}
+  .tally.hot{background:var(--crit);color:#2E1719}
+
+  /* ---------- panels and cards ---------- */
+  .panel{margin-top:26px}
+  .panel-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:11px;padding-inline:4px}
+  .panel-head h2{font-size:19px;font-weight:700;letter-spacing:-.025em}
+  .panel-head p{margin:3px 0 0;font-size:13px;color:var(--ink-3);max-width:64ch;line-height:1.5}
+  .card{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--lift);overflow:hidden}
+  .card + .card{margin-top:10px}
+  .card-pad{padding:18px}
+  .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+
+  .rowitem{display:flex;gap:13px;padding:14px 16px;border-top:1px solid var(--line-soft);align-items:center}
+  .rowitem:first-child{border-top:0}
+  .rowitem .grow{flex:1;min-width:0}
+  .rowitem .ttl{font-weight:600;line-height:1.35;font-size:14.5px}
+  .rowitem .meta{font-size:12.5px;color:var(--ink-3);margin-top:3px;display:flex;flex-wrap:wrap;gap:4px 9px;align-items:center;line-height:1.5}
+  .money{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700;letter-spacing:-.02em;font-size:15px}
+  .money.in{color:var(--good)} .money.out{color:var(--crit)}
+  .tile{width:38px;height:38px;border-radius:var(--r-sm);background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex:none;color:var(--ink-2);align-self:flex-start;margin-top:1px}
+
+  .chip{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--surface-2);color:var(--ink-2);white-space:nowrap}
+  .chip .sw{width:7px;height:7px;border-radius:50%;flex:none}
+  .chip.consumer{color:var(--s-consumer);background:color-mix(in srgb,var(--s-consumer) 14%,var(--surface-2))}
+  .chip.signing{color:var(--s-signing);background:color-mix(in srgb,var(--s-signing) 16%,var(--surface-2))}
+  .chip.agent{color:var(--s-agent);background:color-mix(in srgb,var(--s-agent) 16%,var(--surface-2))}
+  .chip.good{color:var(--good);background:var(--good-soft)}
+  .chip.warn{color:var(--warn);background:var(--warn-soft)}
+  .chip.crit{color:var(--crit);background:var(--crit-soft)}
+
+  .empty{padding:26px 18px;color:var(--ink-2);font-size:13.5px;line-height:1.6}
+  .empty b{color:var(--ink);font-weight:700;display:block;margin-bottom:5px;font-size:15px;letter-spacing:-.02em}
+
+  /* ---------- controls ---------- */
+  .bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px;padding-inline:4px}
+  .seg{display:inline-flex;background:var(--surface);border-radius:999px;padding:5px;gap:4px;flex-wrap:wrap}
+  .seg button{border:0;background:none;padding:7px 15px;border-radius:999px;font-size:12.5px;font-weight:600;color:var(--ink-3);cursor:pointer}
+  .seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+  .btn{border:0;background:var(--surface-2);border-radius:14px;padding:11px 20px;font-size:13.5px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:7px;color:var(--ink)}
+  .btn:hover{background:var(--surface-3)}
+  .btn.primary{background:var(--accent);color:#fff;box-shadow:0 14px 30px -18px var(--accent)}
+  .btn.primary:hover{background:var(--accent-hi)}
+  .btn[disabled]{opacity:.45;cursor:not-allowed}
+  .btn[disabled]:hover{background:var(--surface-2)}
+  .btn.ghost{background:none;color:var(--ink-3);padding:6px 10px;font-size:12px;border-radius:10px}
+  .btn.ghost:hover{background:var(--surface-2);color:var(--ink-2)}
+
+  form.add{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;padding:18px 16px;border-top:1px solid var(--line-soft);background:rgba(255,255,255,.015)}
+  form.add label{display:flex;flex-direction:column;gap:5px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+  form.add input,form.add select,form.add textarea{font:inherit;font-size:14px;padding:11px 13px;border:1px solid transparent;border-radius:14px;background:var(--surface-2);color:var(--ink);min-width:0;width:100%;font-weight:500}
+  form.add input::placeholder{color:var(--ink-3)}
+  form.add input:focus,form.add select:focus{border-color:var(--accent);outline:none}
+  form.add .full{grid-column:1/-1}
+  form.add .actions{grid-column:1/-1;display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:2px}
+  .hint{font-size:12px;color:var(--ink-3);line-height:1.5}
+
+  input[type="checkbox"]{appearance:none;width:22px;height:22px;border-radius:8px;background:var(--surface-2);flex:none;cursor:pointer;position:relative;margin:0;align-self:flex-start;margin-top:1px}
+  input[type="checkbox"]:checked{background:var(--accent)}
+  input[type="checkbox"]:checked::after{content:"";position:absolute;left:8px;top:4px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(43deg)}
+  input[type="checkbox"]:disabled{opacity:.4;cursor:not-allowed}
+  .done .ttl{text-decoration:line-through;color:var(--ink-3)}
+
+  /* ---------- chart ---------- */
+  .bars{display:flex;flex-direction:column;gap:11px}
+  .barrow{display:grid;grid-template-columns:minmax(92px,128px) 1fr auto;gap:12px;align-items:center;font-size:13px}
+  .barrow .track{background:var(--surface-2);border-radius:99px;height:16px;overflow:hidden}
+  .barrow .fill{height:100%;border-radius:99px;min-width:3px}
+  .barrow .lbl{color:var(--ink-2);display:flex;align-items:center;gap:7px;min-width:0;font-weight:500}
+  .barrow .lbl span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink-2);margin-top:14px}
+  .legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+
+  table.rate{width:100%;border-collapse:collapse;font-size:13px}
+  table.rate th,table.rate td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line-soft)}
+  table.rate th{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+  table.rate tr:last-child td{border-bottom:0}
+  table.rate td:last-child{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600}
+  .tablewrap{overflow-x:auto;background:var(--surface-2);border-radius:var(--r);margin-top:8px}
+
+  /* ---------- rules ---------- */
+  .stopcard{background:linear-gradient(160deg,#2A1519 0%,var(--surface) 78%);border-radius:var(--r-lg);padding:20px;box-shadow:var(--lift)}
+  .stopcard h3{font-size:17px;font-weight:700;color:var(--crit);margin-bottom:10px;letter-spacing:-.02em}
+  .steps{list-style:none;margin:0;padding:0;counter-reset:step}
+  .steps li{counter-increment:step;display:grid;grid-template-columns:28px 1fr;gap:12px;padding:10px 0;border-top:1px solid rgba(255,107,107,.12);font-size:14px;line-height:1.5}
+  .steps li:first-child{border-top:0}
+  .steps li::before{content:counter(step);font-size:12px;font-weight:700;color:var(--crit);background:var(--crit-soft);border-radius:9px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .steps b{display:block;color:var(--ink);font-weight:700;letter-spacing:-.015em}
+  .steps span{color:var(--ink-2)}
+  .search{display:flex;gap:10px;align-items:center;margin:16px 0 2px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 56px);z-index:15;background:var(--ground);padding-block:8px}
+  .search input{flex:1;font:inherit;font-size:14px;font-weight:500;padding:13px 18px;border:1px solid transparent;border-radius:999px;background:var(--surface);color:var(--ink);min-width:0}
+  .search input::placeholder{color:var(--ink-3)}
+  .search input:focus{border-color:var(--accent);outline:none}
+  .rule{border-top:1px solid var(--line-soft);padding:16px 18px}
+  .rule:first-child{border-top:0}
+  .rule h4{font-size:15px;font-weight:700;margin:0 0 7px;display:flex;flex-wrap:wrap;gap:9px;align-items:baseline;letter-spacing:-.02em}
+  .rule p{margin:0 0 8px;font-size:13.5px;color:var(--ink-2);line-height:1.6;max-width:72ch}
+  .rule p:last-child{margin-bottom:0}
+  .rule p b{color:var(--ink);font-weight:700}
+  .rule .cite{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);font-weight:400}
+  .rule.stop{box-shadow:inset 3px 0 0 var(--crit)}
+  .rule.unconfirmed{box-shadow:inset 3px 0 0 var(--warn)}
+
+  /* ---------- dialog ---------- */
+  dialog{border:0;padding:0;background:var(--surface);color:var(--ink);border-radius:26px;max-width:560px;width:calc(100% - 28px);box-shadow:0 40px 90px -30px rgba(0,0,0,.95)}
+  dialog::backdrop{background:rgba(4,3,9,.74)}
+  .dlg-head{padding:22px 22px 0}
+  .dlg-head h3{font-size:19px;font-weight:700;letter-spacing:-.025em;line-height:1.25;margin-top:6px}
+  .dlg-body{padding:16px 22px 0;display:flex;flex-direction:column;gap:14px}
+  .dlg-body .detail{font-size:13.5px;color:var(--ink-2);line-height:1.55;margin:0}
+  .dlg-body label{display:flex;flex-direction:column;gap:6px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+  .dlg-body input,.dlg-body select,.dlg-body textarea{font:inherit;font-size:14px;font-weight:500;padding:12px 14px;border:1px solid transparent;border-radius:14px;background:var(--surface-2);color:var(--ink);width:100%}
+  .dlg-body textarea{min-height:92px;resize:vertical;line-height:1.5}
+  .dlg-body input:focus,.dlg-body select:focus,.dlg-body textarea:focus{border-color:var(--accent);outline:none}
+  .dlg-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media (max-width:440px){ .dlg-row{grid-template-columns:1fr} }
+  .dlg-foot{padding:18px 22px 22px;display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+  .updates{display:flex;flex-direction:column;gap:9px;max-height:230px;overflow-y:auto}
+  .update{background:var(--surface-2);border-radius:14px;padding:11px 13px;font-size:13px;line-height:1.5;color:var(--ink-2)}
+  .update .when{font-size:11px;color:var(--ink-3);font-weight:600;display:flex;gap:8px;align-items:center;margin-bottom:4px}
+
+  /* ---------- calendar ---------- */
+  .calhead{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 18px 12px}
+  .calhead h3{font-size:17px;font-weight:700;letter-spacing:-.02em}
+  .calnav{display:flex;gap:6px}
+  .calnav button{width:36px;height:36px;border:0;border-radius:12px;background:var(--surface-2);color:var(--ink-2);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .calnav button:hover{background:var(--surface-3);color:var(--ink)}
+  .calgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;padding:0 12px 14px}
+  .dow{text-align:center;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:700;padding-bottom:6px}
+  .day{height:clamp(44px,7vw,56px);border:0;background:none;border-radius:13px;color:var(--ink-2);font-size:13.5px;font-weight:600;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0;position:relative;font-variant-numeric:tabular-nums}
+  .day:hover{background:var(--surface-2)}
+  .day.out{color:var(--ink-3);opacity:.38}
+  .day.today{box-shadow:inset 0 0 0 1.5px var(--accent-hi);color:var(--ink)}
+  .day.sel{background:var(--accent);color:#fff}
+  .day.sel .dots i{background:#fff!important}
+  .dots{display:flex;gap:3px;height:5px;align-items:center}
+  .dots i{width:5px;height:5px;border-radius:50%;display:block}
+  .daykey{display:flex;gap:14px;flex-wrap:wrap;padding:0 18px 18px;font-size:11.5px;color:var(--ink-3)}
+  .daykey i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;vertical-align:0}
+
+  .foot{margin-top:38px;padding:18px;border-radius:var(--r);background:var(--surface);font-size:12.5px;color:var(--ink-3);line-height:1.65}
+  .foot b{color:var(--ink-2);font-weight:700}
+  @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<header class="mast">
+  <div class="mast-in">
+    <div class="brand">
+      <span class="eyebrow">Given Word Notary LLC · Camden, NJ</span>
+      <h1>The Workstation</h1>
+    </div>
+    <div class="mast-right">
+      <span class="phase" id="phaseBadge"><span class="dot"></span><span id="phaseText">Loading</span></span>
+      <span class="asof" id="asOf"></span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div id="notices"></div>
+  <div class="stats" id="stats"></div>
+
+  <nav class="tabs" id="tabs" role="tablist"></nav>
+
+  <main id="view"></main>
+
+  <p class="foot">
+    <b>How this page works.</b> The Haven vault stays the record of the business — this is the place you
+    work from, and anything typed here is meant to be swept back into the vault by Samira.
+    Money figures are reserve policy, not a tax calculation; the 20% / 35% split is there so the
+    money is set aside before it feels spendable. Not legal or tax advice.
+  </p>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ============================ constants ============================ */
+var CHANNELS = {
+  consumer:      {label:"Consumer",       cls:"consumer", terms:"due-at-completion", payer:"The signer",        varname:"--s-consumer"},
+  "signing-service":{label:"Signing service", cls:"signing", terms:"net-30",          payer:"The signing company", varname:"--s-signing"},
+  agent:         {label:"Agent referral",  cls:"agent",    terms:"due-at-completion", payer:"The signer",        varname:"--s-agent"},
+  brokerage:     {label:"Brokerage (retained)", cls:"agent", terms:"net-15",          payer:"The brokerage",     varname:"--s-agent"}
+};
+var TERM_DAYS = {"due-at-completion":7,"net-15":16,"net-30":31,"net-45":46};
+var PAGE_COST = 0.055;               // paper + toner, blended letter and legal
+var RESERVE = {statutory:0.20, nonNotarial:0.35};
+var TABS = [
+  {id:"today",     label:"Today"},
+  {id:"calendar",  label:"Calendar"},
+  {id:"rules",     label:"Rules"},
+  {id:"jobs",      label:"Jobs"},
+  {id:"launch",    label:"Launch"},
+  {id:"money",     label:"Money"},
+  {id:"marketing", label:"Marketing"},
+  {id:"open",      label:"Open items"}
+];
+var LAUNCH_STATUS = [
+  ["todo","Not started"],
+  ["doing","In progress"],
+  ["waiting","Waiting"],
+  ["blocked","Blocked"],
+  ["done","Done"]
+];
+var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+/* ============================ state ============================ */
+var db = null, canWrite = null, busy = false, booted = false;
+var state = {jobs:[], tasks:[], launch:[], channels:[], activity:[], config:{}};
+var ui = {tab:"today", jobFilter:"open", taskFilter:"open", forms:{}};
+try{ var t = localStorage.getItem("gw.tab"); if(t) ui.tab = t; }catch(e){}
+
+/* ============================ helpers ============================ */
+function $(sel,root){ return (root||document).querySelector(sel); }
+function el(tag,cls,text){ var n=document.createElement(tag); if(cls) n.className=cls; if(text!=null) n.textContent=text; return n; }
+function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){ return ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]; }); }
+function money(n){ n = Number(n)||0; return "$" + n.toLocaleString("en-US",{minimumFractionDigits:(Math.abs(n)%1?2:0), maximumFractionDigits:2}); }
+function todayISO(){ var d=new Date(); return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()); }
+function pad(n){ return n<10?"0"+n:""+n; }
+function dayStart(iso){ if(!iso) return null; var p=String(iso).slice(0,10).split("-"); var d=new Date(+p[0],+p[1]-1,+p[2]); return isNaN(d)?null:d; }
+function daysFromToday(iso){ var d=dayStart(iso); if(!d) return null; var t=dayStart(todayISO()); return Math.round((d-t)/86400000); }
+function addDays(iso,n){ var d=dayStart(iso); if(!d) return null; d.setDate(d.getDate()+n); return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()); }
+function fmtDate(iso){ var d=dayStart(iso); if(!d) return "—"; return d.toLocaleDateString("en-US",{month:"short",day:"numeric"}); }
+function relDays(n){
+  if(n===null||n===undefined) return "";
+  if(n===0) return "today"; if(n===1) return "tomorrow"; if(n===-1) return "yesterday";
+  return n>0 ? ("in "+n+" days") : (Math.abs(n)+" days ago");
+}
+function jobFees(j){
+  var s=Number(j.statutoryFee)||0, nn=Number(j.nonNotarialFee)||0;
+  var print = (j.printingCost!=null && j.printingCost!=="") ? Number(j.printingCost)||0
+            : (Number(j.pages)||0) * 2 * PAGE_COST;
+  return {statutory:s, nonNotarial:nn, gross:s+nn, printing:print,
+          printEstimated: !(j.printingCost!=null && j.printingCost!=="") && (Number(j.pages)||0)>0,
+          reserve: s*RESERVE.statutory + nn*RESERVE.nonNotarial};
+}
+function chanOf(j){ return CHANNELS[j.channel] || CHANNELS.consumer; }
+function invoiceDue(j){
+  var terms = j.paymentTerms || chanOf(j).terms;
+  return addDays(j.date, TERM_DAYS[terms] != null ? TERM_DAYS[terms] : 31);
+}
+function cmp(field,dir){ return function(a,b){ var x=a[field]||"", y=b[field]||""; return (x<y?-1:x>y?1:0)*(dir==="desc"?-1:1); }; }
+
+/* ============================ derived ============================ */
+function doneJobs(){ return state.jobs.filter(function(j){ return j.status==="done"; }); }
+function openJobs(){ return state.jobs.filter(function(j){ return j.status!=="done" && j.status!=="cancelled"; }); }
+
+function moneyPicture(){
+  var m = {gross:0, statutory:0, nonNotarial:0, printing:0, reserve:0, collected:0, outstanding:0, byChannel:{}};
+  doneJobs().forEach(function(j){
+    var f = jobFees(j);
+    m.gross += f.gross; m.statutory += f.statutory; m.nonNotarial += f.nonNotarial;
+    m.printing += f.printing; m.reserve += f.reserve;
+    if(j.paidOn) m.collected += f.gross; else m.outstanding += f.gross;
+    var k = j.channel || "consumer";
+    m.byChannel[k] = (m.byChannel[k]||0) + f.gross;
+  });
+  m.net = m.gross - m.printing - m.reserve;
+  return m;
+}
+
+function alarms(){
+  var out = [];
+  var today = todayISO();
+  state.jobs.forEach(function(j){
+    var name = (j.client || "Unnamed job") + " · " + fmtDate(j.date);
+    var past = j.date && daysFromToday(j.date) <= 0;
+    if(j.status==="done" && !j.journalEntryId && !j.refused)
+      out.push({sev:"crit", tag:"No journal entry", text:name + " — the act is logged here but no BlueNotary entry id is recorded. Enter it while you still remember the appointment.", job:j});
+    if(past && j.status!=="done" && j.status!=="cancelled")
+      out.push({sev:"warn", tag:"Appointment passed", text:name + " — the slot is in the past and the job is still open. Close it out or reschedule.", job:j});
+    if(j.status==="done" && !j.paidOn){
+      var due = invoiceDue(j);
+      if(due && due < today)
+        out.push({sev:"crit", tag:"Invoice overdue", text:name + " — " + money(jobFees(j).gross) + " unpaid, was due " + fmtDate(due) + " on " + (j.paymentTerms||chanOf(j).terms) + " terms.", job:j});
+    }
+    if(j.channel==="signing-service" && j.scanbackDue && !j.scanbackDone && j.scanbackDue < new Date().toISOString())
+      out.push({sev:"crit", tag:"Scan-back overdue", text:name + " — the scan-back was due " + fmtDate(j.scanbackDue) + " and is not marked sent.", job:j});
+    if(j.status==="done" && j.journalEntryId && jobFees(j).gross === 0)
+      out.push({sev:"warn", tag:"Act with no fee", text:name + " — a journal entry exists but no fee is recorded against it.", job:j});
+  });
+  return out;
+}
+
+function launchByPhase(){
+  var phases = {}, order = [];
+  state.launch.slice().sort(cmp("id")).forEach(function(it){
+    var key = it.phase || "Unsorted";
+    if(!phases[key]){ phases[key] = {name:key, items:[], note:it.phaseNote||""}; order.push(key); }
+    phases[key].items.push(it);
+  });
+  return order.map(function(k){ return phases[k]; });
+}
+function launchProgress(){
+  var d=0; state.launch.forEach(function(i){ if(i.done) d++; });
+  return {done:d, total:state.launch.length};
+}
+function openTasks(){ return state.tasks.filter(function(t){ return t.status!=="done"; }); }
+
+function nextDeadline(){
+  var best = null;
+  state.tasks.concat(state.jobs.map(function(j){ return {title:j.client||"Job", due:j.date, status:j.status}; }))
+    .forEach(function(t){
+      if(!t.due || t.status==="done" || t.status==="cancelled") return;
+      var d = daysFromToday(t.due);
+      if(d===null) return;
+      if(!best || d < best.days) best = {title:t.title, days:d, due:t.due};
+    });
+  return best;
+}
+
+function phase(){
+  if(state.config.phase === "operating" || state.jobs.length) return "operating";
+  return "prelaunch";
+}
+
+/* ============================ activity ============================ */
+function activityItems(){
+  var out = [];
+  state.activity.forEach(function(day){
+    (day.items||[]).forEach(function(it){ out.push({date:day.id, text:it.text, kind:it.kind||"note", t:it.t||""}); });
+  });
+  return out.sort(function(a,b){ return (b.date+b.t) < (a.date+a.t) ? -1 : 1; });
+}
+function logActivity(text, kind){
+  if(!db || !text) return Promise.resolve();
+  var id = todayISO();
+  var ref = db.doc("activity/"+id);
+  return ref.get().then(function(snap){
+    var items = (snap.exists && snap.data().items) ? snap.data().items.slice() : [];
+    items.push({text:text, kind:kind||"note", t:new Date().toTimeString().slice(0,5)});
+    if(items.length > 60) items = items.slice(items.length-60);
+    return ref.set({items:items});
+  }).catch(function(){});
+}
+
+/* ============================ the dialog ============================ */
+/* One <dialog> reused by every step. Opened from a row, it is where the story of
+   that step gets written — the checkbox says whether it is done, this says what happened. */
+function openStepDialog(item){
+  var old = document.getElementById("stepDlg");
+  if(old) old.remove();
+  var d = document.createElement("dialog");
+  d.id = "stepDlg";
+
+  var head = el("div","dlg-head");
+  head.appendChild(el("div","eyebrow", item.phase || "Launch step"));
+  head.appendChild(el("h3", null, item.title));
+  d.appendChild(head);
+
+  var body = el("div","dlg-body");
+  if(item.detail) body.appendChild(el("p","detail", item.detail));
+
+  var row = el("div","dlg-row");
+  var lStatus = el("label"); lStatus.appendChild(el("span",null,"Where it stands"));
+  var sel = el("select"); sel.id = "dlgStatus";
+  LAUNCH_STATUS.forEach(function(o){
+    var op = el("option",null,o[1]); op.value=o[0];
+    if(o[0] === (item.status || (item.done ? "done" : "todo"))) op.selected = true;
+    sel.appendChild(op);
+  });
+  lStatus.appendChild(sel); row.appendChild(lStatus);
+
+  var lDue = el("label"); lDue.appendChild(el("span",null,"Date, if it has one"));
+  var due = el("input"); due.type="date"; due.id="dlgDue"; due.value = item.due || "";
+  lDue.appendChild(due); row.appendChild(lDue);
+  body.appendChild(row);
+
+  var lNote = el("label"); lNote.appendChild(el("span",null,"What happened"));
+  var ta = el("textarea"); ta.id="dlgNote";
+  ta.placeholder = "Called DORES, they said to use the portal form \u00b7 paid the $100, entity id is \u2026 \u00b7 waiting on the clerk to call back";
+  lNote.appendChild(ta); body.appendChild(lNote);
+
+  var ups = (item.updates || []).slice().reverse();
+  if(ups.length){
+    var wrap = el("div");
+    wrap.appendChild(el("div","eyebrow","What has happened so far"));
+    var list = el("div","updates"); list.style.marginTop = "8px";
+    ups.forEach(function(u){
+      var b = el("div","update");
+      var w = el("div","when");
+      w.appendChild(el("span",null, fmtDate(u.date)));
+      if(u.status) w.appendChild(el("span","chip", labelFor(u.status)));
+      b.appendChild(w);
+      b.appendChild(el("div",null,u.text));
+      list.appendChild(b);
+    });
+    wrap.appendChild(list); body.appendChild(wrap);
+  }
+  d.appendChild(body);
+
+  var foot = el("div","dlg-foot");
+  var cancel = el("button","btn","Close"); cancel.type="button";
+  cancel.addEventListener("click", function(){ d.close(); });
+  foot.appendChild(cancel);
+  var save = el("button","btn primary","Save update"); save.type="button";
+  if(canWrite === false || !db){ save.disabled = true; }
+  save.addEventListener("click", function(){
+    var status = sel.value, text = ta.value.trim(), dueVal = due.value;
+    var patch = {status:status, done: status === "done", due: dueVal || ""};
+    if(text){
+      var list2 = (item.updates || []).slice();
+      list2.push({date: todayISO(), text: text, status: status});
+      if(list2.length > 40) list2 = list2.slice(list2.length - 40);
+      patch.updates = list2;
+    }
+    save.disabled = true; save.textContent = "Saving\u2026";
+    db.doc("launch/" + item.id).update(patch).then(function(){
+      return logActivity(text ? (item.title + " \u2014 " + text) : (item.title + " \u2014 " + labelFor(status).toLowerCase()),
+                         status === "done" ? "done" : "note");
+    }).then(function(){
+      d.close(); render();
+    }).catch(function(err){
+      save.disabled = false; save.textContent = "Save update";
+      alert("That did not save" + (err && err.message ? ": " + err.message : ".") + " Nothing was changed.");
+    });
+  });
+  foot.appendChild(save);
+  d.appendChild(foot);
+
+  document.body.appendChild(d);
+  d.addEventListener("close", function(){ d.remove(); });
+  d.showModal();
+  ta.focus();
+}
+function labelFor(code){
+  for(var i=0;i<LAUNCH_STATUS.length;i++) if(LAUNCH_STATUS[i][0]===code) return LAUNCH_STATUS[i][1];
+  return code || "Not started";
+}
+function statusTone(code){
+  return code==="done" ? "good" : code==="blocked" ? "crit" : code==="waiting" ? "warn" : "";
+}
+
+/* ============================ the calendar model ============================ */
+/* Everything with a date on it, from five different places, in one list.
+   The four deadlines that can end the business are COMPUTED from two dates in
+   config — enter the commission date and the oath, renewal and course dates appear. */
+function computedDeadlines(){
+  var c = state.config || {}, out = [];
+  if(c.commissionDate){
+    out.push({date: addDays(c.commissionDate, 90), kind:"deadline", title:"Last day to swear the oath",
+      note:"In person at the county clerk. Miss this and the Treasurer cancels the commission and the whole process restarts."});
+  }
+  var expiry = c.commissionExpiry;
+  if(!expiry && c.commissionDate){
+    var d = dayStart(c.commissionDate);
+    if(d){ d.setFullYear(d.getFullYear() + 5); expiry = d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()); }
+  }
+  if(expiry){
+    out.push({date: addDays(expiry, -120), kind:"deadline", title:"Start the continuing education course",
+      note:"3 hours for a renewal. Finish it before the renewal window, not during it."});
+    out.push({date: addDays(expiry, -90), kind:"deadline", title:"Start the commission renewal",
+      note:"Course, exam, application, county clerk again. Ninety days is the runway that chain needs."});
+    out.push({date: expiry, kind:"deadline", title:"Commission expires", note:"Five years from the day it was issued."});
+  }
+  if(c.llcFiledOn){
+    var f = dayStart(c.llcFiledOn);
+    if(f){
+      var now = new Date(), yr = now.getFullYear();
+      for(var i=0;i<2;i++){
+        var y = yr + i;
+        var iso = y+"-"+pad(f.getMonth()+1)+"-"+pad(f.getDate());
+        if(daysFromToday(iso) >= -31) out.push({date: iso, kind:"deadline", title:"NJ annual report due ($75)",
+          note:"Due every year in the anniversary month of formation. Miss it long enough and the state revokes the LLC."});
+      }
+    }
+  }
+  return out.filter(function(x){ return x.date; });
+}
+
+function calendarItems(){
+  var out = [];
+  state.jobs.forEach(function(j){
+    if(!j.date) return;
+    out.push({date:String(j.date).slice(0,10), kind:"job", title:(j.client||"Job") + " \u2014 " + (j.jobType||"notarization"),
+      note:[j.location, j.signingCompany ? "via "+j.signingCompany : "", chanOf(j).label].filter(Boolean).join(" \u00b7 "),
+      color:"var("+chanOf(j).varname+")", obj:j, done:j.status==="done"});
+  });
+  state.tasks.forEach(function(t){
+    if(!t.due || t.status==="done") return;
+    out.push({date:String(t.due).slice(0,10), kind:"task", title:t.title,
+      note:t.who ? ("With " + t.who) : (t.detail||""), color:"var(--accent-hi)"});
+  });
+  state.launch.forEach(function(i){
+    if(!i.due || i.done) return;
+    out.push({date:String(i.due).slice(0,10), kind:"launch", title:i.title, note:i.phase||"", color:"var(--s-consumer)"});
+  });
+  computedDeadlines().forEach(function(d){
+    out.push({date:d.date, kind:"deadline", title:d.title, note:d.note, color:"var(--crit)"});
+  });
+  return out.sort(function(a,b){ return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; });
+}
+function itemsOn(list, iso){ return list.filter(function(x){ return x.date === iso; }); }
+
+/* ============================ render: chrome ============================ */
+function render(){
+  renderPhase(); renderNotices(); renderStats(); renderTabs(); renderView();
+}
+
+function renderPhase(){
+  var p = phase();
+  $("#phaseText").textContent = p==="operating" ? "Operating" : "Pre-commission";
+  $("#asOf").textContent = "as of " + new Date().toLocaleDateString("en-US",{month:"short",day:"numeric"}) + " · " +
+    new Date().toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit"});
+}
+
+function renderNotices(){
+  var box = $("#notices"); box.textContent = "";
+  var al = alarms();
+  if(al.length){
+    var n = el("div","notice crit");
+    var body = el("div");
+    body.appendChild(el("b", null, al.length===1 ? "1 alarm needs you" : al.length + " alarms need you"));
+    var ul = el("ul");
+    al.slice(0,5).forEach(function(a){
+      var li = el("li"); li.appendChild(el("strong",null,a.tag+": ")); li.appendChild(document.createTextNode(a.text)); ul.appendChild(li);
+    });
+    body.appendChild(ul);
+    if(al.length>5) body.appendChild(el("div",null,"…and "+(al.length-5)+" more."));
+    n.appendChild(body); box.appendChild(n);
+  }
+  if(canWrite === false){
+    var r = el("div","notice warn");
+    r.appendChild(el("div",null,"You are signed in as a reader on this page, so nothing you type here can be saved. Everything below is live and up to date."));
+    box.appendChild(r);
+  }
+  if(booted && !db && canWrite !== false){
+    var o = el("div","notice warn");
+    o.appendChild(el("div",null,"Working offline — the shared store did not load, so this page is showing an empty board and cannot save. Reload to try again."));
+    box.appendChild(o);
+  }
+}
+
+function statTile(k,v,sub,tone,meter,hero){
+  var t = el("div", hero ? "hero" : ("stat" + (tone?" is-"+tone:"")));
+  t.appendChild(el("div","k",k));
+  var val = el("div","v"); val.innerHTML = v; t.appendChild(val);
+  if(meter!=null){ var m = el("div","meter"); var i=el("i"); i.style.width = Math.max(0,Math.min(100,meter))+"%"; m.appendChild(i); t.appendChild(m); }
+  if(sub) t.appendChild(el("div","sub",sub));
+  return t;
+}
+/* The first tile in a row is the hero: the violet card that carries the one number
+   worth seeing from across the room. */
+function statRow(specs){
+  var box = el("div","stats");
+  specs.forEach(function(a,i){ box.appendChild(statTile(a[0],a[1],a[2],a[3],a[4],i===0)); });
+  return box;
+}
+function tile(glyph, color){
+  var t = el("div","tile", glyph);
+  if(color){ t.style.color = color; t.style.background = "color-mix(in srgb, " + color + " 15%, var(--surface-2))"; }
+  return t;
+}
+
+function renderStats(){
+  var box = $("#stats"), m = moneyPicture(), al = alarms(), lp = launchProgress(), nd = nextDeadline();
+  var specs;
+  if(phase()==="operating"){
+    var week = openJobs().filter(function(j){ var d=daysFromToday(j.date); return d!==null && d>=0 && d<=7; }).length;
+    specs = [
+      ["Yours to keep", '<span class="num">'+esc(money(m.net))+'</span>',
+       "After " + money(m.printing) + " printing and " + money(m.reserve) + " set aside for tax"],
+      ["Jobs booked", '<span class="num">'+openJobs().length+'</span>', week + " in the next seven days"],
+      ["Alarms", '<span class="num">'+al.length+'</span>',
+       al.length ? "Listed above — work them first" : "Nothing is out of line", al.length?"crit":"good"],
+      ["Waiting on payment", '<span class="num">'+esc(money(m.outstanding))+'</span>',
+       m.outstanding ? "Across " + doneJobs().filter(function(j){return !j.paidOn;}).length + " invoices" : "Everything performed has been paid",
+       m.outstanding?"warn":"good"]
+    ];
+  } else {
+    specs = [
+      ["Next deadline",
+       nd ? '<span class="num">'+(nd.days<0?"past":nd.days)+'</span> <small>'+(nd.days<0?"due":"days")+'</small>' : '<span class="num">—</span>',
+       nd ? nd.title + " · " + fmtDate(nd.due) : "Nothing scheduled"],
+      ["Launch steps", '<span class="num">'+lp.done+'</span> <small>of '+lp.total+'</small>',
+       lp.total ? (lp.total-lp.done) + " still to do before the business can take a paid job" : "No steps loaded yet",
+       null, lp.total ? (lp.done/lp.total*100) : 0],
+      ["Open items", '<span class="num">'+openTasks().length+'</span>',
+       openTasks().filter(function(t){return t.kind==="question";}).length + " are questions out to someone else"],
+      ["Money in", '<span class="num">$0</span>',
+       "No job can be taken until the commission exists. The rate card and the tax split are already set."]
+    ];
+  }
+  var fresh = statRow(specs);
+  box.parentNode.replaceChild(fresh, box);
+  fresh.id = "stats";
+}
+
+function renderTabs(){
+  var nav = $("#tabs"); nav.textContent = "";
+  var strip = el("div","tabstrip"); nav.appendChild(strip);
+  var counts = {
+    jobs: openJobs().length,
+    open: openTasks().length,
+    launch: launchProgress().total - launchProgress().done
+  };
+  TABS.forEach(function(t){
+    var b = el("button", null); b.type="button"; b.setAttribute("role","tab");
+    b.setAttribute("aria-selected", ui.tab===t.id ? "true" : "false");
+    b.appendChild(document.createTextNode(t.label));
+    if(counts[t.id]) b.appendChild(el("span","tally", String(counts[t.id])));
+    if(t.id==="today" && alarms().length) b.appendChild(el("span","tally hot", String(alarms().length)));
+    b.addEventListener("click", function(){ ui.tab=t.id; try{localStorage.setItem("gw.tab",t.id);}catch(e){} render(); window.scrollTo(0,0); });
+    strip.appendChild(b);
+  });
+}
+
+function panel(title, blurb){
+  var p = el("section","panel");
+  var h = el("div","panel-head");
+  var left = el("div"); left.appendChild(el("h2",null,title)); if(blurb) left.appendChild(el("p",null,blurb));
+  h.appendChild(left); p.appendChild(h);
+  return p;
+}
+function emptyCard(title, body){
+  var c = el("div","card"); var e = el("div","empty");
+  e.appendChild(el("b",null,title)); e.appendChild(document.createTextNode(body)); c.appendChild(e); return c;
+}
+
+function renderView(){
+  var v = $("#view"); v.textContent = "";
+  ({today:viewToday, calendar:viewCalendar, rules:viewRules, jobs:viewJobs, money:viewMoney, marketing:viewMarketing, launch:viewLaunch, open:viewOpen}[ui.tab] || viewToday)(v);
+}
+
+/* ============================ view: today ============================ */
+function headline(){
+  var op = phase()==="operating", al=alarms().length, lp=launchProgress(), nd=nextDeadline();
+  if(op){
+    var week = openJobs().filter(function(j){ var d=daysFromToday(j.date); return d!==null&&d>=0&&d<=7; }).length;
+    return (al ? al + (al===1?" alarm is":" alarms are") + " open, and " : "Nothing is out of line. ") +
+      "you have " + openJobs().length + " job" + (openJobs().length===1?"":"s") + " on the book, " + week + " of them inside a week. " +
+      money(moneyPicture().outstanding) + " is still owed to you.";
+  }
+  return "The business is built and not yet switched on. " + lp.done + " of " + lp.total + " launch steps are done, " +
+    openTasks().length + " items are open" + (nd ? ", and the next thing with a date on it is " + nd.title.toLowerCase() + " " + relDays(nd.days) : "") + ".";
+}
+
+function viewToday(v){
+  var p = panel("What's going on");
+  var c = el("div","card"); var pad = el("div","card-pad");
+  var h = el("p"); h.style.margin="0"; h.style.fontFamily="var(--display)"; h.style.fontSize="17.5px"; h.style.lineHeight="1.5";
+  h.textContent = headline(); pad.appendChild(h); c.appendChild(pad); p.appendChild(c);
+  v.appendChild(p);
+
+  /* next seven days */
+  var p2 = panel("The next seven days", "Appointments and anything with a date on it.");
+  var soon = [];
+  openJobs().forEach(function(j){ var d=daysFromToday(j.date); if(d!==null&&d<=7) soon.push({kind:"job",d:d,obj:j}); });
+  openTasks().forEach(function(t){ var d=daysFromToday(t.due); if(d!==null&&d<=7) soon.push({kind:"task",d:d,obj:t}); });
+  soon.sort(function(a,b){ return a.d-b.d; });
+  if(!soon.length){
+    p2.appendChild(emptyCard("Nothing dated in the next week",
+      "Items only appear here once they carry a date. Add one on the Jobs or Open items tab and it shows up."));
+  } else {
+    var lc = el("div","card");
+    soon.forEach(function(s){
+      var r = el("div","rowitem"); var g = el("div","grow");
+      if(s.kind==="job"){
+        r.appendChild(tile("↗", "var(" + chanOf(s.obj).varname + ")"));
+        g.appendChild(el("div","ttl", (s.obj.client||"Job") + " — " + (s.obj.jobType||"notarization")));
+        var mt = el("div","meta");
+        mt.appendChild(chipFor(s.obj));
+        mt.appendChild(el("span",null, fmtDate(s.obj.date) + " · " + relDays(s.d)));
+        if(s.obj.location) mt.appendChild(el("span",null,s.obj.location));
+        g.appendChild(mt);
+        r.appendChild(g);
+        r.appendChild(el("div","money", money(jobFees(s.obj).gross)));
+      } else {
+        r.appendChild(tile(s.obj.kind==="question" ? "?" : "•"));
+        g.appendChild(el("div","ttl", s.obj.title));
+        var mt2 = el("div","meta");
+        mt2.appendChild(el("span",null, fmtDate(s.obj.due) + " · " + relDays(s.d)));
+        if(s.obj.who) mt2.appendChild(el("span","chip", s.obj.who));
+        g.appendChild(mt2);
+        r.appendChild(g);
+      }
+      if(s.d < 0){ r.appendChild(el("span","chip crit","overdue")); }
+      lc.appendChild(r);
+    });
+    p2.appendChild(lc);
+  }
+  v.appendChild(p2);
+
+  /* activity log */
+  var p3 = panel("What's been done", "The running log. Samira writes here after every run, and so can you.");
+  var card = el("div","card");
+  var items = activityItems();
+  if(!items.length){
+    var e = el("div","empty"); e.appendChild(el("b",null,"Nothing logged yet"));
+    e.appendChild(document.createTextNode("Every completed job, filing and answer lands here with its date, so you can see the week without reconstructing it."));
+    card.appendChild(e);
+  } else {
+    items.slice(0,40).forEach(function(it){
+      var r = el("div","rowitem");
+      var glyphs = {done:"✓", money:"$", lead:"+", filing:"§", note:"•"};
+      r.appendChild(tile(glyphs[it.kind] || "•", it.kind==="done" ? "var(--good)" : it.kind==="money" ? "var(--accent-hi)" : null));
+      var g = el("div","grow");
+      g.appendChild(el("div","ttl", it.text));
+      var mt = el("div","meta");
+      mt.appendChild(el("span",null, fmtDate(it.date) + (it.t ? " · " + it.t : "")));
+      if(it.kind && it.kind!=="note") mt.appendChild(el("span","chip", it.kind));
+      g.appendChild(mt); r.appendChild(g);
+      card.appendChild(r);
+    });
+  }
+  card.appendChild(addForm("activity", [
+    {name:"text", label:"What happened", type:"text", full:true, placeholder:"Filed the LLC · $100 paid · confirmation emailed", required:true},
+    {name:"kind", label:"Kind", type:"select", options:[["note","note"],["done","done"],["filing","filing"],["lead","new lead"],["money","money"]]}
+  ], "Log it", function(vals){
+    return logActivity(vals.text, vals.kind);
+  }));
+  p3.appendChild(card);
+  v.appendChild(p3);
+}
+
+function chipFor(j){
+  var c = chanOf(j);
+  var s = el("span","chip "+c.cls);
+  var sw = el("span","sw"); sw.style.background = "var("+c.varname+")"; s.appendChild(sw);
+  s.appendChild(document.createTextNode(c.label));
+  return s;
+}
+
+/* ============================ view: rules ============================ */
+var STOP_PATH = [
+  ["Can I be sure who this is?","An unexpired government photo ID, or someone credible who knows them and whom you know. If you cannot get there, you stop."],
+  ["Is the signer actually in front of me?","Physically present, or live in the remote session. “She signed it this morning, just stamp it” is not a thing you can do."],
+  ["Do they seem willing, and do they seem to know what they are signing?","Not your judgement on whether it is a good idea — just whether they are acting freely and are aware. If someone else is answering for them, stop."],
+  ["Is the document complete?","No blank spaces. A blank you leave behind can be filled in by anyone afterwards, and your seal is on it."],
+  ["Am I being asked to explain it, or to pick the right certificate?","Then you stop. Whoever drew up the document, their attorney, or their loan officer answers that. You can say plainly: “I’m not allowed to tell you what this means or which one you need.”"],
+  ["Do I have a stake in this deal?","If you are a party to it, or you get paid on how it turns out, you cannot notarize it. That conflict voids the act."],
+  ["Still unsure?","Do not do it. Say you will confirm and come back. Nobody has ever lost a commission for taking an extra day; the redo costs you one trip, and getting it wrong can cost the commission."]
+];
+
+var RULES = [
+  {g:"The lines you do not cross", tone:"stop", t:"Never explain what a document says, or choose the certificate",
+   c:"Unauthorized practice of law · NJ",
+   b:["A notary is a witness, not an adviser. You cannot say what a clause means, whether the form is the right one, or whether they need an acknowledgment or a jurat — <b>even when you know the answer</b>.",
+      "In New Jersey that is practising law without a licence. Over a 150-page loan package it is the single most common way a signing agent loses a commission.",
+      "The line that works: <b>“I can’t tell you what this means or which one you need — your loan officer, or whoever drew this up, can.”</b>"]},
+  {g:"The lines you do not cross", tone:"stop", t:"Never notarize where you have an interest",
+   c:"Conflict of interest",
+   b:["If you are a party to the deal, or you get paid based on how it turns out, you cannot notarize it. That conflict voids the act — so the document is no good and the trip was wasted."]},
+  {g:"The lines you do not cross", tone:"stop", t:"Never notarize for someone who is not there",
+   c:"Personal appearance",
+   b:["The signer has to be in front of you, or live in the remote session. Not their spouse, not a photo of the signed page, not “he signed it this morning”.",
+      "This is the request you will get most often from people who are not trying to do anything wrong. It is still a no."]},
+  {g:"The lines you do not cross", tone:"stop", t:"Never notarize a document with blank spaces",
+   c:"Incomplete document",
+   b:["Blanks get filled in after you leave, and your seal is already on the page. Have them completed or struck through before you notarize, or decline."]},
+  {g:"The lines you do not cross", tone:"stop", t:"Never give a real estate agent anything for sending you a client",
+   c:"RESPA Section 8 · 12 U.S.C. 2607",
+   b:["No fee, no percentage, no gift card, no discount their clients get and nobody else does.",
+      "Notarizing a deed or a mortgage document is a settlement service, so this is federal criminal law: <b>up to $10,000 and a year in prison per violation, plus treble damages — and it binds the agent too.</b> If an agent proposes it, do not negotiate and do not soft-yes it. Say no and write down what was asked.",
+      "What is allowed wins the channel anyway: answering the phone, evenings and weekends, a rate sheet and a card, and remote signings for the out-of-state seller nobody else can help."]},
+  {g:"The lines you do not cross", tone:"stop", t:"Never print a recordable document on an inkjet",
+   c:"County recording",
+   b:["County recorders can refuse inkjet, because the ink runs. Laser only. On a loan package that mistake costs the whole package and the relationship."]},
+
+  {g:"Saying no, and how to record it", tone:"", t:"Turning a job away is the job working",
+   c:"",
+   b:["You are sometimes obliged to say no: the signer cannot be satisfactorily identified, is not present, appears coerced or does not understand what they are signing, the document is incomplete, or the act is something a notary commission does not cover.",
+      "Declining correctly is not a failed job. It is the part of the job you are actually commissioned for."]},
+  {g:"Saying no, and how to record it", tone:"", t:"Log every refusal the same day — nothing else will",
+   c:"",
+   b:["A refusal is not a notarial act, so it never enters the journal. Without a separate note it leaves no trace anywhere.",
+      "Record the date and time, what was asked for, and <b>the reason in your own words</b> — do not flatten it into a category, because the specific fact is what carries weight later. It is your evidence of reasonable care if a complaint or a lawsuit arrives, and that is usually years later when memory is worthless.",
+      "First name only. “Her ID was expired” is the record; her name and licence number are not."]},
+  {g:"Saying no, and how to record it", tone:"", t:"Write down what you saw, never what you think they were up to",
+   c:"",
+   b:["<b>“Signer could not produce unexpired ID”</b> is a fact. <b>“Signer was attempting fraud”</b> is an accusation sitting in a file that may one day be read by the person it names."]},
+  {g:"Saying no, and how to record it", tone:"", t:"You still earned the travel fee",
+   c:"",
+   b:["If you made the trip, invoice the travel as a non-notarial line and set aside 35% of it. There is no statutory line, because no act was performed."]},
+
+  {g:"The journal", tone:"", t:"Six things every entry must carry",
+   c:"N.J.A.C. 17:50-1.11",
+   b:["Date and time · type of act · name and address of each person the act was performed for · if you knew them personally, a statement saying so · if not, a brief description of how you identified them and the credential they showed · an itemized list of every fee charged.",
+      "That last one is why the invoice is always two lines. A single blended number makes the legal record wrong."]},
+  {g:"The journal", tone:"", t:"New Jersey does not require the signer's signature",
+   c:"N.J.A.C. 17:50-1.11",
+   b:["Unlike California, Florida and others. That is the finding that lets you run a fully electronic journal with no paper book to carry and no book to lose."]},
+  {g:"The journal", tone:"", t:"One journal at a time, covering in-person and remote both",
+   c:"N.J.A.C. 17:50-1.11",
+   b:["You cannot keep one book for walk-ups and a platform journal for remote work. It is a single decision, and switching later means a fresh DORES filing on top of a migration."]},
+  {g:"The journal", tone:"", t:"Electronic means permanent and tamper-evident — a spreadsheet is not",
+   c:"N.J.A.C. 17:50-1.11",
+   b:["A tamper-evident format is a property of the product: a file anyone can quietly edit does not qualify, and neither does a note in a git repo.",
+      "On paper the equivalent is a permanently bound register with consecutively numbered lines and pages — not a ring binder."]},
+  {g:"The journal", tone:"", t:"Keep it for ten years after the last act",
+   c:"N.J.A.C. 17:50-1.11",
+   b:["Which is the entire reason for the monthly export. Losing the journal without one means losing the record; losing it with one means losing at most a month."]},
+  {g:"The journal", tone:"", t:"Do not store ID photos or thumbprints",
+   c:"N.J.A.C. 17:50-1.11",
+   b:["NJ asks for a <i>brief description</i> of how you identified them and what they showed. So record credential type, issuing state and expiry — not an image, and not the full number.",
+      "Holding government ID images creates real exposure under NJ’s data-breach law for zero legal benefit on consumer work. For a remote act the platform holds the credential check inside the required recording, which is where it belongs."]},
+
+  {g:"What you may charge", tone:"", t:"$2.50 per act",
+   c:"N.J.A.C. 17:50-1.18",
+   b:["Oaths, affidavits, proofs of deed and acknowledgments. Per act — two acknowledgments is $5.00."]},
+  {g:"What you may charge", tone:"", t:"$15.00 for a grantor in a real estate transfer",
+   c:"N.J.A.C. 17:50-1.18",
+   b:["For the whole transaction, however many services it takes. Not $2.50 a signature."]},
+  {g:"What you may charge", tone:"", t:"$25.00 for a mortgagor in real estate financing",
+   c:"N.J.A.C. 17:50-1.18",
+   b:["Again the whole transaction, however many signatures. <b>A refinance with twelve notarized signatures is $25, not $30.</b>",
+      "Charging over a statutory cap is the kind of mistake that ends a commission, so this one is worth knowing cold."]},
+  {g:"What you may charge", tone:"", t:"Travel and technology fees are yours, but they go on their own line",
+   c:"N.J.A.C. 17:50-1.18",
+   b:["The State does not set them. It does require them to be separate and disclosed — and they are taxed differently from the notarial fee, which is what makes the 20% / 35% set-aside possible.",
+      "On a loan signing the flat signing fee <i>is</i> the non-notarial line. Never add a travel tier on top; the drive is already inside it."]},
+
+  {g:"Remote and electronic acts", tone:"", t:"Remote notarization is permanently legal in NJ",
+   c:"Effective 22 October 2021",
+   b:["It is not a pandemic rule that expired. It is settled law."]},
+  {g:"Remote and electronic acts", tone:"stop", t:"Tell the State which platform before your first remote or electronic act",
+   c:"DORES notary portal",
+   b:["A notification to the State Treasurer naming the communication technology platform, filed <b>before</b> the first remote or electronic act — and filed again every time you change platform.",
+      "This is separate from the commission. Remote work does not go live when the commission does; it goes live when this clears."]},
+  {g:"Remote and electronic acts", tone:"", t:"Identity proofing takes two of three",
+   c:"",
+   b:["At least two of: credential analysis, knowledge-based authentication, biometric verification — run by the platform, not by you."]},
+  {g:"Remote and electronic acts", tone:"", t:"Record the whole session, and keep it ten years",
+   c:"",
+   b:["Audio and video, including the identity verification, not just the signing. The recording is retained on the same ten-year clock as the journal."]},
+
+  {g:"The commission itself", tone:"stop", t:"Swear the oath within 90 days or start over",
+   c:"",
+   b:["In person, at the clerk of your county of residence. No mail, no online.",
+      "Miss the 90 days and the Treasurer cancels the commission and the entire process restarts — course, exam, application, endorsement, all of it. Put it on the calendar the day the packet arrives rather than trusting yourself to remember."]},
+  {g:"The commission itself", tone:"", t:"Five years, and it does not renew itself",
+   c:"",
+   b:["Renewal is the same chain as the first time: a 3-hour continuing education course (the first commission needs 6 hours), an updated exam, the DORES application, and the oath again at the county clerk.",
+      "Start 90 days out. Thirty is not enough runway for a chain with four links and a government office in it."]},
+  {g:"The commission itself", tone:"", t:"Report a move or a name change to DORES",
+   c:"",
+   b:["Easy to forget in the middle of moving, which is exactly when it happens."]},
+
+  {g:"If the seal or journal goes missing", tone:"stop", t:"Stop notarizing, immediately",
+   c:"Read this one before the other five",
+   b:["From the moment it is out of your possession until a replacement is physically in your hand, every notarization stops — in person and remote.",
+      "Using a seal that may be in someone else’s hands is what turns an inconvenience into a commission problem."]},
+  {g:"If the seal or journal goes missing", tone:"", t:"Then, in order: search once, report, police, replace, write it up",
+   c:"",
+   b:["<b>Search properly once</b> — car, bag, last appointment, home office. One thorough pass, not a day of hoping; the reporting clock is what matters.",
+      "<b>Report to DORES</b>, through the notary portal or in writing: your full name, commission number, commission expiry, and the last date you know you had it. Keep a copy and the date it went.",
+      "<b>Report to police if you suspect theft</b>, and keep the report number. A stolen seal is a fraud instrument in someone else’s hands, and the report is what separates a victim from a participant if it is later misused.",
+      "<b>Order the replacement</b>, and resume only when it arrives. Then <b>write it up</b> — what was lost, when you last had it, what you reported, to whom, on what date, and when you started again."]},
+  {g:"If the seal or journal goes missing", tone:"", t:"A lost journal is also possibly a data breach",
+   c:"",
+   b:["The journal carries signer names, addresses and identification details under a ten-year duty. So on top of the reporting above, consider whether NJ’s breach-notification obligations are triggered by what was in it.",
+      "Store the seal locked and separate from the journal, so one loss is never both."]},
+
+  {g:"Asking for reviews", tone:"", t:"Never offer anything for a review, and never filter them",
+   c:"FTC endorsement rules · Google policy",
+   b:["No discount, no credit, no free act. And never ask “how did it go?” first and send only the happy ones to Google — review gating is explicitly prohibited and is grounds for removal.",
+      "The penalty lands on the Business Profile the whole consumer side depends on, which makes this the most expensive corner you could cut."]},
+  {g:"Asking for reviews", tone:"", t:"Never ask a borrower on a signing-service job",
+   c:"",
+   b:["They did not hire you, did not pay you, and often did not choose you. Asking a stranger mid-refinance to review the notary who showed up at their house is at best odd and at worst a complaint to the company that sends you work.",
+      "Consumer jobs and agent referrals: ask the person who signed and paid, once, after it closes clean."]},
+
+  {g:"Not confirmed — do not rely on these yet", tone:"unconfirmed", t:"Whether NJ caps the fee for a remote act separately",
+   c:"Question out with DORES",
+   b:["No separate maximum for a remote act could be found. Until DORES answers, <b>do not quote a RON technology fee.</b> Quote the statutory fee and say the technology fee is still being confirmed."]},
+  {g:"Not confirmed — do not rely on these yet", tone:"unconfirmed", t:"Whether the journal can be inspected or copied, and on what terms",
+   c:"Question out with DORES",
+   b:["17:50-1.11 sets what the journal must contain and how long it is kept. It does not clearly say who else may see it. Until that is answered, hand nothing over without checking."]},
+  {g:"Not confirmed — do not rely on these yet", tone:"unconfirmed", t:"Whether NJ restricts recording a credential’s full ID number",
+   c:"Question out with DORES",
+   b:["The working practice — type, issuing state and expiry only, never the full number — is the safe side of an unanswered question, not a confirmed rule."]},
+  {g:"Not confirmed — do not rely on these yet", tone:"unconfirmed", t:"The exact NJ mechanics for reporting a lost seal",
+   c:"Question out with DORES",
+   b:["The stop-first sequence above is standard practice across US notary jurisdictions and is sound. What is <i>not</i> verified is NJ’s specific paperwork: the exact form, the office, the deadline, and whether a replacement comes with a new commission number.",
+      "Confirm with DORES and record the answer before this is ever relied on."]}
+];
+
+function viewRules(v){
+  var p = panel("When you are not sure, work down this list",
+    "Written for the moment it is needed — at somebody’s kitchen table, on your phone, with a person waiting on you.");
+  var stop = el("div","stopcard");
+  stop.appendChild(el("h3",null,"Stop, and answer these in order"));
+  var ol = el("ol","steps");
+  STOP_PATH.forEach(function(x){
+    var li = el("li"); var d = el("div");
+    d.appendChild(el("b",null,x[0])); d.appendChild(el("span",null,x[1]));
+    li.appendChild(d); ol.appendChild(li);
+  });
+  stop.appendChild(ol);
+  p.appendChild(stop);
+  v.appendChild(p);
+
+  var sp = panel("New Jersey notary rules", "Everything below is a summary of the rules this business runs on, with the citation on each. Search it.");
+  var sbox = el("div","search");
+  var inp = el("input"); inp.type="search"; inp.id="ruleSearch";
+  inp.placeholder = "Search — fee, journal, blank, RON, seal, RESPA…";
+  inp.value = ui.ruleQuery || "";
+  sbox.appendChild(inp);
+  var count = el("span","hint"); sbox.appendChild(count);
+  sp.appendChild(sbox);
+  var results = el("div"); sp.appendChild(results);
+  v.appendChild(sp);
+
+  function draw(){
+    var q = (ui.ruleQuery||"").toLowerCase().trim();
+    results.textContent = "";
+    var shown = 0, groups = [], byGroup = {};
+    RULES.forEach(function(r){
+      var hay = (r.t + " " + r.g + " " + r.c + " " + r.b.join(" ")).toLowerCase().replace(/<[^>]+>/g,"");
+      if(q && hay.indexOf(q) === -1) return;
+      if(!byGroup[r.g]){ byGroup[r.g] = []; groups.push(r.g); }
+      byGroup[r.g].push(r); shown++;
+    });
+    count.textContent = q ? (shown + (shown===1?" rule":" rules")) : (RULES.length + " rules");
+    if(!shown){
+      results.appendChild(emptyCard("Nothing matches “" + (ui.ruleQuery||"") + "”",
+        "Try a plainer word — fee, journal, ID, blank, remote, seal, review, agent."));
+      return;
+    }
+    groups.forEach(function(g){
+      var sec = el("div"); sec.style.marginTop = "16px";
+      sec.appendChild(el("div","eyebrow", g));
+      var card = el("div","card"); card.style.marginTop = "6px";
+      byGroup[g].forEach(function(r){
+        var box = el("div","rule" + (r.tone ? " " + r.tone : ""));
+        var h = el("h4");
+        h.appendChild(document.createTextNode(r.t));
+        if(r.c) h.appendChild(el("span","cite", r.c));
+        box.appendChild(h);
+        r.b.forEach(function(para){ var pp = el("p"); pp.innerHTML = para; box.appendChild(pp); });
+        card.appendChild(box);
+      });
+      sec.appendChild(card);
+      results.appendChild(sec);
+    });
+  }
+  var timer = null;
+  inp.addEventListener("input", function(){
+    ui.ruleQuery = inp.value;
+    clearTimeout(timer); timer = setTimeout(draw, 120);
+  });
+  draw();
+
+  var p3 = panel("Who to call when this page does not answer it");
+  var c3 = el("div","card");
+  [["DORES Notary Unit","(609) 292-9292","The commissioning authority. Every unconfirmed item above is a question for them."],
+   ["Camden County Clerk · Courthouse","(856) 225-5300","The oath, and county filings."],
+   ["Camden County Store","(856) 566-2920","The other counter for the same county."]].forEach(function(x){
+    var r = el("div","rowitem"); var g = el("div","grow");
+    g.appendChild(el("div","ttl", x[0]));
+    g.appendChild(el("div","meta")).appendChild(el("span",null,x[2]));
+    r.appendChild(g);
+    r.appendChild(el("div","money", x[1]));
+    c3.appendChild(r);
+  });
+  var note = el("div","rule unconfirmed");
+  note.appendChild(el("h4",null,"What this page is, and is not"));
+  var np = el("p");
+  np.innerHTML = "This is a working summary, written from the project vault’s research. <b>The New Jersey Notary Public Manual and DORES are the authority</b> — when this page and the manual disagree, the manual is right and this page needs fixing. It is not legal advice.";
+  note.appendChild(np);
+  c3.appendChild(note);
+  p3.appendChild(c3);
+  v.appendChild(p3);
+}
+
+/* ============================ view: jobs ============================ */
+function viewJobs(v){
+  var p = panel("Jobs", "Every job belongs to one channel, and the channel — never the amount — decides who pays, when, and what has to happen afterwards.");
+  var bar = el("div","bar");
+  bar.appendChild(segmented(["open","done","all"], ["On the book","Completed","Everything"], ui.jobFilter, function(x){ ui.jobFilter=x; render(); }));
+  p.appendChild(bar);
+
+  var list = state.jobs.slice().sort(cmp("date","desc")).filter(function(j){
+    if(ui.jobFilter==="open") return j.status!=="done" && j.status!=="cancelled";
+    if(ui.jobFilter==="done") return j.status==="done";
+    return true;
+  });
+
+  var card = el("div","card");
+  if(!list.length){
+    var e = el("div","empty");
+    e.appendChild(el("b",null, state.jobs.length ? "Nothing in this view" : "No jobs yet, and that is correct"));
+    e.appendChild(document.createTextNode(state.jobs.length
+      ? "Switch the filter above to see the rest."
+      : "A notarization cannot legally be performed before the commission exists, so the board is empty on purpose. The first ten jobs are meant to be consumer work walked through by hand — the mistakes are cheap there. You can still add one here to see how the money and the alarms behave."));
+    card.appendChild(e);
+  }
+  list.forEach(function(j){
+    var f = jobFees(j);
+    var r = el("div","rowitem");
+    r.appendChild(tile(chanOf(j).label.charAt(0), "var(" + chanOf(j).varname + ")"));
+    var g = el("div","grow");
+    g.appendChild(el("div","ttl", (j.client||"Unnamed") + " — " + (j.jobType||"notarization")));
+    var mt = el("div","meta");
+    mt.appendChild(chipFor(j));
+    mt.appendChild(el("span",null, fmtDate(j.date)));
+    if(j.location) mt.appendChild(el("span",null, j.location));
+    if(j.signingCompany) mt.appendChild(el("span",null,"via "+j.signingCompany));
+    if(j.referringAgent) mt.appendChild(el("span",null,"referred by "+j.referringAgent));
+    if(j.pages) mt.appendChild(el("span",null, j.pages+" pages · "+money(f.printing)+" to print"+(f.printEstimated?" (est.)":"")));
+    if(j.status==="done"){
+      mt.appendChild(el("span","chip "+(j.paidOn?"good":"warn"), j.paidOn ? "paid "+fmtDate(j.paidOn) : "unpaid · due "+fmtDate(invoiceDue(j))));
+      mt.appendChild(el("span","chip "+(j.journalEntryId?"good":"crit"), j.journalEntryId ? "journal "+j.journalEntryId : "no journal entry"));
+    } else {
+      mt.appendChild(el("span","chip","booked"));
+    }
+    g.appendChild(mt);
+    r.appendChild(g);
+    var right = el("div"); right.style.textAlign="right";
+    right.appendChild(el("div","money", money(f.gross)));
+    right.appendChild(el("div","hint", money(f.statutory)+" + "+money(f.nonNotarial)));
+    r.appendChild(right);
+    if(canWrite !== false){
+      var acts = el("div"); acts.style.display="flex"; acts.style.flexDirection="column"; acts.style.gap="2px";
+      if(j.status!=="done") acts.appendChild(miniBtn("Mark done", function(){ writeDoc("jobs/"+j.id, {status:"done"}, "Completed: "+(j.client||"job")); }));
+      else if(!j.paidOn) acts.appendChild(miniBtn("Mark paid", function(){ writeDoc("jobs/"+j.id, {paidOn:todayISO()}, "Paid: "+(j.client||"job")+" "+money(f.gross)); }));
+      acts.appendChild(miniBtn("Remove", function(){ if(confirm("Remove this job?")) delDoc("jobs/"+j.id); }, true));
+      r.appendChild(acts);
+    }
+    card.appendChild(r);
+  });
+
+  card.appendChild(addForm("job", [
+    {name:"client", label:"Who", type:"text", placeholder:"First name only", required:true},
+    {name:"channel", label:"Channel", type:"select", options:Object.keys(CHANNELS).map(function(k){ return [k, CHANNELS[k].label]; })},
+    {name:"date", label:"When", type:"date", required:true},
+    {name:"jobType", label:"What", type:"text", placeholder:"Acknowledgment · refinance package"},
+    {name:"location", label:"Where", type:"text", placeholder:"Town + distance tier"},
+    {name:"statutoryFee", label:"Notarial fee", type:"number", step:"0.01", placeholder:"2.50 / 15 / 25"},
+    {name:"nonNotarialFee", label:"Travel or signing fee", type:"number", step:"0.01", placeholder:"30 / 45 / 65 / 125"},
+    {name:"pages", label:"Package pages", type:"number", placeholder:"loan signings only"},
+    {name:"signingCompany", label:"Signing company", type:"text"},
+    {name:"referringAgent", label:"Referred by", type:"text", placeholder:"agent name · attribution only"},
+    {name:"source", label:"How they found you", type:"select", options:sourceOptions()}
+  ], "Add job", function(vals){
+    var id = "j" + Date.now();
+    var body = {
+      id:id, client:vals.client, channel:vals.channel||"consumer", date:vals.date,
+      jobType:vals.jobType||"", location:vals.location||"",
+      statutoryFee:num(vals.statutoryFee), nonNotarialFee:num(vals.nonNotarialFee),
+      pages:num(vals.pages), signingCompany:vals.signingCompany||"", referringAgent:vals.referringAgent||"",
+      paymentTerms:(CHANNELS[vals.channel]||CHANNELS.consumer).terms,
+      source:vals.source || (vals.referringAgent ? "agent" : (vals.signingCompany ? "snapdocs" : "direct")),
+      status:"booked", createdAt:new Date().toISOString()
+    };
+    return db.doc("jobs/"+id).set(body).then(function(){
+      return logActivity("Booked " + vals.client + " — " + (CHANNELS[body.channel]||CHANNELS.consumer).label.toLowerCase() + " on " + fmtDate(vals.date), "done");
+    });
+  }, "The signer's full name, address and ID details never go in here — they belong in the BlueNotary journal. First name and a town is all this board needs."));
+  p.appendChild(card);
+  v.appendChild(p);
+
+  /* the two-line rule */
+  var p2 = panel("Why every job carries two fees");
+  var c2 = el("div","card"); var pad=el("div","card-pad");
+  pad.innerHTML = "<p style='margin:0 0 8px'>The <b>notarial fee</b> is set by the State (N.J.A.C. 17:50-1.18) and cannot be discounted. The <b>travel or signing fee</b> is yours to set. They are kept apart on every quote and every invoice for three reasons: the State caps one and not the other, the journal records an itemized list of fees, and the two are taxed differently — which is what makes the 20% / 35% set-aside on the Money tab possible.</p>";
+  pad.style.fontSize="13.5px"; pad.style.color="var(--ink-2)";
+  c2.appendChild(pad); p2.appendChild(c2); v.appendChild(p2);
+}
+
+function sourceOptions(){
+  var opts = state.channels.slice().sort(cmp("id")).map(function(c){ return [c.key, c.name]; });
+  return opts.length ? opts : [["direct","Called or texted directly"]];
+}
+function num(x){ return x===""||x==null ? 0 : (Number(x)||0); }
+function miniBtn(label, fn, danger){
+  var b = el("button","btn ghost", label); b.type="button";
+  if(danger) b.style.color="var(--ink-3)";
+  b.style.fontSize="12px";
+  b.addEventListener("click", fn);
+  return b;
+}
+
+/* ============================ view: money ============================ */
+function viewMoney(v){
+  var m = moneyPicture();
+  var p = panel("The money, in one look", "Everything here is computed from completed jobs. Nothing is typed twice.");
+
+  p.appendChild(statRow([
+    ["Yours to keep", '<span class="num">'+esc(money(m.net))+'</span>', "Billed, minus what it cost to print, minus the reserve"],
+    ["Billed", '<span class="num">'+esc(money(m.gross))+'</span>', doneJobs().length + " completed jobs"],
+    ["Paper and toner", '<span class="num">−'+esc(money(m.printing))+'</span>', "What printing the packages actually cost you"],
+    ["Set aside for tax", '<span class="num">−'+esc(money(m.reserve))+'</span>', "20% of notarial fees, 35% of everything else", "warn"]
+  ]));
+  v.appendChild(p);
+
+  /* outstanding */
+  var unpaid = doneJobs().filter(function(j){ return !j.paidOn; }).sort(function(a,b){ return (invoiceDue(a)||"")<(invoiceDue(b)||"")?-1:1; });
+  var p2 = panel("Waiting on payment", "Each channel is chased on its own terms — a loan signing is not late at one week, and a kitchen-table job is.");
+  var c2 = el("div","card");
+  if(!unpaid.length){
+    c2.appendChild(makeEmpty("Nothing outstanding", m.gross ? "Every completed job has been paid." :
+      "This fills in once jobs start completing. Consumer work is charged at the table; a brokerage gets net-15; a signing service pays on net-30 to net-45 and is not late until then."));
+  }
+  unpaid.forEach(function(j){
+    var due = invoiceDue(j), d = daysFromToday(due);
+    var r = el("div","rowitem");
+    r.appendChild(tile("↙", "var(--good)"));
+    var g = el("div","grow");
+    g.appendChild(el("div","ttl", (j.client||"Unnamed") + (j.signingCompany ? " · " + j.signingCompany : "")));
+    var mt = el("div","meta");
+    mt.appendChild(chipFor(j));
+    mt.appendChild(el("span",null, "billed to " + chanOf(j).payer.toLowerCase() + " on " + (j.paymentTerms||chanOf(j).terms)));
+    mt.appendChild(el("span","chip "+(d<0?"crit":d<=3?"warn":""), d<0 ? "overdue "+Math.abs(d)+"d" : "due "+fmtDate(due)));
+    g.appendChild(mt); r.appendChild(g);
+    r.appendChild(el("div","money in", money(jobFees(j).gross)));
+    c2.appendChild(r);
+  });
+  p2.appendChild(c2); v.appendChild(p2);
+
+  /* revenue by channel */
+  var p3 = panel("Where the money came from", "Billed revenue by channel.");
+  var c3 = el("div","card"); var pad3 = el("div","card-pad");
+  var keys = Object.keys(CHANNELS).filter(function(k){ return m.byChannel[k]; });
+  if(!keys.length){
+    pad3.appendChild(el("p","hint","No completed jobs yet, so there is nothing to split. Once there are, this bar tells you which of the three channels is actually feeding the business — which is the question that decides where your time goes."));
+    pad3.firstChild.style.margin = "0";
+  } else {
+    var max = Math.max.apply(null, keys.map(function(k){ return m.byChannel[k]; }));
+    var bars = el("div","bars");
+    keys.forEach(function(k){
+      bars.appendChild(barRow(CHANNELS[k].label, m.byChannel[k], max, "var("+CHANNELS[k].varname+")", money(m.byChannel[k])));
+    });
+    pad3.appendChild(bars);
+    var lg = el("div","legend");
+    keys.forEach(function(k){
+      var s = el("span"); var i = el("i"); i.style.background = "var("+CHANNELS[k].varname+")";
+      s.appendChild(i); s.appendChild(document.createTextNode(CHANNELS[k].label + " · " + money(m.byChannel[k])));
+      lg.appendChild(s);
+    });
+    pad3.appendChild(lg);
+  }
+  c3.appendChild(pad3); p3.appendChild(c3); v.appendChild(p3);
+
+  /* tax split */
+  var p4 = panel("The tax split", "Fees for performing a notarial act are exempt from self-employment tax. Travel, printing and signing fees are not. That is why they are never collapsed into one number.");
+  var c4 = el("div","card"); var pad4 = el("div","card-pad");
+  var tbl = el("div","tablewrap"); tbl.innerHTML =
+    '<table class="rate"><thead><tr><th>Line</th><th>Billed this year</th><th>Reserve rate</th><th>Set aside</th></tr></thead><tbody>' +
+    '<tr><td>Notarial fees <span class="hint">— "Exempt—Notary" on Schedule SE</span></td><td class="num">'+esc(money(m.statutory))+'</td><td class="num">20%</td><td class="num">'+esc(money(m.statutory*RESERVE.statutory))+'</td></tr>' +
+    '<tr><td>Travel, signing, after-hours, technology</td><td class="num">'+esc(money(m.nonNotarial))+'</td><td class="num">35%</td><td class="num">'+esc(money(m.nonNotarial*RESERVE.nonNotarial))+'</td></tr>' +
+    '</tbody></table>';
+  pad4.appendChild(tbl);
+  pad4.appendChild(el("p","hint","These two rates are a reserve policy, not a tax bill. The right income-tax percentage depends on your whole household income — worth one call with a CPA before the first filing."));
+  pad4.lastChild.style.marginBottom = "0";
+  c4.appendChild(pad4); p4.appendChild(c4); v.appendChild(p4);
+
+  /* rate card */
+  var p5 = panel("The rate card", "Published, and not improvised. Line 1 is capped by the State; line 2 is yours.");
+  var c5 = el("div","card"); var pad5 = el("div","card-pad");
+  var w = el("div","grid-2");
+  w.appendChild(rateTable("Line 1 — notarial fee (State-set)", [
+    ["Oath, affidavit, proof of deed, acknowledgment","$2.50 per act"],
+    ["Grantor in a real estate transfer","$15.00 whole transaction"],
+    ["Mortgagor in real estate financing","$25.00 whole transaction"]
+  ]));
+  w.appendChild(rateTable("Line 2 — travel and after-hours (yours)", [
+    ["Within 10 miles of Camden","$30"],
+    ["To 20 miles","$45"],
+    ["To 35 miles","$65"],
+    ["After 7pm, weekends, holidays","+$20"],
+    ["Hospital, jail, nursing home","+$20"]
+  ]));
+  w.appendChild(rateTable("Loan signings — one flat fee, no travel on top", [
+    ["Refinance","$75 – $150"],
+    ["Purchase or seller package","$100 – $200"],
+    ["Modification, reverse, HELOC","$75 – $175"],
+    ["Single document","$50 – $75"],
+    ["Your floor — below this is your call","$75"]
+  ]));
+  w.appendChild(rateTable("What a package really costs to print", [
+    ["Pages per package","100 – 200"],
+    ["Printed twice (borrower copy)","× 2"],
+    ["Paper and toner per page","$0.055"],
+    ["So a 150-page package","about $16.50"]
+  ]));
+  pad5.appendChild(w); c5.appendChild(pad5); p5.appendChild(c5); v.appendChild(p5);
+}
+
+function rateTable(title, rows){
+  var box = el("div");
+  box.appendChild(el("div","eyebrow", title));
+  var t = el("div","tablewrap");
+  var html = '<table class="rate"><tbody>';
+  rows.forEach(function(r){ html += '<tr><td>'+esc(r[0])+'</td><td>'+esc(r[1])+'</td></tr>'; });
+  t.innerHTML = html + '</tbody></table>';
+  t.style.marginTop = "6px";
+  box.appendChild(t);
+  return box;
+}
+function makeEmpty(t,b){ var e=el("div","empty"); e.appendChild(el("b",null,t)); e.appendChild(document.createTextNode(b)); return e; }
+function barRow(label, value, max, color, valueLabel){
+  var r = el("div","barrow");
+  var l = el("div","lbl"); var sw = el("i"); sw.style.cssText="display:inline-block;width:9px;height:9px;border-radius:2px;flex:none;background:"+color;
+  l.appendChild(sw); l.appendChild(el("span",null,label)); r.appendChild(l);
+  var track = el("div","track"); var fill = el("div","fill");
+  fill.style.width = (max>0 ? Math.max(1.5, value/max*100) : 0) + "%"; fill.style.background = color;
+  track.appendChild(fill); r.appendChild(track);
+  r.appendChild(el("div","money", valueLabel));
+  return r;
+}
+
+/* ============================ view: marketing ============================ */
+function viewMarketing(v){
+  var p = panel("Where the work comes from", "Four ways a job can reach you. This tells you which ones are actually working, and what each one has cost.");
+
+  var jobsBySource = {};
+  state.jobs.forEach(function(j){ var s=j.source||"direct"; jobsBySource[s] = (jobsBySource[s]||0)+1; });
+  var revBySource = {};
+  doneJobs().forEach(function(j){ var s=j.source||"direct"; revBySource[s] = (revBySource[s]||0) + jobFees(j).gross; });
+
+  var card = el("div","card");
+  if(!state.channels.length){
+    card.appendChild(makeEmpty("No channels loaded", "Add the ways work can reach you and this becomes the scoreboard."));
+  }
+  state.channels.slice().sort(cmp("id")).forEach(function(ch){
+    var r = el("div","rowitem");
+    var g = el("div","grow");
+    g.appendChild(el("div","ttl", ch.name));
+    var mt = el("div","meta");
+    var tone = ch.status==="live" ? "good" : ch.status==="blocked" ? "crit" : ch.status==="waiting" ? "warn" : "";
+    mt.appendChild(el("span","chip "+tone, ch.status || "not started"));
+    if(ch.blockedBy) mt.appendChild(el("span",null,"waiting on " + ch.blockedBy));
+    if(ch.cost) mt.appendChild(el("span",null, money(ch.cost) + " spent"));
+    mt.appendChild(el("span",null, (jobsBySource[ch.key]||0) + " jobs · " + money(revBySource[ch.key]||0) + " billed"));
+    g.appendChild(mt);
+    if(ch.note) g.appendChild(el("div","hint", ch.note));
+    r.appendChild(g);
+    if(canWrite !== false){
+      var sel = el("select");
+      ["not started","building","waiting","live","paused"].forEach(function(s){
+        var o = el("option",null,s); o.value=s; if(s===(ch.status||"not started")) o.selected=true; sel.appendChild(o);
+      });
+      sel.style.cssText="font:inherit;font-size:12.5px;padding:4px 7px;border:1px solid var(--line);border-radius:7px;background:var(--surface);color:var(--ink)";
+      sel.addEventListener("change", function(){ writeDoc("channels/"+ch.id, {status:sel.value}, ch.name + " moved to " + sel.value); });
+      r.appendChild(sel);
+    }
+    card.appendChild(r);
+  });
+  p.appendChild(card);
+  v.appendChild(p);
+
+  var p2 = panel("Jobs by source", "Counted from the job board — a job's source is set when it is booked.");
+  var c2 = el("div","card"); var pad = el("div","card-pad");
+  var keys = Object.keys(jobsBySource);
+  if(!keys.length){
+    var hint = el("p","hint","Nothing to count yet. When it fills in, the thing to watch is not which channel is biggest but which one pays: a $2.50 acknowledgment off Google and a $150 refinance both count as one job here, so read this beside the money split.");
+    hint.style.margin="0"; pad.appendChild(hint);
+  } else {
+    var max = Math.max.apply(null, keys.map(function(k){ return jobsBySource[k]; }));
+    var bars = el("div","bars");
+    keys.sort(function(a,b){ return jobsBySource[b]-jobsBySource[a]; }).forEach(function(k){
+      var ch = state.channels.filter(function(c){ return c.key===k; })[0];
+      bars.appendChild(barRow(ch ? ch.name : k, jobsBySource[k], max, "var(--accent)", jobsBySource[k] + (jobsBySource[k]===1?" job":" jobs")));
+    });
+    pad.appendChild(bars);
+  }
+  c2.appendChild(pad); p2.appendChild(c2); v.appendChild(p2);
+
+  var p3 = panel("The line you cannot cross");
+  var c3 = el("div","card"); var pad3 = el("div","card-pad");
+  pad3.style.fontSize="13.5px"; pad3.style.color="var(--ink-2)";
+  pad3.innerHTML = "<p style='margin:0 0 8px'><b style='color:var(--crit)'>Never pay a real estate agent for sending you a client.</b> Not a fee, not a percentage, not a gift card, not a discount their clients get and nobody else does.</p>" +
+    "<p style='margin:0 0 8px'>Notarizing a deed or a mortgage document is a settlement service, and RESPA Section 8 makes giving anything of value for that referral a federal crime — up to $10,000 and a year per violation, plus treble damages, and it binds the agent too.</p>" +
+    "<p style='margin:0'>What is allowed wins the channel anyway: answering the phone, evenings and weekends, a rate sheet and a card, and remote signings for the out-of-state seller nobody else can help with.</p>";
+  c3.appendChild(pad3); p3.appendChild(c3); v.appendChild(p3);
+}
+
+/* ============================ view: launch ============================ */
+function nextLaunchStep(){
+  var all = state.launch.slice().sort(cmp("id"));
+  for(var i=0;i<all.length;i++){ if(!all[i].done) return all[i]; }
+  return null;
+}
+
+function viewLaunch(v){
+  var lp = launchProgress(), nx = nextLaunchStep();
+  var pct = lp.total ? Math.round(lp.done/lp.total*100) : 0;
+
+  /* the page opens on the one step that is actually next */
+  var p = panel("The runway", "Every step between here and a business that can take a paid job. Tick one off, then open it and say what happened — that note is how the plan stays true.");
+  var top = el("div","stats");
+  var hero = el("div","hero text");
+  hero.appendChild(el("div","k", nx ? "Next step" : "Runway complete"));
+  hero.appendChild(el("div","v", nx ? nx.title : "Every step is ticked"));
+  if(nx && nx.detail) hero.appendChild(el("div","sub", nx.detail));
+  var hm = el("div","meter"); var hi = el("i"); hi.style.width = pct + "%"; hm.appendChild(hi); hero.appendChild(hm);
+  hero.appendChild(el("div","sub", lp.done + " of " + lp.total + " done · " + pct + "%"));
+  top.appendChild(hero);
+
+  var counts = {doing:0, waiting:0, blocked:0};
+  state.launch.forEach(function(i){ if(!i.done && counts[i.status]!=null) counts[i.status]++; });
+  var dated = state.launch.filter(function(i){ return i.due && !i.done; }).length;
+  var noted = state.launch.filter(function(i){ return (i.updates||[]).length; }).length;
+  top.appendChild(statTile("In progress", '<span class="num">'+counts.doing+'</span>',
+    counts.waiting + (counts.waiting===1 ? " step is waiting" : " steps are waiting") + " on money, a date, or someone else"));
+  top.appendChild(statTile("Blocked", '<span class="num">'+counts.blocked+'</span>',
+    counts.blocked ? "Open each one and say what is in the way" : "Nothing is stuck", counts.blocked?"crit":"good"));
+  top.appendChild(statTile("Written up", '<span class="num">'+noted+'</span>',
+    dated + (dated===1 ? " step has a date on it" : " steps have a date on them")));
+  p.appendChild(top);
+  v.appendChild(p);
+
+  launchByPhase().forEach(function(ph){
+    var d = ph.items.filter(function(i){ return i.done; }).length;
+    var sec = panel(ph.name, ph.note);
+    sec.querySelector(".panel-head").appendChild(
+      el("span","chip " + (d===ph.items.length ? "good" : ""), d + " / " + ph.items.length));
+    var card = el("div","card");
+    ph.items.forEach(function(it){ card.appendChild(launchRow(it)); });
+    sec.appendChild(card);
+    v.appendChild(sec);
+  });
+}
+
+function launchRow(it){
+  var r = el("div","rowitem" + (it.done?" done":""));
+  var cb = el("input"); cb.type="checkbox"; cb.checked=!!it.done; cb.id = "lx_"+it.id;
+  cb.disabled = canWrite === false || !db;
+  cb.addEventListener("change", function(){
+    writeDoc("launch/"+it.id, {done:cb.checked, status: cb.checked ? "done" : "doing"},
+             (cb.checked?"Done: ":"Reopened: ") + it.title);
+  });
+  r.appendChild(cb);
+
+  var g = el("div","grow");
+  var lab = el("label","ttl", it.title); lab.setAttribute("for", cb.id); lab.style.cursor="pointer";
+  g.appendChild(lab);
+
+  var mt = el("div","meta");
+  if(!it.done && it.status && it.status!=="todo") mt.appendChild(el("span","chip "+statusTone(it.status), labelFor(it.status)));
+  if(it.tag) mt.appendChild(el("span","chip " + (it.tag==="deadline"?"crit":it.tag==="queue"?"warn":""), it.tag));
+  if(it.cost) mt.appendChild(el("span","chip", it.cost));
+  if(it.due){ var dd = daysFromToday(it.due); mt.appendChild(el("span","chip "+(dd<0?"crit":dd<=3?"warn":""), fmtDate(it.due)+" · "+relDays(dd))); }
+  if(it.detail) mt.appendChild(el("span",null,it.detail));
+  if(mt.childNodes.length) g.appendChild(mt);
+
+  var ups = it.updates || [];
+  if(ups.length){
+    var last = ups[ups.length-1];
+    var line = el("div","meta");
+    line.style.color = "var(--ink-2)";
+    line.appendChild(el("span","chip", fmtDate(last.date)));
+    line.appendChild(el("span",null, last.text));
+    if(ups.length > 1) line.appendChild(el("span","chip", ups.length + " updates"));
+    g.appendChild(line);
+  }
+  r.appendChild(g);
+
+  var open = el("button","btn ghost", ups.length ? "Update · " + ups.length : "Add note");
+  open.type = "button";
+  open.addEventListener("click", function(){ openStepDialog(it); });
+  r.appendChild(open);
+  return r;
+}
+
+/* ============================ view: calendar ============================ */
+function viewCalendar(v){
+  var items = calendarItems();
+  var today = todayISO();
+  if(!ui.calMonth) ui.calMonth = today.slice(0,7);
+  if(!ui.calDay) ui.calDay = today;
+
+  /* what is coming, before the grid — the question is usually "what's next", not "what's on the 14th" */
+  var soon = items.filter(function(x){ var d=daysFromToday(x.date); return d!==null && d>=0 && d<=30 && !x.done; });
+  var overdue = items.filter(function(x){ var d=daysFromToday(x.date); return d!==null && d<0 && !x.done && x.kind!=="job"; });
+  var nextJob = items.filter(function(x){ return x.kind==="job" && !x.done && daysFromToday(x.date)>=0; })[0];
+  var nextDead = items.filter(function(x){ return x.kind==="deadline" && daysFromToday(x.date)>=0; })[0];
+
+  var p = panel("Calendar");
+  var top = el("div","stats");
+  var hero = el("div","hero text");
+  if(nextJob){
+    hero.appendChild(el("div","k","Next appointment"));
+    hero.appendChild(el("div","v", nextJob.title.split(" — ")[0]));
+    hero.appendChild(el("div","sub", fmtDate(nextJob.date) + " · " + relDays(daysFromToday(nextJob.date)) +
+      (nextJob.note ? " · " + nextJob.note : "")));
+  } else {
+    hero.appendChild(el("div","k","Next appointment"));
+    hero.appendChild(el("div","v","Nothing booked"));
+    hero.appendChild(el("div","sub","Jobs land here the moment one is added on the Jobs tab — who you are seeing, where you are driving, and what it pays."));
+  }
+  top.appendChild(hero);
+  top.appendChild(statTile("Next 30 days", '<span class="num">'+soon.length+'</span>',
+    soon.length ? "Listed below the month" : "Nothing dated in the next month"));
+  top.appendChild(statTile("Overdue", '<span class="num">'+overdue.length+'</span>',
+    overdue.length ? "Past its date and still open" : "Nothing has slipped", overdue.length?"crit":"good"));
+  top.appendChild(statTile("Next hard deadline",
+    nextDead ? '<span class="num">'+daysFromToday(nextDead.date)+'</span> <small>days</small>' : '<span class="num">—</span>',
+    nextDead ? nextDead.title : "Set the commission date below and the four State deadlines appear here",
+    nextDead && daysFromToday(nextDead.date) <= 14 ? "crit" : null));
+  p.appendChild(top);
+  v.appendChild(p);
+
+  /* the month grid */
+  var mp = el("section","panel");
+  var card = el("div","card");
+  var parts = ui.calMonth.split("-"), year = +parts[0], mon = +parts[1]-1;
+
+  var head = el("div","calhead");
+  head.appendChild(el("h3", null, MONTHS[mon] + " " + year));
+  var nav = el("div","calnav");
+  var prev = el("button",null,"‹"); prev.type="button"; prev.setAttribute("aria-label","Previous month");
+  prev.addEventListener("click", function(){ shiftMonth(-1); });
+  var todayBtn = el("button","btn","Today"); todayBtn.type="button"; todayBtn.style.width="auto"; todayBtn.style.padding="0 14px"; todayBtn.style.height="36px";
+  todayBtn.addEventListener("click", function(){ ui.calMonth = todayISO().slice(0,7); ui.calDay = todayISO(); render(); });
+  var next = el("button",null,"›"); next.type="button"; next.setAttribute("aria-label","Next month");
+  next.addEventListener("click", function(){ shiftMonth(1); });
+  nav.appendChild(prev); nav.appendChild(todayBtn); nav.appendChild(next);
+  head.appendChild(nav);
+  card.appendChild(head);
+
+  var grid = el("div","calgrid");
+  ["S","M","T","W","T","F","S"].forEach(function(d,i){ var c = el("div","dow", d); c.id = "dow"+i; grid.appendChild(c); });
+
+  var first = new Date(year, mon, 1);
+  var start = new Date(year, mon, 1 - first.getDay());
+  for(var i=0;i<42;i++){
+    var dt = new Date(start.getFullYear(), start.getMonth(), start.getDate()+i);
+    var iso = dt.getFullYear()+"-"+pad(dt.getMonth()+1)+"-"+pad(dt.getDate());
+    var on = itemsOn(items, iso);
+    var b = el("button","day" + (dt.getMonth()!==mon ? " out" : "") + (iso===today ? " today" : "") + (iso===ui.calDay ? " sel" : ""));
+    b.type = "button";
+    b.appendChild(el("span",null,String(dt.getDate())));
+    var dots = el("div","dots");
+    var seen = {};
+    on.slice(0,4).forEach(function(x){
+      if(seen[x.color]) return; seen[x.color] = 1;
+      var dot = el("i"); dot.style.background = x.color; dots.appendChild(dot);
+    });
+    b.appendChild(dots);
+    b.setAttribute("aria-label", iso + (on.length ? " — " + on.length + " item" + (on.length===1?"":"s") : ""));
+    (function(key){ b.addEventListener("click", function(){ ui.calDay = key; ui.calMonth = key.slice(0,7); render(); }); })(iso);
+    grid.appendChild(b);
+  }
+  card.appendChild(grid);
+  var key = el("div","daykey");
+  [["var(--s-consumer)","Launch step"],["var(--accent-hi)","Open item"],["var(--crit)","Hard deadline"],["var(--s-signing)","Job"]].forEach(function(k){
+    var sp = el("span"); var i2 = el("i"); i2.style.background = k[0]; sp.appendChild(i2);
+    sp.appendChild(document.createTextNode(k[1])); key.appendChild(sp);
+  });
+  card.appendChild(key);
+  mp.appendChild(card);
+  v.appendChild(mp);
+
+  /* the selected day */
+  var dayItems = itemsOn(items, ui.calDay);
+  var dsec = panel(prettyDay(ui.calDay), dayItems.length ? null : "Nothing on this day.");
+  var dcard = el("div","card");
+  if(!dayItems.length){
+    dcard.appendChild(makeEmpty("Clear", "Pick another day above, or add a job, an open item or a launch date and it appears here."));
+  }
+  dayItems.forEach(function(x){ dcard.appendChild(calRow(x)); });
+  dsec.appendChild(dcard);
+  v.appendChild(dsec);
+
+  /* the run of the next month */
+  var up = panel("What is coming", "The next thirty days, and anything already past its date.");
+  var ucard = el("div","card");
+  var listed = overdue.concat(soon);
+  if(!listed.length){
+    ucard.appendChild(makeEmpty("Nothing dated in the next month",
+      "Appointments appear here as jobs are booked. The State deadlines appear once the commission date is recorded below."));
+  }
+  listed.forEach(function(x){ ucard.appendChild(calRow(x, true)); });
+  up.appendChild(ucard);
+  v.appendChild(up);
+
+  /* the two dates that generate the four deadlines */
+  var cfg = state.config || {};
+  var dp = panel("The dates the State counts from",
+    "Enter these two and the page works out the four deadlines that can end the business — the 90-day oath, the continuing education course, the renewal window, and the annual report.");
+  var ccard = el("div","card");
+  var rows = [
+    ["Commission issued", cfg.commissionDate, "The date on the commission packet. The oath is due 90 days after it."],
+    ["Commission expires", cfg.commissionExpiry, "On the packet too. Left blank, five years from the issue date is assumed."],
+    ["LLC formed", cfg.llcFiledOn, "The annual report is due every year in this anniversary month."]
+  ];
+  rows.forEach(function(r0){
+    var r = el("div","rowitem");
+    r.appendChild(tile(r0[1] ? "✓" : "—", r0[1] ? "var(--good)" : null));
+    var g = el("div","grow");
+    g.appendChild(el("div","ttl", r0[0]));
+    g.appendChild(el("div","meta")).appendChild(el("span",null, r0[2]));
+    r.appendChild(g);
+    r.appendChild(el("div","money", r0[1] ? fmtDate(r0[1]) + ", " + String(r0[1]).slice(0,4) : "not set"));
+    ccard.appendChild(r);
+  });
+  ccard.appendChild(addForm("dates", [
+    {name:"commissionDate", label:"Commission issued", type:"date"},
+    {name:"commissionExpiry", label:"Commission expires", type:"date"},
+    {name:"llcFiledOn", label:"LLC formed", type:"date"}
+  ], "Save dates", function(vals){
+    var patch = {};
+    ["commissionDate","commissionExpiry","llcFiledOn"].forEach(function(k){ if(vals[k]) patch[k] = vals[k]; });
+    if(!Object.keys(patch).length) return Promise.resolve();
+    return db.doc("meta/config").set(Object.assign({}, state.config, patch)).then(function(){
+      return logActivity("Recorded " + Object.keys(patch).length + " commission date(s) — the State deadlines are now on the calendar", "filing");
+    });
+  }, "Leave a field blank to keep what is already there."));
+  ccard.lastChild.querySelector(".actions").insertBefore(
+    el("span","hint","Nothing here is guessed. A blank date means the deadline simply does not appear yet."),
+    null);
+  dp.appendChild(ccard);
+  v.appendChild(dp);
+}
+
+function shiftMonth(n){
+  var pr = ui.calMonth.split("-"), d = new Date(+pr[0], +pr[1]-1+n, 1);
+  ui.calMonth = d.getFullYear()+"-"+pad(d.getMonth()+1);
+  render();
+}
+function prettyDay(iso){
+  var d = dayStart(iso);
+  if(!d) return "That day";
+  return d.toLocaleDateString("en-US",{weekday:"long", month:"long", day:"numeric"});
+}
+function calRow(x, withDate){
+  var glyph = {job:"↗", task:"?", launch:"○", deadline:"!"}[x.kind] || "•";
+  var r = el("div","rowitem");
+  r.appendChild(tile(glyph, x.color));
+  var g = el("div","grow");
+  g.appendChild(el("div","ttl", x.title));
+  var mt = el("div","meta");
+  if(withDate){
+    var dd = daysFromToday(x.date);
+    mt.appendChild(el("span","chip " + (dd<0?"crit":dd<=3?"warn":""), fmtDate(x.date) + " · " + relDays(dd)));
+  }
+  if(x.kind==="deadline") mt.appendChild(el("span","chip crit","hard deadline"));
+  if(x.note) mt.appendChild(el("span",null,x.note));
+  g.appendChild(mt);
+  r.appendChild(g);
+  if(x.kind==="job" && x.obj) r.appendChild(el("div","money", money(jobFees(x.obj).gross)));
+  return r;
+}
+
+/* ============================ view: open items ============================ */
+function viewOpen(v){
+  var p = panel("Open items", "Tasks you set yourself, and questions sitting with someone else. A question you have asked is not a task you can do.");
+  var bar = el("div","bar");
+  bar.appendChild(segmented(["open","done","all"], ["Open","Closed","Everything"], ui.taskFilter, function(x){ ui.taskFilter=x; render(); }));
+  p.appendChild(bar);
+
+  var list = state.tasks.slice().sort(function(a,b){
+    var ad = a.due||"9999", bd = b.due||"9999";
+    return ad<bd?-1:ad>bd?1:0;
+  }).filter(function(t){
+    if(ui.taskFilter==="open") return t.status!=="done";
+    if(ui.taskFilter==="done") return t.status==="done";
+    return true;
+  });
+
+  var groups = {}, order = [];
+  list.forEach(function(t){
+    var k = t.who || "Yours to do";
+    if(!groups[k]){ groups[k]=[]; order.push(k); }
+    groups[k].push(t);
+  });
+
+  if(!list.length){
+    p.appendChild(emptyCard("Nothing here", "Add an item below — a task you owe, or a question you have out with DORES, BlueNotary or the county clerk."));
+  }
+  order.forEach(function(k){
+    var sec = el("div"); sec.style.marginTop="14px";
+    var h = el("div","eyebrow", k + " · " + groups[k].length); sec.appendChild(h);
+    var card = el("div","card"); card.style.marginTop="6px";
+    groups[k].forEach(function(t){
+      var r = el("div","rowitem" + (t.status==="done"?" done":""));
+      var cb = el("input"); cb.type="checkbox"; cb.checked = t.status==="done"; cb.id = "tk_"+t.id;
+      cb.disabled = canWrite === false || !db;
+      cb.addEventListener("change", function(){
+        writeDoc("tasks/"+t.id, {status: cb.checked?"done":"open"}, (cb.checked?"Closed: ":"Reopened: ") + t.title);
+      });
+      r.appendChild(cb);
+      var g = el("div","grow");
+      var lab = el("label","ttl", t.title); lab.setAttribute("for", cb.id); lab.style.cursor="pointer";
+      g.appendChild(lab);
+      var mt = el("div","meta");
+      if(t.kind==="question") mt.appendChild(el("span","chip","question out"));
+      if(t.due){ var d=daysFromToday(t.due); mt.appendChild(el("span","chip "+(d<0?"crit":d<=3?"warn":""), fmtDate(t.due)+" · "+relDays(d))); }
+      if(t.detail) mt.appendChild(el("span",null,t.detail));
+      if(mt.childNodes.length) g.appendChild(mt);
+      r.appendChild(g);
+      if(canWrite !== false) r.appendChild(miniBtn("Remove", function(){ if(confirm("Remove this item?")) delDoc("tasks/"+t.id); }, true));
+      card.appendChild(r);
+    });
+    sec.appendChild(card);
+    p.appendChild(sec);
+  });
+
+  var addCard = el("div","card"); addCard.style.marginTop="14px";
+  addCard.appendChild(addForm("task", [
+    {name:"title", label:"What", type:"text", full:true, required:true, placeholder:"Call the Camden County Clerk about the trade name"},
+    {name:"kind", label:"Kind", type:"select", options:[["task","a task I do"],["question","a question I am waiting on"]]},
+    {name:"who", label:"With whom", type:"text", placeholder:"DORES · BlueNotary · County Clerk"},
+    {name:"due", label:"By when", type:"date"},
+    {name:"detail", label:"Note", type:"text", full:true}
+  ], "Add item", function(vals){
+    var id = "t" + Date.now();
+    return db.doc("tasks/"+id).set({
+      id:id, title:vals.title, kind:vals.kind||"task", who:vals.who||"", due:vals.due||"",
+      detail:vals.detail||"", status:"open", createdAt:new Date().toISOString()
+    });
+  }));
+  p.appendChild(addCard);
+  v.appendChild(p);
+}
+
+/* ============================ shared controls ============================ */
+function segmented(values, labels, current, onPick){
+  var s = el("div","seg");
+  values.forEach(function(val,i){
+    var b = el("button",null,labels[i]); b.type="button";
+    b.setAttribute("aria-pressed", current===val ? "true":"false");
+    b.addEventListener("click", function(){ onPick(val); });
+    s.appendChild(b);
+  });
+  return s;
+}
+
+function addForm(key, fields, submitLabel, handler, hint){
+  var f = el("form","add");
+  f.id = "form_"+key;
+  fields.forEach(function(fd){
+    var lab = el("label", fd.full ? "full" : null);
+    lab.appendChild(el("span",null,fd.label));
+    var input;
+    if(fd.type==="select"){
+      input = el("select");
+      fd.options.forEach(function(o){ var op=el("option",null,o[1]); op.value=o[0]; input.appendChild(op); });
+    } else {
+      input = el("input"); input.type = fd.type || "text";
+      if(fd.placeholder) input.placeholder = fd.placeholder;
+      if(fd.step) input.step = fd.step;
+    }
+    input.id = "f_"+key+"_"+fd.name;
+    input.name = fd.name;
+    if(fd.required) input.required = true;
+    lab.appendChild(input);
+    f.appendChild(lab);
+  });
+  var actions = el("div","actions");
+  var btn = el("button","btn primary", submitLabel); btn.type="submit";
+  if(canWrite === false || !db){ btn.disabled = true; }
+  actions.appendChild(btn);
+  if(canWrite === false) actions.appendChild(el("span","hint","Read-only on this page."));
+  else if(!db) actions.appendChild(el("span","hint","Not connected to the shared store."));
+  else if(hint) actions.appendChild(el("span","hint",hint));
+  f.appendChild(actions);
+
+  f.addEventListener("submit", function(e){
+    e.preventDefault();
+    if(busy || !db) return;
+    var vals = {};
+    fields.forEach(function(fd){ var n = f.querySelector("#f_"+key+"_"+fd.name); vals[fd.name] = n ? String(n.value||"").trim() : ""; });
+    busy = true; btn.disabled = true; btn.textContent = "Saving…";
+    Promise.resolve(handler(vals)).then(function(){
+      f.reset();
+    }).catch(function(err){
+      var code = err && err.code;
+      if(code === "invalid_argument"){ canWrite = false; }
+      alert("That did not save" + (err && err.message ? ": " + err.message : ".") + " Nothing was changed.");
+    }).then(function(){
+      busy = false; btn.disabled = (canWrite === false); btn.textContent = submitLabel;
+      render();
+    });
+  });
+  return f;
+}
+
+function writeDoc(path, patch, logLine){
+  if(!db) return;
+  db.doc(path).update(patch).then(function(){
+    if(logLine) return logActivity(logLine, "done");
+  }).catch(function(err){
+    if(err && err.code === "invalid_argument"){ canWrite = false; render(); }
+  });
+}
+function delDoc(path){
+  if(!db) return;
+  db.doc(path).delete().catch(function(){});
+}
+
+/* ============================ boot ============================ */
+render();
+
+function bindCollection(name, key){
+  var unsub = db.collection(name).onSnapshot(function(snap){
+    state[key] = snap.docs.map(function(d){
+      var body = d.data() || {};
+      var o = {}; for(var k in body) o[k] = body[k];
+      o.id = d.id;
+      return o;
+    });
+    render();
+  }, function(){ /* terminal error: leave last known data on screen */ });
+  return unsub;
+}
+
+(async function start(){
+  var use = (window.claude && window.claude.use) ? window.claude.use.bind(window.claude) : null;
+  if(!use){ booted = true; render(); return; }
+  try{
+    var user = await use("user");
+    if(user){
+      var w = await user.can("data.write");
+      canWrite = (w === null) ? null : !!w;
+    }
+  }catch(e){}
+
+  try{ db = await use("db"); }catch(e){ db = null; }
+  booted = true;
+  if(!db){ render(); return; }
+
+  bindCollection("jobs","jobs");
+  bindCollection("tasks","tasks");
+  bindCollection("launch","launch");
+  bindCollection("channels","channels");
+  bindCollection("activity","activity");
+
+  db.doc("meta/config").onSnapshot(function(snap){
+    state.config = (snap.exists && snap.data()) || {};
+    render();
+  }, function(){});
+})();
+
+})();
+</script>
