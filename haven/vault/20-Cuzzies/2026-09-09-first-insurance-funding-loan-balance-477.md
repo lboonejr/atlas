@@ -1,6 +1,6 @@
 ---
 created: 2026-09-09T16:13:24-04:00
-updated: 2026-09-14T17:05:54-04:00
+updated: 2026-09-19T13:05:00Z
 domain: cuzzies
 type: task
 status: active
@@ -61,6 +61,18 @@ Nothing paid yet — the two obligations are now firm and dated:
 No reply needed from Lemar; this is a payment to make, not a decision. Flagged for the
 digest as a real dated obligation to not let slip.
 
+## Update — 2026-09-19
+A new auto-generated "Payment Invoice - 106241219" statement landed 2026-09-19 3:45am ET
+from the unmonitored `firstinsite@firstinsurancefunding.com` (paperless-statement sender,
+not Abraham directly) — a PDF attachment (`Notices.pdf`), no amount/date in the email
+body itself. This is the loan's routine paperless-statement cadence, not necessarily a
+new collections escalation, but it lands the day AFTER the first $238.80 installment's
+9/18 due date with this note's `due` still unflipped to 10/18 — meaning there is no
+record here of the 9/18 payment having actually been called in to Abraham
+(847-572-4919) yet. Not re-carded this scan (matches an existing open Convo 1 thread on
+this loan); flagging in the digest as a payment to confirm. Once Lemar confirms the
+9/18 payment was made, flip `due` to 2026-10-18 for the second $238.80 installment.
+
 ## Sources
 - gmail: thread `1a087cdd997a3f2b` — "RE: Loan #106241219 — return premium from
   endorsements SSC-00003261-00 / SSC-00003260-00 (2LLCJ2Q38)", Abraham Borjon
@@ -68,3 +80,4 @@ digest as a real dated obligation to not let slip.
 - gmail draft (payment-plan ask, sent 9/10): `1a08b387ed50fda5` → sent as message `1a08b754a4ee6670`
 - gmail draft (agree to 2-payment plan, sent 9/14): `1a0925cc6e9892da` → sent as message `1a09fc9d655d04ae`
 - gmail: Abraham's collections-safe confirmation, message `1a0a09cd4f15a0b1`, 2026-09-14T19:50:23Z
+- gmail: paperless statement notice, thread `1a0b7c5439619fb7`, 2026-09-19T07:45:21Z
