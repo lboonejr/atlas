@@ -351,6 +351,41 @@ var SIGNING_FEES = [75,100,125,150,200];
 var SIGNING_FLOOR = 75;
 var PAGE_PRESETS = [100,150,200];
 var SCANBACK_HOURS = 4;                 // the intake skill's default when the company names no deadline
+
+/* Miles. The IRS lets you deduct a flat amount for every business mile, so a 24-mile round trip is
+   real money off the tax bill even on a $32.50 job. This is a page constant on purpose: confirm the
+   current year's figure with a CPA each January and change it here. It is a DEDUCTION, never income. */
+var MILE_RATE = 0.70;
+var MILE_STEP = 5;
+var TIER_MILES = {0:0, 30:16, 45:32, 65:56};   // a round trip at the middle of each tier, as a starting number
+
+/* The five things that kill a job at the table, every one of them knowable on the phone first. */
+var CONFIRM_CHECKS = [
+  {v:"id",     label:"Unexpired photo ID, name matches the document"},
+  {v:"all",    label:"Every signer will be there"},
+  {v:"blanks", label:"Document is complete — no blank spaces"},
+  {v:"unsigned",label:"Nothing is signed yet"},
+  {v:"price",  label:"They know the price and how they are paying"},
+  {v:"where",  label:"Address confirmed, and who to ask for"}
+];
+
+/* Why a call did not turn into a job. The top reason is the whole lesson. */
+var LOST_REASONS = [
+  "I missed the call", "Price", "Could not make the time", "They went elsewhere",
+  "Not something I can notarize", "Just a question", "Other"
+];
+var COMPANY_FLAGS = [
+  {v:"", label:"No flag"},
+  {v:"slow", label:"Pays slow"},
+  {v:"never", label:"Do not work for"}
+];
+/* What to say when someone says $2.50 on the internet. */
+var PRICE_SCRIPT = [
+  "The State of New Jersey sets the notary fee at $2.50 for each signature I notarize. That part is not mine to set.",
+  "Everything else on the price is my travel and my time coming to you, which the State does not cap.",
+  "So on this job it is $2.50 for the act and the rest for the trip. I can also tell you where the nearest bank is if you would rather go to them."
+];
+
 var REFUSAL_REASONS = [
   "No valid photo ID", "Signer not present", "Seemed unwilling or unaware",
   "Blank spaces in the document", "Asked me to explain it", "I have a stake in it", "Other"
@@ -377,7 +412,7 @@ var MONTHS = ["January","February","March","April","May","June","July","August",
 
 /* ============================ state ============================ */
 var db = null, canWrite = null, busy = false, booted = false;
-var state = {jobs:[], tasks:[], launch:[], channels:[], activity:[], config:{}};
+var state = {jobs:[], tasks:[], launch:[], channels:[], activity:[], companies:[], leads:[], config:{}};
 var ui = {tab:"today", jobFilter:"open", taskFilter:"open", forms:{}};
 try{ var t = localStorage.getItem("gw.tab"); if(t) ui.tab = t; }catch(e){}
 
@@ -424,6 +459,15 @@ function jobWhen(j){
   return d;
 }
 function fmtWhen(j){ return fmtDate(j.date) + (j.time ? " · " + fmtTime(j.time) : ""); }
+/* "in 3h 10m" beats a timestamp when the clock is the point. */
+function scanbackLeft(iso){
+  var ms = new Date(iso) - new Date();
+  if(isNaN(ms)) return "—";
+  var late = ms < 0; ms = Math.abs(ms);
+  var h = Math.floor(ms/3600000), m = Math.round((ms%3600000)/60000);
+  var span = (h ? h+"h " : "") + m + "m";
+  return late ? ("overdue by " + span) : ("due in " + span);
+}
 function fmtStamp(iso){
   var d = new Date(iso); if(isNaN(d)) return "—";
   return d.toLocaleDateString("en-US",{month:"short",day:"numeric"}) + " " + d.toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit"});
@@ -444,7 +488,69 @@ function moneyPicture(){
     m.byChannel[k] = (m.byChannel[k]||0) + f.gross;
   });
   m.net = m.gross - m.printing - m.reserve;
+  m.miles = 0;
+  doneJobs().forEach(function(j){ m.miles += Number(j.miles)||0; });
+  m.mileage = m.miles * MILE_RATE;
   return m;
+}
+
+/* ---- who pays, and how fast ----
+   Built from the jobs themselves. The only thing stored per company is the flag Lemar sets. */
+function slug(s){ return String(s||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""); }
+/* "__new" is the chip that opens the text field, never a company name. */
+function cleanCo(v){ v = String(v||"").trim(); return v==="__new" ? "" : v; }
+function companyOf(j){
+  if(j.channel==="signing-service") return (j.signingCompany||"").trim();
+  if(j.channel==="brokerage") return (j.referringAgent||"").trim();
+  return "";
+}
+function companyFlag(name){
+  var k = slug(name);
+  for(var i=0;i<state.companies.length;i++) if(state.companies[i].id===k) return state.companies[i].flag||"";
+  return "";
+}
+function knownCompanies(){
+  var seen = {};
+  state.jobs.forEach(function(j){ var n=companyOf(j); if(n) seen[slug(n)] = n; });
+  state.companies.forEach(function(c){ if(c.name) seen[c.id] = c.name; });
+  return Object.keys(seen).sort().map(function(k){ return {key:k, name:seen[k]}; });
+}
+function companyRows(){
+  var by = {};
+  state.jobs.forEach(function(j){
+    var name = companyOf(j); if(!name) return;
+    var k = slug(name);
+    var row = by[k] || (by[k] = {key:k, name:name, jobs:0, billed:0, outstanding:0, paidCount:0, daysSum:0, worstLate:0});
+    row.jobs++;
+    var f = jobFees(j);
+    row.billed += f.gross;
+    if(j.paidOn){
+      row.paidCount++;
+      var d = daysFromToday(j.date), p = daysFromToday(j.paidOn);
+      if(d!==null && p!==null) row.daysSum += Math.max(0, p - d);
+    } else if(j.status==="done"){
+      row.outstanding += f.gross;
+      var late = -(daysFromToday(invoiceDue(j)) || 0);
+      if(late > row.worstLate) row.worstLate = late;
+    }
+  });
+  state.companies.forEach(function(c){ if(c.name && !by[c.id]) by[c.id] = {key:c.id, name:c.name, jobs:0, billed:0, outstanding:0, paidCount:0, daysSum:0, worstLate:0}; });
+  return Object.keys(by).map(function(k){
+    var r = by[k];
+    r.avgDays = r.paidCount ? Math.round(r.daysSum / r.paidCount) : null;
+    r.flag = companyFlag(r.name);
+    return r;
+  }).sort(function(a,b){ return b.billed - a.billed || (a.name<b.name?-1:1); });
+}
+
+/* ---- the calls that did not become jobs ---- */
+function leadPicture(){
+  var p = {lost:state.leads.length, booked:0, byReason:{}};
+  state.jobs.forEach(function(j){ if(!j.refused && !j.noShow) p.booked++; });
+  state.leads.forEach(function(l){ var r=l.reason||"Other"; p.byReason[r] = (p.byReason[r]||0)+1; });
+  p.calls = p.booked + p.lost;
+  p.rate = p.calls ? Math.round(p.booked / p.calls * 100) : null;
+  return p;
 }
 
 function alarms(){
@@ -453,10 +559,18 @@ function alarms(){
   state.jobs.forEach(function(j){
     var name = (j.client || "Unnamed job") + " · " + fmtDate(j.date);
     var w = jobWhen(j), past = w && w < new Date();
-    if(j.status==="done" && !j.journalEntryId && !j.refused)
+    if(j.status==="done" && !j.journalEntryId && !j.refused && !j.noShow)
       out.push({sev:"crit", tag:"No journal entry", text:name + " — the act is logged here but no BlueNotary entry id is recorded. Enter it while you still remember the appointment.", job:j});
     if(past && j.status!=="done" && j.status!=="cancelled")
       out.push({sev:"warn", tag:"Appointment passed", text:name + " — the slot is in the past and the job is still open. Close it out or reschedule.", job:j});
+    /* The cheapest alarm on the page. A job you have not confirmed is a trip you might drive for nothing. */
+    if(j.status!=="done" && j.status!=="cancelled" && !j.confirmedAt && w && !past && (w - new Date()) < 86400000)
+      out.push({sev:"warn", tag:"Not confirmed", text:name + " is inside 24 hours and has not been confirmed. Tap Confirm, run the six checks on the phone, and send them the text. This is where wasted trips come from.", job:j});
+    if(j.channel==="signing-service" && j.scanbackDue && !j.scanbackDone){
+      var left = new Date(j.scanbackDue) - new Date();
+      if(left > 0 && left < 2*3600000)
+        out.push({sev:"warn", tag:"Scan-back due soon", text:name + " — the scan-back is due in under two hours. Slow scan-backs are how a signing agent quietly stops being offered work.", job:j});
+    }
     if(j.status==="done" && !j.paidOn){
       var due = invoiceDue(j);
       if(due && due < today)
@@ -837,6 +951,16 @@ function viewToday(v){
     pn.appendChild(cn); v.appendChild(pn);
   }
 
+  /* the scan-back clock. A completed loan job leaves the seven-day list, and the four-hour clock does not. */
+  var pending = doneJobs().filter(function(j){ return j.scanbackDue && !j.scanbackDone; })
+                          .sort(function(a,b){ return a.scanbackDue < b.scanbackDue ? -1 : 1; });
+  if(pending.length){
+    var ps = panel("Scan-back clock", "The company needs the signed package back within four hours. Slow scan-backs are how a signing agent quietly stops being offered work.");
+    var pc = el("div","card");
+    pending.forEach(function(j){ pc.appendChild(jobRow(j, false)); });
+    ps.appendChild(pc); v.appendChild(ps);
+  }
+
   /* the next seven days, with the buttons for the job in front of you */
   var p2 = panel("The next seven days", "Appointments and anything with a date on it. The buttons on a job are the whole close-out.");
   var soon = [];
@@ -1191,8 +1315,12 @@ function jobRow(j, withRel){
   if(j.location) mt.appendChild(el("span",null, j.location));
   if(j.signingCompany) mt.appendChild(el("span",null,"via "+j.signingCompany));
   if(j.referringAgent) mt.appendChild(el("span",null,"sent by "+j.referringAgent));
-  if(j.pages) mt.appendChild(el("span",null, j.pages+" pages · "+money(f.printing)+" to print"+(f.printEstimated?" (est.)":"")));
+  if(j.pages) mt.appendChild(el("span",null, j.pages+" pages · "+money(f.printing)+(j.printedAt?" already spent":" to print")+(f.printEstimated?" (est.)":"")));
+  if(j.miles) mt.appendChild(el("span",null, j.miles + " mi · " + money(j.miles*MILE_RATE) + " deduction"));
   if(j.refused) mt.appendChild(el("span","chip warn","refused"));
+  if(j.noShow) mt.appendChild(el("span","chip warn","no-show"));
+  if(j.status!=="done") mt.appendChild(el("span","chip "+(j.confirmedAt?"good":"warn"), j.confirmedAt ? "confirmed" : "not confirmed"));
+  if(j.printedAt) mt.appendChild(el("span","chip good","printed"));
   if(j.status==="done"){
     if(f.gross > 0) mt.appendChild(el("span","chip "+(j.paidOn?"good":"warn"), j.paidOn ? "paid "+fmtDate(j.paidOn) : "unpaid · due "+fmtDate(invoiceDue(j))));
     if(!j.refused) mt.appendChild(el("span","chip "+(j.journalEntryId?"good":"crit"), j.journalEntryId ? "journal "+j.journalEntryId : "no journal entry"));
@@ -1202,7 +1330,7 @@ function jobRow(j, withRel){
   }
   if(j.channel==="signing-service" && j.scanbackDue){
     mt.appendChild(el("span","chip "+(j.scanbackDone?"good":(j.scanbackDue < new Date().toISOString() ? "crit" : "warn")),
-      j.scanbackDone ? "scan-back sent" : "scan-back by " + fmtStamp(j.scanbackDue)));
+      j.scanbackDone ? "scan-back sent" : "scan-back " + scanbackLeft(j.scanbackDue)));
   }
   g.appendChild(mt);
   r.appendChild(g);
@@ -1222,15 +1350,28 @@ function jobActions(j){
   var f = jobFees(j), ch = chanOf(j), name = j.client || "job";
   var atTable = (j.paymentTerms || ch.terms) === "due-at-completion";
   if(j.status!=="done"){
+    if(!j.confirmedAt) acts.appendChild(miniBtn("Confirm", function(){ openConfirmSheet(j); }));
     if(atTable && f.gross > 0)
       acts.appendChild(miniBtn("Done · paid", function(){ writeDoc("jobs/"+j.id, {status:"done", paidOn:todayISO()}, "Done and paid: "+name+" "+money(f.gross)); }, false, true));
     acts.appendChild(miniBtn(atTable && f.gross > 0 ? "Done, unpaid" : "Done", function(){ writeDoc("jobs/"+j.id, {status:"done"}, "Completed: "+name); }, false, !(atTable && f.gross > 0)));
+    /* A wasted trip is still a record, and the travel fee is still earned. */
+    acts.appendChild(miniBtn("No-show", function(){
+      var travel = j.channel==="signing-service" ? 0 : Number(j.nonNotarialFee)||0;
+      if(!confirm("Close this as a no-show?" + (travel ? " The " + money(travel) + " travel fee stays billed." : " Nothing will be billed."))) return;
+      var patch = {status:"done", noShow:true, statutoryFee:0, nonNotarialFee:travel,
+                   jobType:"No-show — " + (j.jobType||"notarization")};
+      if(!travel) patch.paidOn = todayISO();   /* nothing to collect, so nothing to chase */
+      writeDoc("jobs/"+j.id, patch, "No-show: "+name + (travel ? " · travel " + money(travel) + " still billed" : ""));
+    }));
   } else {
     if(!j.paidOn && f.gross > 0)
       acts.appendChild(miniBtn("Paid", function(){ writeDoc("jobs/"+j.id, {paidOn:todayISO()}, "Paid: "+name+" "+money(f.gross)); }, false, true));
     if(!j.journalEntryId && !j.refused)
       acts.appendChild(miniBtn("Journal #", function(){ openJournalSheet(j); }, false, !!j.paidOn || f.gross===0));
   }
+  /* The printing is money out of pocket 30 to 45 days before the money comes in. Mark it when it happens. */
+  if(j.channel==="signing-service" && !j.printedAt)
+    acts.appendChild(miniBtn("Printed", function(){ writeDoc("jobs/"+j.id, {printedAt:new Date().toISOString()}, "Printed the package for "+name+" — "+money(f.printing)+" of paper and toner spent"); }));
   if(j.channel==="signing-service" && j.scanbackDue && !j.scanbackDone)
     acts.appendChild(miniBtn("Scan-back sent", function(){ writeDoc("jobs/"+j.id, {scanbackDone:new Date().toISOString()}, "Scan-back sent: "+name); }));
   acts.appendChild(miniBtn("Remove", function(){ if(confirm("Remove this job?")) delDoc("jobs/"+j.id); }, true));
@@ -1324,11 +1465,68 @@ function viewMoney(v){
     '<table class="rate"><thead><tr><th>Line</th><th>Billed this year</th><th>Reserve rate</th><th>Set aside</th></tr></thead><tbody>' +
     '<tr><td>Notarial fees <span class="hint">— "Exempt—Notary" on Schedule SE</span></td><td class="num">'+esc(money(m.statutory))+'</td><td class="num">20%</td><td class="num">'+esc(money(m.statutory*RESERVE.statutory))+'</td></tr>' +
     '<tr><td>Travel, signing, after-hours, technology</td><td class="num">'+esc(money(m.nonNotarial))+'</td><td class="num">35%</td><td class="num">'+esc(money(m.nonNotarial*RESERVE.nonNotarial))+'</td></tr>' +
+    '<tr><td>Miles driven <span class="hint">— a deduction, not income</span></td><td class="num">'+esc(String(m.miles))+' mi</td><td class="num">'+esc(money(MILE_RATE))+'/mi</td><td class="num">−'+esc(money(m.mileage))+'</td></tr>' +
     '</tbody></table>';
   pad4.appendChild(tbl);
-  pad4.appendChild(el("p","hint","These two rates are a reserve policy, not a tax bill. The right income-tax percentage depends on your whole household income — worth one call with a CPA before the first filing."));
+  pad4.appendChild(el("p","hint","The mileage line works the other way from the other two: it comes off your taxable income rather than being set aside. " +
+    (m.miles ? "You have driven " + m.miles + " business miles, worth about " + money(m.mileage) + " off the top — which is why the miles counter is on every job sheet." :
+               "It fills in from the miles counter on the job sheet. At " + money(MILE_RATE) + " a mile, a 24-mile round trip is about " + money(24*MILE_RATE) + " off your taxable income, on a job that might only bill $32.50.")));
+  pad4.appendChild(el("p","hint","These rates are a reserve policy, not a tax bill. The right income-tax percentage depends on your whole household income, and the mileage rate changes each January — both worth one call with a CPA before the first filing."));
   pad4.lastChild.style.marginBottom = "0";
   c4.appendChild(pad4); p4.appendChild(c4); v.appendChild(p4);
+
+  /* who pays, and how fast — the loan channel's whole problem, kept as your own record */
+  var rows = companyRows();
+  var p45 = panel("Who pays, and how fast", "Built from your own jobs. A signing company that pays in 45 days is normal; one that pays in 70 is a decision you should make once, here, and not again at midnight.");
+  var c45 = el("div","card");
+  if(!rows.length){
+    c45.appendChild(makeEmpty("No companies yet",
+      "This fills in the first time you book a loan signing or a brokerage job. Then it keeps the one number the trade forums all say to keep: how many days that company actually took to pay you. Two taps mark a company slow, or one you will not work for, and that warning shows up in the job sheet before you accept the next one."));
+  }
+  rows.forEach(function(r){
+    var row = el("div","rowitem");
+    row.appendChild(tile(r.flag==="never" ? "✕" : r.flag==="slow" ? "!" : "§", r.flag==="never" ? "var(--crit)" : r.flag==="slow" ? "var(--warn)" : "var(--s-signing)"));
+    var g = el("div","grow");
+    g.appendChild(el("div","ttl", r.name));
+    var mt = el("div","meta");
+    mt.appendChild(el("span",null, r.jobs + (r.jobs===1?" job":" jobs") + " · " + money(r.billed) + " billed"));
+    if(r.avgDays!=null) mt.appendChild(el("span","chip "+(r.avgDays>45?"crit":r.avgDays>30?"warn":"good"), "pays in about " + r.avgDays + " days"));
+    else if(r.jobs) mt.appendChild(el("span","chip","nothing paid yet"));
+    if(r.outstanding) mt.appendChild(el("span","chip "+(r.worstLate>0?"crit":"warn"), money(r.outstanding) + (r.worstLate>0 ? " · " + r.worstLate + "d late" : " outstanding")));
+    if(r.flag) mt.appendChild(el("span","chip "+(r.flag==="never"?"crit":"warn"), r.flag==="never" ? "do not work for" : "pays slow"));
+    g.appendChild(mt);
+    row.appendChild(g);
+    if(canWrite !== false && db){
+      var acts = el("div","acts");
+      COMPANY_FLAGS.forEach(function(fl){
+        if(fl.v === (r.flag||"")) return;
+        acts.appendChild(miniBtn(fl.label, function(){
+          db.doc("companies/"+r.key).set({id:r.key, name:r.name, flag:fl.v, updatedAt:new Date().toISOString()})
+            .then(function(){ return logActivity(r.name + " marked: " + fl.label.toLowerCase(), "note"); }).catch(function(){});
+        }, fl.v==="never"));
+      });
+      row.classList.add("hasacts"); row.appendChild(acts);
+    }
+    c45.appendChild(row);
+  });
+  p45.appendChild(c45); v.appendChild(p45);
+
+  /* the $2.50 argument, settled before it starts */
+  var p46 = panel("When someone says it should be $2.50", "They are half right, and saying so first is how the conversation stays friendly.");
+  var c46 = el("div","card"); var pad46 = el("div","card-pad");
+  PRICE_SCRIPT.forEach(function(line){
+    var q = el("p", null, line);
+    q.style.cssText = "margin:0 0 10px;font-size:14.5px;line-height:1.55;color:var(--ink)";
+    pad46.appendChild(q);
+  });
+  var cp = el("button","btn","Copy the script"); cp.type="button";
+  cp.addEventListener("click", function(){
+    copyText(PRICE_SCRIPT.join(" ")).then(function(){ cp.textContent = "Copied"; })
+      .catch(function(){ cp.textContent = "Could not copy on this device"; })
+      .then(function(){ setTimeout(function(){ cp.textContent = "Copy the script"; }, 2200); });
+  });
+  pad46.appendChild(cp);
+  c46.appendChild(pad46); p46.appendChild(c46); v.appendChild(p46);
 
   /* rate card */
   var p5 = panel("The rate card", "Published, and not improvised. Line 1 is capped by the State; line 2 is yours.");
@@ -1358,6 +1556,12 @@ function viewMoney(v){
     ["Printed twice (borrower copy)","× 2"],
     ["Paper and toner per page","$0.055"],
     ["So a 150-page package","about $16.50"]
+  ]));
+  w.appendChild(rateTable("The wasted trip, and the miles", [
+    ["Nobody home, or not ready","travel fee stands"],
+    ["Notice that avoids it","a call or text a few hours ahead"],
+    ["Turned away at the table","travel fee stands, act is $0"],
+    ["Every business mile driven","about " + money(MILE_RATE) + " off your taxable income"]
   ]));
   pad5.appendChild(w); c5.appendChild(pad5); p5.appendChild(c5); v.appendChild(p5);
 }
@@ -1390,7 +1594,7 @@ function viewMarketing(v){
   var p = panel("Where the work comes from", "Four ways a job can reach you. This tells you which ones are actually working, and what each one has cost.");
 
   var jobsBySource = {};
-  state.jobs.forEach(function(j){ if(j.refused) return; var s=j.source||""; jobsBySource[s] = (jobsBySource[s]||0)+1; });
+  state.jobs.forEach(function(j){ if(j.refused || j.noShow) return; var s=j.source||""; jobsBySource[s] = (jobsBySource[s]||0)+1; });
   var revBySource = {};
   doneJobs().forEach(function(j){ if(j.refused) return; var s=j.source||""; revBySource[s] = (revBySource[s]||0) + jobFees(j).gross; });
 
@@ -1441,6 +1645,37 @@ function viewMarketing(v){
     pad.appendChild(bars);
   }
   c2.appendChild(pad); p2.appendChild(c2); v.appendChild(p2);
+
+  /* the calls you lose say more than the jobs you win */
+  var lp = leadPicture();
+  var p25 = panel("How many calls turn into jobs", "Most people ring two or three notaries and hire whoever answers first. This is the only place you will ever see why the others hung up.");
+  var c25 = el("div","card"); var pad25 = el("div","card-pad");
+  if(!lp.calls){
+    var lh = el("p","hint","Nothing counted yet. Every time a call does not turn into a job, tap Didn't happen below and pick a reason. Once there are ten of them the top reason is usually obvious — and if it is \u201cI missed the call,\u201d answering the phone is worth more than any marketing you could buy.");
+    lh.style.margin = "0"; pad25.appendChild(lh);
+  } else {
+    var big = el("div","quote");
+    big.appendChild(el("span","big", lp.rate + "%"));
+    big.appendChild(el("span","num", lp.booked + " booked · " + lp.lost + " lost"));
+    big.appendChild(el("span","hint", lp.booked + " of " + lp.calls + " calls turned into a job."));
+    pad25.appendChild(big);
+    var rk = Object.keys(lp.byReason);
+    if(rk.length){
+      var mx = Math.max.apply(null, rk.map(function(k){ return lp.byReason[k]; }));
+      var bars = el("div","bars"); bars.style.marginTop = "12px";
+      rk.sort(function(a,b){ return lp.byReason[b]-lp.byReason[a]; }).forEach(function(k){
+        bars.appendChild(barRow(k, lp.byReason[k], mx, k==="I missed the call" ? "var(--crit)" : "var(--warn)", String(lp.byReason[k])));
+      });
+      pad25.appendChild(bars);
+      var top = rk[0];
+      var say = top==="I missed the call" ? "Your top reason is a missed call. That one is free to fix and it is worth more than any ad."
+              : top==="Price" ? "Your top reason is price. Before you cut it, check the money split — a cheaper job you drive 20 miles for can pay less than nothing."
+              : top==="Could not make the time" ? "Your top reason is timing. Evenings and weekends are the differentiator nobody local wants to work."
+              : "Read the top bar as the thing to fix next, not as a verdict on the price.";
+      var sy = el("p","hint", say); sy.style.marginBottom = "0"; pad25.appendChild(sy);
+    }
+  }
+  c25.appendChild(pad25); p25.appendChild(c25); v.appendChild(p25);
 
   var p3 = panel("The line you cannot cross");
   var c3 = el("div","card"); var pad3 = el("div","card-pad");
@@ -1824,13 +2059,14 @@ function toggleGroup(opts, isOn, flip){
   });
   return g;
 }
-function stepper(get, set, min, max, unit){
+function stepper(get, set, min, max, unit, step){
+  var st = step || 1;
   var s = el("div","stepper");
   var minus = el("button", null, "−"); minus.type = "button";
   var val = el("span", null, String(get()));
   var plus = el("button", null, "+"); plus.type = "button";
-  minus.addEventListener("click", function(){ if(get() > min){ set(get()-1); val.textContent = String(get()); } });
-  plus.addEventListener("click", function(){ if(get() < max){ set(get()+1); val.textContent = String(get()); } });
+  minus.addEventListener("click", function(){ if(get() > min){ set(Math.max(min, get()-st)); val.textContent = String(get()); } });
+  plus.addEventListener("click", function(){ if(get() < max){ set(Math.min(max, get()+st)); val.textContent = String(get()); } });
   s.appendChild(minus); s.appendChild(val); s.appendChild(plus);
   if(unit){ var w = el("div"); w.style.display="flex"; w.style.alignItems="center"; w.style.gap="10px"; w.appendChild(s); w.appendChild(el("span","hint",unit)); return w; }
   return s;
@@ -1861,6 +2097,23 @@ function saveButton(sh, label, onSave){
   sh.foot.appendChild(save);
   return save;
 }
+/* Miles are not a fee — they are a deduction. Round trip, stepped by five, pre-filled from the tier
+   you tapped so it is usually already right. At about 70 cents a mile it is worth more than it looks. */
+function milesRow(parent, s){
+  var w = el("div");
+  w.appendChild(stepper(function(){ return s.miles||0; }, function(v){ s.miles = v; var t = document.getElementById("milesHint"); if(t) t.textContent = milesText(s.miles); }, 0, 400, null, MILE_STEP));
+  var h = el("div","hint", milesText(s.miles)); h.id = "milesHint";
+  var box = el("div"); box.style.cssText = "display:flex;align-items:center;gap:10px;flex-wrap:wrap";
+  box.appendChild(w); box.appendChild(h);
+  parent.appendChild(box);
+  return box;
+}
+function milesText(n){
+  n = Number(n)||0;
+  return n ? (n + " miles round trip — about " + money(n*MILE_RATE) + " off your taxable income.")
+           : "Round-trip miles. Leave it at zero if you did not drive.";
+}
+
 function whenChips(parent, s, redraw){
   var w = section(parent, "When");
   w.appendChild(chipGroup([{v:"now",label:"Now"},{v:"today",label:"Later today"},{v:"tomorrow",label:"Tomorrow"},{v:"pick",label:"Pick a day"}],
@@ -1882,8 +2135,44 @@ function whenChips(parent, s, redraw){
   }
 }
 
+/* Who sent the work, as a chip. Typing it means three spellings of one company and a scorecard that
+   splits into three rows — and it is the scorecard that tells you who actually pays. The warning under
+   it is the whole point: you see the company's pay record BEFORE you accept the job, not after. */
+function companyPicker(parent, label, get, set, redraw){
+  var w = section(parent, label);
+  var known = knownCompanies();
+  var opts = known.map(function(c){
+    var f = companyFlag(c.name);
+    return {v:c.name, label:c.name, small: f==="never" ? "do not work for" : f==="slow" ? "pays slow" : undefined};
+  });
+  opts.push({v:"__new", label:"＋ New one"});
+  w.appendChild(chipGroup(opts, get, function(v){ set(v); redraw(); }));
+  if(get()==="__new" || !known.length)
+    textField(w, "Name", function(){ return get()==="__new" ? "" : get(); }, function(v){ set(v.trim() ? v : "__new"); }, "Who sent it");
+  var name = get();
+  if(name && name!=="__new"){
+    var flag = companyFlag(name);
+    var row = null;
+    companyRows().forEach(function(r){ if(r.name===name) row = r; });
+    if(flag==="never"){
+      var bad = el("p","hint"); bad.style.color = "var(--crit)";
+      bad.textContent = "You marked this one “do not work for.” Saving is still your call, but read that again first.";
+      w.appendChild(bad);
+    } else if(flag==="slow" || (row && row.worstLate > 0)){
+      var slow = el("p","hint"); slow.style.color = "var(--warn)";
+      slow.textContent = "Heads up: " + (flag==="slow" ? "you marked this one a slow payer" : "this one is late on money it already owes you")
+        + (row && row.outstanding ? " — " + money(row.outstanding) + " still outstanding" : "")
+        + (row && row.avgDays!=null ? ", and past jobs took about " + row.avgDays + " days to pay" : "") + ".";
+      w.appendChild(slow);
+    } else if(row && row.avgDays!=null){
+      w.appendChild(el("div","hint", "Past jobs from " + name + " paid in about " + row.avgDays + " days."));
+    }
+  }
+  return w;
+}
+
 function openJobSheet(){
-  var s = {channel:"consumer", act:"ack", acts:1, travel:null, extras:{}, pkg:"", fee:null, feeCustom:"", pages:null,
+  var s = {channel:"consumer", act:"ack", acts:1, travel:null, miles:0, extras:{}, pkg:"", fee:null, feeCustom:"", pages:null,
            when:"now", date:todayISO(), time:nowHHMM(), client:"", town:"", signingCompany:"", referringAgent:"",
            source:"", outcome:"booked"};
   var sh = sheet("New job", "Tap through it — the quote writes itself");
@@ -1924,14 +2213,16 @@ function openJobSheet(){
       var pg = section(body, "Pages in the package — sets the printing cost");
       pg.appendChild(chipGroup(PAGE_PRESETS.map(function(n){ return {v:n, label:n+" pages", small:money(n*2*PAGE_COST)}; }).concat([{v:0,label:"Not stated"}]),
         function(){ return s.pages; }, function(v){ s.pages = v; draw(); }));
-      textField(section(body, null), "Signing company", function(){ return s.signingCompany; }, function(v){ s.signingCompany = v; }, "Who sent the package");
+      companyPicker(body, "Who sent the package — and how they pay", function(){ return s.signingCompany; }, function(v){ s.signingCompany = v; }, draw);
+      milesRow(section(body, "Miles"), s);
     } else {
       var ac = section(body, "What — line 1, the State's fee");
       ac.appendChild(chipGroup(ACTS, function(){ return s.act; }, function(v){ s.act = v; draw(); }));
       if(actDef().per) ac.appendChild(stepper(function(){ return s.acts; }, function(v){ s.acts=v; quote(); }, 1, 40, "signatures to notarize"));
       var tr = section(body, "Travel — line 2, yours");
-      tr.appendChild(chipGroup(TRAVEL, function(){ return s.travel; }, function(v){ s.travel = v; draw(); }));
+      tr.appendChild(chipGroup(TRAVEL, function(){ return s.travel; }, function(v){ s.travel = v; s.miles = TIER_MILES[v]||0; draw(); }));
       tr.appendChild(toggleGroup(EXTRAS, function(v){ return !!s.extras[v]; }, function(v){ s.extras[v] = !s.extras[v]; draw(); }));
+      milesRow(tr, s);
     }
 
     whenChips(body, s, draw);
@@ -1942,7 +2233,7 @@ function openJobSheet(){
     textField(row, "Town", function(){ return s.town; }, function(v){ s.town = v; }, "Optional");
     who.appendChild(row);
     if(s.channel==="agent") textField(who, "Sent by", function(){ return s.referringAgent; }, function(v){ s.referringAgent = v; }, "Agent's name — attribution only, never a payment");
-    if(s.channel==="brokerage") textField(who, "Brokerage", function(){ return s.referringAgent; }, function(v){ s.referringAgent = v; }, "Who is billed");
+    if(s.channel==="brokerage") companyPicker(body, "Brokerage — who is billed, and how they pay", function(){ return s.referringAgent; }, function(v){ s.referringAgent = v; }, draw);
 
     if(s.channel==="consumer" && state.channels.length){
       var so = section(body, "How they found you");
@@ -1983,9 +2274,9 @@ function openJobSheet(){
     var done = s.when==="now" && s.outcome !== "booked";
     var body = {
       id:id, client:s.client.trim(), channel:s.channel, date:s.date, time:s.time || "",
-      jobType:type, location:location, acts: a.per ? s.acts : 1,
+      jobType:type, location:location, acts: a.per ? s.acts : 1, miles: Number(s.miles)||0,
       statutoryFee:f.statutory, nonNotarialFee:f.non, pages:f.pages,
-      signingCompany:s.signingCompany.trim(), referringAgent:s.referringAgent.trim(),
+      signingCompany:cleanCo(s.signingCompany), referringAgent:cleanCo(s.referringAgent),
       paymentTerms:(CHANNELS[s.channel]||CHANNELS.consumer).terms,
       source:s.source || (s.channel==="agent" || s.channel==="brokerage" ? "agent" : (signing() ? "snapdocs" : "")),
       status: done ? "done" : "booked", createdAt:new Date().toISOString()
@@ -2002,6 +2293,7 @@ function openJobSheet(){
   onSave.check = function(){
     if(!s.client.trim()) return "A first name is the one thing this needs.";
     if(signing() && fees().non <= 0) return "Tap the fee the company named, or type it under Other.";
+    if(signing() && !cleanCo(s.signingCompany)) return "Name the company. It is who you invoice, and who the pay record is kept against.";
     if(!s.date) return "Pick a day.";
     return null;
   };
@@ -2009,10 +2301,30 @@ function openJobSheet(){
   sh.d.showModal();
 }
 
+/* Two different things did not happen, and they teach you two different lessons.
+   YOU TURNED IT DOWN: a legal-ish record. Saved exactly as before — a job with refused: true, the
+     travel fee kept if you made the trip, skipped by the journal alarm and the marketing count.
+   THEY DIDN'T BOOK YOU: not a job at all. Saved as a lead, so it never touches the money or the
+     journal, but it does tell you your close rate — and if "I missed the call" is the top reason,
+     answering the phone is worth more than any marketing you could buy. */
+function openNoJobSheet(){
+  var s = {path:""};
+  var sh = sheet("Didn't happen", "Which one was it?");
+  sh.body.appendChild(chipGroup([
+      {v:"refused", label:"I turned it down", small:"ID, presence, blanks"},
+      {v:"lost",    label:"They didn't book me", small:"price, timing, missed call"}
+    ], function(){ return s.path; }, function(v){ sh.d.close(); if(v==="refused") openRefusalSheet(); else openLostSheet(); }));
+  sh.body.appendChild(el("p","hint","Both are worth thirty seconds. One is the refusal log the journal requires; the other is the only place you will ever see why calls do not turn into jobs."));
+  var cancel = el("button","btn","Close"); cancel.type="button";
+  cancel.addEventListener("click", function(){ sh.d.close(); });
+  sh.foot.appendChild(cancel);
+  sh.d.showModal();
+}
+
 /* A refusal is not a notarial act, so it never enters the journal — which is exactly why it has to be
    written down here, the same day, in plain words. Reason chips are the six stop-path questions. */
 function openRefusalSheet(){
-  var s = {reason:"", other:"", travel:null, when:"now", date:todayISO(), time:nowHHMM(), client:"", town:""};
+  var s = {reason:"", other:"", travel:null, miles:0, when:"now", date:todayISO(), time:nowHHMM(), client:"", town:""};
   var sh = sheet("Turned one away", "Log it now — nothing else will");
   var body = sh.body;
   function draw(){
@@ -2021,7 +2333,8 @@ function openRefusalSheet(){
     re.appendChild(chipGroup(REFUSAL_REASONS.map(function(r){ return {v:r, label:r}; }), function(){ return s.reason; }, function(v){ s.reason = v; draw(); }));
     if(s.reason==="Other") textField(re, "In your own words", function(){ return s.other; }, function(v){ s.other = v; }, "One line");
     var tr = section(body, "Did you make the trip? The travel fee is still earned");
-    tr.appendChild(chipGroup(TRAVEL, function(){ return s.travel; }, function(v){ s.travel = v; draw(); }));
+    tr.appendChild(chipGroup(TRAVEL, function(){ return s.travel; }, function(v){ s.travel = v; s.miles = TIER_MILES[v]||0; draw(); }));
+    milesRow(tr, s);
     whenChips(body, s, draw);
     var row = el("div","two");
     textField(row, "First name", function(){ return s.client; }, function(v){ s.client = v; }, "First name only");
@@ -2037,7 +2350,7 @@ function openRefusalSheet(){
     var body = {
       id:id, client:s.client.trim() || "Unnamed", channel:"consumer", date:s.date, time:s.time || "",
       jobType:"Refused — " + reason.toLowerCase(), refused:true, refusalReason:reason,
-      location:s.town.trim(), statutoryFee:0, nonNotarialFee:travel,
+      location:s.town.trim(), statutoryFee:0, nonNotarialFee:travel, miles:Number(s.miles)||0,
       paymentTerms:"due-at-completion", source:"", status:"done", createdAt:new Date().toISOString()
     };
     if(!travel) body.paidOn = todayISO();   /* nothing to collect, so nothing to chase */
@@ -2047,6 +2360,45 @@ function openRefusalSheet(){
   };
   onSave.check = function(){ return s.reason ? null : "Tap the reason. That is the record."; };
   saveButton(sh, "Log the refusal", onSave);
+  sh.d.showModal();
+}
+
+/* A call that did not become a job. No PII, no money, no journal — one reason and a timestamp. */
+function openLostSheet(){
+  var s = {reason:"", other:"", asked:"", source:"", quoted:0};
+  var sh = sheet("They didn't book me", "One tap is the whole entry");
+  var body = sh.body;
+  function draw(){
+    body.textContent = "";
+    var re = section(body, "Why not");
+    re.appendChild(chipGroup(LOST_REASONS.map(function(r){ return {v:r, label:r}; }), function(){ return s.reason; }, function(v){ s.reason = v; draw(); }));
+    if(s.reason==="Other") textField(re, "In your own words", function(){ return s.other; }, function(v){ s.other = v; }, "One line");
+    var wa = section(body, "What did they want");
+    wa.appendChild(chipGroup(["Single signature","Several signatures","Deed or mortgage","Loan package","Something else"].map(function(x){ return {v:x, label:x}; }),
+      function(){ return s.asked; }, function(v){ s.asked = (s.asked===v ? "" : v); draw(); }));
+    if(state.channels.length){
+      var so = section(body, "How they found you");
+      so.appendChild(chipGroup(state.channels.slice().sort(cmp("id")).map(function(c){ return {v:c.key, label:c.name.split(" and ")[0]}; }),
+        function(){ return s.source; }, function(v){ s.source = (s.source===v ? "" : v); draw(); }));
+    }
+    if(s.reason==="Price"){
+      var q = section(body, "What did you quote them");
+      q.appendChild(stepper(function(){ return s.quoted; }, function(v){ s.quoted = v; }, 0, 400, "dollars", 5));
+      q.appendChild(el("div","hint","Worth knowing. If every lost call is quoted above the same number, that number is your ceiling — not your price."));
+    }
+    body.appendChild(el("p","hint","No name and no phone number. This is a count and a reason, nothing more."));
+  }
+  draw();
+  var onSave = function(){
+    var id = "l" + Date.now();
+    var reason = s.reason==="Other" ? (s.other.trim() || "Other") : s.reason;
+    return db.doc("leads/"+id).set({
+      id:id, date:todayISO(), time:nowHHMM(), reason:reason, asked:s.asked,
+      source:s.source||"", quoted:Number(s.quoted)||0, createdAt:new Date().toISOString()
+    }).then(function(){ return logActivity("Lost a call — " + reason.toLowerCase() + (s.asked ? " (" + s.asked.toLowerCase() + ")" : ""), "lead"); });
+  };
+  onSave.check = function(){ return s.reason ? null : "Tap the reason. That is the whole point of the entry."; };
+  saveButton(sh, "Log it", onSave);
   sh.d.showModal();
 }
 
@@ -2100,6 +2452,56 @@ function openTaskSheet(){
   sh.d.showModal();
 }
 
+/* The cheapest thing on the page. Six checks on the phone before you drive, and a text they can read
+   back later. A wasted trip costs an hour and the gas; this call costs two minutes. */
+function openConfirmSheet(j){
+  var s = {checks:{}};
+  var sh = sheet("Confirm before you drive", (j.client||"This job") + " · " + fmtWhen(j));
+  var body = sh.body;
+  function allDone(){ var n=0; CONFIRM_CHECKS.forEach(function(c){ if(s.checks[c.v]) n++; }); return n; }
+  function draw(){
+    body.textContent = "";
+    var ck = section(body, "Run these down while you have them on the phone");
+    ck.appendChild(toggleGroup(CONFIRM_CHECKS, function(v){ return !!s.checks[v]; }, function(v){ s.checks[v] = !s.checks[v]; draw(); }));
+    ck.appendChild(el("div","hint", allDone() + " of " + CONFIRM_CHECKS.length + " checked. You can save with some unchecked — the record shows which."));
+    var tx = section(body, "Then send them this");
+    var btn = el("button","btn primary","Copy the text"); btn.type="button";
+    btn.addEventListener("click", function(){
+      copyText(confirmText(j)).then(function(){ btn.textContent = "Copied — paste it into a text"; })
+        .catch(function(){ btn.textContent = "Could not copy on this device"; });
+    });
+    tx.appendChild(btn);
+    var pre = el("div","detail", confirmText(j));
+    pre.style.cssText = "white-space:pre-wrap;margin-top:8px;font-size:13px;line-height:1.55";
+    tx.appendChild(pre);
+  }
+  draw();
+  var onSave = function(){
+    var list = CONFIRM_CHECKS.filter(function(c){ return s.checks[c.v]; }).map(function(c){ return c.v; });
+    return db.doc("jobs/"+j.id).update({confirmedAt:new Date().toISOString(), confirmChecks:list})
+      .then(function(){ return logActivity("Confirmed with " + (j.client||"the signer") + " for " + fmtWhen(j) + " — " + list.length + " of " + CONFIRM_CHECKS.length + " checks clear", "done"); });
+  };
+  saveButton(sh, "Mark confirmed", onSave);
+  sh.d.showModal();
+}
+/* Plain words, no jargon, and the cancellation line stated once so it is never a surprise. */
+function confirmText(j){
+  var f = jobFees(j), ch = chanOf(j);
+  var when = fmtDate(j.date) + (j.time ? " at " + fmtTime(j.time) : "");
+  var lines = [
+    "Hi " + (j.client||"there") + " — confirming your notary appointment for " + when + ".",
+    "",
+    "Please have ready:",
+    "· An unexpired government photo ID for every person signing. The name on the ID has to match the name on the document.",
+    "· Everyone who has to sign, in the room. I cannot notarize for someone who is not there.",
+    "· The document filled in, with no blank spaces, and not signed yet — you sign in front of me."
+  ];
+  if((j.paymentTerms||ch.terms)==="due-at-completion" && f.gross>0)
+    lines.push("", "The total is " + money(f.gross) + " — " + money(f.statutory) + " is the State's notary fee and " + money(f.nonNotarial) + " is my travel and time. Payable when we finish.");
+  lines.push("", "If something changes, a call or a text a few hours ahead is all I need. If nobody is there when I arrive, the travel part of the fee still stands.", "", "— Given Word Notary");
+  return lines.join("\n");
+}
+
 function openJournalSheet(j){
   var s = {id:""};
   var sh = sheet("Journal entry", (j.client||"This job") + " · " + fmtWhen(j));
@@ -2122,7 +2524,7 @@ function renderDock(){
   if(canWrite === false || !db){ d.hidden = true; return; }
   d.hidden = false;
   var inn = el("div","dock-in");
-  [["＋ Job", openJobSheet, true], ["Refused", openRefusalSheet, false], ["Note", openNoteSheet, false]].forEach(function(x){
+  [["＋ Job", openJobSheet, true], ["Didn't happen", openNoJobSheet, false], ["Note", openNoteSheet, false]].forEach(function(x){
     var b = el("button", x[2] ? "main" : null, x[0]); b.type = "button";
     b.addEventListener("click", function(){ x[1](); });
     inn.appendChild(b);
@@ -2131,21 +2533,27 @@ function renderDock(){
 }
 
 /* ============================ export ============================ */
-function copyCSV(){
-  var rows = [["date","time","first name","channel","what","statutory fee","non-notarial fee","printing","set aside","paid on","journal entry","refused","source"]];
-  state.jobs.slice().sort(cmp("date")).forEach(function(j){
-    var f = jobFees(j);
-    rows.push([j.date||"", j.time||"", j.client||"", j.channel||"", j.jobType||"", f.statutory.toFixed(2), f.nonNotarial.toFixed(2),
-               f.printing.toFixed(2), f.reserve.toFixed(2), j.paidOn||"", j.journalEntryId||"", j.refused ? "yes" : "", j.source||""]);
-  });
-  var csv = rows.map(function(r){ return r.map(function(c){ c = String(c==null?"":c); return /[",\n]/.test(c) ? '"' + c.replace(/"/g,'""') + '"' : c; }).join(","); }).join("\n");
-  var viaApi = (navigator.clipboard && navigator.clipboard.writeText) ? navigator.clipboard.writeText(csv) : Promise.reject(new Error("no clipboard"));
+/* The viewer blocks downloads, so everything leaves this page by clipboard. One path, used by the tax
+   export, the confirmation text and the price script alike. */
+function copyText(text){
+  var viaApi = (navigator.clipboard && navigator.clipboard.writeText) ? navigator.clipboard.writeText(text) : Promise.reject(new Error("no clipboard"));
   return viaApi.catch(function(){
-    var ta = document.createElement("textarea"); ta.value = csv; ta.setAttribute("readonly",""); ta.style.position = "fixed"; ta.style.opacity = "0";
+    var ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly",""); ta.style.position = "fixed"; ta.style.opacity = "0";
     document.body.appendChild(ta); ta.select();
     var ok = false; try{ ok = document.execCommand("copy"); }catch(e){}
     ta.remove(); if(!ok) throw new Error("copy blocked");
   });
+}
+function copyCSV(){
+  var rows = [["date","time","first name","channel","what","statutory fee","non-notarial fee","printing","miles","mileage deduction","set aside","paid on","journal entry","refused","no-show","confirmed","company","source"]];
+  state.jobs.slice().sort(cmp("date")).forEach(function(j){
+    var f = jobFees(j), mi = Number(j.miles)||0;
+    rows.push([j.date||"", j.time||"", j.client||"", j.channel||"", j.jobType||"", f.statutory.toFixed(2), f.nonNotarial.toFixed(2),
+               f.printing.toFixed(2), String(mi), (mi*MILE_RATE).toFixed(2), f.reserve.toFixed(2), j.paidOn||"", j.journalEntryId||"",
+               j.refused ? "yes" : "", j.noShow ? "yes" : "", j.confirmedAt ? j.confirmedAt.slice(0,10) : "", companyOf(j), j.source||""]);
+  });
+  var csv = rows.map(function(r){ return r.map(function(c){ c = String(c==null?"":c); return /[",\n]/.test(c) ? '"' + c.replace(/"/g,'""') + '"' : c; }).join(","); }).join("\n");
+  return copyText(csv);
 }
 
 /* ============================ shared controls ============================ */
@@ -2259,6 +2667,8 @@ function bindCollection(name, key){
   bindCollection("launch","launch");
   bindCollection("channels","channels");
   bindCollection("activity","activity");
+  bindCollection("companies","companies");
+  bindCollection("leads","leads");
 
   db.doc("meta/config").onSnapshot(function(snap){
     state.config = (snap.exists && snap.data()) || {};

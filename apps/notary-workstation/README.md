@@ -14,11 +14,13 @@ The decision record, and the rule about which surface is the source of truth, is
 
 | Path | Holds | Written by |
 |---|---|---|
-| `jobs/<id>` | one job: channel, `date` + `time` (HH:MM, local), fees, `acts`, pages, payer, terms, `paidOn`, `journalEntryId`, `scanbackDue`/`scanbackDone` (signing service), `refused`/`refusalReason` for a logged refusal | the Job and Refused buttons in the dock, or `notary-intake` |
+| `jobs/<id>` | one job: channel, `date` + `time` (HH:MM, local), fees, `acts`, pages, payer, terms, `paidOn`, `journalEntryId`, `scanbackDue`/`scanbackDone` (signing service), `refused`/`refusalReason` for a logged refusal | the Job and Didn't happen buttons in the dock, or `notary-intake` |
 | `tasks/<id>` | an open item — a task Lemar owes, or a question out with DORES / BlueNotary / the county clerk | the + Item button on the Open items tab |
 | `launch/<id>` | one runway step: phase, title, detail, cost label, `deadline`/`queue`/`gate` tag, `status`, optional `due`, `updates[]`, done | seeded from the Given Word Runway tracker; `status`/`due`/`updates` written by the step dialog |
 | `channels/<id>` | one way work can reach the business: key, name, status, what is blocking it, spend | the page's Marketing tab |
 | `activity/<YYYY-MM-DD>` | one document per day holding that day's log entries (capped at 60) | every save on the page, the Note button, and anything reporting a completed job |
+| `companies/<slug>` | one company you have worked for: `name` and a `flag` (`""`, `slow`, `never`). The pay record itself is NOT stored — jobs, billed, outstanding and average days-to-pay are computed from `jobs` at render time. The doc exists only to hold the flag Lemar sets | the two flag buttons on the Money tab |
+| `leads/<id>` | a call that did not become a job: `date`, `time`, `reason` (from `LOST_REASONS`), `asked`, `source`, `quoted`. No name, no phone number — a count and a reason | the "They didn't book me" path of the Didn't happen sheet |
 | `meta/config` | `phase` (`prelaunch` or `operating`), entity name, and the three dates the State counts from: `commissionDate`, `commissionExpiry`, `llcFiledOn` | the Calendar tab |
 
 A job's `source` must match a channel's `key` for the marketing scoreboard to count it.
@@ -49,7 +51,7 @@ move it out of that group and update the matching item in `tasks`.
 
 ## How things get recorded (2026-09-18 rework)
 
-The page is tap-first. A fixed dock at the bottom carries three buttons — **Job**, **Refused**,
+The page is tap-first. A fixed dock at the bottom carries three buttons — **Job**, **Didn't happen**,
 **Note** — and each opens a sheet (a dialog that slides up on a phone). Anything with a known set
 of answers is a chip; a count is a stepper; the only typed field is a first name (a town is
 optional). The job sheet's quote recomputes on every tap from the same constants the Money tab's
@@ -69,6 +71,42 @@ day; the calendar's day view and the Today list sort by it.
 **Copy every job for taxes** on the Money tab puts one CSV line per job on the clipboard (both fee
 lines kept apart, printing, set-aside, paid date, journal id, refused flag, source). It uses the
 clipboard because the viewer sandbox blocks downloads, and it needs no extra capability.
+
+## What the 2026-09-19 pain-point pass added
+
+The reasoning, ranked by how often each one happens per job, is in
+`haven/vault/40-Projects/notary-services/2026-09-19-notary-pain-points-and-what-to-build.md`.
+On the page:
+
+- **Confirm before you drive.** A `Confirm` button on every booked job opens six tap-checks
+  (`CONFIRM_CHECKS`) and a ready-to-send text (`confirmText`) that states what to have out, who has
+  to be there, the price split, and that the travel fee stands if nobody is home. Saves
+  `confirmedAt` and `confirmChecks[]`. A job inside 24 hours with no `confirmedAt` raises a
+  **Not confirmed** alarm.
+- **No-show.** A row button on a booked job. Closes it `status: done`, `noShow: true`, statutory
+  line zeroed, travel fee kept. The "no journal entry" alarm and the marketing count both skip it.
+- **Miles.** `miles` on a job, stepped by `MILE_STEP` (5) and pre-filled from the travel tier via
+  `TIER_MILES`. The Money tab's tax-split table carries a third row: miles × `MILE_RATE` as a
+  DEDUCTION, never income. `MILE_RATE` is a page constant — confirm the figure each January.
+- **Who pays, and how fast.** `companyRows()` computes per-company jobs, billed, outstanding,
+  worst days late and average days-to-pay from `jobs` alone. The company is a chip
+  (`companyPicker`) on signing-service and brokerage jobs rather than a typed field, so one company
+  is one row. A `slow` or `never` flag shows as a coloured warning inside the job sheet *before*
+  the job is saved.
+- **Didn't happen.** The dock's middle button now forks: *I turned it down* opens the unchanged
+  refusal sheet, *They didn't book me* opens `openLostSheet` and writes a `leads` doc. Marketing
+  shows the close rate and the lost reasons ranked.
+- **Printed.** A row button on a signing-service job stamps `printedAt`, so the row reads the print
+  cost as already spent rather than still to come.
+- **Scan-back clock.** Completed loan jobs with a pending scan-back get their own panel on Today
+  with a live countdown (`scanbackLeft`), plus a warn alarm under two hours.
+- **The price script.** `PRICE_SCRIPT` on the Money tab, with a Copy button, for when someone says
+  it should cost $2.50.
+- **The tax export** gained miles, the mileage deduction, the no-show flag, the confirmed date and
+  the company.
+
+Everything leaves the page by clipboard through one helper (`copyText`), so none of this needed a
+new capability and the store was never at risk.
 
 ## Republishing
 
