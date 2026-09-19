@@ -1,8 +1,6 @@
-# Basil — Inbox Janitor run — 2026-09-19
-
 ---
 created: 2026-09-19T23:07:00-04:00
-updated: 2026-09-19T23:07:00-04:00
+updated: 2026-09-19T13:05:00Z
 domain: automation
 type: log
 status: done
