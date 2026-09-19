@@ -179,7 +179,18 @@
   .steps li:first-child{border-top:0}
   .steps li::before{content:counter(step);font-size:12px;font-weight:700;color:var(--crit);background:var(--crit-soft);border-radius:9px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:1px}
   .steps b{display:block;color:var(--ink);font-weight:700;letter-spacing:-.015em}
-  .steps span{color:var(--ink-2)}
+  .steps span{color:var(--ink-2);display:block;margin-top:5px}
+  .steps details.step > summary{list-style:none;cursor:pointer;min-height:26px;display:flex;align-items:center}
+  .steps details.step > summary::-webkit-details-marker{display:none}
+  .steps details.step > summary b::after{content:" \203a";color:var(--crit);font-weight:700}
+  .steps details.step[open] > summary b::after{content:" \2039"}
+  .stopcard .btn.small{margin-top:14px;background:rgba(255,107,107,.13);color:var(--crit)}
+  .stopcard .btn.small:hover{background:rgba(255,107,107,.2)}
+  /* one scrolling line of chips beats nine stacked rows on a phone */
+  .chips.scroller{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;
+    -webkit-overflow-scrolling:touch;scroll-snap-type:x proximity}
+  .chips.scroller::-webkit-scrollbar{display:none}
+  .chips.scroller button{flex:none;scroll-snap-align:start}
   .search{display:flex;gap:10px;align-items:center;margin:16px 0 2px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 56px);z-index:15;background:var(--ground);padding-block:8px}
   .search input{flex:1;font:inherit;font-size:14px;font-weight:500;padding:13px 18px;border:1px solid transparent;border-radius:999px;background:var(--surface);color:var(--ink);min-width:0}
   .search input::placeholder{color:var(--ink-3)}
@@ -193,6 +204,37 @@
   .rule .cite{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);font-weight:400}
   .rule.stop{box-shadow:inset 3px 0 0 var(--crit)}
   .rule.unconfirmed{box-shadow:inset 3px 0 0 var(--warn)}
+
+  /* ---------- the FAQ: question on the line, answer beside it, reasoning behind the tap ---------- */
+  .faq{border-top:1px solid var(--line-soft)}
+  .faq:first-child{border-top:0}
+  .faq.stop{box-shadow:inset 3px 0 0 var(--crit)}
+  .faq.unconfirmed{box-shadow:inset 3px 0 0 var(--warn)}
+  .faq > summary{
+    list-style:none;cursor:pointer;padding:15px 18px;display:flex;gap:12px;align-items:baseline;
+    justify-content:space-between;min-height:52px;
+  }
+  .faq > summary::-webkit-details-marker{display:none}
+  .faq > summary:hover{background:rgba(255,255,255,.022)}
+  .faq > summary .q{font-size:14.5px;font-weight:600;line-height:1.4;letter-spacing:-.01em;flex:1;min-width:0}
+  .faq[open] > summary .q{color:var(--accent-hi)}
+  .faq > summary .ans{
+    flex:none;font-size:12.5px;font-weight:700;white-space:nowrap;letter-spacing:-.01em;
+    padding:3px 10px;border-radius:999px;align-self:flex-start;
+  }
+  .ans.no{color:var(--crit);background:var(--crit-soft)}
+  .ans.yes{color:var(--good);background:var(--good-soft)}
+  .ans.open{color:var(--warn);background:var(--warn-soft)}
+  .ans.fact{color:var(--accent-hi);background:var(--accent-soft)}
+  .faq-body{padding:0 18px 16px}
+  .faq-body p{margin:0 0 9px;font-size:13.5px;color:var(--ink-2);line-height:1.6;max-width:72ch}
+  .faq-body p:last-of-type{margin-bottom:0}
+  .faq-body p b{color:var(--ink);font-weight:700}
+  .faq-body .cite{margin-top:10px;font-family:var(--mono);font-size:10.5px;color:var(--ink-3)}
+  @media (max-width:520px){
+    .faq > summary{flex-wrap:wrap;gap:4px 10px}
+    .faq > summary .q{flex-basis:100%}
+  }
 
   /* ---------- dialog ---------- */
   dialog{border:0;padding:0;background:var(--surface);color:var(--ink);border-radius:26px;max-width:560px;width:calc(100% - 28px);box-shadow:0 40px 90px -30px rgba(0,0,0,.95)}
@@ -1026,208 +1068,274 @@ var STOP_PATH = [
   ["Still unsure?","Do not do it. Say you will confirm and come back. Nobody has ever lost a commission for taking an extra day; the redo costs you one trip, and getting it wrong can cost the commission."]
 ];
 
+/* Every rule is a QUESTION with its answer visible before you open it. At a kitchen table you need
+   the answer first and the reasoning second — so the answer rides on the summary line, and the
+   explanation and the citation only appear when you tap. `ans` is the answer; `at` colours it. */
 var RULES = [
-  {g:"The lines you do not cross", tone:"stop", t:"Never explain what a document says, or choose the certificate",
-   c:"Unauthorized practice of law · NJ",
-   b:["A notary is a witness, not an adviser. You cannot say what a clause means, whether the form is the right one, or whether they need an acknowledgment or a jurat — <b>even when you know the answer</b>.",
+  {g:"The lines you do not cross", tone:"stop", at:"no", ans:"No",
+   t:"Can I tell them what the document means, or which form they need?",
+   c:"Unauthorized practice of law \u00b7 NJ",
+   b:["A notary is a witness, not an adviser. You cannot say what a clause means, whether the form is the right one, or whether they need an acknowledgment or a jurat \u2014 <b>even when you know the answer</b>.",
       "In New Jersey that is practising law without a licence. Over a 150-page loan package it is the single most common way a signing agent loses a commission.",
-      "The line that works: <b>“I can’t tell you what this means or which one you need — your loan officer, or whoever drew this up, can.”</b>"]},
-  {g:"The lines you do not cross", tone:"stop", t:"Never notarize where you have an interest",
+      "The line that works: <b>\u201cI can\u2019t tell you what this means or which one you need \u2014 your loan officer, or whoever drew this up, can.\u201d</b>"]},
+  {g:"The lines you do not cross", tone:"stop", at:"no", ans:"No",
+   t:"Can I notarize something I have a stake in?",
    c:"Conflict of interest",
-   b:["If you are a party to the deal, or you get paid based on how it turns out, you cannot notarize it. That conflict voids the act — so the document is no good and the trip was wasted."]},
-  {g:"The lines you do not cross", tone:"stop", t:"Never notarize for someone who is not there",
+   b:["If you are a party to the deal, or you get paid based on how it turns out, you cannot notarize it. That conflict voids the act \u2014 so the document is no good and the trip was wasted."]},
+  {g:"The lines you do not cross", tone:"stop", at:"no", ans:"No",
+   t:"Can I notarize if the signer is not in front of me?",
    c:"Personal appearance",
-   b:["The signer has to be in front of you, or live in the remote session. Not their spouse, not a photo of the signed page, not “he signed it this morning”.",
+   b:["The signer has to be in front of you, or live in the remote session. Not their spouse, not a photo of the signed page, not \u201che signed it this morning\u201d.",
       "This is the request you will get most often from people who are not trying to do anything wrong. It is still a no."]},
-  {g:"The lines you do not cross", tone:"stop", t:"Never notarize a document with blank spaces",
+  {g:"The lines you do not cross", tone:"stop", at:"no", ans:"No",
+   t:"Can I notarize a document that still has blanks in it?",
    c:"Incomplete document",
    b:["Blanks get filled in after you leave, and your seal is already on the page. Have them completed or struck through before you notarize, or decline."]},
-  {g:"The lines you do not cross", tone:"stop", t:"Never give a real estate agent anything for sending you a client",
-   c:"RESPA Section 8 · 12 U.S.C. 2607",
+  {g:"The lines you do not cross", tone:"stop", at:"no", ans:"No \u2014 federal crime",
+   t:"Can I give an agent a fee or a gift for sending me a client?",
+   c:"RESPA Section 8 \u00b7 12 U.S.C. 2607",
    b:["No fee, no percentage, no gift card, no discount their clients get and nobody else does.",
-      "Notarizing a deed or a mortgage document is a settlement service, so this is federal criminal law: <b>up to $10,000 and a year in prison per violation, plus treble damages — and it binds the agent too.</b> If an agent proposes it, do not negotiate and do not soft-yes it. Say no and write down what was asked.",
+      "Notarizing a deed or a mortgage document is a settlement service, so this is federal criminal law: <b>up to $10,000 and a year in prison per violation, plus treble damages \u2014 and it binds the agent too.</b> If an agent proposes it, do not negotiate and do not soft-yes it. Say no and write down what was asked.",
       "What is allowed wins the channel anyway: answering the phone, evenings and weekends, a rate sheet and a card, and remote signings for the out-of-state seller nobody else can help."]},
-  {g:"The lines you do not cross", tone:"stop", t:"Never print a recordable document on an inkjet",
+  {g:"The lines you do not cross", tone:"stop", at:"no", ans:"Laser only",
+   t:"Can I print a deed or mortgage package on an inkjet?",
    c:"County recording",
    b:["County recorders can refuse inkjet, because the ink runs. Laser only. On a loan package that mistake costs the whole package and the relationship."]},
 
-  {g:"Saying no, and how to record it", tone:"", t:"Turning a job away is the job working",
+  {g:"Saying no, and how to record it", tone:"", at:"yes", ans:"It is the job",
+   t:"Is turning a job away a failed job?",
    c:"",
    b:["You are sometimes obliged to say no: the signer cannot be satisfactorily identified, is not present, appears coerced or does not understand what they are signing, the document is incomplete, or the act is something a notary commission does not cover.",
       "Declining correctly is not a failed job. It is the part of the job you are actually commissioned for."]},
-  {g:"Saying no, and how to record it", tone:"", t:"Log every refusal the same day — nothing else will",
+  {g:"Saying no, and how to record it", tone:"", at:"yes", ans:"Yes \u2014 same day",
+   t:"Do I have to write down a refusal?",
    c:"",
    b:["A refusal is not a notarial act, so it never enters the journal. Without a separate note it leaves no trace anywhere.",
-      "Record the date and time, what was asked for, and <b>the reason in your own words</b> — do not flatten it into a category, because the specific fact is what carries weight later. It is your evidence of reasonable care if a complaint or a lawsuit arrives, and that is usually years later when memory is worthless.",
-      "First name only. “Her ID was expired” is the record; her name and licence number are not."]},
-  {g:"Saying no, and how to record it", tone:"", t:"Write down what you saw, never what you think they were up to",
+      "Record the date and time, what was asked for, and <b>the reason in your own words</b> \u2014 do not flatten it into a category, because the specific fact is what carries weight later. It is your evidence of reasonable care if a complaint or a lawsuit arrives, and that is usually years later when memory is worthless.",
+      "First name only. \u201cHer ID was expired\u201d is the record; her name and licence number are not.",
+      "The <b>Didn\u2019t happen</b> button at the bottom of this page writes it for you."]},
+  {g:"Saying no, and how to record it", tone:"", at:"fact", ans:"What you saw",
+   t:"What exactly do I write in a refusal?",
    c:"",
-   b:["<b>“Signer could not produce unexpired ID”</b> is a fact. <b>“Signer was attempting fraud”</b> is an accusation sitting in a file that may one day be read by the person it names."]},
-  {g:"Saying no, and how to record it", tone:"", t:"You still earned the travel fee",
+   b:["<b>\u201cSigner could not produce unexpired ID\u201d</b> is a fact. <b>\u201cSigner was attempting fraud\u201d</b> is an accusation sitting in a file that may one day be read by the person it names."]},
+  {g:"Saying no, and how to record it", tone:"", at:"yes", ans:"Travel fee, yes",
+   t:"Do I still get paid if I turn the job away at the door?",
    c:"",
    b:["If you made the trip, invoice the travel as a non-notarial line and set aside 35% of it. There is no statutory line, because no act was performed."]},
 
-  {g:"The journal", tone:"", t:"Six things every entry must carry",
+  {g:"The journal", tone:"", at:"fact", ans:"Six things",
+   t:"What has to be in every journal entry?",
    c:"N.J.A.C. 17:50-1.11",
-   b:["Date and time · type of act · name and address of each person the act was performed for · if you knew them personally, a statement saying so · if not, a brief description of how you identified them and the credential they showed · an itemized list of every fee charged.",
+   b:["Date and time \u00b7 type of act \u00b7 name and address of each person the act was performed for \u00b7 if you knew them personally, a statement saying so \u00b7 if not, a brief description of how you identified them and the credential they showed \u00b7 an itemized list of every fee charged.",
       "That last one is why the invoice is always two lines. A single blended number makes the legal record wrong."]},
-  {g:"The journal", tone:"", t:"New Jersey does not require the signer's signature",
+  {g:"The journal", tone:"", at:"no", ans:"No",
+   t:"Does the signer have to sign my journal in New Jersey?",
    c:"N.J.A.C. 17:50-1.11",
    b:["Unlike California, Florida and others. That is the finding that lets you run a fully electronic journal with no paper book to carry and no book to lose."]},
-  {g:"The journal", tone:"", t:"One journal at a time, covering in-person and remote both",
+  {g:"The journal", tone:"", at:"no", ans:"One journal only",
+   t:"Can I keep a paper book for walk-ups and a platform journal for remote work?",
    c:"N.J.A.C. 17:50-1.11",
    b:["You cannot keep one book for walk-ups and a platform journal for remote work. It is a single decision, and switching later means a fresh DORES filing on top of a migration."]},
-  {g:"The journal", tone:"", t:"Electronic means permanent and tamper-evident — a spreadsheet is not",
+  {g:"The journal", tone:"", at:"no", ans:"No",
+   t:"Does a spreadsheet count as an electronic journal?",
    c:"N.J.A.C. 17:50-1.11",
    b:["A tamper-evident format is a property of the product: a file anyone can quietly edit does not qualify, and neither does a note in a git repo.",
-      "On paper the equivalent is a permanently bound register with consecutively numbered lines and pages — not a ring binder."]},
-  {g:"The journal", tone:"", t:"Keep it for ten years after the last act",
+      "On paper the equivalent is a permanently bound register with consecutively numbered lines and pages \u2014 not a ring binder."]},
+  {g:"The journal", tone:"", at:"fact", ans:"10 years",
+   t:"How long do I have to keep the journal?",
    c:"N.J.A.C. 17:50-1.11",
-   b:["Which is the entire reason for the monthly export. Losing the journal without one means losing the record; losing it with one means losing at most a month."]},
-  {g:"The journal", tone:"", t:"Do not store ID photos or thumbprints",
+   b:["Ten years after the last act. Which is the entire reason for the monthly export. Losing the journal without one means losing the record; losing it with one means losing at most a month."]},
+  {g:"The journal", tone:"", at:"no", ans:"No",
+   t:"Should I keep a photo of their ID, or a thumbprint?",
    c:"N.J.A.C. 17:50-1.11",
-   b:["NJ asks for a <i>brief description</i> of how you identified them and what they showed. So record credential type, issuing state and expiry — not an image, and not the full number.",
-      "Holding government ID images creates real exposure under NJ’s data-breach law for zero legal benefit on consumer work. For a remote act the platform holds the credential check inside the required recording, which is where it belongs."]},
+   b:["NJ asks for a <i>brief description</i> of how you identified them and what they showed. So record credential type, issuing state and expiry \u2014 not an image, and not the full number.",
+      "Holding government ID images creates real exposure under NJ\u2019s data-breach law for zero legal benefit on consumer work. For a remote act the platform holds the credential check inside the required recording, which is where it belongs."]},
 
-  {g:"What you may charge", tone:"", t:"$2.50 per act",
+  {g:"What you may charge", tone:"", at:"fact", ans:"$2.50 each",
+   t:"What do I charge for an acknowledgment, oath or affidavit?",
    c:"N.J.A.C. 17:50-1.18",
-   b:["Oaths, affidavits, proofs of deed and acknowledgments. Per act — two acknowledgments is $5.00."]},
-  {g:"What you may charge", tone:"", t:"$15.00 for a grantor in a real estate transfer",
+   b:["Oaths, affidavits, proofs of deed and acknowledgments. Per act \u2014 two acknowledgments is $5.00."]},
+  {g:"What you may charge", tone:"", at:"fact", ans:"$15 flat",
+   t:"What do I charge the seller on a real estate transfer?",
    c:"N.J.A.C. 17:50-1.18",
-   b:["For the whole transaction, however many services it takes. Not $2.50 a signature."]},
-  {g:"What you may charge", tone:"", t:"$25.00 for a mortgagor in real estate financing",
+   b:["$15.00 for a grantor, for the whole transaction, however many services it takes. Not $2.50 a signature."]},
+  {g:"What you may charge", tone:"", at:"fact", ans:"$25 flat",
+   t:"What do I charge the borrower on a mortgage or refinance?",
    c:"N.J.A.C. 17:50-1.18",
-   b:["Again the whole transaction, however many signatures. <b>A refinance with twelve notarized signatures is $25, not $30.</b>",
+   b:["$25.00 for a mortgagor, again the whole transaction, however many signatures. <b>A refinance with twelve notarized signatures is $25, not $30.</b>",
       "Charging over a statutory cap is the kind of mistake that ends a commission, so this one is worth knowing cold."]},
-  {g:"What you may charge", tone:"", t:"Travel and technology fees are yours, but they go on their own line",
+  {g:"What you may charge", tone:"", at:"yes", ans:"Yes \u2014 own line",
+   t:"Can I charge for travel, after-hours or technology?",
    c:"N.J.A.C. 17:50-1.18",
-   b:["The State does not set them. It does require them to be separate and disclosed — and they are taxed differently from the notarial fee, which is what makes the 20% / 35% set-aside possible.",
+   b:["The State does not set them. It does require them to be separate and disclosed \u2014 and they are taxed differently from the notarial fee, which is what makes the 20% / 35% set-aside possible.",
       "On a loan signing the flat signing fee <i>is</i> the non-notarial line. Never add a travel tier on top; the drive is already inside it."]},
 
-  {g:"Remote and electronic acts", tone:"", t:"Remote notarization is permanently legal in NJ",
+  {g:"Remote and electronic acts", tone:"", at:"yes", ans:"Yes \u2014 permanently",
+   t:"Is remote notarization still legal in New Jersey?",
    c:"Effective 22 October 2021",
    b:["It is not a pandemic rule that expired. It is settled law."]},
-  {g:"Remote and electronic acts", tone:"stop", t:"Tell the State which platform before your first remote or electronic act",
+  {g:"Remote and electronic acts", tone:"stop", at:"no", ans:"Not until you file",
+   t:"Can I do a remote act the day my commission arrives?",
    c:"DORES notary portal",
-   b:["A notification to the State Treasurer naming the communication technology platform, filed <b>before</b> the first remote or electronic act — and filed again every time you change platform.",
+   b:["A notification to the State Treasurer naming the communication technology platform, filed <b>before</b> the first remote or electronic act \u2014 and filed again every time you change platform.",
       "This is separate from the commission. Remote work does not go live when the commission does; it goes live when this clears."]},
-  {g:"Remote and electronic acts", tone:"", t:"Three ways to be sure who a remote signer is",
-   c:"P.L. 2021, c.179 §19d(1)",
+  {g:"Remote and electronic acts", tone:"", at:"fact", ans:"Three routes",
+   t:"How do I prove who a remote signer is?",
+   c:"P.L. 2021, c.179 \u00a719d(1)",
    b:["The statute gives three routes, any one of which is enough: <b>you know the person</b> personally; <b>a credible witness swears to who they are</b>, in the room or on the video call; or <b>at least two different types of identity proofing</b> (credential analysis, knowledge-based questions, biometric checks) run by the platform.",
-      "The old reading on this page — “two of three methods, always” — was the Manual’s summary, not the law. Before contracting with any remote platform, check that its proofing workflow actually satisfies the two-types route."]},
-  {g:"Remote and electronic acts", tone:"", t:"Record the whole session, and keep it ten years",
+      "The old reading on this page \u2014 \u201ctwo of three methods, always\u201d \u2014 was the Manual\u2019s summary, not the law. Before contracting with any remote platform, check that its proofing workflow actually satisfies the two-types route."]},
+  {g:"Remote and electronic acts", tone:"", at:"yes", ans:"Yes \u2014 10 years",
+   t:"Do I have to record the remote session?",
    c:"",
    b:["Audio and video, including the identity verification, not just the signing. The recording is retained on the same ten-year clock as the journal."]},
 
-  {g:"The commission itself", tone:"stop", t:"Swear the oath within 90 days or start over",
+  {g:"The commission itself", tone:"stop", at:"fact", ans:"90 days",
+   t:"How long do I have to swear the oath?",
    c:"",
    b:["In person, at the clerk of your county of residence. No mail, no online.",
-      "Miss the 90 days and the Treasurer cancels the commission and the entire process restarts — course, exam, application, endorsement, all of it. Put it on the calendar the day the packet arrives rather than trusting yourself to remember."]},
-  {g:"The commission itself", tone:"", t:"Five years, and it does not renew itself",
+      "Miss the 90 days and the Treasurer cancels the commission and the entire process restarts \u2014 course, exam, application, endorsement, all of it. Put it on the calendar the day the packet arrives rather than trusting yourself to remember."]},
+  {g:"The commission itself", tone:"", at:"no", ans:"No \u2014 5 years",
+   t:"Does my commission renew itself?",
    c:"",
    b:["Renewal is the same chain as the first time: a 3-hour continuing education course (the first commission needs 6 hours), an updated exam, the DORES application, and the oath again at the county clerk.",
       "Start 90 days out. Thirty is not enough runway for a chain with four links and a government office in it."]},
-  {g:"The commission itself", tone:"", t:"Report a move or a name change to DORES",
+  {g:"The commission itself", tone:"", at:"yes", ans:"Yes",
+   t:"Do I have to tell DORES if I move or change my name?",
    c:"",
    b:["Easy to forget in the middle of moving, which is exactly when it happens."]},
 
-  {g:"If the seal or journal goes missing", tone:"stop", t:"Stop notarizing, immediately",
-   c:"Read this one before the other five",
-   b:["From the moment it is out of your possession until a replacement is physically in your hand, every notarization stops — in person and remote.",
-      "Using a seal that may be in someone else’s hands is what turns an inconvenience into a commission problem."]},
-  {g:"If the seal or journal goes missing", tone:"", t:"Then, in order: search once, report, police, replace, write it up",
+  {g:"If the seal or journal goes missing", tone:"stop", at:"no", ans:"Stop now",
+   t:"My seal is missing \u2014 can I keep working?",
+   c:"Read this one before the other two",
+   b:["From the moment it is out of your possession until a replacement is physically in your hand, every notarization stops \u2014 in person and remote.",
+      "Using a seal that may be in someone else\u2019s hands is what turns an inconvenience into a commission problem."]},
+  {g:"If the seal or journal goes missing", tone:"", at:"fact", ans:"Five steps",
+   t:"What do I do about it, in what order?",
    c:"",
-   b:["<b>Search properly once</b> — car, bag, last appointment, home office. One thorough pass, not a day of hoping; the reporting clock is what matters.",
+   b:["<b>Search properly once</b> \u2014 car, bag, last appointment, home office. One thorough pass, not a day of hoping; the reporting clock is what matters.",
       "<b>Report to DORES</b>, through the notary portal or in writing: your full name, commission number, commission expiry, and the last date you know you had it. Keep a copy and the date it went.",
-      "<b>Report to police if you suspect theft</b>, and keep the report number. A stolen seal is a fraud instrument in someone else’s hands, and the report is what separates a victim from a participant if it is later misused.",
-      "<b>Order the replacement</b>, and resume only when it arrives. Then <b>write it up</b> — what was lost, when you last had it, what you reported, to whom, on what date, and when you started again."]},
-  {g:"If the seal or journal goes missing", tone:"", t:"A lost journal is also possibly a data breach",
+      "<b>Report to police if you suspect theft</b>, and keep the report number. A stolen seal is a fraud instrument in someone else\u2019s hands, and the report is what separates a victim from a participant if it is later misused.",
+      "<b>Order the replacement</b>, and resume only when it arrives. Then <b>write it up</b> \u2014 what was lost, when you last had it, what you reported, to whom, on what date, and when you started again."]},
+  {g:"If the seal or journal goes missing", tone:"", at:"open", ans:"Possibly",
+   t:"Is a lost journal also a data breach?",
    c:"",
-   b:["The journal carries signer names, addresses and identification details under a ten-year duty. So on top of the reporting above, consider whether NJ’s breach-notification obligations are triggered by what was in it.",
+   b:["The journal carries signer names, addresses and identification details under a ten-year duty. So on top of the reporting above, consider whether NJ\u2019s breach-notification obligations are triggered by what was in it.",
       "Store the seal locked and separate from the journal, so one loss is never both."]},
 
-  {g:"Asking for reviews", tone:"", t:"Never offer anything for a review, and never filter them",
-   c:"FTC endorsement rules · Google policy",
-   b:["No discount, no credit, no free act. And never ask “how did it go?” first and send only the happy ones to Google — review gating is explicitly prohibited and is grounds for removal.",
+  {g:"Asking for reviews", tone:"", at:"no", ans:"No",
+   t:"Can I offer a discount for a Google review?",
+   c:"FTC endorsement rules \u00b7 Google policy",
+   b:["No discount, no credit, no free act. And never ask \u201chow did it go?\u201d first and send only the happy ones to Google \u2014 review gating is explicitly prohibited and is grounds for removal.",
       "The penalty lands on the Business Profile the whole consumer side depends on, which makes this the most expensive corner you could cut."]},
-  {g:"Asking for reviews", tone:"", t:"Never ask a borrower on a signing-service job",
+  {g:"Asking for reviews", tone:"", at:"no", ans:"No",
+   t:"Can I ask a borrower for a review on a signing-service job?",
    c:"",
    b:["They did not hire you, did not pay you, and often did not choose you. Asking a stranger mid-refinance to review the notary who showed up at their house is at best odd and at worst a complaint to the company that sends you work.",
       "Consumer jobs and agent referrals: ask the person who signed and paid, once, after it closes clean."]},
 
-  {g:"Not confirmed — do not rely on these yet", tone:"unconfirmed", t:"Whether NJ caps the fee for a remote act separately",
+  {g:"Not confirmed \u2014 do not rely on these yet", tone:"unconfirmed", at:"open", ans:"Not confirmed",
+   t:"Can I charge extra for a remote act?",
    c:"Question out with DORES",
    b:["No separate maximum for a remote act could be found. Until DORES answers, <b>do not quote a RON technology fee.</b> Quote the statutory fee and say the technology fee is still being confirmed."]},
-  {g:"Not confirmed — do not rely on these yet", tone:"unconfirmed", t:"Whether the journal can be inspected or copied, and on what terms",
+  {g:"Not confirmed \u2014 do not rely on these yet", tone:"unconfirmed", at:"open", ans:"Not confirmed",
+   t:"Who is allowed to ask to see my journal?",
    c:"Question out with DORES",
    b:["17:50-1.11 sets what the journal must contain and how long it is kept. It does not clearly say who else may see it. Until that is answered, hand nothing over without checking."]},
-  {g:"Not confirmed — do not rely on these yet", tone:"unconfirmed", t:"Whether NJ restricts recording a credential’s full ID number",
+  {g:"Not confirmed \u2014 do not rely on these yet", tone:"unconfirmed", at:"open", ans:"Not confirmed",
+   t:"Can I write down a credential\u2019s full ID number?",
    c:"Question out with DORES",
-   b:["The working practice — type, issuing state and expiry only, never the full number — is the safe side of an unanswered question, not a confirmed rule."]},
-  {g:"Not confirmed — do not rely on these yet", tone:"unconfirmed", t:"The journal has to be handed over within 45 days when a commission ends",
-   c:"P.L. 2021, c.179 §27f · question out with DORES",
-   b:["The statute read in the vault records a hard 45-day duty to transmit the journal. What is not yet pinned down is exactly what starts the clock (resignation, expiry, revocation) and who receives it. That is the open DORES question on what happens to the journal if the commission lapses — when it is answered, this moves out of this group."]},
-  {g:"Not confirmed — do not rely on these yet", tone:"unconfirmed", t:"The exact NJ mechanics for reporting a lost seal",
+   b:["The working practice \u2014 type, issuing state and expiry only, never the full number \u2014 is the safe side of an unanswered question, not a confirmed rule."]},
+  {g:"Not confirmed \u2014 do not rely on these yet", tone:"unconfirmed", at:"open", ans:"45 days?",
+   t:"What happens to the journal when my commission ends?",
+   c:"P.L. 2021, c.179 \u00a727f \u00b7 question out with DORES",
+   b:["The statute read in the vault records a hard 45-day duty to transmit the journal. What is not yet pinned down is exactly what starts the clock (resignation, expiry, revocation) and who receives it. That is the open DORES question on what happens to the journal if the commission lapses \u2014 when it is answered, this moves out of this group."]},
+  {g:"Not confirmed \u2014 do not rely on these yet", tone:"unconfirmed", at:"open", ans:"Not confirmed",
+   t:"Exactly how do I report a lost seal in New Jersey?",
    c:"Question out with DORES",
-   b:["The stop-first sequence above is standard practice across US notary jurisdictions and is sound. What is <i>not</i> verified is NJ’s specific paperwork: the exact form, the office, the deadline, and whether a replacement comes with a new commission number.",
+   b:["The stop-first sequence above is standard practice across US notary jurisdictions and is sound. What is <i>not</i> verified is NJ\u2019s specific paperwork: the exact form, the office, the deadline, and whether a replacement comes with a new commission number.",
       "Confirm with DORES and record the answer before this is ever relied on."]}
 ];
 
 function viewRules(v){
   var p = panel("When you are not sure, work down this list",
-    "Written for the moment it is needed — at somebody’s kitchen table, on your phone, with a person waiting on you.");
+    "Written for the moment it is needed \u2014 at somebody\u2019s kitchen table, on your phone, with a person waiting on you.");
   var stop = el("div","stopcard");
   stop.appendChild(el("h3",null,"Stop, and answer these in order"));
   var ol = el("ol","steps");
   STOP_PATH.forEach(function(x){
-    var li = el("li"); var d = el("div");
-    d.appendChild(el("b",null,x[0])); d.appendChild(el("span",null,x[1]));
+    var li = el("li");
+    var d = el("details","step");
+    var sm = el("summary"); sm.appendChild(el("b",null,x[0]));
+    d.appendChild(sm);
+    d.appendChild(el("span",null,x[1]));
     li.appendChild(d); ol.appendChild(li);
   });
+  var openAll = el("button","btn small","Open all seven"); openAll.type="button";
+  openAll.addEventListener("click", function(){
+    var list = stop.querySelectorAll("details.step"), shut = false;
+    list.forEach(function(x){ if(!x.open) shut = true; });
+    list.forEach(function(x){ x.open = shut; });
+    openAll.textContent = shut ? "Close them" : "Open all seven";
+  });
   stop.appendChild(ol);
+  stop.appendChild(openAll);
   p.appendChild(stop);
   v.appendChild(p);
 
-  var sp = panel("New Jersey notary rules", "Everything below is a summary of the rules this business runs on, with the citation on each. Search it.");
+  var sp = panel("Look it up", "Every rule as the question you would actually ask, with the answer on the line. Tap one to see why, and the citation.");
   var sbox = el("div","search");
   var inp = el("input"); inp.type="search"; inp.id="ruleSearch";
-  inp.placeholder = "Search — fee, journal, blank, RON, seal, RESPA…";
+  inp.placeholder = "Search \u2014 fee, journal, blank, remote, seal, review\u2026";
   inp.value = ui.ruleQuery || "";
   sbox.appendChild(inp);
   var count = el("span","hint"); sbox.appendChild(count);
   sp.appendChild(sbox);
+
+  /* the eight groups as chips: on a phone, tapping "What you may charge" beats scrolling to it */
+  var order = [];
+  RULES.forEach(function(r){ if(order.indexOf(r.g) === -1) order.push(r.g); });
+  var chips = el("div","chips scroller"); chips.style.marginBottom = "4px";
+  [{v:"", label:"Everything"}].concat(order.map(function(g){
+    return {v:g, label: g.split(" \u2014 ")[0]};
+  })).forEach(function(o){
+    var b = el("button", null, o.label); b.type = "button";
+    b.setAttribute("aria-pressed", (ui.ruleGroup||"") === o.v ? "true" : "false");
+    b.addEventListener("click", function(){
+      ui.ruleGroup = ((ui.ruleGroup||"") === o.v) ? "" : o.v;
+      chips.querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed","false"); });
+      b.setAttribute("aria-pressed", (ui.ruleGroup||"") === o.v ? "true" : "false");
+      draw();
+    });
+    chips.appendChild(b);
+  });
+  sp.appendChild(chips);
+
   var results = el("div"); sp.appendChild(results);
   v.appendChild(sp);
 
   function draw(){
     var q = (ui.ruleQuery||"").toLowerCase().trim();
+    var only = ui.ruleGroup || "";
     results.textContent = "";
     var shown = 0, groups = [], byGroup = {};
     RULES.forEach(function(r){
-      var hay = (r.t + " " + r.g + " " + r.c + " " + r.b.join(" ")).toLowerCase().replace(/<[^>]+>/g,"");
+      if(only && r.g !== only) return;
+      var hay = (r.t + " " + r.ans + " " + r.g + " " + r.c + " " + r.b.join(" ")).toLowerCase().replace(/<[^>]+>/g,"");
       if(q && hay.indexOf(q) === -1) return;
       if(!byGroup[r.g]){ byGroup[r.g] = []; groups.push(r.g); }
       byGroup[r.g].push(r); shown++;
     });
-    count.textContent = q ? (shown + (shown===1?" rule":" rules")) : (RULES.length + " rules");
+    count.textContent = (q || only) ? (shown + (shown===1?" answer":" answers")) : (RULES.length + " answers");
     if(!shown){
-      results.appendChild(emptyCard("Nothing matches “" + (ui.ruleQuery||"") + "”",
-        "Try a plainer word — fee, journal, ID, blank, remote, seal, review, agent."));
+      results.appendChild(emptyCard("Nothing matches \u201c" + (ui.ruleQuery||"") + "\u201d",
+        "Try a plainer word \u2014 fee, journal, ID, blank, remote, seal, review, agent."));
       return;
     }
     groups.forEach(function(g){
       var sec = el("div"); sec.style.marginTop = "16px";
       sec.appendChild(el("div","eyebrow", g));
       var card = el("div","card"); card.style.marginTop = "6px";
-      byGroup[g].forEach(function(r){
-        var box = el("div","rule" + (r.tone ? " " + r.tone : ""));
-        var h = el("h4");
-        h.appendChild(document.createTextNode(r.t));
-        if(r.c) h.appendChild(el("span","cite", r.c));
-        box.appendChild(h);
-        r.b.forEach(function(para){ var pp = el("p"); pp.innerHTML = para; box.appendChild(pp); });
-        card.appendChild(box);
-      });
+      byGroup[g].forEach(function(r){ card.appendChild(faqRow(r, !!q)); });
       sec.appendChild(card);
       results.appendChild(sec);
     });
@@ -1242,23 +1350,40 @@ function viewRules(v){
   var p3 = panel("Who to call when this page does not answer it");
   var c3 = el("div","card");
   [["DORES Notary Unit","(609) 292-9292","The commissioning authority. Every unconfirmed item above is a question for them."],
-   ["Camden County Clerk · Courthouse","(856) 225-5300","The oath, and county filings."],
+   ["Camden County Clerk \u00b7 Courthouse","(856) 225-5300","The oath, and county filings."],
    ["Camden County Store","(856) 566-2920","The other counter for the same county."]].forEach(function(x){
     var r = el("div","rowitem"); var g = el("div","grow");
     g.appendChild(el("div","ttl", x[0]));
     g.appendChild(el("div","meta")).appendChild(el("span",null,x[2]));
     r.appendChild(g);
-    r.appendChild(el("div","money", x[1]));
+    var tel = el("a","money", x[1]); tel.href = "tel:" + x[1].replace(/\D/g,"");
+    r.appendChild(tel);
     c3.appendChild(r);
   });
   var note = el("div","rule unconfirmed");
   note.appendChild(el("h4",null,"What this page is, and is not"));
   var np = el("p");
-  np.innerHTML = "This is a working summary, written from the project vault’s research. <b>The New Jersey Notary Public Manual and DORES are the authority</b> — when this page and the manual disagree, the manual is right and this page needs fixing. It is not legal advice.";
+  np.innerHTML = "This is a working summary, written from the project vault\u2019s research. <b>The New Jersey Notary Public Manual and DORES are the authority</b> \u2014 when this page and the manual disagree, the manual is right and this page needs fixing. It is not legal advice.";
   note.appendChild(np);
   c3.appendChild(note);
   p3.appendChild(c3);
   v.appendChild(p3);
+}
+
+/* One question. The answer is on the closed line; the reasoning and the citation are behind the tap.
+   A search opens what it found, because if you searched for it you want to read it. */
+function faqRow(r, openIt){
+  var d = el("details","faq" + (r.tone ? " " + r.tone : ""));
+  if(openIt) d.open = true;
+  var sm = el("summary");
+  sm.appendChild(el("span","q", r.t));
+  sm.appendChild(el("span","ans " + (r.at||"fact"), r.ans));
+  d.appendChild(sm);
+  var body = el("div","faq-body");
+  r.b.forEach(function(para){ var pp = el("p"); pp.innerHTML = para; body.appendChild(pp); });
+  if(r.c) body.appendChild(el("div","cite", r.c));
+  d.appendChild(body);
+  return d;
 }
 
 /* ============================ view: jobs ============================ */
