@@ -46,8 +46,19 @@ Expiry is `commissionExpiry` when it is recorded, otherwise `commissionDate` + 5
 The **Rules** tab holds no data — the rules are constants in `index.html` (`STOP_PATH` and
 `RULES`), so changing one is a page edit and a republish. That is deliberate: a legal reference
 that any viewer could edit in place is worse than no reference. Every rule carries its citation,
-and four of them sit in a "not confirmed" group that says so on its face; when DORES answers one,
+and five of them sit in a "not confirmed" group that says so on its face; when DORES answers one,
 move it out of that group and update the matching item in `tasks`.
+
+Since 2026-09-19 the tab is a **quick-reference FAQ**. Each `RULES` entry is written as the
+question Lemar would actually ask (`t`), with the answer itself on the closed line (`ans`, coloured
+by `at`: `no` red, `yes` green, `fact` violet, `open` amber). The reasoning and the citation are
+inside a `<details>`, so 37 rules read as 37 scannable lines instead of a wall of paragraphs — you
+can see "$25 flat" or a red "No" without opening anything. A search opens what it matched, because
+if you searched for it you want to read it. The eight groups are a one-line scrolling chip row that
+filters the list. `STOP_PATH`'s seven steps collapse the same way, with one button to open them all.
+
+Writing a new rule means writing a **question**, not a heading, and an answer short enough to fit
+on the line beside it.
 
 ## How things get recorded (2026-09-18 rework)
 
